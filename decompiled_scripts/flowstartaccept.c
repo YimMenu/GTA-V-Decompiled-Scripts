@@ -1,0 +1,135 @@
+void __EntryFunction__()
+{
+	iLocal_2 = 1;
+	iLocal_3 = 134;
+	iLocal_4 = 134;
+	iLocal_5 = 1;
+	iLocal_6 = 1;
+	iLocal_7 = 1;
+	iLocal_8 = 134;
+	iLocal_9 = 1;
+	iLocal_10 = 12;
+	iLocal_11 = 12;
+	fLocal_14 = 0.001f;
+	iLocal_17 = -1;
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(83))
+	{
+		func_6();
+	}
+	if ((!Global_1 && !GAMEPLAY::IS_PC_VERSION()) && GAMEPLAY::_0x6FDDF453C0C756EC())
+	{
+		SCRIPT::SET_NO_LOADING_SCREEN(1);
+		if (!CAM::IS_SCREEN_FADED_OUT())
+		{
+			if (!CAM::IS_SCREEN_FADING_OUT())
+			{
+				CAM::DO_SCREEN_FADE_OUT(800);
+			}
+		}
+		iLocal_20 = unk_0x67D02A194A2FC2BD("MP_BIG_MESSAGE_FREEMODE");
+		iLocal_21 = unk_0x67D02A194A2FC2BD("INSTRUCTIONAL_BUTTONS");
+		while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_20) || !GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_21))
+		{
+			SYSTEM::WAIT(0);
+		}
+		GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(iLocal_20, "SHOW_CENTERED_MP_MESSAGE");
+		func_5("INSTALL_COMP");
+		GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+		GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(iLocal_21, "SET_DATA_SLOT_EMPTY");
+		GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+		GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(iLocal_21, "SET_DATA_SLOT");
+		GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(0);
+		func_4(CONTROLS::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 201, 1));
+		func_5("HUD_CONTINUE");
+		GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+		GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(iLocal_21, "DRAW_INSTRUCTIONAL_BUTTONS");
+		GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_BOOL(0);
+		GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+		while (!CAM::IS_SCREEN_FADED_OUT())
+		{
+			SYSTEM::WAIT(0);
+		}
+		SCRIPT::SHUTDOWN_LOADING_SCREEN();
+		while (!iLocal_22)
+		{
+			UI::HIDE_LOADING_ON_FADE_THIS_FRAME();
+			GRAPHICS::_SET_2D_LAYER(7);
+			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_20, 255, 255, 255, 0, 0);
+			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_21, 255, 255, 255, 0, 0);
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
+			{
+				iLocal_22 = 1;
+			}
+			SYSTEM::WAIT(0);
+		}
+		SCRIPT::SET_NO_LOADING_SCREEN(0);
+		func_3(1, 1);
+		func_1();
+	}
+	Global_76891.f_1 = 0;
+	GAMEPLAY::SET_BIT(&(Global_111638.f_10011.f_25), 0);
+	func_6();
+}
+
+int func_1()
+{
+	if (func_2(0))
+	{
+		return 0;
+	}
+	if (Global_98783.f_8)
+	{
+		if (Global_98783.f_10 > 0)
+		{
+			return 0;
+		}
+	}
+	else if (Global_98783.f_10 > 1)
+	{
+		return 0;
+	}
+	Global_98783.f_10++;
+	return 1;
+}
+
+int func_2(bool bParam0)
+{
+	if (!bParam0 && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-448212099) > 0)
+	{
+		return 1;
+	}
+	return GAMEPLAY::IS_BIT_SET(Global_76870, 0);
+}
+
+void func_3(int iParam0, int iParam1)
+{
+	Global_98783.f_7 = iParam0;
+	Global_98783.f_8 = iParam1;
+}
+
+void func_4(var uParam0)
+{
+	GRAPHICS::_0xE83A3E3557A56640(uParam0);
+}
+
+void func_5(char* sParam0)
+{
+	GRAPHICS::_BEGIN_TEXT_COMMAND_SCALEFORM(sParam0);
+	GRAPHICS::_END_TEXT_COMMAND_SCALEFORM();
+}
+
+void func_6()
+{
+	if (iLocal_20 != 0)
+	{
+		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_20);
+	}
+	if (iLocal_21 != 0)
+	{
+		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_21);
+	}
+	GRAPHICS::_SET_2D_LAYER(4);
+	SCRIPT::SET_NO_LOADING_SCREEN(0);
+	SCRIPT::TERMINATE_THIS_THREAD();
+}
+
