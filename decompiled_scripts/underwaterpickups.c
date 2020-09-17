@@ -31,9 +31,9 @@ void func_1()
 			if (func_2(Var5, 0f, 0f, 0f, 0))
 			{
 				iVar8 = 0;
-				GAMEPLAY::SET_BIT(&iVar8, 1);
-				GAMEPLAY::SET_BIT(&iVar8, 4);
-				GAMEPLAY::SET_BIT(&iVar8, 3);
+				MISC::SET_BIT(&iVar8, 1);
+				MISC::SET_BIT(&iVar8, 4);
+				MISC::SET_BIT(&iVar8, 3);
 				if (iVar1 == -831529621)
 				{
 					if (bLocal_24)
@@ -63,8 +63,8 @@ void func_1()
 			else
 			{
 				iVar8 = 0;
-				GAMEPLAY::SET_BIT(&iVar8, 1);
-				GAMEPLAY::SET_BIT(&iVar8, 4);
+				MISC::SET_BIT(&iVar8, 1);
+				MISC::SET_BIT(&iVar8, 4);
 				if (iVar1 == -831529621)
 				{
 					if (bLocal_24)
@@ -1041,7 +1041,7 @@ int func_10(int iParam0)
 
 var func_11(int iParam0)
 {
-	return (SYSTEM::SHIFT_RIGHT(iParam0, 26) & 31 * func_12(GAMEPLAY::IS_BIT_SET(iParam0, 31), -1, 1)) + 2011;
+	return (SYSTEM::SHIFT_RIGHT(iParam0, 26) & 31 * func_12(MISC::IS_BIT_SET(iParam0, 31), -1, 1)) + 2011;
 }
 
 int func_12(bool bParam0, int iParam1, int iParam2)
@@ -1299,12 +1299,12 @@ void func_22(var uParam0, int iParam1)
 
 int func_23()
 {
-	func_22(&uVar0, TIME::GET_CLOCK_SECONDS());
-	func_21(&uVar0, TIME::GET_CLOCK_MINUTES());
-	func_20(&uVar0, TIME::GET_CLOCK_HOURS());
-	func_18(&uVar0, TIME::GET_CLOCK_DAY_OF_MONTH());
-	func_19(&uVar0, TIME::GET_CLOCK_MONTH());
-	func_17(&uVar0, TIME::GET_CLOCK_YEAR());
+	func_22(&uVar0, CLOCK::GET_CLOCK_SECONDS());
+	func_21(&uVar0, CLOCK::GET_CLOCK_MINUTES());
+	func_20(&uVar0, CLOCK::GET_CLOCK_HOURS());
+	func_18(&uVar0, CLOCK::GET_CLOCK_DAY_OF_MONTH());
+	func_19(&uVar0, CLOCK::GET_CLOCK_MONTH());
+	func_17(&uVar0, CLOCK::GET_CLOCK_YEAR());
 	return uVar0;
 }
 
@@ -1342,20 +1342,20 @@ int func_25(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (GAMEPLAY::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
 		{
-			if (GAMEPLAY::ABSF((Param0.y - Param3.y)) <= fParam6)
+			if (MISC::ABSF((Param0.y - Param3.y)) <= fParam6)
 			{
-				if (GAMEPLAY::ABSF((Param0.z - Param3.z)) <= fParam6)
+				if (MISC::ABSF((Param0.z - Param3.z)) <= fParam6)
 				{
 					return 1;
 				}
 			}
 		}
 	}
-	else if (GAMEPLAY::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
 	{
-		if (GAMEPLAY::ABSF((Param0.y - Param3.y)) <= fParam6)
+		if (MISC::ABSF((Param0.y - Param3.y)) <= fParam6)
 		{
 			return 1;
 		}

@@ -40,18 +40,18 @@ void __EntryFunction__()
 	{
 		SYSTEM::WAIT(0);
 	}
-	if (!UI::IS_NAMED_RENDERTARGET_REGISTERED("tvscreen"))
+	if (!HUD::IS_NAMED_RENDERTARGET_REGISTERED("tvscreen"))
 	{
-		UI::REGISTER_NAMED_RENDERTARGET("tvscreen", 0);
+		HUD::REGISTER_NAMED_RENDERTARGET("tvscreen", 0);
 	}
-	if (!UI::IS_NAMED_RENDERTARGET_LINKED(-1769322543))
+	if (!HUD::IS_NAMED_RENDERTARGET_LINKED(-1769322543))
 	{
-		UI::LINK_NAMED_RENDERTARGET(-1769322543);
+		HUD::LINK_NAMED_RENDERTARGET(-1769322543);
 	}
-	uLocal_218 = UI::GET_NAMED_RENDERTARGET_RENDER_ID("tvscreen");
-	while (!GAMEPLAY::IS_BIT_SET(uLocal_216, 1))
+	uLocal_218 = HUD::GET_NAMED_RENDERTARGET_RENDER_ID("tvscreen");
+	while (!MISC::IS_BIT_SET(uLocal_216, 1))
 	{
-		if (!GAMEPLAY::IS_BIT_SET(uLocal_216, 0))
+		if (!MISC::IS_BIT_SET(uLocal_216, 0))
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(uLocal_46))
 			{
@@ -81,11 +81,11 @@ void __EntryFunction__()
 					ENTITY::SET_ENTITY_PROOFS(uLocal_46, 1, 1, 1, 1, 1, 0, 0, 0);
 					Var0 = { 707.32f, -966.83f, 30.413f };
 					Var3 = { 0f, 0f, -171.5f };
-					AI::OPEN_SEQUENCE_TASK(&uLocal_49);
-					AI::TASK_PLAY_ANIM_ADVANCED(0, "MISSHEIST_JEWEL@HACKING", "HACK_INTRO", Var0, Var3, 8f, -8f, -1, 262152, 0, 2, 0);
-					AI::TASK_PLAY_ANIM_ADVANCED(0, "MISSHEIST_JEWEL@HACKING", "HACK_LOOP", Var0, Var3, 8f, -8f, -1, 262153, 0, 2, 0);
-					AI::CLOSE_SEQUENCE_TASK(uLocal_49);
-					AI::TASK_PERFORM_SEQUENCE(uLocal_46, uLocal_49);
+					TASK::OPEN_SEQUENCE_TASK(&uLocal_49);
+					TASK::TASK_PLAY_ANIM_ADVANCED(0, "MISSHEIST_JEWEL@HACKING", "HACK_INTRO", Var0, Var3, 8f, -8f, -1, 262152, 0, 2, 0);
+					TASK::TASK_PLAY_ANIM_ADVANCED(0, "MISSHEIST_JEWEL@HACKING", "HACK_LOOP", Var0, Var3, 8f, -8f, -1, 262153, 0, 2, 0);
+					TASK::CLOSE_SEQUENCE_TASK(uLocal_49);
+					TASK::TASK_PERFORM_SEQUENCE(uLocal_46, uLocal_49);
 					PED::_0x2208438012482A1A(uLocal_46, 0, 0);
 					ENTITY::FREEZE_ENTITY_POSITION(uLocal_46, 1);
 					func_28(&uLocal_51, 3, uLocal_46, "LESTER", 0, 1);
@@ -103,7 +103,7 @@ void __EntryFunction__()
 					ENTITY::SET_ENTITY_INVINCIBLE(uLocal_48, 1);
 					ENTITY::SET_ENTITY_PROOFS(uLocal_48, 1, 1, 1, 1, 1, 0, 0, 0);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(-1769322543);
-					GAMEPLAY::SET_BIT(&uLocal_216, 0);
+					MISC::SET_BIT(&uLocal_216, 0);
 				}
 			}
 		}
@@ -116,13 +116,13 @@ void __EntryFunction__()
 				{
 					if (fVar6 < 4f)
 					{
-						if (GAMEPLAY::GET_GAME_TIMER() > iLocal_217)
+						if (MISC::GET_GAME_TIMER() > iLocal_217)
 						{
 							if (!func_21())
 							{
 								if (func_4(&uLocal_51, "JHFAUD", "JHF_LEAVE", 3, 0, 0, 0))
 								{
-									iLocal_217 = GAMEPLAY::GET_GAME_TIMER() + 25000;
+									iLocal_217 = MISC::GET_GAME_TIMER() + 25000;
 								}
 							}
 						}
@@ -141,7 +141,7 @@ void __EntryFunction__()
 				func_1();
 				if (fVar6 > 2500f)
 				{
-					GAMEPLAY::SET_BIT(&uLocal_216, 1);
+					MISC::SET_BIT(&uLocal_216, 1);
 				}
 			}
 		}
@@ -156,9 +156,9 @@ void func_1()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(uLocal_48))
 		{
-			UI::SET_TEXT_RENDER_ID(uLocal_218);
+			HUD::SET_TEXT_RENDER_ID(uLocal_218);
 			GRAPHICS::DRAW_SCALEFORM_MOVIE(uLocal_219, 0.08f, 0.17f, 0.27f, 0.45f, 255, 255, 255, 255, 0);
-			UI::SET_TEXT_RENDER_ID(UI::GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID());
+			HUD::SET_TEXT_RENDER_ID(HUD::GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID());
 		}
 	}
 }
@@ -180,11 +180,11 @@ void func_3(int iParam0, bool bParam1)
 	{
 		if (bParam1)
 		{
-			GAMEPLAY::SET_BIT(&(Global_111638.f_24990), iVar0);
+			MISC::SET_BIT(&(Global_111638.f_24990), iVar0);
 		}
 		else
 		{
-			GAMEPLAY::CLEAR_BIT(&(Global_111638.f_24990), iVar0);
+			MISC::CLEAR_BIT(&(Global_111638.f_24990), iVar0);
 		}
 	}
 	else
@@ -192,11 +192,11 @@ void func_3(int iParam0, bool bParam1)
 		iVar0 = (iVar0 - 31);
 		if (bParam1)
 		{
-			GAMEPLAY::SET_BIT(&(Global_111638.f_24990.f_1), iVar0);
+			MISC::SET_BIT(&(Global_111638.f_24990.f_1), iVar0);
 		}
 		else
 		{
-			GAMEPLAY::CLEAR_BIT(&(Global_111638.f_24990.f_1), iVar0);
+			MISC::CLEAR_BIT(&(Global_111638.f_24990.f_1), iVar0);
 		}
 	}
 }
@@ -281,9 +281,9 @@ int func_5(char* sParam0, int iParam1, bool bParam2)
 		Global_20801 = Global_20802;
 		if (Global_20811)
 		{
-			GAMEPLAY::CLEAR_BIT(&Global_7356, 20);
-			GAMEPLAY::CLEAR_BIT(&Global_7357, 17);
-			GAMEPLAY::CLEAR_BIT(&Global_7358, 0);
+			MISC::CLEAR_BIT(&Global_7356, 20);
+			MISC::CLEAR_BIT(&Global_7357, 17);
+			MISC::CLEAR_BIT(&Global_7358, 0);
 			if (bParam2)
 			{
 				func_15();
@@ -316,7 +316,7 @@ int func_5(char* sParam0, int iParam1, bool bParam2)
 				{
 					return 0;
 				}
-				if (AI::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID()))
+				if (TASK::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID()))
 				{
 					return 0;
 				}
@@ -377,7 +377,7 @@ int func_5(char* sParam0, int iParam1, bool bParam2)
 					default:
 						break;
 				}
-				if (GAMEPLAY::IS_BIT_SET(Global_7356, 9))
+				if (MISC::IS_BIT_SET(Global_7356, 9))
 				{
 					return 0;
 				}
@@ -442,7 +442,7 @@ int func_7()
 	{
 		return 0;
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_1628237[PLAYER::PLAYER_ID()].f_1, 7))
+	if (MISC::IS_BIT_SET(Global_1628237[PLAYER::PLAYER_ID()].f_1, 7))
 	{
 		return 0;
 	}
@@ -460,7 +460,7 @@ bool func_8(int iParam0)
 
 bool func_9(int iParam0, int iParam1)
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1628237[iParam0].f_11.f_4, iParam1);
+	return MISC::IS_BIT_SET(Global_1628237[iParam0].f_11.f_4, iParam1);
 }
 
 int func_10()
@@ -500,7 +500,7 @@ void func_12()
 	Global_21821 = 0;
 	Global_20854 = 0;
 	Global_20855 = 0;
-	GAMEPLAY::CLEAR_BIT(&Global_7357, 16);
+	MISC::CLEAR_BIT(&Global_7357, 16);
 }
 
 int func_13()
@@ -621,7 +621,7 @@ bool func_18(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_1377170.f_1048, iParam0);
+	return MISC::IS_BIT_SET(Global_1377170.f_1048, iParam0);
 }
 
 void func_19()
@@ -795,11 +795,11 @@ void func_28(var uParam0, int iParam1, var uParam2, char* sParam3, int iParam4, 
 
 bool func_29(bool bParam0)
 {
-	if (!bParam0 && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-448212099) > 0)
+	if (!bParam0 && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-448212099) > 0)
 	{
 		return 1;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_76870, 0);
+	return MISC::IS_BIT_SET(Global_76870, 0);
 }
 
 void func_30()
@@ -826,9 +826,9 @@ void func_31()
 
 void func_32()
 {
-	if (UI::IS_NAMED_RENDERTARGET_REGISTERED("tvscreen"))
+	if (HUD::IS_NAMED_RENDERTARGET_REGISTERED("tvscreen"))
 	{
-		UI::RELEASE_NAMED_RENDERTARGET("tvscreen");
+		HUD::RELEASE_NAMED_RENDERTARGET("tvscreen");
 	}
 }
 

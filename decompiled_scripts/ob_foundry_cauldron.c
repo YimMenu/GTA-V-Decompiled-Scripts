@@ -9,7 +9,7 @@ void __EntryFunction__()
 		SYSTEM::WAIT(0);
 		if (ENTITY::DOES_ENTITY_EXIST(uScriptParam_0))
 		{
-			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(uScriptParam_0) && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1986443536) == 0)
+			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(uScriptParam_0) && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1986443536) == 0)
 			{
 				switch (iLocal_2)
 				{
@@ -98,7 +98,7 @@ void func_2(char* sParam0)
 
 void func_3(var uParam0)
 {
-	if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0, uParam0))
+	if (MISC::ARE_STRINGS_EQUAL(uParam0, uParam0))
 	{
 	}
 }

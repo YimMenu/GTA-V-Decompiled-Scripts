@@ -38,12 +38,12 @@ void __EntryFunction__()
 				case 0:
 					func_11(&uVar0, "OFFR_BLIP_R5", 255, 0, 255, 255, 0);
 					func_10(&uVar0);
-					iLocal_46 = GAMEPLAY::GET_GAME_TIMER();
+					iLocal_46 = MISC::GET_GAME_TIMER();
 					iLocal_45 = 1;
 					break;
 				
 				case 1:
-					if ((GAMEPLAY::GET_GAME_TIMER() - iLocal_46) > 3000)
+					if ((MISC::GET_GAME_TIMER() - iLocal_46) > 3000)
 					{
 						func_9(&uVar0);
 						iLocal_45 = 2;
@@ -64,12 +64,12 @@ int func_1(var uParam0, bool bParam1)
 	{
 		func_6(&(uParam0->f_2));
 	}
-	UI::HIDE_HUD_COMPONENT_THIS_FRAME(14);
-	GRAPHICS::_SET_2D_LAYER(1);
+	HUD::HIDE_HUD_COMPONENT_THIS_FRAME(14);
+	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(1);
 	GRAPHICS::DRAW_SCALEFORM_MOVIE(*uParam0, 0.5f, 0.5f, 1f, 1f, 255, 255, 255, 0, 0);
 	if (bParam1)
 	{
-		if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
+		if (PAD::IS_CONTROL_PRESSED(2, 201))
 		{
 			return 0;
 		}
@@ -103,7 +103,7 @@ float func_3(var uParam0)
 		}
 		else
 		{
-			return (func_4(GAMEPLAY::IS_BIT_SET(*uParam0, 4)) - uParam0->f_1);
+			return (func_4(MISC::IS_BIT_SET(*uParam0, 4)) - uParam0->f_1);
 		}
 	}
 	return uParam0->f_1;
@@ -113,7 +113,7 @@ float func_4(bool bParam0)
 {
 	if (bParam0)
 	{
-		fVar0 = SYSTEM::TO_FLOAT(GAMEPLAY::GET_GAME_TIMER());
+		fVar0 = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
 		fVar1 = (fVar0 / 1000f);
 		return fVar1;
 	}
@@ -124,12 +124,12 @@ float func_4(bool bParam0)
 		fVar4 = (fVar3 / 1000f);
 		return fVar4;
 	}
-	return (SYSTEM::TO_FLOAT(GAMEPLAY::GET_GAME_TIMER()) / 1000f);
+	return (SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f);
 }
 
 bool func_5(var uParam0)
 {
-	return GAMEPLAY::IS_BIT_SET(*uParam0, 2);
+	return MISC::IS_BIT_SET(*uParam0, 2);
 }
 
 void func_6(var uParam0)
@@ -139,53 +139,53 @@ void func_6(var uParam0)
 
 void func_7(var uParam0, float fParam1)
 {
-	uParam0->f_1 = (func_4(GAMEPLAY::IS_BIT_SET(*uParam0, 4)) - fParam1);
-	GAMEPLAY::SET_BIT(uParam0, 1);
-	GAMEPLAY::CLEAR_BIT(uParam0, 2);
+	uParam0->f_1 = (func_4(MISC::IS_BIT_SET(*uParam0, 4)) - fParam1);
+	MISC::SET_BIT(uParam0, 1);
+	MISC::CLEAR_BIT(uParam0, 2);
 	uParam0->f_2 = 0f;
 }
 
 bool func_8(var uParam0)
 {
-	return GAMEPLAY::IS_BIT_SET(*uParam0, 1);
+	return MISC::IS_BIT_SET(*uParam0, 1);
 }
 
 void func_9(var uParam0)
 {
 	uParam0->f_1 = 300;
 	func_6(&(uParam0->f_2));
-	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(*uParam0, "SPLASH_TEXT_TRANSITION_OUT");
-	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(300);
-	GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_TRANSITION_OUT");
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(300);
+	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 }
 
 void func_10(var uParam0)
 {
-	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(*uParam0, "SPLASH_TEXT_TRANSITION_IN");
-	GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_TRANSITION_IN");
+	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 }
 
 void func_11(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, bool bParam6)
 {
 	uParam0->f_1 = -1;
-	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(*uParam0, "SPLASH_TEXT_LABEL");
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_LABEL");
 	func_12(sParam1);
-	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(iParam2);
-	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(iParam3);
-	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(iParam4);
-	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(iParam5);
-	GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam2);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam3);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam4);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam5);
+	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	if (bParam6)
 	{
-		GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(*uParam0, "SPLASH_TEXT_TRANSITION_IN");
-		GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_TRANSITION_IN");
+		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	}
 }
 
 void func_12(var uParam0)
 {
-	GRAPHICS::_BEGIN_TEXT_COMMAND_SCALEFORM(uParam0);
-	GRAPHICS::_END_TEXT_COMMAND_SCALEFORM();
+	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(uParam0);
+	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 }
 
 var func_13()

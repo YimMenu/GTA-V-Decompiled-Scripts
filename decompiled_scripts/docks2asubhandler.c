@@ -6,9 +6,9 @@ void __EntryFunction__()
 	}
 	uLocal_0 = ScriptParam_0;
 	uLocal_1 = ScriptParam_0.f_1;
-	while (!GAMEPLAY::IS_BIT_SET(uLocal_2, 1))
+	while (!MISC::IS_BIT_SET(uLocal_2, 1))
 	{
-		if (!GAMEPLAY::IS_BIT_SET(uLocal_2, 0))
+		if (!MISC::IS_BIT_SET(uLocal_2, 0))
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(uLocal_0))
 			{
@@ -23,7 +23,7 @@ void __EntryFunction__()
 						ENTITY::FREEZE_ENTITY_POSITION(uLocal_1, 1);
 						ENTITY::SET_ENTITY_PROOFS(uLocal_1, 1, 1, 1, 1, 1, 0, 0, 0);
 					}
-					GAMEPLAY::SET_BIT(&uLocal_2, 0);
+					MISC::SET_BIT(&uLocal_2, 0);
 				}
 			}
 		}
@@ -34,16 +34,16 @@ void __EntryFunction__()
 				fVar0 = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uLocal_0, 1));
 				if (fVar0 > 90000f)
 				{
-					GAMEPLAY::SET_BIT(&uLocal_2, 1);
+					MISC::SET_BIT(&uLocal_2, 1);
 				}
 				else if (fVar0 > 40000f && !ENTITY::IS_ENTITY_ON_SCREEN(uLocal_0))
 				{
-					GAMEPLAY::SET_BIT(&uLocal_2, 1);
+					MISC::SET_BIT(&uLocal_2, 1);
 				}
 			}
 			else
 			{
-				GAMEPLAY::SET_BIT(&uLocal_2, 1);
+				MISC::SET_BIT(&uLocal_2, 1);
 			}
 		}
 		SYSTEM::WAIT(0);

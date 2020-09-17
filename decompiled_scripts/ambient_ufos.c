@@ -131,7 +131,7 @@ void __EntryFunction__()
 				}
 				else
 				{
-					iLocal_74 = GAMEPLAY::GET_GAME_TIMER();
+					iLocal_74 = MISC::GET_GAME_TIMER();
 					iLocal_75 = 0;
 					iLocal_77 = 3;
 				}
@@ -140,12 +140,12 @@ void __EntryFunction__()
 			case 3:
 				if (func_10(PLAYER::PLAYER_PED_ID(), Local_78[iLocal_76], fLocal_87))
 				{
-					iLocal_75 = (GAMEPLAY::GET_GAME_TIMER() - iLocal_74);
+					iLocal_75 = (MISC::GET_GAME_TIMER() - iLocal_74);
 					if (iLocal_75 >= iLocal_91)
 					{
 						iLocal_77 = 4;
 						iLocal_92 = AUDIO::GET_SOUND_ID();
-						iLocal_93 = GAMEPLAY::GET_GAME_TIMER();
+						iLocal_93 = MISC::GET_GAME_TIMER();
 						if (iLocal_76 == 0)
 						{
 							AUDIO::PLAY_SOUND_FROM_COORD(iLocal_92, "SPECIAL_EVIL_UFO_DEATH_RAY", Local_78[iLocal_76], 0, 0, 0, 0);
@@ -168,7 +168,7 @@ void __EntryFunction__()
 				func_5();
 				func_7();
 				func_6();
-				if (GAMEPLAY::GET_GAME_TIMER() > (iLocal_93 + iLocal_94))
+				if (MISC::GET_GAME_TIMER() > (iLocal_93 + iLocal_94))
 				{
 					func_4(&iLocal_92);
 				}
@@ -257,18 +257,18 @@ void func_6()
 {
 	if (bLocal_104)
 	{
-		if (GAMEPLAY::GET_GAME_TIMER() > iLocal_99)
+		if (MISC::GET_GAME_TIMER() > iLocal_99)
 		{
 			if (iLocal_101 != -1)
 			{
 				func_4(&iLocal_101);
-				iLocal_99 = (GAMEPLAY::GET_GAME_TIMER() + iLocal_98);
+				iLocal_99 = (MISC::GET_GAME_TIMER() + iLocal_98);
 			}
 			else
 			{
 				iLocal_101 = AUDIO::GET_SOUND_ID();
 				AUDIO::PLAY_SOUND(iLocal_101, "ent_amb_elec_crackle", 0, 0, 0, 1);
-				iLocal_99 = (GAMEPLAY::GET_GAME_TIMER() + iLocal_96);
+				iLocal_99 = (MISC::GET_GAME_TIMER() + iLocal_96);
 			}
 		}
 	}
@@ -278,18 +278,18 @@ void func_7()
 {
 	if (bLocal_103)
 	{
-		if (GAMEPLAY::GET_GAME_TIMER() > iLocal_100)
+		if (MISC::GET_GAME_TIMER() > iLocal_100)
 		{
 			if (iLocal_102 != -1)
 			{
 				func_4(&iLocal_102);
-				iLocal_100 = (GAMEPLAY::GET_GAME_TIMER() + iLocal_97);
+				iLocal_100 = (MISC::GET_GAME_TIMER() + iLocal_97);
 			}
 			else
 			{
 				iLocal_102 = AUDIO::GET_SOUND_ID();
 				AUDIO::PLAY_SOUND(iLocal_102, "spl_stun_npc_master", 0, 0, 0, 1);
-				iLocal_100 = (GAMEPLAY::GET_GAME_TIMER() + iLocal_95);
+				iLocal_100 = (MISC::GET_GAME_TIMER() + iLocal_95);
 			}
 		}
 	}

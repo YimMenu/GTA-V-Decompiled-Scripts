@@ -38,7 +38,7 @@ void __EntryFunction__()
 					case 1:
 						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(uScriptParam_0))
 						{
-							if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-622120100) > 0)
+							if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-622120100) > 0)
 							{
 								STREAMING::REQUEST_ANIM_DICT("map_objects");
 								if (STREAMING::HAS_ANIM_DICT_LOADED("map_objects"))
@@ -52,7 +52,7 @@ void __EntryFunction__()
 					case 2:
 						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(uScriptParam_0))
 						{
-							if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-622120100) > 0)
+							if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-622120100) > 0)
 							{
 								if (Global_95175)
 								{
@@ -75,7 +75,7 @@ void __EntryFunction__()
 							if (!func_2(Var3, Var0, 0.1f, 0))
 							{
 								Var6 = { Var0 - Var3 };
-								ENTITY::SET_ENTITY_COORDS(uLocal_3, Var3 + func_1(Var6) * FtoV(GAMEPLAY::GET_FRAME_TIME()) * Vector(fVar9, fVar9, fVar9), 1, 0, 0, 1);
+								ENTITY::SET_ENTITY_COORDS(uLocal_3, Var3 + func_1(Var6) * FtoV(MISC::GET_FRAME_TIME()) * Vector(fVar9, fVar9, fVar9), 1, 0, 0, 1);
 							}
 							else
 							{
@@ -126,20 +126,20 @@ int func_2(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (GAMEPLAY::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
 		{
-			if (GAMEPLAY::ABSF((Param0.y - Param3.y)) <= fParam6)
+			if (MISC::ABSF((Param0.y - Param3.y)) <= fParam6)
 			{
-				if (GAMEPLAY::ABSF((Param0.z - Param3.z)) <= fParam6)
+				if (MISC::ABSF((Param0.z - Param3.z)) <= fParam6)
 				{
 					return 1;
 				}
 			}
 		}
 	}
-	else if (GAMEPLAY::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
 	{
-		if (GAMEPLAY::ABSF((Param0.y - Param3.y)) <= fParam6)
+		if (MISC::ABSF((Param0.y - Param3.y)) <= fParam6)
 		{
 			return 1;
 		}
@@ -174,7 +174,7 @@ void func_5(char* sParam0)
 
 void func_6(var uParam0)
 {
-	if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0, uParam0))
+	if (MISC::ARE_STRINGS_EQUAL(uParam0, uParam0))
 	{
 	}
 }

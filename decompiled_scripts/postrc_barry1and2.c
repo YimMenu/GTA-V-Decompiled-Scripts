@@ -24,7 +24,7 @@ void __EntryFunction__()
 	sLocal_45 = "idle";
 	Local_49 = { 189.5964f, -956.0344f, 29.5771f };
 	Local_52 = { 190.2424f, -956.379f, 28.63f };
-	CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
+	PAD::DISABLE_CONTROL_ACTION(0, 26, 1);
 	if (func_25(PLAYER::PLAYER_PED_ID()))
 	{
 		if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) != 0)
@@ -37,32 +37,32 @@ void __EntryFunction__()
 		func_22(0);
 	}
 	STREAMING::REQUEST_ANIM_DICT(sLocal_44);
-	UI::REQUEST_ADDITIONAL_TEXT("BARY1", 7);
-	while (!STREAMING::HAS_ANIM_DICT_LOADED(sLocal_44) || !UI::HAS_ADDITIONAL_TEXT_LOADED(7))
+	HUD::REQUEST_ADDITIONAL_TEXT("BARY1", 7);
+	while (!STREAMING::HAS_ANIM_DICT_LOADED(sLocal_44) || !HUD::HAS_ADDITIONAL_TEXT_LOADED(7))
 	{
-		CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
+		PAD::DISABLE_CONTROL_ACTION(0, 26, 1);
 		SYSTEM::WAIT(0);
 	}
-	CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
+	PAD::DISABLE_CONTROL_ACTION(0, 26, 1);
 	func_25(PLAYER::PLAYER_PED_ID());
-	iLocal_46 = GAMEPLAY::GET_GAME_TIMER() + 13000;
-	iLocal_47 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5);
+	iLocal_46 = MISC::GET_GAME_TIMER() + 13000;
+	iLocal_47 = MISC::GET_RANDOM_INT_IN_RANGE(0, 5);
 	func_19();
 	while (!func_13(&uLocal_43, 49, Local_52, func_18(1.12f), 0))
 	{
-		CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
+		PAD::DISABLE_CONTROL_ACTION(0, 26, 1);
 		SYSTEM::WAIT(0);
 	}
-	CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
+	PAD::DISABLE_CONTROL_ACTION(0, 26, 1);
 	func_12();
-	iLocal_48 = GAMEPLAY::GET_GAME_TIMER() + 1000;
-	CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
+	iLocal_48 = MISC::GET_GAME_TIMER() + 1000;
+	PAD::DISABLE_CONTROL_ACTION(0, 26, 1);
 	while (true)
 	{
 		func_25(PLAYER::PLAYER_PED_ID());
-		if (GAMEPLAY::GET_GAME_TIMER() < iLocal_48)
+		if (MISC::GET_GAME_TIMER() < iLocal_48)
 		{
-			CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
+			PAD::DISABLE_CONTROL_ACTION(0, 26, 1);
 		}
 		func_11();
 		if (!func_25(uLocal_43))
@@ -112,17 +112,17 @@ float func_2(var uParam0, struct<3> Param1, int iParam4)
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0, 0) };
 	}
-	return GAMEPLAY::GET_DISTANCE_BETWEEN_COORDS(Var0, Param1, iParam4);
+	return MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param1, iParam4);
 }
 
 int func_3()
 {
-	if (((((func_10(PLAYER::PLAYER_PED_ID()) && func_10(uLocal_43)) && !func_9()) && GAMEPLAY::GET_GAME_TIMER() > iLocal_46) && func_8(PLAYER::PLAYER_PED_ID(), uLocal_43, 1) < 20f) && !GAMEPLAY::GET_MISSION_FLAG())
+	if (((((func_10(PLAYER::PLAYER_PED_ID()) && func_10(uLocal_43)) && !func_9()) && MISC::GET_GAME_TIMER() > iLocal_46) && func_8(PLAYER::PLAYER_PED_ID(), uLocal_43, 1) < 20f) && !MISC::GET_MISSION_FLAG())
 	{
 		uVar0 = 16;
 		func_7(&uVar0, 0, uLocal_43, "BARRY", 0, 1);
 		func_4(&uVar0, "BARY1AU", func_6(), 7, 0, 0);
-		iLocal_46 = (GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(12000, 18000));
+		iLocal_46 = (MISC::GET_GAME_TIMER() + MISC::GET_RANDOM_INT_IN_RANGE(12000, 18000));
 		return 1;
 	}
 	return 0;
@@ -138,7 +138,7 @@ void func_4(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4,
 			iParam3 = 7;
 		}
 	}
-	GAMEPLAY::SET_BIT(&Global_19671, 0);
+	MISC::SET_BIT(&Global_19671, 0);
 	Global_20808 = iParam3;
 	StringCopy(&Global_20795, sParam2, 24);
 }
@@ -258,7 +258,7 @@ float func_8(var uParam0, var uParam1, int iParam2)
 	{
 		Var3 = { ENTITY::GET_ENTITY_COORDS(uParam1, 0) };
 	}
-	return GAMEPLAY::GET_DISTANCE_BETWEEN_COORDS(Var0, Var3, iParam2);
+	return MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Var3, iParam2);
 }
 
 int func_9()
@@ -321,8 +321,8 @@ void func_12()
 		ENTITY::SET_ENTITY_COORDS(uLocal_43, Local_52, 1, 0, 0, 1);
 		ENTITY::SET_ENTITY_HEADING(uLocal_43, func_18(1.12f));
 		ENTITY::FREEZE_ENTITY_POSITION(uLocal_43, 1);
-		AI::TASK_PLAY_ANIM(uLocal_43, sLocal_44, sLocal_45, 8f, -8f, -1, 9, 0, 0, 0, 0);
-		AI::TASK_LOOK_AT_ENTITY(uLocal_43, PLAYER::PLAYER_PED_ID(), -1, 0, 2);
+		TASK::TASK_PLAY_ANIM(uLocal_43, sLocal_44, sLocal_45, 8f, -8f, -1, 9, 0, 0, 0, 0);
+		TASK::TASK_LOOK_AT_ENTITY(uLocal_43, PLAYER::PLAYER_PED_ID(), -1, 0, 2);
 	}
 }
 
@@ -522,7 +522,7 @@ void func_22(bool bParam0)
 		func_1(&uLocal_42, 0);
 	}
 	STREAMING::REMOVE_ANIM_DICT(sLocal_44);
-	UI::CLEAR_ADDITIONAL_TEXT(7, 0);
+	HUD::CLEAR_ADDITIONAL_TEXT(7, 0);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
@@ -535,7 +535,7 @@ void func_23(var uParam0, int iParam1, int iParam2, int iParam3)
 			ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(*uParam0, 0, 1);
 			if (iParam3 == 0)
 			{
-				AI::CLEAR_PED_SECONDARY_TASK(*uParam0);
+				TASK::CLEAR_PED_SECONDARY_TASK(*uParam0);
 			}
 			PED::SET_PED_KEEP_TASK(*uParam0, iParam1);
 			if (iParam2 == 1)

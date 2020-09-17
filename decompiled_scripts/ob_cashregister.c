@@ -14,7 +14,7 @@ void __EntryFunction__()
 	iLocal_17 = -1;
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (GAMEPLAY::IS_BIT_SET(Global_1389296, 1))
+		if (MISC::IS_BIT_SET(Global_1389296, 1))
 		{
 			func_18();
 		}
@@ -22,7 +22,7 @@ void __EntryFunction__()
 		{
 			NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, 0, -1);
 			func_15(0, -1, 0);
-			GAMEPLAY::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
+			MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
 			iLocal_22 = 1;
 		}
 	}
@@ -82,15 +82,15 @@ void func_1()
 {
 	iVar0 = 289396019;
 	iVar1 = 341217064;
-	iVar3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(70, 121);
+	iVar3 = MISC::GET_RANDOM_INT_IN_RANGE(70, 121);
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		iVar0 = -295781225;
-		iVar3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(50, 101);
+		iVar3 = MISC::GET_RANDOM_INT_IN_RANGE(50, 101);
 		iVar3 = func_2(iVar3, 1);
 	}
-	GAMEPLAY::SET_BIT(&uVar2, 3);
-	GAMEPLAY::SET_BIT(&uVar2, 4);
+	MISC::SET_BIT(&uVar2, 3);
+	MISC::SET_BIT(&uVar2, 4);
 	STREAMING::REQUEST_MODEL(iVar0);
 	while (!STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
@@ -166,7 +166,7 @@ int func_3()
 	}
 	if (func_4() != 0)
 	{
-		if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(func_4()) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(func_4()) == 0)
 		{
 			return 1;
 		}

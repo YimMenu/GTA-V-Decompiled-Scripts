@@ -31,7 +31,7 @@ int func_1(var uParam0, var uParam1)
 {
 	if (uParam0->f_2)
 	{
-		if (GAMEPLAY::ABSI(NETWORK::GET_TIME_DIFFERENCE(GAMEPLAY::GET_GAME_TIMER(), uParam0->f_1)) >= uParam0->f_3)
+		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), uParam0->f_1)) >= uParam0->f_3)
 		{
 			func_5();
 		}
@@ -58,22 +58,22 @@ int func_1(var uParam0, var uParam1)
 					{
 						if (iVar12 != 0 && Var3.f_5 != 0)
 						{
-							if (NETWORK::_NETWORK_ACCESS_TUNABLE_FLOAT_HASH(iVar12, Var3.f_5, &fVar0))
+							if (NETWORK::NETWORK_ACCESS_TUNABLE_FLOAT_HASH(iVar12, Var3.f_5, &fVar0))
 							{
 								if (fVar0 > Var3.f_1 || fVar0 < Var3)
 								{
 									uParam0->f_2 = 1;
-									uParam0->f_3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 30000);
-									uParam0->f_1 = GAMEPLAY::GET_GAME_TIMER();
+									uParam0->f_3 = MISC::GET_RANDOM_INT_IN_RANGE(20000, 30000);
+									uParam0->f_1 = MISC::GET_GAME_TIMER();
 								}
 							}
-							else if (NETWORK::_NETWORK_ACCESS_TUNABLE_INT_HASH(iVar12, Var3.f_5, &iVar1))
+							else if (NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(iVar12, Var3.f_5, &iVar1))
 							{
 								if (iVar1 > Var3.f_3 || iVar1 < Var3.f_2)
 								{
 									uParam0->f_2 = 1;
-									uParam0->f_3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 30000);
-									uParam0->f_1 = GAMEPLAY::GET_GAME_TIMER();
+									uParam0->f_3 = MISC::GET_RANDOM_INT_IN_RANGE(20000, 30000);
+									uParam0->f_1 = MISC::GET_GAME_TIMER();
 								}
 							}
 						}
@@ -21324,7 +21324,7 @@ int func_4(int iParam0)
 	{
 		StringCopy(&cVar0, "CONTENT_MODIFIER_", 64);
 		StringIntConCat(&cVar0, (iParam0 - 28), 64);
-		return GAMEPLAY::GET_HASH_KEY(&cVar0);
+		return MISC::GET_HASH_KEY(&cVar0);
 	}
 	switch (iParam0)
 	{
@@ -21448,8 +21448,8 @@ int func_4(int iParam0)
 
 void func_5()
 {
-	GAMEPLAY::_0xB3CD58CCA6CDA852();
-	GAMEPLAY::ADD_STUNT_JUMP(-9f, -9f, -9f, -10f, -10f, -10f, -25f, -25f, -25f, -28f, -28f, -28f, 0f, 0f, 0f, 0, 0, 0);
+	MISC::_CLEAR_TACTICAL_ANALYSIS_POINTS();
+	MISC::ADD_STUNT_JUMP(-9f, -9f, -9f, -10f, -10f, -10f, -25f, -25f, -25f, -28f, -28f, -28f, 0f, 0f, 0f, 0, 0, 0);
 	PED::ADD_SCENARIO_BLOCKING_AREA(-9f, -9f, -9f, -10f, -10f, -10f, 0, 1, 1, 1);
 	func_5();
 }
@@ -21498,7 +21498,7 @@ int func_7()
 	}
 	if (func_8() != 0)
 	{
-		if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(func_8()) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(func_8()) == 0)
 		{
 			return 1;
 		}

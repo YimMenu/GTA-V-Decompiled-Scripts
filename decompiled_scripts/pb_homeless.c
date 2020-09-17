@@ -25,7 +25,7 @@ void __EntryFunction__()
 	iLocal_41 = 49;
 	iLocal_42 = 64;
 	Local_47 = { ScriptParam_0.f_1[0] };
-	iLocal_44 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 2);
+	iLocal_44 = MISC::GET_RANDOM_INT_IN_RANGE(0, 2);
 	func_28();
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
 	{
@@ -95,20 +95,20 @@ void func_1()
 					if (iLocal_46 == 0)
 					{
 					}
-					AI::OPEN_SEQUENCE_TASK(&uLocal_57);
-					AI::TASK_TURN_PED_TO_FACE_ENTITY(0, PLAYER::PLAYER_PED_ID(), 0);
-					AI::TASK_PLAY_ANIM(0, "amb@drug_dealer", "beckon_03", 8f, -8f, -1, 0, 0, 0, 0, 0);
-					AI::CLOSE_SEQUENCE_TASK(uLocal_57);
-					AI::TASK_PERFORM_SEQUENCE(iLocal_54, uLocal_57);
-					AI::CLEAR_SEQUENCE_TASK(&uLocal_57);
+					TASK::OPEN_SEQUENCE_TASK(&uLocal_57);
+					TASK::TASK_TURN_PED_TO_FACE_ENTITY(0, PLAYER::PLAYER_PED_ID(), 0);
+					TASK::TASK_PLAY_ANIM(0, "amb@drug_dealer", "beckon_03", 8f, -8f, -1, 0, 0, 0, 0, 0);
+					TASK::CLOSE_SEQUENCE_TASK(uLocal_57);
+					TASK::TASK_PERFORM_SEQUENCE(iLocal_54, uLocal_57);
+					TASK::CLEAR_SEQUENCE_TASK(&uLocal_57);
 				}
 				else if (!ENTITY::IS_ENTITY_DEAD(uLocal_55, 0))
 				{
-					AI::TASK_TURN_PED_TO_FACE_ENTITY(iLocal_54, iLocal_55, 0);
+					TASK::TASK_TURN_PED_TO_FACE_ENTITY(iLocal_54, iLocal_55, 0);
 					if (iLocal_46 == 0)
 					{
 					}
-					AI::TASK_WANDER_STANDARD(iLocal_55, 1193033728, 0);
+					TASK::TASK_WANDER_STANDARD(iLocal_55, 1193033728, 0);
 					iLocal_44 = 0;
 				}
 			}
@@ -187,7 +187,7 @@ int func_3(var uParam0, struct<3> Param1, float fParam4, float fParam5, bool bPa
 	Var1 = { (fParam5 + 0.2f), (fParam5 + 0.2f), fVar0 };
 	if (!PED::IS_PED_INJURED(uParam0))
 	{
-		if ((((ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0, Param1), Var1, 0, 1, 0) && PED::_0xFCF37A457CB96DC0(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(uParam0, 1), fParam4)) && func_5(bParam6)) && !PED::IS_PED_RAGDOLL(uParam0)) && !AI::IS_PED_GETTING_UP(uParam0))
+		if ((((ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0, Param1), Var1, 0, 1, 0) && PED::IS_PED_HEADING_TOWARDS_POSITION(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(uParam0, 1), fParam4)) && func_5(bParam6)) && !PED::IS_PED_RAGDOLL(uParam0)) && !TASK::IS_PED_GETTING_UP(uParam0))
 		{
 			func_4(uParam0, 1);
 			return 1;
@@ -216,12 +216,12 @@ int func_5(bool bParam0)
 	{
 		if (bParam0)
 		{
-			if (AI::GET_PED_DESIRED_MOVE_BLEND_RATIO(PLAYER::PLAYER_PED_ID()) == 1f || AI::GET_PED_DESIRED_MOVE_BLEND_RATIO(PLAYER::PLAYER_PED_ID()) == 0f)
+			if (TASK::GET_PED_DESIRED_MOVE_BLEND_RATIO(PLAYER::PLAYER_PED_ID()) == 1f || TASK::GET_PED_DESIRED_MOVE_BLEND_RATIO(PLAYER::PLAYER_PED_ID()) == 0f)
 			{
 				return 1;
 			}
 		}
-		else if (AI::GET_PED_DESIRED_MOVE_BLEND_RATIO(PLAYER::PLAYER_PED_ID()) == 1f)
+		else if (TASK::GET_PED_DESIRED_MOVE_BLEND_RATIO(PLAYER::PLAYER_PED_ID()) == 1f)
 		{
 			return 1;
 		}
@@ -415,21 +415,21 @@ void func_7()
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_55, uLocal_53);
 			if (!ENTITY::IS_ENTITY_DEAD(iLocal_54, 0))
 			{
-				AI::OPEN_SEQUENCE_TASK(&uLocal_57);
-				AI::TASK_TURN_PED_TO_FACE_COORD(0, Local_50, 0);
-				AI::TASK_PLAY_ANIM(0, "amb@drug_dealer", "beckon_01", 8f, -8f, -1, 0, 0, 0, 0, 0);
-				AI::CLOSE_SEQUENCE_TASK(uLocal_57);
-				AI::TASK_PERFORM_SEQUENCE(iLocal_54, uLocal_57);
-				AI::CLEAR_SEQUENCE_TASK(&uLocal_57);
+				TASK::OPEN_SEQUENCE_TASK(&uLocal_57);
+				TASK::TASK_TURN_PED_TO_FACE_COORD(0, Local_50, 0);
+				TASK::TASK_PLAY_ANIM(0, "amb@drug_dealer", "beckon_01", 8f, -8f, -1, 0, 0, 0, 0, 0);
+				TASK::CLOSE_SEQUENCE_TASK(uLocal_57);
+				TASK::TASK_PERFORM_SEQUENCE(iLocal_54, uLocal_57);
+				TASK::CLEAR_SEQUENCE_TASK(&uLocal_57);
 			}
 			if (!ENTITY::IS_ENTITY_DEAD(iLocal_55, 0))
 			{
-				AI::OPEN_SEQUENCE_TASK(&uLocal_57);
-				AI::TASK_TURN_PED_TO_FACE_COORD(0, Local_47, 0);
-				AI::TASK_PLAY_ANIM(0, "amb@drug_dealer", "beckon_02", 8f, -8f, -1, 0, 0, 0, 0, 0);
-				AI::CLOSE_SEQUENCE_TASK(uLocal_57);
-				AI::TASK_PERFORM_SEQUENCE(iLocal_55, uLocal_57);
-				AI::CLEAR_SEQUENCE_TASK(&uLocal_57);
+				TASK::OPEN_SEQUENCE_TASK(&uLocal_57);
+				TASK::TASK_TURN_PED_TO_FACE_COORD(0, Local_47, 0);
+				TASK::TASK_PLAY_ANIM(0, "amb@drug_dealer", "beckon_02", 8f, -8f, -1, 0, 0, 0, 0, 0);
+				TASK::CLOSE_SEQUENCE_TASK(uLocal_57);
+				TASK::TASK_PERFORM_SEQUENCE(iLocal_55, uLocal_57);
+				TASK::CLEAR_SEQUENCE_TASK(&uLocal_57);
 			}
 		}
 		iLocal_45 = 1;
@@ -585,14 +585,14 @@ int func_11()
 {
 	if (Global_95666 != -1)
 	{
-		return GAMEPLAY::IS_BIT_SET(Global_89532[Global_95666].f_15, 13);
+		return MISC::IS_BIT_SET(Global_89532[Global_95666].f_15, 13);
 	}
 	return 0;
 }
 
 int func_12()
 {
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1424752554) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1424752554) > 0)
 	{
 		return 1;
 	}
@@ -633,7 +633,7 @@ var func_16(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_1377170.f_1048, iParam0);
+	return MISC::IS_BIT_SET(Global_1377170.f_1048, iParam0);
 }
 
 var func_17()

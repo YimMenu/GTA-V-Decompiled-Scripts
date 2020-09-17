@@ -12,7 +12,7 @@ void __EntryFunction__()
 	iLocal_11 = 12;
 	fLocal_16 = -99f;
 	fLocal_26 = -1f;
-	GAMEPLAY::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
+	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(32))
 	{
 		func_31();
@@ -58,7 +58,7 @@ int func_1()
 	{
 		return 1;
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1071358210) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1071358210) > 0)
 	{
 		return 1;
 	}
@@ -75,7 +75,7 @@ void func_2()
 	{
 		return;
 	}
-	iVar1 = GAMEPLAY::GET_GAME_TIMER();
+	iVar1 = MISC::GET_GAME_TIMER();
 	if (Global_42564 > iVar1 || Global_42564 == -1)
 	{
 		if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
@@ -104,7 +104,7 @@ void func_2()
 		{
 			fVar6 = (Global_42568 - Global_42567);
 			Global_42567 = (Global_42567 + (fVar6 * 0.1f));
-			if (GAMEPLAY::ABSF((Global_42567 - Global_42568)) < 0.01f)
+			if (MISC::ABSF((Global_42567 - Global_42568)) < 0.01f)
 			{
 				Global_42567 = Global_42568;
 			}
@@ -113,7 +113,7 @@ void func_2()
 		{
 			CAM::SHAKE_GAMEPLAY_CAM("DRUNK_SHAKE", ((Global_42567 * fVar3) * fVar5));
 		}
-		if ((GAMEPLAY::GET_GAME_TIMER() % 100) == 0)
+		if ((MISC::GET_GAME_TIMER() % 100) == 0)
 		{
 			if (Global_42564 == -1)
 			{
@@ -149,20 +149,20 @@ void func_2()
 				CAM::SET_CAM_SHAKE_AMPLITUDE(Global_42563, ((Global_42567 * fVar3) * fVar5));
 			}
 		}
-		if (!GAMEPLAY::IS_STRING_NULL_OR_EMPTY(&Global_42590) && !GAMEPLAY::IS_STRING_NULL_OR_EMPTY(&Global_42574))
+		if (!MISC::IS_STRING_NULL_OR_EMPTY(&Global_42590) && !MISC::IS_STRING_NULL_OR_EMPTY(&Global_42574))
 		{
 			AUDIO::START_AUDIO_SCENE(&Global_42574);
 			StringCopy(&Global_42590, "", 16);
 		}
-		CAM::_0xF4F2C0D4EE209E20();
+		CAM::INVALIDATE_IDLE_CAM();
 		if (Global_42569 > 0f)
 		{
 			if (fLocal_16 != Global_42569)
 			{
-				if (GRAPHICS::_0x459FD2C8D0AB78BC() != -1)
+				if (GRAPHICS::GET_TIMECYCLE_TRANSITION_MODIFIER_INDEX() != -1)
 				{
 				}
-				else if (!unk_0x98D18905BF723B99())
+				else if (!GRAPHICS::_0x98D18905BF723B99())
 				{
 					GRAPHICS::SET_TRANSITION_TIMECYCLE_MODIFIER(&Global_42570, 15f);
 					fLocal_16 = Global_42569;
@@ -170,11 +170,11 @@ void func_2()
 			}
 			else
 			{
-				if (GRAPHICS::_0x459FD2C8D0AB78BC() != -1 && GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
+				if (GRAPHICS::GET_TIMECYCLE_TRANSITION_MODIFIER_INDEX() != -1 && GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
 					fLocal_16 = -99f;
 				}
-				AUDIO::_0x12561FCBB62D5B9C(2);
+				AUDIO::SET_AUDIO_SPECIAL_EFFECT_MODE(2);
 				iVar7 = (Global_42564 - iVar1);
 				if (iVar7 <= (Global_42565 / 2) && Global_42564 != -1)
 				{
@@ -194,7 +194,7 @@ void func_2()
 					{
 						Global_42564 += 1000;
 					}
-					else if (GRAPHICS::_0x459FD2C8D0AB78BC() != -1)
+					else if (GRAPHICS::GET_TIMECYCLE_TRANSITION_MODIFIER_INDEX() != -1)
 					{
 						Global_42564 += 1000;
 					}
@@ -237,12 +237,12 @@ void func_3(bool bParam0)
 	CAM::STOP_GAMEPLAY_CAM_SHAKING(1);
 	CAM::SET_CINEMATIC_CAM_SHAKE_AMPLITUDE(0f);
 	CAM::STOP_CINEMATIC_CAM_SHAKING(1);
-	AUDIO::_0x12561FCBB62D5B9C(0);
+	AUDIO::SET_AUDIO_SPECIAL_EFFECT_MODE(0);
 	if (AUDIO::IS_AUDIO_SCENE_ACTIVE("SAFEHOUSE_STONED_MICHAEL"))
 	{
 		AUDIO::STOP_AUDIO_SCENE("SAFEHOUSE_STONED_MICHAEL");
 	}
-	if (!GAMEPLAY::IS_STRING_NULL_OR_EMPTY(&Global_42574))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(&Global_42574))
 	{
 		if (AUDIO::IS_AUDIO_SCENE_ACTIVE(&Global_42574))
 		{
@@ -263,7 +263,7 @@ void func_3(bool bParam0)
 	}
 	if (bParam0)
 	{
-		if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1 || GRAPHICS::_0x459FD2C8D0AB78BC() != -1)
+		if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1 || GRAPHICS::GET_TIMECYCLE_TRANSITION_MODIFIER_INDEX() != -1)
 		{
 			GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();
 		}
@@ -441,7 +441,7 @@ int func_12(int iParam0)
 
 float func_13()
 {
-	iVar0 = GAMEPLAY::GET_GAME_TIMER();
+	iVar0 = MISC::GET_GAME_TIMER();
 	fVar1 = 1f;
 	iVar2 = (Global_42564 - iVar0);
 	if (iVar2 <= Global_42565)
@@ -724,7 +724,7 @@ void func_32()
 	Global_42595 = 0;
 	Global_42594 = 0;
 	Global_42355 = 0;
-	GAMEPLAY::TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME("drunk");
+	MISC::TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME("drunk");
 }
 
 void func_33()

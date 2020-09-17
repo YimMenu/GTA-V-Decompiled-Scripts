@@ -35,7 +35,7 @@ void __EntryFunction__()
 	{
 		func_20();
 	}
-	UI::REQUEST_ADDITIONAL_TEXT("FMMC", 2);
+	HUD::REQUEST_ADDITIONAL_TEXT("FMMC", 2);
 	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), 0, 0);
 	uLocal_223 = Global_4456448.f_2;
 	Global_1312441 = 0;
@@ -54,7 +54,7 @@ void __EntryFunction__()
 		{
 			func_19(&Local_102);
 			iLocal_222 = Global_4456448;
-			GAMEPLAY::CLEAR_BIT(&(Local_102.f_4), 0);
+			MISC::CLEAR_BIT(&(Local_102.f_4), 0);
 		}
 		if (func_18() == 3)
 		{
@@ -68,8 +68,8 @@ void __EntryFunction__()
 		switch (iLocal_220)
 		{
 			case 0:
-				UI::REQUEST_ADDITIONAL_TEXT("FMMC", 2);
-				if (UI::HAS_THIS_ADDITIONAL_TEXT_LOADED("FMMC", 2))
+				HUD::REQUEST_ADDITIONAL_TEXT("FMMC", 2);
+				if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("FMMC", 2))
 				{
 					iLocal_220 = 1;
 				}
@@ -81,7 +81,7 @@ void __EntryFunction__()
 					Local_102.f_5 = Global_4456448;
 					func_19(&Local_102);
 				}
-				UI::DISABLE_FRONTEND_THIS_FRAME();
+				HUD::DISABLE_FRONTEND_THIS_FRAME();
 				func_16(&Local_102);
 				Global_1653487 = 0;
 				Global_1653486 = 0;
@@ -157,7 +157,7 @@ void __EntryFunction__()
 				break;
 			
 			case 3:
-				if (CONTROLS::IS_CONTROL_JUST_PRESSED(2, 217))
+				if (PAD::IS_CONTROL_JUST_PRESSED(2, 217))
 				{
 					iLocal_220 = 1;
 				}
@@ -203,7 +203,7 @@ bool func_1()
 
 int func_2(var uParam0)
 {
-	if (!GAMEPLAY::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*uParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Race_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Race_Creator"))
@@ -212,13 +212,13 @@ int func_2(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Race_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Race_Creator");
-				GAMEPLAY::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(uParam0, 2);
 			}
 		}
 	}
-	else if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1141911594) == 0)
+	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1141911594) == 0)
 	{
-		GAMEPLAY::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(uParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -226,7 +226,7 @@ int func_2(var uParam0)
 
 int func_3()
 {
-	if (((((((SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1768762336) > 0 || SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1518439287) > 0) || SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1141911594) > 0) || SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-884469787) > 0) || SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(229048663) > 0) || SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1121276913) > 0) || SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1167339987) > 0) || SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1844397475) > 0)
+	if (((((((SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1768762336) > 0 || SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1518439287) > 0) || SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1141911594) > 0) || SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-884469787) > 0) || SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(229048663) > 0) || SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1121276913) > 0) || SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1167339987) > 0) || SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1844397475) > 0)
 	{
 		return 1;
 	}
@@ -244,7 +244,7 @@ int func_4()
 
 int func_5(var uParam0)
 {
-	if (!GAMEPLAY::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*uParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Deathmatch_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Deathmatch_Creator"))
@@ -253,13 +253,13 @@ int func_5(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Deathmatch_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Deathmatch_Creator");
-				GAMEPLAY::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(uParam0, 2);
 			}
 		}
 	}
-	else if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1518439287) == 0)
+	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1518439287) == 0)
 	{
-		GAMEPLAY::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(uParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -267,7 +267,7 @@ int func_5(var uParam0)
 
 int func_6(var uParam0)
 {
-	if (!GAMEPLAY::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*uParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Capture_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Capture_Creator"))
@@ -276,13 +276,13 @@ int func_6(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Capture_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Capture_Creator");
-				GAMEPLAY::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(uParam0, 2);
 			}
 		}
 	}
-	else if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-884469787) == 0)
+	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-884469787) == 0)
 	{
-		GAMEPLAY::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(uParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -290,7 +290,7 @@ int func_6(var uParam0)
 
 int func_7(var uParam0)
 {
-	if (!GAMEPLAY::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*uParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Mission_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Mission_Creator"))
@@ -299,13 +299,13 @@ int func_7(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Mission_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Mission_Creator");
-				GAMEPLAY::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(uParam0, 2);
 			}
 		}
 	}
-	else if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1768762336) == 0)
+	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1768762336) == 0)
 	{
-		GAMEPLAY::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(uParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -313,7 +313,7 @@ int func_7(var uParam0)
 
 int func_8(var uParam0)
 {
-	if (!GAMEPLAY::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*uParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("Freemode_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("Freemode_Creator"))
@@ -322,13 +322,13 @@ int func_8(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("Freemode_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("Freemode_Creator");
-				GAMEPLAY::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(uParam0, 2);
 			}
 		}
 	}
-	else if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1844397475) == 0)
+	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1844397475) == 0)
 	{
-		GAMEPLAY::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(uParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -336,7 +336,7 @@ int func_8(var uParam0)
 
 int func_9(var uParam0)
 {
-	if (!GAMEPLAY::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*uParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("Basic_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("Basic_Creator"))
@@ -345,13 +345,13 @@ int func_9(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("Basic_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("Basic_Creator");
-				GAMEPLAY::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(uParam0, 2);
 			}
 		}
 	}
-	else if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1167339987) == 0)
+	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1167339987) == 0)
 	{
-		GAMEPLAY::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(uParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -359,7 +359,7 @@ int func_9(var uParam0)
 
 int func_10(var uParam0)
 {
-	if (!GAMEPLAY::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*uParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Survival_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Survival_Creator"))
@@ -368,13 +368,13 @@ int func_10(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Survival_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Survival_Creator");
-				GAMEPLAY::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(uParam0, 2);
 			}
 		}
 	}
-	else if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1121276913) == 0)
+	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1121276913) == 0)
 	{
-		GAMEPLAY::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(uParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -387,7 +387,7 @@ bool func_11()
 
 int func_12(var uParam0)
 {
-	if (!GAMEPLAY::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*uParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_LTS_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_LTS_Creator"))
@@ -396,13 +396,13 @@ int func_12(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_LTS_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_LTS_Creator");
-				GAMEPLAY::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(uParam0, 2);
 			}
 		}
 	}
-	else if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(229048663) == 0)
+	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(229048663) == 0)
 	{
-		GAMEPLAY::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(uParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -471,18 +471,18 @@ bool func_17()
 
 int func_18()
 {
-	if (GAMEPLAY::IS_BIT_SET(Global_1377170.f_102, 1))
+	if (MISC::IS_BIT_SET(Global_1377170.f_102, 1))
 	{
 		return 1;
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_1377170.f_102, 2))
+	if (MISC::IS_BIT_SET(Global_1377170.f_102, 2))
 	{
-		GAMEPLAY::CLEAR_BIT(&(Global_1377170.f_102), 2);
+		MISC::CLEAR_BIT(&(Global_1377170.f_102), 2);
 		return 2;
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_1377170.f_102, 3))
+	if (MISC::IS_BIT_SET(Global_1377170.f_102, 3))
 	{
-		GAMEPLAY::CLEAR_BIT(&(Global_1377170.f_102), 3);
+		MISC::CLEAR_BIT(&(Global_1377170.f_102), 3);
 		return 3;
 	}
 	return 0;

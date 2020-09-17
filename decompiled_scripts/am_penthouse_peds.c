@@ -130,22 +130,22 @@ void func_5(var uParam0)
 {
 	uVar0 = func_9(uParam0);
 	uVar1 = func_8(uParam0);
-	uVar2 = GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.7f);
-	iVar3 = AI::GET_SCRIPT_TASK_STATUS(*uParam0, 242628503);
+	uVar2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.7f);
+	iVar3 = TASK::GET_SCRIPT_TASK_STATUS(*uParam0, 242628503);
 	if (iVar3 != 0 && iVar3 != 1)
 	{
 		if (STREAMING::HAS_ANIM_DICT_LOADED(uVar0))
 		{
-			AI::OPEN_SEQUENCE_TASK(&uVar4);
+			TASK::OPEN_SEQUENCE_TASK(&uVar4);
 			if (!func_7(uParam0))
 			{
 				if (func_6(uParam0))
 				{
-					AI::TASK_PLAY_ANIM_ADVANCED(0, uVar0, uVar1, uParam0->f_6, 0f, 0f, uParam0->f_9, 1090519040, -1056964608, -1, 790529, uVar2, 2, 3);
+					TASK::TASK_PLAY_ANIM_ADVANCED(0, uVar0, uVar1, uParam0->f_6, 0f, 0f, uParam0->f_9, 1090519040, -1056964608, -1, 790529, uVar2, 2, 3);
 				}
 				else
 				{
-					AI::TASK_PLAY_ANIM(0, uVar0, uVar1, 1090519040, -1056964608, -1, 1, uVar2, 0, 0, 0);
+					TASK::TASK_PLAY_ANIM(0, uVar0, uVar1, 1090519040, -1056964608, -1, 1, uVar2, 0, 0, 0);
 				}
 			}
 			else
@@ -157,8 +157,8 @@ void func_5(var uParam0)
 				iVar12 = 0;
 				while (iVar12 < 10)
 				{
-					iVar10 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 4);
-					iVar11 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 4);
+					iVar10 = MISC::GET_RANDOM_INT_IN_RANGE(0, 4);
+					iVar11 = MISC::GET_RANDOM_INT_IN_RANGE(0, 4);
 					iVar13 = iVar5[iVar10];
 					iVar5[iVar10] = iVar5[iVar11];
 					iVar5[iVar11] = iVar13;
@@ -170,28 +170,28 @@ void func_5(var uParam0)
 					switch (iVar5[iVar12])
 					{
 						case 0:
-							AI::TASK_PLAY_ANIM(0, uVar0, "IDLE_A", 1090519040, -1056964608, -1, 0, 0f, 0, 0, 0);
+							TASK::TASK_PLAY_ANIM(0, uVar0, "IDLE_A", 1090519040, -1056964608, -1, 0, 0f, 0, 0, 0);
 							break;
 						
 						case 1:
-							AI::TASK_PLAY_ANIM(0, uVar0, "IDLE_B", 1090519040, -1056964608, -1, 0, 0f, 0, 0, 0);
+							TASK::TASK_PLAY_ANIM(0, uVar0, "IDLE_B", 1090519040, -1056964608, -1, 0, 0f, 0, 0, 0);
 							break;
 						
 						case 2:
-							AI::TASK_PLAY_ANIM(0, uVar0, "IDLE_C", 1090519040, -1056964608, -1, 0, 0f, 0, 0, 0);
+							TASK::TASK_PLAY_ANIM(0, uVar0, "IDLE_C", 1090519040, -1056964608, -1, 0, 0f, 0, 0, 0);
 							break;
 						
 						case 3:
-							AI::TASK_PLAY_ANIM(0, uVar0, "IDLE_D", 1090519040, -1056964608, -1, 0, 0f, 0, 0, 0);
+							TASK::TASK_PLAY_ANIM(0, uVar0, "IDLE_D", 1090519040, -1056964608, -1, 0, 0f, 0, 0, 0);
 							break;
 					}
 					iVar12++;
 				}
 			}
-			AI::SET_SEQUENCE_TO_REPEAT(uVar4, 1);
-			AI::CLOSE_SEQUENCE_TASK(uVar4);
-			AI::TASK_PERFORM_SEQUENCE(*uParam0, uVar4);
-			AI::CLEAR_SEQUENCE_TASK(&uVar4);
+			TASK::SET_SEQUENCE_TO_REPEAT(uVar4, 1);
+			TASK::CLOSE_SEQUENCE_TASK(uVar4);
+			TASK::TASK_PERFORM_SEQUENCE(*uParam0, uVar4);
+			TASK::CLEAR_SEQUENCE_TASK(&uVar4);
 		}
 	}
 }
@@ -623,7 +623,7 @@ void func_17(var uParam0)
 	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(*uParam0, 0);
 	PED::SET_PED_CAN_RAGDOLL(*uParam0, 0);
 	PED::SET_PED_CONFIG_FLAG(*uParam0, 208, 1);
-	AI::CLEAR_PED_TASKS(*uParam0);
+	TASK::CLEAR_PED_TASKS(*uParam0);
 }
 
 void func_18(var uParam0, var uParam1, var uParam2)
@@ -661,51 +661,51 @@ void func_20(var uParam0, int iParam1, int iParam2)
 	switch (iParam1)
 	{
 		case 0:
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2);
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2 + 1);
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2 + 2);
+			MISC::CLEAR_BIT(uParam0, iParam2);
+			MISC::CLEAR_BIT(uParam0, iParam2 + 1);
+			MISC::CLEAR_BIT(uParam0, iParam2 + 2);
 			break;
 		
 		case 1:
-			GAMEPLAY::SET_BIT(uParam0, iParam2);
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2 + 1);
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2 + 2);
+			MISC::SET_BIT(uParam0, iParam2);
+			MISC::CLEAR_BIT(uParam0, iParam2 + 1);
+			MISC::CLEAR_BIT(uParam0, iParam2 + 2);
 			break;
 		
 		case 2:
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2);
-			GAMEPLAY::SET_BIT(uParam0, iParam2 + 1);
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2 + 2);
+			MISC::CLEAR_BIT(uParam0, iParam2);
+			MISC::SET_BIT(uParam0, iParam2 + 1);
+			MISC::CLEAR_BIT(uParam0, iParam2 + 2);
 			break;
 		
 		case 3:
-			GAMEPLAY::SET_BIT(uParam0, iParam2);
-			GAMEPLAY::SET_BIT(uParam0, iParam2 + 1);
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2 + 2);
+			MISC::SET_BIT(uParam0, iParam2);
+			MISC::SET_BIT(uParam0, iParam2 + 1);
+			MISC::CLEAR_BIT(uParam0, iParam2 + 2);
 			break;
 		
 		case 4:
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2);
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2 + 1);
-			GAMEPLAY::SET_BIT(uParam0, iParam2 + 2);
+			MISC::CLEAR_BIT(uParam0, iParam2);
+			MISC::CLEAR_BIT(uParam0, iParam2 + 1);
+			MISC::SET_BIT(uParam0, iParam2 + 2);
 			break;
 		
 		case 5:
-			GAMEPLAY::SET_BIT(uParam0, iParam2);
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2 + 1);
-			GAMEPLAY::SET_BIT(uParam0, iParam2 + 2);
+			MISC::SET_BIT(uParam0, iParam2);
+			MISC::CLEAR_BIT(uParam0, iParam2 + 1);
+			MISC::SET_BIT(uParam0, iParam2 + 2);
 			break;
 		
 		case 6:
-			GAMEPLAY::CLEAR_BIT(uParam0, iParam2);
-			GAMEPLAY::SET_BIT(uParam0, iParam2 + 1);
-			GAMEPLAY::SET_BIT(uParam0, iParam2 + 2);
+			MISC::CLEAR_BIT(uParam0, iParam2);
+			MISC::SET_BIT(uParam0, iParam2 + 1);
+			MISC::SET_BIT(uParam0, iParam2 + 2);
 			break;
 		
 		case 7:
-			GAMEPLAY::SET_BIT(uParam0, iParam2);
-			GAMEPLAY::SET_BIT(uParam0, iParam2 + 1);
-			GAMEPLAY::SET_BIT(uParam0, iParam2 + 2);
+			MISC::SET_BIT(uParam0, iParam2);
+			MISC::SET_BIT(uParam0, iParam2 + 1);
+			MISC::SET_BIT(uParam0, iParam2 + 2);
 			break;
 	}
 }
@@ -742,15 +742,15 @@ void func_23(var uParam0, var uParam1, var uParam2)
 int func_24(var uParam0, int iParam1)
 {
 	iVar0 = 0;
-	if (GAMEPLAY::IS_BIT_SET(*uParam0, iParam1))
+	if (MISC::IS_BIT_SET(*uParam0, iParam1))
 	{
 		iVar0++;
 	}
-	if (GAMEPLAY::IS_BIT_SET(*uParam0, iParam1 + 1))
+	if (MISC::IS_BIT_SET(*uParam0, iParam1 + 1))
 	{
 		iVar0 += 2;
 	}
-	if (GAMEPLAY::IS_BIT_SET(*uParam0, iParam1 + 2))
+	if (MISC::IS_BIT_SET(*uParam0, iParam1 + 2))
 	{
 		iVar0 += 4;
 	}
@@ -916,7 +916,7 @@ int func_35()
 	}
 	if (func_36() != 0)
 	{
-		if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(func_36()) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(func_36()) == 0)
 		{
 			return 1;
 		}
@@ -1715,7 +1715,7 @@ int func_53(int iParam0)
 
 void func_54()
 {
-	while (!NETWORK::_NETWORK_SET_THIS_SCRIPT_MARKED(32, 0, Global_1316838))
+	while (!NETWORK::_NETWORK_IS_THIS_SCRIPT_MARKED(32, 0, Global_1316838))
 	{
 		SYSTEM::WAIT(0);
 	}

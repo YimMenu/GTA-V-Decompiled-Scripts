@@ -139,7 +139,7 @@ void func_2(var uParam0, var uParam1)
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					AI::TASK_PLANE_MISSION(*uParam1, *uParam0, 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 30f, 100, 50, 1);
+					TASK::TASK_PLANE_MISSION(*uParam1, *uParam0, 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 30f, 100, 50, 1);
 				}
 			}
 		}
@@ -158,14 +158,14 @@ void func_3(bool bParam0)
 				{
 					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(uLocal_55[0], 0)) && !ENTITY::IS_ENTITY_DEAD(uLocal_49[0], 0))
 					{
-						AI::TASK_PLANE_MISSION(uLocal_55[0], uLocal_49[0], 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50, 1);
+						TASK::TASK_PLANE_MISSION(uLocal_55[0], uLocal_49[0], 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50, 1);
 					}
 				}
 				else if (bParam0)
 				{
 					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(uLocal_55[0], 0)) && !ENTITY::IS_ENTITY_DEAD(uLocal_49[0], 0))
 					{
-						AI::TASK_PLANE_MISSION(uLocal_55[0], uLocal_49[0], 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50, 1);
+						TASK::TASK_PLANE_MISSION(uLocal_55[0], uLocal_49[0], 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50, 1);
 					}
 				}
 			}
@@ -178,14 +178,14 @@ void func_3(bool bParam0)
 				{
 					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(uLocal_55[2], 0)) && !ENTITY::IS_ENTITY_DEAD(uLocal_49[2], 0))
 					{
-						AI::TASK_PLANE_MISSION(uLocal_55[2], uLocal_49[2], 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50, 1);
+						TASK::TASK_PLANE_MISSION(uLocal_55[2], uLocal_49[2], 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50, 1);
 					}
 				}
 				else if (bParam0)
 				{
 					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(uLocal_55[2], 0)) && !ENTITY::IS_ENTITY_DEAD(uLocal_49[2], 0))
 					{
-						AI::TASK_PLANE_MISSION(uLocal_55[2], uLocal_49[2], 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50, 1);
+						TASK::TASK_PLANE_MISSION(uLocal_55[2], uLocal_49[2], 0, 0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50, 1);
 					}
 				}
 			}
@@ -599,7 +599,7 @@ void func_13()
 			uVar9 = ENTITY::GET_ENTITY_HEADING(uLocal_89);
 			Var3 = { 0f, 500f, 50f };
 			Var6 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var0, uVar9, Var3) };
-			AI::TASK_HELI_MISSION(uLocal_90, uLocal_89, 0, 0, Var6, 4, 50f, -1f, 0f, 100, 50, -1082130432, 0);
+			TASK::TASK_HELI_MISSION(uLocal_90, uLocal_89, 0, 0, Var6, 4, 50f, -1f, 0f, 100, 50, -1082130432, 0);
 		}
 	}
 	if (bLocal_95)

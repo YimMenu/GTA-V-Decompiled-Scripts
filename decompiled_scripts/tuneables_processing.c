@@ -13,8 +13,8 @@ void __EntryFunction__()
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
 	sLocal_20 = "NULL";
-	GAMEPLAY::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
-	unk_0xFAFC23AEE23868DB();
+	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
+	NETWORK::_NETWORK_ALLOCATE_TUNABLES_REGISTRATION_DATA_MAP();
 	while (true)
 	{
 		SYSTEM::WAIT(0);
@@ -401,7 +401,7 @@ int func_1(int iParam0, int iParam1, bool bParam2)
 		case 71:
 			func_3();
 			func_2();
-			TIME::GET_POSIX_TIME(&Global_2458945, &(Global_2458945.f_1), &(Global_2458945.f_2), &(Global_2458945.f_3), &(Global_2458945.f_4), &(Global_2458945.f_5));
+			CLOCK::GET_POSIX_TIME(&Global_2458945, &(Global_2458945.f_1), &(Global_2458945.f_2), &(Global_2458945.f_3), &(Global_2458945.f_4), &(Global_2458945.f_5));
 			Global_262145.f_2330++;
 			break;
 		
@@ -1811,7 +1811,7 @@ void func_6(int iParam0, var uParam1, var uParam2, bool bParam3)
 {
 	uVar0 = func_7(iParam0);
 	uVar1 = *uParam2;
-	if (!NETWORK::_NETWORK_ACCESS_TUNABLE_FLOAT_HASH(uVar0, uParam1, uParam2))
+	if (!NETWORK::NETWORK_ACCESS_TUNABLE_FLOAT_HASH(uVar0, uParam1, uParam2))
 	{
 		if (bParam3)
 		{
@@ -1821,7 +1821,7 @@ void func_6(int iParam0, var uParam1, var uParam2, bool bParam3)
 	}
 	else
 	{
-		unk_0x1950DAE9848A4739(uVar0, uParam1, uParam2);
+		NETWORK::_NETWORK_REGISTER_TUNABLE_FLOAT_HASH(uVar0, uParam1, uParam2);
 	}
 	if (bParam3)
 	{
@@ -1834,7 +1834,7 @@ int func_7(int iParam0)
 	{
 		StringCopy(&cVar0, "CONTENT_MODIFIER_", 64);
 		StringIntConCat(&cVar0, (iParam0 - 28), 64);
-		return GAMEPLAY::GET_HASH_KEY(&cVar0);
+		return MISC::GET_HASH_KEY(&cVar0);
 	}
 	switch (iParam0)
 	{
@@ -2182,7 +2182,7 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 void func_9(int iParam0, var uParam1, var uParam2, bool bParam3)
 {
 	uVar0 = func_7(iParam0);
-	if (!NETWORK::_NETWORK_DOES_TUNABLE_EXIST_HASH(uVar0, uParam1))
+	if (!NETWORK::NETWORK_DOES_TUNABLE_EXIST_HASH(uVar0, uParam1))
 	{
 		if (bParam3)
 		{
@@ -2191,8 +2191,8 @@ void func_9(int iParam0, var uParam1, var uParam2, bool bParam3)
 	}
 	else
 	{
-		*uParam2 = NETWORK::_NETWORK_ACCESS_TUNABLE_BOOL_HASH(uVar0, uParam1);
-		unk_0x697F508861875B42(uVar0, uParam1, uParam2);
+		*uParam2 = NETWORK::NETWORK_ACCESS_TUNABLE_BOOL_HASH(uVar0, uParam1);
+		NETWORK::_NETWORK_REGISTER_TUNABLE_BOOL_HASH(uVar0, uParam1, uParam2);
 	}
 	if (bParam3)
 	{
@@ -2426,7 +2426,7 @@ void func_11(int iParam0, var uParam1, var uParam2, bool bParam3)
 {
 	uVar0 = func_7(iParam0);
 	uVar1 = *uParam2;
-	if (!NETWORK::_NETWORK_ACCESS_TUNABLE_INT_HASH(uVar0, uParam1, uParam2))
+	if (!NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(uVar0, uParam1, uParam2))
 	{
 		if (bParam3)
 		{
@@ -2436,7 +2436,7 @@ void func_11(int iParam0, var uParam1, var uParam2, bool bParam3)
 	}
 	else
 	{
-		unk_0x3A8B55FDA4C8DDEF(uVar0, uParam1, uParam2);
+		NETWORK::_NETWORK_REGISTER_TUNABLE_INT_HASH(uVar0, uParam1, uParam2);
 	}
 	if (bParam3)
 	{
@@ -8130,7 +8130,7 @@ void func_16(int iParam0, int iParam1)
 	{
 		StringCopy(&cVar1, "PACK_CLOTHES_SALE_", 24);
 		StringIntConCat(&cVar1, iVar0, 24);
-		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar1), &(Global_262145.f_22544[iVar0]), 1);
+		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar1), &(Global_262145.f_22544[iVar0]), 1);
 		iVar0++;
 	}
 	func_10(iParam0, iParam1, -1037081389, &(Global_262145.f_23514), 1);
@@ -13763,10 +13763,10 @@ void func_23(int iParam0, int iParam1)
 	{
 		StringCopy(&cVar1, "BB_EVENT_CARGO_ITEM_M_", 32);
 		StringIntConCat(&cVar1, iVar0, 32);
-		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar1), &(Global_262145.f_24744[iVar0]), 1);
+		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar1), &(Global_262145.f_24744[iVar0]), 1);
 		StringCopy(&cVar1, "BB_EVENT_CARGO_ITEM_F_", 32);
 		StringIntConCat(&cVar1, iVar0, 32);
-		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar1), &(Global_262145.f_24755[iVar0]), 1);
+		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar1), &(Global_262145.f_24755[iVar0]), 1);
 		iVar0++;
 	}
 	func_5(iParam0, iParam1, -359916266, &(Global_262145.f_24766), 1);
@@ -19750,8 +19750,8 @@ void func_37(int iParam0, int iParam1)
 		StringIntConCat(&cVar1, iVar0, 32);
 		StringCopy(&cVar9, "RewardPlaylistItem_", 32);
 		StringIntConCat(&cVar9, iVar0, 32);
-		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar1), &(Global_262145.f_7953[iVar0]), 1);
-		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar9), &(Global_262145.f_8004[iVar0]), 1);
+		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar1), &(Global_262145.f_7953[iVar0]), 1);
+		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar9), &(Global_262145.f_8004[iVar0]), 1);
 		iVar0++;
 	}
 }
@@ -27651,10 +27651,10 @@ void func_81(int iParam0, int iParam1, bool bParam2)
 	{
 		StringCopy(&cVar1, "CRATE_DROP_WEAPON_", 32);
 		StringIntConCat(&cVar1, iVar0, 32);
-		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar1), &(Global_262145.f_16[iVar0]), 1);
+		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar1), &(Global_262145.f_16[iVar0]), 1);
 		StringCopy(&cVar1, "CRATE_DROP_WEAPON_CLIPS_", 32);
 		StringIntConCat(&cVar1, iVar0, 32);
-		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar1), &(Global_262145.f_27[iVar0]), 1);
+		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar1), &(Global_262145.f_27[iVar0]), 1);
 		iVar0++;
 	}
 	func_10(iParam0, iParam1, -1647564516, &(Global_262145.f_40), 1);

@@ -28,7 +28,7 @@ void __EntryFunction__()
 	while (true)
 	{
 		SYSTEM::WAIT(0);
-		if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1543351171) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1543351171) == 0)
 		{
 			if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 			{
@@ -47,7 +47,7 @@ void __EntryFunction__()
 				{
 					if (VEHICLE::IS_VEHICLE_MODEL(iLocal_28, 444583674))
 					{
-						CONTROLS::SET_INPUT_EXCLUSIVE(0, 51);
+						PAD::SET_INPUT_EXCLUSIVE(0, 51);
 						if (!VEHICLE::_0x62CA17B74C435651(iLocal_28))
 						{
 							if (iLocal_32 == 0)
@@ -60,9 +60,9 @@ void __EntryFunction__()
 								{
 									if (func_1(&uLocal_30, 1000))
 									{
-										if (VEHICLE::_0x89D630CF5EA96D23(iLocal_28, iLocal_29))
+										if (VEHICLE::_IS_HANDLER_FRAME_ABOVE_CONTAINER(iLocal_28, iLocal_29))
 										{
-											if (CONTROLS::IS_CONTROL_JUST_PRESSED(0, 51))
+											if (PAD::IS_CONTROL_JUST_PRESSED(0, 51))
 											{
 												VEHICLE::_0x6A98C2ECF57FA5D4(iLocal_28, iLocal_29);
 												iLocal_31 = 1;
@@ -77,11 +77,11 @@ void __EntryFunction__()
 						{
 							if (iLocal_31 == 1)
 							{
-								uLocal_30 = GAMEPLAY::GET_GAME_TIMER();
+								uLocal_30 = MISC::GET_GAME_TIMER();
 								iLocal_31 = 0;
 								iLocal_32 = 0;
 							}
-							if (CONTROLS::IS_CONTROL_JUST_PRESSED(0, 51))
+							if (PAD::IS_CONTROL_JUST_PRESSED(0, 51))
 							{
 							}
 						}
@@ -94,7 +94,7 @@ void __EntryFunction__()
 
 int func_1(var uParam0, int iParam1)
 {
-	iVar0 = GAMEPLAY::GET_GAME_TIMER();
+	iVar0 = MISC::GET_GAME_TIMER();
 	if ((iVar0 - *uParam0) > iParam1)
 	{
 		return 1;
@@ -119,9 +119,9 @@ int func_3(int iParam0)
 		iVar0 = 10;
 		iVar1 = (iParam0 - 32);
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_111638.f_9080.f_99.f_219[iVar0], iVar1))
+	if (MISC::IS_BIT_SET(Global_111638.f_9080.f_99.f_219[iVar0], iVar1))
 	{
-		GAMEPLAY::CLEAR_BIT(&(Global_111638.f_9080.f_99.f_219[iVar0]), iVar1);
+		MISC::CLEAR_BIT(&(Global_111638.f_9080.f_99.f_219[iVar0]), iVar1);
 		return 1;
 	}
 	return 0;
@@ -139,11 +139,11 @@ int func_4(int iParam0)
 		iVar0 = 10;
 		iVar1 = (iParam0 - 32);
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_111638.f_9080.f_99.f_219[iVar0], iVar1))
+	if (MISC::IS_BIT_SET(Global_111638.f_9080.f_99.f_219[iVar0], iVar1))
 	{
 		return 0;
 	}
-	GAMEPLAY::SET_BIT(&(Global_111638.f_9080.f_99.f_219[iVar0]), iVar1);
+	MISC::SET_BIT(&(Global_111638.f_9080.f_99.f_219[iVar0]), iVar1);
 	return 1;
 }
 

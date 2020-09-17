@@ -80,28 +80,28 @@ void func_1()
 			{
 				SYSTEM::SETTIMERB(0);
 				Local_48 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-				AI::OPEN_SEQUENCE_TASK(&uLocal_55);
-				AI::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
-				AI::TASK_PLAY_ANIM(0, "amb@PREACHER", "PREACH", 8f, -8f, -1, 1, 0, 0, 0, 0);
-				AI::CLOSE_SEQUENCE_TASK(uLocal_55);
+				TASK::OPEN_SEQUENCE_TASK(&uLocal_55);
+				TASK::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
+				TASK::TASK_PLAY_ANIM(0, "amb@PREACHER", "PREACH", 8f, -8f, -1, 1, 0, 0, 0, 0);
+				TASK::CLOSE_SEQUENCE_TASK(uLocal_55);
 				if (!ENTITY::IS_ENTITY_DEAD(uLocal_52, 0))
 				{
-					AI::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_55);
+					TASK::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_55);
 				}
-				AI::CLEAR_SEQUENCE_TASK(&uLocal_55);
+				TASK::CLEAR_SEQUENCE_TASK(&uLocal_55);
 				iLocal_54 = 1;
 			}
 			if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), uLocal_52, 3f, 3f, 3f, 0, 1, 0) && iLocal_53 == 0)
 			{
 				Local_48 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
 				SYSTEM::SETTIMERB(0);
-				AI::OPEN_SEQUENCE_TASK(&uLocal_55);
-				AI::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
-				AI::TASK_PLAY_ANIM(0, "amb@PREACHER", "PREACH", 8f, -8f, -1, 1, 0, 0, 0, 0);
-				AI::CLOSE_SEQUENCE_TASK(uLocal_55);
-				AI::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_55);
+				TASK::OPEN_SEQUENCE_TASK(&uLocal_55);
+				TASK::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
+				TASK::TASK_PLAY_ANIM(0, "amb@PREACHER", "PREACH", 8f, -8f, -1, 1, 0, 0, 0, 0);
+				TASK::CLOSE_SEQUENCE_TASK(uLocal_55);
+				TASK::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_55);
 			}
-			AI::CLEAR_SEQUENCE_TASK(&uLocal_55);
+			TASK::CLEAR_SEQUENCE_TASK(&uLocal_55);
 			iLocal_53 = 1;
 		}
 	}
@@ -119,12 +119,12 @@ void func_2()
 	uLocal_52 = PED::CREATE_PED(19, 469792763, Local_45.x, Local_45.y, Local_48.z, 0f, 1, 1);
 	if (!ENTITY::IS_ENTITY_DEAD(uLocal_52, 0))
 	{
-		AI::OPEN_SEQUENCE_TASK(&uLocal_55);
-		AI::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
-		AI::TASK_PLAY_ANIM(0, "amb@PREACHER", "PREACH", 8f, -8f, -1, 1, 0, 0, 0, 0);
-		AI::CLOSE_SEQUENCE_TASK(uLocal_55);
-		AI::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_55);
-		AI::CLEAR_SEQUENCE_TASK(&uLocal_55);
+		TASK::OPEN_SEQUENCE_TASK(&uLocal_55);
+		TASK::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
+		TASK::TASK_PLAY_ANIM(0, "amb@PREACHER", "PREACH", 8f, -8f, -1, 1, 0, 0, 0, 0);
+		TASK::CLOSE_SEQUENCE_TASK(uLocal_55);
+		TASK::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_55);
+		TASK::CLEAR_SEQUENCE_TASK(&uLocal_55);
 	}
 	iLocal_44 = 1;
 }
@@ -278,14 +278,14 @@ int func_6()
 {
 	if (Global_95666 != -1)
 	{
-		return GAMEPLAY::IS_BIT_SET(Global_89532[Global_95666].f_15, 13);
+		return MISC::IS_BIT_SET(Global_89532[Global_95666].f_15, 13);
 	}
 	return 0;
 }
 
 int func_7()
 {
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1424752554) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1424752554) > 0)
 	{
 		return 1;
 	}
@@ -326,7 +326,7 @@ var func_11(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_1377170.f_1048, iParam0);
+	return MISC::IS_BIT_SET(Global_1377170.f_1048, iParam0);
 }
 
 var func_12()

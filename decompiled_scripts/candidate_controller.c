@@ -129,20 +129,20 @@ void __EntryFunction__()
 			{
 				if (!iLocal_20)
 				{
-					NETWORK::_0xCFEB8AF24FC1D0BB(1);
+					NETWORK::NETWORK_BLOCK_JOIN_QUEUE_INVITES(1);
 					iLocal_20 = 1;
 				}
 			}
 			else if (iLocal_20)
 			{
-				NETWORK::_0xCFEB8AF24FC1D0BB(0);
+				NETWORK::NETWORK_BLOCK_JOIN_QUEUE_INVITES(0);
 				iLocal_20 = 0;
 			}
 		}
 		iVar1 = Global_41431;
 		iVar0 = Global_41392;
 		Global_110064 = func_1();
-		Global_31043 = TIME::GET_CLOCK_DAY_OF_WEEK();
+		Global_31043 = CLOCK::GET_CLOCK_DAY_OF_WEEK();
 		SYSTEM::WAIT(0);
 	}
 	Global_41397 = 0;
@@ -150,12 +150,12 @@ void __EntryFunction__()
 
 var func_1()
 {
-	func_11(&uVar0, TIME::GET_CLOCK_SECONDS());
-	func_10(&uVar0, TIME::GET_CLOCK_MINUTES());
-	func_9(&uVar0, TIME::GET_CLOCK_HOURS());
-	func_4(&uVar0, TIME::GET_CLOCK_DAY_OF_MONTH());
-	func_3(&uVar0, TIME::GET_CLOCK_MONTH());
-	func_2(&uVar0, TIME::GET_CLOCK_YEAR());
+	func_11(&uVar0, CLOCK::GET_CLOCK_SECONDS());
+	func_10(&uVar0, CLOCK::GET_CLOCK_MINUTES());
+	func_9(&uVar0, CLOCK::GET_CLOCK_HOURS());
+	func_4(&uVar0, CLOCK::GET_CLOCK_DAY_OF_MONTH());
+	func_3(&uVar0, CLOCK::GET_CLOCK_MONTH());
+	func_2(&uVar0, CLOCK::GET_CLOCK_YEAR());
 	return uVar0;
 }
 
@@ -249,7 +249,7 @@ int func_5(int iParam0, int iParam1)
 
 var func_6(var uParam0)
 {
-	return (SYSTEM::SHIFT_RIGHT(uParam0, 26) & 31 * func_7(GAMEPLAY::IS_BIT_SET(uParam0, 31), -1, 1)) + 2011;
+	return (SYSTEM::SHIFT_RIGHT(uParam0, 26) & 31 * func_7(MISC::IS_BIT_SET(uParam0, 31), -1, 1)) + 2011;
 }
 
 int func_7(bool bParam0, int iParam1, int iParam2)
@@ -322,7 +322,7 @@ void func_13(bool bParam0)
 {
 	if (!bParam0)
 	{
-		Global_110280 = GAMEPLAY::GET_GAME_TIMER() + 250;
+		Global_110280 = MISC::GET_GAME_TIMER() + 250;
 	}
 	Global_110277 = bParam0;
 }

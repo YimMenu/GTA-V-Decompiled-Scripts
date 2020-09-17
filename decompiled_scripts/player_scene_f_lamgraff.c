@@ -90,8 +90,8 @@ int func_2()
 			{
 				if (FIRE::IS_ENTITY_ON_FIRE(Global_98465))
 				{
-					AI::STOP_ANIM_PLAYBACK(Global_98465, 0, 0);
-					AI::CLEAR_PED_TASKS(Global_98465);
+					TASK::STOP_ANIM_PLAYBACK(Global_98465, 0, 0);
+					TASK::CLEAR_PED_TASKS(Global_98465);
 					return 0;
 				}
 				fVar0 = PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_293);
@@ -235,9 +235,9 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 		Global_20801 = Global_20802;
 		if (Global_20811)
 		{
-			GAMEPLAY::CLEAR_BIT(&Global_7356, 20);
-			GAMEPLAY::CLEAR_BIT(&Global_7357, 17);
-			GAMEPLAY::CLEAR_BIT(&Global_7358, 0);
+			MISC::CLEAR_BIT(&Global_7356, 20);
+			MISC::CLEAR_BIT(&Global_7357, 17);
+			MISC::CLEAR_BIT(&Global_7358, 0);
 			if (bParam2)
 			{
 				func_14();
@@ -270,7 +270,7 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 				{
 					return 0;
 				}
-				if (AI::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID()))
+				if (TASK::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID()))
 				{
 					return 0;
 				}
@@ -331,7 +331,7 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 					default:
 						break;
 				}
-				if (GAMEPLAY::IS_BIT_SET(Global_7356, 9))
+				if (MISC::IS_BIT_SET(Global_7356, 9))
 				{
 					return 0;
 				}
@@ -396,7 +396,7 @@ int func_6()
 	{
 		return 0;
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_1628237[PLAYER::PLAYER_ID()].f_1, 7))
+	if (MISC::IS_BIT_SET(Global_1628237[PLAYER::PLAYER_ID()].f_1, 7))
 	{
 		return 0;
 	}
@@ -414,7 +414,7 @@ bool func_7(int iParam0)
 
 bool func_8(int iParam0, int iParam1)
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1628237[iParam0].f_11.f_4, iParam1);
+	return MISC::IS_BIT_SET(Global_1628237[iParam0].f_11.f_4, iParam1);
 }
 
 int func_9()
@@ -454,7 +454,7 @@ void func_11()
 	Global_21821 = 0;
 	Global_20854 = 0;
 	Global_20855 = 0;
-	GAMEPLAY::CLEAR_BIT(&Global_7357, 16);
+	MISC::CLEAR_BIT(&Global_7357, 16);
 }
 
 int func_12()
@@ -651,7 +651,7 @@ bool func_23(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_1377170.f_1048, iParam0);
+	return MISC::IS_BIT_SET(Global_1377170.f_1048, iParam0);
 }
 
 void func_24()
@@ -711,8 +711,8 @@ int func_26()
 			{
 				if (FIRE::IS_ENTITY_ON_FIRE(Global_98465))
 				{
-					AI::STOP_ANIM_PLAYBACK(Global_98465, 0, 0);
-					AI::CLEAR_PED_TASKS(Global_98465);
+					TASK::STOP_ANIM_PLAYBACK(Global_98465, 0, 0);
+					TASK::CLEAR_PED_TASKS(Global_98465);
 					return 0;
 				}
 				fVar0 = PED::GET_SYNCHRONIZED_SCENE_PHASE(Global_96074);
@@ -758,13 +758,13 @@ int func_26()
 				}
 				else
 				{
-					AI::CLEAR_PED_TASKS(Global_98465);
+					TASK::CLEAR_PED_TASKS(Global_98465);
 					if (!PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_293))
 					{
 						iLocal_293 = PED::CREATE_SYNCHRONIZED_SCENE(Local_241, 0f, 0f, uLocal_244, 2);
 						PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_293, 1);
 					}
-					AI::TASK_SYNCHRONIZED_SCENE(Global_98465, iLocal_293, &sLocal_245, &cLocal_277, 8f, -8f, 257, 0, 8f, 0);
+					TASK::TASK_SYNCHRONIZED_SCENE(Global_98465, iLocal_293, &sLocal_245, &cLocal_277, 8f, -8f, 257, 0, 8f, 0);
 					return 1;
 				}
 			}
@@ -777,14 +777,14 @@ int func_26()
 				}
 				if (func_3(&uLocal_72, "PRSAUD", "FRAS_IG_7x", 3, 0, 0, 0))
 				{
-					AI::CLEAR_PED_TASKS(Global_98465);
-					PED::_RESET_PED_RAGDOLL_BLOCKING_FLAGS(Global_98465, 16);
+					TASK::CLEAR_PED_TASKS(Global_98465);
+					PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(Global_98465, 16);
 					if (!PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_293))
 					{
 						iLocal_293 = PED::CREATE_SYNCHRONIZED_SCENE(Local_241, 0f, 0f, uLocal_244, 2);
 						PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_293, 1);
 					}
-					AI::TASK_SYNCHRONIZED_SCENE(Global_98465, iLocal_293, &sLocal_245, &cLocal_277, 8f, -8f, 257, 0, 8f, 0);
+					TASK::TASK_SYNCHRONIZED_SCENE(Global_98465, iLocal_293, &sLocal_245, &cLocal_277, 8f, -8f, 257, 0, 8f, 0);
 					return 1;
 				}
 			}
@@ -821,7 +821,7 @@ int func_28()
 		}
 		if (STREAMING::GET_PLAYER_SWITCH_STATE() == 11)
 		{
-			if (STREAMING::SET_PLAYER_INVERTED_UP() > 0)
+			if (STREAMING::GET_PLAYER_SWITCH_INTERP_OUT_DURATION() > 0)
 			{
 				if (STREAMING::_0x5B48A06DD0E792A5() > 100)
 				{
@@ -851,7 +851,7 @@ int func_29(int iParam0, int iParam1)
 		{
 			return 0;
 		}
-		if (GAMEPLAY::_0x9689123E3F213AA5())
+		if (MISC::GET_IS_PLAYER_IN_ANIMAL_FORM())
 		{
 			return 0;
 		}
@@ -967,13 +967,13 @@ void func_37()
 	{
 		if (!PED::IS_PED_INJURED(Global_98465))
 		{
-			AI::TASK_STAND_STILL(Global_98465, -1);
+			TASK::TASK_STAND_STILL(Global_98465, -1);
 		}
 		PED::SET_PED_RELATIONSHIP_GROUP_HASH(Global_98465, 1862763509);
 	}
 	ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_98465, 1, 1);
 	PED::SET_PED_CONFIG_FLAG(Global_98465, 132, 1);
-	PED::_SET_PED_RAGDOLL_BLOCKING_FLAGS(Global_98465, 16);
+	PED::SET_RAGDOLL_BLOCKING_FLAGS(Global_98465, 16);
 	func_39(&Global_98465, Global_93748);
 	func_38(&uLocal_72, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 	uLocal_239 = OBJECT::CREATE_OBJECT(iLocal_240, ENTITY::GET_ENTITY_COORDS(Global_98465, 1), 1, 1, 0);
@@ -1021,7 +1021,7 @@ void func_39(var uParam0, int iParam1)
 {
 	PED::SET_PED_CAN_BE_TARGETTED(*uParam0, 0);
 	PED::SET_PED_CONFIG_FLAG(*uParam0, 20, 1);
-	PED::_SET_PED_RAGDOLL_BLOCKING_FLAGS(*uParam0, 16);
+	PED::SET_RAGDOLL_BLOCKING_FLAGS(*uParam0, 16);
 	if (iParam1 != -86095805)
 	{
 		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0, iParam1);
@@ -2390,7 +2390,7 @@ int func_43(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_44(uParam109, 17, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_44(uParam109, 17, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -2417,7 +2417,7 @@ int func_43(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_44(uParam109, 144, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_44(uParam109, 144, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -2765,7 +2765,7 @@ int func_43(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_44(uParam109, 43, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_44(uParam109, 43, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -3159,7 +3159,7 @@ int func_43(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_44(uParam109, 144, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_44(uParam109, 144, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -3168,7 +3168,7 @@ int func_43(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_44(uParam109, 144, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_44(uParam109, 144, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -3560,7 +3560,7 @@ bool func_47(var uParam0)
 	iVar5 = 0;
 	while (iVar5 < 5)
 	{
-		if (GAMEPLAY::IS_BIT_SET(Global_111638.f_7224.f_11[iVar5], 0))
+		if (MISC::IS_BIT_SET(Global_111638.f_7224.f_11[iVar5], 0))
 		{
 			Var6 = { Global_93947[iVar5].f_3 };
 			fVar9 = SYSTEM::VDIST(Var1, Var6);
@@ -5535,28 +5535,28 @@ int func_49(int iParam0, var uParam1, char* sParam2)
 		
 		case 306:
 			Var8 = { -7.4998f, 7.4995f, -0.5258f };
-			*uParam1 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(-Var8.x, -Var8.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var8.x, -Var8.y);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 307:
 			Var11 = { 10.6345f, 0.7246f, 1.2508f };
-			*uParam1 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(-Var11.x, -Var11.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var11.x, -Var11.y);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 308:
 			Var14 = { -3.4271f, -13.6787f, -1.4107f };
-			*uParam1 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(-Var14.x, -Var14.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var14.x, -Var14.y);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 309:
 			Var17 = { -19.6582f, 7.896f, 0.1334f };
-			*uParam1 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(-Var17.x, -Var17.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var17.x, -Var17.y);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
@@ -5870,8 +5870,8 @@ int func_50(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector(0f, -11.0022f, -0.4395f) + Vector(0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f)) };
-					*uParam3 = (306f + GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(10f, 10f));
+					*uParam2 = { Vector(0f, -11.0022f, -0.4395f) + Vector(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f)) };
+					*uParam3 = (306f + MISC::GET_RANDOM_FLOAT_IN_RANGE(10f, 10f));
 					return 1;
 					break;
 			}
@@ -5883,7 +5883,7 @@ int func_50(int iParam0, int iParam1, var uParam2, var uParam3)
 				case 0:
 					*uParam2 = { Vector(60.2063f, 141.5129f, -863.5425f) - Vector(71.1531f, 179.5117f, -812.0607f) - Vector(1f, 0f, 0f) };
 					*uParam2 = { *uParam2 * Vector(0.95f, 0.95f, 0.95f) };
-					*uParam3 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(*uParam2, uParam2->f_1);
+					*uParam3 = MISC::GET_HEADING_FROM_VECTOR_2D(*uParam2, uParam2->f_1);
 					return 1;
 					break;
 			}
@@ -6297,8 +6297,8 @@ int func_50(int iParam0, int iParam1, var uParam2, var uParam3)
 		case 60:
 			if (func_50(iParam0, 59, uParam2, uParam3))
 			{
-				*uParam2 = { *uParam2 + Vector(0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
-				*uParam3 = (*uParam3 + GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f));
+				*uParam2 = { *uParam2 + Vector(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
+				*uParam3 = (*uParam3 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f));
 				return 1;
 			}
 			break;
@@ -6931,8 +6931,8 @@ int func_50(int iParam0, int iParam1, var uParam2, var uParam3)
 				case 13:
 					if (func_50(iParam0, 130, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector(0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
-						*uParam3 = (*uParam3 + GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f));
+						*uParam2 = { *uParam2 + Vector(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
+						*uParam3 = (*uParam3 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f));
 						return 1;
 					}
 					break;
@@ -6955,7 +6955,7 @@ int func_50(int iParam0, int iParam1, var uParam2, var uParam3)
 			{
 				case 13:
 					*uParam2 = { Vector((9.6327f + 1f), -1518.736f, -1148.466f) - Vector(9.6346f, -1517.601f, -1152.571f) };
-					*uParam3 = GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
+					*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
 					return 1;
 					break;
 			}
@@ -7015,19 +7015,19 @@ int func_50(int iParam0, int iParam1, var uParam2, var uParam3)
 			break;
 		
 		default:
-			*uParam2 = { GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
-			*uParam3 = GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
+			*uParam2 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+			*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
 			return 0;
 			break;
 	}
-	*uParam2 = { GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
-	*uParam3 = GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
+	*uParam2 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+	*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
 	return 0;
 }
 
 int func_51()
 {
-	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535), 0))
+	if (MISC::IS_BIT_SET(MISC::GET_RANDOM_INT_IN_RANGE(0, 65535), 0))
 	{
 		return 1;
 	}
@@ -7488,7 +7488,7 @@ void func_54()
 		GRAPHICS::STOP_PARTICLE_FX_LOOPED(iLocal_294, 0);
 		iLocal_294 = 0;
 	}
-	GAMEPLAY::SET_GAME_PAUSED(0);
+	MISC::SET_GAME_PAUSED(0);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 

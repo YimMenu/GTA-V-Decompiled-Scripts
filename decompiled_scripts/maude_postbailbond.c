@@ -37,7 +37,7 @@ void __EntryFunction__()
 	else
 	{
 		func_50();
-		iLocal_83 = GAMEPLAY::GET_GAME_TIMER();
+		iLocal_83 = MISC::GET_GAME_TIMER();
 		iLocal_85 = func_49();
 		iLocal_84 = 0;
 		func_48(1, &uLocal_88);
@@ -101,7 +101,7 @@ void func_1()
 	if (func_51(iLocal_82))
 	{
 		func_2(&iLocal_82);
-		AI::TASK_SMART_FLEE_PED(iLocal_82, PLAYER::PLAYER_PED_ID(), 10000f, -1, 0, 0);
+		TASK::TASK_SMART_FLEE_PED(iLocal_82, PLAYER::PLAYER_PED_ID(), 10000f, -1, 0, 0);
 		PED::SET_PED_KEEP_TASK(iLocal_82, 1);
 	}
 }
@@ -131,7 +131,7 @@ int func_4(var uParam0, int iParam1)
 {
 	if (func_51(uParam0))
 	{
-		if (AI::GET_SCRIPT_TASK_STATUS(uParam0, iParam1) == 1 || AI::GET_SCRIPT_TASK_STATUS(uParam0, iParam1) == 0)
+		if (TASK::GET_SCRIPT_TASK_STATUS(uParam0, iParam1) == 1 || TASK::GET_SCRIPT_TASK_STATUS(uParam0, iParam1) == 0)
 		{
 			return 1;
 		}
@@ -145,19 +145,19 @@ int func_5(var uParam0, var uParam1, int iParam2)
 	{
 		if (ENTITY::IS_ENTITY_PLAYING_ANIM(*uParam0, func_10(), func_9(), 3))
 		{
-			if (!PED::IS_PED_RAGDOLL(*uParam0) || AI::IS_PED_GETTING_UP(*uParam0))
+			if (!PED::IS_PED_RAGDOLL(*uParam0) || TASK::IS_PED_GETTING_UP(*uParam0))
 			{
 				STREAMING::REQUEST_ANIM_DICT(func_11());
 				if (STREAMING::HAS_ANIM_DICT_LOADED(func_11()))
 				{
 					*iParam2 = PED::CREATE_SYNCHRONIZED_SCENE(2727.4f, 4145.56f, 43.68f, 0f, 0f, -92.17f, 2);
 					PED::SET_SYNCHRONIZED_SCENE_LOOPED(*iParam2, 0);
-					PED::_SET_SYNCHRONIZED_SCENE_OCCLUSION_PORTAL(*iParam2, 0);
+					PED::SET_SYNCHRONIZED_SCENE_HOLD_LAST_FRAME(*iParam2, 0);
 					if (func_4(*uParam0, 1785177548))
 					{
 						ENTITY::STOP_SYNCHRONIZED_ENTITY_ANIM(*uParam0, -1000f, 1);
 					}
-					AI::TASK_SYNCHRONIZED_SCENE(*uParam0, *iParam2, func_11(), func_3(), 1000f, -4f, 4626, 0, 1148846080, 0);
+					TASK::TASK_SYNCHRONIZED_SCENE(*uParam0, *iParam2, func_11(), func_3(), 1000f, -4f, 4626, 0, 1148846080, 0);
 					PED::_0x2208438012482A1A(*uParam0, 0, 0);
 					if (func_8(*uParam1))
 					{
@@ -388,7 +388,7 @@ void func_16(bool bParam0)
 	{
 		Var0 = { func_22() };
 		uVar6 = func_21();
-		if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, uVar6))
+		if (MISC::ARE_STRINGS_EQUAL(&Var0, uVar6))
 		{
 			if (bParam0)
 			{
@@ -439,19 +439,19 @@ void func_20()
 
 char* func_21()
 {
-	if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 3))
+	if (MISC::IS_BIT_SET(Global_111638.f_24981, 3))
 	{
 		return "BB4_loiter";
 	}
-	else if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 2))
+	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 2))
 	{
 		return "BB3_loiter";
 	}
-	else if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 1))
+	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 1))
 	{
 		return "BB2_loiter";
 	}
-	else if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 0))
+	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 0))
 	{
 		return "BB1_loiter";
 	}
@@ -609,7 +609,7 @@ int func_26(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4)
 			{
 				if (PED::IS_PED_SHOOTING(PLAYER::PLAYER_PED_ID()))
 				{
-					if (GAMEPLAY::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(iParam0, 1), fVar0, 1))
+					if (MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(iParam0, 1), fVar0, 1))
 					{
 						return 1;
 					}
@@ -648,7 +648,7 @@ int func_27(int iParam0, float fParam1, bool bParam2, bool bParam3)
 	Var3.z = (Var3.z + fParam1);
 	if (bParam2)
 	{
-		if (((GAMEPLAY::_0x34318593248C8FB2(ENTITY::GET_ENTITY_COORDS(iParam0, 1), -1813897027, fParam1, 1) || GAMEPLAY::_0x34318593248C8FB2(ENTITY::GET_ENTITY_COORDS(iParam0, 1), 615608432, fParam1, 1)) || GAMEPLAY::_0x34318593248C8FB2(ENTITY::GET_ENTITY_COORDS(iParam0, 1), -37975472, fParam1, 1)) || GAMEPLAY::_0x34318593248C8FB2(ENTITY::GET_ENTITY_COORDS(iParam0, 1), 741814745, 5f, 1))
+		if (((MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), -1813897027, fParam1, 1) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), 615608432, fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), -37975472, fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), 741814745, 5f, 1))
 		{
 			if (bParam3)
 			{
@@ -677,7 +677,7 @@ int func_27(int iParam0, float fParam1, bool bParam2, bool bParam3)
 				return 0;
 			}
 		}
-		if (GAMEPLAY::IS_PROJECTILE_IN_AREA(Var0, Var3, 1))
+		if (MISC::IS_PROJECTILE_IN_AREA(Var0, Var3, 1))
 		{
 			return 1;
 		}
@@ -687,7 +687,7 @@ int func_27(int iParam0, float fParam1, bool bParam2, bool bParam3)
 
 int func_28(int iParam0, float fParam1)
 {
-	if ((((GAMEPLAY::_0x82FDE6A57EE4EE44(iParam0, -1813897027, fParam1, &Var1, &uVar0, 0) || GAMEPLAY::_0x82FDE6A57EE4EE44(iParam0, -37975472, fParam1, &Var1, &uVar0, 0)) || GAMEPLAY::_0x82FDE6A57EE4EE44(iParam0, -1600701090, fParam1, &Var1, &uVar0, 0)) || GAMEPLAY::_0x82FDE6A57EE4EE44(iParam0, 741814745, fParam1, &Var1, &uVar0, 0)) || GAMEPLAY::_0x82FDE6A57EE4EE44(iParam0, 615608432, fParam1, &Var1, &uVar0, 0))
+	if ((((MISC::_GET_PROJECTILE_NEAR_PED(iParam0, -1813897027, fParam1, &Var1, &uVar0, 0) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, -37975472, fParam1, &Var1, &uVar0, 0)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, -1600701090, fParam1, &Var1, &uVar0, 0)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, 741814745, fParam1, &Var1, &uVar0, 0)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, 615608432, fParam1, &Var1, &uVar0, 0))
 	{
 		if (func_29(iParam0, Var1, 90f, 0))
 		{
@@ -754,7 +754,7 @@ int func_32(int iParam0, bool bParam1, float fParam2, float fParam3)
 			}
 		}
 	}
-	if (GAMEPLAY::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(iParam0, 1), fParam2, 1))
+	if (MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(iParam0, 1), fParam2, 1))
 	{
 		return 1;
 	}
@@ -819,7 +819,7 @@ bool func_35(int iParam0, int iParam1, float fParam2, int iParam3, int iParam4, 
 	}
 	Var1 = { PED::GET_PED_BONE_COORDS(iParam0, 31086, 0f, 0f, 0f) };
 	uVar0 = func_36(&(Local_37[iVar4]), Var1, iParam1, &(Local_37[iVar4].f_3), iParam0, iParam5);
-	return (uVar0 || (GAMEPLAY::GET_GAME_TIMER() - Local_37[iVar4].f_3) < iParam4);
+	return (uVar0 || (MISC::GET_GAME_TIMER() - Local_37[iVar4].f_3) < iParam4);
 }
 
 int func_36(var uParam0, struct<3> Param1, int iParam4, var uParam5, int iParam6, int iParam7)
@@ -833,10 +833,10 @@ int func_36(var uParam0, struct<3> Param1, int iParam4, var uParam5, int iParam6
 	if (*uParam0 == 0)
 	{
 		Var1 = { func_37(iParam4, iParam7) };
-		*uParam0 = WORLDPROBE::START_SHAPE_TEST_LOS_PROBE(Param1, Var1 + Var1 - Param1 * Vector(0.1f, 0.1f, 0.1f), 511, iParam6, 7);
+		*uParam0 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(Param1, Var1 + Var1 - Param1 * Vector(0.1f, 0.1f, 0.1f), 511, iParam6, 7);
 		return 0;
 	}
-	iVar8 = WORLDPROBE::GET_SHAPE_TEST_RESULT(*uParam0, &uVar0, &Var1, &uVar4, &iVar7);
+	iVar8 = SHAPETEST::GET_SHAPE_TEST_RESULT(*uParam0, &uVar0, &Var1, &uVar4, &iVar7);
 	if (iVar8 == 0)
 	{
 		*uParam0 = 0;
@@ -856,7 +856,7 @@ int func_36(var uParam0, struct<3> Param1, int iParam4, var uParam5, int iParam6
 			{
 				GRAPHICS::DRAW_DEBUG_LINE_WITH_TWO_COLOURS(Param1, ENTITY::GET_ENTITY_COORDS(iParam4, 1), 255, 0, 0, 255, 0, 0, 255, 255);
 			}
-			*uParam5 = GAMEPLAY::GET_GAME_TIMER();
+			*uParam5 = MISC::GET_GAME_TIMER();
 			return 1;
 		}
 		return 0;
@@ -872,7 +872,7 @@ int func_36(var uParam0, struct<3> Param1, int iParam4, var uParam5, int iParam6
 				{
 					GRAPHICS::DRAW_DEBUG_LINE_WITH_TWO_COLOURS(Param1, ENTITY::GET_ENTITY_COORDS(iParam4, 1), 255, 0, 0, 255, 0, 0, 255, 255);
 				}
-				*uParam5 = GAMEPLAY::GET_GAME_TIMER();
+				*uParam5 = MISC::GET_GAME_TIMER();
 				return 1;
 			}
 		}
@@ -885,7 +885,7 @@ Vector3 func_37(int iParam0, int iParam1)
 {
 	if (iParam1 == 7)
 	{
-		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 7);
+		iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 7);
 		iParam1 = iVar0;
 	}
 	if (iParam1 == 0)
@@ -995,14 +995,14 @@ int func_43(struct<3> Param0, struct<3> Param3, int iParam6, float fParam7)
 		{
 			if (SYSTEM::VDIST2(Param3, Param0) < (fParam7 * fParam7))
 			{
-				if (GAMEPLAY::GET_GAME_TIMER() - iLocal_83) > (iParam6 + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 2000))
+				if (MISC::GET_GAME_TIMER() - iLocal_83) > (iParam6 + MISC::GET_RANDOM_INT_IN_RANGE(0, 2000))
 				{
 					uVar0 = 16;
 					func_47(&uVar0, 3, iLocal_82, "MAUDE", 0, 1);
 					cVar165 = func_46();
 					sVar166 = func_21();
 					func_44(&uVar0, cVar165, sVar166, 7, 0, 0);
-					iLocal_83 = GAMEPLAY::GET_GAME_TIMER();
+					iLocal_83 = MISC::GET_GAME_TIMER();
 					iLocal_84++;
 					return 1;
 				}
@@ -1010,7 +1010,7 @@ int func_43(struct<3> Param0, struct<3> Param3, int iParam6, float fParam7)
 		}
 		else
 		{
-			iLocal_83 = GAMEPLAY::GET_GAME_TIMER();
+			iLocal_83 = MISC::GET_GAME_TIMER();
 		}
 	}
 	return 0;
@@ -1026,7 +1026,7 @@ void func_44(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4
 			iParam3 = 7;
 		}
 	}
-	GAMEPLAY::SET_BIT(&Global_19671, 0);
+	MISC::SET_BIT(&Global_19671, 0);
 	Global_20808 = iParam3;
 	StringCopy(&Global_20795, sParam2, 24);
 }
@@ -1061,19 +1061,19 @@ void func_45(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 
 char* func_46()
 {
-	if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 3))
+	if (MISC::IS_BIT_SET(Global_111638.f_24981, 3))
 	{
 		return "BB4AUD";
 	}
-	else if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 2))
+	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 2))
 	{
 		return "BB3AUD";
 	}
-	else if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 1))
+	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 1))
 	{
 		return "BB2AUD";
 	}
-	else if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 0))
+	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 0))
 	{
 		return "BB1AUD";
 	}
@@ -1128,7 +1128,7 @@ void func_48(bool bParam0, var uParam1)
 		VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(Var0, Var3, 0, 1);
 		VEHICLE::REMOVE_VEHICLES_FROM_GENERATORS_IN_AREA(Var0, Var3, 0);
 		PATHFIND::SET_ROADS_IN_AREA(2697.222f, 4119.894f, 42.79107f, 2746.04f, 4162.974f, 43.62732f, 0, 1);
-		GAMEPLAY::CLEAR_AREA(2728.333f, 4144.778f, 43.29292f, 7.5f, 1, 0, 0, 0);
+		MISC::CLEAR_AREA(2728.333f, 4144.778f, 43.29292f, 7.5f, 1, 0, 0, 0);
 	}
 	else
 	{
@@ -1141,19 +1141,19 @@ void func_48(bool bParam0, var uParam1)
 
 int func_49()
 {
-	if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 3))
+	if (MISC::IS_BIT_SET(Global_111638.f_24981, 3))
 	{
 		return 4;
 	}
-	else if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 2))
+	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 2))
 	{
 		return 4;
 	}
-	else if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 1))
+	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 1))
 	{
 		return 4;
 	}
-	else if (GAMEPLAY::IS_BIT_SET(Global_111638.f_24981, 0))
+	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 0))
 	{
 		return 3;
 	}
@@ -1172,8 +1172,8 @@ void func_50()
 		PED::SET_PED_MONEY(iLocal_82, 0);
 		PED::SET_PED_CAN_BE_TARGETTED(iLocal_82, 0);
 		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_82, 1862763509);
-		AI::SET_PED_PATH_CAN_USE_CLIMBOVERS(iLocal_82, 0);
-		AI::SET_PED_PATH_CAN_DROP_FROM_HEIGHT(iLocal_82, 0);
+		TASK::SET_PED_PATH_CAN_USE_CLIMBOVERS(iLocal_82, 0);
+		TASK::SET_PED_PATH_CAN_DROP_FROM_HEIGHT(iLocal_82, 0);
 		PED::SET_PED_CONFIG_FLAG(iLocal_82, 118, 0);
 		Var0 = { 2728.33f, 4145.6f, 43.89f };
 		if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(Var0, 10f, -380698483, 0))
@@ -1319,7 +1319,7 @@ void func_57(var uParam0, int iParam1, int iParam2, int iParam3)
 			ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(*uParam0, 0, 1);
 			if (iParam3 == 0)
 			{
-				AI::CLEAR_PED_SECONDARY_TASK(*uParam0);
+				TASK::CLEAR_PED_SECONDARY_TASK(*uParam0);
 			}
 			PED::SET_PED_KEEP_TASK(*uParam0, iParam1);
 			if (iParam2 == 1)

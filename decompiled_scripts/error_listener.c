@@ -52,7 +52,7 @@ void func_2()
 		{
 			func_9(&Var2);
 			func_8(2, iVar0, iVar1, &Var2);
-			Var2.f_1 = (GAMEPLAY::GET_FRAME_COUNT() - 1);
+			Var2.f_1 = (MISC::GET_FRAME_COUNT() - 1);
 			Var2 = iVar1;
 			if (!func_7(&Var2, &uVar5))
 			{
@@ -139,6 +139,6 @@ int func_11()
 
 void func_12()
 {
-	GAMEPLAY::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
+	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 }
 

@@ -61,7 +61,7 @@ void func_2(char* sParam0)
 
 void func_3(var uParam0)
 {
-	if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0, uParam0))
+	if (MISC::ARE_STRINGS_EQUAL(uParam0, uParam0))
 	{
 	}
 }

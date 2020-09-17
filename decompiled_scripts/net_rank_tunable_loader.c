@@ -17,7 +17,7 @@ void __EntryFunction__()
 	iLocal_24 = -1;
 	iLocal_25 = 21;
 	iLocal_27 = 1;
-	GAMEPLAY::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
+	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	while (true)
 	{
 		switch (iLocal_26)
@@ -8267,7 +8267,7 @@ void func_3(int iParam0, var uParam1, var uParam2, bool bParam3)
 {
 	uVar0 = func_4(iParam0);
 	uVar1 = *uParam2;
-	if (!NETWORK::_NETWORK_ACCESS_TUNABLE_INT_HASH(uVar0, uParam1, uParam2))
+	if (!NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(uVar0, uParam1, uParam2))
 	{
 		if (bParam3)
 		{
@@ -8277,7 +8277,7 @@ void func_3(int iParam0, var uParam1, var uParam2, bool bParam3)
 	}
 	else
 	{
-		unk_0x3A8B55FDA4C8DDEF(uVar0, uParam1, uParam2);
+		NETWORK::_NETWORK_REGISTER_TUNABLE_INT_HASH(uVar0, uParam1, uParam2);
 	}
 	if (bParam3)
 	{
@@ -8290,7 +8290,7 @@ int func_4(int iParam0)
 	{
 		StringCopy(&cVar0, "CONTENT_MODIFIER_", 64);
 		StringIntConCat(&cVar0, (iParam0 - 28), 64);
-		return GAMEPLAY::GET_HASH_KEY(&cVar0);
+		return MISC::GET_HASH_KEY(&cVar0);
 	}
 	switch (iParam0)
 	{

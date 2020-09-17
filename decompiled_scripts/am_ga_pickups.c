@@ -129,12 +129,12 @@ void func_3()
 	iVar0 = 0;
 	while (iVar0 < 5)
 	{
-		if (!GAMEPLAY::IS_BIT_SET(Local_102.f_2[iVar0].f_6, 1))
+		if (!MISC::IS_BIT_SET(Local_102.f_2[iVar0].f_6, 1))
 		{
 			func_4(iVar0);
 			if (Local_102.f_2[iVar0].f_14 > 5)
 			{
-				GAMEPLAY::SET_BIT(&(Local_102.f_2[iVar0].f_6), 1);
+				MISC::SET_BIT(&(Local_102.f_2[iVar0].f_6), 1);
 			}
 			Local_102.f_2[iVar0].f_14++;
 		}
@@ -175,13 +175,13 @@ int func_5()
 
 int func_6(int iParam0)
 {
-	if (func_8(Local_102.f_2[iParam0].f_2) || GAMEPLAY::IS_BIT_SET(Local_102.f_2[iParam0].f_6, 0))
+	if (func_8(Local_102.f_2[iParam0].f_2) || MISC::IS_BIT_SET(Local_102.f_2[iParam0].f_6, 0))
 	{
 		return 1;
 	}
 	iVar4 = 0;
-	GAMEPLAY::SET_BIT(&iVar4, 3);
-	GAMEPLAY::SET_BIT(&iVar4, 4);
+	MISC::SET_BIT(&iVar4, 3);
+	MISC::SET_BIT(&iVar4, 4);
 	switch (Local_102.f_2[iParam0].f_7)
 	{
 		case 0:
@@ -247,8 +247,8 @@ int func_6(int iParam0)
 int func_7(int iParam0, int iParam1)
 {
 	iVar3 = 0;
-	GAMEPLAY::SET_BIT(&iVar3, 3);
-	GAMEPLAY::SET_BIT(&iVar3, 4);
+	MISC::SET_BIT(&iVar3, 3);
+	MISC::SET_BIT(&iVar3, 4);
 	if (NETWORK::CAN_REGISTER_MISSION_ENTITIES(0, 0, 0, 1))
 	{
 		if (!ENTITY::DOES_ENTITY_EXIST(Local_102.f_2[iParam0].f_10[iParam1]))
@@ -274,7 +274,7 @@ int func_9(var uParam0)
 {
 	if (uParam0->f_1)
 	{
-		if (GAMEPLAY::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= 1000)
+		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= 1000)
 		{
 			return 1;
 		}
@@ -305,12 +305,12 @@ void func_11(var uParam0, bool bParam1, bool bParam2)
 			}
 			else
 			{
-				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 			}
 		}
 		else
 		{
-			*uParam0 = GAMEPLAY::GET_GAME_TIMER();
+			*uParam0 = MISC::GET_GAME_TIMER();
 		}
 		uParam0->f_1 = 1;
 	}
@@ -365,7 +365,7 @@ int func_14()
 	}
 	if (func_15() != 0)
 	{
-		if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(func_15()) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(func_15()) == 0)
 		{
 			return 1;
 		}
@@ -572,7 +572,7 @@ int func_29(struct<41> Param0, var uParam41, var uParam42, var uParam43, var uPa
 	{
 		return 0;
 	}
-	GAMEPLAY::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
+	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
 	if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 	{
 		Local_102.f_81 = Param0.f_1;
@@ -580,9 +580,9 @@ int func_29(struct<41> Param0, var uParam41, var uParam42, var uParam43, var uPa
 		iVar21 = 0;
 		while (iVar21 < 5)
 		{
-			if (!GAMEPLAY::IS_BIT_SET(Param0.f_5, 0))
+			if (!MISC::IS_BIT_SET(Param0.f_5, 0))
 			{
-				GAMEPLAY::SET_BIT(&(Local_102.f_2[iVar21].f_6), 0);
+				MISC::SET_BIT(&(Local_102.f_2[iVar21].f_6), 0);
 			}
 			Local_102.f_2[iVar21].f_2 = { Param0.f_6[iVar21] };
 			Local_102.f_2[iVar21].f_5 = Param0.f_22[iVar21];

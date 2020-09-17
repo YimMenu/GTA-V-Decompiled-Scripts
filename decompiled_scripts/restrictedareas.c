@@ -84,7 +84,7 @@ void __EntryFunction__()
 										iLocal_47[iLocal_70] = 1;
 									}
 									Local_72 = { func_33(iLocal_37) };
-									if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(GAMEPLAY::GET_HASH_KEY(&Local_72)) == 0)
+									if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(MISC::GET_HASH_KEY(&Local_72)) == 0)
 									{
 										if (!Global_30982[iLocal_37])
 										{
@@ -124,11 +124,11 @@ void __EntryFunction__()
 										{
 											if (func_38(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), iLocal_37, 0, 0))
 											{
-												if ((GAMEPLAY::GET_GAME_TIMER() - iLocal_78[iLocal_70]) > 8000)
+												if ((MISC::GET_GAME_TIMER() - iLocal_78[iLocal_70]) > 8000)
 												{
 													func_24();
 												}
-												else if (GAMEPLAY::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) + Vector(200f, 200f, 200f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) - Vector(200f, 200f, 200f), 1))
+												else if (MISC::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) + Vector(200f, 200f, 200f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) - Vector(200f, 200f, 200f), 1))
 												{
 													func_24();
 												}
@@ -145,7 +145,7 @@ void __EntryFunction__()
 											}
 											else
 											{
-												iLocal_78[iLocal_70] = GAMEPLAY::GET_GAME_TIMER();
+												iLocal_78[iLocal_70] = MISC::GET_GAME_TIMER();
 											}
 										}
 									}
@@ -179,14 +179,14 @@ void __EntryFunction__()
 										{
 											if (func_38(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), iLocal_37, 0, 0))
 											{
-												if (!iLocal_37 == 4 || (GAMEPLAY::GET_GAME_TIMER() - iLocal_78[iLocal_70]) > 8000)
+												if (!iLocal_37 == 4 || (MISC::GET_GAME_TIMER() - iLocal_78[iLocal_70]) > 8000)
 												{
 													func_24();
 												}
 											}
 											else
 											{
-												iLocal_78[iLocal_70] = GAMEPLAY::GET_GAME_TIMER();
+												iLocal_78[iLocal_70] = MISC::GET_GAME_TIMER();
 											}
 										}
 									}
@@ -231,7 +231,7 @@ void __EntryFunction__()
 								if (func_34(iLocal_37))
 								{
 									Local_72 = { func_33(iLocal_37) };
-									if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(GAMEPLAY::GET_HASH_KEY(&Local_72)) == 0)
+									if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(MISC::GET_HASH_KEY(&Local_72)) == 0)
 									{
 										func_32(iLocal_37, 0);
 										iLocal_38[iLocal_70] = 0;
@@ -349,9 +349,9 @@ int func_2(char* sParam0, int iParam1, bool bParam2)
 		Global_20801 = Global_20802;
 		if (Global_20811)
 		{
-			GAMEPLAY::CLEAR_BIT(&Global_7356, 20);
-			GAMEPLAY::CLEAR_BIT(&Global_7357, 17);
-			GAMEPLAY::CLEAR_BIT(&Global_7358, 0);
+			MISC::CLEAR_BIT(&Global_7356, 20);
+			MISC::CLEAR_BIT(&Global_7357, 17);
+			MISC::CLEAR_BIT(&Global_7358, 0);
 			if (bParam2)
 			{
 				func_12();
@@ -384,7 +384,7 @@ int func_2(char* sParam0, int iParam1, bool bParam2)
 				{
 					return 0;
 				}
-				if (AI::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID()))
+				if (TASK::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID()))
 				{
 					return 0;
 				}
@@ -445,7 +445,7 @@ int func_2(char* sParam0, int iParam1, bool bParam2)
 					default:
 						break;
 				}
-				if (GAMEPLAY::IS_BIT_SET(Global_7356, 9))
+				if (MISC::IS_BIT_SET(Global_7356, 9))
 				{
 					return 0;
 				}
@@ -510,7 +510,7 @@ int func_4()
 	{
 		return 0;
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_1628237[PLAYER::PLAYER_ID()].f_1, 7))
+	if (MISC::IS_BIT_SET(Global_1628237[PLAYER::PLAYER_ID()].f_1, 7))
 	{
 		return 0;
 	}
@@ -528,7 +528,7 @@ bool func_5(int iParam0)
 
 bool func_6(int iParam0, int iParam1)
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1628237[iParam0].f_11.f_4, iParam1);
+	return MISC::IS_BIT_SET(Global_1628237[iParam0].f_11.f_4, iParam1);
 }
 
 int func_7()
@@ -568,7 +568,7 @@ void func_9()
 	Global_21821 = 0;
 	Global_20854 = 0;
 	Global_20855 = 0;
-	GAMEPLAY::CLEAR_BIT(&Global_7357, 16);
+	MISC::CLEAR_BIT(&Global_7357, 16);
 }
 
 int func_10()
@@ -765,7 +765,7 @@ bool func_21(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_1377170.f_1048, iParam0);
+	return MISC::IS_BIT_SET(Global_1377170.f_1048, iParam0);
 }
 
 void func_22()
@@ -827,7 +827,7 @@ void func_24()
 			break;
 		
 		case 1:
-			if (PED::IS_PED_IN_FLYING_VEHICLE(PLAYER::PLAYER_PED_ID()) && GAMEPLAY::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) + Vector(200f, 200f, 200f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) - Vector(200f, 200f, 200f), 1))
+			if (PED::IS_PED_IN_FLYING_VEHICLE(PLAYER::PLAYER_PED_ID()) && MISC::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) + Vector(200f, 200f, 200f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) - Vector(200f, 200f, 200f), 1))
 			{
 				iLocal_71 = 5;
 			}
@@ -841,7 +841,7 @@ void func_24()
 			break;
 		
 		case 2:
-			if (PED::IS_PED_IN_FLYING_VEHICLE(PLAYER::PLAYER_PED_ID()) && GAMEPLAY::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) + Vector(200f, 200f, 200f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) - Vector(200f, 200f, 200f), 1))
+			if (PED::IS_PED_IN_FLYING_VEHICLE(PLAYER::PLAYER_PED_ID()) && MISC::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) + Vector(200f, 200f, 200f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) - Vector(200f, 200f, 200f), 1))
 			{
 				iLocal_71 = 5;
 			}
@@ -907,7 +907,7 @@ int func_25()
 			{
 				return 1;
 			}
-			if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(92439941) > 0)
+			if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(92439941) > 0)
 			{
 				return 1;
 			}
@@ -966,7 +966,7 @@ bool func_28(int iParam0, int iParam1)
 	{
 		return 0;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_111638.f_32744[iParam0], iParam1);
+	return MISC::IS_BIT_SET(Global_111638.f_32744[iParam0], iParam1);
 }
 
 int func_29()
@@ -1005,11 +1005,11 @@ int func_31(int iParam0)
 
 void func_32(int iParam0, bool bParam1)
 {
-	if (GAMEPLAY::IS_BIT_SET(Global_30926, iParam0))
+	if (MISC::IS_BIT_SET(Global_30926, iParam0))
 	{
 		if (!bParam1)
 		{
-			GAMEPLAY::CLEAR_BIT(&Global_30926, iParam0);
+			MISC::CLEAR_BIT(&Global_30926, iParam0);
 			StringCopy(&(Global_30927[iParam0]), "NULL", 24);
 			Global_30982[iParam0] = bParam1;
 		}
@@ -1023,7 +1023,7 @@ struct<6> func_33(int iParam0)
 
 int func_34(int iParam0)
 {
-	if (GAMEPLAY::IS_BIT_SET(Global_30926, iParam0))
+	if (MISC::IS_BIT_SET(Global_30926, iParam0))
 	{
 		return 1;
 	}

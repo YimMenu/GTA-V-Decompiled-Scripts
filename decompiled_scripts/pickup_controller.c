@@ -81,15 +81,15 @@ void func_2()
 void func_3(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bParam6)
 {
 	iVar0 = 0;
-	GAMEPLAY::SET_BIT(&iVar0, 2);
-	GAMEPLAY::SET_BIT(&iVar0, 1);
+	MISC::SET_BIT(&iVar0, 2);
+	MISC::SET_BIT(&iVar0, 1);
 	if (bParam6)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 4);
+		MISC::SET_BIT(&iVar0, 4);
 	}
 	if (bParam5)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 3);
+		MISC::SET_BIT(&iVar0, 3);
 	}
 	uLocal_281[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_4(iParam0), Param2, iVar0, -1, 2, 1, 0);
 	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_281[iParam0], 600000);
@@ -126,15 +126,15 @@ void func_6()
 void func_7(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bParam6)
 {
 	iVar0 = 0;
-	GAMEPLAY::SET_BIT(&iVar0, 2);
-	GAMEPLAY::SET_BIT(&iVar0, 1);
+	MISC::SET_BIT(&iVar0, 2);
+	MISC::SET_BIT(&iVar0, 1);
 	if (bParam6)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 4);
+		MISC::SET_BIT(&iVar0, 4);
 	}
 	if (bParam5)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 3);
+		MISC::SET_BIT(&iVar0, 3);
 	}
 	uLocal_278[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_8(iParam0), Param2, iVar0, -1, 2, 1, 0);
 	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_278[iParam0], 600000);
@@ -155,23 +155,23 @@ int func_9()
 {
 	if (NETWORK::NETWORK_IS_SIGNED_IN())
 	{
-		if (NETWORK::_NETWORK_ARE_ROS_AVAILABLE())
+		if (NETWORK::NETWORK_HAS_VALID_ROS_CREDENTIALS())
 		{
-			if (NETWORK::_0x593570C289A77688())
+			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
 				STATS::STAT_GET_INT(1571103992, &uVar0, -1);
-				GAMEPLAY::SET_BIT(&uVar0, 2);
-				GAMEPLAY::SET_BIT(&uVar0, 4);
-				GAMEPLAY::SET_BIT(&uVar0, 6);
-				GAMEPLAY::SET_BIT(&Global_25, 2);
-				GAMEPLAY::SET_BIT(&Global_25, 4);
-				GAMEPLAY::SET_BIT(&Global_25, 6);
+				MISC::SET_BIT(&uVar0, 2);
+				MISC::SET_BIT(&uVar0, 4);
+				MISC::SET_BIT(&uVar0, 6);
+				MISC::SET_BIT(&Global_25, 2);
+				MISC::SET_BIT(&Global_25, 4);
+				MISC::SET_BIT(&Global_25, 6);
 				STATS::STAT_SET_INT(1571103992, uVar0, 1);
-				if (GAMEPLAY::_0x5AA3BEFA29F03AD4())
+				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
-					uVar0 = GAMEPLAY::GET_PROFILE_SETTING(866);
-					GAMEPLAY::SET_BIT(&uVar0, 0);
-					STATS::_0xDAC073C7901F9E15(uVar0);
+					uVar0 = MISC::GET_PROFILE_SETTING(866);
+					MISC::SET_BIT(&uVar0, 0);
+					STATS::_SET_HAS_CONTENT_UNLOCKS_FLAGS(uVar0);
 				}
 				return 1;
 			}
@@ -185,9 +185,9 @@ int func_9()
 	{
 		return 0;
 	}
-	if (GAMEPLAY::_0x5AA3BEFA29F03AD4())
+	if (MISC::ARE_PROFILE_SETTINGS_VALID())
 	{
-		if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_PROFILE_SETTING(866), 0))
+		if (MISC::IS_BIT_SET(MISC::GET_PROFILE_SETTING(866), 0))
 		{
 			return 1;
 		}
@@ -213,25 +213,25 @@ void func_11(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPar
 	iVar0 = 0;
 	if (iParam1 == 1274757841)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 2);
-		GAMEPLAY::SET_BIT(&iVar0, 4);
-		GAMEPLAY::SET_BIT(&iVar0, 1);
+		MISC::SET_BIT(&iVar0, 2);
+		MISC::SET_BIT(&iVar0, 4);
+		MISC::SET_BIT(&iVar0, 1);
 		if (bParam5)
 		{
-			GAMEPLAY::SET_BIT(&iVar0, 3);
+			MISC::SET_BIT(&iVar0, 3);
 		}
 	}
 	else
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 2);
-		GAMEPLAY::SET_BIT(&iVar0, 1);
+		MISC::SET_BIT(&iVar0, 2);
+		MISC::SET_BIT(&iVar0, 1);
 		if (bParam6)
 		{
-			GAMEPLAY::SET_BIT(&iVar0, 4);
+			MISC::SET_BIT(&iVar0, 4);
 		}
 		if (bParam5)
 		{
-			GAMEPLAY::SET_BIT(&iVar0, 3);
+			MISC::SET_BIT(&iVar0, 3);
 		}
 	}
 	uLocal_266[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_12(iParam0), Param2, iVar0, -1, 2, 1, 0);
@@ -589,15 +589,15 @@ void func_25()
 void func_26(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bParam6, bool bParam7)
 {
 	iVar0 = 0;
-	GAMEPLAY::SET_BIT(&iVar0, 2);
-	GAMEPLAY::SET_BIT(&iVar0, 1);
+	MISC::SET_BIT(&iVar0, 2);
+	MISC::SET_BIT(&iVar0, 1);
 	if (bParam7)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 4);
+		MISC::SET_BIT(&iVar0, 4);
 	}
 	if (bParam5)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 3);
+		MISC::SET_BIT(&iVar0, 3);
 	}
 	uLocal_163[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_28(iParam0, 0), Param2, iVar0, -1, 2, 1, 0);
 	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_163[iParam0], 600000);
@@ -1434,13 +1434,13 @@ void func_29()
 void func_30(int iParam0, struct<3> Param1, bool bParam4, bool bParam5)
 {
 	iVar0 = 0;
-	GAMEPLAY::SET_BIT(&iVar0, 2);
-	GAMEPLAY::SET_BIT(&iVar0, 1);
-	GAMEPLAY::SET_BIT(&iVar0, 8);
-	GAMEPLAY::SET_BIT(&iVar0, 4);
+	MISC::SET_BIT(&iVar0, 2);
+	MISC::SET_BIT(&iVar0, 1);
+	MISC::SET_BIT(&iVar0, 8);
+	MISC::SET_BIT(&iVar0, 4);
 	if (!bParam4)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 3);
+		MISC::SET_BIT(&iVar0, 3);
 	}
 	uLocal_86[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(-1888453608, func_32(iParam0, 0), Param1, iVar0, -1, 2, 1, 0);
 	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_86[iParam0], 600000);
@@ -2239,13 +2239,13 @@ void func_33()
 void func_34(int iParam0, struct<3> Param1, bool bParam4)
 {
 	iVar0 = 0;
-	GAMEPLAY::SET_BIT(&iVar0, 2);
-	GAMEPLAY::SET_BIT(&iVar0, 4);
-	GAMEPLAY::SET_BIT(&iVar0, 1);
-	GAMEPLAY::SET_BIT(&iVar0, 8);
+	MISC::SET_BIT(&iVar0, 2);
+	MISC::SET_BIT(&iVar0, 4);
+	MISC::SET_BIT(&iVar0, 1);
+	MISC::SET_BIT(&iVar0, 8);
 	if (bParam4)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 3);
+		MISC::SET_BIT(&iVar0, 3);
 	}
 	uLocal_66[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(-962731009, func_35(iParam0), Param1, iVar0, -1, 2, 1, 0);
 	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_66[iParam0], 600000);
@@ -2386,16 +2386,16 @@ void func_36()
 void func_37(int iParam0, struct<3> Param1, bool bParam4, bool bParam5, bool bParam6)
 {
 	iVar0 = 0;
-	GAMEPLAY::SET_BIT(&iVar0, 2);
-	GAMEPLAY::SET_BIT(&iVar0, 4);
-	GAMEPLAY::SET_BIT(&iVar0, 1);
+	MISC::SET_BIT(&iVar0, 2);
+	MISC::SET_BIT(&iVar0, 4);
+	MISC::SET_BIT(&iVar0, 1);
 	if (bParam6)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 8);
+		MISC::SET_BIT(&iVar0, 8);
 	}
 	if (bParam4)
 	{
-		GAMEPLAY::SET_BIT(&iVar0, 3);
+		MISC::SET_BIT(&iVar0, 3);
 	}
 	uLocal_20[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(1274757841, func_39(iParam0, 0), Param1, iVar0, -1, 2, 1, 0);
 	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_20[iParam0], 600000);

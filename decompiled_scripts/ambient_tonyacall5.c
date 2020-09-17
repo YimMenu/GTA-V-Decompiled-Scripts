@@ -31,7 +31,7 @@ void __EntryFunction__()
 	{
 		func_32();
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-359250475) > 1)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-359250475) > 1)
 	{
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
@@ -106,14 +106,14 @@ int func_1()
 			{
 				if (ENTITY::IS_ENTITY_AT_COORD(uLocal_38, Local_57, 1f, 1f, 1f, 0, 1, 0))
 				{
-					AI::CLEAR_SEQUENCE_TASK(&uVar7);
-					AI::OPEN_SEQUENCE_TASK(&uVar7);
-					AI::TASK_ACHIEVE_HEADING(0, fLocal_60, 0);
-					AI::TASK_PLAY_ANIM(0, "amb@world_human_stand_mobile@female@standing@call@enter", "enter", 4f, -4f, -1, 0, 0, 0, 0, 0);
-					AI::TASK_PLAY_ANIM(0, "amb@world_human_stand_mobile@female@standing@call@base", "base", 4f, -4f, -1, 1, 0, 0, 0, 0);
-					AI::CLOSE_SEQUENCE_TASK(uVar7);
-					AI::TASK_PERFORM_SEQUENCE(uLocal_38, uVar7);
-					AI::CLEAR_SEQUENCE_TASK(&uVar7);
+					TASK::CLEAR_SEQUENCE_TASK(&uVar7);
+					TASK::OPEN_SEQUENCE_TASK(&uVar7);
+					TASK::TASK_ACHIEVE_HEADING(0, fLocal_60, 0);
+					TASK::TASK_PLAY_ANIM(0, "amb@world_human_stand_mobile@female@standing@call@enter", "enter", 4f, -4f, -1, 0, 0, 0, 0, 0);
+					TASK::TASK_PLAY_ANIM(0, "amb@world_human_stand_mobile@female@standing@call@base", "base", 4f, -4f, -1, 1, 0, 0, 0, 0);
+					TASK::CLOSE_SEQUENCE_TASK(uVar7);
+					TASK::TASK_PERFORM_SEQUENCE(uLocal_38, uVar7);
+					TASK::CLEAR_SEQUENCE_TASK(&uVar7);
 					iLocal_40 = 1;
 				}
 			}
@@ -122,7 +122,7 @@ int func_1()
 		case 1:
 			if (ENTITY::DOES_ENTITY_EXIST(uLocal_38) && !ENTITY::IS_ENTITY_DEAD(uLocal_38, 0))
 			{
-				if (AI::GET_SEQUENCE_PROGRESS(uLocal_38) == 1)
+				if (TASK::GET_SEQUENCE_PROGRESS(uLocal_38) == 1)
 				{
 					if (!ENTITY::DOES_ENTITY_EXIST(uLocal_39))
 					{
@@ -137,9 +137,9 @@ int func_1()
 						}
 					}
 				}
-				else if (AI::GET_SEQUENCE_PROGRESS(uLocal_38) == 2)
+				else if (TASK::GET_SEQUENCE_PROGRESS(uLocal_38) == 2)
 				{
-					iVar6 = (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535) % 2);
+					iVar6 = (MISC::GET_RANDOM_INT_IN_RANGE(0, 65535) % 2);
 					if (iVar6 == 0)
 					{
 						if (func_4(&uLocal_63, "TOWAUD", "TONYA_CALL5", 8, 0, 0, 0))
@@ -160,13 +160,13 @@ int func_1()
 			{
 				if (!func_3())
 				{
-					AI::CLEAR_SEQUENCE_TASK(&uVar7);
-					AI::OPEN_SEQUENCE_TASK(&uVar7);
-					AI::TASK_PLAY_ANIM(0, "amb@world_human_stand_mobile@female@standing@call@exit", "exit", 4f, -4f, -1, 0, 0, 0, 0, 0);
-					AI::TASK_START_SCENARIO_IN_PLACE(0, "WORLD_HUMAN_SMOKING", -1, 1);
-					AI::CLOSE_SEQUENCE_TASK(uVar7);
-					AI::TASK_PERFORM_SEQUENCE(uLocal_38, uVar7);
-					AI::CLEAR_SEQUENCE_TASK(&uVar7);
+					TASK::CLEAR_SEQUENCE_TASK(&uVar7);
+					TASK::OPEN_SEQUENCE_TASK(&uVar7);
+					TASK::TASK_PLAY_ANIM(0, "amb@world_human_stand_mobile@female@standing@call@exit", "exit", 4f, -4f, -1, 0, 0, 0, 0, 0);
+					TASK::TASK_START_SCENARIO_IN_PLACE(0, "WORLD_HUMAN_SMOKING", -1, 1);
+					TASK::CLOSE_SEQUENCE_TASK(uVar7);
+					TASK::TASK_PERFORM_SEQUENCE(uLocal_38, uVar7);
+					TASK::CLEAR_SEQUENCE_TASK(&uVar7);
 					iLocal_40 = 3;
 				}
 			}
@@ -202,12 +202,12 @@ void func_2()
 {
 	if (ENTITY::DOES_ENTITY_EXIST(uLocal_38) && !ENTITY::IS_ENTITY_DEAD(uLocal_38, 0))
 	{
-		if (AI::GET_SEQUENCE_PROGRESS(uLocal_38) == 1)
+		if (TASK::GET_SEQUENCE_PROGRESS(uLocal_38) == 1)
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(uLocal_39))
 			{
 				OBJECT::DELETE_OBJECT(&uLocal_39);
-				AI::TASK_LOOK_AT_ENTITY(uLocal_38, PLAYER::PLAYER_PED_ID(), -1, 0, 2);
+				TASK::TASK_LOOK_AT_ENTITY(uLocal_38, PLAYER::PLAYER_PED_ID(), -1, 0, 2);
 			}
 		}
 	}
@@ -215,7 +215,7 @@ void func_2()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(uLocal_39))
 		{
-			if (AI::GET_SCRIPT_TASK_STATUS(uLocal_38, 993674639) == 1)
+			if (TASK::GET_SCRIPT_TASK_STATUS(uLocal_38, 993674639) == 1)
 			{
 				OBJECT::DELETE_OBJECT(&uLocal_39);
 			}
@@ -312,9 +312,9 @@ int func_5(char* sParam0, int iParam1, bool bParam2)
 		Global_20801 = Global_20802;
 		if (Global_20811)
 		{
-			GAMEPLAY::CLEAR_BIT(&Global_7356, 20);
-			GAMEPLAY::CLEAR_BIT(&Global_7357, 17);
-			GAMEPLAY::CLEAR_BIT(&Global_7358, 0);
+			MISC::CLEAR_BIT(&Global_7356, 20);
+			MISC::CLEAR_BIT(&Global_7357, 17);
+			MISC::CLEAR_BIT(&Global_7358, 0);
 			if (bParam2)
 			{
 				func_15();
@@ -347,7 +347,7 @@ int func_5(char* sParam0, int iParam1, bool bParam2)
 				{
 					return 0;
 				}
-				if (AI::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID()))
+				if (TASK::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID()))
 				{
 					return 0;
 				}
@@ -408,7 +408,7 @@ int func_5(char* sParam0, int iParam1, bool bParam2)
 					default:
 						break;
 				}
-				if (GAMEPLAY::IS_BIT_SET(Global_7356, 9))
+				if (MISC::IS_BIT_SET(Global_7356, 9))
 				{
 					return 0;
 				}
@@ -473,7 +473,7 @@ int func_7()
 	{
 		return 0;
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_1628237[PLAYER::PLAYER_ID()].f_1, 7))
+	if (MISC::IS_BIT_SET(Global_1628237[PLAYER::PLAYER_ID()].f_1, 7))
 	{
 		return 0;
 	}
@@ -491,7 +491,7 @@ bool func_8(int iParam0)
 
 bool func_9(int iParam0, int iParam1)
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1628237[iParam0].f_11.f_4, iParam1);
+	return MISC::IS_BIT_SET(Global_1628237[iParam0].f_11.f_4, iParam1);
 }
 
 int func_10()
@@ -531,7 +531,7 @@ void func_12()
 	Global_21821 = 0;
 	Global_20854 = 0;
 	Global_20855 = 0;
-	GAMEPLAY::CLEAR_BIT(&Global_7357, 16);
+	MISC::CLEAR_BIT(&Global_7357, 16);
 }
 
 int func_13()
@@ -728,7 +728,7 @@ bool func_24(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_1377170.f_1048, iParam0);
+	return MISC::IS_BIT_SET(Global_1377170.f_1048, iParam0);
 }
 
 void func_25()
@@ -789,10 +789,10 @@ int func_27()
 				ENTITY::DETACH_ENTITY(uLocal_39, 1, 1);
 			}
 			AUDIO::STOP_SCRIPTED_CONVERSATION(0);
-			if (AI::GET_SCRIPT_TASK_STATUS(uLocal_38, 1805844857) != 1)
+			if (TASK::GET_SCRIPT_TASK_STATUS(uLocal_38, 1805844857) != 1)
 			{
 				PED::SET_PED_KEEP_TASK(uLocal_38, 1);
-				AI::TASK_SMART_FLEE_PED(uLocal_38, PLAYER::PLAYER_PED_ID(), 1000f, -1, 0, 0);
+				TASK::TASK_SMART_FLEE_PED(uLocal_38, PLAYER::PLAYER_PED_ID(), 1000f, -1, 0, 0);
 				return 1;
 			}
 		}
@@ -822,9 +822,9 @@ int func_28()
 			func_30();
 			if (!func_29(Local_57))
 			{
-				if (AI::GET_SCRIPT_TASK_STATUS(uLocal_38, 713668775) != 1)
+				if (TASK::GET_SCRIPT_TASK_STATUS(uLocal_38, 713668775) != 1)
 				{
-					AI::TASK_FOLLOW_NAV_MESH_TO_COORD(uLocal_38, Local_57, 1f, -1, 0.25f, 0, fLocal_60);
+					TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(uLocal_38, Local_57, 1f, -1, 0.25f, 0, fLocal_60);
 					PED::SET_PED_KEEP_TASK(uLocal_38, 1);
 				}
 				return 1;

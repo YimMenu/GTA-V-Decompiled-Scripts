@@ -47,7 +47,7 @@ void __EntryFunction__()
 			}
 		}
 	}
-	GAMEPLAY::_0x6F2135B6129620C1(1);
+	MISC::_0x6F2135B6129620C1(1);
 	while (true)
 	{
 		if (!func_61(PLAYER::PLAYER_PED_ID()))
@@ -114,11 +114,11 @@ int func_2()
 
 bool func_3(bool bParam0)
 {
-	if (!bParam0 && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-448212099) > 0)
+	if (!bParam0 && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-448212099) > 0)
 	{
 		return 1;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_76870, 0);
+	return MISC::IS_BIT_SET(Global_76870, 0);
 }
 
 void func_4()
@@ -135,15 +135,15 @@ void func_5(int iParam0, bool bParam1, bool bParam2)
 	}
 	if (!bParam2)
 	{
-		bVar1 = GAMEPLAY::IS_BIT_SET(Global_31146[iVar0].f_11, 15);
+		bVar1 = MISC::IS_BIT_SET(Global_31146[iVar0].f_11, 15);
 		if (bVar1 == bParam1)
 		{
 			return;
 		}
 	}
-	if (bParam1 != GAMEPLAY::IS_BIT_SET(Global_31146[iVar0].f_11, 0))
+	if (bParam1 != MISC::IS_BIT_SET(Global_31146[iVar0].f_11, 0))
 	{
-		GAMEPLAY::SET_BIT(&(Global_31146[iVar0].f_11), 18);
+		MISC::SET_BIT(&(Global_31146[iVar0].f_11), 18);
 		if (Global_31143 == 1)
 		{
 			Global_31144 = 1;
@@ -152,22 +152,22 @@ void func_5(int iParam0, bool bParam1, bool bParam2)
 	}
 	if (bParam1)
 	{
-		GAMEPLAY::SET_BIT(&(Global_31146[iVar0].f_11), 0);
-		GAMEPLAY::SET_BIT(&(Global_31146[iVar0].f_11), 15);
-		GAMEPLAY::SET_BIT(&(Global_31146[iVar0].f_11), 3);
+		MISC::SET_BIT(&(Global_31146[iVar0].f_11), 0);
+		MISC::SET_BIT(&(Global_31146[iVar0].f_11), 15);
+		MISC::SET_BIT(&(Global_31146[iVar0].f_11), 3);
 	}
 	else
 	{
-		GAMEPLAY::CLEAR_BIT(&(Global_31146[iVar0].f_11), 0);
-		GAMEPLAY::CLEAR_BIT(&(Global_31146[iVar0].f_11), 15);
+		MISC::CLEAR_BIT(&(Global_31146[iVar0].f_11), 0);
+		MISC::CLEAR_BIT(&(Global_31146[iVar0].f_11), 15);
 	}
-	if (!GAMEPLAY::IS_BIT_SET(Global_31146[iVar0].f_11, 0))
+	if (!MISC::IS_BIT_SET(Global_31146[iVar0].f_11, 0))
 	{
-		if (UI::DOES_BLIP_EXIST(Global_31146[iVar0].f_19))
+		if (HUD::DOES_BLIP_EXIST(Global_31146[iVar0].f_19))
 		{
-			GAMEPLAY::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(1);
-			UI::REMOVE_BLIP(&(Global_31146[iVar0].f_19));
-			GAMEPLAY::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(0);
+			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(1);
+			HUD::REMOVE_BLIP(&(Global_31146[iVar0].f_19));
+			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(0);
 		}
 	}
 }
@@ -216,7 +216,7 @@ void func_7(int iParam0)
 
 void func_8()
 {
-	UI::CLEAR_HELP(1);
+	HUD::CLEAR_HELP(1);
 	StringCopy(&cVar0, "CRACEWIN", 16);
 	StringIntConCat(&cVar0, Global_111638.f_25068 + 1, 16);
 	func_9(&cVar0, -1);
@@ -224,8 +224,8 @@ void func_8()
 
 void func_9(char[4] cParam0, int iParam1)
 {
-	UI::BEGIN_TEXT_COMMAND_DISPLAY_HELP(cParam0);
-	UI::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, 1, iParam1);
+	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(cParam0);
+	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, 1, iParam1);
 }
 
 bool func_10()
@@ -235,7 +235,7 @@ bool func_10()
 
 void func_11()
 {
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(2037466602) == 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(2037466602) == 0)
 	{
 		func_12(&Global_111636);
 		Global_111636 = -1;
@@ -265,13 +265,13 @@ void func_12(var uParam0)
 
 void func_13()
 {
-	UI::HIDE_HELP_TEXT_THIS_FRAME();
+	HUD::HIDE_HELP_TEXT_THIS_FRAME();
 	func_22();
 	PLAYER::SET_ALL_RANDOM_PEDS_FLEE_THIS_FRAME(PLAYER::PLAYER_ID());
 	SCRIPT::REQUEST_SCRIPT("Country_Race");
-	CONTROLS::DISABLE_CONTROL_ACTION(0, 74, 1);
-	GAMEPLAY::CLEAR_AREA_OF_PROJECTILES(func_60(), 20f, 0);
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(2037466602) == 0)
+	PAD::DISABLE_CONTROL_ACTION(0, 74, 1);
+	MISC::CLEAR_AREA_OF_PROJECTILES(func_60(), 20f, 0);
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(2037466602) == 0)
 	{
 		if (SCRIPT::HAS_SCRIPT_LOADED("Country_Race"))
 		{
@@ -639,7 +639,7 @@ void func_23()
 	{
 		if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), func_60(), 5f, 5f, 5f, 1, 1, 0))
 		{
-			CONTROLS::DISABLE_CONTROL_ACTION(0, 74, 1);
+			PAD::DISABLE_CONTROL_ACTION(0, 74, 1);
 			PED::SET_IK_TARGET(uLocal_157, 1, PLAYER::PLAYER_PED_ID(), 0, 0f, 0f, 0f, 0, 150, 400);
 			if (func_41())
 			{
@@ -648,16 +648,16 @@ void func_23()
 					func_35();
 					func_33();
 					func_32();
-					if (((!STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() && !func_31(1)) && !func_30(0)) && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) == 0)
+					if (((!STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() && !func_31(1)) && !func_30(0)) && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) == 0)
 					{
-						if (CONTROLS::IS_CONTROL_JUST_PRESSED(2, 51))
+						if (PAD::IS_CONTROL_JUST_PRESSED(2, 51))
 						{
 							AUDIO::PLAY_SOUND_FRONTEND(-1, "YES", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
-							UI::CLEAR_HELP(1);
-							GAMEPLAY::CLEAR_AREA_OF_PROJECTILES(func_60(), 20f, 0);
+							HUD::CLEAR_HELP(1);
+							MISC::CLEAR_AREA_OF_PROJECTILES(func_60(), 20f, 0);
 							ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), 1);
 							ENTITY::SET_ENTITY_INVINCIBLE(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0), 1);
-							UI::HIDE_HELP_TEXT_THIS_FRAME();
+							HUD::HIDE_HELP_TEXT_THIS_FRAME();
 							iLocal_154 = 1;
 						}
 					}
@@ -690,16 +690,16 @@ void func_23()
 void func_24()
 {
 	Var0 = { func_26() };
-	if (UI::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3) && (func_25(&Var0) || func_25("CRACECAR")))
+	if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3) && (func_25(&Var0) || func_25("CRACECAR")))
 	{
-		UI::CLEAR_HELP(1);
+		HUD::CLEAR_HELP(1);
 	}
 }
 
 bool func_25(char* sParam0)
 {
-	UI::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam0);
-	return UI::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
+	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam0);
+	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
 struct<4> func_26()
@@ -720,11 +720,11 @@ void func_27()
 
 void func_28()
 {
-	if (UI::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
+	if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
 	{
-		if (!func_25("CRACECAR") && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) == 0)
+		if (!func_25("CRACECAR") && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) == 0)
 		{
-			UI::CLEAR_HELP(1);
+			HUD::CLEAR_HELP(1);
 			func_29("CRACECAR", 1, 1, -1);
 		}
 	}
@@ -732,8 +732,8 @@ void func_28()
 
 void func_29(char* sParam0, int iParam1, int iParam2, int iParam3)
 {
-	UI::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
-	UI::END_TEXT_COMMAND_DISPLAY_HELP(0, iParam1, iParam2, iParam3);
+	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
+	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, iParam1, iParam2, iParam3);
 }
 
 int func_30(int iParam0)
@@ -742,7 +742,7 @@ int func_30(int iParam0)
 	{
 		if (Global_19486.f_1 > 3)
 		{
-			if (GAMEPLAY::IS_BIT_SET(Global_7356, 14))
+			if (MISC::IS_BIT_SET(Global_7356, 14))
 			{
 				return 1;
 			}
@@ -756,7 +756,7 @@ int func_30(int iParam0)
 			return 0;
 		}
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
 	{
 		return 1;
 	}
@@ -778,12 +778,12 @@ bool func_31(bool bParam0)
 
 void func_32()
 {
-	if (UI::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
+	if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
 	{
 		Var0 = { func_26() };
-		if (!func_25(&Var0) && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) == 0)
+		if (!func_25(&Var0) && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) == 0)
 		{
-			UI::CLEAR_HELP(1);
+			HUD::CLEAR_HELP(1);
 			func_29(&Var0, 1, 1, -1);
 		}
 	}
@@ -826,10 +826,10 @@ int func_34(var uParam0)
 
 void func_35()
 {
-	if (GAMEPLAY::GET_GAME_TIMER() > iLocal_158 + 5000)
+	if (MISC::GET_GAME_TIMER() > iLocal_158 + 5000)
 	{
 		func_36(uLocal_157, "PRERACE_CHAT", 11);
-		iLocal_158 = GAMEPLAY::GET_GAME_TIMER();
+		iLocal_158 = MISC::GET_GAME_TIMER();
 	}
 }
 
@@ -1066,8 +1066,8 @@ int func_38()
 			iVar2[85] = 943752001;
 			iVar2[86] = -1776615689;
 			iVar2[87] = -956048545;
-			iVar2[88] = GAMEPLAY::GET_HASH_KEY("RATLOADER2");
-			iVar2[89] = GAMEPLAY::GET_HASH_KEY("SLAMVAN");
+			iVar2[88] = MISC::GET_HASH_KEY("RATLOADER2");
+			iVar2[89] = MISC::GET_HASH_KEY("SLAMVAN");
 			iVar2[90] = 0;
 			iVar1 = 0;
 			while (iVar1 < iVar2)
@@ -1126,7 +1126,7 @@ int func_41()
 	{
 		return 0;
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-95143158) != 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-95143158) != 0)
 	{
 		return 0;
 	}
@@ -1174,9 +1174,9 @@ int func_43()
 		{
 			if (func_61(uLocal_157) && func_61(uLocal_156))
 			{
-				if (!UI::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3) && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-131607125) <= 0)
+				if (!HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3) && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-131607125) <= 0)
 				{
-					UI::REQUEST_ADDITIONAL_TEXT("C_RACE", 3);
+					HUD::REQUEST_ADDITIONAL_TEXT("C_RACE", 3);
 				}
 				return 1;
 			}
@@ -1207,23 +1207,23 @@ int func_43()
 			func_14(&uLocal_156, 0);
 			if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), func_60(), 5f, 5f, 5f, 1, 1, 0))
 			{
-				if (UI::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
+				if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
 				{
-					if (!func_25("CRACEDISRUPT") && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) == 0)
+					if (!func_25("CRACEDISRUPT") && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) == 0)
 					{
-						UI::CLEAR_HELP(1);
+						HUD::CLEAR_HELP(1);
 						func_29("CRACEDISRUPT", 1, 1, -1);
 					}
 				}
 			}
-			else if (UI::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3) && func_25("CRACEDISRUPT"))
+			else if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3) && func_25("CRACEDISRUPT"))
 			{
-				UI::CLEAR_HELP(1);
+				HUD::CLEAR_HELP(1);
 			}
 		}
-		else if (UI::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3) && func_25("CRACEDISRUPT"))
+		else if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3) && func_25("CRACEDISRUPT"))
 		{
-			UI::CLEAR_HELP(1);
+			HUD::CLEAR_HELP(1);
 		}
 	}
 	return 0;
@@ -1258,12 +1258,12 @@ void func_44(bool bParam0)
 			}
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(uLocal_156, 3);
 			VEHICLE::SET_VEHICLE_AUTOMATICALLY_ATTACHES(uLocal_156, 0, 0);
-			VEHICLE::_0x2B6747FAA9DB9D6B(uLocal_156, 1);
+			VEHICLE::SET_VEHICLE_DISABLE_TOWING(uLocal_156, 1);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_50());
 			uLocal_157 = PED::CREATE_PED(26, 2007797722, func_47(), func_46(), 1, 1);
 			func_45(uLocal_157);
 			AUDIO::SET_AMBIENT_VOICE_NAME(uLocal_157, "A_M_Y_RACER_01_WHITE_MINI_01");
-			AI::TASK_START_SCENARIO_IN_PLACE(uLocal_157, "WORLD_HUMAN_STAND_IMPATIENT", -1, 1);
+			TASK::TASK_START_SCENARIO_IN_PLACE(uLocal_157, "WORLD_HUMAN_STAND_IMPATIENT", -1, 1);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(2007797722);
 		}
 	}
@@ -1370,12 +1370,12 @@ void func_51()
 		{
 			if (!func_53(uLocal_157, 993674639, 1))
 			{
-				AI::TASK_START_SCENARIO_IN_PLACE(uLocal_157, "WORLD_HUMAN_STAND_IMPATIENT", -1, 1);
+				TASK::TASK_START_SCENARIO_IN_PLACE(uLocal_157, "WORLD_HUMAN_STAND_IMPATIENT", -1, 1);
 			}
 			if (func_52(uLocal_156) || Global_111638.f_25068.f_9)
 			{
 				PED::_0xF1C03A5352243A30(uLocal_157);
-				AI::TASK_COMBAT_PED(uLocal_157, PLAYER::PLAYER_PED_ID(), 0, 16);
+				TASK::TASK_COMBAT_PED(uLocal_157, PLAYER::PLAYER_PED_ID(), 0, 16);
 			}
 			fLocal_160 = ENTITY::GET_ENTITY_SPEED(PLAYER::PLAYER_PED_ID());
 		}
@@ -1384,7 +1384,7 @@ void func_51()
 			if (!func_53(uLocal_157, 780511057, 1))
 			{
 				PED::_0xF1C03A5352243A30(uLocal_157);
-				AI::TASK_COMBAT_PED(uLocal_157, PLAYER::PLAYER_PED_ID(), 0, 16);
+				TASK::TASK_COMBAT_PED(uLocal_157, PLAYER::PLAYER_PED_ID(), 0, 16);
 			}
 		}
 	}
@@ -1413,7 +1413,7 @@ int func_52(var uParam0)
 
 int func_53(var uParam0, int iParam1, bool bParam2)
 {
-	iVar0 = AI::GET_SCRIPT_TASK_STATUS(uParam0, iParam1);
+	iVar0 = TASK::GET_SCRIPT_TASK_STATUS(uParam0, iParam1);
 	if (iVar0 == 1 || iVar0 == 0)
 	{
 		return 1;
@@ -1484,7 +1484,7 @@ float func_55(var uParam0, struct<3> Param1, int iParam4)
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0, 0) };
 	}
-	return GAMEPLAY::GET_DISTANCE_BETWEEN_COORDS(Var0, Param1, iParam4);
+	return MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param1, iParam4);
 }
 
 void func_56()
@@ -1509,7 +1509,7 @@ void func_56()
 		Global_111638.f_25068.f_8 = 1;
 		func_62(0);
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(2037466602) == 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(2037466602) == 0)
 	{
 		if (SYSTEM::VDIST2(func_60(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) > 160000f)
 		{
@@ -1522,23 +1522,23 @@ int func_57()
 {
 	if (NETWORK::NETWORK_IS_SIGNED_IN())
 	{
-		if (NETWORK::_NETWORK_ARE_ROS_AVAILABLE())
+		if (NETWORK::NETWORK_HAS_VALID_ROS_CREDENTIALS())
 		{
-			if (NETWORK::_0x593570C289A77688())
+			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
 				STATS::STAT_GET_INT(1571103992, &uVar0, -1);
-				GAMEPLAY::SET_BIT(&uVar0, 2);
-				GAMEPLAY::SET_BIT(&uVar0, 4);
-				GAMEPLAY::SET_BIT(&uVar0, 6);
-				GAMEPLAY::SET_BIT(&Global_25, 2);
-				GAMEPLAY::SET_BIT(&Global_25, 4);
-				GAMEPLAY::SET_BIT(&Global_25, 6);
+				MISC::SET_BIT(&uVar0, 2);
+				MISC::SET_BIT(&uVar0, 4);
+				MISC::SET_BIT(&uVar0, 6);
+				MISC::SET_BIT(&Global_25, 2);
+				MISC::SET_BIT(&Global_25, 4);
+				MISC::SET_BIT(&Global_25, 6);
 				STATS::STAT_SET_INT(1571103992, uVar0, 1);
-				if (GAMEPLAY::_0x5AA3BEFA29F03AD4())
+				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
-					uVar0 = GAMEPLAY::GET_PROFILE_SETTING(866);
-					GAMEPLAY::SET_BIT(&uVar0, 0);
-					STATS::_0xDAC073C7901F9E15(uVar0);
+					uVar0 = MISC::GET_PROFILE_SETTING(866);
+					MISC::SET_BIT(&uVar0, 0);
+					STATS::_SET_HAS_CONTENT_UNLOCKS_FLAGS(uVar0);
 				}
 				return 1;
 			}
@@ -1552,9 +1552,9 @@ int func_57()
 	{
 		return 0;
 	}
-	if (GAMEPLAY::_0x5AA3BEFA29F03AD4())
+	if (MISC::ARE_PROFILE_SETTINGS_VALID())
 	{
-		if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_PROFILE_SETTING(866), 0))
+		if (MISC::IS_BIT_SET(MISC::GET_PROFILE_SETTING(866), 0))
 		{
 			return 1;
 		}
@@ -1597,7 +1597,7 @@ int func_59(int iParam0, int iParam1)
 	{
 		return 0;
 	}
-	uVar0 = GAMEPLAY::IS_BIT_SET(Global_111638.f_9080.f_99.f_219[iParam0], iParam1);
+	uVar0 = MISC::IS_BIT_SET(Global_111638.f_9080.f_99.f_219[iParam0], iParam1);
 	return uVar0;
 }
 
@@ -1625,14 +1625,14 @@ void func_62(bool bParam0)
 	{
 		if (func_53(uLocal_157, -1098463898, 1) || func_53(uLocal_157, 993674639, 1))
 		{
-			AI::TASK_WANDER_STANDARD(uLocal_157, 1193033728, 0);
+			TASK::TASK_WANDER_STANDARD(uLocal_157, 1193033728, 0);
 		}
 	}
 	func_15(&uLocal_157, bParam0);
 	func_14(&uLocal_156, bParam0);
 	if (bParam0)
 	{
-		GAMEPLAY::CLEAR_AREA(func_60(), 100f, 1, 0, 0, 0);
+		MISC::CLEAR_AREA(func_60(), 100f, 1, 0, 0, 0);
 	}
 	if (CAM::IS_GAMEPLAY_HINT_ACTIVE())
 	{
@@ -1640,11 +1640,11 @@ void func_62(bool bParam0)
 	}
 	iLocal_159 = 1;
 	Var0 = { func_26() };
-	if (UI::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
+	if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
 	{
 		if ((func_25("CRACEDISRUPT") || func_25("CRACECAR")) || func_25(&Var0))
 		{
-			UI::CLEAR_HELP(1);
+			HUD::CLEAR_HELP(1);
 		}
 	}
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("Country_Race");

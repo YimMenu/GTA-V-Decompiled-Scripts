@@ -77,36 +77,36 @@ void func_1()
 		{
 			SYSTEM::SETTIMERB(0);
 			Local_48 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-			AI::OPEN_SEQUENCE_TASK(&uLocal_54);
-			AI::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
-			AI::TASK_PLAY_ANIM(0, "amb@BUSKER", "SAX_loop_B", 8f, -8f, -1, 0, 0, 0, 0, 0);
-			AI::CLOSE_SEQUENCE_TASK(uLocal_54);
+			TASK::OPEN_SEQUENCE_TASK(&uLocal_54);
+			TASK::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
+			TASK::TASK_PLAY_ANIM(0, "amb@BUSKER", "SAX_loop_B", 8f, -8f, -1, 0, 0, 0, 0, 0);
+			TASK::CLOSE_SEQUENCE_TASK(uLocal_54);
 			if (!ENTITY::IS_ENTITY_DEAD(uLocal_52, 0))
 			{
-				AI::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_54);
+				TASK::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_54);
 			}
-			AI::CLEAR_SEQUENCE_TASK(&uLocal_54);
+			TASK::CLEAR_SEQUENCE_TASK(&uLocal_54);
 		}
 		if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_45, 3f, 3f, 3f, 0, 1, 0))
 		{
 			Local_48 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
 			SYSTEM::SETTIMERB(0);
-			AI::OPEN_SEQUENCE_TASK(&uLocal_54);
-			AI::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
-			AI::TASK_PLAY_ANIM(0, "amb@BUSKER", "SAX_loop_A", 8f, -8f, -1, 0, 0, 0, 0, 0);
-			AI::CLOSE_SEQUENCE_TASK(uLocal_54);
+			TASK::OPEN_SEQUENCE_TASK(&uLocal_54);
+			TASK::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
+			TASK::TASK_PLAY_ANIM(0, "amb@BUSKER", "SAX_loop_A", 8f, -8f, -1, 0, 0, 0, 0, 0);
+			TASK::CLOSE_SEQUENCE_TASK(uLocal_54);
 			if (!ENTITY::IS_ENTITY_DEAD(uLocal_52, 0))
 			{
-				AI::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_54);
+				TASK::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_54);
 			}
-			AI::CLEAR_SEQUENCE_TASK(&uLocal_54);
+			TASK::CLEAR_SEQUENCE_TASK(&uLocal_54);
 		}
 	}
 }
 
 void func_2()
 {
-	iLocal_51 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 2);
+	iLocal_51 = MISC::GET_RANDOM_INT_IN_RANGE(0, 2);
 	if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_45, 50f, 50f, 50f, 0, 1, 0))
 	{
 		STREAMING::REQUEST_MODEL(-1606864033);
@@ -124,12 +124,12 @@ void func_2()
 		uLocal_52 = PED::CREATE_PED(19, 832784782, Local_45.x, Local_45.y, Local_48.z, 0f, 1, 1);
 		if (!ENTITY::IS_ENTITY_DEAD(uLocal_52, 0))
 		{
-			AI::OPEN_SEQUENCE_TASK(&uLocal_54);
-			AI::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
-			AI::TASK_PLAY_ANIM(0, "amb@BUSKER", "SAX_loop_A", 8f, -8f, -1, 1, 0, 0, 0, 0);
-			AI::CLOSE_SEQUENCE_TASK(uLocal_54);
-			AI::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_54);
-			AI::CLEAR_SEQUENCE_TASK(&uLocal_54);
+			TASK::OPEN_SEQUENCE_TASK(&uLocal_54);
+			TASK::TASK_TURN_PED_TO_FACE_COORD(0, Local_48, 0);
+			TASK::TASK_PLAY_ANIM(0, "amb@BUSKER", "SAX_loop_A", 8f, -8f, -1, 1, 0, 0, 0, 0);
+			TASK::CLOSE_SEQUENCE_TASK(uLocal_54);
+			TASK::TASK_PERFORM_SEQUENCE(uLocal_52, uLocal_54);
+			TASK::CLEAR_SEQUENCE_TASK(&uLocal_54);
 		}
 		if (iLocal_51 == 1)
 		{
@@ -137,7 +137,7 @@ void func_2()
 			iLocal_53 = PED::CREATE_PED(5, -1606864033, Local_48, 0f, 1, 1);
 			if (!ENTITY::IS_ENTITY_DEAD(iLocal_53, 0))
 			{
-				AI::TASK_TURN_PED_TO_FACE_COORD(iLocal_53, Local_45, 0);
+				TASK::TASK_TURN_PED_TO_FACE_COORD(iLocal_53, Local_45, 0);
 			}
 		}
 		iLocal_44 = 1;
@@ -293,14 +293,14 @@ int func_6()
 {
 	if (Global_95666 != -1)
 	{
-		return GAMEPLAY::IS_BIT_SET(Global_89532[Global_95666].f_15, 13);
+		return MISC::IS_BIT_SET(Global_89532[Global_95666].f_15, 13);
 	}
 	return 0;
 }
 
 int func_7()
 {
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1424752554) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1424752554) > 0)
 	{
 		return 1;
 	}
@@ -341,7 +341,7 @@ var func_11(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_1377170.f_1048, iParam0);
+	return MISC::IS_BIT_SET(Global_1377170.f_1048, iParam0);
 }
 
 var func_12()

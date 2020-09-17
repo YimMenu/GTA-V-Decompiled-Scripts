@@ -27,14 +27,14 @@ void __EntryFunction__()
 	iVar1 = -1622245081;
 	sVar2 = "carwash1";
 	Var3 = { ScriptParam_0.f_1[0] };
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1006508663) > 1)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1006508663) > 1)
 	{
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		GAMEPLAY::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
-		GAMEPLAY::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
+		MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
+		MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
 	}
 	else
 	{
@@ -42,7 +42,7 @@ void __EntryFunction__()
 	}
 	if (Global_2621550)
 	{
-		if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(131838674) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(131838674) == 0)
 		{
 			SCRIPT::REQUEST_SCRIPT_WITH_NAME_HASH(131838674);
 			while (!SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(131838674))
@@ -73,16 +73,16 @@ void __EntryFunction__()
 	{
 		sVar2 = "carwash2";
 	}
-	iVar0 = GAMEPLAY::GET_GAME_TIMER();
-	iVar1 = GAMEPLAY::GET_HASH_KEY(sVar2);
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(iVar1) == 0)
+	iVar0 = MISC::GET_GAME_TIMER();
+	iVar1 = MISC::GET_HASH_KEY(sVar2);
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(iVar1) == 0)
 	{
 		SCRIPT::REQUEST_SCRIPT(sVar2);
 		while (!SCRIPT::HAS_SCRIPT_LOADED(sVar2))
 		{
 			SCRIPT::REQUEST_SCRIPT(sVar2);
 			SYSTEM::WAIT(0);
-			if (GAMEPLAY::GET_GAME_TIMER() > iVar0 + 20000)
+			if (MISC::GET_GAME_TIMER() > iVar0 + 20000)
 			{
 				SCRIPT::TERMINATE_THIS_THREAD();
 			}
@@ -106,7 +106,7 @@ int func_2(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		return GAMEPLAY::IS_BIT_SET(Global_1590535[iParam0].f_274.f_393.f_2, 16);
+		return MISC::IS_BIT_SET(Global_1590535[iParam0].f_274.f_393.f_2, 16);
 	}
 	return 0;
 }
@@ -120,25 +120,25 @@ int func_4(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		return GAMEPLAY::IS_BIT_SET(Global_1590535[iParam0].f_274.f_334, 29);
+		return MISC::IS_BIT_SET(Global_1590535[iParam0].f_274.f_334, 29);
 	}
 	return 0;
 }
 
 var func_5()
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID()].f_39.f_18, 0);
+	return MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID()].f_39.f_18, 0);
 }
 
 bool func_6(int iParam0)
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1590535[iParam0].f_142, 6);
+	return MISC::IS_BIT_SET(Global_1590535[iParam0].f_142, 6);
 }
 
 int func_7()
 {
 	iVar0 = Global_2439138;
-	if (GAMEPLAY::IS_BIT_SET(Global_1627020[iVar0].f_14, 0) && Global_1627020[iVar0].f_23 == 2)
+	if (MISC::IS_BIT_SET(Global_1627020[iVar0].f_14, 0) && Global_1627020[iVar0].f_23 == 2)
 	{
 		return 1;
 	}
@@ -171,7 +171,7 @@ bool func_9(int iParam0)
 
 var func_10(int iParam0)
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1590535[iParam0].f_13.f_1, 0);
+	return MISC::IS_BIT_SET(Global_1590535[iParam0].f_13.f_1, 0);
 }
 
 bool func_11(var uParam0)

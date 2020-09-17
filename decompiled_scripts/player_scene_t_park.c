@@ -73,7 +73,7 @@ void func_1()
 
 int func_2()
 {
-	if (!GAMEPLAY::IS_STRING_NULL_OR_EMPTY(&cLocal_90))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(&cLocal_90))
 	{
 		if (!GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(uLocal_87))
 		{
@@ -100,7 +100,7 @@ int func_2()
 						{
 							if (GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE(&cLocal_106, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 0f, 0f, 0f, iLocal_89, 1f, 0, 0, 0))
 							{
-								if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_106, "scr_meth_pipe_smoke"))
+								if (MISC::ARE_STRINGS_EQUAL(&cLocal_106, "scr_meth_pipe_smoke"))
 								{
 									func_17(PLAYER::PLAYER_PED_ID(), 0, 1);
 								}
@@ -111,7 +111,7 @@ int func_2()
 						}
 						else if (GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_ENTITY(&cLocal_106, iLocal_72, 0f, 0f, -1f, 0f, 0f, 0f, 1065353216, 0, 0, 0))
 						{
-							if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_106, "scr_meth_pipe_smoke"))
+							if (MISC::ARE_STRINGS_EQUAL(&cLocal_106, "scr_meth_pipe_smoke"))
 							{
 								func_17(PLAYER::PLAYER_PED_ID(), 0, 1);
 							}
@@ -134,7 +134,7 @@ int func_2()
 						{
 							if (GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE(&cLocal_106, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 0f, 0f, 0f, iLocal_89, 1f, 0, 0, 0))
 							{
-								if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_106, "scr_meth_pipe_smoke"))
+								if (MISC::ARE_STRINGS_EQUAL(&cLocal_106, "scr_meth_pipe_smoke"))
 								{
 									func_17(PLAYER::PLAYER_PED_ID(), 0, 1);
 								}
@@ -145,7 +145,7 @@ int func_2()
 						}
 						else if (GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_ENTITY(&cLocal_106, iLocal_72, 0f, 0f, -1f, 0f, 0f, 0f, 1065353216, 0, 0, 0))
 						{
-							if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_106, "scr_meth_pipe_smoke"))
+							if (MISC::ARE_STRINGS_EQUAL(&cLocal_106, "scr_meth_pipe_smoke"))
 							{
 								func_17(PLAYER::PLAYER_PED_ID(), 0, 1);
 							}
@@ -157,7 +157,7 @@ int func_2()
 					break;
 				
 				case 2:
-					if (!GAMEPLAY::IS_STRING_NULL_OR_EMPTY(&cLocal_122))
+					if (!MISC::IS_STRING_NULL_OR_EMPTY(&cLocal_122))
 					{
 						if (GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD(&cLocal_122, Local_83 + Local_138, 0f, 0f, 0f, 1f, 0, 0, 0))
 						{
@@ -333,18 +333,18 @@ int func_3(int iParam0, int iParam1)
 			STREAMING::REQUEST_MODEL(iVar13);
 			while (!STREAMING::HAS_MODEL_LOADED(iVar13))
 			{
-				UI::HIDE_HUD_AND_RADAR_THIS_FRAME();
-				UI::HIDE_HUD_COMPONENT_THIS_FRAME(18);
-				UI::CLEAR_REMINDER_MESSAGE();
+				HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
+				HUD::HIDE_HUD_COMPONENT_THIS_FRAME(18);
+				HUD::CLEAR_REMINDER_MESSAGE();
 				if (Global_19486.f_1 != 1)
 				{
 					func_7(1);
 				}
 				SYSTEM::WAIT(0);
 			}
-			UI::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			UI::HIDE_HUD_COMPONENT_THIS_FRAME(18);
-			UI::CLEAR_REMINDER_MESSAGE();
+			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
+			HUD::HIDE_HUD_COMPONENT_THIS_FRAME(18);
+			HUD::CLEAR_REMINDER_MESSAGE();
 			if (Global_19486.f_1 != 1)
 			{
 				func_7(1);
@@ -413,18 +413,18 @@ int func_3(int iParam0, int iParam1)
 			STREAMING::REQUEST_PTFX_ASSET();
 			while (!STREAMING::HAS_PTFX_ASSET_LOADED())
 			{
-				UI::HIDE_HUD_AND_RADAR_THIS_FRAME();
-				UI::HIDE_HUD_COMPONENT_THIS_FRAME(18);
-				UI::CLEAR_REMINDER_MESSAGE();
+				HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
+				HUD::HIDE_HUD_COMPONENT_THIS_FRAME(18);
+				HUD::CLEAR_REMINDER_MESSAGE();
 				if (Global_19486.f_1 != 1)
 				{
 					func_7(1);
 				}
 				SYSTEM::WAIT(0);
 			}
-			UI::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			UI::HIDE_HUD_COMPONENT_THIS_FRAME(18);
-			UI::CLEAR_REMINDER_MESSAGE();
+			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
+			HUD::HIDE_HUD_COMPONENT_THIS_FRAME(18);
+			HUD::CLEAR_REMINDER_MESSAGE();
 			if (Global_19486.f_1 != 1)
 			{
 				func_7(1);
@@ -461,9 +461,9 @@ int func_3(int iParam0, int iParam1)
 			STREAMING::REQUEST_PTFX_ASSET();
 			while (!STREAMING::HAS_PTFX_ASSET_LOADED())
 			{
-				UI::HIDE_HUD_AND_RADAR_THIS_FRAME();
-				UI::HIDE_HUD_COMPONENT_THIS_FRAME(18);
-				UI::CLEAR_REMINDER_MESSAGE();
+				HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
+				HUD::HIDE_HUD_COMPONENT_THIS_FRAME(18);
+				HUD::CLEAR_REMINDER_MESSAGE();
 				if (Global_19486.f_1 != 1)
 				{
 					func_7(1);
@@ -501,18 +501,18 @@ int func_3(int iParam0, int iParam1)
 			STREAMING::REQUEST_MODEL(iVar34);
 			while (!STREAMING::HAS_MODEL_LOADED(iVar34))
 			{
-				UI::HIDE_HUD_AND_RADAR_THIS_FRAME();
-				UI::HIDE_HUD_COMPONENT_THIS_FRAME(18);
-				UI::CLEAR_REMINDER_MESSAGE();
+				HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
+				HUD::HIDE_HUD_COMPONENT_THIS_FRAME(18);
+				HUD::CLEAR_REMINDER_MESSAGE();
 				if (Global_19486.f_1 != 1)
 				{
 					func_7(1);
 				}
 				SYSTEM::WAIT(0);
 			}
-			UI::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			UI::HIDE_HUD_COMPONENT_THIS_FRAME(18);
-			UI::CLEAR_REMINDER_MESSAGE();
+			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
+			HUD::HIDE_HUD_COMPONENT_THIS_FRAME(18);
+			HUD::CLEAR_REMINDER_MESSAGE();
 			if (Global_19486.f_1 != 1)
 			{
 				func_7(1);
@@ -1770,7 +1770,7 @@ void func_7(bool bParam0)
 		func_14();
 		if (Global_19486.f_1 == 10 || Global_19486.f_1 == 9)
 		{
-			GAMEPLAY::SET_BIT(&Global_7357, 16);
+			MISC::SET_BIT(&Global_7357, 16);
 		}
 		Global_19486.f_1 = 1;
 		if (func_13(0))
@@ -1806,7 +1806,7 @@ void func_8(int iParam0)
 	}
 	if (Global_19486.f_1 == 10 || Global_19486.f_1 == 9)
 	{
-		GAMEPLAY::SET_BIT(&Global_7357, 16);
+		MISC::SET_BIT(&Global_7357, 16);
 	}
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 	{
@@ -1815,11 +1815,11 @@ void func_8(int iParam0)
 	Global_20805 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::SET_BIT(&Global_7356, 30);
+		MISC::SET_BIT(&Global_7356, 30);
 	}
 	else
 	{
-		GAMEPLAY::CLEAR_BIT(&Global_7356, 30);
+		MISC::CLEAR_BIT(&Global_7356, 30);
 	}
 	if (!func_9())
 	{
@@ -1868,12 +1868,12 @@ void func_10(bool bParam0, bool bParam1)
 
 bool func_11()
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1687687, 5);
+	return MISC::IS_BIT_SET(Global_1687687, 5);
 }
 
 bool func_12()
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1687687, 19);
+	return MISC::IS_BIT_SET(Global_1687687, 19);
 }
 
 int func_13(int iParam0)
@@ -1882,7 +1882,7 @@ int func_13(int iParam0)
 	{
 		if (Global_19486.f_1 > 3)
 		{
-			if (GAMEPLAY::IS_BIT_SET(Global_7356, 14))
+			if (MISC::IS_BIT_SET(Global_7356, 14))
 			{
 				return 1;
 			}
@@ -1896,7 +1896,7 @@ int func_13(int iParam0)
 			return 0;
 		}
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
 	{
 		return 1;
 	}
@@ -1931,7 +1931,7 @@ int func_15()
 
 int func_16()
 {
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1424752554) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1424752554) > 0)
 	{
 		return 1;
 	}
@@ -1983,7 +1983,7 @@ void func_17(int iParam0, int iParam1, int iParam2)
 				Global_42383[iVar4].f_4 = (Global_42383[iVar4].f_4 + iParam2);
 			}
 		}
-		if (Global_42564 == 0 || Global_42564 <= GAMEPLAY::GET_GAME_TIMER())
+		if (Global_42564 == 0 || Global_42564 <= MISC::GET_GAME_TIMER())
 		{
 			func_28(iVar0, iVar0, 0.3f, func_29(), iParam1, 0);
 		}
@@ -2210,7 +2210,7 @@ void func_28(int iParam0, int iParam1, float fParam2, float fParam3, var uParam4
 		Global_42563 = 0;
 	}
 	Global_42562 = 1;
-	iVar0 = GAMEPLAY::GET_GAME_TIMER();
+	iVar0 = MISC::GET_GAME_TIMER();
 	Global_42564 = (iVar0 + iParam0);
 	if (bParam5)
 	{
@@ -2449,7 +2449,7 @@ int func_37()
 		}
 		if (STREAMING::GET_PLAYER_SWITCH_STATE() == 11)
 		{
-			if (STREAMING::SET_PLAYER_INVERTED_UP() > 0)
+			if (STREAMING::GET_PLAYER_SWITCH_INTERP_OUT_DURATION() > 0)
 			{
 				if (STREAMING::_0x5B48A06DD0E792A5() > 100)
 				{
@@ -2479,7 +2479,7 @@ int func_38(int iParam0, int iParam1)
 		{
 			return 0;
 		}
-		if (GAMEPLAY::_0x9689123E3F213AA5())
+		if (MISC::GET_IS_PLAYER_IN_ANIMAL_FORM())
 		{
 			return 0;
 		}
@@ -2674,7 +2674,7 @@ void func_52()
 		{
 			bVar1 = false;
 		}
-		if (!GAMEPLAY::IS_STRING_NULL_OR_EMPTY(&cLocal_175))
+		if (!MISC::IS_STRING_NULL_OR_EMPTY(&cLocal_175))
 		{
 			if (!AUDIO::REQUEST_AMBIENT_AUDIO_BANK(&cLocal_175, 0, -1))
 			{
@@ -3847,7 +3847,7 @@ int func_54(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_55(uParam109, 17, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_55(uParam109, 17, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -3874,7 +3874,7 @@ int func_54(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_55(uParam109, 144, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_55(uParam109, 144, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -4222,7 +4222,7 @@ int func_54(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_55(uParam109, 43, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_55(uParam109, 43, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -4616,7 +4616,7 @@ int func_54(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_55(uParam109, 144, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_55(uParam109, 144, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -4625,7 +4625,7 @@ int func_54(struct<109> Param0, var uParam109)
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
 			uParam109->f_110 = 1785177548;
-			func_55(uParam109, 144, 1785177548, 1785177548, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
+			func_55(uParam109, 144, 1785177548, 1785177548, MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f), 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f));
 			uParam109->f_118 = 1;
 			return 1;
 			break;
@@ -5017,7 +5017,7 @@ bool func_58(var uParam0)
 	iVar5 = 0;
 	while (iVar5 < 5)
 	{
-		if (GAMEPLAY::IS_BIT_SET(Global_111638.f_7224.f_11[iVar5], 0))
+		if (MISC::IS_BIT_SET(Global_111638.f_7224.f_11[iVar5], 0))
 		{
 			Var6 = { Global_93947[iVar5].f_3 };
 			fVar9 = SYSTEM::VDIST(Var1, Var6);
@@ -6992,28 +6992,28 @@ int func_60(int iParam0, var uParam1, char* sParam2)
 		
 		case 306:
 			Var8 = { -7.4998f, 7.4995f, -0.5258f };
-			*uParam1 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(-Var8.x, -Var8.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var8.x, -Var8.y);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 307:
 			Var11 = { 10.6345f, 0.7246f, 1.2508f };
-			*uParam1 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(-Var11.x, -Var11.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var11.x, -Var11.y);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 308:
 			Var14 = { -3.4271f, -13.6787f, -1.4107f };
-			*uParam1 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(-Var14.x, -Var14.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var14.x, -Var14.y);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 309:
 			Var17 = { -19.6582f, 7.896f, 0.1334f };
-			*uParam1 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(-Var17.x, -Var17.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var17.x, -Var17.y);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
@@ -7327,8 +7327,8 @@ int func_61(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector(0f, -11.0022f, -0.4395f) + Vector(0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f)) };
-					*uParam3 = (306f + GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(10f, 10f));
+					*uParam2 = { Vector(0f, -11.0022f, -0.4395f) + Vector(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f)) };
+					*uParam3 = (306f + MISC::GET_RANDOM_FLOAT_IN_RANGE(10f, 10f));
 					return 1;
 					break;
 			}
@@ -7340,7 +7340,7 @@ int func_61(int iParam0, int iParam1, var uParam2, var uParam3)
 				case 0:
 					*uParam2 = { Vector(60.2063f, 141.5129f, -863.5425f) - Vector(71.1531f, 179.5117f, -812.0607f) - Vector(1f, 0f, 0f) };
 					*uParam2 = { *uParam2 * Vector(0.95f, 0.95f, 0.95f) };
-					*uParam3 = GAMEPLAY::GET_HEADING_FROM_VECTOR_2D(*uParam2, uParam2->f_1);
+					*uParam3 = MISC::GET_HEADING_FROM_VECTOR_2D(*uParam2, uParam2->f_1);
 					return 1;
 					break;
 			}
@@ -7754,8 +7754,8 @@ int func_61(int iParam0, int iParam1, var uParam2, var uParam3)
 		case 60:
 			if (func_61(iParam0, 59, uParam2, uParam3))
 			{
-				*uParam2 = { *uParam2 + Vector(0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
-				*uParam3 = (*uParam3 + GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f));
+				*uParam2 = { *uParam2 + Vector(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
+				*uParam3 = (*uParam3 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f));
 				return 1;
 			}
 			break;
@@ -8388,8 +8388,8 @@ int func_61(int iParam0, int iParam1, var uParam2, var uParam3)
 				case 13:
 					if (func_61(iParam0, 130, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector(0f, GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
-						*uParam3 = (*uParam3 + GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f));
+						*uParam2 = { *uParam2 + Vector(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
+						*uParam3 = (*uParam3 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f));
 						return 1;
 					}
 					break;
@@ -8412,7 +8412,7 @@ int func_61(int iParam0, int iParam1, var uParam2, var uParam3)
 			{
 				case 13:
 					*uParam2 = { Vector((9.6327f + 1f), -1518.736f, -1148.466f) - Vector(9.6346f, -1517.601f, -1152.571f) };
-					*uParam3 = GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
+					*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
 					return 1;
 					break;
 			}
@@ -8472,19 +8472,19 @@ int func_61(int iParam0, int iParam1, var uParam2, var uParam3)
 			break;
 		
 		default:
-			*uParam2 = { GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
-			*uParam3 = GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
+			*uParam2 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+			*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
 			return 0;
 			break;
 	}
-	*uParam2 = { GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
-	*uParam3 = GAMEPLAY::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
+	*uParam2 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+	*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
 	return 0;
 }
 
 int func_62()
 {
-	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535), 0))
+	if (MISC::IS_BIT_SET(MISC::GET_RANDOM_INT_IN_RANGE(0, 65535), 0))
 	{
 		return 1;
 	}
@@ -8954,7 +8954,7 @@ void func_65()
 		AUDIO::STOP_SOUND(uLocal_223);
 		AUDIO::RELEASE_SOUND_ID(uLocal_223);
 	}
-	GAMEPLAY::SET_GAME_PAUSED(0);
+	MISC::SET_GAME_PAUSED(0);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 

@@ -26,11 +26,11 @@ void __EntryFunction__()
 	iLocal_43 = 64;
 	fLocal_62 = ((0.05f + 0.275f) - 0.01f);
 	iLocal_106 = -1;
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1974937116) > 1)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1974937116) > 1)
 	{
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
-	GAMEPLAY::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
+	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	iVar0 = 0;
 	iVar1 = iVar0;
 	SYSTEM::SETTIMERA(0);
@@ -130,7 +130,7 @@ void __EntryFunction__()
 		{
 			case 0:
 				iVar2 = func_15();
-				if (CONTROLS::IS_CONTROL_RELEASED(2, 51))
+				if (PAD::IS_CONTROL_RELEASED(2, 51))
 				{
 					iVar6 = 1;
 				}
@@ -138,7 +138,7 @@ void __EntryFunction__()
 				{
 					if (iVar2 > -1 && iVar6)
 					{
-						if (CONTROLS::IS_CONTROL_JUST_PRESSED(2, 51))
+						if (PAD::IS_CONTROL_JUST_PRESSED(2, 51))
 						{
 							Global_42151[iVar2].f_4 = 1;
 							Global_42151[iVar2].f_29 = 0;
@@ -160,15 +160,15 @@ void __EntryFunction__()
 						{
 							if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::GET_PLAYER_PED(PLAYER::GET_PLAYER_INDEX()), 0))
 							{
-								if (CONTROLS::IS_CONTROL_ENABLED(0, 101))
+								if (PAD::IS_CONTROL_ENABLED(0, 101))
 								{
 									bVar5 = true;
-									CONTROLS::DISABLE_CONTROL_ACTION(0, 101, 1);
+									PAD::DISABLE_CONTROL_ACTION(0, 101, 1);
 								}
-								if (CONTROLS::IS_CONTROL_ENABLED(0, 74))
+								if (PAD::IS_CONTROL_ENABLED(0, 74))
 								{
 									bVar4 = true;
-									CONTROLS::DISABLE_CONTROL_ACTION(0, 74, 1);
+									PAD::DISABLE_CONTROL_ACTION(0, 74, 1);
 								}
 							}
 						}
@@ -177,12 +177,12 @@ void __EntryFunction__()
 					{
 						if (bVar5)
 						{
-							CONTROLS::ENABLE_CONTROL_ACTION(0, 101, 1);
+							PAD::ENABLE_CONTROL_ACTION(0, 101, 1);
 							bVar5 = false;
 						}
 						if (bVar4)
 						{
-							CONTROLS::ENABLE_CONTROL_ACTION(0, 74, 1);
+							PAD::ENABLE_CONTROL_ACTION(0, 74, 1);
 							bVar4 = false;
 						}
 					}
@@ -222,7 +222,7 @@ void __EntryFunction__()
 				{
 					func_25();
 				}
-				if (CONTROLS::IS_CONTROL_JUST_PRESSED(2, 51))
+				if (PAD::IS_CONTROL_JUST_PRESSED(2, 51))
 				{
 					if (iVar2 > -1)
 					{
@@ -258,8 +258,8 @@ void __EntryFunction__()
 		}
 		if (iVar2 > -1)
 		{
-			CONTROLS::DISABLE_CONTROL_ACTION(0, 46, 1);
-			CONTROLS::DISABLE_CONTROL_ACTION(0, 54, 1);
+			PAD::DISABLE_CONTROL_ACTION(0, 46, 1);
+			PAD::DISABLE_CONTROL_ACTION(0, 54, 1);
 		}
 		if (iVar0 != iVar1)
 		{
@@ -291,25 +291,25 @@ void func_1()
 	{
 		if (bLocal_82)
 		{
-			UI::ADD_NEXT_MESSAGE_TO_PREVIOUS_BRIEFS(0);
+			HUD::ADD_NEXT_MESSAGE_TO_PREVIOUS_BRIEFS(0);
 		}
-		UI::BEGIN_TEXT_COMMAND_DISPLAY_HELP(&Local_83);
+		HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(&Local_83);
 		if (bLocal_82)
 		{
-			UI::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&Local_87);
+			HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&Local_87);
 		}
 		else
 		{
-			UI::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
-			UI::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Local_87);
+			HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
+			HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Local_87);
 		}
-		UI::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, iVar0, 50);
+		HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, iVar0, 50);
 	}
 	else
 	{
-		UI::BEGIN_TEXT_COMMAND_DISPLAY_HELP(&Local_83);
-		UI::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
-		UI::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, iVar0, 50);
+		HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(&Local_83);
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
+		HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, iVar0, 50);
 	}
 	switch (iLocal_103)
 	{
@@ -397,7 +397,7 @@ int func_8()
 
 void func_9(int iParam0)
 {
-	unk_0xB9C362BABECDDC7A(3, 21, 200, 0, 0);
+	HUD::_SET_HELP_MESSAGE_TEXT_STYLE(3, 21, 200, 0, 0);
 	if (iParam0 && !func_3())
 	{
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Event_Message_Purple", "GTAO_FM_Events_Soundset", 0);
@@ -560,7 +560,7 @@ int func_18(int iParam0)
 			return 1;
 		}
 	}
-	if (UI::IS_HELP_MESSAGE_BEING_DISPLAYED() && !UI::_0x214CD562A939246A())
+	if (HUD::IS_HELP_MESSAGE_BEING_DISPLAYED() && !HUD::_0x214CD562A939246A())
 	{
 		iVar0 = 0;
 		while (iVar0 < 6)
@@ -598,7 +598,7 @@ int func_19()
 	{
 		return 1;
 	}
-	if (UI::IS_HUD_COMPONENT_ACTIVE(19))
+	if (HUD::IS_HUD_COMPONENT_ACTIVE(19))
 	{
 		return 1;
 	}
@@ -628,7 +628,7 @@ bool func_20(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_1377170.f_1048, iParam0);
+	return MISC::IS_BIT_SET(Global_1377170.f_1048, iParam0);
 }
 
 bool func_21(bool bParam0)
@@ -646,7 +646,7 @@ int func_22(int iParam0)
 	{
 		if (Global_19486.f_1 > 3)
 		{
-			if (GAMEPLAY::IS_BIT_SET(Global_7356, 14))
+			if (MISC::IS_BIT_SET(Global_7356, 14))
 			{
 				return 1;
 			}
@@ -660,7 +660,7 @@ int func_22(int iParam0)
 			return 0;
 		}
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
 	{
 		return 1;
 	}
@@ -696,23 +696,23 @@ int func_23(int iParam0, int iParam1)
 	iVar1 = 0;
 	if (!Global_42151[iVar0].f_12)
 	{
-		UI::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&(Global_42151[iVar0].f_8));
-		UI::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
-		iVar1 = UI::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
+		HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&(Global_42151[iVar0].f_8));
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
+		iVar1 = HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 	}
 	else
 	{
-		UI::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&(Global_42151[iVar0].f_8));
-		UI::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
+		HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&(Global_42151[iVar0].f_8));
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
 		if (Global_42151[iVar0].f_30)
 		{
-			UI::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_42151[iVar0].f_13));
+			HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_42151[iVar0].f_13));
 		}
 		else
 		{
-			UI::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_42151[iVar0].f_13));
+			HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_42151[iVar0].f_13));
 		}
-		iVar1 = UI::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
+		iVar1 = HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 	}
 	return iVar1;
 }
@@ -748,7 +748,7 @@ void func_26()
 	{
 		if (func_31(0))
 		{
-			if (!GAMEPLAY::IS_STRING_NULL_OR_EMPTY(&(Global_2450632.f_684.f_12)))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_2450632.f_684.f_12)))
 			{
 				func_30();
 				func_27(6, 0, 0);
@@ -773,28 +773,28 @@ int func_27(int iParam0, bool bParam1, int iParam2)
 			Global_73936 = 3;
 			break;
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(632911429) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(632911429) > 0)
 	{
 		if (bVar0)
 		{
 		}
 		return 0;
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1476056117) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1476056117) > 0)
 	{
 		if (bVar1)
 		{
 		}
 		return 0;
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(290327540) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(290327540) > 0)
 	{
 		if (bVar2)
 		{
 		}
 		return 0;
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1779901043) > 0)
 	{
 		if ((bVar0 || bVar1) || bVar2)
 		{
@@ -899,7 +899,7 @@ bool func_31(bool bParam0)
 {
 	if (bParam0)
 	{
-		return (Global_2450632.f_684.f_28 && GAMEPLAY::GET_HASH_KEY(SCRIPT::GET_THIS_SCRIPT_NAME()) == Global_2450632.f_684.f_31);
+		return (Global_2450632.f_684.f_28 && MISC::GET_HASH_KEY(SCRIPT::GET_THIS_SCRIPT_NAME()) == Global_2450632.f_684.f_31);
 	}
 	return Global_2450632.f_684.f_28;
 }
@@ -967,7 +967,7 @@ void func_35()
 		Var0[0].f_10 = Global_1573307[10];
 		Var0[0].f_11 = Global_1573307[11];
 		Var0[0].f_12 = Global_1573307[12];
-		if (GAMEPLAY::IS_XBOX360_VERSION() || GAMEPLAY::IS_DURANGO_VERSION())
+		if (MISC::IS_XBOX360_VERSION() || MISC::IS_DURANGO_VERSION())
 		{
 			if (!iLocal_104)
 			{
@@ -991,7 +991,7 @@ void func_35()
 				}
 			}
 		}
-		else if (GAMEPLAY::IS_PS3_VERSION() || GAMEPLAY::IS_ORBIS_VERSION())
+		else if (MISC::IS_PS3_VERSION() || MISC::IS_ORBIS_VERSION())
 		{
 			if (func_36(Var0[0]))
 			{

@@ -3,7 +3,7 @@ void __EntryFunction__()
 	Local_1 = { 613f, 6438f, 31f };
 	fLocal_5 = 5f;
 	iLocal_6 = 1;
-	GAMEPLAY::SET_MISSION_FLAG(1);
+	MISC::SET_MISSION_FLAG(1);
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_1();
@@ -43,7 +43,7 @@ void __EntryFunction__()
 			}
 			if (iLocal_9)
 			{
-				Local_1 = { CAM::_GET_GAMEPLAY_CAM_COORDS() };
+				Local_1 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 				iLocal_9 = 0;
 			}
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(uLocal_0, 0) && !ENTITY::IS_ENTITY_DEAD(uLocal_0, 0))

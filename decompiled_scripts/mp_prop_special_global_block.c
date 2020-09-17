@@ -13,7 +13,7 @@ void __EntryFunction__()
 	Global_3934111 = 1;
 	Global_3934112 = 1;
 	Global_4010525 = -1;
-	GAMEPLAY::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
+	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	func_16();
 	iVar0 = 0;
 	while (iVar0 < 37)
@@ -465,7 +465,7 @@ struct<6> func_5(var uParam0, int iParam1)
 	{
 		iVar23 = 1;
 	}
-	if (iVar23 && GAMEPLAY::_0xB335F761606DB47C(&Var0, &(Var0.f_3), uParam0, uVar6))
+	if (iVar23 && MISC::_GET_BASE_ELEMENT_METADATA(&Var0, &(Var0.f_3), uParam0, uVar6))
 	{
 		return Var0;
 	}

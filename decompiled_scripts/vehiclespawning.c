@@ -26,7 +26,7 @@ void __EntryFunction__()
 	func_20();
 	while (true)
 	{
-		GRAPHICS::_0x3669F1B198DCAA4F();
+		GRAPHICS::DISABLE_OCCLUSION_THIS_FRAME();
 		func_19();
 		if (func_7() || uLocal_62)
 		{
@@ -64,9 +64,9 @@ void __EntryFunction__()
 
 int func_1()
 {
-	if (!INTERIOR::_IS_INTERIOR_PROP_ENABLED(uLocal_64, "garage_decor_01"))
+	if (!INTERIOR::IS_INTERIOR_ENTITY_SET_ACTIVE(uLocal_64, "garage_decor_01"))
 	{
-		INTERIOR::_ENABLE_INTERIOR_PROP(uLocal_64, "garage_decor_01");
+		INTERIOR::ACTIVATE_INTERIOR_ENTITY_SET(uLocal_64, "garage_decor_01");
 	}
 	else
 	{
@@ -83,7 +83,7 @@ int func_2()
 	{
 		if (!iLocal_60)
 		{
-			INTERIOR::_LOAD_INTERIOR(uLocal_64);
+			INTERIOR::PIN_INTERIOR_IN_MEMORY(uLocal_64);
 			iLocal_60 = 1;
 		}
 		else if (INTERIOR::IS_INTERIOR_READY(uLocal_64))
@@ -171,7 +171,7 @@ int func_7()
 	}
 	if (func_8() != 0)
 	{
-		if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(func_8()) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(func_8()) == 0)
 		{
 			return 1;
 		}
@@ -359,7 +359,7 @@ void func_20()
 	{
 		func_3();
 	}
-	GAMEPLAY::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
+	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
 	if (!STREAMING::IS_IPL_ACTIVE("imp_dt1_02_cargarage_a"))
 	{
 		STREAMING::REQUEST_IPL("imp_dt1_02_cargarage_a");

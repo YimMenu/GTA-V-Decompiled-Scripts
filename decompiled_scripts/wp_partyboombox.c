@@ -1,6 +1,6 @@
 void __EntryFunction__()
 {
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-1821484484) > 1)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1821484484) > 1)
 	{
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
@@ -18,7 +18,7 @@ void __EntryFunction__()
 		switch (iLocal_0)
 		{
 			case 0:
-				if (TIME::GET_CLOCK_HOURS() >= 22 || TIME::GET_CLOCK_HOURS() <= 4)
+				if (CLOCK::GET_CLOCK_HOURS() >= 22 || CLOCK::GET_CLOCK_HOURS() <= 4)
 				{
 					iLocal_0 = 1;
 				}

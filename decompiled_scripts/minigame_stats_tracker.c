@@ -45,94 +45,94 @@ void __EntryFunction__()
 				break;
 			
 			case 2:
-				GRAPHICS::_CALL_SCALEFORM_MOVIE_FUNCTION_STRING_PARAMS(uLocal_46, "SET_MISSION_TITLE", ScriptParam_0, ScriptParam_0.f_1, 0, 0, 0);
-				GRAPHICS::_CALL_SCALEFORM_MOVIE_FUNCTION_FLOAT_PARAMS(uLocal_46, "SET_MISSION_TITLE_COLOUR", ScriptParam_0.f_2, ScriptParam_0.f_2, ScriptParam_0.f_2, -1082130432, -1082130432);
-				if (ScriptParam_0.f_5.f_1 != -1f && !GAMEPLAY::IS_STRING_NULL(ScriptParam_0.f_5.f_2))
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_STRING(uLocal_46, "SET_MISSION_TITLE", ScriptParam_0, ScriptParam_0.f_1, 0, 0, 0);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(uLocal_46, "SET_MISSION_TITLE_COLOUR", ScriptParam_0.f_2, ScriptParam_0.f_2, ScriptParam_0.f_2, -1082130432, -1082130432);
+				if (ScriptParam_0.f_5.f_1 != -1f && !MISC::IS_STRING_NULL(ScriptParam_0.f_5.f_2))
 				{
-					GRAPHICS::_CALL_SCALEFORM_MOVIE_FUNCTION_MIXED_PARAMS(uLocal_46, "SET_TOTAL", SYSTEM::TO_FLOAT(ScriptParam_0.f_5), ScriptParam_0.f_5.f_1, -1f, -1f, -1f, ScriptParam_0.f_5.f_2, 0, 0, 0, 0);
+					GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER_AND_STRING(uLocal_46, "SET_TOTAL", SYSTEM::TO_FLOAT(ScriptParam_0.f_5), ScriptParam_0.f_5.f_1, -1f, -1f, -1f, ScriptParam_0.f_5.f_2, 0, 0, 0, 0);
 				}
-				GRAPHICS::_CALL_SCALEFORM_MOVIE_FUNCTION_FLOAT_PARAMS(uLocal_46, "SET_MEDAL", SYSTEM::TO_FLOAT(ScriptParam_0.f_5), -1082130432, -1082130432, -1082130432, -1082130432);
-				GRAPHICS::_CALL_SCALEFORM_MOVIE_FUNCTION_FLOAT_PARAMS(uLocal_46, "SET_SOCIAL_CLUB_INFO", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(uLocal_46, "SET_MEDAL", SYSTEM::TO_FLOAT(ScriptParam_0.f_5), -1082130432, -1082130432, -1082130432, -1082130432);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(uLocal_46, "SET_SOCIAL_CLUB_INFO", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
 				iVar0 = 0;
 				while (iVar0 < ScriptParam_0.f_66 + 1)
 				{
-					GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(uLocal_46, "SET_DATA_SLOT");
-					GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(ScriptParam_0.f_9[iVar0]);
-					GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(ScriptParam_0.f_9[iVar0].f_1);
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_46, "SET_DATA_SLOT");
+					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(ScriptParam_0.f_9[iVar0]);
+					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(ScriptParam_0.f_9[iVar0].f_1);
 					if (ScriptParam_0.f_9[iVar0].f_2 == 4)
 					{
-						GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(2);
-						GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(0);
-						GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(0);
-						GRAPHICS::_BEGIN_TEXT_COMMAND_SCALEFORM("STRING");
-						UI::ADD_TEXT_COMPONENT_SUBSTRING_TIME(SYSTEM::FLOOR((ScriptParam_0.f_9[iVar0].f_3 * 1000f)), 6);
-						GRAPHICS::_END_TEXT_COMMAND_SCALEFORM();
-						if (!GAMEPLAY::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_5))
+						GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(2);
+						GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
+						GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
+						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("STRING");
+						HUD::ADD_TEXT_COMPONENT_SUBSTRING_TIME(SYSTEM::FLOOR((ScriptParam_0.f_9[iVar0].f_3 * 1000f)), 6);
+						GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
+						if (!MISC::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_5))
 						{
 							func_18(ScriptParam_0.f_9[iVar0].f_5);
 						}
 					}
 					else if (ScriptParam_0.f_9[iVar0].f_2 == 8)
 					{
-						if (!GAMEPLAY::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_5) && !GAMEPLAY::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_6))
+						if (!MISC::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_5) && !MISC::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_6))
 						{
-							GRAPHICS::_BEGIN_TEXT_COMMAND_SCALEFORM(ScriptParam_0.f_9[iVar0].f_6);
-							UI::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(ScriptParam_0.f_9[iVar0].f_5);
-							GRAPHICS::_END_TEXT_COMMAND_SCALEFORM();
+							GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(ScriptParam_0.f_9[iVar0].f_6);
+							HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(ScriptParam_0.f_9[iVar0].f_5);
+							GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 						}
 					}
 					else
 					{
-						GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(ScriptParam_0.f_9[iVar0].f_2);
+						GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(ScriptParam_0.f_9[iVar0].f_2);
 						if ((ScriptParam_0.f_9[iVar0].f_3 % 1f) == 0f)
 						{
-							GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_FLOAT(ScriptParam_0.f_9[iVar0].f_3);
+							GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(ScriptParam_0.f_9[iVar0].f_3);
 						}
 						else
 						{
-							GRAPHICS::_BEGIN_TEXT_COMMAND_SCALEFORM("NUMBER");
-							UI::ADD_TEXT_COMPONENT_FLOAT(ScriptParam_0.f_9[iVar0].f_3, 2);
-							GRAPHICS::_END_TEXT_COMMAND_SCALEFORM();
+							GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("NUMBER");
+							HUD::ADD_TEXT_COMPONENT_FLOAT(ScriptParam_0.f_9[iVar0].f_3, 2);
+							GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 						}
 						if ((ScriptParam_0.f_9[iVar0].f_4 % 1f) == 0f)
 						{
-							GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_FLOAT(ScriptParam_0.f_9[iVar0].f_4);
+							GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(ScriptParam_0.f_9[iVar0].f_4);
 						}
 						else
 						{
-							GRAPHICS::_BEGIN_TEXT_COMMAND_SCALEFORM("NUMBER");
-							UI::ADD_TEXT_COMPONENT_FLOAT(ScriptParam_0.f_9[iVar0].f_4, 2);
-							GRAPHICS::_END_TEXT_COMMAND_SCALEFORM();
+							GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("NUMBER");
+							HUD::ADD_TEXT_COMPONENT_FLOAT(ScriptParam_0.f_9[iVar0].f_4, 2);
+							GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 						}
-						if (!GAMEPLAY::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_5))
+						if (!MISC::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_5))
 						{
 							func_18(ScriptParam_0.f_9[iVar0].f_5);
 						}
-						if (!GAMEPLAY::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_6))
+						if (!MISC::IS_STRING_NULL(ScriptParam_0.f_9[iVar0].f_6))
 						{
 							func_18(ScriptParam_0.f_9[iVar0].f_6);
 						}
 					}
-					GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 					iVar0++;
 				}
-				if (ScriptParam_0.f_5 != 0 && !GAMEPLAY::IS_STRING_NULL(ScriptParam_0.f_5.f_2))
+				if (ScriptParam_0.f_5 != 0 && !MISC::IS_STRING_NULL(ScriptParam_0.f_5.f_2))
 				{
-					GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(uLocal_46, "SET_TOTAL");
-					GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(ScriptParam_0.f_5);
-					if (!GAMEPLAY::IS_STRING_NULL(ScriptParam_0.f_5.f_3))
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_46, "SET_TOTAL");
+					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(ScriptParam_0.f_5);
+					if (!MISC::IS_STRING_NULL(ScriptParam_0.f_5.f_3))
 					{
 						func_18(ScriptParam_0.f_5.f_3);
 					}
 					else
 					{
-						GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_FLOAT(ScriptParam_0.f_5.f_1);
+						GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(ScriptParam_0.f_5.f_1);
 					}
 					func_18(ScriptParam_0.f_5.f_2);
-					GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				}
-				GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(uLocal_46, "DRAW_MENU_LIST");
-				GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
+				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_46, "DRAW_MENU_LIST");
+				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				func_12(1);
 				func_9(&uLocal_47);
 				if (!func_8(Global_111638.f_19092, 4096))
@@ -151,9 +151,9 @@ void __EntryFunction__()
 				{
 					func_1(1);
 					GRAPHICS::DRAW_SCALEFORM_MOVIE(uLocal_46, 0.1495f, 0.3159f, 0.2021f, 0.5111f, 255, 255, 255, 0, 0);
-					if (UI::IS_HUD_COMPONENT_ACTIVE(10))
+					if (HUD::IS_HUD_COMPONENT_ACTIVE(10))
 					{
-						UI::HIDE_HUD_COMPONENT_THIS_FRAME(10);
+						HUD::HIDE_HUD_COMPONENT_THIS_FRAME(10);
 					}
 				}
 				break;
@@ -179,7 +179,7 @@ float func_2(var uParam0)
 		}
 		else
 		{
-			return (func_3(GAMEPLAY::IS_BIT_SET(*uParam0, 4)) - uParam0->f_1);
+			return (func_3(MISC::IS_BIT_SET(*uParam0, 4)) - uParam0->f_1);
 		}
 	}
 	return uParam0->f_1;
@@ -189,7 +189,7 @@ float func_3(bool bParam0)
 {
 	if (bParam0)
 	{
-		fVar0 = SYSTEM::TO_FLOAT(GAMEPLAY::GET_GAME_TIMER());
+		fVar0 = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
 		fVar1 = (fVar0 / 1000f);
 		return fVar1;
 	}
@@ -200,17 +200,17 @@ float func_3(bool bParam0)
 		fVar4 = (fVar3 / 1000f);
 		return fVar4;
 	}
-	return (SYSTEM::TO_FLOAT(GAMEPLAY::GET_GAME_TIMER()) / 1000f);
+	return (SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f);
 }
 
 bool func_4(var uParam0)
 {
-	return GAMEPLAY::IS_BIT_SET(*uParam0, 2);
+	return MISC::IS_BIT_SET(*uParam0, 2);
 }
 
 bool func_5(var uParam0)
 {
-	return GAMEPLAY::IS_BIT_SET(*uParam0, 1);
+	return MISC::IS_BIT_SET(*uParam0, 1);
 }
 
 void func_6(var uParam0, int iParam1)
@@ -243,9 +243,9 @@ void func_10(var uParam0)
 
 void func_11(var uParam0, float fParam1)
 {
-	uParam0->f_1 = (func_3(GAMEPLAY::IS_BIT_SET(*uParam0, 4)) - fParam1);
-	GAMEPLAY::SET_BIT(uParam0, 1);
-	GAMEPLAY::CLEAR_BIT(uParam0, 2);
+	uParam0->f_1 = (func_3(MISC::IS_BIT_SET(*uParam0, 4)) - fParam1);
+	MISC::SET_BIT(uParam0, 1);
+	MISC::CLEAR_BIT(uParam0, 2);
 	uParam0->f_2 = 0f;
 }
 
@@ -268,7 +268,7 @@ void func_12(int iParam0)
 	}
 	if (Global_19486.f_1 == 10 || Global_19486.f_1 == 9)
 	{
-		GAMEPLAY::SET_BIT(&Global_7357, 16);
+		MISC::SET_BIT(&Global_7357, 16);
 	}
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 	{
@@ -277,11 +277,11 @@ void func_12(int iParam0)
 	Global_20805 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::SET_BIT(&Global_7356, 30);
+		MISC::SET_BIT(&Global_7356, 30);
 	}
 	else
 	{
-		GAMEPLAY::CLEAR_BIT(&Global_7356, 30);
+		MISC::CLEAR_BIT(&Global_7356, 30);
 	}
 	if (!func_13())
 	{
@@ -334,7 +334,7 @@ int func_15(int iParam0)
 	{
 		if (Global_19486.f_1 > 3)
 		{
-			if (GAMEPLAY::IS_BIT_SET(Global_7356, 14))
+			if (MISC::IS_BIT_SET(Global_7356, 14))
 			{
 				return 1;
 			}
@@ -348,7 +348,7 @@ int func_15(int iParam0)
 			return 0;
 		}
 	}
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
 	{
 		return 1;
 	}
@@ -361,18 +361,18 @@ int func_15(int iParam0)
 
 bool func_16()
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1687687, 5);
+	return MISC::IS_BIT_SET(Global_1687687, 5);
 }
 
 bool func_17()
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1687687, 19);
+	return MISC::IS_BIT_SET(Global_1687687, 19);
 }
 
 void func_18(char* sParam0)
 {
-	GRAPHICS::_BEGIN_TEXT_COMMAND_SCALEFORM(sParam0);
-	GRAPHICS::_END_TEXT_COMMAND_SCALEFORM();
+	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
+	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 }
 
 void func_19()

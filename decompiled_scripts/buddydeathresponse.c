@@ -12,7 +12,7 @@ void __EntryFunction__()
 	iLocal_11 = 12;
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
-	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2) || UNK2::_IS_INTERIOR_RENDERING_DISABLED())
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2) || REPLAY::_IS_INTERIOR_RENDERING_DISABLED())
 	{
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
@@ -30,23 +30,23 @@ void func_1()
 		if (!Global_95239)
 		{
 			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_20, 1, 1);
-			if (AI::GET_SCRIPT_TASK_STATUS(iLocal_20, 1435919172) != 7)
+			if (TASK::GET_SCRIPT_TASK_STATUS(iLocal_20, 1435919172) != 7)
 			{
-				AI::CLEAR_PED_TASKS(iLocal_20);
+				TASK::CLEAR_PED_TASKS(iLocal_20);
 			}
 			Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_20, 1);
-			AI::OPEN_SEQUENCE_TASK(&uVar3);
+			TASK::OPEN_SEQUENCE_TASK(&uVar3);
 			if (!PED::IS_PED_IN_ANY_VEHICLE(iLocal_20, 0))
 			{
 				if (!PED::IS_PED_IN_COMBAT(iLocal_20, 0) && !PED::IS_PED_IN_ANY_VEHICLE(iLocal_20, 0))
 				{
-					AI::TASK_TURN_PED_TO_FACE_COORD(0, Var0, 6000);
+					TASK::TASK_TURN_PED_TO_FACE_COORD(0, Var0, 6000);
 				}
 			}
-			AI::TASK_LOOK_AT_COORD(0, Var0, 6000, 0, 2);
-			AI::CLOSE_SEQUENCE_TASK(uVar3);
-			AI::TASK_PERFORM_SEQUENCE(iLocal_20, uVar3);
+			TASK::TASK_LOOK_AT_COORD(0, Var0, 6000, 0, 2);
+			TASK::CLOSE_SEQUENCE_TASK(uVar3);
+			TASK::TASK_PERFORM_SEQUENCE(iLocal_20, uVar3);
 		}
 		func_2(iLocal_20);
 	}
@@ -68,8 +68,8 @@ void func_1()
 
 void func_2(int iParam0)
 {
-	iVar0 = GAMEPLAY::GET_GAME_TIMER() + 1000;
-	while (GAMEPLAY::GET_GAME_TIMER() < iVar0 && !CAM::IS_SCREEN_FADED_OUT())
+	iVar0 = MISC::GET_GAME_TIMER() + 1000;
+	while (MISC::GET_GAME_TIMER() < iVar0 && !CAM::IS_SCREEN_FADED_OUT())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -296,7 +296,7 @@ int func_9(var uParam0)
 				{
 					if (PED::IS_PED_IN_ANY_VEHICLE(Global_96113[iLocal_18], 0) || !ENTITY::IS_ENTITY_ATTACHED(Global_96113[iLocal_18]))
 					{
-						if (GAMEPLAY::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(Global_96113[iLocal_18], 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 10f)
+						if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(Global_96113[iLocal_18], 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 10f)
 						{
 							iLocal_19 = func_5(Global_96113[iLocal_18]);
 							if ((iLocal_19 == 0 || iLocal_19 == 2) || iLocal_19 == 1)

@@ -51,9 +51,9 @@ void __EntryFunction__()
 		}
 		else if (iVar0 == -1)
 		{
-			iVar0 = GAMEPLAY::GET_GAME_TIMER();
+			iVar0 = MISC::GET_GAME_TIMER();
 		}
-		else if (GAMEPLAY::GET_GAME_TIMER() > iVar0 + 8000)
+		else if (MISC::GET_GAME_TIMER() > iVar0 + 8000)
 		{
 			func_5();
 		}

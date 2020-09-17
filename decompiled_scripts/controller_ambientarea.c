@@ -109,9 +109,9 @@ void func_1(int iParam0)
 	{
 		return;
 	}
-	if (UI::GET_LENGTH_OF_LITERAL_STRING(sVar0) != 0)
+	if (HUD::GET_LENGTH_OF_LITERAL_STRING(sVar0) != 0)
 	{
-		if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(iVar1) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(iVar1) == 0)
 		{
 			SCRIPT::REQUEST_SCRIPT(sVar0);
 			while (!SCRIPT::HAS_SCRIPT_LOADED(sVar0))
@@ -367,7 +367,7 @@ int func_12(int iParam0, struct<3> Param1)
 		{
 			if (iParam0 == 1 || iParam0 == 2)
 			{
-				if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(697767922) == 0)
+				if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(697767922) == 0)
 				{
 					return 1;
 				}

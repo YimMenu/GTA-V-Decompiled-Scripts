@@ -32,7 +32,7 @@ void __EntryFunction__()
 	{
 		func_46();
 	}
-	iLocal_53 = GAMEPLAY::GET_GAME_TIMER();
+	iLocal_53 = MISC::GET_GAME_TIMER();
 	while (true)
 	{
 		func_45();
@@ -45,7 +45,7 @@ void __EntryFunction__()
 			func_2();
 			func_1();
 			iLocal_54++;
-			if (iLocal_54 >= NETWORK::_NETWORK_GET_NUM_PARTICIPANTS_HOST())
+			if (iLocal_54 >= NETWORK::NETWORK_GET_MAX_NUM_PARTICIPANTS())
 			{
 				iLocal_54 = 0;
 			}
@@ -61,7 +61,7 @@ void func_1()
 {
 	iVar1 = PLAYER::NETWORK_PLAYER_ID_TO_INT();
 	iVar0 = 0;
-	while (iVar0 < NETWORK::_NETWORK_GET_NUM_PARTICIPANTS_HOST())
+	while (iVar0 < NETWORK::NETWORK_GET_MAX_NUM_PARTICIPANTS())
 	{
 		if ((iLocal_54 % iVar0) == 0)
 		{
@@ -83,24 +83,24 @@ void func_1()
 								STREAMING::REQUEST_ANIM_DICT("anim@mini@prostitutes@sex@veh_vstr@");
 								iLocal_56 = 1;
 							}
-							if (!GAMEPLAY::IS_BIT_SET(iLocal_55, iVar0))
+							if (!MISC::IS_BIT_SET(iLocal_55, iVar0))
 							{
-								GAMEPLAY::SET_BIT(&iLocal_55, iVar0);
+								MISC::SET_BIT(&iLocal_55, iVar0);
 							}
 						}
-						else if (GAMEPLAY::IS_BIT_SET(iLocal_55, iVar0))
+						else if (MISC::IS_BIT_SET(iLocal_55, iVar0))
 						{
-							GAMEPLAY::CLEAR_BIT(&iLocal_55, iVar0);
+							MISC::CLEAR_BIT(&iLocal_55, iVar0);
 						}
 					}
-					else if (GAMEPLAY::IS_BIT_SET(iLocal_55, iVar0))
+					else if (MISC::IS_BIT_SET(iLocal_55, iVar0))
 					{
-						GAMEPLAY::CLEAR_BIT(&iLocal_55, iVar0);
+						MISC::CLEAR_BIT(&iLocal_55, iVar0);
 					}
 				}
-				else if (GAMEPLAY::IS_BIT_SET(iLocal_55, iVar0))
+				else if (MISC::IS_BIT_SET(iLocal_55, iVar0))
 				{
-					GAMEPLAY::CLEAR_BIT(&iLocal_55, iVar0);
+					MISC::CLEAR_BIT(&iLocal_55, iVar0);
 				}
 			}
 		}
@@ -123,7 +123,7 @@ void func_2()
 	{
 		return;
 	}
-	if (iLocal_53 > GAMEPLAY::GET_GAME_TIMER())
+	if (iLocal_53 > MISC::GET_GAME_TIMER())
 	{
 		return;
 	}
@@ -154,12 +154,12 @@ void func_2()
 				if (iVar0 != func_12(iVar2) && iVar0 != 0)
 				{
 					func_11(iVar0);
-					iLocal_53 = GAMEPLAY::GET_GAME_TIMER();
+					iLocal_53 = MISC::GET_GAME_TIMER();
 					iLocal_52 = 2;
 				}
 				else
 				{
-					iLocal_53 = GAMEPLAY::GET_GAME_TIMER() + 500;
+					iLocal_53 = MISC::GET_GAME_TIMER() + 500;
 				}
 			}
 			break;
@@ -169,49 +169,49 @@ void func_2()
 			{
 				Global_30921 = 0f;
 				SCRIPT::REQUEST_SCRIPT("pb_prostitute");
-				iLocal_53 = GAMEPLAY::GET_GAME_TIMER() + 250;
+				iLocal_53 = MISC::GET_GAME_TIMER() + 250;
 				Local_58[iVar2].f_2 = 0;
 				iLocal_52 = 3;
 			}
 			else
 			{
-				iLocal_53 = GAMEPLAY::GET_GAME_TIMER() + 250;
+				iLocal_53 = MISC::GET_GAME_TIMER() + 250;
 			}
 			break;
 		
 		case 3:
-			if ((SCRIPT::HAS_SCRIPT_LOADED("pb_prostitute") && SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1788246410) <= 0) && !NETWORK::NETWORK_IS_SCRIPT_ACTIVE("pb_prostitute", PLAYER::NETWORK_PLAYER_ID_TO_INT(), 1, 0))
+			if ((SCRIPT::HAS_SCRIPT_LOADED("pb_prostitute") && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1788246410) <= 0) && !NETWORK::NETWORK_IS_SCRIPT_ACTIVE("pb_prostitute", PLAYER::NETWORK_PLAYER_ID_TO_INT(), 1, 0))
 			{
 				iVar4 = func_12(iVar2);
 				iLocal_57 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS("pb_prostitute", &iVar4, 1, 2050);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("pb_prostitute");
 				iLocal_52 = 0;
 			}
-			iLocal_53 = GAMEPLAY::GET_GAME_TIMER();
+			iLocal_53 = MISC::GET_GAME_TIMER();
 			break;
 		
 		case 4:
 			if (func_4())
 			{
 				Local_58[iVar2].f_2 = 0;
-				iLocal_53 = GAMEPLAY::GET_GAME_TIMER() + 250;
+				iLocal_53 = MISC::GET_GAME_TIMER() + 250;
 				iLocal_52 = 5;
 			}
 			else
 			{
-				iLocal_53 = GAMEPLAY::GET_GAME_TIMER() + 500;
+				iLocal_53 = MISC::GET_GAME_TIMER() + 500;
 			}
 			break;
 		
 		case 5:
 			if (((!func_25(PLAYER::PLAYER_ID(), 1, 0) && !func_24()) && bVar3) && !func_3())
 			{
-				iLocal_53 = GAMEPLAY::GET_GAME_TIMER() + 250;
+				iLocal_53 = MISC::GET_GAME_TIMER() + 250;
 				iLocal_52 = 0;
 			}
 			else
 			{
-				iLocal_53 = GAMEPLAY::GET_GAME_TIMER() + 500;
+				iLocal_53 = MISC::GET_GAME_TIMER() + 500;
 			}
 			break;
 	}
@@ -224,7 +224,7 @@ bool func_3()
 
 int func_4()
 {
-	if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(1788246410) <= 0 && !NETWORK::NETWORK_IS_SCRIPT_ACTIVE("pb_prostitute", PLAYER::NETWORK_PLAYER_ID_TO_INT(), 1, 0))
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1788246410) <= 0 && !NETWORK::NETWORK_IS_SCRIPT_ACTIVE("pb_prostitute", PLAYER::NETWORK_PLAYER_ID_TO_INT(), 1, 0))
 	{
 		return 1;
 	}
@@ -266,11 +266,11 @@ var func_6(int iParam0, bool bParam1)
 			{
 				if (bParam1)
 				{
-					GAMEPLAY::SET_BIT(&uVar0, iVar1);
+					MISC::SET_BIT(&uVar0, iVar1);
 				}
 				else if (!func_7(iVar2, 0))
 				{
-					GAMEPLAY::SET_BIT(&uVar0, iVar1);
+					MISC::SET_BIT(&uVar0, iVar1);
 				}
 			}
 		}
@@ -484,25 +484,25 @@ int func_15(int iParam0)
 int func_16(var uParam0)
 {
 	uVar1 = ENTITY::GET_ENTITY_SCRIPT(uParam0, &uVar0);
-	if (!GAMEPLAY::IS_STRING_NULL_OR_EMPTY(uVar1))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(uVar1))
 	{
-		if (GAMEPLAY::ARE_STRINGS_EQUAL(uVar1, "GB_VEHICLE_EXPORT"))
+		if (MISC::ARE_STRINGS_EQUAL(uVar1, "GB_VEHICLE_EXPORT"))
 		{
 			return 0;
 		}
-		if (GAMEPLAY::ARE_STRINGS_EQUAL(uVar1, "BUSINESS_BATTLES_SELL"))
+		if (MISC::ARE_STRINGS_EQUAL(uVar1, "BUSINESS_BATTLES_SELL"))
 		{
 			return 0;
 		}
-		if (GAMEPLAY::ARE_STRINGS_EQUAL(uVar1, "BUSINESS_BATTLES"))
+		if (MISC::ARE_STRINGS_EQUAL(uVar1, "BUSINESS_BATTLES"))
 		{
 			return 0;
 		}
-		if (GAMEPLAY::ARE_STRINGS_EQUAL(uVar1, "GB_CASINO"))
+		if (MISC::ARE_STRINGS_EQUAL(uVar1, "GB_CASINO"))
 		{
 			return 0;
 		}
-		if (GAMEPLAY::ARE_STRINGS_EQUAL(uVar1, "GB_CASINO_HEIST"))
+		if (MISC::ARE_STRINGS_EQUAL(uVar1, "GB_CASINO_HEIST"))
 		{
 			return 0;
 		}
@@ -586,7 +586,7 @@ int func_23(int iParam0)
 
 bool func_24()
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID()].f_39.f_18, 0);
+	return MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID()].f_39.f_18, 0);
 }
 
 int func_25(int iParam0, bool bParam1, bool bParam2)
@@ -615,7 +615,7 @@ bool func_26(int iParam0)
 
 bool func_27(int iParam0)
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1590535[iParam0].f_13.f_1, 0);
+	return MISC::IS_BIT_SET(Global_1590535[iParam0].f_13.f_1, 0);
 }
 
 int func_28(var uParam0)
@@ -909,7 +909,7 @@ int func_34()
 	}
 	if (func_35() != 0)
 	{
-		if (SCRIPT::_GET_NUM_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(func_35()) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(func_35()) == 0)
 		{
 			return 1;
 		}
@@ -1102,7 +1102,7 @@ int func_49(int iParam0)
 {
 	if (iParam0 != func_31())
 	{
-		return GAMEPLAY::IS_BIT_SET(Global_1590535[iParam0].f_274.f_334, 29);
+		return MISC::IS_BIT_SET(Global_1590535[iParam0].f_274.f_334, 29);
 	}
 	return 0;
 }
@@ -1111,7 +1111,7 @@ int func_50(int iParam0)
 {
 	if (iParam0 != func_31())
 	{
-		return GAMEPLAY::IS_BIT_SET(Global_1590535[iParam0].f_274.f_393.f_2, 16);
+		return MISC::IS_BIT_SET(Global_1590535[iParam0].f_274.f_393.f_2, 16);
 	}
 	return 0;
 }
@@ -1129,7 +1129,7 @@ void func_51(struct<21> Param0)
 	{
 		PLAYER::FORCE_CLEANUP_FOR_ALL_THREADS_WITH_THIS_NAME("pb_prostitute", 1);
 	}
-	GAMEPLAY::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
+	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
 }
 
 int func_52(int iParam0, int iParam1, bool bParam2)

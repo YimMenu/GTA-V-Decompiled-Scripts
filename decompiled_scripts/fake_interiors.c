@@ -69,7 +69,7 @@ void func_1()
 			}
 			if (bVar6)
 			{
-				UI::SET_RADAR_AS_INTERIOR_THIS_FRAME(GAMEPLAY::GET_HASH_KEY(func_13(iLocal_29)), Var3.x, Var3.y, func_12(iLocal_29), func_11(iLocal_29));
+				HUD::SET_RADAR_AS_INTERIOR_THIS_FRAME(MISC::GET_HASH_KEY(func_13(iLocal_29)), Var3.x, Var3.y, func_12(iLocal_29), func_11(iLocal_29));
 				func_10(iLocal_29);
 			}
 		}
@@ -78,29 +78,29 @@ void func_1()
 	{
 		if (func_2())
 		{
-			if (GAMEPLAY::IS_BIT_SET(uLocal_34, 1))
+			if (MISC::IS_BIT_SET(uLocal_34, 1))
 			{
-				GAMEPLAY::CLEAR_BIT(&uLocal_34, 1);
+				MISC::CLEAR_BIT(&uLocal_34, 1);
 			}
-			if (UI::IS_PAUSE_MENU_ACTIVE())
+			if (HUD::IS_PAUSE_MENU_ACTIVE())
 			{
-				if (!GAMEPLAY::IS_BIT_SET(uLocal_34, 0))
+				if (!MISC::IS_BIT_SET(uLocal_34, 0))
 				{
-					UI::SET_MINIMAP_COMPONENT(15, 1, -1);
-					GAMEPLAY::SET_BIT(&uLocal_34, 0);
+					HUD::SET_MINIMAP_COMPONENT(15, 1, -1);
+					MISC::SET_BIT(&uLocal_34, 0);
 				}
 			}
-			else if (GAMEPLAY::IS_BIT_SET(uLocal_34, 0))
+			else if (MISC::IS_BIT_SET(uLocal_34, 0))
 			{
-				UI::SET_MINIMAP_COMPONENT(15, 0, -1);
-				GAMEPLAY::CLEAR_BIT(&uLocal_34, 0);
+				HUD::SET_MINIMAP_COMPONENT(15, 0, -1);
+				MISC::CLEAR_BIT(&uLocal_34, 0);
 			}
 		}
-		else if (!GAMEPLAY::IS_BIT_SET(uLocal_34, 1))
+		else if (!MISC::IS_BIT_SET(uLocal_34, 1))
 		{
-			UI::SET_MINIMAP_COMPONENT(15, 0, -1);
-			GAMEPLAY::CLEAR_BIT(&uLocal_34, 0);
-			GAMEPLAY::SET_BIT(&uLocal_34, 1);
+			HUD::SET_MINIMAP_COMPONENT(15, 0, -1);
+			MISC::CLEAR_BIT(&uLocal_34, 0);
+			MISC::SET_BIT(&uLocal_34, 1);
 		}
 	}
 }
@@ -193,7 +193,7 @@ int func_9(int iParam0)
 void func_10(int iParam0)
 {
 	Var0 = { ENTITY::GET_ENTITY_COORDS(uLocal_33, 0) };
-	UI::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.y);
+	HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.y);
 	switch (iParam0)
 	{
 		case 0:
@@ -204,15 +204,15 @@ void func_10(int iParam0)
 		
 		case 2:
 			Var0 = { ENTITY::GET_ENTITY_COORDS(uLocal_33, 0) };
-			UI::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.y);
+			HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.y);
 			break;
 		
 		case 3:
-			UI::SET_RADAR_AS_EXTERIOR_THIS_FRAME();
+			HUD::SET_RADAR_AS_EXTERIOR_THIS_FRAME();
 			break;
 		
 		case 4:
-			UI::SET_RADAR_AS_EXTERIOR_THIS_FRAME();
+			HUD::SET_RADAR_AS_EXTERIOR_THIS_FRAME();
 			break;
 	}
 }
@@ -779,7 +779,7 @@ int func_23(int iParam0)
 			return 1;
 		}
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_2425662[iParam0].f_195, 2))
+	if (MISC::IS_BIT_SET(Global_2425662[iParam0].f_195, 2))
 	{
 		return 1;
 	}
@@ -788,7 +788,7 @@ int func_23(int iParam0)
 
 bool func_24()
 {
-	return GAMEPLAY::IS_BIT_SET(Global_2359302, 3);
+	return MISC::IS_BIT_SET(Global_2359302, 3);
 }
 
 bool func_25(int iParam0, int iParam1)
