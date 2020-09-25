@@ -1,3 +1,39 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	var uLocal_18 = 0;
+	var uLocal_19 = 0;
+	char* sLocal_20 = NULL;
+	float fLocal_21 = 0f;
+	var uLocal_22 = 0;
+	var uLocal_23 = 0;
+	var uLocal_24 = 0;
+	float fLocal_25 = 0f;
+	float fLocal_26 = 0f;
+	var uLocal_27 = 0;
+	int iLocal_28 = 0;
+	int iLocal_29 = 0;
+	var uLocal_30 = 0;
+	int iLocal_31 = 0;
+	int iLocal_32 = 0;
+#endregion
+
 void __EntryFunction__()
 {
 	iLocal_2 = 1;
@@ -28,7 +64,7 @@ void __EntryFunction__()
 	while (true)
 	{
 		SYSTEM::WAIT(0);
-		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1543351171) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("docks_setup")) == 0)
 		{
 			if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 			{
@@ -45,16 +81,16 @@ void __EntryFunction__()
 			{
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_28, 0))
 				{
-					if (VEHICLE::IS_VEHICLE_MODEL(iLocal_28, 444583674))
+					if (VEHICLE::IS_VEHICLE_MODEL(iLocal_28, joaat("handler")))
 					{
 						PAD::SET_INPUT_EXCLUSIVE(0, 51);
 						if (!VEHICLE::_0x62CA17B74C435651(iLocal_28))
 						{
 							if (iLocal_32 == 0)
 							{
-								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_29) || (ENTITY::DOES_ENTITY_EXIST(iLocal_29) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, 874602658, 1, 0, 1) != iLocal_29))
+								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_29) || (ENTITY::DOES_ENTITY_EXIST(iLocal_29) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, joaat("prop_contr_03b_ld"), 1, 0, 1) != iLocal_29))
 								{
-									iLocal_29 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, 874602658, 1, 0, 1);
+									iLocal_29 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, joaat("prop_contr_03b_ld"), 1, 0, 1);
 								}
 								if (ENTITY::DOES_ENTITY_EXIST(iLocal_29))
 								{
@@ -94,6 +130,8 @@ void __EntryFunction__()
 
 int func_1(var uParam0, int iParam1)
 {
+	int iVar0;
+	
 	iVar0 = MISC::GET_GAME_TIMER();
 	if ((iVar0 - *uParam0) > iParam1)
 	{
@@ -109,6 +147,9 @@ void func_2()
 
 int func_3(int iParam0)
 {
+	int iVar0;
+	int iVar1;
+	
 	if (iParam0 <= 31)
 	{
 		iVar0 = 9;
@@ -129,6 +170,9 @@ int func_3(int iParam0)
 
 int func_4(int iParam0)
 {
+	int iVar0;
+	int iVar1;
+	
 	if (iParam0 <= 31)
 	{
 		iVar0 = 9;

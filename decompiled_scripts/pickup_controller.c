@@ -1,3 +1,37 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	var uLocal_18 = 0;
+	var uLocal_19 = 0;
+	var uLocal_20[45] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	var uLocal_21[19] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	var uLocal_22[76] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	var uLocal_23[102] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	var uLocal_24[9] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	int iLocal_25 = 0;
+	bool bLocal_26 = 0;
+	var uLocal_27[1] = { 0 };
+	int iLocal_28 = 0;
+	var uLocal_29[1] = { 0 };
+	int iLocal_30 = 0;
+#endregion
+
 void __EntryFunction__()
 {
 	iLocal_2 = 1;
@@ -21,12 +55,12 @@ void __EntryFunction__()
 	{
 		if (func_23(13) || func_23(14))
 		{
-			if (bLocal_277)
+			if (bLocal_26)
 			{
 				func_15();
 			}
 		}
-		else if (!bLocal_277)
+		else if (!bLocal_26)
 		{
 			func_24();
 		}
@@ -38,33 +72,33 @@ void __EntryFunction__()
 
 void func_1()
 {
-	if (!iLocal_276)
+	if (!iLocal_25)
 	{
 		if (func_13(75))
 		{
 			func_10();
-			iLocal_276 = 1;
+			iLocal_25 = 1;
 		}
 	}
-	if (!iLocal_280)
+	if (!iLocal_28)
 	{
 		if (func_13(75))
 		{
 			if (func_9())
 			{
 				func_6();
-				iLocal_280 = 1;
+				iLocal_28 = 1;
 			}
 		}
 	}
-	if (!iLocal_283)
+	if (!iLocal_30)
 	{
 		if (func_5(62))
 		{
 			if (func_9())
 			{
 				func_2();
-				iLocal_283 = 1;
+				iLocal_30 = 1;
 			}
 		}
 	}
@@ -74,25 +108,27 @@ void func_2()
 {
 	if (func_9())
 	{
-		func_3(0, 1311775952, 156.24f, 0f, 71.2f, 1, 1);
+		func_3(0, joaat("PICKUP_WEAPON_HATCHET"), 156.24f, 0f, 71.2f, 1, 1);
 	}
 }
 
-void func_3(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bParam6)
+void func_3(int iParam0, int iParam1, struct<3> Param2, bool bParam3, bool bParam4)
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	MISC::SET_BIT(&iVar0, 2);
 	MISC::SET_BIT(&iVar0, 1);
-	if (bParam6)
+	if (bParam4)
 	{
 		MISC::SET_BIT(&iVar0, 4);
 	}
-	if (bParam5)
+	if (bParam3)
 	{
 		MISC::SET_BIT(&iVar0, 3);
 	}
-	uLocal_281[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_4(iParam0), Param2, iVar0, -1, 2, 1, 0);
-	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_281[iParam0], 600000);
+	uLocal_29[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_4(iParam0), Param2, iVar0, -1, 2, 1, 0);
+	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_29[iParam0], 600000);
 }
 
 Vector3 func_4(int iParam0)
@@ -112,32 +148,34 @@ int func_5(int iParam0)
 	{
 		return 0;
 	}
-	return Global_111638.f_9080.f_330[iParam0];
+	return Global_111638.f_9080.f_330[iParam0 /*6*/];
 }
 
 void func_6()
 {
 	if (func_9())
 	{
-		func_7(0, -462548556, 156.24f, 0f, 166.2f, 1, 1);
+		func_7(0, joaat("PICKUP_WEAPON_RAILGUN"), 156.24f, 0f, 166.2f, 1, 1);
 	}
 }
 
-void func_7(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bParam6)
+void func_7(int iParam0, int iParam1, struct<3> Param2, bool bParam3, bool bParam4)
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	MISC::SET_BIT(&iVar0, 2);
 	MISC::SET_BIT(&iVar0, 1);
-	if (bParam6)
+	if (bParam4)
 	{
 		MISC::SET_BIT(&iVar0, 4);
 	}
-	if (bParam5)
+	if (bParam3)
 	{
 		MISC::SET_BIT(&iVar0, 3);
 	}
-	uLocal_278[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_8(iParam0), Param2, iVar0, -1, 2, 1, 0);
-	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_278[iParam0], 600000);
+	uLocal_27[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_8(iParam0), Param2, iVar0, -1, 2, 1, 0);
+	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_27[iParam0], 600000);
 }
 
 Vector3 func_8(int iParam0)
@@ -153,20 +191,22 @@ Vector3 func_8(int iParam0)
 
 int func_9()
 {
+	var uVar0;
+	
 	if (NETWORK::NETWORK_IS_SIGNED_IN())
 	{
 		if (NETWORK::NETWORK_HAS_VALID_ROS_CREDENTIALS())
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(1571103992, &uVar0, -1);
+				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &uVar0, -1);
 				MISC::SET_BIT(&uVar0, 2);
 				MISC::SET_BIT(&uVar0, 4);
 				MISC::SET_BIT(&uVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(1571103992, uVar0, 1);
+				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), uVar0, 1);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					uVar0 = MISC::GET_PROFILE_SETTING(866);
@@ -197,26 +237,28 @@ int func_9()
 
 void func_10()
 {
-	func_11(0, 779501861, 156.24f, 0f, 25.2f, 1, 1);
-	func_11(1, 1295434569, -92.68f, 62.64f, -264.24f, 1, 1);
-	func_11(2, -1298986476, -70f, 0f, -40f, 1, 1);
-	func_11(3, 1274757841, -71f, 0f, 168.48f, 1, 1);
-	func_11(4, 996550793, -100.8f, 92.8f, 0f, 1, 1);
-	func_11(5, -1456120371, 77.76f, 10.08f, -17.28f, 1, 1);
-	func_11(6, -30788308, 97.92f, 0f, 100.8f, 1, 1);
-	func_11(7, 2081529176, 0f, 0f, 0f, 1, 1);
-	func_11(8, 2081529176, 0f, 0f, 0f, 1, 1);
+	func_11(0, joaat("pickup_weapon_grenadelauncher"), 156.24f, 0f, 25.2f, 1, 1);
+	func_11(1, joaat("pickup_weapon_rpg"), -92.68f, 62.64f, -264.24f, 1, 1);
+	func_11(2, joaat("pickup_weapon_combatmg"), -70f, 0f, -40f, 1, 1);
+	func_11(3, joaat("pickup_armour_standard"), -71f, 0f, 168.48f, 1, 1);
+	func_11(4, joaat("pickup_weapon_appistol"), -100.8f, 92.8f, 0f, 1, 1);
+	func_11(5, joaat("pickup_weapon_pumpshotgun"), 77.76f, 10.08f, -17.28f, 1, 1);
+	func_11(6, joaat("pickup_weapon_sniperrifle"), 97.92f, 0f, 100.8f, 1, 1);
+	func_11(7, joaat("pickup_weapon_stickybomb"), 0f, 0f, 0f, 1, 1);
+	func_11(8, joaat("pickup_weapon_stickybomb"), 0f, 0f, 0f, 1, 1);
 }
 
-void func_11(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bParam6)
+void func_11(int iParam0, int iParam1, struct<3> Param2, bool bParam3, bool bParam4)
 {
+	int iVar0;
+	
 	iVar0 = 0;
-	if (iParam1 == 1274757841)
+	if (iParam1 == joaat("pickup_armour_standard"))
 	{
 		MISC::SET_BIT(&iVar0, 2);
 		MISC::SET_BIT(&iVar0, 4);
 		MISC::SET_BIT(&iVar0, 1);
-		if (bParam5)
+		if (bParam3)
 		{
 			MISC::SET_BIT(&iVar0, 3);
 		}
@@ -225,17 +267,17 @@ void func_11(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPar
 	{
 		MISC::SET_BIT(&iVar0, 2);
 		MISC::SET_BIT(&iVar0, 1);
-		if (bParam6)
+		if (bParam4)
 		{
 			MISC::SET_BIT(&iVar0, 4);
 		}
-		if (bParam5)
+		if (bParam3)
 		{
 			MISC::SET_BIT(&iVar0, 3);
 		}
 	}
-	uLocal_266[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_12(iParam0), Param2, iVar0, -1, 2, 1, 0);
-	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_266[iParam0], 600000);
+	uLocal_24[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_12(iParam0), Param2, iVar0, -1, 2, 1, 0);
+	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_24[iParam0], 600000);
 }
 
 Vector3 func_12(int iParam0)
@@ -312,7 +354,7 @@ void func_14()
 					break;
 				
 				case 1:
-					if (OBJECT::DOES_PICKUP_EXIST(uLocal_86[Global_31013]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(uLocal_86[Global_31013]))
+					if (OBJECT::DOES_PICKUP_EXIST(uLocal_22[Global_31013]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(uLocal_22[Global_31013]))
 					{
 						Global_31014 = 0;
 					}
@@ -323,7 +365,7 @@ void func_14()
 					break;
 				
 				case 2:
-					if (OBJECT::DOES_PICKUP_EXIST(uLocal_163[Global_31013]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(uLocal_163[Global_31013]))
+					if (OBJECT::DOES_PICKUP_EXIST(uLocal_23[Global_31013]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(uLocal_23[Global_31013]))
 					{
 						Global_31014 = 0;
 					}
@@ -357,71 +399,79 @@ void func_15()
 	func_21();
 	func_20();
 	func_19();
-	if (iLocal_276)
+	if (iLocal_25)
 	{
 		func_18();
 	}
-	if (iLocal_280)
+	if (iLocal_28)
 	{
 		func_17();
 	}
-	if (iLocal_283)
+	if (iLocal_30)
 	{
 		func_16();
 	}
-	bLocal_277 = false;
+	bLocal_26 = false;
 }
 
 void func_16()
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	while (iVar0 < 1)
 	{
-		if (OBJECT::DOES_PICKUP_EXIST(uLocal_281[iVar0]))
+		if (OBJECT::DOES_PICKUP_EXIST(uLocal_29[iVar0]))
 		{
-			OBJECT::REMOVE_PICKUP(uLocal_281[iVar0]);
+			OBJECT::REMOVE_PICKUP(uLocal_29[iVar0]);
 		}
 		iVar0++;
 	}
-	iLocal_283 = 0;
+	iLocal_30 = 0;
 }
 
 void func_17()
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	while (iVar0 < 1)
 	{
-		if (OBJECT::DOES_PICKUP_EXIST(uLocal_278[iVar0]))
+		if (OBJECT::DOES_PICKUP_EXIST(uLocal_27[iVar0]))
 		{
-			OBJECT::REMOVE_PICKUP(uLocal_278[iVar0]);
+			OBJECT::REMOVE_PICKUP(uLocal_27[iVar0]);
 		}
 		iVar0++;
 	}
-	iLocal_280 = 0;
+	iLocal_28 = 0;
 }
 
 void func_18()
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	while (iVar0 < 9)
 	{
-		if (OBJECT::DOES_PICKUP_EXIST(uLocal_266[iVar0]))
+		if (OBJECT::DOES_PICKUP_EXIST(uLocal_24[iVar0]))
 		{
-			OBJECT::REMOVE_PICKUP(uLocal_266[iVar0]);
+			OBJECT::REMOVE_PICKUP(uLocal_24[iVar0]);
 		}
 		iVar0++;
 	}
-	iLocal_276 = 0;
+	iLocal_25 = 0;
 }
 
 void func_19()
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	while (iVar0 < 102)
 	{
-		if (OBJECT::DOES_PICKUP_EXIST(uLocal_163[iVar0]))
+		if (OBJECT::DOES_PICKUP_EXIST(uLocal_23[iVar0]))
 		{
-			OBJECT::REMOVE_PICKUP(uLocal_163[iVar0]);
+			OBJECT::REMOVE_PICKUP(uLocal_23[iVar0]);
 		}
 		iVar0++;
 	}
@@ -429,12 +479,14 @@ void func_19()
 
 void func_20()
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	while (iVar0 < 76)
 	{
-		if (OBJECT::DOES_PICKUP_EXIST(uLocal_86[iVar0]))
+		if (OBJECT::DOES_PICKUP_EXIST(uLocal_22[iVar0]))
 		{
-			OBJECT::REMOVE_PICKUP(uLocal_86[iVar0]);
+			OBJECT::REMOVE_PICKUP(uLocal_22[iVar0]);
 		}
 		iVar0++;
 	}
@@ -442,12 +494,14 @@ void func_20()
 
 void func_21()
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	while (iVar0 < 19)
 	{
-		if (OBJECT::DOES_PICKUP_EXIST(uLocal_66[iVar0]))
+		if (OBJECT::DOES_PICKUP_EXIST(uLocal_21[iVar0]))
 		{
-			OBJECT::REMOVE_PICKUP(uLocal_66[iVar0]);
+			OBJECT::REMOVE_PICKUP(uLocal_21[iVar0]);
 		}
 		iVar0++;
 	}
@@ -455,6 +509,8 @@ void func_21()
 
 void func_22()
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	while (iVar0 < 45)
 	{
@@ -477,133 +533,135 @@ void func_24()
 	func_33();
 	func_29();
 	func_25();
-	bLocal_277 = true;
+	bLocal_26 = true;
 }
 
 void func_25()
 {
-	func_26(0, -214137936, 90f, 0f, 70f, 0, 0, 1);
-	func_26(1, -214137936, 90f, 0f, 0f, 0, 0, 1);
-	func_26(2, -214137936, 0f, 0f, 0f, 1, 0, 1);
-	func_26(3, -214137936, 0f, 0f, 0f, 1, 0, 1);
-	func_26(4, -214137936, 0f, 0f, 0f, 1, 0, 1);
-	func_26(5, -214137936, 0f, 0f, 0f, 1, 0, 1);
-	func_26(6, 1577485217, 0f, 0f, 0f, 1, 0, 1);
-	func_26(7, 1577485217, 0f, 0f, 0f, 1, 0, 1);
-	func_26(8, 1577485217, 95f, 0f, 0f, 0, 0, 1);
-	func_26(9, 1577485217, 0f, 0f, 0f, 1, 0, 1);
-	func_26(10, 779501861, 0f, 0f, 0f, 1, 0, 1);
-	func_26(11, 779501861, 118f, 0f, 92f, 0, 0, 0);
-	func_26(12, 779501861, 82f, -60f, 0f, 0, 0, 0);
-	func_26(13, 792114228, 0f, 0f, 0f, 1, 1, 1);
-	func_26(14, -2050315855, 0f, 0f, 0f, 1, 0, 1);
-	func_26(15, -2050315855, 97.92f, 60.48f, 0f, 0, 0, 1);
-	func_26(16, -2050315855, 0f, 0f, 0f, 1, 0, 1);
-	func_26(17, -2050315855, 0f, 0f, 0f, 1, 0, 1);
-	func_26(18, -105925489, 0f, 0f, 0f, 1, 0, 1);
-	func_26(19, -105925489, 0f, 0f, 0f, 1, 0, 1);
-	func_26(20, -105925489, 0f, 0f, 0f, 1, 0, 1);
-	func_26(21, -105925489, 0f, 0f, 0f, 1, 0, 1);
-	func_26(22, -105925489, 0f, 0f, 0f, 1, 0, 1);
-	func_26(23, -105925489, 0f, 0f, 0f, 1, 0, 1);
-	func_26(24, -105925489, 0f, 0f, 0f, 1, 0, 1);
-	func_26(25, -105925489, 0f, 0f, 0f, 1, 0, 1);
-	func_26(26, -105925489, 0f, 0f, 0f, 1, 0, 1);
-	func_26(27, -105925489, 0f, 0f, 36f, 1, 0, 1);
-	func_26(28, 1295434569, 86f, 0f, 0f, 1, 0, 1);
-	func_26(29, 1295434569, 0f, 0f, 0f, 1, 0, 1);
-	func_26(30, 1295434569, 0f, 0f, 0f, 1, 0, 1);
-	func_26(31, -1766583645, -82f, 0f, 0f, 0, 0, 1);
-	func_26(32, -1766583645, 0f, 0f, 24f, 1, 0, 1);
-	func_26(33, -1766583645, 0f, 0f, 12f, 1, 0, 1);
-	func_26(34, -1766583645, 0f, 0f, 98f, 1, 0, 1);
-	func_26(35, -1766583645, 90f, 0f, 140f, 1, 0, 1);
-	func_26(36, -1766583645, 90f, 0f, 120f, 0, 0, 1);
-	func_26(37, 978070226, 0f, 0f, 0f, 1, 0, 1);
-	func_26(38, 978070226, 85.68f, -92.88f, 0f, 0, 0, 1);
-	func_26(39, 978070226, 0f, 0f, 0f, 1, 0, 1);
-	func_26(40, 978070226, 0f, 0f, 20f, 1, 0, 1);
-	func_26(41, 978070226, 0f, 0f, 0f, 1, 0, 1);
-	func_26(42, 978070226, 0f, 0f, 0f, 1, 1, 1);
-	func_26(43, -30788308, 0f, 0f, 42f, 1, 0, 1);
-	func_26(44, -30788308, 0f, 0f, 52f, 1, 0, 1);
-	func_26(45, -30788308, 90f, 0f, 87f, 1, 0, 1);
-	func_26(46, -30788308, 0f, 0f, 98f, 1, 0, 1);
-	func_26(47, -30788308, 0f, 0f, 20f, 1, 0, 1);
-	func_26(48, 2081529176, 0f, 0f, 0f, 1, 0, 1);
-	func_26(49, 2081529176, 0f, 0f, 0f, 1, 0, 1);
-	func_26(50, 1295434569, 63f, 0f, 0f, 0, 0, 1);
-	func_26(51, -105925489, 0f, 0f, 4f, 1, 0, 1);
-	func_26(52, -105925489, 90f, 90f, 90f, 0, 0, 0);
-	func_26(53, -30788308, 0f, 0f, 2f, 1, 0, 1);
-	func_26(54, -1766583645, 0f, 0f, 0f, 1, 0, 1);
-	func_26(55, -2115084258, 90f, 0f, 4f, 1, 0, 1);
-	func_26(56, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(57, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(58, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(59, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(60, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(61, -2115084258, 0f, 0f, 0f, 1, 1, 1);
-	func_26(62, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(63, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(64, -2115084258, 0f, 0f, 0f, 1, 1, 1);
-	func_26(65, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(66, -2027042680, 90f, 0f, 45f, 0, 0, 1);
-	func_26(67, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(68, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(69, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(70, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(71, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(72, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(73, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(74, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(75, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(76, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(77, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(78, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(79, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(80, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(81, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(82, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(83, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(84, 768803961, 0f, 0f, 0f, 1, 0, 1);
-	func_26(85, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(86, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(87, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(88, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(89, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(90, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(91, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(92, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(93, -2115084258, 0f, 0f, 0f, 1, 0, 1);
-	func_26(94, -2027042680, 0f, 0f, 0f, 1, 0, 1);
-	func_26(95, -546236071, 0f, 0f, 87f, 1, 0, 1);
-	func_26(96, -1835415205, 0f, 0f, 0f, 1, 1, 1);
-	func_26(97, -1835415205, 85.7f, 0f, 136f, 0, 0, 0);
-	func_26(98, 1735599485, 10f, 0f, -90f, 0, 0, 0);
-	func_26(99, -1456120371, -88f, 0f, 0f, 0, 0, 0);
-	func_26(100, 1735599485, 11f, 0f, 28.16f, 0, 0, 0);
-	func_26(101, -1766583645, 92.8f, 0f, 50.4f, 0, 0, 0);
+	func_26(0, joaat("pickup_weapon_assaultrifle"), 90f, 0f, 70f, 0, 0, 1);
+	func_26(1, joaat("pickup_weapon_assaultrifle"), 90f, 0f, 0f, 0, 0, 1);
+	func_26(2, joaat("pickup_weapon_assaultrifle"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(3, joaat("pickup_weapon_assaultrifle"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(4, joaat("pickup_weapon_assaultrifle"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(5, joaat("pickup_weapon_assaultrifle"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(6, joaat("pickup_weapon_grenade"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(7, joaat("pickup_weapon_grenade"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(8, joaat("pickup_weapon_grenade"), 95f, 0f, 0f, 0, 0, 1);
+	func_26(9, joaat("pickup_weapon_grenade"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(10, joaat("pickup_weapon_grenadelauncher"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(11, joaat("pickup_weapon_grenadelauncher"), 118f, 0f, 92f, 0, 0, 0);
+	func_26(12, joaat("pickup_weapon_grenadelauncher"), 82f, -60f, 0f, 0, 0, 0);
+	func_26(13, joaat("pickup_weapon_minigun"), 0f, 0f, 0f, 1, 1, 1);
+	func_26(14, joaat("pickup_weapon_mg"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(15, joaat("pickup_weapon_mg"), 97.92f, 60.48f, 0f, 0, 0, 1);
+	func_26(16, joaat("pickup_weapon_mg"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(17, joaat("pickup_weapon_mg"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(18, joaat("pickup_weapon_pistol"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(19, joaat("pickup_weapon_pistol"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(20, joaat("pickup_weapon_pistol"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(21, joaat("pickup_weapon_pistol"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(22, joaat("pickup_weapon_pistol"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(23, joaat("pickup_weapon_pistol"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(24, joaat("pickup_weapon_pistol"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(25, joaat("pickup_weapon_pistol"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(26, joaat("pickup_weapon_pistol"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(27, joaat("pickup_weapon_pistol"), 0f, 0f, 36f, 1, 0, 1);
+	func_26(28, joaat("pickup_weapon_rpg"), 86f, 0f, 0f, 1, 0, 1);
+	func_26(29, joaat("pickup_weapon_rpg"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(30, joaat("pickup_weapon_rpg"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(31, joaat("pickup_weapon_sawnoffshotgun"), -82f, 0f, 0f, 0, 0, 1);
+	func_26(32, joaat("pickup_weapon_sawnoffshotgun"), 0f, 0f, 24f, 1, 0, 1);
+	func_26(33, joaat("pickup_weapon_sawnoffshotgun"), 0f, 0f, 12f, 1, 0, 1);
+	func_26(34, joaat("pickup_weapon_sawnoffshotgun"), 0f, 0f, 98f, 1, 0, 1);
+	func_26(35, joaat("pickup_weapon_sawnoffshotgun"), 90f, 0f, 140f, 1, 0, 1);
+	func_26(36, joaat("pickup_weapon_sawnoffshotgun"), 90f, 0f, 120f, 0, 0, 1);
+	func_26(37, joaat("pickup_weapon_smg"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(38, joaat("pickup_weapon_smg"), 85.68f, -92.88f, 0f, 0, 0, 1);
+	func_26(39, joaat("pickup_weapon_smg"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(40, joaat("pickup_weapon_smg"), 0f, 0f, 20f, 1, 0, 1);
+	func_26(41, joaat("pickup_weapon_smg"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(42, joaat("pickup_weapon_smg"), 0f, 0f, 0f, 1, 1, 1);
+	func_26(43, joaat("pickup_weapon_sniperrifle"), 0f, 0f, 42f, 1, 0, 1);
+	func_26(44, joaat("pickup_weapon_sniperrifle"), 0f, 0f, 52f, 1, 0, 1);
+	func_26(45, joaat("pickup_weapon_sniperrifle"), 90f, 0f, 87f, 1, 0, 1);
+	func_26(46, joaat("pickup_weapon_sniperrifle"), 0f, 0f, 98f, 1, 0, 1);
+	func_26(47, joaat("pickup_weapon_sniperrifle"), 0f, 0f, 20f, 1, 0, 1);
+	func_26(48, joaat("pickup_weapon_stickybomb"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(49, joaat("pickup_weapon_stickybomb"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(50, joaat("pickup_weapon_rpg"), 63f, 0f, 0f, 0, 0, 1);
+	func_26(51, joaat("pickup_weapon_pistol"), 0f, 0f, 4f, 1, 0, 1);
+	func_26(52, joaat("pickup_weapon_pistol"), 90f, 90f, 90f, 0, 0, 0);
+	func_26(53, joaat("pickup_weapon_sniperrifle"), 0f, 0f, 2f, 1, 0, 1);
+	func_26(54, joaat("pickup_weapon_sawnoffshotgun"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(55, joaat("pickup_weapon_bat"), 90f, 0f, 4f, 1, 0, 1);
+	func_26(56, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(57, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(58, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(59, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(60, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(61, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 1, 1);
+	func_26(62, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(63, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(64, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 1, 1);
+	func_26(65, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(66, joaat("pickup_weapon_crowbar"), 90f, 0f, 45f, 0, 0, 1);
+	func_26(67, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(68, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(69, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(70, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(71, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(72, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(73, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(74, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(75, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(76, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(77, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(78, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(79, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(80, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(81, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(82, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(83, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(84, joaat("pickup_weapon_molotov"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(85, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(86, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(87, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(88, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(89, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(90, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(91, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(92, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(93, joaat("pickup_weapon_bat"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(94, joaat("pickup_weapon_crowbar"), 0f, 0f, 0f, 1, 0, 1);
+	func_26(95, joaat("pickup_weapon_carbinerifle"), 0f, 0f, 87f, 1, 0, 1);
+	func_26(96, joaat("pickup_weapon_assaultshotgun"), 0f, 0f, 0f, 1, 1, 1);
+	func_26(97, joaat("pickup_weapon_assaultshotgun"), 85.7f, 0f, 136f, 0, 0, 0);
+	func_26(98, joaat("pickup_parachute"), 10f, 0f, -90f, 0, 0, 0);
+	func_26(99, joaat("pickup_weapon_pumpshotgun"), -88f, 0f, 0f, 0, 0, 0);
+	func_26(100, joaat("pickup_parachute"), 11f, 0f, 28.16f, 0, 0, 0);
+	func_26(101, joaat("pickup_weapon_sawnoffshotgun"), 92.8f, 0f, 50.4f, 0, 0, 0);
 }
 
-void func_26(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bParam6, bool bParam7)
+void func_26(int iParam0, int iParam1, struct<3> Param2, bool bParam3, bool bParam4, bool bParam5)
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	MISC::SET_BIT(&iVar0, 2);
 	MISC::SET_BIT(&iVar0, 1);
-	if (bParam7)
+	if (bParam5)
 	{
 		MISC::SET_BIT(&iVar0, 4);
 	}
-	if (bParam5)
+	if (bParam3)
 	{
 		MISC::SET_BIT(&iVar0, 3);
 	}
-	uLocal_163[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_28(iParam0, 0), Param2, iVar0, -1, 2, 1, 0);
-	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_163[iParam0], 600000);
-	if (bParam6)
+	uLocal_23[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(iParam1, func_28(iParam0, 0), Param2, iVar0, -1, 2, 1, 0);
+	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_23[iParam0], 600000);
+	if (bParam4)
 	{
-		INTERIOR::ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME(uLocal_163[iParam0], func_27(iParam0));
+		INTERIOR::ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME(uLocal_23[iParam0], func_27(iParam0));
 	}
 }
 
@@ -1186,7 +1244,7 @@ Vector3 func_28(int iParam0, bool bParam1)
 			return -467.0458f, -934.8019f, 46.9844f;
 			break;
 		
-		case 79:
+		case joaat("MPSV_LP0_31"):
 			return 226.7f, -1761f, 28.5f;
 			break;
 		
@@ -1431,22 +1489,24 @@ void func_29()
 	func_30(75, 0f, 0f, 23.3f, 1, 0);
 }
 
-void func_30(int iParam0, struct<3> Param1, bool bParam4, bool bParam5)
+void func_30(int iParam0, struct<3> Param1, bool bParam2, bool bParam3)
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	MISC::SET_BIT(&iVar0, 2);
 	MISC::SET_BIT(&iVar0, 1);
 	MISC::SET_BIT(&iVar0, 8);
 	MISC::SET_BIT(&iVar0, 4);
-	if (!bParam4)
+	if (!bParam2)
 	{
 		MISC::SET_BIT(&iVar0, 3);
 	}
-	uLocal_86[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(-1888453608, func_32(iParam0, 0), Param1, iVar0, -1, 2, 1, 0);
-	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_86[iParam0], 600000);
-	if (bParam5)
+	uLocal_22[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(joaat("pickup_health_standard"), func_32(iParam0, 0), Param1, iVar0, -1, 2, 1, 0);
+	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_22[iParam0], 600000);
+	if (bParam3)
 	{
-		INTERIOR::ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME(uLocal_86[iParam0], func_31(iParam0));
+		INTERIOR::ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME(uLocal_22[iParam0], func_31(iParam0));
 	}
 }
 
@@ -2236,19 +2296,21 @@ void func_33()
 	func_34(18, 0f, 0f, 0f, 1);
 }
 
-void func_34(int iParam0, struct<3> Param1, bool bParam4)
+void func_34(int iParam0, struct<3> Param1, bool bParam2)
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	MISC::SET_BIT(&iVar0, 2);
 	MISC::SET_BIT(&iVar0, 4);
 	MISC::SET_BIT(&iVar0, 1);
 	MISC::SET_BIT(&iVar0, 8);
-	if (bParam4)
+	if (bParam2)
 	{
 		MISC::SET_BIT(&iVar0, 3);
 	}
-	uLocal_66[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(-962731009, func_35(iParam0), Param1, iVar0, -1, 2, 1, 0);
-	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_66[iParam0], 600000);
+	uLocal_21[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(joaat("pickup_weapon_petrolcan"), func_35(iParam0), Param1, iVar0, -1, 2, 1, 0);
+	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_21[iParam0], 600000);
 }
 
 Vector3 func_35(int iParam0)
@@ -2383,23 +2445,25 @@ void func_36()
 	func_37(44, 90f, 0f, -108f, 0, 0, 0);
 }
 
-void func_37(int iParam0, struct<3> Param1, bool bParam4, bool bParam5, bool bParam6)
+void func_37(int iParam0, struct<3> Param1, bool bParam2, bool bParam3, bool bParam4)
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	MISC::SET_BIT(&iVar0, 2);
 	MISC::SET_BIT(&iVar0, 4);
 	MISC::SET_BIT(&iVar0, 1);
-	if (bParam6)
+	if (bParam4)
 	{
 		MISC::SET_BIT(&iVar0, 8);
 	}
-	if (bParam4)
+	if (bParam2)
 	{
 		MISC::SET_BIT(&iVar0, 3);
 	}
-	uLocal_20[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(1274757841, func_39(iParam0, 0), Param1, iVar0, -1, 2, 1, 0);
+	uLocal_20[iParam0] = OBJECT::CREATE_PICKUP_ROTATE(joaat("pickup_armour_standard"), func_39(iParam0, 0), Param1, iVar0, -1, 2, 1, 0);
 	OBJECT::SET_PICKUP_REGENERATION_TIME(uLocal_20[iParam0], 600000);
-	if (bParam5)
+	if (bParam3)
 	{
 		INTERIOR::ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME(uLocal_20[iParam0], func_38(iParam0));
 	}
@@ -2803,15 +2867,15 @@ void func_40()
 	func_21();
 	func_20();
 	func_19();
-	if (iLocal_276)
+	if (iLocal_25)
 	{
 		func_18();
 	}
-	if (iLocal_280)
+	if (iLocal_28)
 	{
 		func_17();
 	}
-	if (iLocal_283)
+	if (iLocal_30)
 	{
 		func_16();
 	}

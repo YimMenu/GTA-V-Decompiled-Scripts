@@ -1,3 +1,256 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	char* sLocal_18 = NULL;
+	var uLocal_19 = 0;
+	var uLocal_20 = 0;
+	var uLocal_21 = 0;
+	var uLocal_22 = 0;
+	float fLocal_23 = 0f;
+	float fLocal_24 = 0f;
+	float fLocal_25 = 0f;
+	var uLocal_26 = 0;
+	var uLocal_27 = 0;
+	float fLocal_28 = 0f;
+	var uLocal_29 = 0;
+	var uLocal_30 = 0;
+	var uLocal_31 = 0;
+	float fLocal_32 = 0f;
+	float fLocal_33 = 0f;
+	var uLocal_34 = 0;
+	var uLocal_35 = 0;
+	int iLocal_36 = 0;
+	var uLocal_37 = 0;
+	var uLocal_38 = 0;
+	var uLocal_39 = 0;
+	int iLocal_40 = 0;
+	int iLocal_41 = 0;
+	int iLocal_42 = 0;
+	int iLocal_43 = 0;
+	var uLocal_44 = 0;
+	var uLocal_45 = 0;
+	var uLocal_46 = 0;
+	float fLocal_47 = 0f;
+	var uLocal_48 = 0;
+	var uLocal_49 = 0;
+	var uLocal_50 = 0;
+	var uLocal_51 = 0;
+	var uLocal_52 = 0;
+	var uLocal_53 = 0;
+	var uLocal_54 = 0;
+	var uLocal_55 = 0;
+	var uLocal_56 = 0;
+	var uLocal_57 = 0;
+	var uLocal_58 = 0;
+	var uLocal_59 = 0;
+	var uLocal_60 = 0;
+	var uLocal_61 = 0;
+	var uLocal_62 = 0;
+	var uLocal_63 = 0;
+	var uLocal_64 = 12;
+	var uLocal_65 = 0;
+	var uLocal_66 = 0;
+	var uLocal_67 = 0;
+	var uLocal_68 = 0;
+	var uLocal_69 = 0;
+	var uLocal_70 = 0;
+	var uLocal_71 = 0;
+	var uLocal_72 = 0;
+	var uLocal_73 = 0;
+	var uLocal_74 = 0;
+	var uLocal_75 = 0;
+	var uLocal_76 = 0;
+	var uLocal_77 = 12;
+	var uLocal_78 = 0;
+	var uLocal_79 = 0;
+	var uLocal_80 = 0;
+	var uLocal_81 = 0;
+	var uLocal_82 = 0;
+	var uLocal_83 = 0;
+	var uLocal_84 = 0;
+	var uLocal_85 = 0;
+	var uLocal_86 = 0;
+	var uLocal_87 = 0;
+	var uLocal_88 = 0;
+	var uLocal_89 = 0;
+	var uLocal_90 = 12;
+	var uLocal_91 = 0;
+	var uLocal_92 = 0;
+	var uLocal_93 = 0;
+	var uLocal_94 = 0;
+	var uLocal_95 = 0;
+	var uLocal_96 = 0;
+	var uLocal_97 = 0;
+	var uLocal_98 = 0;
+	var uLocal_99 = 0;
+	var uLocal_100 = 0;
+	var uLocal_101 = 0;
+	var uLocal_102 = 0;
+	var uLocal_103 = 9;
+	var uLocal_104 = 0;
+	var uLocal_105 = 0;
+	var uLocal_106 = 0;
+	var uLocal_107 = 0;
+	var uLocal_108 = 0;
+	var uLocal_109 = 0;
+	var uLocal_110 = 0;
+	var uLocal_111 = 0;
+	var uLocal_112 = 0;
+	var uLocal_113 = 9;
+	var uLocal_114 = 0;
+	var uLocal_115 = 0;
+	var uLocal_116 = 0;
+	var uLocal_117 = 0;
+	var uLocal_118 = 0;
+	var uLocal_119 = 0;
+	var uLocal_120 = 0;
+	var uLocal_121 = 0;
+	var uLocal_122 = 0;
+	var uLocal_123 = 0;
+	var uLocal_124 = 0;
+	var uLocal_125 = 0;
+	var uLocal_126 = 0;
+	var uLocal_127 = 0;
+	var uLocal_128 = 0;
+	var uLocal_129 = 0;
+	var uLocal_130 = 0;
+	var uLocal_131 = 0;
+	var uLocal_132 = 0;
+	var uLocal_133 = 0;
+	var uLocal_134 = 0;
+	var uLocal_135 = 17;
+	var uLocal_136 = 0;
+	var uLocal_137 = 0;
+	var uLocal_138 = 0;
+	var uLocal_139 = 0;
+	var uLocal_140 = 0;
+	var uLocal_141 = 0;
+	var uLocal_142 = 0;
+	var uLocal_143 = 0;
+	var uLocal_144 = 0;
+	var uLocal_145 = 0;
+	var uLocal_146 = 0;
+	var uLocal_147 = 0;
+	var uLocal_148 = 0;
+	var uLocal_149 = 0;
+	var uLocal_150 = 0;
+	var uLocal_151 = 0;
+	var uLocal_152 = 0;
+	var uLocal_153 = 17;
+	var uLocal_154 = 0;
+	var uLocal_155 = 0;
+	var uLocal_156 = 0;
+	var uLocal_157 = 0;
+	var uLocal_158 = 0;
+	var uLocal_159 = 0;
+	var uLocal_160 = 0;
+	var uLocal_161 = 0;
+	var uLocal_162 = 0;
+	var uLocal_163 = 0;
+	var uLocal_164 = 0;
+	var uLocal_165 = 0;
+	var uLocal_166 = 0;
+	var uLocal_167 = 0;
+	var uLocal_168 = 0;
+	var uLocal_169 = 0;
+	var uLocal_170 = 0;
+	var uLocal_171 = 0;
+	var uLocal_172 = 0;
+	var uLocal_173 = 0;
+	var uLocal_174 = 0;
+	var uLocal_175 = 0;
+	var uLocal_176 = 0;
+	var uLocal_177 = 0;
+	var uLocal_178 = 0;
+	var uLocal_179 = 0;
+	var uLocal_180 = 0;
+	var uLocal_181 = 0;
+	var uLocal_182 = 0;
+	var uLocal_183 = 0;
+	var uLocal_184 = 0;
+	var uLocal_185 = 0;
+	var uLocal_186 = 0;
+	var uLocal_187 = 0;
+	var uLocal_188 = -1;
+	var uLocal_189 = 0;
+	var uLocal_190 = 0;
+	var uLocal_191 = 0;
+	var uLocal_192 = 0;
+	var uLocal_193 = 0;
+	var uLocal_194 = 0;
+	var uLocal_195 = 0;
+	var uLocal_196 = 0;
+	var uLocal_197 = 0;
+	var uLocal_198 = 0;
+	var uLocal_199 = 0;
+	var uLocal_200 = 0;
+	var uLocal_201 = 0;
+	var uLocal_202 = 0;
+	var uLocal_203 = 0;
+	var uLocal_204 = 0;
+	var uLocal_205 = 0;
+	var uLocal_206 = 0;
+	var uLocal_207 = 0;
+	var uLocal_208 = 0;
+	var uLocal_209 = 0;
+	var uLocal_210 = 0;
+	var uLocal_211 = 0;
+	var uLocal_212 = 0;
+	var uLocal_213 = 0;
+	var uLocal_214 = 0;
+	var uLocal_215 = 0;
+	var uLocal_216 = 0;
+	var uLocal_217 = 0;
+	var uLocal_218 = 0;
+	var uLocal_219 = 0;
+	var uLocal_220 = 0;
+	var uLocal_221 = 0;
+	var uLocal_222 = 0;
+	var uLocal_223 = 0;
+	var uLocal_224 = 0;
+	var uLocal_225 = 0;
+	var uLocal_226 = 0;
+	var uLocal_227 = 0;
+	var uLocal_228 = 0;
+	var uLocal_229 = 0;
+	int iLocal_230 = 0;
+	var uLocal_231 = 0;
+	float fLocal_232 = 0f;
+	float fLocal_233 = 0f;
+	float fLocal_234 = 0f;
+	float fLocal_235 = 0f;
+	var uLocal_236 = 0;
+	var uLocal_237 = 0;
+	var uLocal_238 = 0;
+	var uLocal_239 = 0;
+	var uLocal_240 = 0;
+	var uLocal_241 = 0;
+	var uLocal_242 = 0;
+	float fLocal_243 = 0f;
+	var uLocal_244 = 0;
+	var uLocal_245 = 0;
+	var uLocal_246 = 0;
+	var uLocal_247 = 0;
+	var uLocal_248 = 0;
+	var uLocal_249 = 0;
+#endregion
+
 void __EntryFunction__()
 {
 	iLocal_2 = 1;
@@ -99,6 +352,8 @@ void func_5()
 
 void func_6()
 {
+	struct<4736> Var0;
+	
 	Var0.f_1 = 756;
 	Var0.f_4556 = 1;
 	Var0.f_4557 = 1;
@@ -163,6 +418,8 @@ void func_6()
 
 void func_7()
 {
+	struct<886> Var0;
+	
 	Var0.f_1 = -1;
 	Var0.f_7 = 256;
 	Var0.f_264 = 256;
@@ -210,6 +467,8 @@ void func_7()
 
 void func_8()
 {
+	struct<150> Var0;
+	
 	Var0 = 43;
 	Var0.f_45 = 2;
 	Var0.f_48 = 2;
@@ -230,6 +489,8 @@ void func_8()
 
 void func_9()
 {
+	struct<91> Var0;
+	
 	Var0.f_1 = 2;
 	Var0.f_4 = -1;
 	Var0.f_5 = -1;
@@ -258,6 +519,9 @@ void func_9()
 
 void func_10()
 {
+	struct<4453> Var0;
+	var uVar1;
+	
 	Var0.f_9 = 146;
 	Var0.f_9.f_1 = 2;
 	Var0.f_9.f_1.f_3 = 2;
@@ -530,7 +794,7 @@ void func_10()
 	Var0.f_4434 = 15;
 	Var0.f_4450 = 1103626240;
 	Var0.f_4451 = 1;
-	uVar4453 = Global_1676377.f_3105;
+	uVar1 = Global_1676377.f_3105;
 	if (Global_2439137)
 	{
 		MISC::_COPY_MEMORY(&Global_1676377, &Var0, 4453);
@@ -539,11 +803,13 @@ void func_10()
 	{
 		Global_1676377 = { Var0 };
 	}
-	Global_1676377.f_3105 = uVar4453;
+	Global_1676377.f_3105 = uVar1;
 }
 
 void func_11()
 {
+	struct<3> Var0;
+	
 	if (Global_2439137)
 	{
 		MISC::_COPY_MEMORY(&Global_2461128, &Var0, 3);
@@ -556,6 +822,8 @@ void func_11()
 
 void func_12()
 {
+	struct<327> Var0;
+	
 	Var0.f_11 = -1;
 	Var0.f_17 = -1;
 	Var0.f_22 = -1;
@@ -580,6 +848,8 @@ void func_12()
 
 void func_13()
 {
+	struct<162> Var0;
+	
 	Var0.f_2 = 37;
 	Var0.f_40 = 37;
 	Var0.f_83 = 37;
@@ -597,6 +867,8 @@ void func_13()
 
 void func_14()
 {
+	struct<1668> Var0;
+	
 	Var0 = 32;
 	Var0.f_1 = 10;
 	Var0.f_1.f_51 = 10;
@@ -643,6 +915,8 @@ void func_14()
 
 void func_15()
 {
+	struct<581> Var0;
+	
 	Var0 = 32;
 	Var0.f_1.f_3 = -1;
 	Var0.f_1.f_4 = -1;
@@ -753,6 +1027,8 @@ void func_15()
 
 void func_16()
 {
+	struct<760> Var0;
+	
 	Var0 = 1;
 	Var0.f_1 = 34;
 	Var0.f_1.f_1 = 3;
@@ -938,6 +1214,8 @@ void func_16()
 
 void func_17()
 {
+	struct<225> Var0;
+	
 	Var0 = 16;
 	if (Global_2439137)
 	{
@@ -951,6 +1229,8 @@ void func_17()
 
 void func_18()
 {
+	struct<210> Var0;
+	
 	Var0 = 16;
 	Var0.f_1.f_12 = -1;
 	Var0.f_1.f_13.f_12 = -1;
@@ -980,6 +1260,8 @@ void func_18()
 
 void func_19()
 {
+	struct<657> Var0;
+	
 	Var0 = 16;
 	Var0.f_1 = 5;
 	Var0.f_1.f_1 = 10;
@@ -1153,6 +1435,8 @@ void func_19()
 
 void func_20()
 {
+	struct<171> Var0;
+	
 	Var0 = 20;
 	Var0.f_41 = 20;
 	Var0.f_66 = 20;
@@ -1172,6 +1456,8 @@ void func_20()
 
 void func_21()
 {
+	struct<980> Var0;
+	
 	Var0 = -1;
 	Var0.f_1 = -1;
 	Var0.f_25 = -1;
@@ -1246,7 +1532,7 @@ void func_21()
 	Var0.f_876 = 32;
 	Var0.f_913 = -1;
 	Var0.f_914 = -1;
-	Var0.f_926 = -1569615261;
+	Var0.f_926 = joaat("weapon_unarmed");
 	Var0.f_928 = -1;
 	Var0.f_929 = -1;
 	Var0.f_943 = -1;
@@ -1279,6 +1565,8 @@ void func_22()
 
 void func_23()
 {
+	struct<2934> Var0;
+	
 	Var0 = 1036831949;
 	Var0.f_1 = 1028443341;
 	Var0.f_45 = 4;
@@ -1591,6 +1879,8 @@ void func_23()
 
 void func_24()
 {
+	struct<1818> Var0;
+	
 	Var0 = 32;
 	Var0.f_33 = 32;
 	Var0.f_69 = 32;
@@ -1649,6 +1939,8 @@ void func_24()
 
 void func_25()
 {
+	struct<422> Var0;
+	
 	Var0 = 10;
 	Var0.f_1.f_1 = -1;
 	Var0.f_1.f_2 = -1;
@@ -1726,6 +2018,8 @@ void func_25()
 
 void func_26()
 {
+	struct<86> Var0;
+	
 	Var0.f_4 = -1;
 	Var0.f_9 = 32;
 	Var0.f_42 = 15;
@@ -1743,6 +2037,8 @@ void func_26()
 
 void func_27()
 {
+	struct<1075> Var0;
+	
 	Var0.f_84 = 1048576000;
 	Var0.f_85 = 1047233823;
 	Var0.f_139 = 16;
@@ -1770,6 +2066,8 @@ void func_27()
 
 void func_28()
 {
+	struct<306> Var0;
+	
 	Var0.f_3 = 32;
 	Var0.f_3.f_33 = 32;
 	Var0.f_3.f_66 = 32;
@@ -1793,6 +2091,8 @@ void func_28()
 
 void func_29()
 {
+	struct<1508> Var0;
+	
 	Var0.f_3 = 32;
 	Var0.f_69 = 15;
 	Var0.f_85 = 15;
@@ -1877,6 +2177,8 @@ void func_29()
 
 void func_30()
 {
+	struct<24> Var0;
+	
 	Var0.f_3.f_1 = -1;
 	Var0.f_3.f_2 = -1;
 	Var0.f_3.f_9 = -1;
@@ -1895,6 +2197,8 @@ void func_30()
 
 void func_31()
 {
+	struct<41> Var0;
+	
 	Var0.f_4.f_1 = -1;
 	Var0.f_4.f_2 = -1;
 	Var0.f_4.f_9 = -1;
@@ -1913,6 +2217,8 @@ void func_31()
 
 void func_32()
 {
+	struct<188> Var0;
+	
 	Var0.f_15 = 1;
 	Var0.f_59 = 8;
 	if (Global_2439137)
@@ -1927,6 +2233,9 @@ void func_32()
 
 void func_33()
 {
+	int iVar0;
+	int iVar1;
+	
 	Global_2537071.f_9 = 0;
 	Global_2537071.f_297 = 0;
 	Global_2537071.f_296 = 0;
@@ -1956,19 +2265,19 @@ void func_33()
 	iVar0 = 0;
 	while (iVar0 <= (21 - 1))
 	{
-		StringCopy(&(Global_2537071.f_4610[iVar0]), "", 64);
+		StringCopy(&(Global_2537071.f_4610[iVar0 /*16*/]), "", 64);
 		iVar0++;
 	}
 	iVar0 = 0;
 	while (iVar0 <= 4)
 	{
-		StringCopy(&(Global_2537071.f_1662[iVar0]), "", 16);
+		StringCopy(&(Global_2537071.f_1662[iVar0 /*4*/]), "", 16);
 		iVar0++;
 	}
 	iVar0 = 0;
 	while (iVar0 <= 0)
 	{
-		Global_2537071.f_238[iVar0] = { 0f, 0f, 0f };
+		Global_2537071.f_238[iVar0 /*3*/] = { 0f, 0f, 0f };
 		iVar0++;
 	}
 	Global_2537071.f_261 = { 0f, 0f, 0f };
@@ -2076,7 +2385,7 @@ void func_33()
 		iVar1 = 0;
 		while (iVar1 <= 2)
 		{
-			Global_2537071.f_1690[iVar0][iVar1] = 0;
+			Global_2537071.f_1690[iVar0 /*4*/][iVar1] = 0;
 			iVar1++;
 		}
 		iVar0++;
@@ -2199,16 +2508,16 @@ void func_33()
 	Global_2537071.f_4528 = 0;
 	Global_2537071.f_6585 = 0;
 	Global_2537071.f_6586 = 0;
-	if (MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID()].f_274.f_334, 31))
+	if (MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID() /*876*/].f_274.f_334, 31))
 	{
-		MISC::CLEAR_BIT(&(Global_1590535[PLAYER::PLAYER_ID()].f_274.f_334), 31);
+		MISC::CLEAR_BIT(&(Global_1590535[PLAYER::PLAYER_ID() /*876*/].f_274.f_334), 31);
 	}
-	if (MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID()].f_274.f_393.f_2, 17))
+	if (MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID() /*876*/].f_274.f_393.f_2, 17))
 	{
-		MISC::CLEAR_BIT(&(Global_1590535[PLAYER::PLAYER_ID()].f_274.f_393.f_2), 17);
+		MISC::CLEAR_BIT(&(Global_1590535[PLAYER::PLAYER_ID() /*876*/].f_274.f_393.f_2), 17);
 	}
-	Global_2537071.f_796 = -956048545;
-	Global_2537071.f_797 = -2039163396;
+	Global_2537071.f_796 = joaat("taxi");
+	Global_2537071.f_797 = joaat("a_m_y_stlat_01");
 	Global_2537071.f_895 = 0;
 	Global_2537071.f_4386 = 0;
 	func_40(&(Global_2537071.f_10));
@@ -2225,14 +2534,14 @@ void func_33()
 	iVar0 = 0;
 	while (iVar0 <= 31)
 	{
-		func_40(&(Global_2537071.f_322[iVar0]));
-		func_40(&(Global_2537071.f_4402[iVar0]));
+		func_40(&(Global_2537071.f_322[iVar0 /*2*/]));
+		func_40(&(Global_2537071.f_4402[iVar0 /*2*/]));
 		iVar0++;
 	}
 	iVar0 = 0;
 	while (iVar0 <= 6)
 	{
-		func_40(&(Global_2537071.f_12[iVar0]));
+		func_40(&(Global_2537071.f_12[iVar0 /*2*/]));
 		iVar0++;
 	}
 	func_39();
@@ -2248,7 +2557,7 @@ void func_33()
 		iVar1 = 0;
 		while (iVar1 < 20)
 		{
-			Global_2537071.f_5969[iVar0][iVar1] = 0;
+			Global_2537071.f_5969[iVar0 /*21*/][iVar1] = 0;
 			iVar1++;
 		}
 		iVar0++;
@@ -2257,39 +2566,53 @@ void func_33()
 
 void func_34()
 {
+	struct<9> Var0;
+	struct<83> Var1;
+	struct<8> Var2;
+	struct<32> Var3;
+	struct<18> Var4;
+	struct<10> Var5;
+	var uVar6;
+	var uVar7;
+	
 	Global_2537071.f_859 = { Var0 };
-	Var9 = -1;
-	Var9.f_1 = -1;
-	Var9.f_2.f_1 = -1;
-	Var9.f_2.f_2 = -1;
-	Var9.f_2.f_9 = -1;
-	Var9.f_2.f_16 = -1;
-	Var9.f_2.f_19 = -1;
-	Var9.f_2.f_20 = -1;
-	Var9.f_23 = -1;
-	Var9.f_47 = 32;
-	Global_2537071.f_28 = { Var9 };
-	Var92.f_2 = -1;
-	Var92.f_3 = -1;
-	Global_2537071.f_198 = { Var92 };
-	Var100.f_4.f_1 = -1;
-	Var100.f_4.f_2 = -1;
-	Var100.f_4.f_9 = -1;
-	Var100.f_4.f_16 = -1;
-	Var100.f_4.f_19 = -1;
-	Var100.f_4.f_20 = -1;
-	Var100.f_25 = 2;
-	Global_2537071.f_206 = { Var100 };
-	Var132.f_7 = 10;
-	Global_2537071.f_242 = { Var132 };
-	Var150.f_6 = -1;
-	Global_2537071.f_393 = { Var150 };
-	Global_2537071.f_404 = uVar160;
-	Global_2537071.f_408 = uVar161;
+	Var1 = -1;
+	Var1.f_1 = -1;
+	Var1.f_2.f_1 = -1;
+	Var1.f_2.f_2 = -1;
+	Var1.f_2.f_9 = -1;
+	Var1.f_2.f_16 = -1;
+	Var1.f_2.f_19 = -1;
+	Var1.f_2.f_20 = -1;
+	Var1.f_23 = -1;
+	Var1.f_47 = 32;
+	Global_2537071.f_28 = { Var1 };
+	Var2.f_2 = -1;
+	Var2.f_3 = -1;
+	Global_2537071.f_198 = { Var2 };
+	Var3.f_4.f_1 = -1;
+	Var3.f_4.f_2 = -1;
+	Var3.f_4.f_9 = -1;
+	Var3.f_4.f_16 = -1;
+	Var3.f_4.f_19 = -1;
+	Var3.f_4.f_20 = -1;
+	Var3.f_25 = 2;
+	Global_2537071.f_206 = { Var3 };
+	Var4.f_7 = 10;
+	Global_2537071.f_242 = { Var4 };
+	Var5.f_6 = -1;
+	Global_2537071.f_393 = { Var5 };
+	Global_2537071.f_404 = uVar6;
+	Global_2537071.f_408 = uVar7;
 }
 
 void func_35()
 {
+	int iVar0;
+	struct<760> Var1;
+	var uVar2[8];
+	var uVar3;
+	
 	Var1 = 21;
 	Var1.f_2 = -1;
 	Var1.f_3 = -1;
@@ -2350,78 +2673,91 @@ void func_35()
 	Var1.f_755 = 1;
 	Var1.f_756 = 1;
 	Var1.f_758 = 1;
-	uVar770 = Global_2537071.f_5124.f_361;
+	uVar3 = Global_2537071.f_5124.f_361;
 	iVar0 = 0;
 	while (iVar0 < 8)
 	{
-		uVar761[iVar0] = Global_2537071.f_5124.f_343[iVar0];
+		uVar2[iVar0] = Global_2537071.f_5124.f_343[iVar0];
 		iVar0++;
 	}
 	Global_2537071.f_5124 = { Var1 };
-	Global_2537071.f_5124.f_361 = uVar770;
+	Global_2537071.f_5124.f_361 = uVar3;
 	iVar0 = 0;
 	while (iVar0 < 8)
 	{
-		Global_2537071.f_5124.f_343[iVar0] = uVar761[iVar0];
+		Global_2537071.f_5124.f_343[iVar0] = uVar2[iVar0];
 		iVar0++;
 	}
 }
 
 void func_36()
 {
+	int iVar0;
+	struct<26> Var1;
+	
 	iVar0 = 0;
 	while (iVar0 <= 15)
 	{
-		Global_2537071.f_3968[iVar0] = { Var1 };
+		Global_2537071.f_3968[iVar0 /*26*/] = { Var1 };
 		iVar0++;
 	}
 }
 
 void func_37()
 {
+	int iVar0;
+	struct<17> Var1;
+	struct<12> Var2;
+	struct<51> Var3;
+	struct<51> Var4;
+	struct<21> Var5;
+	
 	iVar0 = 0;
 	while (iVar0 <= 4)
 	{
-		Global_2537071.f_111[iVar0] = { Var1 };
+		Global_2537071.f_111[iVar0 /*17*/] = { Var1 };
 		iVar0++;
 	}
 	iVar0 = 0;
 	while (iVar0 <= 0)
 	{
-		Global_2537071.f_4504[iVar0] = { Var18 };
+		Global_2537071.f_4504[iVar0 /*12*/] = { Var2 };
 		iVar0++;
 	}
-	Var30.f_2 = -1;
-	Var30.f_3 = -1;
-	Var30.f_4 = -1;
-	Var30.f_50 = -1;
-	Var81.f_2 = -1;
-	Var81.f_3 = -1;
-	Var81.f_4 = -1;
-	Var81.f_50 = -1;
+	Var3.f_2 = -1;
+	Var3.f_3 = -1;
+	Var3.f_4 = -1;
+	Var3.f_50 = -1;
+	Var4.f_2 = -1;
+	Var4.f_3 = -1;
+	Var4.f_4 = -1;
+	Var4.f_50 = -1;
 	iVar0 = 0;
 	while (iVar0 <= 0)
 	{
-		Global_2537071.f_1074[iVar0] = { Var30 };
-		Global_2537071.f_1330[iVar0] = { Var81 };
+		Global_2537071.f_1074[iVar0 /*51*/] = { Var3 };
+		Global_2537071.f_1330[iVar0 /*51*/] = { Var4 };
 		iVar0++;
 	}
-	Var132.f_1 = -1;
-	Var132.f_2 = -1;
-	Var132.f_9 = -1;
-	Var132.f_16 = -1;
-	Var132.f_19 = -1;
-	Var132.f_20 = -1;
+	Var5.f_1 = -1;
+	Var5.f_2 = -1;
+	Var5.f_9 = -1;
+	Var5.f_16 = -1;
+	Var5.f_19 = -1;
+	Var5.f_20 = -1;
 	iVar0 = 0;
 	while (iVar0 <= 15)
 	{
-		Global_2537071.f_409[iVar0] = { Var132 };
+		Global_2537071.f_409[iVar0 /*21*/] = { Var5 };
 		iVar0++;
 	}
 }
 
 void func_38()
 {
+	struct<1719> Var0;
+	var uVar1;
+	
 	Var0 = 39;
 	Var0.f_1.f_39 = -1;
 	Var0.f_1.f_40 = -1;
@@ -2502,40 +2838,53 @@ void func_38()
 	Var0.f_1.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_39 = -1;
 	Var0.f_1.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_40 = -1;
 	Global_2537071.f_2244 = { Var0 };
-	Global_2537071.f_3963 = uVar1719;
+	Global_2537071.f_3963 = uVar1;
 }
 
 void func_39()
 {
+	struct<12> Var0;
+	struct<61> Var1;
+	struct<3> Var2;
+	struct<358> Var3;
+	struct<9> Var4;
+	struct<19> Var5;
+	struct<19> Var6;
+	struct<2> Var7;
+	struct<51> Var8;
+	var uVar9;
+	struct<165> Var10;
+	struct<12> Var11;
+	
 	Global_2537071.f_4467 = { Var0 };
-	Var12.f_19 = 32;
-	Global_2537071.f_1791 = { Var12 };
-	Global_2537071.f_1854 = { Var73 };
-	Var76 = 8;
-	Global_2537071.f_1858 = { Var76 };
-	Global_2537071.f_2216 = { Var434 };
-	Global_2537071.f_2225 = { Var443 };
-	Var462 = 1;
-	Var462.f_3 = 1;
-	Var462.f_6 = 1;
-	Var462.f_8 = 1;
-	Var462.f_10 = 1;
-	Var462.f_12 = 1;
-	Var462.f_14 = 1;
-	Var462.f_16 = 1;
-	Global_2537071.f_4479 = { Var462 };
-	Global_2537071.f_4498 = { Var481 };
-	Var483.f_2 = -1;
-	Var483.f_3 = -1;
-	Var483.f_4 = -1;
-	Var483.f_50 = -1;
-	Global_2537071.f_1586 = { Var483 };
-	Global_2537071.f_798 = uVar534;
-	Var535 = 16;
-	Global_2537071.f_909 = { Var535 };
-	Var700 = 5;
-	Var700.f_6 = 5;
-	Global_2537071.f_1643 = { Var700 };
+	Var1.f_19 = 32;
+	Global_2537071.f_1791 = { Var1 };
+	Global_2537071.f_1854 = { Var2 };
+	Var3 = 8;
+	Global_2537071.f_1858 = { Var3 };
+	Global_2537071.f_2216 = { Var4 };
+	Global_2537071.f_2225 = { Var5 };
+	Var6 = 1;
+	Var6.f_3 = 1;
+	Var6.f_6 = 1;
+	Var6.f_8 = 1;
+	Var6.f_10 = 1;
+	Var6.f_12 = 1;
+	Var6.f_14 = 1;
+	Var6.f_16 = 1;
+	Global_2537071.f_4479 = { Var6 };
+	Global_2537071.f_4498 = { Var7 };
+	Var8.f_2 = -1;
+	Var8.f_3 = -1;
+	Var8.f_4 = -1;
+	Var8.f_50 = -1;
+	Global_2537071.f_1586 = { Var8 };
+	Global_2537071.f_798 = uVar9;
+	Var10 = 16;
+	Global_2537071.f_909 = { Var10 };
+	Var11 = 5;
+	Var11.f_6 = 5;
+	Global_2537071.f_1643 = { Var11 };
 }
 
 void func_40(var uParam0)
@@ -2546,6 +2895,8 @@ void func_40(var uParam0)
 
 void func_41(bool bParam0)
 {
+	int iVar0;
+	
 	if (bParam0)
 	{
 		if (NETWORK::NETWORK_IS_IN_SESSION() && NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -2585,6 +2936,8 @@ void func_42()
 
 void func_43()
 {
+	struct<464> Var0;
+	
 	Var0 = 33;
 	Var0.f_430 = 33;
 	if (Global_2439137)
@@ -2599,6 +2952,8 @@ void func_43()
 
 void func_44()
 {
+	struct<35> Var0;
+	
 	Var0.f_1 = 5;
 	Var0.f_7 = 4;
 	Var0.f_12 = 4;
@@ -2617,6 +2972,8 @@ void func_44()
 
 void func_45()
 {
+	struct<132> Var0;
+	
 	Var0 = 32;
 	Var0.f_33 = 32;
 	Var0.f_66 = 32;
@@ -2633,6 +2990,8 @@ void func_45()
 
 void func_46()
 {
+	struct<2757> Var0;
+	
 	Var0.f_2 = 16;
 	Var0.f_2.f_1.f_1.f_1 = -1;
 	Var0.f_2.f_1.f_1.f_2 = -1;
@@ -3080,6 +3439,8 @@ void func_46()
 
 void func_47()
 {
+	struct<171> Var0;
+	
 	Var0 = 20;
 	Var0.f_41 = 20;
 	Var0.f_66 = 20;
@@ -3099,6 +3460,8 @@ void func_47()
 
 void func_48()
 {
+	struct<581> Var0;
+	
 	Var0 = 32;
 	Var0.f_1.f_3 = -1;
 	Var0.f_1.f_4 = -1;
@@ -3209,6 +3572,8 @@ void func_48()
 
 void func_49()
 {
+	struct<760> Var0;
+	
 	Var0 = 1;
 	Var0.f_1 = 34;
 	Var0.f_1.f_1 = 3;
@@ -3394,6 +3759,8 @@ void func_49()
 
 void func_50()
 {
+	struct<225> Var0;
+	
 	Var0 = 16;
 	if (Global_2439137)
 	{
@@ -3407,6 +3774,8 @@ void func_50()
 
 void func_51()
 {
+	struct<210> Var0;
+	
 	Var0 = 16;
 	Var0.f_1.f_12 = -1;
 	Var0.f_1.f_13.f_12 = -1;
@@ -3436,6 +3805,8 @@ void func_51()
 
 void func_52()
 {
+	struct<657> Var0;
+	
 	Var0 = 16;
 	Var0.f_1 = 5;
 	Var0.f_1.f_1 = 10;
@@ -3609,6 +3980,8 @@ void func_52()
 
 void func_53()
 {
+	struct<2287> Var0;
+	
 	Var0 = 32;
 	Var0.f_1 = -1;
 	Var0.f_1.f_1 = -1;
@@ -3935,6 +4308,8 @@ void func_53()
 
 void func_54()
 {
+	struct<1444> Var0;
+	
 	Var0.f_3 = 1;
 	Var0.f_4 = 32;
 	Var0.f_4.f_1 = 3;
@@ -4708,6 +5083,8 @@ void func_54()
 
 void func_55()
 {
+	struct<33> Var0;
+	
 	Var0 = 32;
 	if (Global_2439137)
 	{
@@ -4721,6 +5098,8 @@ void func_55()
 
 void func_56()
 {
+	struct<35> Var0;
+	
 	if (Global_2439137)
 	{
 		MISC::_COPY_MEMORY(&Global_4194305, &Var0, 35);
@@ -4733,6 +5112,8 @@ void func_56()
 
 void func_57()
 {
+	struct<26> Var0;
+	
 	Var0.f_2 = 2;
 	Var0.f_5 = 1;
 	Var0.f_9 = 1;
@@ -4750,6 +5131,9 @@ void func_57()
 
 void func_58()
 {
+	int iVar0;
+	struct<549> Var1;
+	
 	Var1 = 2;
 	Var1.f_4 = 32;
 	Var1.f_106 = 2;
@@ -4783,6 +5167,8 @@ void func_58()
 
 void func_59()
 {
+	struct<1430> Var0;
+	
 	Var0.f_1 = -1;
 	Var0.f_2 = 32;
 	Var0.f_2.f_1 = -1;
@@ -5062,31 +5448,37 @@ void func_60(int iParam0)
 
 void func_61(int iParam0)
 {
+	struct<7> Var0;
+	
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1626285[iParam0]), &Var0, 7);
+		MISC::_COPY_MEMORY(&(Global_1626285[iParam0 /*7*/]), &Var0, 7);
 	}
 	else
 	{
-		Global_1626285[iParam0] = { Var0 };
+		Global_1626285[iParam0 /*7*/] = { Var0 };
 	}
 }
 
 void func_62(int iParam0)
 {
+	struct<47> Var0;
+	
 	Var0 = 46;
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1624780[iParam0]), &Var0, 47);
+		MISC::_COPY_MEMORY(&(Global_1624780[iParam0 /*47*/]), &Var0, 47);
 	}
 	else
 	{
-		Global_1624780[iParam0] = { Var0 };
+		Global_1624780[iParam0 /*47*/] = { Var0 };
 	}
 }
 
 void func_63(int iParam0)
 {
+	struct<77> Var0;
+	
 	Var0 = 7;
 	Var0.f_9 = -1;
 	Var0.f_11 = 1;
@@ -5094,16 +5486,18 @@ void func_63(int iParam0)
 	Var0.f_24 = 7;
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1622315[iParam0]), &Var0, 77);
+		MISC::_COPY_MEMORY(&(Global_1622315[iParam0 /*77*/]), &Var0, 77);
 	}
 	else
 	{
-		Global_1622315[iParam0] = { Var0 };
+		Global_1622315[iParam0 /*77*/] = { Var0 };
 	}
 }
 
 void func_64(int iParam0)
 {
+	struct<199> Var0;
+	
 	Var0 = 15;
 	Var0.f_91 = 3;
 	Var0.f_91.f_1.f_30 = -1;
@@ -5120,31 +5514,35 @@ void func_64(int iParam0)
 	Var0.f_91.f_1.f_34.f_34.f_33 = -1;
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1654919[iParam0]), &Var0, 199);
+		MISC::_COPY_MEMORY(&(Global_1654919[iParam0 /*199*/]), &Var0, 199);
 	}
 	else
 	{
-		Global_1654919[iParam0] = { Var0 };
+		Global_1654919[iParam0 /*199*/] = { Var0 };
 	}
 }
 
 void func_65(int iParam0)
 {
+	struct<100> Var0;
+	
 	Var0 = 32;
 	Var0.f_33 = 32;
 	Var0.f_67 = 32;
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1619081[iParam0]), &Var0, 100);
+		MISC::_COPY_MEMORY(&(Global_1619081[iParam0 /*100*/]), &Var0, 100);
 	}
 	else
 	{
-		Global_1619081[iParam0] = { Var0 };
+		Global_1619081[iParam0 /*100*/] = { Var0 };
 	}
 }
 
 void func_66(int iParam0)
 {
+	struct<38> Var0;
+	
 	Var0.f_4 = -1;
 	Var0.f_15 = -1;
 	Var0.f_18 = -1;
@@ -5155,28 +5553,32 @@ void func_66(int iParam0)
 	Var0.f_25 = 1;
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1627020[iParam0]), &Var0, 38);
+		MISC::_COPY_MEMORY(&(Global_1627020[iParam0 /*38*/]), &Var0, 38);
 	}
 	else
 	{
-		Global_1627020[iParam0] = { Var0 };
+		Global_1627020[iParam0 /*38*/] = { Var0 };
 	}
 }
 
 void func_67(int iParam0)
 {
+	struct<26> Var0;
+	
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1388245[iParam0]), &Var0, 26);
+		MISC::_COPY_MEMORY(&(Global_1388245[iParam0 /*26*/]), &Var0, 26);
 	}
 	else
 	{
-		Global_1388245[iParam0] = { Var0 };
+		Global_1388245[iParam0 /*26*/] = { Var0 };
 	}
 }
 
 void func_68(int iParam0)
 {
+	var uVar0;
+	
 	if (Global_2439137)
 	{
 		MISC::_COPY_MEMORY(&(Global_1388164[iParam0]), &uVar0, 1);
@@ -5189,6 +5591,9 @@ void func_68(int iParam0)
 
 void func_69(int iParam0)
 {
+	struct<876> Var0;
+	struct<16> Var1;
+	
 	Var0 = -1;
 	Var0.f_1 = -1;
 	Var0.f_2 = -1;
@@ -5254,24 +5659,26 @@ void func_69(int iParam0)
 	Var0.f_870 = -1;
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1590535[iParam0]), &Var0, 876);
+		MISC::_COPY_MEMORY(&(Global_1590535[iParam0 /*876*/]), &Var0, 876);
 	}
 	else
 	{
-		Global_1590535[iParam0] = { Var0 };
+		Global_1590535[iParam0 /*876*/] = { Var0 };
 	}
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1618568[iParam0]), &Var876, 16);
+		MISC::_COPY_MEMORY(&(Global_1618568[iParam0 /*16*/]), &Var1, 16);
 	}
 	else
 	{
-		Global_1618568[iParam0] = { Var876 };
+		Global_1618568[iParam0 /*16*/] = { Var1 };
 	}
 }
 
 void func_70(int iParam0)
 {
+	struct<421> Var0;
+	
 	Var0.f_1.f_1 = -1;
 	Var0.f_1.f_2 = -1;
 	Var0.f_1.f_9 = -1;
@@ -5330,11 +5737,11 @@ void func_70(int iParam0)
 	Var0.f_416.f_3 = -1;
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_2425662[iParam0]), &Var0, 421);
+		MISC::_COPY_MEMORY(&(Global_2425662[iParam0 /*421*/]), &Var0, 421);
 	}
 	else
 	{
-		Global_2425662[iParam0] = { Var0 };
+		Global_2425662[iParam0 /*421*/] = { Var0 };
 	}
 }
 

@@ -1,3 +1,54 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	char* sLocal_18 = NULL;
+	var uLocal_19 = 0;
+	var uLocal_20 = 0;
+	var uLocal_21 = 0;
+	var uLocal_22 = 0;
+	float fLocal_23 = 0f;
+	float fLocal_24 = 0f;
+	float fLocal_25 = 0f;
+	var uLocal_26 = 0;
+	var uLocal_27 = 0;
+	var uLocal_28 = 0;
+	var uLocal_29 = 0;
+	char cLocal_30[16] = "";
+	var uLocal_31 = 0;
+	var uLocal_32 = 0;
+	char cLocal_33[16] = "";
+	var uLocal_34 = 0;
+	var uLocal_35 = 0;
+	char cLocal_36[16] = "";
+	var uLocal_37 = 0;
+	var uLocal_38 = 0;
+	char cLocal_39[16] = "";
+	var uLocal_40 = 0;
+	var uLocal_41 = 0;
+	char cLocal_42[16] = "";
+	var uLocal_43 = 0;
+	var uLocal_44 = 0;
+	char cLocal_45[16] = "";
+	var uLocal_46 = 0;
+	var uLocal_47 = 0;
+#endregion
+
 void __EntryFunction__()
 {
 	iLocal_2 = 1;
@@ -17,11 +68,11 @@ void __EntryFunction__()
 	fLocal_24 = 140f;
 	fLocal_25 = 180f;
 	StringCopy(&cLocal_30, "CELL_212", 16);
-	StringCopy(&cLocal_34, "CELL_213", 16);
-	StringCopy(&cLocal_38, "CELL_39", 16);
-	StringCopy(&cLocal_42, "CELL_MP_300", 16);
-	StringCopy(&cLocal_46, "CELL_MP_301", 16);
-	StringCopy(&cLocal_50, "CELL_MP_302", 16);
+	StringCopy(&cLocal_33, "CELL_213", 16);
+	StringCopy(&cLocal_36, "CELL_39", 16);
+	StringCopy(&cLocal_39, "CELL_MP_300", 16);
+	StringCopy(&cLocal_42, "CELL_MP_301", 16);
+	StringCopy(&cLocal_45, "CELL_MP_302", 16);
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	func_44(&uLocal_28);
 	func_35();
@@ -155,14 +206,14 @@ void func_6(bool bParam0, bool bParam1)
 			{
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_19423);
 			}
-			Global_19414 = { Global_19432[Global_19431] };
+			Global_19414 = { Global_19432[Global_19431 /*3*/] };
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_19414);
 		}
 	}
 	else if (Global_19664 == 1)
 	{
 		Global_19664 = 0;
-		Global_19414 = { Global_19439[Global_19431] };
+		Global_19414 = { Global_19439[Global_19431 /*3*/] };
 		if (bParam1)
 		{
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_19423);
@@ -194,7 +245,7 @@ int func_7(int iParam0)
 			return 0;
 		}
 	}
-	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("cellphone_flashhand")) > 0)
 	{
 		return 1;
 	}
@@ -217,6 +268,8 @@ bool func_9()
 
 void func_10(int iParam0, int iParam1)
 {
+	struct<4> Var0;
+	
 	Var0 = 589125870;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
@@ -232,6 +285,10 @@ void func_10(int iParam0, int iParam1)
 
 int func_11(int iParam0, bool bParam1)
 {
+	var uVar0;
+	int iVar1;
+	int iVar2;
+	
 	iVar1 = 0;
 	while (iVar1 < 32)
 	{
@@ -257,13 +314,15 @@ int func_11(int iParam0, bool bParam1)
 
 bool func_12(int iParam0, int iParam1)
 {
+	bool bVar0;
+	
 	if (iParam0 == PLAYER::PLAYER_ID())
 	{
 		bVar0 = func_13(-1, 0) == 8;
 	}
 	else
 	{
-		bVar0 = Global_1590535[iParam0].f_211 == 8;
+		bVar0 = Global_1590535[iParam0 /*876*/].f_211 == 8;
 	}
 	if (iParam1 == 1)
 	{
@@ -277,6 +336,9 @@ bool func_12(int iParam0, int iParam1)
 
 int func_13(int iParam0, bool bParam1)
 {
+	int iVar0;
+	int iVar1;
+	
 	iVar1 = iParam0;
 	if (iVar1 == -1)
 	{
@@ -306,6 +368,8 @@ int func_14()
 
 int func_15(int iParam0, bool bParam1, bool bParam2)
 {
+	int iVar0;
+	
 	iVar0 = uParam0;
 	if (iVar0 != -1)
 	{
@@ -359,7 +423,10 @@ int func_17()
 
 int func_18(int iParam0, int iParam1)
 {
-	uVar0 = Global_2583656[iParam0][func_19(iParam1)];
+	var uVar0;
+	var uVar1;
+	
+	uVar0 = Global_2583656[iParam0 /*3*/][func_19(iParam1)];
 	if (STATS::STAT_GET_BOOL(uVar0, &uVar1, -1))
 	{
 		return uVar1;
@@ -369,6 +436,9 @@ int func_18(int iParam0, int iParam1)
 
 int func_19(var uParam0)
 {
+	int iVar0;
+	int iVar1;
+	
 	iVar0 = uParam0;
 	if (iVar0 == -1)
 	{
@@ -418,7 +488,7 @@ int func_23(int iParam0, bool bParam1, bool bParam2)
 	if (!bParam2)
 	{
 	}
-	if (Global_1590535[iParam0] == -1)
+	if (Global_1590535[iParam0 /*876*/] == -1)
 	{
 		return 0;
 	}
@@ -432,14 +502,14 @@ bool func_24(int iParam0)
 
 bool func_25(int iParam0)
 {
-	return MISC::IS_BIT_SET(Global_1590535[iParam0].f_13.f_1, 0);
+	return MISC::IS_BIT_SET(Global_1590535[iParam0 /*876*/].f_13.f_1, 0);
 }
 
 int func_26(int iParam0)
 {
 	if (func_15(iParam0, 0, 1))
 	{
-		return Global_2425662[iParam0].f_1;
+		return Global_2425662[iParam0 /*421*/].f_1;
 	}
 	return 0;
 }
@@ -491,6 +561,10 @@ void func_30()
 
 int func_31()
 {
+	var uVar0;
+	int iVar1;
+	int iVar2;
+	
 	if (Global_76622)
 	{
 		return 0;
@@ -558,26 +632,26 @@ void func_35()
 	{
 		if (Global_2460602)
 		{
-			func_42(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &cLocal_46, 0, 0, 0, 0);
+			func_42(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &cLocal_42, 0, 0, 0, 0);
 		}
 		else
 		{
-			func_42(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &cLocal_42, 0, 0, 0, 0);
+			func_42(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &cLocal_39, 0, 0, 0, 0);
 		}
 	}
 	else
 	{
-		func_42(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &cLocal_50, 0, 0, 0, 0);
+		func_42(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &cLocal_45, 0, 0, 0, 0);
 	}
 	func_43(Global_19467, "DISPLAY_VIEW", SYSTEM::TO_FLOAT(13), -1082130432, -1082130432, -1082130432, -1082130432);
-	func_39(&cLocal_38);
+	func_39(&cLocal_36);
 	if (func_16())
 	{
-		func_36(13, &cLocal_30, 1, "", 4, &cLocal_34, &uLocal_28);
+		func_36(13, &cLocal_30, 1, "", 4, &cLocal_33, &uLocal_28);
 	}
 	else
 	{
-		func_36(1, "", 1, "", 4, &cLocal_34, &uLocal_28);
+		func_36(1, "", 1, "", 4, &cLocal_33, &uLocal_28);
 	}
 }
 

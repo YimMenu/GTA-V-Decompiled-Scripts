@@ -1,3 +1,7 @@
+#region Local Var
+	struct<4> ScriptParam_0 = { 0, 0, 0, 0 } ;
+#endregion
+
 void __EntryFunction__()
 {
 	switch (ScriptParam_0)

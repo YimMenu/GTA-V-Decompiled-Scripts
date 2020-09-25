@@ -50,7 +50,7 @@ void __EntryFunction__()
 	Global_1661964 = { 1274.796f, -1721.399f, 53.655f };
 	Global_1661968 = { 1204.21f, -3107.252f, 4.5502f };
 	Global_1661972 = { 718.0308f, -976.4414f, 23.9148f };
-	Global_1672023 = -1090665087;
+	Global_1672023 = joaat("weapon_vehicle_rocket");
 	Global_1676066 = -1;
 	Global_1676067 = -3;
 	Global_1676073 = -1;

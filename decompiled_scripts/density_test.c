@@ -1,3 +1,15 @@
+#region Local Var
+	bool bLocal_0 = 0;
+	bool bLocal_1 = 0;
+	float fLocal_2 = 0f;
+	float fLocal_3 = 0f;
+	float fLocal_4 = 0f;
+	float fLocal_5 = 0f;
+	float fLocal_6 = 0f;
+	float fLocal_7 = 0f;
+	float fLocal_8 = 0f;
+#endregion
+
 void __EntryFunction__()
 {
 	bLocal_0 = true;

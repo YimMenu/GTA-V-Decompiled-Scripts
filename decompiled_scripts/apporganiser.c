@@ -1,3 +1,30 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	int iLocal_18 = 0;
+	int iLocal_19 = 0;
+	int iLocal_20 = 0;
+	int iLocal_21 = 0;
+	int iLocal_22 = 0;
+	int iLocal_23 = 0;
+#endregion
+
 void __EntryFunction__()
 {
 	iLocal_2 = 1;
@@ -127,6 +154,14 @@ void func_3()
 
 void func_4(int iParam0, bool bParam1)
 {
+	int iVar0;
+	int iVar1;
+	bool bVar2;
+	int iVar3;
+	int iVar4;
+	int iVar5;
+	char* sVar6;
+	
 	if (Global_95831 == Global_95832)
 	{
 		if (!bParam1)
@@ -152,7 +187,7 @@ void func_4(int iParam0, bool bParam1)
 	while (bVar2)
 	{
 		iVar4 = iVar3;
-		iVar3 = Global_95836[iVar0][iVar1];
+		iVar3 = Global_95836[iVar0 /*25*/][iVar1];
 		if (!iVar3 == iVar4)
 		{
 			if (!iVar3 == 0)
@@ -266,6 +301,19 @@ void func_7(int iParam0, char* sParam1, float fParam2, float fParam3, float fPar
 
 void func_8()
 {
+	int iVar0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	int iVar4;
+	int iVar5;
+	int iVar6;
+	int iVar7;
+	int iVar8;
+	int iVar9;
+	int iVar10;
+	int iVar11;
+	
 	if (!Global_95830)
 	{
 		Global_96014 = CLOCK::GET_CLOCK_MONTH();
@@ -302,12 +350,12 @@ void func_8()
 				iVar9 = 0;
 				while (iVar9 < 24)
 				{
-					if (!Global_95836[iVar6][iVar7] == 0)
+					if (!Global_95836[iVar6 /*25*/][iVar7] == 0)
 					{
 						Global_95831++;
 						Global_95833 = (Global_95833 - 1);
 					}
-					Global_95836[iVar6][iVar7] = 0;
+					Global_95836[iVar6 /*25*/][iVar7] = 0;
 					iVar9++;
 				}
 				iVar8++;
@@ -334,12 +382,12 @@ void func_8()
 			{
 				iVar6 = 0;
 			}
-			if (!Global_95836[iVar6][iVar7] == 0)
+			if (!Global_95836[iVar6 /*25*/][iVar7] == 0)
 			{
 				Global_95831++;
 				Global_95833 = (Global_95833 - 1);
 			}
-			Global_95836[iVar6][iVar7] = 0;
+			Global_95836[iVar6 /*25*/][iVar7] = 0;
 			iVar7++;
 			iVar8++;
 		}
@@ -370,12 +418,12 @@ void func_8()
 			iVar8 = 0;
 			while (iVar8 < iVar10)
 			{
-				if (!Global_95836[iVar6][iVar7] == 0)
+				if (!Global_95836[iVar6 /*25*/][iVar7] == 0)
 				{
 					Global_95831++;
 					Global_95833 = (Global_95833 - 1);
 				}
-				Global_95836[iVar6][iVar7] = 0;
+				Global_95836[iVar6 /*25*/][iVar7] = 0;
 				iVar7++;
 				if (iVar7 > 23)
 				{
@@ -408,6 +456,14 @@ void func_8()
 
 int func_9(int iParam0, int iParam1, int iParam2, int iParam3)
 {
+	int iVar0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	int iVar4;
+	int iVar5;
+	int iVar6;
+	
 	iVar0 = 0;
 	if (!iParam1 == iParam3)
 	{
@@ -484,6 +540,9 @@ int func_11(int iParam0)
 
 void func_12()
 {
+	int iVar0;
+	int iVar1;
+	
 	Global_95834 = 0;
 	Global_95835 = 0;
 	iVar0 = 0;
@@ -494,7 +553,7 @@ void func_12()
 		iVar1 = 0;
 		while (iVar1 < 24)
 		{
-			Global_95836[iVar0][iVar1] = 0;
+			Global_95836[iVar0 /*25*/][iVar1] = 0;
 			iVar1++;
 		}
 		iVar0++;

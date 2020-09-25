@@ -1,5 +1,106 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	char* sLocal_18 = NULL;
+	var uLocal_19 = 0;
+	var uLocal_20 = 0;
+	float fLocal_21 = 0f;
+	var uLocal_22 = 0;
+	var uLocal_23 = 0;
+	var uLocal_24 = 0;
+	float fLocal_25 = 0f;
+	float fLocal_26 = 0f;
+	var uLocal_27 = 0;
+	var uLocal_28 = 0;
+	var uLocal_29 = 0;
+	float fLocal_30 = 0f;
+	float fLocal_31 = 0f;
+	float fLocal_32 = 0f;
+	var uLocal_33 = 0;
+	var uLocal_34 = 0;
+	int iLocal_35 = 0;
+	var uLocal_36 = 0;
+	var uLocal_37 = 10;
+	var uLocal_38 = 0;
+	var uLocal_39 = 0;
+	var uLocal_40 = 0;
+	var uLocal_41 = 0;
+	var uLocal_42 = 0;
+	var uLocal_43 = 0;
+	var uLocal_44 = 0;
+	var uLocal_45 = 0;
+	var uLocal_46 = 0;
+	var uLocal_47 = 0;
+	var uLocal_48 = 0;
+	var uLocal_49 = 0;
+	var uLocal_50 = 0;
+	var uLocal_51 = 0;
+	var uLocal_52 = 0;
+	var uLocal_53 = 0;
+	var uLocal_54 = 0;
+	var uLocal_55 = 0;
+	var uLocal_56 = 0;
+	var uLocal_57 = 0;
+	var uLocal_58 = 0;
+	var uLocal_59 = 0;
+	var uLocal_60 = 0;
+	var uLocal_61 = 0;
+	var uLocal_62 = 0;
+	var uLocal_63 = 0;
+	var uLocal_64 = 0;
+	var uLocal_65 = 0;
+	var uLocal_66 = 0;
+	var uLocal_67 = 0;
+	var uLocal_68 = 0;
+	var uLocal_69 = 0;
+	var uLocal_70 = 0;
+	var uLocal_71 = 0;
+	var uLocal_72 = 0;
+	var uLocal_73 = 0;
+	var uLocal_74 = 0;
+	var uLocal_75 = 0;
+	var uLocal_76 = 0;
+	var uLocal_77 = 0;
+	var uLocal_78 = 0;
+	int iLocal_79 = 4;
+	var uLocal_80 = 0;
+	var uLocal_81 = 0;
+	var uLocal_82 = 0;
+	var uLocal_83 = 0;
+	var uLocal_84 = 3;
+	var uLocal_85 = 0;
+	var uLocal_86 = 0;
+	var uLocal_87 = 0;
+	struct<3> Local_88[5];
+	struct<8> Local_89[5];
+	int iLocal_90 = 0;
+	struct<9> Local_91 = { 4, 0, 0, 0, 0, 3, 0, 0, 0 } ;
+#endregion
+
 void __EntryFunction__()
 {
+	struct<3> Var0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	int iVar4;
+	
 	iLocal_2 = 1;
 	iLocal_3 = 134;
 	iLocal_4 = 134;
@@ -20,7 +121,7 @@ void __EntryFunction__()
 	fLocal_31 = 140f;
 	fLocal_32 = 180f;
 	iLocal_35 = 3;
-	iLocal_79 = { ScriptParam_0 };
+	iLocal_79 = { ScriptParam_91 };
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
 	{
 		func_20();
@@ -29,67 +130,67 @@ void __EntryFunction__()
 	{
 		func_19();
 	}
-	iVar3 = 0;
-	iVar4 = 0;
-	iVar5 = 200;
-	iVar6 = MISC::GET_GAME_TIMER();
+	iVar1 = 0;
+	iVar2 = 0;
+	iVar3 = 200;
+	iVar4 = MISC::GET_GAME_TIMER();
 	while (true)
 	{
 		if (!func_9())
 		{
 			func_20();
 		}
-		if ((MISC::GET_GAME_TIMER() - iVar6) > 100)
+		if ((MISC::GET_GAME_TIMER() - iVar4) > 100)
 		{
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
 				Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
-				if (func_8(iLocal_79[iVar3]))
+				if (func_8(iLocal_79[iVar1]))
 				{
-					if (SYSTEM::VDIST2(Var0, ENTITY::GET_ENTITY_COORDS(iLocal_79[iVar3], 0)) >= IntToFloat((iVar5 * iVar5)) && ENTITY::IS_ENTITY_OCCLUDED(iLocal_79[iVar3]))
+					if (SYSTEM::VDIST2(Var0, ENTITY::GET_ENTITY_COORDS(iLocal_79[iVar1], 0)) >= IntToFloat((iVar3 * iVar3)) && ENTITY::IS_ENTITY_OCCLUDED(iLocal_79[iVar1]))
 					{
-						func_7(&(Local_104[iVar3]));
-						func_6(&(iLocal_79[iVar3]), 1, 0, 1);
+						func_7(&(Local_89[iVar1 /*8*/]));
+						func_6(&(iLocal_79[iVar1]), 1, 0, 1);
 					}
 					else
 					{
-						func_5(iLocal_79[iVar3], &(Local_104[iVar3]), -1, 0, 0, 0, -1082130432, 0, -1, -1, 1);
+						func_5(iLocal_79[iVar1], &(Local_89[iVar1 /*8*/]), -1, 0, 0, 0, -1082130432, 0, -1, -1, 1);
 					}
 				}
-				else if (ENTITY::DOES_ENTITY_EXIST(iLocal_79[iVar3]))
+				else if (ENTITY::DOES_ENTITY_EXIST(iLocal_79[iVar1]))
 				{
-					func_6(&(iLocal_79[iVar3]), 1, 0, 1);
+					func_6(&(iLocal_79[iVar1]), 1, 0, 1);
 				}
-				if (func_3(iLocal_79.f_5[iVar4]))
+				if (func_3(iLocal_79.f_5[iVar2]))
 				{
-					if (SYSTEM::VDIST2(Var0, Local_88[iVar4]) >= IntToFloat((iVar5 * iVar5)))
+					if (SYSTEM::VDIST2(Var0, Local_88[iVar2 /*3*/]) >= IntToFloat((iVar3 * iVar3)))
 					{
-						if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_79.f_5[iVar4]) || PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iLocal_79.f_5[iVar4], 0))
+						if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_79.f_5[iVar2]) || PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iLocal_79.f_5[iVar2], 0))
 						{
-							func_2(&(iLocal_79.f_5[iVar4]));
+							func_2(&(iLocal_79.f_5[iVar2]));
 						}
 					}
 				}
-				else if (ENTITY::DOES_ENTITY_EXIST(iLocal_79.f_5[iVar4]))
+				else if (ENTITY::DOES_ENTITY_EXIST(iLocal_79.f_5[iVar2]))
 				{
-					func_2(&(iLocal_79.f_5[iVar4]));
+					func_2(&(iLocal_79.f_5[iVar2]));
 				}
-				iVar3++;
-				if (iVar3 == iLocal_79)
+				iVar1++;
+				if (iVar1 == iLocal_79)
 				{
-					iVar3 = 0;
+					iVar1 = 0;
 				}
-				iVar4++;
-				if (iVar4 == iLocal_79.f_5)
+				iVar2++;
+				if (iVar2 == iLocal_79.f_5)
 				{
-					iVar4 = 0;
+					iVar2 = 0;
 				}
 				if (func_1())
 				{
 					func_20();
 				}
 			}
-			iVar6 = MISC::GET_GAME_TIMER();
+			iVar4 = MISC::GET_GAME_TIMER();
 		}
 		SYSTEM::WAIT(0);
 	}
@@ -97,6 +198,8 @@ void __EntryFunction__()
 
 int func_1()
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	while (iVar0 <= (iLocal_79.f_5 - 1))
 	{
@@ -295,6 +398,9 @@ void func_6(var uParam0, int iParam1, int iParam2, int iParam3)
 
 void func_7(var uParam0)
 {
+	bool bVar0;
+	struct<8> Var1;
+	
 	if (HUD::DOES_BLIP_EXIST(*uParam0))
 	{
 		HUD::REMOVE_BLIP(uParam0);
@@ -336,7 +442,7 @@ int func_8(var uParam0)
 
 int func_9()
 {
-	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1189534554) == 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("bailbond2")) == 0)
 	{
 		if (!func_17(4))
 		{
@@ -370,6 +476,8 @@ int func_10()
 
 void func_11()
 {
+	int iVar0;
+	
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
 		if (func_15(Global_111638.f_2358.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
@@ -410,6 +518,9 @@ bool func_13(int iParam0)
 
 int func_14(var uParam0)
 {
+	int iVar0;
+	int iVar1;
+	
 	if (ENTITY::DOES_ENTITY_EXIST(uParam0))
 	{
 		iVar1 = ENTITY::GET_ENTITY_MODEL(uParam0);
@@ -440,7 +551,7 @@ int func_15(int iParam0)
 
 var func_16(int iParam0)
 {
-	return Global_1798[iParam0];
+	return Global_1798[iParam0 /*29*/];
 }
 
 bool func_17(int iParam0)
@@ -593,16 +704,18 @@ int func_18(int iParam0, int iParam1)
 
 void func_19()
 {
-	PED::ADD_RELATIONSHIP_GROUP("ENEMIES", &iLocal_145);
-	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_145);
-	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_145, 1862763509);
+	int iVar0;
+	
+	PED::ADD_RELATIONSHIP_GROUP("ENEMIES", &iLocal_90);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_90);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_90, 1862763509);
 	iVar0 = 0;
 	while (iVar0 <= (iLocal_79.f_5 - 1))
 	{
 		if (func_3(iLocal_79.f_5[iVar0]))
 		{
 			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_79.f_5[iVar0], 1, 1);
-			Local_88[iVar0] = { ENTITY::GET_ENTITY_COORDS(iLocal_79.f_5[iVar0], 0) };
+			Local_88[iVar0 /*3*/] = { ENTITY::GET_ENTITY_COORDS(iLocal_79.f_5[iVar0], 0) };
 		}
 		iVar0++;
 	}
@@ -612,8 +725,8 @@ void func_19()
 		if (func_8(iLocal_79[iVar0]))
 		{
 			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_79[iVar0], 1, 1);
-			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_79[iVar0], iLocal_145);
-			func_5(iLocal_79[iVar0], &(Local_104[iVar0]), -1, 0, 0, 0, -1082130432, 0, -1, -1, 1);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_79[iVar0], iLocal_90);
+			func_5(iLocal_79[iVar0], &(Local_89[iVar0 /*8*/]), -1, 0, 0, 0, -1082130432, 0, -1, -1, 1);
 		}
 		iVar0++;
 	}
@@ -621,12 +734,14 @@ void func_19()
 
 void func_20()
 {
-	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_145);
-	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_145, 1862763509);
+	int iVar0;
+	
+	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_90);
+	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_90, 1862763509);
 	iVar0 = 0;
 	while (iVar0 <= (iLocal_79 - 1))
 	{
-		func_7(&(Local_104[iVar0]));
+		func_7(&(Local_89[iVar0 /*8*/]));
 		func_6(&(iLocal_79[iVar0]), 1, 0, 1);
 		iVar0++;
 	}

@@ -1,5 +1,12 @@
+#region Local Var
+	int iLocal_0 = 0;
+	int iLocal_1 = 0;
+#endregion
+
 void __EntryFunction__()
 {
+	int iVar0;
+	
 	iLocal_0 = -1;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	STREAMING::REQUEST_IPL("prologue06_int");
@@ -33,12 +40,12 @@ void __EntryFunction__()
 	STREAMING::REMOVE_IPL("prologue03_grv_dug");
 	STREAMING::REMOVE_IPL("prologue_grv_torch");
 	STREAMING::SET_MAPDATACULLBOX_ENABLED("prologue", 1);
-	STREAMING::REQUEST_MODEL(2141384740);
-	while (!STREAMING::HAS_MODEL_LOADED(2141384740))
+	STREAMING::REQUEST_MODEL(joaat("csb_prolsec"));
+	while (!STREAMING::HAS_MODEL_LOADED(joaat("csb_prolsec")))
 	{
 		SYSTEM::WAIT(0);
 	}
-	PLAYER::SET_PLAYER_MODEL(PLAYER::PLAYER_ID(), 2141384740);
+	PLAYER::SET_PLAYER_MODEL(PLAYER::PLAYER_ID(), joaat("csb_prolsec"));
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 5313.8f, -5207.2f, 83.5f, 1, 0, 0, 1);

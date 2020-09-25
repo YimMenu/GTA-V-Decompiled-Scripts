@@ -1,8 +1,19 @@
+#region Local Var
+	var uLocal_0 = 0;
+	struct<3> Local_1 = { 0, 0, 0 } ;
+	var uLocal_2 = 0;
+	float fLocal_3 = 0f;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	bool bLocal_6 = 0;
+	int iLocal_7 = 0;
+#endregion
+
 void __EntryFunction__()
 {
 	Local_1 = { 613f, 6438f, 31f };
-	fLocal_5 = 5f;
-	iLocal_6 = 1;
+	fLocal_3 = 5f;
+	iLocal_4 = 1;
 	MISC::SET_MISSION_FLAG(1);
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
@@ -16,14 +27,14 @@ void __EntryFunction__()
 		ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), -177f);
 		CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0);
 	}
-	STREAMING::REQUEST_MODEL(1030400667);
-	STREAMING::REQUEST_MODEL(184361638);
-	STREAMING::REQUEST_MODEL(642617954);
-	STREAMING::REQUEST_MODEL(920453016);
-	STREAMING::REQUEST_MODEL(240201337);
-	STREAMING::REQUEST_MODEL(586013744);
-	STREAMING::REQUEST_MODEL(868868440);
-	while ((((((!STREAMING::HAS_MODEL_LOADED(1030400667) || !STREAMING::HAS_MODEL_LOADED(184361638)) || !STREAMING::HAS_MODEL_LOADED(642617954)) || !STREAMING::HAS_MODEL_LOADED(920453016)) || !STREAMING::HAS_MODEL_LOADED(240201337)) || !STREAMING::HAS_MODEL_LOADED(586013744)) || !STREAMING::HAS_MODEL_LOADED(868868440))
+	STREAMING::REQUEST_MODEL(joaat("freight"));
+	STREAMING::REQUEST_MODEL(joaat("freightcar"));
+	STREAMING::REQUEST_MODEL(joaat("freightgrain"));
+	STREAMING::REQUEST_MODEL(joaat("freightcont1"));
+	STREAMING::REQUEST_MODEL(joaat("freightcont2"));
+	STREAMING::REQUEST_MODEL(joaat("tankercar"));
+	STREAMING::REQUEST_MODEL(joaat("METROTRAIN"));
+	while ((((((!STREAMING::HAS_MODEL_LOADED(joaat("freight")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcar"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightgrain"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont1"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont2"))) || !STREAMING::HAS_MODEL_LOADED(joaat("tankercar"))) || !STREAMING::HAS_MODEL_LOADED(joaat("METROTRAIN")))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -32,26 +43,26 @@ void __EntryFunction__()
 		SYSTEM::WAIT(0);
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			if (iLocal_7)
+			if (iLocal_5)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(uLocal_0))
 				{
 					VEHICLE::DELETE_MISSION_TRAIN(&uLocal_0);
 				}
-				uLocal_0 = VEHICLE::CREATE_MISSION_TRAIN(uLocal_4, Local_1, iLocal_6);
-				iLocal_7 = 0;
+				uLocal_0 = VEHICLE::CREATE_MISSION_TRAIN(uLocal_2, Local_1, iLocal_4);
+				iLocal_5 = 0;
 			}
-			if (iLocal_9)
+			if (iLocal_7)
 			{
 				Local_1 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
-				iLocal_9 = 0;
+				iLocal_7 = 0;
 			}
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(uLocal_0, 0) && !ENTITY::IS_ENTITY_DEAD(uLocal_0, 0))
 			{
-				VEHICLE::SET_TRAIN_SPEED(uLocal_0, fLocal_5);
-				VEHICLE::SET_TRAIN_CRUISE_SPEED(uLocal_0, fLocal_5);
+				VEHICLE::SET_TRAIN_SPEED(uLocal_0, fLocal_3);
+				VEHICLE::SET_TRAIN_CRUISE_SPEED(uLocal_0, fLocal_3);
 			}
-			if (bLocal_8)
+			if (bLocal_6)
 			{
 				func_1();
 			}

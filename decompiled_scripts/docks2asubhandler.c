@@ -1,11 +1,20 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	var uLocal_2 = 0;
+	struct<2> ScriptParam_0 = { 0, 0 } ;
+#endregion
+
 void __EntryFunction__()
 {
+	float fVar0;
+	
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
 	{
 		func_1();
 	}
-	uLocal_0 = ScriptParam_0;
-	uLocal_1 = ScriptParam_0.f_1;
+	uLocal_0 = ScriptParam_3;
+	uLocal_1 = ScriptParam_3.f_1;
 	while (!MISC::IS_BIT_SET(uLocal_2, 1))
 	{
 		if (!MISC::IS_BIT_SET(uLocal_2, 0))

@@ -1,5 +1,206 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	var uLocal_18 = 0;
+	var uLocal_19 = 0;
+	char* sLocal_20 = NULL;
+	float fLocal_21 = 0f;
+	var uLocal_22 = 0;
+	var uLocal_23 = 0;
+	var uLocal_24 = 0;
+	float fLocal_25 = 0f;
+	float fLocal_26 = 0f;
+	var uLocal_27 = 0;
+	int iLocal_28 = 0;
+	var uLocal_29 = 0;
+	var uLocal_30 = 0;
+	float fLocal_31 = 0f;
+	float fLocal_32 = 0f;
+	float fLocal_33 = 0f;
+	var uLocal_34 = 0;
+	var uLocal_35 = 0;
+	var uLocal_36 = 0;
+	var uLocal_37 = 0;
+	var uLocal_38 = 0;
+	int iLocal_39 = 0;
+	int iLocal_40 = 0;
+	int iLocal_41 = 0;
+	int iLocal_42 = 0;
+	var uLocal_43 = 0;
+	var uLocal_44 = 0;
+	var uLocal_45 = 0;
+	var uLocal_46 = 0;
+	var uLocal_47 = 0;
+	var uLocal_48 = 0;
+	var uLocal_49 = 0;
+	var uLocal_50 = 0;
+	var uLocal_51 = 0;
+	int iLocal_52 = 0;
+	var uLocal_53 = 0;
+	var uLocal_54 = 0;
+	var uLocal_55 = 0;
+	var uLocal_56 = 0;
+	var uLocal_57 = 0;
+	var uLocal_58 = 0;
+	var uLocal_59 = 0;
+	var uLocal_60 = 0;
+	var uLocal_61 = 0;
+	var uLocal_62 = 0;
+	var uLocal_63 = 0;
+	var uLocal_64 = 0;
+	var uLocal_65 = 0;
+	var uLocal_66 = 0;
+	var uLocal_67 = 0;
+	var uLocal_68 = 0;
+	var uLocal_69 = 0;
+	var uLocal_70 = 0;
+	var uLocal_71 = 0;
+	var uLocal_72 = 0;
+	var uLocal_73 = 0;
+	var uLocal_74 = 8;
+	var uLocal_75 = 0;
+	var uLocal_76 = 0;
+	var uLocal_77 = 0;
+	var uLocal_78 = 4;
+	var uLocal_79 = 0;
+	var uLocal_80 = 0;
+	var uLocal_81 = 0;
+	var uLocal_82 = 0;
+	var uLocal_83 = 0;
+	var uLocal_84 = 0;
+	var uLocal_85 = 0;
+	var uLocal_86 = 0;
+	var uLocal_87 = 0;
+	var uLocal_88 = 0;
+	var uLocal_89 = 0;
+	var uLocal_90 = 0;
+	var uLocal_91 = 0;
+	var uLocal_92 = 0;
+	var uLocal_93 = 4;
+	var uLocal_94 = 0;
+	var uLocal_95 = 0;
+	var uLocal_96 = 0;
+	var uLocal_97 = 0;
+	var uLocal_98 = 0;
+	var uLocal_99 = 0;
+	var uLocal_100 = 0;
+	var uLocal_101 = 0;
+	var uLocal_102 = 0;
+	var uLocal_103 = 0;
+	var uLocal_104 = 0;
+	var uLocal_105 = 0;
+	var uLocal_106 = 0;
+	var uLocal_107 = 0;
+	var uLocal_108 = 4;
+	var uLocal_109 = 0;
+	var uLocal_110 = 0;
+	var uLocal_111 = 0;
+	var uLocal_112 = 0;
+	var uLocal_113 = 0;
+	var uLocal_114 = 0;
+	var uLocal_115 = 0;
+	var uLocal_116 = 0;
+	var uLocal_117 = 0;
+	var uLocal_118 = 0;
+	var uLocal_119 = 0;
+	var uLocal_120 = 0;
+	var uLocal_121 = 0;
+	var uLocal_122 = 0;
+	var uLocal_123 = 4;
+	var uLocal_124 = 0;
+	var uLocal_125 = 0;
+	var uLocal_126 = 0;
+	var uLocal_127 = 0;
+	var uLocal_128 = 0;
+	var uLocal_129 = 0;
+	var uLocal_130 = 0;
+	var uLocal_131 = 0;
+	var uLocal_132 = 0;
+	var uLocal_133 = 0;
+	var uLocal_134 = 0;
+	var uLocal_135 = 0;
+	var uLocal_136 = 0;
+	var uLocal_137 = 0;
+	var uLocal_138 = 4;
+	var uLocal_139 = 0;
+	var uLocal_140 = 0;
+	var uLocal_141 = 0;
+	var uLocal_142 = 0;
+	var uLocal_143 = 0;
+	var uLocal_144 = 0;
+	var uLocal_145 = 0;
+	var uLocal_146 = 0;
+	var uLocal_147 = 0;
+	var uLocal_148 = 0;
+	var uLocal_149 = 0;
+	var uLocal_150 = 0;
+	var uLocal_151 = 0;
+	var uLocal_152 = 0;
+	var uLocal_153 = 4;
+	var uLocal_154 = 0;
+	var uLocal_155 = 0;
+	var uLocal_156 = 0;
+	var uLocal_157 = 0;
+	var uLocal_158 = 0;
+	var uLocal_159 = 0;
+	var uLocal_160 = 0;
+	var uLocal_161 = 0;
+	var uLocal_162 = 0;
+	var uLocal_163 = 0;
+	var uLocal_164 = 0;
+	var uLocal_165 = 0;
+	var uLocal_166 = 0;
+	var uLocal_167 = 0;
+	var uLocal_168 = 4;
+	var uLocal_169 = 0;
+	var uLocal_170 = 0;
+	var uLocal_171 = 0;
+	var uLocal_172 = 0;
+	var uLocal_173 = 0;
+	var uLocal_174 = 0;
+	var uLocal_175 = 0;
+	var uLocal_176 = 0;
+	var uLocal_177 = 0;
+	var uLocal_178 = 0;
+	var uLocal_179 = 0;
+	var uLocal_180 = 0;
+	var uLocal_181 = 0;
+	var uLocal_182 = 0;
+	var uLocal_183 = 4;
+	var uLocal_184 = 0;
+	var uLocal_185 = 0;
+	var uLocal_186 = 0;
+	var uLocal_187 = 0;
+	var uLocal_188 = 0;
+	var uLocal_189 = 0;
+	var uLocal_190 = 0;
+	var uLocal_191 = 0;
+	var uLocal_192 = 0;
+	var uLocal_193 = 0;
+	var uLocal_194 = 0;
+	var uLocal_195 = 0;
+#endregion
+
 void __EntryFunction__()
 {
+	struct<4> Var0;
+	
 	iLocal_2 = 1;
 	iLocal_3 = 134;
 	iLocal_4 = 134;
@@ -174,6 +375,16 @@ void __EntryFunction__()
 
 void func_1(var uParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, int iParam5)
 {
+	var uVar0;
+	var uVar1;
+	bool bVar2;
+	var uVar3;
+	bool bVar4;
+	int iVar5;
+	int iVar6;
+	int iVar7;
+	float fVar8;
+	
 	if (((CAM::IS_SCREEN_FADING_OUT() || CAM::IS_SCREEN_FADING_IN()) || CAM::IS_SCREEN_FADED_OUT()) || MISC::IS_FRONTEND_FADING())
 	{
 		if (!bParam3)
@@ -207,7 +418,7 @@ void func_1(var uParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, i
 		iVar6 = 0;
 		while (iVar6 < uParam0->f_123)
 		{
-			switch (uParam0->f_2[iVar6].f_2)
+			switch (uParam0->f_2[iVar6 /*15*/].f_2)
 			{
 				case 0:
 					bVar4 = true;
@@ -232,12 +443,12 @@ void func_1(var uParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, i
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar5);
 					iVar5++;
 					iVar7 = 0;
-					while (iVar7 < uParam0->f_2[iVar6].f_14)
+					while (iVar7 < uParam0->f_2[iVar6 /*15*/].f_14)
 					{
-						uVar0 = uParam0->f_2[iVar6].f_3[iVar7];
-						uVar1 = uParam0->f_2[iVar6].f_3[iVar7].f_1;
-						bVar2 = MISC::IS_BIT_SET(uParam0->f_2[iVar6].f_13, iVar7);
-						if (!MISC::IS_BIT_SET(uParam0->f_2[iVar6].f_12, iVar7))
+						uVar0 = uParam0->f_2[iVar6 /*15*/].f_3[iVar7 /*2*/];
+						uVar1 = uParam0->f_2[iVar6 /*15*/].f_3[iVar7 /*2*/].f_1;
+						bVar2 = MISC::IS_BIT_SET(uParam0->f_2[iVar6 /*15*/].f_13, iVar7);
+						if (!MISC::IS_BIT_SET(uParam0->f_2[iVar6 /*15*/].f_12, iVar7))
 						{
 							uVar3 = PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(uVar0, uVar1, bVar2);
 						}
@@ -251,18 +462,18 @@ void func_1(var uParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, i
 						}
 						iVar7++;
 					}
-					if (!MISC::IS_STRING_NULL_OR_EMPTY(uParam0->f_2[iVar6]))
+					if (!MISC::IS_STRING_NULL_OR_EMPTY(uParam0->f_2[iVar6 /*15*/]))
 					{
-						func_42(uParam0->f_2[iVar6]);
+						func_42(uParam0->f_2[iVar6 /*15*/]);
 					}
 					if (MISC::IS_PC_VERSION())
 					{
 						if (func_6(uParam0->f_1, 4096))
 						{
-							if (uParam0->f_2[iVar6].f_1)
+							if (uParam0->f_2[iVar6 /*15*/].f_1)
 							{
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(true);
-								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(uParam0->f_2[iVar6].f_3[0].f_1);
+								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(uParam0->f_2[iVar6 /*15*/].f_3[0 /*2*/].f_1);
 							}
 							else
 							{
@@ -360,6 +571,9 @@ void func_9(var uParam0, bool bParam1)
 
 int func_10(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
 {
+	int iVar0;
+	int iVar1;
+	
 	if (*uParam0 == 0)
 	{
 		return 0;
@@ -372,19 +586,19 @@ int func_10(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4, i
 	iVar1 = uParam0->f_123;
 	if (iVar1 < 8)
 	{
-		uParam0->f_2[iVar1] = sParam1;
-		uParam0->f_2[iVar1].f_1 = iVar0;
-		uParam0->f_2[iVar1].f_2 = iParam6;
-		uParam0->f_2[iVar1].f_12 = 0;
-		uParam0->f_2[iVar1].f_13 = 0;
-		uParam0->f_2[iVar1].f_14 = 0;
-		uParam0->f_2[iVar1].f_3[0] = iParam2;
-		uParam0->f_2[iVar1].f_3[0].f_1 = iParam3;
+		uParam0->f_2[iVar1 /*15*/] = sParam1;
+		uParam0->f_2[iVar1 /*15*/].f_1 = iVar0;
+		uParam0->f_2[iVar1 /*15*/].f_2 = iParam6;
+		uParam0->f_2[iVar1 /*15*/].f_12 = 0;
+		uParam0->f_2[iVar1 /*15*/].f_13 = 0;
+		uParam0->f_2[iVar1 /*15*/].f_14 = 0;
+		uParam0->f_2[iVar1 /*15*/].f_3[0 /*2*/] = iParam2;
+		uParam0->f_2[iVar1 /*15*/].f_3[0 /*2*/].f_1 = iParam3;
 		if (iParam4 == 1)
 		{
-			MISC::SET_BIT(&(uParam0->f_2[iVar1].f_13), 0);
+			MISC::SET_BIT(&(uParam0->f_2[iVar1 /*15*/].f_13), 0);
 		}
-		uParam0->f_2[iVar1].f_14++;
+		uParam0->f_2[iVar1 /*15*/].f_14++;
 		uParam0->f_123++;
 		return 1;
 	}
@@ -437,6 +651,8 @@ void func_12(var uParam0)
 
 int func_13(var uParam0, var uParam1, var uParam2)
 {
+	int iVar0;
+	
 	if (func_17())
 	{
 		return 1;
@@ -562,30 +778,36 @@ bool func_19()
 
 struct<4> func_20(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	
 	StringCopy(&Var0, "SUMMARY_", 16);
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 24);
-	uParam0->f_15 = iVar4;
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 24);
+	uParam0->f_15 = iVar1;
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 struct<4> func_21(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	
 	StringCopy(&Var0, "COLLECT_", 16);
 	if (((func_22(110) || func_22(95)) || func_22(106)) || func_22(107))
 	{
 		StringCopy(&(uParam0->f_14), "Y", 4);
 		StringConCat(&Var0, "Y", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 11);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 11);
 	}
 	else
 	{
 		StringCopy(&(uParam0->f_14), "N", 4);
 		StringConCat(&Var0, "N", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 12);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 12);
 	}
-	StringIntConCat(&(uParam0->f_14), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	StringIntConCat(&(uParam0->f_14), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
@@ -600,11 +822,17 @@ int func_22(int iParam0)
 
 struct<4> func_23(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	int iVar4;
+	
 	StringCopy(&Var0, "RAND_", 16);
-	STATS::STAT_GET_INT(-852659719, &iVar5, -1);
-	STATS::STAT_GET_INT(-2122623864, &iVar6, -1);
-	iVar7 = (iVar5 + iVar6);
-	if (iVar7 > 10)
+	STATS::STAT_GET_INT(joaat("NUM_RNDPEOPLE_COMPLETED"), &iVar2, -1);
+	STATS::STAT_GET_INT(joaat("NUM_RNDEVENTS_COMPLETED"), &iVar3, -1);
+	iVar4 = (iVar2 + iVar3);
+	if (iVar4 > 10)
 	{
 		StringCopy(&(uParam0->f_13), "Y", 4);
 		StringConCat(&Var0, "Y", 16);
@@ -614,14 +842,17 @@ struct<4> func_23(var uParam0)
 		StringCopy(&(uParam0->f_13), "N", 4);
 		StringConCat(&Var0, "N", 16);
 	}
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
-	StringIntConCat(&(uParam0->f_13), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+	StringIntConCat(&(uParam0->f_13), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 struct<4> func_24(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	
 	StringCopy(&Var0, "FIT_", 16);
 	if ((((((((func_25(1, 1) > 50 && func_25(1, 2) > 50) && func_25(1, 3) > 50) && func_25(0, 1) > 50) && func_25(0, 2) > 50) && func_25(0, 3) > 50) && func_25(2, 1) > 50) && func_25(2, 2) > 50) && func_25(2, 3) > 50)
 	{
@@ -633,14 +864,17 @@ struct<4> func_24(var uParam0)
 		StringCopy(&(uParam0->f_12), "N", 4);
 		StringConCat(&Var0, "N", 16);
 	}
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 11);
-	StringIntConCat(&(uParam0->f_12), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 11);
+	StringIntConCat(&(uParam0->f_12), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 int func_25(int iParam0, int iParam1)
 {
+	var uVar0;
+	int iVar1;
+	
 	iVar1 = func_26(iParam0, iParam1);
 	STATS::STAT_GET_INT(iVar1, &uVar0, -1);
 	return uVar0;
@@ -648,6 +882,9 @@ int func_25(int iParam0, int iParam1)
 
 var func_26(int iParam0, int iParam1)
 {
+	var uVar0;
+	var uVar1;
+	
 	func_27(iParam0, iParam1, &uVar0, &uVar1);
 	return uVar0;
 }
@@ -660,35 +897,35 @@ void func_27(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = 1322098561;
+					*uParam2 = joaat("SP0_SPECIAL_ABILITY_UNLOCKED");
 					break;
 				
 				case 1:
-					*uParam2 = 583576226;
+					*uParam2 = joaat("SP0_STAMINA");
 					break;
 				
 				case 3:
-					*uParam2 = 1939246781;
+					*uParam2 = joaat("SP0_LUNG_CAPACITY");
 					break;
 				
 				case 2:
-					*uParam2 = -1872025703;
+					*uParam2 = joaat("SP0_STRENGTH");
 					break;
 				
 				case 4:
-					*uParam2 = 297038448;
+					*uParam2 = joaat("SP0_WHEELIE_ABILITY");
 					break;
 				
 				case 5:
-					*uParam2 = 2024531174;
+					*uParam2 = joaat("SP0_FLYING_ABILITY");
 					break;
 				
 				case 6:
-					*uParam2 = -1266079991;
+					*uParam2 = joaat("SP0_SHOOTING_ABILITY");
 					break;
 				
 				case 7:
-					*uParam2 = 577288081;
+					*uParam2 = joaat("SP0_STEALTH_ABILITY");
 					break;
 			}
 			break;
@@ -697,35 +934,35 @@ void func_27(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = 1372388259;
+					*uParam2 = joaat("SP1_SPECIAL_ABILITY_UNLOCKED");
 					break;
 				
 				case 1:
-					*uParam2 = 626982837;
+					*uParam2 = joaat("SP1_STAMINA");
 					break;
 				
 				case 3:
-					*uParam2 = 1815853850;
+					*uParam2 = joaat("SP1_LUNG_CAPACITY");
 					break;
 				
 				case 2:
-					*uParam2 = -1205308189;
+					*uParam2 = joaat("SP1_STRENGTH");
 					break;
 				
 				case 4:
-					*uParam2 = 2111310536;
+					*uParam2 = joaat("SP1_WHEELIE_ABILITY");
 					break;
 				
 				case 5:
-					*uParam2 = -376705475;
+					*uParam2 = joaat("SP1_FLYING_ABILITY");
 					break;
 				
 				case 6:
-					*uParam2 = -886696809;
+					*uParam2 = joaat("SP1_SHOOTING_ABILITY");
 					break;
 				
 				case 7:
-					*uParam2 = -412283869;
+					*uParam2 = joaat("SP1_STEALTH_ABILITY");
 					break;
 			}
 			break;
@@ -734,35 +971,35 @@ void func_27(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = 95446082;
+					*uParam2 = joaat("SP2_SPECIAL_ABILITY_UNLOCKED");
 					break;
 				
 				case 1:
-					*uParam2 = 2105689774;
+					*uParam2 = joaat("SP2_STAMINA");
 					break;
 				
 				case 3:
-					*uParam2 = 2123663283;
+					*uParam2 = joaat("SP2_LUNG_CAPACITY");
 					break;
 				
 				case 2:
-					*uParam2 = 1327096153;
+					*uParam2 = joaat("SP2_STRENGTH");
 					break;
 				
 				case 4:
-					*uParam2 = 1810848047;
+					*uParam2 = joaat("SP2_WHEELIE_ABILITY");
 					break;
 				
 				case 5:
-					*uParam2 = 2010093328;
+					*uParam2 = joaat("SP2_FLYING_ABILITY");
 					break;
 				
 				case 6:
-					*uParam2 = 708474090;
+					*uParam2 = joaat("SP2_SHOOTING_ABILITY");
 					break;
 				
 				case 7:
-					*uParam2 = -801407253;
+					*uParam2 = joaat("SP2_STEALTH_ABILITY");
 					break;
 			}
 			break;
@@ -808,6 +1045,9 @@ void func_27(int iParam0, int iParam1, var uParam2, var uParam3)
 
 struct<4> func_28(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	
 	StringCopy(&Var0, "YOGA_", 16);
 	if (func_29(300, 1))
 	{
@@ -819,15 +1059,15 @@ struct<4> func_28(var uParam0)
 		StringCopy(&(uParam0->f_11), "N", 4);
 		StringConCat(&Var0, "N", 16);
 	}
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
-	StringIntConCat(&(uParam0->f_11), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+	StringIntConCat(&(uParam0->f_11), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 int func_29(int iParam0, int iParam1)
 {
-	if (Global_111638.f_10189[iParam0].f_5 == 1)
+	if (Global_111638.f_10189[iParam0 /*12*/].f_5 == 1)
 	{
 		if (iParam1 == 1)
 		{
@@ -839,50 +1079,55 @@ int func_29(int iParam0, int iParam1)
 
 struct<4> func_30(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	
 	StringCopy(&Var0, "VEHS_", 16);
-	STATS::STAT_GET_INT(-22726202, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(1534914527, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-978604952, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-1704487518, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-1367630807, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-1040236793, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(1146577566, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(1861096290, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(713055388, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(1144254321, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-632940664, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-357438054, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(797423994, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(648751400, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(1657674211, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(732455696, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-313904433, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-1437327142, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(686746390, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-580419561, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-276525534, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	if (iVar6 >= 100)
+	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_COP_VEHICLE"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_CARS"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_BIKES"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_BOATS"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_HELIS"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_QUADBIKES"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_BICYCLES"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_COP_VEHICLE"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_CARS"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_BIKES"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_BOATS"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_HELIS"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_QUADBIKES"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_BICYCLES"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_COP_VEHICLE"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_CARS"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_BIKES"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_BOATS"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_HELIS"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_QUADBIKES"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_BICYCLES"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	if (iVar3 >= 100)
 	{
 		StringCopy(&(uParam0->f_10), "Y", 4);
 		StringConCat(&Var0, "Y", 16);
@@ -892,22 +1137,27 @@ struct<4> func_30(var uParam0)
 		StringCopy(&(uParam0->f_10), "N", 4);
 		StringConCat(&Var0, "N", 16);
 	}
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
-	StringIntConCat(&(uParam0->f_10), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+	StringIntConCat(&(uParam0->f_10), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 struct<4> func_31(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	
 	StringCopy(&Var0, "PEDS_", 16);
-	STATS::STAT_GET_INT(1824531000, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(1861069275, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-1575296825, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	if (iVar6 >= 100)
+	STATS::STAT_GET_INT(joaat("SP0_KILLS_INNOCENTS"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_KILLS_INNOCENTS"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_KILLS_INNOCENTS"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	if (iVar3 >= 100)
 	{
 		StringCopy(&(uParam0->f_9), "Y", 4);
 		StringConCat(&Var0, "Y", 16);
@@ -917,17 +1167,21 @@ struct<4> func_31(var uParam0)
 		StringCopy(&(uParam0->f_9), "N", 4);
 		StringConCat(&Var0, "N", 16);
 	}
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
-	StringIntConCat(&(uParam0->f_9), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+	StringIntConCat(&(uParam0->f_9), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 struct<4> func_32(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	int iVar2;
+	
 	StringCopy(&Var0, "STOCK_", 16);
-	STATS::STAT_GET_INT(-1657837343, &iVar5, 0);
-	if (iVar5 >= 120000)
+	STATS::STAT_GET_INT(joaat("TIME_SPENT_ON_STOCKMARKET"), &iVar2, 0);
+	if (iVar2 >= 120000)
 	{
 		StringCopy(&(uParam0->f_8), "Y", 4);
 		StringConCat(&Var0, "Y", 16);
@@ -937,14 +1191,17 @@ struct<4> func_32(var uParam0)
 		StringCopy(&(uParam0->f_8), "N", 4);
 		StringConCat(&Var0, "N", 16);
 	}
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
-	StringIntConCat(&(uParam0->f_8), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+	StringIntConCat(&(uParam0->f_8), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 struct<4> func_33(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	
 	StringCopy(&Var0, "FAMILY_", 16);
 	if (func_34(8) && func_34(5))
 	{
@@ -956,9 +1213,9 @@ struct<4> func_33(var uParam0)
 		StringCopy(&(uParam0->f_7), "N", 4);
 		StringConCat(&Var0, "N", 16);
 	}
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
-	StringIntConCat(&(uParam0->f_7), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+	StringIntConCat(&(uParam0->f_7), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
@@ -966,13 +1223,16 @@ int func_34(int iParam0)
 {
 	if (iParam0 < 9)
 	{
-		return MISC::IS_BIT_SET(Global_111638.f_18098.f_175[iParam0].f_18, 0);
+		return MISC::IS_BIT_SET(Global_111638.f_18098.f_175[iParam0 /*19*/].f_18, 0);
 	}
 	return 0;
 }
 
 struct<4> func_35(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	
 	StringCopy(&Var0, "PROS_", 16);
 	if ((func_36(1) > 0 || func_36(0) > 0) || func_36(2) > 0)
 	{
@@ -984,9 +1244,9 @@ struct<4> func_35(var uParam0)
 		StringCopy(&(uParam0->f_6), "N", 4);
 		StringConCat(&Var0, "N", 16);
 	}
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
-	StringIntConCat(&(uParam0->f_6), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+	StringIntConCat(&(uParam0->f_6), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
@@ -1011,135 +1271,159 @@ int func_36(int iParam0)
 
 struct<4> func_37(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	int iVar4;
+	int iVar5;
+	
 	StringCopy(&Var0, "STRIP_", 16);
-	STATS::STAT_GET_INT(-397746042, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-1677642203, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(1610202677, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(27639974, &iVar7, 0);
-	iVar8 = (iVar8 + iVar7);
-	STATS::STAT_GET_INT(422258364, &iVar7, 1);
-	iVar8 = (iVar8 + iVar7);
-	STATS::STAT_GET_INT(316202960, &iVar7, 2);
-	iVar8 = (iVar8 + iVar7);
-	if (iVar6 >= 3 || iVar8 >= 100)
+	STATS::STAT_GET_INT(joaat("SP0_LAP_DANCED_BOUGHT"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_LAP_DANCED_BOUGHT"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_LAP_DANCED_BOUGHT"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP0_MONEY_SPENT_IN_STRIP_CLUBS"), &iVar4, 0);
+	iVar5 = (iVar5 + iVar4);
+	STATS::STAT_GET_INT(joaat("SP1_MONEY_SPENT_IN_STRIP_CLUBS"), &iVar4, 1);
+	iVar5 = (iVar5 + iVar4);
+	STATS::STAT_GET_INT(joaat("SP2_MONEY_SPENT_IN_STRIP_CLUBS"), &iVar4, 2);
+	iVar5 = (iVar5 + iVar4);
+	if (iVar3 >= 3 || iVar5 >= 100)
 	{
 		StringCopy(&(uParam0->f_5), "Y", 4);
 		StringConCat(&Var0, "Y", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
 	}
 	else
 	{
 		StringCopy(&(uParam0->f_5), "N", 4);
 		StringConCat(&Var0, "N", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 12);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 12);
 	}
-	StringIntConCat(&(uParam0->f_5), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	StringIntConCat(&(uParam0->f_5), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 struct<4> func_38(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	
 	StringCopy(&Var0, "CASH_", 16);
-	STATS::STAT_GET_INT(-656546900, &iVar5, 0);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(-2098183071, &iVar5, 1);
-	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(1578119842, &iVar5, 2);
-	iVar6 = (iVar6 + iVar5);
-	if (iVar6 >= 1000000)
+	STATS::STAT_GET_INT(joaat("SP0_MONEY_TOTAL_SPENT"), &iVar2, 0);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP1_MONEY_TOTAL_SPENT"), &iVar2, 1);
+	iVar3 = (iVar3 + iVar2);
+	STATS::STAT_GET_INT(joaat("SP2_MONEY_TOTAL_SPENT"), &iVar2, 2);
+	iVar3 = (iVar3 + iVar2);
+	if (iVar3 >= 1000000)
 	{
 		StringCopy(&(uParam0->f_3), "SP", 8);
 		StringConCat(&Var0, "SP", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 14);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 14);
 	}
 	else
 	{
 		StringCopy(&(uParam0->f_3), "SA", 8);
 		StringConCat(&Var0, "SA", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
 	}
-	StringIntConCat(&(uParam0->f_3), iVar4, 8);
-	StringIntConCat(&Var0, iVar4, 16);
+	StringIntConCat(&(uParam0->f_3), iVar1, 8);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 struct<4> func_39(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	int iVar4;
+	
 	StringCopy(&Var0, "CHAR_", 16);
-	iVar5 = 0;
-	iVar7 = 0;
-	STATS::STAT_GET_INT(-1263997649, &iVar7, 0);
-	STATS::STAT_GET_INT(1157035214, &iVar6, 1);
-	if (iVar6 > iVar7)
+	iVar2 = 0;
+	iVar4 = 0;
+	STATS::STAT_GET_INT(joaat("SP0_TOTAL_PLAYING_TIME"), &iVar4, 0);
+	STATS::STAT_GET_INT(joaat("SP1_TOTAL_PLAYING_TIME"), &iVar3, 1);
+	if (iVar3 > iVar4)
 	{
-		iVar7 = iVar6;
-		iVar5 = 1;
+		iVar4 = iVar3;
+		iVar2 = 1;
 	}
-	STATS::STAT_GET_INT(-1923670641, &iVar6, 2);
-	if (iVar6 > iVar7)
+	STATS::STAT_GET_INT(joaat("SP2_TOTAL_PLAYING_TIME"), &iVar3, 2);
+	if (iVar3 > iVar4)
 	{
-		iVar7 = iVar6;
-		iVar5 = 2;
+		iVar4 = iVar3;
+		iVar2 = 2;
 	}
-	if (iVar5 == 0)
+	if (iVar2 == 0)
 	{
 		StringCopy(&(uParam0->f_2), "M", 4);
 		StringConCat(&Var0, "M", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
 	}
-	else if (iVar5 == 1)
+	else if (iVar2 == 1)
 	{
 		StringCopy(&(uParam0->f_2), "F", 4);
 		StringConCat(&Var0, "F", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 13);
 	}
 	else
 	{
 		StringCopy(&(uParam0->f_2), "T", 4);
 		StringConCat(&Var0, "T", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 12);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 12);
 	}
-	StringIntConCat(&(uParam0->f_2), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	StringIntConCat(&(uParam0->f_2), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 struct<4> func_40(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	
 	StringCopy(&Var0, "STORY_", 16);
 	if (func_22(135))
 	{
 		StringCopy(&(uParam0->f_1), "M", 4);
 		StringConCat(&Var0, "M", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 11);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 11);
 	}
 	else if (func_22(136))
 	{
 		StringCopy(&(uParam0->f_1), "T", 4);
 		StringConCat(&Var0, "T", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 10);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 10);
 	}
 	else
 	{
 		StringCopy(&(uParam0->f_1), "B", 4);
 		StringConCat(&Var0, "B", 16);
-		iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 11);
+		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 11);
 	}
-	StringIntConCat(&(uParam0->f_1), iVar4, 4);
-	StringIntConCat(&Var0, iVar4, 16);
+	StringIntConCat(&(uParam0->f_1), iVar1, 4);
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
 struct<4> func_41(var uParam0)
 {
+	struct<4> Var0;
+	int iVar1;
+	
 	StringCopy(&Var0, "INTRO_", 16);
-	iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, 21);
-	*uParam0 = iVar4;
-	StringIntConCat(&Var0, iVar4, 16);
+	iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 21);
+	*uParam0 = iVar1;
+	StringIntConCat(&Var0, iVar1, 16);
 	return Var0;
 }
 
@@ -1236,14 +1520,14 @@ void func_47(bool bParam0, bool bParam1)
 			{
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_19423);
 			}
-			Global_19414 = { Global_19432[Global_19431] };
+			Global_19414 = { Global_19432[Global_19431 /*3*/] };
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_19414);
 		}
 	}
 	else if (Global_19664 == 1)
 	{
 		Global_19664 = 0;
-		Global_19414 = { Global_19439[Global_19431] };
+		Global_19414 = { Global_19439[Global_19431 /*3*/] };
 		if (bParam1)
 		{
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_19423);
@@ -1280,7 +1564,7 @@ int func_49(int iParam0)
 			return 0;
 		}
 	}
-	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-754107665) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("cellphone_flashhand")) > 0)
 	{
 		return 1;
 	}
@@ -1352,18 +1636,20 @@ void func_51(bool bParam0, bool bParam1, int iParam2, int iParam3, bool bParam4,
 
 bool func_52()
 {
-	return MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID()].f_39.f_18, 14);
+	return MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID() /*876*/].f_39.f_18, 14);
 }
 
 bool func_53(int iParam0, int iParam1)
 {
+	bool bVar0;
+	
 	if (iParam0 == PLAYER::PLAYER_ID())
 	{
 		bVar0 = func_54(-1, 0) == 8;
 	}
 	else
 	{
-		bVar0 = Global_1590535[iParam0].f_211 == 8;
+		bVar0 = Global_1590535[iParam0 /*876*/].f_211 == 8;
 	}
 	if (iParam1 == 1)
 	{
@@ -1377,6 +1663,9 @@ bool func_53(int iParam0, int iParam1)
 
 int func_54(int iParam0, bool bParam1)
 {
+	int iVar0;
+	int iVar1;
+	
 	iVar1 = iParam0;
 	if (iVar1 == -1)
 	{
@@ -1417,7 +1706,7 @@ int func_56(int iParam0)
 			return 1;
 		}
 	}
-	if (MISC::IS_BIT_SET(Global_2425662[iParam0].f_195, 2))
+	if (MISC::IS_BIT_SET(Global_2425662[iParam0 /*421*/].f_195, 2))
 	{
 		return 1;
 	}
@@ -1431,6 +1720,8 @@ bool func_57()
 
 int func_58(int iParam0, var uParam1, var uParam2, int iParam3)
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	if (MISC::IS_PC_VERSION())
 	{

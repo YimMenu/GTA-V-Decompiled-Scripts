@@ -1,3 +1,9 @@
+#region Local Var
+	struct<2> ScriptParam_0 = { 0, 0 } ;
+	var uScriptParam_1 = 0;
+	var uScriptParam_2 = 0;
+#endregion
+
 void __EntryFunction__()
 {
 	switch (ScriptParam_0)

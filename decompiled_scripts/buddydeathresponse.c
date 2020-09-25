@@ -1,3 +1,27 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	int iLocal_18 = 0;
+	int iLocal_19 = 0;
+	int iLocal_20 = 0;
+#endregion
+
 void __EntryFunction__()
 {
 	iLocal_2 = 1;
@@ -21,6 +45,9 @@ void __EntryFunction__()
 
 void func_1()
 {
+	struct<3> Var0;
+	var uVar1;
+	
 	while (!func_9(&iLocal_20))
 	{
 		SYSTEM::WAIT(0);
@@ -36,7 +63,7 @@ void func_1()
 			}
 			Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_20, 1);
-			TASK::OPEN_SEQUENCE_TASK(&uVar3);
+			TASK::OPEN_SEQUENCE_TASK(&uVar1);
 			if (!PED::IS_PED_IN_ANY_VEHICLE(iLocal_20, 0))
 			{
 				if (!PED::IS_PED_IN_COMBAT(iLocal_20, 0) && !PED::IS_PED_IN_ANY_VEHICLE(iLocal_20, 0))
@@ -45,8 +72,8 @@ void func_1()
 				}
 			}
 			TASK::TASK_LOOK_AT_COORD(0, Var0, 6000, 0, 2);
-			TASK::CLOSE_SEQUENCE_TASK(uVar3);
-			TASK::TASK_PERFORM_SEQUENCE(iLocal_20, uVar3);
+			TASK::CLOSE_SEQUENCE_TASK(uVar1);
+			TASK::TASK_PERFORM_SEQUENCE(iLocal_20, uVar1);
 		}
 		func_2(iLocal_20);
 	}
@@ -68,6 +95,8 @@ void func_1()
 
 void func_2(int iParam0)
 {
+	int iVar0;
+	
 	iVar0 = MISC::GET_GAME_TIMER() + 1000;
 	while (MISC::GET_GAME_TIMER() < iVar0 && !CAM::IS_SCREEN_FADED_OUT())
 	{
@@ -124,6 +153,8 @@ void func_3(var uParam0, char* sParam1, char* sParam2, int iParam3)
 
 int func_4(int iParam0)
 {
+	int iVar0;
+	
 	switch (iParam0)
 	{
 		case 0:
@@ -245,6 +276,9 @@ int func_4(int iParam0)
 
 int func_5(int iParam0)
 {
+	int iVar0;
+	int iVar1;
+	
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
@@ -275,7 +309,7 @@ int func_6(int iParam0)
 
 var func_7(int iParam0)
 {
-	return Global_1798[iParam0];
+	return Global_1798[iParam0 /*29*/];
 }
 
 bool func_8(int iParam0)
@@ -285,6 +319,8 @@ bool func_8(int iParam0)
 
 int func_9(var uParam0)
 {
+	int iVar0;
+	
 	iLocal_18 = 0;
 	while (iLocal_18 < 9)
 	{
@@ -339,6 +375,8 @@ int func_10()
 
 void func_11()
 {
+	int iVar0;
+	
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
 		if (func_6(Global_111638.f_2358.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))

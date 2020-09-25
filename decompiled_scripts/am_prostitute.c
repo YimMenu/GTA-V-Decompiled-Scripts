@@ -1,3 +1,66 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	var uLocal_18 = 0;
+	var uLocal_19 = 0;
+	char* sLocal_20 = NULL;
+	var uLocal_21 = 0;
+	var uLocal_22 = 0;
+	float fLocal_23 = 0f;
+	float fLocal_24 = 0f;
+	float fLocal_25 = 0f;
+	var uLocal_26 = 0;
+	var uLocal_27 = 0;
+	float fLocal_28 = 0f;
+	var uLocal_29 = 0;
+	var uLocal_30 = 0;
+	var uLocal_31 = 0;
+	float fLocal_32 = 0f;
+	float fLocal_33 = 0f;
+	var uLocal_34 = 0;
+	var uLocal_35 = 0;
+	int iLocal_36 = 0;
+	var uLocal_37 = 0;
+	var uLocal_38 = 0;
+	var uLocal_39 = 0;
+	int iLocal_40 = 0;
+	int iLocal_41 = 0;
+	int iLocal_42 = 0;
+	int iLocal_43 = 0;
+	var uLocal_44 = 0;
+	var uLocal_45 = 0;
+	var uLocal_46 = 0;
+	var uLocal_47 = 0;
+	var uLocal_48 = 0;
+	var uLocal_49 = 0;
+	var uLocal_50 = 0;
+	var uLocal_51 = 0;
+	int iLocal_52 = 0;
+	int iLocal_53 = 0;
+	int iLocal_54 = 0;
+	int iLocal_55 = 0;
+	int iLocal_56 = 0;
+	int iLocal_57 = 0;
+	struct<3> Local_58[32];
+	struct<21> Local_59 = { 0, -1, -1, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1, -1 } ;
+#endregion
+
 void __EntryFunction__()
 {
 	iLocal_2 = 1;
@@ -26,7 +89,7 @@ void __EntryFunction__()
 	iLocal_43 = 64;
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		func_51(ScriptParam_0);
+		func_51(ScriptParam_59);
 	}
 	else
 	{
@@ -59,6 +122,10 @@ void __EntryFunction__()
 
 void func_1()
 {
+	int iVar0;
+	int iVar1;
+	int iVar2;
+	
 	iVar1 = PLAYER::NETWORK_PLAYER_ID_TO_INT();
 	iVar0 = 0;
 	while (iVar0 < NETWORK::NETWORK_GET_MAX_NUM_PARTICIPANTS())
@@ -70,7 +137,7 @@ void func_1()
 				iVar2 = PLAYER::GET_PLAYER_PED(NETWORK::NETWORK_GET_PLAYER_INDEX(PLAYER::INT_TO_PARTICIPANTINDEX(iVar0)));
 				if (!ENTITY::IS_ENTITY_DEAD(iVar2, 0))
 				{
-					if (Local_58[iVar0].f_2)
+					if (Local_58[iVar0 /*3*/].f_2)
 					{
 						if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iVar2, 1)) <= 22500f)
 						{
@@ -106,7 +173,7 @@ void func_1()
 		}
 		iVar0++;
 	}
-	if ((iLocal_55 == 0 && iLocal_56) && !Local_58[iVar1].f_2)
+	if ((iLocal_55 == 0 && iLocal_56) && !Local_58[iVar1 /*3*/].f_2)
 	{
 		STREAMING::REMOVE_ANIM_DICT("mini@prostitutes@sexlow_veh");
 		STREAMING::REMOVE_ANIM_DICT("mini@prostitutes@sexnorm_veh");
@@ -119,6 +186,12 @@ void func_1()
 
 void func_2()
 {
+	int iVar0;
+	var uVar1;
+	int iVar2;
+	bool bVar3;
+	int iVar4;
+	
 	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		return;
@@ -170,7 +243,7 @@ void func_2()
 				Global_30921 = 0f;
 				SCRIPT::REQUEST_SCRIPT("pb_prostitute");
 				iLocal_53 = MISC::GET_GAME_TIMER() + 250;
-				Local_58[iVar2].f_2 = 0;
+				Local_58[iVar2 /*3*/].f_2 = 0;
 				iLocal_52 = 3;
 			}
 			else
@@ -180,7 +253,7 @@ void func_2()
 			break;
 		
 		case 3:
-			if ((SCRIPT::HAS_SCRIPT_LOADED("pb_prostitute") && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1788246410) <= 0) && !NETWORK::NETWORK_IS_SCRIPT_ACTIVE("pb_prostitute", PLAYER::NETWORK_PLAYER_ID_TO_INT(), 1, 0))
+			if ((SCRIPT::HAS_SCRIPT_LOADED("pb_prostitute") && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("pb_prostitute")) <= 0) && !NETWORK::NETWORK_IS_SCRIPT_ACTIVE("pb_prostitute", PLAYER::NETWORK_PLAYER_ID_TO_INT(), 1, 0))
 			{
 				iVar4 = func_12(iVar2);
 				iLocal_57 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS("pb_prostitute", &iVar4, 1, 2050);
@@ -193,7 +266,7 @@ void func_2()
 		case 4:
 			if (func_4())
 			{
-				Local_58[iVar2].f_2 = 0;
+				Local_58[iVar2 /*3*/].f_2 = 0;
 				iLocal_53 = MISC::GET_GAME_TIMER() + 250;
 				iLocal_52 = 5;
 			}
@@ -224,7 +297,7 @@ bool func_3()
 
 int func_4()
 {
-	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1788246410) <= 0 && !NETWORK::NETWORK_IS_SCRIPT_ACTIVE("pb_prostitute", PLAYER::NETWORK_PLAYER_ID_TO_INT(), 1, 0))
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("pb_prostitute")) <= 0 && !NETWORK::NETWORK_IS_SCRIPT_ACTIVE("pb_prostitute", PLAYER::NETWORK_PLAYER_ID_TO_INT(), 1, 0))
 	{
 		return 1;
 	}
@@ -245,17 +318,24 @@ int func_4()
 
 void func_5()
 {
+	struct<2> Var0;
+	int iVar1;
+	
 	Var0 = -1835440739;
 	Var0.f_1 = PLAYER::PLAYER_ID();
-	iVar2 = func_6(1, 1);
-	if (iVar2 != 0)
+	iVar1 = func_6(1, 1);
+	if (iVar1 != 0)
 	{
-		SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 2, iVar2);
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 2, iVar1);
 	}
 }
 
 var func_6(int iParam0, bool bParam1)
 {
+	var uVar0;
+	int iVar1;
+	int iVar2;
+	
 	iVar1 = 0;
 	while (iVar1 < 32)
 	{
@@ -281,13 +361,15 @@ var func_6(int iParam0, bool bParam1)
 
 bool func_7(int iParam0, int iParam1)
 {
+	bool bVar0;
+	
 	if (iParam0 == PLAYER::PLAYER_ID())
 	{
 		bVar0 = func_8(-1, 0) == 8;
 	}
 	else
 	{
-		bVar0 = Global_1590535[iParam0].f_211 == 8;
+		bVar0 = Global_1590535[iParam0 /*876*/].f_211 == 8;
 	}
 	if (iParam1 == 1)
 	{
@@ -301,6 +383,9 @@ bool func_7(int iParam0, int iParam1)
 
 int func_8(int iParam0, bool bParam1)
 {
+	int iVar0;
+	int iVar1;
+	
 	iVar1 = iParam0;
 	if (iVar1 == -1)
 	{
@@ -330,6 +415,8 @@ int func_9()
 
 int func_10(int iParam0, bool bParam1, bool bParam2)
 {
+	int iVar0;
+	
 	iVar0 = iParam0;
 	if (iVar0 != -1)
 	{
@@ -357,20 +444,30 @@ int func_10(int iParam0, bool bParam1, bool bParam2)
 
 void func_11(int iParam0)
 {
-	Local_58[PLAYER::NETWORK_PLAYER_ID_TO_INT()] = iParam0;
+	Local_58[PLAYER::NETWORK_PLAYER_ID_TO_INT() /*3*/] = iParam0;
 }
 
 int func_12(int iParam0)
 {
 	if (iParam0 == -1)
 	{
-		return Local_58[PLAYER::NETWORK_PLAYER_ID_TO_INT()];
+		return Local_58[PLAYER::NETWORK_PLAYER_ID_TO_INT() /*3*/];
 	}
-	return Local_58[iParam0];
+	return Local_58[iParam0 /*3*/];
 }
 
 int func_13()
 {
+	int iVar0;
+	int iVar1;
+	var uVar2;
+	var uVar3;
+	struct<3> Var4;
+	struct<3> Var5;
+	struct<3> Var6;
+	float fVar7;
+	float fVar8;
+	
 	iVar0 = func_14();
 	iVar1 = PLAYER::NETWORK_PLAYER_ID_TO_INT();
 	if (!ENTITY::DOES_ENTITY_EXIST(func_12(iVar1)))
@@ -380,7 +477,7 @@ int func_13()
 	}
 	if (iLocal_57 != 0 && SCRIPT::IS_THREAD_ACTIVE(iLocal_57))
 	{
-		if (Local_58[iVar1].f_2)
+		if (Local_58[iVar1 /*3*/].f_2)
 		{
 			return func_12(iVar1);
 		}
@@ -396,7 +493,7 @@ int func_13()
 					{
 						if (func_12(iVar1) == VEHICLE::GET_PED_IN_VEHICLE_SEAT(uVar3, 0, 0) || PED::IS_PED_IN_VEHICLE(func_12(iVar1), uVar3, 1))
 						{
-							Local_58[iVar1].f_2 = 1;
+							Local_58[iVar1 /*3*/].f_2 = 1;
 							return func_12(iVar1);
 						}
 					}
@@ -405,17 +502,17 @@ int func_13()
 						return func_12(iVar1);
 					}
 					Var4 = { ENTITY::GET_ENTITY_COORDS(func_12(iVar1), 0) };
-					Var7 = { ENTITY::GET_ENTITY_COORDS(iVar0, 0) };
-					Var10 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
-					fVar13 = SYSTEM::VDIST(Var4, Var10);
-					fVar14 = SYSTEM::VDIST(Var10, Var7);
-					if (fVar13 > fVar14)
+					Var5 = { ENTITY::GET_ENTITY_COORDS(iVar0, 0) };
+					Var6 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
+					fVar7 = SYSTEM::VDIST(Var4, Var6);
+					fVar8 = SYSTEM::VDIST(Var6, Var5);
+					if (fVar7 > fVar8)
 					{
-						if ((fVar13 - fVar14) > 25f)
+						if ((fVar7 - fVar8) > 25f)
 						{
 							return iVar0;
 						}
-						else if (fVar14 < 6f && fVar13 > 11f)
+						else if (fVar8 < 6f && fVar7 > 11f)
 						{
 							return iVar0;
 						}
@@ -437,30 +534,35 @@ int func_13()
 
 int func_14()
 {
+	int iVar0;
+	var uVar1[8];
+	int iVar2;
+	int iVar3;
+	
 	iVar0 = 0;
-	iVar10 = PED::GET_PED_NEARBY_PEDS(PLAYER::PLAYER_PED_ID(), &uVar1, -1);
-	if (iVar10 > 0)
+	iVar2 = PED::GET_PED_NEARBY_PEDS(PLAYER::PLAYER_PED_ID(), &uVar1, -1);
+	if (iVar2 > 0)
 	{
-		iVar11 = 0;
-		while (iVar11 <= 7)
+		iVar3 = 0;
+		while (iVar3 <= 7)
 		{
-			if (!PED::IS_PED_INJURED(uVar1[iVar11]))
+			if (!PED::IS_PED_INJURED(uVar1[iVar3]))
 			{
-				if (PED::IS_PED_USING_SCENARIO(uVar1[iVar11], "WORLD_HUMAN_PROSTITUTE_HIGH_CLASS") || PED::IS_PED_USING_SCENARIO(uVar1[iVar11], "WORLD_HUMAN_PROSTITUTE_LOW_CLASS"))
+				if (PED::IS_PED_USING_SCENARIO(uVar1[iVar3], "WORLD_HUMAN_PROSTITUTE_HIGH_CLASS") || PED::IS_PED_USING_SCENARIO(uVar1[iVar3], "WORLD_HUMAN_PROSTITUTE_LOW_CLASS"))
 				{
-					if (func_16(uVar1[iVar11]))
+					if (func_16(uVar1[iVar3]))
 					{
-						if (!func_15(uVar1[iVar11]))
+						if (!func_15(uVar1[iVar3]))
 						{
-							if (!PED::IS_PED_FLEEING(uVar1[iVar11]))
+							if (!PED::IS_PED_FLEEING(uVar1[iVar3]))
 							{
-								return uVar1[iVar11];
+								return uVar1[iVar3];
 							}
 						}
 					}
 				}
 			}
-			iVar11++;
+			iVar3++;
 		}
 	}
 	return iVar0;
@@ -468,11 +570,13 @@ int func_14()
 
 int func_15(int iParam0)
 {
+	int iVar0;
+	
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 <= 31)
 	{
-		if (Local_58[iVar0] == iParam0)
+		if (Local_58[iVar0 /*3*/] == iParam0)
 		{
 			return 1;
 		}
@@ -483,6 +587,9 @@ int func_15(int iParam0)
 
 int func_16(var uParam0)
 {
+	var uVar0;
+	var uVar1;
+	
 	uVar1 = ENTITY::GET_ENTITY_SCRIPT(uParam0, &uVar0);
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(uVar1))
 	{
@@ -552,14 +659,14 @@ int func_20(int iParam0)
 {
 	if (func_21(iParam0, 0))
 	{
-		return Global_1628237[iParam0].f_11.f_33;
+		return Global_1628237[iParam0 /*615*/].f_11.f_33;
 	}
 	return -1;
 }
 
 int func_21(int iParam0, int iParam1)
 {
-	if (Global_1628237[iParam0].f_11.f_33 != -1 || (iParam1 && Global_1628237[iParam0].f_11.f_32 != -1))
+	if (Global_1628237[iParam0 /*615*/].f_11.f_33 != -1 || (iParam1 && Global_1628237[iParam0 /*615*/].f_11.f_32 != -1))
 	{
 		return 1;
 	}
@@ -579,14 +686,14 @@ int func_23(int iParam0)
 {
 	if (func_21(iParam0, 0))
 	{
-		return Global_1628237[iParam0].f_11.f_181;
+		return Global_1628237[iParam0 /*615*/].f_11.f_181;
 	}
 	return -1;
 }
 
 bool func_24()
 {
-	return MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID()].f_39.f_18, 0);
+	return MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID() /*876*/].f_39.f_18, 0);
 }
 
 int func_25(int iParam0, bool bParam1, bool bParam2)
@@ -601,7 +708,7 @@ int func_25(int iParam0, bool bParam1, bool bParam2)
 	if (!bParam2)
 	{
 	}
-	if (Global_1590535[iParam0] == -1)
+	if (Global_1590535[iParam0 /*876*/] == -1)
 	{
 		return 0;
 	}
@@ -615,7 +722,7 @@ bool func_26(int iParam0)
 
 bool func_27(int iParam0)
 {
-	return MISC::IS_BIT_SET(Global_1590535[iParam0].f_13.f_1, 0);
+	return MISC::IS_BIT_SET(Global_1590535[iParam0 /*876*/].f_13.f_1, 0);
 }
 
 int func_28(var uParam0)
@@ -636,9 +743,9 @@ int func_29(int iParam0)
 	{
 		if (func_10(iParam0, 1, 1))
 		{
-			if (Global_2425662[iParam0].f_310.f_5 != -1)
+			if (Global_2425662[iParam0 /*421*/].f_310.f_5 != -1)
 			{
-				return func_30(Global_2425662[iParam0].f_310.f_5) == 11;
+				return func_30(Global_2425662[iParam0 /*421*/].f_310.f_5) == 11;
 			}
 		}
 	}
@@ -765,7 +872,7 @@ int func_30(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case 79:
+		case joaat("MPSV_LP0_31"):
 		case 80:
 			return 4;
 			break;
@@ -862,16 +969,18 @@ int func_31()
 
 bool func_32(int iParam0)
 {
-	return Global_2425662[iParam0].f_115 == 7;
+	return Global_2425662[iParam0 /*421*/].f_115 == 7;
 }
 
 bool func_33(int iParam0)
 {
-	return Global_2425662[iParam0].f_115 == 2;
+	return Global_2425662[iParam0 /*421*/].f_115 == 2;
 }
 
 int func_34()
 {
+	var uVar0;
+	
 	func_42(&uVar0);
 	if (Global_1312854 == 0)
 	{
@@ -926,7 +1035,7 @@ int func_35()
 			break;
 		
 		case 2:
-			return -47565502;
+			return joaat("creator");
 			break;
 	}
 	return 0;
@@ -937,11 +1046,11 @@ int func_36()
 	switch (Global_2463024)
 	{
 		case 0:
-			return -931834499;
+			return joaat("freemode");
 		
 		default:
 	}
-	return -931834499;
+	return joaat("freemode");
 }
 
 int func_37()
@@ -975,6 +1084,11 @@ bool func_41()
 
 void func_42(var uParam0)
 {
+	int iVar0;
+	int iVar1;
+	int iVar2;
+	struct<3> Var3;
+	
 	iVar0 = 0;
 	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
 	{
@@ -989,8 +1103,8 @@ void func_42(var uParam0)
 					break;
 				
 				case 589125870:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
-					if (Var4.z == 653923311)
+					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
+					if (Var3.z == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -1003,25 +1117,30 @@ void func_42(var uParam0)
 
 void func_43(int iParam0)
 {
+	struct<3> Var0;
+	var uVar1;
+	var uVar2;
+	bool bVar3;
+	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_10(Var0.y, 1, 1))
 		{
-			uVar3 = PLAYER::GET_PLAYER_PED(Var0.y);
-			if (ENTITY::DOES_ENTITY_EXIST(uVar3))
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(uVar3, 0))
+				if (PED::IS_PED_IN_ANY_VEHICLE(uVar1, 0))
 				{
-					uVar4 = PED::GET_VEHICLE_PED_IS_IN(uVar3, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar4, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					uVar2 = PED::GET_VEHICLE_PED_IS_IN(uVar1, 0);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_44(uVar4, &bVar5))
+						if (func_44(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar4, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
 						}
-						if (bVar5)
+						if (bVar3)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&uVar4);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&uVar2);
 						}
 					}
 				}
@@ -1102,7 +1221,7 @@ int func_49(int iParam0)
 {
 	if (iParam0 != func_31())
 	{
-		return MISC::IS_BIT_SET(Global_1590535[iParam0].f_274.f_334, 29);
+		return MISC::IS_BIT_SET(Global_1590535[iParam0 /*876*/].f_274.f_334, 29);
 	}
 	return 0;
 }
@@ -1111,7 +1230,7 @@ int func_50(int iParam0)
 {
 	if (iParam0 != func_31())
 	{
-		return MISC::IS_BIT_SET(Global_1590535[iParam0].f_274.f_393.f_2, 16);
+		return MISC::IS_BIT_SET(Global_1590535[iParam0 /*876*/].f_274.f_393.f_2, 16);
 	}
 	return 0;
 }
@@ -1134,6 +1253,8 @@ void func_51(struct<21> Param0)
 
 int func_52(int iParam0, int iParam1, bool bParam2)
 {
+	int iVar0;
+	
 	iVar0 = NETWORK::NETWORK_GET_SCRIPT_STATUS();
 	while (iVar0 != 2)
 	{
@@ -1238,7 +1359,7 @@ bool func_53()
 	return Global_1312854;
 }
 
-void func_54(var uParam0, struct<17> Param1, var uParam18, var uParam19, var uParam20, var uParam21)
+void func_54(var uParam0, struct<17> Param1, var uParam2, var uParam3, var uParam4, var uParam5)
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
@@ -1396,7 +1517,7 @@ int func_55(int iParam0)
 		case 78:
 			return 32;
 		
-		case 79:
+		case joaat("MPSV_LP0_31"):
 			return 32;
 		
 		case 80:
