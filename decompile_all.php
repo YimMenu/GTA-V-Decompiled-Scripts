@@ -1,5 +1,6 @@
 <?php
 $proc_limit = 8;
+$out_dir = "decompiled_scripts";
 
 
 $cls = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
@@ -10,8 +11,14 @@ $descriptorspec = array(
 );
 $total_scripts = 0;
 $scripts_to_decompile = [];
+$decompiled_scripts = [];
 $procs = [];
 $last_out = "";
+
+if(!is_dir($out_dir))
+{
+	mkdir($out_dir);
+}
 
 foreach(scandir("scripts") as $script)
 {
@@ -24,7 +31,7 @@ foreach(scandir("scripts") as $script)
 
 function manageprocs()
 {
-	global $cls, $total_scripts, $scripts_to_decompile, $procs, $last_out;
+	global $out_dir, $cls, $total_scripts, $scripts_to_decompile, $decompiled_scripts, $procs, $last_out;
 	$script_names = [];
 	foreach($procs as $script => $proc)
 	{
@@ -37,6 +44,13 @@ function manageprocs()
 			proc_close($proc);
 			unset($scripts_to_decompile[$script]);
 			unset($procs[$script]);
+			$decompiled_scripts[$script] = true;
+			$dest = $out_dir."/{$script}.c";
+			if(is_file($dest))
+			{
+				unlink($dest);
+			}
+			rename("scripts/{$script}_ysc/{$script}.ysc.full.c", $dest);
 		}
 	}
 	$out = "Decompiling: ".join(", ", $script_names)."\nRemaining: ".count($scripts_to_decompile)."/".$total_scripts;
@@ -73,4 +87,23 @@ while(count($procs) > 0)
 	usleep(50000);
 }
 
-echo $cls."All done. :D\n";
+echo $cls."Deleting old scripts...\n";
+$had_old_scripts = false;
+foreach(scandir($out_dir) as $file)
+{
+	if(substr($file, -2) != ".c")
+	{
+		continue;
+	}
+	$file = substr($file, 0, -2);
+	if(!array_key_exists($file, $decompiled_scripts))
+	{
+		echo $file."\n";
+		$had_old_scripts = true;
+	}
+}
+if(!$had_old_scripts)
+{
+	echo "No old scripts found.\n";
+}
+echo "All done. :D\n";
