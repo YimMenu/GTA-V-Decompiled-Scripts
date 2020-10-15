@@ -256,8 +256,8 @@ void __EntryFunction__()
 			uLocal_57 = uLocal_57;
 			Local_75 = { Local_55 };
 			Local_76 = { Var0.f_1[0 /*3*/] };
-			Local_75.z = 0f;
-			Local_76.z = 0f;
+			Local_75.f_2 = 0f;
+			Local_76.f_2 = 0f;
 			fLocal_74 = SYSTEM::VDIST2(Local_75, Local_76);
 			switch (iLocal_59)
 			{
@@ -279,7 +279,7 @@ void __EntryFunction__()
 							}
 							func_108(10);
 						}
-						if ((Local_55.z - Var0.f_1[0 /*3*/].f_2) > 500f)
+						if ((Local_55.f_2 - Var0.f_1[0 /*3*/].f_2) > 500f)
 						{
 						}
 					}
@@ -1039,7 +1039,7 @@ var func_23()
 	
 	Var0 = { ENTITY::GET_ENTITY_ROTATION(iLocal_94, 2) };
 	Local_93 = { ENTITY::GET_ENTITY_COORDS(iLocal_94, 1) };
-	Local_93.f_3 = Var0.z;
+	Local_93.f_3 = Var0.f_2;
 	Local_93.f_4 = iLocal_94;
 	if (!MISC::IS_BIT_SET(Global_111599, 10))
 	{

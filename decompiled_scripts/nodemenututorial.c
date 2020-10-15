@@ -2146,7 +2146,7 @@ void func_92(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -2166,19 +2166,19 @@ void func_93(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_95(Var0.y, 1, 1))
+		if (func_95(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(uVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(uVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_94(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -3714,24 +3714,24 @@ int func_176(int iParam0, bool bParam1, bool bParam2, float fParam3, float fPara
 		}
 		Var7 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar1) };
 		Var7.x = (Var7.x * (func_177(iParam0) / fVar4));
-		Var7.y = (Var7.y * (func_177(iParam0) / fVar4));
+		Var7.f_1 = (Var7.f_1 * (func_177(iParam0) / fVar4));
 		if (!bParam2)
 		{
 			Var7.x = (Var7.x - 2f);
-			Var7.y = (Var7.y - 2f);
+			Var7.f_1 = (Var7.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
 			Var7.x = 288f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22350.f_7029[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
 			Var7.x = 106f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		*fParam3 = ((Var7.x / IntToFloat(iVar2)) * IntToFloat((iVar2 / iVar3)));
-		*fParam4 = (((Var7.y / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
+		*fParam4 = (((Var7.f_1 / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)
@@ -4818,7 +4818,7 @@ void func_196(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				func_169(Global_22347, (fVar49 + 0f), fParam5, 0.034722f, iVar1, iVar2, iVar3, iVar4);
 				Var38 = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
 				Var38.x = (Var38.x * (0.5f / fVar60));
-				Var38.y = (Var38.y * (0.5f / fVar60));
+				Var38.f_1 = (Var38.f_1 * (0.5f / fVar60));
 				if (Global_22350.f_8415)
 				{
 					iVar1 = 0;
@@ -4830,7 +4830,7 @@ void func_196(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(1, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.y / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.f_1 / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
 				fVar49 = (fVar49 + (0f + 0.034722f));
 			}
 			if (MISC::GET_HASH_KEY(&(Global_22350.f_4690)) != 0 && Global_22350.f_4766 != -1)
@@ -6536,7 +6536,7 @@ int func_215()
 		MOBILE::GET_MOBILE_PHONE_POSITION(&Var0);
 		if (Global_19431 == 0)
 		{
-			if (Var0.y > -119f)
+			if (Var0.f_1 > -119f)
 			{
 				return 1;
 			}
@@ -6545,7 +6545,7 @@ int func_215()
 				return 0;
 			}
 		}
-		else if (Var0.y > -101f)
+		else if (Var0.f_1 > -101f)
 		{
 			return 1;
 		}

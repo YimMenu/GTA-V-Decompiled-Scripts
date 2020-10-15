@@ -399,8 +399,8 @@ Vector3 func_9(struct<3> Param0, struct<3> Param1, float fParam2, int iParam3)
 	struct<3> Var0;
 	
 	Var0.x = func_7(Param0.x, Param1.x, fParam2, iParam3);
-	Var0.y = func_7(Param0.y, Param1.y, fParam2, iParam3);
-	Var0.z = func_7(Param0.z, Param1.z, fParam2, iParam3);
+	Var0.f_1 = func_7(Param0.f_1, Param1.f_1, fParam2, iParam3);
+	Var0.f_2 = func_7(Param0.f_2, Param1.f_2, fParam2, iParam3);
 	return Var0;
 }
 
@@ -1090,7 +1090,7 @@ void func_53(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uParam
 	struct<3> Var1;
 	struct<3> Var2;
 	
-	if ((ENTITY::DOES_ENTITY_EXIST(Param0.y) && ENTITY::DOES_ENTITY_EXIST(Param0.f_2[0])) && NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(Param0.f_2[0]))
+	if ((ENTITY::DOES_ENTITY_EXIST(Param0.f_1) && ENTITY::DOES_ENTITY_EXIST(Param0.f_2[0])) && NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(Param0.f_2[0]))
 	{
 		Var0.f_1 = 14;
 		Var0.f_16 = 14;
@@ -1098,7 +1098,7 @@ void func_53(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uParam
 		Var0.f_102 = 14;
 		func_54(14, &Var0);
 		Var0.f_59[0 /*3*/].f_2 = ENTITY::GET_ENTITY_HEADING(Local_156);
-		Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Param0.y, Var0.f_16[0 /*3*/]) };
+		Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Param0.f_1, Var0.f_16[0 /*3*/]) };
 		Var2 = { Var0.f_59[0 /*3*/] };
 		ENTITY::SET_ENTITY_COORDS_NO_OFFSET(Param0.f_2[0], Var1, 0, 0, 1);
 		ENTITY::SET_ENTITY_ROTATION(Param0.f_2[0], Var2, 2, 1);
@@ -1130,7 +1130,7 @@ int func_55(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uParam4
 {
 	struct<103> Var0;
 	
-	if ((ENTITY::DOES_ENTITY_EXIST(Param0.y) && ENTITY::DOES_ENTITY_EXIST(Param0.f_2[0])) && NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(Param0.f_2[0]))
+	if ((ENTITY::DOES_ENTITY_EXIST(Param0.f_1) && ENTITY::DOES_ENTITY_EXIST(Param0.f_2[0])) && NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(Param0.f_2[0]))
 	{
 		if (ENTITY::IS_ENTITY_ATTACHED_TO_ANY_PED(Param0.f_2[0]))
 		{
@@ -1140,7 +1140,7 @@ int func_55(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uParam4
 			Var0.f_102 = 14;
 			func_54(14, &Var0);
 			ENTITY::DETACH_ENTITY(Param0.f_2[0], 1, 1);
-			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(Param0.f_2[0], ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Param0.y, Var0.f_16[0 /*3*/]), 0, 0, 1);
+			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(Param0.f_2[0], ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Param0.f_1, Var0.f_16[0 /*3*/]), 0, 0, 1);
 			Var0.f_59[0 /*3*/].f_2 = ENTITY::GET_ENTITY_HEADING(Local_156);
 			ENTITY::SET_ENTITY_ROTATION(Param0.f_2[0], Var0.f_59[0 /*3*/], 2, 1);
 			return 1;
@@ -1173,8 +1173,8 @@ void func_57(var uParam0)
 		return;
 	}
 	Var1.x = -1371974564;
-	Var1.y = PLAYER::PLAYER_ID();
-	Var1.z = uParam0;
+	Var1.f_1 = PLAYER::PLAYER_ID();
+	Var1.f_2 = uParam0;
 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var1, 3, iVar0);
 }
 
@@ -1308,9 +1308,9 @@ void func_59(int iParam0, int iParam1)
 		case 954195585:
 			if (SCRIPT::GET_EVENT_DATA(1, iParam1, &Var3, 3))
 			{
-				if (NETWORK::NETWORK_IS_PLAYER_A_PARTICIPANT(Var3.y))
+				if (NETWORK::NETWORK_IS_PLAYER_A_PARTICIPANT(Var3.f_1))
 				{
-					Local_156.f_165 = Var3.z;
+					Local_156.f_165 = Var3.f_2;
 					func_42(7);
 				}
 			}
@@ -2745,17 +2745,17 @@ Vector3 func_99(int iParam0, bool bParam1)
 		fVar2 = ENTITY::GET_ENTITY_HEADING(iParam0);
 		if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
 		{
-			fVar2 = Var1.z;
+			fVar2 = Var1.f_2;
 		}
 	}
 	MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(iParam0), &Var3, &Var4);
 	if (bParam1)
 	{
-		fVar5 = (Var4.z + 0.18f);
+		fVar5 = (Var4.f_2 + 0.18f);
 	}
 	else
 	{
-		fVar5 = (Var3.z + 0.18f);
+		fVar5 = (Var3.f_2 + 0.18f);
 	}
 	Var0 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var0, fVar2, 0f, 0f, fVar5) };
 	return Var0;
@@ -5770,8 +5770,8 @@ void func_194(var uParam0)
 		return;
 	}
 	Var1.x = 954195585;
-	Var1.y = PLAYER::PLAYER_ID();
-	Var1.z = uParam0;
+	Var1.f_1 = PLAYER::PLAYER_ID();
+	Var1.f_2 = uParam0;
 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var1, 3, iVar0);
 }
 
@@ -8483,9 +8483,9 @@ int func_322(int iParam0, int iParam1)
 		func_677(iParam0, iParam1, 0, &Var0);
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0.y) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0.f_1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
 			{
-				if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var0.y, 3))
+				if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var0.f_1, 3))
 				{
 					fVar1 = 0.96f;
 					uVar2 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Global_1702977.f_1);
@@ -8527,9 +8527,9 @@ int func_323(int iParam0)
 			if (iVar2 != -1)
 			{
 				func_677(iVar2, iParam0, Global_2425662[PLAYER::PLAYER_ID() /*421*/].f_416.f_2, &Var1);
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.y) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
 				{
-					return ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.y, 3);
+					return ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.f_1, 3);
 				}
 			}
 		}
@@ -11402,15 +11402,15 @@ void func_351(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_339(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_339(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -12368,7 +12368,7 @@ void func_354(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -12377,19 +12377,19 @@ void func_354(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_355(Var2.z)] = Var2.x;
+						(*uParam0)[func_355(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_355(Var2.z)] = func_339(iParam1, Var2.x, func_355(Var2.z), iVar0);
+						(*uParam0)[func_355(Var2.f_2)] = func_339(iParam1, Var2.x, func_355(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_355(Var2.z)] = Var2.y;
+					(*uParam0)[func_355(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -87183,7 +87183,7 @@ void func_599(var uParam0, var uParam1)
 				ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ((*uParam1)[3]), true, 0);
 				Var1 = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ((*uParam1)[3]), 1) };
 				Var2 = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ((*uParam1)[0]), 1) };
-				Var1.z = (Var2.z + 0.0225f);
+				Var1.f_2 = (Var2.f_2 + 0.0225f);
 				ENTITY::SET_ENTITY_COORDS(NETWORK::NET_TO_OBJ((*uParam1)[3]), Var1, 1, 0, 0, 1);
 			}
 		}
@@ -88071,9 +88071,9 @@ void func_633(int iParam0)
 {
 	struct<3> Var0;
 	
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.x = -1737247303;
-	Var0.z = iParam0;
+	Var0.f_2 = iParam0;
 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 3, func_188(1, 1));
 }
 
@@ -88223,9 +88223,9 @@ void func_637(int iParam0, var uParam1)
 			if (iVar1 != -1)
 			{
 				func_677(10, uParam1->f_522, 0, &Var0);
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0.y))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0.f_1))
 				{
-					if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var0.y, 3) && func_322(10, uParam1->f_522))
+					if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var0.f_1, 3) && func_322(10, uParam1->f_522))
 					{
 						uParam1->f_522.f_3 = 0;
 						uParam1->f_522.f_4 = 1;
@@ -88377,9 +88377,9 @@ void func_642(int iParam0, var uParam1)
 			if (iVar0 != -1)
 			{
 				func_677(10, 1, 0, &Var1);
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.y))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_1))
 				{
-					if (((ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.y, 3) && func_322(9, 1)) && uParam1->f_522 != 3) && uParam1->f_522 != 4)
+					if (((ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.f_1, 3) && func_322(9, 1)) && uParam1->f_522 != 3) && uParam1->f_522 != 4)
 					{
 						uParam1->f_522.f_3 = 0;
 						uParam1->f_522.f_4 = 1;
@@ -91921,7 +91921,7 @@ void func_715(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -91941,19 +91941,19 @@ void func_716(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_45(Var0.y, 1, 1))
+		if (func_45(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_717(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{

@@ -507,7 +507,7 @@ void func_4()
 			Var2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
 			if (func_59(1, 0, 1))
 			{
-				if ((((func_64(Var0, Var1) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) >= (func_63() - 90f)) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) <= (func_63() + 90f)) && Var2.z > 33f) && !PED::IS_PED_JUMPING(PLAYER::PLAYER_PED_ID()))
+				if ((((func_64(Var0, Var1) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) >= (func_63() - 90f)) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) <= (func_63() + 90f)) && Var2.f_2 > 33f) && !PED::IS_PED_JUMPING(PLAYER::PLAYER_PED_ID()))
 				{
 					if ((!PLAYER::IS_PLAYER_FREE_AIMING(PLAYER::PLAYER_ID()) && !PLAYER::IS_PLAYER_TARGETTING_ANYTHING(PLAYER::PLAYER_ID())) && PAD::IS_CONTROL_PRESSED(2, 51))
 					{
@@ -674,30 +674,30 @@ void func_4()
 				switch (iLocal_282)
 				{
 					case 0:
-						Var3.z = (Var3.z - 0.2f);
+						Var3.f_2 = (Var3.f_2 - 0.2f);
 						break;
 					
 					case 1:
-						Var3.z = (Var3.z - 0.15f);
+						Var3.f_2 = (Var3.f_2 - 0.15f);
 						break;
 					
 					case 2:
-						Var3.z = (Var3.z - 0.05f);
+						Var3.f_2 = (Var3.f_2 - 0.05f);
 						break;
 					
 					case 3:
-						Var3.z = (Var3.z - 0.15f);
+						Var3.f_2 = (Var3.f_2 - 0.15f);
 						break;
 					
 					case 4:
-						Var3.z = (Var3.z - 0.15f);
+						Var3.f_2 = (Var3.f_2 - 0.15f);
 						break;
 					
 					case 5:
-						Var3.z = (Var3.z - 0.1f);
+						Var3.f_2 = (Var3.f_2 - 0.1f);
 						break;
 				}
-				uLocal_281 = PED::CREATE_SYNCHRONIZED_SCENE(Var3.x, Var3.y, Var3.z, 0f, 0f, fLocal_287, 2);
+				uLocal_281 = PED::CREATE_SYNCHRONIZED_SCENE(Var3.x, Var3.f_1, Var3.f_2, 0f, 0f, fLocal_287, 2);
 				TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), uLocal_281, func_75(), sLocal_284, 1000f, -4f, 0, 0, 1148846080, 0);
 				if (PED::IS_SYNCHRONIZED_SCENE_HOLD_LAST_FRAME(uLocal_281))
 				{
@@ -2509,9 +2509,9 @@ int func_65(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -2520,7 +2520,7 @@ int func_65(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -2795,7 +2795,7 @@ int func_74()
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_41))
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_41, 1) };
-		if (!ENTITY::IS_ENTITY_DEAD(iLocal_41, 0) && Var0.z > 33f)
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_41, 0) && Var0.f_2 > 33f)
 		{
 			return 1;
 		}

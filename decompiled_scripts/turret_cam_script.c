@@ -189,8 +189,8 @@ void func_3(var uParam0, var uParam1)
 	Var0 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 	if ((((HUD::IS_PAUSE_MENU_ACTIVE() || func_8()) || PAD::IS_CONTROL_JUST_PRESSED(2, 199)) || PAD::IS_CONTROL_PRESSED(2, 199)) || PAD::IS_CONTROL_JUST_RELEASED(2, 199))
 	{
-		HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.y);
-		HUD::_0xA17784FCA9548D15(Var0.x, Var0.y, 0);
+		HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.f_1);
+		HUD::_0xA17784FCA9548D15(Var0.x, Var0.f_1, 0);
 		if (HUD::IS_PAUSE_MENU_ACTIVE() || func_8())
 		{
 			if (HUD::DOES_BLIP_EXIST(HUD::GET_MAIN_PLAYER_BLIP_ID()))
@@ -203,7 +203,7 @@ void func_3(var uParam0, var uParam1)
 	{
 		HUD::SET_BLIP_ALPHA(HUD::GET_MAIN_PLAYER_BLIP_ID(), 0);
 	}
-	HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.y);
+	HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
 	uVar1 = CAM::GET_RENDERING_CAM();
 	if (CAM::DOES_CAM_EXIST(uVar1))
 	{
@@ -230,17 +230,17 @@ void func_3(var uParam0, var uParam1)
 		HUD::SET_BLIP_SCALE(*uParam0, 0.44f);
 		HUD::SET_BLIP_PRIORITY(*uParam0, 13 + 1);
 		HUD::SET_BLIP_HIDDEN_ON_LEGEND(*uParam0, 1);
-		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.y)));
+		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.f_1)));
 		HUD::SET_BLIP_HIDDEN_ON_LEGEND(*uParam1, 1);
-		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.y)));
+		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.f_1)));
 	}
 	else
 	{
 		HUD::SET_BLIP_COORDS(*uParam0, Var0);
-		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.y)));
+		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.f_1)));
 		HUD::SET_BLIP_DISPLAY(*uParam0, 5);
 		HUD::SET_BLIP_COORDS(*uParam1, Var0);
-		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.y)));
+		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.f_1)));
 		HUD::SET_BLIP_DISPLAY(*uParam1, 5);
 	}
 }
@@ -438,10 +438,10 @@ Vector3 func_7(struct<3> Param0)
 	struct<3> Var0;
 	
 	Var0.x = SYSTEM::COS(Param0.x);
-	Var0.y = SYSTEM::COS(Param0.z);
-	Var0.z = SYSTEM::SIN(Param0.x);
-	Var0.y = (Var0.y * Var0.x);
-	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.z));
+	Var0.f_1 = SYSTEM::COS(Param0.f_2);
+	Var0.f_2 = SYSTEM::SIN(Param0.x);
+	Var0.f_1 = (Var0.f_1 * Var0.x);
+	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.f_2));
 	return Var0;
 }
 
@@ -859,7 +859,7 @@ int func_21()
 		MOBILE::GET_MOBILE_PHONE_POSITION(&Var0);
 		if (Global_19431 == 0)
 		{
-			if (Var0.y > -119f)
+			if (Var0.f_1 > -119f)
 			{
 				return 1;
 			}
@@ -868,7 +868,7 @@ int func_21()
 				return 0;
 			}
 		}
-		else if (Var0.y > -101f)
+		else if (Var0.f_1 > -101f)
 		{
 			return 1;
 		}
@@ -1222,7 +1222,7 @@ void func_37()
 			}
 		
 		case 0:
-			func_38(Local_65.f_36, 0f, CAM::GET_CAM_FOV(Local_65), Local_64.f_4, Local_64.f_5, Var0.z);
+			func_38(Local_65.f_36, 0f, CAM::GET_CAM_FOV(Local_65), Local_64.f_4, Local_64.f_5, Var0.f_2);
 			break;
 	}
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(0);
@@ -1272,7 +1272,7 @@ void func_41()
 		Var0 = { func_46(Local_65, &(Local_65.f_1), Local_64, Local_64.f_6.f_1, Local_64.f_6) };
 	}
 	Var1 = { Local_64.f_91 + Local_65.f_1 };
-	Var2 = { func_45(Local_64.f_71, Var1.z) };
+	Var2 = { func_45(Local_64.f_71, Var1.f_2) };
 	Var3 = { Local_64.f_88 + Var2 };
 	switch (Local_64.f_94)
 	{
@@ -1413,9 +1413,9 @@ Vector3 func_45(struct<3> Param0, Vector3 vParam1)
 	
 	fVar1 = SYSTEM::SIN(uParam1);
 	fVar2 = SYSTEM::COS(vParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -1462,21 +1462,21 @@ struct<4> func_46(var uParam0, var uParam1, struct<6> Param2, float fParam3, flo
 	CAM::_0x487A82C650EB7799(1f);
 	GRAPHICS::_0xE2892E7E55D7073A(fVar6);
 	Var7.x = Param2.f_2;
-	Var7.y = 0f;
-	Var7.z = Param2;
+	Var7.f_1 = 0f;
+	Var7.f_2 = Param2;
 	Var8.x = Param2.f_3;
-	Var8.y = 0f;
-	Var8.z = Param2.f_1;
+	Var8.f_1 = 0f;
+	Var8.f_2 = Param2.f_1;
 	fVar9 = (((fVar4 * fVar5) * fParam3) * (1f + ((fVar5 - Param2.f_4) / (Param2.f_5 - Param2.f_4))));
 	Var10 = { Var3 };
-	Var10.z = (Var10.z * fVar9);
+	Var10.f_2 = (Var10.f_2 * fVar9);
 	Var10.x = (Var10.x * fVar9);
 	*uParam1 = { *uParam1 + Var10 };
-	bVar11 = Var7.z > Var8.z;
+	bVar11 = Var7.f_2 > Var8.f_2;
 	if (bVar11)
 	{
 		*uParam1 = func_49(*uParam1, Var7.x, Var8.x);
-		uParam1->f_1 = func_49(uParam1->f_1, Var7.y, Var8.y);
+		uParam1->f_1 = func_49(uParam1->f_1, Var7.f_1, Var8.f_1);
 		uParam1->f_2 = func_48(uParam1->f_2);
 	}
 	else
@@ -1491,8 +1491,8 @@ struct<4> func_46(var uParam0, var uParam1, struct<6> Param2, float fParam3, flo
 Vector3 func_47(struct<3> Param0, struct<3> Param1, struct<3> Param2)
 {
 	Param0.x = func_49(Param0.x, Param1.x, Param2.x);
-	Param0.y = func_49(Param0.y, Param1.y, Param2.y);
-	Param0.z = func_49(Param0.z, Param1.z, Param2.z);
+	Param0.f_1 = func_49(Param0.f_1, Param1.f_1, Param2.f_1);
+	Param0.f_2 = func_49(Param0.f_2, Param1.f_2, Param2.f_2);
 	return Param0;
 }
 
@@ -1675,9 +1675,9 @@ bool func_56(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_57(bool bParam0)
@@ -1746,7 +1746,7 @@ void func_58(float fParam0, float fParam1, var uParam2, var uParam3, var uParam4
 
 float func_59(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_60(struct<3> Param0, float fParam1)
@@ -2067,7 +2067,7 @@ float func_78(var uParam0)
 		return 1f;
 	}
 	Var0 = { Var0 - Vector(0f, 0.5f, 0.5f) };
-	Var0.z = 0f;
+	Var0.f_2 = 0f;
 	return SYSTEM::VMAG2(Var0);
 }
 
@@ -2099,8 +2099,8 @@ Vector3 func_80(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -2296,10 +2296,10 @@ void func_85()
 			}
 			func_58(0f, Local_64.f_8.f_4, &Var6, &Var7, &uVar8, &Var9);
 			Var10 = { Vector(Local_64.f_13, Local_64.f_13, Local_64.f_13) * func_86(0f, 0f, 0f, 1f) };
-			Var10.y = 0f;
+			Var10.f_1 = 0f;
 			Var9 = { Var9 + Var10 };
 			Var7 = { Var6 + FtoV(SYSTEM::VMAG(Var7 - Var6)) * func_7(Var9) };
-			Var6.z = (Var6.z - 1f);
+			Var6.f_2 = (Var6.f_2 - 1f);
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var6, Var7, Local_64.f_8.f_3, 0, Local_64.f_8, PLAYER::PLAYER_PED_ID(), 1, 1, -1082130432, Local_64.f_95, 0, 0, 0, 1, 0, Local_64.f_94 != 0);
 			if (Local_65.f_40.f_13.f_2 != -1 && AUDIO::HAS_SOUND_FINISHED(Local_65.f_40.f_13.f_2))
 			{
@@ -3252,7 +3252,7 @@ void func_124(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -3272,19 +3272,19 @@ void func_125(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_82(Var0.y, 1, 1))
+		if (func_82(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_126(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{

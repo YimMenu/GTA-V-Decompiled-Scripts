@@ -439,8 +439,8 @@ void __EntryFunction__()
 			fLocal_57 = fLocal_57;
 			Local_75 = { Local_55 };
 			Local_76 = { ScriptParam_274.f_1[0 /*3*/] };
-			Local_75.z = 0f;
-			Local_76.z = 0f;
+			Local_75.f_2 = 0f;
+			Local_76.f_2 = 0f;
 			fLocal_74 = SYSTEM::VDIST2(Local_75, Local_76);
 			switch (iLocal_59)
 			{
@@ -462,7 +462,7 @@ void __EntryFunction__()
 							}
 							func_135(10);
 						}
-						if ((Local_55.z - ScriptParam_274.f_1[0 /*3*/].f_2) > 500f)
+						if ((Local_55.f_2 - ScriptParam_274.f_1[0 /*3*/].f_2) > 500f)
 						{
 						}
 					}
@@ -3296,7 +3296,7 @@ int func_85(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4)
 			{
 				return 1;
 			}
-			if (MISC::IS_PROJECTILE_IN_AREA((Var1.x - 5f), (Var1.y - 5f), (Var1.z - 5f), (Var1.x + 5f), (Var1.y + 5f), (Var1.z + 5f), 0))
+			if (MISC::IS_PROJECTILE_IN_AREA((Var1.x - 5f), (Var1.f_1 - 5f), (Var1.f_2 - 5f), (Var1.x + 5f), (Var1.f_1 + 5f), (Var1.f_2 + 5f), 0))
 			{
 				return 1;
 			}
@@ -4229,7 +4229,7 @@ int func_122(bool bParam0)
 
 int func_123(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

@@ -490,8 +490,8 @@ void func_7()
 			SYSTEM::WAIT(0);
 		}
 		PED::ADD_RELATIONSHIP_GROUP("homeless", &uLocal_49);
-		Local_48.z = (Local_47.z - 1f);
-		iLocal_50 = PED::CREATE_PED(19, joaat("a_m_o_tramp_01"), Local_47.x, Local_47.y, Local_48.z, 0f, 1, 1);
+		Local_48.f_2 = (Local_47.f_2 - 1f);
+		iLocal_50 = PED::CREATE_PED(19, joaat("a_m_o_tramp_01"), Local_47.x, Local_47.f_1, Local_48.f_2, 0f, 1, 1);
 		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_50, uLocal_49);
 		if (iLocal_44 == 1)
 		{

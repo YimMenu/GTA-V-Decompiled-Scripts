@@ -4292,7 +4292,7 @@ void func_19(bool bParam0)
 	{
 		HUD::REMOVE_BLIP(&uLocal_651);
 	}
-	if (HUD::DOES_BLIP_EXIST(Local_395.z))
+	if (HUD::DOES_BLIP_EXIST(Local_395.f_2))
 	{
 		HUD::REMOVE_BLIP(&(Local_395.f_2));
 	}
@@ -4308,7 +4308,7 @@ void func_19(bool bParam0)
 	{
 		HUD::REMOVE_BLIP(&(Local_188.f_1));
 	}
-	if (HUD::DOES_BLIP_EXIST(Local_408.z))
+	if (HUD::DOES_BLIP_EXIST(Local_408.f_2))
 	{
 		HUD::REMOVE_BLIP(&(Local_408.f_2));
 	}
@@ -4573,9 +4573,9 @@ bool func_32(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_33(int iParam0)
@@ -28631,15 +28631,15 @@ void func_110(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_111(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_111(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -29960,7 +29960,7 @@ void func_116(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -29969,19 +29969,19 @@ void func_116(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_117(Var2.z)] = Var2.x;
+						(*uParam0)[func_117(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_117(Var2.z)] = func_111(iParam1, Var2.x, func_117(Var2.z), iVar0);
+						(*uParam0)[func_117(Var2.f_2)] = func_111(iParam1, Var2.x, func_117(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_117(Var2.z)] = Var2.y;
+					(*uParam0)[func_117(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -98535,7 +98535,7 @@ int func_368(var uParam0)
 					{
 						if (!Local_422[iVar4 /*33*/][iVar5 /*4*/].f_3)
 						{
-							if (MISC::ABSF((Var8.z - (Local_422[iVar4 /*33*/][iVar5 /*4*/].f_1 + 0.1f))) < 0.06f)
+							if (MISC::ABSF((Var8.f_2 - (Local_422[iVar4 /*33*/][iVar5 /*4*/].f_1 + 0.1f))) < 0.06f)
 							{
 								Local_422[iVar4 /*33*/][iVar5 /*4*/].f_2 = (Local_422[iVar4 /*33*/][iVar5 /*4*/].f_2 + MISC::GET_FRAME_TIME());
 								if (Local_422[iVar4 /*33*/][iVar5 /*4*/].f_2 >= 0.95f)
@@ -98558,7 +98558,7 @@ int func_368(var uParam0)
 			iVar4 = 0;
 			while (iVar4 < 7)
 			{
-				if (MISC::ABSF((Var8.z - (Local_423[iVar4 /*29*/][0 /*4*/].f_1 + 0.08f))) < 0.02f)
+				if (MISC::ABSF((Var8.f_2 - (Local_423[iVar4 /*29*/][0 /*4*/].f_1 + 0.08f))) < 0.02f)
 				{
 					bVar2 = true;
 					bVar3 = true;
@@ -98860,7 +98860,7 @@ void func_369(var uParam0, var uParam1, bool bParam2)
 	Var0 = { func_370(uParam0, *uParam1, uParam1->f_1) };
 	if (!bParam2)
 	{
-		Var0 = { (Var0.x + (0.05f * -uParam0->f_8)), (Var0.y + (0.05f * uParam0->f_9)), Var0.z };
+		Var0 = { (Var0.x + (0.05f * -uParam0->f_8)), (Var0.f_1 + (0.05f * uParam0->f_9)), Var0.f_2 };
 	}
 	if (!uParam1->f_3)
 	{
@@ -98874,9 +98874,9 @@ Vector3 func_370(var uParam0, float fParam1, float fParam2)
 	float fVar1;
 	
 	fVar1 = (fParam2 * uParam0->f_10);
-	Var0.z = (uParam0->f_2 + fParam2);
+	Var0.f_2 = (uParam0->f_2 + fParam2);
 	Var0.x = ((*uParam0 + (fParam1 * uParam0->f_9)) + (fVar1 * -uParam0->f_8));
-	Var0.y = ((uParam0->f_1 + (fParam1 * uParam0->f_8)) + (fVar1 * uParam0->f_9));
+	Var0.f_1 = ((uParam0->f_1 + (fParam1 * uParam0->f_8)) + (fVar1 * uParam0->f_9));
 	return Var0;
 }
 
@@ -98963,7 +98963,7 @@ void func_374()
 			break;
 		
 		case 1:
-			Var2.z = (fVar1 * SYSTEM::SIN((IntToFloat((MISC::GET_GAME_TIMER() - iLocal_558)) * fVar0)));
+			Var2.f_2 = (fVar1 * SYSTEM::SIN((IntToFloat((MISC::GET_GAME_TIMER() - iLocal_558)) * fVar0)));
 			Var2 = { Var2 + Local_632 };
 			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(Local_408.x, Var2, 0, 0, 1);
 			break;
@@ -100774,21 +100774,21 @@ int func_390(int iParam0, int iParam1, struct<3> Param2, struct<3> Param3, float
 		fVar6 = MISC::GET_FRAME_TIME();
 		Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, 1) };
 		Var1.x = ENTITY::GET_ENTITY_PITCH(iParam0);
-		Var1.y = ENTITY::GET_ENTITY_ROLL(iParam0);
-		Var1.z = ENTITY::GET_ENTITY_HEADING(iParam0);
+		Var1.f_1 = ENTITY::GET_ENTITY_ROLL(iParam0);
+		Var1.f_2 = ENTITY::GET_ENTITY_HEADING(iParam0);
 		Var4 = { Vector(0f, 0f, 0f) - Local_3465 };
 		Var4 = { Var4 / FtoV(((SYSTEM::TO_FLOAT(iLocal_3464) / 1000f) / fVar6)) };
 		Local_3465 = { Local_3465 + Var4 };
 		Var0 = { Var0 + Local_3465 * Vector(fVar6, fVar6, fVar6) };
 		Var2 = { Param2 - Var0 };
 		Var3 = { Param3 - Var1 };
-		if (Var3.z < 0f)
+		if (Var3.f_2 < 0f)
 		{
-			Var3.z = (Var3.z + 360f);
+			Var3.f_2 = (Var3.f_2 + 360f);
 		}
-		if (Var3.z > (Param3.z + 180f))
+		if (Var3.f_2 > (Param3.f_2 + 180f))
 		{
-			Var3.z = (Var3.z - 360f);
+			Var3.f_2 = (Var3.f_2 - 360f);
 		}
 		Var7 = { func_392(Var3) };
 		Var8 = { func_392(Var2) };
@@ -100796,8 +100796,8 @@ int func_390(int iParam0, int iParam1, struct<3> Param2, struct<3> Param3, float
 		Var7 = { Var7 * FtoV(((SYSTEM::VMAG(Var3) / SYSTEM::TO_FLOAT(iLocal_3464)) * (fVar6 * 1000f))) };
 		Var0 = { Var0 + Var8 };
 		Var1 = { Var1 + Var7 };
-		Var5 = { func_391(Var1.x, Var1.y, Var1.z) };
-		Var0.z = (Var0.z + fParam4);
+		Var5 = { func_391(Var1.x, Var1.f_1, Var1.f_2) };
+		Var0.f_2 = (Var0.f_2 + fParam4);
 		ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iParam0, Var0, 0, 0, 1);
 		ENTITY::SET_ENTITY_QUATERNION(iParam0, Var5, Var5.f_1, Var5.f_2, Var5.f_3);
 		iLocal_3464 = (iLocal_3464 - SYSTEM::ROUND((fVar6 * 1000f)));
@@ -100849,8 +100849,8 @@ Vector3 func_392(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -106708,17 +106708,17 @@ int func_467(var uParam0, float fParam1, float fParam2, int iParam3, int iParam4
 					break;
 				
 				case 2:
-					if (Var14.z > Var13.z)
+					if (Var14.f_2 > Var13.f_2)
 					{
-						fVar4 = func_500((Var14.z + 5f), (Var13.z + fVar15));
+						fVar4 = func_500((Var14.f_2 + 5f), (Var13.f_2 + fVar15));
 					}
 					else
 					{
-						fVar4 = func_500((Var13.z + 5f), (Var14.z + fVar15));
+						fVar4 = func_500((Var13.f_2 + 5f), (Var14.f_2 + fVar15));
 					}
 					fVar3 = 10f;
 					Var12 = { Var13 - Var14 };
-					Var12.z = 0f;
+					Var12.f_2 = 0f;
 					Var12 = { func_498(Var12, func_499((fVar4 * MISC::TAN(fVar3)), (fVar15 / 3f))) };
 					iVar2 = SYSTEM::ROUND(((fVar16 / ((30f - 7.5f) / (800f - 200f))) + 500f));
 					if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0))
@@ -106779,7 +106779,7 @@ int func_467(var uParam0, float fParam1, float fParam2, int iParam3, int iParam4
 					{
 						CAM::ATTACH_CAM_TO_ENTITY((*uParam0)[uParam0->f_24], PLAYER::PLAYER_PED_ID(), 0f, 0f, 5f, 0);
 					}
-					CAM::SET_CAM_ROT((*uParam0)[uParam0->f_24], -87.5f, 0f, Var10.z, 2);
+					CAM::SET_CAM_ROT((*uParam0)[uParam0->f_24], -87.5f, 0f, Var10.f_2, 2);
 					CAM::SET_CAM_FOV((*uParam0)[uParam0->f_24], CAM::GET_FINAL_RENDERED_CAM_FOV());
 					CAM::ADD_CAM_SPLINE_NODE_USING_CAMERA(uParam0->f_9, (*uParam0)[uParam0->f_24], 400, 1);
 					uParam0->f_24++;
@@ -106796,7 +106796,7 @@ int func_467(var uParam0, float fParam1, float fParam2, int iParam3, int iParam4
 					{
 						CAM::ATTACH_CAM_TO_ENTITY((*uParam0)[uParam0->f_24], PLAYER::PLAYER_PED_ID(), Vector(fVar4, 0f, 0f) + Var12, 0);
 					}
-					CAM::SET_CAM_ROT((*uParam0)[uParam0->f_24], -87.5f, 0f, Var10.z, 2);
+					CAM::SET_CAM_ROT((*uParam0)[uParam0->f_24], -87.5f, 0f, Var10.f_2, 2);
 					CAM::SET_CAM_FOV((*uParam0)[uParam0->f_24], CAM::GET_FINAL_RENDERED_CAM_FOV());
 					CAM::ADD_CAM_SPLINE_NODE_USING_CAMERA(uParam0->f_9, (*uParam0)[uParam0->f_24], 400, 1);
 					uParam0->f_24++;
@@ -106857,17 +106857,17 @@ int func_467(var uParam0, float fParam1, float fParam2, int iParam3, int iParam4
 				
 				case 3:
 					fVar4 = 450f;
-					if (Var14.z > Var13.z)
+					if (Var14.f_2 > Var13.f_2)
 					{
-						fVar4 = func_500(fVar4, (Var14.z + 25f));
+						fVar4 = func_500(fVar4, (Var14.f_2 + 25f));
 					}
 					else
 					{
-						fVar4 = func_500(fVar4, (Var13.z + 25f));
+						fVar4 = func_500(fVar4, (Var13.f_2 + 25f));
 					}
 					fVar3 = 20f;
 					Var12 = { Var13 - Var14 };
-					Var12.z = 0f;
+					Var12.f_2 = 0f;
 					Var12 = { func_498(Var12, func_499((fVar4 * MISC::TAN(fVar3)), (fVar15 / 3f))) };
 					fVar16 = func_371(fVar16, 50f, 4000f);
 					iVar2 = SYSTEM::ROUND(((fVar16 / ((4000f - 50f) / (2000f - 1000f))) + 1000f));
@@ -106929,7 +106929,7 @@ int func_467(var uParam0, float fParam1, float fParam2, int iParam3, int iParam4
 					{
 						CAM::ATTACH_CAM_TO_ENTITY((*uParam0)[uParam0->f_24], PLAYER::PLAYER_PED_ID(), 0f, 0f, 5f, 0);
 					}
-					CAM::SET_CAM_ROT((*uParam0)[uParam0->f_24], -87.5f, 0f, Var10.z, 2);
+					CAM::SET_CAM_ROT((*uParam0)[uParam0->f_24], -87.5f, 0f, Var10.f_2, 2);
 					CAM::SET_CAM_FOV((*uParam0)[uParam0->f_24], CAM::GET_FINAL_RENDERED_CAM_FOV());
 					CAM::ADD_CAM_SPLINE_NODE_USING_CAMERA(uParam0->f_9, (*uParam0)[uParam0->f_24], 400, 1);
 					uParam0->f_24++;
@@ -106946,7 +106946,7 @@ int func_467(var uParam0, float fParam1, float fParam2, int iParam3, int iParam4
 					{
 						CAM::ATTACH_CAM_TO_ENTITY((*uParam0)[uParam0->f_24], PLAYER::PLAYER_PED_ID(), Vector(fVar4, 0f, 0f) + Var12, 0);
 					}
-					CAM::SET_CAM_ROT((*uParam0)[uParam0->f_24], -87.5f, 0f, Var10.z, 2);
+					CAM::SET_CAM_ROT((*uParam0)[uParam0->f_24], -87.5f, 0f, Var10.f_2, 2);
 					CAM::SET_CAM_FOV((*uParam0)[uParam0->f_24], CAM::GET_FINAL_RENDERED_CAM_FOV());
 					CAM::ADD_CAM_SPLINE_NODE_USING_CAMERA(uParam0->f_9, (*uParam0)[uParam0->f_24], 800, 1);
 					uParam0->f_24++;
@@ -107327,7 +107327,7 @@ float func_470(var uParam0)
 	if (CAM::DOES_CAM_EXIST(uParam0))
 	{
 		Var0 = { CAM::GET_CAM_COORD(uParam0) };
-		return Var0.z;
+		return Var0.f_2;
 	}
 	return 0f;
 }
@@ -107558,7 +107558,7 @@ int func_482(float fParam0)
 	struct<3> Var0;
 	
 	Var0 = { func_483(PLAYER::PLAYER_ID()) };
-	if (Var0.z < fParam0)
+	if (Var0.f_2 < fParam0)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
@@ -108254,7 +108254,7 @@ Vector3 func_501(int iParam0)
 	}
 	if (Global_2405072.f_598 == 180f)
 	{
-		Var0.y = -Var0.y;
+		Var0.f_1 = -Var0.f_1;
 	}
 	return Var0;
 }
@@ -110810,9 +110810,9 @@ int func_567(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -110821,7 +110821,7 @@ int func_567(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -111387,7 +111387,7 @@ int func_577(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 								if (ENTITY::IS_ENTITY_IN_WATER(iVar10) && !VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(iVar10))
 								{
 									Var19 = { ENTITY::GET_ENTITY_COORDS(iVar10, 1) };
-									if (Var19.z < -1f)
+									if (Var19.f_2 < -1f)
 									{
 										TASK::TASK_LEAVE_VEHICLE(uParam0->f_17[iVar0], iVar10, 64);
 									}
@@ -114003,7 +114003,7 @@ void func_639(var uParam0, int iParam1)
 		{
 			if (func_641(iVar0, &Var1, &uVar2))
 			{
-				Var1.z = (Var1.z + 1f);
+				Var1.f_2 = (Var1.f_2 + 1f);
 				*uParam0 = { Var1 };
 				uParam0->f_3 = uVar2;
 			}
@@ -114981,9 +114981,9 @@ Vector3 func_652(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -117223,8 +117223,8 @@ int func_679(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4
 				Var2 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
 				Var3 = { Var2 + uParam0->f_9 };
 				Var4 = { Var3 - ENTITY::GET_ENTITY_ROTATION(uParam0->f_5, 2) };
-				Var5 = { (-SYSTEM::SIN(Var3.z) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.z) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
-				Var6 = { (-SYSTEM::SIN(Var4.z) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.z) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
+				Var5 = { (-SYSTEM::SIN(Var3.f_2) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.f_2) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
+				Var6 = { (-SYSTEM::SIN(Var4.f_2) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.f_2) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
 				fVar7 = CAM::GET_FINAL_RENDERED_CAM_FOV();
 				if (uParam0->f_17 > 0 || iParam6 != 0)
 				{
@@ -117513,7 +117513,7 @@ void func_686()
 	OBJECT::DELETE_OBJECT(&Local_188);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_188.f_2);
 	VEHICLE::DELETE_VEHICLE(&Local_408);
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_408.y);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_408.f_1);
 	VEHICLE::DELETE_VEHICLE(&Local_387);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_387.f_1);
 	VEHICLE::DELETE_VEHICLE(&Local_389);
@@ -118680,7 +118680,7 @@ void func_713(var uParam0, int iParam1)
 		fVar18 = uParam0->f_10[iParam1 /*57*/].f_12;
 		Var17 = { func_392(Var17) };
 		Var19 = { Var16 + Var17 * Vector(fVar18, fVar18, fVar18) };
-		Var19.z = (Var19.z + uParam0->f_10[iParam1 /*57*/].f_16);
+		Var19.f_2 = (Var19.f_2 + uParam0->f_10[iParam1 /*57*/].f_16);
 		uParam0->f_10[iParam1 /*57*/].f_6 = { Var19 };
 	}
 	if (uParam0->f_10[iParam1 /*57*/].f_2 == 8)
@@ -118793,10 +118793,10 @@ Vector3 func_716(struct<3> Param0)
 	struct<3> Var0;
 	
 	Var0.x = SYSTEM::COS(Param0.x);
-	Var0.y = SYSTEM::COS(Param0.z);
-	Var0.z = SYSTEM::SIN(Param0.x);
-	Var0.y = (Var0.y * Var0.x);
-	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.z));
+	Var0.f_1 = SYSTEM::COS(Param0.f_2);
+	Var0.f_2 = SYSTEM::SIN(Param0.x);
+	Var0.f_1 = (Var0.f_1 * Var0.x);
+	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.f_2));
 	return Var0;
 }
 
@@ -124450,7 +124450,7 @@ void func_785()
 				CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(Local_55, "Dave_FBI", 0, Local_55.f_1, 0);
 				CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(uLocal_677[0], "Michael", 0, func_1104(0), 0);
 				CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(uLocal_677[1], "franklin", 1, func_1104(1), 0);
-				CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(Local_408.x, "FBI_5_heli", 0, Local_408.y, 0);
+				CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(Local_408.x, "FBI_5_heli", 0, Local_408.f_1, 0);
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_387, 0))
 				{
 					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(Local_387, "FBI_5_Lorry", 0, Local_387.f_1, 0);
@@ -126562,7 +126562,7 @@ int func_827()
 	
 	Var0 = { ENTITY::GET_ENTITY_ROTATION(Local_408.x, 2) };
 	Local_188.f_12 = { ENTITY::GET_ENTITY_ROTATION(Local_188, 2) };
-	if (((((ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(Local_408.x, PLAYER::PLAYER_PED_ID(), 1) || ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(Local_188, PLAYER::PLAYER_PED_ID(), 1)) || MISC::ABSF(Var0.x) > 29f) || MISC::ABSF(Var0.y) > 29f) || MISC::ABSF(Local_188.f_12) > 29f) || MISC::ABSF(Local_188.f_12.f_1) > 29f)
+	if (((((ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(Local_408.x, PLAYER::PLAYER_PED_ID(), 1) || ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(Local_188, PLAYER::PLAYER_PED_ID(), 1)) || MISC::ABSF(Var0.x) > 29f) || MISC::ABSF(Var0.f_1) > 29f) || MISC::ABSF(Local_188.f_12) > 29f) || MISC::ABSF(Local_188.f_12.f_1) > 29f)
 	{
 		ENTITY::CLEAR_ENTITY_LAST_DAMAGE_ENTITY(Local_408.x);
 		ENTITY::CLEAR_ENTITY_LAST_DAMAGE_ENTITY(Local_188);
@@ -127542,7 +127542,7 @@ int func_837()
 					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "outside_marine", 2, Local_72[3 /*25*/].f_1, 0);
 					if (CAM::_0xEE778F8C7E1142E2(6) == 4)
 					{
-						CUTSCENE::_0x7F96F23FA9B73327(Local_408.y);
+						CUTSCENE::_0x7F96F23FA9B73327(Local_408.f_1);
 					}
 					CUTSCENE::START_CUTSCENE(0);
 					RECORDING::_0x48621C9FCA3EBD28(4);
@@ -127723,12 +127723,12 @@ void func_838(bool bParam0)
 	{
 		OBJECT::DELETE_OBJECT(&Local_207);
 	}
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_207.z);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_207.f_2);
 	if (ENTITY::DOES_ENTITY_EXIST(Local_229.x))
 	{
 		OBJECT::DELETE_OBJECT(&Local_229);
 	}
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_229.z);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_229.f_2);
 	if (ENTITY::DOES_ENTITY_EXIST(Local_380))
 	{
 		OBJECT::DELETE_OBJECT(&Local_380);
@@ -128013,10 +128013,10 @@ void func_846()
 			}
 			func_849();
 		}
-		else if (!HUD::DOES_BLIP_EXIST(Local_408.z))
+		else if (!HUD::DOES_BLIP_EXIST(Local_408.f_2))
 		{
 			func_19(0);
-			Local_408.z = func_848(Local_408.x, 0, 0);
+			Local_408.f_2 = func_848(Local_408.x, 0, 0);
 			if (!func_361("GOBACK_CHOPPER"))
 			{
 				func_377("GOBACK_CHOPPER", 7500, 0);
@@ -128165,12 +128165,12 @@ void func_853()
 	func_828();
 	if (iLocal_54 == 0)
 	{
-		STREAMING::REQUEST_MODEL(Local_408.y);
+		STREAMING::REQUEST_MODEL(Local_408.f_1);
 		STREAMING::REQUEST_MODEL(iLocal_664);
 		STREAMING::REQUEST_MODEL(Local_200[0 /*24*/].f_2);
 		VEHICLE::REQUEST_VEHICLE_RECORDING(7, "lkfbi5a");
 		STREAMING::REQUEST_PTFX_ASSET();
-		if ((((STREAMING::HAS_MODEL_LOADED(Local_408.y) && STREAMING::HAS_MODEL_LOADED(iLocal_664)) && STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkfbi5a")) && STREAMING::HAS_PTFX_ASSET_LOADED())
+		if ((((STREAMING::HAS_MODEL_LOADED(Local_408.f_1) && STREAMING::HAS_MODEL_LOADED(iLocal_664)) && STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkfbi5a")) && STREAMING::HAS_PTFX_ASSET_LOADED())
 		{
 			STREAMING::REMOVE_ANIM_DICT("missfbi5ig_31");
 			STREAMING::REMOVE_ANIM_DICT("missfbi5ig_32");
@@ -128179,11 +128179,11 @@ void func_853()
 			{
 				Var0 = { VEHICLE::GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME(7, 100f, "lkfbi5a") };
 				fVar1 = 301.8604f;
-				Local_408.x = VEHICLE::CREATE_VEHICLE(Local_408.y, Var0, fVar1, 1, 1, 0);
+				Local_408.x = VEHICLE::CREATE_VEHICLE(Local_408.f_1, Var0, fVar1, 1, 1, 0);
 				func_859(Local_408.x, 0);
 			}
 			VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(Local_408.x, 0);
-			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_408.y);
+			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_408.f_1);
 			VEHICLE::SET_VEHICLE_ENGINE_ON(Local_408.x, 1, 1, 0);
 			VEHICLE::SET_HELI_BLADES_FULL_SPEED(Local_408.x);
 			AUDIO::SET_VEH_RADIO_STATION(Local_408.x, "OFF");
@@ -128409,7 +128409,7 @@ int func_855(var uParam0, bool bParam1)
 			break;
 		
 		case 2:
-			STREAMING::REQUEST_MODEL(Local_408.y);
+			STREAMING::REQUEST_MODEL(Local_408.f_1);
 			STREAMING::REQUEST_MODEL(iLocal_664);
 			STREAMING::REQUEST_MODEL(Local_200[0 /*24*/].f_2);
 			VEHICLE::REQUEST_VEHICLE_RECORDING(7, "lkfbi5a");
@@ -128419,11 +128419,11 @@ int func_855(var uParam0, bool bParam1)
 			iLocal_3426 = PLAYER::PLAYER_PED_ID();
 			HUD::DISPLAY_RADAR(0);
 			HUD::DISPLAY_HUD(0);
-			if ((((((STREAMING::HAS_MODEL_LOADED(Local_408.y) && STREAMING::HAS_MODEL_LOADED(iLocal_664)) && STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkfbi5a")) && STREAMING::HAS_ANIM_DICT_LOADED("MISSFBI5IG_33")) && STREAMING::HAS_ANIM_DICT_LOADED("missswitch")) && STREAMING::HAS_PTFX_ASSET_LOADED())
+			if ((((((STREAMING::HAS_MODEL_LOADED(Local_408.f_1) && STREAMING::HAS_MODEL_LOADED(iLocal_664)) && STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkfbi5a")) && STREAMING::HAS_ANIM_DICT_LOADED("MISSFBI5IG_33")) && STREAMING::HAS_ANIM_DICT_LOADED("missswitch")) && STREAMING::HAS_PTFX_ASSET_LOADED())
 			{
 				if (!ENTITY::DOES_ENTITY_EXIST(Local_408.x))
 				{
-					Local_408.x = VEHICLE::CREATE_VEHICLE(Local_408.y, VEHICLE::GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME(7, 100f, "lkfbi5a"), 301.8604f, 1, 1, 0);
+					Local_408.x = VEHICLE::CREATE_VEHICLE(Local_408.f_1, VEHICLE::GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME(7, 100f, "lkfbi5a"), 301.8604f, 1, 1, 0);
 					VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(Local_408.x, 7, "lkfbi5a", 1);
 				}
 				if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(Local_408.x))
@@ -129037,14 +129037,14 @@ void func_860()
 	if (iLocal_54 == 0)
 	{
 		STREAMING::REQUEST_MODEL(iLocal_664);
-		STREAMING::REQUEST_MODEL(Local_408.y);
+		STREAMING::REQUEST_MODEL(Local_408.f_1);
 		STREAMING::REQUEST_MODEL(Local_200[0 /*24*/].f_2);
-		STREAMING::REQUEST_MODEL(Local_229.z);
-		STREAMING::REQUEST_MODEL(Local_207.z);
+		STREAMING::REQUEST_MODEL(Local_229.f_2);
+		STREAMING::REQUEST_MODEL(Local_207.f_2);
 		STREAMING::REQUEST_ANIM_DICT("missfbi5ig_33");
 		VEHICLE::REQUEST_VEHICLE_RECORDING(7, "lkfbi5a");
 		AUDIO::LOAD_STREAM_WITH_START_OFFSET("STASH_TOXIN_STREAM", 2400, "FBI_05_SOUNDS");
-		if (((((((STREAMING::HAS_MODEL_LOADED(iLocal_664) && STREAMING::HAS_MODEL_LOADED(Local_408.y)) && STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) && STREAMING::HAS_MODEL_LOADED(Local_229.z)) && STREAMING::HAS_MODEL_LOADED(Local_207.z)) && STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_33")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkfbi5a")) && AUDIO::LOAD_STREAM_WITH_START_OFFSET("STASH_TOXIN_STREAM", 2400, "FBI_05_SOUNDS"))
+		if (((((((STREAMING::HAS_MODEL_LOADED(iLocal_664) && STREAMING::HAS_MODEL_LOADED(Local_408.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) && STREAMING::HAS_MODEL_LOADED(Local_229.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_207.f_2)) && STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_33")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkfbi5a")) && AUDIO::LOAD_STREAM_WITH_START_OFFSET("STASH_TOXIN_STREAM", 2400, "FBI_05_SOUNDS"))
 		{
 			ENTITY::SET_ENTITY_PROOFS(Local_55, 0, 0, 0, 0, 0, 1, 0, 0);
 			ENTITY::SET_ENTITY_PROOFS(Local_59, 0, 0, 0, 0, 0, 1, 0, 0);
@@ -129129,10 +129129,10 @@ void func_860()
 							CAM::PLAY_SYNCHRONIZED_CAM_ANIM(uLocal_649, iLocal_548, "mid_mission_switch_cam", "missfbi5ig_33");
 							CAM::SET_CAM_ACTIVE(uLocal_649, 1);
 							CAM::RENDER_SCRIPT_CAMS(1, 0, 3000, 1, 0, 0);
-							Local_207.x = OBJECT::CREATE_OBJECT(Local_207.z, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 0f, 1.5f), 1, 1, 0);
+							Local_207.x = OBJECT::CREATE_OBJECT(Local_207.f_2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 0f, 1.5f), 1, 1, 0);
 							ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(Local_207.x, iLocal_548, "mid_mission_switch_tube", "missfbi5ig_33", 1000f, 8f, 0, 1148846080);
 							ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(Local_207.x);
-							Local_229.x = OBJECT::CREATE_OBJECT(Local_229.z, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 0f, 1.5f), 1, 1, 0);
+							Local_229.x = OBJECT::CREATE_OBJECT(Local_229.f_2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 0f, 1.5f), 1, 1, 0);
 							ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(Local_229.x, iLocal_548, "mid_mission_switch_vial", "missfbi5ig_33", 1000f, 8f, 0, 1148846080);
 							ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(Local_229.x);
 							PED::SET_SYNCHRONIZED_SCENE_PHASE(iLocal_548, 0.08f);
@@ -129221,12 +129221,12 @@ void func_860()
 			GRAPHICS::STOP_PARTICLE_FX_LOOPED(iLocal_645, 0);
 		}
 		OBJECT::DELETE_OBJECT(&Local_207);
-		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_207.z);
+		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_207.f_2);
 		if (ENTITY::DOES_ENTITY_EXIST(Local_229.x))
 		{
 			OBJECT::DELETE_OBJECT(&Local_229);
 		}
-		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_229.z);
+		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_229.f_2);
 		if (!CAM::IS_SCREEN_FADED_OUT())
 		{
 			func_541(0, 0, 0, 0f, 0f, 3000, 0, 0, 0, 1, 1);
@@ -131016,7 +131016,7 @@ void func_882()
 			ENTITY::DETACH_ENTITY(Local_251.x, 1, 1);
 		}
 		ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&Local_251);
-		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_251.z);
+		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_251.f_2);
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(Local_273.x))
 	{
@@ -131025,7 +131025,7 @@ void func_882()
 			ENTITY::DETACH_ENTITY(Local_273.x, 1, 1);
 		}
 		ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&Local_273);
-		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_273.z);
+		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_273.f_2);
 	}
 }
 
@@ -132028,10 +132028,10 @@ void func_893()
 				{
 					Var1 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION("missfbi5ig_22", "take_chemical_player0", 3558.898f, 3677.85f, 27.125f, 0f, 0f, 170f, 1f, 2) };
 					Var0 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missfbi5ig_22", "take_chemical_player0", 3558.898f, 3677.85f, 27.125f, 0f, 0f, 170f, 1f, 2) };
-					Var0.z = (Var0.z - 1f);
+					Var0.f_2 = (Var0.f_2 - 1f);
 					TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 					ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0, 1, 0, 0, 1);
-					ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), Var1.z);
+					ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), Var1.f_2);
 					PED::SET_PED_USING_ACTION_MODE(PLAYER::PLAYER_PED_ID(), 1, -1, 0);
 					PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -633298724, 0, 0, 0);
 					PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
@@ -132072,10 +132072,10 @@ void func_893()
 			RECORDING::_0x13B350B8AD0EEE10();
 			Var3 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION("missfbi5ig_22", "take_chemical_player0", 3558.898f, 3677.85f, 27.125f, 0f, 0f, 170f, 1f, 2) };
 			Var2 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missfbi5ig_22", "take_chemical_player0", 3558.898f, 3677.85f, 27.125f, 0f, 0f, 170f, 1f, 2) };
-			Var2.z = (Var2.z - 1f);
+			Var2.f_2 = (Var2.f_2 - 1f);
 			TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 			ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var2, 1, 0, 0, 1);
-			ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), Var3.z);
+			ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), Var3.f_2);
 			PED::SET_PED_USING_ACTION_MODE(PLAYER::PLAYER_PED_ID(), 1, -1, 0);
 			PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -633298724, 0, 0, 0);
 			PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
@@ -132122,7 +132122,7 @@ void func_895()
 	if (iLocal_54 == 0)
 	{
 		func_922();
-		if (((((((((((((((((STREAMING::HAS_MODEL_LOADED(Local_251.z) && STREAMING::HAS_MODEL_LOADED(Local_273.z)) && STREAMING::HAS_MODEL_LOADED(Local_201.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_207.z)) && STREAMING::HAS_MODEL_LOADED(Local_170.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_188.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_194.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_182.f_2)) && STREAMING::HAS_COLLISION_FOR_MODEL_LOADED(Local_182.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_380.f_2)) && STREAMING::HAS_MODEL_LOADED(joaat("prop_boxpile_02b"))) && STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_15")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[0 /*15*/].f_13, "lkfbi5a")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[1 /*15*/].f_13, "lkfbi5a")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[2 /*15*/].f_13, "lkfbi5a")) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05_GRAB_TOXIN", 0, -1)) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("fbi5_dave_1")) && AUDIO::PREPARE_MUSIC_EVENT("FBI5A_LIFT_EXIT"))
+		if (((((((((((((((((STREAMING::HAS_MODEL_LOADED(Local_251.f_2) && STREAMING::HAS_MODEL_LOADED(Local_273.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_201.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_207.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_170.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_188.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_194.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_182.f_2)) && STREAMING::HAS_COLLISION_FOR_MODEL_LOADED(Local_182.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_380.f_2)) && STREAMING::HAS_MODEL_LOADED(joaat("prop_boxpile_02b"))) && STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_15")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[0 /*15*/].f_13, "lkfbi5a")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[1 /*15*/].f_13, "lkfbi5a")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[2 /*15*/].f_13, "lkfbi5a")) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05_GRAB_TOXIN", 0, -1)) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("fbi5_dave_1")) && AUDIO::PREPARE_MUSIC_EVENT("FBI5A_LIFT_EXIT"))
 		{
 			func_862();
 			MISC::CLEAR_AREA(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1000f, 1, 0, 0, 0);
@@ -132163,7 +132163,7 @@ void func_895()
 			ENTITY::FREEZE_ENTITY_POSITION(Local_201, 1);
 			ENTITY::SET_ENTITY_HEADING(Local_201, Local_201.f_18);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_201.f_2);
-			Local_207.x = OBJECT::CREATE_OBJECT(Local_207.z, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_201, 0f, 0f, 1.5f), 1, 1, 0);
+			Local_207.x = OBJECT::CREATE_OBJECT(Local_207.f_2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_201, 0f, 0f, 1.5f), 1, 1, 0);
 			ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_207.x, Local_201, 0, -0.054f, -0.032f, -0.23f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
 			iLocal_54 = 1;
 		}
@@ -132639,14 +132639,14 @@ void func_902()
 		{
 			case 0:
 				STREAMING::REQUEST_ANIM_DICT("missfbi5ig_15");
-				STREAMING::REQUEST_MODEL(Local_251.z);
-				STREAMING::REQUEST_MODEL(Local_273.z);
-				if ((STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_15") && STREAMING::HAS_MODEL_LOADED(Local_251.z)) && STREAMING::HAS_MODEL_LOADED(Local_273.z))
+				STREAMING::REQUEST_MODEL(Local_251.f_2);
+				STREAMING::REQUEST_MODEL(Local_273.f_2);
+				if ((STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_15") && STREAMING::HAS_MODEL_LOADED(Local_251.f_2)) && STREAMING::HAS_MODEL_LOADED(Local_273.f_2))
 				{
 					STREAMING::REQUEST_ANIM_DICT("missfbi5ig_17");
-					Local_251.x = OBJECT::CREATE_OBJECT(Local_251.z, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_65[3 /*25*/], 0f, 0f, 1f), 1, 1, 0);
+					Local_251.x = OBJECT::CREATE_OBJECT(Local_251.f_2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_65[3 /*25*/], 0f, 0f, 1f), 1, 1, 0);
 					ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_251.x, Local_65[3 /*25*/], PED::GET_PED_BONE_INDEX(Local_65[3 /*25*/], 60309), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
-					Local_273.x = OBJECT::CREATE_OBJECT(Local_273.z, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_65[3 /*25*/], 0f, 0f, 1f), 1, 1, 0);
+					Local_273.x = OBJECT::CREATE_OBJECT(Local_273.f_2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_65[3 /*25*/], 0f, 0f, 1f), 1, 1, 0);
 					ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_273.x, Local_65[3 /*25*/], PED::GET_PED_BONE_INDEX(Local_65[3 /*25*/], 28422), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
 					Local_619 = { 3533.92f, 3662.75f, 28.118f };
 					Local_620 = { 0f, 0f, 169.92f };
@@ -134736,9 +134736,9 @@ int func_919()
 				PED::SET_PED_MONEY(Local_65[5 /*25*/], 0);
 				PED::SET_PED_COMPONENT_VARIATION(Local_65[5 /*25*/], 8, 1, 0, 0);
 				func_732(&uLocal_735, 8, Local_65[5 /*25*/], "scientist3", 0, 1);
-				Local_251.x = OBJECT::CREATE_OBJECT(Local_251.z, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_65[5 /*25*/], 0f, 0f, 1f), 1, 1, 0);
+				Local_251.x = OBJECT::CREATE_OBJECT(Local_251.f_2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_65[5 /*25*/], 0f, 0f, 1f), 1, 1, 0);
 				ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_251.x, Local_65[5 /*25*/], PED::GET_PED_BONE_INDEX(Local_65[5 /*25*/], 60309), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
-				Local_273.x = OBJECT::CREATE_OBJECT(Local_273.z, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_65[5 /*25*/], 0f, 0f, 1f), 1, 1, 0);
+				Local_273.x = OBJECT::CREATE_OBJECT(Local_273.f_2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_65[5 /*25*/], 0f, 0f, 1f), 1, 1, 0);
 				ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_273.x, Local_65[5 /*25*/], PED::GET_PED_BONE_INDEX(Local_65[5 /*25*/], 28422), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
 				iLocal_519++;
 			}
@@ -134941,10 +134941,10 @@ int func_921(char* sParam0)
 
 void func_922()
 {
-	STREAMING::REQUEST_MODEL(Local_251.z);
-	STREAMING::REQUEST_MODEL(Local_273.z);
+	STREAMING::REQUEST_MODEL(Local_251.f_2);
+	STREAMING::REQUEST_MODEL(Local_273.f_2);
 	STREAMING::REQUEST_MODEL(Local_201.f_2);
-	STREAMING::REQUEST_MODEL(Local_207.z);
+	STREAMING::REQUEST_MODEL(Local_207.f_2);
 	STREAMING::REQUEST_MODEL(Local_170.f_2);
 	STREAMING::REQUEST_MODEL(Local_188.f_2);
 	STREAMING::REQUEST_MODEL(Local_194.f_2);
@@ -135617,7 +135617,7 @@ void func_930()
 					ENTITY::DETACH_ENTITY(Local_170, 0, 1);
 				}
 				Local_622 = { ENTITY::GET_ENTITY_COORDS(Local_170, 1) };
-				Local_622.z = 20f;
+				Local_622.f_2 = 20f;
 				Local_623 = { ENTITY::GET_ENTITY_ROTATION(Local_170, 2) };
 				Local_170.f_12 = { ENTITY::GET_ENTITY_ROTATION(Local_170, 2) };
 				Var0 = { ENTITY::GET_ENTITY_ROTATION(Local_170, 2) };
@@ -137809,8 +137809,8 @@ Vector3 func_954(struct<3> Param0, float fParam1)
 {
 	struct<3> Var0;
 	
-	Var0.z = ((Param0.z * SYSTEM::COS(fParam1)) + (Param0.y * SYSTEM::SIN(fParam1)));
-	Var0.y = ((Param0.y * SYSTEM::COS(fParam1)) - (Param0.z * SYSTEM::SIN(fParam1)));
+	Var0.f_2 = ((Param0.f_2 * SYSTEM::COS(fParam1)) + (Param0.f_1 * SYSTEM::SIN(fParam1)));
+	Var0.f_1 = ((Param0.f_1 * SYSTEM::COS(fParam1)) - (Param0.f_2 * SYSTEM::SIN(fParam1)));
 	Var0.x = Param0.x;
 	return Var0;
 }
@@ -139994,7 +139994,7 @@ void func_981()
 
 int func_982()
 {
-	if ((((((((STREAMING::HAS_MODEL_LOADED(Local_395.y) && STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) && STREAMING::HAS_MODEL_LOADED(iLocal_665)) && PED::HAS_PED_PRELOAD_VARIATION_DATA_FINISHED(PLAYER::PLAYER_PED_ID())) && STREAMING::HAS_ANIM_DICT_LOADED("missfbi5leadinoutfbi_5a_mcs_leadout")) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05_Chemical_Factory_01", 0, -1)) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05A_GRILL_CUTTING", 0, -1)) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\Underwater", 0, -1))
+	if ((((((((STREAMING::HAS_MODEL_LOADED(Local_395.f_1) && STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) && STREAMING::HAS_MODEL_LOADED(iLocal_665)) && PED::HAS_PED_PRELOAD_VARIATION_DATA_FINISHED(PLAYER::PLAYER_PED_ID())) && STREAMING::HAS_ANIM_DICT_LOADED("missfbi5leadinoutfbi_5a_mcs_leadout")) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05_Chemical_Factory_01", 0, -1)) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05A_GRILL_CUTTING", 0, -1)) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\Underwater", 0, -1))
 	{
 		return 1;
 	}
@@ -140003,7 +140003,7 @@ int func_982()
 
 void func_983()
 {
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_395.y);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_395.f_1);
 	iLocal_538 = MISC::GET_GAME_TIMER();
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_636))
 	{
@@ -140691,7 +140691,7 @@ void func_1003()
 			}
 			break;
 	}
-	if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("fbi_5_michaels_boat", Local_395.y))
+	if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("fbi_5_michaels_boat", Local_395.f_1))
 	{
 		VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_395.x, 1084227584);
 	}
@@ -140754,7 +140754,7 @@ void func_1006()
 
 void func_1007()
 {
-	STREAMING::REQUEST_MODEL(Local_395.y);
+	STREAMING::REQUEST_MODEL(Local_395.f_1);
 	STREAMING::REQUEST_MODEL(Local_55.f_1);
 	STREAMING::REQUEST_MODEL(Local_59.f_1);
 	STREAMING::REQUEST_MODEL(iLocal_665);
@@ -140988,7 +140988,7 @@ void func_1016(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Para
 			else
 			{
 				Var6 = { ENTITY::GET_ENTITY_COORDS(iVar0, 1) };
-				if ((Var6.z > Param0.z && Var6.z < Param1.z) || (Var6.z > Param1.z && Var6.z < Param0.z))
+				if ((Var6.f_2 > Param0.f_2 && Var6.f_2 < Param1.f_2) || (Var6.f_2 > Param1.f_2 && Var6.f_2 < Param0.f_2))
 				{
 					if (func_1018(iVar0, Param0, Param1, fParam2))
 					{
@@ -141028,7 +141028,7 @@ void func_1016(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Para
 						if (VEHICLE::IS_THIS_MODEL_A_HELI(iVar7))
 						{
 							Param5.x = (Param5.x + 3f);
-							Param5.y = (Param5.y + 3f);
+							Param5.f_1 = (Param5.f_1 + 3f);
 						}
 						if (((iVar7 == joaat("zentorno") || iVar7 == joaat("btype")) || iVar7 == joaat("dubsta3")) || iVar7 == joaat("monster"))
 						{
@@ -141042,11 +141042,11 @@ void func_1016(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Para
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.y - Var4.y) > Param5.y)
+						else if ((Var5.f_1 - Var4.f_1) > Param5.f_1)
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.z - Var4.z) > Param5.z)
+						else if ((Var5.f_2 - Var4.f_2) > Param5.f_2)
 						{
 							bVar2 = false;
 						}
@@ -141135,7 +141135,7 @@ void func_1016(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Para
 
 int func_1017(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -141156,12 +141156,12 @@ int func_1018(int iParam0, struct<3> Param1, struct<3> Param2, float fParam3)
 	
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, 0))
 	{
-		Param1.z = Param2.z;
+		Param1.f_2 = Param2.f_2;
 		Var0 = { func_392(Param1 - Param2) };
 		Var1 = { Var0 };
-		Var0.x = -Var1.y;
-		Var0.y = Var1.x;
-		Var0.z = 0f;
+		Var0.x = -Var1.f_1;
+		Var0.f_1 = Var1.x;
+		Var0.f_2 = 0f;
 		Var2 = { Param1 - Var0 * FtoV((fParam3 / 2f)) };
 		Var3 = { Param1 + Var0 * FtoV((fParam3 / 2f)) };
 		Var4 = { Param2 - Var0 * FtoV((fParam3 / 2f)) };
@@ -141507,7 +141507,7 @@ void func_1024()
 	if (iLocal_52 < 9)
 	{
 		Var0 = { CAM::GET_GAMEPLAY_CAM_COORD() };
-		if ((PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()) || ((((Var0.y < 3726f && Var0.y > 3709f) && Var0.x > 3509f) && Var0.x < 3541f) && Var0.z < 17.5f)) && !iLocal_479)
+		if ((PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()) || ((((Var0.f_1 < 3726f && Var0.f_1 > 3709f) && Var0.x > 3509f) && Var0.x < 3541f) && Var0.f_2 < 17.5f)) && !iLocal_479)
 		{
 			func_1025();
 			if (bLocal_456)
@@ -142650,7 +142650,7 @@ int func_1040()
 			if (iLocal_563 == 2)
 			{
 				Var0 = { ENTITY::GET_ENTITY_ROTATION(Local_389, 2) };
-				if (MISC::ABSF(Var0.x) > 72f || MISC::ABSF(Var0.y) > 72f)
+				if (MISC::ABSF(Var0.x) > 72f || MISC::ABSF(Var0.f_1) > 72f)
 				{
 					sLocal_635 = "fbi5a_FAIL_15";
 					iLocal_52 = 30;
@@ -142999,20 +142999,20 @@ void func_1045()
 
 void func_1046()
 {
-	STREAMING::REQUEST_MODEL(Local_395.y);
+	STREAMING::REQUEST_MODEL(Local_395.f_1);
 	STREAMING::REQUEST_MODEL(iLocal_665);
-	while (!STREAMING::HAS_MODEL_LOADED(Local_395.y) || !STREAMING::HAS_MODEL_LOADED(iLocal_665))
+	while (!STREAMING::HAS_MODEL_LOADED(Local_395.f_1) || !STREAMING::HAS_MODEL_LOADED(iLocal_665))
 	{
 		SYSTEM::WAIT(0);
 	}
 	MISC::CLEAR_AREA(3801.2f, 4468.4f, 5.8f, 1000f, 1, 0, 0, 0);
-	Local_395.x = VEHICLE::CREATE_VEHICLE(Local_395.y, Local_615, 266.1028f, 1, 1, 0);
+	Local_395.x = VEHICLE::CREATE_VEHICLE(Local_395.f_1, Local_615, 266.1028f, 1, 1, 0);
 	VEHICLE::SET_VEHICLE_COLOURS(Local_395.x, 0, 0);
 	VEHICLE::SET_VEHICLE_DIRT_LEVEL(Local_395.x, 5f);
 	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_395.x, 1084227584);
 	AUDIO::SET_VEH_RADIO_STATION(Local_395.x, "OFF");
 	VEHICLE::SET_VEHICLE_EXTRA(Local_395.x, 3, false);
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_395.y);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_395.f_1);
 	TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 	func_1049(0, 0);
 	ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 3818.61f, 4463.606f, 2.7104f, 1, 0, 0, 1);
@@ -143087,7 +143087,7 @@ void func_1047(int iParam0, struct<3> Param1, struct<3> Param2, struct<3> Param3
 
 Vector3 func_1048(struct<3> Param0)
 {
-	return (-SYSTEM::SIN(Param0.z) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.z) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
+	return (-SYSTEM::SIN(Param0.f_2) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.f_2) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
 }
 
 int func_1049(int iParam0, bool bParam1)
@@ -143467,7 +143467,7 @@ void func_1059()
 	STREAMING::REQUEST_MODEL(Local_72[0 /*25*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_72[1 /*25*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_386[0 /*15*/].f_1);
-	STREAMING::REQUEST_MODEL(Local_408.y);
+	STREAMING::REQUEST_MODEL(Local_408.f_1);
 	STREAMING::REQUEST_MODEL(Local_188.f_2);
 	STREAMING::REQUEST_MODEL(joaat("prop_boxpile_02b"));
 	STREAMING::REQUEST_MODEL(Local_200[0 /*24*/].f_2);
@@ -143487,16 +143487,16 @@ void func_1059()
 	{
 		func_1053(0, -1, 1);
 	}
-	while (((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_665) || !STREAMING::HAS_MODEL_LOADED(iLocal_664)) || !STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_72[0 /*25*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_72[1 /*25*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_386[0 /*15*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_408.y)) || !STREAMING::HAS_MODEL_LOADED(Local_188.f_2)) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_boxpile_02b"))) || !STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkfbi5a")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[0 /*15*/].f_13, "lkfbi5a")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "lkfbi5a")) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_carbinerifle")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_carbinerifle"))) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_stungun")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_stungun"))) || !STREAMING::HAS_ANIM_DICT_LOADED("MISSFBI5IG_0")) || !AUDIO::PREPARE_ALARM("FIB_05_BIOTECH_LAB_ALARMS")) || !STREAMING::HAS_PTFX_ASSET_LOADED()) || !INTERIOR::IS_INTERIOR_READY(iLocal_671))
+	while (((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_665) || !STREAMING::HAS_MODEL_LOADED(iLocal_664)) || !STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_72[0 /*25*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_72[1 /*25*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_386[0 /*15*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_408.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_188.f_2)) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_boxpile_02b"))) || !STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkfbi5a")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[0 /*15*/].f_13, "lkfbi5a")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "lkfbi5a")) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_carbinerifle")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_carbinerifle"))) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_stungun")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_stungun"))) || !STREAMING::HAS_ANIM_DICT_LOADED("MISSFBI5IG_0")) || !AUDIO::PREPARE_ALARM("FIB_05_BIOTECH_LAB_ALARMS")) || !STREAMING::HAS_PTFX_ASSET_LOADED()) || !INTERIOR::IS_INTERIOR_READY(iLocal_671))
 	{
 		SYSTEM::WAIT(0);
 	}
 	MISC::CLEAR_AREA(3633.923f, 3766.17f, 40.3f, 10000f, 1, 0, 0, 0);
 	func_1049(2, 0);
-	Local_408.x = VEHICLE::CREATE_VEHICLE(Local_408.y, 3633.923f, 3766.17f, 40.3f, 163.1875f, 1, 1, 0);
+	Local_408.x = VEHICLE::CREATE_VEHICLE(Local_408.f_1, 3633.923f, 3766.17f, 40.3f, 163.1875f, 1, 1, 0);
 	func_859(Local_408.x, 0);
 	VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(Local_408.x, 0);
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_408.y);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_408.f_1);
 	VEHICLE::SET_VEHICLE_ENGINE_ON(Local_408.x, 1, 1, 0);
 	VEHICLE::SET_HELI_BLADES_FULL_SPEED(Local_408.x);
 	AUDIO::SET_VEH_RADIO_STATION(Local_408.x, "OFF");
@@ -143695,7 +143695,7 @@ void func_1062()
 	STREAMING::REQUEST_MODEL(Local_55.f_1);
 	STREAMING::REQUEST_MODEL(Local_59.f_1);
 	STREAMING::REQUEST_MODEL(Local_386[0 /*15*/].f_1);
-	STREAMING::REQUEST_MODEL(Local_408.y);
+	STREAMING::REQUEST_MODEL(Local_408.f_1);
 	STREAMING::REQUEST_MODEL(Local_194.f_2);
 	STREAMING::REQUEST_MODEL(Local_182.f_2);
 	STREAMING::REQUEST_MODEL(Local_380.f_2);
@@ -143717,17 +143717,17 @@ void func_1062()
 	{
 		func_1053(0, -1, 1);
 	}
-	while (((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_665) || !STREAMING::HAS_MODEL_LOADED(iLocal_664)) || !STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_386[0 /*15*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_408.y)) || !STREAMING::HAS_MODEL_LOADED(Local_194.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_182.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_380.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_188.f_2)) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_boxpile_02b"))) || !STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkfbi5a")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[0 /*15*/].f_13, "lkfbi5a")) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_carbinerifle")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_carbinerifle"))) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_stungun")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_stungun"))) || !STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_33")) || !AUDIO::PREPARE_ALARM("FIB_05_BIOTECH_LAB_ALARMS")) || !STREAMING::HAS_PTFX_ASSET_LOADED()) || !INTERIOR::IS_INTERIOR_READY(iLocal_671))
+	while (((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_665) || !STREAMING::HAS_MODEL_LOADED(iLocal_664)) || !STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_386[0 /*15*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_408.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_194.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_182.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_380.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_188.f_2)) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_boxpile_02b"))) || !STREAMING::HAS_MODEL_LOADED(Local_200[0 /*24*/].f_2)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkfbi5a")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[0 /*15*/].f_13, "lkfbi5a")) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_carbinerifle")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_carbinerifle"))) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_stungun")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_stungun"))) || !STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_33")) || !AUDIO::PREPARE_ALARM("FIB_05_BIOTECH_LAB_ALARMS")) || !STREAMING::HAS_PTFX_ASSET_LOADED()) || !INTERIOR::IS_INTERIOR_READY(iLocal_671))
 	{
 		SYSTEM::WAIT(0);
 	}
 	MISC::CLEAR_AREA(3613.408f, 3739.449f, 27.6921f, 10000f, 1, 0, 0, 0);
 	Var0 = { VEHICLE::GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME(4, (VEHICLE::GET_TOTAL_DURATION_OF_VEHICLE_RECORDING(4, "lkfbi5a") - 1000f), "lkfbi5a") };
 	fVar1 = 301.8604f;
-	Local_408.x = VEHICLE::CREATE_VEHICLE(Local_408.y, Var0, fVar1, 1, 1, 0);
+	Local_408.x = VEHICLE::CREATE_VEHICLE(Local_408.f_1, Var0, fVar1, 1, 1, 0);
 	func_859(Local_408.x, 0);
 	VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(Local_408.x, 0);
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_408.y);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_408.f_1);
 	VEHICLE::SET_VEHICLE_ENGINE_ON(Local_408.x, 1, 1, 0);
 	VEHICLE::SET_HELI_BLADES_FULL_SPEED(Local_408.x);
 	AUDIO::SET_VEH_RADIO_STATION(Local_408.x, "OFF");
@@ -143864,8 +143864,8 @@ void func_1063()
 	STREAMING::REQUEST_MODEL(Local_380.f_2);
 	STREAMING::REQUEST_MODEL(Local_188.f_2);
 	STREAMING::REQUEST_MODEL(Local_380.f_2);
-	STREAMING::REQUEST_MODEL(Local_207.z);
-	STREAMING::REQUEST_MODEL(Local_229.z);
+	STREAMING::REQUEST_MODEL(Local_207.f_2);
+	STREAMING::REQUEST_MODEL(Local_229.f_2);
 	STREAMING::REQUEST_MODEL(Local_201.f_2);
 	STREAMING::REQUEST_MODEL(Local_386[0 /*15*/].f_1);
 	STREAMING::REQUEST_MODEL(joaat("prop_boxpile_02b"));
@@ -143883,7 +143883,7 @@ void func_1063()
 	{
 		func_1053(0, -1, 1);
 	}
-	while (((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_665) || !STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_194.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_182.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_380.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_188.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_207.z)) || !STREAMING::HAS_MODEL_LOADED(Local_229.z)) || !STREAMING::HAS_MODEL_LOADED(Local_201.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_386[0 /*15*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_boxpile_02b"))) || !STREAMING::HAS_MODEL_LOADED(Local_380.f_2)) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_carbinerifle")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_carbinerifle"))) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_stungun")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_stungun"))) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[0 /*15*/].f_13, "lkfbi5a")) || !STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_33")) || !AUDIO::PREPARE_ALARM("FIB_05_BIOTECH_LAB_ALARMS")) || !INTERIOR::IS_INTERIOR_READY(iLocal_671)) || !STREAMING::HAS_PTFX_ASSET_LOADED())
+	while (((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_665) || !STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_194.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_182.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_380.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_188.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_207.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_229.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_201.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_386[0 /*15*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_boxpile_02b"))) || !STREAMING::HAS_MODEL_LOADED(Local_380.f_2)) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_carbinerifle")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_carbinerifle"))) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_stungun")))) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_stungun"))) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_386[0 /*15*/].f_13, "lkfbi5a")) || !STREAMING::HAS_ANIM_DICT_LOADED("missfbi5ig_33")) || !AUDIO::PREPARE_ALARM("FIB_05_BIOTECH_LAB_ALARMS")) || !INTERIOR::IS_INTERIOR_READY(iLocal_671)) || !STREAMING::HAS_PTFX_ASSET_LOADED())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -144048,11 +144048,11 @@ void func_1064()
 		func_1049(0, 0);
 	}
 	Var0 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missfbi5ig_22", "take_chemical_player0", 3558.898f, 3677.85f, 27.125f, 0f, 0f, 170f, 1f, 2) };
-	Var0.z = 27.1217f;
+	Var0.f_2 = 27.1217f;
 	Var1 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION("missfbi5ig_22", "take_chemical_player0", 3558.898f, 3677.85f, 27.125f, 0f, 0f, 170f, 1f, 2) };
 	TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 	ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0, 1, 0, 0, 1);
-	ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), Var1.z);
+	ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), Var1.f_2);
 	func_317(PLAYER::PLAYER_PED_ID(), 12, 11, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 	PED::SET_PED_MAX_TIME_UNDERWATER(PLAYER::PLAYER_PED_ID(), -1f);
 	PED::SET_PED_USING_ACTION_MODE(PLAYER::PLAYER_PED_ID(), 1, -1, 0);
@@ -144208,7 +144208,7 @@ void func_1064()
 	func_732(&uLocal_735, func_921("E"), 0, "SECURITYTANNOY", 0, 1);
 	if (!iLocal_919)
 	{
-		STREAMING::NEW_LOAD_SCENE_START(Var0, func_1048(0f, 0f, Var1.z), 10f, 0);
+		STREAMING::NEW_LOAD_SCENE_START(Var0, func_1048(0f, 0f, Var1.f_2), 10f, 0);
 		while (!STREAMING::IS_NEW_LOAD_SCENE_LOADED())
 		{
 			SYSTEM::WAIT(0);
@@ -144615,7 +144615,7 @@ void func_1067()
 	{
 		func_1056(Local_615, 266.72f, 0, 0);
 	}
-	STREAMING::REQUEST_MODEL(Local_395.y);
+	STREAMING::REQUEST_MODEL(Local_395.f_1);
 	STREAMING::REQUEST_MODEL(Local_55.f_1);
 	STREAMING::REQUEST_MODEL(Local_59.f_1);
 	STREAMING::REQUEST_MODEL(iLocal_665);
@@ -144626,7 +144626,7 @@ void func_1067()
 	{
 		func_1053(0, -1, 1);
 	}
-	while ((((((!STREAMING::HAS_MODEL_LOADED(Local_395.y) || !STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) || !STREAMING::HAS_MODEL_LOADED(iLocal_665)) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05_Chemical_Factory_01", 0, -1)) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05A_GRILL_CUTTING", 0, -1)) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\Underwater", 0, -1))
+	while ((((((!STREAMING::HAS_MODEL_LOADED(Local_395.f_1) || !STREAMING::HAS_MODEL_LOADED(Local_55.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_59.f_1)) || !STREAMING::HAS_MODEL_LOADED(iLocal_665)) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05_Chemical_Factory_01", 0, -1)) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_05A_GRILL_CUTTING", 0, -1)) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\Underwater", 0, -1))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -144659,12 +144659,12 @@ void func_1067()
 void func_1068()
 {
 	MISC::CLEAR_AREA(Local_615, 10000f, 1, 0, 0, 0);
-	Local_395.x = VEHICLE::CREATE_VEHICLE(Local_395.y, Local_615, 266.1028f, 1, 1, 0);
+	Local_395.x = VEHICLE::CREATE_VEHICLE(Local_395.f_1, Local_615, 266.1028f, 1, 1, 0);
 	VEHICLE::SET_VEHICLE_COLOURS(Local_395.x, 0, 0);
 	VEHICLE::SET_VEHICLE_DIRT_LEVEL(Local_395.x, 5f);
 	VEHICLE::SET_VEHICLE_EXTRA(Local_395.x, 3, true);
 	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_395.x, 1084227584);
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_395.y);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_395.f_1);
 	iLocal_538 = MISC::GET_GAME_TIMER();
 	if (!func_1103() == 0)
 	{
@@ -145031,7 +145031,7 @@ void func_1074()
 	iLocal_474 = 0;
 	Local_721.f_18 = 0;
 	Local_721.f_19 = 0;
-	Local_395.y = joaat("dinghy");
+	Local_395.f_1 = joaat("dinghy");
 	Local_621[0 /*3*/] = { -0.76f, -0.04f, -0.78f };
 	Local_621[1 /*3*/] = { -0.8f, -0.04f, -0.52f };
 	Local_621[2 /*3*/] = { -0.7f, -0.04f, -0.25f };
@@ -145089,10 +145089,10 @@ void func_1074()
 	Local_201.f_2 = joaat("p_chem_vial_02b_s");
 	Local_201.f_3 = { 3560.53f, 3672.64f, 28.12f };
 	Local_201.f_18 = 252.8533f;
-	Local_207.z = joaat("prop_cs_vial_01");
-	Local_229.z = joaat("p_chem_vial_02b_s");
-	Local_251.z = joaat("p_cs_clipboard");
-	Local_273.z = joaat("prop_pencil_01");
+	Local_207.f_2 = joaat("prop_cs_vial_01");
+	Local_229.f_2 = joaat("p_chem_vial_02b_s");
+	Local_251.f_2 = joaat("p_cs_clipboard");
+	Local_273.f_2 = joaat("prop_pencil_01");
 	Local_295[0 /*24*/].f_2 = joaat("v_ilev_bl_elevdis1");
 	Local_295[0 /*24*/].f_3 = { 3540.25f, 3673.25f, 22.457f };
 	Local_295[0 /*24*/].f_12 = { 0f, 0f, 351.32f };
@@ -145496,7 +145496,7 @@ void func_1074()
 	Local_182.f_2 = joaat("prop_biotech_store");
 	Local_182.f_3 = { 3638.326f, 3771.813f, 35.93f };
 	Local_182.f_18 = 340f;
-	Local_408.y = joaat("cargobob2");
+	Local_408.f_1 = joaat("cargobob2");
 	Local_188.f_2 = joaat("prop_ld_container");
 	Local_188.f_3 = { 3638.326f, 3771.813f, 28.93f };
 	Local_188.f_18 = 340f;

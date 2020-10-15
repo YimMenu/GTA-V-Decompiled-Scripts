@@ -145,7 +145,7 @@ void __EntryFunction__()
 						{
 							if (func_21(&uLocal_38, Var0))
 							{
-								if (Var0.z > 39f && Var0.z < 43f)
+								if (Var0.f_2 > 39f && Var0.f_2 < 43f)
 								{
 									iLocal_37 = 1;
 								}
@@ -697,7 +697,7 @@ bool func_22(struct<3> Param0, struct<3> Param1, float fParam2)
 	struct<3> Var0;
 	
 	Var0 = { Param1 - Param0 };
-	return ((Var0.x * Var0.x) + (Var0.y * Var0.y)) <= (fParam2 * fParam2);
+	return ((Var0.x * Var0.x) + (Var0.f_1 * Var0.f_1)) <= (fParam2 * fParam2);
 }
 
 int func_23()

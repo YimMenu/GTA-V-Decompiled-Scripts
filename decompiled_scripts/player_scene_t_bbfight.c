@@ -1531,7 +1531,7 @@ int func_29(var uParam0, float fParam1)
 
 int func_30(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -1617,12 +1617,12 @@ int func_33(var uParam0, struct<3> Param1, struct<3> Param2, float fParam3, int 
 	struct<3> Var1;
 	
 	Var0.x = (Param1.x - (SYSTEM::COS(fParam3) * Param2.x));
-	Var0.y = (Param1.y - (SYSTEM::SIN(fParam3) * Param2.x));
-	Var0.z = (Param1.z - Param2.z);
+	Var0.f_1 = (Param1.f_1 - (SYSTEM::SIN(fParam3) * Param2.x));
+	Var0.f_2 = (Param1.f_2 - Param2.f_2);
 	Var1.x = (Param1.x + (SYSTEM::COS(fParam3) * Param2.x));
-	Var1.y = (Param1.y + (SYSTEM::SIN(fParam3) * Param2.x));
-	Var1.z = (Param1.z + Param2.z);
-	if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(uParam0, Var0, Var1, (Param2.y * 2f), iParam4, iParam5, iParam6))
+	Var1.f_1 = (Param1.f_1 + (SYSTEM::SIN(fParam3) * Param2.x));
+	Var1.f_2 = (Param1.f_2 + Param2.f_2);
+	if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(uParam0, Var0, Var1, (Param2.f_1 * 2f), iParam4, iParam5, iParam6))
 	{
 		return 1;
 	}
@@ -1633,9 +1633,9 @@ bool func_34(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_35(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4)
@@ -1715,11 +1715,11 @@ int func_36(int iParam0, float fParam1, bool bParam2, bool bParam3)
 	Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0, 1) };
 	Var1 = { Var0 };
 	Var0.x = (Var0.x - fParam1);
-	Var0.y = (Var0.y - fParam1);
-	Var0.z = (Var0.z - fParam1);
+	Var0.f_1 = (Var0.f_1 - fParam1);
+	Var0.f_2 = (Var0.f_2 - fParam1);
 	Var1.x = (Var1.x + fParam1);
-	Var1.y = (Var1.y + fParam1);
-	Var1.z = (Var1.z + fParam1);
+	Var1.f_1 = (Var1.f_1 + fParam1);
+	Var1.f_2 = (Var1.f_2 + fParam1);
 	if (bParam2)
 	{
 		if (((MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_grenade"), fParam1, 1) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_molotov"), fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_smokegrenade"), fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_stickybomb"), 5f, 1))
@@ -1803,7 +1803,7 @@ int func_38(int iParam0, struct<3> Param1, float fParam2, int iParam3)
 
 float func_39(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_40(struct<3> Param0)
@@ -1820,8 +1820,8 @@ Vector3 func_40(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -5606,28 +5606,28 @@ int func_63(int iParam0, var uParam1, char* sParam2)
 		
 		case 306:
 			Var4 = { -7.4998f, 7.4995f, -0.5258f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 307:
 			Var5 = { 10.6345f, 0.7246f, 1.2508f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 308:
 			Var6 = { -3.4271f, -13.6787f, -1.4107f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 309:
 			Var7 = { -19.6582f, 7.896f, 0.1334f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;

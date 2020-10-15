@@ -421,7 +421,7 @@ void __EntryFunction__()
 			fVar35 = 0f;
 			Var36 = { PED::GET_PED_BONE_COORDS(PLAYER::PLAYER_PED_ID(), 2108, 0f, 0f, 0f) };
 			bVar37 = MISC::GET_GROUND_Z_FOR_3D_COORD(Var36, &fVar35, 0, 0);
-			while ((((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PED::IS_PED_FALLING(PLAYER::PLAYER_PED_ID())) || !func_94(0f, 0f, Var36.z, 0f, 0f, fVar35, 1056964608, 0)) && bVar37) && MISC::GET_GAME_TIMER() < iVar33 + 15000)
+			while ((((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PED::IS_PED_FALLING(PLAYER::PLAYER_PED_ID())) || !func_94(0f, 0f, Var36.f_2, 0f, 0f, fVar35, 1056964608, 0)) && bVar37) && MISC::GET_GAME_TIMER() < iVar33 + 15000)
 			{
 				Var36 = { PED::GET_PED_BONE_COORDS(PLAYER::PLAYER_PED_ID(), 2108, 0f, 0f, 0f) };
 				bVar37 = MISC::GET_GROUND_Z_FOR_3D_COORD(Var36, &fVar35, 0, 0);
@@ -890,8 +890,8 @@ int func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, int
 			{
 				MISC::GET_MODEL_DIMENSIONS(uParam0->f_12.f_66, &Var3, &Var4);
 				fVar5 = (Var4.x - Var3.x);
-				fVar6 = (Var4.y - Var3.y);
-				fVar7 = (Var4.z - Var3.z);
+				fVar6 = (Var4.f_1 - Var3.f_1);
+				fVar7 = (Var4.f_2 - Var3.f_2);
 				fVar8 = fVar5;
 				if (fVar6 > fVar8)
 				{
@@ -1041,7 +1041,7 @@ int func_15(var uParam0, struct<3> Param1, float fParam2, bool bParam3)
 				bVar2 = true;
 				if (VEHICLE::IS_THIS_MODEL_A_BOAT(uParam0->f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_JETSKI(uParam0->f_12.f_66))
 				{
-					if (!WATER::TEST_PROBE_AGAINST_WATER(Param1.x, Param1.y, (Param1.z + 30f), Param1.x, Param1.y, (Param1.z - 30f), &uVar3))
+					if (!WATER::TEST_PROBE_AGAINST_WATER(Param1.x, Param1.f_1, (Param1.f_2 + 30f), Param1.x, Param1.f_1, (Param1.f_2 - 30f), &uVar3))
 					{
 						bVar2 = false;
 					}
@@ -6369,7 +6369,7 @@ int func_89(var uParam0, var uParam1, int iParam2, int iParam3, bool bParam4, fl
 	}
 	MISC::GET_MODEL_DIMENSIONS(iParam2, &Var9, &Var10);
 	Var10 = { Var10 - Var9 };
-	bVar7 = ((((VEHICLE::IS_THIS_MODEL_A_BOAT(iParam2) || VEHICLE::IS_THIS_MODEL_A_HELI(iParam2)) || VEHICLE::IS_THIS_MODEL_A_PLANE(iParam2)) || VEHICLE::IS_THIS_MODEL_A_TRAIN(iParam2)) || ((Var10.x > 6f || Var10.y > 6f) || Var10.z > 6f));
+	bVar7 = ((((VEHICLE::IS_THIS_MODEL_A_BOAT(iParam2) || VEHICLE::IS_THIS_MODEL_A_HELI(iParam2)) || VEHICLE::IS_THIS_MODEL_A_PLANE(iParam2)) || VEHICLE::IS_THIS_MODEL_A_TRAIN(iParam2)) || ((Var10.x > 6f || Var10.f_1 > 6f) || Var10.f_2 > 6f));
 	PATHFIND::_0x07FB139B592FA687((*uParam0 - fVar8), (uParam0->f_1 - fVar8), (*uParam0 + fVar8), (uParam0->f_1 + fVar8));
 	iVar11 = MISC::GET_GAME_TIMER();
 	while (!PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA((*uParam0 - fVar8), (uParam0->f_1 - fVar8), (*uParam0 + fVar8), (uParam0->f_1 + fVar8)) && (MISC::GET_GAME_TIMER() - iVar11) < 5000)
@@ -6380,16 +6380,16 @@ int func_89(var uParam0, var uParam1, int iParam2, int iParam3, bool bParam4, fl
 	{
 		iVar0 = 0;
 		Var10.x = (Var10.x / 2f);
-		Var10.y = (Var10.y / 2f);
-		Var10.z = 0f;
+		Var10.f_1 = (Var10.f_1 / 2f);
+		Var10.f_2 = 0f;
 		fVar12 = SYSTEM::VMAG(Var10);
 		while (func_91(*uParam0, &Var4, &iVar0, 16, 300f, 3f))
 		{
 			if (WATER::TEST_VERTICAL_PROBE_AGAINST_ALL_WATER(Var4 + Vector(100f, 0f, 0f), 83, &uVar13) == 1)
 			{
-				Var4.z = uVar13;
+				Var4.f_2 = uVar13;
 				MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(100f, 0f, 0f), &fVar14, 0, 0);
-				if (fVar14 <= Var4.z)
+				if (fVar14 <= Var4.f_2)
 				{
 					bVar6 = true;
 					iVar2 = 0;
@@ -6397,9 +6397,9 @@ int func_89(var uParam0, var uParam1, int iParam2, int iParam3, bool bParam4, fl
 					{
 						if (WATER::TEST_VERTICAL_PROBE_AGAINST_ALL_WATER(Var5 + Vector(10f, 0f, 0f), 83, &uVar13) == 1)
 						{
-							Var5.z = uVar13;
+							Var5.f_2 = uVar13;
 							MISC::GET_GROUND_Z_FOR_3D_COORD(Var5 + Vector(10f, 0f, 0f), &fVar14, 0, 0);
-							if (fVar14 > Var5.z)
+							if (fVar14 > Var5.f_2)
 							{
 								bVar6 = false;
 							}
@@ -6466,7 +6466,7 @@ int func_90(struct<3> Param0, bool bParam1, int iParam2)
 		return 1;
 	}
 	MISC::GET_GROUND_Z_FOR_3D_COORD(Param0 + Vector(10f, 0f, 0f), &fVar0, 0, 0);
-	if (Param0.z < (fVar0 - 0.1f))
+	if (Param0.f_2 < (fVar0 - 0.1f))
 	{
 		return 1;
 	}
@@ -6535,7 +6535,7 @@ int func_92(struct<3> Param0, var uParam1, int iParam2, bool bParam3, bool bPara
 			Var4 = { Var4 * Vector(1.25f, 1.25f, 1.25f) };
 		}
 		Var4 = { Var4 - Var3 };
-		uVar7 = SHAPETEST::START_SHAPE_TEST_BOX(Param0 - Vector(Var3.z, 0f, 0f), Var4, 0f, 0f, uParam1, 2, iVar1, iVar0, 4);
+		uVar7 = SHAPETEST::START_SHAPE_TEST_BOX(Param0 - Vector(Var3.f_2, 0f, 0f), Var4, 0f, 0f, uParam1, 2, iVar1, iVar0, 4);
 		iVar9 = SHAPETEST::GET_SHAPE_TEST_RESULT(uVar7, &iVar2, &uVar5, &uVar6, &uVar8);
 		while (iVar9 == 1)
 		{
@@ -6578,9 +6578,9 @@ int func_94(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -6589,7 +6589,7 @@ int func_94(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -7087,14 +7087,14 @@ int func_100(struct<3> Param0, var uParam1, var uParam2, var uParam3)
 		Var1 = { -394.2681f, -1909.834f, 48.946f };
 		fVar2 = 122.5f;
 		Var3 = { Var0 * Vector(1f, 1f, 1f) + Var1 * Vector(1f, 1f, 1f) / Vector(2f, 2f, 2f) };
-		if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Var0, Var3.x, Var3.y, Var1.z, fVar2, 0, 1, 0))
+		if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Var0, Var3.x, Var3.f_1, Var1.f_2, fVar2, 0, 1, 0))
 		{
 			*uParam1 = { -231.1906f, -1995.793f, 28.946f };
 			*uParam2 = 256.7039f;
 			*uParam3 = 6;
 			return 1;
 		}
-		if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Var3.x, Var3.y, Var0.z, Var1, fVar2, 0, 1, 0))
+		if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Var3.x, Var3.f_1, Var0.f_2, Var1, fVar2, 0, 1, 0))
 		{
 			*uParam1 = { -342.98f, -1879.652f, 28.9463f };
 			*uParam2 = 353.8719f;
@@ -48827,15 +48827,15 @@ void func_356(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_357(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_357(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -49853,7 +49853,7 @@ void func_360(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -49862,19 +49862,19 @@ void func_360(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_361(Var2.z)] = Var2.x;
+						(*uParam0)[func_361(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_361(Var2.z)] = func_357(iParam1, Var2.x, func_361(Var2.z), iVar0);
+						(*uParam0)[func_361(Var2.f_2)] = func_357(iParam1, Var2.x, func_361(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_361(Var2.z)] = Var2.y;
+					(*uParam0)[func_361(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -116863,10 +116863,10 @@ int func_563(var uParam0, int iParam1)
 								if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var12, &fVar13, 0, 0))
 								{
 									GRAPHICS::DRAW_DEBUG_SPHERE(Var12, 0.5f, 255, 0, 255, 255);
-									Var12.z = fVar13;
+									Var12.f_2 = fVar13;
 									Var14 = { uParam0->f_4 - Var12 };
 									uParam0->f_4 = { Var12 };
-									uParam0->f_7 = MISC::GET_HEADING_FROM_VECTOR_2D(Var14.x, Var14.y);
+									uParam0->f_7 = MISC::GET_HEADING_FROM_VECTOR_2D(Var14.x, Var14.f_1);
 									iVar10 = 99;
 								}
 							}
@@ -116906,7 +116906,7 @@ Vector3 func_564(struct<3> Param0, float fParam1, float fParam2)
 	Var0 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), 0f };
 	fVar1 = (fParam2 / 2f);
 	Var0 = { func_565(Var0, MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, fParam1)) };
-	Var0.z = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar1, fVar1);
+	Var0.f_2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar1, fVar1);
 	return Param0 + Var0;
 }
 
@@ -124902,7 +124902,7 @@ int func_632(float fParam0)
 	struct<3> Var0;
 	
 	Var0 = { func_633(PLAYER::PLAYER_ID()) };
-	if (Var0.z < fParam0)
+	if (Var0.f_2 < fParam0)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
@@ -127581,28 +127581,28 @@ int func_651(int iParam0, var uParam1, char* sParam2)
 		
 		case 306:
 			Var4 = { -7.4998f, 7.4995f, -0.5258f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 307:
 			Var5 = { 10.6345f, 0.7246f, 1.2508f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 308:
 			Var6 = { -3.4271f, -13.6787f, -1.4107f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 309:
 			Var7 = { -19.6582f, 7.896f, 0.1334f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
@@ -129740,7 +129740,7 @@ int func_665(int iParam0)
 
 int func_666(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -136842,8 +136842,8 @@ bool func_761(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 

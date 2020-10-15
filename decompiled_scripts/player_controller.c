@@ -26753,15 +26753,15 @@ void func_78(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_79(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_79(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -28082,7 +28082,7 @@ void func_84(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -28091,19 +28091,19 @@ void func_84(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_85(Var2.z)] = Var2.x;
+						(*uParam0)[func_85(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_85(Var2.z)] = func_79(iParam1, Var2.x, func_85(Var2.z), iVar0);
+						(*uParam0)[func_85(Var2.f_2)] = func_79(iParam1, Var2.x, func_85(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_85(Var2.z)] = Var2.y;
+					(*uParam0)[func_85(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -36262,9 +36262,9 @@ int func_193(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -36273,7 +36273,7 @@ int func_193(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -36471,13 +36471,13 @@ void func_201(var uParam0, struct<3> Param1, var uParam2)
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);
 		ENTITY::SET_ENTITY_HEALTH(*uParam0, 0, 0);
 		PHYSICS::ACTIVATE_PHYSICS(*uParam0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.1f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.5f, 0.4f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.03f), (Param1.y + 0.3f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.8f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.2f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.8f, 1.1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.5f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.7f, 0.6f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.01f), (Param1.y - 0.4f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.4f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.01f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.1f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.6f), (Param1.y - 0.35f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.5f, 1.2f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.1f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.5f, 0.4f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.03f), (Param1.f_1 + 0.3f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.8f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.2f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.8f, 1.1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.5f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.7f, 0.6f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.01f), (Param1.f_1 - 0.4f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.4f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.01f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.1f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.6f), (Param1.f_1 - 0.35f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.5f, 1.2f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
 		func_202(*uParam0);
 		return;
 	}
@@ -36529,8 +36529,8 @@ Vector3 func_203(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -36548,13 +36548,13 @@ void func_204(var uParam0, struct<3> Param1, var uParam2)
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);
 		ENTITY::SET_ENTITY_HEALTH(*uParam0, 0, 0);
 		PHYSICS::ACTIVATE_PHYSICS(*uParam0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.1f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.5f, 0.4f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.03f), (Param1.y + 0.3f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.8f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.2f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.8f, 1.1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.5f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.7f, 0.6f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.01f), (Param1.y - 0.4f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.4f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.01f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.1f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.6f), (Param1.y - 0.35f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.5f, 1.2f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.1f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.5f, 0.4f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.03f), (Param1.f_1 + 0.3f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.8f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.2f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.8f, 1.1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.5f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.7f, 0.6f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.01f), (Param1.f_1 - 0.4f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.4f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.01f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.1f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.6f), (Param1.f_1 - 0.35f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.5f, 1.2f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
 		func_202(*uParam0);
 		return;
 	}
@@ -36573,11 +36573,11 @@ void func_205(var uParam0, struct<3> Param1, var uParam2)
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);
 		ENTITY::SET_ENTITY_HEALTH(*uParam0, 0, 0);
 		PHYSICS::ACTIVATE_PHYSICS(*uParam0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.02f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.5f, 0.4f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.23f), (Param1.y + 0.04f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.8f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.05f), (Param1.y - 0.01f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.8f, 1.1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.05f), (Param1.y - 0.11f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.7f, 0.6f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.09f), (Param1.y - 0.06f), Param1.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.1f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.02f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.5f, 0.4f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.23f), (Param1.f_1 + 0.04f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.8f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.05f), (Param1.f_1 - 0.01f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.8f, 1.1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x - 0.05f), (Param1.f_1 - 0.11f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.7f, 0.6f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, (Param1.x + 0.09f), (Param1.f_1 - 0.06f), Param1.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1.1f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
 		func_202(*uParam0);
 		return;
 	}
@@ -36599,11 +36599,11 @@ void func_206(var uParam0, var uParam1, struct<3> Param2, var uParam3)
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);
 		ENTITY::SET_ENTITY_HEALTH(*uParam0, 0, 0);
 		PHYSICS::ACTIVATE_PHYSICS(*uParam0);
-		GRAPHICS::ADD_DECAL(1110, ((Param2.x + 0.12f) - 0.3f), ((Param2.y - 0.01f) - 0.07f), Param2.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1f, 0.9f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, ((Param2.x - 0.03f) - 0.3f), ((Param2.y + 0.04f) - 0.07f), Param2.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.8f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, ((Param2.x - 0.2f) - 0.3f), ((Param2.y - 0.01f) - 0.07f), Param2.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.7f, 0.9f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, ((Param2.x - 0.05f) - 0.3f), ((Param2.y - 0.15f) - 0.07f), Param2.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.7f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
-		GRAPHICS::ADD_DECAL(1110, ((Param2.x + 0.01f) - 0.3f), ((Param2.y - 0.06f) - 0.07f), Param2.z, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.8f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, ((Param2.x + 0.12f) - 0.3f), ((Param2.f_1 - 0.01f) - 0.07f), Param2.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 1f, 0.9f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, ((Param2.x - 0.03f) - 0.3f), ((Param2.f_1 + 0.04f) - 0.07f), Param2.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.8f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, ((Param2.x - 0.2f) - 0.3f), ((Param2.f_1 - 0.01f) - 0.07f), Param2.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.7f, 0.9f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, ((Param2.x - 0.05f) - 0.3f), ((Param2.f_1 - 0.15f) - 0.07f), Param2.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.9f, 0.7f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
+		GRAPHICS::ADD_DECAL(1110, ((Param2.x + 0.01f) - 0.3f), ((Param2.f_1 - 0.06f) - 0.07f), Param2.f_2, 0f, 0f, -1f, func_203(0f, 1f, 0f), 0.8f, 1f, 0.196f, 0f, 0f, 1f, -1f, 1, 0, 0);
 		func_202(*uParam0);
 		Var2 = { 9.9929f, 4.6946f, -7.1469f };
 		*uParam1 = VEHICLE::CREATE_VEHICLE(iVar1, Param2 + Var2, uParam3, 1, 1, 0);
@@ -36672,7 +36672,7 @@ void func_208(var uParam0, var uParam1, struct<3> Param2, var uParam3, bool bPar
 			GRAPHICS::ADD_DECAL(2020, Param2 + Var2, 0f, 0f, -1f, 0.4484f, -0.8938f, 0f, 0.19f, 0.33f, 0.09f, 0f, 0f, 1f, -1f, 1, 0, 0);
 		}
 		func_202(*uParam0);
-		*uParam1 = VEHICLE::CREATE_VEHICLE(iVar0, (Param2.x - 0.4f), (Param2.y - 0.5f), Param2.z, uParam3, 1, 1, 0);
+		*uParam1 = VEHICLE::CREATE_VEHICLE(iVar0, (Param2.x - 0.4f), (Param2.f_1 - 0.5f), Param2.f_2, uParam3, 1, 1, 0);
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);
 		ENTITY::SET_ENTITY_ROTATION(*uParam1, 0f, 85f, 0f, 2, 1);
 		VEHICLE::SET_VEHICLE_BODY_HEALTH(*uParam1, 20.5f);
@@ -37148,7 +37148,7 @@ void func_230(var uParam0)
 
 void func_231(var uParam0, int iParam1, int iParam2, bool bParam3, struct<3> Param4, struct<3> Param5, struct<3> Param6)
 {
-	func_232(uParam0, iParam1, iParam2, bParam3, Param4.x, Param4.y, Param4.z, Param5.x, Param5.y, Param5.z, Param6.x, Param6.y, Param6.z, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+	func_232(uParam0, iParam1, iParam2, bParam3, Param4.x, Param4.f_1, Param4.f_2, Param5.x, Param5.f_1, Param5.f_2, Param6.x, Param6.f_1, Param6.f_2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 }
 
 void func_232(var uParam0, int iParam1, int iParam2, bool bParam3, float fParam4, float fParam5, float fParam6, float fParam7, float fParam8, float fParam9, float fParam10, float fParam11, float fParam12, float fParam13, float fParam14, float fParam15, float fParam16, float fParam17, float fParam18, float fParam19, float fParam20, float fParam21, float fParam22, float fParam23, float fParam24, float fParam25, float fParam26, float fParam27)
@@ -37222,7 +37222,7 @@ void func_232(var uParam0, int iParam1, int iParam2, bool bParam3, float fParam4
 
 void func_233(var uParam0, int iParam1, int iParam2, bool bParam3, struct<3> Param4, struct<3> Param5, struct<3> Param6, struct<3> Param7)
 {
-	func_232(uParam0, iParam1, iParam2, bParam3, Param4.x, Param4.y, Param4.z, Param5.x, Param5.y, Param5.z, Param6.x, Param6.y, Param6.z, Param7.x, Param7.y, Param7.z, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+	func_232(uParam0, iParam1, iParam2, bParam3, Param4.x, Param4.f_1, Param4.f_2, Param5.x, Param5.f_1, Param5.f_2, Param6.x, Param6.f_1, Param6.f_2, Param7.x, Param7.f_1, Param7.f_2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 }
 
 bool func_234(var uParam0, int iParam1)
@@ -114099,9 +114099,9 @@ bool func_594(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_595(int iParam0)
@@ -114870,7 +114870,7 @@ int func_612(int iParam0, int iParam1)
 
 int func_613(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -116074,7 +116074,7 @@ void func_641(int iParam0)
 	func_642(iParam0, 0);
 	if (!func_594(Var1, 0f, 0f, 0f, 0))
 	{
-		fVar5 = MISC::ABSF((Global_111638.f_2358.f_539.f_2300[iVar0 /*3*/].f_2 - Var1.z));
+		fVar5 = MISC::ABSF((Global_111638.f_2358.f_539.f_2300[iVar0 /*3*/].f_2 - Var1.f_2));
 		fVar6 = SYSTEM::VDIST2(Var1, Global_111638.f_2358.f_539.f_2300[iVar0 /*3*/]);
 		fVar7 = SYSTEM::VMAG(Global_111638.f_2358.f_539.f_2318[iVar0 /*3*/]);
 		bVar8 = false;

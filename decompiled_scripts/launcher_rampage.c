@@ -4192,7 +4192,7 @@ void func_69(var uParam0, int iParam1)
 		{
 			if (func_71(iVar0, &Var1, &uVar2))
 			{
-				Var1.z = (Var1.z + 1f);
+				Var1.f_2 = (Var1.f_2 + 1f);
 				*uParam0 = { Var1 };
 				uParam0->f_3 = uVar2;
 			}
@@ -4538,9 +4538,9 @@ bool func_72(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_73(var uParam0)
@@ -5184,9 +5184,9 @@ Vector3 func_84(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -8584,7 +8584,7 @@ int func_167(int iParam0, int iParam1, float fParam2, int iParam3)
 
 float func_168(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_169(struct<3> Param0)
@@ -8601,8 +8601,8 @@ Vector3 func_169(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -8717,11 +8717,11 @@ int func_174(int iParam0, float fParam1, bool bParam2, bool bParam3)
 	Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0, 1) };
 	Var1 = { Var0 };
 	Var0.x = (Var0.x - fParam1);
-	Var0.y = (Var0.y - fParam1);
-	Var0.z = (Var0.z - fParam1);
+	Var0.f_1 = (Var0.f_1 - fParam1);
+	Var0.f_2 = (Var0.f_2 - fParam1);
 	Var1.x = (Var1.x + fParam1);
-	Var1.y = (Var1.y + fParam1);
-	Var1.z = (Var1.z + fParam1);
+	Var1.f_1 = (Var1.f_1 + fParam1);
+	Var1.f_2 = (Var1.f_2 + fParam1);
 	if (bParam2)
 	{
 		if (((MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_grenade"), fParam1, 1) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_molotov"), fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_smokegrenade"), fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_stickybomb"), 5f, 1))
@@ -9954,7 +9954,7 @@ int func_226(float fParam0)
 	while (iVar0 < 5)
 	{
 		Var1 = { Global_31146[(iLocal_239 + iVar0) /*23*/][0 /*3*/] };
-		if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var2, Var1, 1) <= fParam0 && MISC::ABSF((Var2.z - Var1.z)) < 1.5f)
+		if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var2, Var1, 1) <= fParam0 && MISC::ABSF((Var2.f_2 - Var1.f_2)) < 1.5f)
 		{
 			return iVar0;
 		}
@@ -10102,7 +10102,7 @@ void func_228(var uParam0, struct<3> Param1)
 			}
 		}
 		Local_249 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-		if ((!(*uParam0 == 52 && Local_249.z > 34f) && !(*uParam0 == 53 && Local_249.z > 71f)) && !(*uParam0 == 54 && Local_249.z > 30f))
+		if ((!(*uParam0 == 52 && Local_249.f_2 > 34f) && !(*uParam0 == 53 && Local_249.f_2 > 71f)) && !(*uParam0 == 54 && Local_249.f_2 > 30f))
 		{
 			if (func_249(uParam0, 0))
 			{
@@ -23350,10 +23350,10 @@ Vector3 func_336(var uParam0, struct<3> Param1)
 {
 	var uVar0;
 	
-	Param1.z = (Param1.z + 0.15f);
+	Param1.f_2 = (Param1.f_2 + 0.15f);
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(Param1, &uVar0, 0, 0))
 	{
-		Param1.z = uVar0;
+		Param1.f_2 = uVar0;
 	}
 	if (func_225(uParam0))
 	{
@@ -23850,9 +23850,9 @@ int func_354(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -23861,7 +23861,7 @@ int func_354(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}

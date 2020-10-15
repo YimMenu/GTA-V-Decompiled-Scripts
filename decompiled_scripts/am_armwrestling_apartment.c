@@ -3690,8 +3690,8 @@ void func_7(var uParam0, int iParam1)
 	struct<3> Var0;
 	
 	Var0.x = 1230204399;
-	Var0.y = PLAYER::PLAYER_ID();
-	Var0.z = uParam0;
+	Var0.f_1 = PLAYER::PLAYER_ID();
+	Var0.f_2 = uParam0;
 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 3, func_8(iParam1));
 }
 
@@ -4522,7 +4522,7 @@ void func_39(var uParam0, var uParam1, int iParam2, int iParam3, bool bParam4, b
 									if (bParam5)
 									{
 										func_43(&Var0, 0, &Var8, &Var9, 1, 0, 1);
-										Var9.z = (Var9.z + 90f);
+										Var9.f_2 = (Var9.f_2 + 90f);
 										uParam0->f_437 = PED::CREATE_SYNCHRONIZED_SCENE(Var8, Var9, 2);
 										Var10 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&Var1, &cVar2, Var8, Var9, 0, 2) };
 										Var11 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&Var1, &cVar2, Var8, Var9, 0, 2) };
@@ -10250,7 +10250,7 @@ int func_171(var uParam0, var uParam1, int iParam2, int iParam3)
 	else
 	{
 		Var0 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
-		Var1 = { Var0.x, Var0.y, 1320f };
+		Var1 = { Var0.x, Var0.f_1, 1320f };
 		if (iParam3 != 0)
 		{
 			func_189(&(uParam0->f_20), iParam3, Var1, 0f, -1, 0, 1);
@@ -14139,7 +14139,7 @@ int func_188()
 
 void func_189(var uParam0, int iParam1, struct<3> Param2, float fParam3, int iParam4, bool bParam5, int iParam6)
 {
-	Param2.z = (Param2.z + 1f);
+	Param2.f_2 = (Param2.f_2 + 1f);
 	func_191(uParam0, iParam1, Param2, fParam3, iParam4, bParam5);
 	if (ENTITY::DOES_ENTITY_EXIST(*uParam0))
 	{
@@ -43474,15 +43474,15 @@ Vector3 func_251(struct<2> Param0, var uParam1, struct<3> Param2)
 	{
 		return 0f, 0f, 0f;
 	}
-	Var0.z = (180f - MISC::GET_HEADING_FROM_VECTOR_2D((Param2.x - Param0), (Param2.y - Param0.f_1)));
+	Var0.f_2 = (180f - MISC::GET_HEADING_FROM_VECTOR_2D((Param2.x - Param0), (Param2.f_1 - Param0.f_1)));
 	Var0.x = 0f;
-	Var0.y = 0f;
+	Var0.f_1 = 0f;
 	return Var0;
 }
 
 int func_252(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -43554,43 +43554,43 @@ void func_254(var uParam0, var uParam1, int iParam2, int iParam3)
 		switch (iVar1)
 		{
 			case 0:
-				Var7.y = 0.55f;
-				Var7.z = 0.55f;
+				Var7.f_1 = 0.55f;
+				Var7.f_2 = 0.55f;
 				break;
 			
 			case 1:
-				Var7.y = 0.475f;
-				Var7.z = 0.475f;
+				Var7.f_1 = 0.475f;
+				Var7.f_2 = 0.475f;
 				break;
 			
 			case 2:
-				Var7.y = 0.475f;
-				Var7.z = 0.475f;
+				Var7.f_1 = 0.475f;
+				Var7.f_2 = 0.475f;
 				break;
 			
 			case 3:
-				Var7.y = 0.4f;
-				Var7.z = 0.4f;
+				Var7.f_1 = 0.4f;
+				Var7.f_2 = 0.4f;
 				break;
 			
 			case 4:
-				Var7.y = 0.4f;
-				Var7.z = 0.4f;
+				Var7.f_1 = 0.4f;
+				Var7.f_2 = 0.4f;
 				break;
 			
 			case 5:
-				Var7.y = 0.475f;
-				Var7.z = 0.475f;
+				Var7.f_1 = 0.475f;
+				Var7.f_2 = 0.475f;
 				break;
 			
 			case 6:
-				Var7.y = 0.4f;
-				Var7.z = 0.4f;
+				Var7.f_1 = 0.4f;
+				Var7.f_2 = 0.4f;
 				break;
 			
 			case 7:
-				Var7.y = 0.4f;
-				Var7.z = 0.4f;
+				Var7.f_1 = 0.4f;
+				Var7.f_2 = 0.4f;
 				break;
 		}
 		Var5 = { *(uParam1[iVar1 /*16*/]) };
@@ -43603,20 +43603,20 @@ void func_254(var uParam0, var uParam1, int iParam2, int iParam3)
 				{
 					if (func_137((*uParam0)[iVar1]))
 					{
-						Var2.z = (Var2.z + 0.25f);
+						Var2.f_2 = (Var2.f_2 + 0.25f);
 					}
 					else
 					{
-						Var2.z = (Var2.z + 0.22f);
+						Var2.f_2 = (Var2.f_2 + 0.22f);
 					}
 				}
 				else if (func_137((*uParam0)[iVar1]))
 				{
-					Var2.z = (Var2.z + 0.25f);
+					Var2.f_2 = (Var2.f_2 + 0.25f);
 				}
 				else
 				{
-					Var2.z = (Var2.z + 0.22f);
+					Var2.f_2 = (Var2.f_2 + 0.22f);
 				}
 				GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(Var2, &fVar3, &fVar4);
 				if (fVar3 != -1f && fVar4 != -1f)
@@ -45981,10 +45981,10 @@ void func_347(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_8(Var0.y);
+	iVar1 = func_8(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;
@@ -55570,8 +55570,8 @@ void func_496(bool bParam0)
 	if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 	{
 		Var0.x = -1534608561;
-		Var0.y = PLAYER::PLAYER_ID();
-		Var0.z = bParam0;
+		Var0.f_1 = PLAYER::PLAYER_ID();
+		Var0.f_2 = bParam0;
 		SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 3, func_25(1, 1));
 	}
 }
@@ -58785,9 +58785,9 @@ int func_647(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -58796,7 +58796,7 @@ int func_647(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -58817,7 +58817,7 @@ Vector3 func_648(var uParam0, bool bParam1, bool bParam2)
 	{
 		Var0 = { 0.22f, 0.676f, 0.533f };
 		Var0.x = (Var0.x * -1f);
-		Var0.y = (Var0.y * -1f);
+		Var0.f_1 = (Var0.f_1 * -1f);
 	}
 	return func_649(uParam0, Var0);
 }
@@ -58827,8 +58827,8 @@ Vector3 func_649(var uParam0, struct<3> Param1)
 	struct<3> Var0;
 	
 	Var0 = { func_497(uParam0) + func_651(uParam0) * Vector(Param1.x, Param1.x, Param1.x) };
-	Var0 = { Var0 + func_650(uParam0) * Vector(Param1.y, Param1.y, Param1.y) };
-	Var0.z = (Var0.z + Param1.z);
+	Var0 = { Var0 + func_650(uParam0) * Vector(Param1.f_1, Param1.f_1, Param1.f_1) };
+	Var0.f_2 = (Var0.f_2 + Param1.f_2);
 	return Var0;
 }
 
@@ -59134,7 +59134,7 @@ void func_675(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -59154,19 +59154,19 @@ void func_676(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_24(Var0.y, 1, 1))
+		if (func_24(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_677(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -59477,7 +59477,7 @@ void func_695(var uParam0, int iParam1)
 	
 	func_808(uParam0, &(uParam0->f_9), iParam1, 1);
 	Var0.x = -SYSTEM::COS((func_638(uParam0) + 90f));
-	Var0.y = -SYSTEM::SIN((func_638(uParam0) + 90f));
+	Var0.f_1 = -SYSTEM::SIN((func_638(uParam0) + 90f));
 	func_698(uParam0, Var0);
 	func_696(uParam0, func_697(Var0, 2));
 }
@@ -59494,21 +59494,21 @@ Vector3 func_697(struct<3> Param0, int iParam1)
 	switch (iParam1)
 	{
 		case 0:
-			Var0.x = -Param0.y;
-			Var0.y = Param0.x;
+			Var0.x = -Param0.f_1;
+			Var0.f_1 = Param0.x;
 			break;
 		
 		case 1:
 			Var0.x = -Param0.x;
-			Var0.y = -Param0.y;
+			Var0.f_1 = -Param0.f_1;
 			break;
 		
 		case 2:
-			Var0.x = Param0.y;
-			Var0.y = -Param0.x;
+			Var0.x = Param0.f_1;
+			Var0.f_1 = -Param0.x;
 			break;
 	}
-	Var0.z = Param0.z;
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -59586,7 +59586,7 @@ int func_704(var uParam0)
 						
 						case -1534608561:
 							MISC::SET_BIT(uParam0, 1);
-							if (Var0.z)
+							if (Var0.f_2)
 							{
 								MISC::SET_BIT(uParam0, 3);
 							}
@@ -62773,7 +62773,7 @@ void func_808(var uParam0, float fParam1, int iParam2, bool bParam3)
 			OBJECT::GET_COORDS_AND_ROTATION_OF_CLOSEST_OBJECT_OF_TYPE(*uParam0, 8f, joaat("prop_arm_wrestle_01"), uParam0, &Var0, 0);
 			if (((iParam2 != 12 && iParam2 != 3) && iParam2 != 4) && iParam2 != 8)
 			{
-				*fParam1 = Var0.z;
+				*fParam1 = Var0.f_2;
 			}
 		}
 	}

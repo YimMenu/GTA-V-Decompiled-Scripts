@@ -2194,7 +2194,7 @@ int func_67(int iParam0, int iParam1)
 			{
 				Var0 = { func_68(iParam1) };
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -4908,7 +4908,7 @@ int func_126(int iParam0, int iParam1, int iParam2)
 			{
 				return 4;
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -10996,10 +10996,10 @@ void func_251(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_253(Var0.y);
+	iVar1 = func_253(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;

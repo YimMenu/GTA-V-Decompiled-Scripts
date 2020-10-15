@@ -3867,9 +3867,9 @@ int func_56(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -3878,7 +3878,7 @@ int func_56(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -4481,7 +4481,7 @@ int func_68(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var
 								if (ENTITY::IS_ENTITY_IN_WATER(iVar10) && !VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(iVar10))
 								{
 									Var19 = { ENTITY::GET_ENTITY_COORDS(iVar10, 1) };
-									if (Var19.z < -1f)
+									if (Var19.f_2 < -1f)
 									{
 										TASK::TASK_LEAVE_VEHICLE(uParam0->f_17[iVar0], iVar10, 64);
 									}
@@ -5512,9 +5512,9 @@ bool func_95(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_96()
@@ -9114,7 +9114,7 @@ void func_145(var uParam0, int iParam1)
 		{
 			if (func_147(iVar0, &Var1, &uVar2))
 			{
-				Var1.z = (Var1.z + 1f);
+				Var1.f_2 = (Var1.f_2 + 1f);
 				*uParam0 = { Var1 };
 				uParam0->f_3 = uVar2;
 			}
@@ -10097,9 +10097,9 @@ Vector3 func_159(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -12455,7 +12455,7 @@ int func_199()
 		
 		case 1:
 			Local_287 = { ENTITY::GET_ENTITY_COORDS(Local_57[8 /*2*/], 1) };
-			if (Local_287.z <= 1f)
+			if (Local_287.f_2 <= 1f)
 			{
 				ENTITY::FREEZE_ENTITY_POSITION(Local_53[0 /*2*/], 0);
 				CAM::SET_CAM_PARAMS(uLocal_293, 310.0923f, -2949.529f, 10.9528f, -20.2654f, 2.7992f, -141.6393f, 25.6f, 0, 1, 1, 2);
@@ -12471,7 +12471,7 @@ int func_199()
 		
 		case 2:
 			Local_287 = { ENTITY::GET_ENTITY_COORDS(Local_57[8 /*2*/], 1) };
-			if (Local_287.z >= 12.5f)
+			if (Local_287.f_2 >= 12.5f)
 			{
 				CAM::SET_CAM_PARAMS(uLocal_293, 356.9992f, -2984.961f, 117.2741f, -68.2497f, -0.1106f, 66.9743f, 20f, 0, 1, 1, 2);
 				CAM::SET_CAM_PARAMS(uLocal_293, 361.4758f, -2966.824f, 117.2872f, -66.6976f, -0.1106f, 84.372f, 20f, 10000, 1, 1, 2);
@@ -12531,7 +12531,7 @@ int func_199()
 		case 5:
 			STREAMING::_0xA76359FC80B2438E(1f);
 			Local_287 = { ENTITY::GET_ENTITY_COORDS(Local_57[8 /*2*/], 1) };
-			if (Local_287.z <= 11f)
+			if (Local_287.f_2 <= 11f)
 			{
 				ENTITY::DETACH_ENTITY(Local_53[0 /*2*/], 1, 1);
 				iLocal_275++;
@@ -12666,11 +12666,11 @@ void func_205(bool bParam0, float fParam1)
 {
 	if (bParam0)
 	{
-		Local_285.z = (Local_285.z - (fParam1 * SYSTEM::TIMESTEP()));
+		Local_285.f_2 = (Local_285.f_2 - (fParam1 * SYSTEM::TIMESTEP()));
 	}
 	else
 	{
-		Local_285.z = (Local_285.z + (fParam1 * SYSTEM::TIMESTEP()));
+		Local_285.f_2 = (Local_285.f_2 + (fParam1 * SYSTEM::TIMESTEP()));
 	}
 	ENTITY::SET_ENTITY_COORDS_NO_OFFSET(Local_57[8 /*2*/], ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_57[7 /*2*/], Local_285), 0, 0, 1);
 }
@@ -12717,7 +12717,7 @@ int func_206(var uParam0, struct<3> Param1, struct<3> Param2, float fParam3, int
 
 int func_207(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -13388,7 +13388,7 @@ void func_229()
 		
 		case 5:
 			Var1 = { ENTITY::GET_ENTITY_COORDS(Local_53[0 /*2*/], 1) };
-			if (ENTITY::GET_ENTITY_SUBMERGED_LEVEL(Local_53[0 /*2*/]) > 0f || Var1.z < -0.5f)
+			if (ENTITY::GET_ENTITY_SUBMERGED_LEVEL(Local_53[0 /*2*/]) > 0f || Var1.f_2 < -0.5f)
 			{
 				PHYSICS::DELETE_CHILD_ROPE(Local_55[0 /*5*/]);
 				PHYSICS::DELETE_CHILD_ROPE(Local_55[1 /*5*/]);

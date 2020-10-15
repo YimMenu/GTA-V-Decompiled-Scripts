@@ -157,7 +157,7 @@ void __EntryFunction__()
 									}
 									Local_40 = { func_125(iLocal_58) };
 									DATAFILE::DATADICT_SET_INT(uLocal_28[iLocal_34], "x", SYSTEM::ROUND(Local_40.x));
-									DATAFILE::DATADICT_SET_INT(uLocal_28[iLocal_34], "y", SYSTEM::ROUND(Local_40.y));
+									DATAFILE::DATADICT_SET_INT(uLocal_28[iLocal_34], "y", SYSTEM::ROUND(Local_40.f_1));
 									iLocal_34++;
 								}
 							}
@@ -178,7 +178,7 @@ void __EntryFunction__()
 									}
 									Local_40 = { func_125(iLocal_58) };
 									DATAFILE::DATADICT_SET_INT(uLocal_29[iLocal_35], "x", SYSTEM::ROUND(Local_40.x));
-									DATAFILE::DATADICT_SET_INT(uLocal_29[iLocal_35], "y", SYSTEM::ROUND(Local_40.y));
+									DATAFILE::DATADICT_SET_INT(uLocal_29[iLocal_35], "y", SYSTEM::ROUND(Local_40.f_1));
 									iLocal_35++;
 								}
 							}
@@ -199,7 +199,7 @@ void __EntryFunction__()
 									}
 									Local_40 = { func_125(iLocal_58) };
 									DATAFILE::DATADICT_SET_INT(uLocal_30[iLocal_36], "x", SYSTEM::ROUND(Local_40.x));
-									DATAFILE::DATADICT_SET_INT(uLocal_30[iLocal_36], "y", SYSTEM::ROUND(Local_40.y));
+									DATAFILE::DATADICT_SET_INT(uLocal_30[iLocal_36], "y", SYSTEM::ROUND(Local_40.f_1));
 									iLocal_36++;
 								}
 							}
@@ -220,7 +220,7 @@ void __EntryFunction__()
 									}
 									Local_40 = { func_125(iLocal_58) };
 									DATAFILE::DATADICT_SET_INT(uLocal_32[iLocal_37], "x", SYSTEM::ROUND(Local_40.x));
-									DATAFILE::DATADICT_SET_INT(uLocal_32[iLocal_37], "y", SYSTEM::ROUND(Local_40.y));
+									DATAFILE::DATADICT_SET_INT(uLocal_32[iLocal_37], "y", SYSTEM::ROUND(Local_40.f_1));
 									iLocal_37++;
 								}
 							}
@@ -261,7 +261,7 @@ void __EntryFunction__()
 									}
 									Local_40 = { func_125(iLocal_58) };
 									DATAFILE::DATADICT_SET_INT(uLocal_33[iLocal_39], "x", SYSTEM::ROUND(Local_40.x));
-									DATAFILE::DATADICT_SET_INT(uLocal_33[iLocal_39], "y", SYSTEM::ROUND(Local_40.y));
+									DATAFILE::DATADICT_SET_INT(uLocal_33[iLocal_39], "y", SYSTEM::ROUND(Local_40.f_1));
 									iLocal_39++;
 								}
 							}
@@ -1660,15 +1660,15 @@ void func_35(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_36(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_36(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -3062,7 +3062,7 @@ void func_43(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -3071,19 +3071,19 @@ void func_43(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_44(Var2.z)] = Var2.x;
+						(*uParam0)[func_44(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_44(Var2.z)] = func_36(iParam1, Var2.x, func_44(Var2.z), iVar0);
+						(*uParam0)[func_44(Var2.f_2)] = func_36(iParam1, Var2.x, func_44(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_44(Var2.z)] = Var2.y;
+					(*uParam0)[func_44(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;

@@ -2454,7 +2454,7 @@ void func_8(var uParam0)
 			PAD::DISABLE_CONTROL_ACTION(0, 0, 1);
 			Var2 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&sVar0, &sVar1, func_39(uParam0), func_38(uParam0), 0, 2) };
 			Var3 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&sVar0, &sVar1, func_39(uParam0), func_38(uParam0), 0, 2) };
-			uVar4 = Var3.z;
+			uVar4 = Var3.f_2;
 			fVar5 = 0.05f;
 			if (uParam0->f_1.f_1 == 1)
 			{
@@ -2471,7 +2471,7 @@ void func_8(var uParam0)
 			func_40(uParam0, &sVar1);
 			iVar6 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073);
 			Var7 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&sVar0, &sVar1, func_39(uParam0), func_38(uParam0), 0, 2) };
-			fVar8 = Var7.z;
+			fVar8 = Var7.f_2;
 			if ((iVar6 != 1 && iVar6 != 0) || func_25(ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), fVar8, 2f))
 			{
 				PAD::DISABLE_CONTROL_ACTION(0, 0, 1);
@@ -3161,7 +3161,7 @@ Vector3 func_38(var uParam0)
 	Var0 = { uParam0->f_16[uParam0->f_9 /*14*/].f_3 };
 	if (func_11() && uParam0->f_1.f_1 == 0)
 	{
-		Var0.z = (Var0.z - 4f);
+		Var0.f_2 = (Var0.f_2 - 4f);
 	}
 	return Var0;
 }
@@ -3806,12 +3806,12 @@ int func_55(int iParam0, struct<3> Param1, int iParam2)
 	{
 		if (iParam2 == 3 || iParam2 == 4)
 		{
-			if (func_25(ENTITY::GET_ENTITY_HEADING(iParam0), (Param1.z - 180f), 55f))
+			if (func_25(ENTITY::GET_ENTITY_HEADING(iParam0), (Param1.f_2 - 180f), 55f))
 			{
 				return 1;
 			}
 		}
-		else if (func_25(ENTITY::GET_ENTITY_HEADING(iParam0), Param1.z, 55f))
+		else if (func_25(ENTITY::GET_ENTITY_HEADING(iParam0), Param1.f_2, 55f))
 		{
 			return 1;
 		}
@@ -27571,15 +27571,15 @@ void func_135(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_123(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_123(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -28537,7 +28537,7 @@ void func_138(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -28546,19 +28546,19 @@ void func_138(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_139(Var2.z)] = Var2.x;
+						(*uParam0)[func_139(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_139(Var2.z)] = func_123(iParam1, Var2.x, func_139(Var2.z), iVar0);
+						(*uParam0)[func_139(Var2.f_2)] = func_123(iParam1, Var2.x, func_139(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_139(Var2.z)] = Var2.y;
+					(*uParam0)[func_139(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -108523,7 +108523,7 @@ void func_500(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -108543,19 +108543,19 @@ void func_501(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_53(Var0.y, 1, 1))
+		if (func_53(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_502(iVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -108864,9 +108864,9 @@ Vector3 func_514(struct<3> Param0, var uParam1)
 	
 	fVar1 = SYSTEM::SIN(uParam1);
 	fVar2 = SYSTEM::COS(uParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 

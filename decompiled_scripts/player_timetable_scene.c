@@ -606,8 +606,8 @@ int func_1(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4, 
 				Var2 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
 				Var3 = { Var2 + uParam0->f_9 };
 				Var4 = { Var3 - ENTITY::GET_ENTITY_ROTATION(uParam0->f_5, 2) };
-				Var5 = { (-SYSTEM::SIN(Var3.z) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.z) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
-				Var6 = { (-SYSTEM::SIN(Var4.z) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.z) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
+				Var5 = { (-SYSTEM::SIN(Var3.f_2) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.f_2) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
+				Var6 = { (-SYSTEM::SIN(Var4.f_2) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.f_2) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
 				uVar7 = CAM::GET_FINAL_RENDERED_CAM_FOV();
 				if (uParam0->f_17 > 0 || iParam6 != 0)
 				{
@@ -1023,7 +1023,7 @@ int func_7(int iParam0, int iParam1)
 				Var1 = { ENTITY::GET_ENTITY_COORDS(*iParam0, 1) };
 				Var2 = { ENTITY::GET_ENTITY_ROTATION(*iParam0, 2) };
 				ENTITY::SET_ENTITY_COORDS(*iParam0, Var1 + Vector(0.1f, 0f, 0f), 1, 0, 0, 1);
-				ENTITY::SET_ENTITY_ROTATION(*iParam0, Var2.x, Var2.y, Var2.z, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(*iParam0, Var2.x, Var2.f_1, Var2.f_2, 2, 1);
 			}
 			if (ENTITY::GET_ENTITY_MODEL(*iParam0) != joaat("p_defilied_ragdoll_01_s"))
 			{
@@ -5632,7 +5632,7 @@ void func_37(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -5641,19 +5641,19 @@ void func_37(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_41(Var2.z)] = Var2.x;
+						(*uParam0)[func_41(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_41(Var2.z)] = func_38(iParam1, Var2.x, func_41(Var2.z), iVar0);
+						(*uParam0)[func_41(Var2.f_2)] = func_38(iParam1, Var2.x, func_41(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_41(Var2.z)] = Var2.y;
+					(*uParam0)[func_41(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -9222,15 +9222,15 @@ void func_68(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_38(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_38(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -55197,7 +55197,7 @@ void func_231(int iParam0)
 	}
 	else if (fVar2 != 0f && VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, 0))
 	{
-		if (Var1.z > fVar2 && fVar2 > fVar3)
+		if (Var1.f_2 > fVar2 && fVar2 > fVar3)
 		{
 			ENTITY::FREEZE_ENTITY_POSITION(iParam0, 0);
 			ENTITY::SET_ENTITY_DYNAMIC(iParam0, 1);
@@ -62381,9 +62381,9 @@ bool func_349(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_350(int iParam0, var uParam1, char* sParam2)
@@ -64343,28 +64343,28 @@ int func_350(int iParam0, var uParam1, char* sParam2)
 		
 		case 306:
 			Var4 = { -7.4998f, 7.4995f, -0.5258f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 307:
 			Var5 = { 10.6345f, 0.7246f, 1.2508f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 308:
 			Var6 = { -3.4271f, -13.6787f, -1.4107f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 309:
 			Var7 = { -19.6582f, 7.896f, 0.1334f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
@@ -74825,7 +74825,7 @@ int func_435(var uParam0, float fParam1)
 		}
 		else
 		{
-			fVar2 = ((Var0.z - fVar1) - 1f);
+			fVar2 = ((Var0.f_2 - fVar1) - 1f);
 			if (fVar2 > 1f)
 			{
 				iVar3 = ENTITY::GET_ENTITY_MODEL(iLocal_275);
@@ -74867,7 +74867,7 @@ int func_435(var uParam0, float fParam1)
 	}
 	else
 	{
-		fVar5 = ((Var0.z - fVar1) - 1f);
+		fVar5 = ((Var0.f_2 - fVar1) - 1f);
 		if (fVar5 > 1f)
 		{
 			iVar6 = ENTITY::GET_ENTITY_MODEL(iLocal_275);
@@ -77894,9 +77894,9 @@ int func_448()
 						fVar20 = 0.1f;
 						fVar21 = ENTITY::GET_ENTITY_HEIGHT_ABOVE_GROUND(iLocal_275);
 						Var19 = { Var19 * Vector(fVar21, fVar21, fVar21) };
-						if (Var19.y > 10f)
+						if (Var19.f_1 > 10f)
 						{
-							Var19.y = 10f;
+							Var19.f_1 = 10f;
 						}
 						fVar20 = (fVar20 * fVar21);
 						if (fVar20 > 10f)
@@ -78118,7 +78118,7 @@ void func_450()
 
 int func_451(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21, var uParam22, var uParam23, var uParam24, var uParam25, var uParam26, var uParam27, var uParam28, var uParam29, var uParam30, var uParam31, var uParam32, var uParam33, var uParam34, var uParam35, var uParam36, var uParam37, var uParam38, var uParam39, var uParam40, var uParam41, var uParam42, var uParam43, var uParam44, var uParam45, var uParam46, var uParam47, var uParam48, var uParam49, var uParam50, var uParam51, var uParam52, var uParam53, var uParam54, var uParam55, var uParam56, var uParam57, var uParam58, var uParam59, var uParam60, var uParam61, var uParam62, var uParam63, var uParam64, var uParam65, var uParam66, var uParam67, var uParam68, var uParam69, var uParam70, var uParam71, var uParam72, var uParam73, var uParam74, var uParam75, var uParam76, var uParam77, var uParam78, var uParam79, var uParam80, var uParam81, var uParam82, var uParam83, var uParam84, var uParam85, var uParam86, var uParam87, var uParam88, var uParam89, var uParam90, var uParam91, var uParam92, var uParam93, var uParam94, var uParam95, var uParam96, var uParam97, var uParam98, var uParam99, var uParam100, var uParam101, var uParam102, var uParam103, var uParam104, var uParam105, var uParam106)
 {
-	if ((Param0.z == 5 || Param0.z == 6) || Param0.z == 7)
+	if ((Param0.f_2 == 5 || Param0.f_2 == 6) || Param0.f_2 == 7)
 	{
 		switch (STREAMING::GET_PLAYER_SWITCH_TYPE())
 		{
@@ -148350,7 +148350,7 @@ void func_678()
 										Var25 = { ENTITY::GET_ENTITY_VELOCITY(iLocal_275) };
 										if (ENTITY::IS_ENTITY_IN_AIR(iLocal_275))
 										{
-											ENTITY::SET_ENTITY_VELOCITY(iLocal_275, Var25.x, Var25.y, 10f);
+											ENTITY::SET_ENTITY_VELOCITY(iLocal_275, Var25.x, Var25.f_1, 10f);
 										}
 									}
 									VEHICLE::SET_LAST_DRIVEN_VEHICLE(iLocal_275);
@@ -148408,7 +148408,7 @@ void func_678()
 										if (ENTITY::IS_ENTITY_IN_AIR(iLocal_275))
 										{
 											VEHICLE::SET_HELI_BLADES_FULL_SPEED(iLocal_275);
-											ENTITY::SET_ENTITY_VELOCITY(iLocal_275, Var25.x, Var25.y, 10f);
+											ENTITY::SET_ENTITY_VELOCITY(iLocal_275, Var25.x, Var25.f_1, 10f);
 										}
 									}
 									func_436(iLocal_275, 1, "Setup_Player_Timetable_Scene.DEFAULT");
@@ -149324,7 +149324,7 @@ void func_678()
 
 int func_679(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21, var uParam22, var uParam23, var uParam24, var uParam25, var uParam26, var uParam27, var uParam28, var uParam29, var uParam30, var uParam31, var uParam32, var uParam33, var uParam34, var uParam35, var uParam36, var uParam37, var uParam38, var uParam39, var uParam40, var uParam41, var uParam42, var uParam43, var uParam44, var uParam45, var uParam46, var uParam47, var uParam48, var uParam49, var uParam50, var uParam51, var uParam52, var uParam53, var uParam54, var uParam55, var uParam56, var uParam57, var uParam58, var uParam59, var uParam60, var uParam61, var uParam62, var uParam63, var uParam64, var uParam65, var uParam66, var uParam67, var uParam68, var uParam69, var uParam70, var uParam71, var uParam72, var uParam73, var uParam74, var uParam75, var uParam76, var uParam77, var uParam78, var uParam79, var uParam80, var uParam81, var uParam82, var uParam83, var uParam84, var uParam85, var uParam86, var uParam87, var uParam88, var uParam89, var uParam90, var uParam91, var uParam92, var uParam93, var uParam94, var uParam95, var uParam96, var uParam97, var uParam98, var uParam99, var uParam100, var uParam101, var uParam102, var uParam103, var uParam104, var uParam105, var uParam106)
 {
-	switch (Param0.z)
+	switch (Param0.f_2)
 	{
 		case 8:
 		case 11:
@@ -149342,7 +149342,7 @@ int func_679(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uParam
 			break;
 		
 		case 231:
-			func_681(Param0.z);
+			func_681(Param0.f_2);
 			Global_76639 = 1;
 			return 1;
 			break;

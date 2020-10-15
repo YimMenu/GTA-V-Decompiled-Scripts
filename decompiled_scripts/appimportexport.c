@@ -2335,10 +2335,10 @@ void func_40(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPara
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_42(Var0.y);
+	iVar1 = func_42(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;
@@ -3293,7 +3293,7 @@ int func_71(int iParam0, int iParam1, var uParam2)
 	if (Global_1590535[iVar4 /*876*/].f_274[5] > -1)
 	{
 		Var5 = { Global_1049922[Global_1590535[iVar4 /*876*/].f_274[5] /*1951*/].f_38[0 /*27*/].f_23 };
-		Var5.z = 0f;
+		Var5.f_2 = 0f;
 	}
 	else
 	{
@@ -3302,7 +3302,7 @@ int func_71(int iParam0, int iParam1, var uParam2)
 	if (func_20(iVar4))
 	{
 		Var6 = { Global_1676377.f_488[func_74(func_21(iVar4)) /*3*/] };
-		Var6.z = 0f;
+		Var6.f_2 = 0f;
 	}
 	else
 	{
@@ -3314,7 +3314,7 @@ int func_71(int iParam0, int iParam1, var uParam2)
 		while (iVar7 < iParam1)
 		{
 			Var10 = { func_73((*iParam0)[iVar7]) };
-			Var10.z = 0f;
+			Var10.f_2 = 0f;
 			fVar11 = SYSTEM::VDIST(Var10, Var5);
 			fVar12 = SYSTEM::VDIST(Var10, Var6);
 			if (fVar11 >= fVar0 && fVar12 >= fVar1)
@@ -5387,7 +5387,7 @@ int func_135(int iParam0, int iParam1)
 			{
 				Var0 = { func_136(iParam1) };
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -8084,7 +8084,7 @@ int func_192(int iParam0, int iParam1, int iParam2)
 			{
 				return 4;
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}

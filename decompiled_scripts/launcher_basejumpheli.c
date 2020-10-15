@@ -421,8 +421,8 @@ void __EntryFunction__()
 			fLocal_57 = fLocal_57;
 			Local_75 = { Local_55 };
 			Local_76 = { ScriptParam_260.f_1[0 /*3*/] };
-			Local_75.z = 0f;
-			Local_76.z = 0f;
+			Local_75.f_2 = 0f;
+			Local_76.f_2 = 0f;
 			fLocal_74 = SYSTEM::VDIST2(Local_75, Local_76);
 			switch (iLocal_59)
 			{
@@ -444,7 +444,7 @@ void __EntryFunction__()
 							}
 							func_152(10);
 						}
-						if ((Local_55.z - ScriptParam_260.f_1[0 /*3*/].f_2) > 500f)
+						if ((Local_55.f_2 - ScriptParam_260.f_1[0 /*3*/].f_2) > 500f)
 						{
 						}
 					}
@@ -1053,7 +1053,7 @@ void func_16(var uParam0, int iParam1)
 		{
 			Var1 = { ENTITY::GET_ENTITY_COORDS(iParam1, 1) };
 		}
-		fVar3 = MISC::ATAN2((Var1.z - Var2.z), MISC::GET_DISTANCE_BETWEEN_COORDS(Var1, Var2, 0));
+		fVar3 = MISC::ATAN2((Var1.f_2 - Var2.f_2), MISC::GET_DISTANCE_BETWEEN_COORDS(Var1, Var2, 0));
 		if (fVar3 > Var0.x)
 		{
 			Var0.x = func_17(Var0.x, fVar3, 0.07f);
@@ -3839,7 +3839,7 @@ void func_51()
 	if ((PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Local_247, 1) && !PED::IS_PED_JACKING(PLAYER::PLAYER_PED_ID())) && func_76(Local_247.f_3, Local_247))
 	{
 		Var5 = { ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(Local_247, PED::GET_PED_BONE_COORDS(PLAYER::PLAYER_PED_ID(), 0, 0f, 0f, 0f)) };
-		if (Var5.x < 0f || Var5.y < 1f)
+		if (Var5.x < 0f || Var5.f_1 < 1f)
 		{
 			AUDIO::SET_AUDIO_FLAG("DisableFlightMusic", 1);
 			AUDIO::SET_VEH_RADIO_STATION(Local_247, "OFF");
@@ -5306,7 +5306,7 @@ int func_107(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4,
 			{
 				return 1;
 			}
-			if (MISC::IS_PROJECTILE_IN_AREA((Var1.x - 5f), (Var1.y - 5f), (Var1.z - 5f), (Var1.x + 5f), (Var1.y + 5f), (Var1.z + 5f), 0))
+			if (MISC::IS_PROJECTILE_IN_AREA((Var1.x - 5f), (Var1.f_1 - 5f), (Var1.f_2 - 5f), (Var1.x + 5f), (Var1.f_1 + 5f), (Var1.f_2 + 5f), 0))
 			{
 				return 1;
 			}

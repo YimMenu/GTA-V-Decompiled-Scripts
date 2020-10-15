@@ -716,7 +716,7 @@ int func_19(struct<3> Param0, float fParam1, float fParam2, float fParam3, float
 	}
 	if (fParam2 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.y, (Param0.z + 1f), fParam2) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam2))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam2) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam2))
 		{
 			return 0;
 		}
@@ -760,7 +760,7 @@ int func_19(struct<3> Param0, float fParam1, float fParam2, float fParam3, float
 
 int func_20(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

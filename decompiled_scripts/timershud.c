@@ -4398,7 +4398,7 @@ float func_118(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	float fVar0;
 	float fVar1;
 	
-	fVar0 = (Param0.z / 2f);
+	fVar0 = (Param0.f_2 / 2f);
 	fVar1 = Param0.x;
 	fVar1 = (fVar1 + fVar0);
 	fVar1 = (fVar1 - 0.002f);
@@ -4410,7 +4410,7 @@ float func_119(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	float fVar0;
 	float fVar1;
 	
-	fVar0 = (Param0.z / 2f);
+	fVar0 = (Param0.f_2 / 2f);
 	fVar1 = Param0.x;
 	fVar1 = (fVar1 - fVar0);
 	return fVar1;
@@ -7024,7 +7024,7 @@ void func_184(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			func_105(uParam1, 0);
 		}
 		func_105(&Var2, 0);
-		Var2.z = (Var2.z + (0.166f + 0.095f));
+		Var2.f_2 = (Var2.f_2 + (0.166f + 0.095f));
 		if (Global_1378678 == 1)
 		{
 			func_97(iParam9);
@@ -8309,7 +8309,7 @@ int func_219()
 		MOBILE::GET_MOBILE_PHONE_POSITION(&Var0);
 		if (Global_19431 == 0)
 		{
-			if (Var0.y > -119f)
+			if (Var0.f_1 > -119f)
 			{
 				return 1;
 			}
@@ -8318,7 +8318,7 @@ int func_219()
 				return 0;
 			}
 		}
-		else if (Var0.y > -101f)
+		else if (Var0.f_1 > -101f)
 		{
 			return 1;
 		}

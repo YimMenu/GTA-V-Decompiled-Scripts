@@ -587,7 +587,7 @@ void func_16(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -607,19 +607,19 @@ void func_17(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_3(Var0.y, 1, 1))
+		if (func_3(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_18(iVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -830,19 +830,19 @@ Vector3 func_21(int iParam0, bool bParam1)
 				case 1:
 				case 2:
 					Var0.x = (Var0.x - 0.0837f);
-					Var0.y = (Var0.y - 0.1338f);
+					Var0.f_1 = (Var0.f_1 - 0.1338f);
 					break;
 				
 				case 3:
 					Var0.x = (Var0.x - 0.063f);
-					Var0.y = (Var0.y + 0.0407f);
+					Var0.f_1 = (Var0.f_1 + 0.0407f);
 					break;
 				
 				case 4:
 				case 5:
 				case 6:
 					Var0.x = (Var0.x + 0.0837f);
-					Var0.y = (Var0.y + 0.1338f);
+					Var0.f_1 = (Var0.f_1 + 0.1338f);
 					break;
 				}
 			}
@@ -1258,7 +1258,7 @@ void func_25()
 			{
 				Var5 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(func_22(Local_119.f_4, Local_119.f_1, 0), "enter", func_21(Local_119.f_4, 1), func_20(Local_119.f_4), 0, 2) };
 				Var6 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(func_22(Local_119.f_4, Local_119.f_1, 0), "enter", func_21(Local_119.f_4, 1), func_20(Local_119.f_4), 0, 2) };
-				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), Var5, 1f, 20000, Var6.z, 0.05f);
+				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), Var5, 1f, 20000, Var6.f_2, 0.05f);
 				func_51(3);
 			}
 			break;

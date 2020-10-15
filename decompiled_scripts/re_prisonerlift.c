@@ -1530,7 +1530,7 @@ void func_20(int iParam0, int iParam1)
 		}
 		if (func_28(iParam0, iParam1) != 322)
 		{
-			func_22(func_28(iParam0, iParam1), Local_50.x, Local_50.y);
+			func_22(func_28(iParam0, iParam1), Local_50.x, Local_50.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -3158,7 +3158,7 @@ void func_57()
 				iLocal_53 = 10;
 			}
 		}
-		else if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.x - 50f), (Var0.y - 50f), (Var0.z - 50f), (Var0.x + 50f), (Var0.y + 50f), (Var0.z + 50f)))
+		else if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.x - 50f), (Var0.f_1 - 50f), (Var0.f_2 - 50f), (Var0.x + 50f), (Var0.f_1 + 50f), (Var0.f_2 + 50f)))
 		{
 			if (!PED::IS_PED_INJURED(iLocal_64))
 			{
@@ -3176,7 +3176,7 @@ void func_57()
 	}
 	else if (func_14())
 	{
-		if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.x - 10f), (Var0.y - 10f), (Var0.z - 10f), (Var0.x + 10f), (Var0.y + 10f), (Var0.z + 10f)))
+		if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.x - 10f), (Var0.f_1 - 10f), (Var0.f_2 - 10f), (Var0.x + 10f), (Var0.f_1 + 10f), (Var0.f_2 + 10f)))
 		{
 			func_52();
 			SYSTEM::WAIT(0);
@@ -3193,7 +3193,7 @@ void func_57()
 			}
 		}
 	}
-	else if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.x - 10f), (Var0.y - 10f), (Var0.z - 10f), (Var0.x + 10f), (Var0.y + 10f), (Var0.z + 10f)))
+	else if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.x - 10f), (Var0.f_1 - 10f), (Var0.f_2 - 10f), (Var0.x + 10f), (Var0.f_1 + 10f), (Var0.f_2 + 10f)))
 	{
 		if (!PED::IS_PED_INJURED(iLocal_64))
 		{
@@ -6339,7 +6339,7 @@ int func_134(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_50.z) > 50f)
+			if ((Var1.f_2 - Local_50.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -6460,9 +6460,9 @@ bool func_135(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_136(int iParam0)

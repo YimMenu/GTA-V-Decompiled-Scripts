@@ -1306,12 +1306,12 @@ void func_30()
 		}
 		func_31(PLAYER::PLAYER_PED_ID(), &uLocal_81, fLocal_95, 0f, fLocal_94);
 		CAM::SET_CAM_FOV(uLocal_81, fVar1);
-		CAM::ATTACH_CAM_TO_ENTITY(uLocal_81, PLAYER::PLAYER_PED_ID(), Var7.x, (Var7.y - 1f), (Var7.z + 1f), 1);
+		CAM::ATTACH_CAM_TO_ENTITY(uLocal_81, PLAYER::PLAYER_PED_ID(), Var7.x, (Var7.f_1 - 1f), (Var7.f_2 + 1f), 1);
 	}
 	else
 	{
 		uLocal_81 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", 1);
-		CAM::ATTACH_CAM_TO_ENTITY(uLocal_81, PLAYER::PLAYER_PED_ID(), Var7.x, (Var7.y - 1f), (Var7.z + 1f), 1);
+		CAM::ATTACH_CAM_TO_ENTITY(uLocal_81, PLAYER::PLAYER_PED_ID(), Var7.x, (Var7.f_1 - 1f), (Var7.f_2 + 1f), 1);
 		CAM::SET_CAM_NEAR_CLIP(uLocal_81, 0.01f);
 		fLocal_94 = -70f;
 		fLocal_95 = 3f;
@@ -1333,10 +1333,10 @@ void func_31(int iParam0, var uParam1, struct<3> Param2)
 		{
 			uVar0 = ENTITY::GET_ENTITY_HEADING(iParam0);
 			Var1.x = 0f;
-			Var1.y = 0f;
-			Var1.z = uVar0;
+			Var1.f_1 = 0f;
+			Var1.f_2 = uVar0;
 			Var1 = { Var1 + Param2 };
-			CAM::SET_CAM_ROT(*uParam1, Var1.x, Var1.y, Var1.z, 2);
+			CAM::SET_CAM_ROT(*uParam1, Var1.x, Var1.f_1, Var1.f_2, 2);
 		}
 	}
 }
@@ -1458,8 +1458,8 @@ void func_36(struct<3> Param0, float fParam1)
 	}
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_63, 0))
 	{
-		MISC::CLEAR_AREA_OF_VEHICLES(Param0.x, Param0.y, Param0.z, 5f, 0, 0, 0, 0, 0, 0);
-		ENTITY::SET_ENTITY_COORDS(iLocal_63, Param0.x, Param0.y, Param0.z, 1, 0, 0, 1);
+		MISC::CLEAR_AREA_OF_VEHICLES(Param0.x, Param0.f_1, Param0.f_2, 5f, 0, 0, 0, 0, 0, 0);
+		ENTITY::SET_ENTITY_COORDS(iLocal_63, Param0.x, Param0.f_1, Param0.f_2, 1, 0, 0, 1);
 		ENTITY::SET_ENTITY_HEADING(iLocal_63, fParam1);
 		VEHICLE::SET_VEHICLE_FORWARD_SPEED(iLocal_63, 0f);
 		TASK::TASK_VEHICLE_DRIVE_TO_COORD(iLocal_57, iLocal_63, ENTITY::GET_ENTITY_COORDS(iLocal_63, 1), 0f, 0, joaat("tourbus"), iLocal_264, 5f, 15f);
@@ -1745,7 +1745,7 @@ void func_47()
 					{
 						func_85(ENTITY::GET_ENTITY_COORDS(iLocal_63, 1), Local_50[iVar1 /*15*/].f_1, &Local_77, &Local_78, 500);
 					}
-					if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_77.x, Local_77.y, Local_78.x, Local_78.y))
+					if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_77.x, Local_77.f_1, Local_78.x, Local_78.f_1))
 					{
 						if ((iLocal_70 - iLocal_71) > 0)
 						{
@@ -2023,7 +2023,7 @@ void func_54(int iParam0, int iParam1)
 		}
 		if (func_62(iParam0, iParam1) != 322)
 		{
-			func_56(func_62(iParam0, iParam1), Local_44.x, Local_44.y);
+			func_56(func_62(iParam0, iParam1), Local_44.x, Local_44.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -7420,7 +7420,7 @@ void func_184()
 {
 	if (iLocal_75)
 	{
-		PATHFIND::_0x07FB139B592FA687(Local_77.x, Local_77.y, Local_78.x, Local_78.y);
+		PATHFIND::_0x07FB139B592FA687(Local_77.x, Local_77.f_1, Local_78.x, Local_78.f_1);
 	}
 }
 
@@ -7821,7 +7821,7 @@ int func_197(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_44.z) > 50f)
+			if ((Var1.f_2 - Local_44.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -7942,9 +7942,9 @@ bool func_198(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_199(int iParam0)

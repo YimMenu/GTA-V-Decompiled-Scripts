@@ -1871,7 +1871,7 @@ void func_38()
 					Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
 					if (ENTITY::DOES_ENTITY_EXIST(iLocal_260))
 					{
-						if (ENTITY::IS_ENTITY_IN_AIR(iLocal_260) || (Var0.z > 50f && func_49(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 3, 350, 0)))
+						if (ENTITY::IS_ENTITY_IN_AIR(iLocal_260) || (Var0.f_2 > 50f && func_49(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 3, 350, 0)))
 						{
 							bLocal_285 = true;
 						}
@@ -1944,7 +1944,7 @@ void func_38()
 
 int func_39(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

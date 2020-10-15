@@ -1010,7 +1010,7 @@ void func_18()
 				{
 					fVar14 = 90f;
 					Var15 = { func_66(fVar11, fVar10, 0f) };
-					fVar16 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(0f, -1f, Var15.x, Var15.y);
+					fVar16 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(0f, -1f, Var15.x, Var15.f_1);
 					if (fVar11 < 0f)
 					{
 						fVar16 = (360f - fVar16);
@@ -2099,18 +2099,18 @@ void func_21(int iParam0)
 {
 	if (*iParam0)
 	{
-		if (!Local_170.z)
+		if (!Local_170.f_2)
 		{
 			Local_170.x = MISC::GET_GAME_TIMER();
 			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
-				Local_170.y = NETWORK::GET_NETWORK_TIME();
+				Local_170.f_1 = NETWORK::GET_NETWORK_TIME();
 			}
-			Local_170.z = 1;
+			Local_170.f_2 = 1;
 		}
 		if (!Global_22211.f_124)
 		{
-			if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - Local_170.x) < 200) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), Local_170.y)) < 300))
+			if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - Local_170.x) < 200) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), Local_170.f_1)) < 300))
 			{
 				*iParam0 = 0;
 			}
@@ -2118,7 +2118,7 @@ void func_21(int iParam0)
 	}
 	else
 	{
-		Local_170.z = 0;
+		Local_170.f_2 = 0;
 	}
 }
 
@@ -2251,7 +2251,7 @@ int func_35()
 		MOBILE::GET_MOBILE_PHONE_POSITION(&Var0);
 		if (Global_19431 == 0)
 		{
-			if (Var0.y > -119f)
+			if (Var0.f_1 > -119f)
 			{
 				return 1;
 			}
@@ -2260,7 +2260,7 @@ int func_35()
 				return 0;
 			}
 		}
-		else if (Var0.y > -101f)
+		else if (Var0.f_1 > -101f)
 		{
 			return 1;
 		}
@@ -2473,9 +2473,9 @@ bool func_48(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_49(float fParam0)
@@ -2713,8 +2713,8 @@ Vector3 func_66(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -4692,7 +4692,7 @@ int func_123(int iParam0)
 		fVar1 = 0f;
 		if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &fVar1, 0, 0))
 		{
-			if (Var0.z > (fVar1 + 1.5f))
+			if (Var0.f_2 > (fVar1 + 1.5f))
 			{
 				return 1;
 			}
@@ -35247,15 +35247,15 @@ void func_268(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_269(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_269(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -36273,7 +36273,7 @@ void func_272(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -36282,19 +36282,19 @@ void func_272(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_273(Var2.z)] = Var2.x;
+						(*uParam0)[func_273(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_273(Var2.z)] = func_269(iParam1, Var2.x, func_273(Var2.z), iVar0);
+						(*uParam0)[func_273(Var2.f_2)] = func_269(iParam1, Var2.x, func_273(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_273(Var2.z)] = Var2.y;
+					(*uParam0)[func_273(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -110303,7 +110303,7 @@ int func_760(float fParam0)
 	struct<3> Var0;
 	
 	Var0 = { func_761(PLAYER::PLAYER_ID()) };
-	if (Var0.z < fParam0)
+	if (Var0.f_2 < fParam0)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{

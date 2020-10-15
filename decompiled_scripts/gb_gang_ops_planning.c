@@ -589,12 +589,12 @@ void func_13(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uParam
 		if (!bParam6)
 		{
 			Var0 = { Param3 };
-			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.x, Var0.y, (Var0.z + 1f)))
+			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.x, Var0.f_1, (Var0.f_2 + 1f)))
 			{
 			}
 			else
 			{
-				Var0.z = (Var0.z + 4f);
+				Var0.f_2 = (Var0.f_2 + 4f);
 			}
 		}
 	}
@@ -627,22 +627,22 @@ void func_13(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uParam
 			}
 			if ((func_64(PLAYER::PLAYER_ID()) || func_62(PLAYER::PLAYER_ID())) && func_61())
 			{
-				Var0.z = (Var0.z + 1.5f);
+				Var0.f_2 = (Var0.f_2 + 1.5f);
 			}
 			else if (INTERIOR::IS_VALID_INTERIOR(INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID())))
 			{
 				if (func_64(PLAYER::PLAYER_ID()))
 				{
-					Var0.z = (Var0.z + 0.4f);
+					Var0.f_2 = (Var0.f_2 + 0.4f);
 				}
 				else
 				{
-					Var0.z = (Var0.z + 1.5f);
+					Var0.f_2 = (Var0.f_2 + 1.5f);
 				}
 			}
 			else
 			{
-				Var0.z = (Var0.z + 4f);
+				Var0.f_2 = (Var0.f_2 + 4f);
 			}
 		}
 	}
@@ -658,7 +658,7 @@ void func_13(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uParam
 		{
 			Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
 			Var1 = { 0f, 0f, ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) };
-			Var0.z = (Var0.z + 0.4f);
+			Var0.f_2 = (Var0.f_2 + 0.4f);
 			fVar2 = CAM::GET_FINAL_RENDERED_CAM_FOV();
 		}
 		else
@@ -2295,9 +2295,9 @@ Vector3 func_42(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -3350,7 +3350,7 @@ var func_68()
 
 int func_69(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -5795,14 +5795,14 @@ void func_209(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam
 	if ((PAD::_IS_USING_KEYBOARD(2) && bParam2) && !uParam0->f_28)
 	{
 		uParam0->f_14 = Var6.x;
-		uParam0->f_14.f_1 = Var6.y;
-		uParam0->f_14.f_2 = Var6.z;
+		uParam0->f_14.f_1 = Var6.f_1;
+		uParam0->f_14.f_2 = Var6.f_2;
 	}
 	else
 	{
 		uParam0->f_14 = (uParam0->f_14 + func_210(((((Var6.x - uParam0->f_14) * 0.05f) * fVar5) * fParam7), -3f, 3f));
-		uParam0->f_14.f_1 = (uParam0->f_14.f_1 + func_210(((((Var6.y - uParam0->f_14.f_1) * 0.05f) * fVar5) * fParam7), -3f, 3f));
-		uParam0->f_14.f_2 = (uParam0->f_14.f_2 + func_210(((((Var6.z - uParam0->f_14.f_2) * 0.05f) * fVar5) * fParam7), -3f, 3f));
+		uParam0->f_14.f_1 = (uParam0->f_14.f_1 + func_210(((((Var6.f_1 - uParam0->f_14.f_1) * 0.05f) * fVar5) * fParam7), -3f, 3f));
+		uParam0->f_14.f_2 = (uParam0->f_14.f_2 + func_210(((((Var6.f_2 - uParam0->f_14.f_2) * 0.05f) * fVar5) * fParam7), -3f, 3f));
 	}
 	if (uParam0->f_26)
 	{
@@ -7856,7 +7856,7 @@ void func_247(var uParam0)
 		iVar10 = func_122(func_260(uParam0->f_812.f_77), 0);
 		Var7 = { func_259(iVar10) };
 		fVar5 = func_258(iVar10);
-		func_257(uParam0->f_714, SYSTEM::CEIL(Var7.x), SYSTEM::CEIL(Var7.y), fVar5, 0);
+		func_257(uParam0->f_714, SYSTEM::CEIL(Var7.x), SYSTEM::CEIL(Var7.f_1), fVar5, 0);
 		if (!func_256(Var7, uParam0->f_725.f_66, 0))
 		{
 			if (uParam0->f_1243)
@@ -7864,7 +7864,7 @@ void func_247(var uParam0)
 				if (uParam0->f_1243.f_1 != -1)
 				{
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_1243.f_1, "x", Var7.x);
-					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_1243.f_1, "y", Var7.y);
+					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_1243.f_1, "y", Var7.f_1);
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_1243.f_1, "scale", fVar5);
 				}
 			}
@@ -8563,9 +8563,9 @@ bool func_256(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_257(var uParam0, int iParam1, int iParam2, float fParam3, bool bParam4)
@@ -15569,7 +15569,7 @@ int func_484(int iParam0, int iParam1)
 			{
 				Var0 = { func_485(iParam1) };
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -18257,7 +18257,7 @@ int func_540(int iParam0, int iParam1, int iParam2)
 			{
 				return 4;
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -24124,10 +24124,10 @@ void func_634(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_636(Var0.y);
+	iVar1 = func_636(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;
@@ -24375,7 +24375,7 @@ void func_641(var uParam0)
 		iVar5 = func_400(uParam0->f_794, uParam0->f_812.f_1999);
 		Var4 = { func_259(iVar5) };
 		fVar2 = func_258(iVar5);
-		func_257(uParam0->f_714, SYSTEM::CEIL(Var4.x), SYSTEM::CEIL(Var4.y), fVar2, 0);
+		func_257(uParam0->f_714, SYSTEM::CEIL(Var4.x), SYSTEM::CEIL(Var4.f_1), fVar2, 0);
 		if (!func_256(Var4, uParam0->f_725.f_66, 0))
 		{
 			if (uParam0->f_2821)
@@ -24383,7 +24383,7 @@ void func_641(var uParam0)
 				if (uParam0->f_2821.f_1 != -1)
 				{
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_2821.f_1, "x", Var4.x);
-					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_2821.f_1, "y", Var4.y);
+					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_2821.f_1, "y", Var4.f_1);
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_2821.f_1, "scale", fVar2);
 				}
 			}
@@ -26599,7 +26599,7 @@ void func_730(var uParam0)
 	{
 		iVar1 = uParam0->f_812.f_137[func_721(uParam0->f_794)];
 		Var4 = { 350f, 2000f, 0f };
-		func_257(uParam0->f_714, SYSTEM::CEIL(Var4.x), SYSTEM::CEIL(Var4.y), 0f, 0);
+		func_257(uParam0->f_714, SYSTEM::CEIL(Var4.x), SYSTEM::CEIL(Var4.f_1), 0f, 0);
 		func_254(uParam0->f_714);
 		iVar3 = 0;
 		while (iVar3 <= 9)

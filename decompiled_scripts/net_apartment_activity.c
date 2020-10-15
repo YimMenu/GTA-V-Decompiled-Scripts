@@ -41896,15 +41896,15 @@ void func_172(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_25(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_25(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -42917,7 +42917,7 @@ void func_176(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -42926,19 +42926,19 @@ void func_176(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_177(Var2.z)] = Var2.x;
+						(*uParam0)[func_177(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_177(Var2.z)] = func_25(iParam1, Var2.x, func_177(Var2.z), iVar0);
+						(*uParam0)[func_177(Var2.f_2)] = func_25(iParam1, Var2.x, func_177(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_177(Var2.z)] = Var2.y;
+					(*uParam0)[func_177(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -73178,9 +73178,9 @@ int func_259(struct<3> Param0, var uParam1, var uParam2, var uParam3)
 			return 0;
 		}
 	}
-	if (!MISC::IS_STRING_NULL_OR_EMPTY(Param0.y))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(Param0.f_1))
 	{
-		if (!AUDIO::REQUEST_SCRIPT_AUDIO_BANK(Param0.y, Param0.z, func_264(Param0.z)))
+		if (!AUDIO::REQUEST_SCRIPT_AUDIO_BANK(Param0.f_1, Param0.f_2, func_264(Param0.f_2)))
 		{
 			return 0;
 		}
@@ -73935,7 +73935,7 @@ void func_280(var uParam0)
 	{
 		uParam0->f_1986 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(uParam0->f_14.f_1605[0 /*48*/], &(uParam0->f_14.f_1605[0 /*48*/].f_1), uParam0->f_14.f_5, uParam0->f_14.f_8, uParam0->f_14.f_17.f_4, 2) };
 		Var0 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(uParam0->f_14.f_1605[0 /*48*/], &(uParam0->f_14.f_1605[0 /*48*/].f_1), uParam0->f_14.f_5, uParam0->f_14.f_8, uParam0->f_14.f_17.f_4, 2) };
-		uParam0->f_1986.f_3 = Var0.z;
+		uParam0->f_1986.f_3 = Var0.f_2;
 	}
 }
 
@@ -85441,7 +85441,7 @@ int func_455(int iParam0)
 	Var1 = { ENTITY::GET_ENTITY_COORDS(iVar0, 1) };
 	if (INTERIOR::GET_ROOM_KEY_FROM_ENTITY(iVar0) == -374937855)
 	{
-		if (Var1.z > -77f)
+		if (Var1.f_2 > -77f)
 		{
 			return 1;
 		}
@@ -85618,9 +85618,9 @@ Vector3 func_463(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -86316,7 +86316,7 @@ void func_475(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -86336,19 +86336,19 @@ void func_476(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_12(Var0.y, 1, 1))
+		if (func_12(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_477(iVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -87676,7 +87676,7 @@ void func_541(var uParam0, var uParam1)
 
 int func_542(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

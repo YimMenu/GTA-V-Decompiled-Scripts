@@ -4767,9 +4767,9 @@ int func_134(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -4778,7 +4778,7 @@ int func_134(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -5236,7 +5236,7 @@ void func_153(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -5256,19 +5256,19 @@ void func_154(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_35(Var0.y, 1, 1))
+		if (func_35(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(uVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(uVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_155(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -6142,14 +6142,14 @@ var func_174()
 void func_175(struct<3> Param0)
 {
 	Local_47.f_379 = Param0.x;
-	Local_47.f_385 = Param0.y;
+	Local_47.f_385 = Param0.f_1;
 	Local_47.f_380 = func_140(Param0.x);
 	Local_47.f_381 = func_139(Param0.x);
 	Local_47.f_386 = func_179(Param0.x, 0);
 	Local_47.f_387 = func_178(Param0.x, 0);
 	Local_47.f_388 = func_177(Param0.x, 0);
 	Local_47.f_389 = func_176(Param0.x);
-	Local_47.f_390 = Param0.z;
+	Local_47.f_390 = Param0.f_2;
 	Local_47.f_391 = func_18(Param0.x);
 }
 

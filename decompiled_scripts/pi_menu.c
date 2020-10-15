@@ -42652,15 +42652,15 @@ void func_198(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_59(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_59(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -43618,7 +43618,7 @@ void func_201(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -43627,19 +43627,19 @@ void func_201(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_43(Var2.z)] = Var2.x;
+						(*uParam0)[func_43(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_43(Var2.z)] = func_59(iParam1, Var2.x, func_43(Var2.z), iVar0);
+						(*uParam0)[func_43(Var2.f_2)] = func_59(iParam1, Var2.x, func_43(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_43(Var2.z)] = Var2.y;
+					(*uParam0)[func_43(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -95407,70 +95407,70 @@ void func_341()
 			case 1:
 				iVar2 = func_367(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_496(), 1);
 				Var1 = { func_366(Global_93782[iVar2 /*10*/].f_7, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 2:
 				Var1 = { func_362(Global_95677[0 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 3:
 				Var1 = { func_362(Global_95677[1 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 4:
 				Var1 = { func_362(Global_95677[2 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 5:
 				Var1 = { func_362(Global_95677[3 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 6:
 				Var1 = { func_362(Global_95677[4 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 7:
 				Var1 = { func_362(Global_95677[5 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 8:
 				Var1 = { func_362(Global_95677[6 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 9:
 				Var1 = { func_362(Global_95677[7 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 10:
 				Var1 = { func_360() };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -95478,7 +95478,7 @@ void func_341()
 			case 11:
 				iVar0 = func_358(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 3, -1, 0, 1, -1);
 				Var1 = { func_345(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -95486,7 +95486,7 @@ void func_341()
 			case 12:
 				iVar0 = func_358(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 4, -1, 0, 1, 44);
 				Var1 = { func_345(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -95494,7 +95494,7 @@ void func_341()
 			case 13:
 				iVar0 = func_344();
 				Var1 = { func_345(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -95502,7 +95502,7 @@ void func_341()
 			case 14:
 				iVar0 = func_343();
 				Var1 = { func_345(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -95510,7 +95510,7 @@ void func_341()
 			case 15:
 				iVar0 = func_342();
 				Var1 = { func_345(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -95518,7 +95518,7 @@ void func_341()
 			case 16:
 				iVar0 = func_358(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 0, -1, 0, 1, -1);
 				Var1 = { func_345(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -95526,7 +95526,7 @@ void func_341()
 			case 17:
 				iVar0 = func_358(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 2, -1, 0, 1, -1);
 				Var1 = { func_345(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -95534,7 +95534,7 @@ void func_341()
 			case 18:
 				iVar0 = 21;
 				Var1 = { func_345(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -95556,7 +95556,7 @@ void func_341()
 				{
 					Var1 = { HUD::GET_BLIP_COORDS(Global_75441.f_208[iVar3]) };
 				}
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.y);
+				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -96022,9 +96022,9 @@ Vector3 func_349(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -96938,7 +96938,7 @@ Vector3 func_362(int iParam0)
 
 int func_363(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -97858,7 +97858,7 @@ void func_381(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				func_407(Global_22347, (fVar49 + 0f), fParam5, 0.034722f, iVar1, iVar2, iVar3, iVar4);
 				Var38 = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
 				Var38.x = (Var38.x * (0.5f / fVar60));
-				Var38.y = (Var38.y * (0.5f / fVar60));
+				Var38.f_1 = (Var38.f_1 * (0.5f / fVar60));
 				if (Global_22350.f_8415)
 				{
 					iVar1 = 0;
@@ -97870,7 +97870,7 @@ void func_381(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(1, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.y / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.f_1 / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
 				fVar49 = (fVar49 + (0f + 0.034722f));
 			}
 			if (MISC::GET_HASH_KEY(&(Global_22350.f_4690)) != 0 && Global_22350.f_4766 != -1)
@@ -99802,7 +99802,7 @@ int func_400()
 		MOBILE::GET_MOBILE_PHONE_POSITION(&Var0);
 		if (Global_19431 == 0)
 		{
-			if (Var0.y > -119f)
+			if (Var0.f_1 > -119f)
 			{
 				return 1;
 			}
@@ -99811,7 +99811,7 @@ int func_400()
 				return 0;
 			}
 		}
-		else if (Var0.y > -101f)
+		else if (Var0.f_1 > -101f)
 		{
 			return 1;
 		}
@@ -100442,24 +100442,24 @@ int func_417(int iParam0, bool bParam1, bool bParam2, float fParam3, float fPara
 		}
 		Var7 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar1) };
 		Var7.x = (Var7.x * (func_418(iParam0) / fVar4));
-		Var7.y = (Var7.y * (func_418(iParam0) / fVar4));
+		Var7.f_1 = (Var7.f_1 * (func_418(iParam0) / fVar4));
 		if (!bParam2)
 		{
 			Var7.x = (Var7.x - 2f);
-			Var7.y = (Var7.y - 2f);
+			Var7.f_1 = (Var7.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
 			Var7.x = 288f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22350.f_7029[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
 			Var7.x = 106f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		*fParam3 = ((Var7.x / IntToFloat(iVar2)) * IntToFloat((iVar2 / iVar3)));
-		*fParam4 = (((Var7.y / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
+		*fParam4 = (((Var7.f_1 / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)

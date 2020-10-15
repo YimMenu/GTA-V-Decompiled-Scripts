@@ -1458,7 +1458,7 @@ void func_3(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, var
 				func_103(iParam2);
 			}
 			Var6 = { func_284(&(uParam0->f_247)) };
-			if (Var6.z < (uParam0->f_189.f_3[0 /*3*/].f_2 - 1f) && SYSTEM::VDIST2(uParam0->f_189.f_29, func_284(&(uParam0->f_247))) < (26.75f * 26.75f))
+			if (Var6.f_2 < (uParam0->f_189.f_3[0 /*3*/].f_2 - 1f) && SYSTEM::VDIST2(uParam0->f_189.f_29, func_284(&(uParam0->f_247))) < (26.75f * 26.75f))
 			{
 				func_104(uParam1, (1 - func_272(uParam1)));
 				func_270(uParam1, 14);
@@ -1544,7 +1544,7 @@ void func_3(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, var
 				}
 				func_270(uParam1, 14);
 			}
-			else if (Var6.z < (uParam0->f_189.f_3[0 /*3*/].f_2 - 1f) && SYSTEM::VDIST2(uParam0->f_189.f_29, func_284(&(uParam0->f_247))) < (26.75f * 26.75f))
+			else if (Var6.f_2 < (uParam0->f_189.f_3[0 /*3*/].f_2 - 1f) && SYSTEM::VDIST2(uParam0->f_189.f_29, func_284(&(uParam0->f_247))) < (26.75f * 26.75f))
 			{
 				func_104(uParam1, (1 - func_178(uParam1)));
 				func_270(uParam1, 14);
@@ -2927,7 +2927,7 @@ void func_69(var uParam0)
 
 float func_70(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_71(var uParam0)
@@ -3036,8 +3036,8 @@ int func_76(var uParam0)
 
 bool func_77(struct<3> Param0, struct<3> Param1, struct<3> Param2, float fParam3)
 {
-	Param1.z = (Param1.z + 30f);
-	Param2.z = (Param2.z - 5f);
+	Param1.f_2 = (Param1.f_2 + 30f);
+	Param2.f_2 = (Param2.f_2 - 5f);
 	return OBJECT::IS_POINT_IN_ANGLED_AREA(Param0, Param1, Param2, fParam3, 0, 1);
 }
 
@@ -3104,7 +3104,7 @@ Vector3 func_83(var uParam0, var uParam1, struct<3> Param2, var uParam3, float f
 		if (bVar8 == bVar9)
 		{
 			Var1 = { func_86(uParam0, *(uParam1[iVar0 /*3*/])) };
-			fVar5 = MISC::ABSF(((Var1.z + Var6.z) - Param2.z));
+			fVar5 = MISC::ABSF(((Var1.f_2 + Var6.f_2) - Param2.f_2));
 			if (fVar5 < 0.15f)
 			{
 				fVar5 = 0f;
@@ -3126,7 +3126,7 @@ Vector3 func_83(var uParam0, var uParam1, struct<3> Param2, var uParam3, float f
 		iVar0++;
 	}
 	Var2 = { Param2 - Var3 };
-	Var2.z = uParam3;
+	Var2.f_2 = uParam3;
 	return Var2;
 }
 
@@ -3193,8 +3193,8 @@ Vector3 func_86(var uParam0, struct<3> Param1)
 	struct<3> Var0;
 	
 	Var0 = { Vector(Param1.x, Param1.x, Param1.x) * uParam0->f_43 };
-	Var0 = { Var0 + Vector(Param1.y, Param1.y, Param1.y) * uParam0->f_40 };
-	Var0.z = (Var0.z + Param1.z);
+	Var0 = { Var0 + Vector(Param1.f_1, Param1.f_1, Param1.f_1) * uParam0->f_40 };
+	Var0.f_2 = (Var0.f_2 + Param1.f_2);
 	return Var0;
 }
 
@@ -3227,7 +3227,7 @@ Vector3 func_88(struct<3> Param0, var uParam1, struct<3> Param2, struct<3> Param
 			*fParam10 = (IntToFloat(iVar2) * MISC::GET_FRAME_TIME());
 			return Param2;
 		}
-		if (iVar1 > 0 && Param3.z < 0f)
+		if (iVar1 > 0 && Param3.f_2 < 0f)
 		{
 			*fParam10 = (IntToFloat(iVar2) * MISC::GET_FRAME_TIME());
 			return Var0;
@@ -3304,7 +3304,7 @@ int func_97(var uParam0, var uParam1, int iParam2, int iParam3)
 	struct<3> Var3;
 	
 	Var0 = { func_284(&(uParam1->f_247)) };
-	if (MISC::ABSF((Var0.z - uParam0->f_3[0 /*3*/].f_2)) <= 0.6f)
+	if (MISC::ABSF((Var0.f_2 - uParam0->f_3[0 /*3*/].f_2)) <= 0.6f)
 	{
 		Var1 = { uParam1->f_247.f_13 };
 		if (iParam2 == 0)
@@ -3501,9 +3501,9 @@ int func_107(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, in
 				func_59(uParam0, 8);
 			}
 			Var13 = { Var12 };
-			Var13.z = 0f;
+			Var13.f_2 = 0f;
 			Var14 = { uParam0->f_40 };
-			Var14.z = 0f;
+			Var14.f_2 = 0f;
 			if (func_70(Var13, Var14) < 0f)
 			{
 				func_59(uParam0, 16);
@@ -3671,7 +3671,7 @@ int func_107(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, in
 			func_156(uParam0);
 			bVar27 = true;
 		}
-		else if (func_131(uParam0, &(uParam1->f_189), &(uParam1->f_1661), Var11.z, func_287(&(uParam1->f_247))))
+		else if (func_131(uParam0, &(uParam1->f_189), &(uParam1->f_1661), Var11.f_2, func_287(&(uParam1->f_247))))
 		{
 			bVar26 = true;
 		}
@@ -3937,9 +3937,9 @@ void func_114(var uParam0, struct<3> Param1)
 		}
 		uParam0->f_247.f_10 = { Param1 };
 		Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0->f_247, 1) };
-		if (Var0.z < uParam0->f_189.f_29.f_2)
+		if (Var0.f_2 < uParam0->f_189.f_29.f_2)
 		{
-			Var0.z = uParam0->f_189.f_29.f_2;
+			Var0.f_2 = uParam0->f_189.f_29.f_2;
 		}
 		func_277(&(uParam0->f_247), Var0);
 		uParam0->f_247.f_16 = { func_284(&(uParam0->f_247)) };
@@ -4079,7 +4079,7 @@ Vector3 func_121(var uParam0, var uParam1, int iParam2, int iParam3, struct<3> P
 		fVar1 = 3f;
 		fVar5 = 1.58f;
 	}
-	fVar13 = (Var8.z - uParam1->f_189.f_29.f_2);
+	fVar13 = (Var8.f_2 - uParam1->f_189.f_29.f_2);
 	fVar14 = (fVar13 / 2f);
 	fVar15 = func_125(fVar6, fVar7, fVar14);
 	fVar16 = func_125(fVar15, fVar6, fVar12);
@@ -4096,7 +4096,7 @@ Vector3 func_121(var uParam0, var uParam1, int iParam2, int iParam3, struct<3> P
 	}
 	fVar20 = func_125(fVar2, fVar3, fVar12);
 	fVar21 = func_125(fVar4, fVar5, fVar12);
-	Var0.z = func_125(fVar20, fVar21, fVar14);
+	Var0.f_2 = func_125(fVar20, fVar21, fVar14);
 	Var0 = { Var0 / FtoV(SYSTEM::VMAG(Var0)) };
 	Var0 = { Var0 * Vector(fVar18, fVar18, fVar18) };
 	return Var0;
@@ -4463,7 +4463,7 @@ int func_130(var uParam0, var uParam1, var uParam2, var uParam3)
 		return 0;
 	}
 	Var0 = { func_284(uParam0) };
-	fVar1 = (Var0.z - uParam1->f_29.f_2);
+	fVar1 = (Var0.f_2 - uParam1->f_29.f_2);
 	if (fVar1 < 0.1f)
 	{
 		return 0;
@@ -4773,8 +4773,8 @@ int func_140(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 	}
 	Var6 = { *uParam4 - *uParam3 * Vector(fVar2, fVar2, fVar2) };
 	Var7 = { *uParam3 + Var6 };
-	Var7.z = uParam3->f_2;
-	fVar8 = (Var7.z - uParam0->f_37.f_2);
+	Var7.f_2 = uParam3->f_2;
+	fVar8 = (Var7.f_2 - uParam0->f_37.f_2);
 	if (fVar8 > 2f)
 	{
 		return 75;
@@ -4871,7 +4871,7 @@ int func_144(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	{
 		return 0;
 	}
-	uVar4 = Var2.z;
+	uVar4 = Var2.f_2;
 	Var5 = { fVar3, 0f, uVar4 };
 	*fParam7 = MISC::_0x7F8F6405F4777AF6(Var5, *uParam5, *uParam3, 0);
 	*fParam8 = MISC::_0x7F8F6405F4777AF6(Var5, func_117(bParam6, *uParam5, *uParam4), func_117(bParam6, *uParam4, *uParam5), 0);
@@ -4926,8 +4926,8 @@ int func_146(var uParam0, var uParam1, var uParam2, struct<3> Param3, var uParam
 		*uParam4 = func_70(uParam0->f_40, func_284(uParam2) - uParam0->f_37);
 		Var0 = { uParam2->f_10 };
 		Var1 = { func_284(uParam2) };
-		Var0.z = 0f;
-		Var1.z = Param3.z;
+		Var0.f_2 = 0f;
+		Var1.f_2 = Param3.f_2;
 		Var2 = { Param3 - Var1 };
 		fVar3 = func_70(Var0, Var2);
 		if (*uParam4 > 2f && fVar3 < 0f)
@@ -5183,7 +5183,7 @@ int func_152(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 							Var27 = { Var15 + Var4 };
 							Var28 = { func_123(*(uParam4[iVar3 /*3*/]), *(uParam4[iVar3 + 1 /*3*/]), fVar22) };
 							Var29 = { Var28 - Var4 };
-							Var29.z = uParam0->f_37.f_2;
+							Var29.f_2 = uParam0->f_37.f_2;
 							Var30 = { Var27 - Var28 };
 							fVar31 = func_70(Var30, uParam0->f_40);
 							fVar32 = func_70(uParam0->f_40, func_284(&(uParam1->f_247)) - uParam0->f_37);
@@ -5491,7 +5491,7 @@ void func_172(var uParam0, struct<3> Param1, var uParam2, var uParam3, var uPara
 
 int func_173(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -5743,7 +5743,7 @@ Vector3 func_187(struct<3> Param0, struct<3> Param1)
 
 Vector3 func_188(struct<3> Param0, struct<3> Param1)
 {
-	return ((Param0.y * Param1.z) - (Param0.z * Param1.y)), ((Param0.z * Param1.x) - (Param0.x * Param1.z)), ((Param0.x * Param1.y) - (Param0.y * Param1.x));
+	return ((Param0.f_1 * Param1.f_2) - (Param0.f_2 * Param1.f_1)), ((Param0.f_2 * Param1.x) - (Param0.x * Param1.f_2)), ((Param0.x * Param1.f_1) - (Param0.f_1 * Param1.x));
 }
 
 Vector3 func_189(struct<3> Param0, struct<3> Param1)
@@ -5768,8 +5768,8 @@ Vector3 func_190(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -6101,9 +6101,9 @@ int func_204(var uParam0, var uParam1, int iParam2, int iParam3)
 			fVar8 = -1f;
 		}
 	}
-	Var1.z = uParam0->f_37.f_2;
+	Var1.f_2 = uParam0->f_37.f_2;
 	Var2 = { func_190(Var1 - Var6) };
-	fVar0 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(uParam0->f_40, uParam0->f_40.f_1, Var2.x, Var2.y);
+	fVar0 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(uParam0->f_40, uParam0->f_40.f_1, Var2.x, Var2.f_1);
 	fVar0 = (fVar0 * fVar8);
 	*uParam0 = fVar0;
 	if (iParam2 == 0)
@@ -6979,7 +6979,7 @@ void func_240(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 					Var0 = { Var1 - uParam0->f_37 };
 					Var0 = { Var0 / FtoV(SYSTEM::VMAG(Var0)) };
 					*uParam1 = SYSTEM::ROUND((Var0.x * 128f));
-					*uParam2 = SYSTEM::ROUND((Var0.y * 128f));
+					*uParam2 = SYSTEM::ROUND((Var0.f_1 * 128f));
 				}
 				else if ((ENTITY::IS_ENTITY_AT_COORD(uParam0->f_32, func_71(&(uParam0->f_4)), Var2, 0, 1, 0) || TASK::GET_SCRIPT_TASK_STATUS(func_266(uParam0), 2106541073) == 7) && !func_229(&(uParam0->f_4), 256))
 				{
@@ -7051,7 +7051,7 @@ void func_240(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 					Var0 = { func_71(&(uParam0->f_4)) - uParam0->f_37 };
 					Var0 = { Var0 / FtoV(SYSTEM::VMAG(Var0)) };
 					*uParam1 = SYSTEM::ROUND((Var0.x * 128f));
-					*uParam2 = SYSTEM::ROUND((Var0.y * 128f));
+					*uParam2 = SYSTEM::ROUND((Var0.f_1 * 128f));
 				}
 				else if (SYSTEM::VDIST2(uParam0->f_37, Var1) <= (0f * 0f) || TASK::GET_SCRIPT_TASK_STATUS(func_266(uParam0), 2106541073) == 7)
 				{
@@ -7633,7 +7633,7 @@ int func_280(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 		if (*uParam4 > 0.05f && *iParam7 < 1)
 		{
 			Var0 = { *uParam2 * Vector(fVar3, fVar3, fVar3) * Vector(0.015f, 0.015f, 0.015f) };
-			Var0.z = 0f;
+			Var0.f_2 = 0f;
 			*uParam2 = { *uParam2 + Var0 };
 		}
 		else if (*iParam7 >= 1)
@@ -7716,10 +7716,10 @@ Vector3 func_281(struct<3> Param0, float fParam1)
 Vector3 func_282(struct<3> Param0)
 {
 	Param0 = { Param0 * Vector(1f, 1f, 1f) };
-	Param0.z = -Param0.z;
-	if (Param0.z < 0.01f)
+	Param0.f_2 = -Param0.f_2;
+	if (Param0.f_2 < 0.01f)
 	{
-		Param0.z = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -7749,7 +7749,7 @@ int func_283(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 		{
 			Var2 = { uParam0->f_39[1 /*3*/] + uParam0->f_39[2 /*3*/] - uParam0->f_39[1 /*3*/] * Vector(fVar4, fVar4, fVar4) };
 		}
-		fVar5 = (Var1.z - Var2.z);
+		fVar5 = (Var1.f_2 - Var2.f_2);
 		if (fVar5 <= func_12((0.025f - fParam6), -1f, 0f))
 		{
 			return 2;

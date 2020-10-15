@@ -4049,7 +4049,7 @@ void func_49()
 		{
 			Local_82 = { Global_19439[Global_19431 /*3*/] };
 			Local_82.x = (Local_82.x - 10f);
-			Local_82.y = (Local_82.y + 20f);
+			Local_82.f_1 = (Local_82.f_1 + 20f);
 			iLocal_81 = 1;
 		}
 		fVar1 = func_15(Global_19432[Global_19431 /*3*/], Local_82, -90f, 0f, 90f, -90f, 0f, 90f, 450f, 1);

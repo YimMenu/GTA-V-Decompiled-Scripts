@@ -1021,7 +1021,7 @@ void func_17()
 
 int func_18(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -1044,7 +1044,7 @@ Vector3 func_19()
 		Var2 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(iVar0, iVar1) };
 		Var2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var2, ENTITY::GET_ENTITY_HEADING(iVar0), 0.35f, 0f, -0.15f) };
 		MISC::GET_GROUND_Z_FOR_3D_COORD(Var2, &uVar4, 0, 0);
-		Var3 = { Var2.x, Var2.y, uVar4 };
+		Var3 = { Var2.x, Var2.f_1, uVar4 };
 	}
 	return Var3;
 }
@@ -1141,7 +1141,7 @@ void func_22()
 					EVENT::CLEAR_DECISION_MAKER_EVENT_RESPONSE(-1143637011, 62);
 					EVENT::CLEAR_DECISION_MAKER_EVENT_RESPONSE(-1143637011, 138);
 					EVENT::CLEAR_DECISION_MAKER_EVENT_RESPONSE(-1143637011, 56);
-					iLocal_89 = OBJECT::CREATE_OBJECT(joaat("prop_generator_01a"), Local_274.x, (Local_274.y + 0.5f), (Local_274.z - 0.25f), 1, 1, 0);
+					iLocal_89 = OBJECT::CREATE_OBJECT(joaat("prop_generator_01a"), Local_274.x, (Local_274.f_1 + 0.5f), (Local_274.f_2 - 0.25f), 1, 1, 0);
 					ENTITY::SET_ENTITY_HEADING(iLocal_89, 75f);
 					ENTITY::SET_ENTITY_PROOFS(iLocal_89, 0, 1, 1, 0, 0, 0, 0, 0);
 					uLocal_279 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_sparking_generator", iLocal_89, 0f, 0f, 0.2f, 0f, 0f, 0f, 1065353216, 0, 0, 0);
@@ -2400,7 +2400,7 @@ void func_57(int iParam0, int iParam1)
 		}
 		if (func_64(iParam0, iParam1) != 322)
 		{
-			func_59(func_64(iParam0, iParam1), Local_43.x, Local_43.y);
+			func_59(func_64(iParam0, iParam1), Local_43.x, Local_43.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -6094,7 +6094,7 @@ int func_138(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_43.z) > 50f)
+			if ((Var1.f_2 - Local_43.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -6215,9 +6215,9 @@ bool func_139(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_140(int iParam0)

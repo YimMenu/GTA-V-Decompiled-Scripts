@@ -286,7 +286,7 @@ void func_6(int iParam0, int iParam1)
 		}
 		if (func_14(iParam0, iParam1) != 322)
 		{
-			func_8(func_14(iParam0, iParam1), Local_43.x, Local_43.y);
+			func_8(func_14(iParam0, iParam1), Local_43.x, Local_43.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -4538,7 +4538,7 @@ void func_63(int iParam0, int iParam1)
 
 int func_64(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -4552,7 +4552,7 @@ int func_65(int iParam0, int iParam1, struct<3> Param2)
 	
 	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(iParam1, ENTITY::GET_ENTITY_COORDS(iParam0, 1)) };
 	Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(iParam1, Param2) };
-	if ((Var0.y > 0f && Var1.y > 0f) || (Var0.y < 0f && Var1.y < 0f))
+	if ((Var0.f_1 > 0f && Var1.f_1 > 0f) || (Var0.f_1 < 0f && Var1.f_1 < 0f))
 	{
 		return 1;
 	}
@@ -5306,9 +5306,9 @@ bool func_85(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_86()
@@ -8341,7 +8341,7 @@ int func_156(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_43.z) > 50f)
+			if ((Var1.f_2 - Local_43.f_2) > 50f)
 			{
 				return 0;
 			}

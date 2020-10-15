@@ -8469,14 +8469,14 @@ void func_159(var uParam0, int iParam1, int iParam2)
 	
 	Var0.f_1 = -1;
 	Var0.x = (*uParam0)[iParam1 /*3*/];
-	Var0.z = (uParam0[iParam1 /*3*/])->f_2;
-	Var0.y = (uParam0[iParam1 /*3*/])->f_1;
+	Var0.f_2 = (uParam0[iParam1 /*3*/])->f_2;
+	Var0.f_1 = (uParam0[iParam1 /*3*/])->f_1;
 	(*uParam0)[iParam1 /*3*/] = (*uParam0)[iParam2 /*3*/];
 	(uParam0[iParam1 /*3*/])->f_2 = (uParam0[iParam2 /*3*/])->f_2;
 	(uParam0[iParam1 /*3*/])->f_1 = (uParam0[iParam2 /*3*/])->f_1;
 	(*uParam0)[iParam2 /*3*/] = Var0.x;
-	(uParam0[iParam2 /*3*/])->f_2 = Var0.z;
-	(uParam0[iParam2 /*3*/])->f_1 = Var0.y;
+	(uParam0[iParam2 /*3*/])->f_2 = Var0.f_2;
+	(uParam0[iParam2 /*3*/])->f_1 = Var0.f_1;
 }
 
 void func_160()
@@ -17760,7 +17760,7 @@ bool func_408(var uParam0, var uParam1)
 	
 	fVar0 = (uParam1->f_6 + uParam0->f_6);
 	Var1 = { MISC::_0x21C235BC64831E5A(uParam1->f_1[0 /*2*/], uParam1->f_1[0 /*2*/].f_1, 0f, uParam0->f_1[0 /*2*/], uParam0->f_1[0 /*2*/].f_1, 0f, uParam0->f_1[1 /*2*/], uParam0->f_1[1 /*2*/].f_1, 0f, 1) };
-	return func_328(func_88(Var1.x, Var1.y), uParam1->f_1[0 /*2*/]) <= (fVar0 * fVar0);
+	return func_328(func_88(Var1.x, Var1.f_1), uParam1->f_1[0 /*2*/]) <= (fVar0 * fVar0);
 }
 
 bool func_409(var uParam0, var uParam1)
@@ -22625,7 +22625,7 @@ struct<2> func_533(struct<2> Param0, struct<2> Param1, struct<2> Param2, int iPa
 	struct<3> Var0;
 	
 	Var0 = { MISC::_0x21C235BC64831E5A(Param0, Param0.f_1, 0f, Param1, Param1.f_1, 0f, Param2, Param2.f_1, 0f, iParam3) };
-	return func_88(Var0.x, Var0.y);
+	return func_88(Var0.x, Var0.f_1);
 }
 
 void func_534(var uParam0)
@@ -25772,8 +25772,8 @@ void func_669(int iParam0, int iParam1)
 	int iVar1;
 	
 	Var0.x = -2012069109;
-	Var0.y = PLAYER::PLAYER_ID();
-	Var0.z = iParam1;
+	Var0.f_1 = PLAYER::PLAYER_ID();
+	Var0.f_2 = iParam1;
 	iVar1 = func_3(iParam0);
 	if (!iVar1 == 0 && func_71(iParam0, 0, 1))
 	{
@@ -26656,9 +26656,9 @@ int func_676(int iParam0, bool bParam1, bool bParam2, bool bParam3)
 		func_684(iVar0, iParam0, uVar2, &Var1);
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.y) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
 			{
-				if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.y, 3))
+				if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.f_1, 3))
 				{
 					fVar3 = func_683(iVar0, iParam0);
 					uVar4 = func_681();
@@ -29017,9 +29017,9 @@ int func_771(int iParam0, int iParam1)
 		func_1107(iParam0, iParam1, 0, &Var0);
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0.y) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0.f_1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
 			{
-				if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var0.y, 3))
+				if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var0.f_1, 3))
 				{
 					fVar1 = 0.96f;
 					uVar2 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Global_1702977.f_1);
@@ -29061,9 +29061,9 @@ int func_772(int iParam0)
 			if (iVar2 != -1)
 			{
 				func_1107(iVar2, iParam0, Global_2425662[PLAYER::PLAYER_ID() /*421*/].f_416.f_2, &Var1);
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.y) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
 				{
-					return ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.y, 3);
+					return ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.f_1, 3);
 				}
 			}
 		}
@@ -31730,15 +31730,15 @@ void func_799(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_786(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_786(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -32696,7 +32696,7 @@ void func_802(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -32705,19 +32705,19 @@ void func_802(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_803(Var2.z)] = Var2.x;
+						(*uParam0)[func_803(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_803(Var2.z)] = func_786(iParam1, Var2.x, func_803(Var2.z), iVar0);
+						(*uParam0)[func_803(Var2.f_2)] = func_786(iParam1, Var2.x, func_803(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_803(Var2.z)] = Var2.y;
+					(*uParam0)[func_803(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -107176,7 +107176,7 @@ void func_1031(var uParam0, var uParam1)
 				ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ((*uParam1)[3]), true, 0);
 				Var1 = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ((*uParam1)[3]), 1) };
 				Var2 = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ((*uParam1)[0]), 1) };
-				Var1.z = (Var2.z + 0.0225f);
+				Var1.f_2 = (Var2.f_2 + 0.0225f);
 				ENTITY::SET_ENTITY_COORDS(NETWORK::NET_TO_OBJ((*uParam1)[3]), Var1, 1, 0, 0, 1);
 			}
 		}
@@ -108069,9 +108069,9 @@ void func_1066(int iParam0)
 {
 	struct<3> Var0;
 	
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.x = -1737247303;
-	Var0.z = iParam0;
+	Var0.f_2 = iParam0;
 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 3, func_1067(1, 1));
 }
 
@@ -108250,9 +108250,9 @@ void func_1071(int iParam0, var uParam1)
 			if (iVar1 != -1)
 			{
 				func_1107(10, uParam1->f_522, 0, &Var0);
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0.y))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0.f_1))
 				{
-					if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var0.y, 3) && func_771(10, uParam1->f_522))
+					if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var0.f_1, 3) && func_771(10, uParam1->f_522))
 					{
 						uParam1->f_522.f_3 = 0;
 						uParam1->f_522.f_4 = 1;
@@ -108372,9 +108372,9 @@ void func_1072(int iParam0, var uParam1)
 			if (iVar0 != -1)
 			{
 				func_1107(10, 1, 0, &Var1);
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.y))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_1))
 				{
-					if (((ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.y, 3) && func_771(9, 1)) && uParam1->f_522 != 3) && uParam1->f_522 != 4)
+					if (((ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.f_1, 3) && func_771(9, 1)) && uParam1->f_522 != 3) && uParam1->f_522 != 4)
 					{
 						uParam1->f_522.f_3 = 0;
 						uParam1->f_522.f_4 = 1;
@@ -111489,9 +111489,9 @@ int func_1115(var uParam0)
 			if (iVar2 != -1)
 			{
 				func_684(iVar2, uParam0, func_1113(PLAYER::PLAYER_ID()), &Var1);
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.y) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Global_1702977.f_47)))
 				{
-					return ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.y, 3);
+					return ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &(Global_1702977.f_47), Var1.f_1, 3);
 				}
 			}
 		}

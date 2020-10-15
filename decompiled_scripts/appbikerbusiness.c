@@ -3447,7 +3447,7 @@ int func_80(int iParam0, int iParam1)
 			{
 				Var0 = { func_81(iParam1) };
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -6161,7 +6161,7 @@ int func_139(int iParam0, int iParam1, int iParam2)
 			{
 				return 4;
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -12182,7 +12182,7 @@ int func_245()
 				{
 					if (Var0.x == iLocal_695 && Var0.x != -1)
 					{
-						if (Var0.z == 0)
+						if (Var0.f_2 == 0)
 						{
 							return 1;
 						}
@@ -12782,10 +12782,10 @@ void func_256(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_258(Var0.y);
+	iVar1 = func_258(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;
@@ -14233,8 +14233,8 @@ int func_304(int iParam0)
 		if (iVar2 > 0)
 		{
 			Var8.x = MISC::GET_HASH_KEY(func_235(iLocal_510));
-			Var8.y = iVar6;
-			Var8.z = iParam0;
+			Var8.f_1 = iVar6;
+			Var8.f_2 = iParam0;
 			MONEY::_0x675D19C6067CAE08(iVar2, &Var8, 0, 1);
 		}
 		iLocal_496 = 1;
@@ -16588,9 +16588,9 @@ bool func_383(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_384(int iParam0)
@@ -17347,8 +17347,8 @@ int func_394(int iParam0, int iParam1, int iParam2)
 		}
 	}
 	Var11.x = MISC::GET_HASH_KEY(func_235(iParam0));
-	Var11.y = func_27(iParam0);
-	Var11.z = -1;
+	Var11.f_1 = func_27(iParam0);
+	Var11.f_2 = -1;
 	if (iVar1 > 0)
 	{
 		func_396(joaat("MPPLY_INGAMESTORE_MONEYSPENT"), iVar1);

@@ -144,7 +144,7 @@ void func_4()
 {
 	if (ENTITY::IS_ENTITY_DEAD(uLocal_1, 0))
 	{
-		uLocal_1 = PED::CREATE_PED(5, iLocal_5, Local_2.x, Local_2.y, Local_2.z, uLocal_3, 1, 1);
+		uLocal_1 = PED::CREATE_PED(5, iLocal_5, Local_2.x, Local_2.f_1, Local_2.f_2, uLocal_3, 1, 1);
 		PED::SET_PED_RANDOM_COMPONENT_VARIATION(uLocal_1, 0);
 		PED::SET_PED_CAN_BE_TARGETTED(uLocal_1, 0);
 		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(uLocal_1, 1);

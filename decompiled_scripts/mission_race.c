@@ -2177,10 +2177,10 @@ Vector3 func_7(int iParam0, struct<3> Param1)
 {
 	var uVar0;
 	
-	Param1.z = (Param1.z + 0.15f);
+	Param1.f_2 = (Param1.f_2 + 0.15f);
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(Param1, &uVar0, 0, 0))
 	{
-		Param1.z = uVar0;
+		Param1.f_2 = uVar0;
 	}
 	if (func_8(uParam0))
 	{
@@ -2477,7 +2477,7 @@ void func_24(int iParam0, int iParam1)
 				if (Local_530.f_1 == 3)
 				{
 					Var1.x = (Var1.x + MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f));
-					Var1.y = (Var1.y + MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f));
+					Var1.f_1 = (Var1.f_1 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f));
 				}
 				else
 				{
@@ -10170,9 +10170,9 @@ bool func_118(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_119(struct<3> Param0, float fParam1)
@@ -10219,7 +10219,7 @@ int func_120(var uParam0, struct<3> Param1, float fParam2, bool bParam3)
 				bVar2 = true;
 				if (VEHICLE::IS_THIS_MODEL_A_BOAT(uParam0->f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_JETSKI(uParam0->f_12.f_66))
 				{
-					if (!WATER::TEST_PROBE_AGAINST_WATER(Param1.x, Param1.y, (Param1.z + 30f), Param1.x, Param1.y, (Param1.z - 30f), &uVar3))
+					if (!WATER::TEST_PROBE_AGAINST_WATER(Param1.x, Param1.f_1, (Param1.f_2 + 30f), Param1.x, Param1.f_1, (Param1.f_2 - 30f), &uVar3))
 					{
 						bVar2 = false;
 					}
@@ -10389,9 +10389,9 @@ int func_123(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -10400,7 +10400,7 @@ int func_123(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -11895,7 +11895,7 @@ void func_179(int iParam0)
 	int iVar0;
 	
 	func_180();
-	if (iParam0 == 1 && HUD::DOES_BLIP_EXIST(Local_18.y))
+	if (iParam0 == 1 && HUD::DOES_BLIP_EXIST(Local_18.f_1))
 	{
 		HUD::REMOVE_BLIP(&(Local_18.f_1));
 	}
@@ -15119,24 +15119,24 @@ int func_246(int iParam0, bool bParam1, bool bParam2, float fParam3, float fPara
 		}
 		Var7 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar1) };
 		Var7.x = (Var7.x * (func_247(iParam0) / fVar4));
-		Var7.y = (Var7.y * (func_247(iParam0) / fVar4));
+		Var7.f_1 = (Var7.f_1 * (func_247(iParam0) / fVar4));
 		if (!bParam2)
 		{
 			Var7.x = (Var7.x - 2f);
-			Var7.y = (Var7.y - 2f);
+			Var7.f_1 = (Var7.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
 			Var7.x = 288f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22350.f_7029[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
 			Var7.x = 106f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		*fParam3 = ((Var7.x / IntToFloat(iVar2)) * IntToFloat((iVar2 / iVar3)));
-		*fParam4 = (((Var7.y / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
+		*fParam4 = (((Var7.f_1 / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)
@@ -25897,18 +25897,18 @@ int func_407()
 				{
 					HUD::CLEAR_HELP(1);
 				}
-				if (!HUD::DOES_BLIP_EXIST(Local_18.y) && !(Local_530.f_1 == 2 && (VEHICLE::IS_VEHICLE_STUCK_TIMER_UP(Local_18.x, 0, 1000) || VEHICLE::IS_VEHICLE_STUCK_TIMER_UP(Local_18.x, 1, 1000))))
+				if (!HUD::DOES_BLIP_EXIST(Local_18.f_1) && !(Local_530.f_1 == 2 && (VEHICLE::IS_VEHICLE_STUCK_TIMER_UP(Local_18.x, 0, 1000) || VEHICLE::IS_VEHICLE_STUCK_TIMER_UP(Local_18.x, 1, 1000))))
 				{
-					Local_18.y = HUD::ADD_BLIP_FOR_ENTITY(Local_18.x);
-					HUD::SET_BLIP_AS_FRIENDLY(Local_18.y, 1);
-					HUD::SET_BLIP_SCALE(Local_18.y, 1f);
+					Local_18.f_1 = HUD::ADD_BLIP_FOR_ENTITY(Local_18.x);
+					HUD::SET_BLIP_AS_FRIENDLY(Local_18.f_1, 1);
+					HUD::SET_BLIP_SCALE(Local_18.f_1, 1f);
 					if (Local_530.f_1 == 3)
 					{
 						AUDIO::TRIGGER_MUSIC_EVENT("MGSR_FELL_OFF");
 					}
-					if (Local_18.z == 0)
+					if (Local_18.f_2 == 0)
 					{
-						Local_18.z = 1;
+						Local_18.f_2 = 1;
 						switch (Local_530.f_1)
 						{
 							case 1:
@@ -26234,7 +26234,7 @@ int func_416()
 
 void func_417()
 {
-	if (HUD::DOES_BLIP_EXIST(Local_18.y))
+	if (HUD::DOES_BLIP_EXIST(Local_18.f_1))
 	{
 		HUD::REMOVE_BLIP(&(Local_18.f_1));
 		if (Local_530.f_1 == 3)
@@ -27566,8 +27566,8 @@ void func_450(var uParam0, int iParam1, bool bParam2, float fParam3, int iParam4
 		Var0 = { HUD::GET_BLIP_COORDS(*uParam0) };
 		Var1 = { ENTITY::GET_ENTITY_COORDS(iParam1, 1) };
 		Var0.x = (Var0.x + ((Var1.x - Var0.x) / fParam3));
-		Var0.y = (Var0.y + ((Var1.y - Var0.y) / fParam3));
-		Var0.z = (Var0.z + ((Var1.z - Var0.z) / fParam3));
+		Var0.f_1 = (Var0.f_1 + ((Var1.f_1 - Var0.f_1) / fParam3));
+		Var0.f_2 = (Var0.f_2 + ((Var1.f_2 - Var0.f_2) / fParam3));
 		HUD::SET_BLIP_COORDS(*uParam0, Var0);
 	}
 }
@@ -28096,11 +28096,11 @@ int func_467(int iParam0, float fParam1, bool bParam2, bool bParam3)
 	Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, 1) };
 	Var1 = { Var0 };
 	Var0.x = (Var0.x - fParam1);
-	Var0.y = (Var0.y - fParam1);
-	Var0.z = (Var0.z - fParam1);
+	Var0.f_1 = (Var0.f_1 - fParam1);
+	Var0.f_2 = (Var0.f_2 - fParam1);
 	Var1.x = (Var1.x + fParam1);
-	Var1.y = (Var1.y + fParam1);
-	Var1.z = (Var1.z + fParam1);
+	Var1.f_1 = (Var1.f_1 + fParam1);
+	Var1.f_2 = (Var1.f_2 + fParam1);
 	if (bParam2)
 	{
 		if (((MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_grenade"), fParam1, 1) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_molotov"), fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_smokegrenade"), fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_stickybomb"), 5f, 1))
@@ -28184,7 +28184,7 @@ int func_469(int iParam0, struct<3> Param1, float fParam2, int iParam3)
 
 float func_470(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_471(struct<3> Param0)
@@ -28201,8 +28201,8 @@ Vector3 func_471(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -28388,11 +28388,11 @@ void func_478(int iParam0, bool bParam1, bool bParam2)
 	{
 		Var10 = { Local_532[iParam0 /*3*/] };
 		Var13 = { Var10 };
-		Var13.z = (Var13.z + 20f);
+		Var13.f_2 = (Var13.f_2 + 20f);
 		bVar17 = false;
 		if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var13, &fVar16, 0, 0))
 		{
-			if (fVar16 > (Var10.z + 1f))
+			if (fVar16 > (Var10.f_2 + 1f))
 			{
 				fVar14 = ((7.5f * 1f) * 0.66f);
 				fVar15 = 2f;
@@ -28513,9 +28513,9 @@ void func_479(int iParam0, struct<3> Param1)
 	{
 		Var1[iVar0 /*3*/] = { Param1 + func_481(iVar0) };
 		MISC::GET_GROUND_Z_FOR_3D_COORD(Var1[iVar0 /*3*/], &fVar2, 0, 0);
-		if (fVar2 < (Param1.z - 2f) || fVar2 > (Param1.z + 2f))
+		if (fVar2 < (Param1.f_2 - 2f) || fVar2 > (Param1.f_2 + 2f))
 		{
-			Var1[iVar0 /*3*/].f_2 = Param1.z;
+			Var1[iVar0 /*3*/].f_2 = Param1.f_2;
 		}
 		else
 		{
@@ -28539,9 +28539,9 @@ Vector3 func_480(var uParam0)
 	{
 		Var1 = { *(uParam0[iVar0 /*3*/]) };
 		Var2 = { *(uParam0[(iVar0 + 1 % *uParam0) /*3*/]) };
-		Var3.x = (Var3.x + ((Var1.y - Var2.y) * (Var1.z + Var2.z)));
-		Var3.y = (Var3.y + ((Var1.z - Var2.z) * (Var1.x + Var2.x)));
-		Var3.z = (Var3.z + ((Var1.x - Var2.x) * (Var1.y + Var2.y)));
+		Var3.x = (Var3.x + ((Var1.f_1 - Var2.f_1) * (Var1.f_2 + Var2.f_2)));
+		Var3.f_1 = (Var3.f_1 + ((Var1.f_2 - Var2.f_2) * (Var1.x + Var2.x)));
+		Var3.f_2 = (Var3.f_2 + ((Var1.x - Var2.x) * (Var1.f_1 + Var2.f_1)));
 		iVar0++;
 	}
 	return func_471(Var3);
@@ -28628,7 +28628,7 @@ int func_483(int iParam0)
 	}
 	Var3 = { Var2 - Var0 };
 	Var4 = { Var1 - Var0 };
-	fVar5 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var3.x, Var3.y, Var4.x, Var4.y);
+	fVar5 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var3.x, Var3.f_1, Var4.x, Var4.f_1);
 	if (fVar5 > 180f)
 	{
 		fVar5 = (360f - fVar5);
@@ -30771,7 +30771,7 @@ void func_536(char[24] cParam0, int iParam1, int iParam2, int iParam3, int iPara
 					{
 						if (HUD::IS_HUD_COMPONENT_ACTIVE(15))
 						{
-							HUD::SET_HUD_COMPONENT_POSITION(15, Local_23.x, (Local_23.y + fLocal_24));
+							HUD::SET_HUD_COMPONENT_POSITION(15, Local_23.x, (Local_23.f_1 + fLocal_24));
 							Global_76881 = 1;
 						}
 					}
@@ -31713,7 +31713,7 @@ void func_557(bool bParam0, int iParam1)
 		PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 32, 0);
 	}
 	PLAYER::SET_WANTED_LEVEL_MULTIPLIER(0.1f);
-	Local_18.z = 0;
+	Local_18.f_2 = 0;
 }
 
 void func_558(int iParam0, var uParam1, var uParam2, float fParam3)

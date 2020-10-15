@@ -1632,7 +1632,7 @@ void func_59(var uParam0, int iParam1)
 				{
 					bVar6 = false;
 				}
-				if (func_102(Var4, Var5.z, 0, 0, 0, 0, 1, bVar6, 1, 0, 0) && Global_2513613)
+				if (func_102(Var4, Var5.f_2, 0, 0, 0, 0, 1, bVar6, 1, 0, 0) && Global_2513613)
 				{
 					func_132(uParam0, 6);
 				}
@@ -1649,7 +1649,7 @@ void func_59(var uParam0, int iParam1)
 						NETWORK::NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(iParam1->f_14[uParam0->f_281.f_2]);
 					}
 				}
-				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), Var4, 1f, 500, Var5.z, 0.05f);
+				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), Var4, 1f, 500, Var5.f_2, 0.05f);
 				func_21(uParam0->f_281.f_2);
 				func_132(uParam0, 6);
 			}
@@ -1670,7 +1670,7 @@ void func_59(var uParam0, int iParam1)
 			func_117(uParam0, &sVar1, 0);
 			iVar7 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073);
 			Var8 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&sVar0, &sVar1, func_116(uParam0), func_115(uParam0), 0, 2) };
-			fVar9 = Var8.z;
+			fVar9 = Var8.f_2;
 			if (((iVar7 != 1 && iVar7 != 0) || func_101(ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), fVar9, 5f)) || func_34(&(uParam0->f_281), 14))
 			{
 				fVar10 = 1f;
@@ -2560,7 +2560,7 @@ int func_74()
 
 int func_75(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2866,8 +2866,8 @@ var func_98(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 	struct<3> Var0;
 	
 	Var0.f_2 = -1;
-	Var0.y = iParam0;
-	Var0.z = iParam1;
+	Var0.f_1 = iParam0;
+	Var0.f_2 = iParam1;
 	Var0.x = iParam2;
 	func_94(1);
 	Global_2513628 = { Var0 };
@@ -2989,7 +2989,7 @@ int func_102(struct<3> Param0, float fParam1, bool bParam2, bool bParam3, bool b
 	if (!Global_2439138.f_1233 && !bParam9)
 	{
 		Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
-		if ((MISC::ABSF((Var1.x - Param0.x)) < 0.2f && MISC::ABSF((Var1.y - Param0.y)) < 0.2f) && MISC::ABSF((Var1.z - Param0.z)) < 1.2f)
+		if ((MISC::ABSF((Var1.x - Param0.x)) < 0.2f && MISC::ABSF((Var1.f_1 - Param0.f_1)) < 0.2f) && MISC::ABSF((Var1.f_2 - Param0.f_2)) < 1.2f)
 		{
 			fVar2 = (fParam1 - ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()));
 			if (fVar2 > 180f)
@@ -3012,7 +3012,7 @@ int func_102(struct<3> Param0, float fParam1, bool bParam2, bool bParam3, bool b
 			}
 		}
 	}
-	if (((!Param0.x == Global_2439138.f_1235 || !Param0.y == Global_2439138.f_1235.f_1) || !Param0.z == Global_2439138.f_1235.f_2) || !fParam1 == Global_2439138.f_1238)
+	if (((!Param0.x == Global_2439138.f_1235 || !Param0.f_1 == Global_2439138.f_1235.f_1) || !Param0.f_2 == Global_2439138.f_1235.f_2) || !fParam1 == Global_2439138.f_1238)
 	{
 		if (Global_2439138.f_1233 == 1)
 		{
@@ -3733,7 +3733,7 @@ int func_129(int iParam0, struct<3> Param1)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(uParam0))
 	{
-		if (func_101(ENTITY::GET_ENTITY_HEADING(iParam0), (Param1.z - 180f), 90f))
+		if (func_101(ENTITY::GET_ENTITY_HEADING(iParam0), (Param1.f_2 - 180f), 90f))
 		{
 			return 1;
 		}
@@ -4176,7 +4176,7 @@ void func_159(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -4196,19 +4196,19 @@ void func_160(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_107(Var0.y, 1, 1))
+		if (func_107(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_161(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -4338,9 +4338,9 @@ Vector3 func_167(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 

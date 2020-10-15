@@ -2158,7 +2158,7 @@ void func_50(int iParam0, int iParam1)
 		}
 		if (func_55(iParam0, iParam1) != 322)
 		{
-			func_52(func_55(iParam0, iParam1), Local_43.x, Local_43.y);
+			func_52(func_55(iParam0, iParam1), Local_43.x, Local_43.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -3153,8 +3153,8 @@ void func_69(var uParam0, var uParam1, var uParam2, var uParam3)
 				Var1 = { HUD::GET_BLIP_COORDS(*uParam3) };
 				Var2 = { ENTITY::GET_ENTITY_COORDS(*uParam2, 1) };
 				Var1.x = (Var1.x + (((Var2.x - Var1.x) / 1f) * SYSTEM::TIMESTEP()));
-				Var1.y = (Var1.y + (((Var2.y - Var1.y) / 1f) * SYSTEM::TIMESTEP()));
-				Var1.z = (Var1.z + (((Var2.z - Var1.z) / 1f) * SYSTEM::TIMESTEP()));
+				Var1.f_1 = (Var1.f_1 + (((Var2.f_1 - Var1.f_1) / 1f) * SYSTEM::TIMESTEP()));
+				Var1.f_2 = (Var1.f_2 + (((Var2.f_2 - Var1.f_2) / 1f) * SYSTEM::TIMESTEP()));
 				HUD::SET_BLIP_COORDS(*uParam3, Var1);
 				if (iVar0 == 0)
 				{
@@ -3311,7 +3311,7 @@ void func_74(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, va
 
 int func_75(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -3760,7 +3760,7 @@ void func_81()
 				if (iLocal_78 < 5 && iLocal_79 < MISC::GET_GAME_TIMER())
 				{
 					Local_50 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS((Local_50.x + fLocal_64), (Local_50.y + fLocal_65), (Local_50.z + fLocal_66), (Local_50.x - fLocal_64), (Local_50.y - fLocal_65), Local_50.z, 10, 0, joaat("weapon_assaultrifle"), 0, 1, 1, -1082130432);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS((Local_50.x + fLocal_64), (Local_50.f_1 + fLocal_65), (Local_50.f_2 + fLocal_66), (Local_50.x - fLocal_64), (Local_50.f_1 - fLocal_65), Local_50.f_2, 10, 0, joaat("weapon_assaultrifle"), 0, 1, 1, -1082130432);
 					iLocal_79 = (MISC::GET_GAME_TIMER() + MISC::GET_RANDOM_INT_IN_RANGE(200, 500));
 					iLocal_78++;
 				}
@@ -4251,7 +4251,7 @@ void func_98(int iParam0, var uParam1)
 	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(uParam0, 1084227584);
 	Local_279 = { ENTITY::GET_ENTITY_COORDS(iParam0, 1) };
 	Local_281 = { Local_103 - Local_279 };
-	ENTITY::SET_ENTITY_HEADING(iParam0, MISC::GET_HEADING_FROM_VECTOR_2D(Local_281.x, Local_281.y));
+	ENTITY::SET_ENTITY_HEADING(iParam0, MISC::GET_HEADING_FROM_VECTOR_2D(Local_281.x, Local_281.f_1));
 	if (bLocal_110)
 	{
 		if (!PED::IS_PED_INJURED(uParam1))
@@ -5414,8 +5414,8 @@ void func_118()
 			ENTITY::SET_ENTITY_COLLISION(iLocal_82[iVar1], 1, 0);
 			PED::SET_PED_CONFIG_FLAG(iLocal_82[iVar1], 227, 1);
 			Local_50 = { ENTITY::GET_ENTITY_COORDS(iLocal_82[iVar1], 1) };
-			Local_51 = { Local_50.x, (Local_50.y - 2f), (Local_50.z - 0.5f) };
-			Local_52 = { Local_50.x, (Local_50.y + 50f), (Local_50.z - 0.5f) };
+			Local_51 = { Local_50.x, (Local_50.f_1 - 2f), (Local_50.f_2 - 0.5f) };
+			Local_52 = { Local_50.x, (Local_50.f_1 + 50f), (Local_50.f_2 - 0.5f) };
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(Local_51, Local_52, 100, 1, joaat("weapon_assaultrifle"), 0, 1, 1, -1082130432);
 			iVar1++;
 		}
@@ -5550,8 +5550,8 @@ Vector3 func_119(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -5575,20 +5575,20 @@ void func_120()
 			fLocal_65 = MISC::GET_RANDOM_FLOAT_IN_RANGE(2f, 4f);
 			fLocal_66 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0.1f, 2f);
 			SYSTEM::WAIT(0);
-			Local_54 = { (Local_53.x - fLocal_64), (Local_53.y - fLocal_65), (Local_53.z + fLocal_66) };
-			Local_55 = { (Local_53.x + fLocal_64), (Local_53.y + fLocal_65), Local_53.z };
+			Local_54 = { (Local_53.x - fLocal_64), (Local_53.f_1 - fLocal_65), (Local_53.f_2 + fLocal_66) };
+			Local_55 = { (Local_53.x + fLocal_64), (Local_53.f_1 + fLocal_65), Local_53.f_2 };
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(Local_54, Local_55, 1, 0, joaat("weapon_assaultrifle"), 0, 1, 1, -1082130432);
-			Local_54 = { (Local_53.x + fLocal_64), (Local_53.y + fLocal_65), (Local_53.z + fLocal_66) };
-			Local_55 = { (Local_53.x - fLocal_64), (Local_53.y - fLocal_65), Local_53.z };
+			Local_54 = { (Local_53.x + fLocal_64), (Local_53.f_1 + fLocal_65), (Local_53.f_2 + fLocal_66) };
+			Local_55 = { (Local_53.x - fLocal_64), (Local_53.f_1 - fLocal_65), Local_53.f_2 };
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(Local_54, Local_55, 1, 0, joaat("weapon_assaultrifle"), 0, 1, 1, -1082130432);
-			Local_54 = { (Local_53.x + fLocal_64), (Local_53.y - fLocal_65), (Local_53.z + fLocal_66) };
-			Local_55 = { (Local_53.x - fLocal_64), (Local_53.y + fLocal_65), Local_53.z };
+			Local_54 = { (Local_53.x + fLocal_64), (Local_53.f_1 - fLocal_65), (Local_53.f_2 + fLocal_66) };
+			Local_55 = { (Local_53.x - fLocal_64), (Local_53.f_1 + fLocal_65), Local_53.f_2 };
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(Local_54, Local_55, 1, 0, joaat("weapon_assaultrifle"), 0, 1, 1, -1082130432);
-			Local_54 = { (Local_53.x - fLocal_64), (Local_53.y + fLocal_65), (Local_53.z + fLocal_66) };
-			Local_55 = { (Local_53.x + fLocal_64), (Local_53.y - fLocal_65), Local_53.z };
+			Local_54 = { (Local_53.x - fLocal_64), (Local_53.f_1 + fLocal_65), (Local_53.f_2 + fLocal_66) };
+			Local_55 = { (Local_53.x + fLocal_64), (Local_53.f_1 - fLocal_65), Local_53.f_2 };
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(Local_54, Local_55, 1, 0, joaat("weapon_assaultrifle"), 0, 1, 1, -1082130432);
-			Local_54 = { Local_53.x, (Local_53.y + fLocal_65), (Local_53.z + fLocal_66) };
-			Local_55 = { Local_53.x, (Local_53.y - fLocal_65), Local_53.z };
+			Local_54 = { Local_53.x, (Local_53.f_1 + fLocal_65), (Local_53.f_2 + fLocal_66) };
+			Local_55 = { Local_53.x, (Local_53.f_1 - fLocal_65), Local_53.f_2 };
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(Local_54, Local_55, 1, 0, joaat("weapon_assaultrifle"), 0, 1, 1, -1082130432);
 			iLocal_77++;
 		}
@@ -6685,7 +6685,7 @@ int func_138(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_43.z) > 50f)
+			if ((Var1.f_2 - Local_43.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -6806,9 +6806,9 @@ bool func_139(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_140(int iParam0)

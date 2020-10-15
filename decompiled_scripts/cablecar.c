@@ -335,7 +335,7 @@ void __EntryFunction__()
 			func_303(0);
 		}
 		Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-		if (((Var0.x <= -900f || Var0.x >= 740f) || Var0.y <= 5200f) || Var0.y >= 5900f)
+		if (((Var0.x <= -900f || Var0.x >= 740f) || Var0.f_1 <= 5200f) || Var0.f_1 >= 5900f)
 		{
 			func_303(0);
 		}
@@ -583,14 +583,14 @@ void func_7(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4,
 	if ((PAD::_IS_USING_KEYBOARD(2) && bParam2) && !uParam0->f_28)
 	{
 		uParam0->f_14 = Var6.x;
-		uParam0->f_14.f_1 = Var6.y;
-		uParam0->f_14.f_2 = Var6.z;
+		uParam0->f_14.f_1 = Var6.f_1;
+		uParam0->f_14.f_2 = Var6.f_2;
 	}
 	else
 	{
 		uParam0->f_14 = (uParam0->f_14 + func_8(((((Var6.x - uParam0->f_14) * 0.05f) * fVar5) * fParam7), -3f, 3f));
-		uParam0->f_14.f_1 = (uParam0->f_14.f_1 + func_8(((((Var6.y - uParam0->f_14.f_1) * 0.05f) * fVar5) * fParam7), -3f, 3f));
-		uParam0->f_14.f_2 = (uParam0->f_14.f_2 + func_8(((((Var6.z - uParam0->f_14.f_2) * 0.05f) * fVar5) * fParam7), -3f, 3f));
+		uParam0->f_14.f_1 = (uParam0->f_14.f_1 + func_8(((((Var6.f_1 - uParam0->f_14.f_1) * 0.05f) * fVar5) * fParam7), -3f, 3f));
+		uParam0->f_14.f_2 = (uParam0->f_14.f_2 + func_8(((((Var6.f_2 - uParam0->f_14.f_2) * 0.05f) * fVar5) * fParam7), -3f, 3f));
 	}
 	if (uParam0->f_26)
 	{
@@ -1428,7 +1428,7 @@ bool func_21(var uParam0, struct<3> Param1, float fParam2)
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0, 1) };
 	Var1 = { Param1 - Var0 };
-	return ((Var1.x * Var1.x) + (Var1.y * Var1.y)) <= (fParam2 * fParam2);
+	return ((Var1.x * Var1.x) + (Var1.f_1 * Var1.f_1)) <= (fParam2 * fParam2);
 }
 
 int func_22(var uParam0)
@@ -4161,7 +4161,7 @@ void func_111(var uParam0)
 	{
 		ENTITY::DETACH_ENTITY(PLAYER::PLAYER_PED_ID(), 1, 1);
 	}
-	Var0.y = (Var0.y * uParam0->f_17);
+	Var0.f_1 = (Var0.f_1 * uParam0->f_17);
 	if (uParam0->f_17 == -1f)
 	{
 		ENTITY::ATTACH_ENTITY_TO_ENTITY(PLAYER::PLAYER_PED_ID(), uParam0->f_2, 0, Var0, 0f, 0f, 180f, 0, 0, 0, 0, 2, 1);
@@ -4189,7 +4189,7 @@ void func_112(var uParam0)
 	{
 		ENTITY::DETACH_ENTITY(func_54(), 1, 1);
 	}
-	Var0.y = (Var0.y * uParam0->f_17);
+	Var0.f_1 = (Var0.f_1 * uParam0->f_17);
 	if (uParam0->f_17 == -1f)
 	{
 		ENTITY::ATTACH_ENTITY_TO_ENTITY(func_54(), uParam0->f_2, 0, Var0, 0f, 0f, 180f, 0, 0, 0, 0, 2, 1);
@@ -4215,7 +4215,7 @@ void func_113(var uParam0)
 	{
 		ENTITY::DETACH_ENTITY(func_96(), 1, 1);
 	}
-	Var0.y = (Var0.y * uParam0->f_17);
+	Var0.f_1 = (Var0.f_1 * uParam0->f_17);
 	if (uParam0->f_17 == -1f)
 	{
 		ENTITY::ATTACH_ENTITY_TO_ENTITY(func_96(), uParam0->f_2, 0, Var0, 0f, 0f, 180f, 0, 0, 0, 0, 2, 1);
@@ -7805,15 +7805,15 @@ void func_147(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_144(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_144(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -8771,7 +8771,7 @@ void func_150(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -8780,19 +8780,19 @@ void func_150(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_151(Var2.z)] = Var2.x;
+						(*uParam0)[func_151(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_151(Var2.z)] = func_144(iParam1, Var2.x, func_151(Var2.z), iVar0);
+						(*uParam0)[func_151(Var2.f_2)] = func_144(iParam1, Var2.x, func_151(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_151(Var2.z)] = Var2.y;
+					(*uParam0)[func_151(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -32848,7 +32848,7 @@ bool func_238(var uParam0, var uParam1, float fParam2, bool bParam3)
 	{
 		return 0;
 	}
-	func_244(&Var0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam1->f_2, 0f, 2.75f, Local_56.z) + Vector(1f, 0f, 0f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam1->f_2, 0f, -2.75f, Local_56.z) - Vector(1f, 0f, 0f), 3f);
+	func_244(&Var0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam1->f_2, 0f, 2.75f, Local_56.f_2) + Vector(1f, 0f, 0f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam1->f_2, 0f, -2.75f, Local_56.f_2) - Vector(1f, 0f, 0f), 3f);
 	if (bParam3)
 	{
 		func_241(&Var0, 0, 0, 255, 255);
@@ -32888,8 +32888,8 @@ Vector3 func_240(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -32918,7 +32918,7 @@ void func_242(struct<3> Param0, struct<3> Param1, float fParam2, var uParam3, va
 	fVar2 = (fParam2 / 2f);
 	Var3 = { Param0 };
 	Var4 = { Param1 };
-	Var4.z = Param0.z;
+	Var4.f_2 = Param0.f_2;
 	Var5[0 /*3*/] = { Var3 - Var1 * Vector(fVar2, fVar2, fVar2) };
 	Var5[1 /*3*/] = { Var3 + Var1 * Vector(fVar2, fVar2, fVar2) };
 	Var5[2 /*3*/] = { Var4 + Var1 * Vector(fVar2, fVar2, fVar2) };
@@ -32931,7 +32931,7 @@ void func_242(struct<3> Param0, struct<3> Param1, float fParam2, var uParam3, va
 	while (iVar6 <= 3)
 	{
 		Var5[(4 + iVar6) /*3*/] = { Var5[iVar6 /*3*/] };
-		Var5[(4 + iVar6) /*3*/].f_2 = Param1.z;
+		Var5[(4 + iVar6) /*3*/].f_2 = Param1.f_2;
 		iVar6++;
 	}
 	GRAPHICS::DRAW_DEBUG_LINE(Var5[4 /*3*/], Var5[5 /*3*/], uParam3, uParam4, uParam5, uParam6);
@@ -32946,7 +32946,7 @@ void func_242(struct<3> Param0, struct<3> Param1, float fParam2, var uParam3, va
 
 Vector3 func_243(struct<3> Param0, struct<3> Param1)
 {
-	return ((Param0.y * Param1.z) - (Param0.z * Param1.y)), ((Param0.z * Param1.x) - (Param0.x * Param1.z)), ((Param0.x * Param1.y) - (Param0.y * Param1.x));
+	return ((Param0.f_1 * Param1.f_2) - (Param0.f_2 * Param1.f_1)), ((Param0.f_2 * Param1.x) - (Param0.x * Param1.f_2)), ((Param0.x * Param1.f_1) - (Param0.f_1 * Param1.x));
 }
 
 void func_244(var uParam0, struct<3> Param1, struct<3> Param2, float fParam3)
@@ -33010,7 +33010,7 @@ void func_247(var uParam0)
 			ENTITY::DETACH_ENTITY(func_54(), 1, 1);
 		}
 		Var0.x = (Var0.x - 0.4f);
-		Var0.y = (Var0.y - 0.5f);
+		Var0.f_1 = (Var0.f_1 - 0.5f);
 		ENTITY::ATTACH_ENTITY_TO_ENTITY(func_54(), uParam0->f_2, 0, Var0, 0f, 0f, -90f, 0, 0, 0, 0, 2, 1);
 	}
 }
@@ -33027,7 +33027,7 @@ void func_248(var uParam0)
 			ENTITY::DETACH_ENTITY(func_96(), 1, 1);
 		}
 		Var0.x = (Var0.x + 0.2f);
-		Var0.y = (Var0.y + 0.5f);
+		Var0.f_1 = (Var0.f_1 + 0.5f);
 		ENTITY::ATTACH_ENTITY_TO_ENTITY(func_96(), uParam0->f_2, 0, Var0, 0f, 0f, -90f, 0, 0, 0, 0, 2, 1);
 	}
 }
@@ -33080,7 +33080,7 @@ void func_250(var uParam0, var uParam1, bool bParam2, bool bParam3, int iParam4,
 	Var0 = { uParam0->f_1[0 /*3*/] };
 	if (bParam2)
 	{
-		Var0.z = (Var0.z + uParam0->f_18);
+		Var0.f_2 = (Var0.f_2 + uParam0->f_18);
 	}
 	*uParam1 = CAM::CREATE_CAM_WITH_PARAMS("DEFAULT_SCRIPTED_CAMERA", Var0, uParam0->f_8[0 /*3*/], uParam0->f_15[0], 1, 2);
 	if (!CAM::DOES_CAM_EXIST(*uParam1))
@@ -33095,7 +33095,7 @@ void func_250(var uParam0, var uParam1, bool bParam2, bool bParam3, int iParam4,
 		Var0 = { uParam0->f_1[1 /*3*/] };
 		if (bParam2)
 		{
-			Var0.z = (Var0.z + uParam0->f_18);
+			Var0.f_2 = (Var0.f_2 + uParam0->f_18);
 		}
 		if (fVar1 == 0f)
 		{
@@ -33383,7 +33383,7 @@ void func_256(var uParam0, int iParam1)
 
 Vector3 func_257(struct<3> Param0)
 {
-	return (-SYSTEM::SIN(Param0.z) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.z) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
+	return (-SYSTEM::SIN(Param0.f_2) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.f_2) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
 }
 
 void func_258(struct<3> Param0, struct<3> Param1, int iParam2)
@@ -33895,7 +33895,7 @@ void func_268(var uParam0, var uParam1, int iParam2)
 	{
 		Var0 = { -0.6f, -1.21756f, -5.85388f };
 	}
-	Var0.y = (Var0.y * uParam1->f_17);
+	Var0.f_1 = (Var0.f_1 * uParam1->f_17);
 	if (uParam1->f_17 == -1f)
 	{
 		ENTITY::ATTACH_ENTITY_TO_ENTITY(uParam0, uParam1->f_2, 0, Var0, 0f, 0f, 180f, 0, 0, 0, 0, 2, 1);
@@ -34192,7 +34192,7 @@ bool func_280(var uParam0, var uParam1, float fParam2, bool bParam3)
 	{
 		return 0;
 	}
-	func_244(&Var0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam1->f_2, 0f, 2.75f, (Local_56.z + 2.63f)) + Vector(1f, 0f, 0f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam1->f_2, 0f, -2.75f, (Local_56.z + 2.63f)) - Vector(1f, 0f, 0f), 3f);
+	func_244(&Var0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam1->f_2, 0f, 2.75f, (Local_56.f_2 + 2.63f)) + Vector(1f, 0f, 0f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam1->f_2, 0f, -2.75f, (Local_56.f_2 + 2.63f)) - Vector(1f, 0f, 0f), 3f);
 	if (bParam3)
 	{
 		func_241(&Var0, 0, 0, 255, 255);
@@ -34259,7 +34259,7 @@ void func_283(var uParam0)
 
 int func_284(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -34810,7 +34810,7 @@ void func_303(bool bParam0)
 			{
 				Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - Vector(5f, 0f, 0f) };
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0, 1, 0, 0, 1);
-				Var0.z = -200f;
+				Var0.f_2 = -200f;
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0, 1, 0, 0, 1);
 			}
 		}

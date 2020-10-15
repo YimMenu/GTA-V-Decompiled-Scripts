@@ -2249,8 +2249,8 @@ int func_1()
 				CAM::SET_CINEMATIC_MODE_ACTIVE(0);
 				CAM::SET_CINEMATIC_BUTTON_ACTIVE(false);
 				GRAPHICS::ANIMPOSTFX_PLAY("MinigameTransitionOut", 0, 0);
-				CAM::SET_CAM_COORD(uLocal_1706, Local_43.x, Local_43.y, (Local_43.z + 1000f));
-				CAM::SET_CAM_ROT(uLocal_1706, 90f, Local_44.y, Local_44.z, 2);
+				CAM::SET_CAM_COORD(uLocal_1706, Local_43.x, Local_43.f_1, (Local_43.f_2 + 1000f));
+				CAM::SET_CAM_ROT(uLocal_1706, 90f, Local_44.f_1, Local_44.f_2, 2);
 				CAM::SET_CAM_ACTIVE_WITH_INTERP(Local_2035.f_2858, uLocal_1706, 500, 1, 1);
 				AUDIO::PLAY_SOUND_FRONTEND(-1, "QUIT_WHOOSH", "HUD_MINI_GAME_SOUNDSET", 1);
 				CAM::RENDER_SCRIPT_CAMS(1, 0, 3000, 1, 0, 0);
@@ -2667,7 +2667,7 @@ bool func_7(var uParam0)
 
 Vector3 func_8(struct<3> Param0)
 {
-	return (-SYSTEM::SIN(Param0.z) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.z) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
+	return (-SYSTEM::SIN(Param0.f_2) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.f_2) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
 }
 
 void func_9(var uParam0, struct<3> Param1, var uParam2, float fParam3)
@@ -4792,7 +4792,7 @@ void func_72(var uParam0)
 	bVar8 = fVar6 >= fVar3;
 	if (Local_45 == 1)
 	{
-		if (MISC::ABSF((Var5.z - Var4.z)) > 15f)
+		if (MISC::ABSF((Var5.f_2 - Var4.f_2)) > 15f)
 		{
 			bVar7 = true;
 		}
@@ -4841,9 +4841,9 @@ int func_73(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -4852,7 +4852,7 @@ int func_73(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -5738,7 +5738,7 @@ int func_93(var uParam0, var uParam1, var uParam2, int iParam3)
 				else
 				{
 					ENTITY::GET_ENTITY_MATRIX(uParam0->f_358[0 /*189*/].f_9, &uVar0, &uVar1, &Var2, &uVar3);
-					if (Var2.z <= -0.866f)
+					if (Var2.f_2 <= -0.866f)
 					{
 						if (uParam1->f_8 != 0)
 						{
@@ -5938,7 +5938,7 @@ int func_93(var uParam0, var uParam1, var uParam2, int iParam3)
 				else
 				{
 					ENTITY::GET_ENTITY_MATRIX(uParam0->f_358[0 /*189*/].f_9, &uVar0, &uVar1, &Var2, &uVar3);
-					if (Var2.z <= -0.866f)
+					if (Var2.f_2 <= -0.866f)
 					{
 						if (uParam1->f_8 != 0)
 						{
@@ -6167,7 +6167,7 @@ int func_94(var uParam0, var uParam1, int iParam2)
 
 float func_95(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_96(struct<3> Param0)
@@ -6184,8 +6184,8 @@ Vector3 func_96(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -6202,11 +6202,11 @@ bool func_97(int iParam0)
 		return 0;
 	}
 	ENTITY::GET_ENTITY_MATRIX(iParam0, &uVar0, &Var1, &Var2, &uVar3);
-	if (MISC::ABSF(Var2.z) > 0.342f)
+	if (MISC::ABSF(Var2.f_2) > 0.342f)
 	{
 		return 0;
 	}
-	return Var1.z < 0f;
+	return Var1.f_2 < 0f;
 }
 
 void func_98(char* sParam0, var uParam1)
@@ -6330,11 +6330,11 @@ bool func_99(int iParam0)
 		return 0;
 	}
 	ENTITY::GET_ENTITY_MATRIX(iParam0, &uVar0, &Var1, &Var2, &uVar3);
-	if (MISC::ABSF(Var2.z) > 0.342f)
+	if (MISC::ABSF(Var2.f_2) > 0.342f)
 	{
 		return 0;
 	}
-	return Var1.z > 0f;
+	return Var1.f_2 > 0f;
 }
 
 int func_100(var uParam0, int iParam1)
@@ -6902,25 +6902,25 @@ void func_109(int iParam0, float fParam1, bool bParam2, float fParam3, float fPa
 			bVar1 = true;
 			Var0.x = fParam3;
 		}
-		if (Var0.y < -fVar2)
+		if (Var0.f_1 < -fVar2)
 		{
 			bVar1 = true;
-			Var0.y = (Var0.y + fVar2);
+			Var0.f_1 = (Var0.f_1 + fVar2);
 		}
-		else if (Var0.y < fParam4)
+		else if (Var0.f_1 < fParam4)
 		{
 			bVar1 = true;
-			Var0.y = fParam4;
+			Var0.f_1 = fParam4;
 		}
-		else if (Var0.y > fVar2)
+		else if (Var0.f_1 > fVar2)
 		{
 			bVar1 = true;
-			Var0.y = (Var0.y - fVar2);
+			Var0.f_1 = (Var0.f_1 - fVar2);
 		}
-		else if (Var0.y > fParam4)
+		else if (Var0.f_1 > fParam4)
 		{
 			bVar1 = true;
-			Var0.y = fParam4;
+			Var0.f_1 = fParam4;
 		}
 	}
 	else
@@ -6930,10 +6930,10 @@ void func_109(int iParam0, float fParam1, bool bParam2, float fParam3, float fPa
 			bVar1 = true;
 			Var0.x = fParam3;
 		}
-		if (Var0.y != fParam4)
+		if (Var0.f_1 != fParam4)
 		{
 			bVar1 = true;
-			Var0.y = fParam4;
+			Var0.f_1 = fParam4;
 		}
 	}
 	if (bVar1)
@@ -8047,8 +8047,8 @@ void func_130(struct<3> Param0, int iParam1, struct<3> Param2, bool bParam3)
 		{
 			Var4 = { Param2 - Var3 };
 		}
-		uVar0 = MISC::GET_HEADING_FROM_VECTOR_2D(Var4.x, Var4.y);
-		fVar1 = (MISC::GET_HEADING_FROM_VECTOR_2D(Var4.x, Var4.z) - 270f);
+		uVar0 = MISC::GET_HEADING_FROM_VECTOR_2D(Var4.x, Var4.f_1);
+		fVar1 = (MISC::GET_HEADING_FROM_VECTOR_2D(Var4.x, Var4.f_2) - 270f);
 		while (fVar1 > 180f)
 		{
 			fVar1 = (fVar1 - 360f);
@@ -8065,15 +8065,15 @@ void func_130(struct<3> Param0, int iParam1, struct<3> Param2, bool bParam3)
 		{
 			fVar1 = (180f - MISC::ABSF(fVar1));
 		}
-		if (MISC::ABSF((Var6.z - fVar5)) < 25f && (fVar1 > 15f || fVar1 < -15f))
+		if (MISC::ABSF((Var6.f_2 - fVar5)) < 25f && (fVar1 > 15f || fVar1 < -15f))
 		{
-			Var6.z = (fVar5 + 25f);
+			Var6.f_2 = (fVar5 + 25f);
 			ENTITY::SET_ENTITY_COORDS(iParam1, Var6, 1, 0, 0, 1);
 		}
 		ENTITY::FREEZE_ENTITY_POSITION(iParam1, 1);
 		Var2 = { ENTITY::GET_ENTITY_ROTATION(iParam1, 2) };
 		Var2.x = fVar1;
-		Var2.z = uVar0;
+		Var2.f_2 = uVar0;
 		ENTITY::SET_ENTITY_ROTATION(iParam1, Var2, 2, 1);
 		ENTITY::FREEZE_ENTITY_POSITION(iParam1, 0);
 		STREAMING::NEW_LOAD_SCENE_START(Var6, ENTITY::GET_ENTITY_FORWARD_VECTOR(iParam1), 500f, 0);
@@ -8111,7 +8111,7 @@ void func_132(var uParam0, int iParam1, int iParam2, bool bParam3)
 		}
 	}
 	Var0 = { uParam0->f_27[iParam2 + 1 /*10*/] - uParam0->f_27[iParam2 /*10*/] };
-	uVar1 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.y);
+	uVar1 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.f_1);
 	fVar2 = 0f;
 	if (VEHICLE::IS_THIS_MODEL_A_BIKE(uParam0->f_358[iParam1 /*189*/].f_22))
 	{
@@ -10908,7 +10908,7 @@ Vector3 func_229(int iParam0)
 
 int func_230(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -10997,7 +10997,7 @@ int func_239(var uParam0, bool bParam1, bool bParam2)
 				}
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(uParam0->f_358[0 /*189*/].f_9, 0) && ENTITY::IS_ENTITY_IN_AIR(uParam0->f_358[0 /*189*/].f_9))
 				{
-					TASK::TASK_VEHICLE_MISSION_COORS_TARGET(PLAYER::PLAYER_PED_ID(), uParam0->f_358[0 /*189*/].f_9, Local_1898.x, Local_1898.y, (Local_1898.z + 15f), 4, ENTITY::GET_ENTITY_SPEED(uParam0->f_358[0 /*189*/].f_9), 262144, 10f, 10f, 1);
+					TASK::TASK_VEHICLE_MISSION_COORS_TARGET(PLAYER::PLAYER_PED_ID(), uParam0->f_358[0 /*189*/].f_9, Local_1898.x, Local_1898.f_1, (Local_1898.f_2 + 15f), 4, ENTITY::GET_ENTITY_SPEED(uParam0->f_358[0 /*189*/].f_9), 262144, 10f, 10f, 1);
 				}
 				CAM::POINT_CAM_AT_COORD(uLocal_1707, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1));
 				iLocal_1649 = 2;
@@ -11046,7 +11046,7 @@ int func_239(var uParam0, bool bParam1, bool bParam2)
 			CAM::STOP_CAM_SHAKING(uLocal_1707, 0);
 			Local_1898 = { CAM::GET_CAM_COORD(uLocal_1707) };
 			Local_1899 = { CAM::GET_CAM_ROT(uLocal_1707, 2) };
-			uLocal_1706 = CAM::CREATE_CAMERA_WITH_PARAMS(26379945, Local_1898.x, Local_1898.y, (Local_1898.z + 1000f), 90f, Local_1899.y, Local_1899.z, fLocal_1900, 0, 2);
+			uLocal_1706 = CAM::CREATE_CAMERA_WITH_PARAMS(26379945, Local_1898.x, Local_1898.f_1, (Local_1898.f_2 + 1000f), 90f, Local_1899.f_1, Local_1899.f_2, fLocal_1900, 0, 2);
 			CAM::SET_CAM_ACTIVE_WITH_INTERP(uLocal_1706, uLocal_1707, 500, 1, 1);
 			AUDIO::PLAY_SOUND_FRONTEND(-1, "QUIT_WHOOSH", "HUD_MINI_GAME_SOUNDSET", 1);
 			iLocal_1649 = 6;
@@ -11300,13 +11300,13 @@ void func_246(var uParam0, struct<3> Param1)
 	}
 	Var1 = { CAM::GET_CAM_ROT(uParam0, 2) };
 	Var2 = { CAM::GET_CAM_COORD(uParam0) };
-	Var3 = { func_8(Var1.x, Var1.y, (Var1.z + 90f)) };
+	Var3 = { func_8(Var1.x, Var1.f_1, (Var1.f_2 + 90f)) };
 	Var4 = { Param1 - Var2 };
 	Var4 = { func_96(Var4) };
-	fVar5 = MISC::ATAN2((Param1.z - Var2.z), MISC::GET_DISTANCE_BETWEEN_COORDS(Param1, Var2, 0));
-	fVar6 = MISC::GET_HEADING_FROM_VECTOR_2D((Param1.x - Var2.x), (Param1.y - Var2.y));
+	fVar5 = MISC::ATAN2((Param1.f_2 - Var2.f_2), MISC::GET_DISTANCE_BETWEEN_COORDS(Param1, Var2, 0));
+	fVar6 = MISC::GET_HEADING_FROM_VECTOR_2D((Param1.x - Var2.x), (Param1.f_1 - Var2.f_1));
 	fVar6 = func_248(fVar6, -180f, 180f);
-	fVar0 = func_95(func_8(fVar5, Var1.y, Var1.z), Var3);
+	fVar0 = func_95(func_8(fVar5, Var1.f_1, Var1.f_2), Var3);
 	fVar7 = (fVar5 - Var1.x);
 	if (fVar7 > 270f)
 	{
@@ -11328,7 +11328,7 @@ void func_246(var uParam0, struct<3> Param1)
 		fLocal_1893 = (fLocal_1893 * 0.9f);
 		Var1.x = func_247(Var1.x, fVar5, fLocal_1893);
 	}
-	fVar8 = (fVar6 - Var1.z);
+	fVar8 = (fVar6 - Var1.f_2);
 	if (fVar8 > 270f)
 	{
 		fVar8 = (fVar8 - 360f);
@@ -11337,17 +11337,17 @@ void func_246(var uParam0, struct<3> Param1)
 	{
 		fVar8 = (fVar8 + 360f);
 	}
-	fVar6 = (Var1.z + fVar8);
-	if ((bLocal_1895 && (Var1.z - fVar6) < 0f) || (!bLocal_1895 && (Var1.z - fVar6) > 0f))
+	fVar6 = (Var1.f_2 + fVar8);
+	if ((bLocal_1895 && (Var1.f_2 - fVar6) < 0f) || (!bLocal_1895 && (Var1.f_2 - fVar6) > 0f))
 	{
-		if (!bLocal_1895 && (Var1.z - fVar6) > 0f)
+		if (!bLocal_1895 && (Var1.f_2 - fVar6) > 0f)
 		{
 		}
-		else if (bLocal_1895 && (Var1.z - fVar6) < 0f)
+		else if (bLocal_1895 && (Var1.f_2 - fVar6) < 0f)
 		{
 		}
 		fLocal_1894 = (fLocal_1894 * 0.9f);
-		Var1.z = func_247(Var1.z, fVar6, fLocal_1894);
+		Var1.f_2 = func_247(Var1.f_2, fVar6, fLocal_1894);
 	}
 	CAM::SET_CAM_ROT(uParam0, Var1, 2);
 }
@@ -11401,13 +11401,13 @@ void func_250(var uParam0)
 	ENTITY::GET_ENTITY_MATRIX(PLAYER::PLAYER_PED_ID(), &Var0, &uVar6, &uVar6, &Var1);
 	Var5 = { CAM::GET_CAM_ROT(uParam0, 2) };
 	Var4 = { CAM::GET_CAM_COORD(uParam0) };
-	Var2 = { func_8((Var5.x + 90f), Var5.y, Var5.z) };
-	Var3 = { func_8(Var5.x, Var5.y, (Var5.z + 90f)) };
+	Var2 = { func_8((Var5.x + 90f), Var5.f_1, Var5.f_2) };
+	Var3 = { func_8(Var5.x, Var5.f_1, (Var5.f_2 + 90f)) };
 	fLocal_1893 = 0.2f;
 	fLocal_1894 = 0.5f;
 	Var7 = { CAM::GET_CAM_COORD(uParam0) - Var1 };
 	Var8 = { Var1 + FtoV(func_95(Var7, Var0)) * Var0 };
-	if (Var8.z > Var4.z)
+	if (Var8.f_2 > Var4.f_2)
 	{
 		bLocal_1896 = true;
 	}
@@ -12601,7 +12601,7 @@ void func_310(struct<6> Param0, int iParam1, int iParam2, int iParam3, int iPara
 					{
 						if (HUD::IS_HUD_COMPONENT_ACTIVE(15))
 						{
-							HUD::SET_HUD_COMPONENT_POSITION(15, Local_30.x, (Local_30.y + fLocal_31));
+							HUD::SET_HUD_COMPONENT_POSITION(15, Local_30.x, (Local_30.f_1 + fLocal_31));
 							Global_76881 = 1;
 						}
 					}
@@ -13796,7 +13796,7 @@ int func_339(int iParam0, struct<3> Param1, struct<3> Param2, struct<3> Param3)
 	{
 		Var0 = { Param1 - Param2 };
 		Var1 = { Param3 - Param2 };
-		fVar2 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var0.x, Var0.y, Var1.x, Var1.y);
+		fVar2 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var0.x, Var0.f_1, Var1.x, Var1.f_1);
 		if (fVar2 > 180f)
 		{
 			fVar2 = (360f - fVar2);
@@ -13821,9 +13821,9 @@ bool func_340(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_341(var uParam0, int iParam1, float fParam2, int iParam3, int iParam4)

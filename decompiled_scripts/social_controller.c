@@ -4169,11 +4169,11 @@ Vector3 func_86(int iParam0)
 	}
 	if (DATAFILE::DATADICT_GET_TYPE(iParam0, "camh") == 3)
 	{
-		Var0.z = DATAFILE::DATADICT_GET_FLOAT(iParam0, "camh");
+		Var0.f_2 = DATAFILE::DATADICT_GET_FLOAT(iParam0, "camh");
 	}
 	else if (DATAFILE::DATADICT_GET_TYPE(iParam0, "camh") == 2)
 	{
-		Var0.z = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iParam0, "camh"));
+		Var0.f_2 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iParam0, "camh"));
 	}
 	return Var0;
 }
@@ -4200,19 +4200,19 @@ Vector3 func_87(int iParam0, char* sParam1)
 		}
 		if (DATAFILE::DATADICT_GET_TYPE(iVar1, "y") == 2)
 		{
-			Var0.y = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iVar1, "y"));
+			Var0.f_1 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iVar1, "y"));
 		}
 		else
 		{
-			Var0.y = DATAFILE::DATADICT_GET_FLOAT(iVar1, "y");
+			Var0.f_1 = DATAFILE::DATADICT_GET_FLOAT(iVar1, "y");
 		}
 		if (DATAFILE::DATADICT_GET_TYPE(iVar1, "z") == 2)
 		{
-			Var0.z = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iVar1, "z"));
+			Var0.f_2 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iVar1, "z"));
 		}
 		else
 		{
-			Var0.z = DATAFILE::DATADICT_GET_FLOAT(iVar1, "z");
+			Var0.f_2 = DATAFILE::DATADICT_GET_FLOAT(iVar1, "z");
 		}
 	}
 	return Var0;
@@ -45931,8 +45931,8 @@ void func_501()
 			if (SCRIPT::HAS_SCRIPT_LOADED("tuneables_processing") && MISC::GET_NUMBER_OF_FREE_STACKS_OF_THIS_SIZE(1424) > 0)
 			{
 				Var0.x = func_502(iLocal_68);
-				Var0.y = func_502(iLocal_70);
-				Var0.z = iLocal_68 == 1;
+				Var0.f_1 = func_502(iLocal_70);
+				Var0.f_2 = iLocal_68 == 1;
 				SYSTEM::START_NEW_SCRIPT_WITH_ARGS("tuneables_processing", &Var0, 3, 1424);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("tuneables_processing");
 				iLocal_67++;

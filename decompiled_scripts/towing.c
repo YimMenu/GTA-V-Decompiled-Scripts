@@ -1434,7 +1434,7 @@ int func_1(struct<3> Param0, var uParam1, var uParam2, var uParam3, var uParam4,
 			return 1;
 		}
 	}
-	switch (Param0.z)
+	switch (Param0.f_2)
 	{
 		case 1:
 			if (iLocal_906 > 4 && iLocal_906 < 17)
@@ -1653,7 +1653,7 @@ float func_10(int iParam0, struct<3> Param1, int iParam2)
 
 int func_11(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -6700,7 +6700,7 @@ int func_138(struct<3> Param0, float fParam1, var uParam2, int iParam3)
 	uLocal_850 = VEHICLE::_ADD_SPEED_ZONE_FOR_COORD(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var4, uVar5, -1.5f, -30f, 0f), 10f, 0f, 0);
 	uLocal_851 = VEHICLE::_ADD_SPEED_ZONE_FOR_COORD(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var4, uVar5, -1.5f, 30f, 0f), 10f, 0f, 0);
 	MISC::CLEAR_AREA_OF_VEHICLES(Var0, 30f, 0, 0, 0, 0, 0, 0);
-	Local_394[func_256() /*28*/][0 /*3*/] = { Var0.x, Var0.y, (Var0.z + 1f) };
+	Local_394[func_256() /*28*/][0 /*3*/] = { Var0.x, Var0.f_1, (Var0.f_2 + 1f) };
 	return 1;
 }
 
@@ -6760,9 +6760,9 @@ bool func_140(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_141(int iParam0)
@@ -8166,7 +8166,7 @@ int func_179(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	if (bParam3)
 	{
-		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.y - IntToFloat(uParam2->f_6)), (Var0.z - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.y + IntToFloat(uParam2->f_6)), (Var0.z + IntToFloat(uParam2->f_6)), 0))
+		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.f_1 - IntToFloat(uParam2->f_6)), (Var0.f_2 - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.f_1 + IntToFloat(uParam2->f_6)), (Var0.f_2 + IntToFloat(uParam2->f_6)), 0))
 		{
 			return 1;
 		}
@@ -8404,7 +8404,7 @@ int func_185(var uParam0, var uParam1, struct<3> Param2, var uParam3, var uParam
 	var uVar4;
 	
 	Var3 = { *(uParam0[0 /*3*/]) };
-	Var3.z = (Var3.z + 1f);
+	Var3.f_2 = (Var3.f_2 + 1f);
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var3, &uVar0, 0, 0) || func_9(*(uParam0[0 /*3*/]), 0) < 60f)
 	{
 		func_187(uParam1);
@@ -8537,8 +8537,8 @@ Vector3 func_188(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }

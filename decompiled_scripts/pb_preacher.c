@@ -192,8 +192,8 @@ void func_2()
 	{
 		SYSTEM::WAIT(0);
 	}
-	Local_46.z = (Local_45.z - 1f);
-	uLocal_48 = PED::CREATE_PED(19, joaat("s_m_m_strpreach_01"), Local_45.x, Local_45.y, Local_46.z, 0f, 1, 1);
+	Local_46.f_2 = (Local_45.f_2 - 1f);
+	uLocal_48 = PED::CREATE_PED(19, joaat("s_m_m_strpreach_01"), Local_45.x, Local_45.f_1, Local_46.f_2, 0f, 1, 1);
 	if (!ENTITY::IS_ENTITY_DEAD(uLocal_48, 0))
 	{
 		TASK::OPEN_SEQUENCE_TASK(&uLocal_51);

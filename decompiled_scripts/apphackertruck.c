@@ -2894,7 +2894,7 @@ int func_89(int iParam0, int iParam1)
 			{
 				Var0 = { func_90(iParam1) };
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -5608,7 +5608,7 @@ int func_148(int iParam0, int iParam1, int iParam2)
 			{
 				return 4;
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -11606,7 +11606,7 @@ int func_258(int iParam0, int iParam1)
 						if (HUD::DOES_BLIP_EXIST(Global_2416079[iVar6]))
 						{
 							Var8 = { HUD::GET_BLIP_COORDS(Global_2416079[iVar6]) };
-							Var8.z = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var8.x, Var8.y);
+							Var8.f_2 = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var8.x, Var8.f_1);
 						}
 						else
 						{
@@ -11676,7 +11676,7 @@ int func_259(int iParam0, int iParam1)
 			if (HUD::DOES_BLIP_EXIST(Global_2416079[PLAYER::PLAYER_ID()]))
 			{
 				Var0 = { HUD::GET_BLIP_COORDS(Global_2416079[PLAYER::PLAYER_ID()]) };
-				Var0.z = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.y);
+				Var0.f_2 = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.f_1);
 			}
 			else
 			{
@@ -13993,7 +13993,7 @@ int func_318(int iParam0)
 
 int func_319(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -15492,10 +15492,10 @@ void func_378(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_380(Var0.y);
+	iVar1 = func_380(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;
@@ -16456,7 +16456,7 @@ int func_412(int iParam0, int iParam1, var uParam2)
 	if (Global_1590535[iVar4 /*876*/].f_274[5] > -1)
 	{
 		Var5 = { Global_1049922[Global_1590535[iVar4 /*876*/].f_274[5] /*1951*/].f_38[0 /*27*/].f_23 };
-		Var5.z = 0f;
+		Var5.f_2 = 0f;
 	}
 	else
 	{
@@ -16465,7 +16465,7 @@ int func_412(int iParam0, int iParam1, var uParam2)
 	if (func_327(iVar4))
 	{
 		Var6 = { Global_1676377.f_488[func_415(func_222(iVar4)) /*3*/] };
-		Var6.z = 0f;
+		Var6.f_2 = 0f;
 	}
 	else
 	{
@@ -16477,7 +16477,7 @@ int func_412(int iParam0, int iParam1, var uParam2)
 		while (iVar7 < iParam1)
 		{
 			Var10 = { func_414((*iParam0)[iVar7]) };
-			Var10.z = 0f;
+			Var10.f_2 = 0f;
 			fVar11 = SYSTEM::VDIST(Var10, Var5);
 			fVar12 = SYSTEM::VDIST(Var10, Var6);
 			if (fVar11 >= fVar0 && fVar12 >= fVar1)

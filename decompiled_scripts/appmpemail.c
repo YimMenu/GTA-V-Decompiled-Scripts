@@ -83,7 +83,7 @@ void __EntryFunction__()
 	MOBILE::GET_MOBILE_PHONE_POSITION(&Local_39);
 	Local_38 = { Local_39 };
 	Local_38.x = (Local_38.x - 10f);
-	Local_38.y = (Local_38.y + 20f);
+	Local_38.f_1 = (Local_38.f_1 + 20f);
 	Global_21838 = 0;
 	Global_21839 = 1;
 	while (true)

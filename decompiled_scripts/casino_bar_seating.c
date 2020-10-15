@@ -726,7 +726,7 @@ void func_1(var uParam0)
 			PAD::DISABLE_CONTROL_ACTION(0, 0, 1);
 			Var2 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&sVar0, &sVar1, func_31(uParam0), func_30(uParam0), 0, 2) };
 			Var3 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&sVar0, &sVar1, func_31(uParam0), func_30(uParam0), 0, 2) };
-			uVar4 = Var3.z;
+			uVar4 = Var3.f_2;
 			fVar5 = 0.05f;
 			if (uParam0->f_1.f_1 == 1)
 			{
@@ -743,7 +743,7 @@ void func_1(var uParam0)
 			func_34(uParam0, &sVar1);
 			iVar6 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073);
 			Var7 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&sVar0, &sVar1, func_31(uParam0), func_30(uParam0), 0, 2) };
-			fVar8 = Var7.z;
+			fVar8 = Var7.f_2;
 			if ((iVar6 != 1 && iVar6 != 0) || func_16(ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), fVar8, 5f))
 			{
 				if (uParam0->f_1.f_1 == 3)
@@ -1430,7 +1430,7 @@ Vector3 func_30(var uParam0)
 	Var0 = { uParam0->f_16[uParam0->f_9 /*14*/].f_3 };
 	if (func_4() && uParam0->f_1.f_1 == 0)
 	{
-		Var0.z = (Var0.z - 4f);
+		Var0.f_2 = (Var0.f_2 - 4f);
 	}
 	return Var0;
 }
@@ -2174,12 +2174,12 @@ int func_56(var uParam0, struct<3> Param1, int iParam2)
 	{
 		if (iParam2 == 3 || iParam2 == 4)
 		{
-			if (func_16(ENTITY::GET_ENTITY_HEADING(uParam0), (Param1.z - 180f), 45f))
+			if (func_16(ENTITY::GET_ENTITY_HEADING(uParam0), (Param1.f_2 - 180f), 45f))
 			{
 				return 1;
 			}
 		}
-		else if (func_16(ENTITY::GET_ENTITY_HEADING(uParam0), Param1.z, 45f))
+		else if (func_16(ENTITY::GET_ENTITY_HEADING(uParam0), Param1.f_2, 45f))
 		{
 			return 1;
 		}
@@ -2439,7 +2439,7 @@ void func_77(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -2459,19 +2459,19 @@ void func_78(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_54(Var0.y, 1, 1))
+		if (func_54(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(uVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(uVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_79(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -3368,9 +3368,9 @@ Vector3 func_105(struct<3> Param0, var uParam1)
 	
 	fVar1 = SYSTEM::SIN(uParam1);
 	fVar2 = SYSTEM::COS(uParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 

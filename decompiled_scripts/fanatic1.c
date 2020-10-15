@@ -2173,7 +2173,7 @@ int func_51(int iParam0, int iParam1, float fParam2, int iParam3)
 
 float func_52(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_53(struct<3> Param0)
@@ -2190,8 +2190,8 @@ Vector3 func_53(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -2315,7 +2315,7 @@ int func_58(int iParam0, bool bParam1, float fParam2, float fParam3, bool bParam
 			if (PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID()))
 			{
 				Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - ENTITY::GET_ENTITY_COORDS(iParam0, 1) };
-				if ((((Var0.x * Var0.x) + (Var0.y * Var0.y)) + (Var0.z * Var0.z)) <= 5f)
+				if ((((Var0.x * Var0.x) + (Var0.f_1 * Var0.f_1)) + (Var0.f_2 * Var0.f_2)) <= 5f)
 				{
 					return func_61(PLAYER::PLAYER_PED_ID(), iParam0, fParam2);
 				}
@@ -2377,7 +2377,7 @@ bool func_61(int iParam0, int iParam1, float fParam2)
 	
 	Var0 = { ENTITY::GET_ENTITY_FORWARD_VECTOR(iParam0) };
 	Var1 = { ENTITY::GET_ENTITY_COORDS(iParam1, 1) - ENTITY::GET_ENTITY_COORDS(iParam0, 1) };
-	return (((Var0.x * Var1.x) + (Var0.y * Var1.y)) / SYSTEM::VDIST(Var1, 0f, 0f, 0f)) > SYSTEM::COS(fParam2);
+	return (((Var0.x * Var1.x) + (Var0.f_1 * Var1.f_1)) / SYSTEM::VDIST(Var1, 0f, 0f, 0f)) > SYSTEM::COS(fParam2);
 }
 
 int func_62(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4)
@@ -2457,11 +2457,11 @@ int func_63(int iParam0, float fParam1, bool bParam2, bool bParam3)
 	Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, 1) };
 	Var1 = { Var0 };
 	Var0.x = (Var0.x - fParam1);
-	Var0.y = (Var0.y - fParam1);
-	Var0.z = (Var0.z - fParam1);
+	Var0.f_1 = (Var0.f_1 - fParam1);
+	Var0.f_2 = (Var0.f_2 - fParam1);
 	Var1.x = (Var1.x + fParam1);
-	Var1.y = (Var1.y + fParam1);
-	Var1.z = (Var1.z + fParam1);
+	Var1.f_1 = (Var1.f_1 + fParam1);
+	Var1.f_2 = (Var1.f_2 + fParam1);
 	if (bParam2)
 	{
 		if (((MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_grenade"), fParam1, 1) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_molotov"), fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_smokegrenade"), fParam1, 1)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), joaat("weapon_stickybomb"), 5f, 1))
@@ -10395,15 +10395,15 @@ void func_143(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_124(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_124(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -11361,7 +11361,7 @@ void func_146(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -11370,19 +11370,19 @@ void func_146(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_147(Var2.z)] = Var2.x;
+						(*uParam0)[func_147(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_147(Var2.z)] = func_124(iParam1, Var2.x, func_147(Var2.z), iVar0);
+						(*uParam0)[func_147(Var2.f_2)] = func_124(iParam1, Var2.x, func_147(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_147(Var2.z)] = Var2.y;
+					(*uParam0)[func_147(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -37461,7 +37461,7 @@ void func_305(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 			else
 			{
 				Var6 = { ENTITY::GET_ENTITY_COORDS(iVar0, 1) };
-				if ((Var6.z > Param0.z && Var6.z < Param1.z) || (Var6.z > Param1.z && Var6.z < Param0.z))
+				if ((Var6.f_2 > Param0.f_2 && Var6.f_2 < Param1.f_2) || (Var6.f_2 > Param1.f_2 && Var6.f_2 < Param0.f_2))
 				{
 					if (func_309(iVar0, Param0, Param1, fParam2))
 					{
@@ -37501,7 +37501,7 @@ void func_305(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 						if (VEHICLE::IS_THIS_MODEL_A_HELI(iVar7))
 						{
 							Param5.x = (Param5.x + 3f);
-							Param5.y = (Param5.y + 3f);
+							Param5.f_1 = (Param5.f_1 + 3f);
 						}
 						if (((iVar7 == joaat("zentorno") || iVar7 == joaat("btype")) || iVar7 == joaat("dubsta3")) || iVar7 == joaat("monster"))
 						{
@@ -37515,11 +37515,11 @@ void func_305(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.y - Var4.y) > Param5.y)
+						else if ((Var5.f_1 - Var4.f_1) > Param5.f_1)
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.z - Var4.z) > Param5.z)
+						else if ((Var5.f_2 - Var4.f_2) > Param5.f_2)
 						{
 							bVar2 = false;
 						}
@@ -37608,7 +37608,7 @@ void func_305(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 
 int func_306(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -37713,12 +37713,12 @@ int func_309(int iParam0, struct<3> Param1, struct<3> Param2, float fParam3)
 	
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, 0))
 	{
-		Param1.z = Param2.z;
+		Param1.f_2 = Param2.f_2;
 		Var0 = { func_53(Param1 - Param2) };
 		Var1 = { Var0 };
-		Var0.x = -Var1.y;
-		Var0.y = Var1.x;
-		Var0.z = 0f;
+		Var0.x = -Var1.f_1;
+		Var0.f_1 = Var1.x;
+		Var0.f_2 = 0f;
 		Var2 = { Param1 - Var0 * FtoV((fParam3 / 2f)) };
 		Var3 = { Param1 + Var0 * FtoV((fParam3 / 2f)) };
 		Var4 = { Param2 - Var0 * FtoV((fParam3 / 2f)) };
@@ -37974,13 +37974,13 @@ void func_318()
 		
 		case 1:
 			PED::SET_PED_DENSITY_MULTIPLIER_THIS_FRAME(0.5f);
-			if (Local_292.z == 0 && iLocal_352 < 105)
+			if (Local_292.f_2 == 0 && iLocal_352 < 105)
 			{
 				if (func_331() && func_298(PLAYER::PLAYER_PED_ID(), iLocal_244) < 25f)
 				{
 					if (func_17(&uLocal_78, "FAN1AU", Local_292.x, 7, 0, 0, 0))
 					{
-						Local_292.z = 1;
+						Local_292.f_2 = 1;
 						TASK::TASK_PLAY_ANIM(iLocal_244, "rcmfanatic1yell", "yell_c", 8f, -8f, -1, 48, 0, 0, 0, 0);
 					}
 				}
@@ -38606,7 +38606,7 @@ void func_328(int iParam0)
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0, 1) };
 		MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &fVar1, 0, 0);
-		ENTITY::SET_ENTITY_COORDS(iParam0, Var0.x, Var0.y, fVar1, 1, 0, 0, 1);
+		ENTITY::SET_ENTITY_COORDS(iParam0, Var0.x, Var0.f_1, fVar1, 1, 0, 0, 1);
 	}
 }
 
@@ -38855,7 +38855,7 @@ void func_339()
 			PED::SET_PED_DENSITY_MULTIPLIER_THIS_FRAME(0.5f);
 			if (func_331())
 			{
-				if (Local_286.z == 0)
+				if (Local_286.f_2 == 0)
 				{
 					if (func_440(iLocal_244))
 					{
@@ -38863,7 +38863,7 @@ void func_339()
 					}
 					if (iVar0 <= 52)
 					{
-						if ((Local_298.z == 0 && Local_295.z == 0) && iLocal_349 == 2)
+						if ((Local_298.f_2 == 0 && Local_295.f_2 == 0) && iLocal_349 == 2)
 						{
 							func_17(&uLocal_78, "FAN1AU", Local_286.x, 7, 0, 0, 0);
 						}
@@ -38871,7 +38871,7 @@ void func_339()
 						{
 							func_344(&uLocal_78, "FAN1AU", Local_286.x, "FAN1_RD1_3", 7, 0, 0);
 						}
-						Local_286.z = 1;
+						Local_286.f_2 = 1;
 					}
 				}
 			}
@@ -38882,7 +38882,7 @@ void func_339()
 					iLocal_323 = 2;
 				}
 			}
-			if (Local_286.z == 1 && Local_289.z == 1)
+			if (Local_286.f_2 == 1 && Local_289.f_2 == 1)
 			{
 				if (func_440(iLocal_244))
 				{
@@ -38986,7 +38986,7 @@ void func_340()
 							{
 								if (func_17(&uLocal_78, "FAN1AU", Local_289.x, 9, 0, 0, 0))
 								{
-									Local_289.z = 1;
+									Local_289.f_2 = 1;
 									func_39("Doing Mary Ann's anim...");
 									TASK::TASK_PLAY_ANIM(iLocal_244, "rcmfanatic1yell", "yell_d", 8f, -8f, -1, 48, 0, 0, 0, 0);
 									iLocal_323 = 4;
@@ -39000,7 +39000,7 @@ void func_340()
 						}
 						else if (func_17(&uLocal_78, "FAN1AU", Local_289.x, 9, 1, 0, 0))
 						{
-							Local_289.z = 1;
+							Local_289.f_2 = 1;
 							func_39("Doing Mary Ann's anim...");
 							TASK::TASK_PLAY_ANIM(iLocal_244, "rcmfanatic1yell", "yell_d", 8f, -8f, -1, 48, 0, 0, 0, 0);
 							iLocal_323 = 4;
@@ -39230,7 +39230,7 @@ void func_345()
 					TASK::CLEAR_SEQUENCE_TASK(&uLocal_77);
 				}
 			}
-			if (Local_298.z == 0)
+			if (Local_298.f_2 == 0)
 			{
 				if (iLocal_352 < 17)
 				{
@@ -39244,7 +39244,7 @@ void func_345()
 								{
 									func_15();
 								}
-								if (func_319(Local_298.x, Local_298.y, 0, &(Local_285.f_4)))
+								if (func_319(Local_298.x, Local_298.f_1, 0, &(Local_285.f_4)))
 								{
 									if (Local_285.f_4 != -1)
 									{
@@ -39254,7 +39254,7 @@ void func_345()
 									}
 									iLocal_59 = 1;
 									iLocal_64 = 1;
-									Local_298.z = 1;
+									Local_298.f_2 = 1;
 									Global_111638.f_18569.f_386 = 1;
 								}
 								else
@@ -39266,7 +39266,7 @@ void func_345()
 					}
 				}
 			}
-			if (Local_295.z == 0)
+			if (Local_295.f_2 == 0)
 			{
 				if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -1772.762f, -532.9971f, 35.58929f, -1797.246f, -492.1292f, 39.2704f, 26f, 0, 1, 0) || func_346(PLAYER::PLAYER_PED_ID(), -1812.91f, -468.5253f, 41.32029f, 1) < 10f)
 				{
@@ -39274,7 +39274,7 @@ void func_345()
 					{
 						func_15();
 					}
-					if (func_319(Local_295.x, Local_295.y, 0, &(Local_285.f_4)))
+					if (func_319(Local_295.x, Local_295.f_1, 0, &(Local_285.f_4)))
 					{
 						if (Local_285.f_4 != -1)
 						{
@@ -39284,7 +39284,7 @@ void func_345()
 						}
 						iLocal_59 = 1;
 						iLocal_64 = 1;
-						Local_295.z = 1;
+						Local_295.f_2 = 1;
 						Global_111638.f_18569.f_386 = 1;
 					}
 					else
@@ -39295,13 +39295,13 @@ void func_345()
 			}
 			if (iLocal_64 == 1)
 			{
-				if (Local_301.z == 0)
+				if (Local_301.f_2 == 0)
 				{
 					if (func_298(PLAYER::PLAYER_PED_ID(), iLocal_244) < 10f)
 					{
-						if (func_319(Local_301.x, Local_301.y, 0, &uVar0))
+						if (func_319(Local_301.x, Local_301.f_1, 0, &uVar0))
 						{
-							Local_301.z = 1;
+							Local_301.f_2 = 1;
 							iLocal_64 = 0;
 							iLocal_281 = MISC::GET_GAME_TIMER();
 						}
@@ -39319,7 +39319,7 @@ void func_345()
 				}
 				else if (Local_285.f_3 == 1)
 				{
-					if (Local_301.z == 1)
+					if (Local_301.f_2 == 1)
 					{
 						StringCopy(&Local_267, Local_285, 16);
 						StringConCat(&Local_267, "_", 16);
@@ -39581,7 +39581,7 @@ int func_351(int iParam0, struct<3> Param1, float fParam2, bool bParam3, int iPa
 			bVar0 = MISC::GET_GROUND_Z_FOR_3D_COORD(Param1, &fVar1, 0, 0);
 			if (bVar0)
 			{
-				Param1.z = fVar1;
+				Param1.f_2 = fVar1;
 			}
 		}
 		ENTITY::SET_ENTITY_COORDS(iParam0, Param1, 1, 0, 0, iParam4);
@@ -40458,7 +40458,7 @@ void func_376()
 	{
 		if (iLocal_262 < 2)
 		{
-			if ((Local_295.z || Local_298.z) && iLocal_56 == 2)
+			if ((Local_295.f_2 || Local_298.f_2) && iLocal_56 == 2)
 			{
 				iLocal_243 = 1;
 				func_39("MA Dialogue: Now in MA_OUT_OF_TALKING_RANGE");
@@ -40488,7 +40488,7 @@ void func_376()
 	{
 		if (iLocal_264 < 2)
 		{
-			if ((Local_295.z || Local_298.z) && iLocal_56 == 2)
+			if ((Local_295.f_2 || Local_298.f_2) && iLocal_56 == 2)
 			{
 				if (iLocal_279 == 0)
 				{
@@ -41393,7 +41393,7 @@ int func_397(int iParam0)
 	}
 	Var3 = { Var2 - Var0 };
 	Var4 = { Var1 - Var0 };
-	fVar5 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var3.x, Var3.y, Var4.x, Var4.y);
+	fVar5 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var3.x, Var3.f_1, Var4.x, Var4.f_1);
 	if (fVar5 > 180f)
 	{
 		fVar5 = (360f - fVar5);
@@ -41690,7 +41690,7 @@ void func_405(struct<6> Param0, int iParam1, int iParam2, int iParam3, int iPara
 					{
 						if (HUD::IS_HUD_COMPONENT_ACTIVE(15))
 						{
-							HUD::SET_HUD_COMPONENT_POSITION(15, Local_22.x, (Local_22.y + fLocal_23));
+							HUD::SET_HUD_COMPONENT_POSITION(15, Local_22.x, (Local_22.f_1 + fLocal_23));
 							Global_76881 = 1;
 						}
 					}
@@ -42874,13 +42874,13 @@ void func_432()
 	Local_284[0 /*5*/].f_2 = 0;
 	Local_284[1 /*5*/].f_2 = 0;
 	Local_284[2 /*5*/].f_2 = 0;
-	Local_298.z = 0;
-	Local_295.z = 0;
-	Local_301.z = 0;
+	Local_298.f_2 = 0;
+	Local_295.f_2 = 0;
+	Local_301.f_2 = 0;
 	Local_285.f_2 = 0;
-	Local_286.z = 0;
-	Local_289.z = 0;
-	Local_292.z = 0;
+	Local_286.f_2 = 0;
+	Local_289.f_2 = 0;
+	Local_292.f_2 = 0;
 	Local_74.f_1 = 0;
 	Local_73.f_1 = 0;
 	Local_75.f_1 = 0;
@@ -43046,11 +43046,11 @@ void func_437()
 	Local_284[0 /*5*/].f_1 = "FAN1_PUSH_1";
 	Local_284[1 /*5*/].f_1 = "FAN1_PUSH_2";
 	Local_284[2 /*5*/].f_1 = "FAN1_PUSH_3";
-	Local_298.y = "FAN1_CHEAT_1";
+	Local_298.f_1 = "FAN1_CHEAT_1";
 	Local_298.x = "FAN1_CHEAT";
-	Local_295.y = "FAN1_CHEAT_2";
+	Local_295.f_1 = "FAN1_CHEAT_2";
 	Local_295.x = "FAN1_CHEAT";
-	Local_301.y = "FAN1_CATCHC_1";
+	Local_301.f_1 = "FAN1_CATCHC_1";
 	Local_301.x = "FAN1_CATCHC";
 	if (func_440(PLAYER::PLAYER_PED_ID()))
 	{

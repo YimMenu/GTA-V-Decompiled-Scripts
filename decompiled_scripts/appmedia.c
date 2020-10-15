@@ -296,20 +296,20 @@ void func_8()
 		}
 		if (iLocal_37)
 		{
-			Local_30.y = (Local_30.y - 2f);
+			Local_30.f_1 = (Local_30.f_1 - 2f);
 		}
-		if (Local_30.y < Local_29.y || Local_30.y == Local_29.y)
+		if (Local_30.f_1 < Local_29.f_1 || Local_30.f_1 == Local_29.f_1)
 		{
-			Local_30.y = Local_29.y;
+			Local_30.f_1 = Local_29.f_1;
 			iLocal_37 = 0;
 		}
 		if (iLocal_38)
 		{
-			Local_30.z = (Local_30.z - 7f);
+			Local_30.f_2 = (Local_30.f_2 - 7f);
 		}
-		if (Local_30.z < Local_29.z || Local_30.z == Local_29.z)
+		if (Local_30.f_2 < Local_29.f_2 || Local_30.f_2 == Local_29.f_2)
 		{
-			Local_30.z = Local_29.z;
+			Local_30.f_2 = Local_29.f_2;
 			iLocal_38 = 0;
 		}
 		if ((iLocal_36 == 0 && iLocal_37 == 0) && iLocal_38 == 0)
@@ -342,20 +342,20 @@ void func_9()
 		}
 		if (iLocal_34)
 		{
-			Local_30.y = (Local_30.y - 0.5f);
+			Local_30.f_1 = (Local_30.f_1 - 0.5f);
 		}
-		if (Local_30.y < Local_29.y || Local_30.y == Local_29.y)
+		if (Local_30.f_1 < Local_29.f_1 || Local_30.f_1 == Local_29.f_1)
 		{
-			Local_30.y = Local_29.y;
+			Local_30.f_1 = Local_29.f_1;
 			iLocal_34 = 0;
 		}
 		if (iLocal_35)
 		{
-			Local_30.z = (Local_30.z + 7f);
+			Local_30.f_2 = (Local_30.f_2 + 7f);
 		}
-		if (Local_30.z > Local_29.z || Local_30.z == Local_29.z)
+		if (Local_30.f_2 > Local_29.f_2 || Local_30.f_2 == Local_29.f_2)
 		{
-			Local_30.z = Local_29.z;
+			Local_30.f_2 = Local_29.f_2;
 			iLocal_35 = 0;
 		}
 		if ((iLocal_33 == 0 && iLocal_34 == 0) && iLocal_35 == 0)

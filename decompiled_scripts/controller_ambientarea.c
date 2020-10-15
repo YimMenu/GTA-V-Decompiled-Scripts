@@ -399,7 +399,7 @@ void func_11(var uParam0, int iParam1)
 
 int func_12(int iParam0, struct<3> Param1)
 {
-	Param1.z = 0f;
+	Param1.f_2 = 0f;
 	if (!SCRIPT::IS_THREAD_ACTIVE(Global_31107[iParam0 /*7*/].f_5))
 	{
 		return 1;

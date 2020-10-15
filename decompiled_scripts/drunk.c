@@ -232,7 +232,7 @@ void func_9()
 	{
 		return;
 	}
-	switch (Local_52.y)
+	switch (Local_52.f_1)
 	{
 		case 1:
 			if (!func_133())
@@ -796,7 +796,7 @@ void func_12(char* sParam0, var uParam1, char* sParam2)
 						{
 							Var27 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
 							uVar28 = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
-							fVar29 = Var27.z;
+							fVar29 = Var27.f_2;
 							fVar30 = uVar28;
 							uParam1->f_57 = (fVar29 - fVar30);
 							if (uParam1->f_57 < 360f)
@@ -854,7 +854,7 @@ void func_12(char* sParam0, var uParam1, char* sParam2)
 								{
 									Var37 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
 									uVar38 = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
-									fVar39 = Var37.z;
+									fVar39 = Var37.f_2;
 									fVar40 = uVar38;
 									uParam1->f_31 = (fVar39 - fVar40);
 									if (uParam1->f_31 < 360f)
@@ -1020,8 +1020,8 @@ int func_16(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4,
 				Var2 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
 				Var3 = { Var2 + uParam0->f_9 };
 				Var4 = { Var3 - ENTITY::GET_ENTITY_ROTATION(uParam0->f_5, 2) };
-				Var5 = { (-SYSTEM::SIN(Var3.z) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.z) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
-				Var6 = { (-SYSTEM::SIN(Var4.z) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.z) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
+				Var5 = { (-SYSTEM::SIN(Var3.f_2) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.f_2) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
+				Var6 = { (-SYSTEM::SIN(Var4.f_2) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.f_2) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
 				uVar7 = CAM::GET_FINAL_RENDERED_CAM_FOV();
 				if (uParam0->f_17 > 0 || iParam6 != 0)
 				{
@@ -1935,9 +1935,9 @@ bool func_53(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_54()
@@ -3253,7 +3253,7 @@ int func_107(int iParam0)
 		PED::SET_PED_STRAFE_CLIPSET(Local_43.f_1, "move_ped_strafing_firstperson@drunk");
 	}
 	PED::SET_PED_ALTERNATE_MOVEMENT_ANIM(Local_43.f_1, 0, sVar1, "idle", 2f, 1);
-	Local_52.z = sVar1;
+	Local_52.f_2 = sVar1;
 	bLocal_47 = true;
 	iVar4 = 0;
 	switch (func_70(Local_43.f_1))
@@ -3418,7 +3418,7 @@ int func_114(int iParam0)
 	
 	iVar0 = func_115(iParam0);
 	uVar1 = func_113(iVar0);
-	if (MISC::IS_STRING_NULL_OR_EMPTY(Local_52.z))
+	if (MISC::IS_STRING_NULL_OR_EMPTY(Local_52.f_2))
 	{
 		if (MISC::IS_STRING_NULL_OR_EMPTY(uVar1))
 		{
@@ -3429,7 +3429,7 @@ int func_114(int iParam0)
 			return 0;
 		}
 	}
-	return MISC::ARE_STRINGS_EQUAL(Local_52.z, sVar1);
+	return MISC::ARE_STRINGS_EQUAL(Local_52.f_2, sVar1);
 }
 
 int func_115(int iParam0)
@@ -3740,7 +3740,7 @@ void func_121()
 			}
 			return;
 		}
-		Local_52.y = 3;
+		Local_52.f_1 = 3;
 		return;
 	}
 	if (!bLocal_47)
@@ -4576,7 +4576,7 @@ void func_145()
 		PED::RESET_PED_MOVEMENT_CLIPSET(Local_43.f_1, 1048576000);
 		PED::RESET_PED_STRAFE_CLIPSET(Local_43.f_1);
 		PED::CLEAR_PED_ALTERNATE_MOVEMENT_ANIM(Local_43.f_1, 0, -1056964608);
-		Local_52.z = "";
+		Local_52.f_2 = "";
 		PED::CLEAR_FACIAL_IDLE_ANIM_OVERRIDE(Local_43.f_1);
 		PED::SET_PED_RESET_FLAG(Local_43.f_1, 200, 0);
 		PED::SET_PED_RESET_FLAG(Local_43.f_1, 46, 0);
@@ -4614,7 +4614,7 @@ int func_147()
 		return 0;
 	}
 	func_148(Local_43.f_1);
-	Local_52.z = "";
+	Local_52.f_2 = "";
 	Global_2537071.f_4540 = 1;
 	return 1;
 }
@@ -4770,7 +4770,7 @@ void func_153(int iParam0)
 
 void func_154()
 {
-	Local_52.y = 2;
+	Local_52.f_1 = 2;
 }
 
 void func_155()
@@ -4983,10 +4983,10 @@ void func_162()
 					break;
 				}
 		}
-		Local_52.y = 1;
+		Local_52.f_1 = 1;
 		return;
 	}
-	Local_52.y = 12;
+	Local_52.f_1 = 12;
 	if (Local_51 == -1)
 	{
 		Global_42383[iLocal_54 /*5*/].f_2 = 0;

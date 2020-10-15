@@ -24328,15 +24328,15 @@ void func_82(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_83(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_83(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -25657,7 +25657,7 @@ void func_88(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -25666,19 +25666,19 @@ void func_88(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_89(Var2.z)] = Var2.x;
+						(*uParam0)[func_89(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_89(Var2.z)] = func_83(iParam1, Var2.x, func_89(Var2.z), iVar0);
+						(*uParam0)[func_89(Var2.f_2)] = func_83(iParam1, Var2.x, func_89(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_89(Var2.z)] = Var2.y;
+					(*uParam0)[func_89(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -25892,14 +25892,14 @@ void func_99(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
 	fVar5 = 0.01f;
-	if (iParam0 == 29 && Var0.z <= 35f)
+	if (iParam0 == 29 && Var0.f_2 <= 35f)
 	{
 		Var1 = { -95.402f, -744.506f, 37.2165f };
 		Var2 = { 0.9047f, 0.4261f, 0f };
 		fVar3 = 0.51f;
 		fVar4 = 0.35f;
 	}
-	else if (iParam0 == 29 && Var0.z <= 36f)
+	else if (iParam0 == 29 && Var0.f_2 <= 36f)
 	{
 		Var1 = { -95.4013f, -744.5073f, 37.1846f };
 		Var2 = { 0.9047f, 0.4261f, 0f };
@@ -25933,7 +25933,7 @@ Vector3 func_100(struct<3> Param0)
 
 Vector3 func_101(struct<3> Param0, struct<3> Param1)
 {
-	return ((Param0.y * Param1.z) - (Param0.z * Param1.y)), ((Param0.z * Param1.x) - (Param0.x * Param1.z)), ((Param0.x * Param1.y) - (Param0.y * Param1.x));
+	return ((Param0.f_1 * Param1.f_2) - (Param0.f_2 * Param1.f_1)), ((Param0.f_2 * Param1.x) - (Param0.x * Param1.f_2)), ((Param0.x * Param1.f_1) - (Param0.f_1 * Param1.x));
 }
 
 int func_102(float fParam0)

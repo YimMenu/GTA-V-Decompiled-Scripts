@@ -2296,37 +2296,37 @@ void func_61(var uParam0)
 		}
 		if (fVar6 > 0.1f)
 		{
-			if ((Var7.y - (MISC::ABSF((fVar4 * fVar6)) * SYSTEM::TIMESTEP())) >= -4000f)
+			if ((Var7.f_1 - (MISC::ABSF((fVar4 * fVar6)) * SYSTEM::TIMESTEP())) >= -4000f)
 			{
 				bVar1 = true;
-				Var7.y = (Var7.y - (MISC::ABSF((fVar4 * fVar6)) * SYSTEM::TIMESTEP()));
+				Var7.f_1 = (Var7.f_1 - (MISC::ABSF((fVar4 * fVar6)) * SYSTEM::TIMESTEP()));
 			}
 		}
 		else if (fVar6 < -0.1f)
 		{
-			if ((Var7.y + (MISC::ABSF((fVar4 * fVar6)) * SYSTEM::TIMESTEP())) <= 8000f)
+			if ((Var7.f_1 + (MISC::ABSF((fVar4 * fVar6)) * SYSTEM::TIMESTEP())) <= 8000f)
 			{
 				bVar1 = true;
-				Var7.y = (Var7.y + (MISC::ABSF((fVar4 * fVar6)) * SYSTEM::TIMESTEP()));
+				Var7.f_1 = (Var7.f_1 + (MISC::ABSF((fVar4 * fVar6)) * SYSTEM::TIMESTEP()));
 			}
 		}
 		fVar8 = func_67(Var7);
-		if (Var7.z != fVar8)
+		if (Var7.f_2 != fVar8)
 		{
-			if (Var7.z < fVar8)
+			if (Var7.f_2 < fVar8)
 			{
-				Var7.z = (Var7.z + (MISC::ABSF(fVar4) * SYSTEM::TIMESTEP()));
-				if (Var7.z > fVar8)
+				Var7.f_2 = (Var7.f_2 + (MISC::ABSF(fVar4) * SYSTEM::TIMESTEP()));
+				if (Var7.f_2 > fVar8)
 				{
-					Var7.z = fVar8;
+					Var7.f_2 = fVar8;
 				}
 			}
-			else if (Var7.z > fVar8)
+			else if (Var7.f_2 > fVar8)
 			{
-				Var7.z = (Var7.z - (MISC::ABSF(fVar4) * SYSTEM::TIMESTEP()));
-				if (Var7.z < fVar8)
+				Var7.f_2 = (Var7.f_2 - (MISC::ABSF(fVar4) * SYSTEM::TIMESTEP()));
+				if (Var7.f_2 < fVar8)
 				{
-					Var7.z = fVar8;
+					Var7.f_2 = fVar8;
 				}
 			}
 			bVar1 = true;
@@ -2396,11 +2396,11 @@ void func_61(var uParam0)
 		{
 			fVar9 = -50f;
 		}
-		if (Var11.y < Var7.y)
+		if (Var11.f_1 < Var7.f_1)
 		{
 			fVar10 = 50f;
 		}
-		else if (Var11.y > Var7.y)
+		else if (Var11.f_1 > Var7.f_1)
 		{
 			fVar10 = -50f;
 		}
@@ -2446,7 +2446,7 @@ void func_61(var uParam0)
 			func_41(uParam0);
 		}
 		MISC::_GET_GROUND_Z_FOR_3D_COORD_2(Var7, &fVar12, 1, 0);
-		STREAMING::SET_FOCUS_POS_AND_VEL((Var7.x + fVar9), (Var7.y + fVar10), (fVar12 + 50f), -90f, 0f, 0f);
+		STREAMING::SET_FOCUS_POS_AND_VEL((Var7.x + fVar9), (Var7.f_1 + fVar10), (fVar12 + 50f), -90f, 0f, 0f);
 	}
 }
 
@@ -2702,7 +2702,7 @@ void func_70(struct<3> Param0)
 				if (ENTITY::DOES_ENTITY_EXIST(uVar4))
 				{
 					Var2 = { ENTITY::GET_ENTITY_COORDS(iVar4, 0) };
-					if (MISC::GET_DISTANCE_BETWEEN_COORDS(Param0, Var2, 0) < 15f && Var2.z >= (Param0.z - 15f))
+					if (MISC::GET_DISTANCE_BETWEEN_COORDS(Param0, Var2, 0) < 15f && Var2.f_2 >= (Param0.f_2 - 15f))
 					{
 						FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), Var2, 59, 1f, 1, 0, 1065353216);
 					}
@@ -2719,7 +2719,7 @@ void func_70(struct<3> Param0)
 				if (((func_74(Global_1315847[iVar8], 0) || func_73(Global_1315847[iVar8], 0)) || func_72(Global_1315847[iVar8], 0)) || func_71(Global_1315847[iVar8], 0))
 				{
 					Var3 = { ENTITY::GET_ENTITY_COORDS(Global_1315847[iVar8], 0) };
-					if (MISC::GET_DISTANCE_BETWEEN_COORDS(Param0, Var3, 0) < 15f && Var3.z >= (Param0.z - 15f))
+					if (MISC::GET_DISTANCE_BETWEEN_COORDS(Param0, Var3, 0) < 15f && Var3.f_2 >= (Param0.f_2 - 15f))
 					{
 						FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), Var3, 59, 1f, 1, 0, 1065353216);
 					}
@@ -5840,7 +5840,7 @@ int func_222(var uParam0)
 
 int func_223(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -5976,7 +5976,7 @@ bool func_228(struct<3> Param0, var uParam1, struct<3> Param2, float fParam3)
 
 float func_229(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_230(struct<3> Param0)
@@ -5993,8 +5993,8 @@ Vector3 func_230(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }

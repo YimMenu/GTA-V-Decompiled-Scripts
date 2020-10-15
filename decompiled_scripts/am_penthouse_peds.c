@@ -49,8 +49,8 @@ void __EntryFunction__()
 		{
 			if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 			{
-				Local_22.y = func_53(iScriptParam_24);
-				Local_22.z = 0;
+				Local_22.f_1 = func_53(iScriptParam_24);
+				Local_22.f_2 = 0;
 				Local_22.x = 1;
 			}
 			else
@@ -100,7 +100,7 @@ void func_1()
 	{
 		if (AUDIO::IS_STREAM_PLAYING())
 		{
-			fVar1 = (SYSTEM::TO_FLOAT(Local_22.y) / 5f);
+			fVar1 = (SYSTEM::TO_FLOAT(Local_22.f_1) / 5f);
 			AUDIO::SET_VARIABLE_ON_STREAM("Crowd_Size", fVar1);
 			iLocal_21++;
 		}
@@ -119,7 +119,7 @@ int func_2()
 	iVar3 = 0;
 	while (iVar3 < 50)
 	{
-		if (Local_23[iVar3 /*13*/].f_12 <= Local_22.y)
+		if (Local_23[iVar3 /*13*/].f_12 <= Local_22.f_1)
 		{
 			fVar1 = SYSTEM::VDIST(Local_23[iVar3 /*13*/].f_6, 945f, 15f, 117f);
 			if (fVar1 < fVar0)
@@ -917,7 +917,7 @@ int func_31()
 {
 	var uVar0;
 	
-	uVar0 = Local_22.y;
+	uVar0 = Local_22.f_1;
 	return uVar0;
 }
 
@@ -1075,7 +1075,7 @@ void func_43(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -1095,19 +1095,19 @@ void func_44(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_46(Var0.y, 1, 1))
+		if (func_46(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(uVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(uVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_45(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -1779,7 +1779,7 @@ int func_52()
 {
 	var uVar0;
 	
-	uVar0 = Local_22.z;
+	uVar0 = Local_22.f_2;
 	return uVar0;
 }
 

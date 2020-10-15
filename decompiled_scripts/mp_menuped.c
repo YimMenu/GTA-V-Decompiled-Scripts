@@ -315,7 +315,7 @@ void __EntryFunction__()
 			func_421(iVar0);
 			func_419(&(Global_1312652[0 /*6*/].f_3));
 			func_420();
-			func_417(ScriptParam_249.y, 1);
+			func_417(ScriptParam_249.f_1, 1);
 			if (func_416(PLAYER::PLAYER_ID()))
 			{
 				HUD::PAUSE_MENU_ACTIVATE_CONTEXT(1344549371);
@@ -341,14 +341,14 @@ void __EntryFunction__()
 			func_421(iVar0);
 			SYSTEM::WAIT(0);
 			SYSTEM::WAIT(0);
-			func_417(ScriptParam_249.y, 0);
+			func_417(ScriptParam_249.f_1, 0);
 			PED::_0x4668D80430D6C299(Global_1312652[0 /*6*/].f_3);
 			HUD::GIVE_PED_TO_PAUSE_MENU(Global_1312652[0 /*6*/].f_3, 1);
 			func_420();
 			break;
 		
 		case 5:
-			if (ScriptParam_249.z == 203)
+			if (ScriptParam_249.f_2 == 203)
 			{
 				if (NETWORK::NETWORK_GET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU(&Var1))
 				{
@@ -370,7 +370,7 @@ void __EntryFunction__()
 					}
 				}
 			}
-			if (ScriptParam_249.z == 201)
+			if (ScriptParam_249.f_2 == 201)
 			{
 				func_34(1);
 				if (NETWORK::NETWORK_GET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU(&Var1))
@@ -407,13 +407,13 @@ void __EntryFunction__()
 			break;
 		
 		case 0:
-			func_1(ScriptParam_249.y);
+			func_1(ScriptParam_249.f_1);
 			break;
 		
 		default:
 			break;
 	}
-	func_417(ScriptParam_249.y, 0);
+	func_417(ScriptParam_249.f_1, 0);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
@@ -1239,7 +1239,7 @@ int func_39(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, int
 									{
 										uVar3 = ENTITY::GET_ENTITY_MODEL(iVar2);
 										Var4 = { ENTITY::GET_ENTITY_COORDS(iVar2, 0) };
-										Var4.z = (Var4.z + 2f);
+										Var4.f_2 = (Var4.f_2 + 2f);
 										*uParam1 = PED::CREATE_PED(25, uVar3, Var4, 0f, 0, 0);
 										ENTITY::SET_ENTITY_VISIBLE(*uParam1, 0, 0);
 										ENTITY::SET_ENTITY_COLLISION(*uParam1, 0, 0);
@@ -41784,15 +41784,15 @@ void func_197(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_51(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_51(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -42805,7 +42805,7 @@ void func_201(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -42814,19 +42814,19 @@ void func_201(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_202(Var2.z)] = Var2.x;
+						(*uParam0)[func_202(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_202(Var2.z)] = func_51(iParam1, Var2.x, func_202(Var2.z), iVar0);
+						(*uParam0)[func_202(Var2.f_2)] = func_51(iParam1, Var2.x, func_202(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_202(Var2.z)] = Var2.y;
+					(*uParam0)[func_202(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -94336,7 +94336,7 @@ int func_347(var uParam0, int iParam1, int iParam2)
 		Var4 = { CAM::GET_CAM_ROT(CAM::GET_RENDERING_CAM(), 2) };
 		Var5 = { CAM::GET_CAM_COORD(CAM::GET_RENDERING_CAM()) };
 	}
-	Var2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var5, Var4.z, Var0) };
+	Var2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var5, Var4.f_2, Var0) };
 	Var3 = { Var4 + Var1 };
 	if (func_348(uParam0, func_413(iParam1, func_414(386, iParam2)), Var2, Var3, 0, 1, iParam2, 50f, 0, 1, 1, 0, 0))
 	{
@@ -94580,7 +94580,7 @@ int func_348(var uParam0, int iParam1, struct<3> Param2, struct<3> Param3, bool 
 				if (bParam9)
 				{
 					ENTITY::SET_ENTITY_COORDS(*uParam0, Param2, 1, 0, 0, 1);
-					ENTITY::SET_ENTITY_HEADING(*uParam0, Param3.z);
+					ENTITY::SET_ENTITY_HEADING(*uParam0, Param3.f_2);
 				}
 			}
 		}

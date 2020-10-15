@@ -240,8 +240,8 @@ void __EntryFunction__()
 			fLocal_65 = fLocal_65;
 			Local_83 = { Local_63 };
 			Local_84 = { ScriptParam_93.f_1[0 /*3*/] };
-			Local_83.z = 0f;
-			Local_84.z = 0f;
+			Local_83.f_2 = 0f;
+			Local_84.f_2 = 0f;
 			fLocal_82 = SYSTEM::VDIST2(Local_83, Local_84);
 			switch (iLocal_67)
 			{
@@ -263,7 +263,7 @@ void __EntryFunction__()
 							}
 							func_81(10);
 						}
-						if ((Local_63.z - ScriptParam_93.f_1[0 /*3*/].f_2) > 500f)
+						if ((Local_63.f_2 - ScriptParam_93.f_1[0 /*3*/].f_2) > 500f)
 						{
 						}
 					}

@@ -549,7 +549,7 @@ void func_13()
 		if (func_15(Local_238.f_2))
 		{
 			Local_61 = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(Local_238.f_2), 1) };
-			Local_61.z = (Local_61.z - 5f);
+			Local_61.f_2 = (Local_61.f_2 - 5f);
 		}
 	}
 	switch (Local_238.f_50)
@@ -560,11 +560,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), PLAYER::PLAYER_PED_ID(), 1, 0, -1f, iVar0, 1, 1, 0, 0, 0, 0);
 					func_11(&(Local_238.f_51), 0, 0);
 					iLocal_57 = 1;
@@ -584,11 +584,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 5f, 5f) };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 5f, 5f) };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_238.f_2.f_3), 1, 0, -1f, iVar0, 1, 0, 0, 0, 0, 0);
 					func_11(&(Local_238.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_237, Local_238.f_50);
@@ -607,11 +607,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, -5f, -5f) };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, -5f, -5f) };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_238.f_2.f_3), 1, 0, -1f, iVar0, 1, 0, 0, 0, 0, 0);
 					func_11(&(Local_238.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_237, Local_238.f_50);
@@ -630,11 +630,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 5f, -5f) };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 5f, -5f) };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_238.f_2.f_3), 1, 0, -1f, iVar0, 1, 0, 0, 0, 0, 0);
 					func_11(&(Local_238.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_237, Local_238.f_50);
@@ -653,11 +653,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, -5f, 5f) };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, -5f, 5f) };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_238.f_2.f_3), 1, 0, -1f, iVar0, 1, 0, 0, 0, 0, 0);
 					func_11(&(Local_238.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_237, Local_238.f_50);
@@ -676,11 +676,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 5f, 10f) };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 5f, 10f) };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_238.f_2.f_3), 1, 0, -1f, iVar0, 1, 0, 0, 0, 0, 0);
 					func_11(&(Local_238.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_237, Local_238.f_50);
@@ -699,11 +699,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 10f, 10f) };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 10f, 10f) };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_238.f_2.f_3), 1, 0, -1f, iVar0, 1, 0, 0, 0, 0, 0);
 					func_11(&(Local_238.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_237, Local_238.f_50);
@@ -722,11 +722,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, -10f, -10f) };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, -10f, -10f) };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_238.f_2.f_3), 1, 0, -1f, iVar0, 1, 0, 0, 0, 0, 0);
 					func_11(&(Local_238.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_237, Local_238.f_50);
@@ -745,11 +745,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 10f, -10f) };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, 10f, -10f) };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_238.f_2.f_3), 1, 0, -1f, iVar0, 1, 0, 0, 0, 0, 0);
 					func_11(&(Local_238.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_237, Local_238.f_50);
@@ -768,11 +768,11 @@ void func_13()
 				if (!MISC::IS_BIT_SET(uLocal_237, Local_238.f_50))
 				{
 					Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, -10f, 10f) };
-					Var1.z = Local_61.z;
+					Var1.f_2 = Local_61.f_2;
 					Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(0f, -10f, 10f) };
 					Var2 = { Var2 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var2 + Vector(10f, 0f, 0f), &(Var2.f_2), 0, 0);
-					Var2.z = (Var2.z - 25f);
+					Var2.f_2 = (Var2.f_2 - 25f);
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var2, iVar3, 1, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_238.f_2.f_3), 1, 0, -1f, iVar0, 1, 0, 0, 0, 0, 0);
 					Local_238.f_50++;
 					iLocal_57 = 0;
@@ -819,7 +819,7 @@ int func_16(int iParam0)
 
 int func_17(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -1198,8 +1198,8 @@ void func_27()
 								}
 								Var1 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 - Vector(1000f, 25f, 25f) };
 								Var2 = { Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + Vector(1000f, 25f, 25f) };
-								Var1.z = -200f;
-								Var2.z = 1500f;
+								Var1.f_2 = -200f;
+								Var2.f_2 = 1500f;
 								if (ENTITY::IS_ENTITY_AT_COORD(iVar0, Local_240[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2, 75f, 75f, 1000f, 0, 1, 0) && MISC::IS_PROJECTILE_TYPE_IN_AREA(Var1, Var2, joaat("weapon_flare"), 0))
 								{
 									Local_238.f_53 = 1;
@@ -2122,9 +2122,9 @@ int func_64(int iParam0, struct<3> Param1, int iParam2)
 			if (Global_2417897.f_461[iVar0 /*11*/][iVar1 /*5*/].f_4 == iParam2)
 			{
 				Var2 = { Param1 };
-				if (MISC::ABSF((Global_2417897.f_461[iVar0 /*11*/][iVar1 /*5*/].f_2 - Var2.z)) < 2f)
+				if (MISC::ABSF((Global_2417897.f_461[iVar0 /*11*/][iVar1 /*5*/].f_2 - Var2.f_2)) < 2f)
 				{
-					Var2.z = Global_2417897.f_461[iVar0 /*11*/][iVar1 /*5*/].f_2;
+					Var2.f_2 = Global_2417897.f_461[iVar0 /*11*/][iVar1 /*5*/].f_2;
 				}
 				if (SYSTEM::VDIST(Global_2417897.f_461[iVar0 /*11*/][iVar1 /*5*/], Var2) < 0.5f)
 				{
@@ -2149,7 +2149,7 @@ int func_65(struct<3> Param0, float fParam1, float fParam2, float fParam3, float
 	}
 	if (fParam2 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.y, (Param0.z + 1f), fParam2) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam2))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam2) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam2))
 		{
 			return 0;
 		}
@@ -2491,7 +2491,7 @@ Vector3 func_81(struct<3> Param0, float fParam1, float fParam2, float fParam3)
 	Var0 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), 0f };
 	fVar1 = (fParam3 / 2f);
 	Var0 = { func_82(Var0, MISC::GET_RANDOM_FLOAT_IN_RANGE(fParam1, fParam2)) };
-	Var0.z = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar1, fVar1);
+	Var0.f_2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar1, fVar1);
 	return Param0 + Var0;
 }
 
@@ -2572,9 +2572,9 @@ bool func_88(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_89()
@@ -2833,7 +2833,7 @@ void func_107(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -2853,19 +2853,19 @@ void func_108(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_24(Var0.y, 1, 1))
+		if (func_24(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_109(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{

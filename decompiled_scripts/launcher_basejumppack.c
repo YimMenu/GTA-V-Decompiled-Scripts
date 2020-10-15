@@ -410,8 +410,8 @@ void __EntryFunction__()
 			uLocal_57 = uLocal_57;
 			Local_75 = { Local_55 };
 			Local_76 = { ScriptParam_261.f_1[0 /*3*/] };
-			Local_75.z = 0f;
-			Local_76.z = 0f;
+			Local_75.f_2 = 0f;
+			Local_76.f_2 = 0f;
 			fLocal_74 = SYSTEM::VDIST2(Local_75, Local_76);
 			switch (iLocal_59)
 			{
@@ -433,7 +433,7 @@ void __EntryFunction__()
 							}
 							func_125(10);
 						}
-						if ((Local_55.z - ScriptParam_261.f_1[0 /*3*/].f_2) > 500f)
+						if ((Local_55.f_2 - ScriptParam_261.f_1[0 /*3*/].f_2) > 500f)
 						{
 						}
 					}
@@ -1206,7 +1206,7 @@ void func_25(bool bParam0)
 	bool bVar8;
 	
 	Var6 = { func_70(iLocal_82) };
-	Var6 = { func_69(SYSTEM::COS(Var6.z), SYSTEM::SIN(Var6.z), MISC::TAN(Var6.x)) };
+	Var6 = { func_69(SYSTEM::COS(Var6.f_2), SYSTEM::SIN(Var6.f_2), MISC::TAN(Var6.x)) };
 	STREAMING::NEW_LOAD_SCENE_START(func_68(iLocal_82), Var6, 5000f, 0);
 	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), 0, 256);
 	HUD::DISPLAY_HUD(0);
@@ -1231,7 +1231,7 @@ void func_25(bool bParam0)
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_255))
 		{
 			Var4 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - ENTITY::GET_ENTITY_COORDS(iLocal_255, 0) };
-			Var4.z = 0f;
+			Var4.f_2 = 0f;
 			fVar7 = SYSTEM::VMAG(Var4);
 			TASK::OPEN_SEQUENCE_TASK(&uVar1);
 			if (fVar7 > 0.8f)
@@ -1343,7 +1343,7 @@ void func_25(bool bParam0)
 	}
 	else
 	{
-		Local_83.z = iLocal_255;
+		Local_83.f_2 = iLocal_255;
 	}
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
@@ -1455,7 +1455,7 @@ Vector3 func_32(int iParam0)
 
 int func_33(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2155,8 +2155,8 @@ Vector3 func_69(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -2553,7 +2553,7 @@ void func_85()
 	uVar0 = PLAYER::GET_PLAYERS_LAST_VEHICLE();
 	if (ENTITY::DOES_ENTITY_EXIST(uVar0))
 	{
-		Local_83.y = iVar0;
+		Local_83.f_1 = iVar0;
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_255))
 	{

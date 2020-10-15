@@ -3371,7 +3371,7 @@ void func_59(int iParam0, int iParam1)
 		}
 		if (func_62(iParam0, iParam1) != 322)
 		{
-			func_60(func_62(iParam0, iParam1), Local_43.x, Local_43.y);
+			func_60(func_62(iParam0, iParam1), Local_43.x, Local_43.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -7014,7 +7014,7 @@ void func_107()
 		{
 			Local_61 = { OBJECT::GET_SAFE_PICKUP_COORDS(ENTITY::GET_ENTITY_COORDS(iLocal_106, 0), 1067030938, 1069547520) };
 		}
-		Local_61 = { Local_61.x, Local_61.y, (Local_61.z + 0.25f) };
+		Local_61 = { Local_61.x, Local_61.f_1, (Local_61.f_2 + 0.25f) };
 		uLocal_62 = OBJECT::CREATE_PICKUP(joaat("pickup_money_med_bag"), Local_61, uLocal_60, iLocal_118, 1, joaat("prop_cs_duffel_01"));
 		uLocal_121 = func_108(uLocal_62);
 		if (iLocal_47 == 1)
@@ -11351,7 +11351,7 @@ int func_204(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_43.z) > 50f)
+			if ((Var1.f_2 - Local_43.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -11472,9 +11472,9 @@ bool func_205(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_206(int iParam0)

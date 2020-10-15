@@ -1105,8 +1105,8 @@ void func_19(var uParam0)
 	int iVar1;
 	
 	Var0.x = -1881515167;
-	Var0.y = PLAYER::PLAYER_ID();
-	Var0.z = uParam0;
+	Var0.f_1 = PLAYER::PLAYER_ID();
+	Var0.f_2 = uParam0;
 	iVar1 = func_20(1);
 	if (!iVar1 == 0)
 	{
@@ -15741,8 +15741,8 @@ void func_135(int iParam0)
 	int iVar1;
 	
 	Var0.x = 1446324155;
-	Var0.y = PLAYER::PLAYER_ID();
-	Var0.z = iParam0;
+	Var0.f_1 = PLAYER::PLAYER_ID();
+	Var0.f_2 = iParam0;
 	iVar1 = func_20(1);
 	if (!iVar1 == 0)
 	{
@@ -16795,7 +16795,7 @@ void func_161(var uParam0)
 				{
 					if (Var2.x == 1446324155)
 					{
-						func_166(&(uParam0->f_35), Var2.z);
+						func_166(&(uParam0->f_35), Var2.f_2);
 					}
 				}
 			}
@@ -16803,7 +16803,7 @@ void func_161(var uParam0)
 			{
 				if (Var3.x == -1881515167)
 				{
-					iLocal_139 = Var3.z;
+					iLocal_139 = Var3.f_2;
 				}
 			}
 		}
@@ -18272,7 +18272,7 @@ void func_218(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -18292,19 +18292,19 @@ void func_219(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_21(Var0.y, 1, 1))
+		if (func_21(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_220(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{

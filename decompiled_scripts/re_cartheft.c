@@ -215,7 +215,7 @@ void __EntryFunction__()
 			if (!PED::IS_PED_IN_FLYING_VEHICLE(PLAYER::PLAYER_PED_ID()))
 			{
 				Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-				if (Var0.z > 23f || ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -743.3924f, -2129.82f, 12.07619f, -708.892f, -2160.705f, 19.7035f, 124.5f, 0, 1, 0))
+				if (Var0.f_2 > 23f || ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -743.3924f, -2129.82f, 12.07619f, -708.892f, -2160.705f, 19.7035f, 124.5f, 0, 1, 0))
 				{
 					SCRIPT::TERMINATE_THIS_THREAD();
 				}
@@ -1133,7 +1133,7 @@ int func_4()
 						MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &(Var0.f_2), 0, 0);
 						ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0, 1, 0, 0, 1);
 						Var0 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_126, sLocal_129, Local_130, Local_131, 1f, 2) };
-						ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), Var0.z);
+						ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), Var0.f_2);
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0, 1065353216);
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0);
 					}
@@ -1941,13 +1941,13 @@ void func_43(struct<3> Param0, float fParam1, float fParam2)
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - Param0 };
-		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y);
+		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1);
 		if (func_44(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0), fVar2, 15f))
 		{
 			bVar0 = true;
 		}
 		Var1 = { Param0 - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y);
+		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1);
 		if (func_44(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0), fVar2, 15f))
 		{
 			bVar0 = true;
@@ -3638,9 +3638,9 @@ bool func_98(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_99(var uParam0, bool bParam1, bool bParam2, bool bParam3)
@@ -4540,7 +4540,7 @@ void func_124(int iParam0, int iParam1)
 		}
 		if (func_130(iParam0, iParam1) != 322)
 		{
-			func_125(func_130(iParam0, iParam1), Local_45.x, Local_45.y);
+			func_125(func_130(iParam0, iParam1), Local_45.x, Local_45.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -6800,7 +6800,7 @@ int func_169()
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
 				Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - Local_50 };
-				uLocal_51 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.y);
+				uLocal_51 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.f_1);
 			}
 			iLocal_71 = PED::CREATE_PED(5, iVar3, Local_50, uLocal_51, 1, 1);
 			AUDIO::SET_AMBIENT_VOICE_NAME(iLocal_71, sVar7);
@@ -8133,7 +8133,7 @@ int func_194(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_45.z) > 50f)
+			if ((Var1.f_2 - Local_45.f_2) > 50f)
 			{
 				return 0;
 			}

@@ -10791,15 +10791,15 @@ void func_151(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_118(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_118(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -11757,7 +11757,7 @@ void func_154(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -11766,19 +11766,19 @@ void func_154(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_127(Var2.z)] = Var2.x;
+						(*uParam0)[func_127(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_127(Var2.z)] = func_118(iParam1, Var2.x, func_127(Var2.z), iVar0);
+						(*uParam0)[func_127(Var2.f_2)] = func_118(iParam1, Var2.x, func_127(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_127(Var2.z)] = Var2.y;
+					(*uParam0)[func_127(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -60800,24 +60800,24 @@ int func_329(int iParam0, bool bParam1, bool bParam2, float fParam3, float fPara
 		}
 		Var7 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar1) };
 		Var7.x = (Var7.x * (func_330(iParam0) / fVar4));
-		Var7.y = (Var7.y * (func_330(iParam0) / fVar4));
+		Var7.f_1 = (Var7.f_1 * (func_330(iParam0) / fVar4));
 		if (!bParam2)
 		{
 			Var7.x = (Var7.x - 2f);
-			Var7.y = (Var7.y - 2f);
+			Var7.f_1 = (Var7.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
 			Var7.x = 288f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22350.f_7029[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
 			Var7.x = 106f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		*fParam3 = ((Var7.x / IntToFloat(iVar2)) * IntToFloat((iVar2 / iVar3)));
-		*fParam4 = (((Var7.y / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
+		*fParam4 = (((Var7.f_1 / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)
@@ -61508,7 +61508,7 @@ void func_337(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				func_355(Global_22347, (fVar49 + 0f), fParam5, 0.034722f, iVar1, iVar2, iVar3, iVar4);
 				Var38 = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
 				Var38.x = (Var38.x * (0.5f / fVar60));
-				Var38.y = (Var38.y * (0.5f / fVar60));
+				Var38.f_1 = (Var38.f_1 * (0.5f / fVar60));
 				if (Global_22350.f_8415)
 				{
 					iVar1 = 0;
@@ -61520,7 +61520,7 @@ void func_337(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(1, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.y / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.f_1 / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
 				fVar49 = (fVar49 + (0f + 0.034722f));
 			}
 			if (MISC::GET_HASH_KEY(&(Global_22350.f_4690)) != 0 && Global_22350.f_4766 != -1)
@@ -63298,7 +63298,7 @@ int func_348()
 		MOBILE::GET_MOBILE_PHONE_POSITION(&Var0);
 		if (Global_19431 == 0)
 		{
-			if (Var0.y > -119f)
+			if (Var0.f_1 > -119f)
 			{
 				return 1;
 			}
@@ -63307,7 +63307,7 @@ int func_348()
 				return 0;
 			}
 		}
-		else if (Var0.y > -101f)
+		else if (Var0.f_1 > -101f)
 		{
 			return 1;
 		}
@@ -80549,10 +80549,10 @@ void func_464(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_466(Var0.y);
+	iVar1 = func_466(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;
@@ -81162,7 +81162,7 @@ float func_481(int iParam0, float fParam1, float fParam2, float fParam3, float f
 		case 0:
 			Var10 = { HUD::_0x5BFF36D6ED83E0AE() };
 			fParam1 = (Var10.x + func_483(0.005f));
-			fParam2 = (Var10.y + 0.518f);
+			fParam2 = (Var10.f_1 + 0.518f);
 			fParam3 = func_483(0.21f);
 			fVar2 = 0.025f;
 			fVar5 = (fParam4 + func_483(0.05f));
@@ -81173,7 +81173,7 @@ float func_481(int iParam0, float fParam1, float fParam2, float fParam3, float f
 		case 1:
 			Var10 = { HUD::_0x5BFF36D6ED83E0AE() };
 			fParam1 = (Var10.x + func_483(0.145f));
-			fParam2 = (Var10.y + 0.417f);
+			fParam2 = (Var10.f_1 + 0.417f);
 			fParam3 = func_483(0.042f);
 			fVar2 = 0.025f;
 			fVar5 = fParam4;
@@ -81184,7 +81184,7 @@ float func_481(int iParam0, float fParam1, float fParam2, float fParam3, float f
 		case 2:
 			Var10 = { HUD::_0x5BFF36D6ED83E0AE() };
 			fParam1 = (Var10.x + func_483(0.145f));
-			fParam2 = (Var10.y + 0.457f);
+			fParam2 = (Var10.f_1 + 0.457f);
 			fParam3 = func_483(0.042f);
 			fVar2 = 0.025f;
 			fVar5 = fParam4;
@@ -96868,7 +96868,7 @@ void func_689(int iParam0, int iParam1, var uParam2)
 	
 	func_690(iParam0, &uVar0, &Var1);
 	func_690(iParam1, &uVar2, &Var3);
-	*uParam2 = (*uParam2 + (Var3.z - Var1.z));
+	*uParam2 = (*uParam2 + (Var3.f_2 - Var1.f_2));
 }
 
 int func_690(int iParam0, var uParam1, var uParam2)
@@ -97163,9 +97163,9 @@ bool func_691(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_692(int iParam0)
@@ -97255,9 +97255,9 @@ Vector3 func_695(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -97831,8 +97831,8 @@ void func_704(int iParam0, int iParam1, var uParam2)
 	func_690(iParam0, &Var0, &Var1);
 	func_690(iParam1, &Var2, &Var3);
 	Var4 = { *uParam2 - Var0 };
-	Var4 = { func_695(Var4, -Var1.z) };
-	Var4 = { func_695(Var4, Var3.z) };
+	Var4 = { func_695(Var4, -Var1.f_2) };
+	Var4 = { func_695(Var4, Var3.f_2) };
 	*uParam2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var2, 0f, Var4) };
 }
 
@@ -99267,23 +99267,23 @@ void func_731(int iParam0, int iParam1, var uParam2)
 	
 	func_690(iParam0, &uVar0, &Var1);
 	func_690(iParam1, &uVar2, &Var3);
-	while (Var3.z > 180f)
+	while (Var3.f_2 > 180f)
 	{
-		Var3.z = (Var3.z - 360f);
+		Var3.f_2 = (Var3.f_2 - 360f);
 	}
-	while (Var3.z < -180f)
+	while (Var3.f_2 < -180f)
 	{
-		Var3.z = (Var3.z + 360f);
+		Var3.f_2 = (Var3.f_2 + 360f);
 	}
-	while (Var1.z > 180f)
+	while (Var1.f_2 > 180f)
 	{
-		Var1.z = (Var1.z - 360f);
+		Var1.f_2 = (Var1.f_2 - 360f);
 	}
-	while (Var1.z < -180f)
+	while (Var1.f_2 < -180f)
 	{
-		Var1.z = (Var1.z + 360f);
+		Var1.f_2 = (Var1.f_2 + 360f);
 	}
-	uParam2->f_2 = (uParam2->f_2 + (Var3.z - Var1.z));
+	uParam2->f_2 = (uParam2->f_2 + (Var3.f_2 - Var1.f_2));
 	while (uParam2->f_2 > 180f)
 	{
 		uParam2->f_2 = (uParam2->f_2 - 360f);
@@ -106137,7 +106137,7 @@ int func_921(int iParam0, struct<3> Param1, float fParam2, bool bParam3, int iPa
 			bVar0 = MISC::GET_GROUND_Z_FOR_3D_COORD(Param1, &fVar1, 0, 0);
 			if (bVar0)
 			{
-				Param1.z = fVar1;
+				Param1.f_2 = fVar1;
 			}
 		}
 		ENTITY::SET_ENTITY_COORDS(iParam0, Param1, 1, 0, 0, iParam4);
@@ -108661,7 +108661,7 @@ void func_970(var uParam0)
 					}
 					PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(uParam0->f_42, 1);
 					TASK::TASK_LOOK_AT_ENTITY(uParam0->f_42, PLAYER::PLAYER_PED_ID(), -1, 2048, 2);
-					TASK::TASK_PLAY_ANIM_ADVANCED(uParam0->f_42, "amb@prop_human_seat_chair@male@generic@react_cowering", "idle_front", Var2.x, Var2.y, (Var2.z - fVar3), 0f, 0f, ENTITY::GET_ENTITY_HEADING(uParam0->f_42), 4f, -2f, -1, 1, 0, 2, 0);
+					TASK::TASK_PLAY_ANIM_ADVANCED(uParam0->f_42, "amb@prop_human_seat_chair@male@generic@react_cowering", "idle_front", Var2.x, Var2.f_1, (Var2.f_2 - fVar3), 0f, 0f, ENTITY::GET_ENTITY_HEADING(uParam0->f_42), 4f, -2f, -1, 1, 0, 2, 0);
 					PED::SET_PED_KEEP_TASK(uParam0->f_42, 1);
 					ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&(uParam0->f_42));
 				}
@@ -110113,7 +110113,7 @@ void func_1016(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -110133,19 +110133,19 @@ void func_1017(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_6(Var0.y, 1, 1))
+		if (func_6(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_1018(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{

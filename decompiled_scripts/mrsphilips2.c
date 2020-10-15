@@ -4562,9 +4562,9 @@ bool func_22(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_23(int iParam0, var uParam1, float fParam2)
@@ -12919,15 +12919,15 @@ void func_109(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_90(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_90(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -13885,7 +13885,7 @@ void func_112(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -13894,19 +13894,19 @@ void func_112(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_113(Var2.z)] = Var2.x;
+						(*uParam0)[func_113(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_113(Var2.z)] = func_90(iParam1, Var2.x, func_113(Var2.z), iVar0);
+						(*uParam0)[func_113(Var2.f_2)] = func_90(iParam1, Var2.x, func_113(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_113(Var2.z)] = Var2.y;
+					(*uParam0)[func_113(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -53088,7 +53088,7 @@ int func_389(float fParam0)
 	struct<3> Var0;
 	
 	Var0 = { func_390(PLAYER::PLAYER_ID()) };
-	if (Var0.z < fParam0)
+	if (Var0.f_2 < fParam0)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
@@ -54039,9 +54039,9 @@ int func_413(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -54050,7 +54050,7 @@ int func_413(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -120160,10 +120160,10 @@ int func_617(var uParam0, int iParam1)
 								if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var12, &fVar13, 0, 0))
 								{
 									GRAPHICS::DRAW_DEBUG_SPHERE(Var12, 0.5f, 255, 0, 255, 255);
-									Var12.z = fVar13;
+									Var12.f_2 = fVar13;
 									Var14 = { uParam0->f_4 - Var12 };
 									uParam0->f_4 = { Var12 };
-									uParam0->f_7 = MISC::GET_HEADING_FROM_VECTOR_2D(Var14.x, Var14.y);
+									uParam0->f_7 = MISC::GET_HEADING_FROM_VECTOR_2D(Var14.x, Var14.f_1);
 									iVar10 = 99;
 								}
 							}
@@ -120203,7 +120203,7 @@ Vector3 func_618(struct<3> Param0, float fParam1, float fParam2)
 	Var0 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), 0f };
 	fVar1 = (fParam2 / 2f);
 	Var0 = { func_619(Var0, MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, fParam1)) };
-	Var0.z = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar1, fVar1);
+	Var0.f_2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar1, fVar1);
 	return Param0 + Var0;
 }
 
@@ -127017,14 +127017,14 @@ int func_658(struct<3> Param0, var uParam1, var uParam2, var uParam3)
 		Var1 = { -394.2681f, -1909.834f, 48.946f };
 		fVar2 = 122.5f;
 		Var3 = { Var0 * Vector(1f, 1f, 1f) + Var1 * Vector(1f, 1f, 1f) / Vector(2f, 2f, 2f) };
-		if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Var0, Var3.x, Var3.y, Var1.z, fVar2, 0, 1, 0))
+		if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Var0, Var3.x, Var3.f_1, Var1.f_2, fVar2, 0, 1, 0))
 		{
 			*uParam1 = { -231.1906f, -1995.793f, 28.946f };
 			*uParam2 = 256.7039f;
 			*uParam3 = 6;
 			return 1;
 		}
-		if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Var3.x, Var3.y, Var0.z, Var1, fVar2, 0, 1, 0))
+		if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Var3.x, Var3.f_1, Var0.f_2, Var1, fVar2, 0, 1, 0))
 		{
 			*uParam1 = { -342.98f, -1879.652f, 28.9463f };
 			*uParam2 = 353.8719f;
@@ -129367,28 +129367,28 @@ int func_668(int iParam0, var uParam1, char* sParam2)
 		
 		case 306:
 			Var4 = { -7.4998f, 7.4995f, -0.5258f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 307:
 			Var5 = { 10.6345f, 0.7246f, 1.2508f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 308:
 			Var6 = { -3.4271f, -13.6787f, -1.4107f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 309:
 			Var7 = { -19.6582f, 7.896f, 0.1334f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
@@ -132515,7 +132515,7 @@ void func_715(struct<6> Param0, int iParam1, int iParam2, int iParam3, int iPara
 					{
 						if (HUD::IS_HUD_COMPONENT_ACTIVE(15))
 						{
-							HUD::SET_HUD_COMPONENT_POSITION(15, Local_22.x, (Local_22.y + fLocal_23));
+							HUD::SET_HUD_COMPONENT_POSITION(15, Local_22.x, (Local_22.f_1 + fLocal_23));
 							Global_76881 = 1;
 						}
 					}

@@ -5023,15 +5023,15 @@ void func_54(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_51(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_51(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -5989,7 +5989,7 @@ void func_57(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -5998,19 +5998,19 @@ void func_57(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_58(Var2.z)] = Var2.x;
+						(*uParam0)[func_58(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_58(Var2.z)] = func_51(iParam1, Var2.x, func_58(Var2.z), iVar0);
+						(*uParam0)[func_58(Var2.f_2)] = func_51(iParam1, Var2.x, func_58(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_58(Var2.z)] = Var2.y;
+					(*uParam0)[func_58(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -105789,9 +105789,9 @@ bool func_466(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_467(int iParam0, int iParam1)
@@ -106965,7 +106965,7 @@ int func_504(int iParam0, int iParam1, var uParam2, char* sParam3, var uParam4, 
 		}
 		if (func_513(uVar4, 4))
 		{
-			if (MISC::ABSF((Var1.z - Var2.z)) > 2f)
+			if (MISC::ABSF((Var1.f_2 - Var2.f_2)) > 2f)
 			{
 				return 0;
 			}
@@ -108851,7 +108851,7 @@ int func_518(int iParam0, int iParam1, var uParam2, char* sParam3, var uParam4, 
 	}
 	if (iParam1 == 6 || iParam1 == 31)
 	{
-		if (MISC::ABSF((Var1.z - Var0.z)) > 2f)
+		if (MISC::ABSF((Var1.f_2 - Var0.f_2)) > 2f)
 		{
 			return 0;
 		}
@@ -116856,8 +116856,8 @@ Vector3 func_605(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -117801,12 +117801,12 @@ int func_614(int iParam0, struct<3> Param1, struct<3> Param2, float fParam3, int
 	struct<3> Var1;
 	
 	Var0.x = (Param1.x - (SYSTEM::COS(fParam3) * Param2.x));
-	Var0.y = (Param1.y - (SYSTEM::SIN(fParam3) * Param2.x));
-	Var0.z = (Param1.z - Param2.z);
+	Var0.f_1 = (Param1.f_1 - (SYSTEM::SIN(fParam3) * Param2.x));
+	Var0.f_2 = (Param1.f_2 - Param2.f_2);
 	Var1.x = (Param1.x + (SYSTEM::COS(fParam3) * Param2.x));
-	Var1.y = (Param1.y + (SYSTEM::SIN(fParam3) * Param2.x));
-	Var1.z = (Param1.z + Param2.z);
-	if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(iParam0, Var0, Var1, (Param2.y * 2f), iParam4, iParam5, iParam6))
+	Var1.f_1 = (Param1.f_1 + (SYSTEM::SIN(fParam3) * Param2.x));
+	Var1.f_2 = (Param1.f_2 + Param2.f_2);
+	if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(iParam0, Var0, Var1, (Param2.f_1 * 2f), iParam4, iParam5, iParam6))
 	{
 		return 1;
 	}
@@ -124237,7 +124237,7 @@ int func_687(int iParam0, int iParam1, var uParam2, int iParam3, int iParam4, va
 						if (!ENTITY::IS_ENTITY_ON_SCREEN(*uParam2))
 						{
 							ENTITY::SET_ENTITY_COORDS(*uParam2, Var20, 1, 0, 0, 1);
-							ENTITY::SET_ENTITY_HEADING(*uParam2, MISC::GET_HEADING_FROM_VECTOR_2D((Var21.x - Var20.x), (Var21.y - Var20.y)));
+							ENTITY::SET_ENTITY_HEADING(*uParam2, MISC::GET_HEADING_FROM_VECTOR_2D((Var21.x - Var20.x), (Var21.f_1 - Var20.f_1)));
 						}
 					}
 					if (MISC::IS_STRING_NULL_OR_EMPTY(&sVar22))

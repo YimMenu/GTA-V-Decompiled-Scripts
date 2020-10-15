@@ -25806,15 +25806,15 @@ void func_80(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_81(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_81(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -27135,7 +27135,7 @@ void func_86(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -27144,19 +27144,19 @@ void func_86(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_87(Var2.z)] = Var2.x;
+						(*uParam0)[func_87(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_87(Var2.z)] = func_81(iParam1, Var2.x, func_87(Var2.z), iVar0);
+						(*uParam0)[func_87(Var2.f_2)] = func_81(iParam1, Var2.x, func_87(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_87(Var2.z)] = Var2.y;
+					(*uParam0)[func_87(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -102043,7 +102043,7 @@ int func_439(var uParam0, struct<3> Param1, int iParam2)
 	Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0->f_12, 1) };
 	if (!ENTITY::DOES_ENTITY_EXIST(uParam0->f_11))
 	{
-		Var0.z = (Var0.z - 0.4f);
+		Var0.f_2 = (Var0.f_2 - 0.4f);
 	}
 	fVar1 = SYSTEM::VDIST2(Var0, Param1);
 	if (fVar1 <= 0.005625f)
@@ -102185,13 +102185,13 @@ int func_442(struct<3> Param0, var uParam1)
 	int iVar1;
 	int iVar2;
 	
-	Param0.z = 0f;
+	Param0.f_2 = 0f;
 	iVar1 = 0;
 	while (iVar1 <= (20 - 1))
 	{
 		iVar2 = iVar1;
 		Var0 = { *(uParam1[iVar2 /*4*/]) };
-		Var0.z = 0f;
+		Var0.f_2 = 0f;
 		if (SYSTEM::VDIST2(Param0, Var0) <= 1.5f)
 		{
 			return iVar2;
@@ -102307,9 +102307,9 @@ int func_446(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -102318,7 +102318,7 @@ int func_446(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -104993,7 +104993,7 @@ void func_543(int iParam0, struct<3> Param1, float fParam2)
 		if (WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &uVar0, 1))
 		{
 			iVar1 = WEAPON::GET_CURRENT_PED_WEAPON_ENTITY_INDEX(iParam0, 1);
-			Var2 = { (Param1.x + MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam2, fParam2)), (Param1.y + MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam2, fParam2)), (Param1.z + MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam2, fParam2)) };
+			Var2 = { (Param1.x + MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam2, fParam2)), (Param1.f_1 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam2, fParam2)), (Param1.f_2 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam2, fParam2)) };
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(iVar1, 1), Var2, 1, 1, uVar0, iParam0, 1, 1, -1082130432);
 		}
 	}
@@ -119749,7 +119749,7 @@ void func_845(char[24] cParam0, int iParam1, int iParam2, int iParam3, int iPara
 					{
 						if (HUD::IS_HUD_COMPONENT_ACTIVE(15))
 						{
-							HUD::SET_HUD_COMPONENT_POSITION(15, Local_29.x, (Local_29.y + fLocal_30));
+							HUD::SET_HUD_COMPONENT_POSITION(15, Local_29.x, (Local_29.f_1 + fLocal_30));
 							Global_76881 = 1;
 						}
 					}
@@ -121850,7 +121850,7 @@ int func_890(var uParam0, struct<3> Param1, bool bParam2, float fParam3)
 
 int func_891(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

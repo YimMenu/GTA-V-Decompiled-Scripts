@@ -5699,10 +5699,10 @@ Vector3 func_196(int iParam0, struct<3> Param1)
 {
 	var uVar0;
 	
-	Param1.z = (Param1.z + 0.15f);
+	Param1.f_2 = (Param1.f_2 + 0.15f);
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(Param1, &uVar0, 0, 0))
 	{
-		Param1.z = uVar0;
+		Param1.f_2 = uVar0;
 	}
 	if (func_197(iParam0))
 	{
@@ -6153,7 +6153,7 @@ int func_210(var uParam0, struct<3> Param1, bool bParam2, float fParam3)
 
 int func_211(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -7989,7 +7989,7 @@ int func_248(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	if (bParam3)
 	{
-		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.y - IntToFloat(uParam2->f_6)), (Var0.z - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.y + IntToFloat(uParam2->f_6)), (Var0.z + IntToFloat(uParam2->f_6)), 0))
+		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.f_1 - IntToFloat(uParam2->f_6)), (Var0.f_2 - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.f_1 + IntToFloat(uParam2->f_6)), (Var0.f_2 + IntToFloat(uParam2->f_6)), 0))
 		{
 			return 1;
 		}
@@ -8144,7 +8144,7 @@ int func_254(int iParam0, int iParam1)
 	}
 	if (iParam1 && func_267(uLocal_300, 2))
 	{
-		fVar3 = MISC::ABSF((Var0.z - Var1.z));
+		fVar3 = MISC::ABSF((Var0.f_2 - Var1.f_2));
 		if (fVar3 > 8f)
 		{
 			return 1;

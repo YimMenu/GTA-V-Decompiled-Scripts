@@ -497,9 +497,9 @@ bool func_16(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 Vector3 func_17(int iParam0, int iParam1)
@@ -3430,7 +3430,7 @@ void func_101(int iParam0, struct<3> Param1)
 	{
 		return;
 	}
-	if ((Param1.x == Global_31146[iVar0 /*23*/][0 /*3*/] && Param1.y == Global_31146[iVar0 /*23*/][0 /*3*/].f_1) && Param1.z == Global_31146[iVar0 /*23*/][0 /*3*/].f_2)
+	if ((Param1.x == Global_31146[iVar0 /*23*/][0 /*3*/] && Param1.f_1 == Global_31146[iVar0 /*23*/][0 /*3*/].f_1) && Param1.f_2 == Global_31146[iVar0 /*23*/][0 /*3*/].f_2)
 	{
 		return;
 	}

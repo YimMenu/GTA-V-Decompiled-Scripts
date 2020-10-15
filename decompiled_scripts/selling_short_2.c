@@ -123,7 +123,7 @@ void __EntryFunction__()
 
 int func_1()
 {
-	CLOCK::SET_CLOCK_TIME(Local_21.x, Local_21.y, Local_21.z);
+	CLOCK::SET_CLOCK_TIME(Local_21.x, Local_21.f_1, Local_21.f_2);
 	MISC::SET_WIND(-1f);
 	switch (iLocal_59)
 	{
@@ -476,8 +476,8 @@ void func_16(bool bParam0)
 	SYSTEM::WAIT(2000);
 	iLocal_59 = 0;
 	Local_21.x = 12;
-	Local_21.y = 0;
-	Local_21.z = 0;
+	Local_21.f_1 = 0;
+	Local_21.f_2 = 0;
 	iVar0 = 0;
 	while (iVar0 <= (16 - 1))
 	{

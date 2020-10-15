@@ -4791,9 +4791,9 @@ int func_95(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -4802,7 +4802,7 @@ int func_95(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -5368,7 +5368,7 @@ int func_105(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 								if (ENTITY::IS_ENTITY_IN_WATER(iVar10) && !VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(iVar10))
 								{
 									Var19 = { ENTITY::GET_ENTITY_COORDS(iVar10, 1) };
-									if (Var19.z < -1f)
+									if (Var19.f_2 < -1f)
 									{
 										TASK::TASK_LEAVE_VEHICLE(uParam0->f_17[iVar0], iVar10, 64);
 									}
@@ -9609,7 +9609,7 @@ void func_179(var uParam0, int iParam1)
 		{
 			if (func_181(iVar0, &Var1, &uVar2))
 			{
-				Var1.z = (Var1.z + 1f);
+				Var1.f_2 = (Var1.f_2 + 1f);
 				*uParam0 = { Var1 };
 				uParam0->f_3 = uVar2;
 			}
@@ -9955,9 +9955,9 @@ bool func_182(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_183(var uParam0)
@@ -10601,9 +10601,9 @@ Vector3 func_194(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -12688,7 +12688,7 @@ void func_227(int iParam0, int iParam1, struct<3> Param2, int iParam3, char* sPa
 
 int func_228(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -16876,15 +16876,15 @@ void func_269(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_266(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_266(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -17842,7 +17842,7 @@ void func_272(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -17851,19 +17851,19 @@ void func_272(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_273(Var2.z)] = Var2.x;
+						(*uParam0)[func_273(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_273(Var2.z)] = func_266(iParam1, Var2.x, func_273(Var2.f_2), iVar0);
+						(*uParam0)[func_273(Var2.f_2)] = func_266(iParam1, Var2.x, func_273(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_273(Var2.z)] = Var2.y;
+					(*uParam0)[func_273(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -115986,9 +115986,9 @@ void func_645()
 			{
 				Local_515 = { ENTITY::GET_ENTITY_COORDS(Local_301[10 /*19*/], 1) };
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Local_301[10 /*19*/], 1, 1);
-				if (Local_515.z < 43f)
+				if (Local_515.f_2 < 43f)
 				{
-					if (ENTITY::HAS_ENTITY_COLLIDED_WITH_ANYTHING(Local_301[10 /*19*/]) || Local_515.z < 41.3f)
+					if (ENTITY::HAS_ENTITY_COLLIDED_WITH_ANYTHING(Local_301[10 /*19*/]) || Local_515.f_2 < 41.3f)
 					{
 						VEHICLE::SET_HELI_TAIL_EXPLODE_THROW_DASHBOARD(Local_301[10 /*19*/], 0);
 						uLocal_314[1] = GRAPHICS::START_PARTICLE_FX_LOOPED_AT_COORD("scr_trev2_heli_wreck", ENTITY::GET_ENTITY_COORDS(Local_301[10 /*19*/], 0), 0f, 0f, 0f, 1065353216, 0, 0, 0, 0);
@@ -128236,7 +128236,7 @@ void func_738()
 					{
 						iVar1 = ENTITY::GET_ENTITY_MODEL(iVar0);
 						MISC::GET_MODEL_DIMENSIONS(iVar1, &Var2, &Var3);
-						fVar4 = (-Var2.z + Var3.z);
+						fVar4 = (-Var2.f_2 + Var3.f_2);
 						if (fVar4 < 2.6f && SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(iVar0, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) < 50f)
 						{
 							ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iVar0, 1, 1);
@@ -134710,8 +134710,8 @@ Vector3 func_773(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -140934,7 +140934,7 @@ float func_870(int iParam0, var uParam1)
 	{
 		*uParam1 = 0f;
 	}
-	fLocal_533 = (Var0.z - *uParam1);
+	fLocal_533 = (Var0.f_2 - *uParam1);
 	if (fLocal_533 < 0f)
 	{
 		fLocal_533 = (fLocal_533 * -1f);

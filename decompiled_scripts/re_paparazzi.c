@@ -2314,7 +2314,7 @@ float func_40(struct<3> Param0, struct<3> Param1)
 	
 	Param0 = { func_41(Param0) };
 	Param1 = { func_41(Param1) };
-	fVar0 = (MISC::ATAN2(Param1.y, Param1.x) - MISC::ATAN2(Param0.y, Param0.x));
+	fVar0 = (MISC::ATAN2(Param1.f_1, Param1.x) - MISC::ATAN2(Param0.f_1, Param0.x));
 	if (fVar0 > 180f)
 	{
 		fVar0 = (fVar0 - 360f);
@@ -2340,8 +2340,8 @@ Vector3 func_41(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -2512,7 +2512,7 @@ void func_46(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, va
 
 int func_47(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2568,20 +2568,20 @@ int func_49(int iParam0, int iParam1, int iParam2, struct<3> Param3, struct<3> P
 	{
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(iParam0), &Var3, &Var4);
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(iParam1), &Var5, &uVar6);
-		fVar7 = MISC::ABSF((Var4.z - Var3.z));
+		fVar7 = MISC::ABSF((Var4.f_2 - Var3.f_2));
 		fVar8 = MISC::ABSF((Var4.x - Var3.x));
-		fVar9 = MISC::ABSF((Var4.y - Var3.y));
+		fVar9 = MISC::ABSF((Var4.f_1 - Var3.f_1));
 		if (fVar8 > fVar7)
 		{
 			fVar10 = (fVar8 / 2f);
-			fVar11 = (fVar10 - MISC::ABSF(Var3.z));
+			fVar11 = (fVar10 - MISC::ABSF(Var3.f_2));
 		}
 		else
 		{
 			fVar10 = (fVar9 / 2f);
 			fVar11 = (fVar10 - MISC::ABSF(Var3.x));
 		}
-		Var12.z = (Var12.z + (Var5.z - Var3.z));
+		Var12.f_2 = (Var12.f_2 + (Var5.f_2 - Var3.f_2));
 		ENTITY::SET_ENTITY_COORDS(iParam2, Param3, 1, 0, 0, 1);
 		ENTITY::SET_ENTITY_ROTATION(iParam2, Param4, 2, 1);
 		Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam2, Vector((fVar11 * 1.25f), ((fVar9 / 2f) - (fVar10 * 0.75f)), 0f) + Var12) };
@@ -2723,7 +2723,7 @@ void func_53(struct<3> Param0, int iParam1, int iParam2)
 	int iVar1;
 	
 	Var0 = { func_41(ENTITY::GET_ENTITY_COORDS(iParam2, 1) - Param0) };
-	iVar1 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.y);
+	iVar1 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.f_1);
 	Local_109[iParam1 /*18*/].f_3 = { Param0 };
 	TASK::CLEAR_PED_TASKS(Local_109[iParam1 /*18*/]);
 	if (SYSTEM::VDIST(Param0, Local_109[iParam1 /*18*/].f_6) < 2f)
@@ -2815,8 +2815,8 @@ void func_55()
 				Var1 = { HUD::GET_BLIP_COORDS(Local_108[iVar0 /*18*/].f_1) };
 				Var2 = { Local_108[iVar0 /*18*/].f_8 };
 				Var1.x = (Var1.x + ((Var2.x - Var1.x) / 10f));
-				Var1.y = (Var1.y + ((Var2.y - Var1.y) / 10f));
-				Var1.z = (Var1.z + ((Var2.z - Var1.z) / 10f));
+				Var1.f_1 = (Var1.f_1 + ((Var2.f_1 - Var1.f_1) / 10f));
+				Var1.f_2 = (Var1.f_2 + ((Var2.f_2 - Var1.f_2) / 10f));
 				HUD::SET_BLIP_COORDS(Local_108[iVar0 /*18*/].f_1, Var1);
 				if (func_58(Local_108[iVar0 /*18*/], 1, 0, 0, 0, 0, 1, 0, 1))
 				{
@@ -3406,7 +3406,7 @@ int func_76(struct<3> Param0, int iParam1)
 
 float func_77(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 void func_78()
@@ -3622,7 +3622,7 @@ void func_86(int iParam0, int iParam1)
 		}
 		if (func_94(iParam0, iParam1) != 322)
 		{
-			func_88(func_94(iParam0, iParam1), Local_43.x, Local_43.y);
+			func_88(func_94(iParam0, iParam1), Local_43.x, Local_43.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -11320,7 +11320,7 @@ int func_239(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_43.z) > 50f)
+			if ((Var1.f_2 - Local_43.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -11441,9 +11441,9 @@ bool func_240(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_241(int iParam0)

@@ -43,7 +43,7 @@ void __EntryFunction__()
 	while (true)
 	{
 		SYSTEM::WAIT(0);
-		if (func_1(ScriptParam_21.x, ScriptParam_21.y, ScriptParam_21.z))
+		if (func_1(ScriptParam_21.x, ScriptParam_21.f_1, ScriptParam_21.f_2))
 		{
 			SCRIPT::TERMINATE_THIS_THREAD();
 		}

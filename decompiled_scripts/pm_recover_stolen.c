@@ -2458,9 +2458,9 @@ bool func_65(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_66(var uParam0, bool bParam1, bool bParam2, bool bParam3)
@@ -3028,7 +3028,7 @@ void func_88(var uParam0)
 	int iVar2;
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
-	Var0.z = 0f;
+	Var0.f_2 = 0f;
 	iVar1 = 0;
 	iVar2 = 0;
 	MISC::SET_BIT(&iVar1, 3);
@@ -3227,7 +3227,7 @@ int func_89(int iParam0, struct<3> Param1)
 
 float func_90(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_91(struct<3> Param0)
@@ -3244,8 +3244,8 @@ Vector3 func_91(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }

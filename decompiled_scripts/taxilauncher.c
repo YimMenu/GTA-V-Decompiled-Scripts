@@ -1527,11 +1527,11 @@ int func_36()
 		Var2 = { Var0 };
 		Var3 = { Var2 };
 		Var2.x = (Var2.x - fVar1);
-		Var2.y = (Var2.y - fVar1);
-		Var2.z = (Var2.z - fVar1);
+		Var2.f_1 = (Var2.f_1 - fVar1);
+		Var2.f_2 = (Var2.f_2 - fVar1);
 		Var3.x = (Var3.x + fVar1);
-		Var3.y = (Var3.y + fVar1);
-		Var3.z = (Var3.z + fVar1);
+		Var3.f_1 = (Var3.f_1 + fVar1);
+		Var3.f_2 = (Var3.f_2 + fVar1);
 		if (MISC::IS_PROJECTILE_IN_AREA(Var2, Var3, 1))
 		{
 			return 1;
@@ -1910,7 +1910,7 @@ int func_51(int iParam0)
 		}
 		Var3 = { Var1 - Var0 };
 		Var4 = { Var2 - Var0 };
-		if (MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var3.x, Var3.y, Var4.x, Var4.y) < 90f)
+		if (MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var3.x, Var3.f_1, Var4.x, Var4.f_1) < 90f)
 		{
 			return 1;
 		}
@@ -2655,7 +2655,7 @@ int func_68(struct<3> Param0, struct<3> Param1, var uParam2, var uParam3, var uP
 		if (PATHFIND::_GET_POINT_ON_ROAD_SIDE(Var0, 0, &Var1) && PATHFIND::_GET_POINT_ON_ROAD_SIDE(Var0, 1, &Var2))
 		{
 			Var5 = { Var1 - Var0 };
-			Var6 = { -Var5.y, Var5.x, 0f };
+			Var6 = { -Var5.f_1, Var5.x, 0f };
 			Var7 = { Param0 - Param1 };
 			fVar8 = func_72(Var6, Var7);
 			if (fVar8 < 0f)
@@ -2741,7 +2741,7 @@ int func_70(var uParam0, struct<3> Param1)
 
 int func_71(struct<3> Param0, struct<3> Param1)
 {
-	if ((Param0.z - Param1.z) > 0.45f || (Param0.z - Param1.z) < -0.45f)
+	if ((Param0.f_2 - Param1.f_2) > 0.45f || (Param0.f_2 - Param1.f_2) < -0.45f)
 	{
 		return 1;
 	}
@@ -2750,7 +2750,7 @@ int func_71(struct<3> Param0, struct<3> Param1)
 
 float func_72(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 int func_73(struct<3> Param0)
@@ -2838,7 +2838,7 @@ int func_76(struct<3> Param0, var uParam1, var uParam2, var uParam3, int iParam4
 		{
 			while (!bVar8 && *uParam3 < iVar6)
 			{
-				if (Param0.z == 1f)
+				if (Param0.f_2 == 1f)
 				{
 					fVar0 = 0f;
 				}
@@ -2847,7 +2847,7 @@ int func_76(struct<3> Param0, var uParam1, var uParam2, var uParam3, int iParam4
 					uVar5 = PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE_ID(*uParam1, 1, iVar9, 1077936128, 0);
 					if (PATHFIND::IS_VEHICLE_NODE_ID_VALID(uVar5))
 					{
-						fVar2 = (Param0.z - uParam1->f_2);
+						fVar2 = (Param0.f_2 - uParam1->f_2);
 						if (fVar2 < 0f)
 						{
 							fVar2 = (fVar2 * -1f);
@@ -2890,7 +2890,7 @@ var func_77(struct<3> Param0, struct<3> Param1)
 	struct<3> Var0;
 	
 	Var0 = { Param0 - Param1 };
-	Var0.z = 0f;
+	Var0.f_2 = 0f;
 	return SYSTEM::VMAG(Var0);
 }
 
@@ -2899,12 +2899,12 @@ int func_78(struct<3> Param0, struct<3> Param1)
 	float fVar0;
 	float fVar1;
 	
-	fVar1 = (Param1.z - Param0.z);
+	fVar1 = (Param1.f_2 - Param0.f_2);
 	if (fVar1 < 0f)
 	{
 		fVar1 = (fVar1 * -1f);
 	}
-	if (Param0.z <= 1f)
+	if (Param0.f_2 <= 1f)
 	{
 		func_56("\nIS_COORD_ON_SAME_LEVEL_AS_COORD - vCoord1.z <= 1, probably a waypoint blip - RETURN TRUE\n");
 		return 1;
@@ -2991,9 +2991,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 28f;
+		Var1.f_2 = 28f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -209.3372f, -2011.099f, 26.62037f, -257.2225f, -2076.963f, 36.62037f, 30f, 0, 1))
 	{
@@ -3002,9 +3002,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 159f;
+		Var1.f_2 = 159f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -804.05f, 4216.412f, 204.4872f, -509.0679f, 4135.19f, 123.2502f, 250f, 0, 1))
 	{
@@ -3013,9 +3013,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 180f;
+		Var1.f_2 = 180f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -2203.167f, 183.3549f, 167.4022f, -2311.587f, 434.3828f, 195.4669f, 138.5f, 0, 1))
 	{
@@ -3024,9 +3024,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 10f;
+		Var1.f_2 = 10f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -2041.478f, -553.2159f, -0.089962f, -1787.08f, -768.0886f, 37.99918f, 220f, 0, 1))
 	{
@@ -3086,9 +3086,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 330f;
+		Var1.f_2 = 330f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -446.12f, 1057.452f, 318.6169f, -405.8336f, 1194.486f, 337.0966f, 106.25f, 0, 1))
 	{
@@ -3097,9 +3097,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 20f;
+		Var1.f_2 = 20f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -1362.091f, -29.26777f, -100f, -1377.953f, 152.2389f, 100f, 50f, 0, 1))
 	{
@@ -3387,9 +3387,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 20f;
+		Var1.f_2 = 20f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 845.7216f, -990.7473f, 37.4696f, 846.3397f, -1066.88f, 16.96623f, 90f, 0, 1))
 	{
@@ -3439,9 +3439,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 20f;
+		Var1.f_2 = 20f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 767.3736f, -1077.429f, -10.78654f, 682.8284f, -1080.686f, 79.67303f, 60f, 0, 1))
 	{
@@ -3491,9 +3491,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 31f;
+		Var1.f_2 = 31f;
 	}
 	if (func_92(3, Var1))
 	{
@@ -3505,9 +3505,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 77.2f;
+		Var1.f_2 = 77.2f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1535.987f, -2041.497f, 68.21275f, 1529.357f, -2204.463f, 96.11195f, 105f, 0, 1))
 	{
@@ -3516,9 +3516,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 51.1739f;
+		Var1.f_2 = 51.1739f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1185.81f, -1768.367f, 28.31145f, 1369.068f, -1701.452f, 66.25389f, 70f, 1, 1))
 	{
@@ -3551,9 +3551,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 25f;
+		Var1.f_2 = 25f;
 	}
 	if (func_90(Var1, -1693.302f, -1109.13f, 17.89778f, 240f))
 	{
@@ -3565,9 +3565,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 10f;
+		Var1.f_2 = 10f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -1140.89f, -1573.135f, -6.566939f, -1067.084f, -1675.976f, 23.53153f, 52f, 0, 1))
 	{
@@ -3576,9 +3576,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 114f;
+		Var1.f_2 = 114f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1324.172f, 1110.748f, 99.65493f, 1523.097f, 1110.473f, 132.8859f, 170f, 0, 1))
 	{
@@ -3603,9 +3603,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 40f;
+		Var1.f_2 = 40f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1737.39f, 3287.795f, 35.13897f, 1724.345f, 3337.854f, 57.20038f, 40f, 0, 1))
 	{
@@ -3614,9 +3614,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 7f;
+		Var1.f_2 = 7f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -695.7981f, -1379.678f, 24.48124f, -777.3731f, -1491.13f, -3.594945f, 72f, 0, 1))
 	{
@@ -3625,9 +3625,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 325f;
+		Var1.f_2 = 325f;
 	}
 	if (SYSTEM::VDIST2(Var1, -75.59782f, -818.6082f, 325.1745f) < (58f * 58f))
 	{
@@ -3638,9 +3638,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 	if (!func_81())
 	{
 		Var1 = { Param0 };
-		if (Param0.z == 1f)
+		if (Param0.f_2 == 1f)
 		{
-			Var1.z = 36.1141f;
+			Var1.f_2 = 36.1141f;
 		}
 		if (func_92(7, Var1))
 		{
@@ -3653,9 +3653,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 12.7091f;
+		Var1.f_2 = 12.7091f;
 	}
 	if (func_92(2, Var1))
 	{
@@ -3744,17 +3744,17 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 	fVar12 = func_80(Param0, Var10);
 	Var1 = { Param0 };
 	bVar13 = false;
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 400f;
+		Var1.f_2 = 400f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -148.8777f, 4862.204f, 305.6442f, 454.6274f, 5573.104f, 804.097f, 250f, 0, 1))
 	{
 		bVar13 = true;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 200f;
+		Var1.f_2 = 200f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -482.8931f, 4990.255f, 155.1601f, 7.830751f, 5009.371f, 430.7604f, 250f, 0, 1))
 	{
@@ -3772,33 +3772,33 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	bVar13 = false;
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 700f;
+		Var1.f_2 = 700f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 441.3999f, 5579.99f, 802.5138f, 965.7776f, 5675.921f, 601.2646f, 250f, 0, 1))
 	{
 		bVar13 = true;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 300f;
+		Var1.f_2 = 300f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 954.1139f, 5641.051f, 646.5054f, 2140.375f, 5377.753f, 149.1221f, 250f, 0, 1))
 	{
 		bVar13 = true;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 100f;
+		Var1.f_2 = 100f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 2117.348f, 5377.259f, 173.3297f, 2439.934f, 5297.445f, 62.68662f, 100f, 0, 1))
 	{
 		bVar13 = true;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 65f;
+		Var1.f_2 = 65f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 2393.347f, 5321.58f, 107.0624f, 2523.946f, 5124.746f, 41.68384f, 70f, 0, 1))
 	{
@@ -3815,9 +3815,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 6f;
+		Var1.f_2 = 6f;
 	}
 	if (func_38(Var1, -99.68751f, -2448.891f, 5.01731f, 230f))
 	{
@@ -3837,9 +3837,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 			return 1;
 		}
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 28.4f;
+		Var1.f_2 = 28.4f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 412.279f, 6481.868f, 25.80821f, 468.9353f, 6442.752f, 45.60727f, 24f, 0, 1))
 	{
@@ -3847,9 +3847,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 219.4788f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 28.2065f;
+		Var1.f_2 = 28.2065f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 476.5394f, -1301.548f, 44.82458f, 499.5822f, -1339.025f, 26.31703f, 35f, 0, 1))
 	{
@@ -3857,9 +3857,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 181.3208f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 28.2065f;
+		Var1.f_2 = 28.2065f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 496.9816f, -1412.255f, 43.29391f, 497.269f, -1339.364f, 26.31648f, 40f, 0, 1))
 	{
@@ -3867,9 +3867,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 83.2905f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 73f;
+		Var1.f_2 = 73f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 951.1704f, -147.0047f, 71.54326f, 1005.245f, -98.44745f, 95.62679f, 70f, 0, 1))
 	{
@@ -3877,9 +3877,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 58.9938f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 52f;
+		Var1.f_2 = 52f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1137.022f, 89.06853f, 74.89022f, 1267.821f, 292.0106f, 102.9904f, 195f, 0, 1))
 	{
@@ -3893,9 +3893,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 145.5134f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 30.6f;
+		Var1.f_2 = 30.6f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 191.8731f, -723.553f, 40.23576f, 79.58656f, -687.6684f, 29.54734f, 85f, 0, 1))
 	{
@@ -3912,9 +3912,9 @@ int func_79(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 33.5f;
+		Var1.f_2 = 33.5f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -40f, -687.7f, 36.6f, -72.7f, -682f, 29.6f, 15f, 0, 1) || OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -45.3f, -687.8f, 29.3f, 5.9f, -688.7f, 36.8f, 55f, 0, 1))
 	{
@@ -4075,7 +4075,7 @@ bool func_90(struct<3> Param0, struct<3> Param1, float fParam2)
 	struct<3> Var0;
 	
 	Var0 = { Param1 - Param0 };
-	return ((Var0.x * Var0.x) + (Var0.y * Var0.y)) <= (fParam2 * fParam2);
+	return ((Var0.x * Var0.x) + (Var0.f_1 * Var0.f_1)) <= (fParam2 * fParam2);
 }
 
 int func_91(struct<3> Param0, int iParam1, int iParam2, bool bParam3)
@@ -4401,7 +4401,7 @@ Vector3 func_94(int iParam0)
 
 int func_95(struct<3> Param0, struct<3> Param1, struct<3> Param2)
 {
-	if (((((Param0.x > Param1.x && Param0.x < Param2.x) && Param0.y > Param1.y) && Param0.y < Param2.y) && Param0.z > Param1.z) && Param0.z < Param2.z)
+	if (((((Param0.x > Param1.x && Param0.x < Param2.x) && Param0.f_1 > Param1.f_1) && Param0.f_1 < Param2.f_1) && Param0.f_2 > Param1.f_2) && Param0.f_2 < Param2.f_2)
 	{
 		return 1;
 	}
@@ -4434,13 +4434,13 @@ void func_97(struct<2> Param0, var uParam1, struct<2> Param2, var uParam3, var u
 	}
 	if (Param2.f_1 <= Param0.f_1)
 	{
-		Var0.y = Param2.f_1;
-		Var1.y = Param0.f_1;
+		Var0.f_1 = Param2.f_1;
+		Var1.f_1 = Param0.f_1;
 	}
 	else
 	{
-		Var0.y = Param0.f_1;
-		Var1.y = Param2.f_1;
+		Var0.f_1 = Param0.f_1;
+		Var1.f_1 = Param2.f_1;
 	}
 	Var0 = { Var0 - Vector(IntToFloat(iParam6), IntToFloat(iParam6), IntToFloat(iParam6)) };
 	Var1 = { Var1 + Vector(IntToFloat(iParam6), IntToFloat(iParam6), IntToFloat(iParam6)) };
@@ -4462,9 +4462,9 @@ int func_98(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -4473,7 +4473,7 @@ int func_98(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -4652,7 +4652,7 @@ int func_101(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4)
 						Var10 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var1, fVar3, 0f, 1f, 0f) };
 						Var11 = { Var10 - Var1 };
 						Var12 = { Var0 - Var1 };
-						if (MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var11.x, Var11.y, Var12.x, Var12.y) > 60f)
+						if (MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var11.x, Var11.f_1, Var12.x, Var12.f_1) > 60f)
 						{
 							fVar3 = (fVar3 + 180f);
 							fVar3 = func_69(fVar3, 0f, 360f);
@@ -5230,11 +5230,11 @@ int func_107()
 		Var2 = { Var0 };
 		Var3 = { Var2 };
 		Var2.x = (Var2.x - fVar1);
-		Var2.y = (Var2.y - fVar1);
-		Var2.z = (Var2.z - fVar1);
+		Var2.f_1 = (Var2.f_1 - fVar1);
+		Var2.f_2 = (Var2.f_2 - fVar1);
 		Var3.x = (Var3.x + fVar1);
-		Var3.y = (Var3.y + fVar1);
-		Var3.z = (Var3.z + fVar1);
+		Var3.f_1 = (Var3.f_1 + fVar1);
+		Var3.f_2 = (Var3.f_2 + fVar1);
 		if (MISC::IS_PROJECTILE_IN_AREA(Var2, Var3, 1))
 		{
 			return 1;
@@ -5329,7 +5329,7 @@ int func_108()
 													fVar10 = (fVar10 * 0.5f);
 													fVar10 = (fVar10 + 0.5f);
 													fVar6 = (fVar6 * fVar10);
-													fVar10 = (Local_243.z - Var9.z);
+													fVar10 = (Local_243.f_2 - Var9.f_2);
 													if (fVar10 < 0f)
 													{
 														fVar10 = (fVar10 * -1f);
@@ -5338,7 +5338,7 @@ int func_108()
 													{
 														Var11 = { ENTITY::GET_ENTITY_FORWARD_VECTOR(PLAYER::PLAYER_PED_ID()) };
 														Var12 = { Var9 - Local_243 };
-														if (((Var11.x * Var12.x) + (Var11.y * Var12.y)) / SYSTEM::VDIST(Var12, 0f, 0f, 0f)) > SYSTEM::COS(120f)
+														if (((Var11.x * Var12.x) + (Var11.f_1 * Var12.f_1)) / SYSTEM::VDIST(Var12, 0f, 0f, 0f)) > SYSTEM::COS(120f)
 														{
 															if (CAM::IS_SPHERE_VISIBLE(Var9, 2f))
 															{

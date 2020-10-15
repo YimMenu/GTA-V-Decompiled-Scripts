@@ -258,8 +258,8 @@ void __EntryFunction__()
 			fLocal_57 = fLocal_57;
 			Local_75 = { Local_55 };
 			Local_76 = { ScriptParam_97.f_1[0 /*3*/] };
-			Local_75.z = 0f;
-			Local_76.z = 0f;
+			Local_75.f_2 = 0f;
+			Local_76.f_2 = 0f;
 			fLocal_74 = SYSTEM::VDIST2(Local_75, Local_76);
 			switch (iLocal_59)
 			{
@@ -281,7 +281,7 @@ void __EntryFunction__()
 							}
 							func_111(10);
 						}
-						if ((Local_55.z - ScriptParam_97.f_1[0 /*3*/].f_2) > 500f)
+						if ((Local_55.f_2 - ScriptParam_97.f_1[0 /*3*/].f_2) > 500f)
 						{
 						}
 					}
@@ -765,7 +765,7 @@ void func_4()
 	{
 		ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_84, 1, 1);
 	}
-	uLocal_86 = PED::ADD_SCENARIO_BLOCKING_AREA((Local_79.x - 3f), (Local_79.y - 3f), (Local_79.z - 3f), (Local_79.x + 3f), (Local_79.y + 3f), (Local_79.z + 3f), 0, 1, 1, 1);
+	uLocal_86 = PED::ADD_SCENARIO_BLOCKING_AREA((Local_79.x - 3f), (Local_79.f_1 - 3f), (Local_79.f_2 - 3f), (Local_79.x + 3f), (Local_79.f_1 + 3f), (Local_79.f_2 + 3f), 0, 1, 1, 1);
 	func_7();
 	func_5();
 }
@@ -4774,7 +4774,7 @@ void func_103()
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_83))
 		{
-			Var1.z = (Var1.z + 0.54f);
+			Var1.f_2 = (Var1.f_2 + 0.54f);
 			iLocal_83 = OBJECT::CREATE_OBJECT(joaat("p_cs_clipboard"), Var1, 1, 1, 0);
 			ENTITY::SET_ENTITY_ROTATION(iLocal_83, -90f, 0f, 90f, 2, 0);
 			PHYSICS::ACTIVATE_PHYSICS(iLocal_83);
@@ -4849,7 +4849,7 @@ void func_103()
 
 int func_104(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

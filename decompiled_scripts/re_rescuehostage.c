@@ -1276,7 +1276,7 @@ void func_32(int iParam0, int iParam1)
 		}
 		if (func_40(iParam0, iParam1) != 322)
 		{
-			func_34(func_40(iParam0, iParam1), Local_44.x, Local_44.y);
+			func_34(func_40(iParam0, iParam1), Local_44.x, Local_44.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -2842,13 +2842,13 @@ bool func_64()
 	if (bVar1)
 	{
 		Var2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - Local_46 };
-		fVar5 = MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.y);
+		fVar5 = MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.f_1);
 		if (func_65(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0), fVar5, 15f))
 		{
 			bVar0 = true;
 		}
 		Var2 = { Local_46 - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-		fVar5 = MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.y);
+		fVar5 = MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.f_1);
 		if (func_65(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0), fVar5, 15f))
 		{
 			bVar0 = true;
@@ -4862,7 +4862,7 @@ int func_112()
 		uLocal_61 = PED::ADD_SCENARIO_BLOCKING_AREA(Vector(31.64024f, 6405.058f, -98.41389f) - Vector(40f, 40f, 40f), Vector(31.64024f, 6405.058f, -98.41389f) + Vector(40f, 40f, 40f), 0, 1, 1, 1);
 		PED::SET_PED_CAN_BE_TARGETTED(iLocal_50, 0);
 		AUDIO::STOP_PED_SPEAKING(iLocal_50, 1);
-		Local_46.z = (Local_46.z + 1f);
+		Local_46.f_2 = (Local_46.f_2 + 1f);
 		Local_66 = { Local_46 };
 		Local_67 = { 0f, 0f, fLocal_47 };
 		iLocal_63 = PED::CREATE_SYNCHRONIZED_SCENE(Local_66, Local_67, 2);
@@ -5088,7 +5088,7 @@ int func_121(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_44.z) > 50f)
+			if ((Var1.f_2 - Local_44.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -5209,9 +5209,9 @@ bool func_122(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_123(int iParam0)

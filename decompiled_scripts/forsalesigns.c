@@ -1089,7 +1089,7 @@ int func_24(var uParam0)
 	struct<3> Var0;
 	
 	Var0 = { ENTITY::GET_ENTITY_ROTATION(uParam0, 0) };
-	if (((Var0.x > 30f || Var0.x < -30f) || Var0.y > 30f) || Var0.y < -30f)
+	if (((Var0.x > 30f || Var0.x < -30f) || Var0.f_1 > 30f) || Var0.f_1 < -30f)
 	{
 		return 1;
 	}

@@ -618,7 +618,7 @@ void __EntryFunction__()
 	}
 	bVar2 = true;
 	Local_496 = { ENTITY::GET_ENTITY_COORDS(iScriptParam_531, 1) };
-	Local_496.z = (Local_496.z + 1f);
+	Local_496.f_2 = (Local_496.f_2 + 1f);
 	if (CAM::GET_FOLLOW_PED_CAM_VIEW_MODE() != 4)
 	{
 		Local_501 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iScriptParam_531, Local_499) };
@@ -629,7 +629,7 @@ void __EntryFunction__()
 	}
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(Local_501, &fVar3, 0, 0))
 	{
-		Local_501.z = (fVar3 + 1f);
+		Local_501.f_2 = (fVar3 + 1f);
 	}
 	SYSTEM::SETTIMERA(0);
 	AUDIO::HINT_SCRIPT_AUDIO_BANK("ATM", 0, -1);
@@ -5137,7 +5137,7 @@ void func_97(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -5157,19 +5157,19 @@ void func_98(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_100(Var0.y, 1, 1))
+		if (func_100(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_99(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
@@ -5244,11 +5244,11 @@ bool func_101(int iParam0)
 
 int func_102(struct<3> Param0)
 {
-	if ((Param0.x == 129.6975f && Param0.y == -1290.842f) && Param0.z == 28.27142f)
+	if ((Param0.x == 129.6975f && Param0.f_1 == -1290.842f) && Param0.f_2 == 28.27142f)
 	{
 		return 1;
 	}
-	if ((Param0.x == 130.5791f && Param0.y == -1292.369f) && Param0.z == 28.27142f)
+	if ((Param0.x == 130.5791f && Param0.f_1 == -1292.369f) && Param0.f_2 == 28.27142f)
 	{
 		return 1;
 	}

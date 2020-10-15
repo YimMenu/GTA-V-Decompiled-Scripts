@@ -1969,12 +1969,12 @@ void func_63(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uParam
 		if (!bParam6)
 		{
 			Var0 = { Param3 };
-			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.x, Var0.y, (Var0.z + 1f)))
+			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.x, Var0.f_1, (Var0.f_2 + 1f)))
 			{
 			}
 			else
 			{
-				Var0.z = (Var0.z + 4f);
+				Var0.f_2 = (Var0.f_2 + 4f);
 			}
 		}
 	}
@@ -2007,22 +2007,22 @@ void func_63(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uParam
 			}
 			if ((func_115(PLAYER::PLAYER_ID()) || func_113(PLAYER::PLAYER_ID())) && func_112())
 			{
-				Var0.z = (Var0.z + 1.5f);
+				Var0.f_2 = (Var0.f_2 + 1.5f);
 			}
 			else if (INTERIOR::IS_VALID_INTERIOR(INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID())))
 			{
 				if (func_115(PLAYER::PLAYER_ID()))
 				{
-					Var0.z = (Var0.z + 0.4f);
+					Var0.f_2 = (Var0.f_2 + 0.4f);
 				}
 				else
 				{
-					Var0.z = (Var0.z + 1.5f);
+					Var0.f_2 = (Var0.f_2 + 1.5f);
 				}
 			}
 			else
 			{
-				Var0.z = (Var0.z + 4f);
+				Var0.f_2 = (Var0.f_2 + 4f);
 			}
 		}
 	}
@@ -2038,7 +2038,7 @@ void func_63(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uParam
 		{
 			Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
 			Var1 = { 0f, 0f, ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) };
-			Var0.z = (Var0.z + 0.4f);
+			Var0.f_2 = (Var0.f_2 + 0.4f);
 			fVar2 = CAM::GET_FINAL_RENDERED_CAM_FOV();
 		}
 		else
@@ -3688,9 +3688,9 @@ Vector3 func_93(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -4743,7 +4743,7 @@ var func_119()
 
 int func_120(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -7289,7 +7289,7 @@ bool func_235(int iParam0)
 		{
 			SYSTEM::WAIT(0);
 		}
-		if (!Var1.z)
+		if (!Var1.f_2)
 		{
 			bVar0 = false;
 		}

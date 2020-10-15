@@ -4911,9 +4911,9 @@ bool func_77(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_78(int iParam0, bool bParam1)
@@ -6624,7 +6624,7 @@ int func_149(int iParam0)
 		func_69(42);
 		return 0;
 	}
-	else if (Var0.y >= 15f || Var0.y <= -15f)
+	else if (Var0.f_1 >= 15f || Var0.f_1 <= -15f)
 	{
 		func_69(43);
 		return 0;

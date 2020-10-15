@@ -1659,9 +1659,9 @@ int func_5()
 	if (func_4(iLocal_69, iLocal_361, 1) < (0.5f + 0.25f))
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_361, 1) };
-		if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var0.x, Var0.y, (Var0.z + 1f), &fVar1, 0, 0))
+		if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var0.x, Var0.f_1, (Var0.f_2 + 1f), &fVar1, 0, 0))
 		{
-			if (MISC::ABSF((Var0.z - fVar1)) < 0.1f)
+			if (MISC::ABSF((Var0.f_2 - fVar1)) < 0.1f)
 			{
 				return 1;
 			}
@@ -2246,11 +2246,11 @@ char* func_21()
 	if (func_125(iLocal_69))
 	{
 		Var1 = { ENTITY::GET_ENTITY_COORDS(iLocal_69, 1) };
-		if ((Var1.z + 1f) < Local_322.z)
+		if ((Var1.f_2 + 1f) < Local_322.f_2)
 		{
 			sVar0 = "indicate_high";
 		}
-		else if ((Var1.z - 1f) > Local_322.z)
+		else if ((Var1.f_2 - 1f) > Local_322.f_2)
 		{
 			sVar0 = "indicate_low";
 		}
@@ -4022,7 +4022,7 @@ int func_66()
 			}
 			if (WATER::GET_WATER_HEIGHT(Var1, &fVar0))
 			{
-				if ((fVar0 - Var1.z) > 1f)
+				if ((fVar0 - Var1.f_2) > 1f)
 				{
 					return 1;
 				}
@@ -4077,7 +4077,7 @@ void func_68(struct<3> Param0, int iParam1)
 				PED::DETACH_SYNCHRONIZED_SCENE(uLocal_87);
 			}
 			TASK::CLEAR_PED_TASKS_IMMEDIATELY(iLocal_69);
-			func_124(iLocal_69, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), (Param0.x + 1f), Param0.y, Param0.z), ENTITY::GET_ENTITY_HEADING(iLocal_69), 1, 0);
+			func_124(iLocal_69, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), (Param0.x + 1f), Param0.f_1, Param0.f_2), ENTITY::GET_ENTITY_HEADING(iLocal_69), 1, 0);
 			PED::_0x2208438012482A1A(iLocal_69, 0, 0);
 			func_69(0, 0);
 			iLocal_86 = 15;
@@ -6414,7 +6414,7 @@ int func_93(int iParam0)
 
 int func_94(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -7620,7 +7620,7 @@ int func_118(int iParam0, int iParam1)
 			{
 				Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_69, 1) };
 				Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-				if (MISC::ABSF((Var0.z - Var1.z)) < 2.5f)
+				if (MISC::ABSF((Var0.f_2 - Var1.f_2)) < 2.5f)
 				{
 					return 1;
 				}
@@ -7668,7 +7668,7 @@ bool func_120(int iParam0, struct<3> Param1, float fParam2)
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0, 1) };
 	Var1 = { Param1 - Var0 };
-	return ((Var1.x * Var1.x) + (Var1.y * Var1.y)) <= (fParam2 * fParam2);
+	return ((Var1.x * Var1.x) + (Var1.f_1 * Var1.f_1)) <= (fParam2 * fParam2);
 }
 
 void func_121(int iParam0, int iParam1)
@@ -7737,7 +7737,7 @@ int func_124(int iParam0, struct<3> Param1, var uParam2, bool bParam3, int iPara
 			bVar0 = MISC::GET_GROUND_Z_FOR_3D_COORD(Param1, &fVar1, 0, 0);
 			if (bVar0)
 			{
-				Param1.z = fVar1;
+				Param1.f_2 = fVar1;
 			}
 		}
 		ENTITY::SET_ENTITY_COORDS(iParam0, Param1, 1, 0, 0, iParam4);
@@ -9018,7 +9018,7 @@ int func_163()
 						Var1 = { ENTITY::GET_ENTITY_COORDS(iLocal_69, 1) };
 						if (WATER::GET_WATER_HEIGHT(Var1, &fVar2))
 						{
-							if ((fVar2 - Var1.z) > 0.1f)
+							if ((fVar2 - Var1.f_2) > 0.1f)
 							{
 								ENTITY::SET_ENTITY_HEALTH(iLocal_69, 0, 0);
 							}

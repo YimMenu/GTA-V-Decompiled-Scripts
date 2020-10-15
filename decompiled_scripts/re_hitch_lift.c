@@ -1305,7 +1305,7 @@ void func_28(int iParam0, int iParam1)
 		}
 		if (func_36(iParam0, iParam1) != 322)
 		{
-			func_30(func_36(iParam0, iParam1), Local_44.x, Local_44.y);
+			func_30(func_36(iParam0, iParam1), Local_44.x, Local_44.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -6695,7 +6695,7 @@ void func_147(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, v
 
 int func_148(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -6807,8 +6807,8 @@ void func_153(int iParam0, var uParam1, int iParam2, var uParam3)
 				Var1 = { HUD::GET_BLIP_COORDS(*uParam3) };
 				Var2 = { ENTITY::GET_ENTITY_COORDS(*iParam2, 1) };
 				Var1.x = (Var1.x + (((Var2.x - Var1.x) / 1f) * SYSTEM::TIMESTEP()));
-				Var1.y = (Var1.y + (((Var2.y - Var1.y) / 1f) * SYSTEM::TIMESTEP()));
-				Var1.z = (Var1.z + (((Var2.z - Var1.z) / 1f) * SYSTEM::TIMESTEP()));
+				Var1.f_1 = (Var1.f_1 + (((Var2.f_1 - Var1.f_1) / 1f) * SYSTEM::TIMESTEP()));
+				Var1.f_2 = (Var1.f_2 + (((Var2.f_2 - Var1.f_2) / 1f) * SYSTEM::TIMESTEP()));
 				HUD::SET_BLIP_COORDS(*uParam3, Var1);
 				if (iVar0 == 0)
 				{
@@ -11199,7 +11199,7 @@ int func_228(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_44.z) > 50f)
+			if ((Var1.f_2 - Local_44.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -11320,9 +11320,9 @@ bool func_229(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_230(int iParam0)

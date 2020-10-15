@@ -5688,7 +5688,7 @@ void func_192()
 				Var1 = { ENTITY::GET_ENTITY_COORDS(Local_89[iVar0 /*11*/], 1) };
 				if (SYSTEM::VDIST(Var1, 114.5f, -1296.4f, 29.7f) < 6.5f)
 				{
-					if (Var1.z > 29.2f)
+					if (Var1.f_2 > 29.2f)
 					{
 						ENTITY::SET_ENTITY_COORDS(Local_89[iVar0 /*11*/], 115.8838f, -1291.02f, 27.261f, 0, 1, 0, 1);
 						ENTITY::SET_ENTITY_HEADING(Local_89[iVar0 /*11*/], 0.1092f);
@@ -9005,10 +9005,10 @@ void func_296(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_298(Var0.y);
+	iVar1 = func_298(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;
@@ -13718,15 +13718,15 @@ void func_356(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_353(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_353(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -14684,7 +14684,7 @@ void func_359(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -14693,19 +14693,19 @@ void func_359(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_360(Var2.z)] = Var2.x;
+						(*uParam0)[func_360(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_360(Var2.z)] = func_353(iParam1, Var2.x, func_360(Var2.z), iVar0);
+						(*uParam0)[func_360(Var2.f_2)] = func_353(iParam1, Var2.x, func_360(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_360(Var2.z)] = Var2.y;
+					(*uParam0)[func_360(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -103035,14 +103035,14 @@ void func_620(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam
 	if ((PAD::_IS_USING_KEYBOARD(2) && bParam2) && !iParam0->f_28)
 	{
 		iParam0->f_14 = Var6.x;
-		iParam0->f_14.f_1 = Var6.y;
-		iParam0->f_14.f_2 = Var6.z;
+		iParam0->f_14.f_1 = Var6.f_1;
+		iParam0->f_14.f_2 = Var6.f_2;
 	}
 	else
 	{
 		iParam0->f_14 = (iParam0->f_14 + func_621(((((Var6.x - iParam0->f_14) * 0.05f) * fVar5) * fParam7), -3f, 3f));
 		iParam0->f_14.f_1 = (iParam0->f_14.f_1 + func_621(((((Var6.f_1 - iParam0->f_14.f_1) * 0.05f) * fVar5) * fParam7), -3f, 3f));
-		iParam0->f_14.f_2 = (iParam0->f_14.f_2 + func_621(((((Var6.z - iParam0->f_14.f_2) * 0.05f) * fVar5) * fParam7), -3f, 3f));
+		iParam0->f_14.f_2 = (iParam0->f_14.f_2 + func_621(((((Var6.f_2 - iParam0->f_14.f_2) * 0.05f) * fVar5) * fParam7), -3f, 3f));
 	}
 	if (iParam0->f_26)
 	{
@@ -105810,8 +105810,8 @@ void func_724()
 
 float func_725(struct<3> Param0, struct<3> Param1)
 {
-	Param0.z = 0f;
-	Param1.z = 0f;
+	Param0.f_2 = 0f;
+	Param1.f_2 = 0f;
 	return SYSTEM::VDIST(Param0, Param1);
 }
 
@@ -105901,7 +105901,7 @@ int func_738()
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
-		if (Var0.z < 28.4f)
+		if (Var0.f_2 < 28.4f)
 		{
 			return 0;
 		}
@@ -105917,7 +105917,7 @@ int func_739()
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
-		if (Var0.z > 31f)
+		if (Var0.f_2 > 31f)
 		{
 			return 0;
 		}
@@ -106525,7 +106525,7 @@ int func_756(int iParam0)
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, 0) };
-		if (Var0.z > 31f)
+		if (Var0.f_2 > 31f)
 		{
 			return 0;
 		}
@@ -106585,7 +106585,7 @@ void func_758(int iParam0)
 	TASK::CLEAR_SEQUENCE_TASK(&(Local_371[iParam0 /*9*/].f_2));
 	TASK::OPEN_SEQUENCE_TASK(&(Local_371[iParam0 /*9*/].f_2));
 	Var3 = { ENTITY::GET_ENTITY_COORDS(Local_371[iParam0 /*9*/], 1) };
-	if (Var3.z > 29f)
+	if (Var3.f_2 > 29f)
 	{
 		TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, func_177(2), 1f, -1, 0.25f, 2049, 1193033728);
 	}
@@ -106684,8 +106684,8 @@ Vector3 func_760(struct<3> Param0, struct<3> Param1, struct<3> Param2)
 	
 	Var0 = { Param0 - Param1 };
 	Var1 = { Param2 - Param1 };
-	fVar2 = ((Var1.x * Var1.x) + (Var1.y * Var1.y));
-	fVar3 = ((Var0.x * Var1.x) + (Var0.y * Var1.y));
+	fVar2 = ((Var1.x * Var1.x) + (Var1.f_1 * Var1.f_1));
+	fVar3 = ((Var0.x * Var1.x) + (Var0.f_1 * Var1.f_1));
 	fVar4 = (fVar3 / fVar2);
 	if (fVar4 < 0f)
 	{
@@ -107438,12 +107438,12 @@ void func_786(int iParam0)
 	{
 		TASK::TASK_LOOK_AT_ENTITY(iLocal_101[iParam0], PLAYER::PLAYER_PED_ID(), 2500, 0, 2);
 	}
-	if (((((fVar1 <= 2.25f && Var0.z > 28.62f) || func_739()) || func_788()) || func_787()) && !func_1070())
+	if (((((fVar1 <= 2.25f && Var0.f_2 > 28.62f) || func_739()) || func_788()) || func_787()) && !func_1070())
 	{
 		if ((((ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_101[iParam0], PLAYER::PLAYER_PED_ID(), 1) || (iLocal_163 < MISC::GET_GAME_TIMER() && func_1006(uLocal_157, 4))) || func_739()) || func_788()) || func_787())
 		{
 			func_158();
-			if (fVar1 <= 2.25f && Var0.z > 28.62f)
+			if (fVar1 <= 2.25f && Var0.f_2 > 28.62f)
 			{
 				func_102(&uLocal_206, "SCAUD", "SC_WARN", func_117(), 0, 0, 0);
 			}
@@ -107459,14 +107459,14 @@ void func_786(int iParam0)
 	{
 		if (!PED::IS_PED_INJURED(iLocal_101[iParam0]))
 		{
-			if (fVar1 <= 2.25f && Var0.z > 28.62f)
+			if (fVar1 <= 2.25f && Var0.f_2 > 28.62f)
 			{
 				if (func_648())
 				{
 					func_158();
 					if (!func_1006(uLocal_157, 2))
 					{
-						if (fVar1 <= 2.25f && Var0.z > 28.62f)
+						if (fVar1 <= 2.25f && Var0.f_2 > 28.62f)
 						{
 							func_102(&uLocal_206, "SCAUD", "SC_VPWARN", func_117(), 0, 0, 0);
 						}
@@ -107475,7 +107475,7 @@ void func_786(int iParam0)
 					}
 					else
 					{
-						if (fVar1 <= 2.25f && Var0.z > 28.62f)
+						if (fVar1 <= 2.25f && Var0.f_2 > 28.62f)
 						{
 							func_102(&uLocal_206, "SCAUD", "SC_WARN", func_117(), 0, 0, 0);
 						}
@@ -107502,7 +107502,7 @@ int func_788()
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
-		if (Var0.z > 31f)
+		if (Var0.f_2 > 31f)
 		{
 			return 0;
 		}
@@ -110265,9 +110265,9 @@ bool func_862(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_863(int iParam0)
@@ -110372,7 +110372,7 @@ int func_871(int iParam0)
 
 float func_872(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_873(struct<3> Param0)
@@ -110389,8 +110389,8 @@ Vector3 func_873(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -111017,7 +111017,7 @@ int func_893()
 
 int func_894(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -111275,9 +111275,9 @@ float func_909(struct<3> Param0, struct<3> Param1)
 	float fVar3;
 	float fVar4;
 	
-	fVar1 = (Param1.z - Param0.z);
-	fVar2 = (Param1.y - Param0.y);
-	fVar3 = (Param1.z - Param0.z);
+	fVar1 = (Param1.f_2 - Param0.f_2);
+	fVar2 = (Param1.f_1 - Param0.f_1);
+	fVar3 = (Param1.f_2 - Param0.f_2);
 	fVar4 = SYSTEM::SQRT(((fVar1 * fVar1) + (fVar2 * fVar2)));
 	if (fVar4 != 0f)
 	{
@@ -112979,7 +112979,7 @@ int func_1003()
 	{
 		return 0;
 	}
-	if (Var0.z > 32f)
+	if (Var0.f_2 > 32f)
 	{
 		return 0;
 	}
@@ -113052,7 +113052,7 @@ bool func_1007()
 	struct<3> Var0;
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-	return (func_1008() && Var0.z < 28.4f);
+	return (func_1008() && Var0.f_2 < 28.4f);
 }
 
 bool func_1008()

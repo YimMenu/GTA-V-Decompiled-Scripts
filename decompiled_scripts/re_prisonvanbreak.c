@@ -452,7 +452,7 @@ void func_2()
 			if (STREAMING::HAS_MODEL_LOADED(joaat("prop_security_case_01")))
 			{
 				Local_245 = { PED::GET_DEAD_PED_PICKUP_COORDS(iLocal_218, 1067030938, 1069547520) };
-				Local_245.z = (Local_245.z + 0.3f);
+				Local_245.f_2 = (Local_245.f_2 + 0.3f);
 				uLocal_264[0] = OBJECT::CREATE_PICKUP_ROTATE(joaat("pickup_money_case"), Local_245 + Vector(-0.49f, 0f, 0f), -90f, 0f, 0f, 0, 5000, 2, 1, joaat("prop_security_case_01"));
 				if (!HUD::DOES_BLIP_EXIST(uLocal_268[0]))
 				{
@@ -471,7 +471,7 @@ void func_2()
 			if (STREAMING::HAS_MODEL_LOADED(joaat("prop_security_case_01")))
 			{
 				Local_245 = { PED::GET_DEAD_PED_PICKUP_COORDS(iLocal_219, 1067030938, 1069547520) };
-				Local_245.z = (Local_245.z + 0.3f);
+				Local_245.f_2 = (Local_245.f_2 + 0.3f);
 				uLocal_264[1] = OBJECT::CREATE_PICKUP_ROTATE(joaat("pickup_money_case"), Local_245 + Vector(-0.49f, 0f, 0f), -90f, 0f, 0f, 0, 5000, 2, 1, joaat("prop_security_case_01"));
 				if (!HUD::DOES_BLIP_EXIST(uLocal_268[1]))
 				{
@@ -864,7 +864,7 @@ void func_11(int iParam0, int iParam1)
 		}
 		if (func_18(iParam0, iParam1) != 322)
 		{
-			func_12(func_18(iParam0, iParam1), Local_43.x, Local_43.y);
+			func_12(func_18(iParam0, iParam1), Local_43.x, Local_43.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -2842,7 +2842,7 @@ void func_62()
 	{
 		Local_245 = { ENTITY::GET_ENTITY_COORDS(iLocal_219, 1) };
 	}
-	Local_245.z = (Local_245.z - 0.11f);
+	Local_245.f_2 = (Local_245.f_2 - 0.11f);
 	if (!ENTITY::IS_ENTITY_DEAD(iLocal_218, 0))
 	{
 		SYSTEM::SETTIMERA(0);
@@ -5098,7 +5098,7 @@ int func_95(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPara
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_43.z) > 50f)
+			if ((Var1.f_2 - Local_43.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -5219,9 +5219,9 @@ bool func_96(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_97(int iParam0)

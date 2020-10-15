@@ -526,7 +526,7 @@ void func_19()
 			{
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(uLocal_42, 1, 0);
 			}
-			Local_49.z = 29.603f;
+			Local_49.f_2 = 29.603f;
 			ENTITY::SET_ENTITY_COORDS(uLocal_42, Local_49, 1, 0, 0, 1);
 			ENTITY::SET_ENTITY_HEADING(uLocal_42, 23.45f);
 		}

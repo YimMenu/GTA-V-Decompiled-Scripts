@@ -127,7 +127,7 @@ void __EntryFunction__()
 	Local_47 = { Global_19439[Global_19431 /*3*/] };
 	Local_48 = { Local_47 };
 	Local_48.x = (Local_48.x - 10f);
-	Local_48.y = (Local_48.y + 20f);
+	Local_48.f_1 = (Local_48.f_1 + 20f);
 	while (true)
 	{
 		SYSTEM::WAIT(0);

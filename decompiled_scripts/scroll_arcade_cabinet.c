@@ -4310,14 +4310,14 @@ void func_111(int iParam0, int iParam1, int iParam2)
 		if (iVar0 <= iVar1)
 		{
 			Var3.x = (*iParam0)[iVar0 /*3*/];
-			Var3.z = (iParam0[iVar0 /*3*/])->f_2;
-			Var3.y = (iParam0[iVar0 /*3*/])->f_1;
+			Var3.f_2 = (iParam0[iVar0 /*3*/])->f_2;
+			Var3.f_1 = (iParam0[iVar0 /*3*/])->f_1;
 			(*iParam0)[iVar0 /*3*/] = (*iParam0)[iVar1 /*3*/];
 			(iParam0[iVar0 /*3*/])->f_2 = (iParam0[iVar1 /*3*/])->f_2;
 			(iParam0[iVar0 /*3*/])->f_1 = (iParam0[iVar1 /*3*/])->f_1;
 			(*iParam0)[iVar1 /*3*/] = Var3.x;
-			(iParam0[iVar1 /*3*/])->f_2 = Var3.z;
-			(iParam0[iVar1 /*3*/])->f_1 = Var3.y;
+			(iParam0[iVar1 /*3*/])->f_2 = Var3.f_2;
+			(iParam0[iVar1 /*3*/])->f_1 = Var3.f_1;
 			iVar0++;
 			iVar1 = (iVar1 - 1);
 		}
@@ -12064,8 +12064,8 @@ void func_371(int iParam0, int iParam1)
 	int iVar1;
 	
 	Var0.x = -2012069109;
-	Var0.y = PLAYER::PLAYER_ID();
-	Var0.z = iParam1;
+	Var0.f_1 = PLAYER::PLAYER_ID();
+	Var0.f_2 = iParam1;
 	iVar1 = func_70(iParam0);
 	if (!iVar1 == 0 && func_77(iParam0, 0, 1))
 	{

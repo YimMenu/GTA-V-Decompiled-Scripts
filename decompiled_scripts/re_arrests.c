@@ -503,7 +503,7 @@ void func_1()
 								TASK::OPEN_SEQUENCE_TASK(&uLocal_67);
 								if (!bLocal_282 && fVar2 > 2f)
 								{
-									TASK::TASK_SHOOT_AT_COORD(0, Local_64.x, Local_64.y, (Local_64.z + 4f), 1000, 1566631136);
+									TASK::TASK_SHOOT_AT_COORD(0, Local_64.x, Local_64.f_1, (Local_64.f_2 + 4f), 1000, 1566631136);
 								}
 								TASK::TASK_LOOK_AT_ENTITY(0, iLocal_53, -1, 2048, 2);
 								TASK::TASK_GO_TO_ENTITY_WHILE_AIMING_AT_ENTITY(0, iLocal_53, iLocal_53, 1f, 0, 3f, 1082130432, 1, 0, -957453492);
@@ -736,7 +736,7 @@ void func_1()
 								fVar4 = MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(iLocal_53, 1), ENTITY::GET_ENTITY_COORDS(iLocal_55, 1), 1);
 								if (fVar4 < 4f && iLocal_273 == 0)
 								{
-									TASK::TASK_GOTO_ENTITY_OFFSET_XY(iLocal_53, iLocal_55, 60000, 0.5f, Local_283.x, Local_283.y, 1f, 1);
+									TASK::TASK_GOTO_ENTITY_OFFSET_XY(iLocal_53, iLocal_55, 60000, 0.5f, Local_283.x, Local_283.f_1, 1f, 1);
 									iLocal_273 = 1;
 								}
 								else if (fVar4 < 3f)
@@ -755,7 +755,7 @@ void func_1()
 								{
 									Local_283 = { -1.578f, -0.5f, 1f };
 								}
-								TASK::TASK_GOTO_ENTITY_OFFSET_XY(iLocal_53, iLocal_55, 60000, 0.5f, Local_283.x, Local_283.y, 1f, 1);
+								TASK::TASK_GOTO_ENTITY_OFFSET_XY(iLocal_53, iLocal_55, 60000, 0.5f, Local_283.x, Local_283.f_1, 1f, 1);
 								if (bLocal_284)
 								{
 									PED::SET_PED_MOVEMENT_CLIPSET(iLocal_53, "MOVE_M@BAIL_BOND_TAZERED", 1048576000);
@@ -1322,7 +1322,7 @@ int func_10()
 				VEHICLE::SET_DISABLE_PRETEND_OCCUPANTS(iLocal_55, 1);
 				Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_55, 1) };
 				Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - Var0 };
-				ENTITY::SET_ENTITY_HEADING(iLocal_55, MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y));
+				ENTITY::SET_ENTITY_HEADING(iLocal_55, MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1));
 				PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(ENTITY::GET_ENTITY_COORDS(iLocal_52, 0), 1, &Var0, 1, 1077936128, 0);
 				if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, 2528.563f, 2639.115f, 36.9446f, 1) < 75f)
 				{
@@ -4484,7 +4484,7 @@ int func_93(float fParam0)
 
 float func_94(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 int func_95()
@@ -5225,7 +5225,7 @@ int func_114()
 			WEAPON::GIVE_WEAPON_TO_PED(iLocal_52, joaat("weapon_pistol"), -1, 0, 1);
 		}
 		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_52, joaat("weapon_pistol"), 1);
-		uLocal_58 = OBJECT::CREATE_OBJECT(joaat("prop_ld_binbag_01"), Local_63.x, Local_63.y, (Local_63.z + 100f), 1, 1, 0);
+		uLocal_58 = OBJECT::CREATE_OBJECT(joaat("prop_ld_binbag_01"), Local_63.x, Local_63.f_1, (Local_63.f_2 + 100f), 1, 1, 0);
 		ENTITY::SET_ENTITY_VISIBLE(uLocal_58, 0, 0);
 		if (SYSTEM::VDIST(2411.32f, 4958.76f, 45.19f, Local_63) < 10f)
 		{
@@ -5263,7 +5263,7 @@ int func_114()
 void func_115()
 {
 	Local_244.x = 0f;
-	Local_244.y = 10f;
+	Local_244.f_1 = 10f;
 	PED::SET_PED_COMBAT_MOVEMENT(iLocal_52, 2);
 	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_52, 13, 1);
 	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_52, 2, 1);
@@ -6575,7 +6575,7 @@ int func_136(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_44.z) > 50f)
+			if ((Var1.f_2 - Local_44.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -6696,9 +6696,9 @@ bool func_137(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 bool func_138(int iParam0)
@@ -8233,7 +8233,7 @@ void func_196(int iParam0, int iParam1)
 		}
 		if (func_200(iParam0, iParam1) != 322)
 		{
-			func_197(func_200(iParam0, iParam1), Local_44.x, Local_44.y);
+			func_197(func_200(iParam0, iParam1), Local_44.x, Local_44.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)

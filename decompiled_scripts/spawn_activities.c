@@ -2891,9 +2891,9 @@ Vector3 func_71(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -3651,7 +3651,7 @@ int func_81(var uParam0, int iParam1, float fParam2)
 			{
 				return 1;
 			}
-			else if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, uParam0->f_146.f_1592, true) < (uParam0->f_146.f_1595 + fParam2) && (Var0.z > uParam0->f_146.f_57[2 /*8*/].f_2 && Var0.z < uParam0->f_146.f_57[2 /*8*/].f_3.f_2))
+			else if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, uParam0->f_146.f_1592, true) < (uParam0->f_146.f_1595 + fParam2) && (Var0.f_2 > uParam0->f_146.f_57[2 /*8*/].f_2 && Var0.f_2 < uParam0->f_146.f_57[2 /*8*/].f_3.f_2))
 			{
 				return 1;
 			}
@@ -6580,7 +6580,7 @@ int func_205(int iParam0, int iParam1)
 			{
 				Var0 = { func_206(iParam1) };
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -9268,7 +9268,7 @@ int func_261(int iParam0, int iParam1, int iParam2)
 			{
 				return 4;
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -14688,7 +14688,7 @@ void func_373(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -14708,19 +14708,19 @@ void func_374(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_8(Var0.y, 1, 1))
+		if (func_8(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_375(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{

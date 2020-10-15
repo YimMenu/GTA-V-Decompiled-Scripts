@@ -2680,7 +2680,7 @@ int func_21(var uParam0)
 
 int func_22(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -4432,9 +4432,9 @@ int func_66(struct<3> Param0, var uParam1, var uParam2, var uParam3)
 			return 0;
 		}
 	}
-	if (!MISC::IS_STRING_NULL_OR_EMPTY(Param0.y))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(Param0.f_1))
 	{
-		if (!AUDIO::REQUEST_SCRIPT_AUDIO_BANK(Param0.y, Param0.z, func_71(Param0.z)))
+		if (!AUDIO::REQUEST_SCRIPT_AUDIO_BANK(Param0.f_1, Param0.f_2, func_71(Param0.f_2)))
 		{
 			return 0;
 		}
@@ -4747,7 +4747,7 @@ int func_82(var uParam0, var uParam1)
 						}
 						else if (STREAMING::IS_MODEL_A_VEHICLE(uParam0->f_2180[iVar0]))
 						{
-							(*uParam1)[iVar0] = ENTITY::GET_OBJECT_INDEX_FROM_ENTITY_INDEX(VEHICLE::CREATE_VEHICLE(uParam0->f_2180[iVar0], Var1, Var2.z, 0, 0, 0));
+							(*uParam1)[iVar0] = ENTITY::GET_OBJECT_INDEX_FROM_ENTITY_INDEX(VEHICLE::CREATE_VEHICLE(uParam0->f_2180[iVar0], Var1, Var2.f_2, 0, 0, 0));
 						}
 						ENTITY::SET_ENTITY_INVINCIBLE((*uParam1)[iVar0], 1);
 						ENTITY::FREEZE_ENTITY_POSITION((*uParam1)[iVar0], 1);
@@ -16278,7 +16278,7 @@ int func_257(var uParam0, var uParam1)
 					Var1 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(uParam0->f_14.f_1605[iVar0 /*48*/], &(uParam0->f_14.f_1605[iVar0 /*48*/].f_1), uParam0->f_14.f_5, uParam0->f_14.f_8, 0, 2) };
 					Var2 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(uParam0->f_14.f_1605[iVar0 /*48*/], &(uParam0->f_14.f_1605[iVar0 /*48*/].f_1), uParam0->f_14.f_5, uParam0->f_14.f_8, 0, 2) };
 					uParam0->f_2223[iVar0 /*66*/].f_58 = { Var1 };
-					uParam0->f_2223[iVar0 /*66*/].f_61.f_2 = Var2.z;
+					uParam0->f_2223[iVar0 /*66*/].f_61.f_2 = Var2.f_2;
 					(*uParam1)[iVar0] = PED::CREATE_PED(26, uParam0->f_2223[iVar0 /*66*/], uParam0->f_2223[iVar0 /*66*/].f_58, uParam0->f_2223[iVar0 /*66*/].f_61.f_2, 0, 1);
 					uParam0->f_2356[iVar0] = (*uParam1)[iVar0];
 					iVar3 = 0;

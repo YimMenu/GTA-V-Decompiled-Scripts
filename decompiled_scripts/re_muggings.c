@@ -1970,9 +1970,9 @@ bool func_28(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_29(var uParam0, bool bParam1, bool bParam2, bool bParam3)
@@ -3221,7 +3221,7 @@ void func_61()
 				iVar8 = 1;
 				if (iLocal_80 == 1)
 				{
-					if (Var7.z > 33.5f)
+					if (Var7.f_2 > 33.5f)
 					{
 						iVar8 = 0;
 					}
@@ -3306,37 +3306,37 @@ void func_61()
 							func_105(iLocal_60, &Local_105, &Local_106, cLocal_321, sLocal_323);
 							if (iLocal_80 == 1)
 							{
-								if (Local_106.z > 225f && Local_106.z < 265f)
+								if (Local_106.f_2 > 225f && Local_106.f_2 < 265f)
 								{
-									if (Local_106.z < 245f)
+									if (Local_106.f_2 < 245f)
 									{
-										Local_106.z = 225f;
+										Local_106.f_2 = 225f;
 									}
 									else
 									{
-										Local_106.z = 265f;
+										Local_106.f_2 = 265f;
 									}
 								}
-								else if (Local_106.z > 45f && Local_106.z < 85f)
+								else if (Local_106.f_2 > 45f && Local_106.f_2 < 85f)
 								{
-									if (Local_106.z < 65f)
+									if (Local_106.f_2 < 65f)
 									{
-										Local_106.z = 45f;
+										Local_106.f_2 = 45f;
 									}
 									else
 									{
-										Local_106.z = 85f;
+										Local_106.f_2 = 85f;
 									}
 								}
 							}
-							Local_105.z = (Local_105.z + 2f);
+							Local_105.f_2 = (Local_105.f_2 + 2f);
 							MISC::GET_GROUND_Z_FOR_3D_COORD(Local_105, &(Local_105.f_2), 0, 0);
 							Var1 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(cLocal_321, sLocal_323, Local_105, Local_106, 0f, 2) };
 							Var4 = { Var1 - Local_105 };
-							Var4.z = 0f;
+							Var4.f_2 = 0f;
 							fVar5 = SYSTEM::VMAG(Var4);
 							MISC::GET_GROUND_Z_FOR_3D_COORD(Var1, &(Var1.f_2), 0, 0);
-							fVar6 = (Local_105.z - Var1.z);
+							fVar6 = (Local_105.f_2 - Var1.f_2);
 							Local_106.x = MISC::ATAN2(fVar6, fVar5);
 							if (Local_106.x > 30f || Local_106.x < -30f)
 							{
@@ -3353,7 +3353,7 @@ void func_61()
 								{
 									if (iLocal_80 == 1)
 									{
-										if (Local_106.z > 40f && Local_106.z < 220f)
+										if (Local_106.f_2 > 40f && Local_106.f_2 < 220f)
 										{
 											Local_74 = { -148.3897f, -1647.215f, 31.5867f };
 											fLocal_73 = 331.9427f;
@@ -3366,7 +3366,7 @@ void func_61()
 									}
 									else if (iLocal_80 == 3)
 									{
-										if (Local_106.z > 160f && Local_106.z < 340f)
+										if (Local_106.f_2 > 160f && Local_106.f_2 < 340f)
 										{
 											Local_74 = { -319.709f, -837.0066f, 30.449f };
 											fLocal_73 = 61.7986f;
@@ -3379,7 +3379,7 @@ void func_61()
 									}
 									else if (iLocal_80 == 4)
 									{
-										if (Local_106.z > 240f || Local_106.z < 60f)
+										if (Local_106.f_2 > 240f || Local_106.f_2 < 60f)
 										{
 											Local_74 = { 37.222f, -1005.04f, 28.4648f };
 											fLocal_73 = 156.7986f;
@@ -3451,10 +3451,10 @@ void func_61()
 							ENTITY::SET_ENTITY_COORDS(iLocal_60, Var1, 1, 0, 0, 1);
 							PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_60, 0);
 							Var1 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(cLocal_321, sLocal_323, Local_105, Local_106, 1f, 2) };
-							ENTITY::SET_ENTITY_HEADING(iLocal_60, Var1.z);
+							ENTITY::SET_ENTITY_HEADING(iLocal_60, Var1.f_2);
 							if (iLocal_80 == 4)
 							{
-								if (func_99(Var1.z, 0f, 90f))
+								if (func_99(Var1.f_2, 0f, 90f))
 								{
 									TASK::OPEN_SEQUENCE_TASK(&uLocal_103);
 									TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, 38.2412f, -992.2134f, 28.4317f, 1f, 20000, 0.25f, 0, 1193033728);
@@ -3476,7 +3476,7 @@ void func_61()
 							else
 							{
 								TASK::OPEN_SEQUENCE_TASK(&uLocal_103);
-								TASK::TASK_WANDER_STANDARD(0, Var1.z, 1);
+								TASK::TASK_WANDER_STANDARD(0, Var1.f_2, 1);
 								TASK::CLOSE_SEQUENCE_TASK(uLocal_103);
 								TASK::TASK_PERFORM_SEQUENCE(iLocal_60, uLocal_103);
 								TASK::CLEAR_SEQUENCE_TASK(&uLocal_103);
@@ -5135,13 +5135,13 @@ Vector3 func_103(struct<3> Param0, struct<3> Param1)
 		switch (iVar5)
 		{
 			case 0:
-				if (SYSTEM::VDIST(Var2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, (Var4.y + IntToFloat(iVar6)), 0f)) < SYSTEM::VDIST(Var2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, -(Var4.y + IntToFloat(iVar6)), 0f)))
+				if (SYSTEM::VDIST(Var2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, (Var4.f_1 + IntToFloat(iVar6)), 0f)) < SYSTEM::VDIST(Var2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, -(Var4.f_1 + IntToFloat(iVar6)), 0f)))
 				{
-					Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, (Var4.y + IntToFloat(iVar6)), 0f) };
+					Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, (Var4.f_1 + IntToFloat(iVar6)), 0f) };
 				}
 				else
 				{
-					Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, -(Var4.y + IntToFloat(iVar6)), 0f) };
+					Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, -(Var4.f_1 + IntToFloat(iVar6)), 0f) };
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(iVar0))
 				{
@@ -5200,13 +5200,13 @@ Vector3 func_103(struct<3> Param0, struct<3> Param1)
 				break;
 			
 			case 2:
-				if (SYSTEM::VDIST(Var2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, (Var4.y - IntToFloat(iVar6)), 0f)) < SYSTEM::VDIST(Var2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, -(Var4.y - IntToFloat(iVar6)), 0f)))
+				if (SYSTEM::VDIST(Var2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, (Var4.f_1 - IntToFloat(iVar6)), 0f)) < SYSTEM::VDIST(Var2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, -(Var4.f_1 - IntToFloat(iVar6)), 0f)))
 				{
-					Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, (Var4.y - IntToFloat(iVar6)), 0f) };
+					Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, (Var4.f_1 - IntToFloat(iVar6)), 0f) };
 				}
 				else
 				{
-					Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, -(Var4.y - IntToFloat(iVar6)), 0f) };
+					Var1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 0f, -(Var4.f_1 - IntToFloat(iVar6)), 0f) };
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(iVar0))
 				{
@@ -5414,7 +5414,7 @@ Vector3 func_104(struct<3> Param0, float fParam1, struct<2> Param2, var uParam3)
 	fVar2 = SYSTEM::COS(uVar1);
 	fVar3 = SYSTEM::SIN(uVar1);
 	Var0.x = ((Param2 * fVar2) + (Param2.f_1 * fVar3));
-	Var0.y = ((Param2.f_1 * fVar2) - (Param2 * fVar3));
+	Var0.f_1 = ((Param2.f_1 * fVar2) - (Param2 * fVar3));
 	Var4 = { Param0 + Var0 };
 	return Var4;
 }
@@ -5473,7 +5473,7 @@ void func_105(int iParam0, var uParam1, var uParam2, char[4] cParam3, char* sPar
 				{
 					if (iVar6 != 0)
 					{
-						if (Var8.z > (uParam1->f_2 + 8.5f))
+						if (Var8.f_2 > (uParam1->f_2 + 8.5f))
 						{
 							iVar0++;
 						}
@@ -5562,13 +5562,13 @@ void func_108(struct<3> Param0, var uParam1, var uParam2)
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - Param0 };
-		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y);
+		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1);
 		if (func_109(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0), fVar2, 15f))
 		{
 			bVar0 = true;
 		}
 		Var1 = { Param0 - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y);
+		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1);
 		if (func_109(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0), fVar2, 15f))
 		{
 			bVar0 = true;
@@ -9817,18 +9817,18 @@ void func_216()
 	
 	ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_61, PED::GET_ANIM_INITIAL_OFFSET_POSITION(cLocal_319, sLocal_325, Local_331, Local_332, 0, 2), 0, 0, 1);
 	Var0 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(cLocal_319, sLocal_325, Local_331, Local_332, 0, 2) };
-	if (Var0.z < 0f)
+	if (Var0.f_2 < 0f)
 	{
-		Var0.z = (Var0.z + 360f);
+		Var0.f_2 = (Var0.f_2 + 360f);
 	}
-	ENTITY::SET_ENTITY_HEADING(iLocal_61, Var0.z);
+	ENTITY::SET_ENTITY_HEADING(iLocal_61, Var0.f_2);
 	ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_60, PED::GET_ANIM_INITIAL_OFFSET_POSITION(cLocal_319, sLocal_326, Local_331, Local_332, 0, 2), 0, 0, 1);
 	Var0 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(cLocal_319, sLocal_326, Local_331, Local_332, 0, 2) };
-	if (Var0.z < 0f)
+	if (Var0.f_2 < 0f)
 	{
-		Var0.z = (Var0.z + 360f);
+		Var0.f_2 = (Var0.f_2 + 360f);
 	}
-	ENTITY::SET_ENTITY_HEADING(iLocal_60, Var0.z);
+	ENTITY::SET_ENTITY_HEADING(iLocal_60, Var0.f_2);
 	TASK::TASK_PLAY_ANIM(iLocal_61, cLocal_319, sLocal_325, 1000f, -1000f, -1, 9, 0, 0, 0, 0);
 	TASK::TASK_PLAY_ANIM(iLocal_60, cLocal_319, sLocal_326, 1000f, -1000f, -1, 9, 0, 0, 0, 0);
 }
@@ -10560,7 +10560,7 @@ int func_235(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_43.z) > 50f)
+			if ((Var1.f_2 - Local_43.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -12316,7 +12316,7 @@ void func_298(int iParam0, int iParam1)
 		}
 		if (func_302(iParam0, iParam1) != 322)
 		{
-			func_299(func_302(iParam0, iParam1), Local_43.x, Local_43.y);
+			func_299(func_302(iParam0, iParam1), Local_43.x, Local_43.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)

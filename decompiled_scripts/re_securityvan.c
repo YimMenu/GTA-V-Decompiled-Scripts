@@ -1976,8 +1976,8 @@ Vector3 func_35(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -2049,7 +2049,7 @@ int func_37(struct<3> Param0, struct<3> Param1, struct<3> Param2, int iParam3, b
 
 int func_38(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2321,7 +2321,7 @@ void func_45(int iParam0, int iParam1)
 		}
 		if (func_55(iParam0, iParam1) != 322)
 		{
-			func_47(func_55(iParam0, iParam1), Local_43.x, Local_43.y);
+			func_47(func_55(iParam0, iParam1), Local_43.x, Local_43.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -3929,8 +3929,8 @@ void func_77(int iParam0, bool bParam1)
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_50, 0) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		Var0 = { func_35(ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(iLocal_50, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1))) };
-		fVar1 = ((ENTITY::GET_ENTITY_HEADING(iLocal_50) + MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.y)) + 45f);
-		fVar2 = ((ENTITY::GET_ENTITY_HEADING(iLocal_50) + MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.y)) - 45f);
+		fVar1 = ((ENTITY::GET_ENTITY_HEADING(iLocal_50) + MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.f_1)) + 45f);
+		fVar2 = ((ENTITY::GET_ENTITY_HEADING(iLocal_50) + MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.f_1)) - 45f);
 		Var3[0 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(ENTITY::GET_ENTITY_COORDS(iLocal_50, 1), fVar1, 0f, 4.5f, 0f) };
 		Var3[1 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(ENTITY::GET_ENTITY_COORDS(iLocal_50, 1), fVar2, 0f, 4.5f, 0f) };
 		func_78(&fVar1);
@@ -4088,11 +4088,11 @@ void func_79(int iParam0)
 					{
 						if (bLocal_80)
 						{
-							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(iParam0, Local_285, 2f, -1, 0.1f, 512, Local_284.z);
+							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(iParam0, Local_285, 2f, -1, 0.1f, 512, Local_284.f_2);
 						}
 						else
 						{
-							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(iParam0, Local_285, 1f, -1, 0.1f, 512, Local_284.z);
+							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(iParam0, Local_285, 1f, -1, 0.1f, 512, Local_284.f_2);
 						}
 						iLocal_48++;
 					}
@@ -4117,17 +4117,17 @@ void func_79(int iParam0)
 						{
 							fVar0 = (fVar0 + 360f);
 						}
-						if (Local_284.z > 180f)
+						if (Local_284.f_2 > 180f)
 						{
-							Local_284.z = (Local_284.z - 360f);
+							Local_284.f_2 = (Local_284.f_2 - 360f);
 						}
-						if (Local_284.z <= -180f)
+						if (Local_284.f_2 <= -180f)
 						{
-							Local_284.z = (Local_284.z + 360f);
+							Local_284.f_2 = (Local_284.f_2 + 360f);
 						}
 						if (SYSTEM::VDIST(Local_285, ENTITY::GET_ENTITY_COORDS(iParam0, 1)) < 0.3f)
 						{
-							if (MISC::ABSF((fVar0 - Local_284.z)) < 15f)
+							if (MISC::ABSF((fVar0 - Local_284.f_2)) < 15f)
 							{
 								PED::CLEAR_PED_ALTERNATE_WALK_ANIM(iParam0, -1056964608);
 								TASK::CLEAR_PED_TASKS(iParam0);
@@ -4388,7 +4388,7 @@ int func_82(struct<3> Param0, struct<2> Param1, var uParam2, struct<2> Param3, v
 	fVar1 = Param1;
 	fVar2 = Param3;
 	fVar3 = Param5;
-	fVar4 = Param0.y;
+	fVar4 = Param0.f_1;
 	fVar5 = Param1.f_1;
 	fVar6 = Param3.f_1;
 	fVar7 = Param5.f_1;
@@ -4411,7 +4411,7 @@ int func_82(struct<3> Param0, struct<2> Param1, var uParam2, struct<2> Param3, v
 	}
 	*uParam7 = fVar11;
 	uParam7->f_1 = fVar12;
-	uParam7->f_2 = Param0.z;
+	uParam7->f_2 = Param0.f_2;
 	return 1;
 }
 
@@ -6371,9 +6371,9 @@ bool func_134(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_135(var uParam0, int iParam1, int iParam2)
@@ -6979,7 +6979,7 @@ int func_149()
 		Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - ENTITY::GET_ENTITY_COORDS(iLocal_50, 1) };
 		Var1 = { ENTITY::GET_ENTITY_FORWARD_VECTOR(iLocal_50) };
 		Var2 = { ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(iLocal_50, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) };
-		if (((Var2.y > 1f && (((PLAYER::IS_PLAYER_TARGETTING_ENTITY(PLAYER::PLAYER_ID(), iLocal_50) || PLAYER::IS_PLAYER_FREE_AIMING_AT_ENTITY(PLAYER::PLAYER_ID(), iLocal_50)) || PLAYER::IS_PLAYER_FREE_AIMING_AT_ENTITY(PLAYER::PLAYER_ID(), iLocal_49[0])) || PLAYER::IS_PLAYER_FREE_AIMING_AT_ENTITY(PLAYER::PLAYER_ID(), iLocal_49[1]))) && MISC::ABSF(MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var1.x, Var1.y, Var0.x, Var0.y)) < 60f) && MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var1.z, Var1.y, Var0.z, Var0.y) < 30f)
+		if (((Var2.f_1 > 1f && (((PLAYER::IS_PLAYER_TARGETTING_ENTITY(PLAYER::PLAYER_ID(), iLocal_50) || PLAYER::IS_PLAYER_FREE_AIMING_AT_ENTITY(PLAYER::PLAYER_ID(), iLocal_50)) || PLAYER::IS_PLAYER_FREE_AIMING_AT_ENTITY(PLAYER::PLAYER_ID(), iLocal_49[0])) || PLAYER::IS_PLAYER_FREE_AIMING_AT_ENTITY(PLAYER::PLAYER_ID(), iLocal_49[1]))) && MISC::ABSF(MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var1.x, Var1.f_1, Var0.x, Var0.f_1)) < 60f) && MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var1.f_2, Var1.f_1, Var0.f_2, Var0.f_1) < 30f)
 		{
 			return 1;
 		}
@@ -7070,8 +7070,8 @@ void func_153()
 				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_50, 1084227584);
 				TASK::OPEN_SEQUENCE_TASK(&uLocal_54);
 				TASK::TASK_STAND_STILL(0, 5000);
-				TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, Local_285, 1f, -1, 0.1f, 512, Local_284.z);
-				TASK::TASK_ACHIEVE_HEADING(0, Local_284.z, 0);
+				TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, Local_285, 1f, -1, 0.1f, 512, Local_284.f_2);
+				TASK::TASK_ACHIEVE_HEADING(0, Local_284.f_2, 0);
 				TASK::CLOSE_SEQUENCE_TASK(uLocal_54);
 				TASK::TASK_PERFORM_SEQUENCE(iLocal_49[1], uLocal_54);
 				TASK::CLEAR_SEQUENCE_TASK(&uLocal_54);
@@ -7094,8 +7094,8 @@ void func_153()
 				if (TASK::GET_SCRIPT_TASK_STATUS(iLocal_49[1], 242628503) != 1)
 				{
 					TASK::OPEN_SEQUENCE_TASK(&uLocal_54);
-					TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, Local_285, 1f, -1, 0.1f, 512, Local_284.z);
-					TASK::TASK_ACHIEVE_HEADING(0, Local_284.z, 0);
+					TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, Local_285, 1f, -1, 0.1f, 512, Local_284.f_2);
+					TASK::TASK_ACHIEVE_HEADING(0, Local_284.f_2, 0);
 					TASK::CLOSE_SEQUENCE_TASK(uLocal_54);
 					TASK::TASK_PERFORM_SEQUENCE(iLocal_49[1], uLocal_54);
 					TASK::CLEAR_SEQUENCE_TASK(&uLocal_54);
@@ -7109,15 +7109,15 @@ void func_153()
 				{
 					fVar0 = (fVar0 + 360f);
 				}
-				if (Local_284.z > 180f)
+				if (Local_284.f_2 > 180f)
 				{
-					Local_284.z = (Local_284.z - 360f);
+					Local_284.f_2 = (Local_284.f_2 - 360f);
 				}
-				if (Local_284.z <= -180f)
+				if (Local_284.f_2 <= -180f)
 				{
-					Local_284.z = (Local_284.z + 360f);
+					Local_284.f_2 = (Local_284.f_2 + 360f);
 				}
-				if (MISC::ABSF((fVar0 - Local_284.z)) < 15f && SYSTEM::VDIST(Local_285, ENTITY::GET_ENTITY_COORDS(iLocal_49[1], 1)) < 0.2f)
+				if (MISC::ABSF((fVar0 - Local_284.f_2)) < 15f && SYSTEM::VDIST(Local_285, ENTITY::GET_ENTITY_COORDS(iLocal_49[1], 1)) < 0.2f)
 				{
 					PED::CLEAR_PED_ALTERNATE_WALK_ANIM(iLocal_49[1], -1056964608);
 					TASK::CLEAR_PED_TASKS(iLocal_49[1]);
@@ -7493,7 +7493,7 @@ void func_159()
 	ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_50, 1, 1);
 	VEHICLE::SET_VEHICLE_DROPS_MONEY_WHEN_BLOWN_UP(iLocal_50, 0);
 	VEHICLE::SET_VEHICLE_PROVIDES_COVER(iLocal_50, 1);
-	PATHFIND::_0x07FB139B592FA687((Local_63.x - 200f), (Local_63.y - 200f), (Local_63.x + 200f), (Local_63.y + 200f));
+	PATHFIND::_0x07FB139B592FA687((Local_63.x - 200f), (Local_63.f_1 - 200f), (Local_63.x + 200f), (Local_63.f_1 + 200f));
 	if (iLocal_44 == 3)
 	{
 		iLocal_49[0] = PED::CREATE_PED_INSIDE_VEHICLE(iLocal_50, 26, iLocal_73, -1, 1, 1);
@@ -9048,7 +9048,7 @@ int func_191(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_43.z) > 50f)
+			if ((Var1.f_2 - Local_43.f_2) > 50f)
 			{
 				return 0;
 			}

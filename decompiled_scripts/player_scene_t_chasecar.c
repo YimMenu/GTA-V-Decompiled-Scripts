@@ -2115,9 +2115,9 @@ bool func_59(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_60(var uParam0, bool bParam1, bool bParam2, bool bParam3)
@@ -2953,7 +2953,7 @@ var func_72(int iParam0, int iParam1)
 		{
 			uVar5 = PED::GET_VEHICLE_PED_IS_IN(iParam1, 0);
 			Var3.x = ENTITY::GET_ENTITY_FORWARD_X(uVar5);
-			Var3.y = ENTITY::GET_ENTITY_FORWARD_Y(iVar5);
+			Var3.f_1 = ENTITY::GET_ENTITY_FORWARD_Y(iVar5);
 		}
 		else
 		{
@@ -2961,7 +2961,7 @@ var func_72(int iParam0, int iParam1)
 			Var3 = { Var2 - Var1 };
 		}
 	}
-	uVar4 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var0, Var0.f_1, Var3.x, Var3.y);
+	uVar4 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var0, Var0.f_1, Var3.x, Var3.f_1);
 	return uVar4;
 }
 
@@ -2981,7 +2981,7 @@ float func_73(int iParam0, int iParam1)
 		Var1 = { ENTITY::GET_ENTITY_COORDS(iParam1, 1) };
 	}
 	Var2 = { Var1 - Var0 };
-	Var2.z = 0f;
+	Var2.f_2 = 0f;
 	fVar3 = SYSTEM::VMAG(Var2);
 	return fVar3;
 }
@@ -3016,8 +3016,8 @@ int func_74(int iParam0, int iParam1)
 		Var4 = { Var2 - Var1 };
 	}
 	Var3 = { Var1 - Var0 };
-	Var3.z = 0f;
-	Var4.z = 0f;
+	Var3.f_2 = 0f;
+	Var4.f_2 = 0f;
 	fVar5 = func_75(Var3, Var4);
 	if (fVar5 < 0f)
 	{
@@ -3028,7 +3028,7 @@ int func_74(int iParam0, int iParam1)
 
 float func_75(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 float func_76(int iParam0, int iParam1)
@@ -3050,13 +3050,13 @@ float func_76(int iParam0, int iParam1)
 		Var3 = { ENTITY::GET_ENTITY_COORDS(iParam1, 1) };
 	}
 	Var1 = { Var3 - Var2 };
-	fVar4 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var1.x, Var1.y, Var0, Var0.f_1);
+	fVar4 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var1.x, Var1.f_1, Var0, Var0.f_1);
 	fVar4 = (fVar4 + -90f);
 	if (fVar4 < 0f)
 	{
 		fVar4 = (fVar4 * -1f);
 	}
-	Var1.z = 0f;
+	Var1.f_2 = 0f;
 	return (SYSTEM::VMAG(Var1) * SYSTEM::SIN(fVar4));
 }
 
@@ -5823,28 +5823,28 @@ int func_94(int iParam0, var uParam1, char* sParam2)
 		
 		case 306:
 			Var4 = { -7.4998f, 7.4995f, -0.5258f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 307:
 			Var5 = { 10.6345f, 0.7246f, 1.2508f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 308:
 			Var6 = { -3.4271f, -13.6787f, -1.4107f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 309:
 			Var7 = { -19.6582f, 7.896f, 0.1334f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;

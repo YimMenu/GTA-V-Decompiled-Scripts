@@ -1605,7 +1605,7 @@ Vector3 func_38(struct<3> Param0, float fParam1, struct<2> Param2, float fParam3
 	fVar2 = SYSTEM::COS(uVar1);
 	fVar3 = SYSTEM::SIN(uVar1);
 	Var0.x = ((Param2 * fVar2) + (Param2.f_1 * fVar3));
-	Var0.y = ((Param2.f_1 * fVar2) - (Param2 * fVar3));
+	Var0.f_1 = ((Param2.f_1 * fVar2) - (Param2 * fVar3));
 	Var4 = { Param0 + Var0 };
 	return Var4;
 }
@@ -1614,9 +1614,9 @@ bool func_39(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 Vector3 func_40()
@@ -4648,8 +4648,8 @@ void func_142(struct<3> Param0, float fParam1, bool bParam2)
 	PATHFIND::GET_CLOSEST_VEHICLE_NODE_WITH_HEADING(Param0, &Var1, &fVar0, 1, 1077936128, 0);
 	Var2 = { func_38(Var1, func_143(fVar0), fParam1, fParam1, 5f) };
 	Var3 = { func_38(Var1, fVar0, fParam1, fParam1, -5f) };
-	Var3.z = (Var3.z - 22f);
-	Var2.z = (Var2.z + 22f);
+	Var3.f_2 = (Var3.f_2 - 22f);
+	Var2.f_2 = (Var2.f_2 + 22f);
 	if (bParam2)
 	{
 		PATHFIND::SET_ROADS_IN_AREA(Var3, Var2, 0, 1);
@@ -6594,19 +6594,19 @@ void func_212()
 		Local_301.x = Var0.x;
 		Local_302.x = Var1.x;
 	}
-	if (Var1.y <= Var0.y)
+	if (Var1.f_1 <= Var0.f_1)
 	{
-		Local_301.y = Var1.y;
-		Local_302.y = Var0.y;
+		Local_301.f_1 = Var1.f_1;
+		Local_302.f_1 = Var0.f_1;
 	}
 	else
 	{
-		Local_301.y = Var0.y;
-		Local_302.y = Var1.y;
+		Local_301.f_1 = Var0.f_1;
+		Local_302.f_1 = Var1.f_1;
 	}
 	Local_301 = { Local_301 - Vector(20f, 20f, 20f) };
 	Local_302 = { Local_302 + Vector(20f, 20f, 20f) };
-	PATHFIND::_0x07FB139B592FA687(Local_301.x, Local_301.y, Local_302.x, Local_302.y);
+	PATHFIND::_0x07FB139B592FA687(Local_301.x, Local_301.f_1, Local_302.x, Local_302.f_1);
 }
 
 int func_213()
@@ -7730,8 +7730,8 @@ void func_253(struct<3> Param0, bool bParam1, float fParam2)
 	
 	Var0 = { func_38(Param0, 1f, -fParam2, -fParam2, -fParam2) };
 	Var1 = { func_38(Param0, 1f, fParam2, fParam2, fParam2) };
-	Var0.z = (Var0.z - 22f);
-	Var1.z = (Var1.z + 22f);
+	Var0.f_2 = (Var0.f_2 - 22f);
+	Var1.f_2 = (Var1.f_2 + 22f);
 	if (!bParam1)
 	{
 		PATHFIND::SET_ROADS_IN_AREA(Var0, Var1, 0, 1);
@@ -8177,7 +8177,7 @@ int func_264(var uParam0)
 			iVar6 = func_193(&(uParam0->f_409), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, 0f, 2.2f, 0.275f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, Var0), 1);
 			if (iVar6 == 1)
 			{
-				Var0.z = (Var0.z + 1.5f);
+				Var0.f_2 = (Var0.f_2 + 1.5f);
 				if (uParam0->f_7 == 2)
 				{
 					Var1 = { 0.7632f, 1.4884f, 0.4369f };
@@ -8587,7 +8587,7 @@ int func_275(var uParam0, float fParam1)
 	{
 		Var2 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(uParam0->f_4, iVar8) };
 		Var2 = { ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(uParam0->f_4, Var2) };
-		Var2.y = (Var2.y + 1f);
+		Var2.f_1 = (Var2.f_1 + 1f);
 	}
 	else
 	{
@@ -8604,7 +8604,7 @@ int func_275(var uParam0, float fParam1)
 			break;
 		
 		case 1:
-			if ((func_51(uParam0->f_4, uParam0->f_3, 0) <= fParam1 && !uParam0->f_142) && MISC::ABSF((Var0.z - Var1.z)) < 5f)
+			if ((func_51(uParam0->f_4, uParam0->f_3, 0) <= fParam1 && !uParam0->f_142) && MISC::ABSF((Var0.f_2 - Var1.f_2)) < 5f)
 			{
 				if (uParam0->f_409 == 0)
 				{
@@ -10146,7 +10146,7 @@ int func_324(var uParam0)
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(uParam0->f_4, 0))
 	{
 		Var0 = { ENTITY::GET_ENTITY_SPEED_VECTOR(uParam0->f_4, 1) };
-		if (Var0.y < -10f && !func_14(&(Local_162[0 /*10*/].f_3)))
+		if (Var0.f_1 < -10f && !func_14(&(Local_162[0 /*10*/].f_3)))
 		{
 			if (!func_14(&(Local_162[12 /*10*/].f_3)))
 			{
@@ -10270,7 +10270,7 @@ bool func_328(int iParam0)
 	PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), 2, &Var1, 1, 1077936128, 0);
 	PATHFIND::_GET_POINT_ON_ROAD_SIDE(Var0, -1, &Var2);
 	fVar9 = SYSTEM::VMAG(Var2 - Var0);
-	Var3 = { func_332((Var1.x - Var0.x), (Var1.y - Var0.y), 0f) };
+	Var3 = { func_332((Var1.x - Var0.x), (Var1.f_1 - Var0.f_1), 0f) };
 	Var4 = { func_331(Var3, 0) * Vector(fVar9, fVar9, fVar9) };
 	Var3 = { Var3 * Vector(2f, 2f, 2f) };
 	Var5 = { Var0 - Var3 + Var4 };
@@ -10294,10 +10294,10 @@ int func_329(struct<3> Param0, struct<3> Param1, struct<3> Param2, struct<3> Par
 	float fVar8;
 	float fVar9;
 	
-	Param0.z = 0f;
-	Param1.z = 0f;
-	Param2.z = 0f;
-	Param3.z = 0f;
+	Param0.f_2 = 0f;
+	Param1.f_2 = 0f;
+	Param2.f_2 = 0f;
+	Param3.f_2 = 0f;
 	Var0 = { func_332(Param2 - Param1) };
 	Var1 = { func_332(Param3 - Param1) };
 	fVar2 = func_330(Param0, Var0);
@@ -10331,7 +10331,7 @@ int func_329(struct<3> Param0, struct<3> Param1, struct<3> Param2, struct<3> Par
 
 float func_330(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 Vector3 func_331(struct<3> Param0, int iParam1)
@@ -10341,21 +10341,21 @@ Vector3 func_331(struct<3> Param0, int iParam1)
 	switch (iParam1)
 	{
 		case 0:
-			Var0.x = -Param0.y;
-			Var0.y = Param0.x;
+			Var0.x = -Param0.f_1;
+			Var0.f_1 = Param0.x;
 			break;
 		
 		case 1:
 			Var0.x = -Param0.x;
-			Var0.y = -Param0.y;
+			Var0.f_1 = -Param0.f_1;
 			break;
 		
 		case 2:
-			Var0.x = Param0.y;
-			Var0.y = -Param0.x;
+			Var0.x = Param0.f_1;
+			Var0.f_1 = -Param0.x;
 			break;
 	}
-	Var0.z = Param0.z;
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -10373,8 +10373,8 @@ Vector3 func_332(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -11761,7 +11761,7 @@ void func_364(var uParam0)
 
 int func_365(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -16151,7 +16151,7 @@ int func_435(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	if (bParam3)
 	{
-		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.y - IntToFloat(uParam2->f_6)), (Var0.z - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.y + IntToFloat(uParam2->f_6)), (Var0.z + IntToFloat(uParam2->f_6)), 0))
+		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.f_1 - IntToFloat(uParam2->f_6)), (Var0.f_2 - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.f_1 + IntToFloat(uParam2->f_6)), (Var0.f_2 + IntToFloat(uParam2->f_6)), 0))
 		{
 			return 1;
 		}

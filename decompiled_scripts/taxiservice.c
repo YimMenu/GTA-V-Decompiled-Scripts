@@ -4573,7 +4573,7 @@ void func_83()
 			if (fVar1 < 100f)
 			{
 				Var0 = { func_84(Global_110676 - Var0) };
-				Var0 = { (Global_110676 + (Var0.x * IntToFloat((100 - SYSTEM::ROUND(fVar1))))), (Global_110676.f_1 + (Var0.y * IntToFloat((100 - SYSTEM::ROUND(fVar1))))), Global_110676.f_2 };
+				Var0 = { (Global_110676 + (Var0.x * IntToFloat((100 - SYSTEM::ROUND(fVar1))))), (Global_110676.f_1 + (Var0.f_1 * IntToFloat((100 - SYSTEM::ROUND(fVar1))))), Global_110676.f_2 };
 				PATHFIND::GET_CLOSEST_VEHICLE_NODE_WITH_HEADING(Var0, &Global_110676, &Global_110682, 1, 1077936128, 0);
 				ENTITY::SET_ENTITY_COORDS(Global_110669, Global_110676, 1, 0, 0, 1);
 				ENTITY::SET_ENTITY_HEADING(Global_110669, Global_110682);
@@ -4596,8 +4596,8 @@ Vector3 func_84(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -6106,7 +6106,7 @@ int func_126(int iParam0, var uParam1, var uParam2)
 					*uParam1 = { Global_110679 };
 					*uParam2 = Global_110683;
 					Var0 = { Local_829 - *uParam1 };
-					Var0.z = 0f;
+					Var0.f_2 = 0f;
 					fLocal_72 = SYSTEM::VMAG(Var0);
 					iLocal_110 = 7;
 					iLocal_820 = 4;
@@ -6117,7 +6117,7 @@ int func_126(int iParam0, var uParam1, var uParam2)
 					if (func_146(Local_829, uParam1, uParam2))
 					{
 						Var0 = { Local_829 - *uParam1 };
-						Var0.z = 0f;
+						Var0.f_2 = 0f;
 						fLocal_72 = SYSTEM::VMAG(Var0);
 						iLocal_110 = 7;
 						iLocal_820 = 4;
@@ -6132,7 +6132,7 @@ int func_126(int iParam0, var uParam1, var uParam2)
 				if (func_135(Local_829, uParam1, uParam2, 1))
 				{
 					Var0 = { Local_829 - *uParam1 };
-					Var0.z = 0f;
+					Var0.f_2 = 0f;
 					fLocal_72 = SYSTEM::VMAG(Var0);
 					iLocal_110 = 7;
 					iLocal_820 = 4;
@@ -6165,7 +6165,7 @@ int func_126(int iParam0, var uParam1, var uParam2)
 				if (func_146(*uParam1, uParam1, uParam2))
 				{
 					Var0 = { Local_829 - *uParam1 };
-					Var0.z = 0f;
+					Var0.f_2 = 0f;
 					fLocal_72 = SYSTEM::VMAG(Var0);
 					iLocal_110 = 7;
 				}
@@ -6226,7 +6226,7 @@ int func_127(var uParam0, struct<3> Param1, struct<3> Param2, var uParam3, var u
 	{
 		while (!bVar13 && *iParam5 < iVar18)
 		{
-			if (Param2.z == 1f)
+			if (Param2.f_2 == 1f)
 			{
 				fVar0 = 0f;
 			}
@@ -6323,7 +6323,7 @@ int func_127(var uParam0, struct<3> Param1, struct<3> Param2, var uParam3, var u
 								}
 							}
 						}
-						fVar11 = (Param2.z - uParam3->f_2);
+						fVar11 = (Param2.f_2 - uParam3->f_2);
 						if (fVar11 < 0f)
 						{
 							fVar11 = (fVar11 * -1f);
@@ -6367,7 +6367,7 @@ int func_127(var uParam0, struct<3> Param1, struct<3> Param2, var uParam3, var u
 		if (bVar13)
 		{
 			Var2 = { Param2 - *uParam3 };
-			Var2.z = 0f;
+			Var2.f_2 = 0f;
 			fLocal_72 = SYSTEM::VMAG(Var2);
 			if (fLocal_72 != 0f)
 			{
@@ -6403,12 +6403,12 @@ int func_130(struct<3> Param0, struct<3> Param1)
 	float fVar0;
 	float fVar1;
 	
-	fVar1 = (Param1.z - Param0.z);
+	fVar1 = (Param1.f_2 - Param0.f_2);
 	if (fVar1 < 0f)
 	{
 		fVar1 = (fVar1 * -1f);
 	}
-	if (Param0.z <= 1f)
+	if (Param0.f_2 <= 1f)
 	{
 		func_54("\nIS_COORD_ON_SAME_LEVEL_AS_COORD - vCoord1.z <= 1, probably a waypoint blip - RETURN TRUE\n");
 		return 1;
@@ -6449,13 +6449,13 @@ void func_132(struct<2> Param0, var uParam1, struct<2> Param2, var uParam3, var 
 	}
 	if (Param2.f_1 <= Param0.f_1)
 	{
-		Var0.y = Param2.f_1;
-		Var1.y = Param0.f_1;
+		Var0.f_1 = Param2.f_1;
+		Var1.f_1 = Param0.f_1;
 	}
 	else
 	{
-		Var0.y = Param0.f_1;
-		Var1.y = Param2.f_1;
+		Var0.f_1 = Param0.f_1;
+		Var1.f_1 = Param2.f_1;
 	}
 	Var0 = { Var0 - Vector(IntToFloat(iParam6), IntToFloat(iParam6), IntToFloat(iParam6)) };
 	Var1 = { Var1 + Vector(IntToFloat(iParam6), IntToFloat(iParam6), IntToFloat(iParam6)) };
@@ -6477,9 +6477,9 @@ int func_133(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -6488,7 +6488,7 @@ int func_133(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -6580,9 +6580,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 28f;
+		Var1.f_2 = 28f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -209.3372f, -2011.099f, 26.62037f, -257.2225f, -2076.963f, 36.62037f, 30f, 0, 1))
 	{
@@ -6591,9 +6591,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 159f;
+		Var1.f_2 = 159f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -804.05f, 4216.412f, 204.4872f, -509.0679f, 4135.19f, 123.2502f, 250f, 0, 1))
 	{
@@ -6602,9 +6602,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 180f;
+		Var1.f_2 = 180f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -2203.167f, 183.3549f, 167.4022f, -2311.587f, 434.3828f, 195.4669f, 138.5f, 0, 1))
 	{
@@ -6613,9 +6613,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 10f;
+		Var1.f_2 = 10f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -2041.478f, -553.2159f, -0.089962f, -1787.08f, -768.0886f, 37.99918f, 220f, 0, 1))
 	{
@@ -6675,9 +6675,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 330f;
+		Var1.f_2 = 330f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -446.12f, 1057.452f, 318.6169f, -405.8336f, 1194.486f, 337.0966f, 106.25f, 0, 1))
 	{
@@ -6686,9 +6686,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 20f;
+		Var1.f_2 = 20f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -1362.091f, -29.26777f, -100f, -1377.953f, 152.2389f, 100f, 50f, 0, 1))
 	{
@@ -6976,9 +6976,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 20f;
+		Var1.f_2 = 20f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 845.7216f, -990.7473f, 37.4696f, 846.3397f, -1066.88f, 16.96623f, 90f, 0, 1))
 	{
@@ -7028,9 +7028,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 20f;
+		Var1.f_2 = 20f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 767.3736f, -1077.429f, -10.78654f, 682.8284f, -1080.686f, 79.67303f, 60f, 0, 1))
 	{
@@ -7080,9 +7080,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 31f;
+		Var1.f_2 = 31f;
 	}
 	if (func_142(3, Var1))
 	{
@@ -7094,9 +7094,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 77.2f;
+		Var1.f_2 = 77.2f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1535.987f, -2041.497f, 68.21275f, 1529.357f, -2204.463f, 96.11195f, 105f, 0, 1))
 	{
@@ -7105,9 +7105,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 51.1739f;
+		Var1.f_2 = 51.1739f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1185.81f, -1768.367f, 28.31145f, 1369.068f, -1701.452f, 66.25389f, 70f, 1, 1))
 	{
@@ -7140,9 +7140,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 25f;
+		Var1.f_2 = 25f;
 	}
 	if (func_140(Var1, -1693.302f, -1109.13f, 17.89778f, 240f))
 	{
@@ -7154,9 +7154,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 10f;
+		Var1.f_2 = 10f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -1140.89f, -1573.135f, -6.566939f, -1067.084f, -1675.976f, 23.53153f, 52f, 0, 1))
 	{
@@ -7165,9 +7165,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 114f;
+		Var1.f_2 = 114f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1324.172f, 1110.748f, 99.65493f, 1523.097f, 1110.473f, 132.8859f, 170f, 0, 1))
 	{
@@ -7192,9 +7192,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 40f;
+		Var1.f_2 = 40f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1737.39f, 3287.795f, 35.13897f, 1724.345f, 3337.854f, 57.20038f, 40f, 0, 1))
 	{
@@ -7203,9 +7203,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 7f;
+		Var1.f_2 = 7f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -695.7981f, -1379.678f, 24.48124f, -777.3731f, -1491.13f, -3.594945f, 72f, 0, 1))
 	{
@@ -7214,9 +7214,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 325f;
+		Var1.f_2 = 325f;
 	}
 	if (SYSTEM::VDIST2(Var1, -75.59782f, -818.6082f, 325.1745f) < (58f * 58f))
 	{
@@ -7227,9 +7227,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 	if (!func_138())
 	{
 		Var1 = { Param0 };
-		if (Param0.z == 1f)
+		if (Param0.f_2 == 1f)
 		{
-			Var1.z = 36.1141f;
+			Var1.f_2 = 36.1141f;
 		}
 		if (func_142(7, Var1))
 		{
@@ -7242,9 +7242,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 	}
 	Var1 = { Param0 };
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 12.7091f;
+		Var1.f_2 = 12.7091f;
 	}
 	if (func_142(2, Var1))
 	{
@@ -7333,17 +7333,17 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 	fVar12 = func_137(Param0, Var10);
 	Var1 = { Param0 };
 	bVar13 = false;
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 400f;
+		Var1.f_2 = 400f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -148.8777f, 4862.204f, 305.6442f, 454.6274f, 5573.104f, 804.097f, 250f, 0, 1))
 	{
 		bVar13 = true;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 200f;
+		Var1.f_2 = 200f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -482.8931f, 4990.255f, 155.1601f, 7.830751f, 5009.371f, 430.7604f, 250f, 0, 1))
 	{
@@ -7361,33 +7361,33 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		return 1;
 	}
 	bVar13 = false;
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 700f;
+		Var1.f_2 = 700f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 441.3999f, 5579.99f, 802.5138f, 965.7776f, 5675.921f, 601.2646f, 250f, 0, 1))
 	{
 		bVar13 = true;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 300f;
+		Var1.f_2 = 300f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 954.1139f, 5641.051f, 646.5054f, 2140.375f, 5377.753f, 149.1221f, 250f, 0, 1))
 	{
 		bVar13 = true;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 100f;
+		Var1.f_2 = 100f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 2117.348f, 5377.259f, 173.3297f, 2439.934f, 5297.445f, 62.68662f, 100f, 0, 1))
 	{
 		bVar13 = true;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 65f;
+		Var1.f_2 = 65f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 2393.347f, 5321.58f, 107.0624f, 2523.946f, 5124.746f, 41.68384f, 70f, 0, 1))
 	{
@@ -7404,9 +7404,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 6f;
+		Var1.f_2 = 6f;
 	}
 	if (func_136(Var1, -99.68751f, -2448.891f, 5.01731f, 230f))
 	{
@@ -7426,9 +7426,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 			return 1;
 		}
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 28.4f;
+		Var1.f_2 = 28.4f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 412.279f, 6481.868f, 25.80821f, 468.9353f, 6442.752f, 45.60727f, 24f, 0, 1))
 	{
@@ -7436,9 +7436,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 219.4788f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 28.2065f;
+		Var1.f_2 = 28.2065f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 476.5394f, -1301.548f, 44.82458f, 499.5822f, -1339.025f, 26.31703f, 35f, 0, 1))
 	{
@@ -7446,9 +7446,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 181.3208f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 28.2065f;
+		Var1.f_2 = 28.2065f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 496.9816f, -1412.255f, 43.29391f, 497.269f, -1339.364f, 26.31648f, 40f, 0, 1))
 	{
@@ -7456,9 +7456,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 83.2905f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 73f;
+		Var1.f_2 = 73f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 951.1704f, -147.0047f, 71.54326f, 1005.245f, -98.44745f, 95.62679f, 70f, 0, 1))
 	{
@@ -7466,9 +7466,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 58.9938f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 52f;
+		Var1.f_2 = 52f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 1137.022f, 89.06853f, 74.89022f, 1267.821f, 292.0106f, 102.9904f, 195f, 0, 1))
 	{
@@ -7482,9 +7482,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		*uParam2 = 145.5134f;
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 30.6f;
+		Var1.f_2 = 30.6f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, 191.8731f, -723.553f, 40.23576f, 79.58656f, -687.6684f, 29.54734f, 85f, 0, 1))
 	{
@@ -7501,9 +7501,9 @@ int func_135(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 		}
 		return 1;
 	}
-	if (Param0.z == 1f)
+	if (Param0.f_2 == 1f)
 	{
-		Var1.z = 33.5f;
+		Var1.f_2 = 33.5f;
 	}
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -40f, -687.7f, 36.6f, -72.7f, -682f, 29.6f, 15f, 0, 1) || OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, -45.3f, -687.8f, 29.3f, 5.9f, -688.7f, 36.8f, 55f, 0, 1))
 	{
@@ -7583,7 +7583,7 @@ bool func_140(struct<3> Param0, struct<3> Param1, float fParam2)
 	struct<3> Var0;
 	
 	Var0 = { Param1 - Param0 };
-	return ((Var0.x * Var0.x) + (Var0.y * Var0.y)) <= (fParam2 * fParam2);
+	return ((Var0.x * Var0.x) + (Var0.f_1 * Var0.f_1)) <= (fParam2 * fParam2);
 }
 
 int func_141(struct<3> Param0, int iParam1, int iParam2, bool bParam3)
@@ -7909,7 +7909,7 @@ Vector3 func_144(int iParam0)
 
 int func_145(struct<3> Param0, struct<3> Param1, struct<3> Param2)
 {
-	if (((((Param0.x > Param1.x && Param0.x < Param2.x) && Param0.y > Param1.y) && Param0.y < Param2.y) && Param0.z > Param1.z) && Param0.z < Param2.z)
+	if (((((Param0.x > Param1.x && Param0.x < Param2.x) && Param0.f_1 > Param1.f_1) && Param0.f_1 < Param2.f_1) && Param0.f_2 > Param1.f_2) && Param0.f_2 < Param2.f_2)
 	{
 		return 1;
 	}
@@ -8094,9 +8094,9 @@ int func_148(int iParam0, struct<3> Param1)
 	switch (iParam0)
 	{
 		case 76:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 15f;
+				Param1.f_2 = 15f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -1157.595f, -2726.636f, 12.94464f, -1110.794f, -2679.33f, 22.94466f, 26f, 0, 1))
 			{
@@ -8105,9 +8105,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 70:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 38.5f;
+				Param1.f_2 = 38.5f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -1908.065f, 4432.693f, 51.3842f, -1962.212f, 4473.8f, 22.93989f, 70f, 0, 1))
 			{
@@ -8116,9 +8116,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 71:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 206.5f;
+				Param1.f_2 = 206.5f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -541.8311f, 2050.599f, 186.3904f, -499.787f, 1968.325f, 228.0183f, 70f, 0, 1))
 			{
@@ -8127,9 +8127,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 73:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 43.1f;
+				Param1.f_2 = 43.1f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -179.8588f, 4216.167f, 30.26505f, -246.32f, 4226.653f, 53.77886f, 70f, 0, 1))
 			{
@@ -8138,9 +8138,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 74:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 34f;
+				Param1.f_2 = 34f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 1634.122f, 3858.049f, 28.33912f, 1573.259f, 3800.442f, 48.35476f, 70f, 0, 1))
 			{
@@ -8149,9 +8149,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 75:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 94f;
+				Param1.f_2 = 94f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 2057.873f, 2059.198f, 63.88074f, 1999.045f, 2190.544f, 122.2642f, 110f, 0, 1))
 			{
@@ -8160,9 +8160,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 72:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 40.7f;
+				Param1.f_2 = 40.7f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 3028.084f, 2768.167f, 57.72984f, 2944.284f, 2772.836f, 30.23068f, 85f, 0, 1))
 			{
@@ -8172,9 +8172,9 @@ int func_148(int iParam0, struct<3> Param1)
 		
 		case 105:
 		case 106:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 305f;
+				Param1.f_2 = 305f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 2097.951f, 4820.308f, 55.48169f, 2151.254f, 4726.398f, 31.0732f, 120f, 0, 1))
 			{
@@ -8183,9 +8183,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 125:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 4.7f;
+				Param1.f_2 = 4.7f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -763.5086f, -1297.98f, 2.000373f, -864.1372f, -1278.007f, 24.15038f, 85f, 0, 1))
 			{
@@ -8194,9 +8194,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 126:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 52f;
+				Param1.f_2 = 52f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 1137.022f, 89.06853f, 74.89022f, 1267.821f, 292.0106f, 102.9904f, 195f, 0, 1))
 			{
@@ -8205,9 +8205,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 127:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 35.6f;
+				Param1.f_2 = 35.6f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 2512.305f, 1519.462f, 28.55504f, 2380.374f, 1521.587f, 58.80984f, 90f, 0, 1))
 			{
@@ -8216,9 +8216,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 128:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 10.0979f;
+				Param1.f_2 = 10.0979f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -193.5583f, 6533.439f, -1.902109f, -299.2512f, 6645.049f, 20.45973f, 120f, 0, 1))
 			{
@@ -8227,9 +8227,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 129:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 325f;
+				Param1.f_2 = 325f;
 			}
 			if (SYSTEM::VDIST2(Param1, -75.59782f, -818.6082f, 325.1745f) < (58f * 58f))
 			{
@@ -8238,9 +8238,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 131:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 133f;
+				Param1.f_2 = 133f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -1171.147f, 4647.89f, 203.7937f, -1280.149f, 4457.597f, 5.653551f, 120f, 0, 1))
 			{
@@ -8249,9 +8249,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 132:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 91.6f;
+				Param1.f_2 = 91.6f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -687.974f, 4499.52f, 114.781f, -826.0081f, 4496.864f, 49.88359f, 140f, 0, 1))
 			{
@@ -8260,9 +8260,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 134:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 23f;
+				Param1.f_2 = 23f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -1364.701f, 4490.626f, 49.52477f, -1367.169f, 4340.34f, -1.682158f, 100f, 0, 1))
 			{
@@ -8271,9 +8271,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 135:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 44f;
+				Param1.f_2 = 44f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 2566.189f, 5007.007f, 97.36896f, 2491.714f, 4923.261f, 30.43494f, 80f, 0, 1))
 			{
@@ -8282,9 +8282,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 136:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 69f;
+				Param1.f_2 = 69f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 1009.917f, -163.4684f, 102.1028f, 1113.474f, -221.3295f, 49.8745f, 90f, 0, 1))
 			{
@@ -8293,9 +8293,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 107:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 12f;
+				Param1.f_2 = 12f;
 			}
 			if (SYSTEM::VDIST2(Param1, -1230.622f, -2049.97f, 12.8882f) < (75f * 75f))
 			{
@@ -8304,9 +8304,9 @@ int func_148(int iParam0, struct<3> Param1)
 			break;
 		
 		case 65:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 47f;
+				Param1.f_2 = 47f;
 			}
 			if (SYSTEM::VDIST2(Param1, -1968.1f, 3116.7f, 46.8882f) < (30f * 30f))
 			{
@@ -8522,9 +8522,9 @@ int func_150(int iParam0, struct<3> Param1)
 	switch (iParam0)
 	{
 		case 9:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 83.3f;
+				Param1.f_2 = 83.3f;
 			}
 			if (SYSTEM::VDIST2(Param1, -1619.53f, 4204.1f, 83.3f) < (20f * 20f))
 			{
@@ -8533,9 +8533,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 11:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 35f;
+				Param1.f_2 = 35f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 1882.79f, 4725.034f, 34.74373f, 1701.497f, 4677.47f, 47.89289f, 159.5f, 0, 1))
 			{
@@ -8544,9 +8544,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 12:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 35f;
+				Param1.f_2 = 35f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 1882.79f, 4725.034f, 34.74373f, 1701.497f, 4677.47f, 47.89289f, 159.5f, 0, 1))
 			{
@@ -8555,9 +8555,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 14:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 11.66f;
+				Param1.f_2 = 11.66f;
 			}
 			if (SYSTEM::VDIST2(Param1, -2892.93f, 3192.37f, 11.66f) < (50f * 50f))
 			{
@@ -8566,9 +8566,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 17:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 302.86f;
+				Param1.f_2 = 302.86f;
 			}
 			if (SYSTEM::VDIST2(Param1, -188.22f, 1296.1f, 302.86f) < (50f * 50f))
 			{
@@ -8577,9 +8577,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 18:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 14.64f;
+				Param1.f_2 = 14.64f;
 			}
 			if (SYSTEM::VDIST2(Param1, -954.19f, -2760.05f, 14.64f) < (50f * 50f))
 			{
@@ -8588,9 +8588,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 19:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 325f;
+				Param1.f_2 = 325f;
 			}
 			if (SYSTEM::VDIST2(Param1, -75.59782f, -818.6082f, 325.1745f) < (58f * 58f))
 			{
@@ -8599,9 +8599,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 20:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 170.29f;
+				Param1.f_2 = 170.29f;
 			}
 			if (SYSTEM::VDIST2(Param1, 1732.27f, 96.36f, 170.29f) < (50f * 50f))
 			{
@@ -8610,9 +8610,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 21:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 44.9677f;
+				Param1.f_2 = 44.9677f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -1903.322f, -401.2384f, 19.23456f, -1844.879f, -445.7261f, 73.56197f, 115f, 0, 1))
 			{
@@ -8621,9 +8621,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 22:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 359f;
+				Param1.f_2 = 359f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 794.2453f, 1277.443f, -100f, 833.8215f, 1277.108f, 400f, 19f, 0, 1))
 			{
@@ -8632,9 +8632,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 23:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 5f;
+				Param1.f_2 = 5f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -1015.526f, 6287.513f, -10.94449f, -761.3104f, 5895.014f, 45.33727f, 167.75f, 0, 1))
 			{
@@ -8643,9 +8643,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 24:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 29.6f;
+				Param1.f_2 = 29.6f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -72.13491f, -1267.587f, 27.68361f, -72.18015f, -1256.712f, 31f, 30f, 0, 1))
 			{
@@ -8654,9 +8654,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 26:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 16.3f;
+				Param1.f_2 = 16.3f;
 			}
 			if (SYSTEM::VDIST2(Param1, -683.4159f, 5841.043f, 16.3306f) < (20f * 20f))
 			{
@@ -8666,9 +8666,9 @@ int func_150(int iParam0, struct<3> Param1)
 		
 		case 28:
 		case 29:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 29f;
+				Param1.f_2 = 29f;
 			}
 			if (SYSTEM::VDIST2(Param1, 566.1639f, -1773.817f, 29f) < (50f * 50f))
 			{
@@ -8677,9 +8677,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 30:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 63.1146f;
+				Param1.f_2 = 63.1146f;
 			}
 			if (SYSTEM::VDIST2(Param1, -1103.628f, 288.1084f, 63.1146f) < (50f * 50f))
 			{
@@ -8688,9 +8688,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 33:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 100f;
+				Param1.f_2 = 100f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -21.12362f, 4518.907f, 119.7836f, 43.13283f, 4538.929f, 72.58955f, 48f, 0, 1))
 			{
@@ -8699,9 +8699,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 37:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 67.5f;
+				Param1.f_2 = 67.5f;
 			}
 			if (SYSTEM::VDIST2(Param1, -1099.502f, 790.2614f, 163.3998f) < (30f * 30f))
 			{
@@ -8710,9 +8710,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 39:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 67.5f;
+				Param1.f_2 = 67.5f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -1088.425f, 372.0723f, 62.75896f, -967.03f, 363.5976f, 101.3483f, 75f, 0, 1))
 			{
@@ -8721,9 +8721,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 43:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 28.2f;
+				Param1.f_2 = 28.2f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -91.45676f, -1296.975f, 26.15437f, 40.67288f, -1297.459f, 58.29368f, 110f, 0, 1))
 			{
@@ -8732,9 +8732,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 44:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 49.9f;
+				Param1.f_2 = 49.9f;
 			}
 			if (SYSTEM::VDIST2(Param1, 2468.51f, 3437.39f, 49.9f) < (30f * 30f))
 			{
@@ -8743,9 +8743,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 47:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 110f;
+				Param1.f_2 = 110f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -78.38029f, 285.5254f, 102.6286f, -51.1546f, 357.5217f, 122.0617f, 40f, 0, 1))
 			{
@@ -8754,9 +8754,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 49:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 100f;
+				Param1.f_2 = 100f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 420.5196f, 116.2892f, 77.57532f, 212.2937f, 193.6794f, 131.8767f, 250f, 0, 1))
 			{
@@ -8765,9 +8765,9 @@ int func_150(int iParam0, struct<3> Param1)
 			break;
 		
 		case 50:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 64f;
+				Param1.f_2 = 64f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 1140.158f, -540.9644f, 49.99944f, 972.3716f, -535.1002f, 85.64397f, 168.25f, 0, 1))
 			{
@@ -8778,9 +8778,9 @@ int func_150(int iParam0, struct<3> Param1)
 		case 58:
 		case 59:
 		case 62:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 29.6f;
+				Param1.f_2 = 29.6f;
 			}
 			if (SYSTEM::VDIST2(Param1, -16.5304f, -1473.121f, 29.611f) < (8f * 8f))
 			{
@@ -8953,9 +8953,9 @@ int func_152(int iParam0, struct<3> Param1)
 	switch (iParam0)
 	{
 		case 3:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 7f;
+				Param1.f_2 = 7f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -1535.754f, -922.101f, 4.122119f, -1487.87f, -961.3929f, 26.71922f, 50f, 0, 1))
 			{
@@ -8964,9 +8964,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case 8:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 40f;
+				Param1.f_2 = 40f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 53.12898f, -463.9999f, 36.9208f, 99.3761f, -329.3476f, 118.0454f, 125f, 0, 1))
 			{
@@ -8976,9 +8976,9 @@ int func_152(int iParam0, struct<3> Param1)
 		
 		case 32:
 		case 38:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 51.0214f;
+				Param1.f_2 = 51.0214f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 1420.347f, -2036.558f, 47.36072f, 1341.11f, -2103.844f, 72.32651f, 55f, 0, 1))
 			{
@@ -8988,9 +8988,9 @@ int func_152(int iParam0, struct<3> Param1)
 		
 		case 41:
 		case 47:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 51.0214f;
+				Param1.f_2 = 51.0214f;
 			}
 			if (SYSTEM::VDIST2(Param1, -13.89061f, -1449.29f, 29.64636f) < (36f * 36f))
 			{
@@ -8999,9 +8999,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case 48:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 173.47f;
+				Param1.f_2 = 173.47f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -2306.98f, 435.3038f, 171.4666f, -2303.291f, 366.3199f, 179.6018f, 65.5f, 0, 1))
 			{
@@ -9010,9 +9010,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case 45:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 114f;
+				Param1.f_2 = 114f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 1324.172f, 1110.748f, 99.65493f, 1523.097f, 1110.473f, 132.8859f, 170f, 0, 1))
 			{
@@ -9021,9 +9021,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case 24:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 46f;
+				Param1.f_2 = 46f;
 			}
 			if (SYSTEM::VDIST2(Param1, 1330.389f, -2553.744f, 45.9221f) < (30f * 30f))
 			{
@@ -9032,9 +9032,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case 60:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 34.5f;
+				Param1.f_2 = 34.5f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, -995.978f, -517.4324f, 11.37763f, -1060.725f, -547.5588f, 65.33043f, 35.75f, 0, 1))
 			{
@@ -9043,9 +9043,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case 86:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 23.18f;
+				Param1.f_2 = 23.18f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 682.6544f, -968.7439f, 19.97575f, 762.8684f, -964.4064f, 43.03712f, 53f, 0, 1))
 			{
@@ -9054,9 +9054,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case 87:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 5f;
+				Param1.f_2 = 5f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 148.8361f, -3029.146f, 4.277727f, 148.1396f, -3342.344f, 22.90379f, 97.75f, 0, 1))
 			{
@@ -9065,9 +9065,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case 78:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 28.1893f;
+				Param1.f_2 = 28.1893f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 446.8174f, -1691.708f, 23.28233f, 288.5565f, -1552.352f, 108.3117f, 155f, 0, 1))
 			{
@@ -9076,9 +9076,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case joaat("MPSV_LP0_31"):
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 28.1893f;
+				Param1.f_2 = 28.1893f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 910.9382f, -1749.91f, 14.50614f, 921.7415f, -1455.248f, 99.67125f, 210f, 0, 1))
 			{
@@ -9087,9 +9087,9 @@ int func_152(int iParam0, struct<3> Param1)
 			break;
 		
 		case 83:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 37f;
+				Param1.f_2 = 37f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 2657.302f, 2974.529f, 34.53447f, 2591.657f, 2880.223f, 68.08156f, 78.75f, 0, 1))
 			{
@@ -9099,9 +9099,9 @@ int func_152(int iParam0, struct<3> Param1)
 		
 		case 76:
 		case 84:
-			if (Param1.z == 1f)
+			if (Param1.f_2 == 1f)
 			{
-				Param1.z = 28f;
+				Param1.f_2 = 28f;
 			}
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(Param1, 83.32325f, -1312.172f, 23.33694f, 148.383f, -1273.553f, 49.46651f, 65f, 0, 1))
 			{
@@ -9133,7 +9133,7 @@ int func_153(var uParam0, int iParam1, float fParam2)
 				Var4 = { func_85(*iParam1, 0) };
 				if (uParam0->f_2 == 1f)
 				{
-					Var4.z = 1f;
+					Var4.f_2 = 1f;
 				}
 				fVar2 = SYSTEM::VDIST(*uParam0, Var4);
 				if (fVar2 < fVar1)
@@ -9159,7 +9159,7 @@ int func_153(var uParam0, int iParam1, float fParam2)
 				Var4 = { func_85(*iParam1, 0) };
 				if (uParam0->f_2 == 1f)
 				{
-					Var4.z = 1f;
+					Var4.f_2 = 1f;
 				}
 				fVar2 = SYSTEM::VDIST(*uParam0, Var4);
 				if (fVar2 < fVar1)
@@ -9230,7 +9230,7 @@ int func_156(var uParam0, int iParam1, float fParam2)
 				Var3 = { Var5.f_6 };
 				if (uParam0->f_2 == 1f)
 				{
-					Var3.z = 1f;
+					Var3.f_2 = 1f;
 				}
 				fVar2 = SYSTEM::VDIST(*uParam0, Var3);
 				if (fVar2 < fVar1)
@@ -9309,7 +9309,7 @@ int func_158(var uParam0, int iParam1, float fParam2)
 					Var3 = { HUD::GET_BLIP_COORDS(Global_31146[Global_95677[iVar4 /*17*/].f_9 /*23*/].f_19) };
 					if (uParam0->f_2 == 1f)
 					{
-						Var3.z = 1f;
+						Var3.f_2 = 1f;
 					}
 					fVar2 = SYSTEM::VDIST(*uParam0, Var3);
 					if (fVar2 < fVar1)
@@ -10083,7 +10083,7 @@ void func_182()
 		Var0 = { HUD::GET_BLIP_COORDS(Local_43.x) };
 		if (CAM::DOES_CAM_EXIST(uLocal_68) && CAM::IS_CAM_ACTIVE(uLocal_68))
 		{
-			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.y);
+			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
 			HUD::LOCK_MINIMAP_ANGLE(0);
 			HUD::SET_RADAR_ZOOM(1400);
 		}
@@ -10139,7 +10139,7 @@ void func_185(int iParam0, var uParam1, struct<3> Param2)
 		if (CAM::DOES_CAM_EXIST(*uParam1))
 		{
 			Var0 = { ENTITY::GET_ENTITY_ROTATION(iParam0, 2) };
-			uVar3 = Var0.y;
+			uVar3 = Var0.f_1;
 			Var4 = { func_84(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Global_110669, Param2) - ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Global_110669, Local_835)) };
 			func_186(Var4, &uVar1, &uVar2, 1);
 			CAM::SET_CAM_ROT(*uParam1, uVar1, uVar3, uVar2, 2);
@@ -10151,9 +10151,9 @@ void func_186(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 {
 	float fVar0;
 	
-	if (Param0.y != 0f)
+	if (Param0.f_1 != 0f)
 	{
-		*uParam2 = MISC::ATAN2(Param0.x, Param0.y);
+		*uParam2 = MISC::ATAN2(Param0.x, Param0.f_1);
 	}
 	else if (Param0.x < 0f)
 	{
@@ -10171,12 +10171,12 @@ void func_186(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 			*uParam2 = (*uParam2 + 360f);
 		}
 	}
-	fVar0 = SYSTEM::SQRT(((Param0.x * Param0.x) + (Param0.y * Param0.y)));
+	fVar0 = SYSTEM::SQRT(((Param0.x * Param0.x) + (Param0.f_1 * Param0.f_1)));
 	if (fVar0 != 0f)
 	{
-		*uParam1 = MISC::ATAN2(Param0.z, fVar0);
+		*uParam1 = MISC::ATAN2(Param0.f_2, fVar0);
 	}
-	else if (Param0.z < 0f)
+	else if (Param0.f_2 < 0f)
 	{
 		*uParam1 = -90f;
 	}
@@ -11749,9 +11749,9 @@ bool func_209(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_210(var uParam0)
@@ -12159,14 +12159,14 @@ void func_217()
 		Var0 = { HUD::GET_BLIP_COORDS(Local_819[iLocal_92 /*3*/]) };
 		if (!func_218(Var0))
 		{
-			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.y);
+			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
 		}
 	}
 }
 
 int func_218(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -12190,7 +12190,7 @@ void func_219()
 		Var0 = { HUD::GET_BLIP_COORDS(Local_819[iLocal_92 /*3*/]) };
 		if (!func_218(Var0))
 		{
-			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.y);
+			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
 		}
 	}
 }
@@ -12445,11 +12445,11 @@ int func_230(int iParam0)
 		Var2 = { Var0 };
 		Var3 = { Var2 };
 		Var2.x = (Var2.x - fVar1);
-		Var2.y = (Var2.y - fVar1);
-		Var2.z = (Var2.z - fVar1);
+		Var2.f_1 = (Var2.f_1 - fVar1);
+		Var2.f_2 = (Var2.f_2 - fVar1);
 		Var3.x = (Var3.x + fVar1);
-		Var3.y = (Var3.y + fVar1);
-		Var3.z = (Var3.z + fVar1);
+		Var3.f_1 = (Var3.f_1 + fVar1);
+		Var3.f_2 = (Var3.f_2 + fVar1);
 		if (MISC::IS_PROJECTILE_IN_AREA(Var2, Var3, 1))
 		{
 			return 1;
@@ -12514,7 +12514,7 @@ int func_232()
 			if (func_234(&uVar0, &iVar1, 1))
 			{
 				Local_832 = { ENTITY::GET_ENTITY_COORDS(Global_110669, 1) - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-				Local_832.z = 0f;
+				Local_832.f_2 = 0f;
 				fLocal_72 = SYSTEM::VMAG(Local_832);
 				iLocal_71 = func_60(PLAYER::PLAYER_PED_ID());
 				func_233();

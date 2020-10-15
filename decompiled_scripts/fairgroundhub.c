@@ -684,7 +684,7 @@ int func_8(var uParam0)
 		if (func_66(iVar1))
 		{
 			Var0 = { ENTITY::GET_ENTITY_ROTATION(iVar1, 2) };
-			if (Var0.y > 45f || Var0.y < -45f)
+			if (Var0.f_1 > 45f || Var0.f_1 < -45f)
 			{
 				return 0;
 			}
@@ -829,8 +829,8 @@ Vector3 func_18(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -1339,13 +1339,13 @@ void func_50(struct<3> Param0, float fParam1, int iParam2, int iParam3, int iPar
 	fVar4 = 0f;
 	Var2 = { Param0 };
 	Var2.x = (Var2.x + (SYSTEM::SIN((fVar4 - fVar1)) * fParam1));
-	Var2.y = (Var2.y + (SYSTEM::COS((fVar4 - fVar1)) * fParam1));
+	Var2.f_1 = (Var2.f_1 + (SYSTEM::COS((fVar4 - fVar1)) * fParam1));
 	iVar0 = 0;
 	while (iVar0 <= iParam6)
 	{
 		Var3 = { Param0 };
 		Var3.x = (Var3.x + (SYSTEM::SIN(fVar4) * fParam1));
-		Var3.y = (Var3.y + (SYSTEM::COS(fVar4) * fParam1));
+		Var3.f_1 = (Var3.f_1 + (SYSTEM::COS(fVar4) * fParam1));
 		GRAPHICS::DRAW_DEBUG_LINE(Var2, Var3, iParam2, iParam3, iParam4, iParam5);
 		Var2 = { Var3 };
 		fVar4 = (fVar4 + fVar1);
@@ -1377,7 +1377,7 @@ void func_52(struct<3> Param0, struct<3> Param1, float fParam2, int iParam3, int
 	fVar2 = (fParam2 / 2f);
 	Var3 = { Param0 };
 	Var4 = { Param1 };
-	Var4.z = Param0.z;
+	Var4.f_2 = Param0.f_2;
 	Var5[0 /*3*/] = { Var3 - Var1 * Vector(fVar2, fVar2, fVar2) };
 	Var5[1 /*3*/] = { Var3 + Var1 * Vector(fVar2, fVar2, fVar2) };
 	Var5[2 /*3*/] = { Var4 + Var1 * Vector(fVar2, fVar2, fVar2) };
@@ -1390,7 +1390,7 @@ void func_52(struct<3> Param0, struct<3> Param1, float fParam2, int iParam3, int
 	while (iVar6 <= 3)
 	{
 		Var5[(4 + iVar6) /*3*/] = { Var5[iVar6 /*3*/] };
-		Var5[(4 + iVar6) /*3*/].f_2 = Param1.z;
+		Var5[(4 + iVar6) /*3*/].f_2 = Param1.f_2;
 		iVar6++;
 	}
 	GRAPHICS::DRAW_DEBUG_LINE(Var5[4 /*3*/], Var5[5 /*3*/], iParam3, iParam4, iParam5, iParam6);
@@ -1405,7 +1405,7 @@ void func_52(struct<3> Param0, struct<3> Param1, float fParam2, int iParam3, int
 
 Vector3 func_53(struct<3> Param0, struct<3> Param1)
 {
-	return ((Param0.y * Param1.z) - (Param0.z * Param1.y)), ((Param0.z * Param1.x) - (Param0.x * Param1.z)), ((Param0.x * Param1.y) - (Param0.y * Param1.x));
+	return ((Param0.f_1 * Param1.f_2) - (Param0.f_2 * Param1.f_1)), ((Param0.f_2 * Param1.x) - (Param0.x * Param1.f_2)), ((Param0.x * Param1.f_1) - (Param0.f_1 * Param1.x));
 }
 
 void func_54(int iParam0, int iParam1, int iParam2, bool bParam3, int iParam4)
@@ -3675,7 +3675,7 @@ void func_76(var uParam0)
 
 int func_77(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

@@ -18932,7 +18932,7 @@ void func_110(var uParam0, var uParam1, int iParam2)
 		bVar6 = MISC::GET_DISTANCE_BETWEEN_COORDS(Var11, Var12, 1) < 2f;
 		if (bVar6)
 		{
-			if (MISC::ABSF((Var11.z - Var12.z)) > 1f)
+			if (MISC::ABSF((Var11.f_2 - Var12.f_2)) > 1f)
 			{
 				bVar6 = false;
 			}
@@ -19303,7 +19303,7 @@ void func_110(var uParam0, var uParam1, int iParam2)
 					Var21 = { ENTITY::GET_ENTITY_COORDS(*uParam0, 0) };
 					if (bVar19)
 					{
-						if (MISC::ABSF((Var20.z - Var21.z)) > 1f)
+						if (MISC::ABSF((Var20.f_2 - Var21.f_2)) > 1f)
 						{
 							bVar19 = false;
 						}
@@ -19778,7 +19778,7 @@ float func_125(int iParam0, int iParam1)
 
 int func_126(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -21255,7 +21255,7 @@ int func_143(var uParam0, var uParam1, var uParam2, int iParam3)
 										{
 											fVar19 = 0f;
 											Var20 = { ENTITY::GET_ENTITY_COORDS(*uParam2, 0) };
-											uParam1->f_2 = Var20.z;
+											uParam1->f_2 = Var20.f_2;
 											TASK::TASK_PLAY_ANIM_ADVANCED(*uParam2, uParam1->f_5.f_324[iVar17 /*48*/], &(uParam1->f_5.f_324[iVar17 /*48*/].f_1), *uParam1, 0f, 0f, uParam1->f_3, fVar0, fVar1, -1, 2, 0, 2, 0);
 											iVar18 = 0;
 											iVar18 = 0;
@@ -21263,7 +21263,7 @@ int func_143(var uParam0, var uParam1, var uParam2, int iParam3)
 											{
 												if (ENTITY::DOES_ENTITY_EXIST((*uParam0)[uParam0->f_7255[uParam2->f_41[iVar18]] /*58*/]) && !ENTITY::IS_ENTITY_DEAD((*uParam0)[uParam0->f_7255[uParam2->f_41[iVar18]] /*58*/], 0))
 												{
-													Var10[iVar18 /*607*/].f_2 = Var20.z;
+													Var10[iVar18 /*607*/].f_2 = Var20.f_2;
 													TASK::TASK_PLAY_ANIM_ADVANCED((*uParam0)[uParam0->f_7255[uParam2->f_41[iVar18]] /*58*/], Var10[iVar18 /*607*/].f_5.f_324[iVar17 /*48*/], &(Var10[iVar18 /*607*/].f_5.f_324[iVar17 /*48*/].f_1), Var10[iVar18 /*607*/], 0f, 0f, Var10[iVar18 /*607*/].f_3, fVar0, fVar1, -1, 2, 0, 2, 0);
 												}
 												func_127(uParam0[uParam0->f_7255[uParam2->f_41[iVar18]] /*58*/]);
@@ -30700,7 +30700,7 @@ int func_363(var uParam0, var uParam1, var uParam2, struct<3> Param3, float fPar
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(*uParam2))
 			{
-				*uParam2 = PED::CREATE_PED(26, *uParam1, Param3.x, Param3.y, (Param3.z - 1f), uParam4, 0, 1);
+				*uParam2 = PED::CREATE_PED(26, *uParam1, Param3.x, Param3.f_1, (Param3.f_2 - 1f), uParam4, 0, 1);
 				if (func_376(uParam2->f_16))
 				{
 					func_366(uParam2->f_16, &iVar1, &iVar2, func_57(uParam2->f_39));
@@ -55517,7 +55517,7 @@ void func_532(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -55537,19 +55537,19 @@ void func_533(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_88(Var0.y, 1, 1))
+		if (func_88(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_534(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{

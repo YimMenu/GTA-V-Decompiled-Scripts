@@ -1236,14 +1236,14 @@ int func_38(int iParam0)
 			break;
 		
 		case 4:
-			if (Var0.z < 74f)
+			if (Var0.f_2 < 74f)
 			{
 				return 1;
 			}
 			break;
 		
 		case 5:
-			if (Var0.z > 75f)
+			if (Var0.f_2 > 75f)
 			{
 				return 1;
 			}

@@ -426,7 +426,7 @@ int func_1(var uParam0, var uParam1)
 		if (CAM::DOES_CAM_EXIST(CAM::GET_RENDERING_CAM()))
 		{
 			Var3 = { CAM::GET_CAM_COORD(CAM::GET_RENDERING_CAM()) };
-			if ((Var3.x != 0f || Var3.y != 0f) || Var3.z != 0f)
+			if ((Var3.x != 0f || Var3.f_1 != 0f) || Var3.f_2 != 0f)
 			{
 				STREAMING::SET_FOCUS_POS_AND_VEL(Var3, 0f, 0f, 0f);
 				if (!MISC::IS_BIT_SET(*uParam0, 14))
@@ -2152,7 +2152,7 @@ int func_1(var uParam0, var uParam1)
 								{
 									ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), -200.8225f, 302.9014f, 95.9455f, 1, 0, 0, 1);
 									Var1 = { Vector(95.9465f, 307.0503f, -210.3399f) - Vector(95.9455f, 302.9014f, -200.8225f) };
-									ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y));
+									ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1));
 									CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0);
 									CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0, 1065353216);
 									MISC::SET_BIT(uParam0, 23);
@@ -2168,7 +2168,7 @@ int func_1(var uParam0, var uParam1)
 							{
 								ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), -200.8225f, 302.9014f, 95.9455f, 1, 0, 0, 1);
 								Var1 = { Vector(95.9465f, 307.0503f, -210.3399f) - Vector(95.9455f, 302.9014f, -200.8225f) };
-								ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y));
+								ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1));
 								CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0);
 								CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0, 1065353216);
 								MISC::SET_BIT(uParam0, 23);
@@ -2584,7 +2584,7 @@ void func_5(var uParam0)
 		{
 		}
 		Var0 = { ENTITY::GET_ENTITY_COORDS(uParam0->f_58[uParam0->f_90], 1) };
-		if (Var0.z < -50f)
+		if (Var0.f_2 < -50f)
 		{
 			func_6(uParam0, uParam0->f_90);
 		}
@@ -5796,9 +5796,9 @@ bool func_115(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_116(int iParam0, var uParam1, var uParam2)
@@ -6461,7 +6461,7 @@ void func_135(var uParam0)
 
 Vector3 func_136(struct<3> Param0)
 {
-	return (-SYSTEM::SIN(Param0.z) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.z) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
+	return (-SYSTEM::SIN(Param0.f_2) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.f_2) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
 }
 
 int func_137()
@@ -8718,7 +8718,7 @@ int func_169(float fParam0)
 	struct<3> Var0;
 	
 	Var0 = { func_170(PLAYER::PLAYER_ID()) };
-	if (Var0.z < fParam0)
+	if (Var0.f_2 < fParam0)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{

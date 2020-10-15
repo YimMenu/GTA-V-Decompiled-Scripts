@@ -3917,9 +3917,9 @@ int func_40(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -3928,7 +3928,7 @@ int func_40(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -36271,15 +36271,15 @@ void func_299(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_300(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_300(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -37297,7 +37297,7 @@ void func_303(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -37306,19 +37306,19 @@ void func_303(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_304(Var2.z)] = Var2.x;
+						(*uParam0)[func_304(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_304(Var2.z)] = func_300(iParam1, Var2.x, func_304(Var2.z), iVar0);
+						(*uParam0)[func_304(Var2.f_2)] = func_300(iParam1, Var2.x, func_304(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_304(Var2.z)] = Var2.y;
+					(*uParam0)[func_304(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -108141,7 +108141,7 @@ int func_582()
 		{
 			bVar1 = true;
 		}
-		else if (fVar2 < (50f * 50f) && MISC::ABSF(Var3.z) < 5f)
+		else if (fVar2 < (50f * 50f) && MISC::ABSF(Var3.f_2) < 5f)
 		{
 			bVar1 = true;
 		}
@@ -108237,7 +108237,7 @@ void func_586()
 	
 	TASK::WAYPOINT_RECORDING_GET_COORD(&Global_95606, Local_1451.f_3, &Var0);
 	Var1 = { func_587(Var0 - Global_31146[219 /*23*/][0 /*3*/]) * FtoV(TASK::WAYPOINT_RECORDING_GET_SPEED_AT_POINT(&Global_95606, Local_1451.f_3)) };
-	fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D((Var0.x - Global_31146[219 /*23*/][0 /*3*/]), (Var0.y - Global_31146[219 /*23*/][0 /*3*/].f_1));
+	fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D((Var0.x - Global_31146[219 /*23*/][0 /*3*/]), (Var0.f_1 - Global_31146[219 /*23*/][0 /*3*/].f_1));
 	MISC::CLEAR_AREA(Global_31146[219 /*23*/][0 /*3*/], 15f, 1, 0, 0, 0);
 	Global_95241[0] = VEHICLE::CREATE_VEHICLE(joaat("boxville3"), Global_31146[219 /*23*/][0 /*3*/], fVar2, 1, 1, 0);
 	ENTITY::SET_ENTITY_ALPHA(Global_95241[0], 100, 0);
@@ -108274,8 +108274,8 @@ Vector3 func_587(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -110109,7 +110109,7 @@ void func_647(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 			else
 			{
 				Var6 = { ENTITY::GET_ENTITY_COORDS(iVar0, 1) };
-				if ((Var6.z > Param0.z && Var6.z < Param1.z) || (Var6.z > Param1.z && Var6.z < Param0.z))
+				if ((Var6.f_2 > Param0.f_2 && Var6.f_2 < Param1.f_2) || (Var6.f_2 > Param1.f_2 && Var6.f_2 < Param0.f_2))
 				{
 					if (func_651(iVar0, Param0, Param1, fParam2))
 					{
@@ -110149,7 +110149,7 @@ void func_647(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 						if (VEHICLE::IS_THIS_MODEL_A_HELI(iVar7))
 						{
 							Param5.x = (Param5.x + 3f);
-							Param5.y = (Param5.y + 3f);
+							Param5.f_1 = (Param5.f_1 + 3f);
 						}
 						if (((iVar7 == joaat("zentorno") || iVar7 == joaat("btype")) || iVar7 == joaat("dubsta3")) || iVar7 == joaat("monster"))
 						{
@@ -110163,11 +110163,11 @@ void func_647(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.y - Var4.y) > Param5.y)
+						else if ((Var5.f_1 - Var4.f_1) > Param5.f_1)
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.z - Var4.z) > Param5.z)
+						else if ((Var5.f_2 - Var4.f_2) > Param5.f_2)
 						{
 							bVar2 = false;
 						}
@@ -110256,7 +110256,7 @@ void func_647(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 
 int func_648(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -110361,12 +110361,12 @@ int func_651(int iParam0, struct<3> Param1, struct<3> Param2, float fParam3)
 	
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, 0))
 	{
-		Param1.z = Param2.z;
+		Param1.f_2 = Param2.f_2;
 		Var0 = { func_587(Param1 - Param2) };
 		Var1 = { Var0 };
-		Var0.x = -Var1.y;
-		Var0.y = Var1.x;
-		Var0.z = 0f;
+		Var0.x = -Var1.f_1;
+		Var0.f_1 = Var1.x;
+		Var0.f_2 = 0f;
 		Var2 = { Param1 - Var0 * FtoV((fParam3 / 2f)) };
 		Var3 = { Param1 + Var0 * FtoV((fParam3 / 2f)) };
 		Var4 = { Param2 - Var0 * FtoV((fParam3 / 2f)) };
@@ -111225,7 +111225,7 @@ void func_698(char* sParam0)
 
 float func_699(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 int func_700()

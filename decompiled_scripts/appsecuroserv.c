@@ -2577,7 +2577,7 @@ int func_42(int iParam0, int iParam1, var uParam2)
 	if (Global_1590535[iVar4 /*876*/].f_274[5] > -1)
 	{
 		Var5 = { Global_1049922[Global_1590535[iVar4 /*876*/].f_274[5] /*1951*/].f_38[0 /*27*/].f_23 };
-		Var5.z = 0f;
+		Var5.f_2 = 0f;
 	}
 	else
 	{
@@ -2586,7 +2586,7 @@ int func_42(int iParam0, int iParam1, var uParam2)
 	if (func_295(iVar4))
 	{
 		Var6 = { Global_1676377.f_488[func_45(func_297(iVar4)) /*3*/] };
-		Var6.z = 0f;
+		Var6.f_2 = 0f;
 	}
 	else
 	{
@@ -2598,7 +2598,7 @@ int func_42(int iParam0, int iParam1, var uParam2)
 		while (iVar7 < iParam1)
 		{
 			Var10 = { func_44((*iParam0)[iVar7]) };
-			Var10.z = 0f;
+			Var10.f_2 = 0f;
 			fVar11 = SYSTEM::VDIST(Var10, Var5);
 			fVar12 = SYSTEM::VDIST(Var10, Var6);
 			if (fVar11 >= fVar0 && fVar12 >= fVar1)
@@ -4466,7 +4466,7 @@ int func_105(int iParam0, int iParam1)
 			{
 				Var0 = { func_106(iParam1) };
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -7163,7 +7163,7 @@ int func_162(int iParam0, int iParam1, int iParam2)
 			{
 				return 4;
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -12476,7 +12476,7 @@ int func_227(int iParam0)
 	Var14.f_2 = MISC::GET_HASH_KEY(func_235(iLocal_821));
 	Var14.f_3 = iVar2;
 	Var15.x = Var14;
-	Var15.z = Var14.f_2;
+	Var15.f_2 = Var14.f_2;
 	if (Var14.f_3 > 0 && (iVar1 == 0 || iVar1 == 11))
 	{
 		Var14.f_1 = (Var14.f_1 - Var14.f_3);
@@ -12855,10 +12855,10 @@ void func_240(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_242(Var0.y);
+	iVar1 = func_242(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;
@@ -13548,7 +13548,7 @@ void func_258(int iParam0, var uParam1)
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_608, "ADD_VEHICLE_WAREHOUSE");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar2);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var0.x);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var0.y);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var0.f_1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar3);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar4);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar5);
@@ -23891,7 +23891,7 @@ void func_349(int iParam0)
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_608, "ADD_WAREHOUSE");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(func_355(iParam0));
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var1.x);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var1.y);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var1.f_1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar5);
 	func_259(&cVar0);
 	func_259(&cVar2);
@@ -26032,7 +26032,7 @@ void func_403(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				func_420(Global_22347, (fVar49 + 0f), fParam5, 0.034722f, iVar1, iVar2, iVar3, iVar4);
 				Var38 = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
 				Var38.x = (Var38.x * (0.5f / fVar60));
-				Var38.y = (Var38.y * (0.5f / fVar60));
+				Var38.f_1 = (Var38.f_1 * (0.5f / fVar60));
 				if (Global_22350.f_8415)
 				{
 					iVar1 = 0;
@@ -26044,7 +26044,7 @@ void func_403(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(1, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.y / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.f_1 / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
 				fVar49 = (fVar49 + (0f + 0.034722f));
 			}
 			if (MISC::GET_HASH_KEY(&(Global_22350.f_4690)) != 0 && Global_22350.f_4766 != -1)
@@ -27816,7 +27816,7 @@ int func_413()
 		MOBILE::GET_MOBILE_PHONE_POSITION(&Var0);
 		if (Global_19431 == 0)
 		{
-			if (Var0.y > -119f)
+			if (Var0.f_1 > -119f)
 			{
 				return 1;
 			}
@@ -27825,7 +27825,7 @@ int func_413()
 				return 0;
 			}
 		}
-		else if (Var0.y > -101f)
+		else if (Var0.f_1 > -101f)
 		{
 			return 1;
 		}
@@ -28456,24 +28456,24 @@ int func_430(int iParam0, bool bParam1, bool bParam2, float fParam3, float fPara
 		}
 		Var7 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar1) };
 		Var7.x = (Var7.x * (func_431(iParam0) / fVar4));
-		Var7.y = (Var7.y * (func_431(iParam0) / fVar4));
+		Var7.f_1 = (Var7.f_1 * (func_431(iParam0) / fVar4));
 		if (!bParam2)
 		{
 			Var7.x = (Var7.x - 2f);
-			Var7.y = (Var7.y - 2f);
+			Var7.f_1 = (Var7.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
 			Var7.x = 288f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22350.f_7029[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
 			Var7.x = 106f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		*fParam3 = ((Var7.x / IntToFloat(iVar2)) * IntToFloat((iVar2 / iVar3)));
-		*fParam4 = (((Var7.y / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
+		*fParam4 = (((Var7.f_1 / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)
@@ -30002,12 +30002,12 @@ void func_470(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uPara
 		if (!bParam6)
 		{
 			Var0 = { Param3 };
-			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.x, Var0.y, (Var0.z + 1f)))
+			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.x, Var0.f_1, (Var0.f_2 + 1f)))
 			{
 			}
 			else
 			{
-				Var0.z = (Var0.z + 4f);
+				Var0.f_2 = (Var0.f_2 + 4f);
 			}
 		}
 	}
@@ -30040,22 +30040,22 @@ void func_470(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uPara
 			}
 			if ((func_508(PLAYER::PLAYER_ID()) || func_507(PLAYER::PLAYER_ID())) && func_506())
 			{
-				Var0.z = (Var0.z + 1.5f);
+				Var0.f_2 = (Var0.f_2 + 1.5f);
 			}
 			else if (INTERIOR::IS_VALID_INTERIOR(INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID())))
 			{
 				if (func_508(PLAYER::PLAYER_ID()))
 				{
-					Var0.z = (Var0.z + 0.4f);
+					Var0.f_2 = (Var0.f_2 + 0.4f);
 				}
 				else
 				{
-					Var0.z = (Var0.z + 1.5f);
+					Var0.f_2 = (Var0.f_2 + 1.5f);
 				}
 			}
 			else
 			{
-				Var0.z = (Var0.z + 4f);
+				Var0.f_2 = (Var0.f_2 + 4f);
 			}
 		}
 	}
@@ -30071,7 +30071,7 @@ void func_470(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uPara
 		{
 			Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
 			Var1 = { 0f, 0f, ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) };
-			Var0.z = (Var0.z + 0.4f);
+			Var0.f_2 = (Var0.f_2 + 0.4f);
 			fVar2 = CAM::GET_FINAL_RENDERED_CAM_FOV();
 		}
 		else
@@ -31236,9 +31236,9 @@ Vector3 func_487(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -32081,7 +32081,7 @@ var func_512()
 
 int func_513(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -36060,7 +36060,7 @@ void func_673(bool bParam0)
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar21);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(bVar25);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var14.x);
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var14.y);
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var14.f_1);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		iVar26 = 1;
 		while (iVar26 <= 22)
@@ -37167,7 +37167,7 @@ bool func_702(int iParam0)
 		{
 			SYSTEM::WAIT(0);
 		}
-		if (!Var1.z)
+		if (!Var1.f_2)
 		{
 			bVar0 = false;
 		}

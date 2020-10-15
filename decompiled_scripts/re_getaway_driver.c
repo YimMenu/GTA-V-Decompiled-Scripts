@@ -4236,9 +4236,9 @@ bool func_64(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_65()
@@ -9901,7 +9901,7 @@ void func_167()
 				{
 					iLocal_262 = VEHICLE::CREATE_VEHICLE(joaat("police3"), Local_233, 0, 1, 1, 0);
 					Local_234 = { func_186(PLAYER::PLAYER_ID()) - ENTITY::GET_ENTITY_COORDS(iLocal_262, 1) };
-					ENTITY::SET_ENTITY_HEADING(iLocal_262, MISC::GET_HEADING_FROM_VECTOR_2D(Local_234.x, Local_234.y));
+					ENTITY::SET_ENTITY_HEADING(iLocal_262, MISC::GET_HEADING_FROM_VECTOR_2D(Local_234.x, Local_234.f_1));
 					VEHICLE::SET_VEHICLE_SIREN(iLocal_262, 1);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(uLocal_260[2]))
@@ -10511,7 +10511,7 @@ void func_190(int iParam0, int iParam1)
 		}
 		if (func_193(iParam0, iParam1) != 322)
 		{
-			func_191(func_193(iParam0, iParam1), Local_49.x, Local_49.y);
+			func_191(func_193(iParam0, iParam1), Local_49.x, Local_49.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)
@@ -11612,7 +11612,7 @@ int func_214(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_49.z) > 50f)
+			if ((Var1.f_2 - Local_49.f_2) > 50f)
 			{
 				return 0;
 			}

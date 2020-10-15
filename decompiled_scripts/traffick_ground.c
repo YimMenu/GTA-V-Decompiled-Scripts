@@ -5984,9 +5984,9 @@ bool func_5(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_6()
@@ -10753,24 +10753,24 @@ int func_108(int iParam0, bool bParam1, bool bParam2, float fParam3, float fPara
 		}
 		Var7 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar1) };
 		Var7.x = (Var7.x * (func_109(iParam0) / fVar4));
-		Var7.y = (Var7.y * (func_109(iParam0) / fVar4));
+		Var7.f_1 = (Var7.f_1 * (func_109(iParam0) / fVar4));
 		if (!bParam2)
 		{
 			Var7.x = (Var7.x - 2f);
-			Var7.y = (Var7.y - 2f);
+			Var7.f_1 = (Var7.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
 			Var7.x = 288f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22350.f_7029[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
 			Var7.x = 106f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		*fParam3 = ((Var7.x / IntToFloat(iVar2)) * IntToFloat((iVar2 / iVar3)));
-		*fParam4 = (((Var7.y / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
+		*fParam4 = (((Var7.f_1 / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)
@@ -14318,7 +14318,7 @@ int func_191(var uParam0, var uParam1, int iParam2)
 		func_372("ORIENTATION BETWEEN HEADINGS ARE TOO GREAT, RETURNING FALSE!!!");
 		bVar7 = false;
 	}
-	if (MISC::ABSF((Var2.z - Var0.z)) > 3f)
+	if (MISC::ABSF((Var2.f_2 - Var0.f_2)) > 3f)
 	{
 		func_372("GET_FORWARD_POINT: Z VALUE IS TOO HIGH, RETURNING FALSE!!!");
 		bVar7 = false;
@@ -14344,7 +14344,7 @@ int func_191(var uParam0, var uParam1, int iParam2)
 
 float func_192(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 int func_193()
@@ -14377,7 +14377,7 @@ int func_194(var uParam0, int iParam1, var uParam2, var uParam3)
 
 int func_195(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -14414,7 +14414,7 @@ int func_196(var uParam0, var uParam1, float fParam2)
 		func_372("ORIENTATION BETWEEN HEADINGS ARE TOO GREAT, RETURNING FALSE!!!");
 		bVar7 = false;
 	}
-	if (MISC::ABSF((Var2.z - Var0.z)) > 3f)
+	if (MISC::ABSF((Var2.f_2 - Var0.f_2)) > 3f)
 	{
 		func_372("Z VALUE IS TOO HIGH, RETURNING FALSE!!!");
 		bVar7 = false;
@@ -17893,7 +17893,7 @@ int func_251(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	if (bParam3)
 	{
-		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.y - IntToFloat(uParam2->f_6)), (Var0.z - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.y + IntToFloat(uParam2->f_6)), (Var0.z + IntToFloat(uParam2->f_6)), 0))
+		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.f_1 - IntToFloat(uParam2->f_6)), (Var0.f_2 - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.f_1 + IntToFloat(uParam2->f_6)), (Var0.f_2 + IntToFloat(uParam2->f_6)), 0))
 		{
 			return 1;
 		}

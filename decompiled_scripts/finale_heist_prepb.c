@@ -2078,7 +2078,7 @@ int func_39(var uParam0, struct<3> Param1, float fParam2, bool bParam3)
 				bVar2 = true;
 				if (VEHICLE::IS_THIS_MODEL_A_BOAT(uParam0->f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_JETSKI(uParam0->f_12.f_66))
 				{
-					if (!WATER::TEST_PROBE_AGAINST_WATER(Param1.x, Param1.y, (Param1.z + 30f), Param1.x, Param1.y, (Param1.z - 30f), &uVar3))
+					if (!WATER::TEST_PROBE_AGAINST_WATER(Param1.x, Param1.f_1, (Param1.f_2 + 30f), Param1.x, Param1.f_1, (Param1.f_2 - 30f), &uVar3))
 					{
 						bVar2 = false;
 					}
@@ -5925,9 +5925,9 @@ int func_76(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -5936,7 +5936,7 @@ int func_76(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -6991,9 +6991,9 @@ bool func_99(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_100(var uParam0)
@@ -7054,11 +7054,11 @@ int func_105(int iParam0, struct<3> Param1, int iParam2)
 	{
 		return 0;
 	}
-	else if ((Var1.y - Var0.y) > Param1.y)
+	else if ((Var1.f_1 - Var0.f_1) > Param1.f_1)
 	{
 		return 0;
 	}
-	else if ((Var1.z - Var0.z) > Param1.z)
+	else if ((Var1.f_2 - Var0.f_2) > Param1.f_2)
 	{
 		return 0;
 	}
@@ -11483,7 +11483,7 @@ void func_190()
 			}
 			if (iLocal_303[1] == 1)
 			{
-				if (Local_93.z < 36f || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0))
+				if (Local_93.f_2 < 36f || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					if (PED::CAN_PED_SEE_HATED_PED(iLocal_36[1], PLAYER::PLAYER_PED_ID()))
 					{
@@ -11791,7 +11791,7 @@ void func_191()
 									{
 										if (PED::CAN_PED_SEE_HATED_PED(iLocal_35[6], PLAYER::PLAYER_PED_ID()))
 										{
-											if (Local_93.z > 31f)
+											if (Local_93.f_2 > 31f)
 											{
 												if (iLocal_29 != 3 && iLocal_29 != 4)
 												{
@@ -12014,7 +12014,7 @@ void func_196(int iParam0)
 							{
 								if (func_177(PLAYER::PLAYER_PED_ID(), iLocal_35[4], 1) < 25f)
 								{
-									if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), 926.455f, -1582.384f, 29.32759f, 909.6322f, -1581.374f, 31.58907f, 9.5f, 0, 1, 0) || Local_93.y > -1573f)
+									if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), 926.455f, -1582.384f, 29.32759f, 909.6322f, -1581.374f, 31.58907f, 9.5f, 0, 1, 0) || Local_93.f_1 > -1573f)
 									{
 										if (iLocal_311 == 0)
 										{
@@ -12109,7 +12109,7 @@ void func_196(int iParam0)
 					{
 						if (ENTITY::IS_ENTITY_AT_COORD(iLocal_35[6], 925f, -1561f, 30f, 3f, 3f, 3f, 0, 1, 0))
 						{
-							if (func_177(PLAYER::PLAYER_PED_ID(), iLocal_35[6], 1) < 15f && Local_93.z < 40f)
+							if (func_177(PLAYER::PLAYER_PED_ID(), iLocal_35[6], 1) < 15f && Local_93.f_2 < 40f)
 							{
 								if (iLocal_321 == 0)
 								{
@@ -12910,12 +12910,12 @@ void func_198()
 					if ((func_199(iLocal_37) && ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(iLocal_37, 1)) && iLocal_350 == 0)
 					{
 						Local_94 = { ENTITY::GET_ENTITY_COORDS(iLocal_37, 1) };
-						PATHFIND::_0x07FB139B592FA687(Local_94.x, Local_94.y, Local_92.x, Local_92.y);
+						PATHFIND::_0x07FB139B592FA687(Local_94.x, Local_94.f_1, Local_92.x, Local_92.f_1);
 						if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) == 0)
 						{
 							if (iLocal_353 == 0)
 							{
-								if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.y, Local_92.x, Local_92.y))
+								if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.f_1, Local_92.x, Local_92.f_1))
 								{
 									TASK::TASK_VEHICLE_MISSION_COORS_TARGET(iLocal_37, PED::GET_VEHICLE_PED_IS_IN(iLocal_37, 0), Local_92, 4, 30f, 786468, 3f, 15f, 0);
 									iLocal_356 = 0;
@@ -12934,7 +12934,7 @@ void func_198()
 						}
 						else if (iLocal_353 == 0)
 						{
-							if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.y, Local_92.x, Local_92.y))
+							if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.f_1, Local_92.x, Local_92.f_1))
 							{
 								TASK::TASK_VEHICLE_MISSION_COORS_TARGET(iLocal_37, PED::GET_VEHICLE_PED_IS_IN(iLocal_37, 0), Local_92, 4, 30f, 786468, 3f, 15f, 0);
 								iLocal_356 = 0;
@@ -13007,12 +13007,12 @@ void func_198()
 					if ((func_199(iLocal_39) && ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(iLocal_39, 1)) && iLocal_352 == 0)
 					{
 						Local_94 = { ENTITY::GET_ENTITY_COORDS(iLocal_39, 1) };
-						PATHFIND::_0x07FB139B592FA687(Local_94.x, Local_94.y, Local_92.x, Local_92.y);
+						PATHFIND::_0x07FB139B592FA687(Local_94.x, Local_94.f_1, Local_92.x, Local_92.f_1);
 						if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) == 0)
 						{
 							if (iLocal_354 == 0)
 							{
-								if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.y, Local_92.x, Local_92.y))
+								if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.f_1, Local_92.x, Local_92.f_1))
 								{
 									TASK::TASK_VEHICLE_MISSION_COORS_TARGET(iLocal_39, PED::GET_VEHICLE_PED_IS_IN(iLocal_39, 0), Local_92, 4, 30f, 786468, 3f, 15f, 0);
 									iLocal_357 = 0;
@@ -13031,7 +13031,7 @@ void func_198()
 						}
 						else if (iLocal_354 == 0)
 						{
-							if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.y, Local_92.x, Local_92.y))
+							if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.f_1, Local_92.x, Local_92.f_1))
 							{
 								TASK::TASK_VEHICLE_MISSION_COORS_TARGET(iLocal_39, PED::GET_VEHICLE_PED_IS_IN(iLocal_39, 0), Local_92, 4, 30f, 786468, 3f, 15f, 0);
 								iLocal_357 = 0;
@@ -13104,12 +13104,12 @@ void func_198()
 					if ((func_199(iLocal_38) && ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(iLocal_38, 1)) && iLocal_351 == 0)
 					{
 						Local_94 = { ENTITY::GET_ENTITY_COORDS(iLocal_38, 1) };
-						PATHFIND::_0x07FB139B592FA687(Local_94.x, Local_94.y, Local_92.x, Local_92.y);
+						PATHFIND::_0x07FB139B592FA687(Local_94.x, Local_94.f_1, Local_92.x, Local_92.f_1);
 						if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) == 0)
 						{
 							if (iLocal_355 == 0)
 							{
-								if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.y, Local_92.x, Local_92.y))
+								if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.f_1, Local_92.x, Local_92.f_1))
 								{
 									TASK::TASK_VEHICLE_MISSION_COORS_TARGET(iLocal_38, PED::GET_VEHICLE_PED_IS_IN(iLocal_38, 0), Local_92, 4, 30f, 786468, 3f, 15f, 0);
 									iLocal_358 = 0;
@@ -13128,7 +13128,7 @@ void func_198()
 						}
 						else if (iLocal_355 == 0)
 						{
-							if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.y, Local_92.x, Local_92.y))
+							if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_94.x, Local_94.f_1, Local_92.x, Local_92.f_1))
 							{
 								TASK::TASK_VEHICLE_MISSION_COORS_TARGET(iLocal_38, PED::GET_VEHICLE_PED_IS_IN(iLocal_38, 0), Local_92, 4, 30f, 786468, 3f, 15f, 0);
 								iLocal_358 = 0;

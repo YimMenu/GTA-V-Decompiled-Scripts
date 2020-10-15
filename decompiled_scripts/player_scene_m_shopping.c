@@ -722,10 +722,10 @@ Vector3 func_4(struct<3> Param0, float fParam1, float fParam2)
 	while (iVar3 < 10)
 	{
 		Var0 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam1, fParam1), MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam1, fParam1), 0f };
-		if (((Var0.x * Var0.x) + (Var0.y * Var0.y)) <= fVar1)
+		if (((Var0.x * Var0.x) + (Var0.f_1 * Var0.f_1)) <= fVar1)
 		{
 			fVar2 = (fParam2 / 2f);
-			Var0.z = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar2, fVar2);
+			Var0.f_2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar2, fVar2);
 			return Param0 + Var0;
 		}
 		iVar3++;
@@ -741,7 +741,7 @@ Vector3 func_5(struct<3> Param0, float fParam1, float fParam2)
 	Var0 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), 0f };
 	fVar1 = (fParam2 / 2f);
 	Var0 = { func_6(Var0, MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, fParam1)) };
-	Var0.z = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar1, fVar1);
+	Var0.f_2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar1, fVar1);
 	return Param0 + Var0;
 }
 
@@ -1096,7 +1096,7 @@ int func_10(var uParam0, int iParam1, var uParam2, char* sParam3, var uParam4, v
 	}
 	if (iParam1 == 6 || iParam1 == 31)
 	{
-		if (MISC::ABSF((Var1.z - Var0.z)) > 2f)
+		if (MISC::ABSF((Var1.f_2 - Var0.f_2)) > 2f)
 		{
 			return 0;
 		}
@@ -5733,9 +5733,9 @@ bool func_133(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 void func_134(var uParam0, char* sParam1, char* sParam2, int iParam3)
@@ -12535,28 +12535,28 @@ int func_167(int iParam0, var uParam1, char* sParam2)
 		
 		case 306:
 			Var4 = { -7.4998f, 7.4995f, -0.5258f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var4.x, -Var4.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 307:
 			Var5 = { 10.6345f, 0.7246f, 1.2508f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var5.x, -Var5.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 308:
 			Var6 = { -3.4271f, -13.6787f, -1.4107f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var6.x, -Var6.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 309:
 			Var7 = { -19.6582f, 7.896f, 0.1334f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.y);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var7.x, -Var7.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;

@@ -942,7 +942,7 @@ void func_26(struct<3> Param0)
 	
 	if (SYSTEM::VMAG(Param0) < 0.01f)
 	{
-		Param0.z = 1f;
+		Param0.f_2 = 1f;
 	}
 	Global_2425662[PLAYER::PLAYER_ID() /*421*/].f_261.f_1 = { Param0 };
 	uVar0 = NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID());
@@ -1701,20 +1701,20 @@ void func_41(var uParam0, struct<3> Param1)
 	fVar0 = SYSTEM::COS(Param1.x);
 	fVar1 = SYSTEM::SIN(Param1.x);
 	Var2.x = *uParam0;
-	Var2.y = ((fVar0 * uParam0->f_1) - (fVar1 * uParam0->f_2));
-	Var2.z = ((fVar1 * uParam0->f_1) + (fVar0 * uParam0->f_2));
+	Var2.f_1 = ((fVar0 * uParam0->f_1) - (fVar1 * uParam0->f_2));
+	Var2.f_2 = ((fVar1 * uParam0->f_1) + (fVar0 * uParam0->f_2));
 	*uParam0 = { Var2 };
-	fVar0 = SYSTEM::COS(Param1.y);
-	fVar1 = SYSTEM::SIN(Param1.y);
+	fVar0 = SYSTEM::COS(Param1.f_1);
+	fVar1 = SYSTEM::SIN(Param1.f_1);
 	Var2.x = ((fVar0 * *uParam0) + (fVar1 * uParam0->f_2));
-	Var2.y = uParam0->f_1;
-	Var2.z = ((fVar0 * uParam0->f_2) - (fVar1 * *uParam0));
+	Var2.f_1 = uParam0->f_1;
+	Var2.f_2 = ((fVar0 * uParam0->f_2) - (fVar1 * *uParam0));
 	*uParam0 = { Var2 };
-	fVar0 = SYSTEM::COS(Param1.z);
-	fVar1 = SYSTEM::SIN(Param1.z);
+	fVar0 = SYSTEM::COS(Param1.f_2);
+	fVar1 = SYSTEM::SIN(Param1.f_2);
 	Var2.x = ((fVar0 * *uParam0) - (fVar1 * uParam0->f_1));
-	Var2.y = ((fVar1 * *uParam0) + (fVar0 * uParam0->f_1));
-	Var2.z = uParam0->f_2;
+	Var2.f_1 = ((fVar1 * *uParam0) + (fVar0 * uParam0->f_1));
+	Var2.f_2 = uParam0->f_2;
 	*uParam0 = { Var2 };
 }
 
@@ -11366,7 +11366,7 @@ void func_345(struct<3> Param0, struct<3> Param1, float fParam2, var uParam3, fl
 	func_41(&Var1, 0f, 0f, uParam3);
 	Var1 = { Var1 * Vector(fParam2, fParam2, fParam2) };
 	*uParam5 = { Param0 + Var1 };
-	uParam5->f_2 = Param0.z;
+	uParam5->f_2 = Param0.f_2;
 	*uParam6 = { Param1 };
 	uParam6->f_2 = (uParam6->f_2 + fParam4);
 }
@@ -12373,7 +12373,7 @@ int func_349(var uParam0)
 	Var3 = { 99999.9f, 99999.9f, 99999.9f };
 	Var4 = { -99999.9f, -99999.9f, -99999.9f };
 	Var0 = { uParam0->f_3 - *uParam0 };
-	Var0.z = 0f;
+	Var0.f_2 = 0f;
 	Var1 = { func_351(0f, 0f, 1f, Var0) };
 	Var1 = { Var1 / FtoV(SYSTEM::VMAG(Var1)) };
 	Var1 = { Var1 * FtoV((uParam0->f_6 * 0.5f)) };
@@ -12392,20 +12392,20 @@ int func_349(var uParam0)
 		{
 			Var4.x = Var2[iVar5 /*3*/];
 		}
-		if (Var2[iVar5 /*3*/].f_1 < Var3.y)
+		if (Var2[iVar5 /*3*/].f_1 < Var3.f_1)
 		{
-			Var3.y = Var2[iVar5 /*3*/].f_1;
+			Var3.f_1 = Var2[iVar5 /*3*/].f_1;
 		}
-		if (Var2[iVar5 /*3*/].f_1 > Var4.y)
+		if (Var2[iVar5 /*3*/].f_1 > Var4.f_1)
 		{
-			Var4.y = Var2[iVar5 /*3*/].f_1;
+			Var4.f_1 = Var2[iVar5 /*3*/].f_1;
 		}
 		iVar5++;
 	}
-	uVar6[0] = func_350(Var3.x, Var3.y, 0f);
-	uVar6[1] = func_350(Var3.x, Var4.y, 0f);
-	uVar6[2] = func_350(Var4.x, Var3.y, 0f);
-	uVar6[3] = func_350(Var4.x, Var4.y, 0f);
+	uVar6[0] = func_350(Var3.x, Var3.f_1, 0f);
+	uVar6[1] = func_350(Var3.x, Var4.f_1, 0f);
+	uVar6[2] = func_350(Var4.x, Var3.f_1, 0f);
+	uVar6[3] = func_350(Var4.x, Var4.f_1, 0f);
 	iVar7 = 0;
 	while (iVar7 < 4)
 	{
@@ -12464,7 +12464,7 @@ int func_350(struct<2> Param0, float fParam1)
 
 Vector3 func_351(struct<3> Param0, struct<3> Param1)
 {
-	return ((Param0.y * Param1.z) - (Param0.z * Param1.y)), ((Param0.z * Param1.x) - (Param0.x * Param1.z)), ((Param0.x * Param1.y) - (Param0.y * Param1.x));
+	return ((Param0.f_1 * Param1.f_2) - (Param0.f_2 * Param1.f_1)), ((Param0.f_2 * Param1.x) - (Param0.x * Param1.f_2)), ((Param0.x * Param1.f_1) - (Param0.f_1 * Param1.x));
 }
 
 void func_352(int iParam0, var uParam1, var uParam2, var uParam3)

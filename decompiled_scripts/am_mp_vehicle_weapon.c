@@ -622,7 +622,7 @@ int func_13()
 		MOBILE::GET_MOBILE_PHONE_POSITION(&Var0);
 		if (Global_19431 == 0)
 		{
-			if (Var0.y > -119f)
+			if (Var0.f_1 > -119f)
 			{
 				return 1;
 			}
@@ -631,7 +631,7 @@ int func_13()
 				return 0;
 			}
 		}
-		else if (Var0.y > -101f)
+		else if (Var0.f_1 > -101f)
 		{
 			return 1;
 		}
@@ -940,14 +940,14 @@ void func_24()
 		if (CAM::DOES_CAM_EXIST(Local_117.f_61))
 		{
 			Var0 = { CAM::GET_CAM_ROT(Local_117.f_61, 2) };
-			func_32(SYSTEM::ROUND(-Var0.z));
+			func_32(SYSTEM::ROUND(-Var0.f_2));
 		}
 		func_31(Local_117.f_33);
 	}
 	else if (CAM::DOES_CAM_EXIST(Local_117.f_61))
 	{
 		Var1 = { CAM::GET_CAM_ROT(Local_117.f_61, 2) };
-		fVar2 = Var1.z;
+		fVar2 = Var1.f_2;
 		if (ENTITY::DOES_ENTITY_EXIST(func_30()))
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(func_30(), 0))
@@ -1010,7 +1010,7 @@ void func_24()
 			fVar3 = 0.5f;
 		}
 		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Local_117.f_62, "SET_ALT_FOV_HEADING");
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var8.z);
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var8.f_2);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fVar3);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fVar2);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -1697,7 +1697,7 @@ void func_49()
 						{
 							Var4 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(func_30(), iVar3) + func_54(Local_117.f_31) };
 							Var5 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-							Var6 = { (-SYSTEM::SIN(Var5.z) * SYSTEM::COS(Var5.x)), (SYSTEM::COS(Var5.z) * SYSTEM::COS(Var5.x)), SYSTEM::SIN(Var5.x) };
+							Var6 = { (-SYSTEM::SIN(Var5.f_2) * SYSTEM::COS(Var5.x)), (SYSTEM::COS(Var5.f_2) * SYSTEM::COS(Var5.x)), SYSTEM::SIN(Var5.x) };
 							Var7 = { 1f, 1f, 1f };
 							Var8 = { Var4 + Var6 * Var7 };
 							MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var4, Var8, iVar1, 1, func_53(0), PLAYER::PLAYER_PED_ID(), 1, 1, -1082130432, uVar2, 0, 0, Local_117.f_84[Local_117.f_31], 1, 0, 1);
@@ -1732,13 +1732,13 @@ void func_49()
 				Var10 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(func_30(), iVar9) + func_54(Local_117.f_31) };
 				Var11 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 				Var12 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-				Var13 = { (-SYSTEM::SIN(Var12.z) * SYSTEM::COS(Var12.x)), (SYSTEM::COS(Var12.z) * SYSTEM::COS(Var12.x)), SYSTEM::SIN(Var12.x) };
+				Var13 = { (-SYSTEM::SIN(Var12.f_2) * SYSTEM::COS(Var12.x)), (SYSTEM::COS(Var12.f_2) * SYSTEM::COS(Var12.x)), SYSTEM::SIN(Var12.x) };
 				Var14 = { 10f, 10f, 10f };
 				if (!func_50(Local_117.f_56))
 				{
 					Var14.x = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_117.f_56, Var11, 0);
-					Var14.y = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_117.f_56, Var11, 0);
-					Var14.z = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_117.f_56, Var11, 0);
+					Var14.f_1 = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_117.f_56, Var11, 0);
+					Var14.f_2 = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_117.f_56, Var11, 0);
 				}
 				Var15 = { Var11 + Var13 * Var14 };
 				MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var10, Var15, iVar1, 1, func_53(1), PLAYER::PLAYER_PED_ID(), 1, 1, -1082130432, uVar2, 0, 0, 0, 1, 0, 1);
@@ -1754,7 +1754,7 @@ void func_49()
 
 int func_50(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -1985,7 +1985,7 @@ void func_61()
 	{
 		Var4 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 		Var5 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-		Var6 = { (-SYSTEM::SIN(Var5.z) * SYSTEM::COS(Var5.x)), (SYSTEM::COS(Var5.z) * SYSTEM::COS(Var5.x)), SYSTEM::SIN(Var5.x) };
+		Var6 = { (-SYSTEM::SIN(Var5.f_2) * SYSTEM::COS(Var5.x)), (SYSTEM::COS(Var5.f_2) * SYSTEM::COS(Var5.x)), SYSTEM::SIN(Var5.x) };
 		Var7 = { 300f, 300f, 300f };
 		Var8 = { Var4 + Var6 * Var7 };
 		Var9 = { Var4 + Var6 * Vector(1f, 1f, 1f) };
@@ -2558,7 +2558,7 @@ int func_77()
 
 var func_78(struct<3> Param0)
 {
-	return SYSTEM::SQRT((((Param0.x * Param0.x) + (Param0.y * Param0.y)) + (Param0.z * Param0.z)));
+	return SYSTEM::SQRT((((Param0.x * Param0.x) + (Param0.f_1 * Param0.f_1)) + (Param0.f_2 * Param0.f_2)));
 }
 
 int func_79(int iParam0)
@@ -2975,7 +2975,7 @@ void func_90()
 			if (!ENTITY::IS_ENTITY_DEAD(func_30(), 0))
 			{
 				fVar19 = ENTITY::GET_ENTITY_HEADING(func_30());
-				fVar20 = (fVar19 - Var15.z);
+				fVar20 = (fVar19 - Var15.f_2);
 				while (MISC::ABSF(fVar20) >= 180f && iVar21 < 30)
 				{
 					if (fVar20 < 0f)
@@ -2995,22 +2995,22 @@ void func_90()
 				{
 					if (fVar20 > 0f)
 					{
-						Var15.z = (fVar19 - fVar11);
+						Var15.f_2 = (fVar19 - fVar11);
 					}
 					else
 					{
-						Var15.z = (fVar19 + fVar11);
+						Var15.f_2 = (fVar19 + fVar11);
 					}
 				}
 				if (fVar20 < fVar12)
 				{
 					if (fVar20 > 0f)
 					{
-						Var15.z = (fVar19 - MISC::ABSF(fVar12));
+						Var15.f_2 = (fVar19 - MISC::ABSF(fVar12));
 					}
 					else
 					{
-						Var15.z = (fVar19 + MISC::ABSF(fVar12));
+						Var15.f_2 = (fVar19 + MISC::ABSF(fVar12));
 					}
 				}
 			}
@@ -3025,7 +3025,7 @@ void func_90()
 				Var24 = { ENTITY::GET_ENTITY_ROTATION(func_30(), 2) };
 				fVar25 = ((MISC::ABSF(Local_117.f_53.f_2) - 90f) / -90f);
 				fVar22 = (fVar22 + ((Var24.x - Local_117.f_50) * fVar25));
-				fVar23 = (fVar23 + (Var24.z - Local_117.f_50.f_2));
+				fVar23 = (fVar23 + (Var24.f_2 - Local_117.f_50.f_2));
 				if (fVar23 > 180f)
 				{
 					fVar23 = (fVar23 - 360f);
@@ -3213,9 +3213,9 @@ int func_92(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -3224,7 +3224,7 @@ int func_92(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -3236,9 +3236,9 @@ bool func_93(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 float func_94(float fParam0, float fParam1, float fParam2)
@@ -3373,8 +3373,8 @@ void func_103()
 	Var0 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 	if ((((HUD::IS_PAUSE_MENU_ACTIVE() || func_108()) || PAD::IS_CONTROL_JUST_PRESSED(2, 199)) || PAD::IS_CONTROL_PRESSED(2, 199)) || PAD::IS_CONTROL_JUST_RELEASED(2, 199))
 	{
-		HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.y);
-		HUD::_0xA17784FCA9548D15(Var0.x, Var0.y, 0);
+		HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.f_1);
+		HUD::_0xA17784FCA9548D15(Var0.x, Var0.f_1, 0);
 		if (HUD::IS_PAUSE_MENU_ACTIVE() || func_108())
 		{
 			if (HUD::DOES_BLIP_EXIST(HUD::GET_MAIN_PLAYER_BLIP_ID()))
@@ -3390,7 +3390,7 @@ void func_103()
 			HUD::SET_BLIP_ALPHA(HUD::GET_MAIN_PLAYER_BLIP_ID(), 0);
 		}
 	}
-	HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.y);
+	HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
 	HUD::SET_RADAR_AS_EXTERIOR_THIS_FRAME();
 	HUD::HIDE_MINIMAP_INTERIOR_MAP_THIS_FRAME();
 	if (CAM::DOES_CAM_EXIST(Local_117.f_61))
@@ -3421,17 +3421,17 @@ void func_103()
 			HUD::SET_BLIP_SCALE(Local_117.f_109, 0.44f);
 			HUD::SET_BLIP_PRIORITY(Local_117.f_109, 13 + 1);
 			HUD::SET_BLIP_HIDDEN_ON_LEGEND(Local_117.f_109, 1);
-			HUD::SET_BLIP_ROTATION(Local_117.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y)));
+			HUD::SET_BLIP_ROTATION(Local_117.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1)));
 			HUD::SET_BLIP_HIDDEN_ON_LEGEND(Local_117.f_108, 1);
-			HUD::SET_BLIP_ROTATION(Local_117.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y)));
+			HUD::SET_BLIP_ROTATION(Local_117.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1)));
 		}
 		else
 		{
 			HUD::SET_BLIP_COORDS(Local_117.f_109, Var0);
-			HUD::SET_BLIP_ROTATION(Local_117.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y)));
+			HUD::SET_BLIP_ROTATION(Local_117.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1)));
 			HUD::SET_BLIP_DISPLAY(Local_117.f_109, 5);
 			HUD::SET_BLIP_COORDS(Local_117.f_108, Var0);
-			HUD::SET_BLIP_ROTATION(Local_117.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y)));
+			HUD::SET_BLIP_ROTATION(Local_117.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1)));
 			HUD::SET_BLIP_DISPLAY(Local_117.f_108, 5);
 		}
 	}
@@ -3630,10 +3630,10 @@ Vector3 func_107(struct<3> Param0)
 	struct<3> Var0;
 	
 	Var0.x = SYSTEM::COS(Param0.x);
-	Var0.y = SYSTEM::COS(Param0.z);
-	Var0.z = SYSTEM::SIN(Param0.x);
-	Var0.y = (Var0.y * Var0.x);
-	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.z));
+	Var0.f_1 = SYSTEM::COS(Param0.f_2);
+	Var0.f_2 = SYSTEM::SIN(Param0.x);
+	Var0.f_1 = (Var0.f_1 * Var0.x);
+	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.f_2));
 	return Var0;
 }
 
@@ -3702,7 +3702,7 @@ int func_113()
 						Var0 = { CAM::GET_CAM_COORD(Local_117.f_61) };
 						if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &uVar1, 0, 0))
 						{
-							if (SYSTEM::VDIST(Var0, Var0.x, Var0.y, uVar1) < 2f)
+							if (SYSTEM::VDIST(Var0, Var0.x, Var0.f_1, uVar1) < 2f)
 							{
 								return 1;
 							}
@@ -4003,7 +4003,7 @@ void func_130()
 			Local_117.f_61 = CAM::CREATE_CAMERA(26379945, 1);
 			CAM::SET_CAM_FOV(Local_117.f_61, Local_117.f_59);
 			Var0 = { ENTITY::GET_ENTITY_ROTATION(func_30(), 2) };
-			CAM::SET_CAM_ROT(Local_117.f_61, 0f, 0f, Var0.z, 2);
+			CAM::SET_CAM_ROT(Local_117.f_61, 0f, 0f, Var0.f_2, 2);
 			CAM::ATTACH_CAM_TO_ENTITY(Local_117.f_61, func_30(), func_136(), 1);
 			func_133(1);
 			func_132(1);
@@ -4168,7 +4168,7 @@ void func_138()
 						Local_117.f_61 = CAM::CREATE_CAMERA(26379945, 1);
 						CAM::SET_CAM_FOV(Local_117.f_61, Local_117.f_59);
 						Var0 = { ENTITY::GET_ENTITY_ROTATION(func_30(), 2) };
-						CAM::SET_CAM_ROT(Local_117.f_61, 0f, 0f, Var0.z, 2);
+						CAM::SET_CAM_ROT(Local_117.f_61, 0f, 0f, Var0.f_2, 2);
 						CAM::ATTACH_CAM_TO_ENTITY(Local_117.f_61, func_30(), func_136(), 1);
 						func_133(1);
 						func_132(1);
@@ -5104,7 +5104,7 @@ int func_171()
 				Var1 = { ENTITY::GET_ENTITY_COORDS(uVar0, 1) };
 				if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var1, &uVar2, 0, 0))
 				{
-					if (SYSTEM::VDIST(Var1, Var1.x, Var1.y, uVar2) < 3f)
+					if (SYSTEM::VDIST(Var1, Var1.x, Var1.f_1, uVar2) < 3f)
 					{
 						return 1;
 					}
@@ -5411,7 +5411,7 @@ void func_192(var uParam0)
 				
 				case 589125870:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.z == 653923311)
+					if (Var3.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -5431,19 +5431,19 @@ void func_193(int iParam0)
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
-		if (func_28(Var0.y, 1, 1))
+		if (func_28(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.y);
+			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
 			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, 0))
 				{
 					uVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.z) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
 						if (func_194(uVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.z);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{

@@ -243,8 +243,8 @@ void __EntryFunction__()
 			fLocal_57 = fLocal_57;
 			Local_75 = { Local_55 };
 			Local_76 = { ScriptParam_93.f_1[0 /*3*/] };
-			Local_75.z = 0f;
-			Local_76.z = 0f;
+			Local_75.f_2 = 0f;
+			Local_76.f_2 = 0f;
 			fLocal_74 = SYSTEM::VDIST2(Local_75, Local_76);
 			switch (iLocal_59)
 			{
@@ -266,7 +266,7 @@ void __EntryFunction__()
 							}
 							func_80(10);
 						}
-						if ((Local_55.z - ScriptParam_93.f_1[0 /*3*/].f_2) > 500f)
+						if ((Local_55.f_2 - ScriptParam_93.f_1[0 /*3*/].f_2) > 500f)
 						{
 						}
 					}
@@ -1071,8 +1071,8 @@ var func_24()
 	var uVar1;
 	
 	Var0 = -1;
-	Var0.y = iLocal_84;
-	Var0.z = iLocal_83;
+	Var0.f_1 = iLocal_84;
+	Var0.f_2 = iLocal_83;
 	uVar1 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&Local_51, &Var0, 3, iLocal_61);
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&Local_51);
 	return uVar1;

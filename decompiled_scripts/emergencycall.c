@@ -333,7 +333,7 @@ void func_10(var uParam0, var uParam1, var uParam2)
 					*uParam1 = { -3031.38f, 605.32f, 6.86f };
 				}
 				Var6 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - ENTITY::GET_ENTITY_COORDS(uParam0, 1) };
-				fVar8 = MISC::GET_HEADING_FROM_VECTOR_2D(Var6.x, Var6.y);
+				fVar8 = MISC::GET_HEADING_FROM_VECTOR_2D(Var6.x, Var6.f_1);
 				fVar9 = (fVar10 + 180f);
 				if (fVar9 > 360f)
 				{
@@ -392,7 +392,7 @@ void func_10(var uParam0, var uParam1, var uParam2)
 					{
 						if (iVar15 != 0)
 						{
-							if (Var17.z > (uParam1->f_2 + 8.5f))
+							if (Var17.f_2 > (uParam1->f_2 + 8.5f))
 							{
 								iVar13++;
 							}

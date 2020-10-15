@@ -6167,7 +6167,7 @@ void func_4()
 
 Vector3 func_5(struct<3> Param0)
 {
-	return (-SYSTEM::SIN(Param0.z) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.z) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
+	return (-SYSTEM::SIN(Param0.f_2) * SYSTEM::COS(Param0.x)), (SYSTEM::COS(Param0.f_2) * SYSTEM::COS(Param0.x)), SYSTEM::SIN(Param0.x);
 }
 
 void func_6(bool bParam0, bool bParam1, int iParam2, int iParam3, bool bParam4, bool bParam5)
@@ -31992,15 +31992,15 @@ void func_127(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_128(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_128(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -33018,7 +33018,7 @@ void func_131(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -33027,19 +33027,19 @@ void func_131(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_132(Var2.z)] = Var2.x;
+						(*uParam0)[func_132(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_132(Var2.z)] = func_128(iParam1, Var2.x, func_132(Var2.z), iVar0);
+						(*uParam0)[func_132(Var2.f_2)] = func_128(iParam1, Var2.x, func_132(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_132(Var2.z)] = Var2.y;
+					(*uParam0)[func_132(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -108374,7 +108374,7 @@ void func_468(var uParam0, int iParam1)
 		{
 			if (func_470(iVar0, &Var1, &uVar2))
 			{
-				Var1.z = (Var1.z + 1f);
+				Var1.f_2 = (Var1.f_2 + 1f);
 				*uParam0 = { Var1 };
 				uParam0->f_3 = uVar2;
 			}
@@ -108720,9 +108720,9 @@ bool func_471(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_472(var uParam0)
@@ -109361,9 +109361,9 @@ Vector3 func_482(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -111420,7 +111420,7 @@ void func_520()
 	STREAMING::REQUEST_MODEL(iLocal_462);
 	STREAMING::REQUEST_MODEL(iLocal_460);
 	STREAMING::REQUEST_MODEL(Local_403.f_1);
-	STREAMING::REQUEST_MODEL(Local_405.y);
+	STREAMING::REQUEST_MODEL(Local_405.f_1);
 	STREAMING::REQUEST_MODEL(Local_418.f_1);
 	STREAMING::REQUEST_MODEL(Local_391[3 /*33*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_392[0 /*33*/].f_1);
@@ -111447,7 +111447,7 @@ void func_520()
 	{
 		func_440(0, -1, 1);
 	}
-	while ((((((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_461) || !STREAMING::HAS_MODEL_LOADED(iLocal_462)) || !STREAMING::HAS_MODEL_LOADED(iLocal_460)) || !STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_405.y)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[3 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_446.f_2)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_435.f_13, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, sLocal_362)) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_0")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_1")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_2")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_3")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched")) || !STREAMING::HAS_ANIM_SET_LOADED("Wpn_AssaultRifle_WeaponHoldingCrouched")) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched_strafing")) || !PED::HAS_ACTION_MODE_ASSET_LOADED("franklin_action")) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_heavysniper"))) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_heavysniper")))) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1)) || !STREAMING::HAS_PTFX_ASSET_LOADED())
+	while ((((((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_461) || !STREAMING::HAS_MODEL_LOADED(iLocal_462)) || !STREAMING::HAS_MODEL_LOADED(iLocal_460)) || !STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[3 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_446.f_2)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_435.f_13, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, sLocal_362)) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_0")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_1")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_2")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_3")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched")) || !STREAMING::HAS_ANIM_SET_LOADED("Wpn_AssaultRifle_WeaponHoldingCrouched")) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched_strafing")) || !PED::HAS_ACTION_MODE_ASSET_LOADED("franklin_action")) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_heavysniper"))) || !STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_heavysniper")))) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1)) || !STREAMING::HAS_PTFX_ASSET_LOADED())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -111553,7 +111553,7 @@ void func_520()
 	VEHICLE::SET_VEHICLE_DAMAGE(Local_418, 0.3f, -0.1f, 0.75f, 200f, 200f, 1);
 	VEHICLE::SET_VEHICLE_DOOR_BROKEN(Local_418, 4, 1);
 	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_418, 1084227584);
-	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.y, -2442.858f, 3670.484f, 12.454f, 0f, 1, 1, 0);
+	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.f_1, -2442.858f, 3670.484f, 12.454f, 0f, 1, 1, 0);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_405.x, 1);
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_405.x, 1);
 	VEHICLE::SET_VEHICLE_COLOURS(Local_405.x, 12, 12);
@@ -111577,7 +111577,7 @@ void func_520()
 	uLocal_383 = CAM::CREATE_CAM("default_scripted_camera", 1);
 	CAM::ATTACH_CAM_TO_ENTITY(uLocal_383, Local_403, -0.39f, 0.65f, 1.35f, 1);
 	CAM::SET_CAM_FOV(uLocal_383, 45f);
-	func_525(&Local_403, &uLocal_383, Local_365.x, 0f, Local_365.z);
+	func_525(&Local_403, &uLocal_383, Local_365.x, 0f, Local_365.f_2);
 	iLocal_352 = 1;
 	if (!iLocal_736)
 	{
@@ -111717,8 +111717,8 @@ void func_525(int iParam0, var uParam1, struct<3> Param2)
 		if (CAM::DOES_CAM_EXIST(*uParam1))
 		{
 			Var0.x = ENTITY::GET_ENTITY_PITCH(*iParam0);
-			Var0.y = ENTITY::GET_ENTITY_ROLL(*iParam0);
-			Var0.z = ENTITY::GET_ENTITY_HEADING(*iParam0);
+			Var0.f_1 = ENTITY::GET_ENTITY_ROLL(*iParam0);
+			Var0.f_2 = ENTITY::GET_ENTITY_HEADING(*iParam0);
 			Var0 = { Var0 + Param2 };
 			CAM::SET_CAM_ROT(*uParam1, Var0, 2);
 		}
@@ -112655,7 +112655,7 @@ void func_530()
 						{
 							Local_393.f_17 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
 							Local_314 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
-							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.z);
+							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.f_2);
 							iLocal_255++;
 						}
 						if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(Local_393, 1), ENTITY::GET_ENTITY_COORDS(Local_403, 1), 1) > 45f)
@@ -112704,7 +112704,7 @@ void func_530()
 										iLocal_291 = MISC::GET_GAME_TIMER();
 										Local_393.f_17 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
 										Local_314 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
-										TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.z);
+										TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.f_2);
 										iLocal_291 = MISC::GET_GAME_TIMER();
 									}
 								}
@@ -113474,7 +113474,7 @@ void func_530()
 						{
 							Local_393.f_17 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
 							Local_314 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
-							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.z);
+							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.f_2);
 							iLocal_255++;
 						}
 						if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(Local_393, 1), ENTITY::GET_ENTITY_COORDS(Local_403, 1), 1) > 45f)
@@ -113520,7 +113520,7 @@ void func_530()
 								{
 									Local_393.f_17 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
 									Local_314 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
-									TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.z);
+									TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.f_2);
 								}
 							}
 							else if (func_550(Local_393, 713668775))
@@ -114378,7 +114378,7 @@ void func_530()
 						{
 							Local_393.f_17 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
 							Local_314 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
-							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.z);
+							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.f_2);
 							iLocal_255++;
 						}
 						if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(Local_393, 1), ENTITY::GET_ENTITY_COORDS(Local_403, 1), 1) > 45f)
@@ -114424,7 +114424,7 @@ void func_530()
 								{
 									Local_393.f_17 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
 									Local_314 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION("missexile2", "chop_get_in_frogger_rds", ENTITY::GET_ENTITY_COORDS(Local_403, 1), ENTITY::GET_ENTITY_ROTATION(Local_403, 2), 0f, 2) };
-									TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.z);
+									TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_393, Local_393.f_17, 2f, 60000, 0.15f, 4608, Local_314.f_2);
 								}
 							}
 							else if (func_550(Local_393, 713668775))
@@ -114536,7 +114536,7 @@ void func_536()
 {
 	TASK::OPEN_SEQUENCE_TASK(&uLocal_389);
 	TASK::TASK_FOLLOW_WAYPOINT_RECORDING(0, "exile2_0", 126, 520, 227);
-	TASK::TASK_GO_STRAIGHT_TO_COORD(0, Local_308, 2f, -1, Local_309.z, 1056964608);
+	TASK::TASK_GO_STRAIGHT_TO_COORD(0, Local_308, 2f, -1, Local_309.f_2, 1056964608);
 	TASK::CLOSE_SEQUENCE_TASK(uLocal_389);
 	TASK::TASK_PERFORM_SEQUENCE(Local_393, uLocal_389);
 	TASK::CLEAR_SEQUENCE_TASK(&uLocal_389);
@@ -115067,7 +115067,7 @@ void func_554()
 	STREAMING::REQUEST_MODEL(iLocal_462);
 	STREAMING::REQUEST_MODEL(iLocal_460);
 	STREAMING::REQUEST_MODEL(Local_403.f_1);
-	STREAMING::REQUEST_MODEL(Local_405.y);
+	STREAMING::REQUEST_MODEL(Local_405.f_1);
 	STREAMING::REQUEST_MODEL(Local_418.f_1);
 	STREAMING::REQUEST_MODEL(Local_391[3 /*33*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_392[0 /*33*/].f_1);
@@ -115095,7 +115095,7 @@ void func_554()
 	{
 		func_440(0, -1, 1);
 	}
-	while (((((((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_461) || !STREAMING::HAS_MODEL_LOADED(iLocal_462)) || !STREAMING::HAS_MODEL_LOADED(iLocal_460)) || !STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_405.y)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[3 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_446.f_2)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_435.f_13, "lkexile2")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_0")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_1")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_2")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_3")) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_heavysniper"))) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5749)) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched")) || !STREAMING::HAS_ANIM_SET_LOADED("Wpn_AssaultRifle_WeaponHoldingCrouched")) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched_strafing")) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1)) || !STREAMING::HAS_PTFX_ASSET_LOADED())
+	while (((((((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_461) || !STREAMING::HAS_MODEL_LOADED(iLocal_462)) || !STREAMING::HAS_MODEL_LOADED(iLocal_460)) || !STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[3 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_446.f_2)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_435.f_13, "lkexile2")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_0")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_1")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_2")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_3")) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_heavysniper"))) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5749)) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched")) || !STREAMING::HAS_ANIM_SET_LOADED("Wpn_AssaultRifle_WeaponHoldingCrouched")) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched_strafing")) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1)) || !STREAMING::HAS_PTFX_ASSET_LOADED())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -115214,7 +115214,7 @@ void func_554()
 	VEHICLE::SET_VEHICLE_DAMAGE(Local_418, 0.3f, -0.1f, 0.75f, 200f, 200f, 1);
 	VEHICLE::SET_VEHICLE_DOOR_BROKEN(Local_418, 4, 1);
 	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_418, 1084227584);
-	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.y, -2442.858f, 3670.484f, 12.454f, 0f, 1, 1, 0);
+	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.f_1, -2442.858f, 3670.484f, 12.454f, 0f, 1, 1, 0);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_405.x, 1);
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_405.x, 1);
 	VEHICLE::SET_VEHICLE_COLOURS(Local_405.x, 12, 12);
@@ -115440,19 +115440,19 @@ void func_555(bool bParam0)
 								{
 									fVar0 = (fVar0 * -1f);
 								}
-								Local_365.z = (Local_365.z + fVar0);
-								if (Local_365.z < fLocal_368)
+								Local_365.f_2 = (Local_365.f_2 + fVar0);
+								if (Local_365.f_2 < fLocal_368)
 								{
-									Local_365.z = fLocal_368;
+									Local_365.f_2 = fLocal_368;
 								}
-								if (Local_365.z >= fLocal_369)
+								if (Local_365.f_2 >= fLocal_369)
 								{
-									Local_365.z = fLocal_369;
+									Local_365.f_2 = fLocal_369;
 								}
 							}
 						}
 						CAM::SET_CAM_FOV(uLocal_383, 45f);
-						func_525(&Local_403, &uLocal_383, Local_365.x, 0f, Local_365.z);
+						func_525(&Local_403, &uLocal_383, Local_365.x, 0f, Local_365.f_2);
 						break;
 				}
 			}
@@ -115479,7 +115479,7 @@ void func_555(bool bParam0)
 		{
 			if (CAM::IS_CAM_ACTIVE(uLocal_383))
 			{
-				func_525(&Local_403, &uLocal_383, Local_365.x, 0f, Local_365.z);
+				func_525(&Local_403, &uLocal_383, Local_365.x, 0f, Local_365.f_2);
 			}
 		}
 		if ((func_143() != 0 && (Local_518 != 1 && Local_518 != 2)) && STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
@@ -115548,7 +115548,7 @@ float func_558(int iParam0)
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, 1) - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
 	Var1 = { func_559(Var0) };
-	return MISC::ATAN2(Var1.z, SYSTEM::VMAG(Var1.x, Var1.y, 0f));
+	return MISC::ATAN2(Var1.f_2, SYSTEM::VMAG(Var1.x, Var1.f_1, 0f));
 }
 
 Vector3 func_559(struct<3> Param0)
@@ -115565,8 +115565,8 @@ Vector3 func_559(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -115577,7 +115577,7 @@ float func_560(int iParam0)
 	float fVar1;
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, 1) - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-	fVar1 = (MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.y) - ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()));
+	fVar1 = (MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.f_1) - ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()));
 	if (fVar1 > 180f)
 	{
 		fVar1 = (fVar1 - 360f);
@@ -115593,7 +115593,7 @@ void func_561()
 {
 	uLocal_383 = CAM::CREATE_CAM("default_scripted_camera", 0);
 	CAM::ATTACH_CAM_TO_ENTITY(uLocal_383, Local_403, -0.39f, 0.85f, 1.35f, 1);
-	func_525(&Local_403, &uLocal_383, Local_365.x, 0f, Local_365.z);
+	func_525(&Local_403, &uLocal_383, Local_365.x, 0f, Local_365.f_2);
 	CAM::SET_CAM_FOV(uLocal_383, 45f);
 	CAM::_0x661B5C8654ADD825(uLocal_383, 1);
 	CAM::SET_CAM_ACTIVE(uLocal_383, 1);
@@ -115786,7 +115786,7 @@ void func_571()
 	STREAMING::REQUEST_MODEL(Local_392[0 /*33*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_403.f_1);
 	STREAMING::REQUEST_MODEL(Local_418.f_1);
-	STREAMING::REQUEST_MODEL(Local_405.y);
+	STREAMING::REQUEST_MODEL(Local_405.f_1);
 	STREAMING::REQUEST_MODEL(Local_446.f_2);
 	VEHICLE::REQUEST_VEHICLE_RECORDING(Local_403.f_13, sLocal_362);
 	VEHICLE::REQUEST_VEHICLE_RECORDING(4, sLocal_362);
@@ -115802,7 +115802,7 @@ void func_571()
 	STREAMING::REQUEST_ANIM_SET("Wpn_AssaultRifle_WeaponHoldingCrouched");
 	STREAMING::REQUEST_ANIM_SET("move_ped_crouched_strafing");
 	AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1);
-	while ((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_461) || !STREAMING::HAS_MODEL_LOADED(iLocal_462)) || !STREAMING::HAS_MODEL_LOADED(iLocal_460)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_446.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_405.y)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_403.f_13, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_435.f_13, "lkexile2")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_0")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_1")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_2")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5749)) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched")) || !STREAMING::HAS_ANIM_SET_LOADED("Wpn_AssaultRifle_WeaponHoldingCrouched")) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched_strafing")) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1))
+	while ((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_461) || !STREAMING::HAS_MODEL_LOADED(iLocal_462)) || !STREAMING::HAS_MODEL_LOADED(iLocal_460)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_446.f_2)) || !STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_403.f_13, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_435.f_13, "lkexile2")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_0")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_1")) || !TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_2")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5749)) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched")) || !STREAMING::HAS_ANIM_SET_LOADED("Wpn_AssaultRifle_WeaponHoldingCrouched")) || !STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched_strafing")) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -115846,7 +115846,7 @@ void func_571()
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_418.f_1);
 	VEHICLE::SET_VEHICLE_DAMAGE(Local_418, 0f, 1f, -0.336f, 1000f, 1000f, 1);
 	VEHICLE::SET_VEHICLE_DOOR_BROKEN(Local_418, 4, 0);
-	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.y, -1899.395f, 4431.256f, 42.805f, 228.1822f, 1, 1, 0);
+	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.f_1, -1899.395f, 4431.256f, 42.805f, 228.1822f, 1, 1, 0);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_405.x, 1);
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_405.x, 1);
 	VEHICLE::SET_VEHICLE_COLOURS(Local_405.x, 12, 12);
@@ -115866,7 +115866,7 @@ void func_572()
 	STREAMING::REQUEST_MODEL(iLocal_460);
 	STREAMING::REQUEST_MODEL(Local_393.f_1);
 	STREAMING::REQUEST_MODEL(Local_403.f_1);
-	STREAMING::REQUEST_MODEL(Local_405.y);
+	STREAMING::REQUEST_MODEL(Local_405.f_1);
 	STREAMING::REQUEST_MODEL(Local_418.f_1);
 	STREAMING::REQUEST_MODEL(Local_426.f_1);
 	STREAMING::REQUEST_ANIM_DICT("missexile2");
@@ -115875,7 +115875,7 @@ void func_572()
 	{
 		func_440(0, -1, 1);
 	}
-	while (((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_461) || !STREAMING::HAS_MODEL_LOADED(iLocal_462)) || !STREAMING::HAS_MODEL_LOADED(iLocal_460)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_405.y)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_426.f_1)) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1))
+	while (((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_461) || !STREAMING::HAS_MODEL_LOADED(iLocal_462)) || !STREAMING::HAS_MODEL_LOADED(iLocal_460)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_426.f_1)) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -115922,7 +115922,7 @@ void func_572()
 	VEHICLE::SET_VEHICLE_DAMAGE(Local_418, 0.3f, -0.1f, 0.75f, 200f, 200f, 1);
 	VEHICLE::SET_VEHICLE_DOOR_BROKEN(Local_418, 4, 1);
 	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_418, 1084227584);
-	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.y, -1899.395f, 4431.256f, 42.805f, 228.1822f, 1, 1, 0);
+	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.f_1, -1899.395f, 4431.256f, 42.805f, 228.1822f, 1, 1, 0);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_405.x, 1);
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_405.x, 1);
 	VEHICLE::SET_VEHICLE_COLOURS(Local_405.x, 12, 12);
@@ -115949,7 +115949,7 @@ void func_572()
 void func_573()
 {
 	STREAMING::REQUEST_MODEL(iLocal_462);
-	STREAMING::REQUEST_MODEL(Local_405.y);
+	STREAMING::REQUEST_MODEL(Local_405.f_1);
 	STREAMING::REQUEST_MODEL(Local_418.f_1);
 	STREAMING::REQUEST_MODEL(Local_391[0 /*33*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_393.f_1);
@@ -115961,7 +115961,7 @@ void func_573()
 	VEHICLE::REQUEST_VEHICLE_RECORDING(1, sLocal_362);
 	AUDIO::LOAD_STREAM("CAR_CRASH_OFF_CLIFF_STREAM", "EXILE_2_SOUNDS");
 	STREAMING::REQUEST_PTFX_ASSET();
-	while ((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_462) || !STREAMING::HAS_MODEL_LOADED(Local_405.y)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2ig_5")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2deer_crash")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, sLocal_362)) || !AUDIO::LOAD_STREAM("CAR_CRASH_OFF_CLIFF_STREAM", "EXILE_2_SOUNDS")) || !STREAMING::HAS_PTFX_ASSET_LOADED())
+	while ((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_462) || !STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2ig_5")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2deer_crash")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, sLocal_362)) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, sLocal_362)) || !AUDIO::LOAD_STREAM("CAR_CRASH_OFF_CLIFF_STREAM", "EXILE_2_SOUNDS")) || !STREAMING::HAS_PTFX_ASSET_LOADED())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -115970,7 +115970,7 @@ void func_573()
 	{
 		func_391(1, 0);
 	}
-	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.y, -1969.002f, 4481.579f, 32.3209f, 215.9919f, 1, 1, 0);
+	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.f_1, -1969.002f, 4481.579f, 32.3209f, 215.9919f, 1, 1, 0);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_405.x, 1);
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_405.x, 1);
 	VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(Local_405.x, 0);
@@ -116048,7 +116048,7 @@ void func_575()
 	{
 		func_440(0, -1, 1);
 	}
-	while ((((((((((((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_462) || !STREAMING::HAS_MODEL_LOADED(Local_405.y)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(joaat("radi"))) || !STREAMING::HAS_MODEL_LOADED(joaat("sabregt"))) || !STREAMING::HAS_PTFX_ASSET_LOADED()) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(2, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(8, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(9, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(10, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(11, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(12, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(13, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(14, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(15, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(16, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(17, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(18, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(19, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(100, "lkexcile2_chase")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2switch"))
+	while ((((((((((((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_462) || !STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(joaat("radi"))) || !STREAMING::HAS_MODEL_LOADED(joaat("sabregt"))) || !STREAMING::HAS_PTFX_ASSET_LOADED()) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(2, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(8, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(9, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(10, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(11, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(12, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(13, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(14, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(15, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(16, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(17, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(18, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(19, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(100, "lkexcile2_chase")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2switch"))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -116090,7 +116090,7 @@ void func_575()
 	{
 		func_391(1, 0);
 	}
-	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.y, -2646.31f, 2677.32f, 16.6427f, 351.1425f, 1, 1, 0);
+	Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.f_1, -2646.31f, 2677.32f, 16.6427f, 351.1425f, 1, 1, 0);
 	VEHICLE::SET_VEHICLE_ACTIVE_DURING_PLAYBACK(Local_405.x, 1);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_405.x, 1);
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_405.x, 1);
@@ -117513,8 +117513,8 @@ int func_598(int iParam0, int iParam1, bool bParam2)
 		}
 	}
 	Var3 = { Var1 - Var0 };
-	Var3.z = 0f;
-	Var4.z = 0f;
+	Var3.f_2 = 0f;
+	Var4.f_2 = 0f;
 	if (func_599(Var3, Var4) < 0f)
 	{
 		return 1;
@@ -117524,7 +117524,7 @@ int func_598(int iParam0, int iParam1, bool bParam2)
 
 float func_599(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 int func_600(int iParam0, int iParam1, float fParam2)
@@ -117549,14 +117549,14 @@ int func_600(int iParam0, int iParam1, float fParam2)
 	{
 		return 0;
 	}
-	Var0.z = 0f;
-	Var1.z = 0f;
+	Var0.f_2 = 0f;
+	Var1.f_2 = 0f;
 	fVar2 = func_599(Var0, Var1);
 	if (fVar2 < 0f)
 	{
 		return 0;
 	}
-	fVar2 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var0.x, Var0.y, Var1.x, Var1.y);
+	fVar2 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var0.x, Var0.f_1, Var1.x, Var1.f_1);
 	if (!fVar2 < fParam2)
 	{
 		return 0;
@@ -118358,9 +118358,9 @@ void func_615(int iParam0, float fParam1, int iParam2)
 										else if (((!bLocal_90 && !MISC::IS_BIT_SET(iLocal_142[iVar0], 4)) && iVar2 < 3) && (iVar0 > iLocal_161 || iLocal_161 == 0))
 										{
 											Var19 = { ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(iParam0, ENTITY::GET_ENTITY_COORDS(iLocal_196[iVar0], 1)) };
-											if (Var19.y < 0f)
+											if (Var19.f_1 < 0f)
 											{
-												if (MISC::ABSF(Var19.y) > MISC::ABSF(Var19.x))
+												if (MISC::ABSF(Var19.f_1) > MISC::ABSF(Var19.x))
 												{
 													bVar18 = true;
 												}
@@ -118536,8 +118536,8 @@ int func_617(int iParam0, int iParam1)
 	{
 		return 0;
 	}
-	Var0.z = 0f;
-	Var1.z = 0f;
+	Var0.f_2 = 0f;
+	Var1.f_2 = 0f;
 	fVar2 = func_599(Var0, Var1);
 	if (fVar2 < 0f)
 	{
@@ -118719,17 +118719,17 @@ void func_622(int iParam0, float fParam1)
 						Local_176.x = Local_177.x;
 						Local_177.x = fVar3;
 					}
-					if (Local_176.y > Local_177.y)
+					if (Local_176.f_1 > Local_177.f_1)
 					{
-						fVar3 = Local_176.y;
-						Local_176.y = Local_177.y;
-						Local_177.y = fVar3;
+						fVar3 = Local_176.f_1;
+						Local_176.f_1 = Local_177.f_1;
+						Local_177.f_1 = fVar3;
 					}
-					if (Local_176.z > Local_177.z)
+					if (Local_176.f_2 > Local_177.f_2)
 					{
-						fVar3 = Local_176.z;
-						Local_176.z = Local_177.z;
-						Local_177.z = fVar3;
+						fVar3 = Local_176.f_2;
+						Local_176.f_2 = Local_177.f_2;
+						Local_177.f_2 = fVar3;
 					}
 					Local_176 = { Local_176 - Vector(fLocal_139, fLocal_139, fLocal_139) };
 					Local_177 = { Local_177 + Vector(fLocal_139, fLocal_139, fLocal_139) };
@@ -118760,17 +118760,17 @@ void func_622(int iParam0, float fParam1)
 					Local_178.x = Local_179.x;
 					Local_179.x = fVar3;
 				}
-				if (Local_178.y > Local_179.y)
+				if (Local_178.f_1 > Local_179.f_1)
 				{
-					fVar3 = Local_178.y;
-					Local_178.y = Local_179.y;
-					Local_179.y = fVar3;
+					fVar3 = Local_178.f_1;
+					Local_178.f_1 = Local_179.f_1;
+					Local_179.f_1 = fVar3;
 				}
-				if (Local_178.z > Local_179.z)
+				if (Local_178.f_2 > Local_179.f_2)
 				{
-					fVar3 = Local_178.z;
-					Local_178.z = Local_179.z;
-					Local_179.z = fVar3;
+					fVar3 = Local_178.f_2;
+					Local_178.f_2 = Local_179.f_2;
+					Local_179.f_2 = fVar3;
 				}
 				Local_178 = { Local_178 - Vector(fLocal_139, fLocal_139, fLocal_139) };
 				Local_179 = { Local_179 + Vector(fLocal_139, fLocal_139, fLocal_139) };
@@ -118812,8 +118812,8 @@ int func_623(int iParam0, int iParam1)
 		Var4 = { Var2 - Var1 };
 	}
 	Var3 = { Var1 - Var0 };
-	Var3.z = 0f;
-	Var4.z = 0f;
+	Var3.f_2 = 0f;
+	Var4.f_2 = 0f;
 	fVar5 = func_599(Var3, Var4);
 	if (fVar5 < 0f)
 	{
@@ -119197,11 +119197,11 @@ void func_630(char* sParam0, int iParam1, bool bParam2, bool bParam3)
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
 		Local_168.x = (Var0.x - 100f);
-		Local_168.y = (Var0.y - 100f);
-		Local_168.z = (Var0.z - 100f);
+		Local_168.f_1 = (Var0.f_1 - 100f);
+		Local_168.f_2 = (Var0.f_2 - 100f);
 		Local_169.x = (Var0.x + 100f);
-		Local_169.y = (Var0.y + 100f);
-		Local_169.z = (Var0.z + 100f);
+		Local_169.f_1 = (Var0.f_1 + 100f);
+		Local_169.f_2 = (Var0.f_2 + 100f);
 		PATHFIND::SET_ROADS_IN_AREA(Local_168, Local_169, 0, 0);
 		if (bParam2)
 		{
@@ -119376,7 +119376,7 @@ void func_635(int iParam0, int iParam1, bool bParam2)
 void func_636()
 {
 	STREAMING::REQUEST_MODEL(iLocal_462);
-	STREAMING::REQUEST_MODEL(Local_405.y);
+	STREAMING::REQUEST_MODEL(Local_405.f_1);
 	STREAMING::REQUEST_MODEL(Local_418.f_1);
 	STREAMING::REQUEST_MODEL(Local_391[0 /*33*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_393.f_1);
@@ -125022,7 +125022,7 @@ void func_693()
 	Local_398.f_27 = 0;
 	StringCopy(&Local_321, "", 16);
 	StringCopy(&cLocal_324, "", 16);
-	Local_405.y = joaat("baller");
+	Local_405.f_1 = joaat("baller");
 	Local_418.f_1 = joaat("dubsta");
 	Local_418.f_3 = { -2442.858f, 3681.484f, 12.454f };
 	Local_426.f_1 = func_457(2, 0);
@@ -125745,14 +125745,14 @@ void func_710()
 {
 	Local_393.f_1 = func_40();
 	Local_391[0 /*33*/].f_1 = joaat("a_m_m_hillbilly_02");
-	Local_405.y = joaat("baller");
+	Local_405.f_1 = joaat("baller");
 	Local_418.f_1 = joaat("dubsta");
 	Local_403.f_1 = joaat("frogger");
 	Local_426.f_1 = func_457(2, 0);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iLocal_462);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_393.f_1);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_391[0 /*33*/].f_1);
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_405.y);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_405.f_1);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_418.f_1);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("radi"));
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("sabregt"));
@@ -125958,7 +125958,7 @@ void func_717()
 	{
 		HUD::REMOVE_BLIP(&uLocal_379);
 	}
-	if (HUD::DOES_BLIP_EXIST(Local_405.z))
+	if (HUD::DOES_BLIP_EXIST(Local_405.f_2))
 	{
 		HUD::REMOVE_BLIP(&(Local_405.f_2));
 	}
@@ -127048,9 +127048,9 @@ int func_745(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -127059,7 +127059,7 @@ int func_745(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -127625,7 +127625,7 @@ int func_755(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 								if (ENTITY::IS_ENTITY_IN_WATER(iVar10) && !VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(iVar10))
 								{
 									Var19 = { ENTITY::GET_ENTITY_COORDS(iVar10, 1) };
-									if (Var19.z < -1f)
+									if (Var19.f_2 < -1f)
 									{
 										TASK::TASK_LEAVE_VEHICLE(uParam0->f_17[iVar0], iVar10, 64);
 									}
@@ -129065,7 +129065,7 @@ void func_782()
 				ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&Local_418);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_418.f_1);
 				ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&Local_405);
-				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_405.y);
+				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_405.f_1);
 				ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&Local_435);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_435.f_1);
 				VEHICLE::REMOVE_VEHICLE_RECORDING(Local_403.f_13, sLocal_362);
@@ -130425,7 +130425,7 @@ int func_808(float fParam0)
 	struct<3> Var0;
 	
 	Var0 = { func_809(PLAYER::PLAYER_ID()) };
-	if (Var0.z < fParam0)
+	if (Var0.f_2 < fParam0)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
@@ -130989,7 +130989,7 @@ int func_832()
 	else
 	{
 		Local_365 = { -24f, 0f, 65.9f };
-		func_525(&Local_403, &iLocal_383, Local_365.x, 0f, Local_365.z);
+		func_525(&Local_403, &iLocal_383, Local_365.x, 0f, Local_365.f_2);
 		CAM::SET_CAM_ACTIVE(iLocal_383, 1);
 	}
 	Global_22130 = 1;
@@ -131245,7 +131245,7 @@ int func_842()
 		if (!CAM::IS_CAM_ACTIVE(iLocal_383))
 		{
 			CAM::SET_CAM_ACTIVE(iLocal_383, 1);
-			func_525(&Local_403, &iLocal_383, Local_365.x, 0f, Local_365.z);
+			func_525(&Local_403, &iLocal_383, Local_365.x, 0f, Local_365.f_2);
 		}
 	}
 	Global_22130 = 1;
@@ -132354,8 +132354,8 @@ int func_865()
 			uLocal_354 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_ex2_rpg_trail", iLocal_737, 0f, -0.2f, 0f, 0f, 0f, 0f, 1f, 0, 0, 0);
 			Local_766 = { -1532f, 4469.2f, 23f };
 			Local_764 = { func_559(Local_766 - Local_446.f_3) };
-			Local_446.f_12 = MISC::ATAN2(Local_764.z, SYSTEM::VMAG(Local_764.x, Local_764.y, 0f));
-			Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_764.y, Local_764.x) - 90f));
+			Local_446.f_12 = MISC::ATAN2(Local_764.f_2, SYSTEM::VMAG(Local_764.x, Local_764.f_1, 0f));
+			Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_764.f_1, Local_764.x) - 90f));
 			switch (func_143())
 			{
 				case 0:
@@ -132379,10 +132379,10 @@ int func_865()
 			Local_767 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_403, -5f, 0f, -0.5f) };
 			Local_765 = { func_559(Local_767 - Local_446.f_3) };
 			Local_764.x = (Local_764.x + ((Local_765.x - Local_764.x) * 0.15f));
-			Local_764.y = (Local_764.y + ((Local_765.y - Local_764.y) * 0.15f));
-			Local_764.z = (Local_764.z + ((Local_765.z - Local_764.z) * 0.15f));
-			Local_446.f_12 = MISC::ATAN2(Local_764.z, SYSTEM::VMAG(Local_764.x, Local_764.y, 0f));
-			Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_764.y, Local_764.x) - 90f));
+			Local_764.f_1 = (Local_764.f_1 + ((Local_765.f_1 - Local_764.f_1) * 0.15f));
+			Local_764.f_2 = (Local_764.f_2 + ((Local_765.f_2 - Local_764.f_2) * 0.15f));
+			Local_446.f_12 = MISC::ATAN2(Local_764.f_2, SYSTEM::VMAG(Local_764.x, Local_764.f_1, 0f));
+			Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_764.f_1, Local_764.x) - 90f));
 			if (!func_866(Local_446.f_3, Local_767, Local_764 * FtoV(MISC::GET_FRAME_TIME()) * Vector(50f, 50f, 50f)))
 			{
 			}
@@ -132431,8 +132431,8 @@ int func_865()
 							ENTITY::_SET_ENTITY_SOMETHING(iLocal_737, 0);
 							uLocal_354 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_ex2_rpg_trail", iLocal_737, 0f, -0.2f, 0f, 0f, 0f, 0f, 1f, 0, 0, 0);
 							Local_764 = { func_559(Vector(19f, 4469.92f, -1537.21f) - ENTITY::GET_ENTITY_COORDS(iLocal_737, 1)) };
-							Local_446.f_12 = MISC::ATAN2(Local_764.z, SYSTEM::VMAG(Local_764.x, Local_764.y, 0f));
-							Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_764.y, Local_764.x) - 90f));
+							Local_446.f_12 = MISC::ATAN2(Local_764.f_2, SYSTEM::VMAG(Local_764.x, Local_764.f_1, 0f));
+							Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_764.f_1, Local_764.x) - 90f));
 							switch (func_143())
 							{
 								case 0:
@@ -132457,10 +132457,10 @@ int func_865()
 			Local_767 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_403, -18f, 0.5f, 0.5f) };
 			Local_765 = { func_559(Local_767 - Local_446.f_3) };
 			Local_764.x = (Local_764.x + ((Local_765.x - Local_764.x) * 0.15f));
-			Local_764.y = (Local_764.y + ((Local_765.y - Local_764.y) * 0.15f));
-			Local_764.z = (Local_764.z + ((Local_765.z - Local_764.z) * 0.15f));
-			Local_446.f_12 = MISC::ATAN2(Local_764.z, SYSTEM::VMAG(Local_764.x, Local_764.y, 0f));
-			Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_764.y, Local_764.x) - 90f));
+			Local_764.f_1 = (Local_764.f_1 + ((Local_765.f_1 - Local_764.f_1) * 0.15f));
+			Local_764.f_2 = (Local_764.f_2 + ((Local_765.f_2 - Local_764.f_2) * 0.15f));
+			Local_446.f_12 = MISC::ATAN2(Local_764.f_2, SYSTEM::VMAG(Local_764.x, Local_764.f_1, 0f));
+			Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_764.f_1, Local_764.x) - 90f));
 			Local_446.f_3 = { ENTITY::GET_ENTITY_COORDS(iLocal_737, 1) };
 			if (!func_866(Local_446.f_3, Local_767, Local_764 * FtoV(MISC::GET_FRAME_TIME()) * Vector(35f, 35f, 35f)))
 			{
@@ -133289,8 +133289,8 @@ int func_886()
 					Local_446.f_3 = { -1532.08f, 4416.26f, 65.35f };
 					Local_306 = { -1474.7f, 4385.4f, 93.9f };
 					Local_307 = { func_559(Local_306 - Local_446.f_3) };
-					Local_446.f_12 = MISC::ATAN2(Local_307.z, SYSTEM::VMAG(Local_307.x, Local_307.y, 0f));
-					Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_307.y, Local_307.x) - 90f));
+					Local_446.f_12 = MISC::ATAN2(Local_307.f_2, SYSTEM::VMAG(Local_307.x, Local_307.f_1, 0f));
+					Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_307.f_1, Local_307.x) - 90f));
 					iLocal_737 = OBJECT::CREATE_OBJECT(Local_446.f_2, Local_446.f_3, 1, 1, 0);
 					ENTITY::SET_ENTITY_ROTATION(iLocal_737, Local_446.f_12, 2, 1);
 					uLocal_354 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_ex2_rpg_trail", iLocal_737, 0f, -0.2f, 0f, 0f, 0f, 0f, 1f, 0, 0, 0);
@@ -133338,8 +133338,8 @@ int func_886()
 		case 1:
 			Local_446.f_3 = { ENTITY::GET_ENTITY_COORDS(iLocal_737, 1) };
 			Local_768 = { Local_307 * Vector(35f, 35f, 35f) };
-			Local_446.f_12 = MISC::ATAN2(Local_307.z, SYSTEM::VMAG(Local_307.x, Local_307.y, 0f));
-			Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_307.y, Local_307.x) - 90f));
+			Local_446.f_12 = MISC::ATAN2(Local_307.f_2, SYSTEM::VMAG(Local_307.x, Local_307.f_1, 0f));
+			Local_446.f_12.f_2 = func_867((MISC::ATAN2(Local_307.f_1, Local_307.x) - 90f));
 			ENTITY::SET_ENTITY_VELOCITY(iLocal_737, Local_768);
 			ENTITY::SET_ENTITY_ROTATION(iLocal_737, Local_446.f_12, 2, 1);
 			if (VEHICLE::GET_TIME_POSITION_IN_RECORDING(Local_403) > 3800f)
@@ -133805,8 +133805,8 @@ int func_888(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4
 				Var2 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
 				Var3 = { Var2 + uParam0->f_9 };
 				Var4 = { Var3 - ENTITY::GET_ENTITY_ROTATION(uParam0->f_5, 2) };
-				Var5 = { (-SYSTEM::SIN(Var3.z) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.z) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
-				Var6 = { (-SYSTEM::SIN(Var4.z) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.z) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
+				Var5 = { (-SYSTEM::SIN(Var3.f_2) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.f_2) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
+				Var6 = { (-SYSTEM::SIN(Var4.f_2) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.f_2) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
 				fVar7 = CAM::GET_FINAL_RENDERED_CAM_FOV();
 				if (uParam0->f_17 > 0 || iParam6 != 0)
 				{
@@ -134718,7 +134718,7 @@ void func_910(var uParam0, int iParam1)
 		fVar18 = uParam0->f_10[iParam1 /*57*/].f_12;
 		Var17 = { func_559(Var17) };
 		Var19 = { Var16 + Var17 * Vector(fVar18, fVar18, fVar18) };
-		Var19.z = (Var19.z + uParam0->f_10[iParam1 /*57*/].f_16);
+		Var19.f_2 = (Var19.f_2 + uParam0->f_10[iParam1 /*57*/].f_16);
 		uParam0->f_10[iParam1 /*57*/].f_6 = { Var19 };
 	}
 	if (uParam0->f_10[iParam1 /*57*/].f_2 == 8)
@@ -134831,10 +134831,10 @@ Vector3 func_913(struct<3> Param0)
 	struct<3> Var0;
 	
 	Var0.x = SYSTEM::COS(Param0.x);
-	Var0.y = SYSTEM::COS(Param0.z);
-	Var0.z = SYSTEM::SIN(Param0.x);
-	Var0.y = (Var0.y * Var0.x);
-	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.z));
+	Var0.f_1 = SYSTEM::COS(Param0.f_2);
+	Var0.f_2 = SYSTEM::SIN(Param0.x);
+	Var0.f_1 = (Var0.f_1 * Var0.x);
+	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.f_2));
 	return Var0;
 }
 
@@ -136085,10 +136085,10 @@ void func_928()
 										Var2 = { Local_310 };
 										Var3 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missexile2", "take_down_bad_guy_victim", Local_310, Local_311, 1f, 2) };
 										MISC::GET_GROUND_Z_FOR_3D_COORD(Var3, &fVar6, 0, 0);
-										Var3.z = (fVar6 + 1f);
+										Var3.f_2 = (fVar6 + 1f);
 										Var4 = { Var3 - Var2 };
 										Var5 = { func_559(Var4) };
-										Local_311.x = MISC::ATAN2(Var5.z, SYSTEM::VMAG(Var5.x, Var5.y, 0f));
+										Local_311.x = MISC::ATAN2(Var5.f_2, SYSTEM::VMAG(Var5.x, Var5.f_1, 0f));
 										Local_391[3 /*33*/].f_23 = PED::CREATE_SYNCHRONIZED_SCENE(Local_310, Local_311, 2);
 										TASK::TASK_SYNCHRONIZED_SCENE(Local_391[3 /*33*/], Local_391[3 /*33*/].f_23, "missexile2", "take_down_bad_guy_victim", 8f, -8f, 5, 16, 8f, 0);
 										iLocal_359 = 22;
@@ -137630,7 +137630,7 @@ float func_949(int iParam0)
 	Var2 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
 	Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, 1) - CAM::GET_FINAL_RENDERED_CAM_COORD() };
 	Var1 = { func_559(Var0) };
-	return (MISC::ATAN2(Var1.z, SYSTEM::VMAG(Var1.x, Var1.y, 0f)) - Var2.x);
+	return (MISC::ATAN2(Var1.f_2, SYSTEM::VMAG(Var1.x, Var1.f_1, 0f)) - Var2.x);
 }
 
 float func_950(int iParam0)
@@ -137641,7 +137641,7 @@ float func_950(int iParam0)
 	
 	Var2 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
 	Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, 1) - CAM::GET_FINAL_RENDERED_CAM_COORD() };
-	fVar1 = (MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.y) - Var2.z);
+	fVar1 = (MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.f_1) - Var2.f_2);
 	if (fVar1 > 180f)
 	{
 		fVar1 = (fVar1 - 360f);
@@ -138139,7 +138139,7 @@ void func_957(var uParam0)
 
 int func_958()
 {
-	if ((((((((((((((((((((((((((STREAMING::HAS_MODEL_LOADED(iLocal_461) && STREAMING::HAS_MODEL_LOADED(iLocal_462)) && STREAMING::HAS_MODEL_LOADED(iLocal_460)) && STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) && STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) && STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_405.y)) && STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_446.f_2)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_403.f_13, sLocal_362)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, sLocal_362)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, sLocal_362)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexile2")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_435.f_13, "lkexile2")) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_0")) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_1")) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_2")) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_3")) && STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) && STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5749)) && STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched")) && STREAMING::HAS_ANIM_SET_LOADED("Wpn_AssaultRifle_WeaponHoldingCrouched")) && STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched_strafing")) && WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_heavysniper"))) && STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_heavysniper")))) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1)) && STREAMING::HAS_PTFX_ASSET_LOADED())
+	if ((((((((((((((((((((((((((STREAMING::HAS_MODEL_LOADED(iLocal_461) && STREAMING::HAS_MODEL_LOADED(iLocal_462)) && STREAMING::HAS_MODEL_LOADED(iLocal_460)) && STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) && STREAMING::HAS_MODEL_LOADED(Local_392[0 /*33*/].f_1)) && STREAMING::HAS_MODEL_LOADED(Local_403.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_446.f_2)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_403.f_13, sLocal_362)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, sLocal_362)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, sLocal_362)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexile2")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(Local_435.f_13, "lkexile2")) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_0")) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_1")) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_2")) && TASK::GET_IS_WAYPOINT_RECORDING_LOADED("exile2_3")) && STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) && STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5749)) && STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched")) && STREAMING::HAS_ANIM_SET_LOADED("Wpn_AssaultRifle_WeaponHoldingCrouched")) && STREAMING::HAS_ANIM_SET_LOADED("move_ped_crouched_strafing")) && WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_heavysniper"))) && STREAMING::HAS_MODEL_LOADED(WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_heavysniper")))) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("EXILE_2_01", 0, -1)) && STREAMING::HAS_PTFX_ASSET_LOADED())
 	{
 		return 1;
 	}
@@ -138154,7 +138154,7 @@ void func_959()
 	STREAMING::REQUEST_MODEL(Local_391[0 /*33*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_392[0 /*33*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_403.f_1);
-	STREAMING::REQUEST_MODEL(Local_405.y);
+	STREAMING::REQUEST_MODEL(Local_405.f_1);
 	STREAMING::REQUEST_MODEL(Local_418.f_1);
 	STREAMING::REQUEST_MODEL(Local_446.f_2);
 	VEHICLE::REQUEST_VEHICLE_RECORDING(Local_403.f_13, sLocal_362);
@@ -140347,7 +140347,7 @@ void func_978()
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_391[0 /*33*/].f_1);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_392[0 /*33*/].f_1);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_403.f_1);
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_405.y);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_405.f_1);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_418.f_1);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_446.f_2);
 	VEHICLE::REMOVE_VEHICLE_RECORDING(Local_403.f_13, sLocal_362);
@@ -141371,21 +141371,21 @@ int func_998()
 	{
 		func_519(uLocal_463[0]);
 		STREAMING::REQUEST_MODEL(iLocal_462);
-		STREAMING::REQUEST_MODEL(Local_405.y);
+		STREAMING::REQUEST_MODEL(Local_405.f_1);
 		STREAMING::REQUEST_ANIM_DICT("missswitch");
 		STREAMING::REQUEST_ANIM_DICT("missexile2switch");
 		STREAMING::REQUEST_ANIM_DICT(sLocal_5734);
 		VEHICLE::REQUEST_VEHICLE_RECORDING(100, "lkexcile2_chase");
 		if (PED::IS_PED_SITTING_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Local_426) && PED::IS_PED_SITTING_IN_VEHICLE(uLocal_463[0], Local_426))
 		{
-			if (((((STREAMING::HAS_MODEL_LOADED(iLocal_462) && STREAMING::HAS_MODEL_LOADED(Local_405.y)) && STREAMING::HAS_ANIM_DICT_LOADED("missswitch")) && STREAMING::HAS_ANIM_DICT_LOADED("missexile2switch")) && STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5734)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(100, "lkexcile2_chase"))
+			if (((((STREAMING::HAS_MODEL_LOADED(iLocal_462) && STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) && STREAMING::HAS_ANIM_DICT_LOADED("missswitch")) && STREAMING::HAS_ANIM_DICT_LOADED("missexile2switch")) && STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5734)) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(100, "lkexcile2_chase"))
 			{
 				PLAYER::CLEAR_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID());
 				PLAYER::SET_WANTED_LEVEL_MULTIPLIER(0f);
 				PLAYER::SET_MAX_WANTED_LEVEL(0);
 				PED::SET_CREATE_RANDOM_COPS(0);
 				MISC::CLEAR_AREA(-2689.224f, 2368.075f, 15.7681f, 300f, 1, 0, 0, 0);
-				Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.y, -2646.31f, 2677.32f, 16.6427f, 350.3382f, 1, 1, 0);
+				Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.f_1, -2646.31f, 2677.32f, 16.6427f, 350.3382f, 1, 1, 0);
 				VEHICLE::SET_VEHICLE_ACTIVE_DURING_PLAYBACK(Local_405.x, 1);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_405.x, 1);
 				ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_405.x, 1);
@@ -142520,7 +142520,7 @@ void func_1028(float fParam0, int iParam1, int iParam2, float fParam3, float fPa
 	fVar4 = 0f;
 	fVar5 = (fParam11 - 1f);
 	fVar6 = (1f - fParam9);
-	if (Var2.y < 1f)
+	if (Var2.f_1 < 1f)
 	{
 		if (fVar3 > fParam5)
 		{
@@ -142644,7 +142644,7 @@ void func_1029()
 								{
 									HUD::REMOVE_BLIP(&(Local_418.f_2));
 								}
-								if (HUD::DOES_BLIP_EXIST(Local_405.z))
+								if (HUD::DOES_BLIP_EXIST(Local_405.f_2))
 								{
 									HUD::REMOVE_BLIP(&(Local_405.f_2));
 								}
@@ -143561,7 +143561,7 @@ void func_1034()
 
 int func_1035()
 {
-	if ((((((((((((((((((((((((((((((STREAMING::HAS_MODEL_LOADED(iLocal_462) && STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) && STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_405.y)) && STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) && STREAMING::HAS_MODEL_LOADED(joaat("radi"))) && STREAMING::HAS_MODEL_LOADED(joaat("sabregt"))) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexile2")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(2, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(8, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(9, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(10, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(11, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(12, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(13, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(14, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(15, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(16, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(17, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(18, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(19, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(100, "lkexcile2_chase")) && STREAMING::HAS_ANIM_DICT_LOADED("missexile2"))
+	if ((((((((((((((((((((((((((((((STREAMING::HAS_MODEL_LOADED(iLocal_462) && STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) && STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) && STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) && STREAMING::HAS_MODEL_LOADED(joaat("radi"))) && STREAMING::HAS_MODEL_LOADED(joaat("sabregt"))) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexile2")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(2, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(8, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(9, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(10, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(11, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(12, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(13, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(14, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(15, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(16, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(17, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(18, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(19, "lkexcile2_chase")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(100, "lkexcile2_chase")) && STREAMING::HAS_ANIM_DICT_LOADED("missexile2"))
 	{
 		return 1;
 	}
@@ -143573,7 +143573,7 @@ void func_1036()
 	STREAMING::REQUEST_MODEL(iLocal_462);
 	STREAMING::REQUEST_MODEL(Local_391[0 /*33*/].f_1);
 	STREAMING::REQUEST_MODEL(Local_393.f_1);
-	STREAMING::REQUEST_MODEL(Local_405.y);
+	STREAMING::REQUEST_MODEL(Local_405.f_1);
 	STREAMING::REQUEST_MODEL(Local_418.f_1);
 	STREAMING::REQUEST_MODEL(joaat("radi"));
 	STREAMING::REQUEST_MODEL(joaat("sabregt"));
@@ -143928,7 +143928,7 @@ void func_1044()
 			break;
 		
 		case 1:
-			while ((((((((((((((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_462) || !STREAMING::HAS_MODEL_LOADED(Local_405.y)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(joaat("radi"))) || !STREAMING::HAS_MODEL_LOADED(joaat("sabregt"))) || !STREAMING::HAS_PTFX_ASSET_LOADED()) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(2, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(8, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(9, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(10, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(11, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(12, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(13, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(14, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(15, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(16, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(17, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(18, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(19, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(100, "lkexcile2_chase")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2switch")) || !STREAMING::HAS_ANIM_DICT_LOADED("missswitch")) || !STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5734))
+			while ((((((((((((((((((((((((((((((((((!STREAMING::HAS_MODEL_LOADED(iLocal_462) || !STREAMING::HAS_MODEL_LOADED(Local_405.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_418.f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_391[0 /*33*/].f_1)) || !STREAMING::HAS_MODEL_LOADED(Local_393.f_1)) || !STREAMING::HAS_MODEL_LOADED(joaat("radi"))) || !STREAMING::HAS_MODEL_LOADED(joaat("sabregt"))) || !STREAMING::HAS_PTFX_ASSET_LOADED()) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexile2")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(2, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(4, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(8, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(9, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(10, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(11, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(12, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(13, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(14, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(15, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(16, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(17, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(18, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(19, "lkexcile2_chase")) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(100, "lkexcile2_chase")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2")) || !STREAMING::HAS_ANIM_DICT_LOADED("missexile2switch")) || !STREAMING::HAS_ANIM_DICT_LOADED("missswitch")) || !STREAMING::HAS_ANIM_DICT_LOADED(sLocal_5734))
 			{
 				SYSTEM::WAIT(0);
 			}
@@ -143948,7 +143948,7 @@ void func_1044()
 						PLAYER::SET_MAX_WANTED_LEVEL(0);
 						PED::SET_CREATE_RANDOM_COPS(0);
 						MISC::CLEAR_AREA(-2664.224f, 2689.3f, 15.7681f, 10000f, 1, 0, 0, 0);
-						Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.y, -2646.31f, 2677.32f, 16.6427f, 350.3382f, 1, 1, 0);
+						Local_405.x = VEHICLE::CREATE_VEHICLE(Local_405.f_1, -2646.31f, 2677.32f, 16.6427f, 350.3382f, 1, 1, 0);
 						VEHICLE::SET_VEHICLE_ACTIVE_DURING_PLAYBACK(Local_405.x, 1);
 						VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_405.x, 1);
 						ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_405.x, 1);
@@ -144380,7 +144380,7 @@ void func_1054(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Para
 			else
 			{
 				Var6 = { ENTITY::GET_ENTITY_COORDS(iVar0, 1) };
-				if ((Var6.z > Param0.z && Var6.z < Param1.z) || (Var6.z > Param1.z && Var6.z < Param0.z))
+				if ((Var6.f_2 > Param0.f_2 && Var6.f_2 < Param1.f_2) || (Var6.f_2 > Param1.f_2 && Var6.f_2 < Param0.f_2))
 				{
 					if (func_1056(iVar0, Param0, Param1, fParam2))
 					{
@@ -144420,7 +144420,7 @@ void func_1054(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Para
 						if (VEHICLE::IS_THIS_MODEL_A_HELI(iVar7))
 						{
 							Param5.x = (Param5.x + 3f);
-							Param5.y = (Param5.y + 3f);
+							Param5.f_1 = (Param5.f_1 + 3f);
 						}
 						if (((iVar7 == joaat("zentorno") || iVar7 == joaat("btype")) || iVar7 == joaat("dubsta3")) || iVar7 == joaat("monster"))
 						{
@@ -144434,11 +144434,11 @@ void func_1054(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Para
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.y - Var4.y) > Param5.y)
+						else if ((Var5.f_1 - Var4.f_1) > Param5.f_1)
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.z - Var4.z) > Param5.z)
+						else if ((Var5.f_2 - Var4.f_2) > Param5.f_2)
 						{
 							bVar2 = false;
 						}
@@ -144527,7 +144527,7 @@ void func_1054(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Para
 
 int func_1055(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -144548,12 +144548,12 @@ int func_1056(int iParam0, struct<3> Param1, struct<3> Param2, float fParam3)
 	
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, 0))
 	{
-		Param1.z = Param2.z;
+		Param1.f_2 = Param2.f_2;
 		Var0 = { func_559(Param1 - Param2) };
 		Var1 = { Var0 };
-		Var0.x = -Var1.y;
-		Var0.y = Var1.x;
-		Var0.z = 0f;
+		Var0.x = -Var1.f_1;
+		Var0.f_1 = Var1.x;
+		Var0.f_2 = 0f;
 		Var2 = { Param1 - Var0 * FtoV((fParam3 / 2f)) };
 		Var3 = { Param1 + Var0 * FtoV((fParam3 / 2f)) };
 		Var4 = { Param2 - Var0 * FtoV((fParam3 / 2f)) };
@@ -146837,7 +146837,7 @@ int func_1093()
 						return 1;
 					}
 					Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-					if (Var1.z < 10f)
+					if (Var1.f_2 < 10f)
 					{
 						sLocal_317 = "FS_FAIL_0";
 						return 1;

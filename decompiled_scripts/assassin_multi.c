@@ -6819,24 +6819,24 @@ int func_115(int iParam0, bool bParam1, bool bParam2, float fParam3, float fPara
 		}
 		Var7 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar1) };
 		Var7.x = (Var7.x * (func_116(iParam0) / fVar4));
-		Var7.y = (Var7.y * (func_116(iParam0) / fVar4));
+		Var7.f_1 = (Var7.f_1 * (func_116(iParam0) / fVar4));
 		if (!bParam2)
 		{
 			Var7.x = (Var7.x - 2f);
-			Var7.y = (Var7.y - 2f);
+			Var7.f_1 = (Var7.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
 			Var7.x = 288f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22350.f_7029[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
 			Var7.x = 106f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		*fParam3 = ((Var7.x / IntToFloat(iVar2)) * IntToFloat((iVar2 / iVar3)));
-		*fParam4 = (((Var7.y / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
+		*fParam4 = (((Var7.f_1 / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)
@@ -9792,9 +9792,9 @@ bool func_209(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_210(var uParam0, bool bParam1, bool bParam2, bool bParam3)
@@ -10568,7 +10568,7 @@ int func_227(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	if (bParam3)
 	{
-		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.y - IntToFloat(uParam2->f_6)), (Var0.z - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.y + IntToFloat(uParam2->f_6)), (Var0.z + IntToFloat(uParam2->f_6)), 0))
+		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.f_1 - IntToFloat(uParam2->f_6)), (Var0.f_2 - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.f_1 + IntToFloat(uParam2->f_6)), (Var0.f_2 + IntToFloat(uParam2->f_6)), 0))
 		{
 			return 1;
 		}
@@ -11178,7 +11178,7 @@ int func_242(int iParam0, float fParam1)
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
 			Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, 1) };
-			if (PED::IS_COP_PED_IN_AREA_3D((Var0.x - fParam1), (Var0.y - fParam1), (Var0.z - fParam1), (Var0.x + fParam1), (Var0.y + fParam1), (Var0.z + fParam1)))
+			if (PED::IS_COP_PED_IN_AREA_3D((Var0.x - fParam1), (Var0.f_1 - fParam1), (Var0.f_2 - fParam1), (Var0.x + fParam1), (Var0.f_1 + fParam1), (Var0.f_2 + fParam1)))
 			{
 				return 1;
 			}
@@ -12278,7 +12278,7 @@ void func_274(var uParam0, int iParam1)
 
 int func_275(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -12545,7 +12545,7 @@ void func_284(var uParam0, var uParam1)
 		Var3 = { uParam0->f_249[0 /*3*/] };
 	}
 	fVar5 = 142.1f;
-	fVar6 = (fVar5 - Var3.z);
+	fVar6 = (fVar5 - Var3.f_2);
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
@@ -12583,8 +12583,8 @@ void func_284(var uParam0, var uParam1)
 									}
 									if (PHYSICS::DOES_ROPE_EXIST(&uLocal_1251) && PHYSICS::DOES_ROPE_EXIST(&uLocal_1252))
 									{
-										PHYSICS::ATTACH_ENTITIES_TO_ROPE(uLocal_1252, uParam1->f_11[1], uParam1->f_11[0], -648.59f, 305.73f, fVar5, -648.59f, 305.73f, Var3.z, fVar6, 0, 0, 0, 0);
-										PHYSICS::ATTACH_ENTITIES_TO_ROPE(uLocal_1251, uParam1->f_11[1], uParam1->f_11[0], -638.93f, 304.92f, fVar5, -638.93f, 304.92f, Var3.z, fVar6, 0, 0, 0, 0);
+										PHYSICS::ATTACH_ENTITIES_TO_ROPE(uLocal_1252, uParam1->f_11[1], uParam1->f_11[0], -648.59f, 305.73f, fVar5, -648.59f, 305.73f, Var3.f_2, fVar6, 0, 0, 0, 0);
+										PHYSICS::ATTACH_ENTITIES_TO_ROPE(uLocal_1251, uParam1->f_11[1], uParam1->f_11[0], -638.93f, 304.92f, fVar5, -638.93f, 304.92f, Var3.f_2, fVar6, 0, 0, 0, 0);
 										bLocal_1215 = true;
 										iLocal_1240 = 1;
 									}
@@ -12628,7 +12628,7 @@ void func_284(var uParam0, var uParam1)
 			{
 				PHYSICS::START_ROPE_WINDING(uLocal_1252);
 				PHYSICS::START_ROPE_WINDING(uLocal_1251);
-				if (Var2.z >= 125f)
+				if (Var2.f_2 >= 125f)
 				{
 					if (iLocal_1168 < 2)
 					{
@@ -15683,7 +15683,7 @@ void func_325(var uParam0, int iParam1)
 		{
 			if (func_327(iVar0, &Var1, &uVar2))
 			{
-				Var1.z = (Var1.z + 1f);
+				Var1.f_2 = (Var1.f_2 + 1f);
 				*uParam0 = { Var1 };
 				uParam0->f_3 = uVar2;
 			}
@@ -16666,9 +16666,9 @@ Vector3 func_339(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -19673,9 +19673,9 @@ int func_402(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -19684,7 +19684,7 @@ int func_402(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -21737,7 +21737,7 @@ int func_418(var uParam0, struct<3> Param1, float fParam2, bool bParam3)
 				bVar2 = true;
 				if (VEHICLE::IS_THIS_MODEL_A_BOAT(uParam0->f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_JETSKI(uParam0->f_12.f_66))
 				{
-					if (!WATER::TEST_PROBE_AGAINST_WATER(Param1.x, Param1.y, (Param1.z + 30f), Param1.x, Param1.y, (Param1.z - 30f), &uVar3))
+					if (!WATER::TEST_PROBE_AGAINST_WATER(Param1.x, Param1.f_1, (Param1.f_2 + 30f), Param1.x, Param1.f_1, (Param1.f_2 - 30f), &uVar3))
 					{
 						bVar2 = false;
 					}
@@ -25045,7 +25045,7 @@ void func_490(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 			else
 			{
 				Var6 = { ENTITY::GET_ENTITY_COORDS(iVar0, 1) };
-				if ((Var6.z > Param0.z && Var6.z < Param1.z) || (Var6.z > Param1.z && Var6.z < Param0.z))
+				if ((Var6.f_2 > Param0.f_2 && Var6.f_2 < Param1.f_2) || (Var6.f_2 > Param1.f_2 && Var6.f_2 < Param0.f_2))
 				{
 					if (func_491(iVar0, Param0, Param1, fParam2))
 					{
@@ -25085,7 +25085,7 @@ void func_490(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 						if (VEHICLE::IS_THIS_MODEL_A_HELI(iVar7))
 						{
 							Param5.x = (Param5.x + 3f);
-							Param5.y = (Param5.y + 3f);
+							Param5.f_1 = (Param5.f_1 + 3f);
 						}
 						if (((iVar7 == joaat("zentorno") || iVar7 == joaat("btype")) || iVar7 == joaat("dubsta3")) || iVar7 == joaat("monster"))
 						{
@@ -25099,11 +25099,11 @@ void func_490(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.y - Var4.y) > Param5.y)
+						else if ((Var5.f_1 - Var4.f_1) > Param5.f_1)
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.z - Var4.z) > Param5.z)
+						else if ((Var5.f_2 - Var4.f_2) > Param5.f_2)
 						{
 							bVar2 = false;
 						}
@@ -25204,12 +25204,12 @@ int func_491(int iParam0, struct<3> Param1, struct<3> Param2, float fParam3)
 	
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(uParam0, 0))
 	{
-		Param1.z = Param2.z;
+		Param1.f_2 = Param2.f_2;
 		Var0 = { func_493(Param1 - Param2) };
 		Var1 = { Var0 };
-		Var0.x = -Var1.y;
-		Var0.y = Var1.x;
-		Var0.z = 0f;
+		Var0.x = -Var1.f_1;
+		Var0.f_1 = Var1.x;
+		Var0.f_2 = 0f;
 		Var2 = { Param1 - Var0 * FtoV((fParam3 / 2f)) };
 		Var3 = { Param1 + Var0 * FtoV((fParam3 / 2f)) };
 		Var4 = { Param2 - Var0 * FtoV((fParam3 / 2f)) };
@@ -25279,8 +25279,8 @@ Vector3 func_493(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -25685,7 +25685,7 @@ void func_512(var uParam0)
 	PATHFIND::SET_ROADS_BACK_TO_ORIGINAL_IN_ANGLED_AREA(-662.6993f, -1645.326f, 24.07147f, -672.2144f, -1777.59f, 38.81248f, 45f, 1);
 	PATHFIND::SET_ROADS_BACK_TO_ORIGINAL_IN_ANGLED_AREA(-382.9608f, -1688.732f, 17.8985f, -431.2512f, -1811.23f, 37.6825f, 80f, 1);
 	Var0 = { 414.1398f, -640.002f, 27.5001f };
-	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA((Var0.x - 40f), (Var0.y - 40f), (Var0.z - 40f), (Var0.x + 40f), (Var0.y + 40f), (Var0.z + 40f), 1, 1);
+	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA((Var0.x - 40f), (Var0.f_1 - 40f), (Var0.f_2 - 40f), (Var0.x + 40f), (Var0.f_1 + 40f), (Var0.f_2 + 40f), 1, 1);
 	PATHFIND::SET_ROADS_BACK_TO_ORIGINAL_IN_ANGLED_AREA(426.035f, -644.93f, -100f, 421.035f, -644.93f, 100f, 55f, 1);
 	VEHICLE::SET_PARKED_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(1f);
 	PED::CLEAR_PED_NON_CREATION_AREA();

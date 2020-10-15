@@ -10641,8 +10641,8 @@ void func_188()
 				{
 					StringCopy(&cLocal_295, MISC::GET_ONSCREEN_KEYBOARD_RESULT(), 64);
 					Local_294.x = 0;
-					Local_294.z = 0;
-					Local_294.y = 0;
+					Local_294.f_2 = 0;
+					Local_294.f_1 = 0;
 					iLocal_304 = 0;
 					iLocal_305 = HUD::GET_LENGTH_OF_LITERAL_STRING(&cLocal_295);
 					StringCopy(&cLocal_295, HUD::_GET_TEXT_SUBSTRING_SAFE(&cLocal_295, 0, iLocal_305, 63), 64);
@@ -10662,8 +10662,8 @@ void func_188()
 				if (Local_294.x == 2)
 				{
 					Local_294.x = 0;
-					Local_294.z = 0;
-					Local_294.y = 0;
+					Local_294.f_2 = 0;
+					Local_294.f_1 = 0;
 					iLocal_304 = 0;
 					Local_293.f_2999 = 0;
 				}
@@ -13849,10 +13849,10 @@ void func_277(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_279(Var0.y);
+	iVar1 = func_279(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;

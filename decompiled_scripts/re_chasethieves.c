@@ -1729,7 +1729,7 @@ void func_39()
 						ENTITY::ATTACH_ENTITY_TO_ENTITY(uLocal_127, PLAYER::PLAYER_PED_ID(), PED::GET_PED_BONE_INDEX(PLAYER::PLAYER_PED_ID(), 28422), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
 						uLocal_132 = ENTITY::GET_ENTITY_HEADING(iLocal_83);
 						Var0 = { Local_131 };
-						Var0.z = (Var0.z + 50f);
+						Var0.f_2 = (Var0.f_2 + 50f);
 						MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &(Var0.f_2), 0, 0);
 						Var1 = { ENTITY::GET_ENTITY_ROTATION(iLocal_83, 2) };
 						uLocal_150 = PED::CREATE_SYNCHRONIZED_SCENE(Var0, Var1, 2);
@@ -3614,7 +3614,7 @@ void func_90()
 
 int func_91(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -3635,7 +3635,7 @@ int func_92(int iParam0, struct<3> Param1, var uParam2, bool bParam3, int iParam
 			bVar0 = MISC::GET_GROUND_Z_FOR_3D_COORD(Param1, &fVar1, 0, 0);
 			if (bVar0)
 			{
-				Param1.z = fVar1;
+				Param1.f_2 = fVar1;
 			}
 		}
 		ENTITY::SET_ENTITY_COORDS(iParam0, Param1, 1, 0, 0, iParam4);
@@ -7361,15 +7361,15 @@ void func_133(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_130(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_130(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -8327,7 +8327,7 @@ void func_136(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -8336,19 +8336,19 @@ void func_136(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_137(Var2.z)] = Var2.x;
+						(*uParam0)[func_137(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_137(Var2.z)] = func_130(iParam1, Var2.x, func_137(Var2.z), iVar0);
+						(*uParam0)[func_137(Var2.f_2)] = func_130(iParam1, Var2.x, func_137(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_137(Var2.z)] = Var2.y;
+					(*uParam0)[func_137(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -33686,7 +33686,7 @@ int func_262()
 					while (iLocal_138 < 2)
 					{
 						Var0.x = (Var0.x + SYSTEM::TO_FLOAT(iLocal_138));
-						uLocal_89[iLocal_138] = VEHICLE::CREATE_VEHICLE(joaat("hexer"), Var0, Var1.z, 1, 1, 0);
+						uLocal_89[iLocal_138] = VEHICLE::CREATE_VEHICLE(joaat("hexer"), Var0, Var1.f_2, 1, 1, 0);
 						iLocal_90[iLocal_138] = PED::CREATE_PED_INSIDE_VEHICLE(uLocal_89[iLocal_138], 22, iLocal_164, -1, 1, 1);
 						iLocal_91[iLocal_138] = PED::CREATE_PED_INSIDE_VEHICLE(uLocal_89[iLocal_138], 22, iLocal_164, 0, 1, 1);
 						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_91[iLocal_138], uLocal_510);
@@ -34486,9 +34486,9 @@ bool func_287(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_288(var uParam0, bool bParam1, bool bParam2, bool bParam3)
@@ -36717,10 +36717,10 @@ void func_336()
 	}
 	ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_78, PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_512, sLocal_514, Local_173, Local_174, 0, 2), 0, 0, 1);
 	Local_175 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_512, sLocal_514, Local_173, Local_174, 0, 2) };
-	ENTITY::SET_ENTITY_HEADING(iLocal_78, Local_175.z);
+	ENTITY::SET_ENTITY_HEADING(iLocal_78, Local_175.f_2);
 	ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_83, PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_512, sLocal_513, Local_173, Local_174, 0, 2), 0, 0, 1);
 	Local_175 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_512, sLocal_513, Local_173, Local_174, 0, 2) };
-	ENTITY::SET_ENTITY_HEADING(iLocal_83, Local_175.z);
+	ENTITY::SET_ENTITY_HEADING(iLocal_83, Local_175.f_2);
 	TASK::TASK_PLAY_ANIM(iLocal_78, sLocal_512, sLocal_514, 1000f, -1000f, -1, 9, 0, 0, 0, 0);
 	TASK::TASK_PLAY_ANIM(iLocal_83, sLocal_512, sLocal_513, 1000f, -1000f, -1, 9, 0, 0, 0, 0);
 	if (iLocal_153 == 2)
@@ -37522,7 +37522,7 @@ int func_360(struct<3> Param0, int iParam1, int iParam2, bool bParam3, bool bPar
 		}
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !bParam4)
 		{
-			if ((Var1.z - Local_56.z) > 50f)
+			if ((Var1.f_2 - Local_56.f_2) > 50f)
 			{
 				return 0;
 			}
@@ -39267,7 +39267,7 @@ void func_423(int iParam0, int iParam1)
 		}
 		if (func_428(iParam0, iParam1) != 322)
 		{
-			func_424(func_428(iParam0, iParam1), Local_56.x, Local_56.y);
+			func_424(func_428(iParam0, iParam1), Local_56.x, Local_56.f_1);
 		}
 		Global_111626 = iParam1;
 		if (Global_111624 == 0)

@@ -438,7 +438,7 @@ void __EntryFunction__()
 			{
 				ScriptParam_228.f_4 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ScriptParam_228, 5f, joaat("prop_dart_bd_cab_01"), 1, 0, 1);
 				OBJECT::GET_COORDS_AND_ROTATION_OF_CLOSEST_OBJECT_OF_TYPE(ScriptParam_228, 5f, joaat("prop_dart_bd_cab_01"), &ScriptParam_228, &Var19, 0);
-				ScriptParam_228.f_3 = Var19.z;
+				ScriptParam_228.f_3 = Var19.f_2;
 			}
 		}
 	}
@@ -2454,24 +2454,24 @@ int func_18(int iParam0, bool bParam1, bool bParam2, float fParam3, float fParam
 		}
 		Var7 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar1) };
 		Var7.x = (Var7.x * (func_19(iParam0) / fVar4));
-		Var7.y = (Var7.y * (func_19(iParam0) / fVar4));
+		Var7.f_1 = (Var7.f_1 * (func_19(iParam0) / fVar4));
 		if (!bParam2)
 		{
 			Var7.x = (Var7.x - 2f);
-			Var7.y = (Var7.y - 2f);
+			Var7.f_1 = (Var7.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
 			Var7.x = 288f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22350.f_7029[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
 			Var7.x = 106f;
-			Var7.y = 106f;
+			Var7.f_1 = 106f;
 		}
 		*fParam3 = ((Var7.x / IntToFloat(iVar2)) * IntToFloat((iVar2 / iVar3)));
-		*fParam4 = (((Var7.y / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
+		*fParam4 = (((Var7.f_1 / IntToFloat(iVar3)) / (Var7.x / IntToFloat(iVar2))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)
@@ -16254,8 +16254,8 @@ void func_270(var uParam0, var uParam1, bool bParam2)
 	
 	Var3 = { uParam0->f_8 };
 	Var3.x = (Var3.x + 0.0041f);
-	Var3.z = (Var3.z + 0.0002f);
-	fVar1 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(0f, 1f, Var3.x, Var3.z);
+	Var3.f_2 = (Var3.f_2 + 0.0002f);
+	fVar1 = MISC::GET_ANGLE_BETWEEN_2D_VECTORS(0f, 1f, Var3.x, Var3.f_2);
 	fVar0 = func_271(Var3);
 	uParam0->f_22 = fVar0;
 	if (bParam2)
@@ -16325,7 +16325,7 @@ void func_270(var uParam0, var uParam1, bool bParam2)
 
 var func_271(struct<3> Param0)
 {
-	return SYSTEM::SQRT(((Param0.x * Param0.x) + (Param0.z * Param0.z)));
+	return SYSTEM::SQRT(((Param0.x * Param0.x) + (Param0.f_2 * Param0.f_2)));
 }
 
 int func_272(var uParam0)
@@ -16643,7 +16643,7 @@ void func_286(var uParam0, var uParam1, var uParam2, var uParam3, bool bParam4)
 		fVar1 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 90f);
 		Var7 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(uParam1->f_1, uParam1->f_4, Local_41) };
 		Var8 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(uParam1->f_1, uParam1->f_4, uParam0->f_8, (uParam0->f_8.f_1 + fLocal_34), uParam0->f_8.f_2) };
-		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D((Var7.x - Var8.x), (Var7.y - Var8.y));
+		fVar2 = MISC::GET_HEADING_FROM_VECTOR_2D((Var7.x - Var8.x), (Var7.f_1 - Var8.f_1));
 		fVar2 = (fVar2 - 180f);
 		uParam0->f_17 = { 90f, fVar1, fVar2 };
 		ENTITY::SET_ENTITY_ROTATION(*uParam0, uParam0->f_17, 0, 1);
@@ -17289,7 +17289,7 @@ void func_301(var uParam0, struct<4> Param1, var uParam2, var uParam3)
 	
 	Var0 = { 0f, 0f, 0f };
 	Var0.x = (Var0.x + MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.1f, 0.1f));
-	Var0.z = (Var0.z + MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.1f, 0.1f));
+	Var0.f_2 = (Var0.f_2 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.1f, 0.1f));
 	uParam0->f_8 = { Param1.f_3 + Var0 };
 	uParam0->f_2 = { Local_41 };
 }
@@ -17321,7 +17321,7 @@ int func_302(var uParam0, var uParam1, bool bParam2)
 	fVar4 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 90f);
 	Var1 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(uParam1->f_1, uParam1->f_4, Local_41) };
 	Var2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(uParam1->f_1, uParam1->f_4, (uParam0->f_14 + 0.0035f), (uParam0->f_14.f_1 + fLocal_34), uParam0->f_14.f_2) };
-	fVar5 = MISC::GET_HEADING_FROM_VECTOR_2D((Var1.x - Var2.x), (Var1.y - Var2.y));
+	fVar5 = MISC::GET_HEADING_FROM_VECTOR_2D((Var1.x - Var2.x), (Var1.f_1 - Var2.f_1));
 	fVar5 = (fVar5 - 180f);
 	fVar3 = 90f;
 	uParam0->f_17 = { fVar3, fVar4, fVar5 };
@@ -17442,9 +17442,9 @@ Vector3 func_308(int iParam0)
 	else
 	{
 		fVar0 = func_311(iParam0);
-		Var1.y = -0.5f;
+		Var1.f_1 = -0.5f;
 		Var1.x = func_310(fVar0);
-		Var1.z = func_309(fVar0);
+		Var1.f_2 = func_309(fVar0);
 	}
 	return Var1;
 }
@@ -17628,14 +17628,14 @@ void func_313(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam
 	if ((PAD::_IS_USING_KEYBOARD(2) && bParam2) && !uParam0->f_28)
 	{
 		uParam0->f_14 = Var6.x;
-		uParam0->f_14.f_1 = Var6.y;
-		uParam0->f_14.f_2 = Var6.z;
+		uParam0->f_14.f_1 = Var6.f_1;
+		uParam0->f_14.f_2 = Var6.f_2;
 	}
 	else
 	{
 		uParam0->f_14 = (uParam0->f_14 + func_14(((((Var6.x - uParam0->f_14) * 0.05f) * fVar5) * fParam7), -3f, 3f));
-		uParam0->f_14.f_1 = (uParam0->f_14.f_1 + func_14(((((Var6.y - uParam0->f_14.f_1) * 0.05f) * fVar5) * fParam7), -3f, 3f));
-		uParam0->f_14.f_2 = (uParam0->f_14.f_2 + func_14(((((Var6.z - uParam0->f_14.f_2) * 0.05f) * fVar5) * fParam7), -3f, 3f));
+		uParam0->f_14.f_1 = (uParam0->f_14.f_1 + func_14(((((Var6.f_1 - uParam0->f_14.f_1) * 0.05f) * fVar5) * fParam7), -3f, 3f));
+		uParam0->f_14.f_2 = (uParam0->f_14.f_2 + func_14(((((Var6.f_2 - uParam0->f_14.f_2) * 0.05f) * fVar5) * fParam7), -3f, 3f));
 	}
 	if (uParam0->f_26)
 	{
@@ -19121,7 +19121,7 @@ void func_347(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				func_365(Global_22347, (fVar49 + 0f), fParam5, 0.034722f, iVar1, iVar2, iVar3, iVar4);
 				Var38 = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
 				Var38.x = (Var38.x * (0.5f / fVar60));
-				Var38.y = (Var38.y * (0.5f / fVar60));
+				Var38.f_1 = (Var38.f_1 * (0.5f / fVar60));
 				if (Global_22350.f_8415)
 				{
 					iVar1 = 0;
@@ -19133,7 +19133,7 @@ void func_347(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(1, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.y / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22347 + (fParam5 * 0.5f)), ((fVar49 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar60), ((Var38.f_1 / 720f) * fVar60), 0f, iVar1, iVar2, iVar3, iVar4, 0);
 				fVar49 = (fVar49 + (0f + 0.034722f));
 			}
 			if (MISC::GET_HASH_KEY(&(Global_22350.f_4690)) != 0 && Global_22350.f_4766 != -1)
@@ -20949,7 +20949,7 @@ int func_358()
 		MOBILE::GET_MOBILE_PHONE_POSITION(&Var0);
 		if (Global_19431 == 0)
 		{
-			if (Var0.y > -119f)
+			if (Var0.f_1 > -119f)
 			{
 				return 1;
 			}
@@ -20958,7 +20958,7 @@ int func_358()
 				return 0;
 			}
 		}
-		else if (Var0.y > -101f)
+		else if (Var0.f_1 > -101f)
 		{
 			return 1;
 		}
@@ -23348,7 +23348,7 @@ void func_455(var uParam0, int iParam1, struct<3> Param2, float fParam3)
 
 int func_456(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

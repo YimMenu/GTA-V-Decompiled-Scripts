@@ -3850,7 +3850,7 @@ float func_59(float fParam0, float fParam1, float fParam2)
 
 int func_60(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.y == 0f) && Param0.z == 0f)
+	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -7534,7 +7534,7 @@ void func_104(var uParam0, int iParam1)
 		{
 			if (func_106(iVar0, &Var1, &uVar2))
 			{
-				Var1.z = (Var1.z + 1f);
+				Var1.f_2 = (Var1.f_2 + 1f);
 				*uParam0 = { Var1 };
 				uParam0->f_3 = uVar2;
 			}
@@ -7880,9 +7880,9 @@ bool func_107(struct<3> Param0, struct<3> Param1, bool bParam2)
 {
 	if (bParam2)
 	{
-		return (Param0.x == Param1.x && Param0.y == Param1.y);
+		return (Param0.x == Param1.x && Param0.f_1 == Param1.f_1);
 	}
-	return ((Param0.x == Param1.x && Param0.y == Param1.y) && Param0.z == Param1.z);
+	return ((Param0.x == Param1.x && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
 }
 
 int func_108(var uParam0)
@@ -8526,9 +8526,9 @@ Vector3 func_119(struct<3> Param0, float fParam1)
 	
 	fVar1 = SYSTEM::SIN(fParam1);
 	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.y * fVar1));
-	Var0.y = ((Param0.x * fVar1) + (Param0.y * fVar2));
-	Var0.z = Param0.z;
+	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
+	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
 
@@ -13382,9 +13382,9 @@ int func_193(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	{
 		if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 		{
-			if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+			if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 			{
-				if (MISC::ABSF((Param0.z - Param1.z)) <= fParam2)
+				if (MISC::ABSF((Param0.f_2 - Param1.f_2)) <= fParam2)
 				{
 					return 1;
 				}
@@ -13393,7 +13393,7 @@ int func_193(struct<3> Param0, struct<3> Param1, float fParam2, bool bParam3)
 	}
 	else if (MISC::ABSF((Param0.x - Param1.x)) <= fParam2)
 	{
-		if (MISC::ABSF((Param0.y - Param1.y)) <= fParam2)
+		if (MISC::ABSF((Param0.f_1 - Param1.f_1)) <= fParam2)
 		{
 			return 1;
 		}
@@ -13995,7 +13995,7 @@ int func_205(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 								if (ENTITY::IS_ENTITY_IN_WATER(iVar10) && !VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(iVar10))
 								{
 									Var19 = { ENTITY::GET_ENTITY_COORDS(iVar10, 1) };
-									if (Var19.z < -1f)
+									if (Var19.f_2 < -1f)
 									{
 										TASK::TASK_LEAVE_VEHICLE(uParam0->f_17[iVar0], iVar10, 64);
 									}
@@ -16446,7 +16446,7 @@ void func_257(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 						{
 							Var5 = { CAM::GET_CAM_ROT(Local_1453.f_32, 2) };
 							func_427(ENTITY::GET_ENTITY_COORDS(Local_1453.f_9, 0), ENTITY::GET_ENTITY_COORDS(Local_1372[2 /*2*/], 0), &Var6, &(Var6.f_2), 1);
-							fVar7 = SYSTEM::COS((Var5.z - Var6.z));
+							fVar7 = SYSTEM::COS((Var5.f_2 - Var6.f_2));
 							fVar8 = SYSTEM::COS((Var5.x - Var6.x));
 							fVar9 = SYSTEM::COS((Var5.x + Var6.x));
 							uVar10 = MISC::ACOS((((fVar7 * (fVar8 + fVar9)) + (fVar8 - fVar9)) / 2f));
@@ -18276,8 +18276,8 @@ int func_268(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4
 				Var2 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
 				Var3 = { Var2 + uParam0->f_9 };
 				Var4 = { Var3 - ENTITY::GET_ENTITY_ROTATION(uParam0->f_5, 2) };
-				Var5 = { (-SYSTEM::SIN(Var3.z) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.z) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
-				Var6 = { (-SYSTEM::SIN(Var4.z) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.z) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
+				Var5 = { (-SYSTEM::SIN(Var3.f_2) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.f_2) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
+				Var6 = { (-SYSTEM::SIN(Var4.f_2) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.f_2) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
 				fVar7 = CAM::GET_FINAL_RENDERED_CAM_FOV();
 				if (uParam0->f_17 > 0 || iParam6 != 0)
 				{
@@ -19170,7 +19170,7 @@ void func_289(var uParam0, int iParam1)
 		fVar18 = uParam0->f_10[iParam1 /*57*/].f_12;
 		Var17 = { func_293(Var17) };
 		Var19 = { Var16 + Var17 * Vector(fVar18, fVar18, fVar18) };
-		Var19.z = (Var19.z + uParam0->f_10[iParam1 /*57*/].f_16);
+		Var19.f_2 = (Var19.f_2 + uParam0->f_10[iParam1 /*57*/].f_16);
 		uParam0->f_10[iParam1 /*57*/].f_6 = { Var19 };
 	}
 	if (uParam0->f_10[iParam1 /*57*/].f_2 == 8)
@@ -19283,10 +19283,10 @@ Vector3 func_292(struct<3> Param0)
 	struct<3> Var0;
 	
 	Var0.x = SYSTEM::COS(Param0.x);
-	Var0.y = SYSTEM::COS(Param0.z);
-	Var0.z = SYSTEM::SIN(Param0.x);
-	Var0.y = (Var0.y * Var0.x);
-	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.z));
+	Var0.f_1 = SYSTEM::COS(Param0.f_2);
+	Var0.f_2 = SYSTEM::SIN(Param0.x);
+	Var0.f_1 = (Var0.f_1 * Var0.x);
+	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.f_2));
 	return Var0;
 }
 
@@ -19304,8 +19304,8 @@ Vector3 func_293(struct<3> Param0)
 	else
 	{
 		Param0.x = 0f;
-		Param0.y = 0f;
-		Param0.z = 0f;
+		Param0.f_1 = 0f;
+		Param0.f_2 = 0f;
 	}
 	return Param0;
 }
@@ -23802,15 +23802,15 @@ void func_343(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_340(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_340(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -24768,7 +24768,7 @@ void func_346(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -24777,19 +24777,19 @@ void func_346(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_347(Var2.z)] = Var2.x;
+						(*uParam0)[func_347(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_347(Var2.z)] = func_340(iParam1, Var2.x, func_347(Var2.z), iVar0);
+						(*uParam0)[func_347(Var2.f_2)] = func_340(iParam1, Var2.x, func_347(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_347(Var2.z)] = Var2.y;
+					(*uParam0)[func_347(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
@@ -48627,9 +48627,9 @@ void func_428(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 {
 	float fVar0;
 	
-	if (Param0.y != 0f)
+	if (Param0.f_1 != 0f)
 	{
-		*uParam2 = MISC::ATAN2(Param0.x, Param0.y);
+		*uParam2 = MISC::ATAN2(Param0.x, Param0.f_1);
 	}
 	else if (Param0.x < 0f)
 	{
@@ -48647,12 +48647,12 @@ void func_428(struct<3> Param0, var uParam1, var uParam2, int iParam3)
 			*uParam2 = (*uParam2 + 360f);
 		}
 	}
-	fVar0 = SYSTEM::SQRT(((Param0.x * Param0.x) + (Param0.y * Param0.y)));
+	fVar0 = SYSTEM::SQRT(((Param0.x * Param0.x) + (Param0.f_1 * Param0.f_1)));
 	if (fVar0 != 0f)
 	{
-		*uParam1 = MISC::ATAN2(Param0.z, fVar0);
+		*uParam1 = MISC::ATAN2(Param0.f_2, fVar0);
 	}
-	else if (Param0.z < 0f)
+	else if (Param0.f_2 < 0f)
 	{
 		*uParam1 = -90f;
 	}
@@ -54419,9 +54419,9 @@ int func_496(var uParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 				uParam0->f_2 = 1;
 				uParam0->f_9 = iParam1;
 				Var0 = { ENTITY::GET_ENTITY_COORDS(iParam1, 1) };
-				uParam0->f_22 = Var0.z;
+				uParam0->f_22 = Var0.f_2;
 				Var1 = { ENTITY::GET_ENTITY_ROTATION(iParam1, 2) };
-				uParam0->f_41 = Var1.z;
+				uParam0->f_41 = Var1.f_2;
 				if (uParam0->f_4)
 				{
 					PAD::DISABLE_ALL_CONTROL_ACTIONS(0);
@@ -54433,7 +54433,7 @@ int func_496(var uParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 				}
 				Var2 = { ENTITY::GET_ENTITY_VELOCITY(iParam1) };
 				uParam0->f_78 = Var2.x;
-				uParam0->f_79 = Var2.y;
+				uParam0->f_79 = Var2.f_1;
 				GRAPHICS::PUSH_TIMECYCLE_MODIFIER();
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(uParam0->f_8, 0))
 				{
@@ -55272,7 +55272,7 @@ void func_501(var uParam0, int iParam1, float fParam2, float fParam3)
 					fVar29 = 0.5f;
 				}
 				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_68, "SET_ALT_FOV_HEADING");
-				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var28.z);
+				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Var28.f_2);
 				if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fVar29);
@@ -55724,7 +55724,7 @@ int func_513(struct<3> Param0, struct<3> Param1, struct<3> Param2, struct<3> Par
 
 float func_514(struct<3> Param0, struct<3> Param1)
 {
-	return (((Param0.x * Param1.x) + (Param0.y * Param1.y)) + (Param0.z * Param1.z));
+	return (((Param0.x * Param1.x) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
 }
 
 int func_515(var uParam0, struct<3> Param1, struct<3> Param2, struct<3> Param3, struct<3> Param4)
@@ -55754,7 +55754,7 @@ int func_515(var uParam0, struct<3> Param1, struct<3> Param2, struct<3> Param3, 
 
 Vector3 func_516(struct<3> Param0, struct<3> Param1)
 {
-	return ((Param0.y * Param1.z) - (Param0.z * Param1.y)), ((Param0.z * Param1.x) - (Param0.x * Param1.z)), ((Param0.x * Param1.y) - (Param0.y * Param1.x));
+	return ((Param0.f_1 * Param1.f_2) - (Param0.f_2 * Param1.f_1)), ((Param0.f_2 * Param1.x) - (Param0.x * Param1.f_2)), ((Param0.x * Param1.f_1) - (Param0.f_1 * Param1.x));
 }
 
 int func_517(var uParam0, int iParam1)
@@ -55788,11 +55788,11 @@ int func_518(struct<3> Param0, struct<3> Param1, struct<3> Param2, float fParam3
 	struct<3> Var4;
 	
 	Var4 = { Param1 - Param0 };
-	fVar0 = (((Var4.x * Var4.x) + (Var4.y * Var4.y)) + (Var4.z * Var4.z));
-	fVar1 = (2f * (((Var4.x * (Param0.x - Param2.x)) + (Var4.y * (Param0.y - Param2.y))) + (Var4.z * (Param0.z - Param2.z))));
-	fVar2 = (((Param2.x * Param2.x) + (Param2.y * Param2.y)) + (Param2.z * Param2.z));
-	fVar2 = (fVar2 + (((Param0.x * Param0.x) + (Param0.y * Param0.y)) + (Param0.z * Param0.z)));
-	fVar2 = (fVar2 - (2f * (((Param2.x * Param0.x) + (Param2.y * Param0.y)) + (Param2.z * Param0.z))));
+	fVar0 = (((Var4.x * Var4.x) + (Var4.f_1 * Var4.f_1)) + (Var4.f_2 * Var4.f_2));
+	fVar1 = (2f * (((Var4.x * (Param0.x - Param2.x)) + (Var4.f_1 * (Param0.f_1 - Param2.f_1))) + (Var4.f_2 * (Param0.f_2 - Param2.f_2))));
+	fVar2 = (((Param2.x * Param2.x) + (Param2.f_1 * Param2.f_1)) + (Param2.f_2 * Param2.f_2));
+	fVar2 = (fVar2 + (((Param0.x * Param0.x) + (Param0.f_1 * Param0.f_1)) + (Param0.f_2 * Param0.f_2)));
+	fVar2 = (fVar2 - (2f * (((Param2.x * Param0.x) + (Param2.f_1 * Param0.f_1)) + (Param2.f_2 * Param0.f_2))));
 	fVar2 = (fVar2 - (fParam3 * fParam3));
 	fVar3 = ((fVar1 * fVar1) - ((4f * fVar0) * fVar2));
 	if (MISC::ABSF(fVar0) < 1E-05f || fVar3 <= 0f)
@@ -55848,8 +55848,8 @@ void func_520(var uParam0, struct<3> Param1, int iParam2, int iParam3, int iPara
 		{
 			Var1 = { CAM::GET_CAM_COORD(CAM::GET_RENDERING_CAM()) };
 			Var2 = { CAM::GET_CAM_ROT(CAM::GET_RENDERING_CAM(), 2) };
-			fVar3 = MISC::GET_DISTANCE_BETWEEN_COORDS(Var1.x, Var1.y, 0f, Param1.x, Param1.y, 0f, 1);
-			fVar4 = (Param1.z - Var1.z);
+			fVar3 = MISC::GET_DISTANCE_BETWEEN_COORDS(Var1.x, Var1.f_1, 0f, Param1.x, Param1.f_1, 0f, 1);
+			fVar4 = (Param1.f_2 - Var1.f_2);
 			if (fVar3 > 0f)
 			{
 				fVar5 = MISC::ATAN((fVar4 / fVar3));
@@ -55859,7 +55859,7 @@ void func_520(var uParam0, struct<3> Param1, int iParam2, int iParam3, int iPara
 				fVar5 = 0f;
 			}
 			fVar6 = func_521(Var1, Param1, 0);
-			fVar7 = MISC::ATAN2(((SYSTEM::COS(Var2.x) * SYSTEM::SIN(fVar5)) - ((SYSTEM::SIN(Var2.x) * SYSTEM::COS(fVar5)) * SYSTEM::COS(((fVar6 * -1f) - Var2.z)))), (SYSTEM::SIN(((fVar6 * -1f) - Var2.z)) * SYSTEM::COS(fVar5)));
+			fVar7 = MISC::ATAN2(((SYSTEM::COS(Var2.x) * SYSTEM::SIN(fVar5)) - ((SYSTEM::SIN(Var2.x) * SYSTEM::COS(fVar5)) * SYSTEM::COS(((fVar6 * -1f) - Var2.f_2)))), (SYSTEM::SIN(((fVar6 * -1f) - Var2.f_2)) * SYSTEM::COS(fVar5)));
 			if (uParam0->f_10 > 0f)
 			{
 			}
@@ -56050,7 +56050,7 @@ void func_531(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 			else
 			{
 				Var6 = { ENTITY::GET_ENTITY_COORDS(iVar0, 1) };
-				if ((Var6.z > Param0.z && Var6.z < Param1.z) || (Var6.z > Param1.z && Var6.z < Param0.z))
+				if ((Var6.f_2 > Param0.f_2 && Var6.f_2 < Param1.f_2) || (Var6.f_2 > Param1.f_2 && Var6.f_2 < Param0.f_2))
 				{
 					if (func_532(iVar0, Param0, Param1, fParam2))
 					{
@@ -56090,7 +56090,7 @@ void func_531(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 						if (VEHICLE::IS_THIS_MODEL_A_HELI(iVar7))
 						{
 							Param5.x = (Param5.x + 3f);
-							Param5.y = (Param5.y + 3f);
+							Param5.f_1 = (Param5.f_1 + 3f);
 						}
 						if (((iVar7 == joaat("zentorno") || iVar7 == joaat("btype")) || iVar7 == joaat("dubsta3")) || iVar7 == joaat("monster"))
 						{
@@ -56104,11 +56104,11 @@ void func_531(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.y - Var4.y) > Param5.y)
+						else if ((Var5.f_1 - Var4.f_1) > Param5.f_1)
 						{
 							bVar2 = false;
 						}
-						else if ((Var5.z - Var4.z) > Param5.z)
+						else if ((Var5.f_2 - Var4.f_2) > Param5.f_2)
 						{
 							bVar2 = false;
 						}
@@ -56209,12 +56209,12 @@ int func_532(int iParam0, struct<3> Param1, struct<3> Param2, float fParam3)
 	
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, 0))
 	{
-		Param1.z = Param2.z;
+		Param1.f_2 = Param2.f_2;
 		Var0 = { func_293(Param1 - Param2) };
 		Var1 = { Var0 };
-		Var0.x = -Var1.y;
-		Var0.y = Var1.x;
-		Var0.z = 0f;
+		Var0.x = -Var1.f_1;
+		Var0.f_1 = Var1.x;
+		Var0.f_2 = 0f;
 		Var2 = { Param1 - Var0 * FtoV((fParam3 / 2f)) };
 		Var3 = { Param1 + Var0 * FtoV((fParam3 / 2f)) };
 		Var4 = { Param2 - Var0 * FtoV((fParam3 / 2f)) };
@@ -57259,7 +57259,7 @@ void func_544(int iParam0, int iParam1)
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_1372[0 /*2*/], 0))
 					{
 						Var4 = { ENTITY::GET_ENTITY_COORDS(Local_1372[0 /*2*/], 1) };
-						if (Var4.z < 100f)
+						if (Var4.f_2 < 100f)
 						{
 							Local_1606[iVar3 /*7*/].f_2 = 1;
 						}
@@ -60785,7 +60785,7 @@ void func_584(var uParam0, struct<3> Param1, float fParam2, float fParam3, int i
 	uParam0->f_47 = 1;
 	if (iParam4 == 1)
 	{
-		Param1.z = -1f;
+		Param1.f_2 = -1f;
 	}
 	uParam0->f_74 = { Param1 };
 	uParam0->f_69 = fParam3;
@@ -66055,7 +66055,7 @@ int func_659(float fParam0)
 	struct<3> Var0;
 	
 	Var0 = { func_660(PLAYER::PLAYER_ID()) };
-	if (Var0.z < fParam0)
+	if (Var0.f_2 < fParam0)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
@@ -134967,9 +134967,9 @@ void func_939(var uParam0, float fParam1, float fParam2, float fParam3, float fP
 			{
 				Var6 = { CAM::GET_CAM_COORD(uParam0->f_32) };
 				Global_1573326 = 1;
-				if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var6.x, Var6.y, (Var6.z + 1f), &fVar7, 0, 0) || ENTITY::IS_ENTITY_IN_WATER(uParam0->f_8))
+				if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var6.x, Var6.f_1, (Var6.f_2 + 1f), &fVar7, 0, 0) || ENTITY::IS_ENTITY_IN_WATER(uParam0->f_8))
 				{
-					if (fVar7 > Var6.z)
+					if (fVar7 > Var6.f_2)
 					{
 						if (Global_1319110 != -1 || Global_1319116 != -1)
 						{
@@ -134983,7 +134983,7 @@ void func_939(var uParam0, float fParam1, float fParam2, float fParam3, float fP
 										uParam0->f_34 = 1;
 									}
 								}
-								if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var6.x, Var6.y, (Var6.z - 1f), &fVar7, 0, 0))
+								if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var6.x, Var6.f_1, (Var6.f_2 - 1f), &fVar7, 0, 0))
 								{
 								}
 								else
@@ -135188,7 +135188,7 @@ void func_939(var uParam0, float fParam1, float fParam2, float fParam3, float fP
 							Var18 = { CAM::GET_CAM_COORD(uParam0->f_32) };
 							uParam0->f_124 = (SYSTEM::SIN(uParam0->f_121.f_2) * 150f);
 							uParam0->f_124.f_1 = (SYSTEM::COS(uParam0->f_121.f_2) * 150f);
-							uParam0->f_124.f_2 = Var18.z;
+							uParam0->f_124.f_2 = Var18.f_2;
 						}
 						if (uParam0->f_4)
 						{
@@ -135353,7 +135353,7 @@ void func_939(var uParam0, float fParam1, float fParam2, float fParam3, float fP
 											}
 									}
 									fVar23 = (fVar23 - ((Var26.x - uParam0->f_465) * fVar27));
-									fVar24 = (fVar24 + (Var26.z - uParam0->f_465.f_2));
+									fVar24 = (fVar24 + (Var26.f_2 - uParam0->f_465.f_2));
 									if (fVar24 > 180f)
 									{
 										fVar24 = (fVar24 - 360f);
@@ -135931,9 +135931,9 @@ void func_945(var uParam0)
 			}
 			else
 			{
-				Var3 = { ((Var1.x - uParam0->f_70) / SYSTEM::TIMESTEP()), ((Var1.y - uParam0->f_70.f_1) / SYSTEM::TIMESTEP()), 0f };
+				Var3 = { ((Var1.x - uParam0->f_70) / SYSTEM::TIMESTEP()), ((Var1.f_1 - uParam0->f_70.f_1) / SYSTEM::TIMESTEP()), 0f };
 			}
-			uVar4 = SYSTEM::SQRT(((Var3.x * Var3.x) + (Var3.y * Var3.y)));
+			uVar4 = SYSTEM::SQRT(((Var3.x * Var3.x) + (Var3.f_1 * Var3.f_1)));
 			fVar5 = (uParam0->f_41 * -1f);
 			if (uParam0->f_67 != -1f)
 			{
@@ -135942,13 +135942,13 @@ void func_945(var uParam0)
 				fVar9 = (fVar7 - 160f);
 				Var10 = { uParam0->f_55 + Vector(0f, (uParam0->f_67 * SYSTEM::COS(fVar8)), (uParam0->f_67 * SYSTEM::SIN(fVar8))) };
 				Var11 = { uParam0->f_55 + Vector(0f, (uParam0->f_67 * SYSTEM::COS(fVar9)), (uParam0->f_67 * SYSTEM::SIN(fVar9))) };
-				fVar12 = MISC::ATAN(((Var10.x - Var1.x) / (Var10.y - Var1.y)));
-				if ((Var10.y - Var1.y) < 0f)
+				fVar12 = MISC::ATAN(((Var10.x - Var1.x) / (Var10.f_1 - Var1.f_1)));
+				if ((Var10.f_1 - Var1.f_1) < 0f)
 				{
 					fVar12 = (fVar12 + 180f);
 				}
-				fVar13 = MISC::ATAN(((Var11.x - Var1.x) / (Var11.y - Var1.y)));
-				if ((Var11.y - Var1.y) < 0f)
+				fVar13 = MISC::ATAN(((Var11.x - Var1.x) / (Var11.f_1 - Var1.f_1)));
+				if ((Var11.f_1 - Var1.f_1) < 0f)
 				{
 					fVar13 = (fVar13 + 180f);
 				}
@@ -135988,9 +135988,9 @@ void func_945(var uParam0)
 				uParam0->f_475 = (uParam0->f_475 + fVar17);
 			}
 			Var18 = { ((SYSTEM::SIN(-fVar5) * fVar16) * -5f), ((SYSTEM::COS(-fVar5) * fVar16) * 5f), 0f };
-			if (uParam0->f_67 != -1f || Var6.z == -1f)
+			if (uParam0->f_67 != -1f || Var6.f_2 == -1f)
 			{
-				fVar19 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA(((Var1.x + Var18.x) - (fVar16 * 5f)), ((Var1.y + Var18.y) - (fVar16 * 5f)), ((Var1.x + Var18.x) + (fVar16 * 5f)), ((Var1.y + Var18.y) + (fVar16 * 5f)));
+				fVar19 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA(((Var1.x + Var18.x) - (fVar16 * 5f)), ((Var1.f_1 + Var18.f_1) - (fVar16 * 5f)), ((Var1.x + Var18.x) + (fVar16 * 5f)), ((Var1.f_1 + Var18.f_1) + (fVar16 * 5f)));
 				if (fVar19 > (uParam0->f_475 / 10f))
 				{
 					fVar20 = fVar19;
@@ -135999,18 +135999,18 @@ void func_945(var uParam0)
 				{
 					fVar20 = ((uParam0->f_475 / 10f) + 40f);
 				}
-				Var6.z = (fVar20 + 100f);
+				Var6.f_2 = (fVar20 + 100f);
 			}
 			fVar21 = MISC::GET_DISTANCE_BETWEEN_COORDS(Var1, Var6, 1);
 			if (fVar21 > 6f)
 			{
 				fVar21 = 6f;
 			}
-			fVar22 = ((Var6.z - Var1.z) / fVar21);
+			fVar22 = ((Var6.f_2 - Var1.f_2) / fVar21);
 			fVar23 = (fVar22 - uParam0->f_80);
-			Var0.z = (Var0.z + (fVar23 * SYSTEM::TIMESTEP()));
+			Var0.f_2 = (Var0.f_2 + (fVar23 * SYSTEM::TIMESTEP()));
 			uParam0->f_80 = (uParam0->f_80 + (fVar23 * SYSTEM::TIMESTEP()));
-			Var0.z = (uParam0->f_80 - 0.57f);
+			Var0.f_2 = (uParam0->f_80 - 0.57f);
 			fVar24 = MISC::GET_DISTANCE_BETWEEN_COORDS(Var1, Var6, 0);
 			fVar25 = 1f;
 			fVar25 = fVar25;
@@ -136023,9 +136023,9 @@ void func_945(var uParam0)
 					fVar26 = 30f;
 				}
 			}
-			if (MISC::ABSF((Var6.z - Var1.z)) > 2f)
+			if (MISC::ABSF((Var6.f_2 - Var1.f_2)) > 2f)
 			{
-				fVar27 = ((fVar24 * 10f) / MISC::ABSF((Var6.z - Var1.z)));
+				fVar27 = ((fVar24 * 10f) / MISC::ABSF((Var6.f_2 - Var1.f_2)));
 				if (fVar26 > fVar27)
 				{
 					fVar26 = fVar27;
@@ -136062,9 +136062,9 @@ void func_945(var uParam0)
 				}
 			}
 			Var0.x = (SYSTEM::SIN(fVar5) * uParam0->f_68);
-			Var0.y = (SYSTEM::COS(fVar5) * uParam0->f_68);
+			Var0.f_1 = (SYSTEM::COS(fVar5) * uParam0->f_68);
 			uParam0->f_78 = Var0.x;
-			uParam0->f_79 = Var0.y;
+			uParam0->f_79 = Var0.f_1;
 			if (uParam0->f_51 == 1)
 			{
 				fVar29 = (uParam0->f_52 - uParam0->f_53);
@@ -136116,14 +136116,14 @@ void func_945(var uParam0)
 			uParam0->f_82 = fVar28;
 			uParam0->f_41 = (uParam0->f_41 + (-uParam0->f_82 * SYSTEM::TIMESTEP()));
 			Var2 = { ENTITY::GET_ENTITY_ROTATION(uParam0->f_8, 2) };
-			Var2.y = (Var2.y + (((fVar28 / 2f) - Var2.y) * SYSTEM::TIMESTEP()));
+			Var2.f_1 = (Var2.f_1 + (((fVar28 / 2f) - Var2.f_1) * SYSTEM::TIMESTEP()));
 			if (uParam0->f_51 == 1)
 			{
-				ENTITY::SET_ENTITY_ROTATION(uParam0->f_8, 0f, Var2.y, uParam0->f_53, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(uParam0->f_8, 0f, Var2.f_1, uParam0->f_53, 2, 1);
 			}
 			else
 			{
-				ENTITY::SET_ENTITY_ROTATION(uParam0->f_8, 0f, Var2.y, uParam0->f_41, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(uParam0->f_8, 0f, Var2.f_1, uParam0->f_41, 2, 1);
 			}
 			uParam0->f_70 = { Var1 };
 			uLocal_66 = uLocal_66;
@@ -136136,7 +136136,7 @@ void func_945(var uParam0)
 void func_946(var uParam0, var uParam1, struct<3> Param2)
 {
 	uParam1 = uParam1;
-	Param2.z = 150f;
+	Param2.f_2 = 150f;
 	func_947(uParam0, Param2, 5f, 100f, -1, 1, 0);
 }
 
@@ -136199,7 +136199,7 @@ void func_948(var uParam0)
 		iVar10 = 0;
 		iVar11 = 0;
 		iVar11 = iVar11;
-		fVar12 = Var0.z;
+		fVar12 = Var0.f_2;
 		fVar12 = fVar12;
 		if (iVar10 == 0)
 		{
@@ -136213,11 +136213,11 @@ void func_948(var uParam0)
 			{
 				iVar6++;
 				fVar5 = (fVar14 * IntToFloat(iVar6));
-				fVar3 = ((SYSTEM::SIN(Var1.z) * fVar5) * -1f);
-				fVar4 = (SYSTEM::COS(Var1.z) * fVar5);
-				fVar13 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA(((Var0.x + fVar3) - 3f), ((Var0.y + fVar4) - 3f), ((Var0.x + fVar3) + 3f), ((Var0.y + fVar4) + 3f));
+				fVar3 = ((SYSTEM::SIN(Var1.f_2) * fVar5) * -1f);
+				fVar4 = (SYSTEM::COS(Var1.f_2) * fVar5);
+				fVar13 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA(((Var0.x + fVar3) - 3f), ((Var0.f_1 + fVar4) - 3f), ((Var0.x + fVar3) + 3f), ((Var0.f_1 + fVar4) + 3f));
 				fVar13 = (fVar13 - 20f);
-				fVar12 = (Var0.z + (SYSTEM::SIN(Var1.x) * (50f * IntToFloat(iVar6))));
+				fVar12 = (Var0.f_2 + (SYSTEM::SIN(Var1.x) * (50f * IntToFloat(iVar6))));
 				if (uParam0->f_45)
 				{
 				}
@@ -136236,7 +136236,7 @@ void func_948(var uParam0)
 		{
 			if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &fVar16, 0, 0))
 			{
-				fVar15 = (Var0.z - fVar16);
+				fVar15 = (Var0.f_2 - fVar16);
 				if (fVar15 < 150f)
 				{
 					fVar15 = 150f;
@@ -136249,17 +136249,17 @@ void func_948(var uParam0)
 			if (Var1.x < 0f)
 			{
 				fVar5 = MISC::ABSF((fVar15 / MISC::TAN(Var1.x)));
-				fVar9 = (Var0.z - fVar15);
+				fVar9 = (Var0.f_2 - fVar15);
 			}
 			else
 			{
 				fVar5 = 1000f;
-				fVar9 = (Var0.z + (fVar5 * MISC::TAN(Var1.x)));
+				fVar9 = (Var0.f_2 + (fVar5 * MISC::TAN(Var1.x)));
 			}
 		}
-		fVar3 = ((SYSTEM::SIN(Var1.z) * fVar5) * -1f);
-		fVar4 = (SYSTEM::COS(Var1.z) * fVar5);
-		Var2 = { (fVar3 + Var0.x), (fVar4 + Var0.y), fVar9 };
+		fVar3 = ((SYSTEM::SIN(Var1.f_2) * fVar5) * -1f);
+		fVar4 = (SYSTEM::COS(Var1.f_2) * fVar5);
+		Var2 = { (fVar3 + Var0.x), (fVar4 + Var0.f_1), fVar9 };
 		iVar7 = 0;
 		while (iVar7 < uParam0->f_298)
 		{
@@ -136270,7 +136270,7 @@ void func_948(var uParam0)
 					iVar10 = 1;
 					iVar11 = 1;
 					Var2 = { ENTITY::GET_ENTITY_COORDS(uParam0->f_298[iVar7 /*11*/], 1) };
-					fVar9 = Var8.z;
+					fVar9 = Var8.f_2;
 				}
 			}
 			iVar7++;
@@ -139219,7 +139219,7 @@ void func_952(int iParam0, bool bParam1)
 												if (PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Local_1372[0 /*2*/], 0))
 												{
 													Var9 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) };
-													if (((Var9.x < -2000f || Var9.x > 2000f) || Var9.y > 1365f) || Var9.y < -3000f)
+													if (((Var9.x < -2000f || Var9.x > 2000f) || Var9.f_1 > 1365f) || Var9.f_1 < -3000f)
 													{
 														func_969("CH_F11");
 													}
@@ -140372,11 +140372,11 @@ void func_972(struct<3> Param0, struct<3> Param1, float fParam2, struct<3> Param
 			{
 				bVar1 = false;
 			}
-			else if ((Var7.y - Var6.y) > Param3.y)
+			else if ((Var7.f_1 - Var6.f_1) > Param3.f_1)
 			{
 				bVar1 = false;
 			}
-			else if ((Var7.z - Var6.z) > Param3.z)
+			else if ((Var7.f_2 - Var6.f_2) > Param3.f_2)
 			{
 				bVar1 = false;
 			}
@@ -140616,7 +140616,7 @@ void func_979(struct<3> Param0, struct<3> Param1, float fParam2)
 		ENTITY::SET_ENTITY_VELOCITY(Local_1372[0 /*2*/], Var1);
 		if (func_60(Param1))
 		{
-			uVar4 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.y);
+			uVar4 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1);
 			Var5 = { 0f, 0f, uVar4 };
 			Var3 = { Var5 - ENTITY::GET_ENTITY_ROTATION(Local_1372[0 /*2*/], 2) };
 			if (Var3.x < -180f)
@@ -140627,21 +140627,21 @@ void func_979(struct<3> Param0, struct<3> Param1, float fParam2)
 			{
 				Var3.x = (Var3.x - 360f);
 			}
-			if (Var3.y < -180f)
+			if (Var3.f_1 < -180f)
 			{
-				Var3.y = (Var3.y + 360f);
+				Var3.f_1 = (Var3.f_1 + 360f);
 			}
-			if (Var3.y > 180f)
+			if (Var3.f_1 > 180f)
 			{
-				Var3.y = (Var3.y - 360f);
+				Var3.f_1 = (Var3.f_1 - 360f);
 			}
-			if (Var3.z < -180f)
+			if (Var3.f_2 < -180f)
 			{
-				Var3.z = (Var3.z + 360f);
+				Var3.f_2 = (Var3.f_2 + 360f);
 			}
-			if (Var3.z > 180f)
+			if (Var3.f_2 > 180f)
 			{
-				Var3.z = (Var3.z - 360f);
+				Var3.f_2 = (Var3.f_2 - 360f);
 			}
 			ENTITY::SET_ENTITY_ROTATION(Local_1372[0 /*2*/], ENTITY::GET_ENTITY_ROTATION(Local_1372[0 /*2*/], 2) + Var3 * FtoV(SYSTEM::TIMESTEP()), 2, 1);
 		}
@@ -140656,21 +140656,21 @@ void func_979(struct<3> Param0, struct<3> Param1, float fParam2)
 			{
 				Var3.x = (Var3.x - 360f);
 			}
-			if (Var3.y < -180f)
+			if (Var3.f_1 < -180f)
 			{
-				Var3.y = (Var3.y + 360f);
+				Var3.f_1 = (Var3.f_1 + 360f);
 			}
-			if (Var3.y > 180f)
+			if (Var3.f_1 > 180f)
 			{
-				Var3.y = (Var3.y - 360f);
+				Var3.f_1 = (Var3.f_1 - 360f);
 			}
-			if (Var3.z < -180f)
+			if (Var3.f_2 < -180f)
 			{
-				Var3.z = (Var3.z + 360f);
+				Var3.f_2 = (Var3.f_2 + 360f);
 			}
-			if (Var3.z > 180f)
+			if (Var3.f_2 > 180f)
 			{
-				Var3.z = (Var3.z - 360f);
+				Var3.f_2 = (Var3.f_2 - 360f);
 			}
 			ENTITY::SET_ENTITY_ROTATION(Local_1372[0 /*2*/], ENTITY::GET_ENTITY_ROTATION(Local_1372[0 /*2*/], 2) + Var3 * FtoV(SYSTEM::TIMESTEP()), 2, 1);
 		}

@@ -411,7 +411,7 @@ void func_10()
 float func_11(int iParam0)
 {
 	fLocal_23 = (Global_4269954[iParam0 /*3*/] - Local_20.x);
-	fLocal_24 = (SYSTEM::COS(((3.14159f / 180f) * Local_20.x)) * (Global_4269954[iParam0 /*3*/].f_1 - Local_20.y));
+	fLocal_24 = (SYSTEM::COS(((3.14159f / 180f) * Local_20.x)) * (Global_4269954[iParam0 /*3*/].f_1 - Local_20.f_1));
 	fLocal_25 = MISC::ATAN2(fLocal_23, fLocal_24);
 	if (fLocal_25 < 0f)
 	{
@@ -423,13 +423,13 @@ float func_11(int iParam0)
 float func_12(int iParam0)
 {
 	fLocal_27 = SYSTEM::SQRT(SYSTEM::VDIST2(Global_4269954[iParam0 /*3*/], Local_20));
-	fLocal_28 = (Global_4269954[iParam0 /*3*/].f_2 - Local_20.z);
+	fLocal_28 = (Global_4269954[iParam0 /*3*/].f_2 - Local_20.f_2);
 	return fLocal_27;
 }
 
 float func_13(int iParam0)
 {
-	fLocal_26 = SYSTEM::SQRT((((Global_4269954[iParam0 /*3*/] - Local_20.x) * (Global_4269954[iParam0 /*3*/] - Local_20.x)) + ((Global_4269954[iParam0 /*3*/].f_1 - Local_20.y) * (Global_4269954[iParam0 /*3*/].f_1 - Local_20.y))));
+	fLocal_26 = SYSTEM::SQRT((((Global_4269954[iParam0 /*3*/] - Local_20.x) * (Global_4269954[iParam0 /*3*/] - Local_20.x)) + ((Global_4269954[iParam0 /*3*/].f_1 - Local_20.f_1) * (Global_4269954[iParam0 /*3*/].f_1 - Local_20.f_1))));
 	return fLocal_26;
 }
 
@@ -459,7 +459,7 @@ void func_14(var uParam0, char* sParam1, float fParam2, float fParam3, float fPa
 float func_15()
 {
 	fLocal_23 = (Global_21911 - Local_20.x);
-	fLocal_24 = (SYSTEM::COS(((3.14159f / 180f) * Local_20.x)) * (Global_21911.f_1 - Local_20.y));
+	fLocal_24 = (SYSTEM::COS(((3.14159f / 180f) * Local_20.x)) * (Global_21911.f_1 - Local_20.f_1));
 	fLocal_25 = MISC::ATAN2(fLocal_23, fLocal_24);
 	if (fLocal_25 < 0f)
 	{
@@ -471,13 +471,13 @@ float func_15()
 float func_16()
 {
 	fLocal_27 = SYSTEM::SQRT(SYSTEM::VDIST2(Global_21911, Local_20));
-	fLocal_28 = (Global_21911.f_2 - Local_20.z);
+	fLocal_28 = (Global_21911.f_2 - Local_20.f_2);
 	return fLocal_27;
 }
 
 float func_17()
 {
-	fLocal_26 = SYSTEM::SQRT((((Global_21911 - Local_20.x) * (Global_21911 - Local_20.x)) + ((Global_21911.f_1 - Local_20.y) * (Global_21911.f_1 - Local_20.y))));
+	fLocal_26 = SYSTEM::SQRT((((Global_21911 - Local_20.x) * (Global_21911 - Local_20.x)) + ((Global_21911.f_1 - Local_20.f_1) * (Global_21911.f_1 - Local_20.f_1))));
 	return fLocal_26;
 }
 

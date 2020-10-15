@@ -4272,7 +4272,7 @@ int func_114(int iParam0, int iParam1)
 			{
 				Var0 = { func_115(iParam1) };
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -6986,7 +6986,7 @@ int func_173(int iParam0, int iParam1, int iParam2)
 			{
 				return 4;
 			}
-			if (Var0.y == 4)
+			if (Var0.f_1 == 4)
 			{
 				return 4;
 			}
@@ -14305,10 +14305,10 @@ void func_295(struct<67> Param0, var uParam1, var uParam2, var uParam3, var uPar
 	}
 	Var0.f_2 = 2147483647;
 	Var0.x = 285918879;
-	Var0.y = PLAYER::PLAYER_ID();
+	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam19;
-	iVar1 = func_297(Var0.y);
+	iVar1 = func_297(Var0.f_1);
 	if ((Global_262145.f_23568 && !Global_262145.f_23569) && !Global_262145.f_23570)
 	{
 		return;
@@ -16028,8 +16028,8 @@ int func_333(int iParam0)
 		if (iVar3 > 0)
 		{
 			Var7.x = MISC::GET_HASH_KEY(func_298(iLocal_128));
-			Var7.y = 5;
-			Var7.z = iParam0;
+			Var7.f_1 = 5;
+			Var7.f_2 = iParam0;
 			MONEY::_0x675D19C6067CAE08(iVar3, &Var7, 0, 1);
 		}
 		if (func_53())
@@ -18772,7 +18772,7 @@ int func_434()
 				{
 					if (Var0.x == iLocal_318 && Var0.x != -1)
 					{
-						if (Var0.z == 0)
+						if (Var0.f_2 == 0)
 						{
 							return 1;
 						}

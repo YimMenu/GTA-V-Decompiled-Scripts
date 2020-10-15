@@ -250,8 +250,8 @@ void __EntryFunction__()
 			uLocal_66 = uLocal_66;
 			Local_84 = { Local_64 };
 			Local_85 = { ScriptParam_100.f_1[0 /*3*/] };
-			Local_84.z = 0f;
-			Local_85.z = 0f;
+			Local_84.f_2 = 0f;
+			Local_85.f_2 = 0f;
 			fLocal_83 = SYSTEM::VDIST2(Local_84, Local_85);
 			switch (iLocal_68)
 			{
@@ -273,7 +273,7 @@ void __EntryFunction__()
 							}
 							func_173(10);
 						}
-						if ((Local_64.z - ScriptParam_100.f_1[0 /*3*/].f_2) > 500f)
+						if ((Local_64.f_2 - ScriptParam_100.f_1[0 /*3*/].f_2) > 500f)
 						{
 						}
 					}
@@ -415,7 +415,7 @@ void __EntryFunction__()
 							}
 							else if (fLocal_89 > 0f)
 							{
-								if (MISC::ABSF((Local_64.z - Local_86.z)) > fLocal_89)
+								if (MISC::ABSF((Local_64.f_2 - Local_86.f_2)) > fLocal_89)
 								{
 									bVar2 = false;
 								}
@@ -2027,15 +2027,15 @@ void func_48(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar3 = 0;
 			while (iVar3 < Var1.f_3)
 			{
-				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.z != -1)
+				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar3, &Var2) && Var2.f_2 != -1)
 				{
 					if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 					{
-						(*iParam0)[Var2.z] = func_49(iParam1, Var2.x, 14, iVar0);
+						(*iParam0)[Var2.f_2] = func_49(iParam1, Var2.x, 14, iVar0);
 					}
-					else if (Var2.y != -1)
+					else if (Var2.f_1 != -1)
 					{
-						(*iParam0)[Var2.z] = Var2.y;
+						(*iParam0)[Var2.f_2] = Var2.f_1;
 					}
 				}
 				iVar3++;
@@ -26664,7 +26664,7 @@ void func_124(var uParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if ((Var2.x != 0 && Var2.x != -1) && Var2.x != joaat("0"))
 				{
-					if (Var2.z == 10)
+					if (Var2.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var3);
 						FILES::GET_SHOP_PED_COMPONENT(Var2.x, &Var3);
@@ -26673,19 +26673,19 @@ void func_124(var uParam0, int iParam1, int iParam2, int iParam3)
 							uParam0->f_16 = 1;
 						}
 					}
-					if (Var2.z == 10 && uParam0->f_16)
+					if (Var2.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_122(Var2.z)] = Var2.x;
+						(*uParam0)[func_122(Var2.f_2)] = Var2.x;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_122(Var2.z)] = func_49(iParam1, Var2.x, func_122(Var2.z), iVar0);
+						(*uParam0)[func_122(Var2.f_2)] = func_49(iParam1, Var2.x, func_122(Var2.f_2), iVar0);
 					}
 				}
-				else if (Var2.y != -1)
+				else if (Var2.f_1 != -1)
 				{
-					(*uParam0)[func_122(Var2.z)] = Var2.y;
+					(*uParam0)[func_122(Var2.f_2)] = Var2.f_1;
 				}
 			}
 			iVar4++;
