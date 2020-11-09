@@ -1,6 +1,7 @@
 <?php
 $proc_limit = 8;
 $out_dir = "decompiled_scripts";
+$native_tables_dir = "native_tables";
 
 
 $cls = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
@@ -19,6 +20,10 @@ if(!is_dir($out_dir))
 {
 	mkdir($out_dir);
 }
+if(!is_dir($native_tables_dir))
+{
+	mkdir($native_tables_dir);
+}
 
 foreach(scandir("scripts") as $script)
 {
@@ -31,7 +36,7 @@ foreach(scandir("scripts") as $script)
 
 function manageprocs()
 {
-	global $out_dir, $cls, $total_scripts, $scripts_to_decompile, $decompiled_scripts, $procs, $last_out;
+	global $out_dir, $native_tables_dir, $cls, $total_scripts, $scripts_to_decompile, $decompiled_scripts, $procs, $last_out;
 	$script_names = [];
 	foreach($procs as $script => $proc)
 	{
@@ -45,12 +50,20 @@ function manageprocs()
 			unset($scripts_to_decompile[$script]);
 			unset($procs[$script]);
 			$decompiled_scripts[$script] = true;
+			// move decompiled script
 			$dest = $out_dir."/{$script}.c";
 			if(is_file($dest))
 			{
 				unlink($dest);
 			}
 			rename("scripts/{$script}_ysc/{$script}.ysc.full.c", $dest);
+			// move native table
+			$dest = $native_tables_dir."/{$script}.txt";
+			if(is_file($dest))
+			{
+				unlink($dest);
+			}
+			rename("scripts/{$script}_ysc/{$script}.ysc.full native table.txt", $dest);
 		}
 	}
 	$out = "Decompiling: ".join(", ", $script_names)."\nRemaining: ".count($scripts_to_decompile)."/".$total_scripts;
