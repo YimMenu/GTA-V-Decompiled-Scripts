@@ -16891,7 +16891,7 @@ int func_407(int iParam0)
 			return -1084633958;
 		
 		case 54:
-			return joaat("HUNTER");
+			return joaat("hunter");
 		
 		case 51:
 			return 1922837891;

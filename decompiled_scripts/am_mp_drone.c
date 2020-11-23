@@ -1139,7 +1139,7 @@ bool func_45(int iParam0)
 
 int func_46(int iParam0)
 {
-	if (ENTITY::GET_ENTITY_MODEL(uParam0) == joaat("HAULER2") || ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("PHANTOM3"))
+	if (ENTITY::GET_ENTITY_MODEL(uParam0) == joaat("hauler2") || ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("phantom3"))
 	{
 		return 1;
 	}
@@ -5220,7 +5220,7 @@ int func_195(int iParam0, int iParam1)
 			return 0;
 			break;
 		
-		case joaat("TECHNICAL3"):
+		case joaat("technical3"):
 			if (Global_262145.f_20625)
 			{
 				if (iParam1 & 1 != 0)
@@ -5232,7 +5232,7 @@ int func_195(int iParam0, int iParam1)
 			return 0;
 			break;
 		
-		case joaat("INSURGENT3"):
+		case joaat("insurgent3"):
 			if (Global_262145.f_20626)
 			{
 				if (iParam1 & 1 != 0)
@@ -5314,9 +5314,9 @@ int func_195(int iParam0, int iParam1)
 			return 1;
 			break;
 		
-		case 1802742206:
-		case -2122646867:
-		case 67753863:
+		case joaat("youga3"):
+		case joaat("gauntlet5"):
+		case joaat("yosemite3"):
 			if (iParam1 & 1 != 0)
 			{
 				return 0;
@@ -5324,9 +5324,9 @@ int func_195(int iParam0, int iParam1)
 			return 1;
 			break;
 		
-		case 1717532765:
-		case 1107404867:
-		case -913589546:
+		case joaat("manana2"):
+		case joaat("peyote3"):
+		case joaat("glendale2"):
 			return 1;
 			break;
 	}
@@ -5419,19 +5419,19 @@ void func_199(int iParam0, var uParam1)
 	switch (iParam0)
 	{
 		case 1:
-			(*uParam1)[0] = joaat("HAULER2");
+			(*uParam1)[0] = joaat("hauler2");
 			(*uParam1)[1] = joaat("trailerlarge");
 			uParam1->f_3 = -2.6f;
 			break;
 		
 		case 2:
-			(*uParam1)[0] = joaat("PHANTOM3");
+			(*uParam1)[0] = joaat("phantom3");
 			(*uParam1)[1] = joaat("trailerlarge");
 			uParam1->f_3 = -2.6f;
 			break;
 		
 		case 3:
-			(*uParam1)[0] = joaat("NIGHTSHARK");
+			(*uParam1)[0] = joaat("nightshark");
 			(*uParam1)[1] = joaat("trailersmall2");
 			uParam1->f_3 = 0.5f;
 			break;

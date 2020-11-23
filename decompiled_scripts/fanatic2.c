@@ -37795,7 +37795,7 @@ int func_300(bool bParam0, bool bParam1, bool bParam2)
 		{
 			iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0);
 			iVar1 = func_304(PLAYER::PLAYER_PED_ID(), 0);
-			if (((VEHICLE::IS_TURRET_SEAT(iVar0, iVar1) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("APC") && iVar1 != -1)) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("akula") && iVar1 != -1)) || (((ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("riot2") && iVar1 == 0) && func_303(iVar0, 10)) && VEHICLE::GET_VEHICLE_MOD(iVar0, 10) != -1))
+			if (((VEHICLE::IS_TURRET_SEAT(iVar0, iVar1) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("apc") && iVar1 != -1)) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("akula") && iVar1 != -1)) || (((ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("riot2") && iVar1 == 0) && func_303(iVar0, 10)) && VEHICLE::GET_VEHICLE_MOD(iVar0, 10) != -1))
 			{
 				return 0;
 			}
@@ -39934,7 +39934,7 @@ int func_359(var uParam0, int iParam1)
 					return 1;
 				}
 			}
-			else if ((VEHICLE::IS_VEHICLE_MODEL(uParam0->f_1, joaat("fbi")) || VEHICLE::IS_VEHICLE_MODEL(uParam0->f_1, joaat("FIRETRUK"))) || VEHICLE::IS_VEHICLE_MODEL(uParam0->f_1, joaat("police")))
+			else if ((VEHICLE::IS_VEHICLE_MODEL(uParam0->f_1, joaat("fbi")) || VEHICLE::IS_VEHICLE_MODEL(uParam0->f_1, joaat("firetruk"))) || VEHICLE::IS_VEHICLE_MODEL(uParam0->f_1, joaat("police")))
 			{
 				return 0;
 			}

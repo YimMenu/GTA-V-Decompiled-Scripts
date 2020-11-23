@@ -473,7 +473,7 @@ int func_6(int iParam0)
 		case joaat("buzzard2"):
 		case joaat("cargobob"):
 		case joaat("crusader"):
-		case joaat("FIRETRUK"):
+		case joaat("firetruk"):
 		case joaat("lazer"):
 		case joaat("rhino"):
 		case joaat("titan"):
@@ -4194,7 +4194,7 @@ int func_136(var uParam0, int iParam1, struct<3> Param2, var uParam3, int iParam
 		return 0;
 	}
 	fVar0 = 1.5f;
-	if (iParam1 == joaat("BOMBUSHKA"))
+	if (iParam1 == joaat("bombushka"))
 	{
 		fVar0 = 20f;
 	}

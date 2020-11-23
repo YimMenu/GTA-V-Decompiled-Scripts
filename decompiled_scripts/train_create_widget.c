@@ -33,8 +33,8 @@ void __EntryFunction__()
 	STREAMING::REQUEST_MODEL(joaat("freightcont1"));
 	STREAMING::REQUEST_MODEL(joaat("freightcont2"));
 	STREAMING::REQUEST_MODEL(joaat("tankercar"));
-	STREAMING::REQUEST_MODEL(joaat("METROTRAIN"));
-	while ((((((!STREAMING::HAS_MODEL_LOADED(joaat("freight")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcar"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightgrain"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont1"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont2"))) || !STREAMING::HAS_MODEL_LOADED(joaat("tankercar"))) || !STREAMING::HAS_MODEL_LOADED(joaat("METROTRAIN")))
+	STREAMING::REQUEST_MODEL(joaat("metrotrain"));
+	while ((((((!STREAMING::HAS_MODEL_LOADED(joaat("freight")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcar"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightgrain"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont1"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont2"))) || !STREAMING::HAS_MODEL_LOADED(joaat("tankercar"))) || !STREAMING::HAS_MODEL_LOADED(joaat("metrotrain")))
 	{
 		SYSTEM::WAIT(0);
 	}

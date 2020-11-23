@@ -1022,7 +1022,7 @@ int func_34(var uParam0, int iParam1, struct<3> Param2, float fParam3, int iPara
 		return 0;
 	}
 	fVar0 = 1.5f;
-	if (iParam1 == joaat("BOMBUSHKA"))
+	if (iParam1 == joaat("bombushka"))
 	{
 		fVar0 = 20f;
 	}

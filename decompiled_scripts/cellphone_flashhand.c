@@ -1275,7 +1275,7 @@ void __EntryFunction__()
 					{
 						MISC::SET_BIT(&Global_7357, 4);
 					}
-					if (((((((((((((((ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("valkyrie") || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("insurgent")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("technical")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("trash")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("trash2")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("limo2")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("INSURGENT3")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("HALFTRACK")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("DUNE3")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("trailersmall2")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("technical2")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("boxville5")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("MOGUL")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("BOMBUSHKA")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("TULA")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("chernobog"))
+					if (((((((((((((((ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("valkyrie") || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("insurgent")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("technical")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("trash")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("trash2")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("limo2")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("insurgent3")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("halftrack")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("dune3")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("trailersmall2")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("technical2")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("boxville5")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("mogul")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("bombushka")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("tula")) || ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("chernobog"))
 					{
 						if (PED::IS_PED_SITTING_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iLocal_110))
 						{
@@ -1310,21 +1310,21 @@ void __EntryFunction__()
 										MISC::SET_BIT(&Global_7357, 4);
 									}
 								}
-								if (ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("INSURGENT3"))
+								if (ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("insurgent3"))
 								{
 									if (iVar6 == 3)
 									{
 										MISC::SET_BIT(&Global_7357, 4);
 									}
 								}
-								if (ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("HALFTRACK"))
+								if (ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("halftrack"))
 								{
 									if (iVar6 == 1)
 									{
 										MISC::SET_BIT(&Global_7357, 4);
 									}
 								}
-								if (ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("DUNE3"))
+								if (ENTITY::GET_ENTITY_MODEL(iLocal_110) == joaat("dune3"))
 								{
 									if (iVar6 == 0)
 									{

@@ -38320,7 +38320,7 @@ int func_309(int iParam0)
 	switch (iParam0)
 	{
 		case joaat("granger"):
-		case joaat("VISIONE"):
+		case joaat("visione"):
 			return 1;
 		
 		default:

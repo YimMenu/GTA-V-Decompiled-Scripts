@@ -10229,7 +10229,7 @@ int func_229(var uParam0, int iParam1)
 		case 43:
 			*uParam0 = { 693.1154f, -1018.155f, 21.6387f };
 			uParam0->f_3 = 177.6454f;
-			uParam0->f_4 = joaat("FIRETRUK");
+			uParam0->f_4 = joaat("firetruk");
 			MISC::SET_BIT(&(uParam0->f_9), 23);
 			MISC::SET_BIT(&(uParam0->f_9), 8);
 			iVar0 = 1;

@@ -1163,7 +1163,7 @@ int func_38()
 			iVar2[1] = joaat("benson");
 			iVar2[2] = joaat("biff");
 			iVar2[3] = joaat("bus");
-			iVar2[4] = joaat("FIRETRUK");
+			iVar2[4] = joaat("firetruk");
 			iVar2[5] = joaat("forklift");
 			iVar2[6] = joaat("mule");
 			iVar2[7] = joaat("mule2");

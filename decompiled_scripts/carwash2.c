@@ -39215,7 +39215,7 @@ int func_377(int iParam0)
 		}
 		return 1;
 	}
-	if (iVar0 == 67753863)
+	if (iVar0 == joaat("yosemite3"))
 	{
 		if (VEHICLE::GET_VEHICLE_MOD(iParam0, 5) == 4)
 		{
@@ -39285,10 +39285,10 @@ int func_378(int iParam0)
 		case joaat("limo2"):
 		case joaat("raptor"):
 		case joaat("ratloader2"):
-		case joaat("DUNE3"):
+		case joaat("dune3"):
 		case joaat("dune4"):
 		case joaat("dune5"):
-		case joaat("VIGILANTE"):
+		case joaat("vigilante"):
 		case joaat("deluxo"):
 		case joaat("caracara"):
 		case joaat("scramjet"):
@@ -39304,10 +39304,10 @@ int func_378(int iParam0)
 		case joaat("vagrant"):
 		case joaat("formula2"):
 		case joaat("minitank"):
-		case 1107404867:
-		case 1802742206:
-		case 1492612435:
-		case 1181339704:
+		case joaat("peyote3"):
+		case joaat("youga3"):
+		case joaat("openwheel1"):
+		case joaat("openwheel2"):
 			return 1;
 		
 		default:

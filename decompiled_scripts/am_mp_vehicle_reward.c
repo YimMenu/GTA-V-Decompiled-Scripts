@@ -11662,7 +11662,7 @@ int func_122(int iParam0)
 	switch (iParam0)
 	{
 		case joaat("granger"):
-		case joaat("VISIONE"):
+		case joaat("visione"):
 			return 1;
 		
 		default:
@@ -13140,7 +13140,7 @@ int func_151(int iParam0, char* sParam1, int iParam2)
 		case joaat("mesa2"):
 		case joaat("rapidgt2"):
 		case joaat("emperor2"):
-		case 1717532765:
+		case joaat("manana2"):
 			StringConCat(&cVar2, "2", 64);
 			break;
 		
@@ -14095,8 +14095,8 @@ int func_161(int iParam0)
 		case joaat("hydra"):
 		case joaat("cargobob"):
 		case joaat("cargobob2"):
-		case joaat("HAVOK"):
-		case joaat("HUNTER"):
+		case joaat("havok"):
+		case joaat("hunter"):
 		case joaat("volatus"):
 		case joaat("supervolito"):
 		case joaat("supervolito2"):
@@ -14105,19 +14105,19 @@ int func_161(int iParam0)
 		case joaat("frogger"):
 		case joaat("maverick"):
 		case joaat("annihilator"):
-		case joaat("MOGUL"):
-		case joaat("ROGUE"):
-		case joaat("STARLING"):
-		case joaat("SEABREEZE"):
-		case joaat("MICROLIGHT"):
-		case joaat("TULA"):
+		case joaat("mogul"):
+		case joaat("rogue"):
+		case joaat("starling"):
+		case joaat("seabreeze"):
+		case joaat("microlight"):
+		case joaat("tula"):
 		case joaat("lazer"):
-		case joaat("PYRO"):
-		case joaat("MOLOTOK"):
-		case joaat("NOKOTA"):
-		case joaat("HOWARD"):
-		case joaat("BOMBUSHKA"):
-		case joaat("ALPHAZ1"):
+		case joaat("pyro"):
+		case joaat("molotok"):
+		case joaat("nokota"):
+		case joaat("howard"):
+		case joaat("bombushka"):
+		case joaat("alphaz1"):
 		case joaat("nimbus"):
 		case joaat("luxor2"):
 		case joaat("velum2"):
@@ -16438,12 +16438,12 @@ int func_177(int iParam0)
 			return 39;
 			break;
 		
-		case 1802742206:
-		case -2122646867:
-		case 1717532765:
-		case 1107404867:
-		case 67753863:
-		case -913589546:
+		case joaat("youga3"):
+		case joaat("gauntlet5"):
+		case joaat("manana2"):
+		case joaat("peyote3"):
+		case joaat("yosemite3"):
+		case joaat("glendale2"):
 			return 27;
 			break;
 	}
@@ -16513,8 +16513,8 @@ int func_179(int iParam0)
 {
 	switch (iParam0)
 	{
-		case joaat("HUNTER"):
-		case joaat("BOMBUSHKA"):
+		case joaat("hunter"):
+		case joaat("bombushka"):
 		case joaat("volatol"):
 		case joaat("akula"):
 		case joaat("khanjali"):
@@ -16529,18 +16529,18 @@ int func_180(int iParam0)
 {
 	switch (iParam0)
 	{
-		case joaat("HAVOK"):
-		case joaat("MICROLIGHT"):
-		case joaat("MOGUL"):
-		case joaat("ROGUE"):
-		case joaat("SEABREEZE"):
-		case joaat("TULA"):
-		case joaat("PYRO"):
-		case joaat("ALPHAZ1"):
-		case joaat("HOWARD"):
-		case joaat("STARLING"):
-		case joaat("MOLOTOK"):
-		case joaat("NOKOTA"):
+		case joaat("havok"):
+		case joaat("microlight"):
+		case joaat("mogul"):
+		case joaat("rogue"):
+		case joaat("seabreeze"):
+		case joaat("tula"):
+		case joaat("pyro"):
+		case joaat("alphaz1"):
+		case joaat("howard"):
+		case joaat("starling"):
+		case joaat("molotok"):
+		case joaat("nokota"):
 		case joaat("cuban800"):
 		case joaat("avenger"):
 		case joaat("thruster"):
@@ -16642,12 +16642,12 @@ int func_181(int iParam0)
 			return 39;
 			break;
 		
-		case 1802742206:
-		case -2122646867:
-		case 1717532765:
-		case 1107404867:
-		case 67753863:
-		case -913589546:
+		case joaat("youga3"):
+		case joaat("gauntlet5"):
+		case joaat("manana2"):
+		case joaat("peyote3"):
+		case joaat("yosemite3"):
+		case joaat("glendale2"):
 			return 27;
 			break;
 	}
@@ -16766,37 +16766,37 @@ int func_182(int iParam0)
 			return 26;
 			break;
 		
-		case 1802742206:
+		case joaat("youga3"):
 			return 27;
 			break;
 		
-		case -2122646867:
+		case joaat("gauntlet5"):
 			return 27;
 			break;
 		
-		case 1717532765:
+		case joaat("manana2"):
 			return 27;
 			break;
 		
-		case 1107404867:
+		case joaat("peyote3"):
 			return 27;
 			break;
 		
-		case 67753863:
+		case joaat("yosemite3"):
 			return 27;
 			break;
 		
-		case -913589546:
+		case joaat("glendale2"):
 			return 27;
 			break;
 	}
 	switch (iParam0)
 	{
-		case joaat("APC"):
+		case joaat("apc"):
 			return 29;
 			break;
 		
-		case joaat("HALFTRACK"):
+		case joaat("halftrack"):
 			return 29;
 			break;
 		
@@ -16816,23 +16816,23 @@ int func_182(int iParam0)
 			return 29;
 			break;
 		
-		case joaat("DUNE3"):
+		case joaat("dune3"):
 			return 30;
 			break;
 		
-		case joaat("INSURGENT3"):
+		case joaat("insurgent3"):
 			return 30;
 			break;
 		
-		case joaat("TAMPA3"):
+		case joaat("tampa3"):
 			return 30;
 			break;
 		
-		case joaat("TECHNICAL3"):
+		case joaat("technical3"):
 			return 30;
 			break;
 		
-		case joaat("OPPRESSOR"):
+		case joaat("oppressor"):
 			return 31;
 			break;
 		
@@ -16840,11 +16840,11 @@ int func_182(int iParam0)
 			return 31;
 			break;
 		
-		case joaat("PHANTOM3"):
+		case joaat("phantom3"):
 			return 32;
 			break;
 		
-		case joaat("HAULER2"):
+		case joaat("hauler2"):
 			return 32;
 			break;
 		
@@ -16894,7 +16894,7 @@ int func_182(int iParam0)
 	}
 	switch (iParam0)
 	{
-		case joaat("VIGILANTE"):
+		case joaat("vigilante"):
 			return 31;
 			break;
 	}
@@ -17858,11 +17858,11 @@ int func_182(int iParam0)
 		case joaat("le7b"):
 		case joaat("lynx"):
 		case joaat("sheava"):
-		case joaat("ARDENT"):
-		case joaat("CHEETAH2"):
-		case joaat("TORERO"):
-		case joaat("VAGNER"):
-		case joaat("XA21"):
+		case joaat("ardent"):
+		case joaat("cheetah2"):
+		case joaat("torero"):
+		case joaat("vagner"):
+		case joaat("xa21"):
 			return 3;
 			break;
 		
@@ -17870,13 +17870,13 @@ int func_182(int iParam0)
 			return 2;
 			break;
 		
-		case joaat("TAMPA3"):
-		case joaat("APC"):
-		case joaat("HALFTRACK"):
-		case joaat("DUNE3"):
+		case joaat("tampa3"):
+		case joaat("apc"):
+		case joaat("halftrack"):
+		case joaat("dune3"):
 		case joaat("trailersmall2"):
-		case joaat("INSURGENT3"):
-		case joaat("TECHNICAL3"):
+		case joaat("insurgent3"):
+		case joaat("technical3"):
 		case joaat("sentinel3"):
 		case joaat("riata"):
 			return 3;
@@ -17914,7 +17914,7 @@ int func_182(int iParam0)
 		case joaat("brutus"):
 		case joaat("lguard"):
 		case joaat("blazer2"):
-		case joaat("FIRETRUK"):
+		case joaat("firetruk"):
 		case joaat("burrito2"):
 		case joaat("boxville"):
 		case joaat("stockade"):
@@ -17923,36 +17923,36 @@ int func_182(int iParam0)
 		case joaat("formula"):
 		case joaat("imorgon"):
 		case joaat("komoda"):
-		case 1717532765:
+		case joaat("manana2"):
 		case joaat("rebla"):
-		case joaat("Sugoi"):
-		case 1802742206:
+		case joaat("sugoi"):
+		case joaat("youga3"):
 		case joaat("zhaba"):
 		case joaat("vstr"):
 		case joaat("everon"):
 		case joaat("sultan2"):
 		case joaat("jb7002"):
 		case joaat("outlaw"):
-		case joaat("Stryder"):
+		case joaat("stryder"):
 		case joaat("vagrant"):
 		case joaat("formula2"):
 		case joaat("furia"):
 		case joaat("yosemite2"):
 		case joaat("retinue2"):
 		case joaat("minitank"):
-		case -2122646867:
-		case -2098954619:
-		case 2134119907:
-		case 1107404867:
-		case 67753863:
-		case -913589546:
-		case -631322662:
-		case -838099166:
-		case -1810806490:
-		case -1358197432:
-		case 1492612435:
-		case -1728685474:
-		case 1181339704:
+		case joaat("gauntlet5"):
+		case joaat("club"):
+		case joaat("dukes3"):
+		case joaat("peyote3"):
+		case joaat("yosemite3"):
+		case joaat("glendale2"):
+		case joaat("penumbra2"):
+		case joaat("landstalker2"):
+		case joaat("seminole2"):
+		case joaat("tigon"):
+		case joaat("openwheel1"):
+		case joaat("coquette4"):
+		case joaat("openwheel2"):
 			return 3;
 			break;
 	}
@@ -18133,36 +18133,36 @@ int func_183(int iParam0)
 			return 1;
 			break;
 		
-		case joaat("GP1"):
-		case joaat("RUSTON"):
-		case joaat("INFERNUS2"):
-		case joaat("TURISMO2"):
+		case joaat("gp1"):
+		case joaat("ruston"):
+		case joaat("infernus2"):
+		case joaat("turismo2"):
 			return 1;
 			break;
 		
-		case joaat("ARDENT"):
-		case joaat("VAGNER"):
-		case joaat("CHEETAH2"):
-		case joaat("NIGHTSHARK"):
-		case joaat("TORERO"):
-		case joaat("XA21"):
-		case joaat("TAMPA3"):
-		case joaat("APC"):
-		case joaat("HALFTRACK"):
-		case joaat("DUNE3"):
+		case joaat("ardent"):
+		case joaat("vagner"):
+		case joaat("cheetah2"):
+		case joaat("nightshark"):
+		case joaat("torero"):
+		case joaat("xa21"):
+		case joaat("tampa3"):
+		case joaat("apc"):
+		case joaat("halftrack"):
+		case joaat("dune3"):
 		case joaat("trailersmall2"):
-		case joaat("INSURGENT3"):
-		case joaat("TECHNICAL3"):
-		case joaat("PHANTOM3"):
-		case joaat("HAULER2"):
+		case joaat("insurgent3"):
+		case joaat("technical3"):
+		case joaat("phantom3"):
+		case joaat("hauler2"):
 			return 1;
 			break;
 		
-		case joaat("CYCLONE"):
-		case joaat("RAPIDGT3"):
-		case joaat("RETINUE"):
-		case joaat("VISIONE"):
-		case joaat("VIGILANTE"):
+		case joaat("cyclone"):
+		case joaat("rapidgt3"):
+		case joaat("retinue"):
+		case joaat("visione"):
+		case joaat("vigilante"):
 			return 1;
 			break;
 		
@@ -18263,7 +18263,7 @@ int func_183(int iParam0)
 		case joaat("rcbandito"):
 		case joaat("caracara2"):
 		case joaat("drafter"):
-		case joaat("Dynasty"):
+		case joaat("dynasty"):
 		case joaat("gauntlet3"):
 		case joaat("gauntlet4"):
 		case joaat("hellion"):
@@ -18272,7 +18272,7 @@ int func_183(int iParam0)
 		case joaat("locust"):
 		case joaat("nebula"):
 		case joaat("neo"):
-		case joaat("Novak"):
+		case joaat("novak"):
 		case joaat("s80"):
 		case joaat("thrax"):
 		case joaat("zion3"):
@@ -18289,32 +18289,32 @@ int func_183(int iParam0)
 		case joaat("formula"):
 		case joaat("imorgon"):
 		case joaat("komoda"):
-		case 1717532765:
+		case joaat("manana2"):
 		case joaat("rebla"):
-		case joaat("Sugoi"):
-		case 1802742206:
+		case joaat("sugoi"):
+		case joaat("youga3"):
 		case joaat("zhaba"):
 		case joaat("vstr"):
 		case joaat("everon"):
 		case joaat("sultan2"):
 		case joaat("jb7002"):
 		case joaat("outlaw"):
-		case joaat("Stryder"):
+		case joaat("stryder"):
 		case joaat("vagrant"):
 		case joaat("formula2"):
 		case joaat("minitank"):
-		case -2122646867:
-		case 2134119907:
-		case -2098954619:
-		case 1107404867:
-		case -913589546:
-		case -631322662:
-		case -838099166:
-		case -1810806490:
-		case -1358197432:
-		case 1492612435:
-		case -1728685474:
-		case 1181339704:
+		case joaat("gauntlet5"):
+		case joaat("dukes3"):
+		case joaat("club"):
+		case joaat("peyote3"):
+		case joaat("glendale2"):
+		case joaat("penumbra2"):
+		case joaat("landstalker2"):
+		case joaat("seminole2"):
+		case joaat("tigon"):
+		case joaat("openwheel1"):
+		case joaat("coquette4"):
+		case joaat("openwheel2"):
 			return 1;
 			break;
 	}
@@ -18622,36 +18622,36 @@ int func_189(int iParam0)
 		case joaat("nero2"):
 		case joaat("comet3"):
 		case joaat("elegy"):
-		case joaat("APC"):
-		case joaat("HALFTRACK"):
+		case joaat("apc"):
+		case joaat("halftrack"):
 		case joaat("trailersmall2"):
-		case joaat("DUNE3"):
-		case joaat("INSURGENT3"):
-		case joaat("TAMPA3"):
-		case joaat("TECHNICAL3"):
-		case joaat("OPPRESSOR"):
+		case joaat("dune3"):
+		case joaat("insurgent3"):
+		case joaat("tampa3"):
+		case joaat("technical3"):
+		case joaat("oppressor"):
 		case joaat("trailerlarge"):
-		case joaat("HAULER2"):
-		case joaat("PHANTOM3"):
-		case joaat("BOMBUSHKA"):
-		case joaat("HUNTER"):
-		case joaat("MICROLIGHT"):
-		case joaat("ROGUE"):
-		case joaat("TULA"):
-		case joaat("HAVOK"):
-		case joaat("MOGUL"):
-		case joaat("STARLING"):
-		case joaat("SEABREEZE"):
-		case joaat("CYCLONE"):
-		case joaat("VISIONE"):
-		case joaat("VIGILANTE"):
-		case joaat("RAPIDGT3"):
-		case joaat("RETINUE"):
-		case joaat("ALPHAZ1"):
-		case joaat("HOWARD"):
-		case joaat("MOLOTOK"):
-		case joaat("NOKOTA"):
-		case joaat("PYRO"):
+		case joaat("hauler2"):
+		case joaat("phantom3"):
+		case joaat("bombushka"):
+		case joaat("hunter"):
+		case joaat("microlight"):
+		case joaat("rogue"):
+		case joaat("tula"):
+		case joaat("havok"):
+		case joaat("mogul"):
+		case joaat("starling"):
+		case joaat("seabreeze"):
+		case joaat("cyclone"):
+		case joaat("visione"):
+		case joaat("vigilante"):
+		case joaat("rapidgt3"):
+		case joaat("retinue"):
+		case joaat("alphaz1"):
+		case joaat("howard"):
+		case joaat("molotok"):
+		case joaat("nokota"):
+		case joaat("pyro"):
 		case joaat("cuban800"):
 		case joaat("akula"):
 		case joaat("volatol"):
@@ -18696,12 +18696,12 @@ int func_189(int iParam0)
 		case joaat("minitank"):
 		case joaat("formula"):
 		case joaat("formula2"):
-		case 1802742206:
-		case -2122646867:
-		case 1717532765:
-		case 1107404867:
-		case 67753863:
-		case -913589546:
+		case joaat("youga3"):
+		case joaat("gauntlet5"):
+		case joaat("manana2"):
+		case joaat("peyote3"):
+		case joaat("yosemite3"):
+		case joaat("glendale2"):
 			return 3;
 			break;
 	}
@@ -24557,7 +24557,7 @@ int func_282(int iParam0, int iParam1, int iParam2)
 		
 		case joaat("buccaneer2"):
 		case joaat("peyote2"):
-		case 1107404867:
+		case joaat("peyote3"):
 			if ((!MISC::IS_BIT_SET(iParam1, 1) && !MISC::IS_BIT_SET(iParam1, 2)) && !MISC::IS_BIT_SET(iParam1, 3))
 			{
 				return 1;
@@ -24593,7 +24593,7 @@ int func_282(int iParam0, int iParam1, int iParam2)
 			}
 			break;
 		
-		case 1717532765:
+		case joaat("manana2"):
 			if (MISC::IS_BIT_SET(iParam1, 0))
 			{
 				return 1;
@@ -24922,8 +24922,8 @@ int func_295(int iParam0)
 				return 157;
 				break;
 			
-			case joaat("HAULER2"):
-			case joaat("PHANTOM3"):
+			case joaat("hauler2"):
+			case joaat("phantom3"):
 				return 158;
 				break;
 			
@@ -24984,8 +24984,8 @@ int func_296(int iParam0, bool bParam1)
 	switch (iParam0)
 	{
 		case joaat("trailersmall2"):
-		case joaat("HAULER2"):
-		case joaat("PHANTOM3"):
+		case joaat("hauler2"):
+		case joaat("phantom3"):
 			if (!bParam1)
 			{
 				return 1;
@@ -27406,7 +27406,7 @@ int func_347(int iParam0, int iParam1, bool bParam2, int iParam3, bool bParam4, 
 		{
 			if (bParam4)
 			{
-				if (func_218(func_72(4, iParam0), iParam5, 0) == joaat("HAULER2") || func_218(func_72(4, iParam0), iParam5, 0) == joaat("PHANTOM3"))
+				if (func_218(func_72(4, iParam0), iParam5, 0) == joaat("hauler2") || func_218(func_72(4, iParam0), iParam5, 0) == joaat("phantom3"))
 				{
 					return iParam0;
 				}
@@ -27419,7 +27419,7 @@ int func_347(int iParam0, int iParam1, bool bParam2, int iParam3, bool bParam4, 
 					return iParam0;
 				}
 			}
-			else if (Global_1323615[iParam0 /*141*/].f_66 == joaat("HAULER2") || Global_1323615[iParam0 /*141*/].f_66 == joaat("PHANTOM3"))
+			else if (Global_1323615[iParam0 /*141*/].f_66 == joaat("hauler2") || Global_1323615[iParam0 /*141*/].f_66 == joaat("phantom3"))
 			{
 				return iParam0;
 			}
@@ -28292,7 +28292,7 @@ int func_374(var uParam0, int iParam1, struct<3> Param2, var uParam3, int iParam
 		return 0;
 	}
 	fVar0 = 1.5f;
-	if (iParam1 == joaat("BOMBUSHKA"))
+	if (iParam1 == joaat("bombushka"))
 	{
 		fVar0 = 20f;
 	}
@@ -28964,19 +28964,19 @@ void func_385(int iParam0, var uParam1)
 	switch (iParam0)
 	{
 		case 1:
-			(*uParam1)[0] = joaat("HAULER2");
+			(*uParam1)[0] = joaat("hauler2");
 			(*uParam1)[1] = joaat("trailerlarge");
 			uParam1->f_3 = -2.6f;
 			break;
 		
 		case 2:
-			(*uParam1)[0] = joaat("PHANTOM3");
+			(*uParam1)[0] = joaat("phantom3");
 			(*uParam1)[1] = joaat("trailerlarge");
 			uParam1->f_3 = -2.6f;
 			break;
 		
 		case 3:
-			(*uParam1)[0] = joaat("NIGHTSHARK");
+			(*uParam1)[0] = joaat("nightshark");
 			(*uParam1)[1] = joaat("trailersmall2");
 			uParam1->f_3 = 0.5f;
 			break;
@@ -33930,11 +33930,11 @@ int func_483(int iParam0)
 {
 	switch (iParam0)
 	{
-		case joaat("MICROLIGHT"):
-		case joaat("HAVOK"):
-		case joaat("SEABREEZE"):
-		case joaat("ROGUE"):
-		case joaat("PYRO"):
+		case joaat("microlight"):
+		case joaat("havok"):
+		case joaat("seabreeze"):
+		case joaat("rogue"):
+		case joaat("pyro"):
 		case joaat("buzzard"):
 		case joaat("frogger"):
 		case joaat("maverick"):
@@ -33949,11 +33949,11 @@ int func_483(int iParam0)
 		case joaat("velum2"):
 		case joaat("vestra"):
 		case joaat("lazer"):
-		case joaat("ALPHAZ1"):
-		case joaat("HOWARD"):
-		case joaat("MOLOTOK"):
-		case joaat("NOKOTA"):
-		case joaat("STARLING"):
+		case joaat("alphaz1"):
+		case joaat("howard"):
+		case joaat("molotok"):
+		case joaat("nokota"):
+		case joaat("starling"):
 			return 1;
 		
 		default:
@@ -34047,9 +34047,9 @@ int func_485(int iParam0)
 		case joaat("dodo"):
 		case joaat("mammatus"):
 		case joaat("annihilator"):
-		case joaat("TULA"):
-		case joaat("HUNTER"):
-		case joaat("MOGUL"):
+		case joaat("tula"):
+		case joaat("hunter"):
+		case joaat("mogul"):
 		case joaat("cargobob"):
 		case joaat("cargobob2"):
 		case joaat("shamal"):
@@ -34063,7 +34063,7 @@ int func_485(int iParam0)
 		case joaat("titan"):
 		case joaat("skylift"):
 		case joaat("miljet"):
-		case joaat("BOMBUSHKA"):
+		case joaat("bombushka"):
 		case joaat("volatol"):
 			return 1;
 		

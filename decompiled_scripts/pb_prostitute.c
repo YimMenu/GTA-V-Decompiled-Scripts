@@ -3684,14 +3684,14 @@ int func_93(int iParam0)
 				}
 				break;
 			
-			case 1107404867:
+			case joaat("peyote3"):
 				if (((!VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 2) && !VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 3)) && !VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 4)) && !VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 1))
 				{
 					return 0;
 				}
 				break;
 			
-			case -1728685474:
+			case joaat("coquette4"):
 				if (!VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 1))
 				{
 					return 0;
@@ -3705,7 +3705,7 @@ int func_93(int iParam0)
 				}
 				break;
 			
-			case 1717532765:
+			case joaat("manana2"):
 				if (VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 1))
 				{
 					return 0;
@@ -13974,7 +13974,7 @@ int func_354(int iParam0)
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, 0))
 	{
 		iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-		if ((((((((((((((iVar0 == joaat("infernus") || iVar0 == joaat("voltic")) || iVar0 == joaat("stingergt")) || iVar0 == joaat("stinger")) || iVar0 == joaat("bullet")) || iVar0 == joaat("entityxf")) || iVar0 == joaat("feltzer3")) || iVar0 == joaat("granger")) || iVar0 == joaat("panto")) || iVar0 == joaat("phoenix")) || iVar0 == joaat("fmj")) || iVar0 == joaat("reaper")) || iVar0 == joaat("le7b")) || iVar0 == joaat("tyrus")) || iVar0 == joaat("INFERNUS2"))
+		if ((((((((((((((iVar0 == joaat("infernus") || iVar0 == joaat("voltic")) || iVar0 == joaat("stingergt")) || iVar0 == joaat("stinger")) || iVar0 == joaat("bullet")) || iVar0 == joaat("entityxf")) || iVar0 == joaat("feltzer3")) || iVar0 == joaat("granger")) || iVar0 == joaat("panto")) || iVar0 == joaat("phoenix")) || iVar0 == joaat("fmj")) || iVar0 == joaat("reaper")) || iVar0 == joaat("le7b")) || iVar0 == joaat("tyrus")) || iVar0 == joaat("infernus2"))
 		{
 			return 0;
 		}

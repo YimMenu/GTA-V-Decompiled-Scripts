@@ -7627,7 +7627,7 @@ int func_161(int iParam0)
 	switch (iParam0)
 	{
 		case joaat("granger"):
-		case joaat("VISIONE"):
+		case joaat("visione"):
 			return 1;
 		
 		default:
@@ -128670,7 +128670,7 @@ int func_745(int iParam0)
 		case joaat("coach"):
 		case joaat("rentalbus"):
 		case joaat("tourbus"):
-		case joaat("FIRETRUK"):
+		case joaat("firetruk"):
 		case joaat("pbus"):
 		case joaat("trash"):
 		case joaat("benson"):
@@ -129398,203 +129398,203 @@ int func_749(int iParam0)
 			iVar0 = 0;
 		}
 	}
-	if (iParam0 == joaat("GP1"))
+	if (iParam0 == joaat("gp1"))
 	{
 		if (!Global_262145.f_19740 && iVar1 < Global_262145.f_19736)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("INFERNUS2"))
+	else if (iParam0 == joaat("infernus2"))
 	{
 		if (!Global_262145.f_19741 && iVar1 < Global_262145.f_19737)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("RUSTON"))
+	else if (iParam0 == joaat("ruston"))
 	{
 		if (!Global_262145.f_19742 && iVar1 < Global_262145.f_19738)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("TURISMO2"))
+	else if (iParam0 == joaat("turismo2"))
 	{
 		if (!Global_262145.f_19743 && iVar1 < Global_262145.f_19739)
 		{
 			iVar0 = 0;
 		}
 	}
-	if (iParam0 == joaat("XA21"))
+	if (iParam0 == joaat("xa21"))
 	{
 		if (!Global_262145.f_20619 && iVar1 < Global_262145.f_20627)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("CHEETAH2"))
+	else if (iParam0 == joaat("cheetah2"))
 	{
 		if (!Global_262145.f_20620 && iVar1 < Global_262145.f_20628)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("TORERO"))
+	else if (iParam0 == joaat("torero"))
 	{
 		if (!Global_262145.f_20621 && iVar1 < Global_262145.f_20629)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("VAGNER"))
+	else if (iParam0 == joaat("vagner"))
 	{
 		if (!Global_262145.f_20622 && iVar1 < Global_262145.f_20630)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("ARDENT"))
+	else if (iParam0 == joaat("ardent"))
 	{
 		if (!Global_262145.f_20623 && iVar1 < Global_262145.f_20631)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("NIGHTSHARK"))
+	else if (iParam0 == joaat("nightshark"))
 	{
 		if (!Global_262145.f_20624 && iVar1 < Global_262145.f_20632)
 		{
 			iVar0 = 0;
 		}
 	}
-	if (iParam0 == joaat("MICROLIGHT"))
+	if (iParam0 == joaat("microlight"))
 	{
 		if (!Global_262145.f_21396 && iVar1 < Global_262145.f_21416)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("MOGUL"))
+	else if (iParam0 == joaat("mogul"))
 	{
 		if (!Global_262145.f_21408 && iVar1 < Global_262145.f_21428)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("ROGUE"))
+	else if (iParam0 == joaat("rogue"))
 	{
 		if (!Global_262145.f_21399 && iVar1 < Global_262145.f_21419)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("STARLING"))
+	else if (iParam0 == joaat("starling"))
 	{
 		if (!Global_262145.f_21409 && iVar1 < Global_262145.f_21429)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("SEABREEZE"))
+	else if (iParam0 == joaat("seabreeze"))
 	{
 		if (!Global_262145.f_21397 && iVar1 < Global_262145.f_21417)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("TULA"))
+	else if (iParam0 == joaat("tula"))
 	{
 		if (!Global_262145.f_21413 && iVar1 < Global_262145.f_21433)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("PYRO"))
+	else if (iParam0 == joaat("pyro"))
 	{
 		if (!Global_262145.f_21411 && iVar1 < Global_262145.f_21431)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("MOLOTOK"))
+	else if (iParam0 == joaat("molotok"))
 	{
 		if (!Global_262145.f_21412 && iVar1 < Global_262145.f_21432)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("NOKOTA"))
+	else if (iParam0 == joaat("nokota"))
 	{
 		if (!Global_262145.f_21407 && iVar1 < Global_262145.f_21427)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("BOMBUSHKA"))
+	else if (iParam0 == joaat("bombushka"))
 	{
 		if (!Global_262145.f_21414 && iVar1 < Global_262145.f_21434)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("HUNTER"))
+	else if (iParam0 == joaat("hunter"))
 	{
 		if (!Global_262145.f_21410 && iVar1 < Global_262145.f_21430)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("HAVOK"))
+	else if (iParam0 == joaat("havok"))
 	{
 		if (!Global_262145.f_21406 && iVar1 < Global_262145.f_21426)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("HOWARD"))
+	else if (iParam0 == joaat("howard"))
 	{
 		if (!Global_262145.f_21398 && iVar1 < Global_262145.f_21418)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("ALPHAZ1"))
+	else if (iParam0 == joaat("alphaz1"))
 	{
 		if (!Global_262145.f_21400 && iVar1 < Global_262145.f_21420)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("CYCLONE"))
+	else if (iParam0 == joaat("cyclone"))
 	{
 		if (!Global_262145.f_21401 && iVar1 < Global_262145.f_21421)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("VISIONE"))
+	else if (iParam0 == joaat("visione"))
 	{
 		if (!Global_262145.f_21402 && iVar1 < Global_262145.f_21422)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("VIGILANTE"))
+	else if (iParam0 == joaat("vigilante"))
 	{
 		if (!Global_262145.f_21403 && iVar1 < Global_262145.f_21423)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("RETINUE"))
+	else if (iParam0 == joaat("retinue"))
 	{
 		if (!Global_262145.f_21404 && iVar1 < Global_262145.f_21424)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("RAPIDGT3"))
+	else if (iParam0 == joaat("rapidgt3"))
 	{
 		if (!Global_262145.f_21405 && iVar1 < Global_262145.f_21425)
 		{
@@ -130135,7 +130135,7 @@ int func_749(int iParam0)
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("Novak"))
+	else if (iParam0 == joaat("novak"))
 	{
 		if (!Global_262145.f_25005 && iVar1 < Global_262145.f_25026)
 		{
@@ -130184,7 +130184,7 @@ int func_749(int iParam0)
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("Dynasty"))
+	else if (iParam0 == joaat("dynasty"))
 	{
 		if (!Global_262145.f_25012 && iVar1 < Global_262145.f_25033)
 		{
@@ -130296,7 +130296,7 @@ int func_749(int iParam0)
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("Sugoi"))
+	else if (iParam0 == joaat("sugoi"))
 	{
 		if (!Global_262145.f_27826 && iVar1 < Global_262145.f_27847)
 		{
@@ -130331,7 +130331,7 @@ int func_749(int iParam0)
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("Stryder"))
+	else if (iParam0 == joaat("stryder"))
 	{
 		if (!Global_262145.f_27831 && iVar1 < Global_262145.f_27852)
 		{
@@ -130359,7 +130359,7 @@ int func_749(int iParam0)
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == joaat("FIRETRUK"))
+	else if (iParam0 == joaat("firetruk"))
 	{
 		if (!Global_262145.f_27835 && iVar1 < Global_262145.f_27856)
 		{
@@ -130443,105 +130443,105 @@ int func_749(int iParam0)
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == -2122646867)
+	else if (iParam0 == joaat("gauntlet5"))
 	{
 		if (!Global_262145.f_28874 && iVar1 < Global_262145.f_28539)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == -2098954619)
+	else if (iParam0 == joaat("club"))
 	{
 		if (!Global_262145.f_28525 && iVar1 < Global_262145.f_28546)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == 2134119907)
+	else if (iParam0 == joaat("dukes3"))
 	{
 		if (!Global_262145.f_28526 && iVar1 < Global_262145.f_28532)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == 67753863)
+	else if (iParam0 == joaat("yosemite3"))
 	{
 		if (!Global_262145.f_28872 && iVar1 < Global_262145.f_28540)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == 1107404867)
+	else if (iParam0 == joaat("peyote3"))
 	{
 		if (!Global_262145.f_28873 && iVar1 < Global_262145.f_28541)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == -913589546)
+	else if (iParam0 == joaat("glendale2"))
 	{
 		if (!Global_262145.f_28519 && iVar1 < Global_262145.f_28538)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == -631322662)
+	else if (iParam0 == joaat("penumbra2"))
 	{
 		if (!Global_262145.f_28520 && iVar1 < Global_262145.f_28547)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == -838099166)
+	else if (iParam0 == joaat("landstalker2"))
 	{
 		if (!Global_262145.f_28521 && iVar1 < Global_262145.f_28537)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == -1810806490)
+	else if (iParam0 == joaat("seminole2"))
 	{
 		if (!Global_262145.f_28522 && iVar1 < Global_262145.f_28535)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == -1358197432)
+	else if (iParam0 == joaat("tigon"))
 	{
 		if (!Global_262145.f_28868 && iVar1 < Global_262145.f_28542)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == 1492612435)
+	else if (iParam0 == joaat("openwheel1"))
 	{
 		if (!Global_262145.f_28869 && iVar1 < Global_262145.f_28543)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == 1181339704)
+	else if (iParam0 == joaat("openwheel2"))
 	{
 		if (!Global_262145.f_28870 && iVar1 < Global_262145.f_28544)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == -1728685474)
+	else if (iParam0 == joaat("coquette4"))
 	{
 		if (!Global_262145.f_28871 && iVar1 < Global_262145.f_28545)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == 1717532765)
+	else if (iParam0 == joaat("manana2"))
 	{
 		if (!Global_262145.f_28523 && iVar1 < Global_262145.f_28534)
 		{
 			iVar0 = 0;
 		}
 	}
-	else if (iParam0 == 1802742206)
+	else if (iParam0 == joaat("youga3"))
 	{
 		if (!Global_262145.f_28524 && iVar1 < Global_262145.f_28536)
 		{
@@ -131154,7 +131154,7 @@ int func_757(var uParam0, int iParam1)
 		case 43:
 			*uParam0 = { 693.1154f, -1018.155f, 21.6387f };
 			uParam0->f_3 = 177.6454f;
-			uParam0->f_4 = joaat("FIRETRUK");
+			uParam0->f_4 = joaat("firetruk");
 			MISC::SET_BIT(&(uParam0->f_9), 23);
 			MISC::SET_BIT(&(uParam0->f_9), 8);
 			iVar0 = 1;
@@ -139150,7 +139150,7 @@ int func_837(bool bParam0, bool bParam1, bool bParam2)
 		{
 			iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0);
 			iVar1 = func_841(PLAYER::PLAYER_PED_ID(), 0);
-			if (((VEHICLE::IS_TURRET_SEAT(iVar0, iVar1) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("APC") && iVar1 != -1)) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("akula") && iVar1 != -1)) || (((ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("riot2") && iVar1 == 0) && func_840(iVar0, 10)) && VEHICLE::GET_VEHICLE_MOD(iVar0, 10) != -1))
+			if (((VEHICLE::IS_TURRET_SEAT(iVar0, iVar1) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("apc") && iVar1 != -1)) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("akula") && iVar1 != -1)) || (((ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("riot2") && iVar1 == 0) && func_840(iVar0, 10)) && VEHICLE::GET_VEHICLE_MOD(iVar0, 10) != -1))
 			{
 				return 0;
 			}

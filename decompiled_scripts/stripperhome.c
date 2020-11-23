@@ -6719,14 +6719,14 @@ int func_219(int iParam0)
 				}
 				break;
 			
-			case 1107404867:
+			case joaat("peyote3"):
 				if (((!VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 2) && !VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 3)) && !VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 4)) && !VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 1))
 				{
 					return 0;
 				}
 				break;
 			
-			case -1728685474:
+			case joaat("coquette4"):
 				if (!VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 1))
 				{
 					return 0;
@@ -6740,7 +6740,7 @@ int func_219(int iParam0)
 				}
 				break;
 			
-			case 1717532765:
+			case joaat("manana2"):
 				if (VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(iParam0, 1))
 				{
 					return 0;

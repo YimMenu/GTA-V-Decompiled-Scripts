@@ -32545,7 +32545,7 @@ int func_232()
 	int iVar0;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0));
-	if (iVar0 == joaat("FIRETRUK") || iVar0 == joaat("trash"))
+	if (iVar0 == joaat("firetruk") || iVar0 == joaat("trash"))
 	{
 		return 1;
 	}

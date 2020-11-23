@@ -316,7 +316,7 @@ void func_1()
 	{
 		if (iLocal_124 == PLAYER::PLAYER_ID())
 		{
-			if (!iLocal_93 && iLocal_78 != joaat("HUNTER"))
+			if (!iLocal_93 && iLocal_78 != joaat("hunter"))
 			{
 				VEHICLE::DISABLE_VEHICLE_WEAPON(1, joaat("vehicle_weapon_space_rocket"), iLocal_120, PLAYER::PLAYER_PED_ID());
 				iLocal_93 = 1;
@@ -905,7 +905,7 @@ void func_1()
 					func_210();
 				}
 			}
-			if (((((!bLocal_84 && !bLocal_85) && !bLocal_86) && iLocal_78 != joaat("HUNTER")) && iLocal_78 != joaat("akula")) && Global_1319116 == -1)
+			if (((((!bLocal_84 && !bLocal_85) && !bLocal_86) && iLocal_78 != joaat("hunter")) && iLocal_78 != joaat("akula")) && Global_1319116 == -1)
 			{
 				Local_71.f_7 = 1;
 				func_130();
@@ -913,7 +913,7 @@ void func_1()
 			if (((bLocal_84 || bLocal_85) || bLocal_86) || func_112())
 			{
 				func_57();
-				if (iLocal_78 != joaat("BOMBUSHKA"))
+				if (iLocal_78 != joaat("bombushka"))
 				{
 					func_46();
 				}
@@ -1501,7 +1501,7 @@ char* func_9(int iParam0)
 	{
 		switch (ENTITY::GET_ENTITY_MODEL(iParam0))
 		{
-			case joaat("BOMBUSHKA"):
+			case joaat("bombushka"):
 				return "BOMBGUN_T_2c";
 				break;
 			
@@ -2108,7 +2108,7 @@ bool func_35(int iParam0)
 
 int func_36(int iParam0)
 {
-	if (ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("HAULER2") || ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("PHANTOM3"))
+	if (ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("hauler2") || ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("phantom3"))
 	{
 		return 1;
 	}
@@ -2918,7 +2918,7 @@ Vector3 func_59()
 			}
 			break;
 		
-		case joaat("HUNTER"):
+		case joaat("hunter"):
 			switch (func_60())
 			{
 				case 0:
@@ -2950,7 +2950,7 @@ Vector3 func_59()
 	}
 	if (Global_1319116 != -1)
 	{
-		if (ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("BOMBUSHKA"))
+		if (ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("bombushka"))
 		{
 			switch (Global_1319116)
 			{
@@ -3132,11 +3132,11 @@ int func_61(int iParam0, var uParam1)
 			return 1;
 			break;
 		
-		case joaat("HUNTER"):
+		case joaat("hunter"):
 			return 1;
 			break;
 		
-		case joaat("BOMBUSHKA"):
+		case joaat("bombushka"):
 			return 1;
 			break;
 		
@@ -5079,7 +5079,7 @@ void func_99(var uParam0, float fParam1, float fParam2, float fParam3, float fPa
 									CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_32, uParam0->f_9, 0f, 5.75f, -0.75f, 1);
 									break;
 								
-								case joaat("HUNTER"):
+								case joaat("hunter"):
 									CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_32, uParam0->f_9, -0.0066f, 8.9038f, -0.5f, 1);
 									break;
 								
@@ -5455,7 +5455,7 @@ void func_99(var uParam0, float fParam1, float fParam2, float fParam3, float fPa
 									uParam0->f_56 = (uParam0->f_56 * fVar29);
 									uParam0->f_57 = (uParam0->f_57 * fVar29);
 								}
-								else if (iVar28 == joaat("HUNTER"))
+								else if (iVar28 == joaat("hunter"))
 								{
 									uParam0->f_56 = (uParam0->f_56 * 4f);
 									uParam0->f_57 = (uParam0->f_57 * 4f);
@@ -5637,7 +5637,7 @@ void func_99(var uParam0, float fParam1, float fParam2, float fParam3, float fPa
 											break;
 										}
 								}
-								if (ENTITY::GET_ENTITY_MODEL(uParam0->f_9) == joaat("BOMBUSHKA"))
+								if (ENTITY::GET_ENTITY_MODEL(uParam0->f_9) == joaat("bombushka"))
 								{
 									switch (Global_1319115)
 									{
@@ -5705,7 +5705,7 @@ void func_99(var uParam0, float fParam1, float fParam2, float fParam3, float fPa
 											break;
 										}
 								}
-								if (ENTITY::GET_ENTITY_MODEL(uParam0->f_9) == joaat("PHANTOM3"))
+								if (ENTITY::GET_ENTITY_MODEL(uParam0->f_9) == joaat("phantom3"))
 								{
 									switch (Global_1319115)
 									{
@@ -5720,11 +5720,11 @@ void func_99(var uParam0, float fParam1, float fParam2, float fParam3, float fPa
 											break;
 										}
 								}
-								if (ENTITY::GET_ENTITY_MODEL(uParam0->f_8) == joaat("BOMBUSHKA"))
+								if (ENTITY::GET_ENTITY_MODEL(uParam0->f_8) == joaat("bombushka"))
 								{
 									CAM::_ATTACH_CAM_TO_PED_BONE_2(uParam0->f_32, PLAYER::PLAYER_PED_ID(), -1, Var35 + Vector(uParam0->f_186.f_2, 0f, uParam0->f_186), Var34, 1);
 								}
-								else if (Global_1319116 != -1 || (func_191(uParam0->f_8) && ENTITY::GET_ENTITY_MODEL(uParam0->f_8) != joaat("BOMBUSHKA")))
+								else if (Global_1319116 != -1 || (func_191(uParam0->f_8) && ENTITY::GET_ENTITY_MODEL(uParam0->f_8) != joaat("bombushka")))
 								{
 									CAM::_ATTACH_CAM_TO_VEHICLE_BONE(uParam0->f_32, uParam0->f_9, 0, 1, Var35 + Vector(uParam0->f_186.f_2, 0f, uParam0->f_186), Var34, 1);
 								}
@@ -6053,7 +6053,7 @@ void func_108()
 					{
 						func_48("HUNTGUN_2c", -1);
 					}
-					else if (iLocal_78 == joaat("HUNTER"))
+					else if (iLocal_78 == joaat("hunter"))
 					{
 						func_48("HUNTGUN_2c", -1);
 					}
@@ -6072,7 +6072,7 @@ void func_108()
 				}
 				else if (bLocal_85)
 				{
-					if (ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("BOMBUSHKA"))
+					if (ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("bombushka"))
 					{
 						func_48("BOMBGUN_T_2b", -1);
 					}
@@ -6087,7 +6087,7 @@ void func_108()
 				}
 				else if (bLocal_86)
 				{
-					if (ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("BOMBUSHKA"))
+					if (ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("bombushka"))
 					{
 						func_48("BOMBGUN_T_2d", -1);
 					}
@@ -6106,7 +6106,7 @@ void func_108()
 					{
 						func_48("HUNTGUN_4", -1);
 					}
-					else if (iLocal_78 == joaat("valkyrie") || iLocal_78 == joaat("HUNTER"))
+					else if (iLocal_78 == joaat("valkyrie") || iLocal_78 == joaat("hunter"))
 					{
 						func_48("HUNTGUN_4c", -1);
 					}
@@ -6432,7 +6432,7 @@ void func_129()
 	{
 		if ((!ENTITY::IS_ENTITY_DEAD(Local_71.f_9, 0) && !(!ENTITY::IS_ENTITY_DEAD(Global_1370234, 0) && ENTITY::GET_ENTITY_MODEL(Local_71.f_9) == ENTITY::GET_ENTITY_MODEL(Global_1370234))) && !func_191(iLocal_120))
 		{
-			if ((((ENTITY::GET_ENTITY_MODEL(Local_71.f_9) != joaat("valkyrie") && ENTITY::GET_ENTITY_MODEL(Local_71.f_9) != joaat("savage")) && ENTITY::GET_ENTITY_MODEL(Local_71.f_9) != joaat("HUNTER")) && !func_141(PLAYER::PLAYER_ID())) && !func_140(PLAYER::PLAYER_ID()))
+			if ((((ENTITY::GET_ENTITY_MODEL(Local_71.f_9) != joaat("valkyrie") && ENTITY::GET_ENTITY_MODEL(Local_71.f_9) != joaat("savage")) && ENTITY::GET_ENTITY_MODEL(Local_71.f_9) != joaat("hunter")) && !func_141(PLAYER::PLAYER_ID())) && !func_140(PLAYER::PLAYER_ID()))
 			{
 				NETWORK::SET_ENTITY_LOCALLY_INVISIBLE(Local_71.f_9);
 				if (!bLocal_90)
@@ -6674,7 +6674,7 @@ int func_135(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 				{
 					GRAPHICS::SET_TIMECYCLE_MODIFIER("heliGunCam");
 				}
-				else if (iVar2 == joaat("valkyrie") || iVar2 == joaat("HUNTER"))
+				else if (iVar2 == joaat("valkyrie") || iVar2 == joaat("hunter"))
 				{
 					GRAPHICS::SET_TIMECYCLE_MODIFIER("heliGunCam");
 				}
@@ -7100,9 +7100,9 @@ int func_148(int iParam0)
 	switch (ENTITY::GET_ENTITY_MODEL(ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(iParam0)))
 	{
 		case joaat("valkyrie"):
-		case joaat("BOMBUSHKA"):
+		case joaat("bombushka"):
 		case joaat("volatol"):
-		case joaat("HUNTER"):
+		case joaat("hunter"):
 		case joaat("savage"):
 			return 1;
 			break;
@@ -7237,7 +7237,7 @@ int func_150()
 			}
 			if (!func_157())
 			{
-				if (((((PAD::IS_CONTROL_JUST_RELEASED(iVar3, iVar2) && !(iLocal_122 == PLAYER::PLAYER_PED_ID() && iLocal_78 == joaat("HUNTER"))) && !func_191(iLocal_120)) || (PAD::IS_DISABLED_CONTROL_JUST_PRESSED(iVar3, iVar2) && Global_1319110 != -1)) || (PAD::IS_DISABLED_CONTROL_JUST_PRESSED(iVar3, iVar2) && Global_1319116 != -1)) || iLocal_109)
+				if (((((PAD::IS_CONTROL_JUST_RELEASED(iVar3, iVar2) && !(iLocal_122 == PLAYER::PLAYER_PED_ID() && iLocal_78 == joaat("hunter"))) && !func_191(iLocal_120)) || (PAD::IS_DISABLED_CONTROL_JUST_PRESSED(iVar3, iVar2) && Global_1319110 != -1)) || (PAD::IS_DISABLED_CONTROL_JUST_PRESSED(iVar3, iVar2) && Global_1319116 != -1)) || iLocal_109)
 				{
 					iLocal_109 = 0;
 					if (func_151())
@@ -7287,7 +7287,7 @@ int func_150()
 	{
 		if (bVar0)
 		{
-			if (iLocal_78 != joaat("HUNTER"))
+			if (iLocal_78 != joaat("hunter"))
 			{
 				return bVar0;
 			}
@@ -7671,7 +7671,7 @@ void func_164()
 							func_48("HUNTGUN_1c", -1);
 						}
 					}
-					else if (iLocal_78 == joaat("HUNTER"))
+					else if (iLocal_78 == joaat("hunter"))
 					{
 						if (func_110(PLAYER::PLAYER_ID(), 19))
 						{
@@ -7785,7 +7785,7 @@ void func_164()
 					}
 					iLocal_80 = 1;
 				}
-				else if ((((func_179() && !Global_2460715.f_132) && !Global_1315732) && iLocal_78 != joaat("HUNTER")) && !func_191(iLocal_120))
+				else if ((((func_179() && !Global_2460715.f_132) && !Global_1315732) && iLocal_78 != joaat("hunter")) && !func_191(iLocal_120))
 				{
 					if (iLocal_78 == joaat("buzzard") || iLocal_78 == joaat("savage"))
 					{
@@ -8013,7 +8013,7 @@ void func_175()
 	{
 		return;
 	}
-	if (iLocal_124 == PLAYER::PLAYER_ID() && iLocal_78 != joaat("BOMBUSHKA"))
+	if (iLocal_124 == PLAYER::PLAYER_ID() && iLocal_78 != joaat("bombushka"))
 	{
 		if (func_176(iLocal_120))
 		{
@@ -8225,7 +8225,7 @@ int func_185(int iParam0)
 
 void func_186()
 {
-	if (ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("akula") || ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("PHANTOM3"))
+	if (ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("akula") || ENTITY::GET_ENTITY_MODEL(iLocal_120) == joaat("phantom3"))
 	{
 		if (bLocal_85 || bLocal_86)
 		{
@@ -8320,7 +8320,7 @@ int func_191(int iParam0)
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	switch (iVar0)
 	{
-		case joaat("BOMBUSHKA"):
+		case joaat("bombushka"):
 		case joaat("volatol"):
 		case joaat("akula"):
 			return 1;
@@ -8375,7 +8375,7 @@ void func_194(var uParam0, bool bParam1, bool bParam2)
 
 int func_195()
 {
-	if (((func_207(joaat("HUNTER")) && func_123(iLocal_122)) && iLocal_122 == PLAYER::PLAYER_PED_ID()) && !func_123(iLocal_123))
+	if (((func_207(joaat("hunter")) && func_123(iLocal_122)) && iLocal_122 == PLAYER::PLAYER_PED_ID()) && !func_123(iLocal_123))
 	{
 		return 1;
 	}

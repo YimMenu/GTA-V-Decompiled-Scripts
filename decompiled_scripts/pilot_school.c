@@ -108014,7 +108014,7 @@ int func_649(bool bParam0, bool bParam1, bool bParam2)
 		{
 			iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0);
 			iVar1 = func_652(PLAYER::PLAYER_PED_ID(), 0);
-			if (((VEHICLE::IS_TURRET_SEAT(iVar0, iVar1) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("APC") && iVar1 != -1)) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("akula") && iVar1 != -1)) || (((ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("riot2") && iVar1 == 0) && func_651(iVar0, 10)) && VEHICLE::GET_VEHICLE_MOD(iVar0, 10) != -1))
+			if (((VEHICLE::IS_TURRET_SEAT(iVar0, iVar1) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("apc") && iVar1 != -1)) || (ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("akula") && iVar1 != -1)) || (((ENTITY::GET_ENTITY_MODEL(iVar0) == joaat("riot2") && iVar1 == 0) && func_651(iVar0, 10)) && VEHICLE::GET_VEHICLE_MOD(iVar0, 10) != -1))
 			{
 				return 0;
 			}
@@ -113327,7 +113327,7 @@ int func_831(int iParam0)
 	switch (iParam0)
 	{
 		case joaat("granger"):
-		case joaat("VISIONE"):
+		case joaat("visione"):
 			return 1;
 		
 		default:
@@ -113440,7 +113440,7 @@ void func_833(int iParam0, var uParam1, bool bParam2, bool bParam3)
 				iVar2++;
 			}
 		}
-		else if (uParam1->f_66 == 1492612435)
+		else if (uParam1->f_66 == joaat("openwheel1"))
 		{
 			iVar3 = 1;
 			while (iVar3 <= 6)
@@ -113455,7 +113455,7 @@ void func_833(int iParam0, var uParam1, bool bParam2, bool bParam3)
 				iVar3++;
 			}
 		}
-		else if (uParam1->f_66 == 1181339704)
+		else if (uParam1->f_66 == joaat("openwheel2"))
 		{
 			iVar4 = 1;
 			while (iVar4 <= 11)
@@ -113473,14 +113473,14 @@ void func_833(int iParam0, var uParam1, bool bParam2, bool bParam3)
 				iVar4++;
 			}
 		}
-		else if (uParam1->f_66 == -1728685474)
+		else if (uParam1->f_66 == joaat("coquette4"))
 		{
 			if (VEHICLE::GET_VEHICLE_MOD(iParam0, 10) != 0)
 			{
 				MISC::SET_BIT(&(uParam1->f_77), 0);
 			}
 		}
-		if (uParam1->f_66 == joaat("NIGHTSHARK"))
+		if (uParam1->f_66 == joaat("nightshark"))
 		{
 			VEHICLE::_SET_DISABLE_VEHICLE_WINDOW_COLLISIONS(iParam0, 0);
 			if (VEHICLE::GET_VEHICLE_MOD(iParam0, 5) != -1)
@@ -113755,7 +113755,7 @@ void func_836(var uParam0)
 {
 	switch (ENTITY::GET_ENTITY_MODEL(*uParam0))
 	{
-		case joaat("STARLING"):
+		case joaat("starling"):
 			if (VEHICLE::GET_VEHICLE_MOD(*uParam0, 4) == 0)
 			{
 				VEHICLE::SET_VEHICLE_MOD(*uParam0, 13, 0, false);
@@ -114001,7 +114001,7 @@ int func_838(int iParam0, int iParam1)
 			return 0;
 			break;
 		
-		case joaat("TECHNICAL3"):
+		case joaat("technical3"):
 			if (Global_262145.f_20625)
 			{
 				if (iParam1 & 1 != 0)
@@ -114013,7 +114013,7 @@ int func_838(int iParam0, int iParam1)
 			return 0;
 			break;
 		
-		case joaat("INSURGENT3"):
+		case joaat("insurgent3"):
 			if (Global_262145.f_20626)
 			{
 				if (iParam1 & 1 != 0)
@@ -114095,9 +114095,9 @@ int func_838(int iParam0, int iParam1)
 			return 1;
 			break;
 		
-		case 1802742206:
-		case -2122646867:
-		case 67753863:
+		case joaat("youga3"):
+		case joaat("gauntlet5"):
+		case joaat("yosemite3"):
 			if (iParam1 & 1 != 0)
 			{
 				return 0;
@@ -114105,9 +114105,9 @@ int func_838(int iParam0, int iParam1)
 			return 1;
 			break;
 		
-		case 1717532765:
-		case 1107404867:
-		case -913589546:
+		case joaat("manana2"):
+		case joaat("peyote3"):
+		case joaat("glendale2"):
 			return 1;
 			break;
 	}

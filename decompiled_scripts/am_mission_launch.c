@@ -654,7 +654,7 @@ int func_11(var uParam0, int iParam1, struct<3> Param2, var uParam3, int iParam4
 		return 0;
 	}
 	fVar0 = 1.5f;
-	if (iParam1 == joaat("BOMBUSHKA"))
+	if (iParam1 == joaat("bombushka"))
 	{
 		fVar0 = 20f;
 	}

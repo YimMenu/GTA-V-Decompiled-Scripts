@@ -13951,7 +13951,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 			}
 			break;
 		
-		case joaat("FIRETRUK"):
+		case joaat("firetruk"):
 			if (!bParam2)
 			{
 				iVar1 = 2471250;
@@ -16051,7 +16051,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				iVar1 = (Global_262145.f_19176 + func_278(iParam1));
 				break;
 			
-			case joaat("INFERNUS2"):
+			case joaat("infernus2"):
 				iVar1 = 915000;
 				if (bVar0)
 				{
@@ -16062,7 +16062,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("GP1"):
+			case joaat("gp1"):
 				iVar1 = 1260000;
 				if (bVar0)
 				{
@@ -16073,7 +16073,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("RUSTON"):
+			case joaat("ruston"):
 				iVar1 = 430000;
 				if (bVar0)
 				{
@@ -16084,7 +16084,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("TURISMO2"):
+			case joaat("turismo2"):
 				iVar1 = 705000;
 				if (bVar0)
 				{
@@ -16095,7 +16095,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("ARDENT"):
+			case joaat("ardent"):
 				iVar1 = 1150000;
 				if (bVar0)
 				{
@@ -16106,7 +16106,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("CHEETAH2"):
+			case joaat("cheetah2"):
 				iVar1 = 865000;
 				if (bVar0)
 				{
@@ -16117,7 +16117,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("NIGHTSHARK"):
+			case joaat("nightshark"):
 				iVar1 = 1245000;
 				if (bVar0)
 				{
@@ -16128,7 +16128,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("TORERO"):
+			case joaat("torero"):
 				iVar1 = 998000;
 				if (bVar0)
 				{
@@ -16139,7 +16139,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("VAGNER"):
+			case joaat("vagner"):
 				iVar1 = 1535000;
 				if (bVar0)
 				{
@@ -16150,7 +16150,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("XA21"):
+			case joaat("xa21"):
 				iVar1 = 2375000;
 				if (bVar0)
 				{
@@ -16161,7 +16161,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("APC"):
+			case joaat("apc"):
 				iVar1 = 2325000;
 				if (bVar0)
 				{
@@ -16177,7 +16177,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("DUNE3"):
+			case joaat("dune3"):
 				iVar1 = 850000;
 				if (bVar0)
 				{
@@ -16193,7 +16193,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("HALFTRACK"):
+			case joaat("halftrack"):
 				iVar1 = 1695000;
 				if (bVar0)
 				{
@@ -16209,7 +16209,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("OPPRESSOR"):
+			case joaat("oppressor"):
 				iVar1 = 2650000;
 				if (bVar0)
 				{
@@ -16225,7 +16225,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("TAMPA3"):
+			case joaat("tampa3"):
 				iVar1 = 1585000;
 				if (bVar0)
 				{
@@ -16257,7 +16257,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("PHANTOM3"):
+			case joaat("phantom3"):
 				if (!bParam2)
 				{
 					iVar1 = 1225000;
@@ -16275,7 +16275,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("HAULER2"):
+			case joaat("hauler2"):
 				if (!bParam2)
 				{
 					iVar1 = 1400000;
@@ -16304,7 +16304,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("MICROLIGHT"):
+			case joaat("microlight"):
 				if (bParam2)
 				{
 					iVar1 = 500000;
@@ -16329,7 +16329,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("MOGUL"):
+			case joaat("mogul"):
 				if (bParam2)
 				{
 					iVar1 = 2350000;
@@ -16354,7 +16354,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("ROGUE"):
+			case joaat("rogue"):
 				if (bParam2)
 				{
 					iVar1 = 1200000;
@@ -16379,7 +16379,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("STARLING"):
+			case joaat("starling"):
 				if (bParam2)
 				{
 					iVar1 = 2750000;
@@ -16404,7 +16404,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("SEABREEZE"):
+			case joaat("seabreeze"):
 				if (bParam2)
 				{
 					iVar1 = 850000;
@@ -16429,7 +16429,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("TULA"):
+			case joaat("tula"):
 				if (bParam2)
 				{
 					iVar1 = 3890000;
@@ -16454,7 +16454,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("PYRO"):
+			case joaat("pyro"):
 				if (bParam2)
 				{
 					iVar1 = 3350000;
@@ -16479,7 +16479,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("MOLOTOK"):
+			case joaat("molotok"):
 				if (bParam2)
 				{
 					iVar1 = 3600000;
@@ -16504,7 +16504,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("NOKOTA"):
+			case joaat("nokota"):
 				if (bParam2)
 				{
 					iVar1 = 1995000;
@@ -16529,7 +16529,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("BOMBUSHKA"):
+			case joaat("bombushka"):
 				if (bParam2)
 				{
 					iVar1 = 4450000;
@@ -16554,7 +16554,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("HUNTER"):
+			case joaat("hunter"):
 				if (bParam2)
 				{
 					iVar1 = 3100000;
@@ -16579,7 +16579,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("HAVOK"):
+			case joaat("havok"):
 				if (bParam2)
 				{
 					iVar1 = 1730000;
@@ -16604,7 +16604,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("HOWARD"):
+			case joaat("howard"):
 				if (bParam2)
 				{
 					iVar1 = 975000;
@@ -16629,7 +16629,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("ALPHAZ1"):
+			case joaat("alphaz1"):
 				if (bParam2)
 				{
 					iVar1 = 1595000;
@@ -16654,7 +16654,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("CYCLONE"):
+			case joaat("cyclone"):
 				iVar1 = 1890000;
 				if (bVar0)
 				{
@@ -16665,7 +16665,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("VISIONE"):
+			case joaat("visione"):
 				iVar1 = 2250000;
 				if (bVar0)
 				{
@@ -16676,7 +16676,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("VIGILANTE"):
+			case joaat("vigilante"):
 				iVar1 = 3750000;
 				if (bVar0)
 				{
@@ -16687,7 +16687,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("RETINUE"):
+			case joaat("retinue"):
 				iVar1 = 615000;
 				if (bVar0)
 				{
@@ -16698,7 +16698,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("RAPIDGT3"):
+			case joaat("rapidgt3"):
 				iVar1 = 885000;
 				if (bVar0)
 				{
@@ -18129,7 +18129,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("Novak"):
+			case joaat("novak"):
 				iVar1 = 608000;
 				if (bVar0 && Global_262145.f_26105 >= 0)
 				{
@@ -18210,7 +18210,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("Dynasty"):
+			case joaat("dynasty"):
 				iVar1 = 450000;
 				if (bVar0 && Global_262145.f_26109 >= 0)
 				{
@@ -18490,7 +18490,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("Sugoi"):
+			case joaat("sugoi"):
 				if (bParam2)
 				{
 					iVar1 = 918000;
@@ -18655,7 +18655,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case joaat("Stryder"):
+			case joaat("stryder"):
 				if (bParam2)
 				{
 					iVar1 = 502500;
@@ -18831,7 +18831,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case -1358197432:
+			case joaat("tigon"):
 				iVar1 = 2310000;
 				if (bVar0)
 				{
@@ -18842,7 +18842,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case 1492612435:
+			case joaat("openwheel1"):
 				iVar1 = 3400000;
 				if (bVar0)
 				{
@@ -18853,7 +18853,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case 1181339704:
+			case joaat("openwheel2"):
 				iVar1 = 2997000;
 				if (bVar0)
 				{
@@ -18864,7 +18864,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case -1728685474:
+			case joaat("coquette4"):
 				iVar1 = 1510000;
 				if (bVar0)
 				{
@@ -18875,7 +18875,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case 1107404867:
+			case joaat("peyote3"):
 				iVar1 = 620000;
 				if (bVar0)
 				{
@@ -18883,7 +18883,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case 67753863:
+			case joaat("yosemite3"):
 				iVar1 = 700000;
 				if (bVar0)
 				{
@@ -18891,7 +18891,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case -2122646867:
+			case joaat("gauntlet5"):
 				iVar1 = 815000;
 				if (bVar0)
 				{
@@ -18899,7 +18899,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case -838099166:
+			case joaat("landstalker2"):
 				iVar1 = 1220000;
 				if (bVar0)
 				{
@@ -18910,7 +18910,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case -913589546:
+			case joaat("glendale2"):
 				iVar1 = 520000;
 				if (bVar0)
 				{
@@ -18918,7 +18918,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case -2098954619:
+			case joaat("club"):
 				iVar1 = 1280000;
 				if (bVar0)
 				{
@@ -18929,7 +18929,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case 2134119907:
+			case joaat("dukes3"):
 				iVar1 = 378000;
 				if (bVar0)
 				{
@@ -18940,7 +18940,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case 1802742206:
+			case joaat("youga3"):
 				iVar1 = 1288000;
 				if (bVar0)
 				{
@@ -18948,7 +18948,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case 1717532765:
+			case joaat("manana2"):
 				iVar1 = 925000;
 				if (bVar0)
 				{
@@ -18956,7 +18956,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case -631322662:
+			case joaat("penumbra2"):
 				iVar1 = 1380000;
 				if (bVar0)
 				{
@@ -18967,7 +18967,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 				}
 				break;
 			
-			case -1810806490:
+			case joaat("seminole2"):
 				iVar1 = 678000;
 				if (bVar0)
 				{
@@ -20482,7 +20482,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 			iVar1 = (Global_262145.f_14513 + func_278(iParam1));
 			break;
 		
-		case joaat("TECHNICAL3"):
+		case joaat("technical3"):
 			iVar1 = (950000 + func_278(iParam1));
 			if (bVar0)
 			{
@@ -20493,7 +20493,7 @@ int func_275(var uParam0, int iParam1, bool bParam2, int iParam3)
 			}
 			break;
 		
-		case joaat("INSURGENT3"):
+		case joaat("insurgent3"):
 			iVar1 = (1350000 + func_278(iParam1));
 			if (bVar0)
 			{
@@ -20733,17 +20733,17 @@ int func_276(int iParam0)
 {
 	switch (iParam0)
 	{
-		case joaat("APC"):
-		case joaat("DUNE3"):
-		case joaat("HALFTRACK"):
-		case joaat("OPPRESSOR"):
-		case joaat("TAMPA3"):
-		case joaat("TECHNICAL3"):
-		case joaat("INSURGENT3"):
-		case joaat("VIGILANTE"):
+		case joaat("apc"):
+		case joaat("dune3"):
+		case joaat("halftrack"):
+		case joaat("oppressor"):
+		case joaat("tampa3"):
+		case joaat("technical3"):
+		case joaat("insurgent3"):
+		case joaat("vigilante"):
 		case joaat("barrage"):
-		case joaat("ARDENT"):
-		case joaat("NIGHTSHARK"):
+		case joaat("ardent"):
+		case joaat("nightshark"):
 		case joaat("deluxo"):
 		case joaat("stromberg"):
 		case joaat("comet4"):
@@ -20924,11 +20924,11 @@ int func_278(int iParam0)
 			return Global_262145.f_19168;
 			break;
 		
-		case joaat("TECHNICAL3"):
+		case joaat("technical3"):
 			return Global_262145.f_20896;
 			break;
 		
-		case joaat("INSURGENT3"):
+		case joaat("insurgent3"):
 			return Global_262145.f_20895;
 			break;
 		
@@ -21016,27 +21016,27 @@ int func_278(int iParam0)
 			return Global_262145.f_25214;
 			break;
 		
-		case 1802742206:
+		case joaat("youga3"):
 			return Global_262145.f_28568;
 			break;
 		
-		case -2122646867:
+		case joaat("gauntlet5"):
 			return Global_262145.f_28563;
 			break;
 		
-		case 1717532765:
+		case joaat("manana2"):
 			return Global_262145.f_28567;
 			break;
 		
-		case 1107404867:
+		case joaat("peyote3"):
 			return Global_262145.f_28565;
 			break;
 		
-		case 67753863:
+		case joaat("yosemite3"):
 			return Global_262145.f_28564;
 			break;
 		
-		case -913589546:
+		case joaat("glendale2"):
 			return Global_262145.f_28566;
 			break;
 	}

@@ -90590,19 +90590,19 @@ void func_621(int iParam0, var uParam1)
 	switch (iParam0)
 	{
 		case 1:
-			(*uParam1)[0] = joaat("HAULER2");
+			(*uParam1)[0] = joaat("hauler2");
 			(*uParam1)[1] = joaat("trailerlarge");
 			uParam1->f_3 = -2.6f;
 			break;
 		
 		case 2:
-			(*uParam1)[0] = joaat("PHANTOM3");
+			(*uParam1)[0] = joaat("phantom3");
 			(*uParam1)[1] = joaat("trailerlarge");
 			uParam1->f_3 = -2.6f;
 			break;
 		
 		case 3:
-			(*uParam1)[0] = joaat("NIGHTSHARK");
+			(*uParam1)[0] = joaat("nightshark");
 			(*uParam1)[1] = joaat("trailersmall2");
 			uParam1->f_3 = 0.5f;
 			break;

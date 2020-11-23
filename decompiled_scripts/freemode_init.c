@@ -366,8 +366,8 @@ int func_2(int iParam0)
 		case joaat("hydra"):
 		case joaat("cargobob"):
 		case joaat("cargobob2"):
-		case joaat("HAVOK"):
-		case joaat("HUNTER"):
+		case joaat("havok"):
+		case joaat("hunter"):
 		case joaat("volatus"):
 		case joaat("supervolito"):
 		case joaat("supervolito2"):
@@ -376,19 +376,19 @@ int func_2(int iParam0)
 		case joaat("frogger"):
 		case joaat("maverick"):
 		case joaat("annihilator"):
-		case joaat("MOGUL"):
-		case joaat("ROGUE"):
-		case joaat("STARLING"):
-		case joaat("SEABREEZE"):
-		case joaat("MICROLIGHT"):
-		case joaat("TULA"):
+		case joaat("mogul"):
+		case joaat("rogue"):
+		case joaat("starling"):
+		case joaat("seabreeze"):
+		case joaat("microlight"):
+		case joaat("tula"):
 		case joaat("lazer"):
-		case joaat("PYRO"):
-		case joaat("MOLOTOK"):
-		case joaat("NOKOTA"):
-		case joaat("HOWARD"):
-		case joaat("BOMBUSHKA"):
-		case joaat("ALPHAZ1"):
+		case joaat("pyro"):
+		case joaat("molotok"):
+		case joaat("nokota"):
+		case joaat("howard"):
+		case joaat("bombushka"):
+		case joaat("alphaz1"):
 		case joaat("nimbus"):
 		case joaat("luxor2"):
 		case joaat("velum2"):
@@ -437,7 +437,7 @@ int func_3(int iParam0, bool bParam1)
 		case joaat("trailersmall2"):
 			return 1;
 		
-		case joaat("NIGHTSHARK"):
+		case joaat("nightshark"):
 			if (func_5(Global_4456448.f_232883) || func_4(Global_4456448.f_232883))
 			{
 				if (!bParam1)
@@ -447,7 +447,7 @@ int func_3(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case joaat("TECHNICAL3"):
+		case joaat("technical3"):
 		case joaat("technical"):
 			if (func_5(Global_4456448.f_232883))
 			{

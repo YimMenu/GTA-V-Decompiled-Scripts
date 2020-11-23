@@ -5992,7 +5992,7 @@ int func_171(int iParam0, int iParam1, int iParam2)
 							return joaat("yosemite2");
 						
 						case 2:
-							return joaat("Sugoi");
+							return joaat("sugoi");
 						
 						case 3:
 							return joaat("jugular");
@@ -6027,7 +6027,7 @@ int func_171(int iParam0, int iParam1, int iParam2)
 							return joaat("manchez");
 						
 						case 1:
-							return joaat("Stryder");
+							return joaat("stryder");
 						
 						case 2:
 							return joaat("defiler");

@@ -79658,7 +79658,7 @@ bool func_367(int iParam0)
 
 int func_368(int iParam0)
 {
-	if (ENTITY::GET_ENTITY_MODEL(uParam0) == joaat("HAULER2") || ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("PHANTOM3"))
+	if (ENTITY::GET_ENTITY_MODEL(uParam0) == joaat("hauler2") || ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("phantom3"))
 	{
 		return 1;
 	}

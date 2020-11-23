@@ -7149,7 +7149,7 @@ int func_153()
 			{
 				return 1;
 			}
-			if ((((((((((iVar0 == joaat("police4") || iVar0 == joaat("policeold1")) || iVar0 == joaat("policeold2")) || iVar0 == joaat("fbi")) || iVar0 == joaat("fbi2")) || iVar0 == joaat("lguard")) || iVar0 == joaat("sheriff")) || iVar0 == joaat("sheriff2")) || iVar0 == joaat("pranger")) || iVar0 == joaat("ambulance")) || iVar0 == joaat("FIRETRUK"))
+			if ((((((((((iVar0 == joaat("police4") || iVar0 == joaat("policeold1")) || iVar0 == joaat("policeold2")) || iVar0 == joaat("fbi")) || iVar0 == joaat("fbi2")) || iVar0 == joaat("lguard")) || iVar0 == joaat("sheriff")) || iVar0 == joaat("sheriff2")) || iVar0 == joaat("pranger")) || iVar0 == joaat("ambulance")) || iVar0 == joaat("firetruk"))
 			{
 				return 1;
 			}
@@ -7161,7 +7161,7 @@ int func_153()
 			iVar2[1] = joaat("benson");
 			iVar2[2] = joaat("biff");
 			iVar2[3] = joaat("bus");
-			iVar2[4] = joaat("FIRETRUK");
+			iVar2[4] = joaat("firetruk");
 			iVar2[5] = joaat("forklift");
 			iVar2[6] = joaat("mule");
 			iVar2[7] = joaat("mule2");
