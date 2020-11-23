@@ -45761,7 +45761,7 @@ void func_442()
 		return;
 	}
 	Global_2513866 = iVar0;
-	if ((func_455() && func_454() != 652987936) || SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-571276564) > 0)
+	if ((func_455() && func_454() != joaat("am_mp_arena_garage")) || SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("base_lounge_seats")) > 0)
 	{
 		return;
 	}

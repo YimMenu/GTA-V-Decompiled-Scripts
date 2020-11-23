@@ -170821,7 +170821,7 @@ char* func_1825(var uParam0)
 				if (func_1648(uParam0->f_1) && ENTITY::IS_ENTITY_A_MISSION_ENTITY(uParam0->f_6))
 				{
 					iVar1 = MISC::GET_HASH_KEY(ENTITY::GET_ENTITY_SCRIPT(uParam0->f_6, &uVar0));
-					if (iVar1 == 1159023377)
+					if (iVar1 == joaat("gb_data_hack"))
 					{
 						return "Data hack delivery vehicle is not valid";
 					}

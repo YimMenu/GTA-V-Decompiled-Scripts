@@ -21854,7 +21854,7 @@ void func_383()
 {
 	if (Global_2484621.f_15 || func_384())
 	{
-		if (unk_0x09952BA662A7629B(-1860946021) > 0)
+		if (unk_0x09952BA662A7629B(joaat("gb_ie_delivery_cutscene")) > 0)
 		{
 			func_112(Global_2484621.f_15);
 		}

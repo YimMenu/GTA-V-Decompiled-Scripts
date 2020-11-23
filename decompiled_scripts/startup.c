@@ -122,10 +122,10 @@ void __EntryFunction__()
 	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("mp_prop_special_global_block"));
 	func_39(joaat("title_update_registration"), 1424);
 	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("title_update_registration"));
-	func_39(-556768532, 1424);
-	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(-556768532);
-	func_39(-1350801275, 1424);
-	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(-1350801275);
+	func_39(joaat("title_update_registration_2"), 1424);
+	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("title_update_registration_2"));
+	func_39(joaat("globals_fmmc_struct_registration"), 1424);
+	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("globals_fmmc_struct_registration"));
 	Global_4270623 = 0;
 	func_39(joaat("sp_dlc_registration"), 1424);
 	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("sp_dlc_registration"));

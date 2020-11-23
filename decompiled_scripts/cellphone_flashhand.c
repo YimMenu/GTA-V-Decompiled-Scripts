@@ -800,7 +800,7 @@ void __EntryFunction__()
 							PAD::SET_INPUT_EXCLUSIVE(0, Global_19455);
 						}
 					}
-					if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1641206367) == 0)
+					if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("appsecurohack")) == 0)
 					{
 						PAD::SET_INPUT_EXCLUSIVE(0, Global_19456);
 						if (MISC::IS_BIT_SET(Global_7356, 17))
@@ -808,7 +808,7 @@ void __EntryFunction__()
 							PAD::SET_INPUT_EXCLUSIVE(0, Global_19457);
 						}
 					}
-					if (!func_61() && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1641206367) == 0)
+					if (!func_61() && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("appsecurohack")) == 0)
 					{
 						PAD::SET_INPUT_EXCLUSIVE(0, Global_19458);
 					}

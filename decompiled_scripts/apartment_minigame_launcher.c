@@ -1189,7 +1189,7 @@ void func_25(var uParam0, var uParam1, var uParam2)
 			break;
 		
 		case 4:
-			if ((!NETWORK::NETWORK_IS_SCRIPT_ACTIVE(Local_135.f_3, Local_135.f_6, 1, 0) || (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-1424690702) == 0 && Local_135.f_2 == 0)) || (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(1774039768) == 0 && Local_135.f_2 == 1))
+			if ((!NETWORK::NETWORK_IS_SCRIPT_ACTIVE(Local_135.f_3, Local_135.f_6, 1, 0) || (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("am_darts_apartment")) == 0 && Local_135.f_2 == 0)) || (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("am_armwrestling_apartment")) == 0 && Local_135.f_2 == 1))
 			{
 				func_38(&uLocal_126);
 				func_42(&(Local_207[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/]));

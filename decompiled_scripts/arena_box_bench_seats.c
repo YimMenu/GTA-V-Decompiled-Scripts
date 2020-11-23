@@ -2823,7 +2823,7 @@ void func_94(int iParam0)
 
 void func_95()
 {
-	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(-430894719) > 0)
+	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("turret_cam_script")) > 0)
 	{
 		Global_2513636 = 1;
 	}

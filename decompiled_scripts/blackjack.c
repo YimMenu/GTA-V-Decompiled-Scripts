@@ -5867,7 +5867,7 @@ void func_90()
 				Local_126.f_222 = { Var4 };
 				Local_131 = { Var5 };
 				Local_131.f_10 = 1;
-				Local_131 = -747096482;
+				Local_131 = joaat("blackjack");
 				Local_131.f_11 = func_324(PLAYER::PLAYER_ID());
 				if (func_324(PLAYER::PLAYER_ID()))
 				{

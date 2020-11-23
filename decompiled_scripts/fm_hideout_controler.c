@@ -151575,7 +151575,7 @@ int func_1548()
 	{
 		return joaat("fm_mission_controller");
 	}
-	return -1085924656;
+	return joaat("fm_mission_controller_2020");
 }
 
 int func_1549(int iParam0)

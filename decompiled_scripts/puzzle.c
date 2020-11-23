@@ -84512,11 +84512,11 @@ int func_443(int iParam0, struct<3> Param1, struct<3> Param2, struct<3> Param3, 
 			func_444(0);
 		}
 	}
-	if (!SCRIPT::IS_THREAD_ACTIVE(uLocal_92) && !SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(588062221))
+	if (!SCRIPT::IS_THREAD_ACTIVE(uLocal_92) && !SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(joaat("am_mp_drone")))
 	{
 		SCRIPT::REQUEST_SCRIPT("AM_MP_DRONE");
 	}
-	if ((SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(588062221) && !SCRIPT::IS_THREAD_ACTIVE(uLocal_92)) && !func_445())
+	if ((SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(joaat("am_mp_drone")) && !SCRIPT::IS_THREAD_ACTIVE(uLocal_92)) && !func_445())
 	{
 		Var0.f_1 = -1;
 		Var0 = 0;
@@ -84525,12 +84525,12 @@ int func_443(int iParam0, struct<3> Param1, struct<3> Param2, struct<3> Param3, 
 		Var0.f_8 = { Param3 };
 		Var0.f_1 = iParam0;
 		Var0.f_11 = iParam4;
-		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(588062221) < 1)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("am_mp_drone")) < 1)
 		{
 			if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("AM_MP_DRONE", Var0, 1, 0))
 			{
-				uLocal_92 = SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(588062221, &Var0, 12, 1424);
-				SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(588062221);
+				uLocal_92 = SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(joaat("am_mp_drone"), &Var0, 12, 1424);
+				SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("am_mp_drone"));
 				func_9(&uLocal_90);
 			}
 			else
