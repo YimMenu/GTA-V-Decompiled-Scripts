@@ -84409,7 +84409,7 @@ void func_1178(int iParam0)
 				}
 				if ((!func_1180(func_1188()) && !func_1179(func_1188())) && func_1188() != 0)
 				{
-					WEAPON::_PED_SKIP_NEXT_RELOADING(PLAYER::PLAYER_PED_ID());
+					WEAPON::REFILL_AMMO_INSTANTLY(PLAYER::PLAYER_PED_ID());
 				}
 			}
 			else

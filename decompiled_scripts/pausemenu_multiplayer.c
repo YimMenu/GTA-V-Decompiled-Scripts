@@ -8204,7 +8204,7 @@ int func_187()
 	{
 		case 1:
 		case 10:
-			if (!NETWORK::_NETWORK_GET_ROS_PRIVILEGE_10())
+			if (!NETWORK::NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV())
 			{
 				return 101;
 			}
@@ -8272,7 +8272,7 @@ int func_187()
 			{
 				return 50;
 			}
-			if (!NETWORK::_NETWORK_GET_ROS_PRIVILEGE_10())
+			if (!NETWORK::NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV())
 			{
 				return 101;
 			}
@@ -70241,7 +70241,7 @@ void func_1079()
 	{
 		case 1:
 		case 10:
-			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_10())
+			if (NETWORK::NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV())
 			{
 				if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT())
 				{
@@ -73705,7 +73705,7 @@ void func_1155()
 							break;
 						
 						case 8:
-							if (((((((((func_45() || func_244() == 2) || ((!func_246(1, 0) && !func_246(1, 1)) && !func_246(1, 2))) || !NETWORK::_NETWORK_GET_ROS_PRIVILEGE_10()) || (((!MISC::IS_DURANGO_VERSION() && !MISC::IS_ORBIS_VERSION()) && !func_242()) && !NETWORK::_0x595F028698072DD9(1, -2, 1))) || (MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_HAS_ROS_PRIVILEGE(18))) || (!func_243() && MISC::IS_ORBIS_VERSION())) || NETWORK::NETWORK_PLAYER_IS_CHEATER()) || func_238(0)) || !func_239())
+							if (((((((((func_45() || func_244() == 2) || ((!func_246(1, 0) && !func_246(1, 1)) && !func_246(1, 2))) || !NETWORK::NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV()) || (((!MISC::IS_DURANGO_VERSION() && !MISC::IS_ORBIS_VERSION()) && !func_242()) && !NETWORK::_0x595F028698072DD9(1, -2, 1))) || (MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_HAS_ROS_PRIVILEGE(18))) || (!func_243() && MISC::IS_ORBIS_VERSION())) || NETWORK::NETWORK_PLAYER_IS_CHEATER()) || func_238(0)) || !func_239())
 							{
 								bVar5 = false;
 							}

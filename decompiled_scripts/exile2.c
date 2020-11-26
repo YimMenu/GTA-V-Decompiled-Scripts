@@ -131166,7 +131166,7 @@ void func_840()
 					TASK::CLEAR_PED_TASKS_IMMEDIATELY(Local_391[3 /*33*/]);
 					ENTITY::SET_ENTITY_COORDS(Local_391[3 /*33*/], Local_391[3 /*33*/].f_17, 1, 0, 0, 1);
 					ENTITY::SET_ENTITY_HEADING(Local_391[3 /*33*/], 196.2294f);
-					WEAPON::_PED_SKIP_NEXT_RELOADING(Local_391[3 /*33*/]);
+					WEAPON::REFILL_AMMO_INSTANTLY(Local_391[3 /*33*/]);
 					TASK::TASK_AIM_GUN_AT_ENTITY(Local_391[3 /*33*/], Local_403, 3000, 1);
 					PED::_0x2208438012482A1A(Local_391[3 /*33*/], 0, 0);
 					iLocal_359 = 6;

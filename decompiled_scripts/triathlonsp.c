@@ -96505,7 +96505,7 @@ int func_397(struct<3> Param0, var uParam1, struct<3> Param2, float fParam3)
 			sVar8 = "Corona_Marker";
 			break;
 	}
-	GRAPHICS::_OVERRIDE_DECAL_TEXTURE(iVar7, &cLocal_1, sVar8);
+	GRAPHICS::PATCH_DECAL_DIFFUSE_MAP(iVar7, &cLocal_1, sVar8);
 	if (uParam1->f_10 == 0)
 	{
 		return 0;
@@ -113754,7 +113754,7 @@ int func_792(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, bo
 	if (!NETWORK::NETWORK_IS_SIGNED_ONLINE())
 	{
 	}
-	if ((!NETWORK::NETWORK_PLAYER_IS_CHEATER() && (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES() || !NETWORK::_NETWORK_HAS_AGE_RESTRICTED_PROFILE())) && NETWORK::_NETWORK_GET_ROS_PRIVILEGE_4())
+	if ((!NETWORK::NETWORK_PLAYER_IS_CHEATER() && (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES() || !NETWORK::_NETWORK_HAS_AGE_RESTRICTED_PROFILE())) && NETWORK::NETWORK_HAVE_ROS_LEADERBOARD_WRITE_PRIV())
 	{
 		Var0.f_2.f_1 = 4;
 		Var0 = iParam0;
@@ -113810,7 +113810,7 @@ int func_792(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, bo
 	if (NETWORK::_NETWORK_HAS_AGE_RESTRICTED_PROFILE())
 	{
 	}
-	if (!NETWORK::_NETWORK_GET_ROS_PRIVILEGE_4())
+	if (!NETWORK::NETWORK_HAVE_ROS_LEADERBOARD_WRITE_PRIV())
 	{
 	}
 	return 0;

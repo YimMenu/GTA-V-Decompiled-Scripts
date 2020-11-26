@@ -128965,25 +128965,25 @@ void func_862()
 					{
 						if (iLocal_510 < 0 || MISC::GET_GAME_TIMER() < iLocal_510 + 2000)
 						{
-							VEHICLE::_0xCAC66558B944DA67(iLocal_166[2], 1);
+							VEHICLE::SET_VEHICLE_USES_LARGE_REAR_RAMP(iLocal_166[2], 1);
 						}
 						else
 						{
-							VEHICLE::_0xCAC66558B944DA67(iLocal_166[2], 0);
+							VEHICLE::SET_VEHICLE_USES_LARGE_REAR_RAMP(iLocal_166[2], 0);
 						}
 						VEHICLE::SET_VEHICLE_INACTIVE_DURING_PLAYBACK(iLocal_166[2], 0);
 					}
 					else
 					{
 						RECORDING::_0x293220DA1B46CEBC(3f, 2f, 3);
-						VEHICLE::_0xCAC66558B944DA67(iLocal_166[2], 0);
+						VEHICLE::SET_VEHICLE_USES_LARGE_REAR_RAMP(iLocal_166[2], 0);
 						VEHICLE::SET_VEHICLE_INACTIVE_DURING_PLAYBACK(iLocal_166[2], 1);
 						fLocal_426 = 1f;
 					}
 				}
 				else
 				{
-					VEHICLE::_0xCAC66558B944DA67(iLocal_166[2], 0);
+					VEHICLE::SET_VEHICLE_USES_LARGE_REAR_RAMP(iLocal_166[2], 0);
 					VEHICLE::SET_VEHICLE_INACTIVE_DURING_PLAYBACK(iLocal_166[2], 1);
 				}
 				VEHICLE::SET_VEHICLE_DOOR_CONTROL(iLocal_166[2], 2, 0, 1f);

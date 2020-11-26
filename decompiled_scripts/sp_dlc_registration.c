@@ -8,7 +8,7 @@ void __EntryFunction__()
 	MISC::STOP_SAVE_DATA();
 	MISC::SET_BIT(&Global_4270623, 0);
 	iVar0 = 1;
-	iVar1 = MISC::_0xA09F896CE912481F(1);
+	iVar1 = MISC::GET_SIZE_OF_SAVE_DATA(1);
 	if (iVar0 != iVar1)
 	{
 	}

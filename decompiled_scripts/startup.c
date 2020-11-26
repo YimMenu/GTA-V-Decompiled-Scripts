@@ -198,7 +198,7 @@ void __EntryFunction__()
 	MISC::STOP_SAVE_STRUCT();
 	MISC::STOP_SAVE_DATA();
 	iVar2 = 10931;
-	iVar3 = MISC::_0xA09F896CE912481F(0);
+	iVar3 = MISC::GET_SIZE_OF_SAVE_DATA(0);
 	if (iVar2 != iVar3)
 	{
 	}

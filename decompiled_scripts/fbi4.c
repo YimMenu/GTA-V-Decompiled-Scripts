@@ -131749,7 +131749,7 @@ void func_887()
 
 int func_888()
 {
-	WEAPON::_PED_SKIP_NEXT_RELOADING(uLocal_424[2]);
+	WEAPON::REFILL_AMMO_INSTANTLY(uLocal_424[2]);
 	Local_468.f_12 = uLocal_424[2];
 	if (HUD::DOES_BLIP_EXIST(uLocal_680))
 	{

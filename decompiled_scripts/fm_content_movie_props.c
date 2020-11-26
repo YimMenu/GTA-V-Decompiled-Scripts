@@ -26122,7 +26122,7 @@ void func_710(int iParam0)
 				}
 				if ((!func_712(func_728()) && !func_711(func_728())) && func_728() != 0)
 				{
-					WEAPON::_PED_SKIP_NEXT_RELOADING(PLAYER::PLAYER_PED_ID());
+					WEAPON::REFILL_AMMO_INSTANTLY(PLAYER::PLAYER_PED_ID());
 				}
 			}
 			else

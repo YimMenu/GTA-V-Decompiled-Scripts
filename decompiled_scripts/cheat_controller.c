@@ -3301,7 +3301,7 @@ void func_112()
 
 void func_113()
 {
-	MISC::_0x2587A48BC88DFADF(0);
+	MISC::SET_RIOT_MODE_ENABLED(0);
 	if (iLocal_64 == 5)
 	{
 		func_37();

@@ -334,7 +334,7 @@ void func_11()
 			iVar3 = (iVar1 - iVar2);
 			if (iVar3 > 0)
 			{
-				NETWORK::_GET_DATE_AND_TIME_FROM_UNIX_EPOCH(iVar3, &Var0);
+				NETWORK::CONVERT_POSIX_TIME(iVar3, &Var0);
 				iVar4 = (Var0.f_3 * 3600000);
 				iVar4 = (iVar4 + (Var0.f_4 * 60000));
 				iVar4 = (iVar4 + Var0.f_5 * 1000);

@@ -163646,11 +163646,11 @@ void func_2274(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 		{
 			Var3 = { Var1 };
 			Var3.f_24 = uParam5;
-			STATS::_0xC729991A9065376E(&Var3);
+			STATS::_PLAYSTATS_SELL_CONTRABAND(&Var3);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_CONTRABAND_BUY"))
 		{
-			STATS::_0xD6781E42755531F7(&Var1);
+			STATS::_PLAYSTATS_BUY_CONTRABAND(&Var1);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_CONTRABAND_DEFEND"))
 		{
@@ -163658,14 +163658,14 @@ void func_2274(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 			{
 				Var4 = { Var1 };
 				Var4.f_24 = uParam5;
-				STATS::_0x2605663BD4F23B5D(&Var4);
+				STATS::_PLAYSTATS_DEFEND_CONTRABAND(&Var4);
 			}
 			else
 			{
 				Var5 = { Var1 };
 				Var5.f_24 = uParam5;
 				Var5.f_25 = iParam6;
-				STATS::_0x04D90BA8207ADA2D(&Var5);
+				STATS::_PLAYSTATS_RECOVER_CONTRABAND(&Var5);
 			}
 		}
 	}
