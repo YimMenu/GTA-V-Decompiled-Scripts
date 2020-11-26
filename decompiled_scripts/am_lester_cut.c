@@ -4943,7 +4943,7 @@ int func_138()
 				{
 					if (func_180(&uLocal_333, 1000, 0))
 					{
-						TASK::TASK_LOOK_AT_COORD(iLocal_153, 1276.409f, -1719.918f, 56.1054f, NaNf, 0, 2);
+						TASK::TASK_LOOK_AT_COORD(iLocal_153, 1276.409f, -1719.918f, 56.1054f, -1, 0, 2);
 						MISC::SET_BIT(&iLocal_323, 21);
 					}
 				}

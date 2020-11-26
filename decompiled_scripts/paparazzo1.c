@@ -51226,7 +51226,7 @@ void func_545(float fParam0)
 			{
 				if (!func_91(Local_539.x, 1226471469))
 				{
-					TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, NaNf, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, -1, 0, 2);
 					iLocal_312 = MISC::GET_GAME_TIMER();
 					TASK::TASK_SWEEP_AIM_POSITION(Local_539.x, sLocal_350, "sweep_low", "sweep_med", "sweep_high", -1, Var1, fVar0, 0.25f);
 				}
@@ -51294,7 +51294,7 @@ void func_545(float fParam0)
 			}
 			else if (!func_91(Local_539.x, 1226471469))
 			{
-				TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, NaNf, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, -1, 0, 2);
 				iLocal_312 = MISC::GET_GAME_TIMER();
 				TASK::TASK_SWEEP_AIM_POSITION(Local_539.x, sLocal_350, "sweep_low", "sweep_med", "sweep_high", -1, Var1, fVar0, 0.25f);
 			}
@@ -51309,7 +51309,7 @@ void func_545(float fParam0)
 			{
 				if (!func_91(Local_539.x, 1226471469))
 				{
-					TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, NaNf, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, -1, 0, 2);
 					iLocal_312 = MISC::GET_GAME_TIMER();
 					TASK::TASK_SWEEP_AIM_POSITION(Local_539.x, sLocal_350, "sweep_low", "sweep_med", "sweep_high", -1, Var1, fVar0, 0.25f);
 				}
@@ -51352,7 +51352,7 @@ void func_545(float fParam0)
 			{
 				if (!func_91(Local_539.x, 1226471469))
 				{
-					TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, NaNf, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, -1, 0, 2);
 					iLocal_312 = MISC::GET_GAME_TIMER();
 					TASK::TASK_SWEEP_AIM_POSITION(Local_539.x, sLocal_350, "sweep_low", "sweep_med", "sweep_high", -1, Var1, fVar0, 0.25f);
 				}
@@ -51407,7 +51407,7 @@ void func_545(float fParam0)
 			{
 				if (!func_91(Local_539.x, 1226471469))
 				{
-					TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, NaNf, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(Local_539.x, Var1, -1, 0, 2);
 					iLocal_312 = MISC::GET_GAME_TIMER();
 					TASK::TASK_SWEEP_AIM_POSITION(Local_539.x, sLocal_350, "sweep_low", "sweep_med", "sweep_high", -1, Var1, fVar0, 0.25f);
 				}

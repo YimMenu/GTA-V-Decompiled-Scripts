@@ -49951,7 +49951,7 @@ void func_438()
 							if (!func_140())
 							{
 								TASK::TASK_TURN_PED_TO_FACE_COORD(Local_94[iVar0 /*32*/], ENTITY::GET_ENTITY_COORDS(func_8(), true), 4000);
-								TASK::TASK_LOOK_AT_COORD(Local_94[iVar0 /*32*/], ENTITY::GET_ENTITY_COORDS(func_8(), true), 5.605194E-42f, 0, 2);
+								TASK::TASK_LOOK_AT_COORD(Local_94[iVar0 /*32*/], ENTITY::GET_ENTITY_COORDS(func_8(), true), 4000, 0, 2);
 								Local_94[iVar0 /*32*/].f_31 = 1;
 								func_262(&uLocal_98, Local_94[iVar0 /*32*/].f_29, Local_94[iVar0 /*32*/], Local_94[iVar0 /*32*/].f_30, 0, 1);
 								if (MISC::ARE_STRINGS_EQUAL(Local_94[iVar0 /*32*/].f_30, "CONSTRUCTION1"))
@@ -49988,7 +49988,7 @@ void func_438()
 							if (!func_140())
 							{
 								TASK::TASK_TURN_PED_TO_FACE_COORD(Local_94[iVar0 /*32*/], ENTITY::GET_ENTITY_COORDS(func_8(), true), 4000);
-								TASK::TASK_LOOK_AT_COORD(Local_94[iVar0 /*32*/], ENTITY::GET_ENTITY_COORDS(func_8(), true), 5.605194E-42f, 0, 2);
+								TASK::TASK_LOOK_AT_COORD(Local_94[iVar0 /*32*/], ENTITY::GET_ENTITY_COORDS(func_8(), true), 4000, 0, 2);
 								Local_94[iVar0 /*32*/].f_31 = 1;
 								func_262(&uLocal_98, Local_94[iVar0 /*32*/].f_29, Local_94[iVar0 /*32*/], Local_94[iVar0 /*32*/].f_30, 0, 1);
 								if (MISC::ARE_STRINGS_EQUAL(Local_94[iVar0 /*32*/].f_30, "CONSTRUCTION1"))
@@ -50025,7 +50025,7 @@ void func_438()
 							if (!func_140())
 							{
 								TASK::TASK_TURN_PED_TO_FACE_COORD(Local_94[iVar0 /*32*/], ENTITY::GET_ENTITY_COORDS(func_8(), true), 4000);
-								TASK::TASK_LOOK_AT_COORD(Local_94[iVar0 /*32*/], ENTITY::GET_ENTITY_COORDS(func_8(), true), 5.605194E-42f, 0, 2);
+								TASK::TASK_LOOK_AT_COORD(Local_94[iVar0 /*32*/], ENTITY::GET_ENTITY_COORDS(func_8(), true), 4000, 0, 2);
 								Local_94[iVar0 /*32*/].f_31 = 1;
 								func_262(&uLocal_98, Local_94[iVar0 /*32*/].f_29, Local_94[iVar0 /*32*/], Local_94[iVar0 /*32*/].f_30, 0, 1);
 								if (MISC::ARE_STRINGS_EQUAL(Local_94[iVar0 /*32*/].f_30, "CONSTRUCTION1"))

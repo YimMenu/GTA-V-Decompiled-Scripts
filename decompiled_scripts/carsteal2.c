@@ -15736,7 +15736,7 @@ void func_257(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 									func_539(1);
 									func_542();
 									TASK::TASK_START_SCENARIO_IN_PLACE(0, "WORLD_HUMAN_AA_SMOKE", 0, false);
-									TASK::TASK_LOOK_AT_COORD(0, 453.9144f, -948.0502f, 44.276f, NaNf, 0, 2);
+									TASK::TASK_LOOK_AT_COORD(0, 453.9144f, -948.0502f, 44.276f, -1, 0, 2);
 									TASK::TASK_PAUSE(0, 99999999);
 									func_541(Local_1371[2 /*14*/], 0);
 									Local_1610[iParam0 /*10*/].f_3 = 1;
@@ -16491,9 +16491,9 @@ void func_257(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 										{
 											PED::SET_PED_INTO_VEHICLE(Local_1371[5 /*14*/], Local_1372[8 /*2*/], -1);
 											func_542();
-											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[5 /*14*/], -5f, 5f, 0f), 2.101948E-41f, 0, 2);
+											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[5 /*14*/], -5f, 5f, 0f), 15000, 0, 2);
 											TASK::TASK_PAUSE(0, 15000);
-											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[5 /*14*/], 5f, 5f, 0f), 2.101948E-41f, 0, 2);
+											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[5 /*14*/], 5f, 5f, 0f), 15000, 0, 2);
 											TASK::TASK_PAUSE(0, 15000);
 											func_541(Local_1371[5 /*14*/], 1);
 										}
@@ -16580,9 +16580,9 @@ void func_257(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 										{
 											PED::SET_PED_INTO_VEHICLE(Local_1371[6 /*14*/], Local_1372[9 /*2*/], -1);
 											func_542();
-											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[6 /*14*/], -5f, 5f, 0f), 2.101948E-41f, 0, 2);
+											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[6 /*14*/], -5f, 5f, 0f), 15000, 0, 2);
 											TASK::TASK_PAUSE(0, 15000);
-											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[6 /*14*/], 5f, 5f, 0f), 2.101948E-41f, 0, 2);
+											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[6 /*14*/], 5f, 5f, 0f), 15000, 0, 2);
 											TASK::TASK_PAUSE(0, 15000);
 											func_541(Local_1371[6 /*14*/], 1);
 										}
@@ -16629,9 +16629,9 @@ void func_257(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 										{
 											PED::SET_PED_INTO_VEHICLE(Local_1371[7 /*14*/], Local_1372[10 /*2*/], -1);
 											func_542();
-											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[7 /*14*/], -5f, 5f, 0f), 2.101948E-41f, 0, 2);
+											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[7 /*14*/], -5f, 5f, 0f), 15000, 0, 2);
 											TASK::TASK_PAUSE(0, 15000);
-											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[7 /*14*/], 5f, 5f, 0f), 2.101948E-41f, 0, 2);
+											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[7 /*14*/], 5f, 5f, 0f), 15000, 0, 2);
 											TASK::TASK_PAUSE(0, 15000);
 											func_541(Local_1371[7 /*14*/], 1);
 										}
@@ -16686,9 +16686,9 @@ void func_257(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 										{
 											PED::SET_PED_INTO_VEHICLE(Local_1371[8 /*14*/], Local_1372[11 /*2*/], -1);
 											func_542();
-											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[8 /*14*/], -5f, 5f, 0f), 2.101948E-41f, 0, 2);
+											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[8 /*14*/], -5f, 5f, 0f), 15000, 0, 2);
 											TASK::TASK_PAUSE(0, 15000);
-											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[8 /*14*/], 5f, 5f, 0f), 2.101948E-41f, 0, 2);
+											TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_1371[8 /*14*/], 5f, 5f, 0f), 15000, 0, 2);
 											TASK::TASK_PAUSE(0, 15000);
 											func_541(Local_1371[8 /*14*/], 1);
 										}

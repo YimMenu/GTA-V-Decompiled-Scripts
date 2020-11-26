@@ -13801,7 +13801,7 @@ void func_262(int iParam0)
 							if ((!func_189(*iParam0, 1464580341, 1) || func_263(*iParam0)) || iVar1)
 							{
 								TASK::TASK_TURN_PED_TO_FACE_COORD(*iParam0, iParam0->f_88, 0);
-								TASK::TASK_LOOK_AT_COORD(*iParam0, iParam0->f_88, NaNf, 2048, 2);
+								TASK::TASK_LOOK_AT_COORD(*iParam0, iParam0->f_88, -1, 2048, 2);
 							}
 						}
 						else if ((!func_189(*iParam0, 713668775, 1) || func_263(*iParam0)) || iVar1)
@@ -13820,7 +13820,7 @@ void func_262(int iParam0)
 						if (!func_189(*iParam0, 1464580341, 1) || func_263(*iParam0))
 						{
 							TASK::TASK_TURN_PED_TO_FACE_COORD(*iParam0, iParam0->f_88, -1);
-							TASK::TASK_LOOK_AT_COORD(*iParam0, iParam0->f_88, NaNf, 2048, 2);
+							TASK::TASK_LOOK_AT_COORD(*iParam0, iParam0->f_88, -1, 2048, 2);
 						}
 					}
 					else
@@ -13919,7 +13919,7 @@ void func_264(var uParam0)
 							}
 							if (ENTITY::DOES_ENTITY_EXIST(Local_46[2 /*8*/]))
 							{
-								TASK::TASK_LOOK_AT_COORD(*uParam0, ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(Local_46[2 /*8*/], ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(Local_46[2 /*8*/], "engine")), NaNf, 0, 2);
+								TASK::TASK_LOOK_AT_COORD(*uParam0, ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(Local_46[2 /*8*/], ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(Local_46[2 /*8*/], "engine")), -1, 0, 2);
 							}
 							uParam0->f_46 = 0;
 						}
@@ -14028,7 +14028,7 @@ void func_264(var uParam0)
 							if ((!func_189(*uParam0, 1464580341, 1) || func_263(*uParam0)) || iVar3)
 							{
 								TASK::TASK_TURN_PED_TO_FACE_COORD(*uParam0, uParam0->f_88, 0);
-								TASK::TASK_LOOK_AT_COORD(*uParam0, uParam0->f_88, NaNf, 2048, 2);
+								TASK::TASK_LOOK_AT_COORD(*uParam0, uParam0->f_88, -1, 2048, 2);
 							}
 						}
 						else if ((!func_189(*uParam0, 713668775, 1) || func_263(*uParam0)) || iVar3)
@@ -14047,7 +14047,7 @@ void func_264(var uParam0)
 						if (!func_189(*uParam0, 1464580341, 1) || func_263(*uParam0))
 						{
 							TASK::TASK_TURN_PED_TO_FACE_COORD(*uParam0, uParam0->f_88, -1);
-							TASK::TASK_LOOK_AT_COORD(*uParam0, uParam0->f_88, NaNf, 2048, 2);
+							TASK::TASK_LOOK_AT_COORD(*uParam0, uParam0->f_88, -1, 2048, 2);
 						}
 					}
 					else

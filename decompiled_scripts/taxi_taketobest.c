@@ -633,20 +633,20 @@ void func_9()
 					func_135(&Local_256, 15, 0);
 					if (iLocal_234 == iLocal_233)
 					{
-						TASK::TASK_LOOK_AT_COORD(Local_230.f_3, -713.4489f, -153.4094f, 37.1441f, 1.401298E-41f, 2049, 3);
+						TASK::TASK_LOOK_AT_COORD(Local_230.f_3, -713.4489f, -153.4094f, 37.1441f, 10000, 2049, 3);
 						func_134(&Local_230, 0);
 						Local_230.f_56 = 50;
 						Local_230.f_108 = 0;
 					}
 					else if (iLocal_234 == 14)
 					{
-						TASK::TASK_LOOK_AT_COORD(Local_230.f_3, -1196.372f, -772.4608f, 17.30166f, 1.401298E-41f, 2049, 3);
+						TASK::TASK_LOOK_AT_COORD(Local_230.f_3, -1196.372f, -772.4608f, 17.30166f, 10000, 2049, 3);
 						Local_230.f_56 = 25;
 						Local_230.f_108 = 0;
 					}
 					else
 					{
-						TASK::TASK_LOOK_AT_COORD(Local_230.f_3, 72.87311f, -1392.597f, 29.76223f, 1.401298E-41f, 2049, 3);
+						TASK::TASK_LOOK_AT_COORD(Local_230.f_3, 72.87311f, -1392.597f, 29.76223f, 10000, 2049, 3);
 						Local_230.f_56 = 0;
 						Local_230.f_108 = 1;
 					}

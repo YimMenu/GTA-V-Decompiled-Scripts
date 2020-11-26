@@ -44646,7 +44646,7 @@ void func_449(var uParam0, struct<3> Param1, int iParam2)
 	CAM::SET_GAMEPLAY_COORD_HINT(Param1, -1, iVar0, iVar1, iParam2);
 	iVar2 = 2048;
 	iVar3 = 3;
-	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param1, NaNf, iVar2, iVar3);
+	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param1, -1, iVar2, iVar3);
 	GRAPHICS::ANIMPOSTFX_PLAY("FocusIn", 0, false);
 	AUDIO::START_AUDIO_SCENE("HINT_CAM_SCENE");
 	AUDIO::PLAY_SOUND_FRONTEND(-1, "FocusIn", "HintCamSounds", true);

@@ -137760,7 +137760,7 @@ void func_954()
 							{
 								func_293();
 								iLocal_201 = func_290(func_968(iLocal_457), 1);
-								TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), func_968(iLocal_457) + Vector(1.5f, 0f, 0f), NaNf, 2048, 2);
+								TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), func_968(iLocal_457) + Vector(1.5f, 0f, 0f), -1, 2048, 2);
 							}
 						}
 					}

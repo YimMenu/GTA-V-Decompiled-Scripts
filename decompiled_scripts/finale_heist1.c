@@ -6860,7 +6860,7 @@ void func_9()
 							ENTITY::SET_ENTITY_HEADING(Local_217[1 /*2*/], 305.798f);
 						}
 						MISC::CLEAR_AREA(1754.607f, 3268.812f, 40.24541f, 20f, true, false, false, false);
-						TASK::TASK_LOOK_AT_COORD(func_170(), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(func_170(), -3.3f, 3f, 0f), NaNf, 1040, 2);
+						TASK::TASK_LOOK_AT_COORD(func_170(), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(func_170(), -3.3f, 3f, 0f), -1, 1040, 2);
 						TASK::CLEAR_PED_TASKS_IMMEDIATELY(func_250());
 						PED::_0x2208438012482A1A(func_250(), false, false);
 						iLocal_623 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);

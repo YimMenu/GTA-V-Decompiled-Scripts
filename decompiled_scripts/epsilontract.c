@@ -1799,7 +1799,7 @@ void func_35(struct<3> Param0)
 {
 	if (func_36(PLAYER::PLAYER_PED_ID(), Param0, 7f))
 	{
-		TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param0, 1.401298E-43f, 2048, 1);
+		TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param0, 100, 2048, 1);
 	}
 }
 

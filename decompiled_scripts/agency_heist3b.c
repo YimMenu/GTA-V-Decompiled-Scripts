@@ -127366,7 +127366,7 @@ void func_830(var uParam0, struct<3> Param1, int iParam2)
 	CAM::SET_GAMEPLAY_COORD_HINT(Param1, -1, iVar0, iVar1, iParam2);
 	iVar2 = 2048;
 	iVar3 = 3;
-	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param1, NaNf, iVar2, iVar3);
+	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param1, -1, iVar2, iVar3);
 	GRAPHICS::ANIMPOSTFX_PLAY("FocusIn", 0, false);
 	AUDIO::START_AUDIO_SCENE("HINT_CAM_SCENE");
 	AUDIO::PLAY_SOUND_FRONTEND(-1, "FocusIn", "HintCamSounds", true);
@@ -146054,7 +146054,7 @@ void func_1072()
 							ENTITY::SET_ENTITY_INVINCIBLE(func_83(), false);
 							PED::SET_PED_STEALTH_MOVEMENT(func_83(), true, 0);
 							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_440[1 /*20*/], 138.7255f, -741.7317f, 261.8488f, 2f, -1, 0.25f, false, 196.0327f);
-							TASK::TASK_LOOK_AT_COORD(Local_440[1 /*20*/], 139.0352f, -744.258f, 262.0591f, NaNf, 0, 2);
+							TASK::TASK_LOOK_AT_COORD(Local_440[1 /*20*/], 139.0352f, -744.258f, 262.0591f, -1, 0, 2);
 							iLocal_1080 = 1;
 						}
 						else
@@ -146105,7 +146105,7 @@ void func_1072()
 							ENTITY::SET_ENTITY_INVINCIBLE(Local_440[3 /*20*/], false);
 							PED::SET_PED_STEALTH_MOVEMENT(Local_440[3 /*20*/], true, "DEFAULT_ACTION");
 							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_440[3 /*20*/], 143.6292f, -743.4308f, 261.8488f, 2f, -1, 0.25f, false, 118.006f);
-							TASK::TASK_LOOK_AT_COORD(Local_440[3 /*20*/], 135.5912f, -747.2527f, 259.9271f, NaNf, 0, 2);
+							TASK::TASK_LOOK_AT_COORD(Local_440[3 /*20*/], 135.5912f, -747.2527f, 259.9271f, -1, 0, 2);
 							iLocal_1081 = 1;
 						}
 						else

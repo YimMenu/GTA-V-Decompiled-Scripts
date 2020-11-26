@@ -677,7 +677,7 @@ void func_2()
 				WEAPON::SET_CURRENT_PED_WEAPON(iLocal_222[1], joaat("weapon_unarmed"), true);
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_243);
 				TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_223, false) + Vector(0f, 1f, 0f), 2f, -1, 0.25f, false, 40000f);
-				TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_223, false), NaNf, 2052, 2);
+				TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_223, false), -1, 2052, 2);
 				TASK::TASK_TURN_PED_TO_FACE_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_223, false), 0);
 				TASK::TASK_PLAY_ANIM(0, "random@countrysiderobbery", "enter", 2f, -2f, -1, 0, 0f, false, false, false);
 				TASK::TASK_PLAY_ANIM(0, "random@countrysiderobbery", "base", 2f, -2f, -1, 1, 0f, false, false, false);

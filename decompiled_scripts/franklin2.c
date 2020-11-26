@@ -105495,7 +105495,7 @@ void func_498()
 							TASK::CLOSE_SEQUENCE_TASK(iVar7);
 							TASK::TASK_PERFORM_SEQUENCE(Local_267, iVar7);
 							TASK::CLEAR_SEQUENCE_TASK(&iVar7);
-							TASK::TASK_LOOK_AT_COORD(Local_267, Var11, NaNf, 2048, 2);
+							TASK::TASK_LOOK_AT_COORD(Local_267, Var11, -1, 2048, 2);
 							Local_267.f_5 = MISC::GET_GAME_TIMER();
 						}
 					}

@@ -3165,7 +3165,7 @@ void func_49()
 			{
 				if (!func_52(PLAYER::PLAYER_PED_ID(), -880529684))
 				{
-					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1007.995f, -476.8016f, 49.9117f, NaNf, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1007.995f, -476.8016f, 49.9117f, -1, 0, 2);
 				}
 				if (PAD::IS_CONTROL_JUST_PRESSED(2, 51))
 				{

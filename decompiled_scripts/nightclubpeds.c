@@ -19639,7 +19639,7 @@ void func_123(var uParam0, var uParam1)
 	{
 		if (TASK::GET_SCRIPT_TASK_STATUS(*uParam1, -880529684) != 1)
 		{
-			TASK::TASK_LOOK_AT_COORD(*uParam1, uParam1->f_13, NaNf, 2048, 4);
+			TASK::TASK_LOOK_AT_COORD(*uParam1, uParam1->f_13, -1, 2048, 4);
 		}
 	}
 	if (func_111() || uParam1->f_18)

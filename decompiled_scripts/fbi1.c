@@ -122392,7 +122392,7 @@ void func_720()
 						{
 							HUD::REMOVE_BLIP(&(Local_57[1 /*28*/].f_2));
 						}
-						TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(Local_57[1 /*28*/], false), NaNf, 0, 2);
+						TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(Local_57[1 /*28*/], false), -1, 0, 2);
 						iLocal_243 = 2;
 					}
 					else
@@ -122441,7 +122441,7 @@ void func_720()
 				{
 					HUD::REMOVE_BLIP(&(Local_57[1 /*28*/].f_2));
 				}
-				TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(Local_57[1 /*28*/], false), NaNf, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(Local_57[1 /*28*/], false), -1, 0, 2);
 				iLocal_243 = 2;
 			}
 			break;
@@ -122549,7 +122549,7 @@ void func_723()
 						{
 							HUD::REMOVE_BLIP(&(Local_57[0 /*28*/].f_2));
 						}
-						TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(Local_57[0 /*28*/], false), NaNf, 0, 2);
+						TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(Local_57[0 /*28*/], false), -1, 0, 2);
 						iLocal_242 = 2;
 					}
 					else
@@ -122602,7 +122602,7 @@ void func_723()
 					{
 						HUD::REMOVE_BLIP(&(Local_57[0 /*28*/].f_2));
 					}
-					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(Local_57[0 /*28*/], false), NaNf, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(Local_57[0 /*28*/], false), -1, 0, 2);
 					iLocal_242 = 2;
 				}
 			}

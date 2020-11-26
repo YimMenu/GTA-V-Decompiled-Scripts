@@ -15827,7 +15827,7 @@ void func_308(var uParam0, var uParam1, int iParam2)
 					Var2 = { ENTITY::GET_ENTITY_COORDS(uParam0->f_1, true) };
 					fVar4 = ENTITY::GET_ENTITY_HEADING(uParam0->f_1);
 					Var3 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var2, fVar4, 2f, 5.6201f, 0.1098f) };
-					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Var3, 7.006492E-42f, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Var3, 5000, 0, 2);
 				}
 				func_298(uParam0->f_1);
 				HUD::CLEAR_HELP(true);
@@ -16716,7 +16716,7 @@ void func_327(var uParam0, int iParam1, bool bParam2)
 	}
 	if (bParam2)
 	{
-		TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_1441, 7.006492E-42f, 0, 2);
+		TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_1441, 5000, 0, 2);
 	}
 }
 

@@ -1831,7 +1831,7 @@ void func_48(struct<3> Param0)
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(uLocal_59[iVar0], false))
 			{
-				TASK::TASK_LOOK_AT_COORD(uLocal_59[iVar0], Param0, 2.802597E-41f, 2050, 4);
+				TASK::TASK_LOOK_AT_COORD(uLocal_59[iVar0], Param0, 20000, 2050, 4);
 			}
 			iLocal_62[iVar0] = 1;
 		}

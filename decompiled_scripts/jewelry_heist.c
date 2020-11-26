@@ -118613,7 +118613,7 @@ int func_697()
 		SYSTEM::SETTIMERA(0);
 		iLocal_384 = 1;
 		MISC::CLEAR_AREA_OF_PEDS(657.0762f, -1879.361f, 9.100791f, 200f, 0);
-		TASK::TASK_LOOK_AT_COORD(iLocal_436[2], 635.0606f, -1848.388f, 10.1182f, 5.605194E-42f, 2048, 2);
+		TASK::TASK_LOOK_AT_COORD(iLocal_436[2], 635.0606f, -1848.388f, 10.1182f, 4000, 2048, 2);
 		TASK::TASK_PLAY_ANIM(func_93(0), "MISSHeist_Jewel", "Michael_InTruck_Shouting", 8f, -8f, -1, 40, 0f, false, false, false);
 		VEHICLE::ROLL_DOWN_WINDOW(iLocal_460, 0);
 		if (bLocal_382)
@@ -128791,7 +128791,7 @@ int func_888()
 							{
 								if (func_625(&uLocal_539, "JHAUD", "JH_WHICH_KD", 9, 0, 0, 0))
 								{
-									TASK::TASK_LOOK_AT_COORD(iLocal_436[0], -17.8649f, -809.1964f, 18.7799f, 5.605194E-42f, 2048, 2);
+									TASK::TASK_LOOK_AT_COORD(iLocal_436[0], -17.8649f, -809.1964f, 18.7799f, 4000, 2048, 2);
 									iLocal_266 = 5;
 								}
 							}
@@ -128802,7 +128802,7 @@ int func_888()
 							{
 								if (func_625(&uLocal_539, "JHAUD", "JH_LOST_KD", 9, 0, 0, 0))
 								{
-									TASK::TASK_LOOK_AT_COORD(iLocal_436[0], -17.8649f, -809.1964f, 18.7799f, 5.605194E-42f, 2048, 2);
+									TASK::TASK_LOOK_AT_COORD(iLocal_436[0], -17.8649f, -809.1964f, 18.7799f, 4000, 2048, 2);
 									iLocal_266++;
 								}
 							}
@@ -128813,7 +128813,7 @@ int func_888()
 							{
 								if (func_625(&uLocal_539, "JHAUD", "JH_UMM_KD", 9, 0, 0, 0))
 								{
-									TASK::TASK_LOOK_AT_COORD(iLocal_436[0], -7.7608f, -805.0465f, 18.8407f, 5.605194E-42f, 2048, 2);
+									TASK::TASK_LOOK_AT_COORD(iLocal_436[0], -7.7608f, -805.0465f, 18.8407f, 4000, 2048, 2);
 									iLocal_266++;
 								}
 							}
@@ -128824,7 +128824,7 @@ int func_888()
 							{
 								if (func_625(&uLocal_539, "JHAUD", "JH_THIS_KD", 9, 0, 0, 0))
 								{
-									TASK::TASK_LOOK_AT_COORD(iLocal_436[0], -17.8649f, -809.1964f, 18.7799f, 5.605194E-42f, 2048, 2);
+									TASK::TASK_LOOK_AT_COORD(iLocal_436[0], -17.8649f, -809.1964f, 18.7799f, 4000, 2048, 2);
 									iLocal_266++;
 								}
 							}
@@ -136231,7 +136231,7 @@ int func_991()
 				if (ENTITY::IS_ENTITY_AT_COORD(func_93(1), Local_314[2 /*3*/], 3f, 3f, 1.5f, false, true, 0))
 				{
 					RECORDING::_0x293220DA1B46CEBC(3f, 3f, 4);
-					TASK::TASK_LOOK_AT_COORD(func_93(1), -595.126f, -293.2816f, 46.5502f, 7.006492E-42f, 2048, 2);
+					TASK::TASK_LOOK_AT_COORD(func_93(1), -595.126f, -293.2816f, 46.5502f, 5000, 2048, 2);
 					iLocal_417++;
 				}
 				break;

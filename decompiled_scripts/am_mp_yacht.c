@@ -131030,7 +131030,7 @@ int func_1123(int* iParam0, int* iParam1, var uParam2, int iParam3, var uParam4,
 							{
 								iParam0->f_2 = iParam1->f_716;
 								TASK::TASK_TURN_PED_TO_FACE_COORD(PLAYER::PLAYER_PED_ID(), func_1124(iParam1, iParam0, uParam2), 0);
-								TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), func_1124(iParam1, iParam0, uParam2), NaNf, 0, 2);
+								TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), func_1124(iParam1, iParam0, uParam2), -1, 0, 2);
 								MISC::SET_BIT(iParam1, 0);
 								MISC::SET_BIT(&Global_2359302, 15);
 								return 1;

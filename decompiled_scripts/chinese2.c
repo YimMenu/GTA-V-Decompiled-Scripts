@@ -7471,12 +7471,12 @@ void func_100(int iParam0)
 		case 7:
 			if (Local_113[iParam0 /*33*/].f_15 > 2000 && !MISC::IS_BIT_SET(Local_113[iParam0 /*33*/].f_14, 0))
 			{
-				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2505.634f, 4996.994f, 46.6624f, 5.605194E-42f, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2505.634f, 4996.994f, 46.6624f, 4000, 0, 2);
 				MISC::SET_BIT(&(Local_113[iParam0 /*33*/].f_14), 0);
 			}
 			else if (Local_113[iParam0 /*33*/].f_15 > 8000 && !MISC::IS_BIT_SET(Local_113[iParam0 /*33*/].f_14, 1))
 			{
-				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2472.297f, 4962.687f, 47.2297f, 8.407791E-42f, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2472.297f, 4962.687f, 47.2297f, 6000, 0, 2);
 				MISC::SET_BIT(&(Local_113[iParam0 /*33*/].f_14), 1);
 			}
 			break;
@@ -7492,12 +7492,12 @@ void func_100(int iParam0)
 			}
 			else if (Local_113[iParam0 /*33*/].f_15 > 11000 && !MISC::IS_BIT_SET(Local_113[iParam0 /*33*/].f_14, 1))
 			{
-				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2494.634f, 5001.994f, 46.6624f, 9.809089E-42f, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2494.634f, 5001.994f, 46.6624f, 7000, 0, 2);
 				MISC::SET_BIT(&(Local_113[iParam0 /*33*/].f_14), 1);
 			}
 			else if (Local_113[iParam0 /*33*/].f_15 > 20000 && !MISC::IS_BIT_SET(Local_113[iParam0 /*33*/].f_14, 2))
 			{
-				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2477.634f, 4966.994f, 46.6624f, 9.809089E-42f, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2477.634f, 4966.994f, 46.6624f, 7000, 0, 2);
 				MISC::SET_BIT(&(Local_113[iParam0 /*33*/].f_14), 2);
 			}
 			break;
@@ -7505,17 +7505,17 @@ void func_100(int iParam0)
 		case 4:
 			if (Local_113[iParam0 /*33*/].f_15 > 3000 && !MISC::IS_BIT_SET(Local_113[iParam0 /*33*/].f_14, 0))
 			{
-				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2505.634f, 4996.994f, 46.6624f, 7.006492E-42f, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2505.634f, 4996.994f, 46.6624f, 5000, 0, 2);
 				MISC::SET_BIT(&(Local_113[iParam0 /*33*/].f_14), 0);
 			}
 			else if (Local_113[iParam0 /*33*/].f_15 > 10000 && !MISC::IS_BIT_SET(Local_113[iParam0 /*33*/].f_14, 1))
 			{
-				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2461.449f, 4977.48f, 51.7483f, 8.407791E-42f, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2461.449f, 4977.48f, 51.7483f, 6000, 0, 2);
 				MISC::SET_BIT(&(Local_113[iParam0 /*33*/].f_14), 1);
 			}
 			else if (Local_113[iParam0 /*33*/].f_15 > 18000 && !MISC::IS_BIT_SET(Local_113[iParam0 /*33*/].f_14, 2))
 			{
-				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2505.634f, 4996.994f, 46.6624f, 8.407791E-42f, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(Local_113[iParam0 /*33*/], 2505.634f, 4996.994f, 46.6624f, 6000, 0, 2);
 				MISC::SET_BIT(&(Local_113[iParam0 /*33*/].f_14), 2);
 			}
 			break;
@@ -8966,8 +8966,8 @@ int func_115(int iParam0, var uParam1, char* sParam2, struct<3> Param3, struct<3
 				{
 					TASK::CLEAR_PED_TASKS((*uParam1)[iParam0 /*24*/]);
 					func_99();
-					TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS((*uParam1)[iParam0 /*24*/], -5f, 3f, 0f), 3.503246E-42f, 0, 2);
-					TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS((*uParam1)[iParam0 /*24*/], 5f, 3f, 0f), 3.503246E-42f, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS((*uParam1)[iParam0 /*24*/], -5f, 3f, 0f), 2500, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS((*uParam1)[iParam0 /*24*/], 5f, 3f, 0f), 2500, 0, 2);
 					func_98(uParam1[iParam0 /*24*/], 0);
 					(uParam1[iParam0 /*24*/])->f_11 = MISC::GET_GAME_TIMER() + 3000;
 					(uParam1[iParam0 /*24*/])->f_5 = 2;

@@ -21664,7 +21664,7 @@ int func_342(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			{
 				*iParam12 = 0;
 			}
-			TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), func_363(uParam0, *iParam6), NaNf, 0, 2);
+			TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), func_363(uParam0, *iParam6), -1, 0, 2);
 		}
 	}
 	return 0;

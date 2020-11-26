@@ -1694,7 +1694,7 @@ void func_33()
 	struct<3> Var0;
 	
 	Var0 = { func_34(Local_136.f_1, 60f) };
-	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Var0, 1.401298E-42f, 0, 2);
+	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Var0, 1000, 0, 2);
 }
 
 Vector3 func_34(struct<3> Param0, float fParam1)

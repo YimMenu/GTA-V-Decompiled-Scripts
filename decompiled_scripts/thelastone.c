@@ -43328,7 +43328,7 @@ void func_411()
 							HUD::SET_BLIP_SCALE(Local_48.f_3, 1f);
 							AUDIO::PLAY_SOUND_FROM_COORD(Local_48.f_5, "ALERT", -1541.965f, 4692.725f, 44.0651f, "SASQUATCH_01_SOUNDSET", false, 0, false);
 							HUD::TRIGGER_SONAR_BLIP(ENTITY::GET_ENTITY_COORDS(Local_48.f_2, true), 30f, 6);
-							TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_47.f_1[0 /*14*/].f_1, 8.407791E-42f, 1024, 2);
+							TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_47.f_1[0 /*14*/].f_1, 6000, 1024, 2);
 							iLocal_176 = 1;
 							iLocal_190 = -1;
 							func_412();

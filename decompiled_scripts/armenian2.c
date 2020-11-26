@@ -45196,7 +45196,7 @@ void func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 						{
 							func_137();
 							TASK::TASK_LEAVE_ANY_VEHICLE(0, 0, 0);
-							TASK::TASK_LOOK_AT_COORD(0, -1129.619f, -1588.344f, 4.7752f, 7.006492E-42f, 0, 2);
+							TASK::TASK_LOOK_AT_COORD(0, -1129.619f, -1588.344f, 4.7752f, 5000, 0, 2);
 							iVar10 = PLAYER::PLAYER_PED_ID();
 							func_136(iVar10, 0);
 							Local_69[iParam0 /*10*/].f_3 = 1;
@@ -46032,7 +46032,7 @@ void func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 												HUD::REMOVE_BLIP(&iLocal_246);
 											}
 											PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
-											TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1064.049f, -1663.417f, 4.8837f, 4.203895E-42f, 0, 2);
+											TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1064.049f, -1663.417f, 4.8837f, 3000, 0, 2);
 											if (!ENTITY::IS_ENTITY_DEAD(iLocal_82[0], false))
 											{
 												ENTITY::SET_ENTITY_COORDS(iLocal_82[0], -1066.72f, -1665.41f, 5.73f, true, false, false, true);
@@ -46142,7 +46142,7 @@ void func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 										}
 										PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 										iLocal_81++;
-										TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1063.143f, -1667.331f, 4.9339f, 4.203895E-42f, 0, 2);
+										TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1063.143f, -1667.331f, 4.9339f, 3000, 0, 2);
 										if (!ENTITY::IS_ENTITY_DEAD(iLocal_82[1], false) && !ENTITY::IS_ENTITY_DEAD(iLocal_210, false))
 										{
 											ENTITY::SET_ENTITY_COORDS(iLocal_82[1], -1064.45f, -1668.56f, 5.73f, true, false, false, true);
@@ -46342,7 +46342,7 @@ void func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							switch (Local_69[iParam0 /*10*/].f_6)
 							{
 								case 0:
-									TASK::TASK_LOOK_AT_COORD(Local_94[2 /*14*/], -1074.437f, -1674.698f, 5.0856f, 4.203895E-42f, 0, 2);
+									TASK::TASK_LOOK_AT_COORD(Local_94[2 /*14*/], -1074.437f, -1674.698f, 5.0856f, 3000, 0, 2);
 									Local_69[iParam0 /*10*/].f_6++;
 									Local_69[iParam0 /*10*/].f_7 = MISC::GET_GAME_TIMER() + 3000;
 									break;
@@ -46350,7 +46350,7 @@ void func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 								case 1:
 									if (MISC::GET_GAME_TIMER() > 3000)
 									{
-										TASK::TASK_LOOK_AT_COORD(Local_94[2 /*14*/], -1068.423f, -1665.641f, 4.9303f, 4.203895E-42f, 0, 2);
+										TASK::TASK_LOOK_AT_COORD(Local_94[2 /*14*/], -1068.423f, -1665.641f, 4.9303f, 3000, 0, 2);
 										Local_69[iParam0 /*10*/].f_6++;
 										Local_69[iParam0 /*10*/].f_7 = MISC::GET_GAME_TIMER() + 3000;
 									}

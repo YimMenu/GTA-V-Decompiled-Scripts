@@ -33805,7 +33805,7 @@ void func_221()
 				case 2:
 					if (func_158(&Local_549, cLocal_202, "FAM2_MRESP", 8, 0, 0, 0))
 					{
-						TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_210, 1.050974E-41f, 1, 2);
+						TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_210, 7500, 1, 2);
 						SYSTEM::SETTIMERA(0);
 						iLocal_190++;
 					}
@@ -37328,7 +37328,7 @@ void func_274()
 				if (func_208(iLocal_93, 30f, 1, 1056964608, 0, 1, 0))
 				{
 					PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 256);
-					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1823.195f, -1213.526f, 12.152f, NaNf, 0, 3);
+					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1823.195f, -1213.526f, 12.152f, -1, 0, 3);
 					TASK::TASK_LEAVE_VEHICLE(PLAYER::PLAYER_PED_ID(), iLocal_93, 0);
 					iLocal_159++;
 				}
@@ -40162,7 +40162,7 @@ void func_318()
 								func_319(1);
 							}
 							func_174();
-							TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_95, 10f, 5f, 0f), 2.802597E-41f, 4, 3);
+							TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_95, 10f, 5f, 0f), 20000, 4, 3);
 							if (!func_177())
 							{
 								if (func_158(&Local_549, cLocal_202, "FAM2_HIRE1", 8, 0, 0, 0))

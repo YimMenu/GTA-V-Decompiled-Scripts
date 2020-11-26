@@ -122251,7 +122251,7 @@ void func_774()
 						CAM::POINT_CAM_AT_ENTITY(iLocal_552, Local_240, 2.5f, -4.9f, 0.2f, true);
 						CAM::ATTACH_CAM_TO_ENTITY(iLocal_553, Local_240, -1.5f, 1.58f, 0.59f, true);
 						CAM::POINT_CAM_AT_ENTITY(iLocal_553, Local_234, 0f, 0f, 0f, true);
-						TASK::TASK_LOOK_AT_COORD(Local_262, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_240, -1.5f, -10f, 0.7f), 2.802597E-42f, 0, 2);
+						TASK::TASK_LOOK_AT_COORD(Local_262, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_240, -1.5f, -10f, 0.7f), 2000, 0, 2);
 					}
 					else if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(Local_234, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_240, 1.4f, -22f, -10f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_240, 10f, -22f, 10f), 55f, false, true, 0))
 					{
@@ -122259,7 +122259,7 @@ void func_774()
 						CAM::POINT_CAM_AT_ENTITY(iLocal_552, Local_240, -2.1f, -4.9f, 0.2f, true);
 						CAM::ATTACH_CAM_TO_ENTITY(iLocal_553, Local_240, 1.5f, 1.58f, 0.59f, true);
 						CAM::POINT_CAM_AT_ENTITY(iLocal_553, Local_234, 0f, 0f, 0f, true);
-						TASK::TASK_LOOK_AT_COORD(Local_262, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_240, 1.5f, -10f, 0.7f), 2.802597E-42f, 0, 2);
+						TASK::TASK_LOOK_AT_COORD(Local_262, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_240, 1.5f, -10f, 0.7f), 2000, 0, 2);
 					}
 					else
 					{
@@ -122267,7 +122267,7 @@ void func_774()
 						CAM::POINT_CAM_AT_ENTITY(iLocal_552, Local_240, 2.5f, -4.9f, 0.2f, true);
 						CAM::ATTACH_CAM_TO_ENTITY(iLocal_553, Local_240, -1.5f, 1.58f, 0.59f, true);
 						CAM::POINT_CAM_AT_ENTITY(iLocal_553, Local_234, 0f, 0f, 0f, true);
-						TASK::TASK_LOOK_AT_COORD(Local_262, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_240, -1.5f, -10f, 0.7f), 2.802597E-42f, 0, 2);
+						TASK::TASK_LOOK_AT_COORD(Local_262, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_240, -1.5f, -10f, 0.7f), 2000, 0, 2);
 					}
 					func_778();
 					func_75();
@@ -127218,7 +127218,7 @@ int func_876()
 				{
 					if (!PED::IS_PED_INJURED(Local_302[iVar0 /*20*/]))
 					{
-						TASK::TASK_LOOK_AT_COORD(Local_302[iVar0 /*20*/], -249.6f, -2016.1f, 30.8f, 2.101948E-41f, 2048, 2);
+						TASK::TASK_LOOK_AT_COORD(Local_302[iVar0 /*20*/], -249.6f, -2016.1f, 30.8f, 15000, 2048, 2);
 					}
 					iVar0++;
 				}
@@ -128314,7 +128314,7 @@ void func_902()
 				ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 287.7694f);
 				PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), true, false);
 			}
-			TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -831.9f, 165.2f, 71.3f, 7.006492E-42f, 0, 2);
+			TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -831.9f, 165.2f, 71.3f, 5000, 0, 2);
 			iLocal_562 = CAM::CREATE_CAM("DEFAULT_SPLINE_CAMERA", true);
 			iLocal_554 = CAM::CREATE_CAM_WITH_PARAMS("default_scripted_camera", -872.3856f, 148.4303f, 63.40092f, 8.263765f, 0f, -63.05555f, 30.0172f, false, 2);
 			iLocal_555 = CAM::CREATE_CAM_WITH_PARAMS("default_scripted_camera", -869.3068f, 147.8171f, 64.73584f, 9.493369f, 0f, -63.17923f, 30.0172f, false, 2);

@@ -4751,7 +4751,7 @@ void func_108()
 			{
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_71);
 				TASK::TASK_GO_STRAIGHT_TO_COORD(0, Local_46, 1f, 20000, 40000f, 0.5f);
-				TASK::TASK_LOOK_AT_COORD(0, Local_46, NaNf, 2048, 2);
+				TASK::TASK_LOOK_AT_COORD(0, Local_46, -1, 2048, 2);
 				TASK::TASK_PLAY_ANIM(0, sLocal_99, "bystander_bystander_angry", 8f, -8f, 1500, 0, 0f, false, false, false);
 				TASK::CLOSE_SEQUENCE_TASK(iLocal_71);
 				TASK::TASK_PERFORM_SEQUENCE(iLocal_50, iLocal_71);

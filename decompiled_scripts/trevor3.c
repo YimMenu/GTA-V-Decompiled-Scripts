@@ -8313,8 +8313,8 @@ int func_131(int iParam0, var uParam1, char* sParam2, struct<3> Param3, struct<3
 				{
 					TASK::CLEAR_PED_TASKS((*uParam1)[iParam0 /*24*/]);
 					func_140();
-					TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS((*uParam1)[iParam0 /*24*/], -5f, 3f, 0f), 3.503246E-42f, 0, 2);
-					TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS((*uParam1)[iParam0 /*24*/], 5f, 3f, 0f), 3.503246E-42f, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS((*uParam1)[iParam0 /*24*/], -5f, 3f, 0f), 2500, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS((*uParam1)[iParam0 /*24*/], 5f, 3f, 0f), 2500, 0, 2);
 					func_139(uParam1[iParam0 /*24*/], 0);
 					(uParam1[iParam0 /*24*/])->f_11 = MISC::GET_GAME_TIMER() + 3000;
 					(uParam1[iParam0 /*24*/])->f_5 = 2;

@@ -136237,7 +136237,7 @@ int func_940()
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_224, 5f);
 			PHYSICS::ACTIVATE_PHYSICS(Local_224);
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_424[0], true);
-			TASK::TASK_LOOK_AT_COORD(iLocal_424[0], 907.64f, -2373.35f, 31.5f, 7.006492E-42f, 0, 2);
+			TASK::TASK_LOOK_AT_COORD(iLocal_424[0], 907.64f, -2373.35f, 31.5f, 5000, 0, 2);
 			Local_233 = VEHICLE::CREATE_VEHICLE(Local_233.f_1, 922.4016f, -2156.801f, 29.4934f, 174.54f, true, true, false);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_233, true);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(Local_233, 3);
@@ -138341,7 +138341,7 @@ void func_963(int iParam0, float fParam1)
 		{
 			TASK::CLEAR_PED_TASKS(iParam0);
 			TASK::TASK_PLAY_ANIM(iParam0, "missfbi4", "_binoculars_trevor", 1000f, -8f, -1, 1, fParam1, false, false, false);
-			TASK::TASK_LOOK_AT_COORD(iParam0, 788.3f, -2333.5f, 61.6f, NaNf, 10240, 2);
+			TASK::TASK_LOOK_AT_COORD(iParam0, 788.3f, -2333.5f, 61.6f, -1, 10240, 2);
 			PED::_0x2208438012482A1A(iParam0, false, false);
 		}
 	}

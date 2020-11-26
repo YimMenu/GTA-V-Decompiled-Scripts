@@ -120160,7 +120160,7 @@ void func_670(var uParam0, int iParam1)
 										TASK::CLEAR_SEQUENCE_TASK(&iVar1);
 										TASK::OPEN_SEQUENCE_TASK(&iVar1);
 										TASK::TASK_LEAVE_ANY_VEHICLE(0, 0, 0);
-										TASK::TASK_LOOK_AT_COORD(0, Local_322[0 /*27*/].f_10, 2.802597E-42f, 2048, 2);
+										TASK::TASK_LOOK_AT_COORD(0, Local_322[0 /*27*/].f_10, 2000, 2048, 2);
 										TASK::TASK_GO_TO_COORD_WHILE_AIMING_AT_COORD(0, Local_322[0 /*27*/].f_10, Local_322[0 /*27*/].f_10, 0.5f, false, 2f, 4f, true, 0, false, -957453492);
 										TASK::TASK_AIM_GUN_AT_COORD(0, Local_322[0 /*27*/].f_10, 5000, false, true);
 										TASK::CLOSE_SEQUENCE_TASK(iVar1);
@@ -120211,7 +120211,7 @@ void func_670(var uParam0, int iParam1)
 								TASK::OPEN_SEQUENCE_TASK(&iVar2);
 								if (!PED::IS_PED_INJURED(Local_327))
 								{
-									TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(Local_327, true), 2.802597E-42f, 2048, 2);
+									TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(Local_327, true), 2000, 2048, 2);
 									TASK::TASK_GO_TO_COORD_WHILE_AIMING_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(Local_327, true), ENTITY::GET_ENTITY_COORDS(Local_327, true), 0.5f, false, 3f, 4f, true, 0, false, -957453492);
 								}
 								TASK::TASK_COMBAT_HATED_TARGETS_AROUND_PED(0, 100f, 0);
@@ -139613,7 +139613,7 @@ void func_853(var uParam0, struct<3> Param1, int iParam2)
 	CAM::SET_GAMEPLAY_COORD_HINT(Param1, -1, iVar0, iVar1, iParam2);
 	iVar2 = 2048;
 	iVar3 = 3;
-	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param1, NaNf, iVar2, iVar3);
+	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param1, -1, iVar2, iVar3);
 	GRAPHICS::ANIMPOSTFX_PLAY("FocusIn", 0, false);
 	AUDIO::START_AUDIO_SCENE("HINT_CAM_SCENE");
 	AUDIO::PLAY_SOUND_FRONTEND(-1, "FocusIn", "HintCamSounds", true);

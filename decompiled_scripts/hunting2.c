@@ -39369,7 +39369,7 @@ void func_342()
 				if (PAD::IS_CONTROL_JUST_RELEASED(0, 234))
 				{
 					HUD::CLEAR_HELP(true);
-					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_964[4 /*3*/], NaNf, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_964[4 /*3*/], -1, 0, 2);
 					iLocal_934 = MISC::GET_GAME_TIMER() + 3000;
 					iLocal_710 = 17;
 					iLocal_711 = 1;
@@ -44608,7 +44608,7 @@ void func_427()
 						{
 							func_277("HT_OBJ");
 							PED::SET_PED_CAN_USE_AUTO_CONVERSATION_LOOKAT(PLAYER::PLAYER_PED_ID(), false);
-							TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_964[2 /*3*/], NaNf, 0, 2);
+							TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_964[2 /*3*/], -1, 0, 2);
 							iLocal_910[2] = 1;
 						}
 					}
@@ -45013,7 +45013,7 @@ void func_434()
 		
 		case 2:
 			PED::SET_PED_CAN_USE_AUTO_CONVERSATION_LOOKAT(PLAYER::PLAYER_PED_ID(), false);
-			TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_964[1 /*3*/], NaNf, 0, 2);
+			TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_964[1 /*3*/], -1, 0, 2);
 			TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(Local_93[1 /*36*/], Local_965, 2f, -1, 0.25f, false, 40000f);
 			iLocal_934 = MISC::GET_GAME_TIMER() + 3000;
 			iLocal_710 = 9;
@@ -47858,7 +47858,7 @@ void func_502()
 							func_517(&uLocal_716, sLocal_942, &Local_945, &cLocal_949, 7, 0, 0);
 						}
 						func_512(iLocal_939, 1);
-						TASK::TASK_LOOK_AT_COORD(iLocal_939, Local_964[2 /*3*/], NaNf, 0, 2);
+						TASK::TASK_LOOK_AT_COORD(iLocal_939, Local_964[2 /*3*/], -1, 0, 2);
 						TASK::TASK_FOLLOW_WAYPOINT_RECORDING(iLocal_939, "HT2_CLE_2_3", iLocal_997, 2, -1);
 						iLocal_714 = 1;
 					}

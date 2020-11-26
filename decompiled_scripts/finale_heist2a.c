@@ -149165,7 +149165,7 @@ void func_1065()
 								VEHICLE::SET_VEHICLE_ENGINE_HEALTH(iLocal_803, 1000f);
 							}
 						}
-						TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), 356.26f, -679.22f, 30.37f, NaNf, 2049, 2);
+						TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), 356.26f, -679.22f, 30.37f, -1, 2049, 2);
 						AUDIO::SET_AUDIO_FLAG("AllowScoreAndRadio", false);
 						PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
 						func_115(1, 1, 1, 0, 0, 0);
@@ -149216,7 +149216,7 @@ void func_1065()
 					{
 						if (!PED::IS_PED_INJURED(iLocal_709[2]) && SYSTEM::TIMERB() > 700)
 						{
-							TASK::TASK_LOOK_AT_COORD(iLocal_709[2], 398.45f, -681.63f, 30.37f, NaNf, 2049, 2);
+							TASK::TASK_LOOK_AT_COORD(iLocal_709[2], 398.45f, -681.63f, 30.37f, -1, 2049, 2);
 							iLocal_237 = 1;
 						}
 					}

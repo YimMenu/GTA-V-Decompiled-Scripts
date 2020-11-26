@@ -953,7 +953,7 @@ void func_3(bool bParam0)
 					{
 						TASK::CLEAR_PED_TASKS(iLocal_52);
 						TASK::OPEN_SEQUENCE_TASK(&iLocal_67);
-						TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_53, false), 1.401298E-41f, 0, 2);
+						TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_53, false), 10000, 0, 2);
 						TASK::TASK_PLAY_ANIM(0, sLocal_250, sVar0, 8f, -4f, -1, 0, 0f, false, false, false);
 						TASK::TASK_PLAY_ANIM(0, sLocal_250, sVar1, 16f, -8f, -1, 1, 0f, false, false, false);
 						TASK::CLOSE_SEQUENCE_TASK(iLocal_67);
@@ -1500,7 +1500,7 @@ void func_12()
 							{
 								TASK::CLEAR_PED_TASKS(iLocal_53);
 								TASK::OPEN_SEQUENCE_TASK(&iLocal_67);
-								TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_52, false), 1.401298E-42f, 0, 2);
+								TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_52, false), 1000, 0, 2);
 								TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_52, false), 2f, -1, 3f, false, 40000f);
 								TASK::CLOSE_SEQUENCE_TASK(iLocal_67);
 								TASK::TASK_PERFORM_SEQUENCE(iLocal_53, iLocal_67);
@@ -1521,7 +1521,7 @@ void func_12()
 							else if (TASK::GET_SCRIPT_TASK_STATUS(iLocal_53, 242628503) == 7)
 							{
 								TASK::OPEN_SEQUENCE_TASK(&iLocal_67);
-								TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_52, false), 1.401298E-42f, 0, 2);
+								TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_52, false), 1000, 0, 2);
 								TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, ENTITY::GET_ENTITY_COORDS(iLocal_52, false), 2f, -1, 3f, false, 40000f);
 								TASK::CLOSE_SEQUENCE_TASK(iLocal_67);
 								TASK::TASK_PERFORM_SEQUENCE(iLocal_53, iLocal_67);

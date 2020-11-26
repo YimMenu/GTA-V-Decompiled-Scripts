@@ -113960,7 +113960,7 @@ void func_570()
 						TASK::CLOSE_SEQUENCE_TASK(iLocal_140);
 						TASK::TASK_PERFORM_SEQUENCE(iLocal_122[0], iLocal_140);
 						TASK::CLEAR_SEQUENCE_TASK(&iLocal_140);
-						TASK::TASK_LOOK_AT_COORD(iLocal_122[0], -625.7f, -238.8f, 37.8f, NaNf, 1024, 3);
+						TASK::TASK_LOOK_AT_COORD(iLocal_122[0], -625.7f, -238.8f, 37.8f, -1, 1024, 3);
 						iLocal_421[1] = 1;
 					}
 				}
@@ -114013,7 +114013,7 @@ void func_570()
 						TASK::CLOSE_SEQUENCE_TASK(iLocal_140);
 						TASK::TASK_PERFORM_SEQUENCE(iLocal_122[0], iLocal_140);
 						TASK::CLEAR_SEQUENCE_TASK(&iLocal_140);
-						TASK::TASK_LOOK_AT_COORD(iLocal_122[0], -617.6f, -229.3f, 38f, NaNf, 1024, 3);
+						TASK::TASK_LOOK_AT_COORD(iLocal_122[0], -617.6f, -229.3f, 38f, -1, 1024, 3);
 						iLocal_421[3] = 1;
 					}
 				}

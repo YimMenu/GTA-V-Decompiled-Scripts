@@ -141974,7 +141974,7 @@ int func_766(var uParam0, var uParam1)
 						{
 							if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 							{
-								TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -393f, 1223f, 329f, 2.802597E-42f, 2096, 4);
+								TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -393f, 1223f, 329f, 2000, 2096, 4);
 							}
 						}
 						AUDIO::TRIGGER_MUSIC_EVENT("SOL1_FRANKLIN_STARTS");

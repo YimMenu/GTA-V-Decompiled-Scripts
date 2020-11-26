@@ -115898,7 +115898,7 @@ void func_631()
 				func_471(&uLocal_2277, 4, Local_349[iVar0 /*32*/], "fibguard1", 0, 1);
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_2184);
 				TASK::TASK_PLAY_ANIM(0, "missfbi_s4mop", "guard_idle_a", 8f, -8f, -1, 0, 0f, false, false, false);
-				TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_349[iVar0 /*32*/], 0f, 2f, 0f), NaNf, 2048, 2);
+				TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_349[iVar0 /*32*/], 0f, 2f, 0f), -1, 2048, 2);
 				TASK::TASK_PLAY_ANIM(0, "missfbi_s4mop", "guard_idle_a_earpiece", 8f, -8f, -1, 0, 0f, false, false, false);
 				TASK::TASK_LOOK_AT_ENTITY(0, PLAYER::PLAYER_PED_ID(), -1, 2048, 2);
 				TASK::SET_SEQUENCE_TO_REPEAT(iLocal_2184, true);
@@ -129306,7 +129306,7 @@ void func_844()
 								if (func_845(Local_360[iVar0 /*32*/], 242628503, 1))
 								{
 									TASK::OPEN_SEQUENCE_TASK(&iLocal_2184);
-									TASK::TASK_LOOK_AT_COORD(0, 98.41f, -745.5f, 149.87f, NaNf, 0, 2);
+									TASK::TASK_LOOK_AT_COORD(0, 98.41f, -745.5f, 149.87f, -1, 0, 2);
 									TASK::TASK_PLAY_ANIM(0, "REACTION@MALE_STAND@SMALL_VARIATIONS@IDLE_C", "react_small_variations_m", 8f, -8f, -1, 0, 0f, false, false, false);
 									TASK::TASK_PLAY_ANIM(0, "REACTION@MALE_STAND@SMALL_VARIATIONS@IDLE_C", "react_small_variations_n", 8f, -8f, -1, 0, 0f, false, false, false);
 									TASK::SET_SEQUENCE_TO_REPEAT(iLocal_2184, true);
@@ -129324,7 +129324,7 @@ void func_844()
 								if (func_845(Local_360[iVar0 /*32*/], 242628503, 1))
 								{
 									TASK::OPEN_SEQUENCE_TASK(&iLocal_2184);
-									TASK::TASK_LOOK_AT_COORD(0, 98.41f, -745.5f, 149.87f, NaNf, 0, 2);
+									TASK::TASK_LOOK_AT_COORD(0, 98.41f, -745.5f, 149.87f, -1, 0, 2);
 									TASK::TASK_PLAY_ANIM(0, "REACTION@MALE_STAND@SMALL_VARIATIONS@IDLE_C", "react_small_variations_n", 8f, -8f, -1, 0, 0f, false, false, false);
 									TASK::TASK_PLAY_ANIM(0, "REACTION@MALE_STAND@SMALL_VARIATIONS@IDLE_C", "react_small_variations_P", 8f, -8f, -1, 0, 0f, false, false, false);
 									TASK::SET_SEQUENCE_TO_REPEAT(iLocal_2184, true);
@@ -129354,7 +129354,7 @@ void func_844()
 								if (func_845(Local_369[iVar0 /*32*/], 713668775, 1))
 								{
 									TASK::OPEN_SEQUENCE_TASK(&iLocal_2184);
-									TASK::TASK_LOOK_AT_COORD(0, 98.41f, -745.5f, 149.87f, NaNf, 0, 2);
+									TASK::TASK_LOOK_AT_COORD(0, 98.41f, -745.5f, 149.87f, -1, 0, 2);
 									TASK::TASK_PLAY_ANIM(0, "REACTION@MALE_STAND@SMALL_VARIATIONS@IDLE_C", "react_small_variations_m", 8f, -8f, -1, 0, 0f, false, false, false);
 									TASK::TASK_PLAY_ANIM(0, "REACTION@MALE_STAND@SMALL_VARIATIONS@IDLE_C", "react_small_variations_n", 8f, -8f, -1, 0, 0f, false, false, false);
 									TASK::SET_SEQUENCE_TO_REPEAT(iLocal_2184, true);
@@ -129378,7 +129378,7 @@ void func_844()
 								if (func_845(Local_369[iVar0 /*32*/], 713668775, 1))
 								{
 									TASK::OPEN_SEQUENCE_TASK(&iLocal_2184);
-									TASK::TASK_LOOK_AT_COORD(0, 98.41f, -745.5f, 149.87f, NaNf, 0, 2);
+									TASK::TASK_LOOK_AT_COORD(0, 98.41f, -745.5f, 149.87f, -1, 0, 2);
 									TASK::TASK_PLAY_ANIM(0, "REACTION@MALE_STAND@SMALL_VARIATIONS@IDLE_C", "react_small_variations_n", 8f, -8f, -1, 0, 0f, false, false, false);
 									TASK::TASK_PLAY_ANIM(0, "REACTION@MALE_STAND@SMALL_VARIATIONS@IDLE_C", "react_small_variations_P", 8f, -8f, -1, 0, 0f, false, false, false);
 									TASK::SET_SEQUENCE_TO_REPEAT(iLocal_2184, true);
@@ -143692,7 +143692,7 @@ void func_1065()
 				fVar3 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1);
 				if (ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) < (fVar3 + 45f) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) > (fVar3 - 45f))
 				{
-					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Var2, NaNf, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Var2, -1, 0, 2);
 					iLocal_2071 = iVar0;
 				}
 				else if (TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), -880529684) == 1)
@@ -145695,7 +145695,7 @@ void func_1094()
 								{
 									TASK::OPEN_SEQUENCE_TASK(&iLocal_2184);
 									TASK::TASK_PLAY_ANIM(0, "missfbi_s4mop", "guard_idle_a", 8f, -8f, -1, 0, 0f, false, false, false);
-									TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_349[iVar0 /*32*/], 0f, 2f, 0f), NaNf, 2048, 2);
+									TASK::TASK_LOOK_AT_COORD(0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_349[iVar0 /*32*/], 0f, 2f, 0f), -1, 2048, 2);
 									TASK::TASK_PLAY_ANIM(0, "missfbi_s4mop", "guard_idle_a_earpiece", 8f, -8f, -1, 0, 0f, false, false, false);
 									TASK::TASK_LOOK_AT_ENTITY(0, PLAYER::PLAYER_PED_ID(), -1, 2048, 2);
 									TASK::SET_SEQUENCE_TO_REPEAT(iLocal_2184, true);

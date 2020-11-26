@@ -4236,7 +4236,7 @@ void func_97()
 				if (!PED::IS_PED_INJURED(iLocal_78))
 				{
 					TASK::CLEAR_PED_TASKS(iLocal_78);
-					TASK::TASK_LOOK_AT_COORD(iLocal_78, -461.4785f, -984.8583f, 28.0809f, 4.203895E-41f, 2080, 2);
+					TASK::TASK_LOOK_AT_COORD(iLocal_78, -461.4785f, -984.8583f, 28.0809f, 30000, 2080, 2);
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_90))
 				{
@@ -4332,7 +4332,7 @@ void func_97()
 				CAM::SET_CAM_ACTIVE_WITH_INTERP(iLocal_277, iLocal_276, 2500, 3, 3);
 				if (!PED::IS_PED_INJURED(iLocal_78))
 				{
-					TASK::TASK_LOOK_AT_COORD(iLocal_78, ENTITY::GET_ENTITY_COORDS(iLocal_78, true) - Vector(10f, 0f, 2f), 4.203895E-41f, 2080, 2);
+					TASK::TASK_LOOK_AT_COORD(iLocal_78, ENTITY::GET_ENTITY_COORDS(iLocal_78, true) - Vector(10f, 0f, 2f), 30000, 2080, 2);
 				}
 				iLocal_104 = MISC::GET_GAME_TIMER();
 				iLocal_72 = 7;

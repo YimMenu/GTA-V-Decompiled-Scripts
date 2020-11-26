@@ -1267,7 +1267,7 @@ void func_23()
 		case 0:
 			if (func_94(iLocal_80, bLocal_28))
 			{
-				TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1335.905f, -1278.671f, 5.07569f, NaNf, 0, 2);
+				TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -1335.905f, -1278.671f, 5.07569f, -1, 0, 2);
 				iLocal_81 = 1;
 			}
 			break;

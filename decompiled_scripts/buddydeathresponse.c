@@ -71,7 +71,7 @@ void func_1()
 					TASK::TASK_TURN_PED_TO_FACE_COORD(0, Var0, 6000);
 				}
 			}
-			TASK::TASK_LOOK_AT_COORD(0, Var0, 8.407791E-42f, 0, 2);
+			TASK::TASK_LOOK_AT_COORD(0, Var0, 6000, 0, 2);
 			TASK::CLOSE_SEQUENCE_TASK(iVar1);
 			TASK::TASK_PERFORM_SEQUENCE(iLocal_20, iVar1);
 		}

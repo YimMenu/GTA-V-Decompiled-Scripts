@@ -20558,11 +20558,11 @@ void func_338()
 			iLocal_150 = 5;
 			if (!PED::IS_PED_INJURED(iLocal_51))
 			{
-				TASK::TASK_LOOK_AT_COORD(iLocal_51, Local_113, NaNf, 16, 4);
+				TASK::TASK_LOOK_AT_COORD(iLocal_51, Local_113, -1, 16, 4);
 			}
 			if (!PED::IS_PED_INJURED(uLocal_186[2]))
 			{
-				TASK::TASK_LOOK_AT_COORD(uLocal_186[2], Local_113, NaNf, 16, 4);
+				TASK::TASK_LOOK_AT_COORD(uLocal_186[2], Local_113, -1, 16, 4);
 			}
 		}
 	}
@@ -20776,7 +20776,7 @@ void func_338()
 				{
 					if (!PED::IS_PED_INJURED(iLocal_51))
 					{
-						TASK::TASK_LOOK_AT_COORD(iLocal_51, Local_113, 1.401298E-41f, 16, 4);
+						TASK::TASK_LOOK_AT_COORD(iLocal_51, Local_113, 10000, 16, 4);
 					}
 					bLocal_267 = false;
 					iLocal_266 = 0;
@@ -22486,15 +22486,15 @@ void func_378()
 					{
 						if (!PED::IS_PED_HEADTRACKING_ENTITY(iLocal_51, iLocal_60))
 						{
-							TASK::TASK_LOOK_AT_COORD(iLocal_51, Local_113, NaNf, 16, 4);
+							TASK::TASK_LOOK_AT_COORD(iLocal_51, Local_113, -1, 16, 4);
 						}
 						if (!PED::IS_PED_HEADTRACKING_ENTITY(uLocal_186[2], iLocal_60))
 						{
-							TASK::TASK_LOOK_AT_COORD(uLocal_186[2], Local_113, NaNf, 16, 4);
+							TASK::TASK_LOOK_AT_COORD(uLocal_186[2], Local_113, -1, 16, 4);
 						}
 						if (!PED::IS_PED_HEADTRACKING_ENTITY(PLAYER::PLAYER_PED_ID(), iLocal_60))
 						{
-							TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_113, NaNf, 16, 4);
+							TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_113, -1, 16, 4);
 						}
 					}
 					if (!ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Local_165, Local_166, fLocal_167, false, true, 0))
@@ -23600,7 +23600,7 @@ void func_396(var uParam0, struct<3> Param1, int iParam2)
 	CAM::SET_GAMEPLAY_COORD_HINT(Param1, -1, iVar0, iVar1, iParam2);
 	iVar2 = 2048;
 	iVar3 = 3;
-	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param1, NaNf, iVar2, iVar3);
+	TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Param1, -1, iVar2, iVar3);
 	GRAPHICS::ANIMPOSTFX_PLAY("FocusIn", 0, false);
 	AUDIO::START_AUDIO_SCENE("HINT_CAM_SCENE");
 	AUDIO::PLAY_SOUND_FRONTEND(-1, "FocusIn", "HintCamSounds", true);
@@ -23863,15 +23863,15 @@ void func_399()
 				func_403(&iLocal_54, &iLocal_55, Local_112, &Local_240, 1, 1, 1, 1);
 				if (SYSTEM::TIMERA() > 0 && SYSTEM::TIMERA() < 100)
 				{
-					TASK::TASK_LOOK_AT_COORD(iLocal_51, Local_113, 1.401298E-41f, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(iLocal_51, Local_113, 10000, 0, 2);
 				}
 				if (SYSTEM::TIMERA() > 200 && SYSTEM::TIMERA() < 250)
 				{
-					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_113, 7.006492E-42f, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_113, 5000, 0, 2);
 				}
 				if (SYSTEM::TIMERA() > 300 && SYSTEM::TIMERA() < 350)
 				{
-					TASK::TASK_LOOK_AT_COORD(uLocal_186[2], Local_113, 9.809089E-42f, 0, 2);
+					TASK::TASK_LOOK_AT_COORD(uLocal_186[2], Local_113, 7000, 0, 2);
 				}
 				if (PED::IS_PED_SITTING_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iLocal_63))
 				{
