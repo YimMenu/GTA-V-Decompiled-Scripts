@@ -45,8 +45,8 @@
 	var uLocal_43 = 0;
 	var uLocal_44 = 0;
 	int iLocal_45 = 0;
-	var uLocal_46 = 0;
-	var uLocal_47 = 0;
+	int iLocal_46 = 0;
+	int* iLocal_47 = NULL;
 	var uLocal_48 = 0;
 	var uLocal_49 = 0;
 	struct<68> ScriptParam_0 = { 0, 0, 1132396544, 1132396544, 1132396544, 0, -1082130432, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 1092616192 } ;
@@ -89,30 +89,30 @@ void __EntryFunction__()
 		switch (iLocal_45)
 		{
 			case 0:
-				uLocal_46 = unk_0x67D02A194A2FC2BD("mission_complete");
+				iLocal_46 = unk_0x67D02A194A2FC2BD("mission_complete");
 				iLocal_45 = 1;
 				break;
 			
 			case 1:
-				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(uLocal_46))
+				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_46))
 				{
 					iLocal_45 = 2;
 				}
 				break;
 			
 			case 2:
-				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_STRING(uLocal_46, "SET_MISSION_TITLE", ScriptParam_50, ScriptParam_50.f_1, 0, 0, 0);
-				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(uLocal_46, "SET_MISSION_TITLE_COLOUR", ScriptParam_50.f_2, ScriptParam_50.f_2, ScriptParam_50.f_2, -1082130432, -1082130432);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_STRING(iLocal_46, "SET_MISSION_TITLE", ScriptParam_50, ScriptParam_50.f_1, 0, 0, 0);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_46, "SET_MISSION_TITLE_COLOUR", ScriptParam_50.f_2, ScriptParam_50.f_2, ScriptParam_50.f_2, -1f, -1f);
 				if (ScriptParam_50.f_5.f_1 != -1f && !MISC::IS_STRING_NULL(ScriptParam_50.f_5.f_2))
 				{
-					GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER_AND_STRING(uLocal_46, "SET_TOTAL", SYSTEM::TO_FLOAT(ScriptParam_50.f_5), ScriptParam_50.f_5.f_1, -1f, -1f, -1f, ScriptParam_50.f_5.f_2, 0, 0, 0, 0);
+					GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER_AND_STRING(iLocal_46, "SET_TOTAL", SYSTEM::TO_FLOAT(ScriptParam_50.f_5), ScriptParam_50.f_5.f_1, -1f, -1f, -1f, ScriptParam_50.f_5.f_2, 0, 0, 0, 0);
 				}
-				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(uLocal_46, "SET_MEDAL", SYSTEM::TO_FLOAT(ScriptParam_50.f_5), -1082130432, -1082130432, -1082130432, -1082130432);
-				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(uLocal_46, "SET_SOCIAL_CLUB_INFO", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_46, "SET_MEDAL", SYSTEM::TO_FLOAT(ScriptParam_50.f_5), -1f, -1f, -1f, -1f);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_46, "SET_SOCIAL_CLUB_INFO", 0f, -1f, -1f, -1f, -1f);
 				iVar0 = 0;
 				while (iVar0 < ScriptParam_50.f_66 + 1)
 				{
-					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_46, "SET_DATA_SLOT");
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_46, "SET_DATA_SLOT");
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(ScriptParam_50.f_9[iVar0 /*7*/]);
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(ScriptParam_50.f_9[iVar0 /*7*/].f_1);
 					if (ScriptParam_50.f_9[iVar0 /*7*/].f_2 == 4)
@@ -174,7 +174,7 @@ void __EntryFunction__()
 				}
 				if (ScriptParam_50.f_5 != 0 && !MISC::IS_STRING_NULL(ScriptParam_50.f_5.f_2))
 				{
-					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_46, "SET_TOTAL");
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_46, "SET_TOTAL");
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(ScriptParam_50.f_5);
 					if (!MISC::IS_STRING_NULL(ScriptParam_50.f_5.f_3))
 					{
@@ -187,10 +187,10 @@ void __EntryFunction__()
 					func_18(ScriptParam_50.f_5.f_2);
 					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				}
-				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_46, "DRAW_MENU_LIST");
+				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_46, "DRAW_MENU_LIST");
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				func_12(1);
-				func_9(&uLocal_47);
+				func_9(&iLocal_47);
 				if (!func_8(Global_111638.f_19092, 4096))
 				{
 					func_6(&(Global_111638.f_19092), 4096);
@@ -199,14 +199,14 @@ void __EntryFunction__()
 				break;
 			
 			case 3:
-				if (((func_2(&uLocal_47) > ScriptParam_50.f_67 && ScriptParam_50.f_67 != -1f) || CAM::IS_SCREEN_FADED_OUT()) || Global_30912)
+				if (((func_2(&iLocal_47) > ScriptParam_50.f_67 && ScriptParam_50.f_67 != -1f) || CAM::IS_SCREEN_FADED_OUT()) || Global_30912)
 				{
 					func_19();
 				}
 				else
 				{
 					func_1(1);
-					GRAPHICS::DRAW_SCALEFORM_MOVIE(uLocal_46, 0.1495f, 0.3159f, 0.2021f, 0.5111f, 255, 255, 255, 0, 0);
+					GRAPHICS::DRAW_SCALEFORM_MOVIE(iLocal_46, 0.1495f, 0.3159f, 0.2021f, 0.5111f, 255, 255, 255, 0, 0);
 					if (HUD::IS_HUD_COMPONENT_ACTIVE(10))
 					{
 						HUD::HIDE_HUD_COMPONENT_THIS_FRAME(10);
@@ -225,27 +225,27 @@ void func_1(int iParam0)
 	Global_76883 = iParam0;
 }
 
-float func_2(var uParam0)
+float func_2(int* iParam0)
 {
-	if (func_5(uParam0))
+	if (func_5(iParam0))
 	{
-		if (func_4(uParam0))
+		if (func_4(iParam0))
 		{
-			return uParam0->f_2;
+			return iParam0->f_2;
 		}
 		else
 		{
-			return (func_3(MISC::IS_BIT_SET(*uParam0, 4)) - uParam0->f_1);
+			return (func_3(MISC::IS_BIT_SET(*iParam0, 4)) - iParam0->f_1);
 		}
 	}
-	return uParam0->f_1;
+	return iParam0->f_1;
 }
 
 float func_3(bool bParam0)
 {
 	float fVar0;
 	float fVar1;
-	var uVar2;
+	int iVar2;
 	float fVar3;
 	float fVar4;
 	
@@ -257,8 +257,8 @@ float func_3(bool bParam0)
 	}
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		uVar2 = NETWORK::GET_NETWORK_TIME();
-		fVar3 = SYSTEM::TO_FLOAT(uVar2);
+		iVar2 = NETWORK::GET_NETWORK_TIME();
+		fVar3 = SYSTEM::TO_FLOAT(iVar2);
 		fVar4 = (fVar3 / 1000f);
 		return fVar4;
 	}
@@ -290,25 +290,25 @@ bool func_8(var uParam0, int iParam1)
 	return (uParam0 && iParam1) != 0;
 }
 
-void func_9(var uParam0)
+void func_9(int* iParam0)
 {
-	if (!func_5(uParam0))
+	if (!func_5(iParam0))
 	{
-		func_10(uParam0);
+		func_10(iParam0);
 	}
 }
 
-void func_10(var uParam0)
+void func_10(int* iParam0)
 {
-	func_11(uParam0, 0f);
+	func_11(iParam0, 0f);
 }
 
-void func_11(var uParam0, float fParam1)
+void func_11(int* iParam0, float fParam1)
 {
-	uParam0->f_1 = (func_3(MISC::IS_BIT_SET(*uParam0, 4)) - fParam1);
-	MISC::SET_BIT(uParam0, 1);
-	MISC::CLEAR_BIT(uParam0, 2);
-	uParam0->f_2 = 0f;
+	iParam0->f_1 = (func_3(MISC::IS_BIT_SET(*iParam0, 4)) - fParam1);
+	MISC::SET_BIT(iParam0, 1);
+	MISC::CLEAR_BIT(iParam0, 2);
+	iParam0->f_2 = 0f;
 }
 
 void func_12(int iParam0)
@@ -334,7 +334,7 @@ void func_12(int iParam0)
 	}
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 	{
-		AUDIO::STOP_SCRIPTED_CONVERSATION(0);
+		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 	}
 	Global_20805 = 5;
 	if (iParam0 == 1)
@@ -439,7 +439,7 @@ void func_18(char* sParam0)
 
 void func_19()
 {
-	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&uLocal_46);
+	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_46);
 	Global_30912 = 0;
 	func_1(0);
 	SCRIPT::TERMINATE_THIS_THREAD();

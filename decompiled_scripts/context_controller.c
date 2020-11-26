@@ -258,19 +258,19 @@ void __EntryFunction__()
 				{
 					if (iVar2 != -1)
 					{
-						if (!PED::IS_PED_DEAD_OR_DYING(PLAYER::GET_PLAYER_PED(PLAYER::GET_PLAYER_INDEX()), 1))
+						if (!PED::IS_PED_DEAD_OR_DYING(PLAYER::GET_PLAYER_PED(PLAYER::GET_PLAYER_INDEX()), true))
 						{
-							if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::GET_PLAYER_PED(PLAYER::GET_PLAYER_INDEX()), 0))
+							if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::GET_PLAYER_PED(PLAYER::GET_PLAYER_INDEX()), false))
 							{
 								if (PAD::IS_CONTROL_ENABLED(0, 101))
 								{
 									bVar5 = true;
-									PAD::DISABLE_CONTROL_ACTION(0, 101, 1);
+									PAD::DISABLE_CONTROL_ACTION(0, 101, true);
 								}
 								if (PAD::IS_CONTROL_ENABLED(0, 74))
 								{
 									bVar4 = true;
-									PAD::DISABLE_CONTROL_ACTION(0, 74, 1);
+									PAD::DISABLE_CONTROL_ACTION(0, 74, true);
 								}
 							}
 						}
@@ -279,12 +279,12 @@ void __EntryFunction__()
 					{
 						if (bVar5)
 						{
-							PAD::ENABLE_CONTROL_ACTION(0, 101, 1);
+							PAD::ENABLE_CONTROL_ACTION(0, 101, true);
 							bVar5 = false;
 						}
 						if (bVar4)
 						{
-							PAD::ENABLE_CONTROL_ACTION(0, 74, 1);
+							PAD::ENABLE_CONTROL_ACTION(0, 74, true);
 							bVar4 = false;
 						}
 					}
@@ -360,8 +360,8 @@ void __EntryFunction__()
 		}
 		if (iVar2 > -1)
 		{
-			PAD::DISABLE_CONTROL_ACTION(0, 46, 1);
-			PAD::DISABLE_CONTROL_ACTION(0, 54, 1);
+			PAD::DISABLE_CONTROL_ACTION(0, 46, true);
+			PAD::DISABLE_CONTROL_ACTION(0, 54, true);
 		}
 		if (iVar0 != iVar1)
 		{
@@ -380,22 +380,22 @@ void __EntryFunction__()
 
 void func_1()
 {
-	int iVar0;
+	bool bVar0;
 	
 	if (!bLocal_80)
 	{
 		return;
 	}
-	iVar0 = 1;
+	bVar0 = true;
 	if (iLocal_85 == 1)
 	{
-		iVar0 = 0;
+		bVar0 = false;
 	}
 	if (bLocal_81)
 	{
 		if (bLocal_82)
 		{
-			HUD::ADD_NEXT_MESSAGE_TO_PREVIOUS_BRIEFS(0);
+			HUD::ADD_NEXT_MESSAGE_TO_PREVIOUS_BRIEFS(false);
 		}
 		HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(&Local_83);
 		if (bLocal_82)
@@ -407,13 +407,13 @@ void func_1()
 			HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
 			HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Local_84);
 		}
-		HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, iVar0, 50);
+		HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, bVar0, 50);
 	}
 	else
 	{
 		HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(&Local_83);
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
-		HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, iVar0, 50);
+		HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, bVar0, 50);
 	}
 	switch (iLocal_85)
 	{
@@ -441,7 +441,7 @@ void func_2(int iParam0)
 	}
 	if (iParam0 && !func_3())
 	{
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Boss_Message_Orange", sVar0, 0);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Boss_Message_Orange", sVar0, false);
 	}
 }
 
@@ -508,7 +508,7 @@ void func_9(int iParam0)
 	HUD::_SET_HELP_MESSAGE_TEXT_STYLE(3, 21, 200, 0, 0);
 	if (iParam0 && !func_3())
 	{
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Event_Message_Purple", "GTAO_FM_Events_Soundset", 0);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Event_Message_Purple", "GTAO_FM_Events_Soundset", false);
 	}
 }
 
@@ -792,10 +792,10 @@ int func_22(int iParam0)
 	return 0;
 }
 
-int func_23(int iParam0, int iParam1)
+bool func_23(int iParam0, int iParam1)
 {
 	int iVar0;
-	int iVar1;
+	bool bVar1;
 	
 	iVar0 = func_24(iParam0);
 	if (iParam1 == 0)
@@ -817,12 +817,12 @@ int func_23(int iParam0, int iParam1)
 	{
 		return 0;
 	}
-	iVar1 = 0;
+	bVar1 = false;
 	if (!Global_42151[iVar0 /*32*/].f_12)
 	{
 		HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&(Global_42151[iVar0 /*32*/].f_8));
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
-		iVar1 = HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
+		bVar1 = HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 	}
 	else
 	{
@@ -836,9 +836,9 @@ int func_23(int iParam0, int iParam1)
 		{
 			HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_42151[iVar0 /*32*/].f_13));
 		}
-		iVar1 = HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
+		bVar1 = HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 	}
-	return iVar1;
+	return bVar1;
 }
 
 int func_24(int iParam0)
@@ -1066,21 +1066,21 @@ void func_33()
 
 void func_34(int iParam0)
 {
-	var uVar0;
+	int iVar0;
 	
-	uVar0 = Global_58686[iParam0];
+	iVar0 = Global_58686[iParam0];
 	switch (iParam0)
 	{
 		case 0:
-			STATS::STAT_SET_INT(joaat("SP0_TOTAL_CASH"), uVar0, 1);
+			STATS::STAT_SET_INT(joaat("SP0_TOTAL_CASH"), iVar0, true);
 			break;
 		
 		case 1:
-			STATS::STAT_SET_INT(joaat("SP1_TOTAL_CASH"), uVar0, 1);
+			STATS::STAT_SET_INT(joaat("SP1_TOTAL_CASH"), iVar0, true);
 			break;
 		
 		case 2:
-			STATS::STAT_SET_INT(joaat("SP2_TOTAL_CASH"), uVar0, 1);
+			STATS::STAT_SET_INT(joaat("SP2_TOTAL_CASH"), iVar0, true);
 			break;
 	}
 }

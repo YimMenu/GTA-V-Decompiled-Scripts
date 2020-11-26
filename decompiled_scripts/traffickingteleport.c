@@ -48,7 +48,7 @@
 
 void __EntryFunction__()
 {
-	var uVar0;
+	int iVar0;
 	
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -74,11 +74,11 @@ void __EntryFunction__()
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	uVar0 = PLAYER::GET_PLAYER_PED(PLAYER::GET_PLAYER_INDEX());
-	if (!ENTITY::IS_ENTITY_DEAD(uVar0, 0))
+	iVar0 = PLAYER::GET_PLAYER_PED(PLAYER::GET_PLAYER_INDEX());
+	if (!ENTITY::IS_ENTITY_DEAD(iVar0, false))
 	{
-		ENTITY::SET_ENTITY_COORDS(uVar0, 2119.159f, 4813.522f, 40.2223f, 1, 0, 0, 1);
-		ENTITY::SET_ENTITY_HEADING(uVar0, 225.2837f);
+		ENTITY::SET_ENTITY_COORDS(iVar0, 2119.159f, 4813.522f, 40.2223f, true, false, false, true);
+		ENTITY::SET_ENTITY_HEADING(iVar0, 225.2837f);
 	}
 	func_1(19, 0);
 }

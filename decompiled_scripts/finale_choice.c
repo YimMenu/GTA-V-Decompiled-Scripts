@@ -101,22 +101,22 @@ void __EntryFunction__()
 						{
 							if (iLocal_28)
 							{
-								PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), 0, 384);
+								PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 384);
 								PED::SET_PED_MAX_MOVE_BLEND_RATIO(PLAYER::PLAYER_PED_ID(), 0f);
-								PAD::ENABLE_CONTROL_ACTION(0, 173, 1);
-								PAD::ENABLE_CONTROL_ACTION(0, 172, 1);
-								PAD::ENABLE_CONTROL_ACTION(0, 174, 1);
-								PAD::ENABLE_CONTROL_ACTION(0, 175, 1);
-								PAD::ENABLE_CONTROL_ACTION(0, 176, 1);
-								PAD::ENABLE_CONTROL_ACTION(0, 177, 1);
-								PAD::ENABLE_CONTROL_ACTION(0, 178, 1);
-								PAD::ENABLE_CONTROL_ACTION(0, 179, 1);
-								PAD::ENABLE_CONTROL_ACTION(0, 180, 1);
-								PAD::ENABLE_CONTROL_ACTION(0, 181, 1);
+								PAD::ENABLE_CONTROL_ACTION(0, 173, true);
+								PAD::ENABLE_CONTROL_ACTION(0, 172, true);
+								PAD::ENABLE_CONTROL_ACTION(0, 174, true);
+								PAD::ENABLE_CONTROL_ACTION(0, 175, true);
+								PAD::ENABLE_CONTROL_ACTION(0, 176, true);
+								PAD::ENABLE_CONTROL_ACTION(0, 177, true);
+								PAD::ENABLE_CONTROL_ACTION(0, 178, true);
+								PAD::ENABLE_CONTROL_ACTION(0, 179, true);
+								PAD::ENABLE_CONTROL_ACTION(0, 180, true);
+								PAD::ENABLE_CONTROL_ACTION(0, 181, true);
 							}
 							else
 							{
-								PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), 1, 0);
+								PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 							}
 							switch (func_12())
 							{
@@ -130,7 +130,7 @@ void __EntryFunction__()
 								case -1989308064:
 									func_7(12, 0);
 									func_6(134, 1);
-									STATS::STAT_SET_INT(joaat("SP_FINAL_DECISION"), 2, 1);
+									STATS::STAT_SET_INT(joaat("SP_FINAL_DECISION"), 2, true);
 									break;
 								
 								case -1970925435:
@@ -143,13 +143,13 @@ void __EntryFunction__()
 								case -1060930305:
 									func_7(12, 1);
 									func_6(134, 1);
-									STATS::STAT_SET_INT(joaat("SP_FINAL_DECISION"), 1, 1);
+									STATS::STAT_SET_INT(joaat("SP_FINAL_DECISION"), 1, true);
 									break;
 								
 								case -1817481777:
 									func_7(12, 2);
 									func_6(134, 1);
-									STATS::STAT_SET_INT(joaat("SP_FINAL_DECISION"), 3, 1);
+									STATS::STAT_SET_INT(joaat("SP_FINAL_DECISION"), 3, true);
 									break;
 								
 								default:
@@ -641,7 +641,7 @@ void func_19()
 {
 	if (func_17(14))
 	{
-		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_111638.f_28045[0 /*29*/])
 			{
@@ -834,7 +834,7 @@ void func_22(int iParam0)
 	}
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 	{
-		AUDIO::STOP_SCRIPTED_CONVERSATION(0);
+		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 	}
 	Global_20805 = 5;
 	if (iParam0 == 1)
@@ -956,14 +956,14 @@ void func_30()
 	Global_111638.f_2358.f_539.f_4321 = 145;
 }
 
-int func_31(var uParam0)
+int func_31(int iParam0)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (ENTITY::DOES_ENTITY_EXIST(uParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = ENTITY::GET_ENTITY_MODEL(uParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{
@@ -1165,7 +1165,7 @@ void func_42()
 	func_43(-1060930305);
 	func_43(-1817481777);
 	Global_7361 = 0;
-	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), 1, 0);
+	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
@@ -1425,14 +1425,14 @@ void func_53(int iParam0, int iParam1, int iParam2)
 void func_54(int iParam0)
 {
 	int iVar0;
-	var uVar1;
+	int iVar1;
 	struct<15> Var2;
 	
 	if (iParam0 < 0 || iParam0 >= Global_111638.f_7683.f_136)
 	{
 		return;
 	}
-	uVar1 = Global_111638.f_7683[iParam0 /*15*/].f_2;
+	iVar1 = Global_111638.f_7683[iParam0 /*15*/].f_2;
 	if (Global_111638.f_7683.f_136 > 1)
 	{
 		iVar0 = iParam0;
@@ -1450,7 +1450,7 @@ void func_54(int iParam0)
 	iVar0 = 0;
 	while (iVar0 < 3)
 	{
-		if (MISC::IS_BIT_SET(uVar1, iVar0))
+		if (MISC::IS_BIT_SET(iVar1, iVar0))
 		{
 			func_9(iVar0);
 		}

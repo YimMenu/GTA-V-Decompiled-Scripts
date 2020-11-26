@@ -91,8 +91,8 @@ void __EntryFunction__()
 	Local_50 = { 1694.74f, 3276.502f, 41.2796f };
 	Local_51 = { 8.79494f, 0.59893f, 154.8464f };
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
-	HUD::_SET_PLAYER_IS_IN_DIRECTOR_MODE(0);
-	MISC::_SET_PLAYER_IS_IN_ANIMAL_FORM(0);
+	HUD::_SET_PLAYER_IS_IN_DIRECTOR_MODE(false);
+	MISC::_SET_PLAYER_IS_IN_ANIMAL_FORM(false);
 	STREAMING::REMOVE_IPL("prologue_DistantLights");
 	STREAMING::REMOVE_IPL("prologue_LODLights");
 	iLocal_52 = 0;
@@ -163,7 +163,7 @@ void __EntryFunction__()
 				}
 				SYSTEM::WAIT(0);
 			}
-			MISC::START_SAVE_DATA(&Global_111638, 1, 1);
+			MISC::START_SAVE_DATA(&Global_111638, 1, true);
 			MISC::REGISTER_FLOAT_TO_SAVE(&Global_111638, "fSaveVersion");
 			MISC::STOP_SAVE_DATA();
 			if (Global_1)
@@ -180,7 +180,7 @@ void __EntryFunction__()
 			}
 			break;
 	}
-	MISC::START_SAVE_DATA(&Global_2097152, 10931, 0);
+	MISC::START_SAVE_DATA(&Global_2097152, 10931, false);
 	MISC::START_SAVE_ARRAY_WITH_SIZE(&Global_2097152, 10931, "g_savedMPGlobals");
 	iVar1 = 0;
 	while (iVar1 < 1)
@@ -198,7 +198,7 @@ void __EntryFunction__()
 	MISC::STOP_SAVE_STRUCT();
 	MISC::STOP_SAVE_DATA();
 	iVar2 = 10931;
-	iVar3 = MISC::GET_SIZE_OF_SAVE_DATA(0);
+	iVar3 = MISC::GET_SIZE_OF_SAVE_DATA(false);
 	if (iVar2 != iVar3)
 	{
 	}
@@ -206,8 +206,8 @@ void __EntryFunction__()
 	{
 		NETWORK::_0xB606E6CC59664972(0);
 	}
-	PATHFIND::_0x228E5C6AD4D74BFD(0);
-	MISC::_SET_PLAYER_IS_IN_ANIMAL_FORM(0);
+	PATHFIND::_0x228E5C6AD4D74BFD(false);
+	MISC::_SET_PLAYER_IS_IN_ANIMAL_FORM(false);
 	func_2();
 	func_1();
 	SCRIPT::TERMINATE_THIS_THREAD();
@@ -557,7 +557,7 @@ void func_12(var uParam0, int iParam1)
 	func_13(&(uParam0->f_6174), &cVar0);
 }
 
-void func_13(var uParam0, char[4] cParam1)
+void func_13(var* uParam0, char* sParam1)
 {
 	int iVar0;
 	struct<4> Var1;
@@ -571,7 +571,7 @@ void func_13(var uParam0, char[4] cParam1)
 	char cVar9[16];
 	char cVar10[16];
 	
-	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 4338, cParam1);
+	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 4338, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(uParam0, "CASH_GIVEN_TOTAL");
 	MISC::REGISTER_INT_TO_SAVE(&(uParam0->f_1), "CASH_GIVEN_TIME");
 	MISC::REGISTER_INT_TO_SAVE(&(uParam0->f_2), "LAST_SAVED_CAR");
@@ -1121,7 +1121,7 @@ void func_14(var uParam0, int iParam1)
 	func_15(&(uParam0->f_6086), iParam1);
 }
 
-void func_15(var uParam0, int iParam1)
+void func_15(var* uParam0, int iParam1)
 {
 	char cVar0[64];
 	int iVar1;
@@ -1186,7 +1186,7 @@ void func_15(var uParam0, int iParam1)
 	MISC::REGISTER_BOOL_TO_SAVE(&(uParam0->f_87), "SETUP_INIT");
 }
 
-void func_16(var uParam0, char* sParam1)
+void func_16(var* uParam0, char* sParam1)
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 41, sParam1);
 	MISC::REGISTER_ENUM_TO_SAVE(uParam0, "Model");
@@ -1236,12 +1236,12 @@ void func_17(var uParam0, int iParam1)
 	func_18(&(uParam0->f_5506), &cVar0);
 }
 
-void func_18(var uParam0, char[4] cParam1)
+void func_18(var* uParam0, char* sParam1)
 {
 	int iVar0;
 	char cVar1[16];
 	
-	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 580, cParam1);
+	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 580, sParam1);
 	MISC::REGISTER_BOOL_TO_SAVE(uParam0, "TV_ON");
 	MISC::REGISTER_INT_TO_SAVE(&(uParam0->f_1), "TV_CHANNEL_ID");
 	MISC::REGISTER_BOOL_TO_SAVE(&(uParam0->f_2), "PENTHOUSE_TV_ON");
@@ -1368,12 +1368,12 @@ void func_19(var uParam0, int iParam1)
 	func_20(&(uParam0->f_5500), &cVar0);
 }
 
-void func_20(var uParam0, char[4] cParam1)
+void func_20(var* uParam0, char* sParam1)
 {
 	int iVar0;
 	char cVar1[16];
 	
-	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 6, cParam1);
+	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 6, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(uParam0, "BAV_Timestamp");
 	MISC::START_SAVE_ARRAY_WITH_SIZE(&(uParam0->f_1), 5, "B_A_V_BS_ID");
 	iVar0 = 0;
@@ -1388,7 +1388,7 @@ void func_20(var uParam0, char[4] cParam1)
 	MISC::STOP_SAVE_ARRAY();
 }
 
-void func_21(var uParam0, int iParam1)
+void func_21(var* uParam0, int iParam1)
 {
 	struct<3> Var0;
 	
@@ -1397,27 +1397,27 @@ void func_21(var uParam0, int iParam1)
 	func_22(uParam0, &Var0);
 }
 
-void func_22(var uParam0, char* sParam1)
+void func_22(var* uParam0, char* sParam1)
 {
 	int iVar0;
-	char cVar1[32];
+	struct<4> Var1;
 	
 	iVar0 = 0;
 	MISC::START_SAVE_ARRAY_WITH_SIZE(uParam0, 5500, sParam1);
 	iVar0 = 0;
 	while (iVar0 < 39)
 	{
-		StringCopy(&cVar1, "MP_VEHICLE", 32);
-		StringIntConCat(&cVar1, iVar0, 32);
-		func_23(uParam0[iVar0 /*141*/], &cVar1);
+		StringCopy(&Var1, "MP_VEHICLE", 32);
+		StringIntConCat(&Var1, iVar0, 32);
+		func_23(uParam0[iVar0 /*141*/], &Var1);
 		iVar0++;
 	}
 	MISC::STOP_SAVE_ARRAY();
 }
 
-void func_23(var uParam0, char[4] cParam1)
+void func_23(var* uParam0, char* sParam1)
 {
-	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 141, cParam1);
+	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 141, sParam1);
 	func_24(uParam0, "VEHICLE_SETUP_STRUCT_MP");
 	MISC::REGISTER_INT_TO_SAVE(&(uParam0->f_102), "VEHICLE_BS");
 	MISC::REGISTER_INT_TO_SAVE(&(uParam0->f_104), "PAID_PREMIUM");
@@ -1431,7 +1431,7 @@ void func_23(var uParam0, char[4] cParam1)
 	MISC::STOP_SAVE_STRUCT();
 }
 
-void func_24(var uParam0, char* sParam1)
+void func_24(var* uParam0, char* sParam1)
 {
 	func_26(uParam0, "VEHICLE_SETUP_STRUCT");
 	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 102, sParam1);
@@ -1450,7 +1450,7 @@ void func_24(var uParam0, char* sParam1)
 	MISC::STOP_SAVE_STRUCT();
 }
 
-void func_25(var uParam0, char* sParam1)
+void func_25(var* uParam0, char* sParam1)
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(uParam0, 13, sParam1);
 	MISC::_REGISTER_INT64_TO_SAVE(uParam0, "Data64_1");
@@ -1469,7 +1469,7 @@ void func_25(var uParam0, char* sParam1)
 	MISC::STOP_SAVE_STRUCT();
 }
 
-void func_26(var uParam0, char* sParam1)
+void func_26(var* uParam0, char* sParam1)
 {
 	int iVar0;
 	char cVar1[16];
@@ -1722,16 +1722,16 @@ bool func_37(int iParam0)
 
 void func_38()
 {
-	REPLAY::_0x7E2BD3EF6C205F09("No_Filter", 1);
-	REPLAY::_0x7E2BD3EF6C205F09("phone_cam1", 1);
-	REPLAY::_0x7E2BD3EF6C205F09("phone_cam2", 1);
-	REPLAY::_0x7E2BD3EF6C205F09("phone_cam3", 1);
-	REPLAY::_0x7E2BD3EF6C205F09("phone_cam4", 1);
-	REPLAY::_0x7E2BD3EF6C205F09("phone_cam5", 1);
-	REPLAY::_0x7E2BD3EF6C205F09("phone_cam6", 1);
-	REPLAY::_0x7E2BD3EF6C205F09("phone_cam7", 1);
-	REPLAY::_0x7E2BD3EF6C205F09("phone_cam9", 1);
-	REPLAY::_0x7E2BD3EF6C205F09("phone_cam12", 0);
+	REPLAY::_0x7E2BD3EF6C205F09("No_Filter", true);
+	REPLAY::_0x7E2BD3EF6C205F09("phone_cam1", true);
+	REPLAY::_0x7E2BD3EF6C205F09("phone_cam2", true);
+	REPLAY::_0x7E2BD3EF6C205F09("phone_cam3", true);
+	REPLAY::_0x7E2BD3EF6C205F09("phone_cam4", true);
+	REPLAY::_0x7E2BD3EF6C205F09("phone_cam5", true);
+	REPLAY::_0x7E2BD3EF6C205F09("phone_cam6", true);
+	REPLAY::_0x7E2BD3EF6C205F09("phone_cam7", true);
+	REPLAY::_0x7E2BD3EF6C205F09("phone_cam9", true);
+	REPLAY::_0x7E2BD3EF6C205F09("phone_cam12", false);
 }
 
 void func_39(int iParam0, int iParam1)

@@ -8071,9 +8071,9 @@ void func_1()
 	func_2(iLocal_27, 27, -111778767, &(Global_291133[8000]), 1);
 }
 
-void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
+void func_2(int iParam0, int iParam1, int iParam2, int* iParam3, bool bParam4)
 {
-	func_3(0, iParam2, uParam3, bParam4);
+	func_3(0, iParam2, iParam3, bParam4);
 	if (iParam0 == 0)
 	{
 		return;
@@ -8106,7 +8106,7 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 		case 23:
 		case 24:
 		case 25:
-			func_3(1, iParam2, uParam3, bParam4);
+			func_3(1, iParam2, iParam3, bParam4);
 			if (iParam0 == 1)
 			{
 				return;
@@ -8117,7 +8117,7 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 				case 3:
 				case 4:
 				case 5:
-					func_3(2, iParam2, uParam3, bParam4);
+					func_3(2, iParam2, iParam3, bParam4);
 					if (iParam0 == 2)
 					{
 						return;
@@ -8127,7 +8127,7 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 3:
 						case 4:
 						case 5:
-							func_3(iParam0, iParam2, uParam3, bParam4);
+							func_3(iParam0, iParam2, iParam3, bParam4);
 							return;
 						
 						case 1:
@@ -8181,7 +8181,7 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 				case 23:
 				case 24:
 				case 25:
-					func_3(6, iParam2, uParam3, bParam4);
+					func_3(6, iParam2, iParam3, bParam4);
 					if (iParam0 == 6)
 					{
 						return;
@@ -8195,10 +8195,10 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 19:
 						case 26:
 						case 24:
-							func_3(iParam0, iParam2, uParam3, bParam4);
+							func_3(iParam0, iParam2, iParam3, bParam4);
 							if (iParam1 != 27)
 							{
-								func_3(iParam1, iParam2, uParam3, bParam4);
+								func_3(iParam1, iParam2, iParam3, bParam4);
 							}
 							return;
 						
@@ -8208,12 +8208,12 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 22:
 						case 23:
 						case 25:
-							func_3(15, iParam2, uParam3, bParam4);
+							func_3(15, iParam2, iParam3, bParam4);
 							if (iParam0 == 15)
 							{
 								if (iParam1 != 27)
 								{
-									func_3(iParam1, iParam2, uParam3, bParam4);
+									func_3(iParam1, iParam2, iParam3, bParam4);
 								}
 								return;
 							}
@@ -8224,10 +8224,10 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 								case 22:
 								case 23:
 								case 25:
-									func_3(iParam0, iParam2, uParam3, bParam4);
+									func_3(iParam0, iParam2, iParam3, bParam4);
 									if (iParam1 != 27)
 									{
-										func_3(iParam1, iParam2, uParam3, bParam4);
+										func_3(iParam1, iParam2, iParam3, bParam4);
 									}
 									return;
 								
@@ -8243,12 +8243,12 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 12:
 						case 13:
 						case 14:
-							func_3(8, iParam2, uParam3, bParam4);
+							func_3(8, iParam2, iParam3, bParam4);
 							if (iParam0 == 8)
 							{
 								if (iParam1 != 27)
 								{
-									func_3(iParam1, iParam2, uParam3, bParam4);
+									func_3(iParam1, iParam2, iParam3, bParam4);
 								}
 								return;
 							}
@@ -8260,10 +8260,10 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 								case 12:
 								case 13:
 								case 14:
-									func_3(iParam0, iParam2, uParam3, bParam4);
+									func_3(iParam0, iParam2, iParam3, bParam4);
 									if (iParam1 != 27)
 									{
-										func_3(iParam1, iParam2, uParam3, bParam4);
+										func_3(iParam1, iParam2, iParam3, bParam4);
 									}
 									return;
 								
@@ -8294,24 +8294,24 @@ void func_2(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 	}
 }
 
-void func_3(int iParam0, var uParam1, var uParam2, bool bParam3)
+void func_3(int iParam0, int iParam1, int* iParam2, bool bParam3)
 {
-	var uVar0;
+	int iVar0;
 	var uVar1;
 	
-	uVar0 = func_4(iParam0);
-	uVar1 = *uParam2;
-	if (!NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(uVar0, uParam1, uParam2))
+	iVar0 = func_4(iParam0);
+	uVar1 = *iParam2;
+	if (!NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(iVar0, iParam1, iParam2))
 	{
 		if (bParam3)
 		{
 		}
 		return;
-		*uParam2 = uVar1;
+		*iParam2 = uVar1;
 	}
 	else
 	{
-		NETWORK::_NETWORK_REGISTER_TUNABLE_INT_HASH(uVar0, uParam1, uParam2);
+		NETWORK::_NETWORK_REGISTER_TUNABLE_INT_HASH(iVar0, iParam1, iParam2);
 	}
 	if (bParam3)
 	{

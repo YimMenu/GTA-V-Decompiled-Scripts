@@ -115,7 +115,7 @@ void __EntryFunction__()
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
-		MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
+		MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 	}
 	else
 	{
@@ -208,7 +208,7 @@ int func_4(int iParam0)
 	return 0;
 }
 
-var func_5()
+bool func_5()
 {
 	return MISC::IS_BIT_SET(Global_1590535[PLAYER::PLAYER_ID() /*876*/].f_39.f_18, 0);
 }
@@ -254,17 +254,17 @@ bool func_9(int iParam0)
 	return func_10(iParam0);
 }
 
-var func_10(int iParam0)
+bool func_10(int iParam0)
 {
 	return MISC::IS_BIT_SET(Global_1590535[iParam0 /*876*/].f_13.f_1, 0);
 }
 
-bool func_11(var uParam0)
+bool func_11(int iParam0)
 {
-	if (!ENTITY::DOES_ENTITY_EXIST(uParam0))
+	if (!ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		return 0;
 	}
-	return !ENTITY::IS_ENTITY_DEAD(uParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, false);
 }
 

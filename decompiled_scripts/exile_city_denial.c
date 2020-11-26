@@ -32,7 +32,7 @@
 	bool bLocal_30 = 0;
 	int iLocal_31 = 0;
 	bool bLocal_32 = 0;
-	var uLocal_33 = 0;
+	int iLocal_33 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -44,7 +44,7 @@ void __EntryFunction__()
 	bool bVar4;
 	bool bVar5;
 	bool bVar6;
-	var uVar7;
+	int iVar7;
 	
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -130,7 +130,7 @@ void __EntryFunction__()
 				iVar1 = 0;
 			}
 		}
-		Var2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
+		Var2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
 		bLocal_29 = func_24(Var2, &bLocal_32);
 		if (Global_76891 || Global_76891.f_1)
 		{
@@ -161,7 +161,7 @@ void __EntryFunction__()
 		{
 			if (PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()))
 			{
-				if (ENTITY::IS_ENTITY_IN_AIR(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0)))
+				if (ENTITY::IS_ENTITY_IN_AIR(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)))
 				{
 					bLocal_29 = false;
 				}
@@ -205,14 +205,14 @@ void __EntryFunction__()
 					PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
 					if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 					{
-						uVar7 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
-						while (INTERIOR::IS_VALID_INTERIOR(uVar7))
+						iVar7 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
+						while (INTERIOR::IS_VALID_INTERIOR(iVar7))
 						{
 							SYSTEM::WAIT(5000);
 							PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
 							if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 							{
-								uVar7 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
+								iVar7 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
 							}
 						}
 					}
@@ -256,7 +256,7 @@ void __EntryFunction__()
 								{
 									if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 									{
-										MISC::CREATE_INCIDENT_WITH_ENTITY(11, PLAYER::PLAYER_PED_ID(), iVar0, 0f, &uLocal_33, 0, 0);
+										MISC::CREATE_INCIDENT_WITH_ENTITY(11, PLAYER::PLAYER_PED_ID(), iVar0, 0f, &iLocal_33, 0, 0);
 									}
 								}
 							}
@@ -287,7 +287,7 @@ void __EntryFunction__()
 		}
 		if (bLocal_29)
 		{
-			if (!MISC::IS_INCIDENT_VALID(uLocal_33))
+			if (!MISC::IS_INCIDENT_VALID(iLocal_33))
 			{
 				if (MISC::_GET_NUM_DISPATCHED_UNITS_FOR_PLAYER(11) < 256)
 				{
@@ -295,7 +295,7 @@ void __EntryFunction__()
 					{
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 						{
-							MISC::CREATE_INCIDENT_WITH_ENTITY(11, PLAYER::PLAYER_PED_ID(), iVar0, 0f, &uLocal_33, 0, 0);
+							MISC::CREATE_INCIDENT_WITH_ENTITY(11, PLAYER::PLAYER_PED_ID(), iVar0, 0f, &iLocal_33, 0, 0);
 						}
 					}
 				}
@@ -307,9 +307,9 @@ void __EntryFunction__()
 			iVar0 = (iVar0 + MISC::GET_RANDOM_INT_IN_RANGE(1, 2));
 			if (iVar0 < 8)
 			{
-				if (MISC::IS_INCIDENT_VALID(uLocal_33))
+				if (MISC::IS_INCIDENT_VALID(iLocal_33))
 				{
-					MISC::SET_INCIDENT_REQUESTED_UNITS(uLocal_33, 11, iVar0);
+					MISC::SET_INCIDENT_REQUESTED_UNITS(iLocal_33, 11, iVar0);
 				}
 				else if (MISC::_GET_NUM_DISPATCHED_UNITS_FOR_PLAYER(11) < 256)
 				{
@@ -317,7 +317,7 @@ void __EntryFunction__()
 					{
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 						{
-							MISC::CREATE_INCIDENT_WITH_ENTITY(11, PLAYER::PLAYER_PED_ID(), iVar0, 0f, &uLocal_33, 0, 0);
+							MISC::CREATE_INCIDENT_WITH_ENTITY(11, PLAYER::PLAYER_PED_ID(), iVar0, 0f, &iLocal_33, 0, 0);
 						}
 					}
 				}
@@ -598,9 +598,9 @@ void func_6(int iParam0, bool bParam1, bool bParam2)
 	{
 		if (HUD::DOES_BLIP_EXIST(Global_31146[iVar0 /*23*/].f_19))
 		{
-			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(1);
+			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(true);
 			HUD::REMOVE_BLIP(&(Global_31146[iVar0 /*23*/].f_19));
-			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(0);
+			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(false);
 		}
 	}
 }
@@ -626,7 +626,7 @@ void func_7(int iParam0, bool bParam1)
 void func_8(char* sParam0, int iParam1)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
-	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, 1, iParam1);
+	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, true, iParam1);
 }
 
 bool func_9(int iParam0)
@@ -807,14 +807,14 @@ bool func_14(bool bParam0)
 	return MISC::IS_BIT_SET(Global_76870, 0);
 }
 
-int func_15(var uParam0)
+int func_15(int iParam0)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (ENTITY::DOES_ENTITY_EXIST(uParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = ENTITY::GET_ENTITY_MODEL(uParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{
@@ -868,7 +868,7 @@ int func_18(int iParam0, int iParam1, int iParam2, bool bParam3, int iParam4)
 		}
 		Global_41395++;
 		*iParam0 = Global_41395;
-		PLAYER::SET_PLAYER_INVINCIBLE(PLAYER::GET_PLAYER_INDEX(), 0);
+		PLAYER::SET_PLAYER_INVINCIBLE(PLAYER::GET_PLAYER_INDEX(), false);
 		Global_22211.f_5 = 0;
 		if (iParam2 != 5)
 		{
@@ -966,7 +966,7 @@ void func_20()
 	bLocal_29 = false;
 	bLocal_30 = false;
 	Global_41396 = 0;
-	MISC::DELETE_INCIDENT(uLocal_33);
+	MISC::DELETE_INCIDENT(iLocal_33);
 }
 
 void func_21(int iParam0)
@@ -1328,14 +1328,14 @@ int func_36(int iParam0, int iParam1)
 void func_37(int iParam0)
 {
 	int iVar0;
-	var uVar1;
+	int iVar1;
 	struct<15> Var2;
 	
 	if (iParam0 < 0 || iParam0 >= Global_111638.f_7683.f_136)
 	{
 		return;
 	}
-	uVar1 = Global_111638.f_7683[iParam0 /*15*/].f_2;
+	iVar1 = Global_111638.f_7683[iParam0 /*15*/].f_2;
 	if (Global_111638.f_7683.f_136 > 1)
 	{
 		iVar0 = iParam0;
@@ -1353,7 +1353,7 @@ void func_37(int iParam0)
 	iVar0 = 0;
 	while (iVar0 < 3)
 	{
-		if (MISC::IS_BIT_SET(uVar1, iVar0))
+		if (MISC::IS_BIT_SET(iVar1, iVar0))
 		{
 			func_11(iVar0);
 		}

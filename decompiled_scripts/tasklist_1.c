@@ -85,7 +85,7 @@ void __EntryFunction__()
 						{
 							if (PED::IS_PED_INJURED(uLocal_20[iLocal_19]))
 							{
-								if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(uLocal_20[iLocal_19], PLAYER::PLAYER_PED_ID(), 1))
+								if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(uLocal_20[iLocal_19], PLAYER::PLAYER_PED_ID(), true))
 								{
 									if (!Global_30818[iLocal_19])
 									{
@@ -93,7 +93,7 @@ void __EntryFunction__()
 										func_2("CL_C1A_J1", Global_21924[1 /*42*/].f_27[1], Global_21924[1 /*42*/].f_32[1], 2000, 1);
 										Global_30818[iLocal_19] = 1;
 									}
-									if (ENTITY::IS_ENTITY_DEAD(uLocal_20[iLocal_19], 0))
+									if (ENTITY::IS_ENTITY_DEAD(uLocal_20[iLocal_19], false))
 									{
 										if (!Global_30822[iLocal_19])
 										{
@@ -183,13 +183,13 @@ int func_1()
 	return 0;
 }
 
-void func_2(char* sParam0, var uParam1, var uParam2, int iParam3, int iParam4)
+void func_2(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 {
 	iParam4 = iParam4;
 	HUD::BEGIN_TEXT_COMMAND_PRINT(sParam0);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(uParam1);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(uParam2);
-	HUD::END_TEXT_COMMAND_PRINT(iParam3, 0);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam1);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam2);
+	HUD::END_TEXT_COMMAND_PRINT(iParam3, false);
 }
 
 void func_3(char* sParam0, char* sParam1, int iParam2, int iParam3)
@@ -197,7 +197,7 @@ void func_3(char* sParam0, char* sParam1, int iParam2, int iParam3)
 	iParam3 = iParam3;
 	HUD::BEGIN_TEXT_COMMAND_PRINT(sParam0);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
-	HUD::END_TEXT_COMMAND_PRINT(iParam2, 0);
+	HUD::END_TEXT_COMMAND_PRINT(iParam2, false);
 }
 
 int func_4(int iParam0, int iParam1, bool bParam2, int iParam3)
@@ -242,25 +242,25 @@ int func_5(var uParam0, var uParam1, bool bParam2, int iParam3)
 
 void func_6(int iParam0)
 {
-	var uVar0;
-	var uVar1;
-	var uVar2;
-	var uVar3;
+	int iVar0;
+	int iVar1;
+	int iVar2;
+	int iVar3;
 	var uVar4;
-	var uVar5;
+	int iVar5;
 	
-	uVar0 = CLOCK::GET_CLOCK_SECONDS();
-	uVar1 = CLOCK::GET_CLOCK_MINUTES();
-	uVar2 = CLOCK::GET_CLOCK_HOURS();
-	uVar3 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
+	iVar0 = CLOCK::GET_CLOCK_SECONDS();
+	iVar1 = CLOCK::GET_CLOCK_MINUTES();
+	iVar2 = CLOCK::GET_CLOCK_HOURS();
+	iVar3 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
 	uVar4 = CLOCK::GET_CLOCK_MONTH() + 1;
-	uVar5 = CLOCK::GET_CLOCK_YEAR();
-	Global_22093[iParam0 /*9*/].f_2 = uVar0;
-	Global_22093[iParam0 /*9*/].f_2.f_1 = uVar1;
-	Global_22093[iParam0 /*9*/].f_2.f_2 = uVar2;
-	Global_22093[iParam0 /*9*/].f_2.f_3 = uVar3;
+	iVar5 = CLOCK::GET_CLOCK_YEAR();
+	Global_22093[iParam0 /*9*/].f_2 = iVar0;
+	Global_22093[iParam0 /*9*/].f_2.f_1 = iVar1;
+	Global_22093[iParam0 /*9*/].f_2.f_2 = iVar2;
+	Global_22093[iParam0 /*9*/].f_2.f_3 = iVar3;
 	Global_22093[iParam0 /*9*/].f_2.f_4 = uVar4;
-	Global_22093[iParam0 /*9*/].f_2.f_5 = uVar5;
+	Global_22093[iParam0 /*9*/].f_2.f_5 = iVar5;
 }
 
 void func_7()

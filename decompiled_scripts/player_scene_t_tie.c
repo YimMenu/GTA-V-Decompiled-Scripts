@@ -162,7 +162,7 @@ int func_2()
 	float fVar0;
 	
 	func_3(&iLocal_68, &iLocal_74);
-	fVar0 = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Local_70);
+	fVar0 = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Local_70);
 	if (fVar0 > (100f * 100f))
 	{
 		return 1;
@@ -269,11 +269,11 @@ int func_6(int iParam0, int iParam1)
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iParam1))
 		{
-			Var0 = { ENTITY::GET_ENTITY_COORDS(iParam1, 0) };
-			fVar1 = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0);
+			Var0 = { ENTITY::GET_ENTITY_COORDS(iParam1, false) };
+			fVar1 = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), Var0);
 			if (fVar1 > 250f)
 			{
-				if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(iParam1, false))
 				{
 					if (!ENTITY::IS_ENTITY_ON_SCREEN(iParam1))
 					{
@@ -366,7 +366,7 @@ int func_12(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	if (ENTITY::DOES_ENTITY_EXIST(uParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
@@ -496,8 +496,8 @@ void func_20()
 	{
 		if (iLocal_69[iVar0] != 0)
 		{
-			iLocal_68[iVar0] = PED::CREATE_PED(26, iLocal_69[iVar0], Local_70 + Local_72[iVar0 /*3*/], 0, 1, 1);
-			ENTITY::SET_ENTITY_ROTATION(iLocal_68[iVar0], Vector(uLocal_71, 0f, 0f) + Local_73[iVar0 /*3*/], 2, 1);
+			iLocal_68[iVar0] = PED::CREATE_PED(26, iLocal_69[iVar0], Local_70 + Local_72[iVar0 /*3*/], 0f, true, true);
+			ENTITY::SET_ENTITY_ROTATION(iLocal_68[iVar0], Vector(uLocal_71, 0f, 0f) + Local_73[iVar0 /*3*/], 2, true);
 			PED::SET_PED_RANDOM_COMPONENT_VARIATION(iLocal_68[iVar0], 0);
 			if (iLocal_66 == 288)
 			{
@@ -508,14 +508,14 @@ void func_20()
 			{
 				PED::SET_PED_RANDOM_COMPONENT_VARIATION(iLocal_68[iVar0], 0);
 			}
-			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_68[iVar0], 13, 0);
-			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_68[iVar0], 17, 1);
-			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_68[iVar0], 1);
-			PED::SET_PED_CAN_BE_TARGETTED(iLocal_68[iVar0], 0);
-			TASK::TASK_PLAY_ANIM_ADVANCED(iLocal_68[iVar0], &cLocal_75, &(Local_80[iVar0 /*8*/]), Local_70 + Local_72[iVar0 /*3*/], Vector(uLocal_71, 0f, 0f) + Local_73[iVar0 /*3*/], 1000f, -8f, -1, iLocal_81, 0, 2, 0);
-			PED::_0x2208438012482A1A(iLocal_68[iVar0], 0, 0);
-			PED::SET_PED_KEEP_TASK(iLocal_68[iVar0], 1);
-			PED::SET_PED_RESET_FLAG(iLocal_68[iVar0], 55, 1);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_68[iVar0], 13, false);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_68[iVar0], 17, true);
+			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_68[iVar0], true);
+			PED::SET_PED_CAN_BE_TARGETTED(iLocal_68[iVar0], false);
+			TASK::TASK_PLAY_ANIM_ADVANCED(iLocal_68[iVar0], &cLocal_75, &(Local_80[iVar0 /*8*/]), Local_70 + Local_72[iVar0 /*3*/], Vector(uLocal_71, 0f, 0f) + Local_73[iVar0 /*3*/], 1000f, -8f, -1, iLocal_81, 0f, 2, 0);
+			PED::_0x2208438012482A1A(iLocal_68[iVar0], false, false);
+			PED::SET_PED_KEEP_TASK(iLocal_68[iVar0], true);
+			PED::SET_PED_RESET_FLAG(iLocal_68[iVar0], 55, true);
 			if (iLocal_83[iVar0] > 0)
 			{
 				PED::APPLY_PED_BLOOD_BY_ZONE(iLocal_68[iVar0], 1, 0.36f, 0.71f, "ShotgunSmall");
@@ -548,7 +548,7 @@ void func_20()
 			fVar9 = 0f;
 			fVar10 = 1f;
 			fVar11 = -1f;
-			iLocal_82[iVar0] = GRAPHICS::ADD_DECAL(iLocal_83[iVar0], Local_70 + Local_84[iVar0 /*3*/], Var3, Var4, fVar5, fVar6, fVar7, fVar8, fVar9, fVar10, fVar11, 0, 0, 0);
+			iLocal_82[iVar0] = GRAPHICS::ADD_DECAL(iLocal_83[iVar0], Local_70 + Local_84[iVar0 /*3*/], Var3, Var4, fVar5, fVar6, fVar7, fVar8, fVar9, fVar10, fVar11, false, false, false);
 			SYSTEM::WAIT(0);
 		}
 		iVar0++;
@@ -2838,7 +2838,7 @@ bool func_27(var uParam0)
 	Var1 = { Global_111638.f_2358.f_539.f_2300[iVar0 /*3*/] };
 	if (func_28(Var1, 0f, 0f, 0f, 0))
 	{
-		Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
+		Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
 	}
 	*uParam0 = 5;
 	fVar2 = 9999999f;
@@ -6800,7 +6800,7 @@ void func_34()
 		}
 		iVar0++;
 	}
-	MISC::SET_GAME_PAUSED(0);
+	MISC::SET_GAME_PAUSED(false);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 

@@ -1,6 +1,6 @@
 void __EntryFunction__()
 {
-	MISC::START_SAVE_DATA(&Global_2883584, 1, 1);
+	MISC::START_SAVE_DATA(&Global_2883584, 1, true);
 	func_1();
 	MISC::STOP_SAVE_DATA();
 	MISC::SET_BIT(&Global_4270623, 1);

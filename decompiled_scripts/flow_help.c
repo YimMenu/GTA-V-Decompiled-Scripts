@@ -73,12 +73,12 @@ void __EntryFunction__()
 											{
 												if (MISC::ARE_STRINGS_EQUAL(&(Global_111638.f_20405[iLocal_21 /*16*/].f_4), ""))
 												{
-													HUD::ADD_NEXT_MESSAGE_TO_PREVIOUS_BRIEFS(1);
+													HUD::ADD_NEXT_MESSAGE_TO_PREVIOUS_BRIEFS(true);
 													func_11(&(Global_111638.f_20405[iLocal_21 /*16*/]));
 												}
 												else
 												{
-													HUD::ADD_NEXT_MESSAGE_TO_PREVIOUS_BRIEFS(1);
+													HUD::ADD_NEXT_MESSAGE_TO_PREVIOUS_BRIEFS(true);
 													func_10(&(Global_111638.f_20405[iLocal_21 /*16*/]), &(Global_111638.f_20405[iLocal_21 /*16*/].f_4));
 												}
 												if (Global_111638.f_20405[iLocal_21 /*16*/].f_13 != 0)
@@ -123,12 +123,12 @@ void __EntryFunction__()
 				{
 					if (func_3(&Local_20))
 					{
-						HUD::CLEAR_HELP(0);
+						HUD::CLEAR_HELP(false);
 					}
 				}
 				else if (func_2(&Local_20, &(Local_20.f_4)))
 				{
-					HUD::CLEAR_HELP(0);
+					HUD::CLEAR_HELP(false);
 				}
 				if ((MISC::GET_GAME_TIMER() - Global_110279) > 4000 || Local_20.f_16)
 				{
@@ -261,16 +261,16 @@ void func_1(char* sParam0, char* sParam1, var uParam2, int iParam3, int iParam4,
 	}
 }
 
-bool func_2(var uParam0, var uParam1)
+bool func_2(char* sParam0, char* sParam1)
 {
-	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(uParam0);
-	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(uParam1);
+	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam0);
+	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-bool func_3(var uParam0)
+bool func_3(char* sParam0)
 {
-	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(uParam0);
+	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam0);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
@@ -397,17 +397,17 @@ void func_9(int iParam0, int iParam1)
 	Global_111638.f_8608.f_236[iParam0] = (MISC::GET_GAME_TIMER() + iParam1);
 }
 
-void func_10(var uParam0, var uParam1)
+void func_10(char* sParam0, char* sParam1)
 {
-	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(uParam0);
-	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(uParam1);
-	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 1, 1, -1);
+	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
+	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
+	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, true, true, -1);
 }
 
-void func_11(var uParam0)
+void func_11(char* sParam0)
 {
-	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(uParam0);
-	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 1, 1, -1);
+	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
+	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, true, true, -1);
 }
 
 int func_12()
@@ -453,14 +453,14 @@ bool func_14(int iParam0)
 	return Global_41431 == iParam0;
 }
 
-int func_15(var uParam0)
+int func_15(int iParam0)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (ENTITY::DOES_ENTITY_EXIST(uParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = ENTITY::GET_ENTITY_MODEL(uParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{
@@ -583,12 +583,12 @@ void func_23()
 		{
 			if (func_3(&Local_20))
 			{
-				HUD::CLEAR_HELP(1);
+				HUD::CLEAR_HELP(true);
 			}
 		}
 		else if (func_2(&Local_20, &(Local_20.f_4)))
 		{
-			HUD::CLEAR_HELP(1);
+			HUD::CLEAR_HELP(true);
 		}
 	}
 	Global_110279 = 0;

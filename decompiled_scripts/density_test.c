@@ -21,7 +21,7 @@ void __EntryFunction__()
 	fLocal_6 = 1f;
 	fLocal_7 = 1f;
 	fLocal_8 = 1f;
-	MISC::SET_MISSION_FLAG(1);
+	MISC::SET_MISSION_FLAG(true);
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_1();
@@ -49,7 +49,7 @@ void __EntryFunction__()
 
 void func_1()
 {
-	VEHICLE::SET_RANDOM_TRAINS(1);
+	VEHICLE::SET_RANDOM_TRAINS(true);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 

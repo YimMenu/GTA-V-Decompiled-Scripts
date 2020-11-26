@@ -56,9 +56,9 @@
 	struct<8> Local_54[50];
 	struct<3> Local_55 = { 0, 0, 0 } ;
 	int iLocal_56 = 0;
-	var uLocal_57 = 0;
+	int iLocal_57 = 0;
 	bool bLocal_58 = 0;
-	int iLocal_59 = 0;
+	bool bLocal_59 = 0;
 	int iLocal_60 = 0;
 #endregion
 
@@ -135,7 +135,7 @@ void __EntryFunction__()
 				{
 					fVar0 = 0f;
 					iLocal_48 = func_102(&fVar0);
-					iLocal_59 = MISC::IS_BIT_SET(Global_7357, 28);
+					bLocal_59 = MISC::IS_BIT_SET(Global_7357, 28);
 					if (iLocal_48 != -1)
 					{
 						if (fVar0 < fLocal_46)
@@ -169,7 +169,7 @@ void __EntryFunction__()
 									if (bVar8)
 									{
 										func_95(iLocal_48, 1);
-										STATS::STAT_SET_INT(joaat("NUM_HIDDEN_PACKAGES_6"), func_92(), 1);
+										STATS::STAT_SET_INT(joaat("NUM_HIDDEN_PACKAGES_6"), func_92(), true);
 										bLocal_58 = true;
 										if (func_105())
 										{
@@ -194,7 +194,7 @@ void __EntryFunction__()
 			{
 				if (!func_113())
 				{
-					func_4(iLocal_59);
+					func_4(bLocal_59);
 					iLocal_47 = 0;
 				}
 			}
@@ -253,7 +253,7 @@ void func_2(int iParam0, bool bParam1)
 
 int func_3()
 {
-	var uVar0;
+	int iVar0;
 	
 	if (NETWORK::NETWORK_IS_SIGNED_IN())
 	{
@@ -261,19 +261,19 @@ int func_3()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &uVar0, -1);
-				MISC::SET_BIT(&uVar0, 2);
-				MISC::SET_BIT(&uVar0, 4);
-				MISC::SET_BIT(&uVar0, 6);
+				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				MISC::SET_BIT(&iVar0, 2);
+				MISC::SET_BIT(&iVar0, 4);
+				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), uVar0, 1);
+				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
-					uVar0 = MISC::GET_PROFILE_SETTING(866);
-					MISC::SET_BIT(&uVar0, 0);
-					STATS::_SET_HAS_CONTENT_UNLOCKS_FLAGS(uVar0);
+					iVar0 = MISC::GET_PROFILE_SETTING(866);
+					MISC::SET_BIT(&iVar0, 0);
+					STATS::_SET_HAS_CONTENT_UNLOCKS_FLAGS(iVar0);
 				}
 				return 1;
 			}
@@ -297,9 +297,9 @@ int func_3()
 	return 0;
 }
 
-void func_4(int iParam0)
+void func_4(bool bParam0)
 {
-	if (iParam0 == 1)
+	if (bParam0 == 1)
 	{
 		MISC::SET_BIT(&Global_7357, 28);
 	}
@@ -2215,7 +2215,7 @@ void func_12(int iParam0)
 
 void func_13(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5, int iParam6, bool bParam7, int iParam8, int iParam9, bool bParam10)
 {
-	var uVar0;
+	int iVar0;
 	int iVar1;
 	
 	uParam0->f_6 = 0;
@@ -2326,20 +2326,20 @@ void func_13(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 			{
 				return;
 			}
-			uVar0 = func_16(func_19(iParam1, uParam0->f_2), Global_76431, 0);
-			if (MISC::IS_BIT_SET(uVar0, uParam0->f_1))
+			iVar0 = func_16(func_19(iParam1, uParam0->f_2), Global_76431, 0);
+			if (MISC::IS_BIT_SET(iVar0, uParam0->f_1))
 			{
 				MISC::SET_BIT(&(uParam0->f_6), 1);
 			}
-			uVar0 = func_16(func_15(iParam1, uParam0->f_2), Global_76431, 0);
-			if (MISC::IS_BIT_SET(uVar0, uParam0->f_1))
+			iVar0 = func_16(func_15(iParam1, uParam0->f_2), Global_76431, 0);
+			if (MISC::IS_BIT_SET(iVar0, uParam0->f_1))
 			{
 				MISC::SET_BIT(&(uParam0->f_6), 2);
 			}
 			if (func_14(iParam1, uParam0->f_2, &iVar1))
 			{
-				uVar0 = func_16(iVar1, Global_76431, 0);
-				if (!MISC::IS_BIT_SET(uVar0, uParam0->f_1))
+				iVar0 = func_16(iVar1, Global_76431, 0);
+				if (!MISC::IS_BIT_SET(iVar0, uParam0->f_1))
 				{
 					MISC::SET_BIT(&(uParam0->f_6), 4);
 				}
@@ -2928,7 +2928,7 @@ int func_15(int iParam0, int iParam1)
 
 int func_16(int iParam0, int iParam1, int iParam2)
 {
-	var uVar0;
+	int iVar0;
 	var uVar1;
 	
 	if (iParam0 != 11511)
@@ -2936,8 +2936,8 @@ int func_16(int iParam0, int iParam1, int iParam2)
 		if (iParam2 == 0)
 		{
 		}
-		uVar0 = Global_2548434[iParam0 /*3*/][func_17(iParam1)];
-		if (STATS::STAT_GET_INT(uVar0, &uVar1, -1))
+		iVar0 = Global_2548434[iParam0 /*3*/][func_17(iParam1)];
+		if (STATS::STAT_GET_INT(iVar0, &uVar1, -1))
 		{
 			return uVar1;
 		}
@@ -3260,7 +3260,7 @@ int func_20(int iParam0, int iParam1, bool bParam2, bool bParam3, int iParam4)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	var uVar3;
+	int iVar3;
 	
 	iVar0 = Global_76431;
 	if (iParam4 != -1)
@@ -3269,8 +3269,8 @@ int func_20(int iParam0, int iParam1, bool bParam2, bool bParam3, int iParam4)
 	}
 	if (func_21(iParam0, iParam1, &iVar2, &iVar1, bParam2, bParam3))
 	{
-		uVar3 = func_16(iVar2, iVar0, 0);
-		return MISC::IS_BIT_SET(uVar3, iVar1);
+		iVar3 = func_16(iVar2, iVar0, 0);
+		return MISC::IS_BIT_SET(iVar3, iVar1);
 	}
 	return 0;
 }
@@ -5578,7 +5578,7 @@ int func_22(int iParam0)
 void func_23(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
-	var uVar1;
+	int iVar1;
 	struct<8> Var2;
 	int iVar3;
 	int iVar4;
@@ -5599,11 +5599,11 @@ void func_23(int iParam0, int iParam1, int iParam2, int iParam3)
 	{
 		return;
 	}
-	uVar1 = Global_76434[0 /*14*/].f_5;
+	iVar1 = Global_76434[0 /*14*/].f_5;
 	if (iParam0 == 12)
 	{
 		iVar4 = 0;
-		iVar5 = FILES::_0xF3FBE2D50A6A8C28(uVar1, 0);
+		iVar5 = FILES::_0xF3FBE2D50A6A8C28(iVar1, false);
 		iVar3 = 0;
 		while (iVar3 < iVar5)
 		{
@@ -5630,7 +5630,7 @@ void func_23(int iParam0, int iParam1, int iParam2, int iParam3)
 	{
 		FILES::INIT_SHOP_PED_PROP(&Var6);
 		iVar9 = 0;
-		iVar10 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, 1, -1, -1);
+		iVar10 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, true, -1, -1);
 		iVar8 = 0;
 		while (iVar8 < iVar10)
 		{
@@ -5701,7 +5701,7 @@ void func_23(int iParam0, int iParam1, int iParam2, int iParam3)
 			return;
 		}
 		iVar13 = 0;
-		iVar14 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, 0, -1, func_24(iParam0));
+		iVar14 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, false, -1, func_24(iParam0));
 		iVar12 = 0;
 		while (iVar12 < iVar14)
 		{
@@ -24366,7 +24366,7 @@ int func_83(int iParam0, int iParam1, int iParam2, int iParam3)
 	{
 		FILES::INIT_SHOP_PED_PROP(&Var0);
 		iVar2 = 0;
-		iVar3 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, 1, -1, -1);
+		iVar3 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
 		iVar1 = 0;
 		while (iVar1 < iVar3)
 		{
@@ -24386,7 +24386,7 @@ int func_83(int iParam0, int iParam1, int iParam2, int iParam3)
 	{
 		FILES::INIT_SHOP_PED_COMPONENT(&Var4);
 		iVar6 = 0;
-		iVar7 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, 0, -1, func_24(iParam2));
+		iVar7 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_24(iParam2));
 		iVar5 = 0;
 		while (iVar5 < iVar7)
 		{
@@ -25646,7 +25646,7 @@ void func_88(var uParam0, int iParam1, int iParam2, int iParam3)
 	{
 		iVar0 = 4;
 	}
-	FILES::_0xF3FBE2D50A6A8C28(iVar0, 0);
+	FILES::_0xF3FBE2D50A6A8C28(iVar0, false);
 	FILES::GET_SHOP_PED_QUERY_OUTFIT((iParam2 - iParam3), &Var1);
 	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
 	{
@@ -25806,10 +25806,10 @@ int func_92()
 bool func_93(int iParam0)
 {
 	int iVar0;
-	var uVar1;
+	int iVar1;
 	
-	func_94(iParam0, &iVar0, &uVar1);
-	return MISC::IS_BIT_SET(Global_111638.f_10044.f_135[iVar0], uVar1);
+	func_94(iParam0, &iVar0, &iVar1);
+	return MISC::IS_BIT_SET(Global_111638.f_10044.f_135[iVar0], iVar1);
 }
 
 void func_94(int iParam0, var uParam1, var uParam2)
@@ -25821,12 +25821,12 @@ void func_94(int iParam0, var uParam1, var uParam2)
 void func_95(int iParam0, bool bParam1)
 {
 	int iVar0;
-	var uVar1;
+	int iVar1;
 	
-	func_94(iParam0, &iVar0, &uVar1);
+	func_94(iParam0, &iVar0, &iVar1);
 	if (bParam1)
 	{
-		MISC::SET_BIT(&(Global_111638.f_10044.f_135[iVar0]), uVar1);
+		MISC::SET_BIT(&(Global_111638.f_10044.f_135[iVar0]), iVar1);
 	}
 	else
 	{
@@ -25890,7 +25890,7 @@ void func_99(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 	struct<3> Var8;
 	struct<3> Var9;
 	
-	Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
+	Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
 	fVar5 = 0.01f;
 	if (iParam0 == 29 && Var0.f_2 <= 35f)
 	{
@@ -25944,7 +25944,7 @@ int func_102(float fParam0)
 	float fVar3;
 	
 	iVar1 = -1;
-	Var2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
+	Var2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
 	iVar0 = 0;
 	while (iVar0 < 50)
 	{
@@ -26010,9 +26010,9 @@ void func_106()
 {
 	if (bLocal_58)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(uLocal_57))
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_57))
 		{
-			GRAPHICS::DRAW_SCALEFORM_MOVIE(uLocal_57, 0.5f, 0.5f, 1f, 1f, 100, 100, 100, 255, 0);
+			GRAPHICS::DRAW_SCALEFORM_MOVIE(iLocal_57, 0.5f, 0.5f, 1f, 1f, 100, 100, 100, 255, 0);
 		}
 		switch (iLocal_56)
 		{
@@ -26026,7 +26026,7 @@ void func_106()
 				{
 					if (!func_112())
 					{
-						uLocal_57 = unk_0x67D02A194A2FC2BD("MIDSIZED_MESSAGE");
+						iLocal_57 = unk_0x67D02A194A2FC2BD("MIDSIZED_MESSAGE");
 						iLocal_60 = MISC::GET_GAME_TIMER() + 5000;
 						iLocal_56++;
 					}
@@ -26034,7 +26034,7 @@ void func_106()
 				break;
 			
 			case 2:
-				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(uLocal_57) || iLocal_60 < MISC::GET_GAME_TIMER())
+				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_57) || iLocal_60 < MISC::GET_GAME_TIMER())
 				{
 					if (iLocal_60 < MISC::GET_GAME_TIMER())
 					{
@@ -26049,7 +26049,7 @@ void func_106()
 				break;
 			
 			case 3:
-				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_57, "SHOW_BRIDGES_KNIVES_PROGRESS");
+				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_57, "SHOW_BRIDGES_KNIVES_PROGRESS");
 				func_111("PM_TITLE");
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(50);
 				func_111("PM_PASS");
@@ -26057,14 +26057,14 @@ void func_106()
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(func_92());
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				iLocal_60 = MISC::GET_GAME_TIMER() + 7500;
-				AUDIO::PLAY_SOUND_FRONTEND(-1, "UNDER_THE_BRIDGE", "HUD_AWARDS", 1);
+				AUDIO::PLAY_SOUND_FRONTEND(-1, "UNDER_THE_BRIDGE", "HUD_AWARDS", true);
 				iLocal_56++;
 				break;
 			
 			case 4:
 				if ((((((iLocal_60 < MISC::GET_GAME_TIMER() || CAM::IS_SCREEN_FADED_OUT()) || !PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID())) || func_112()) || !PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID())) || func_110()) || func_109())
 				{
-					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uLocal_57, "SHARD_ANIM_OUT");
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_57, "SHARD_ANIM_OUT");
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(0.33f);
 					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -26081,7 +26081,7 @@ void func_106()
 				break;
 			
 			case 6:
-				GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&uLocal_57);
+				GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_57);
 				if (func_105())
 				{
 					iLocal_60 = MISC::GET_GAME_TIMER() + 1000;
@@ -26111,7 +26111,7 @@ void func_106()
 void func_107(char* sParam0, int iParam1)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
-	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, 1, iParam1);
+	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, true, iParam1);
 }
 
 int func_108(int iParam0)

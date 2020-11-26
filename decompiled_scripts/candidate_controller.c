@@ -160,13 +160,13 @@ void __EntryFunction__()
 			{
 				if (!iLocal_20)
 				{
-					NETWORK::NETWORK_BLOCK_JOIN_QUEUE_INVITES(1);
+					NETWORK::NETWORK_BLOCK_JOIN_QUEUE_INVITES(true);
 					iLocal_20 = 1;
 				}
 			}
 			else if (iLocal_20)
 			{
-				NETWORK::NETWORK_BLOCK_JOIN_QUEUE_INVITES(0);
+				NETWORK::NETWORK_BLOCK_JOIN_QUEUE_INVITES(false);
 				iLocal_20 = 0;
 			}
 		}
@@ -283,9 +283,9 @@ int func_5(int iParam0, int iParam1)
 	return 30;
 }
 
-var func_6(var uParam0)
+var func_6(int iParam0)
 {
-	return (SYSTEM::SHIFT_RIGHT(uParam0, 26) & 31 * func_7(MISC::IS_BIT_SET(uParam0, 31), -1, 1)) + 2011;
+	return (SYSTEM::SHIFT_RIGHT(iParam0, 26) & 31 * func_7(MISC::IS_BIT_SET(iParam0, 31), -1, 1)) + 2011;
 }
 
 int func_7(bool bParam0, int iParam1, int iParam2)

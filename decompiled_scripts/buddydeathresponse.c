@@ -46,7 +46,7 @@ void __EntryFunction__()
 void func_1()
 {
 	struct<3> Var0;
-	var uVar1;
+	int iVar1;
 	
 	while (!func_9(&iLocal_20))
 	{
@@ -56,24 +56,24 @@ void func_1()
 	{
 		if (!Global_95239)
 		{
-			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_20, 1, 1);
+			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_20, true, true);
 			if (TASK::GET_SCRIPT_TASK_STATUS(iLocal_20, 1435919172) != 7)
 			{
 				TASK::CLEAR_PED_TASKS(iLocal_20);
 			}
-			Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
-			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_20, 1);
-			TASK::OPEN_SEQUENCE_TASK(&uVar1);
-			if (!PED::IS_PED_IN_ANY_VEHICLE(iLocal_20, 0))
+			Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_20, true);
+			TASK::OPEN_SEQUENCE_TASK(&iVar1);
+			if (!PED::IS_PED_IN_ANY_VEHICLE(iLocal_20, false))
 			{
-				if (!PED::IS_PED_IN_COMBAT(iLocal_20, 0) && !PED::IS_PED_IN_ANY_VEHICLE(iLocal_20, 0))
+				if (!PED::IS_PED_IN_COMBAT(iLocal_20, 0) && !PED::IS_PED_IN_ANY_VEHICLE(iLocal_20, false))
 				{
 					TASK::TASK_TURN_PED_TO_FACE_COORD(0, Var0, 6000);
 				}
 			}
-			TASK::TASK_LOOK_AT_COORD(0, Var0, 6000, 0, 2);
-			TASK::CLOSE_SEQUENCE_TASK(uVar1);
-			TASK::TASK_PERFORM_SEQUENCE(iLocal_20, uVar1);
+			TASK::TASK_LOOK_AT_COORD(0, Var0, 8.407791E-42f, 0, 2);
+			TASK::CLOSE_SEQUENCE_TASK(iVar1);
+			TASK::TASK_PERFORM_SEQUENCE(iLocal_20, iVar1);
 		}
 		func_2(iLocal_20);
 	}
@@ -85,7 +85,7 @@ void func_1()
 	{
 		if (!PED::IS_PED_INJURED(iLocal_20))
 		{
-			PED::SET_PED_KEEP_TASK(iLocal_20, 1);
+			PED::SET_PED_KEEP_TASK(iLocal_20, true);
 		}
 		ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&iLocal_20);
 	}
@@ -102,7 +102,7 @@ void func_2(int iParam0)
 	{
 		SYSTEM::WAIT(0);
 	}
-	if (!PED::IS_PED_INJURED(uParam0))
+	if (!PED::IS_PED_INJURED(iParam0))
 	{
 		if (iLocal_19 == 1)
 		{
@@ -146,9 +146,9 @@ void func_2(int iParam0)
 	}
 }
 
-void func_3(var uParam0, char* sParam1, char* sParam2, int iParam3)
+void func_3(int iParam0, char* sParam1, char* sParam2, int iParam3)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(uParam0, sParam1, sParam2, func_4(iParam3), 0);
+	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sParam1, sParam2, func_4(iParam3), false);
 }
 
 int func_4(int iParam0)
@@ -330,9 +330,9 @@ int func_9(var uParam0)
 			{
 				if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_96113[iLocal_18]))
 				{
-					if (PED::IS_PED_IN_ANY_VEHICLE(Global_96113[iLocal_18], 0) || !ENTITY::IS_ENTITY_ATTACHED(Global_96113[iLocal_18]))
+					if (PED::IS_PED_IN_ANY_VEHICLE(Global_96113[iLocal_18], false) || !ENTITY::IS_ENTITY_ATTACHED(Global_96113[iLocal_18]))
 					{
-						if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(Global_96113[iLocal_18], 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 10f)
+						if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(Global_96113[iLocal_18], true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), true) < 10f)
 						{
 							iLocal_19 = func_5(Global_96113[iLocal_18]);
 							if ((iLocal_19 == 0 || iLocal_19 == 2) || iLocal_19 == 1)
@@ -341,11 +341,11 @@ int func_9(var uParam0)
 								{
 									if (ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY(Global_96113[iLocal_18], PLAYER::PLAYER_PED_ID(), 17))
 									{
-										if (PED::IS_PED_IN_ANY_VEHICLE(Global_96113[iLocal_18], 0))
+										if (PED::IS_PED_IN_ANY_VEHICLE(Global_96113[iLocal_18], false))
 										{
-											iVar0 = PED::GET_VEHICLE_PED_IS_IN(Global_96113[iLocal_18], 0);
+											iVar0 = PED::GET_VEHICLE_PED_IS_IN(Global_96113[iLocal_18], false);
 										}
-										if ((ENTITY::DOES_ENTITY_EXIST(iVar0) && VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, 0)) || !ENTITY::DOES_ENTITY_EXIST(iVar0))
+										if ((ENTITY::DOES_ENTITY_EXIST(iVar0) && VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false)) || !ENTITY::DOES_ENTITY_EXIST(iVar0))
 										{
 											*uParam0 = Global_96113[iLocal_18];
 											return 1;

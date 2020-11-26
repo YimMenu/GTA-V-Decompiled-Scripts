@@ -1611,9 +1611,9 @@ void func_4(int iParam0, int iParam1)
 	func_10(iParam0, iParam1, -1847669294, &(Global_262145.f_28529), 1);
 }
 
-void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
+void func_5(int iParam0, int iParam1, int iParam2, float* fParam3, bool bParam4)
 {
-	func_6(0, iParam2, uParam3, bParam4);
+	func_6(0, iParam2, fParam3, bParam4);
 	if (iParam0 == 0)
 	{
 		return;
@@ -1646,7 +1646,7 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 		case 23:
 		case 24:
 		case 25:
-			func_6(1, iParam2, uParam3, bParam4);
+			func_6(1, iParam2, fParam3, bParam4);
 			if (iParam0 == 1)
 			{
 				return;
@@ -1657,7 +1657,7 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 				case 3:
 				case 4:
 				case 5:
-					func_6(2, iParam2, uParam3, bParam4);
+					func_6(2, iParam2, fParam3, bParam4);
 					if (iParam0 == 2)
 					{
 						return;
@@ -1667,7 +1667,7 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 3:
 						case 4:
 						case 5:
-							func_6(iParam0, iParam2, uParam3, bParam4);
+							func_6(iParam0, iParam2, fParam3, bParam4);
 							return;
 						
 						case 1:
@@ -1721,7 +1721,7 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 				case 23:
 				case 24:
 				case 25:
-					func_6(6, iParam2, uParam3, bParam4);
+					func_6(6, iParam2, fParam3, bParam4);
 					if (iParam0 == 6)
 					{
 						return;
@@ -1735,10 +1735,10 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 19:
 						case 26:
 						case 24:
-							func_6(iParam0, iParam2, uParam3, bParam4);
+							func_6(iParam0, iParam2, fParam3, bParam4);
 							if (iParam1 != 27)
 							{
-								func_6(iParam1, iParam2, uParam3, bParam4);
+								func_6(iParam1, iParam2, fParam3, bParam4);
 							}
 							return;
 						
@@ -1748,12 +1748,12 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 22:
 						case 23:
 						case 25:
-							func_6(15, iParam2, uParam3, bParam4);
+							func_6(15, iParam2, fParam3, bParam4);
 							if (iParam0 == 15)
 							{
 								if (iParam1 != 27)
 								{
-									func_6(iParam1, iParam2, uParam3, bParam4);
+									func_6(iParam1, iParam2, fParam3, bParam4);
 								}
 								return;
 							}
@@ -1764,10 +1764,10 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 								case 22:
 								case 23:
 								case 25:
-									func_6(iParam0, iParam2, uParam3, bParam4);
+									func_6(iParam0, iParam2, fParam3, bParam4);
 									if (iParam1 != 27)
 									{
-										func_6(iParam1, iParam2, uParam3, bParam4);
+										func_6(iParam1, iParam2, fParam3, bParam4);
 									}
 									return;
 								
@@ -1783,12 +1783,12 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 12:
 						case 13:
 						case 14:
-							func_6(8, iParam2, uParam3, bParam4);
+							func_6(8, iParam2, fParam3, bParam4);
 							if (iParam0 == 8)
 							{
 								if (iParam1 != 27)
 								{
-									func_6(iParam1, iParam2, uParam3, bParam4);
+									func_6(iParam1, iParam2, fParam3, bParam4);
 								}
 								return;
 							}
@@ -1800,10 +1800,10 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 								case 12:
 								case 13:
 								case 14:
-									func_6(iParam0, iParam2, uParam3, bParam4);
+									func_6(iParam0, iParam2, fParam3, bParam4);
 									if (iParam1 != 27)
 									{
-										func_6(iParam1, iParam2, uParam3, bParam4);
+										func_6(iParam1, iParam2, fParam3, bParam4);
 									}
 									return;
 								
@@ -1834,24 +1834,24 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 	}
 }
 
-void func_6(int iParam0, var uParam1, var uParam2, bool bParam3)
+void func_6(int iParam0, int iParam1, float* fParam2, bool bParam3)
 {
-	var uVar0;
+	int iVar0;
 	var uVar1;
 	
-	uVar0 = func_7(iParam0);
-	uVar1 = *uParam2;
-	if (!NETWORK::NETWORK_ACCESS_TUNABLE_FLOAT_HASH(uVar0, uParam1, uParam2))
+	iVar0 = func_7(iParam0);
+	uVar1 = *fParam2;
+	if (!NETWORK::NETWORK_ACCESS_TUNABLE_FLOAT_HASH(iVar0, iParam1, fParam2))
 	{
 		if (bParam3)
 		{
 		}
 		return;
-		*uParam2 = uVar1;
+		*fParam2 = uVar1;
 	}
 	else
 	{
-		NETWORK::_NETWORK_REGISTER_TUNABLE_FLOAT_HASH(uVar0, uParam1, uParam2);
+		NETWORK::_NETWORK_REGISTER_TUNABLE_FLOAT_HASH(iVar0, iParam1, fParam2);
 	}
 	if (bParam3)
 	{
@@ -1988,9 +1988,9 @@ int func_7(int iParam0)
 	return 0;
 }
 
-void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
+void func_8(int iParam0, int iParam1, int iParam2, int* iParam3, bool bParam4)
 {
-	func_9(0, iParam2, uParam3, bParam4);
+	func_9(0, iParam2, iParam3, bParam4);
 	if (iParam0 == 0)
 	{
 		return;
@@ -2023,7 +2023,7 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 		case 23:
 		case 24:
 		case 25:
-			func_9(1, iParam2, uParam3, bParam4);
+			func_9(1, iParam2, iParam3, bParam4);
 			if (iParam0 == 1)
 			{
 				return;
@@ -2034,7 +2034,7 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 				case 3:
 				case 4:
 				case 5:
-					func_9(2, iParam2, uParam3, bParam4);
+					func_9(2, iParam2, iParam3, bParam4);
 					if (iParam0 == 2)
 					{
 						return;
@@ -2044,7 +2044,7 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 3:
 						case 4:
 						case 5:
-							func_9(iParam0, iParam2, uParam3, bParam4);
+							func_9(iParam0, iParam2, iParam3, bParam4);
 							return;
 						
 						case 1:
@@ -2098,7 +2098,7 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 				case 23:
 				case 24:
 				case 25:
-					func_9(6, iParam2, uParam3, bParam4);
+					func_9(6, iParam2, iParam3, bParam4);
 					if (iParam0 == 6)
 					{
 						return;
@@ -2112,10 +2112,10 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 19:
 						case 26:
 						case 24:
-							func_9(iParam0, iParam2, uParam3, bParam4);
+							func_9(iParam0, iParam2, iParam3, bParam4);
 							if (iParam1 != 27)
 							{
-								func_9(iParam1, iParam2, uParam3, bParam4);
+								func_9(iParam1, iParam2, iParam3, bParam4);
 							}
 							return;
 						
@@ -2125,12 +2125,12 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 22:
 						case 23:
 						case 25:
-							func_9(15, iParam2, uParam3, bParam4);
+							func_9(15, iParam2, iParam3, bParam4);
 							if (iParam0 == 15)
 							{
 								if (iParam1 != 27)
 								{
-									func_9(iParam1, iParam2, uParam3, bParam4);
+									func_9(iParam1, iParam2, iParam3, bParam4);
 								}
 								return;
 							}
@@ -2141,10 +2141,10 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 								case 22:
 								case 23:
 								case 25:
-									func_9(iParam0, iParam2, uParam3, bParam4);
+									func_9(iParam0, iParam2, iParam3, bParam4);
 									if (iParam1 != 27)
 									{
-										func_9(iParam1, iParam2, uParam3, bParam4);
+										func_9(iParam1, iParam2, iParam3, bParam4);
 									}
 									return;
 								
@@ -2160,12 +2160,12 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 12:
 						case 13:
 						case 14:
-							func_9(8, iParam2, uParam3, bParam4);
+							func_9(8, iParam2, iParam3, bParam4);
 							if (iParam0 == 8)
 							{
 								if (iParam1 != 27)
 								{
-									func_9(iParam1, iParam2, uParam3, bParam4);
+									func_9(iParam1, iParam2, iParam3, bParam4);
 								}
 								return;
 							}
@@ -2177,10 +2177,10 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 								case 12:
 								case 13:
 								case 14:
-									func_9(iParam0, iParam2, uParam3, bParam4);
+									func_9(iParam0, iParam2, iParam3, bParam4);
 									if (iParam1 != 27)
 									{
-										func_9(iParam1, iParam2, uParam3, bParam4);
+										func_9(iParam1, iParam2, iParam3, bParam4);
 									}
 									return;
 								
@@ -2211,12 +2211,12 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 	}
 }
 
-void func_9(int iParam0, var uParam1, var uParam2, bool bParam3)
+void func_9(int iParam0, int iParam1, int* iParam2, bool bParam3)
 {
-	var uVar0;
+	int iVar0;
 	
-	uVar0 = func_7(iParam0);
-	if (!NETWORK::NETWORK_DOES_TUNABLE_EXIST_HASH(uVar0, uParam1))
+	iVar0 = func_7(iParam0);
+	if (!NETWORK::NETWORK_DOES_TUNABLE_EXIST_HASH(iVar0, iParam1))
 	{
 		if (bParam3)
 		{
@@ -2225,17 +2225,17 @@ void func_9(int iParam0, var uParam1, var uParam2, bool bParam3)
 	}
 	else
 	{
-		*uParam2 = NETWORK::NETWORK_ACCESS_TUNABLE_BOOL_HASH(uVar0, uParam1);
-		NETWORK::_NETWORK_REGISTER_TUNABLE_BOOL_HASH(uVar0, uParam1, uParam2);
+		*iParam2 = NETWORK::NETWORK_ACCESS_TUNABLE_BOOL_HASH(iVar0, iParam1);
+		NETWORK::_NETWORK_REGISTER_TUNABLE_BOOL_HASH(iVar0, iParam1, iParam2);
 	}
 	if (bParam3)
 	{
 	}
 }
 
-void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
+void func_10(int iParam0, int iParam1, int iParam2, int* iParam3, bool bParam4)
 {
-	func_11(0, iParam2, uParam3, bParam4);
+	func_11(0, iParam2, iParam3, bParam4);
 	if (iParam0 == 0)
 	{
 		return;
@@ -2268,7 +2268,7 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 		case 23:
 		case 24:
 		case 25:
-			func_11(1, iParam2, uParam3, bParam4);
+			func_11(1, iParam2, iParam3, bParam4);
 			if (iParam0 == 1)
 			{
 				return;
@@ -2279,7 +2279,7 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 				case 3:
 				case 4:
 				case 5:
-					func_11(2, iParam2, uParam3, bParam4);
+					func_11(2, iParam2, iParam3, bParam4);
 					if (iParam0 == 2)
 					{
 						return;
@@ -2289,7 +2289,7 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 3:
 						case 4:
 						case 5:
-							func_11(iParam0, iParam2, uParam3, bParam4);
+							func_11(iParam0, iParam2, iParam3, bParam4);
 							return;
 						
 						case 1:
@@ -2343,7 +2343,7 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 				case 23:
 				case 24:
 				case 25:
-					func_11(6, iParam2, uParam3, bParam4);
+					func_11(6, iParam2, iParam3, bParam4);
 					if (iParam0 == 6)
 					{
 						return;
@@ -2357,10 +2357,10 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 19:
 						case 26:
 						case 24:
-							func_11(iParam0, iParam2, uParam3, bParam4);
+							func_11(iParam0, iParam2, iParam3, bParam4);
 							if (iParam1 != 27)
 							{
-								func_11(iParam1, iParam2, uParam3, bParam4);
+								func_11(iParam1, iParam2, iParam3, bParam4);
 							}
 							return;
 						
@@ -2370,12 +2370,12 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 22:
 						case 23:
 						case 25:
-							func_11(15, iParam2, uParam3, bParam4);
+							func_11(15, iParam2, iParam3, bParam4);
 							if (iParam0 == 15)
 							{
 								if (iParam1 != 27)
 								{
-									func_11(iParam1, iParam2, uParam3, bParam4);
+									func_11(iParam1, iParam2, iParam3, bParam4);
 								}
 								return;
 							}
@@ -2386,10 +2386,10 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 								case 22:
 								case 23:
 								case 25:
-									func_11(iParam0, iParam2, uParam3, bParam4);
+									func_11(iParam0, iParam2, iParam3, bParam4);
 									if (iParam1 != 27)
 									{
-										func_11(iParam1, iParam2, uParam3, bParam4);
+										func_11(iParam1, iParam2, iParam3, bParam4);
 									}
 									return;
 								
@@ -2405,12 +2405,12 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 						case 12:
 						case 13:
 						case 14:
-							func_11(8, iParam2, uParam3, bParam4);
+							func_11(8, iParam2, iParam3, bParam4);
 							if (iParam0 == 8)
 							{
 								if (iParam1 != 27)
 								{
-									func_11(iParam1, iParam2, uParam3, bParam4);
+									func_11(iParam1, iParam2, iParam3, bParam4);
 								}
 								return;
 							}
@@ -2422,10 +2422,10 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 								case 12:
 								case 13:
 								case 14:
-									func_11(iParam0, iParam2, uParam3, bParam4);
+									func_11(iParam0, iParam2, iParam3, bParam4);
 									if (iParam1 != 27)
 									{
-										func_11(iParam1, iParam2, uParam3, bParam4);
+										func_11(iParam1, iParam2, iParam3, bParam4);
 									}
 									return;
 								
@@ -2456,24 +2456,24 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, bool bParam4)
 	}
 }
 
-void func_11(int iParam0, var uParam1, var uParam2, bool bParam3)
+void func_11(int iParam0, int iParam1, int* iParam2, bool bParam3)
 {
-	var uVar0;
+	int iVar0;
 	var uVar1;
 	
-	uVar0 = func_7(iParam0);
-	uVar1 = *uParam2;
-	if (!NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(uVar0, uParam1, uParam2))
+	iVar0 = func_7(iParam0);
+	uVar1 = *iParam2;
+	if (!NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(iVar0, iParam1, iParam2))
 	{
 		if (bParam3)
 		{
 		}
 		return;
-		*uParam2 = uVar1;
+		*iParam2 = uVar1;
 	}
 	else
 	{
-		NETWORK::_NETWORK_REGISTER_TUNABLE_INT_HASH(uVar0, uParam1, uParam2);
+		NETWORK::_NETWORK_REGISTER_TUNABLE_INT_HASH(iVar0, iParam1, iParam2);
 	}
 	if (bParam3)
 	{

@@ -356,7 +356,7 @@ void func_4(struct<3> Param0, struct<3> Param1, float fParam2, int iParam3, int 
 		return;
 	}
 	Global_93947[iParam3 /*9*/].f_8 = MISC::ADD_HOSPITAL_RESTART(Param1, fParam2, 0);
-	MISC::DISABLE_HOSPITAL_RESTART(Global_93947[iParam3 /*9*/].f_8, 0);
+	MISC::DISABLE_HOSPITAL_RESTART(Global_93947[iParam3 /*9*/].f_8, false);
 	Global_93947[iParam3 /*9*/] = { Param0 };
 	Global_93947[iParam3 /*9*/].f_3 = { Param1 };
 	Global_93947[iParam3 /*9*/].f_6 = fParam2;
@@ -571,7 +571,7 @@ void func_11(int iParam0, bool bParam1)
 void func_12(int iParam0, bool bParam1, bool bParam2)
 {
 	int iVar0;
-	int iVar1;
+	bool bVar1;
 	
 	iVar0 = iParam0;
 	if ((iVar0 < 0 || iVar0 >= 263) || iParam0 == 263)
@@ -580,8 +580,8 @@ void func_12(int iParam0, bool bParam1, bool bParam2)
 	}
 	if (!bParam2)
 	{
-		iVar1 = MISC::IS_BIT_SET(Global_31146[iVar0 /*23*/].f_11, 15);
-		if (iVar1 == bParam1)
+		bVar1 = MISC::IS_BIT_SET(Global_31146[iVar0 /*23*/].f_11, 15);
+		if (bVar1 == bParam1)
 		{
 			return;
 		}
@@ -610,9 +610,9 @@ void func_12(int iParam0, bool bParam1, bool bParam2)
 	{
 		if (HUD::DOES_BLIP_EXIST(Global_31146[iVar0 /*23*/].f_19))
 		{
-			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(1);
+			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(true);
 			HUD::REMOVE_BLIP(&(Global_31146[iVar0 /*23*/].f_19));
-			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(0);
+			MISC::SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT(false);
 		}
 	}
 }
@@ -667,7 +667,7 @@ void func_16(struct<3> Param0, struct<3> Param1, float fParam2, int iParam3, int
 		return;
 	}
 	Global_93883[iParam3 /*9*/].f_8 = MISC::ADD_POLICE_RESTART(Param1, fParam2, 0);
-	MISC::DISABLE_POLICE_RESTART(Global_93883[iParam3 /*9*/].f_8, 0);
+	MISC::DISABLE_POLICE_RESTART(Global_93883[iParam3 /*9*/].f_8, false);
 	Global_93883[iParam3 /*9*/] = { Param0 };
 	Global_93883[iParam3 /*9*/].f_3 = { Param1 };
 	Global_93883[iParam3 /*9*/].f_6 = fParam2;
@@ -945,36 +945,36 @@ void func_25(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	func_26(iParam0, 3, iParam5);
 }
 
-void func_26(int iParam0, int iParam1, var uParam2)
+void func_26(int iParam0, int iParam1, int iParam2)
 {
-	func_27(iParam1, uParam2, &(Global_111638.f_1.f_73[iParam0 /*3*/].f_1), &(Global_111638.f_1.f_73[iParam0 /*3*/].f_2));
+	func_27(iParam1, iParam2, &(Global_111638.f_1.f_73[iParam0 /*3*/].f_1), &(Global_111638.f_1.f_73[iParam0 /*3*/].f_2));
 }
 
-void func_27(int iParam0, var uParam1, var uParam2, var uParam3)
+void func_27(int iParam0, int iParam1, var uParam2, var uParam3)
 {
 	switch (iParam0)
 	{
 		case 0:
 			*uParam2 = (*uParam2 - *uParam2 & 32767);
-			*uParam2 = (*uParam2 || uParam1);
+			*uParam2 = (*uParam2 || iParam1);
 			return;
 			break;
 		
 		case 1:
 			*uParam2 = (*uParam2 - *uParam2 & 1073709056);
-			*uParam2 = (*uParam2 || SYSTEM::SHIFT_LEFT(uParam1, 15));
+			*uParam2 = (*uParam2 || SYSTEM::SHIFT_LEFT(iParam1, 15));
 			return;
 			break;
 		
 		case 2:
 			*uParam3 = (*uParam3 - *uParam3 & 32767);
-			*uParam3 = (*uParam3 || uParam1);
+			*uParam3 = (*uParam3 || iParam1);
 			return;
 			break;
 		
 		case 3:
 			*uParam3 = (*uParam3 - *uParam3 & 1073709056);
-			*uParam3 = (*uParam3 || SYSTEM::SHIFT_LEFT(uParam1, 15));
+			*uParam3 = (*uParam3 || SYSTEM::SHIFT_LEFT(iParam1, 15));
 			return;
 			break;
 	}
@@ -1166,11 +1166,11 @@ void func_37()
 	Global_92919 = -1;
 	MISC::CLEAR_BIT(&(Global_98744.f_20), 17);
 	Global_98779 = 0;
-	MISC::PAUSE_DEATH_ARREST_RESTART(0);
-	MISC::IGNORE_NEXT_RESTART(0);
-	MISC::SET_FADE_IN_AFTER_DEATH_ARREST(1);
-	MISC::SET_FADE_OUT_AFTER_ARREST(1);
-	MISC::SET_FADE_OUT_AFTER_DEATH(1);
+	MISC::PAUSE_DEATH_ARREST_RESTART(false);
+	MISC::IGNORE_NEXT_RESTART(false);
+	MISC::SET_FADE_IN_AFTER_DEATH_ARREST(true);
+	MISC::SET_FADE_OUT_AFTER_ARREST(true);
+	MISC::SET_FADE_OUT_AFTER_DEATH(true);
 	func_38(0);
 }
 
@@ -2560,9 +2560,9 @@ void func_88()
 			BRAIN::REGISTER_WORLD_POINT_SCRIPT_BRAIN("altruist_cult", 200f, 1);
 			BRAIN::REGISTER_WORLD_POINT_SCRIPT_BRAIN("re_yetarian", 150f, 1);
 			BRAIN::REGISTER_WORLD_POINT_SCRIPT_BRAIN("flyUnderBridges", 200f, 1);
-			BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", joaat("s_f_y_hooker_01"), 100, 0);
-			BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", joaat("s_f_y_hooker_02"), 100, 0);
-			BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", joaat("s_f_y_hooker_03"), 100, 0);
+			BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", joaat("s_f_y_hooker_01"), 1.401298E-43f, 0f);
+			BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", joaat("s_f_y_hooker_02"), 1.401298E-43f, 0f);
+			BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", joaat("s_f_y_hooker_03"), 1.401298E-43f, 0f);
 			BRAIN::REGISTER_WORLD_POINT_SCRIPT_BRAIN("launcher_BasejumpHeli", 209f, 1);
 			BRAIN::REGISTER_WORLD_POINT_SCRIPT_BRAIN("launcher_BasejumpPack", 100f, 1);
 			BRAIN::REGISTER_WORLD_POINT_SCRIPT_BRAIN("launcher_golf", 209f, 1);

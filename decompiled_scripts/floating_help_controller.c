@@ -24,7 +24,7 @@ void func_1()
 			{
 				if (func_3(iVar0))
 				{
-					HUD::CLEAR_FLOATING_HELP(iVar1, 0);
+					HUD::CLEAR_FLOATING_HELP(iVar1, false);
 				}
 				func_2(iVar0);
 			}
@@ -45,7 +45,7 @@ void func_1()
 				{
 					if (Global_110290[iVar0 /*28*/].f_23 != 0)
 					{
-						if (!ENTITY::IS_ENTITY_DEAD(Global_110290[iVar0 /*28*/].f_23, 0))
+						if (!ENTITY::IS_ENTITY_DEAD(Global_110290[iVar0 /*28*/].f_23, false))
 						{
 							if (!MISC::IS_BIT_SET(Global_110290[iVar0 /*28*/].f_27, 3))
 							{
@@ -118,31 +118,31 @@ int func_3(int iParam0)
 	return 0;
 }
 
-var func_4(int iParam0, var uParam1)
+bool func_4(int iParam0, char* sParam1)
 {
-	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(uParam1);
+	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam1);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED((1 + iParam0));
 }
 
-var func_5(int iParam0, var uParam1, var uParam2)
+bool func_5(int iParam0, char* sParam1, int iParam2)
 {
-	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(uParam1);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(uParam2);
+	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam1);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam2);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED((1 + iParam0));
 }
 
-var func_6(int iParam0, var uParam1, var uParam2)
+bool func_6(int iParam0, char* sParam1, char* sParam2)
 {
-	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(uParam1);
-	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(uParam2);
+	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam1);
+	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam2);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED((1 + iParam0));
 }
 
-var func_7(int iParam0, var uParam1, var uParam2, var uParam3)
+bool func_7(int iParam0, char* sParam1, char* sParam2, int iParam3)
 {
-	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(uParam1);
-	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(uParam2);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(uParam3);
+	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam1);
+	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam2);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam3);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED((1 + iParam0));
 }
 

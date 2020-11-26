@@ -17,9 +17,9 @@
 	var uLocal_15 = 0;
 	var uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
-	var uLocal_20 = 0;
+	int iLocal_18 = 0;
+	int iLocal_19 = 0;
+	int iLocal_20 = 0;
 	int iLocal_21 = 0;
 	int iLocal_22 = 0;
 	bool bLocal_23 = 0;
@@ -62,7 +62,7 @@ void __EntryFunction__()
 	iLocal_11 = 12;
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
-	uLocal_20 = HUD::ADD_BLIP_FOR_COORD(100f, 100f, 30f);
+	iLocal_20 = HUD::ADD_BLIP_FOR_COORD(100f, 100f, 30f);
 	iLocal_22 = 1;
 	fLocal_25 = 0f;
 	fLocal_28 = 0f;
@@ -80,8 +80,8 @@ void __EntryFunction__()
 	{
 		func_2();
 	}
-	uLocal_18 = unk_0x67D02A194A2FC2BD("p_bubblegum");
-	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(uLocal_18))
+	iLocal_18 = unk_0x67D02A194A2FC2BD("p_bubblegum");
+	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_18))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -93,24 +93,24 @@ void __EntryFunction__()
 		if (iLocal_22 == 1)
 		{
 			iLocal_22 = 0;
-			uLocal_19 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", 1);
-			if (CAM::DOES_CAM_EXIST(uLocal_19))
+			iLocal_19 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", true);
+			if (CAM::DOES_CAM_EXIST(iLocal_19))
 			{
-				CAM::SET_CAM_PARAMS(uLocal_19, -160.6632f, -1072.144f, -1615.471f, -89.4999f, -0.2863f, 58.1189f, 45f, 0, 1, 1, 2);
-				CAM::SET_CAM_NEAR_CLIP(uLocal_19, 0.01f);
-				CAM::SET_CAM_FAR_CLIP(uLocal_19, 0.02f);
-				CAM::RENDER_SCRIPT_CAMS(1, 0, 3000, 1, 0, 0);
+				CAM::SET_CAM_PARAMS(iLocal_19, -160.6632f, -1072.144f, -1615.471f, -89.4999f, -0.2863f, 58.1189f, 45f, 0, 1, 1, 2);
+				CAM::SET_CAM_NEAR_CLIP(iLocal_19, 0.01f);
+				CAM::SET_CAM_FAR_CLIP(iLocal_19, 0.02f);
+				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 			}
-			HUD::SET_BLIP_SPRITE(uLocal_20, 66);
+			HUD::SET_BLIP_SPRITE(iLocal_20, 66);
 		}
 		iLocal_21 = 1;
-		GRAPHICS::DRAW_SCALEFORM_MOVIE(uLocal_18, 0.5f, 0.5f, 1f, 1f, 255, 255, 255, 0, 0);
-		func_1(uLocal_18);
+		GRAPHICS::DRAW_SCALEFORM_MOVIE(iLocal_18, 0.5f, 0.5f, 1f, 1f, 255, 255, 255, 0, 0);
+		func_1(iLocal_18);
 		SYSTEM::WAIT(0);
 	}
 }
 
-void func_1(var uParam0)
+void func_1(int iParam0)
 {
 	if (Global_19465 == 0)
 	{
@@ -144,7 +144,7 @@ void func_1(var uParam0)
 		if (!bLocal_23 == bLocal_24)
 		{
 			bLocal_24 = bLocal_23;
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0, "SET_INPUT_EVENT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(10);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_25);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -167,7 +167,7 @@ void func_1(var uParam0)
 		if (!bLocal_26 == bLocal_27)
 		{
 			bLocal_27 = bLocal_26;
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0, "SET_INPUT_EVENT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(11);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_28);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -190,7 +190,7 @@ void func_1(var uParam0)
 		if (!bLocal_29 == bLocal_30)
 		{
 			bLocal_30 = bLocal_29;
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0, "SET_INPUT_EVENT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(8);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_31);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -213,7 +213,7 @@ void func_1(var uParam0)
 		if (!bLocal_32 == bLocal_33)
 		{
 			bLocal_33 = bLocal_32;
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0, "SET_INPUT_EVENT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(9);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_34);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -236,7 +236,7 @@ void func_1(var uParam0)
 		if (!bLocal_35 == bLocal_36)
 		{
 			bLocal_36 = bLocal_35;
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0, "SET_INPUT_EVENT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(17);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_37);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -259,7 +259,7 @@ void func_1(var uParam0)
 		if (!bLocal_38 == bLocal_39)
 		{
 			bLocal_39 = bLocal_38;
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0, "SET_INPUT_EVENT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(15);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_40);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -282,7 +282,7 @@ void func_1(var uParam0)
 		if (!bLocal_41 == bLocal_42)
 		{
 			bLocal_42 = bLocal_41;
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0, "SET_INPUT_EVENT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(16);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_43);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -305,7 +305,7 @@ void func_1(var uParam0)
 		if (!bLocal_44 == bLocal_45)
 		{
 			bLocal_45 = bLocal_44;
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0, "SET_INPUT_EVENT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(14);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_46);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -315,15 +315,15 @@ void func_1(var uParam0)
 
 void func_2()
 {
-	if (CAM::DOES_CAM_EXIST(uLocal_19))
+	if (CAM::DOES_CAM_EXIST(iLocal_19))
 	{
-		CAM::DESTROY_CAM(uLocal_19, 0);
+		CAM::DESTROY_CAM(iLocal_19, false);
 	}
-	CAM::RENDER_SCRIPT_CAMS(0, 0, 3000, 1, 0, 0);
+	CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
 	func_3(0);
-	MISC::SET_GAME_PAUSED(0);
-	HUD::CLEAR_HELP(1);
-	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&uLocal_18);
+	MISC::SET_GAME_PAUSED(false);
+	HUD::CLEAR_HELP(true);
+	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_18);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
@@ -374,7 +374,7 @@ void func_4(int iParam0)
 	}
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 	{
-		AUDIO::STOP_SCRIPTED_CONVERSATION(0);
+		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 	}
 	Global_20805 = 5;
 	if (iParam0 == 1)

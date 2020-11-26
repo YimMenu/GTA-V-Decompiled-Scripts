@@ -309,7 +309,7 @@ void func_1()
 	}
 }
 
-void func_2(int iParam0, var uParam1, int iParam2)
+void func_2(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	
@@ -320,33 +320,33 @@ void func_2(int iParam0, var uParam1, int iParam2)
 	}
 	if (iLocal_94[iParam0] == 0)
 	{
-		if (OBJECT::DOOR_SYSTEM_GET_DOOR_PENDING_STATE(uParam1) == -1)
+		if (OBJECT::DOOR_SYSTEM_GET_DOOR_PENDING_STATE(iParam1) == -1)
 		{
-			if (OBJECT::DOOR_SYSTEM_GET_DOOR_STATE(uParam1) != iParam2)
+			if (OBJECT::DOOR_SYSTEM_GET_DOOR_STATE(iParam1) != iParam2)
 			{
-				if (NETWORK::NETWORK_HAS_CONTROL_OF_DOOR(uParam1))
+				if (NETWORK::NETWORK_HAS_CONTROL_OF_DOOR(iParam1))
 				{
 					MISC::SET_BIT(&(iLocal_94[iParam0]), iVar0);
-					OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(uParam1, iParam2, 1, 1);
+					OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(iParam1, iParam2, true, true);
 					func_34(&(Local_95[iParam0 /*2*/]), 1, 0);
 				}
 				else
 				{
-					NETWORK::NETWORK_REQUEST_CONTROL_OF_DOOR(uParam1);
+					NETWORK::NETWORK_REQUEST_CONTROL_OF_DOOR(iParam1);
 				}
 			}
 		}
-		else if (OBJECT::DOOR_SYSTEM_GET_DOOR_PENDING_STATE(uParam1) != iParam2)
+		else if (OBJECT::DOOR_SYSTEM_GET_DOOR_PENDING_STATE(iParam1) != iParam2)
 		{
-			if (NETWORK::NETWORK_HAS_CONTROL_OF_DOOR(uParam1))
+			if (NETWORK::NETWORK_HAS_CONTROL_OF_DOOR(iParam1))
 			{
 				MISC::SET_BIT(&(iLocal_94[iParam0]), iVar0);
-				OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(uParam1, iParam2, 1, 1);
+				OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(iParam1, iParam2, true, true);
 				func_34(&(Local_95[iParam0 /*2*/]), 1, 0);
 			}
 			else
 			{
-				NETWORK::NETWORK_REQUEST_CONTROL_OF_DOOR(uParam1);
+				NETWORK::NETWORK_REQUEST_CONTROL_OF_DOOR(iParam1);
 			}
 		}
 	}
@@ -414,18 +414,18 @@ bool func_6(var uParam0)
 	return uParam0->f_1;
 }
 
-int func_7(var uParam0, bool bParam1, bool bParam2)
+int func_7(int iParam0, bool bParam1, bool bParam2)
 {
 	int iVar0;
 	
-	iVar0 = uParam0;
+	iVar0 = iParam0;
 	if (iVar0 != -1)
 	{
-		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(uParam0))
+		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))
 		{
 			if (bParam1)
 			{
-				if (!PLAYER::IS_PLAYER_PLAYING(uParam0))
+				if (!PLAYER::IS_PLAYER_PLAYING(iParam0))
 				{
 					return 0;
 				}
@@ -472,7 +472,7 @@ void func_9()
 	}
 	else if (fVar0 <= 20f)
 	{
-		if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, Local_69[iLocal_72 /*17*/].f_3, Local_69[iLocal_72 /*17*/].f_6, Local_69[iLocal_72 /*17*/].f_9, 0, 1))
+		if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, Local_69[iLocal_72 /*17*/].f_3, Local_69[iLocal_72 /*17*/].f_6, Local_69[iLocal_72 /*17*/].f_9, false, true))
 		{
 			if (!MISC::IS_BIT_SET(Local_96[PLAYER::PLAYER_ID() /*4*/].f_2, iLocal_72))
 			{
@@ -483,7 +483,7 @@ void func_9()
 		{
 			if (Global_2462099)
 			{
-				if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, Local_69[iLocal_72 /*17*/].f_10, Local_69[iLocal_72 /*17*/].f_13, Local_69[iLocal_72 /*17*/].f_16, 0, 1))
+				if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, Local_69[iLocal_72 /*17*/].f_10, Local_69[iLocal_72 /*17*/].f_13, Local_69[iLocal_72 /*17*/].f_16, false, true))
 				{
 					if (!MISC::IS_BIT_SET(Local_96[PLAYER::PLAYER_ID() /*4*/].f_2, iLocal_72))
 					{
@@ -503,7 +503,7 @@ void func_9()
 						MISC::SET_BIT(&(Local_96[PLAYER::PLAYER_ID() /*4*/].f_2), iLocal_72);
 					}
 				}
-				else if (MISC::IS_BIT_SET(Local_96[PLAYER::PLAYER_ID() /*4*/].f_2, iLocal_72) && !OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, Local_69[iLocal_72 /*17*/].f_3, Local_69[iLocal_72 /*17*/].f_6, Local_69[iLocal_72 /*17*/].f_9, 0, 1))
+				else if (MISC::IS_BIT_SET(Local_96[PLAYER::PLAYER_ID() /*4*/].f_2, iLocal_72) && !OBJECT::IS_POINT_IN_ANGLED_AREA(Var1, Local_69[iLocal_72 /*17*/].f_3, Local_69[iLocal_72 /*17*/].f_6, Local_69[iLocal_72 /*17*/].f_9, false, true))
 				{
 					MISC::CLEAR_BIT(&(Local_96[PLAYER::PLAYER_ID() /*4*/].f_2), iLocal_72);
 				}
@@ -550,7 +550,7 @@ int func_12()
 
 Vector3 func_13(int iParam0)
 {
-	return ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(iParam0), false);
 }
 
 void func_14()
@@ -566,7 +566,7 @@ void func_14()
 	while (iVar0 < 4)
 	{
 		func_22(iVar0, &Var3);
-		if (MISC::GET_DISTANCE_BETWEEN_COORDS(func_13(PLAYER::PLAYER_ID()), Var3.f_1, 1) < 150f)
+		if (MISC::GET_DISTANCE_BETWEEN_COORDS(func_13(PLAYER::PLAYER_ID()), Var3.f_1, true) < 150f)
 		{
 			bVar2 = false;
 			iVar1 = 0;
@@ -575,7 +575,7 @@ void func_14()
 				iVar4 = PLAYER::INT_TO_PLAYERINDEX(iVar1);
 				if (func_7(iVar4, 1, 1))
 				{
-					if (func_15(iVar4) && ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::GET_PLAYER_PED(iVar4), Var3.f_4[0 /*3*/], Var3.f_4[1 /*3*/], Var3.f_11, 0, 1, 0))
+					if (func_15(iVar4) && ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::GET_PLAYER_PED(iVar4), Var3.f_4[0 /*3*/], Var3.f_4[1 /*3*/], Var3.f_11, false, true, 0))
 					{
 						bVar2 = true;
 						iVar1 = 32;
@@ -592,9 +592,9 @@ void func_14()
 					{
 						fLocal_97[iVar0] = 1f;
 					}
-					AUDIO::SET_SCRIPT_UPDATE_DOOR_AUDIO(Var3, 1);
-					OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(Var3, fLocal_97[iVar0], 0, 0);
-					OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(Var3, 0, 0, 1);
+					AUDIO::SET_SCRIPT_UPDATE_DOOR_AUDIO(Var3, true);
+					OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(Var3, fLocal_97[iVar0], false, false);
+					OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(Var3, 0, false, true);
 				}
 			}
 			else if (fLocal_97[iVar0] != 0f)
@@ -604,9 +604,9 @@ void func_14()
 				{
 					fLocal_97[iVar0] = 0f;
 				}
-				AUDIO::SET_SCRIPT_UPDATE_DOOR_AUDIO(Var3, 1);
-				OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(Var3, fLocal_97[iVar0], 0, 0);
-				OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(Var3, 1, 0, 1);
+				AUDIO::SET_SCRIPT_UPDATE_DOOR_AUDIO(Var3, true);
+				OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(Var3, fLocal_97[iVar0], false, false);
+				OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(Var3, 1, false, true);
 			}
 		}
 		iVar0++;
@@ -749,7 +749,7 @@ void func_23()
 	{
 		if (!iLocal_66)
 		{
-			OBJECT::_0xC7F29CA00F46350E(1);
+			OBJECT::_0xC7F29CA00F46350E(true);
 			iLocal_66 = 1;
 		}
 	}
@@ -3690,37 +3690,37 @@ int func_29(int iParam0, int iParam1)
 	return 1;
 }
 
-void func_30(struct<15> Param0, int iParam1)
+void func_30(struct<15> Param0, bool bParam1)
 {
 	if (Param0 != 0)
 	{
-		OBJECT::ADD_DOOR_TO_SYSTEM(Param0, Param0.f_2, Param0.f_3, 0, iParam1, Param0.f_11);
+		OBJECT::ADD_DOOR_TO_SYSTEM(Param0, Param0.f_2, Param0.f_3, false, bParam1, Param0.f_11);
 		if (Param0.f_9)
 		{
-			OBJECT::DOOR_SYSTEM_SET_HOLD_OPEN(Param0, 1);
+			OBJECT::DOOR_SYSTEM_SET_HOLD_OPEN(Param0, true);
 		}
 		if (Param0.f_12 != 0f)
 		{
-			OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(Param0, Param0.f_12, 0, iParam1);
+			OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(Param0, Param0.f_12, false, bParam1);
 		}
 		if (!Param0.f_6)
 		{
 			if (Param0.f_7)
 			{
-				OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(Param0, Param0.f_8, iParam1, 0);
+				OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(Param0, Param0.f_8, bParam1, false);
 			}
 		}
 		if (Param0.f_10)
 		{
-			OBJECT::_0xA85A21582451E951(Param0, 1);
+			OBJECT::_0xA85A21582451E951(Param0, true);
 		}
 		if (Param0.f_14 != 0f)
 		{
-			OBJECT::DOOR_SYSTEM_SET_AUTOMATIC_RATE(Param0, Param0.f_14, iParam1, 0);
+			OBJECT::DOOR_SYSTEM_SET_AUTOMATIC_RATE(Param0, Param0.f_14, bParam1, false);
 		}
 		if (Param0.f_13 != 0f)
 		{
-			OBJECT::DOOR_SYSTEM_SET_AUTOMATIC_DISTANCE(Param0, Param0.f_13, iParam1, 0);
+			OBJECT::DOOR_SYSTEM_SET_AUTOMATIC_DISTANCE(Param0, Param0.f_13, bParam1, false);
 		}
 	}
 }
@@ -3926,29 +3926,29 @@ void func_43(var uParam0)
 void func_44(int iParam0)
 {
 	struct<3> Var0;
-	var uVar1;
-	var uVar2;
+	int iVar1;
+	int iVar2;
 	bool bVar3;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_7(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
+			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(uVar1, 0))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
 				{
-					uVar2 = PED::GET_VEHICLE_PED_IS_IN(uVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_45(uVar2, &bVar3))
+						if (func_45(iVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&uVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
 						}
 					}
 				}
@@ -3957,24 +3957,24 @@ void func_44(int iParam0)
 	}
 }
 
-int func_45(var uParam0, var uParam1)
+int func_45(int iParam0, var uParam1)
 {
-	if (ENTITY::DOES_ENTITY_EXIST(uParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(uParam0))
+		if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(iParam0))
 		{
-			if (NETWORK::NETWORK_GET_ENTITY_IS_LOCAL(uParam0))
+			if (NETWORK::NETWORK_GET_ENTITY_IS_LOCAL(iParam0))
 			{
-				if (!VEHICLE::IS_THIS_MODEL_A_TRAIN(ENTITY::GET_ENTITY_MODEL(uParam0)))
+				if (!VEHICLE::IS_THIS_MODEL_A_TRAIN(ENTITY::GET_ENTITY_MODEL(iParam0)))
 				{
-					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(uParam0, 0, 1);
+					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iParam0, false, true);
 					*uParam1 = 1;
 				}
 			}
 		}
-		if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(uParam0, 0))
+		if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(iParam0, false))
 		{
-			if (NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(uParam0))
+			if (NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0))
 			{
 				return 1;
 			}
@@ -4106,7 +4106,7 @@ int func_52(struct<21> Param0)
 	{
 		return 0;
 	}
-	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
+	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 	iLocal_67 = 1;
 	return 1;
 }
@@ -4252,13 +4252,13 @@ bool func_55()
 	return Global_1312854;
 }
 
-void func_56(var uParam0, struct<17> Param1, var uParam2, var uParam3, var uParam4, var uParam5)
+void func_56(int iParam0, struct<17> Param1, var uParam2, var uParam3, var uParam4, var uParam5)
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		func_50();
 	}
-	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(uParam0, 0, Param1.f_16);
+	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(iParam0, false, Param1.f_16);
 }
 
 int func_57(int iParam0)

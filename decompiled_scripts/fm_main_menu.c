@@ -215,7 +215,7 @@
 	var uLocal_213 = 0;
 	var uLocal_214 = 0;
 	int iLocal_215 = 0;
-	var uLocal_216 = 0;
+	int* iLocal_216 = NULL;
 	int iLocal_217 = 0;
 	var uLocal_218 = 0;
 #endregion
@@ -258,7 +258,7 @@ void __EntryFunction__()
 		func_20();
 	}
 	HUD::REQUEST_ADDITIONAL_TEXT("FMMC", 2);
-	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), 0, 0);
+	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
 	uLocal_218 = Global_4456448.f_2;
 	Global_1312441 = 0;
 	Local_102.f_5 = Global_4456448;
@@ -319,54 +319,54 @@ void __EntryFunction__()
 				{
 					if (Global_4456448.f_2 == 5)
 					{
-						if (func_12(&uLocal_216))
+						if (func_12(&iLocal_216))
 						{
 							iLocal_215 = 2;
 						}
 					}
 					else if (func_11())
 					{
-						if (func_10(&uLocal_216))
+						if (func_10(&iLocal_216))
 						{
 							iLocal_215 = 2;
 						}
 					}
 					else if (Global_4456448.f_2 == 11)
 					{
-						if (func_9(&uLocal_216))
+						if (func_9(&iLocal_216))
 						{
 							iLocal_215 = 2;
 						}
 					}
 					else if (Global_4456448.f_2 == 12)
 					{
-						if (func_8(&uLocal_216))
+						if (func_8(&iLocal_216))
 						{
 							iLocal_215 = 2;
 						}
 					}
 					else if (Global_4456448.f_2 != 6 && Global_4456448 != 4)
 					{
-						if (func_7(&uLocal_216))
+						if (func_7(&iLocal_216))
 						{
 							iLocal_215 = 2;
 						}
 					}
-					else if (func_6(&uLocal_216))
+					else if (func_6(&iLocal_216))
 					{
 						iLocal_215 = 2;
 					}
 				}
 				else if (Global_4456448 == 1)
 				{
-					if (func_5(&uLocal_216))
+					if (func_5(&iLocal_216))
 					{
 						iLocal_215 = 2;
 					}
 				}
 				else if (func_4())
 				{
-					if (func_2(&uLocal_216))
+					if (func_2(&iLocal_216))
 					{
 						iLocal_215 = 2;
 					}
@@ -423,9 +423,9 @@ bool func_1()
 	return Global_1312371;
 }
 
-int func_2(var uParam0)
+int func_2(int* iParam0)
 {
-	if (!MISC::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Race_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Race_Creator"))
@@ -434,13 +434,13 @@ int func_2(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Race_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Race_Creator");
-				MISC::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(iParam0, 2);
 			}
 		}
 	}
 	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("fm_race_creator")) == 0)
 	{
-		MISC::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(iParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -464,9 +464,9 @@ int func_4()
 	return 0;
 }
 
-int func_5(var uParam0)
+int func_5(int* iParam0)
 {
-	if (!MISC::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Deathmatch_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Deathmatch_Creator"))
@@ -475,21 +475,21 @@ int func_5(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Deathmatch_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Deathmatch_Creator");
-				MISC::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(iParam0, 2);
 			}
 		}
 	}
 	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("fm_deathmatch_creator")) == 0)
 	{
-		MISC::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(iParam0, 2);
 		return 1;
 	}
 	return 0;
 }
 
-int func_6(var uParam0)
+int func_6(int* iParam0)
 {
-	if (!MISC::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Capture_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Capture_Creator"))
@@ -498,21 +498,21 @@ int func_6(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Capture_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Capture_Creator");
-				MISC::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(iParam0, 2);
 			}
 		}
 	}
 	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("fm_capture_creator")) == 0)
 	{
-		MISC::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(iParam0, 2);
 		return 1;
 	}
 	return 0;
 }
 
-int func_7(var uParam0)
+int func_7(int* iParam0)
 {
-	if (!MISC::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Mission_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Mission_Creator"))
@@ -521,21 +521,21 @@ int func_7(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Mission_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Mission_Creator");
-				MISC::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(iParam0, 2);
 			}
 		}
 	}
 	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("fm_mission_creator")) == 0)
 	{
-		MISC::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(iParam0, 2);
 		return 1;
 	}
 	return 0;
 }
 
-int func_8(var uParam0)
+int func_8(int* iParam0)
 {
-	if (!MISC::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("Freemode_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("Freemode_Creator"))
@@ -544,21 +544,21 @@ int func_8(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("Freemode_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("Freemode_Creator");
-				MISC::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(iParam0, 2);
 			}
 		}
 	}
 	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("freemode_creator")) == 0)
 	{
-		MISC::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(iParam0, 2);
 		return 1;
 	}
 	return 0;
 }
 
-int func_9(var uParam0)
+int func_9(int* iParam0)
 {
-	if (!MISC::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("Basic_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("Basic_Creator"))
@@ -567,21 +567,21 @@ int func_9(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("Basic_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("Basic_Creator");
-				MISC::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(iParam0, 2);
 			}
 		}
 	}
 	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("basic_creator")) == 0)
 	{
-		MISC::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(iParam0, 2);
 		return 1;
 	}
 	return 0;
 }
 
-int func_10(var uParam0)
+int func_10(int* iParam0)
 {
-	if (!MISC::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Survival_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Survival_Creator"))
@@ -590,13 +590,13 @@ int func_10(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Survival_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Survival_Creator");
-				MISC::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(iParam0, 2);
 			}
 		}
 	}
 	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("fm_survival_creator")) == 0)
 	{
-		MISC::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(iParam0, 2);
 		return 1;
 	}
 	return 0;
@@ -607,9 +607,9 @@ bool func_11()
 	return Global_4456448 == 3;
 }
 
-int func_12(var uParam0)
+int func_12(int* iParam0)
 {
-	if (!MISC::IS_BIT_SET(*uParam0, 2))
+	if (!MISC::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_LTS_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_LTS_Creator"))
@@ -618,13 +618,13 @@ int func_12(var uParam0)
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_LTS_Creator", 35000);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_LTS_Creator");
-				MISC::SET_BIT(uParam0, 2);
+				MISC::SET_BIT(iParam0, 2);
 			}
 		}
 	}
 	else if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("fm_lts_creator")) == 0)
 	{
-		MISC::CLEAR_BIT(uParam0, 2);
+		MISC::CLEAR_BIT(iParam0, 2);
 		return 1;
 	}
 	return 0;

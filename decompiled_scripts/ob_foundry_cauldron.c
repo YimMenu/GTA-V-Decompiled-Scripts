@@ -2,14 +2,14 @@
 	var uLocal_0 = 0;
 	var uLocal_1 = 0;
 	int iLocal_2 = 0;
-	var uLocal_3 = 0;
-	var uLocal_4 = 0;
-	var uScriptParam_0 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iScriptParam_0 = 0;
 #endregion
 
 void __EntryFunction__()
 {
-	var uVar0;
+	int iVar0;
 	
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
@@ -18,19 +18,19 @@ void __EntryFunction__()
 	while (true)
 	{
 		SYSTEM::WAIT(0);
-		if (ENTITY::DOES_ENTITY_EXIST(uScriptParam_5))
+		if (ENTITY::DOES_ENTITY_EXIST(iScriptParam_5))
 		{
-			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(uScriptParam_5) && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("finalec1")) == 0)
+			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(iScriptParam_5) && SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("finalec1")) == 0)
 			{
 				switch (iLocal_2)
 				{
 					case 0:
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 						{
-							uVar0 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
-							if (INTERIOR::IS_VALID_INTERIOR(uVar0))
+							iVar0 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
+							if (INTERIOR::IS_VALID_INTERIOR(iVar0))
 							{
-								if (INTERIOR::IS_INTERIOR_READY(uVar0))
+								if (INTERIOR::IS_INTERIOR_READY(iVar0))
 								{
 									if (INTERIOR::IS_INTERIOR_SCENE())
 									{
@@ -47,22 +47,22 @@ void __EntryFunction__()
 						{
 							if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							{
-								if (!ENTITY::DOES_ENTITY_EXIST(uLocal_4))
+								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4))
 								{
-									uLocal_4 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(1090f, -1996f, 39f, 100f, joaat("v_ilev_found_cranebucket"), 1, 0, 1);
+									iLocal_4 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(1090f, -1996f, 39f, 100f, joaat("v_ilev_found_cranebucket"), true, false, true);
 								}
-								if (!GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(uLocal_3))
+								if (!GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(iLocal_3))
 								{
-									if (ENTITY::DOES_ENTITY_EXIST(uLocal_4))
+									if (ENTITY::DOES_ENTITY_EXIST(iLocal_4))
 									{
-										uVar0 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
-										if (INTERIOR::IS_VALID_INTERIOR(uVar0))
+										iVar0 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
+										if (INTERIOR::IS_VALID_INTERIOR(iVar0))
 										{
-											if (INTERIOR::IS_INTERIOR_READY(uVar0))
+											if (INTERIOR::IS_INTERIOR_READY(iVar0))
 											{
 												if (INTERIOR::IS_INTERIOR_SCENE())
 												{
-													uLocal_3 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_obfoundry_cauldron_steam", uLocal_4, 0f, 0f, 0f, 0f, 0f, 0f, 1065353216, 0, 0, 0);
+													iLocal_3 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_obfoundry_cauldron_steam", iLocal_4, 0f, 0f, 0f, 0f, 0f, 0f, 1f, false, false, false);
 												}
 											}
 										}
@@ -90,13 +90,13 @@ void __EntryFunction__()
 
 void func_1()
 {
-	if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(uLocal_3))
+	if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(iLocal_3))
 	{
-		GRAPHICS::STOP_PARTICLE_FX_LOOPED(uLocal_3, 0);
+		GRAPHICS::STOP_PARTICLE_FX_LOOPED(iLocal_3, false);
 	}
-	if (ENTITY::DOES_ENTITY_EXIST(uLocal_4))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_4))
 	{
-		ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&uLocal_4);
+		ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&iLocal_4);
 	}
 	func_2("ob_foundry_cauldron Terminated >>>>>>>>>>>>>>>>>\n");
 	SCRIPT::TERMINATE_THIS_THREAD();
@@ -107,9 +107,9 @@ void func_2(char* sParam0)
 	func_3(sParam0);
 }
 
-void func_3(var uParam0)
+void func_3(char* sParam0)
 {
-	if (MISC::ARE_STRINGS_EQUAL(uParam0, uParam0))
+	if (MISC::ARE_STRINGS_EQUAL(sParam0, sParam0))
 	{
 	}
 }

@@ -20,7 +20,7 @@
 	int iLocal_18 = 0;
 	struct<3> Local_19 = { 0, 0, 0 } ;
 	int iLocal_20 = 0;
-	var uLocal_21 = 0;
+	int iLocal_21 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -45,9 +45,9 @@ void __EntryFunction__()
 		}
 		else
 		{
-			NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, 0, -1);
+			NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, -1);
 			func_15(0, -1, 0);
-			MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
+			MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 			iLocal_20 = 1;
 		}
 	}
@@ -65,22 +65,22 @@ void __EntryFunction__()
 				func_18();
 			}
 		}
-		if (ENTITY::DOES_ENTITY_EXIST(uScriptParam_21))
+		if (ENTITY::DOES_ENTITY_EXIST(iScriptParam_21))
 		{
-			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(uScriptParam_21))
+			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(iScriptParam_21))
 			{
 				switch (iLocal_18)
 				{
 					case 0:
-						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(uScriptParam_21))
+						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(iScriptParam_21))
 						{
-							Local_19 = { ENTITY::GET_ENTITY_COORDS(uScriptParam_21, 1) };
+							Local_19 = { ENTITY::GET_ENTITY_COORDS(iScriptParam_21, true) };
 							iLocal_18 = 1;
 						}
 						break;
 					
 					case 1:
-						if ((OBJECT::HAS_OBJECT_BEEN_BROKEN(uScriptParam_21, 0) && ENTITY::IS_ENTITY_VISIBLE(uScriptParam_21)) && !ENTITY::IS_ENTITY_A_MISSION_ENTITY(uScriptParam_21))
+						if ((OBJECT::HAS_OBJECT_BEEN_BROKEN(iScriptParam_21, 0) && ENTITY::IS_ENTITY_VISIBLE(iScriptParam_21)) && !ENTITY::IS_ENTITY_A_MISSION_ENTITY(iScriptParam_21))
 						{
 							func_1();
 							iLocal_18 = 2;
@@ -107,7 +107,7 @@ void func_1()
 {
 	int iVar0;
 	int iVar1;
-	var uVar2;
+	int iVar2;
 	int iVar3;
 	
 	iVar0 = joaat("prop_money_bag_01");
@@ -119,8 +119,8 @@ void func_1()
 		iVar3 = MISC::GET_RANDOM_INT_IN_RANGE(50, 101);
 		iVar3 = func_2(iVar3, 1);
 	}
-	MISC::SET_BIT(&uVar2, 3);
-	MISC::SET_BIT(&uVar2, 4);
+	MISC::SET_BIT(&iVar2, 3);
+	MISC::SET_BIT(&iVar2, 4);
 	STREAMING::REQUEST_MODEL(iVar0);
 	while (!STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
@@ -128,11 +128,11 @@ void func_1()
 	}
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		OBJECT::CREATE_AMBIENT_PICKUP(iVar1, OBJECT::GET_SAFE_PICKUP_COORDS(Local_19, 1067030938, 1069547520), uVar2, iVar3, iVar0, 0, 0);
+		OBJECT::CREATE_AMBIENT_PICKUP(iVar1, OBJECT::GET_SAFE_PICKUP_COORDS(Local_19, 1.2f, 1.5f), iVar2, iVar3, iVar0, false, false);
 	}
 	else
 	{
-		OBJECT::CREATE_PICKUP(iVar1, OBJECT::GET_SAFE_PICKUP_COORDS(Local_19, 1067030938, 1069547520), uVar2, iVar3, 0, iVar0);
+		OBJECT::CREATE_PICKUP(iVar1, OBJECT::GET_SAFE_PICKUP_COORDS(Local_19, 1.2f, 1.5f), iVar2, iVar3, false, iVar0);
 	}
 }
 
@@ -300,29 +300,29 @@ void func_11(var uParam0)
 void func_12(int iParam0)
 {
 	struct<3> Var0;
-	var uVar1;
-	var uVar2;
+	int iVar1;
+	int iVar2;
 	bool bVar3;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_14(Var0.f_1, 1, 1))
 		{
-			uVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(uVar1))
+			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(uVar1, 0))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
 				{
-					uVar2 = PED::GET_VEHICLE_PED_IS_IN(uVar1, 0);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(uVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_13(uVar2, &bVar3))
+						if (func_13(iVar2, &bVar3))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(uVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
 						}
 						if (bVar3)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&uVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
 						}
 					}
 				}
@@ -331,24 +331,24 @@ void func_12(int iParam0)
 	}
 }
 
-int func_13(var uParam0, var uParam1)
+int func_13(int iParam0, var uParam1)
 {
-	if (ENTITY::DOES_ENTITY_EXIST(uParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(uParam0))
+		if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(iParam0))
 		{
-			if (NETWORK::NETWORK_GET_ENTITY_IS_LOCAL(uParam0))
+			if (NETWORK::NETWORK_GET_ENTITY_IS_LOCAL(iParam0))
 			{
-				if (!VEHICLE::IS_THIS_MODEL_A_TRAIN(ENTITY::GET_ENTITY_MODEL(uParam0)))
+				if (!VEHICLE::IS_THIS_MODEL_A_TRAIN(ENTITY::GET_ENTITY_MODEL(iParam0)))
 				{
-					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(uParam0, 0, 1);
+					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iParam0, false, true);
 					*uParam1 = 1;
 				}
 			}
 		}
-		if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(uParam0, 0))
+		if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(iParam0, false))
 		{
-			if (NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(uParam0))
+			if (NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0))
 			{
 				return 1;
 			}
@@ -357,18 +357,18 @@ int func_13(var uParam0, var uParam1)
 	return 0;
 }
 
-int func_14(var uParam0, bool bParam1, bool bParam2)
+int func_14(int iParam0, bool bParam1, bool bParam2)
 {
 	int iVar0;
 	
-	iVar0 = uParam0;
+	iVar0 = iParam0;
 	if (iVar0 != -1)
 	{
-		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(uParam0))
+		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))
 		{
 			if (bParam1)
 			{
-				if (!PLAYER::IS_PLAYER_PLAYING(uParam0))
+				if (!PLAYER::IS_PLAYER_PLAYING(iParam0))
 				{
 					return 0;
 				}

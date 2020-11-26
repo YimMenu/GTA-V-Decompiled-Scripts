@@ -2,7 +2,7 @@
 	var uLocal_0 = 0;
 	var uLocal_1 = 0;
 	int iLocal_2 = 0;
-	var uLocal_3[20] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	int iLocal_3[20] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 	bool bLocal_4 = 0;
 	struct<3> Local_5 = { 0, 0, 0 } ;
 	struct<2> Local_6 = { 0, 5 } ;
@@ -41,7 +41,7 @@ void __EntryFunction__()
 	}
 	func_24(Var0);
 	bLocal_4 = func_4();
-	Local_5 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
+	Local_5 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
 	func_1();
 	while (true)
 	{
@@ -60,13 +60,13 @@ void func_1()
 	struct<3> Var2;
 	struct<3> Var3;
 	int iVar4;
-	var uVar5;
+	int iVar5;
 	
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 20)
 	{
-		if (func_3(iVar0, &iVar1, &Var2, &Var3, &uVar5))
+		if (func_3(iVar0, &iVar1, &Var2, &Var3, &iVar5))
 		{
 			if (func_2(Var3, 0f, 0f, 0f, 0))
 			{
@@ -78,25 +78,25 @@ void func_1()
 				{
 					if (bLocal_4)
 					{
-						uLocal_3[iVar0] = OBJECT::CREATE_PICKUP(iVar1, Var2, iVar4, uVar5, 1, 0);
+						iLocal_3[iVar0] = OBJECT::CREATE_PICKUP(iVar1, Var2, iVar4, iVar5, true, 0);
 					}
 				}
 				else if (SYSTEM::VDIST2(Var2, Local_5) > 400f)
 				{
 					if (iVar1 == joaat("pickup_armour_standard"))
 					{
-						uLocal_3[iVar0] = OBJECT::CREATE_PICKUP(iVar1, Var2, iVar4, iVar5, 1, 0);
+						iLocal_3[iVar0] = OBJECT::CREATE_PICKUP(iVar1, Var2, iVar4, iVar5, true, 0);
 					}
 					else if ((iVar1 == joaat("pickup_weapon_grenadelauncher") || iVar1 == joaat("pickup_weapon_rpg")) || iVar1 == joaat("pickup_weapon_mg"))
 					{
 						if (bLocal_4)
 						{
-							uLocal_3[iVar0] = OBJECT::CREATE_PICKUP(iVar1, Var2, iVar4, -1, 1, 0);
+							iLocal_3[iVar0] = OBJECT::CREATE_PICKUP(iVar1, Var2, iVar4, -1, true, 0);
 						}
 					}
 					else
 					{
-						uLocal_3[iVar0] = OBJECT::CREATE_PICKUP(iVar1, Var2, iVar4, -1, 1, 0);
+						iLocal_3[iVar0] = OBJECT::CREATE_PICKUP(iVar1, Var2, iVar4, -1, true, 0);
 					}
 				}
 			}
@@ -109,25 +109,25 @@ void func_1()
 				{
 					if (bLocal_4)
 					{
-						uLocal_3[iVar0] = OBJECT::CREATE_PICKUP_ROTATE(iVar1, Var2, Var3, iVar4, 10000, 2, 1, 0);
+						iLocal_3[iVar0] = OBJECT::CREATE_PICKUP_ROTATE(iVar1, Var2, Var3, iVar4, 10000, 2, true, 0);
 					}
 				}
 				else if (SYSTEM::VDIST2(Var2, Local_5) > 400f)
 				{
 					if (iVar1 == joaat("pickup_armour_standard"))
 					{
-						uLocal_3[iVar0] = OBJECT::CREATE_PICKUP_ROTATE(iVar1, Var2, Var3, iVar4, -1, 2, 1, 0);
+						iLocal_3[iVar0] = OBJECT::CREATE_PICKUP_ROTATE(iVar1, Var2, Var3, iVar4, -1, 2, true, 0);
 					}
 					else if ((iVar1 == joaat("pickup_weapon_grenadelauncher") || iVar1 == joaat("pickup_weapon_rpg")) || iVar1 == joaat("pickup_weapon_mg"))
 					{
 						if (bLocal_4)
 						{
-							uLocal_3[iVar0] = OBJECT::CREATE_PICKUP_ROTATE(iVar1, Var2, Var3, iVar4, -1, 2, 1, 0);
+							iLocal_3[iVar0] = OBJECT::CREATE_PICKUP_ROTATE(iVar1, Var2, Var3, iVar4, -1, 2, true, 0);
 						}
 					}
 					else
 					{
-						uLocal_3[iVar0] = OBJECT::CREATE_PICKUP_ROTATE(iVar1, Var2, Var3, iVar4, -1, 2, 1, 0);
+						iLocal_3[iVar0] = OBJECT::CREATE_PICKUP_ROTATE(iVar1, Var2, Var3, iVar4, -1, 2, true, 0);
 					}
 				}
 			}
@@ -1442,9 +1442,9 @@ void func_27()
 	iVar0 = 0;
 	while (iVar0 < 20)
 	{
-		if (OBJECT::DOES_PICKUP_EXIST(uLocal_3[iVar0]))
+		if (OBJECT::DOES_PICKUP_EXIST(iLocal_3[iVar0]))
 		{
-			OBJECT::REMOVE_PICKUP(uLocal_3[iVar0]);
+			OBJECT::REMOVE_PICKUP(iLocal_3[iVar0]);
 		}
 		iVar0++;
 	}

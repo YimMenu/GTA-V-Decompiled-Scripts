@@ -29,7 +29,7 @@
 	var uLocal_27 = 0;
 	int iLocal_28 = 0;
 	int iLocal_29 = 0;
-	var uLocal_30 = 0;
+	int iLocal_30 = 0;
 	int iLocal_31 = 0;
 	int iLocal_32 = 0;
 #endregion
@@ -68,9 +68,9 @@ void __EntryFunction__()
 		{
 			if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0))
+				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 				{
-					iLocal_28 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0);
+					iLocal_28 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 				}
 				else
 				{
@@ -79,7 +79,7 @@ void __EntryFunction__()
 			}
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_28))
 			{
-				if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_28, 0))
+				if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_28, false))
 				{
 					if (VEHICLE::IS_VEHICLE_MODEL(iLocal_28, joaat("handler")))
 					{
@@ -88,13 +88,13 @@ void __EntryFunction__()
 						{
 							if (iLocal_32 == 0)
 							{
-								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_29) || (ENTITY::DOES_ENTITY_EXIST(iLocal_29) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, joaat("prop_contr_03b_ld"), 1, 0, 1) != iLocal_29))
+								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_29) || (ENTITY::DOES_ENTITY_EXIST(iLocal_29) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, true), 15f, joaat("prop_contr_03b_ld"), true, false, true) != iLocal_29))
 								{
-									iLocal_29 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, joaat("prop_contr_03b_ld"), 1, 0, 1);
+									iLocal_29 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, true), 15f, joaat("prop_contr_03b_ld"), true, false, true);
 								}
 								if (ENTITY::DOES_ENTITY_EXIST(iLocal_29))
 								{
-									if (func_1(&uLocal_30, 1000))
+									if (func_1(&iLocal_30, 1000))
 									{
 										if (VEHICLE::_IS_HANDLER_FRAME_ABOVE_CONTAINER(iLocal_28, iLocal_29))
 										{
@@ -113,7 +113,7 @@ void __EntryFunction__()
 						{
 							if (iLocal_31 == 1)
 							{
-								uLocal_30 = MISC::GET_GAME_TIMER();
+								iLocal_30 = MISC::GET_GAME_TIMER();
 								iLocal_31 = 0;
 								iLocal_32 = 0;
 							}

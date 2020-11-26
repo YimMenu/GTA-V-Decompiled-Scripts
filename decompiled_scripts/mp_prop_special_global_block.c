@@ -484,18 +484,18 @@ Vector3 func_4(struct<3> Param0, float fParam1)
 	return Var0;
 }
 
-struct<6> func_5(var uParam0, int iParam1)
+struct<6> func_5(int iParam0, int iParam1)
 {
 	struct<6> Var0;
-	var uVar1;
+	bool bVar1;
 	int iVar2;
 	
 	iVar2 = 0;
-	if (func_6(iParam1, &uVar1))
+	if (func_6(iParam1, &bVar1))
 	{
 		iVar2 = 1;
 	}
-	if (iVar2 && MISC::_GET_BASE_ELEMENT_METADATA(&Var0, &(Var0.f_3), uParam0, uVar1))
+	if (iVar2 && MISC::_GET_BASE_ELEMENT_METADATA(&Var0, &(Var0.f_3), iParam0, bVar1))
 	{
 		return Var0;
 	}

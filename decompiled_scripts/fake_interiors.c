@@ -30,8 +30,8 @@
 	int iLocal_28 = 0;
 	int iLocal_29 = 0;
 	struct<3> Local_30 = { 0, 0, 0 } ;
-	var uLocal_31 = 0;
-	var uLocal_32 = 0;
+	int iLocal_31 = 0;
+	int iLocal_32 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -67,13 +67,13 @@ void __EntryFunction__()
 		}
 		if (func_23(PLAYER::PLAYER_ID()) && ENTITY::DOES_ENTITY_EXIST(func_22()))
 		{
-			uLocal_31 = func_22();
+			iLocal_31 = func_22();
 		}
 		else
 		{
-			uLocal_31 = PLAYER::PLAYER_PED_ID();
+			iLocal_31 = PLAYER::PLAYER_PED_ID();
 		}
-		if (ENTITY::IS_ENTITY_DEAD(uLocal_31, 0))
+		if (ENTITY::IS_ENTITY_DEAD(iLocal_31, false))
 		{
 		}
 		func_1();
@@ -90,7 +90,7 @@ void func_1()
 	func_21();
 	if (iLocal_29 != -1 && func_20(iLocal_29))
 	{
-		Var0 = { ENTITY::GET_ENTITY_COORDS(uLocal_31, 0) };
+		Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 		Var1 = { func_19(iLocal_29) };
 		if (SYSTEM::VDIST2(Var1, Var0) < IntToFloat(func_18(iLocal_29)))
 		{
@@ -101,7 +101,7 @@ void func_1()
 			{
 				if (!bVar2)
 				{
-					if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(uLocal_31, func_16(iLocal_29, iVar3), func_15(iLocal_29, iVar3), func_14(iLocal_29, iVar3), 0, 1, 0))
+					if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(iLocal_31, func_16(iLocal_29, iVar3), func_15(iLocal_29, iVar3), func_14(iLocal_29, iVar3), false, true, 0))
 					{
 						bVar2 = true;
 					}
@@ -119,29 +119,29 @@ void func_1()
 	{
 		if (func_2())
 		{
-			if (MISC::IS_BIT_SET(uLocal_32, 1))
+			if (MISC::IS_BIT_SET(iLocal_32, 1))
 			{
-				MISC::CLEAR_BIT(&uLocal_32, 1);
+				MISC::CLEAR_BIT(&iLocal_32, 1);
 			}
 			if (HUD::IS_PAUSE_MENU_ACTIVE())
 			{
-				if (!MISC::IS_BIT_SET(uLocal_32, 0))
+				if (!MISC::IS_BIT_SET(iLocal_32, 0))
 				{
-					HUD::SET_MINIMAP_COMPONENT(15, 1, -1);
-					MISC::SET_BIT(&uLocal_32, 0);
+					HUD::SET_MINIMAP_COMPONENT(15, true, -1);
+					MISC::SET_BIT(&iLocal_32, 0);
 				}
 			}
-			else if (MISC::IS_BIT_SET(uLocal_32, 0))
+			else if (MISC::IS_BIT_SET(iLocal_32, 0))
 			{
-				HUD::SET_MINIMAP_COMPONENT(15, 0, -1);
-				MISC::CLEAR_BIT(&uLocal_32, 0);
+				HUD::SET_MINIMAP_COMPONENT(15, false, -1);
+				MISC::CLEAR_BIT(&iLocal_32, 0);
 			}
 		}
-		else if (!MISC::IS_BIT_SET(uLocal_32, 1))
+		else if (!MISC::IS_BIT_SET(iLocal_32, 1))
 		{
-			HUD::SET_MINIMAP_COMPONENT(15, 0, -1);
-			MISC::CLEAR_BIT(&uLocal_32, 0);
-			MISC::SET_BIT(&uLocal_32, 1);
+			HUD::SET_MINIMAP_COMPONENT(15, false, -1);
+			MISC::CLEAR_BIT(&iLocal_32, 0);
+			MISC::SET_BIT(&iLocal_32, 1);
 		}
 	}
 }
@@ -239,7 +239,7 @@ void func_10(int iParam0)
 {
 	struct<3> Var0;
 	
-	Var0 = { ENTITY::GET_ENTITY_COORDS(uLocal_31, 0) };
+	Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 	HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.f_1);
 	switch (iParam0)
 	{
@@ -250,7 +250,7 @@ void func_10(int iParam0)
 			break;
 		
 		case 2:
-			Var0 = { ENTITY::GET_ENTITY_COORDS(uLocal_31, 0) };
+			Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 			HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.f_1);
 			break;
 		
@@ -275,7 +275,7 @@ int func_11(int iParam0)
 			break;
 		
 		case 1:
-			Var0 = { ENTITY::GET_ENTITY_COORDS(uLocal_31, 0) };
+			Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 			if (Var0.f_2 < 9.7796f)
 			{
 				return 0;
@@ -291,7 +291,7 @@ int func_11(int iParam0)
 			break;
 		
 		case 2:
-			Var0 = { ENTITY::GET_ENTITY_COORDS(uLocal_31, 0) };
+			Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 			if (Var0.f_2 < 178.9f)
 			{
 				return 0;
@@ -803,7 +803,7 @@ void func_21()
 		}
 		else
 		{
-			Var0 = { ENTITY::GET_ENTITY_COORDS(uLocal_31, 0) };
+			Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 			if (SYSTEM::VDIST2(func_19(iLocal_28), Var0) < SYSTEM::VDIST2(func_19(iLocal_29), Var0))
 			{
 				iLocal_29 = iLocal_28;

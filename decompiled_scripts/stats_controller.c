@@ -56,26 +56,26 @@
 	int iLocal_54 = 0;
 	int iLocal_55 = 0;
 	int iLocal_56 = 0;
-	var uLocal_57 = 0;
+	int iLocal_57 = 0;
 	int iLocal_58 = 0;
 	bool bLocal_59 = 0;
 	int iLocal_60 = 0;
 	int iLocal_61 = 0;
 	int iLocal_62 = 0;
 	int iLocal_63 = 0;
-	int iLocal_64 = 0;
+	bool bLocal_64 = 0;
 	int iLocal_65 = 0;
 	int iLocal_66 = 0;
 	int iLocal_67 = 0;
 	int iLocal_68 = 0;
-	var uLocal_69 = 0;
+	int iLocal_69 = 0;
 	int iLocal_70 = 0;
-	var uLocal_71 = 0;
+	int iLocal_71 = 0;
 	int iLocal_72 = 0;
-	var uLocal_73 = 0;
+	int iLocal_73 = 0;
 	int iLocal_74 = 0;
 	int iLocal_75 = 0;
-	var uLocal_76 = 0;
+	int iLocal_76 = 0;
 	int iLocal_77 = 0;
 	int iLocal_78 = 0;
 	int iLocal_79 = 0;
@@ -83,7 +83,7 @@
 	int iLocal_81 = 0;
 	int iLocal_82 = 0;
 	int iLocal_83 = 0;
-	var uLocal_84 = 0;
+	int iLocal_84 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -224,13 +224,13 @@ void func_2()
 			iLocal_83 = MISC::GET_GAME_TIMER();
 			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
-				uLocal_84 = NETWORK::GET_NETWORK_TIME();
+				iLocal_84 = NETWORK::GET_NETWORK_TIME();
 			}
 			return;
 		}
 		if (iLocal_82)
 		{
-			if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_83) > 3000) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(uLocal_84, 3000))))
+			if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_83) > 3000) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(iLocal_84, 3000))))
 			{
 				iLocal_82 = 0;
 			}
@@ -240,7 +240,7 @@ void func_2()
 			}
 		}
 	}
-	if (((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_56) > 2000) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(uLocal_57, 2000)))) || bLocal_59)
+	if (((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_56) > 2000) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(iLocal_57, 2000)))) || bLocal_59)
 	{
 		if (iLocal_55 >= 8)
 		{
@@ -248,7 +248,7 @@ void func_2()
 			iLocal_56 = MISC::GET_GAME_TIMER();
 			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
-				uLocal_57 = NETWORK::GET_NETWORK_TIME();
+				iLocal_57 = NETWORK::GET_NETWORK_TIME();
 			}
 		}
 		iVar11 = 1;
@@ -299,7 +299,7 @@ void func_2()
 				}
 				else
 				{
-					STATS::STAT_SET_INT(iVar6, iVar4, 1);
+					STATS::STAT_SET_INT(iVar6, iVar4, true);
 				}
 				if (iVar4 > func_53(iLocal_58, iVar8, -1))
 				{
@@ -362,17 +362,17 @@ void func_2()
 							if (iLocal_58 == 0)
 							{
 								STATS::STAT_GET_INT(joaat("SP0_TOTAL_PLAYING_TIME"), &iVar10, -1);
-								STATS::STAT_SET_INT(iVar9, iVar10, 1);
+								STATS::STAT_SET_INT(iVar9, iVar10, true);
 							}
 							else if (iLocal_58 == 1)
 							{
 								STATS::STAT_GET_INT(joaat("SP1_TOTAL_PLAYING_TIME"), &iVar10, -1);
-								STATS::STAT_SET_INT(iVar9, iVar10, 1);
+								STATS::STAT_SET_INT(iVar9, iVar10, true);
 							}
 							else if (iLocal_58 == 2)
 							{
 								STATS::STAT_GET_INT(joaat("SP2_TOTAL_PLAYING_TIME"), &iVar10, -1);
-								STATS::STAT_SET_INT(iVar9, iVar10, 1);
+								STATS::STAT_SET_INT(iVar9, iVar10, true);
 							}
 							else if (iLocal_58 == 3)
 							{
@@ -396,7 +396,7 @@ void func_2()
 				}
 				else
 				{
-					STATS::STAT_SET_INT(iVar6, iVar4, 1);
+					STATS::STAT_SET_INT(iVar6, iVar4, true);
 				}
 				if (bVar16)
 				{
@@ -531,7 +531,7 @@ bool func_3(int iParam0, int iParam1, var uParam2)
 	return *uParam2 != joaat("LAST_PLAYING_TIME");
 }
 
-void func_4(int iParam0, int iParam1, int iParam2, int iParam3)
+void func_4(int iParam0, bool bParam1, int iParam2, bool bParam3)
 {
 	int iVar0;
 	
@@ -540,7 +540,7 @@ void func_4(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar0 = Global_2583656[iParam0 /*3*/][func_5(iParam2)];
 		if (iVar0 != 0)
 		{
-			STATS::STAT_SET_BOOL(iVar0, iParam1, iParam3);
+			STATS::STAT_SET_BOOL(iVar0, bParam1, bParam3);
 		}
 	}
 }
@@ -582,7 +582,7 @@ int func_7()
 void func_8(char* sParam0, int iParam1)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
-	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, 0, 1, iParam1);
+	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, true, iParam1);
 }
 
 int func_9()
@@ -989,7 +989,7 @@ int func_26(int iParam0)
 {
 	var uVar0;
 	
-	WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &uVar0, 1);
+	WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &uVar0, true);
 	return uVar0;
 }
 
@@ -1203,7 +1203,7 @@ int func_40()
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, 1);
+				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);
@@ -1244,7 +1244,7 @@ bool func_42()
 
 int func_43(int iParam0)
 {
-	var uVar0;
+	int iVar0;
 	int iVar1;
 	
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -1257,10 +1257,10 @@ int func_43(int iParam0)
 	}
 	else
 	{
-		uVar0 = PLAYER::GET_PLAYER_PED(iParam0);
-		if (ENTITY::DOES_ENTITY_EXIST(uVar0))
+		iVar0 = PLAYER::GET_PLAYER_PED(iParam0);
+		if (ENTITY::DOES_ENTITY_EXIST(iVar0))
 		{
-			iVar1 = ENTITY::GET_ENTITY_MODEL(uVar0);
+			iVar1 = ENTITY::GET_ENTITY_MODEL(iVar0);
 			if (iVar1 == joaat("mp_m_freemode_01") || iVar1 == joaat("mp_f_freemode_01"))
 			{
 				return 0;
@@ -1285,11 +1285,11 @@ bool func_44(int iParam0)
 
 int func_45(int iParam0, int iParam1)
 {
-	var uVar0;
+	int iVar0;
 	var uVar1;
 	
-	uVar0 = Global_2583656[iParam0 /*3*/][func_5(iParam1)];
-	if (STATS::STAT_GET_BOOL(uVar0, &uVar1, -1))
+	iVar0 = Global_2583656[iParam0 /*3*/][func_5(iParam1)];
+	if (STATS::STAT_GET_BOOL(iVar0, &uVar1, -1))
 	{
 		return uVar1;
 	}
@@ -1670,7 +1670,7 @@ bool func_54(int iParam0)
 	return Global_41431 == iParam0;
 }
 
-void func_55(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
+void func_55(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 {
 	int iVar0;
 	
@@ -1680,7 +1680,7 @@ void func_55(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 	iVar0 = Global_2548434[iParam0 /*3*/][func_5(iParam2)];
 	if (iVar0 != 0)
 	{
-		STATS::STAT_SET_INT(iVar0, iParam1, iParam3);
+		STATS::STAT_SET_INT(iVar0, iParam1, bParam3);
 	}
 }
 
@@ -2386,7 +2386,7 @@ int func_69(int iParam0, int iParam1, int iParam2)
 
 int func_70(int iParam0, int iParam1, int iParam2)
 {
-	var uVar0;
+	int iVar0;
 	var uVar1;
 	
 	if (iParam0 != 11511)
@@ -2394,8 +2394,8 @@ int func_70(int iParam0, int iParam1, int iParam2)
 		if (iParam2 == 0)
 		{
 		}
-		uVar0 = Global_2548434[iParam0 /*3*/][func_5(iParam1)];
-		if (STATS::STAT_GET_INT(uVar0, &uVar1, -1))
+		iVar0 = Global_2548434[iParam0 /*3*/][func_5(iParam1)];
+		if (STATS::STAT_GET_INT(iVar0, &uVar1, -1))
 		{
 			return uVar1;
 		}
@@ -2575,27 +2575,27 @@ void func_74(int iParam0, int iParam1)
 {
 	int iVar0;
 	float fVar1;
-	var uVar2;
+	int iVar2;
 	int iVar3;
 	
 	if (((iParam0 != 0 || iParam0 != 1) || iParam0 != 2) || iParam0 != 3)
 	{
 		return;
 	}
-	func_71(iParam0, iParam1, &uVar2, &iVar3);
+	func_71(iParam0, iParam1, &iVar2, &iVar3);
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		iVar0 = func_70(iVar3, -1, 0);
 	}
 	else
 	{
-		STATS::STAT_GET_INT(uVar2, &iVar0, -1);
+		STATS::STAT_GET_INT(iVar2, &iVar0, -1);
 	}
 	switch (iParam1)
 	{
 		case 2:
 			fVar1 = (0.8f + (0.4f * (SYSTEM::TO_FLOAT(iVar0) / 100f)));
-			PLAYER::SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER(PLAYER::PLAYER_ID(), fVar1, 1);
+			PLAYER::SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER(PLAYER::PLAYER_ID(), fVar1, true);
 			break;
 		
 		case 7:
@@ -2971,19 +2971,19 @@ int func_81()
 void func_82()
 {
 	bool bVar0;
-	var uVar1;
-	var uVar2;
+	int iVar1;
+	int iVar2;
 	
 	if (iLocal_74)
 	{
 		bVar0 = true;
-		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0))
+		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{
-			uVar1 = PED::GET_VEHICLE_PED_IS_USING(PLAYER::PLAYER_PED_ID());
-			if ((((ENTITY::DOES_ENTITY_EXIST(uVar1) && VEHICLE::IS_VEHICLE_DRIVEABLE(uVar1, 0)) && !ENTITY::IS_ENTITY_IN_AIR(uVar1)) && VEHICLE::GET_PED_IN_VEHICLE_SEAT(uVar1, -1, 0) == PLAYER::PLAYER_PED_ID()) && (VEHICLE::IS_THIS_MODEL_A_BIKE(ENTITY::GET_ENTITY_MODEL(uVar1)) || VEHICLE::IS_THIS_MODEL_A_CAR(ENTITY::GET_ENTITY_MODEL(uVar1))))
+			iVar1 = PED::GET_VEHICLE_PED_IS_USING(PLAYER::PLAYER_PED_ID());
+			if ((((ENTITY::DOES_ENTITY_EXIST(iVar1) && VEHICLE::IS_VEHICLE_DRIVEABLE(iVar1, false)) && !ENTITY::IS_ENTITY_IN_AIR(iVar1)) && VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, 0) == PLAYER::PLAYER_PED_ID()) && (VEHICLE::IS_THIS_MODEL_A_BIKE(ENTITY::GET_ENTITY_MODEL(iVar1)) || VEHICLE::IS_THIS_MODEL_A_CAR(ENTITY::GET_ENTITY_MODEL(iVar1))))
 			{
 				bVar0 = false;
-				if (ENTITY::GET_ENTITY_SPEED(uVar1) >= 53f)
+				if (ENTITY::GET_ENTITY_SPEED(iVar1) >= 53f)
 				{
 					func_80(iLocal_58, 4, 2);
 					bVar0 = true;
@@ -2996,16 +2996,16 @@ void func_82()
 			iLocal_75 = MISC::GET_GAME_TIMER();
 			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
-				uLocal_76 = NETWORK::GET_NETWORK_TIME();
+				iLocal_76 = NETWORK::GET_NETWORK_TIME();
 			}
 		}
 	}
-	else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0))
+	else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 	{
-		uVar2 = PED::GET_VEHICLE_PED_IS_USING(PLAYER::PLAYER_PED_ID());
-		if (((ENTITY::DOES_ENTITY_EXIST(uVar2) && VEHICLE::IS_VEHICLE_DRIVEABLE(uVar2, 0)) && ENTITY::GET_ENTITY_SPEED(uVar2) < 20f) && !ENTITY::IS_ENTITY_IN_AIR(uVar2))
+		iVar2 = PED::GET_VEHICLE_PED_IS_USING(PLAYER::PLAYER_PED_ID());
+		if (((ENTITY::DOES_ENTITY_EXIST(iVar2) && VEHICLE::IS_VEHICLE_DRIVEABLE(iVar2, false)) && ENTITY::GET_ENTITY_SPEED(iVar2) < 20f) && !ENTITY::IS_ENTITY_IN_AIR(iVar2))
 		{
-			if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_75) > 10000) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(uLocal_76, 10000))))
+			if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_75) > 10000) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(iLocal_76, 10000))))
 			{
 				iLocal_74 = 1;
 			}
@@ -3016,25 +3016,25 @@ void func_82()
 void func_83()
 {
 	bool bVar0;
-	var uVar1;
+	int iVar1;
 	char cVar2[64];
 	
 	bVar0 = false;
-	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0))
+	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 	{
-		uVar1 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), 0);
-		if (((ENTITY::DOES_ENTITY_EXIST(uVar1) && VEHICLE::IS_VEHICLE_DRIVEABLE(uVar1, 0)) && VEHICLE::GET_PED_IN_VEHICLE_SEAT(uVar1, -1, 0) == PLAYER::PLAYER_PED_ID()) && (((VEHICLE::IS_THIS_MODEL_A_CAR(ENTITY::GET_ENTITY_MODEL(uVar1)) || VEHICLE::IS_THIS_MODEL_A_BIKE(ENTITY::GET_ENTITY_MODEL(uVar1))) || VEHICLE::IS_THIS_MODEL_A_BICYCLE(ENTITY::GET_ENTITY_MODEL(uVar1))) || VEHICLE::IS_THIS_MODEL_A_QUADBIKE(ENTITY::GET_ENTITY_MODEL(uVar1))))
+		iVar1 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
+		if (((ENTITY::DOES_ENTITY_EXIST(iVar1) && VEHICLE::IS_VEHICLE_DRIVEABLE(iVar1, false)) && VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, 0) == PLAYER::PLAYER_PED_ID()) && (((VEHICLE::IS_THIS_MODEL_A_CAR(ENTITY::GET_ENTITY_MODEL(iVar1)) || VEHICLE::IS_THIS_MODEL_A_BIKE(ENTITY::GET_ENTITY_MODEL(iVar1))) || VEHICLE::IS_THIS_MODEL_A_BICYCLE(ENTITY::GET_ENTITY_MODEL(iVar1))) || VEHICLE::IS_THIS_MODEL_A_QUADBIKE(ENTITY::GET_ENTITY_MODEL(iVar1))))
 		{
 			if (iLocal_66)
 			{
-				if (!ENTITY::IS_ENTITY_IN_AIR(uVar1))
+				if (!ENTITY::IS_ENTITY_IN_AIR(iVar1))
 				{
-					if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_68) > 1500) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(uLocal_69, 1500))))
+					if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_68) > 1500) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(iLocal_69, 1500))))
 					{
 						iLocal_70 = MISC::GET_GAME_TIMER();
 						if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 						{
-							uLocal_71 = NETWORK::GET_NETWORK_TIME();
+							iLocal_71 = NETWORK::GET_NETWORK_TIME();
 						}
 						iLocal_67 = 1;
 					}
@@ -3043,11 +3043,11 @@ void func_83()
 			}
 			if (iLocal_67)
 			{
-				if (!ENTITY::IS_ENTITY_IN_AIR(uVar1))
+				if (!ENTITY::IS_ENTITY_IN_AIR(iVar1))
 				{
-					if (VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(uVar1))
+					if (VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(iVar1))
 					{
-						if ((((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_70) > 20) || (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_70) == 0)) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(uLocal_71, 20)))) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_EQUAL_TO(NETWORK::GET_NETWORK_TIME(), uLocal_71)))
+						if ((((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_70) > 20) || (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_70) == 0)) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(iLocal_71, 20)))) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_EQUAL_TO(NETWORK::GET_NETWORK_TIME(), iLocal_71)))
 						{
 						}
 						else
@@ -3067,16 +3067,16 @@ void func_83()
 			}
 			if (!iLocal_66 && !iLocal_67)
 			{
-				if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_72) > 1000) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(uLocal_73, 1000))))
+				if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && (MISC::GET_GAME_TIMER() - iLocal_72) > 1000) || (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::IS_TIME_MORE_THAN(NETWORK::GET_NETWORK_TIME(), NETWORK::GET_TIME_OFFSET(iLocal_73, 1000))))
 				{
-					if (ENTITY::IS_ENTITY_IN_AIR(uVar1))
+					if (ENTITY::IS_ENTITY_IN_AIR(iVar1))
 					{
 						if (!iLocal_66)
 						{
 							iLocal_68 = MISC::GET_GAME_TIMER();
 							if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 							{
-								uLocal_69 = NETWORK::GET_NETWORK_TIME();
+								iLocal_69 = NETWORK::GET_NETWORK_TIME();
 							}
 							iLocal_66 = 1;
 						}
@@ -3098,7 +3098,7 @@ void func_83()
 		iLocal_72 = MISC::GET_GAME_TIMER();
 		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
-			uLocal_73 = NETWORK::GET_NETWORK_TIME();
+			iLocal_73 = NETWORK::GET_NETWORK_TIME();
 		}
 		iLocal_66 = 0;
 		iLocal_67 = 0;
@@ -3153,7 +3153,7 @@ int func_87(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	if (ENTITY::DOES_ENTITY_EXIST(uParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
@@ -3227,12 +3227,12 @@ void func_90()
 		}
 		HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("PS_UPDATE");
 		HUD::ADD_TEXT_COMPONENT_INTEGER(iLocal_65);
-		HUD::END_TEXT_COMMAND_THEFEED_POST_STATS(func_92(iLocal_63), func_91(iLocal_63), iLocal_64, (iLocal_65 - iLocal_64), 0, sVar0, sVar0);
+		HUD::END_TEXT_COMMAND_THEFEED_POST_STATS(func_92(iLocal_63), func_91(iLocal_63), iLocal_64, (iLocal_65 - iLocal_64), false, sVar0, sVar0);
 		iLocal_82 = 1;
 		iLocal_83 = MISC::GET_GAME_TIMER() + 5000;
 		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
-			uLocal_84 = NETWORK::GET_TIME_OFFSET(NETWORK::GET_NETWORK_TIME(), 5000);
+			iLocal_84 = NETWORK::GET_TIME_OFFSET(NETWORK::GET_NETWORK_TIME(), 5000);
 		}
 		iLocal_61 = 0;
 	}
@@ -3493,12 +3493,12 @@ void func_99()
 	iLocal_56 = 0;
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		uLocal_57 = NETWORK::GET_NETWORK_TIME();
+		iLocal_57 = NETWORK::GET_NETWORK_TIME();
 	}
 	iLocal_72 = MISC::GET_GAME_TIMER();
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		uLocal_73 = NETWORK::GET_NETWORK_TIME();
+		iLocal_73 = NETWORK::GET_NETWORK_TIME();
 	}
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
@@ -3551,7 +3551,7 @@ void func_100()
 				if (iVar4 != 0)
 				{
 					func_71(iVar3, iVar4, &iVar5, &uVar6);
-					STATS::STAT_SET_INT(iVar5, func_53(iVar3, iVar4, -1), 1);
+					STATS::STAT_SET_INT(iVar5, func_53(iVar3, iVar4, -1), true);
 				}
 				iVar4++;
 			}

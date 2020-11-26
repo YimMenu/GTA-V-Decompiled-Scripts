@@ -87,9 +87,9 @@ void func_2(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, ch
 	}
 }
 
-void func_3(var uParam0)
+void func_3(char* sParam0)
 {
-	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(uParam0);
+	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 }
 
