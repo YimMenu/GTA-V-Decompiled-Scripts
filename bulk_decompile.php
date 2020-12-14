@@ -4,17 +4,6 @@ $out_dir = "decompiled_scripts";
 $native_tables_dir = "native_tables";
 
 
-$cls = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-$descriptorspec = array(
-	0 => array("pipe", "r"),
-	1 => array("pipe", "w"),
-	2 => array("pipe", "w"),
-);
-$total_scripts = 0;
-$scripts_to_decompile = [];
-$decompiled_scripts = [];
-$procs = [];
-$last_out = "";
 
 if(!is_dir($out_dir))
 {
@@ -25,12 +14,37 @@ if(!is_dir($native_tables_dir))
 	mkdir($native_tables_dir);
 }
 
-foreach(scandir("scripts") as $script)
+$cls = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+$descriptorspec = array(
+	0 => array("pipe", "r"),
+	1 => array("pipe", "w"),
+	2 => array("pipe", "w"),
+);
+$decompiled_scripts = [];
+$procs = [];
+$last_out = "";
+
+$full_decompile = false;
+$scripts_to_decompile = [];
+$total_scripts = 0;
+foreach($argv as $i => $arg)
 {
-	if(substr($script, -4) == "_ysc")
+	if($i != 0)
 	{
-		$scripts_to_decompile[substr($script, 0, -4)] = true;
+		$scripts_to_decompile[$arg] = true;
 		$total_scripts++;
+	}
+}
+if($total_scripts == 0)
+{
+	$full_decompile = true;
+	foreach(scandir("scripts") as $script)
+	{
+		if(substr($script, -4) == "_ysc")
+		{
+			$scripts_to_decompile[substr($script, 0, -4)] = true;
+			$total_scripts++;
+		}
 	}
 }
 
@@ -99,24 +113,28 @@ while(count($procs) > 0)
 	manageprocs();
 	usleep(50000);
 }
+echo $cls;
 
-echo $cls."Deleting old scripts...\n";
-$had_old_scripts = false;
-foreach(scandir($out_dir) as $file)
+if($full_decompile)
 {
-	if(substr($file, -2) != ".c")
+	echo "Discovering old scripts...\n";
+	$had_old_scripts = false;
+	foreach(scandir($out_dir) as $file)
 	{
-		continue;
+		if(substr($file, -2) != ".c")
+		{
+			continue;
+		}
+		$file = substr($file, 0, -2);
+		if(!array_key_exists($file, $decompiled_scripts))
+		{
+			echo $file."\n";
+			$had_old_scripts = true;
+		}
 	}
-	$file = substr($file, 0, -2);
-	if(!array_key_exists($file, $decompiled_scripts))
+	if(!$had_old_scripts)
 	{
-		echo $file."\n";
-		$had_old_scripts = true;
+		echo "No old scripts found.\n";
 	}
-}
-if(!$had_old_scripts)
-{
-	echo "No old scripts found.\n";
 }
 echo "All done. :D\n";
