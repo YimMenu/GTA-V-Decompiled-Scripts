@@ -35,16 +35,16 @@
 	float fLocal_33 = 0f;
 	float fLocal_34 = 0f;
 	var uLocal_35[20] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	int iLocal_36 = 0;
-	int iLocal_37 = 0;
-	int iLocal_38 = 0;
-	bool bLocal_39 = 0;
-	int iLocal_40 = 0;
-	bool bLocal_41 = 0;
-	var uLocal_42 = 0;
-	float fLocal_43 = 0f;
-	int iLocal_44 = 0;
-	struct<3> Local_45 = { 0, 0, 0 } ;
+	int iLocal_56 = 0;
+	int iLocal_57 = 0;
+	int iLocal_58 = 0;
+	bool bLocal_59 = 0;
+	int iLocal_60 = 0;
+	bool bLocal_61 = 0;
+	var uLocal_62 = 0;
+	float fLocal_63 = 0f;
+	int iLocal_64 = 0;
+	struct<3> Local_65 = { 0, 0, 0 } ;
 #endregion
 
 void __EntryFunction__()
@@ -69,42 +69,42 @@ void __EntryFunction__()
 	fLocal_29 = 0f;
 	fLocal_33 = -0.0375f;
 	fLocal_34 = 0.17f;
-	fLocal_43 = 277.7314f;
-	Local_45 = { -196.045f, -580.13f, 135.0004f };
+	fLocal_63 = 277.7314f;
+	Local_65 = { -196.045f, -580.13f, 135.0004f };
 	CAM::DO_SCREEN_FADE_OUT(800);
 	func_20();
 	while (true)
 	{
 		GRAPHICS::DISABLE_OCCLUSION_THIS_FRAME();
 		func_19();
-		if (func_7() || uLocal_42)
+		if (func_7() || uLocal_62)
 		{
 			func_3();
 		}
-		if (!iLocal_38)
+		if (!iLocal_58)
 		{
-			if (!iLocal_37 && CAM::IS_SCREEN_FADED_OUT())
+			if (!iLocal_57 && CAM::IS_SCREEN_FADED_OUT())
 			{
-				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Local_45, true, false, false, true);
-				ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), fLocal_43);
-				STREAMING::NEW_LOAD_SCENE_START_SPHERE(Local_45, 2500f, 0);
+				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Local_65, true, false, false, true);
+				ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), fLocal_63);
+				STREAMING::NEW_LOAD_SCENE_START_SPHERE(Local_65, 2500f, 0);
 				CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0f);
-				iLocal_37 = 1;
+				iLocal_57 = 1;
 			}
 			else if (STREAMING::IS_NEW_LOAD_SCENE_ACTIVE())
 			{
-				if (!bLocal_41)
+				if (!bLocal_61)
 				{
-					bLocal_41 = func_2();
+					bLocal_61 = func_2();
 				}
-				else if (!bLocal_39)
+				else if (!bLocal_59)
 				{
-					bLocal_39 = func_1();
+					bLocal_59 = func_1();
 				}
 				else
 				{
 					CAM::DO_SCREEN_FADE_IN(800);
-					iLocal_38 = 1;
+					iLocal_58 = 1;
 				}
 			}
 		}
@@ -113,13 +113,13 @@ void __EntryFunction__()
 
 int func_1()
 {
-	if (!INTERIOR::IS_INTERIOR_ENTITY_SET_ACTIVE(iLocal_44, "garage_decor_01"))
+	if (!INTERIOR::IS_INTERIOR_ENTITY_SET_ACTIVE(iLocal_64, "garage_decor_01"))
 	{
-		INTERIOR::ACTIVATE_INTERIOR_ENTITY_SET(iLocal_44, "garage_decor_01");
+		INTERIOR::ACTIVATE_INTERIOR_ENTITY_SET(iLocal_64, "garage_decor_01");
 	}
 	else
 	{
-		INTERIOR::REFRESH_INTERIOR(iLocal_44);
+		INTERIOR::REFRESH_INTERIOR(iLocal_64);
 		return 1;
 	}
 	return 0;
@@ -127,17 +127,17 @@ int func_1()
 
 int func_2()
 {
-	iLocal_44 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
-	if (INTERIOR::IS_VALID_INTERIOR(iLocal_44))
+	iLocal_64 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
+	if (INTERIOR::IS_VALID_INTERIOR(iLocal_64))
 	{
-		if (!iLocal_40)
+		if (!iLocal_60)
 		{
-			INTERIOR::PIN_INTERIOR_IN_MEMORY(iLocal_44);
-			iLocal_40 = 1;
+			INTERIOR::PIN_INTERIOR_IN_MEMORY(iLocal_64);
+			iLocal_60 = 1;
 		}
-		else if (INTERIOR::IS_INTERIOR_READY(iLocal_44))
+		else if (INTERIOR::IS_INTERIOR_READY(iLocal_64))
 		{
-			INTERIOR::UNPIN_INTERIOR(iLocal_44);
+			INTERIOR::UNPIN_INTERIOR(iLocal_64);
 			return 1;
 		}
 	}
@@ -149,7 +149,7 @@ void func_3()
 	int iVar0;
 	
 	iVar0 = 0;
-	while (iVar0 < iLocal_36)
+	while (iVar0 < iLocal_56)
 	{
 		func_5(iVar0);
 		iVar0++;
@@ -295,7 +295,7 @@ void func_15(var uParam0)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	struct<3> Var3;
+	struct<3> Var4;
 	
 	iVar0 = 0;
 	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
@@ -311,8 +311,8 @@ void func_15(var uParam0)
 					break;
 				
 				case 589125870:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.f_2 == 653923311)
+					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
+					if (Var4.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -326,29 +326,29 @@ void func_15(var uParam0)
 void func_16(int iParam0)
 {
 	struct<3> Var0;
-	int iVar1;
-	int iVar2;
-	bool bVar3;
+	int iVar3;
+	int iVar4;
+	bool bVar5;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_18(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
+			iVar3 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar3, false))
 				{
-					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_17(iVar2, &bVar3))
+						if (func_17(iVar4, &bVar5))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
 						}
-						if (bVar3)
+						if (bVar5)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar4);
 						}
 					}
 				}

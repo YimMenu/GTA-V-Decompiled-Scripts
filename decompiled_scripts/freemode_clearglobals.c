@@ -520,7 +520,7 @@ void func_9()
 void func_10()
 {
 	struct<4453> Var0;
-	var uVar1;
+	var uVar4453;
 	
 	Var0.f_9 = 146;
 	Var0.f_9.f_1 = 2;
@@ -794,7 +794,7 @@ void func_10()
 	Var0.f_4434 = 15;
 	Var0.f_4450 = 1103626240;
 	Var0.f_4451 = 1;
-	uVar1 = Global_1676377.f_3105;
+	uVar4453 = Global_1676377.f_3105;
 	if (Global_2439137)
 	{
 		MISC::_COPY_MEMORY(&Global_1676377, &Var0, 4453);
@@ -803,7 +803,7 @@ void func_10()
 	{
 		Global_1676377 = { Var0 };
 	}
-	Global_1676377.f_3105 = uVar1;
+	Global_1676377.f_3105 = uVar4453;
 }
 
 void func_11()
@@ -2567,51 +2567,51 @@ void func_33()
 void func_34()
 {
 	struct<9> Var0;
-	struct<83> Var1;
-	struct<8> Var2;
-	struct<32> Var3;
-	struct<18> Var4;
-	struct<10> Var5;
-	var uVar6;
-	var uVar7;
+	struct<83> Var9;
+	struct<8> Var92;
+	struct<32> Var100;
+	struct<18> Var132;
+	struct<10> Var150;
+	var uVar160;
+	var uVar161;
 	
 	Global_2537071.f_859 = { Var0 };
-	Var1 = -1;
-	Var1.f_1 = -1;
-	Var1.f_2.f_1 = -1;
-	Var1.f_2.f_2 = -1;
-	Var1.f_2.f_9 = -1;
-	Var1.f_2.f_16 = -1;
-	Var1.f_2.f_19 = -1;
-	Var1.f_2.f_20 = -1;
-	Var1.f_23 = -1;
-	Var1.f_47 = 32;
-	Global_2537071.f_28 = { Var1 };
-	Var2.f_2 = -1;
-	Var2.f_3 = -1;
-	Global_2537071.f_198 = { Var2 };
-	Var3.f_4.f_1 = -1;
-	Var3.f_4.f_2 = -1;
-	Var3.f_4.f_9 = -1;
-	Var3.f_4.f_16 = -1;
-	Var3.f_4.f_19 = -1;
-	Var3.f_4.f_20 = -1;
-	Var3.f_25 = 2;
-	Global_2537071.f_206 = { Var3 };
-	Var4.f_7 = 10;
-	Global_2537071.f_242 = { Var4 };
-	Var5.f_6 = -1;
-	Global_2537071.f_393 = { Var5 };
-	Global_2537071.f_404 = uVar6;
-	Global_2537071.f_408 = uVar7;
+	Var9 = -1;
+	Var9.f_1 = -1;
+	Var9.f_2.f_1 = -1;
+	Var9.f_2.f_2 = -1;
+	Var9.f_2.f_9 = -1;
+	Var9.f_2.f_16 = -1;
+	Var9.f_2.f_19 = -1;
+	Var9.f_2.f_20 = -1;
+	Var9.f_23 = -1;
+	Var9.f_47 = 32;
+	Global_2537071.f_28 = { Var9 };
+	Var92.f_2 = -1;
+	Var92.f_3 = -1;
+	Global_2537071.f_198 = { Var92 };
+	Var100.f_4.f_1 = -1;
+	Var100.f_4.f_2 = -1;
+	Var100.f_4.f_9 = -1;
+	Var100.f_4.f_16 = -1;
+	Var100.f_4.f_19 = -1;
+	Var100.f_4.f_20 = -1;
+	Var100.f_25 = 2;
+	Global_2537071.f_206 = { Var100 };
+	Var132.f_7 = 10;
+	Global_2537071.f_242 = { Var132 };
+	Var150.f_6 = -1;
+	Global_2537071.f_393 = { Var150 };
+	Global_2537071.f_404 = uVar160;
+	Global_2537071.f_408 = uVar161;
 }
 
 void func_35()
 {
 	int iVar0;
 	struct<760> Var1;
-	var uVar2[8];
-	var uVar3;
+	var uVar761[8];
+	var uVar770;
 	
 	Var1 = 21;
 	Var1.f_2 = -1;
@@ -2673,19 +2673,19 @@ void func_35()
 	Var1.f_755 = 1;
 	Var1.f_756 = 1;
 	Var1.f_758 = 1;
-	uVar3 = Global_2537071.f_5124.f_361;
+	uVar770 = Global_2537071.f_5124.f_361;
 	iVar0 = 0;
 	while (iVar0 < 8)
 	{
-		uVar2[iVar0] = Global_2537071.f_5124.f_343[iVar0];
+		uVar761[iVar0] = Global_2537071.f_5124.f_343[iVar0];
 		iVar0++;
 	}
 	Global_2537071.f_5124 = { Var1 };
-	Global_2537071.f_5124.f_361 = uVar3;
+	Global_2537071.f_5124.f_361 = uVar770;
 	iVar0 = 0;
 	while (iVar0 < 8)
 	{
-		Global_2537071.f_5124.f_343[iVar0] = uVar2[iVar0];
+		Global_2537071.f_5124.f_343[iVar0] = uVar761[iVar0];
 		iVar0++;
 	}
 }
@@ -2707,10 +2707,10 @@ void func_37()
 {
 	int iVar0;
 	struct<17> Var1;
-	struct<12> Var2;
-	struct<51> Var3;
-	struct<51> Var4;
-	struct<21> Var5;
+	struct<12> Var18;
+	struct<51> Var30;
+	struct<51> Var81;
+	struct<21> Var132;
 	
 	iVar0 = 0;
 	while (iVar0 <= 4)
@@ -2721,34 +2721,34 @@ void func_37()
 	iVar0 = 0;
 	while (iVar0 <= 0)
 	{
-		Global_2537071.f_4504[iVar0 /*12*/] = { Var2 };
+		Global_2537071.f_4504[iVar0 /*12*/] = { Var18 };
 		iVar0++;
 	}
-	Var3.f_2 = -1;
-	Var3.f_3 = -1;
-	Var3.f_4 = -1;
-	Var3.f_50 = -1;
-	Var4.f_2 = -1;
-	Var4.f_3 = -1;
-	Var4.f_4 = -1;
-	Var4.f_50 = -1;
+	Var30.f_2 = -1;
+	Var30.f_3 = -1;
+	Var30.f_4 = -1;
+	Var30.f_50 = -1;
+	Var81.f_2 = -1;
+	Var81.f_3 = -1;
+	Var81.f_4 = -1;
+	Var81.f_50 = -1;
 	iVar0 = 0;
 	while (iVar0 <= 0)
 	{
-		Global_2537071.f_1074[iVar0 /*51*/] = { Var3 };
-		Global_2537071.f_1330[iVar0 /*51*/] = { Var4 };
+		Global_2537071.f_1074[iVar0 /*51*/] = { Var30 };
+		Global_2537071.f_1330[iVar0 /*51*/] = { Var81 };
 		iVar0++;
 	}
-	Var5.f_1 = -1;
-	Var5.f_2 = -1;
-	Var5.f_9 = -1;
-	Var5.f_16 = -1;
-	Var5.f_19 = -1;
-	Var5.f_20 = -1;
+	Var132.f_1 = -1;
+	Var132.f_2 = -1;
+	Var132.f_9 = -1;
+	Var132.f_16 = -1;
+	Var132.f_19 = -1;
+	Var132.f_20 = -1;
 	iVar0 = 0;
 	while (iVar0 <= 15)
 	{
-		Global_2537071.f_409[iVar0 /*21*/] = { Var5 };
+		Global_2537071.f_409[iVar0 /*21*/] = { Var132 };
 		iVar0++;
 	}
 }
@@ -2756,7 +2756,7 @@ void func_37()
 void func_38()
 {
 	struct<1719> Var0;
-	var uVar1;
+	var uVar1719;
 	
 	Var0 = 39;
 	Var0.f_1.f_39 = -1;
@@ -2838,53 +2838,53 @@ void func_38()
 	Var0.f_1.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_39 = -1;
 	Var0.f_1.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_40 = -1;
 	Global_2537071.f_2244 = { Var0 };
-	Global_2537071.f_3963 = uVar1;
+	Global_2537071.f_3963 = uVar1719;
 }
 
 void func_39()
 {
 	struct<12> Var0;
-	struct<61> Var1;
-	struct<3> Var2;
-	struct<358> Var3;
-	struct<9> Var4;
-	struct<19> Var5;
-	struct<19> Var6;
-	struct<2> Var7;
-	struct<51> Var8;
-	var uVar9;
-	struct<165> Var10;
-	struct<12> Var11;
+	struct<61> Var12;
+	struct<3> Var73;
+	struct<358> Var76;
+	struct<9> Var434;
+	struct<19> Var443;
+	struct<19> Var462;
+	struct<2> Var481;
+	struct<51> Var483;
+	var uVar534;
+	struct<165> Var535;
+	struct<12> Var700;
 	
 	Global_2537071.f_4467 = { Var0 };
-	Var1.f_19 = 32;
-	Global_2537071.f_1791 = { Var1 };
-	Global_2537071.f_1854 = { Var2 };
-	Var3 = 8;
-	Global_2537071.f_1858 = { Var3 };
-	Global_2537071.f_2216 = { Var4 };
-	Global_2537071.f_2225 = { Var5 };
-	Var6 = 1;
-	Var6.f_3 = 1;
-	Var6.f_6 = 1;
-	Var6.f_8 = 1;
-	Var6.f_10 = 1;
-	Var6.f_12 = 1;
-	Var6.f_14 = 1;
-	Var6.f_16 = 1;
-	Global_2537071.f_4479 = { Var6 };
-	Global_2537071.f_4498 = { Var7 };
-	Var8.f_2 = -1;
-	Var8.f_3 = -1;
-	Var8.f_4 = -1;
-	Var8.f_50 = -1;
-	Global_2537071.f_1586 = { Var8 };
-	Global_2537071.f_798 = uVar9;
-	Var10 = 16;
-	Global_2537071.f_909 = { Var10 };
-	Var11 = 5;
-	Var11.f_6 = 5;
-	Global_2537071.f_1643 = { Var11 };
+	Var12.f_19 = 32;
+	Global_2537071.f_1791 = { Var12 };
+	Global_2537071.f_1854 = { Var73 };
+	Var76 = 8;
+	Global_2537071.f_1858 = { Var76 };
+	Global_2537071.f_2216 = { Var434 };
+	Global_2537071.f_2225 = { Var443 };
+	Var462 = 1;
+	Var462.f_3 = 1;
+	Var462.f_6 = 1;
+	Var462.f_8 = 1;
+	Var462.f_10 = 1;
+	Var462.f_12 = 1;
+	Var462.f_14 = 1;
+	Var462.f_16 = 1;
+	Global_2537071.f_4479 = { Var462 };
+	Global_2537071.f_4498 = { Var481 };
+	Var483.f_2 = -1;
+	Var483.f_3 = -1;
+	Var483.f_4 = -1;
+	Var483.f_50 = -1;
+	Global_2537071.f_1586 = { Var483 };
+	Global_2537071.f_798 = uVar534;
+	Var535 = 16;
+	Global_2537071.f_909 = { Var535 };
+	Var700 = 5;
+	Var700.f_6 = 5;
+	Global_2537071.f_1643 = { Var700 };
 }
 
 void func_40(var uParam0)
@@ -5592,7 +5592,7 @@ void func_68(int iParam0)
 void func_69(int iParam0)
 {
 	struct<876> Var0;
-	struct<16> Var1;
+	struct<16> Var876;
 	
 	Var0 = -1;
 	Var0.f_1 = -1;
@@ -5667,11 +5667,11 @@ void func_69(int iParam0)
 	}
 	if (Global_2439137)
 	{
-		MISC::_COPY_MEMORY(&(Global_1618568[iParam0 /*16*/]), &Var1, 16);
+		MISC::_COPY_MEMORY(&(Global_1618568[iParam0 /*16*/]), &Var876, 16);
 	}
 	else
 	{
-		Global_1618568[iParam0 /*16*/] = { Var1 };
+		Global_1618568[iParam0 /*16*/] = { Var876 };
 	}
 }
 

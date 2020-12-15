@@ -930,13 +930,13 @@ void func_19(int iParam0)
 int func_20(int iParam0, int iParam1)
 {
 	int* iVar0;
-	int iVar1;
-	int iVar2;
-	int iVar3;
-	int iVar4;
-	int iVar5;
-	int iVar6;
-	struct<7> Var7;
+	int iVar39;
+	int iVar40;
+	int iVar41;
+	int iVar42;
+	int iVar43;
+	int iVar44;
+	struct<7> Var45;
 	
 	if (iParam1 == -61829581)
 	{
@@ -954,51 +954,51 @@ int func_20(int iParam0, int iParam1)
 	{
 		return 0;
 	}
-	iVar1 = func_87(iParam1, &iVar0);
-	if ((((((((((((((((((((((iParam1 != joaat("weapon_pistol") && iParam1 != joaat("weapon_appistol")) && iParam1 != joaat("weapon_combatpistol")) && iParam1 != joaat("weapon_microsmg")) && iParam1 != joaat("weapon_smg")) && iParam1 != joaat("weapon_pumpshotgun")) && iParam1 != joaat("weapon_assaultshotgun")) && iParam1 != joaat("weapon_sawnoffshotgun")) && iParam1 != joaat("weapon_assaultrifle")) && iParam1 != joaat("weapon_carbinerifle")) && iParam1 != joaat("weapon_advancedrifle")) && iParam1 != joaat("weapon_sniperrifle")) && iParam1 != joaat("weapon_heavysniper")) && iParam1 != joaat("weapon_mg")) && iParam1 != joaat("weapon_combatmg")) && iParam1 != joaat("weapon_grenadelauncher")) && iParam1 != -572349828) && iParam1 != joaat("weapon_assaultsmg")) && iParam1 != 392730790) && iParam1 != -947031628) && iParam1 != joaat("weapon_bullpupshotgun")) && iParam1 != joaat("weapon_pistol50")) && (iVar1 == -1 || FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar1) < 3))
+	iVar39 = func_87(iParam1, &iVar0);
+	if ((((((((((((((((((((((iParam1 != joaat("weapon_pistol") && iParam1 != joaat("weapon_appistol")) && iParam1 != joaat("weapon_combatpistol")) && iParam1 != joaat("weapon_microsmg")) && iParam1 != joaat("weapon_smg")) && iParam1 != joaat("weapon_pumpshotgun")) && iParam1 != joaat("weapon_assaultshotgun")) && iParam1 != joaat("weapon_sawnoffshotgun")) && iParam1 != joaat("weapon_assaultrifle")) && iParam1 != joaat("weapon_carbinerifle")) && iParam1 != joaat("weapon_advancedrifle")) && iParam1 != joaat("weapon_sniperrifle")) && iParam1 != joaat("weapon_heavysniper")) && iParam1 != joaat("weapon_mg")) && iParam1 != joaat("weapon_combatmg")) && iParam1 != joaat("weapon_grenadelauncher")) && iParam1 != -572349828) && iParam1 != joaat("weapon_assaultsmg")) && iParam1 != 392730790) && iParam1 != -947031628) && iParam1 != joaat("weapon_bullpupshotgun")) && iParam1 != joaat("weapon_pistol50")) && (iVar39 == -1 || FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar39) < 3))
 	{
 		return 0;
 	}
-	iVar2 = 0;
-	iVar3 = 0;
-	iVar4 = 0;
-	iVar5 = 0;
-	iVar6 = 0;
-	while (func_21(&Var7, iParam1, iVar6, 0))
+	iVar40 = 0;
+	iVar41 = 0;
+	iVar42 = 0;
+	iVar43 = 0;
+	iVar44 = 0;
+	while (func_21(&Var45, iParam1, iVar44, 0))
 	{
-		if (Var7.f_4 == joaat("WAPClip"))
+		if (Var45.f_4 == joaat("WAPClip"))
 		{
-			iVar3++;
+			iVar41++;
 		}
-		if (Var7.f_4 == joaat("WAPScop"))
+		if (Var45.f_4 == joaat("WAPScop"))
 		{
-			iVar2++;
+			iVar40++;
 		}
-		if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(iParam0, iParam1, Var7))
+		if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(iParam0, iParam1, Var45))
 		{
-			if (Var7.f_4 == joaat("WAPClip"))
+			if (Var45.f_4 == joaat("WAPClip"))
 			{
-				iVar5 = Var7.f_6;
+				iVar43 = Var45.f_6;
 			}
-			else if (Var7.f_4 == joaat("WAPScop"))
+			else if (Var45.f_4 == joaat("WAPScop"))
 			{
-				iVar4 = Var7.f_6;
+				iVar42 = Var45.f_6;
 			}
 		}
-		else if ((((Var7.f_4 == joaat("WAPClip") || Var7.f_4 == joaat("WAPScop")) || Var7.f_4 == joaat("WAPRail")) || Var7.f_4 == joaat("gun_root")) || Var7.f_4 == -31573710)
+		else if ((((Var45.f_4 == joaat("WAPClip") || Var45.f_4 == joaat("WAPScop")) || Var45.f_4 == joaat("WAPRail")) || Var45.f_4 == joaat("gun_root")) || Var45.f_4 == -31573710)
 		{
 		}
 		else
 		{
 			return 0;
 		}
-		iVar6++;
+		iVar44++;
 	}
-	if (iVar2 > iVar4)
+	if (iVar40 > iVar42)
 	{
 		return 0;
 	}
-	if (iVar3 > iVar5)
+	if (iVar41 > iVar43)
 	{
 		return 0;
 	}
@@ -1027,7 +1027,7 @@ bool func_21(var uParam0, int iParam1, int iParam2, bool bParam3)
 	int iVar13;
 	int iVar14;
 	int* iVar15;
-	struct<4> Var16;
+	struct<4> Var54;
 	
 	func_86(uParam0, 0, 989182658, 0, 0);
 	switch (iParam1)
@@ -4066,47 +4066,47 @@ bool func_21(var uParam0, int iParam1, int iParam2, bool bParam3)
 				iVar13 = 0;
 				while (iVar13 < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar12))
 				{
-					if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar12, iVar13, &Var16))
+					if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar12, iVar13, &Var54))
 					{
-						if (!func_74(Var16.f_3))
+						if (!func_74(Var54.f_3))
 						{
-							if (Var16 == joaat("WAPClip") || Var16 == joaat("WAPClip_2"))
+							if (Var54 == joaat("WAPClip") || Var54 == joaat("WAPClip_2"))
 							{
 								iVar1++;
 							}
-							else if (Var16 == joaat("WAPFlshLasr") || Var16 == joaat("WAPFlshLasr_2"))
+							else if (Var54 == joaat("WAPFlshLasr") || Var54 == joaat("WAPFlshLasr_2"))
 							{
 								iVar2++;
 							}
-							else if (Var16 == joaat("WAPScop") || Var16 == joaat("WAPScop_2"))
+							else if (Var54 == joaat("WAPScop") || Var54 == joaat("WAPScop_2"))
 							{
 								iVar3++;
 							}
-							else if (Var16 == joaat("WAPRail") || Var16 == joaat("WAPRail_2"))
+							else if (Var54 == joaat("WAPRail") || Var54 == joaat("WAPRail_2"))
 							{
 								iVar4++;
 							}
-							else if (Var16 == joaat("WAPGrip") || Var16 == joaat("WAPGrip_2"))
+							else if (Var54 == joaat("WAPGrip") || Var54 == joaat("WAPGrip_2"))
 							{
 								iVar5++;
 							}
-							else if (Var16 == joaat("WAPSupp") || Var16 == joaat("WAPSupp_2"))
+							else if (Var54 == joaat("WAPSupp") || Var54 == joaat("WAPSupp_2"))
 							{
 								iVar6++;
 							}
-							else if (Var16 == 1731751835)
+							else if (Var54 == 1731751835)
 							{
 								iVar7++;
 							}
-							else if (Var16 == joaat("gun_root"))
+							else if (Var54 == joaat("gun_root"))
 							{
 								iVar8++;
 							}
-							else if (Var16 == -31573710)
+							else if (Var54 == -31573710)
 							{
 								iVar9++;
 							}
-							else if (Var16 == -1312077031)
+							else if (Var54 == -1312077031)
 							{
 								iVar10++;
 							}
@@ -4116,43 +4116,43 @@ bool func_21(var uParam0, int iParam1, int iParam2, bool bParam3)
 							}
 							if (iVar14 == iParam2)
 							{
-								if (Var16 == joaat("WAPClip") || Var16 == joaat("WAPClip_2"))
+								if (Var54 == joaat("WAPClip") || Var54 == joaat("WAPClip_2"))
 								{
 									iVar0 = iVar1;
 								}
-								else if (Var16 == joaat("WAPFlshLasr") || Var16 == joaat("WAPFlshLasr_2"))
+								else if (Var54 == joaat("WAPFlshLasr") || Var54 == joaat("WAPFlshLasr_2"))
 								{
 									iVar0 = iVar2;
 								}
-								else if (Var16 == joaat("WAPScop") || Var16 == joaat("WAPScop_2"))
+								else if (Var54 == joaat("WAPScop") || Var54 == joaat("WAPScop_2"))
 								{
 									iVar0 = iVar3;
 								}
-								else if (Var16 == joaat("WAPRail") || Var16 == joaat("WAPRail_2"))
+								else if (Var54 == joaat("WAPRail") || Var54 == joaat("WAPRail_2"))
 								{
 									iVar0 = iVar4;
 								}
-								else if (Var16 == joaat("WAPGrip") || Var16 == joaat("WAPGrip_2"))
+								else if (Var54 == joaat("WAPGrip") || Var54 == joaat("WAPGrip_2"))
 								{
 									iVar0 = iVar5;
 								}
-								else if (Var16 == joaat("WAPSupp") || Var16 == joaat("WAPSupp_2"))
+								else if (Var54 == joaat("WAPSupp") || Var54 == joaat("WAPSupp_2"))
 								{
 									iVar0 = iVar6;
 								}
-								else if (Var16 == 1731751835)
+								else if (Var54 == 1731751835)
 								{
 									iVar0 = iVar7;
 								}
-								else if (Var16 == joaat("gun_root"))
+								else if (Var54 == joaat("gun_root"))
 								{
 									iVar0 = iVar8;
 								}
-								else if (Var16 == -31573710)
+								else if (Var54 == -31573710)
 								{
 									iVar0 = iVar9;
 								}
-								else if (Var16 == -1312077031)
+								else if (Var54 == -1312077031)
 								{
 									iVar0 = iVar10;
 								}
@@ -4160,7 +4160,7 @@ bool func_21(var uParam0, int iParam1, int iParam2, bool bParam3)
 								{
 									iVar0 = iVar11;
 								}
-								func_86(uParam0, Var16.f_3, Var16, iVar0, Var16.f_1);
+								func_86(uParam0, Var54.f_3, Var54, iVar0, Var54.f_1);
 							}
 							iVar14++;
 						}
@@ -4184,14 +4184,14 @@ int func_22(int iParam0, int iParam1)
 	int iVar2;
 	int iVar3;
 	int* iVar4;
-	struct<6> Var5;
-	int iVar6;
-	int iVar7;
-	int* iVar8;
-	struct<6> Var9;
-	char* sVar10;
-	struct<4> Var11;
-	float fVar12;
+	struct<6> Var43;
+	int iVar65;
+	int iVar66;
+	int* iVar67;
+	struct<6> Var106;
+	char* sVar128;
+	struct<4> Var144;
+	float fVar148;
 	
 	iVar0 = 0;
 	fVar1 = 2.5f;
@@ -4898,24 +4898,24 @@ int func_22(int iParam0, int iParam1)
 					iVar3 = 0;
 					while (iVar3 < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar2))
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar2, iVar3, &Var5))
+						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar2, iVar3, &Var43))
 						{
-							if (!func_74(Var5.f_3))
+							if (!func_74(Var43.f_3))
 							{
-								if (Var5.f_3 == iParam1)
+								if (Var43.f_3 == iParam1)
 								{
 									fVar1 = 1f;
 									if (!func_69(iParam1))
 									{
-										Var5.f_5 = -1;
+										Var43.f_5 = -1;
 									}
-									if (Var5.f_5 == -1)
+									if (Var43.f_5 == -1)
 									{
 										iVar0 = -1;
 									}
 									else
 									{
-										iVar0 = Var5.f_5;
+										iVar0 = Var43.f_5;
 									}
 									if (iParam0 == joaat("weapon_hammer"))
 									{
@@ -7343,31 +7343,31 @@ int func_22(int iParam0, int iParam1)
 				break;
 			
 			default:
-				iVar6 = func_87(iParam0, &iVar8);
-				if (iVar6 != -1)
+				iVar65 = func_87(iParam0, &iVar67);
+				if (iVar65 != -1)
 				{
-					iVar7 = 0;
-					while (iVar7 < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar6))
+					iVar66 = 0;
+					while (iVar66 < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar65))
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar6, iVar7, &Var9))
+						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar65, iVar66, &Var106))
 						{
-							if (!func_74(Var9.f_3))
+							if (!func_74(Var106.f_3))
 							{
-								if (Var9.f_3 == iParam1)
+								if (Var106.f_3 == iParam1)
 								{
 									fVar1 = 1f;
-									if (Var9.f_5 == -1)
+									if (Var106.f_5 == -1)
 									{
 										iVar0 = -1;
 									}
 									else
 									{
-										iVar0 = Var9.f_5;
+										iVar0 = Var106.f_5;
 									}
 								}
 							}
 						}
-						iVar7++;
+						iVar66++;
 					}
 				}
 				break;
@@ -7375,17 +7375,17 @@ int func_22(int iParam0, int iParam1)
 	}
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && func_67())
 	{
-		StringCopy(&Var11, func_65(iParam1, iParam0), 16);
-		func_61(&sVar10, Var11, ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()), 3, 1, func_63(iParam0), func_62(iParam0), -1, 0, 0);
-		if (NETSHOPPING::_NET_GAMESERVER_CATALOG_ITEM_EXISTS(&sVar10))
+		StringCopy(&Var144, func_65(iParam1, iParam0), 16);
+		func_61(&sVar128, Var144, ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()), 3, 1, func_63(iParam0), func_62(iParam0), -1, 0, 0);
+		if (NETSHOPPING::_NET_GAMESERVER_CATALOG_ITEM_EXISTS(&sVar128))
 		{
-			iVar0 = NETSHOPPING::NET_GAMESERVER_GET_PRICE(MISC::GET_HASH_KEY(&sVar10), 1671640801, true);
+			iVar0 = NETSHOPPING::NET_GAMESERVER_GET_PRICE(MISC::GET_HASH_KEY(&sVar128), 1671640801, true);
 		}
 	}
 	if (iVar0 > 0)
 	{
-		fVar12 = func_23(iParam0, &iVar0, fVar1);
-		if (fVar12 != 1f)
+		fVar148 = func_23(iParam0, &iVar0, fVar1);
+		if (fVar148 != 1f)
 		{
 		}
 	}
@@ -7516,24 +7516,24 @@ int func_26()
 int func_27()
 {
 	struct<7> Var0;
-	struct<7> Var1;
+	struct<7> Var7;
 	
 	CLOCK::GET_POSIX_TIME(&Var0, &(Var0.f_1), &(Var0.f_2), &(Var0.f_3), &(Var0.f_4), &(Var0.f_5));
-	Var1 = { func_51(joaat("MPPLY_STARTED_MP")) };
-	if (func_28(Var1, Var0, 7))
+	Var7 = { func_51(joaat("MPPLY_STARTED_MP")) };
+	if (func_28(Var7, Var0, 7))
 	{
 		return 1;
 	}
 	return 0;
 }
 
-int func_28(struct<7> Param0, struct<7> Param1, int iParam2)
+int func_28(struct<7> Param0, struct<7> Param7, int iParam14)
 {
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = func_49(Param1);
-	iVar1 = func_39(Param0, iParam2);
+	iVar0 = func_49(Param7);
+	iVar1 = func_39(Param0, iParam14);
 	if (iVar1 == -15)
 	{
 		return 0;
@@ -7741,7 +7741,7 @@ int func_38(int iParam0, int iParam1)
 	return 30;
 }
 
-var func_39(struct<7> Param0, int iParam1)
+var func_39(struct<7> Param0, int iParam7)
 {
 	var uVar0;
 	var uVar1;
@@ -7751,8 +7751,8 @@ var func_39(struct<7> Param0, int iParam1)
 	{
 		uVar0 = func_49(Param0);
 		uVar1 = uVar0;
-		func_40(&uVar1, 0, 0, 0, iParam1, 0, 0);
-		if (iParam1 == 0)
+		func_40(&uVar1, 0, 0, 0, iParam7, 0, 0);
+		if (iParam7 == 0)
 		{
 			uVar1 = uVar0;
 		}
@@ -7943,7 +7943,7 @@ int func_48(struct<7> Param0)
 	return 0;
 }
 
-var func_49(struct<6> Param0, var uParam1)
+var func_49(struct<6> Param0, var uParam6)
 {
 	var uVar0;
 	
@@ -8041,12 +8041,12 @@ struct<7> func_51(int iParam0)
 {
 	int iVar0;
 	struct<7> Var1;
-	struct<7> Var2;
+	struct<7> Var8;
 	
 	iVar0 = iParam0;
-	if (STATS::STAT_GET_DATE(iVar0, &Var2, 7, -1))
+	if (STATS::STAT_GET_DATE(iVar0, &Var8, 7, -1))
 	{
-		return Var2;
+		return Var8;
 	}
 	return Var1;
 }
@@ -8057,7 +8057,7 @@ int func_52(int iParam0)
 	int iVar1;
 	int iVar2;
 	int iVar3[6];
-	bool bVar4;
+	bool bVar10;
 	
 	iVar0 = func_56();
 	if (iParam0 == 0 || !func_55(iVar0))
@@ -8187,45 +8187,45 @@ int func_52(int iParam0)
 		iVar3[3] = func_53(4, iVar0);
 		iVar3[4] = func_53(5, iVar0);
 		iVar3[5] = func_53(0, iVar0);
-		bVar4 = false;
+		bVar10 = false;
 		iVar2 = 0;
 		while (iVar2 < 6)
 		{
 			if (iVar3[iVar2] < 3)
 			{
-				bVar4 = true;
+				bVar10 = true;
 			}
 			iVar2++;
 		}
-		if (!bVar4)
+		if (!bVar10)
 		{
 			return 1;
 		}
-		bVar4 = false;
+		bVar10 = false;
 		iVar2 = 0;
 		while (iVar2 < 6)
 		{
 			if (iVar3[iVar2] < 2)
 			{
-				bVar4 = true;
+				bVar10 = true;
 			}
 			iVar2++;
 		}
-		if (!bVar4)
+		if (!bVar10)
 		{
 			return 2;
 		}
-		bVar4 = false;
+		bVar10 = false;
 		iVar2 = 0;
 		while (iVar2 < 6)
 		{
 			if (iVar3[iVar2] < 1)
 			{
-				bVar4 = true;
+				bVar10 = true;
 			}
 			iVar2++;
 		}
-		if (!bVar4)
+		if (!bVar10)
 		{
 			return 3;
 		}
@@ -8399,7 +8399,7 @@ var func_60(int iParam0)
 	return Global_1798[iParam0 /*29*/];
 }
 
-void func_61(char* sParam0, char[8] cParam1, char[4] cParam2, char[4] cParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, bool bParam10, bool bParam11)
+void func_61(char* sParam0, char[8] cParam1, char[4] cParam3, char[4] cParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, bool bParam11, bool bParam12)
 {
 	switch (MISC::GET_HASH_KEY(&cParam1))
 	{
@@ -8439,186 +8439,186 @@ void func_61(char* sParam0, char[8] cParam1, char[4] cParam2, char[4] cParam3, i
 			break;
 	}
 	StringCopy(sParam0, "", 64);
-	switch (iParam5)
+	switch (iParam6)
 	{
 		case 0:
-			if (iParam4 == joaat("mp_m_freemode_01"))
+			if (iParam5 == joaat("mp_m_freemode_01"))
 			{
 				StringCopy(sParam0, "M", 64);
 			}
-			else if (iParam4 == joaat("mp_f_freemode_01"))
+			else if (iParam5 == joaat("mp_f_freemode_01"))
 			{
 				StringCopy(sParam0, "F", 64);
 			}
 			StringConCat(sParam0, "_HA_", 64);
 			StringConCat(sParam0, &cParam1, 64);
 			StringConCat(sParam0, "_t", 64);
-			StringIntConCat(sParam0, iParam6, 64);
-			StringConCat(sParam0, "_v", 64);
 			StringIntConCat(sParam0, iParam7, 64);
+			StringConCat(sParam0, "_v", 64);
+			StringIntConCat(sParam0, iParam8, 64);
 			break;
 		
 		case 1:
-			if (iParam4 == joaat("mp_m_freemode_01"))
+			if (iParam5 == joaat("mp_m_freemode_01"))
 			{
 				StringCopy(sParam0, "M", 64);
 			}
-			else if (iParam4 == joaat("mp_f_freemode_01"))
+			else if (iParam5 == joaat("mp_f_freemode_01"))
 			{
 				StringCopy(sParam0, "F", 64);
 			}
 			StringConCat(sParam0, "_CL_", 64);
-			if (iParam6 == 12)
+			if (iParam7 == 12)
 			{
 				StringConCat(sParam0, "OUTFIT_", 64);
 			}
 			StringConCat(sParam0, &cParam1, 64);
-			if (iParam8 != -1)
-			{
-				StringConCat(sParam0, "_n", 64);
-				StringIntConCat(sParam0, iParam8, 64);
-			}
-			StringConCat(sParam0, "_t", 64);
-			StringIntConCat(sParam0, iParam6, 64);
-			StringConCat(sParam0, "_v", 64);
-			StringIntConCat(sParam0, iParam7, 64);
 			if (iParam9 != -1)
 			{
-				StringConCat(sParam0, "_p", 64);
+				StringConCat(sParam0, "_n", 64);
 				StringIntConCat(sParam0, iParam9, 64);
+			}
+			StringConCat(sParam0, "_t", 64);
+			StringIntConCat(sParam0, iParam7, 64);
+			StringConCat(sParam0, "_v", 64);
+			StringIntConCat(sParam0, iParam8, 64);
+			if (iParam10 != -1)
+			{
+				StringConCat(sParam0, "_p", 64);
+				StringIntConCat(sParam0, iParam10, 64);
 			}
 			break;
 		
 		case 2:
-			if (iParam4 == joaat("mp_m_freemode_01"))
+			if (iParam5 == joaat("mp_m_freemode_01"))
 			{
 				StringCopy(sParam0, "M", 64);
 			}
-			else if (iParam4 == joaat("mp_f_freemode_01"))
+			else if (iParam5 == joaat("mp_f_freemode_01"))
 			{
 				StringCopy(sParam0, "F", 64);
 			}
 			StringConCat(sParam0, "_TA_", 64);
 			StringConCat(sParam0, &cParam1, 64);
 			StringConCat(sParam0, "_t", 64);
-			StringIntConCat(sParam0, iParam6, 64);
-			StringConCat(sParam0, "_v", 64);
 			StringIntConCat(sParam0, iParam7, 64);
+			StringConCat(sParam0, "_v", 64);
+			StringIntConCat(sParam0, iParam8, 64);
 			break;
 		
 		case 3:
 			StringConCat(sParam0, "WP_", 64);
 			StringConCat(sParam0, &cParam1, 64);
 			StringConCat(sParam0, "_t", 64);
-			StringIntConCat(sParam0, iParam6, 64);
-			StringConCat(sParam0, "_v", 64);
 			StringIntConCat(sParam0, iParam7, 64);
-			if (iParam8 != -1)
+			StringConCat(sParam0, "_v", 64);
+			StringIntConCat(sParam0, iParam8, 64);
+			if (iParam9 != -1)
 			{
 				StringConCat(sParam0, "_n", 64);
-				StringIntConCat(sParam0, iParam8, 64);
+				StringIntConCat(sParam0, iParam9, 64);
 			}
 			break;
 		
 		case 4:
-			if (iParam4 == Global_73804)
+			if (iParam5 == Global_73804)
 			{
 				StringCopy(sParam0, "VE_BIG_YACHT_t0_v0", 64);
 			}
-			else if (iParam4 == Global_73805)
+			else if (iParam5 == Global_73805)
 			{
 				StringCopy(sParam0, "VE_BIG_TRUCK_t0_v0", 64);
 			}
-			else if (iParam4 == Global_73806)
+			else if (iParam5 == Global_73806)
 			{
 				StringCopy(sParam0, "VE_BALLISTIC_EQUIPMENT_t0_v0", 64);
 			}
-			else if (iParam4 == Global_73807)
+			else if (iParam5 == Global_73807)
 			{
 				StringCopy(sParam0, "VE_BIG_PLANE_t0_v0", 64);
 			}
-			else if (iParam4 == Global_73808)
+			else if (iParam5 == Global_73808)
 			{
 				StringCopy(sParam0, "VE_HACKER_TRUCK_t0_v0", 64);
 			}
-			else if (iParam4 == 0)
+			else if (iParam5 == 0)
 			{
 				StringConCat(sParam0, "VEM_", 64);
-				if (iParam6 == 24 || iParam6 == 25)
+				if (iParam7 == 24 || iParam7 == 25)
 				{
-					if (iParam8 == 1)
+					if (iParam9 == 1)
 					{
 						StringConCat(sParam0, "COLOUR_1_", 64);
 					}
-					else if (iParam8 == 2)
+					else if (iParam9 == 2)
 					{
 						StringConCat(sParam0, "COLOUR_2_", 64);
 					}
-					else if (iParam8 == 3)
+					else if (iParam9 == 3)
 					{
 						StringConCat(sParam0, "COLOUR_EXTRA_1_", 64);
 					}
-					if (iParam9 == 5)
+					if (iParam10 == 5)
 					{
 						StringConCat(sParam0, "MCT_CHROME_", 64);
 					}
-					else if (iParam9 == 1)
+					else if (iParam10 == 1)
 					{
 						StringConCat(sParam0, "MCT_CLASSIC_", 64);
 					}
-					else if (iParam9 == 0)
+					else if (iParam10 == 0)
 					{
 						StringConCat(sParam0, "MCT_METALLIC_", 64);
 					}
-					else if (iParam9 == 4)
+					else if (iParam10 == 4)
 					{
 						StringConCat(sParam0, "MCT_METALS_", 64);
 					}
-					else if (iParam9 == 3)
+					else if (iParam10 == 3)
 					{
 						StringConCat(sParam0, "MCT_MATTE_", 64);
 					}
-					else if (iParam9 == 2)
+					else if (iParam10 == 2)
 					{
 						StringConCat(sParam0, "MCT_PEARLESCENT_", 64);
 					}
-					else if (iParam9 == 6)
+					else if (iParam10 == 6)
 					{
 						StringConCat(sParam0, "MCT_NONE_", 64);
 					}
-					iParam8 = -1;
+					iParam9 = -1;
 				}
-				else if (iParam6 == 38)
+				else if (iParam7 == 38)
 				{
 					StringConCat(sParam0, "COLOUR_5_", 64);
 				}
-				else if (iParam6 == 65)
+				else if (iParam7 == 65)
 				{
 					StringConCat(sParam0, "COLOUR_6_", 64);
 				}
 				StringConCat(sParam0, &cParam1, 64);
-				if (iParam8 != -1)
+				if (iParam9 != -1)
 				{
 					StringConCat(sParam0, "_n", 64);
-					StringIntConCat(sParam0, iParam8, 64);
+					StringIntConCat(sParam0, iParam9, 64);
 				}
 				StringConCat(sParam0, "_t", 64);
-				StringIntConCat(sParam0, iParam6, 64);
-				StringConCat(sParam0, "_v", 64);
 				StringIntConCat(sParam0, iParam7, 64);
+				StringConCat(sParam0, "_v", 64);
+				StringIntConCat(sParam0, iParam8, 64);
 			}
-			else if (iParam6 == 22)
+			else if (iParam7 == 22)
 			{
-				StringCopy(&cParam1, VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(iParam4), 16);
+				StringCopy(&cParam1, VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(iParam5), 16);
 				if (MISC::IS_STRING_NULL_OR_EMPTY(&cParam1) || MISC::GET_HASH_KEY(&cParam1) == -515263000)
 				{
 					return;
 				}
 				StringConCat(sParam0, "VEM_INSURANCE_", 64);
 				StringConCat(sParam0, &cParam1, 64);
-				if (!bParam10)
+				if (!bParam11)
 				{
-					switch (iParam4)
+					switch (iParam5)
 					{
 						case joaat("dubsta2"):
 						case joaat("cavalcade2"):
@@ -8642,9 +8642,9 @@ void func_61(char* sParam0, char[8] cParam1, char[4] cParam2, char[4] cParam3, i
 						}
 				}
 			}
-			else if (iParam6 == 40)
+			else if (iParam7 == 40)
 			{
-				switch (iParam4)
+				switch (iParam5)
 				{
 					case joaat("fcr2"):
 						StringCopy(&cParam1, "FCR2", 16);
@@ -8659,7 +8659,7 @@ void func_61(char* sParam0, char[8] cParam1, char[4] cParam2, char[4] cParam3, i
 						break;
 					
 					default:
-						StringCopy(&cParam1, VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(iParam4), 16);
+						StringCopy(&cParam1, VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(iParam5), 16);
 						if (MISC::IS_STRING_NULL_OR_EMPTY(&cParam1))
 						{
 							return;
@@ -8669,15 +8669,15 @@ void func_61(char* sParam0, char[8] cParam1, char[4] cParam2, char[4] cParam3, i
 				StringConCat(sParam0, "VEU_", 64);
 				StringConCat(sParam0, &cParam1, 64);
 				StringConCat(sParam0, "_t0_v", 64);
-				StringIntConCat(sParam0, iParam7, 64);
+				StringIntConCat(sParam0, iParam8, 64);
 			}
 			else
 			{
 				StringConCat(sParam0, "VE_", 64);
 				StringConCat(sParam0, &cParam1, 64);
-				if (!bParam10)
+				if (!bParam11)
 				{
-					switch (iParam4)
+					switch (iParam5)
 					{
 						case joaat("dubsta2"):
 						case joaat("cavalcade2"):
@@ -8700,24 +8700,24 @@ void func_61(char* sParam0, char[8] cParam1, char[4] cParam2, char[4] cParam3, i
 							break;
 						}
 				}
-				if (iParam8 != -1)
-				{
-					StringConCat(sParam0, "_n", 64);
-					StringIntConCat(sParam0, iParam8, 64);
-				}
-				StringConCat(sParam0, "_t", 64);
-				StringIntConCat(sParam0, iParam6, 64);
-				StringConCat(sParam0, "_v", 64);
-				StringIntConCat(sParam0, iParam7, 64);
 				if (iParam9 != -1)
 				{
-					StringConCat(sParam0, "_p", 64);
+					StringConCat(sParam0, "_n", 64);
 					StringIntConCat(sParam0, iParam9, 64);
+				}
+				StringConCat(sParam0, "_t", 64);
+				StringIntConCat(sParam0, iParam7, 64);
+				StringConCat(sParam0, "_v", 64);
+				StringIntConCat(sParam0, iParam8, 64);
+				if (iParam10 != -1)
+				{
+					StringConCat(sParam0, "_p", 64);
+					StringIntConCat(sParam0, iParam10, 64);
 				}
 			}
 			break;
 	}
-	if (bParam11)
+	if (bParam12)
 	{
 		StringConCat(sParam0, "_CESP", 64);
 	}
@@ -9154,7 +9154,7 @@ char* func_65(int iParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	int* iVar2;
-	struct<7> Var3;
+	struct<7> Var41;
 	
 	if (iParam1 == joaat("weapon_knuckle"))
 	{
@@ -9640,11 +9640,11 @@ char* func_65(int iParam0, int iParam1)
 					iVar1 = 0;
 					while (iVar1 < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar0))
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar0, iVar1, &Var3))
+						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar0, iVar1, &Var41))
 						{
-							if (Var3.f_3 == iParam0)
+							if (Var41.f_3 == iParam0)
 							{
-								return func_66(&(Var3.f_6));
+								return func_66(&(Var41.f_6));
 							}
 						}
 						iVar1++;
@@ -12533,12 +12533,12 @@ void func_88(int iParam0, var uParam1)
 	int iVar2;
 	int iVar3;
 	struct<5> Var4;
-	int iVar5;
-	int iVar6;
-	struct<2> Var7;
-	struct<4> Var8;
 	int iVar9;
 	int iVar10;
+	struct<2> Var11;
+	struct<4> Var50;
+	int iVar72;
+	int iVar73;
 	
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
@@ -12598,15 +12598,15 @@ void func_88(int iParam0, var uParam1)
 			uParam1->f_221[iVar0 /*5*/].f_1 = 0;
 			iVar0++;
 		}
-		iVar6 = FILES::_GET_NUM_DLC_WEAPONS_SP();
-		iVar5 = 0;
-		while (iVar5 < iVar6)
+		iVar10 = FILES::_GET_NUM_DLC_WEAPONS_SP();
+		iVar9 = 0;
+		while (iVar9 < iVar10)
 		{
-			if ((FILES::_GET_DLC_WEAPON_DATA_SP(iVar5, &Var7) && !func_89(Var7.f_1)) && iVar9 < 51)
+			if ((FILES::_GET_DLC_WEAPON_DATA_SP(iVar9, &Var11) && !func_89(Var11.f_1)) && iVar72 < 51)
 			{
-				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var7))
+				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var11))
 				{
-					Var4 = Var7.f_1;
+					Var4 = Var11.f_1;
 					Var4.f_1 = 0;
 					Var4.f_2 = 0;
 					Var4.f_3 = 0;
@@ -12624,20 +12624,20 @@ void func_88(int iParam0, var uParam1)
 							Var4.f_1 = 0;
 						}
 					}
-					uParam1->f_221[iVar9 /*5*/].f_1 = Var4.f_1;
-					iVar10 = 0;
+					uParam1->f_221[iVar72 /*5*/].f_1 = Var4.f_1;
+					iVar73 = 0;
 					iVar1 = 0;
-					while (iVar1 < FILES::_GET_NUM_DLC_WEAPON_COMPONENTS_SP(iVar5))
+					while (iVar1 < FILES::_GET_NUM_DLC_WEAPON_COMPONENTS_SP(iVar9))
 					{
-						if (FILES::_GET_DLC_WEAPON_COMPONENT_DATA_SP(iVar5, iVar1, &Var8))
+						if (FILES::_GET_DLC_WEAPON_COMPONENT_DATA_SP(iVar9, iVar1, &Var50))
 						{
-							if (!func_74(Var8.f_3))
+							if (!func_74(Var50.f_3))
 							{
-								if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(iParam0, Var4, Var8.f_3))
+								if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(iParam0, Var4, Var50.f_3))
 								{
-									MISC::SET_BIT(&(Var4.f_2), iVar10);
+									MISC::SET_BIT(&(Var4.f_2), iVar73);
 								}
-								iVar10++;
+								iVar73++;
 							}
 						}
 						iVar1++;
@@ -12651,10 +12651,10 @@ void func_88(int iParam0, var uParam1)
 						Var4.f_1 = 0;
 					}
 				}
-				uParam1->f_221[iVar9 /*5*/] = { Var4 };
-				iVar9++;
+				uParam1->f_221[iVar72 /*5*/] = { Var4 };
+				iVar72++;
 			}
-			iVar5++;
+			iVar9++;
 		}
 	}
 }
@@ -12760,7 +12760,7 @@ int func_90(int iParam0, int iParam1)
 	int iVar2;
 	int iVar3;
 	int* iVar4;
-	struct<4> Var5;
+	struct<4> Var43;
 	
 	iVar0 = 0;
 	switch (iParam0)
@@ -13507,13 +13507,13 @@ int func_90(int iParam0, int iParam1)
 					iVar2 = 0;
 					while (iVar2 < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar1))
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar1, iVar2, &Var5))
+						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar1, iVar2, &Var43))
 						{
-							if (!func_74(Var5.f_3))
+							if (!func_74(Var43.f_3))
 							{
 								if (iVar3 == iParam1)
 								{
-									return Var5.f_3;
+									return Var43.f_3;
 								}
 								iVar3++;
 							}
@@ -14125,9 +14125,9 @@ int func_118()
 int func_119(bool bParam0)
 {
 	var uVar0[6];
-	int iVar1;
-	int iVar2;
-	int iVar3;
+	int iVar7;
+	int iVar8;
+	int iVar9;
 	
 	if (PLAYER::HAS_ACHIEVEMENT_BEEN_PASSED(17))
 	{
@@ -14139,21 +14139,21 @@ int func_119(bool bParam0)
 	uVar0[3] = func_122();
 	uVar0[4] = func_121();
 	uVar0[5] = func_120();
-	iVar1 = 0;
-	iVar2 = 0;
-	while (iVar2 < 6)
+	iVar7 = 0;
+	iVar8 = 0;
+	while (iVar8 < 6)
 	{
-		if (uVar0[iVar2])
+		if (uVar0[iVar8])
 		{
-			iVar1++;
+			iVar7++;
 		}
-		iVar2++;
+		iVar8++;
 	}
-	STATS::STAT_GET_INT(joaat("NUM_DISCIPLINE_GOLD_EARNED"), &iVar3, -1);
-	if (iVar1 > iVar3 && iVar1 > 0)
+	STATS::STAT_GET_INT(joaat("NUM_DISCIPLINE_GOLD_EARNED"), &iVar9, -1);
+	if (iVar7 > iVar9 && iVar7 > 0)
 	{
-		STATS::STAT_SET_INT(joaat("NUM_DISCIPLINE_GOLD_EARNED"), iVar1, true);
-		func_133(17, iVar1);
+		STATS::STAT_SET_INT(joaat("NUM_DISCIPLINE_GOLD_EARNED"), iVar7, true);
+		func_133(17, iVar7);
 	}
 	if (bParam0)
 	{

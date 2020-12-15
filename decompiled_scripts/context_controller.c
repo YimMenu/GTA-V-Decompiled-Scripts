@@ -83,11 +83,11 @@
 	bool bLocal_81 = 0;
 	bool bLocal_82 = 0;
 	struct<4> Local_83 = { 0, 0, 0, 0 } ;
-	struct<16> Local_84 = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ;
-	int iLocal_85 = 0;
-	int iLocal_86 = 0;
-	int iLocal_87 = 0;
-	int iLocal_88 = 0;
+	struct<16> Local_87 = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ;
+	int iLocal_103 = 0;
+	int iLocal_104 = 0;
+	int iLocal_105 = 0;
+	int iLocal_106 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -127,7 +127,7 @@ void __EntryFunction__()
 	iLocal_42 = 49;
 	iLocal_43 = 64;
 	fLocal_62 = ((0.05f + 0.275f) - 0.01f);
-	iLocal_88 = -1;
+	iLocal_106 = -1;
 	if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("context_controller")) > 1)
 	{
 		SCRIPT::TERMINATE_THIS_THREAD();
@@ -387,7 +387,7 @@ void func_1()
 		return;
 	}
 	bVar0 = true;
-	if (iLocal_85 == 1)
+	if (iLocal_103 == 1)
 	{
 		bVar0 = false;
 	}
@@ -400,12 +400,12 @@ void func_1()
 		HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(&Local_83);
 		if (bLocal_82)
 		{
-			HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&Local_84);
+			HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&Local_87);
 		}
 		else
 		{
 			HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
-			HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Local_84);
+			HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Local_87);
 		}
 		HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, bVar0, 50);
 	}
@@ -415,7 +415,7 @@ void func_1()
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_42346);
 		HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, bVar0, 50);
 	}
-	switch (iLocal_85)
+	switch (iLocal_103)
 	{
 		case 0:
 			break;
@@ -648,22 +648,22 @@ int func_15()
 	return iVar2;
 }
 
-void func_16(struct<4> Param0, struct<16> Param1, var uParam2, var uParam3)
+void func_16(struct<4> Param0, struct<16> Param4, var uParam20, var uParam21)
 {
 	Local_83 = { Param0 };
-	Local_84 = { Param1 };
+	Local_87 = { Param4 };
 	bLocal_80 = true;
 	bLocal_81 = true;
-	iLocal_85 = uParam2;
-	bLocal_82 = uParam3;
+	iLocal_103 = uParam20;
+	bLocal_82 = uParam21;
 }
 
-void func_17(struct<4> Param0, var uParam1)
+void func_17(struct<4> Param0, var uParam4)
 {
 	Local_83 = { Param0 };
 	bLocal_80 = true;
 	bLocal_81 = false;
-	iLocal_85 = uParam1;
+	iLocal_103 = uParam4;
 }
 
 int func_18(int iParam0)
@@ -1088,8 +1088,8 @@ void func_34(int iParam0)
 void func_35()
 {
 	struct<13> Var0[1];
-	struct<16> Var1[1];
-	int iVar2;
+	struct<16> Var14[1];
+	int iVar31;
 	
 	if (Global_1573306 != -1)
 	{
@@ -1108,14 +1108,14 @@ void func_35()
 		Var0[0 /*13*/].f_12 = Global_1573307[12];
 		if (MISC::IS_XBOX360_VERSION() || MISC::IS_DURANGO_VERSION())
 		{
-			if (!iLocal_86)
+			if (!iLocal_104)
 			{
 				if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(&(Var0[0 /*13*/])))
 				{
-					iLocal_86 = 1;
+					iLocal_104 = 1;
 				}
 			}
-			if (iLocal_86)
+			if (iLocal_104)
 			{
 				if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_PENDING())
 				{
@@ -1134,26 +1134,26 @@ void func_35()
 		{
 			if (func_36(Var0[0 /*13*/]))
 			{
-				switch (iLocal_87)
+				switch (iLocal_105)
 				{
 					case 0:
-						iLocal_88 = NETWORK::_0xD66C9E72B3CC4982(&Var0, 1);
-						if (iLocal_88 >= 0)
+						iLocal_106 = NETWORK::_0xD66C9E72B3CC4982(&Var0, 1);
+						if (iLocal_106 >= 0)
 						{
-							iLocal_87++;
+							iLocal_105++;
 						}
 						break;
 					
 					case 1:
-						iVar2 = NETWORK::_0x58CC181719256197(iLocal_88, &Var1, 1);
-						switch (iVar2)
+						iVar31 = NETWORK::_0x58CC181719256197(iLocal_106, &Var14, 1);
+						switch (iVar31)
 						{
 							case -1:
 								func_37();
 								break;
 							
 							case 0:
-								MemCopy(&(Global_2097152[func_38() /*10930*/].f_10753.f_18[Global_1573306 /*6*/]), {Var1[0 /*16*/]}, 6);
+								MemCopy(&(Global_2097152[func_38() /*10930*/].f_10753.f_18[Global_1573306 /*6*/]), {Var14[0 /*16*/]}, 6);
 								func_37();
 								break;
 							
@@ -1187,9 +1187,9 @@ bool func_36(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 void func_37()
 {
 	Global_1573306 = -1;
-	iLocal_86 = 0;
-	iLocal_88 = -1;
-	iLocal_87 = 0;
+	iLocal_104 = 0;
+	iLocal_106 = -1;
+	iLocal_105 = 0;
 }
 
 int func_38()

@@ -26,18 +26,18 @@
 	int iLocal_24 = 0;
 	int iLocal_25 = 0;
 	int iLocal_26[25] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	struct<6> Local_27[25];
-	int iLocal_28 = 0;
-	struct<3> Local_29 = { 0, 0, 0 } ;
-	struct<3> Local_30 = { 0, 0, 0 } ;
-	int iLocal_31 = 0;
-	int iLocal_32 = 0;
-	int iLocal_33 = 0;
-	int iLocal_34 = 0;
-	int iLocal_35 = 0;
-	int iLocal_36 = 0;
-	int iLocal_37 = 0;
-	int iLocal_38 = 0;
+	struct<6> Local_52[25];
+	int iLocal_203 = 0;
+	struct<3> Local_204 = { 0, 0, 0 } ;
+	struct<3> Local_207 = { 0, 0, 0 } ;
+	int iLocal_210 = 0;
+	int iLocal_211 = 0;
+	int iLocal_212 = 0;
+	int iLocal_213 = 0;
+	int iLocal_214 = 0;
+	int iLocal_215 = 0;
+	int iLocal_216 = 0;
+	int iLocal_217 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -67,7 +67,7 @@ void __EntryFunction__()
 				switch (Global_19486.f_1)
 				{
 					case 7:
-						if ((iLocal_31 == 0 && iLocal_32 == 0) && Global_21840 == 0)
+						if ((iLocal_210 == 0 && iLocal_211 == 0) && Global_21840 == 0)
 						{
 							func_22();
 							func_16();
@@ -75,7 +75,7 @@ void __EntryFunction__()
 						break;
 					
 					case 8:
-						if ((func_15(2, Global_19454, 0) && iLocal_31 == 0) && iLocal_32 == 0)
+						if ((func_15(2, Global_19454, 0) && iLocal_210 == 0) && iLocal_211 == 0)
 						{
 							func_14();
 							Global_19464 = 1;
@@ -96,11 +96,11 @@ void __EntryFunction__()
 				{
 					func_11();
 				}
-				if (iLocal_31)
+				if (iLocal_210)
 				{
 					func_9();
 				}
-				if (iLocal_32)
+				if (iLocal_211)
 				{
 					func_8();
 				}
@@ -164,7 +164,7 @@ void func_3()
 	{
 		if (GRAPHICS::_0xE791DF1F73ED2C8B(iLocal_22))
 		{
-			func_6(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(iVar0), SYSTEM::TO_FLOAT(0), -1f, -1f, &(Local_27[iLocal_22 /*6*/]), 0, 0, 0, 0);
+			func_6(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(iVar0), SYSTEM::TO_FLOAT(0), -1f, -1f, &(Local_52[iLocal_22 /*6*/]), 0, 0, 0, 0);
 			iLocal_26[iVar0] = iLocal_22;
 			iVar0++;
 		}
@@ -283,38 +283,38 @@ void func_7(int iParam0, char* sParam1, float fParam2, float fParam3, float fPar
 
 void func_8()
 {
-	if (iLocal_31 == 0 && iLocal_32 == 1)
+	if (iLocal_210 == 0 && iLocal_211 == 1)
 	{
-		if (iLocal_36)
+		if (iLocal_215)
 		{
-			Local_30.x = (Local_30.x + 1f);
+			Local_207.x = (Local_207.x + 1f);
 		}
-		if (Local_30.x > Local_29.x || Local_30.x == Local_29.x)
+		if (Local_207.x > Local_204.x || Local_207.x == Local_204.x)
 		{
-			Local_30.x = Local_29.x;
-			iLocal_36 = 0;
+			Local_207.x = Local_204.x;
+			iLocal_215 = 0;
 		}
-		if (iLocal_37)
+		if (iLocal_216)
 		{
-			Local_30.f_1 = (Local_30.f_1 - 2f);
+			Local_207.f_1 = (Local_207.f_1 - 2f);
 		}
-		if (Local_30.f_1 < Local_29.f_1 || Local_30.f_1 == Local_29.f_1)
+		if (Local_207.f_1 < Local_204.f_1 || Local_207.f_1 == Local_204.f_1)
 		{
-			Local_30.f_1 = Local_29.f_1;
-			iLocal_37 = 0;
+			Local_207.f_1 = Local_204.f_1;
+			iLocal_216 = 0;
 		}
-		if (iLocal_38)
+		if (iLocal_217)
 		{
-			Local_30.f_2 = (Local_30.f_2 - 7f);
+			Local_207.f_2 = (Local_207.f_2 - 7f);
 		}
-		if (Local_30.f_2 < Local_29.f_2 || Local_30.f_2 == Local_29.f_2)
+		if (Local_207.f_2 < Local_204.f_2 || Local_207.f_2 == Local_204.f_2)
 		{
-			Local_30.f_2 = Local_29.f_2;
-			iLocal_38 = 0;
+			Local_207.f_2 = Local_204.f_2;
+			iLocal_217 = 0;
 		}
-		if ((iLocal_36 == 0 && iLocal_37 == 0) && iLocal_38 == 0)
+		if ((iLocal_215 == 0 && iLocal_216 == 0) && iLocal_217 == 0)
 		{
-			iLocal_32 = 0;
+			iLocal_211 = 0;
 			if (Global_19486.f_1 > 3)
 			{
 				Global_19486.f_1 = 7;
@@ -323,52 +323,52 @@ void func_8()
 				func_26();
 			}
 		}
-		MOBILE::SET_MOBILE_PHONE_ROTATION(Local_30, 0);
+		MOBILE::SET_MOBILE_PHONE_ROTATION(Local_207, 0);
 	}
 }
 
 void func_9()
 {
-	if ((iLocal_31 == 1 && iLocal_32 == 0) && Global_21840 == 6)
+	if ((iLocal_210 == 1 && iLocal_211 == 0) && Global_21840 == 6)
 	{
-		if (iLocal_33)
+		if (iLocal_212)
 		{
-			Local_30.x = (Local_30.x - 1f);
+			Local_207.x = (Local_207.x - 1f);
 		}
-		if (Local_30.x < Local_29.x || Local_30.x == Local_29.x)
+		if (Local_207.x < Local_204.x || Local_207.x == Local_204.x)
 		{
-			Local_30.x = Local_29.x;
-			iLocal_33 = 0;
+			Local_207.x = Local_204.x;
+			iLocal_212 = 0;
 		}
-		if (iLocal_34)
+		if (iLocal_213)
 		{
-			Local_30.f_1 = (Local_30.f_1 - 0.5f);
+			Local_207.f_1 = (Local_207.f_1 - 0.5f);
 		}
-		if (Local_30.f_1 < Local_29.f_1 || Local_30.f_1 == Local_29.f_1)
+		if (Local_207.f_1 < Local_204.f_1 || Local_207.f_1 == Local_204.f_1)
 		{
-			Local_30.f_1 = Local_29.f_1;
-			iLocal_34 = 0;
+			Local_207.f_1 = Local_204.f_1;
+			iLocal_213 = 0;
 		}
-		if (iLocal_35)
+		if (iLocal_214)
 		{
-			Local_30.f_2 = (Local_30.f_2 + 7f);
+			Local_207.f_2 = (Local_207.f_2 + 7f);
 		}
-		if (Local_30.f_2 > Local_29.f_2 || Local_30.f_2 == Local_29.f_2)
+		if (Local_207.f_2 > Local_204.f_2 || Local_207.f_2 == Local_204.f_2)
 		{
-			Local_30.f_2 = Local_29.f_2;
-			iLocal_35 = 0;
+			Local_207.f_2 = Local_204.f_2;
+			iLocal_214 = 0;
 		}
-		if ((iLocal_33 == 0 && iLocal_34 == 0) && iLocal_35 == 0)
+		if ((iLocal_212 == 0 && iLocal_213 == 0) && iLocal_214 == 0)
 		{
-			iLocal_31 = 0;
+			iLocal_210 = 0;
 			func_10("CELL_MSHELP_2");
 		}
-		MOBILE::SET_MOBILE_PHONE_ROTATION(Local_30, 0);
+		MOBILE::SET_MOBILE_PHONE_ROTATION(Local_207, 0);
 	}
 	if (MISC::IS_BIT_SET(Global_7357, 15))
 	{
-		iLocal_31 = 0;
-		iLocal_32 = 0;
+		iLocal_210 = 0;
+		iLocal_211 = 0;
 		func_7(Global_19467, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
 		func_6(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_MSMENU_3", 0, 0, 0, 0);
 		if (Global_19474)
@@ -384,7 +384,7 @@ void func_9()
 		func_6(Global_19467, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 		MISC::CLEAR_BIT(&Global_7356, 17);
 		func_7(Global_19467, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
-		func_4(Global_19467, "SET_HEADER", &(Local_27[iLocal_23 /*6*/]), 0, 0, 0, 0);
+		func_4(Global_19467, "SET_HEADER", &(Local_52[iLocal_23 /*6*/]), 0, 0, 0, 0);
 	}
 }
 
@@ -413,14 +413,14 @@ int func_12()
 
 void func_13()
 {
-	if (iLocal_31 == 0)
+	if (iLocal_210 == 0)
 	{
-		MOBILE::GET_MOBILE_PHONE_ROTATION(&Local_30, 0);
-		Local_29 = { Global_19446 };
-		iLocal_32 = 1;
-		iLocal_36 = 1;
-		iLocal_37 = 1;
-		iLocal_38 = 1;
+		MOBILE::GET_MOBILE_PHONE_ROTATION(&Local_207, 0);
+		Local_204 = { Global_19446 };
+		iLocal_211 = 1;
+		iLocal_215 = 1;
+		iLocal_216 = 1;
+		iLocal_217 = 1;
 	}
 }
 
@@ -457,11 +457,11 @@ int func_15(int iParam0, int iParam1, int iParam2)
 
 void func_16()
 {
-	if (iLocal_28)
+	if (iLocal_203)
 	{
 		if (SYSTEM::TIMERA() > 50)
 		{
-			iLocal_28 = 0;
+			iLocal_203 = 0;
 		}
 	}
 	if (PAD::_IS_USING_KEYBOARD(2))
@@ -475,18 +475,18 @@ void func_16()
 			func_17();
 		}
 	}
-	if (iLocal_28 == 0)
+	if (iLocal_203 == 0)
 	{
 		if (func_15(2, Global_19462, 0))
 		{
 			func_20();
-			iLocal_28 = 1;
+			iLocal_203 = 1;
 			SYSTEM::SETTIMERA(0);
 		}
 		if (func_15(2, Global_19463, 0))
 		{
 			func_17();
-			iLocal_28 = 1;
+			iLocal_203 = 1;
 			SYSTEM::SETTIMERA(0);
 		}
 	}
@@ -588,7 +588,7 @@ void func_22()
 						func_7(Global_19467, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
 						func_6(Global_19467, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_MSMENU_2", 0, 0, 0, 0);
 						func_7(Global_19467, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
-						func_4(Global_19467, "SET_HEADER", &(Local_27[iLocal_23 /*6*/]), 0, 0, 0, 0);
+						func_4(Global_19467, "SET_HEADER", &(Local_52[iLocal_23 /*6*/]), 0, 0, 0, 0);
 						if (Global_19474)
 						{
 							func_6(Global_19467, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, "CELL_205", 0, 0, 0, 0);
@@ -614,14 +614,14 @@ void func_22()
 
 void func_23()
 {
-	if (iLocal_32 == 0)
+	if (iLocal_211 == 0)
 	{
-		MOBILE::GET_MOBILE_PHONE_ROTATION(&Local_30, 0);
-		Local_29 = { -90.3f, -0.8f, 90f };
-		iLocal_31 = 1;
-		iLocal_33 = 1;
-		iLocal_34 = 1;
-		iLocal_35 = 1;
+		MOBILE::GET_MOBILE_PHONE_ROTATION(&Local_207, 0);
+		Local_204 = { -90.3f, -0.8f, 90f };
+		iLocal_210 = 1;
+		iLocal_212 = 1;
+		iLocal_213 = 1;
+		iLocal_214 = 1;
 	}
 }
 
@@ -666,25 +666,25 @@ void func_26()
 
 void func_27()
 {
-	StringCopy(&(Local_27[0 /*6*/]), "CELL_MSSLOT_1", 24);
-	StringCopy(&(Local_27[1 /*6*/]), "CELL_MSSLOT_2", 24);
-	StringCopy(&(Local_27[2 /*6*/]), "CELL_MSSLOT_3", 24);
-	StringCopy(&(Local_27[3 /*6*/]), "CELL_MSSLOT_4", 24);
-	StringCopy(&(Local_27[4 /*6*/]), "CELL_MSSLOT_5", 24);
-	StringCopy(&(Local_27[5 /*6*/]), "CELL_MSSLOT_6", 24);
-	StringCopy(&(Local_27[6 /*6*/]), "CELL_MSSLOT_7", 24);
-	StringCopy(&(Local_27[7 /*6*/]), "CELL_MSSLOT_8", 24);
-	StringCopy(&(Local_27[8 /*6*/]), "CELL_MSSLOT_9", 24);
-	StringCopy(&(Local_27[9 /*6*/]), "CELL_MSSLOT_10", 24);
-	StringCopy(&(Local_27[10 /*6*/]), "CELL_MSSLOT_11", 24);
-	StringCopy(&(Local_27[11 /*6*/]), "CELL_MSSLOT_12", 24);
-	StringCopy(&(Local_27[12 /*6*/]), "CELL_MSSLOT_13", 24);
-	StringCopy(&(Local_27[13 /*6*/]), "CELL_MSSLOT_14", 24);
-	StringCopy(&(Local_27[14 /*6*/]), "CELL_MSSLOT_15", 24);
-	StringCopy(&(Local_27[15 /*6*/]), "CELL_MSSLOT_16", 24);
-	StringCopy(&(Local_27[16 /*6*/]), "CELL_MSSLOT_17", 24);
-	StringCopy(&(Local_27[17 /*6*/]), "CELL_MSSLOT_18", 24);
-	StringCopy(&(Local_27[18 /*6*/]), "CELL_MSSLOT_19", 24);
-	StringCopy(&(Local_27[19 /*6*/]), "CELL_MSSLOT_20", 24);
+	StringCopy(&(Local_52[0 /*6*/]), "CELL_MSSLOT_1", 24);
+	StringCopy(&(Local_52[1 /*6*/]), "CELL_MSSLOT_2", 24);
+	StringCopy(&(Local_52[2 /*6*/]), "CELL_MSSLOT_3", 24);
+	StringCopy(&(Local_52[3 /*6*/]), "CELL_MSSLOT_4", 24);
+	StringCopy(&(Local_52[4 /*6*/]), "CELL_MSSLOT_5", 24);
+	StringCopy(&(Local_52[5 /*6*/]), "CELL_MSSLOT_6", 24);
+	StringCopy(&(Local_52[6 /*6*/]), "CELL_MSSLOT_7", 24);
+	StringCopy(&(Local_52[7 /*6*/]), "CELL_MSSLOT_8", 24);
+	StringCopy(&(Local_52[8 /*6*/]), "CELL_MSSLOT_9", 24);
+	StringCopy(&(Local_52[9 /*6*/]), "CELL_MSSLOT_10", 24);
+	StringCopy(&(Local_52[10 /*6*/]), "CELL_MSSLOT_11", 24);
+	StringCopy(&(Local_52[11 /*6*/]), "CELL_MSSLOT_12", 24);
+	StringCopy(&(Local_52[12 /*6*/]), "CELL_MSSLOT_13", 24);
+	StringCopy(&(Local_52[13 /*6*/]), "CELL_MSSLOT_14", 24);
+	StringCopy(&(Local_52[14 /*6*/]), "CELL_MSSLOT_15", 24);
+	StringCopy(&(Local_52[15 /*6*/]), "CELL_MSSLOT_16", 24);
+	StringCopy(&(Local_52[16 /*6*/]), "CELL_MSSLOT_17", 24);
+	StringCopy(&(Local_52[17 /*6*/]), "CELL_MSSLOT_18", 24);
+	StringCopy(&(Local_52[18 /*6*/]), "CELL_MSSLOT_19", 24);
+	StringCopy(&(Local_52[19 /*6*/]), "CELL_MSSLOT_20", 24);
 }
 

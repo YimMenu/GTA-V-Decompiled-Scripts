@@ -138,7 +138,7 @@ void __EntryFunction__()
 	{
 		iLocal_91 = 40;
 	}
-	switch (iScriptParam_92)
+	switch (iScriptParam_0)
 	{
 		case 3:
 			while (iLocal_83 == 0)

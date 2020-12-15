@@ -19,8 +19,8 @@
 	int iLocal_17 = 0;
 	int iLocal_18 = 0;
 	struct<3> Local_19 = { 0, 0, 0 } ;
-	int iLocal_20 = 0;
-	int iLocal_21 = 0;
+	int iLocal_22 = 0;
+	int iScriptParam_0 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -48,7 +48,7 @@ void __EntryFunction__()
 			NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, -1);
 			func_15(0, -1, 0);
 			MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
-			iLocal_20 = 1;
+			iLocal_22 = 1;
 		}
 	}
 	else if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
@@ -58,29 +58,29 @@ void __EntryFunction__()
 	while (true)
 	{
 		SYSTEM::WAIT(0);
-		if (iLocal_20 == 1)
+		if (iLocal_22 == 1)
 		{
 			if (func_3())
 			{
 				func_18();
 			}
 		}
-		if (ENTITY::DOES_ENTITY_EXIST(iScriptParam_21))
+		if (ENTITY::DOES_ENTITY_EXIST(iScriptParam_0))
 		{
-			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(iScriptParam_21))
+			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(iScriptParam_0))
 			{
 				switch (iLocal_18)
 				{
 					case 0:
-						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(iScriptParam_21))
+						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(iScriptParam_0))
 						{
-							Local_19 = { ENTITY::GET_ENTITY_COORDS(iScriptParam_21, true) };
+							Local_19 = { ENTITY::GET_ENTITY_COORDS(iScriptParam_0, true) };
 							iLocal_18 = 1;
 						}
 						break;
 					
 					case 1:
-						if ((OBJECT::HAS_OBJECT_BEEN_BROKEN(iScriptParam_21, 0) && ENTITY::IS_ENTITY_VISIBLE(iScriptParam_21)) && !ENTITY::IS_ENTITY_A_MISSION_ENTITY(iScriptParam_21))
+						if ((OBJECT::HAS_OBJECT_BEEN_BROKEN(iScriptParam_0, 0) && ENTITY::IS_ENTITY_VISIBLE(iScriptParam_0)) && !ENTITY::IS_ENTITY_A_MISSION_ENTITY(iScriptParam_0))
 						{
 							func_1();
 							iLocal_18 = 2;
@@ -269,7 +269,7 @@ void func_11(var uParam0)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	struct<3> Var3;
+	struct<3> Var4;
 	
 	iVar0 = 0;
 	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
@@ -285,8 +285,8 @@ void func_11(var uParam0)
 					break;
 				
 				case 589125870:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.f_2 == 653923311)
+					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
+					if (Var4.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -300,29 +300,29 @@ void func_11(var uParam0)
 void func_12(int iParam0)
 {
 	struct<3> Var0;
-	int iVar1;
-	int iVar2;
-	bool bVar3;
+	int iVar3;
+	int iVar4;
+	bool bVar5;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_14(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
+			iVar3 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar3, false))
 				{
-					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_13(iVar2, &bVar3))
+						if (func_13(iVar4, &bVar5))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
 						}
-						if (bVar3)
+						if (bVar5)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar4);
 						}
 					}
 				}

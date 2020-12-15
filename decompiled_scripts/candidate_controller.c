@@ -27,9 +27,9 @@ void __EntryFunction__()
 	int iVar0;
 	int iVar1;
 	int iVar2[8];
-	int iVar3;
-	int iVar4;
-	int iVar5;
+	int iVar11;
+	int iVar12;
+	int iVar13;
 	
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -69,59 +69,59 @@ void __EntryFunction__()
 			Global_41397 = 1;
 			if (Global_41392 == iVar0)
 			{
-				iVar3 = 0;
+				iVar11 = 0;
 				if (Global_41392 > 1)
 				{
-					iVar4 = 0;
-					iVar4 = 0;
-					while (iVar4 < Global_41392)
+					iVar12 = 0;
+					iVar12 = 0;
+					while (iVar12 < Global_41392)
 					{
-						if (func_15(Global_41398[iVar4 /*4*/].f_2))
+						if (func_15(Global_41398[iVar12 /*4*/].f_2))
 						{
-							iVar2[iVar4] = 0;
+							iVar2[iVar12] = 0;
 						}
 						else
 						{
-							iVar2[iVar4] = 1;
+							iVar2[iVar12] = 1;
 						}
-						if (Global_41398[iVar4 /*4*/].f_1 == 7)
+						if (Global_41398[iVar12 /*4*/].f_1 == 7)
 						{
-							iVar2[iVar4] = 1;
+							iVar2[iVar12] = 1;
 						}
-						iVar4++;
+						iVar12++;
 					}
-					iVar5 = 0;
-					iVar4 = 0;
-					iVar4 = 0;
-					while (iVar4 < (Global_41392 - 1))
+					iVar13 = 0;
+					iVar12 = 0;
+					iVar12 = 0;
+					while (iVar12 < (Global_41392 - 1))
 					{
-						if (!iVar2[iVar4 + 1])
+						if (!iVar2[iVar12 + 1])
 						{
-							if (Global_41398[iVar4 + 1 /*4*/].f_1 < Global_41398[iVar5 /*4*/].f_1)
+							if (Global_41398[iVar12 + 1 /*4*/].f_1 < Global_41398[iVar13 /*4*/].f_1)
 							{
-								iVar5 = iVar4 + 1;
+								iVar13 = iVar12 + 1;
 							}
 						}
-						iVar4++;
+						iVar12++;
 					}
-					iVar3 = iVar5;
-					if (Global_41398[iVar3 /*4*/].f_2 == 15)
+					iVar11 = iVar13;
+					if (Global_41398[iVar11 /*4*/].f_2 == 15)
 					{
-						iVar3 = -1;
+						iVar11 = -1;
 					}
-					if (iVar3 != -1)
+					if (iVar11 != -1)
 					{
-						if (!func_15(Global_41398[iVar3 /*4*/].f_2))
+						if (!func_15(Global_41398[iVar11 /*4*/].f_2))
 						{
-							iVar3 = -1;
+							iVar11 = -1;
 						}
 					}
 				}
-				if (iVar3 > -1)
+				if (iVar11 > -1)
 				{
-					Global_41393 = Global_41398[iVar3 /*4*/];
-					Global_41394 = Global_41398[iVar3 /*4*/].f_3;
-					Global_41431 = Global_41398[iVar3 /*4*/].f_2;
+					Global_41393 = Global_41398[iVar11 /*4*/];
+					Global_41394 = Global_41398[iVar11 /*4*/].f_3;
+					Global_41431 = Global_41398[iVar11 /*4*/].f_2;
 					Global_41392 = 0;
 					Global_41397 = 0;
 				}

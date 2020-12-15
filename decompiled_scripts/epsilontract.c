@@ -49,7 +49,7 @@
 	bool bLocal_47 = 0;
 	var uLocal_48 = 0;
 	struct<11> Local_49[10];
-	char* sLocal_50[10] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL };
+	char* sLocal_160[10] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL };
 #endregion
 
 void __EntryFunction__()
@@ -119,7 +119,7 @@ void func_1()
 			{
 				if (!func_45(36) && (MISC::GET_GAME_TIMER() - iLocal_42) > iLocal_43)
 				{
-					func_44(0, 60, sLocal_50[0], 1, 0, 0, 0, 0, 1);
+					func_44(0, 60, sLocal_160[0], 1, 0, 0, 0, 0, 1);
 					func_43(36);
 					iLocal_42 = -1;
 				}
@@ -130,7 +130,7 @@ void func_1()
 				{
 					if ((MISC::GET_GAME_TIMER() - iLocal_42) > 15000)
 					{
-						func_44(0, 60, sLocal_50[iLocal_41], 1, 0, 0, 0, 0, 1);
+						func_44(0, 60, sLocal_160[iLocal_41], 1, 0, 0, 0, 0, 1);
 						iLocal_42 = -1;
 					}
 				}
@@ -747,14 +747,14 @@ void func_16(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4)
 	int iVar1;
 	int iVar2;
 	struct<16> Var3;
-	int iVar4;
-	int iVar5;
-	bool bVar6;
-	bool bVar7;
-	int iVar8;
-	int iVar9;
-	int iVar10;
-	int iVar11;
+	int iVar19;
+	int iVar20;
+	bool bVar21;
+	bool bVar22;
+	int iVar23;
+	int iVar24;
+	int iVar25;
+	int iVar26;
 	
 	if (!iParam0 < 3)
 	{
@@ -764,27 +764,27 @@ void func_16(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4)
 	StringCopy(&Var3, "UNSET", 64);
 	if (!bParam2)
 	{
-		iVar4 = (Global_45940[iParam1 /*46*/].f_42 - 1);
-		if (iVar4 < 0)
+		iVar19 = (Global_45940[iParam1 /*46*/].f_42 - 1);
+		if (iVar19 < 0)
 		{
 			return;
 		}
-		iVar5 = Global_45940[iParam1 /*46*/].f_32[iVar4];
-		iVar2 = iVar5;
-		Var3 = { func_27(Global_42615[iVar5 /*12*/].f_1) };
-		if (Global_42615[iVar5 /*12*/].f_2 == iParam0 && !Global_42615[iVar5 /*12*/].f_3 == iParam0)
+		iVar20 = Global_45940[iParam1 /*46*/].f_32[iVar19];
+		iVar2 = iVar20;
+		Var3 = { func_27(Global_42615[iVar20 /*12*/].f_1) };
+		if (Global_42615[iVar20 /*12*/].f_2 == iParam0 && !Global_42615[iVar20 /*12*/].f_3 == iParam0)
 		{
 			return;
 		}
-		iVar1 = Global_42615[iVar5 /*12*/].f_2;
+		iVar1 = Global_42615[iVar20 /*12*/].f_2;
 		iVar0 = Global_51553[iParam0 /*120*/];
-		bVar6 = false;
+		bVar21 = false;
 		while (iVar0 >= 16)
 		{
 			iVar0 = (iVar0 - 16);
-			bVar6 = true;
+			bVar21 = true;
 		}
-		if (bVar6)
+		if (bVar21)
 		{
 			if (!Global_51553[iParam0 /*120*/].f_69[iVar0])
 			{
@@ -817,7 +817,7 @@ void func_16(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4)
 				}
 		}
 		Global_51553[iParam0 /*120*/].f_18[iVar0] = iParam1;
-		Global_51553[iParam0 /*120*/].f_1[iVar0] = iVar4;
+		Global_51553[iParam0 /*120*/].f_1[iVar0] = iVar19;
 		Global_51553[iParam0 /*120*/].f_35[iVar0] = 0;
 		Global_51553[iParam0 /*120*/].f_86[iVar0] = 0;
 		Global_51553[iParam0 /*120*/].f_69[iVar0] = 0;
@@ -826,13 +826,13 @@ void func_16(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4)
 	else
 	{
 		iVar0 = Global_51553[iParam0 /*120*/];
-		bVar7 = false;
+		bVar22 = false;
 		while (iVar0 >= 16)
 		{
 			iVar0 = (iVar0 - 16);
-			bVar7 = true;
+			bVar22 = true;
 		}
-		if (bVar7)
+		if (bVar22)
 		{
 			if (!Global_51553[iParam0 /*120*/].f_69[iVar0])
 			{
@@ -864,38 +864,38 @@ void func_16(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4)
 					}
 				}
 		}
-		iVar8 = -1;
-		iVar9 = 0;
-		iVar9 = 0;
-		while (iVar9 < 7)
+		iVar23 = -1;
+		iVar24 = 0;
+		iVar24 = 0;
+		while (iVar24 < 7)
 		{
-			if (Global_51915[iVar9 /*203*/].f_1 == iParam1 && Global_51915[iVar9 /*203*/].f_9 > 0)
+			if (Global_51915[iVar24 /*203*/].f_1 == iParam1 && Global_51915[iVar24 /*203*/].f_9 > 0)
 			{
-				iVar8 = iVar9;
+				iVar23 = iVar24;
 			}
-			iVar9++;
+			iVar24++;
 		}
-		if (iVar8 == -1)
+		if (iVar23 == -1)
 		{
 			return;
 		}
-		Global_51553[iParam0 /*120*/].f_18[iVar0] = Global_51915[iVar8 /*203*/].f_1;
-		Global_51553[iParam0 /*120*/].f_1[iVar0] = (Global_51915[iVar8 /*203*/].f_9 - 1);
+		Global_51553[iParam0 /*120*/].f_18[iVar0] = Global_51915[iVar23 /*203*/].f_1;
+		Global_51553[iParam0 /*120*/].f_1[iVar0] = (Global_51915[iVar23 /*203*/].f_9 - 1);
 		Global_51553[iParam0 /*120*/].f_35[iVar0] = 0;
 		Global_51553[iParam0 /*120*/].f_86[iVar0] = 1;
 		Global_51553[iParam0 /*120*/].f_69[iVar0] = 0;
 		Global_51553[iParam0 /*120*/]++;
-		iVar10 = Global_51553[iParam0 /*120*/].f_1[iVar0];
-		iVar11 = Global_51915[iVar8 /*203*/].f_10[iVar10 /*48*/];
-		iVar2 = iVar11;
-		iVar1 = Global_42615[iVar11 /*12*/].f_2;
-		if (Global_51915[iVar8 /*203*/].f_10[(Global_51915[iVar8 /*203*/].f_9 - 1) /*48*/].f_1)
+		iVar25 = Global_51553[iParam0 /*120*/].f_1[iVar0];
+		iVar26 = Global_51915[iVar23 /*203*/].f_10[iVar25 /*48*/];
+		iVar2 = iVar26;
+		iVar1 = Global_42615[iVar26 /*12*/].f_2;
+		if (Global_51915[iVar23 /*203*/].f_10[(Global_51915[iVar23 /*203*/].f_9 - 1) /*48*/].f_1)
 		{
-			MemCopy(&Var3, {Global_51915[iVar8 /*203*/].f_10[(Global_51915[iVar8 /*203*/].f_9 - 1) /*48*/].f_2}, 16);
+			MemCopy(&Var3, {Global_51915[iVar23 /*203*/].f_10[(Global_51915[iVar23 /*203*/].f_9 - 1) /*48*/].f_2}, 16);
 		}
 		else
 		{
-			Var3 = { func_27(Global_42615[iVar11 /*12*/].f_1) };
+			Var3 = { func_27(Global_42615[iVar26 /*12*/].f_1) };
 		}
 	}
 	if (!bParam4)
@@ -1506,7 +1506,7 @@ var func_26(int iParam0)
 struct<16> func_27(int iParam0)
 {
 	struct<16> Var0;
-	struct<16> Var1;
+	struct<16> Var16;
 	
 	if (iParam0 > -1)
 	{
@@ -1514,8 +1514,8 @@ struct<16> func_27(int iParam0)
 		StringIntConCat(&Var0, iParam0, 64);
 		return Var0;
 	}
-	StringCopy(&Var1, "FAIL", 64);
-	return Var1;
+	StringCopy(&Var16, "FAIL", 64);
+	return Var16;
 }
 
 int func_28(int iParam0, bool bParam1)
@@ -1803,9 +1803,9 @@ void func_35(struct<3> Param0)
 	}
 }
 
-bool func_36(int iParam0, struct<3> Param1, float fParam2)
+bool func_36(int iParam0, struct<3> Param1, float fParam4)
 {
-	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(iParam0, true), Param1) <= (fParam2 * fParam2);
+	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(iParam0, true), Param1) <= (fParam4 * fParam4);
 }
 
 int func_37()
@@ -2156,33 +2156,33 @@ void func_48()
 	iVar0 = 0;
 	if (Global_111638.f_18569.f_388)
 	{
-		sLocal_50[0] = "TRACT_HINT1B";
+		sLocal_160[0] = "TRACT_HINT1B";
 		iLocal_43 = 300000;
 	}
 	else
 	{
-		sLocal_50[0] = "TRACT_HINT1";
+		sLocal_160[0] = "TRACT_HINT1";
 		iLocal_43 = 16000;
 	}
 	Local_49[0 /*11*/].f_3 = { 501.9415f, 5604.429f, 796.9146f };
 	Local_49[1 /*11*/].f_3 = { 2658.18f, -1361.14f, -21.63f };
-	sLocal_50[1] = "TRACT_HINT2";
+	sLocal_160[1] = "TRACT_HINT2";
 	Local_49[2 /*11*/].f_3 = { 24.7139f, 7644.334f, 18.0792f };
-	sLocal_50[2] = "TRACT_HINT3";
+	sLocal_160[2] = "TRACT_HINT3";
 	Local_49[3 /*11*/].f_3 = { -263.55f, 4729.6f, 137.37f };
-	sLocal_50[3] = "TRACT_HINT4";
+	sLocal_160[3] = "TRACT_HINT4";
 	Local_49[4 /*11*/].f_3 = { -771.98f, -685.22f, 28.86f };
-	sLocal_50[4] = "TRACT_HINT5";
+	sLocal_160[4] = "TRACT_HINT5";
 	Local_49[5 /*11*/].f_3 = { -1605.03f, 5256.55f, 1.08f };
-	sLocal_50[5] = "TRACT_HINT6";
+	sLocal_160[5] = "TRACT_HINT6";
 	Local_49[6 /*11*/].f_3 = { -1804.546f, 403.9298f, 112.1966f };
-	sLocal_50[6] = "TRACT_HINT7";
+	sLocal_160[6] = "TRACT_HINT7";
 	Local_49[7 /*11*/].f_3 = { 484.2701f, 5617.175f, 787.4708f };
-	sLocal_50[7] = "TRACT_HINT8";
+	sLocal_160[7] = "TRACT_HINT8";
 	Local_49[8 /*11*/].f_3 = { -75.1004f, -819.0673f, 325.3656f };
-	sLocal_50[8] = "TRACT_HINT9";
+	sLocal_160[8] = "TRACT_HINT9";
 	Local_49[9 /*11*/].f_3 = { -1725.34f, -189.95f, 57.52f };
-	sLocal_50[9] = "TRACT_HINT10";
+	sLocal_160[9] = "TRACT_HINT10";
 	iLocal_42 = MISC::GET_GAME_TIMER();
 	iVar0 = 0;
 	while (iVar0 < 10)

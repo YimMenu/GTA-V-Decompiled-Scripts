@@ -92,6 +92,6 @@ void __EntryFunction__()
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	uScriptParam_64 = uScriptParam_64;
+	uScriptParam_0 = uScriptParam_0;
 }
 

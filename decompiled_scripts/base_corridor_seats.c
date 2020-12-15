@@ -227,11 +227,11 @@ void func_4(var uParam0, bool bParam1)
 bool func_5(var uParam0)
 {
 	char* sVar0;
-	char* sVar1;
+	char* sVar4;
 	
 	func_7(uParam0, uParam0->f_57.f_2, &sVar0);
-	func_7(uParam0, uParam0->f_57.f_2, &sVar1);
-	return (func_6(&sVar0) || func_6(&sVar1));
+	func_7(uParam0, uParam0->f_57.f_2, &sVar4);
+	return (func_6(&sVar0) || func_6(&sVar4));
 }
 
 bool func_6(char* sParam0)
@@ -310,19 +310,19 @@ int func_10(int iParam0)
 void func_11(var uParam0)
 {
 	char* sVar0;
-	char* sVar1;
-	struct<14> Var2;
-	struct<3> Var3;
-	struct<3> Var4;
-	float fVar5;
-	int iVar6;
-	int iVar7;
-	int iVar8;
+	char* sVar16;
+	struct<14> Var20;
+	struct<3> Var34;
+	struct<3> Var37;
+	float fVar40;
+	int iVar41;
+	int iVar42;
+	int iVar43;
 	
 	func_56(uParam0);
 	func_54(uParam0);
-	Var2.f_1.f_6 = 1061158912;
-	Var2 = { *(uParam0[uParam0->f_57.f_2 /*14*/]) };
+	Var20.f_1.f_6 = 1061158912;
+	Var20 = { *(uParam0[uParam0->f_57.f_2 /*14*/]) };
 	switch (uParam0->f_57.f_4)
 	{
 		case 0:
@@ -378,13 +378,13 @@ void func_11(var uParam0)
 		
 		case 4:
 			func_41(uParam0, &sVar0);
-			func_40(uParam0, &sVar1);
-			if (Var2 != 3)
+			func_40(uParam0, &sVar16);
+			if (Var20 != 3)
 			{
-				Var3 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&sVar0, &sVar1, func_39(uParam0), func_38(uParam0), 0f, 2) };
-				Var4 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&sVar0, &sVar1, func_39(uParam0), func_38(uParam0), 0f, 2) };
-				fVar5 = Var4.f_2;
-				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), Var3, 1f, 500, fVar5, 0.15f);
+				Var34 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&sVar0, &sVar16, func_39(uParam0), func_38(uParam0), 0f, 2) };
+				Var37 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&sVar0, &sVar16, func_39(uParam0), func_38(uParam0), 0f, 2) };
+				fVar40 = Var37.f_2;
+				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), Var34, 1f, 500, fVar40, 0.15f);
 			}
 			func_52(uParam0, 5);
 			break;
@@ -392,19 +392,19 @@ void func_11(var uParam0)
 		case 5:
 			func_26(uParam0);
 			func_41(uParam0, &sVar0);
-			func_40(uParam0, &sVar1);
-			if (Var2 == 3)
+			func_40(uParam0, &sVar16);
+			if (Var20 == 3)
 			{
-				iVar6 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 1920390111);
+				iVar41 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 1920390111);
 			}
 			else
 			{
-				iVar6 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073);
+				iVar41 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073);
 			}
-			if (iVar6 != 1 && iVar6 != 0)
+			if (iVar41 != 1 && iVar41 != 0)
 			{
 				uParam0->f_57.f_1 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(func_39(uParam0), func_38(uParam0), 2, true, false, 1f, 0f, 1f);
-				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->f_57.f_1, &sVar0, &sVar1, 2f, -1000f, 13, 16, 1.5f, 0);
+				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->f_57.f_1, &sVar0, &sVar16, 2f, -1000f, 13, 16, 1.5f, 0);
 				NETWORK::NETWORK_START_SYNCHRONISED_SCENE(uParam0->f_57.f_1);
 				uParam0->f_57.f_8.f_4 = MISC::GET_GAME_TIMER();
 				func_25(&(uParam0->f_57), 8);
@@ -420,16 +420,16 @@ void func_11(var uParam0)
 			}
 			func_26(uParam0);
 			func_18(uParam0);
-			iVar7 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_57.f_1);
-			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar7))
+			iVar42 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_57.f_1);
+			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar42))
 			{
-				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar7) >= 1f)
+				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar42) >= 1f)
 				{
 					func_12(uParam0, 0);
 					func_41(uParam0, &sVar0);
-					func_40(uParam0, &sVar1);
+					func_40(uParam0, &sVar16);
 					uParam0->f_57.f_1 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(func_39(uParam0), func_38(uParam0), 2, true, false, 1f, 0f, 1f);
-					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->f_57.f_1, &sVar0, &sVar1, 4f, -1.5f, 13, 16, 1000f, 0);
+					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->f_57.f_1, &sVar0, &sVar16, 4f, -1.5f, 13, 16, 1000f, 0);
 					NETWORK::NETWORK_START_SYNCHRONISED_SCENE(uParam0->f_57.f_1);
 					func_25(&(uParam0->f_57), 8);
 					func_25(&(uParam0->f_57), 11);
@@ -451,10 +451,10 @@ void func_11(var uParam0)
 			break;
 		
 		case 8:
-			iVar8 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_57.f_1);
-			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar8))
+			iVar43 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_57.f_1);
+			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar43))
 			{
-				if ((PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar8) >= 1f || ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), 364629851)) || ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), 2116425869))
+				if ((PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar43) >= 1f || ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), 364629851)) || ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), 2116425869))
 				{
 					NETWORK::NETWORK_STOP_SYNCHRONISED_SCENE(uParam0->f_57.f_1);
 					func_4(uParam0, 1);
@@ -596,15 +596,15 @@ int func_17(int iParam0)
 void func_18(var uParam0)
 {
 	struct<3> Var0;
-	float fVar1;
+	float fVar3;
 	
 	if (uParam0->f_57.f_4 == 6)
 	{
 		Var0 = { PAD::GET_CONTROL_NORMAL(0, 218), PAD::GET_CONTROL_NORMAL(0, 219), 0f };
-		fVar1 = SYSTEM::VMAG(Var0);
+		fVar3 = SYSTEM::VMAG(Var0);
 		if ((uParam0->f_57.f_4 == 6 && !ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), -1322051853)) && !func_8(&(uParam0->f_57), 12))
 		{
-			if (fVar1 >= 0.35f)
+			if (fVar3 >= 0.35f)
 			{
 				func_23(uParam0);
 			}
@@ -723,15 +723,15 @@ bool func_22(var uParam0)
 void func_23(var uParam0)
 {
 	char* sVar0;
-	char* sVar1;
+	char* sVar16;
 	
 	if (((func_13(uParam0) != uParam0->f_57.f_8.f_1 && uParam0->f_57.f_8.f_2 < 6) && uParam0->f_57.f_8.f_2 != 3) && uParam0->f_57.f_8.f_2 != 4)
 	{
 		func_12(uParam0, 1);
 		func_41(uParam0, &sVar0);
-		func_40(uParam0, &sVar1);
+		func_40(uParam0, &sVar16);
 		uParam0->f_57.f_1 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(func_39(uParam0), func_38(uParam0), 2, true, false, 1f, 0f, 1f);
-		NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->f_57.f_1, &sVar0, &sVar1, 4f, -1.5f, 13, 16, 1000f, 0);
+		NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->f_57.f_1, &sVar0, &sVar16, 4f, -1.5f, 13, 16, 1000f, 0);
 		NETWORK::NETWORK_START_SYNCHRONISED_SCENE(uParam0->f_57.f_1);
 		func_25(&(uParam0->f_57), 8);
 		PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), false, false);
@@ -1521,7 +1521,7 @@ void func_69(var uParam0)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	struct<3> Var3;
+	struct<3> Var4;
 	
 	iVar0 = 0;
 	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
@@ -1537,8 +1537,8 @@ void func_69(var uParam0)
 					break;
 				
 				case 589125870:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.f_2 == 653923311)
+					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
+					if (Var4.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -1552,29 +1552,29 @@ void func_69(var uParam0)
 void func_70(int iParam0)
 {
 	struct<3> Var0;
-	int iVar1;
-	int iVar2;
-	bool bVar3;
+	int iVar3;
+	int iVar4;
+	bool bVar5;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_48(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
+			iVar3 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar3, false))
 				{
-					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_71(iVar2, &bVar3))
+						if (func_71(iVar4, &bVar5))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
 						}
-						if (bVar3)
+						if (bVar5)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar4);
 						}
 					}
 				}
@@ -1646,20 +1646,20 @@ void func_74()
 void func_75(int iParam0, var uParam1, int iParam2)
 {
 	struct<3> Var0;
-	float fVar1;
-	int iVar2;
+	float fVar3;
+	int iVar4;
 	
-	func_82(iParam0, &Var0, &fVar1);
-	iVar2 = 0;
-	while (iVar2 < 2)
+	func_82(iParam0, &Var0, &fVar3);
+	iVar4 = 0;
+	while (iVar4 < 2)
 	{
-		(*uParam1)[(*iParam2)[iVar2] /*14*/] = 2;
-		(uParam1[(*iParam2)[iVar2] /*14*/])->f_8 = { func_78(func_79(iVar2), fVar1) + Var0 };
-		(uParam1[(*iParam2)[iVar2] /*14*/])->f_8.f_3 = { 0f, 0f, (fVar1 + 174f) };
-		(uParam1[(*iParam2)[iVar2] /*14*/])->f_1 = { func_78(func_77(iVar2), fVar1) + Var0 };
-		(uParam1[(*iParam2)[iVar2] /*14*/])->f_1.f_3 = { func_78(func_76(iVar2), fVar1) + Var0 };
-		(uParam1[(*iParam2)[iVar2] /*14*/])->f_1.f_6 = 1.42f;
-		iVar2++;
+		(*uParam1)[(*iParam2)[iVar4] /*14*/] = 2;
+		(uParam1[(*iParam2)[iVar4] /*14*/])->f_8 = { func_78(func_79(iVar4), fVar3) + Var0 };
+		(uParam1[(*iParam2)[iVar4] /*14*/])->f_8.f_3 = { 0f, 0f, (fVar3 + 174f) };
+		(uParam1[(*iParam2)[iVar4] /*14*/])->f_1 = { func_78(func_77(iVar4), fVar3) + Var0 };
+		(uParam1[(*iParam2)[iVar4] /*14*/])->f_1.f_3 = { func_78(func_76(iVar4), fVar3) + Var0 };
+		(uParam1[(*iParam2)[iVar4] /*14*/])->f_1.f_6 = 1.42f;
+		iVar4++;
 	}
 }
 
@@ -1693,16 +1693,16 @@ Vector3 func_77(int iParam0)
 	return 0f, 0f, 0f;
 }
 
-Vector3 func_78(struct<3> Param0, float fParam1)
+Vector3 func_78(struct<3> Param0, float fParam3)
 {
 	struct<3> Var0;
-	float fVar1;
-	float fVar2;
+	float fVar3;
+	float fVar4;
 	
-	fVar1 = SYSTEM::SIN(fParam1);
-	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
-	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	fVar3 = SYSTEM::SIN(fParam3);
+	fVar4 = SYSTEM::COS(fParam3);
+	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }

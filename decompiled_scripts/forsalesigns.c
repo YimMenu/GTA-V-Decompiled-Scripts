@@ -210,7 +210,7 @@
 	var uLocal_208 = 0;
 	var uLocal_209 = 0;
 	struct<11> Local_210[15];
-	bool bLocal_211 = 0;
+	bool bLocal_376 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -328,7 +328,7 @@ void func_1()
 		iVar0++;
 	}
 	func_11();
-	if (!bLocal_211 && !bLocal_39)
+	if (!bLocal_376 && !bLocal_39)
 	{
 		if (func_2(2))
 		{
@@ -765,7 +765,7 @@ void func_11()
 				{
 					GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_41);
 				}
-				bLocal_211 = false;
+				bLocal_376 = false;
 				bLocal_39 = false;
 				iLocal_40 = 0;
 				break;
@@ -827,9 +827,9 @@ void func_14(struct<3> Param0)
 	}
 }
 
-bool func_15(int iParam0, struct<3> Param1, float fParam2)
+bool func_15(int iParam0, struct<3> Param1, float fParam4)
 {
-	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(iParam0, true), Param1) <= (fParam2 * fParam2);
+	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(iParam0, true), Param1) <= (fParam4 * fParam4);
 }
 
 void func_16(int* iParam0, var uParam1)
@@ -1694,7 +1694,7 @@ void func_49(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 float func_50(int iParam0, int iParam1, bool bParam2)
 {
 	struct<3> Var0;
-	struct<3> Var1;
+	struct<3> Var3;
 	
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0, false))
 	{
@@ -1706,13 +1706,13 @@ float func_50(int iParam0, int iParam1, bool bParam2)
 	}
 	if (!ENTITY::IS_ENTITY_DEAD(iParam1, false))
 	{
-		Var1 = { ENTITY::GET_ENTITY_COORDS(iParam1, true) };
+		Var3 = { ENTITY::GET_ENTITY_COORDS(iParam1, true) };
 	}
 	else
 	{
-		Var1 = { ENTITY::GET_ENTITY_COORDS(iParam1, false) };
+		Var3 = { ENTITY::GET_ENTITY_COORDS(iParam1, false) };
 	}
-	return MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Var1, bParam2);
+	return MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Var3, bParam2);
 }
 
 int func_51()

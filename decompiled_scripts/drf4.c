@@ -1491,7 +1491,7 @@ void func_3(var uParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	struct<3> Var2;
-	float fVar3;
+	float fVar5;
 	
 	if (iParam1 == 94)
 	{
@@ -1507,8 +1507,8 @@ void func_3(var uParam0, int iParam1)
 		else
 		{
 			Var2 = { 0f, 0f, 0f };
-			fVar3 = 0f;
-			if (!func_5(Global_111638.f_18528[iVar0], &Var2, &fVar3))
+			fVar5 = 0f;
+			if (!func_5(Global_111638.f_18528[iVar0], &Var2, &fVar5))
 			{
 				Global_111638.f_18528[iVar0] = 318;
 				func_4(&(uParam0->f_2296[iVar0]));
@@ -4417,9 +4417,9 @@ void func_90(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, va
 {
 	int iVar0;
 	struct<4> Var1;
-	var uVar2;
-	var uVar3;
-	int iVar4;
+	var uVar5;
+	var uVar6;
+	int iVar7;
 	
 	HUD::REQUEST_ADDITIONAL_TEXT("SHRINK", 0);
 	HUD::REQUEST_ADDITIONAL_TEXT("DrfAud", 6);
@@ -4430,7 +4430,7 @@ void func_90(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, va
 	func_123(uParam0, 0, PLAYER::PLAYER_PED_ID(), "MICHAEL", 0, 1);
 	func_123(uParam0, 1, 0, "FRIEDLANDER", 0, 1);
 	func_122(uParam1, uParam2, iParam3, iParam11);
-	Var1 = { func_118(iParam11, &uVar2, &uVar3, 1) };
+	Var1 = { func_118(iParam11, &uVar5, &uVar6, 1) };
 	iVar0 = func_117(&Var1);
 	func_113(uParam1, uParam2, iParam3, iVar0);
 	func_112(uParam1, uParam2, iParam3, iParam11);
@@ -4439,89 +4439,89 @@ void func_90(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, va
 	func_94(uParam4, uParam5, uParam7, uParam8, uParam6, uParam9, sParam10, iParam11);
 	func_93(uParam4, uParam5, uParam7, uParam8, uParam6, uParam9, sParam10);
 	func_91(uParam4, uParam5, uParam7, uParam8, uParam6, uParam9, iParam11);
-	iVar4 = 0;
-	while (iVar4 < 47)
+	iVar7 = 0;
+	while (iVar7 < 47)
 	{
-		if (MISC::IS_STRING_NULL_OR_EMPTY(uParam1[iVar4 /*4*/]))
+		if (MISC::IS_STRING_NULL_OR_EMPTY(uParam1[iVar7 /*4*/]))
 		{
-			iVar4 = 47;
+			iVar7 = 47;
 		}
-		iVar4++;
+		iVar7++;
 	}
-	iVar4 = 0;
-	while (iVar4 < 27)
+	iVar7 = 0;
+	while (iVar7 < 27)
 	{
-		if (MISC::IS_STRING_NULL_OR_EMPTY(uParam4[iVar4 /*4*/]))
+		if (MISC::IS_STRING_NULL_OR_EMPTY(uParam4[iVar7 /*4*/]))
 		{
-			iVar4 = 27;
+			iVar7 = 27;
 		}
-		iVar4++;
+		iVar7++;
 	}
-	iVar4 = 0;
-	while (iVar4 < 27)
+	iVar7 = 0;
+	while (iVar7 < 27)
 	{
-		if (MISC::IS_STRING_NULL_OR_EMPTY(uParam7[iVar4 /*4*/]))
+		if (MISC::IS_STRING_NULL_OR_EMPTY(uParam7[iVar7 /*4*/]))
 		{
-			iVar4 = 27;
+			iVar7 = 27;
 		}
-		iVar4++;
+		iVar7++;
 	}
 }
 
 void func_91(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, int iParam6)
 {
 	struct<2> Var0;
-	int iVar1;
-	int iVar2;
+	int iVar4;
+	int iVar5;
 	
 	switch (iParam6)
 	{
 		case 2:
 			StringCopy(&Var0, "DRF_3", 16);
-			iVar1 = 17;
-			iVar2 = 7;
+			iVar4 = 17;
+			iVar5 = 7;
 			break;
 		
 		case 3:
 			StringCopy(&Var0, "DRF_4", 16);
-			iVar1 = 6;
-			iVar2 = 17;
+			iVar4 = 6;
+			iVar5 = 17;
 			break;
 		
 		default:
 			break;
 	}
-	func_92(uParam0, uParam1, uParam4, &Var0, iVar1, iVar2, 0);
-	func_92(uParam2, uParam3, uParam5, &Var0, iVar1, iVar2, 0);
+	func_92(uParam0, uParam1, uParam4, &Var0, iVar4, iVar5, 0);
+	func_92(uParam2, uParam3, uParam5, &Var0, iVar4, iVar5, 0);
 }
 
 void func_92(var uParam0, var uParam1, var uParam2, char* sParam3, int iParam4, int iParam5, int iParam6)
 {
 	struct<4> Var0;
-	int iVar1;
-	int iVar2;
-	int iVar3;
+	int iVar4;
+	int iVar5;
+	int iVar6;
 	
-	iVar1 = iParam4;
-	while (iVar1 <= ((iParam4 + iParam5) - 1))
+	iVar4 = iParam4;
+	while (iVar4 <= ((iParam4 + iParam5) - 1))
 	{
 		StringCopy(&Var0, sParam3, 16);
 		StringConCat(&Var0, "_", 16);
-		if (iVar1 < 9 && iParam6)
+		if (iVar4 < 9 && iParam6)
 		{
 			StringConCat(&Var0, "0", 16);
 		}
-		StringIntConCat(&Var0, iVar1 + 1, 16);
+		StringIntConCat(&Var0, iVar4 + 1, 16);
 		if (HUD::DOES_TEXT_LABEL_EXIST(&Var0))
 		{
-			iVar2 = (*uParam2 + iVar3);
-			StringCopy(uParam0[iVar2 /*4*/], sParam3, 16);
-			*(uParam1[iVar2 /*4*/]) = { Var0 };
-			iVar3++;
+			iVar5 = (*uParam2 + iVar6);
+			StringCopy(uParam0[iVar5 /*4*/], sParam3, 16);
+			*(uParam1[iVar5 /*4*/]) = { Var0 };
+			iVar6++;
 		}
-		iVar1++;
+		iVar4++;
 	}
-	*uParam2 = (*uParam2 + iVar3);
+	*uParam2 = (*uParam2 + iVar6);
 }
 
 void func_93(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6)
@@ -4741,76 +4741,76 @@ void func_93(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 void func_94(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, int iParam7)
 {
 	struct<4> Var0;
-	int iVar1;
-	int iVar2;
+	int iVar4;
+	int iVar5;
 	
 	switch (iParam7)
 	{
 		case 2:
-			iVar1 = 1;
+			iVar4 = 1;
 			break;
 		
 		case 3:
-			iVar1 = 3;
+			iVar4 = 3;
 			break;
 	}
-	func_92(uParam0, uParam1, uParam4, "DRF_SEX", iVar1, 1, 0);
-	func_92(uParam2, uParam3, uParam5, "DRF_SEX", iVar1, 1, 0);
-	Var0 = { func_95(uParam6, &iVar2, iParam7, 1) };
-	func_92(uParam0, uParam1, uParam4, &Var0, 0, iVar2, 0);
-	func_92(uParam2, uParam3, uParam5, &Var0, 0, iVar2, 0);
+	func_92(uParam0, uParam1, uParam4, "DRF_SEX", iVar4, 1, 0);
+	func_92(uParam2, uParam3, uParam5, "DRF_SEX", iVar4, 1, 0);
+	Var0 = { func_95(uParam6, &iVar5, iParam7, 1) };
+	func_92(uParam0, uParam1, uParam4, &Var0, 0, iVar5, 0);
+	func_92(uParam2, uParam3, uParam5, &Var0, 0, iVar5, 0);
 }
 
 struct<4> func_95(var uParam0, var uParam1, int iParam2, bool bParam3)
 {
 	struct<4> Var0;
-	int iVar1;
+	int iVar4;
 	
 	if (func_103() <= 0)
 	{
 		if (!func_102())
 		{
-			iVar1 = func_99(1, 2, 3, 4, 12);
+			iVar4 = func_99(1, 2, 3, 4, 12);
 		}
 		else if (func_98() >= 1)
 		{
-			iVar1 = func_99(5, 6, 7, 0, 0);
+			iVar4 = func_99(5, 6, 7, 0, 0);
 		}
 		else
 		{
-			iVar1 = func_99(5, 7, 0, 0, 0);
+			iVar4 = func_99(5, 7, 0, 0, 0);
 		}
 	}
 	else if (func_103() >= 2)
 	{
-		iVar1 = func_99(10, 11, 0, 0, 0);
+		iVar4 = func_99(10, 11, 0, 0, 0);
 	}
 	else if (!func_102())
 	{
 		if (iParam2 != 4)
 		{
-			iVar1 = func_99(8, 9, 0, 0, 0);
+			iVar4 = func_99(8, 9, 0, 0, 0);
 		}
 		else
 		{
-			iVar1 = 9;
+			iVar4 = 9;
 		}
 	}
 	else if (iParam2 != 4)
 	{
-		iVar1 = func_99(8, 9, 10, 0, 0);
+		iVar4 = func_99(8, 9, 10, 0, 0);
 	}
 	else
 	{
-		iVar1 = func_99(9, 10, 0, 0, 0);
+		iVar4 = func_99(9, 10, 0, 0, 0);
 	}
-	func_97(uParam0, iVar1);
+	func_97(uParam0, iVar4);
 	if (bParam3)
 	{
-		func_96(&(Global_111638.f_19956), iVar1, 1);
+		func_96(&(Global_111638.f_19956), iVar4, 1);
 	}
 	StringCopy(&Var0, "DRF_PR_", 16);
-	switch (iVar1)
+	switch (iVar4)
 	{
 		case 1:
 			StringConCat(&Var0, "1_A", 16);
@@ -5077,124 +5077,124 @@ void func_104(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 void func_105(var uParam0, var uParam1, var uParam2, int iParam3)
 {
 	struct<4> Var0;
-	int iVar1;
-	int iVar2;
+	int iVar4;
+	int iVar5;
 	
 	switch (iParam3)
 	{
 		case 2:
-			iVar1 = 2;
+			iVar4 = 2;
 			break;
 		
 		case 3:
-			iVar1 = 3;
+			iVar4 = 3;
 			break;
 	}
-	func_92(uParam0, uParam1, uParam2, "DRF_OPW", iVar1, 1, 0);
-	Var0 = { func_106(iParam3, 0, 1, &iVar2) };
-	func_92(uParam0, uParam1, uParam2, &Var0, 0, iVar2, 0);
+	func_92(uParam0, uParam1, uParam2, "DRF_OPW", iVar4, 1, 0);
+	Var0 = { func_106(iParam3, 0, 1, &iVar5) };
+	func_92(uParam0, uParam1, uParam2, &Var0, 0, iVar5, 0);
 }
 
 struct<4> func_106(int iParam0, int iParam1, bool bParam2, var uParam3)
 {
 	struct<4> Var0;
-	int iVar1;
-	int iVar2;
-	int iVar3;
 	int iVar4;
 	int iVar5;
+	int iVar6;
+	int iVar7;
+	int iVar8;
 	
 	if ((((!func_111(&(Global_111638.f_19956), 8) && iParam1) && iParam0 != 4) && func_109(3) > 0) && MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 1f) < 0.75f)
 	{
-		iVar1 = 8;
+		iVar4 = 8;
 		*uParam3 = 4;
 	}
 	else
 	{
 		if (!func_111(&(Global_111638.f_19956), 1) && func_109(5) > 0)
 		{
-			MISC::SET_BIT(&iVar2, 1);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 1);
+			iVar6++;
 		}
 		if (!func_111(&(Global_111638.f_19956), 2) && func_109(7) >= 2)
 		{
-			MISC::SET_BIT(&iVar2, 2);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 2);
+			iVar6++;
 		}
 		if (!func_111(&(Global_111638.f_19956), 3) && ((((func_109(8) > 0 || func_109(9) > 0) && func_109(7) > 0) && iParam1) && iParam0 != 4))
 		{
-			MISC::SET_BIT(&iVar2, 3);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 3);
+			iVar6++;
 		}
 		if ((!func_111(&(Global_111638.f_19956), 4) && func_109(1) > 0) && func_109(1) < 3)
 		{
-			MISC::SET_BIT(&iVar2, 4);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 4);
+			iVar6++;
 		}
 		if (!func_111(&(Global_111638.f_19956), 5) && func_109(1) >= 3)
 		{
-			MISC::SET_BIT(&iVar2, 5);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 5);
+			iVar6++;
 		}
 		if (!func_111(&(Global_111638.f_19956), 6) && func_109(0) > 0)
 		{
-			MISC::SET_BIT(&iVar2, 6);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 6);
+			iVar6++;
 		}
 		if (!func_111(&(Global_111638.f_19956), 7))
 		{
-			MISC::SET_BIT(&iVar2, 7);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 7);
+			iVar6++;
 		}
 		if (((!func_111(&(Global_111638.f_19956), 8) && iParam1) && func_109(3) > 0) && iParam0 != 4)
 		{
-			MISC::SET_BIT(&iVar2, 8);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 8);
+			iVar6++;
 		}
 		if (!func_111(&(Global_111638.f_19956), 9))
 		{
-			MISC::SET_BIT(&iVar2, 9);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 9);
+			iVar6++;
 		}
 		if (!func_111(&(Global_111638.f_19956), 10))
 		{
-			MISC::SET_BIT(&iVar2, 10);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 10);
+			iVar6++;
 		}
 		if (!func_111(&(Global_111638.f_19956), 11))
 		{
-			MISC::SET_BIT(&iVar2, 11);
-			iVar3++;
+			MISC::SET_BIT(&iVar5, 11);
+			iVar6++;
 		}
-		if (iVar3 <= 0)
+		if (iVar6 <= 0)
 		{
 			if (iParam0 != 4)
 			{
-				iVar1 = func_108(7, 9, 10, 11, 0);
+				iVar4 = func_108(7, 9, 10, 11, 0);
 			}
 			else
 			{
-				iVar1 = func_108(7, 9, 10, 0, 0);
+				iVar4 = func_108(7, 9, 10, 0, 0);
 			}
 		}
 		else
 		{
-			iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(1, iVar3 + 1);
-			iVar5 = 1;
-			while (iVar4 > 0)
+			iVar7 = MISC::GET_RANDOM_INT_IN_RANGE(1, iVar6 + 1);
+			iVar8 = 1;
+			while (iVar7 > 0)
 			{
-				if (MISC::IS_BIT_SET(iVar2, iVar5))
+				if (MISC::IS_BIT_SET(iVar5, iVar8))
 				{
-					iVar4 = (iVar4 - 1);
-					if (iVar4 == 0)
+					iVar7 = (iVar7 - 1);
+					if (iVar7 == 0)
 					{
-						iVar1 = iVar5;
+						iVar4 = iVar8;
 					}
 				}
-				iVar5++;
+				iVar8++;
 			}
 		}
-		switch (iVar1)
+		switch (iVar4)
 		{
 			case 1:
 				*uParam3 = 5;
@@ -5243,21 +5243,21 @@ struct<4> func_106(int iParam0, int iParam1, bool bParam2, var uParam3)
 	}
 	if (bParam2)
 	{
-		func_107(&(Global_111638.f_19956), iVar1, 1);
+		func_107(&(Global_111638.f_19956), iVar4, 1);
 	}
 	StringCopy(&Var0, "DRF_OWR_", 16);
-	if (iVar1 >= 1 && iVar1 <= 3)
+	if (iVar4 >= 1 && iVar4 <= 3)
 	{
-		StringIntConCat(&Var0, iVar1, 16);
+		StringIntConCat(&Var0, iVar4, 16);
 	}
-	else if (iVar1 < 7)
+	else if (iVar4 < 7)
 	{
 		StringIntConCat(&Var0, 4, 16);
-		if (iVar1 == 4)
+		if (iVar4 == 4)
 		{
 			StringConCat(&Var0, "A", 16);
 		}
-		else if (iVar1 == 5)
+		else if (iVar4 == 5)
 		{
 			StringConCat(&Var0, "B", 16);
 		}
@@ -5269,19 +5269,19 @@ struct<4> func_106(int iParam0, int iParam1, bool bParam2, var uParam3)
 	else
 	{
 		StringIntConCat(&Var0, 7, 16);
-		if (iVar1 == 7)
+		if (iVar4 == 7)
 		{
 			StringConCat(&Var0, "A", 16);
 		}
-		else if (iVar1 == 8)
+		else if (iVar4 == 8)
 		{
 			StringConCat(&Var0, "B", 16);
 		}
-		else if (iVar1 == 9)
+		else if (iVar4 == 9)
 		{
 			StringConCat(&Var0, "C", 16);
 		}
-		else if (iVar1 == 10)
+		else if (iVar4 == 10)
 		{
 			StringConCat(&Var0, "D", 16);
 		}
@@ -5314,7 +5314,7 @@ int func_108(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	int iVar0;
 	int iVar1;
 	int iVar2[12];
-	bool bVar3;
+	bool bVar15;
 	
 	iVar0 = 0;
 	while (iVar0 < 12)
@@ -5325,29 +5325,29 @@ int func_108(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	if ((iParam0 > 0 && iParam0 < 12) && !func_111(&(Global_111638.f_19956), iParam0))
 	{
 		iVar2[iParam0] = 0;
-		bVar3 = true;
+		bVar15 = true;
 	}
 	if ((iParam1 > 0 && iParam1 < 12) && !func_111(&(Global_111638.f_19956), iParam1))
 	{
 		iVar2[iParam1] = 0;
-		bVar3 = true;
+		bVar15 = true;
 	}
 	if ((iParam2 > 0 && iParam2 < 12) && !func_111(&(Global_111638.f_19956), iParam2))
 	{
 		iVar2[iParam2] = 0;
-		bVar3 = true;
+		bVar15 = true;
 	}
 	if ((iParam3 > 0 && iParam3 < 12) && !func_111(&(Global_111638.f_19956), iParam3))
 	{
 		iVar2[iParam3] = 0;
-		bVar3 = true;
+		bVar15 = true;
 	}
 	if ((iParam4 > 0 && iParam4 < 12) && !func_111(&(Global_111638.f_19956), iParam4))
 	{
 		iVar2[iParam4] = 0;
-		bVar3 = true;
+		bVar15 = true;
 	}
-	if (!bVar3)
+	if (!bVar15)
 	{
 		if (iParam0 > 0 && iParam0 < 12)
 		{
@@ -5465,11 +5465,11 @@ bool func_111(var uParam0, int iParam1)
 void func_112(var uParam0, var uParam1, var uParam2, int iParam3)
 {
 	struct<4> Var0;
-	int iVar1;
-	int iVar2;
+	int iVar4;
+	int iVar5;
 	
-	Var0 = { func_118(iParam3, &iVar1, &iVar2, 1) };
-	func_92(uParam0, uParam1, uParam2, &Var0, iVar1, iVar2, 0);
+	Var0 = { func_118(iParam3, &iVar4, &iVar5, 1) };
+	func_92(uParam0, uParam1, uParam2, &Var0, iVar4, iVar5, 0);
 }
 
 void func_113(var uParam0, var uParam1, var uParam2, int iParam3)
@@ -5687,24 +5687,24 @@ int func_121(int iParam0)
 void func_122(var uParam0, var uParam1, var uParam2, int iParam3)
 {
 	struct<4> Var0;
-	int iVar1;
+	int iVar4;
 	
 	switch (iParam3)
 	{
 		case 2:
 			StringCopy(&Var0, "DRF_3", 16);
-			iVar1 = 17;
+			iVar4 = 17;
 			break;
 		
 		case 3:
 			StringCopy(&Var0, "DRF_4", 16);
-			iVar1 = 6;
+			iVar4 = 6;
 			break;
 		
 		default:
 			break;
 	}
-	func_92(uParam0, uParam1, uParam2, &Var0, 0, iVar1, 0);
+	func_92(uParam0, uParam1, uParam2, &Var0, 0, iVar4, 0);
 	switch (iParam3)
 	{
 		case 2:

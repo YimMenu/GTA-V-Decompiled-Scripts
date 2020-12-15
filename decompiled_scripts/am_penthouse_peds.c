@@ -22,9 +22,9 @@
 	int iLocal_20 = 0;
 	int iLocal_21 = 0;
 	struct<3> Local_22 = { 0, 0, -1 } ;
-	struct<13> Local_23[50];
-	int iLocal_24 = 0;
-	var uLocal_25 = 0;
+	struct<13> Local_25[50];
+	int iScriptParam_0 = 0;
+	var uScriptParam_1 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -49,7 +49,7 @@ void __EntryFunction__()
 		{
 			if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 			{
-				Local_22.f_1 = func_53(iScriptParam_24);
+				Local_22.f_1 = func_53(iScriptParam_0);
 				Local_22.f_2 = 0;
 				Local_22.x = 1;
 			}
@@ -89,9 +89,9 @@ void func_1()
 		iVar0 = func_2();
 		if (iVar0 > -1)
 		{
-			if (ENTITY::DOES_ENTITY_EXIST(Local_23[iVar0 /*13*/]) && !ENTITY::IS_ENTITY_DEAD(Local_23[iVar0 /*13*/], false))
+			if (ENTITY::DOES_ENTITY_EXIST(Local_25[iVar0 /*13*/]) && !ENTITY::IS_ENTITY_DEAD(Local_25[iVar0 /*13*/], false))
 			{
-				AUDIO::PLAY_STREAM_FROM_PED(Local_23[iVar0 /*13*/]);
+				AUDIO::PLAY_STREAM_FROM_PED(Local_25[iVar0 /*13*/]);
 				iLocal_21++;
 			}
 		}
@@ -119,9 +119,9 @@ int func_2()
 	iVar3 = 0;
 	while (iVar3 < 50)
 	{
-		if (Local_23[iVar3 /*13*/].f_12 <= Local_22.f_1)
+		if (Local_25[iVar3 /*13*/].f_12 <= Local_22.f_1)
 		{
-			fVar1 = SYSTEM::VDIST(Local_23[iVar3 /*13*/].f_6, 945f, 15f, 117f);
+			fVar1 = SYSTEM::VDIST(Local_25[iVar3 /*13*/].f_6, 945f, 15f, 117f);
 			if (fVar1 < fVar0)
 			{
 				fVar0 = fVar1;
@@ -140,17 +140,17 @@ void func_3()
 	iVar0 = 0;
 	while (iVar0 < 50)
 	{
-		if (func_30(&(Local_23[iVar0 /*13*/])))
+		if (func_30(&(Local_25[iVar0 /*13*/])))
 		{
-			if (!ENTITY::DOES_ENTITY_EXIST(Local_23[iVar0 /*13*/]))
+			if (!ENTITY::DOES_ENTITY_EXIST(Local_25[iVar0 /*13*/]))
 			{
-				func_11(&(Local_23[iVar0 /*13*/]));
+				func_11(&(Local_25[iVar0 /*13*/]));
 			}
-			else if (ENTITY::IS_ENTITY_DEAD(Local_23[iVar0 /*13*/], false))
+			else if (ENTITY::IS_ENTITY_DEAD(Local_25[iVar0 /*13*/], false))
 			{
-				func_10(&(Local_23[iVar0 /*13*/]));
+				func_10(&(Local_25[iVar0 /*13*/]));
 			}
-			func_4(&(Local_23[iVar0 /*13*/]));
+			func_4(&(Local_25[iVar0 /*13*/]));
 		}
 		iVar0++;
 	}
@@ -173,10 +173,10 @@ void func_5(var uParam0)
 	int iVar3;
 	int iVar4;
 	int iVar5[4];
-	int iVar6;
-	int iVar7;
-	int iVar8;
-	int iVar9;
+	int iVar10;
+	int iVar11;
+	int iVar12;
+	int iVar13;
 	
 	sVar0 = func_9(uParam0);
 	sVar1 = func_8(uParam0);
@@ -204,20 +204,20 @@ void func_5(var uParam0)
 				iVar5[1] = 1;
 				iVar5[2] = 2;
 				iVar5[3] = 3;
-				iVar8 = 0;
-				while (iVar8 < 10)
+				iVar12 = 0;
+				while (iVar12 < 10)
 				{
-					iVar6 = MISC::GET_RANDOM_INT_IN_RANGE(0, 4);
-					iVar7 = MISC::GET_RANDOM_INT_IN_RANGE(0, 4);
-					iVar9 = iVar5[iVar6];
-					iVar5[iVar6] = iVar5[iVar7];
-					iVar5[iVar7] = iVar9;
-					iVar8++;
+					iVar10 = MISC::GET_RANDOM_INT_IN_RANGE(0, 4);
+					iVar11 = MISC::GET_RANDOM_INT_IN_RANGE(0, 4);
+					iVar13 = iVar5[iVar10];
+					iVar5[iVar10] = iVar5[iVar11];
+					iVar5[iVar11] = iVar13;
+					iVar12++;
 				}
-				iVar8 = 0;
-				while (iVar8 < 4)
+				iVar12 = 0;
+				while (iVar12 < 4)
 				{
-					switch (iVar5[iVar8])
+					switch (iVar5[iVar12])
 					{
 						case 0:
 							TASK::TASK_PLAY_ANIM(0, sVar0, "IDLE_A", 8f, -8f, -1, 0, 0f, false, false, false);
@@ -235,7 +235,7 @@ void func_5(var uParam0)
 							TASK::TASK_PLAY_ANIM(0, sVar0, "IDLE_D", 8f, -8f, -1, 0, 0f, false, false, false);
 							break;
 					}
-					iVar8++;
+					iVar12++;
 				}
 			}
 			TASK::SET_SEQUENCE_TO_REPEAT(iVar4, true);
@@ -680,19 +680,19 @@ void func_18(int iParam0, int* iParam1, int* iParam2)
 {
 	int iVar0;
 	struct<21> Var1;
-	int iVar2;
-	int iVar3;
+	int iVar22;
+	int iVar23;
 	
 	Var1 = 10;
 	iVar0 = 0;
 	while (iVar0 < 12)
 	{
-		iVar2 = PED::GET_PED_DRAWABLE_VARIATION(iParam0, iVar0);
-		iVar3 = PED::GET_PED_TEXTURE_VARIATION(iParam0, iVar0);
+		iVar22 = PED::GET_PED_DRAWABLE_VARIATION(iParam0, iVar0);
+		iVar23 = PED::GET_PED_TEXTURE_VARIATION(iParam0, iVar0);
 		if (iVar0 < 10)
 		{
-			Var1[iVar0 /*2*/] = iVar2;
-			Var1[iVar0 /*2*/].f_1 = iVar3;
+			Var1[iVar0 /*2*/] = iVar22;
+			Var1[iVar0 /*2*/].f_1 = iVar23;
 		}
 		iVar0++;
 	}
@@ -943,7 +943,7 @@ void func_34()
 	iVar0 = 0;
 	while (iVar0 < 50)
 	{
-		func_10(&(Local_23[iVar0 /*13*/]));
+		func_10(&(Local_25[iVar0 /*13*/]));
 		iVar0++;
 	}
 }
@@ -1058,7 +1058,7 @@ void func_43(var uParam0)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	struct<3> Var3;
+	struct<3> Var4;
 	
 	iVar0 = 0;
 	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
@@ -1074,8 +1074,8 @@ void func_43(var uParam0)
 					break;
 				
 				case 589125870:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.f_2 == 653923311)
+					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
+					if (Var4.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -1089,29 +1089,29 @@ void func_43(var uParam0)
 void func_44(int iParam0)
 {
 	struct<3> Var0;
-	int iVar1;
-	int iVar2;
-	bool bVar3;
+	int iVar3;
+	int iVar4;
+	bool bVar5;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_46(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
+			iVar3 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar3, false))
 				{
-					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_45(iVar2, &bVar3))
+						if (func_45(iVar4, &bVar5))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
 						}
-						if (bVar3)
+						if (bVar5)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar4);
 						}
 					}
 				}
@@ -1197,7 +1197,7 @@ void func_49()
 	iVar0 = 0;
 	while (iVar0 < 50)
 	{
-		func_29(&(Local_23[iVar0 /*13*/]));
+		func_29(&(Local_25[iVar0 /*13*/]));
 		iVar0++;
 	}
 }
@@ -1209,7 +1209,7 @@ void func_50()
 	iVar0 = 0;
 	while (iVar0 < 50)
 	{
-		func_51(&(Local_23[iVar0 /*13*/]), iVar0);
+		func_51(&(Local_25[iVar0 /*13*/]), iVar0);
 		iVar0++;
 	}
 }

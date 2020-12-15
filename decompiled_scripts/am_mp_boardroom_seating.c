@@ -117,8 +117,8 @@
 	var uLocal_115 = 0;
 	int iLocal_116 = 0;
 	int iLocal_117[7] = { 0, 0, 0, 0, 0, 0, 0 };
-	int iLocal_118[32] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
-	struct<7> Local_119 = { 0, 0, 0, 0, -1, 0, -1 } ;
+	int iLocal_125[32] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
+	struct<7> Local_158 = { 0, 0, 0, 0, -1, 0, -1 } ;
 #endregion
 
 void __EntryFunction__()
@@ -570,7 +570,7 @@ void func_16(var uParam0)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	struct<3> Var3;
+	struct<3> Var4;
 	
 	iVar0 = 0;
 	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
@@ -586,8 +586,8 @@ void func_16(var uParam0)
 					break;
 				
 				case 589125870:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.f_2 == 653923311)
+					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
+					if (Var4.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -601,29 +601,29 @@ void func_16(var uParam0)
 void func_17(int iParam0)
 {
 	struct<3> Var0;
-	int iVar1;
-	int iVar2;
-	bool bVar3;
+	int iVar3;
+	int iVar4;
+	bool bVar5;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_3(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
+			iVar3 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar3, false))
 				{
-					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_18(iVar2, &bVar3))
+						if (func_18(iVar4, &bVar5))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
 						}
-						if (bVar3)
+						if (bVar5)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar4);
 						}
 					}
 				}
@@ -664,7 +664,7 @@ void func_19()
 	int iVar1;
 	int iVar2;
 	struct<3> Var3;
-	struct<3> Var4;
+	struct<3> Var6;
 	
 	iVar0 = MISC::GET_HASH_KEY("vw_prop_vw_offchair_01");
 	if (func_1(PLAYER::PLAYER_ID()))
@@ -689,14 +689,14 @@ void func_19()
 			if (NETWORK::CAN_REGISTER_MISSION_OBJECTS(1))
 			{
 				Var3 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(func_22(iVar1, 0, 0), "enter_chair", func_21(iVar1, 1), func_20(iVar1), 0f, 2) };
-				Var4 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(func_22(iVar1, 0, 0), "enter_chair", func_21(iVar1, 1), func_20(iVar1), 0f, 2) };
+				Var6 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(func_22(iVar1, 0, 0), "enter_chair", func_21(iVar1, 1), func_20(iVar1), 0f, 2) };
 				iVar2 = OBJECT::CREATE_OBJECT(iVar0, Var3, true, true, false);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);
 				ENTITY::SET_ENTITY_CAN_BE_DAMAGED(iVar2, false);
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar2, true);
 				ENTITY::_0x352E2B5CF420BF3B(iVar2, 1);
 				ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iVar2, Var3, false, false, true);
-				ENTITY::SET_ENTITY_ROTATION(iVar2, Var4, 2, true);
+				ENTITY::SET_ENTITY_ROTATION(iVar2, Var6, 2, true);
 				ENTITY::FREEZE_ENTITY_POSITION(iVar2, true);
 				iLocal_117[iVar1] = NETWORK::OBJ_TO_NET(iVar2);
 				STREAMING::REMOVE_ANIM_DICT(func_22(iVar1, 0, 0));
@@ -1118,103 +1118,103 @@ void func_25()
 	char* sVar3;
 	int iVar4;
 	struct<3> Var5;
-	struct<3> Var6;
-	int iVar7;
-	int iVar8;
-	int iVar9;
-	int iVar10;
+	struct<3> Var8;
+	int iVar11;
+	int iVar12;
+	int iVar13;
+	int iVar14;
 	
 	func_57();
 	iVar0 = 0;
-	if (func_56() || (!func_54() && Local_119 > 2))
+	if (func_56() || (!func_54() && Local_158 > 2))
 	{
 		func_52(1);
 	}
-	switch (Local_119)
+	switch (Local_158)
 	{
 		case 0:
 			func_51(1);
 			break;
 		
 		case 1:
-			if (((((((((((((func_3(PLAYER::PLAYER_ID(), 1, 1) && !Global_262145.f_26139) && PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID())) && !func_50()) && !func_49()) && !MISC::IS_BIT_SET(Global_1676377.f_4, 2)) && !PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID())) && func_46(PLAYER::PLAYER_PED_ID()) <= 9) && !Global_2405072.f_2672) && !func_45(PLAYER::PLAYER_ID())) && func_42(PLAYER::PLAYER_ID(), -1, 1)) && func_41()) && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false)) && func_40(ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), Local_119.f_2, 45f))
+			if (((((((((((((func_3(PLAYER::PLAYER_ID(), 1, 1) && !Global_262145.f_26139) && PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID())) && !func_50()) && !func_49()) && !MISC::IS_BIT_SET(Global_1676377.f_4, 2)) && !PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID())) && func_46(PLAYER::PLAYER_PED_ID()) <= 9) && !Global_2405072.f_2672) && !func_45(PLAYER::PLAYER_ID())) && func_42(PLAYER::PLAYER_ID(), -1, 1)) && func_41()) && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false)) && func_40(ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), Local_158.f_2, 45f))
 			{
-				if (Local_119.f_6 == -1)
+				if (Local_158.f_6 == -1)
 				{
-					if ((Local_119.f_4 == 3 && func_34() != PLAYER::PLAYER_ID()) && !func_1(PLAYER::PLAYER_ID()))
+					if ((Local_158.f_4 == 3 && func_34() != PLAYER::PLAYER_ID()) && !func_1(PLAYER::PLAYER_ID()))
 					{
 						func_33("MPJAC_NO_SIT");
 					}
 					else
 					{
-						func_32(&(Local_119.f_6), 4, "MPJAC_SIT", 0, 0, 0, 0);
+						func_32(&(Local_158.f_6), 4, "MPJAC_SIT", 0, 0, 0, 0);
 					}
 				}
-				else if (func_30(Local_119.f_6, 1))
+				else if (func_30(Local_158.f_6, 1))
 				{
 					if (func_29("MPJAC_NO_SIT"))
 					{
 						HUD::CLEAR_HELP(true);
 					}
-					func_27(&(Local_119.f_6));
-					Local_119.f_6 = -1;
+					func_27(&(Local_158.f_6));
+					Local_158.f_6 = -1;
 					PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 185, true);
 					MISC::SET_BIT(&(Global_1676377.f_6), 11);
 					if (func_1(PLAYER::PLAYER_ID()))
 					{
-						switch (Local_119.f_4)
+						switch (Local_158.f_4)
 						{
 							case 0:
-								Local_119.f_1 = 0;
+								Local_158.f_1 = 0;
 								break;
 							
 							case 1:
-								Local_119.f_1 = 1;
+								Local_158.f_1 = 1;
 								break;
 							
 							case 2:
-								Local_119.f_1 = 2;
+								Local_158.f_1 = 2;
 								break;
 							
 							case 3:
-								Local_119.f_1 = 0;
+								Local_158.f_1 = 0;
 								break;
 							
 							case 4:
-								Local_119.f_1 = 1;
+								Local_158.f_1 = 1;
 								break;
 						}
 					}
 					else
 					{
-						switch (Local_119.f_4)
+						switch (Local_158.f_4)
 						{
 							case 0:
-								Local_119.f_1 = 0;
+								Local_158.f_1 = 0;
 								break;
 							
 							case 1:
-								Local_119.f_1 = 1;
+								Local_158.f_1 = 1;
 								break;
 							
 							case 2:
-								Local_119.f_1 = 2;
+								Local_158.f_1 = 2;
 								break;
 							
 							case 3:
-								Local_119.f_1 = 0;
+								Local_158.f_1 = 0;
 								break;
 							
 							case 4:
-								Local_119.f_1 = 0;
+								Local_158.f_1 = 0;
 								break;
 							
 							case 5:
-								Local_119.f_1 = 2;
+								Local_158.f_1 = 2;
 								break;
 							
 							case 6:
-								Local_119.f_1 = 1;
+								Local_158.f_1 = 1;
 								break;
 							}
 					}
@@ -1223,10 +1223,10 @@ void func_25()
 			}
 			else
 			{
-				if (Local_119.f_6 != -1)
+				if (Local_158.f_6 != -1)
 				{
-					func_27(&(Local_119.f_6));
-					Local_119.f_6 = -1;
+					func_27(&(Local_158.f_6));
+					Local_158.f_6 = -1;
 				}
 				if (func_29("MPJAC_NO_SIT"))
 				{
@@ -1236,43 +1236,43 @@ void func_25()
 			break;
 		
 		case 2:
-			if (Local_119.f_4 != 3 || func_1(PLAYER::PLAYER_ID()))
+			if (Local_158.f_4 != 3 || func_1(PLAYER::PLAYER_ID()))
 			{
-				STREAMING::REQUEST_ANIM_DICT(func_22(Local_119.f_4, Local_119.f_1, 0));
-				STREAMING::REQUEST_ANIM_DICT(func_22(Local_119.f_4, Local_119.f_1, 1));
-				STREAMING::REQUEST_ANIM_DICT(func_22(Local_119.f_4, Local_119.f_1, 2));
-				if ((STREAMING::HAS_ANIM_DICT_LOADED(func_22(Local_119.f_4, Local_119.f_1, 0)) && STREAMING::HAS_ANIM_DICT_LOADED(func_22(Local_119.f_4, Local_119.f_1, 1))) && STREAMING::HAS_ANIM_DICT_LOADED(func_22(Local_119.f_4, Local_119.f_1, 2)))
+				STREAMING::REQUEST_ANIM_DICT(func_22(Local_158.f_4, Local_158.f_1, 0));
+				STREAMING::REQUEST_ANIM_DICT(func_22(Local_158.f_4, Local_158.f_1, 1));
+				STREAMING::REQUEST_ANIM_DICT(func_22(Local_158.f_4, Local_158.f_1, 2));
+				if ((STREAMING::HAS_ANIM_DICT_LOADED(func_22(Local_158.f_4, Local_158.f_1, 0)) && STREAMING::HAS_ANIM_DICT_LOADED(func_22(Local_158.f_4, Local_158.f_1, 1))) && STREAMING::HAS_ANIM_DICT_LOADED(func_22(Local_158.f_4, Local_158.f_1, 2)))
 				{
 					iVar4 = 1;
 				}
 			}
 			else
 			{
-				STREAMING::REQUEST_ANIM_DICT(func_22(Local_119.f_4, 0, 0));
-				if (STREAMING::HAS_ANIM_DICT_LOADED(func_22(Local_119.f_4, 0, 0)))
+				STREAMING::REQUEST_ANIM_DICT(func_22(Local_158.f_4, 0, 0));
+				if (STREAMING::HAS_ANIM_DICT_LOADED(func_22(Local_158.f_4, 0, 0)))
 				{
 					iVar4 = 1;
 				}
 			}
 			if (iVar4 && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
-				Var5 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(func_22(Local_119.f_4, Local_119.f_1, 0), "enter", func_21(Local_119.f_4, 1), func_20(Local_119.f_4), 0f, 2) };
-				Var6 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(func_22(Local_119.f_4, Local_119.f_1, 0), "enter", func_21(Local_119.f_4, 1), func_20(Local_119.f_4), 0f, 2) };
-				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), Var5, 1f, 20000, Var6.f_2, 0.05f);
+				Var5 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(func_22(Local_158.f_4, Local_158.f_1, 0), "enter", func_21(Local_158.f_4, 1), func_20(Local_158.f_4), 0f, 2) };
+				Var8 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(func_22(Local_158.f_4, Local_158.f_1, 0), "enter", func_21(Local_158.f_4, 1), func_20(Local_158.f_4), 0f, 2) };
+				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), Var5, 1f, 20000, Var8.f_2, 0.05f);
 				func_51(3);
 			}
 			break;
 		
 		case 3:
-			if (!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]))
+			if (!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]))
 			{
-				NETWORK::NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]);
+				NETWORK::NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]);
 			}
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
-				if ((NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]) && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073) != 1) && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073) != 0)
+				if ((NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]) && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073) != 1) && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073) != 0)
 				{
-					if (Local_119.f_4 == 3 && !func_1(PLAYER::PLAYER_ID()))
+					if (Local_158.f_4 == 3 && !func_1(PLAYER::PLAYER_ID()))
 					{
 						sVar2 = "enter_b";
 						sVar3 = "enter_b_chair";
@@ -1282,41 +1282,41 @@ void func_25()
 						sVar2 = "enter";
 						sVar3 = "enter_chair";
 					}
-					Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, true, false, 1f, 0f, 1f);
-					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), sVar2, 2f, -2f, 13, 16, 1000f, 0);
-					NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), sVar3, 2f, -2f, 13);
-					NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
+					Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, true, false, 1f, 0f, 1f);
+					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), sVar2, 2f, -2f, 13, 16, 1000f, 0);
+					NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), sVar3, 2f, -2f, 13);
+					NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
 					func_51(4);
 				}
 			}
 			break;
 		
 		case 4:
-			if (!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]))
+			if (!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]))
 			{
-				NETWORK::NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]);
+				NETWORK::NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]);
 			}
-			if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]))
+			if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]))
 			{
-				iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_119.f_5);
+				iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_158.f_5);
 				if (iVar1 == -1 || PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar1) >= 0.99f)
 				{
-					Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, true, false, 1f, 0f, 1f);
-					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), "base", 2f, -2f, 13, 16, 1000f, 0);
-					NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), "base_chair", 2f, -2f, 13);
-					NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
+					Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, true, false, 1f, 0f, 1f);
+					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), "base", 2f, -2f, 13, 16, 1000f, 0);
+					NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), "base_chair", 2f, -2f, 13);
+					NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
 					func_51(5);
 				}
 			}
 			break;
 		
 		case 5:
-			if (((!MISC::IS_BIT_SET(Local_119.f_3, 2) && !MISC::IS_BIT_SET(Local_119.f_3, 0)) && !MISC::IS_BIT_SET(Local_119.f_3, 1)) && NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(iLocal_117[3]))
+			if (((!MISC::IS_BIT_SET(Local_158.f_3, 2) && !MISC::IS_BIT_SET(Local_158.f_3, 0)) && !MISC::IS_BIT_SET(Local_158.f_3, 1)) && NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(iLocal_117[3]))
 			{
-				iVar7 = func_34();
-				if (iVar7 != func_4() && func_3(iVar7, 1, 1))
+				iVar11 = func_34();
+				if (iVar11 != func_4() && func_3(iVar11, 1, 1))
 				{
-					if (iLocal_118[iVar7] == 3 && !func_1(PLAYER::PLAYER_ID()))
+					if (iLocal_125[iVar11] == 3 && !func_1(PLAYER::PLAYER_ID()))
 					{
 						if (!PED::IS_PED_HEADTRACKING_ENTITY(PLAYER::PLAYER_PED_ID(), NETWORK::NET_TO_OBJ(iLocal_117[3])))
 						{
@@ -1339,21 +1339,21 @@ void func_25()
 					}
 				}
 			}
-			if (!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]))
+			if (!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]))
 			{
-				NETWORK::NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]);
+				NETWORK::NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]);
 			}
-			if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]))
+			if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]))
 			{
-				iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_119.f_5);
+				iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_158.f_5);
 				if (iVar1 == -1 || PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar1) >= 0.99f)
 				{
-					if (!MISC::IS_BIT_SET(Local_119.f_3, 2))
+					if (!MISC::IS_BIT_SET(Local_158.f_3, 2))
 					{
-						iVar8 = MISC::GET_RANDOM_INT_IN_RANGE(0, 3);
-						if ((!MISC::IS_BIT_SET(Local_119.f_3, 0) && !MISC::IS_BIT_SET(Local_119.f_3, 1)) && !func_1(PLAYER::PLAYER_ID()))
+						iVar12 = MISC::GET_RANDOM_INT_IN_RANGE(0, 3);
+						if ((!MISC::IS_BIT_SET(Local_158.f_3, 0) && !MISC::IS_BIT_SET(Local_158.f_3, 1)) && !func_1(PLAYER::PLAYER_ID()))
 						{
-							switch (iVar8)
+							switch (iVar12)
 							{
 								case 0:
 									sVar2 = "idle_a";
@@ -1373,7 +1373,7 @@ void func_25()
 						}
 						else
 						{
-							switch (iVar8)
+							switch (iVar12)
 							{
 								case 0:
 									sVar2 = "idle_a";
@@ -1391,111 +1391,111 @@ void func_25()
 									break;
 								}
 						}
-						Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, true, false, 1f, 0f, 1f);
-						if (MISC::IS_BIT_SET(Local_119.f_3, 0))
+						Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, true, false, 1f, 0f, 1f);
+						if (MISC::IS_BIT_SET(Local_158.f_3, 0))
 						{
-							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), sVar2, 2f, -2f, 13, 16, 1000f, 0);
-							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), sVar3, 2f, -2f, 13);
+							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), sVar2, 2f, -2f, 13, 16, 1000f, 0);
+							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), sVar3, 2f, -2f, 13);
 						}
-						else if (MISC::IS_BIT_SET(Local_119.f_3, 1))
+						else if (MISC::IS_BIT_SET(Local_158.f_3, 1))
 						{
-							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), sVar2, 2f, -2f, 13, 16, 1000f, 0);
-							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), sVar3, 2f, -2f, 13);
+							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), sVar2, 2f, -2f, 13, 16, 1000f, 0);
+							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), sVar3, 2f, -2f, 13);
 						}
 						else
 						{
-							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), sVar2, 2f, -2f, 13, 16, 1000f, 0);
-							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), sVar3, 2f, -2f, 13);
+							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), sVar2, 2f, -2f, 13, 16, 1000f, 0);
+							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), sVar3, 2f, -2f, 13);
 						}
-						NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
+						NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 						{
 							TASK::TASK_CLEAR_LOOK_AT(PLAYER::PLAYER_PED_ID());
 						}
-						MISC::SET_BIT(&(Local_119.f_3), 2);
+						MISC::SET_BIT(&(Local_158.f_3), 2);
 					}
 					else
 					{
-						Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, true, false, 1f, 0f, 1f);
-						if (MISC::IS_BIT_SET(Local_119.f_3, 0))
+						Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, true, false, 1f, 0f, 1f);
+						if (MISC::IS_BIT_SET(Local_158.f_3, 0))
 						{
-							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), "base", 2f, -2f, 13, 16, 1000f, 0);
-							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), "base_chair", 2f, -2f, 13);
+							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), "base", 2f, -2f, 13, 16, 1000f, 0);
+							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), "base_chair", 2f, -2f, 13);
 						}
-						else if (MISC::IS_BIT_SET(Local_119.f_3, 1))
+						else if (MISC::IS_BIT_SET(Local_158.f_3, 1))
 						{
-							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), "base", 2f, -2f, 13, 16, 1000f, 0);
-							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), "base_chair", 2f, -2f, 13);
+							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), "base", 2f, -2f, 13, 16, 1000f, 0);
+							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), "base_chair", 2f, -2f, 13);
 						}
 						else
 						{
-							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), "base", 2f, -2f, 13, 16, 1000f, 0);
-							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), "base_chair", 2f, -2f, 13);
+							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), "base", 2f, -2f, 13, 16, 1000f, 0);
+							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), "base_chair", 2f, -2f, 13);
 						}
-						NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
-						MISC::CLEAR_BIT(&(Local_119.f_3), 2);
+						NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
+						MISC::CLEAR_BIT(&(Local_158.f_3), 2);
 					}
 				}
 				if ((((func_3(PLAYER::PLAYER_ID(), 1, 1) && !func_50()) && !func_49()) && !func_45(PLAYER::PLAYER_ID())) && !func_26())
 				{
-					if (PAD::_0x6CD79468A1E595C6(2) || MISC::IS_BIT_SET(Local_119.f_3, 2))
+					if (PAD::_0x6CD79468A1E595C6(2) || MISC::IS_BIT_SET(Local_158.f_3, 2))
 					{
-						if (Local_119.f_6 != -1)
+						if (Local_158.f_6 != -1)
 						{
-							func_27(&(Local_119.f_6));
-							Local_119.f_6 = -1;
+							func_27(&(Local_158.f_6));
+							Local_158.f_6 = -1;
 						}
 					}
-					if (Local_119.f_6 == -1)
+					if (Local_158.f_6 == -1)
 					{
-						if (!MISC::IS_BIT_SET(Local_119.f_3, 2))
+						if (!MISC::IS_BIT_SET(Local_158.f_3, 2))
 						{
 							if (PAD::_IS_USING_KEYBOARD(2))
 							{
-								if (Local_119.f_4 == 3 && !func_1(PLAYER::PLAYER_ID()))
+								if (Local_158.f_4 == 3 && !func_1(PLAYER::PLAYER_ID()))
 								{
-									func_32(&(Local_119.f_6), 4, "MPOFSEAT_PCEXIT", 0, 0, 0, 0);
+									func_32(&(Local_158.f_6), 4, "MPOFSEAT_PCEXIT", 0, 0, 0, 0);
 								}
 								else
 								{
-									func_32(&(Local_119.f_6), 4, "MPOFSEAT_EX_PCC", 0, 0, 0, 0);
+									func_32(&(Local_158.f_6), 4, "MPOFSEAT_EX_PCC", 0, 0, 0, 0);
 								}
 							}
-							else if (Local_119.f_4 == 3 && !func_1(PLAYER::PLAYER_ID()))
+							else if (Local_158.f_4 == 3 && !func_1(PLAYER::PLAYER_ID()))
 							{
-								func_32(&(Local_119.f_6), 4, "MPOFSEAT_EXIT", 0, 0, 0, 0);
+								func_32(&(Local_158.f_6), 4, "MPOFSEAT_EXIT", 0, 0, 0, 0);
 							}
 							else
 							{
-								func_32(&(Local_119.f_6), 4, "MPOFSEAT_EXIT_C", 0, 0, 0, 0);
+								func_32(&(Local_158.f_6), 4, "MPOFSEAT_EXIT_C", 0, 0, 0, 0);
 							}
 						}
 					}
 					else
 					{
-						iVar10 = PAD::GET_CONTROL_VALUE(2, 30);
+						iVar14 = PAD::GET_CONTROL_VALUE(2, 30);
 						if (PAD::_IS_USING_KEYBOARD(2))
 						{
-							iVar9 = 225;
+							iVar13 = 225;
 						}
 						else
 						{
-							iVar9 = 190;
+							iVar13 = 190;
 						}
-						if (PAD::IS_DISABLED_CONTROL_JUST_PRESSED(2, iVar9))
+						if (PAD::IS_DISABLED_CONTROL_JUST_PRESSED(2, iVar13))
 						{
-							if (Local_119.f_4 == 3 && !func_1(PLAYER::PLAYER_ID()))
+							if (Local_158.f_4 == 3 && !func_1(PLAYER::PLAYER_ID()))
 							{
 								sVar2 = "exit_b";
 								sVar3 = "exit_b_chair";
 							}
-							else if (MISC::IS_BIT_SET(Local_119.f_3, 0))
+							else if (MISC::IS_BIT_SET(Local_158.f_3, 0))
 							{
 								sVar2 = "exit_seat";
 								sVar3 = "exit_seat_chair";
 								iVar0 = 1;
 							}
-							else if (MISC::IS_BIT_SET(Local_119.f_3, 1))
+							else if (MISC::IS_BIT_SET(Local_158.f_3, 1))
 							{
 								sVar2 = "exit_seat";
 								sVar3 = "exit_seat_chair";
@@ -1507,121 +1507,121 @@ void func_25()
 								sVar3 = "exit_chair";
 								iVar0 = 0;
 							}
-							Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, false, false, 1f, 0f, 1f);
-							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, iVar0), sVar2, 2f, -2f, 13, 16, 1000f, 0);
-							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, iVar0), sVar3, 2f, -2f, 13);
-							NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
-							func_27(&(Local_119.f_6));
-							Local_119.f_6 = -1;
+							Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, false, false, 1f, 0f, 1f);
+							NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, iVar0), sVar2, 2f, -2f, 13, 16, 1000f, 0);
+							NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, iVar0), sVar3, 2f, -2f, 13);
+							NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
+							func_27(&(Local_158.f_6));
+							Local_158.f_6 = -1;
 							if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							{
 								TASK::TASK_CLEAR_LOOK_AT(PLAYER::PLAYER_PED_ID());
 							}
 							func_51(7);
 						}
-						else if (Local_119.f_4 != 3 || func_1(PLAYER::PLAYER_ID()))
+						else if (Local_158.f_4 != 3 || func_1(PLAYER::PLAYER_ID()))
 						{
-							if (iVar10 < 100 && !MISC::IS_BIT_SET(Local_119.f_3, 0))
+							if (iVar14 < 100 && !MISC::IS_BIT_SET(Local_158.f_3, 0))
 							{
-								if (MISC::IS_BIT_SET(Local_119.f_3, 1))
+								if (MISC::IS_BIT_SET(Local_158.f_3, 1))
 								{
-									Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, true, false, 1f, 0f, 1f);
-									NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), "exit", 2f, -2f, 13, 16, 1000f, 0);
-									NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), "exit_chair", 2f, -2f, 13);
-									NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
-									MISC::CLEAR_BIT(&(Local_119.f_3), 0);
-									MISC::CLEAR_BIT(&(Local_119.f_3), 1);
+									Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, true, false, 1f, 0f, 1f);
+									NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), "exit", 2f, -2f, 13, 16, 1000f, 0);
+									NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), "exit_chair", 2f, -2f, 13);
+									NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
+									MISC::CLEAR_BIT(&(Local_158.f_3), 0);
+									MISC::CLEAR_BIT(&(Local_158.f_3), 1);
 								}
 								else
 								{
-									Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, true, false, 1f, 0f, 1f);
-									NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), "enter", 2f, -2f, 13, 16, 1000f, 0);
-									NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), "enter_chair", 2f, -2f, 13);
-									NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
-									MISC::SET_BIT(&(Local_119.f_3), 0);
-									MISC::CLEAR_BIT(&(Local_119.f_3), 1);
+									Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, true, false, 1f, 0f, 1f);
+									NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), "enter", 2f, -2f, 13, 16, 1000f, 0);
+									NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), "enter_chair", 2f, -2f, 13);
+									NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
+									MISC::SET_BIT(&(Local_158.f_3), 0);
+									MISC::CLEAR_BIT(&(Local_158.f_3), 1);
 								}
 								if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 								{
 									TASK::TASK_CLEAR_LOOK_AT(PLAYER::PLAYER_PED_ID());
 								}
-								func_27(&(Local_119.f_6));
-								Local_119.f_6 = -1;
+								func_27(&(Local_158.f_6));
+								Local_158.f_6 = -1;
 								func_51(6);
 							}
-							else if (iVar10 > 150 && !MISC::IS_BIT_SET(Local_119.f_3, 1))
+							else if (iVar14 > 150 && !MISC::IS_BIT_SET(Local_158.f_3, 1))
 							{
-								if (MISC::IS_BIT_SET(Local_119.f_3, 0))
+								if (MISC::IS_BIT_SET(Local_158.f_3, 0))
 								{
-									Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, true, false, 1f, 0f, 1f);
-									NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), "exit", 2f, -2f, 13, 16, 1000f, 0);
-									NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), "exit_chair", 2f, -2f, 13);
-									NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
-									MISC::CLEAR_BIT(&(Local_119.f_3), 0);
-									MISC::CLEAR_BIT(&(Local_119.f_3), 1);
+									Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, true, false, 1f, 0f, 1f);
+									NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), "exit", 2f, -2f, 13, 16, 1000f, 0);
+									NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), "exit_chair", 2f, -2f, 13);
+									NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
+									MISC::CLEAR_BIT(&(Local_158.f_3), 0);
+									MISC::CLEAR_BIT(&(Local_158.f_3), 1);
 								}
 								else
 								{
-									Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, true, false, 1f, 0f, 1f);
-									NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), "enter", 2f, -2f, 13, 16, 1000f, 0);
-									NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), "enter_chair", 2f, -2f, 13);
-									NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
-									MISC::CLEAR_BIT(&(Local_119.f_3), 0);
-									MISC::SET_BIT(&(Local_119.f_3), 1);
+									Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, true, false, 1f, 0f, 1f);
+									NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), "enter", 2f, -2f, 13, 16, 1000f, 0);
+									NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), "enter_chair", 2f, -2f, 13);
+									NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
+									MISC::CLEAR_BIT(&(Local_158.f_3), 0);
+									MISC::SET_BIT(&(Local_158.f_3), 1);
 								}
 								if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 								{
 									TASK::TASK_CLEAR_LOOK_AT(PLAYER::PLAYER_PED_ID());
 								}
-								func_27(&(Local_119.f_6));
-								Local_119.f_6 = -1;
+								func_27(&(Local_158.f_6));
+								Local_158.f_6 = -1;
 								func_51(6);
 							}
 						}
 					}
 				}
-				else if (Local_119.f_6 != -1)
+				else if (Local_158.f_6 != -1)
 				{
-					func_27(&(Local_119.f_6));
-					Local_119.f_6 = -1;
+					func_27(&(Local_158.f_6));
+					Local_158.f_6 = -1;
 				}
 			}
 			break;
 		
 		case 6:
-			if (!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]))
+			if (!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]))
 			{
-				NETWORK::NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]);
+				NETWORK::NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]);
 			}
-			if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]))
+			if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]))
 			{
-				iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_119.f_5);
+				iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_158.f_5);
 				if (iVar1 == -1 || PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar1) >= 0.99f)
 				{
-					Local_119.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), 2), 2, true, false, 1f, 0f, 1f);
-					if (MISC::IS_BIT_SET(Local_119.f_3, 0))
+					Local_158.f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true), ENTITY::GET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), 2), 2, true, false, 1f, 0f, 1f);
+					if (MISC::IS_BIT_SET(Local_158.f_3, 0))
 					{
-						NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), "base", 2f, -2f, 13, 16, 1000f, 0);
-						NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 1), "base_chair", 2f, -2f, 13);
+						NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), "base", 2f, -2f, 13, 16, 1000f, 0);
+						NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 1), "base_chair", 2f, -2f, 13);
 					}
-					else if (MISC::IS_BIT_SET(Local_119.f_3, 1))
+					else if (MISC::IS_BIT_SET(Local_158.f_3, 1))
 					{
-						NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), "base", 2f, -2f, 13, 16, 1000f, 0);
-						NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 2), "base_chair", 2f, -2f, 13);
+						NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), "base", 2f, -2f, 13, 16, 1000f, 0);
+						NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 2), "base_chair", 2f, -2f, 13);
 					}
 					else
 					{
-						NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), "base", 2f, -2f, 13, 16, 1000f, 0);
-						NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Local_119.f_5, func_22(Local_119.f_4, Local_119.f_1, 0), "base_chair", 2f, -2f, 13);
+						NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), "base", 2f, -2f, 13, 16, 1000f, 0);
+						NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Local_158.f_5, func_22(Local_158.f_4, Local_158.f_1, 0), "base_chair", 2f, -2f, 13);
 					}
-					NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_119.f_5);
+					NETWORK::NETWORK_START_SYNCHRONISED_SCENE(Local_158.f_5);
 					func_51(5);
 				}
 			}
 			break;
 		
 		case 7:
-			iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_119.f_5);
+			iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_158.f_5);
 			if (iVar1 == -1 || PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar1) >= 0.99f)
 			{
 				func_52(0);
@@ -1961,7 +1961,7 @@ int func_41()
 		{
 			if (iVar1 != PLAYER::PLAYER_ID())
 			{
-				if (func_42(iVar1, Local_119.f_4, 0))
+				if (func_42(iVar1, Local_158.f_4, 0))
 				{
 					return 0;
 				}
@@ -1991,9 +1991,9 @@ int func_42(int iParam0, int iParam1, bool bParam2)
 					{
 						if (bParam2)
 						{
-							Local_119.f_4 = iVar1;
-							iLocal_118[PLAYER::PLAYER_ID()] = iVar1;
-							Local_119.f_2 = func_43(iVar1);
+							Local_158.f_4 = iVar1;
+							iLocal_125[PLAYER::PLAYER_ID()] = iVar1;
+							Local_158.f_2 = func_43(iVar1);
 						}
 						return 1;
 					}
@@ -2253,47 +2253,47 @@ int func_50()
 
 void func_51(int iParam0)
 {
-	Local_119 = iParam0;
+	Local_158 = iParam0;
 }
 
 void func_52(int iParam0)
 {
 	struct<3> Var0;
-	struct<3> Var1;
+	struct<3> Var3;
 	
-	if (Local_119 > 2)
+	if (Local_158 > 2)
 	{
-		NETWORK::NETWORK_STOP_SYNCHRONISED_SCENE(Local_119.f_5);
+		NETWORK::NETWORK_STOP_SYNCHRONISED_SCENE(Local_158.f_5);
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			TASK::TASK_CLEAR_LOOK_AT(PLAYER::PLAYER_PED_ID());
 		}
-		if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(iLocal_117[Local_119.f_4]) && NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]))
+		if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(iLocal_117[Local_158.f_4]) && NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]))
 		{
-			Var0 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(func_22(Local_119.f_4, Local_119.f_1, 0), "enter_chair", func_21(Local_119.f_4, 1), func_20(Local_119.f_4), 0f, 2) };
-			Var1 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(func_22(Local_119.f_4, Local_119.f_1, 0), "enter_chair", func_21(Local_119.f_4, 1), func_20(Local_119.f_4), 0f, 2) };
-			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Var0, false, false, true);
-			ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), Var1, 2, true);
-			ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(iLocal_117[Local_119.f_4]), true);
+			Var0 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(func_22(Local_158.f_4, Local_158.f_1, 0), "enter_chair", func_21(Local_158.f_4, 1), func_20(Local_158.f_4), 0f, 2) };
+			Var3 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(func_22(Local_158.f_4, Local_158.f_1, 0), "enter_chair", func_21(Local_158.f_4, 1), func_20(Local_158.f_4), 0f, 2) };
+			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Var0, false, false, true);
+			ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), Var3, 2, true);
+			ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(iLocal_117[Local_158.f_4]), true);
 		}
 	}
-	if (Local_119.f_6 != -1)
+	if (Local_158.f_6 != -1)
 	{
-		func_27(&(Local_119.f_6));
-		Local_119.f_6 = -1;
+		func_27(&(Local_158.f_6));
+		Local_158.f_6 = -1;
 	}
 	if (func_29("MPJAC_NO_SIT"))
 	{
 		HUD::CLEAR_HELP(true);
 	}
-	if (iParam0 && Local_119 > 2)
+	if (iParam0 && Local_158 > 2)
 	{
-		if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(iLocal_117[Local_119.f_4]) && NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_119.f_4]))
+		if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(iLocal_117[Local_158.f_4]) && NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_117[Local_158.f_4]))
 		{
-			func_53(&(iLocal_117[Local_119.f_4]));
+			func_53(&(iLocal_117[Local_158.f_4]));
 		}
 	}
-	Local_119.f_3 = 0;
+	Local_158.f_3 = 0;
 	if (func_1(PLAYER::PLAYER_ID()))
 	{
 		STREAMING::REMOVE_ANIM_DICT("anim@amb@clubhouse@boardroom@crew@female@var_a@base@");
@@ -2338,7 +2338,7 @@ void func_52(int iParam0)
 		STREAMING::REMOVE_ANIM_DICT("anim@amb@office@boardroom@boss@female@");
 		STREAMING::REMOVE_ANIM_DICT("anim@amb@office@boardroom@boss@male@");
 	}
-	if (Local_119 > 1)
+	if (Local_158 > 1)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
@@ -2346,8 +2346,8 @@ void func_52(int iParam0)
 		}
 		MISC::CLEAR_BIT(&(Global_1676377.f_6), 11);
 	}
-	Local_119.f_4 = -1;
-	iLocal_118[PLAYER::PLAYER_ID()] = -1;
+	Local_158.f_4 = -1;
+	iLocal_125[PLAYER::PLAYER_ID()] = -1;
 	func_51(1);
 }
 
@@ -2389,7 +2389,7 @@ var func_56()
 
 void func_57()
 {
-	if (Local_119 > 3)
+	if (Local_158 > 3)
 	{
 		CAM::INVALIDATE_IDLE_CAM();
 		HUD::HUD_FORCE_WEAPON_WHEEL(false);
@@ -2549,7 +2549,7 @@ void func_69()
 	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, func_73());
 	func_71(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_117, 8);
-	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&iLocal_118, 33);
+	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&iLocal_125, 33);
 	if (func_1(PLAYER::PLAYER_ID()))
 	{
 		iLocal_116 = 5;

@@ -2090,15 +2090,15 @@ bool func_69(int iParam0)
 void func_70(int iParam0, int iParam1, var uParam2, int iParam3, bool bParam4)
 {
 	struct<6> Var0[2];
-	struct<3> Var1;
+	struct<3> Var13;
 	
 	Var0[0 /*6*/] = { func_74(iParam3, bParam4) };
 	Var0[1 /*6*/] = { func_74(iParam0, bParam4) };
 	*uParam2 = { func_72(iParam1, iParam3) };
-	Var1 = { *uParam2 - Var0[0 /*6*/] };
-	Var1 = { func_71(Var1, -Var0[0 /*6*/].f_3.f_2) };
-	Var1 = { func_71(Var1, Var0[1 /*6*/].f_3.f_2) };
-	*uParam2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var0[1 /*6*/], 0f, Var1) };
+	Var13 = { *uParam2 - Var0[0 /*6*/] };
+	Var13 = { func_71(Var13, -Var0[0 /*6*/].f_3.f_2) };
+	Var13 = { func_71(Var13, Var0[1 /*6*/].f_3.f_2) };
+	*uParam2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var0[1 /*6*/], 0f, Var13) };
 	switch (iParam1)
 	{
 		case 6:
@@ -2883,16 +2883,16 @@ void func_70(int iParam0, int iParam1, var uParam2, int iParam3, bool bParam4)
 	}
 }
 
-Vector3 func_71(struct<3> Param0, float fParam1)
+Vector3 func_71(struct<3> Param0, float fParam3)
 {
 	struct<3> Var0;
-	float fVar1;
-	float fVar2;
+	float fVar3;
+	float fVar4;
 	
-	fVar1 = SYSTEM::SIN(fParam1);
-	fVar2 = SYSTEM::COS(fParam1);
-	Var0.x = ((Param0.x * fVar2) - (Param0.f_1 * fVar1));
-	Var0.f_1 = ((Param0.x * fVar1) + (Param0.f_1 * fVar2));
+	fVar3 = SYSTEM::SIN(fParam3);
+	fVar4 = SYSTEM::COS(fParam3);
+	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
@@ -2900,15 +2900,15 @@ Vector3 func_71(struct<3> Param0, float fParam1)
 struct<6> func_72(int iParam0, int iParam1)
 {
 	struct<6> Var0;
-	bool bVar1;
-	int iVar2;
+	bool bVar6;
+	int iVar23;
 	
-	iVar2 = 0;
-	if (func_73(iParam1, &bVar1))
+	iVar23 = 0;
+	if (func_73(iParam1, &bVar6))
 	{
-		iVar2 = 1;
+		iVar23 = 1;
 	}
-	if (iVar2 && MISC::_GET_BASE_ELEMENT_METADATA(&Var0, &(Var0.f_3), iParam0, bVar1))
+	if (iVar23 && MISC::_GET_BASE_ELEMENT_METADATA(&Var0, &(Var0.f_3), iParam0, bVar6))
 	{
 		return Var0;
 	}
@@ -3716,7 +3716,7 @@ int func_82(int iParam0, int iParam1)
 Vector3 func_83(int iParam0)
 {
 	struct<3> Var0;
-	struct<3> Var1;
+	struct<3> Var6;
 	
 	switch (iParam0)
 	{
@@ -3737,7 +3737,7 @@ Vector3 func_83(int iParam0)
 		case 41:
 		case 42:
 		case 43:
-			Var1 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
+			Var6 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
 			break;
 		
 		case 8:
@@ -3753,7 +3753,7 @@ Vector3 func_83(int iParam0)
 		case 67:
 		case 68:
 		case 69:
-			Var1 = { 348.132f, -997.2031f, -100.1741f };
+			Var6 = { 348.132f, -997.2031f, -100.1741f };
 			break;
 		
 		case 17:
@@ -3766,7 +3766,7 @@ Vector3 func_83(int iParam0)
 		case 70:
 		case 71:
 		case 72:
-			Var1 = { 264.3808f, -997.7274f, -100.0087f };
+			Var6 = { 264.3808f, -997.7274f, -100.0087f };
 			break;
 		
 		case 61:
@@ -3774,14 +3774,14 @@ Vector3 func_83(int iParam0)
 		case 63:
 		case 64:
 		case 65:
-			Var1 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
+			Var6 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
 			break;
 		
 		case 73:
 		case 74:
 		case 75:
 		case 76:
-			Var1 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
+			Var6 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
 			break;
 		
 		case 77:
@@ -3790,25 +3790,25 @@ Vector3 func_83(int iParam0)
 		case 80:
 		case 81:
 		case 82:
-			Var1 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
+			Var6 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
 			break;
 		
 		case 83:
 		case 84:
 		case 85:
-			Var1 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
+			Var6 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
 			break;
 		
 		case 86:
 			func_70(iParam0, 3, &Var0, 86, 0);
-			Var1 = { Var0 };
+			Var6 = { Var0 };
 			break;
 		
 		case 87:
 		case 88:
 		case 89:
 		case 90:
-			Var1 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
+			Var6 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
 			break;
 		
 		case 91:
@@ -3817,7 +3817,7 @@ Vector3 func_83(int iParam0)
 		case 94:
 		case 95:
 		case 96:
-			Var1 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
+			Var6 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
 			break;
 		
 		case 97:
@@ -3826,10 +3826,10 @@ Vector3 func_83(int iParam0)
 		case 100:
 		case 101:
 		case 102:
-			Var1 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
+			Var6 = { Global_1049922[iParam0 /*1951*/].f_146.f_47 };
 			break;
 	}
-	return Var1;
+	return Var6;
 }
 
 Vector3 func_84(int iParam0)
@@ -4731,8 +4731,8 @@ int func_127(int iParam0)
 void func_128(var uParam0, int iParam1)
 {
 	struct<3> Var0;
-	float fVar1;
-	int iVar2;
+	float fVar3;
+	int iVar4;
 	
 	if (func_103() == 7)
 	{
@@ -4752,67 +4752,67 @@ void func_128(var uParam0, int iParam1)
 			{
 				case 0:
 					Var0 = { 799.4338f, 4489.434f, 50.1044f };
-					fVar1 = 234.7151f;
+					fVar3 = 234.7151f;
 					break;
 				
 				case 1:
 					Var0 = { -1780.224f, -898.138f, 5.523f };
-					fVar1 = 0f;
+					fVar3 = 0f;
 					break;
 				
 				case 2:
 					Var0 = { 548.493f, 2675.173f, 42.1963f };
-					fVar1 = -29.16f;
+					fVar3 = -29.16f;
 					break;
 				
 				case 3:
 					Var0 = { -2510.704f, 1715.879f, 153.946f };
-					fVar1 = 0f;
+					fVar3 = 0f;
 					break;
 			}
 		}
 		else
 		{
-			iVar2 = MISC::GET_RANDOM_INT_IN_RANGE(0, 7);
-			switch (iVar2)
+			iVar4 = MISC::GET_RANDOM_INT_IN_RANGE(0, 7);
+			switch (iVar4)
 			{
 				case 0:
 					Var0 = { 1095.78f, 42.0084f, 79.8909f };
-					fVar1 = 4.1868f;
+					fVar3 = 4.1868f;
 					break;
 				
 				case 1:
 					Var0 = { 1234.744f, 348.742f, 80.9909f };
-					fVar1 = 64.0722f;
+					fVar3 = 64.0722f;
 					break;
 				
 				case 2:
 					Var0 = { 1078.318f, 203.7619f, 86.9908f };
-					fVar1 = 287.8687f;
+					fVar3 = 287.8687f;
 					break;
 				
 				case 3:
 					Var0 = { 882.1516f, -280.3958f, 65.4134f };
-					fVar1 = 322.2067f;
+					fVar3 = 322.2067f;
 					break;
 				
 				case 4:
 					Var0 = { 1101.12f, -706.6118f, 55.8202f };
-					fVar1 = 302.1545f;
+					fVar3 = 302.1545f;
 					break;
 				
 				case 5:
 					Var0 = { 958.2682f, 72.5168f, 111.554f };
-					fVar1 = 235.6346f;
+					fVar3 = 235.6346f;
 					break;
 				
 				case 6:
 					Var0 = { 919.9286f, 23.3805f, 113.1937f };
-					fVar1 = 128.1919f;
+					fVar3 = 128.1919f;
 					break;
 				}
 		}
-		func_129(Var0, fVar1, 50f, 1, 0f, 1, 0, 65f, 1, 1, 0, 1, -1082130432);
+		func_129(Var0, fVar3, 50f, 1, 0f, 1, 0, 65f, 1, 1, 0, 1, -1082130432);
 	}
 	else if (func_103() == 0)
 	{
@@ -4828,7 +4828,7 @@ void func_128(var uParam0, int iParam1)
 	}
 }
 
-void func_129(struct<3> Param0, float fParam1, float fParam2, int iParam3, float fParam4, int iParam5, int iParam6, float fParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12)
+void func_129(struct<3> Param0, float fParam3, float fParam4, int iParam5, float fParam6, int iParam7, int iParam8, float fParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14)
 {
 	struct<28> Var0;
 	
@@ -4853,21 +4853,21 @@ void func_129(struct<3> Param0, float fParam1, float fParam2, int iParam3, float
 	}
 	Var0.f_6 = Global_2413899.f_6;
 	Var0 = { Param0 };
-	Var0.f_5 = fParam1;
-	Var0.f_4 = fParam2;
-	Var0.f_7 = iParam3;
-	Var0.f_3 = fParam4;
-	Var0.f_8 = iParam6;
-	Var0.f_9 = iParam5;
+	Var0.f_5 = fParam3;
+	Var0.f_4 = fParam4;
+	Var0.f_7 = iParam5;
+	Var0.f_3 = fParam6;
+	Var0.f_8 = iParam8;
+	Var0.f_9 = iParam7;
 	Var0.f_10 = 0;
 	Var0.f_11 = { 0f, 0f, 0f };
 	Var0.f_14 = { 0f, 0f, 0f };
 	Var0.f_17 = 0f;
-	Var0.f_21 = fParam7;
-	Var0.f_22 = iParam8;
+	Var0.f_21 = fParam9;
+	Var0.f_22 = iParam10;
 	if (func_130(PLAYER::PLAYER_ID()))
 	{
-		if (iParam11 || iParam5)
+		if (iParam13 || iParam7)
 		{
 			Var0.f_23 = 1;
 		}
@@ -4884,9 +4884,9 @@ void func_129(struct<3> Param0, float fParam1, float fParam2, int iParam3, float
 	{
 		Var0.f_21 = 1f;
 	}
-	Var0.f_24 = iParam9;
-	Var0.f_26 = iParam10;
-	Var0.f_27 = iParam12;
+	Var0.f_24 = iParam11;
+	Var0.f_26 = iParam12;
+	Var0.f_27 = iParam14;
 	Global_2413899 = { Var0 };
 }
 
@@ -14671,7 +14671,7 @@ void func_373(var uParam0)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	struct<3> Var3;
+	struct<3> Var4;
 	
 	iVar0 = 0;
 	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
@@ -14687,8 +14687,8 @@ void func_373(var uParam0)
 					break;
 				
 				case 589125870:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.f_2 == 653923311)
+					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
+					if (Var4.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -14702,29 +14702,29 @@ void func_373(var uParam0)
 void func_374(int iParam0)
 {
 	struct<3> Var0;
-	int iVar1;
-	int iVar2;
-	bool bVar3;
+	int iVar3;
+	int iVar4;
+	bool bVar5;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_8(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
+			iVar3 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar3, false))
 				{
-					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_375(iVar2, &bVar3))
+						if (func_375(iVar4, &bVar5))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
 						}
-						if (bVar3)
+						if (bVar5)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar4);
 						}
 					}
 				}

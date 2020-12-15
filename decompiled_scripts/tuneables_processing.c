@@ -43,7 +43,7 @@ void __EntryFunction__()
 	while (true)
 	{
 		SYSTEM::WAIT(0);
-		if (func_1(ScriptParam_21.x, ScriptParam_21.f_1, ScriptParam_21.f_2))
+		if (func_1(ScriptParam_0.x, ScriptParam_0.f_1, ScriptParam_0.f_2))
 		{
 			SCRIPT::TERMINATE_THIS_THREAD();
 		}
@@ -19690,7 +19690,7 @@ void func_37(int iParam0, int iParam1)
 {
 	int iVar0;
 	char cVar1[32];
-	char cVar2[32];
+	char cVar9[32];
 	
 	func_5(iParam0, iParam1, -1806375809, &(Global_262145.f_2840), 1);
 	func_5(iParam0, iParam1, 1232863007, &(Global_262145.f_2841), 1);
@@ -19795,10 +19795,10 @@ void func_37(int iParam0, int iParam1)
 	{
 		StringCopy(&cVar1, "RewardPlaylist_", 32);
 		StringIntConCat(&cVar1, iVar0, 32);
-		StringCopy(&cVar2, "RewardPlaylistItem_", 32);
-		StringIntConCat(&cVar2, iVar0, 32);
+		StringCopy(&cVar9, "RewardPlaylistItem_", 32);
+		StringIntConCat(&cVar9, iVar0, 32);
 		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar1), &(Global_262145.f_7953[iVar0]), 1);
-		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar2), &(Global_262145.f_8004[iVar0]), 1);
+		func_10(iParam0, iParam1, MISC::GET_HASH_KEY(&cVar9), &(Global_262145.f_8004[iVar0]), 1);
 		iVar0++;
 	}
 }

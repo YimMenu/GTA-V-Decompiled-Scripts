@@ -66,12 +66,12 @@
 	int iLocal_64 = 0;
 	int iLocal_65 = 0;
 	int iLocal_66[56] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	var uLocal_67 = 0;
-	var uLocal_68 = 0;
-	int iLocal_69 = 0;
-	var uLocal_70 = 0;
-	var uLocal_71 = 0;
-	var uLocal_72 = 0;
+	var uLocal_123 = 0;
+	var uLocal_124 = 0;
+	int iScriptParam_0 = 0;
+	var uScriptParam_1 = 0;
+	var uScriptParam_2 = 0;
+	var uScriptParam_3 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -137,7 +137,7 @@ void __EntryFunction__()
 	HUD::_0x4895BDEA16E7C080(0);
 	func_149();
 	iVar5 = 1;
-	switch (iScriptParam_69)
+	switch (iScriptParam_0)
 	{
 		case 3:
 			while (iVar0 == 0)
@@ -227,7 +227,7 @@ void __EntryFunction__()
 				func_9(&Global_1375642, &Global_1373206);
 				if (iVar5 == 1)
 				{
-					func_1(&Global_1375642, &Global_1373206, &uLocal_67);
+					func_1(&Global_1375642, &Global_1373206, &uLocal_123);
 				}
 			}
 			break;
@@ -874,7 +874,7 @@ int func_13(var uParam0)
 void func_14(var uParam0, int iParam1)
 {
 	struct<2> Var0;
-	int iVar1;
+	int iVar4;
 	
 	StringCopy(&Var0, " ", 16);
 	if (iParam1 == 1)
@@ -887,10 +887,10 @@ void func_14(var uParam0, int iParam1)
 		if (uParam0->f_277 > -1)
 		{
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DESCRIPTION");
-			iVar1 = (uParam0->f_215[uParam0->f_277] - uParam0->f_165[uParam0->f_277]);
-			if (iVar1 < 0)
+			iVar4 = (uParam0->f_215[uParam0->f_277] - uParam0->f_165[uParam0->f_277]);
+			if (iVar4 < 0)
 			{
-				iVar1 = 0;
+				iVar4 = 0;
 			}
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			func_20(&(uParam0->f_11[uParam0->f_277 /*4*/]));
@@ -906,7 +906,7 @@ void func_14(var uParam0, int iParam1)
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(uParam0->f_195[uParam0->f_277]);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(uParam0->f_205[uParam0->f_277]);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(uParam0->f_225[uParam0->f_277]);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar1);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar4);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(uParam0->f_125[uParam0->f_277]);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(uParam0->f_175[uParam0->f_277]);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(uParam0->f_235[uParam0->f_277]);
@@ -7472,7 +7472,7 @@ char* func_58(int iParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	int* iVar2;
-	struct<7> Var3;
+	struct<7> Var41;
 	
 	if (iParam1 == joaat("weapon_knuckle"))
 	{
@@ -7958,11 +7958,11 @@ char* func_58(int iParam0, int iParam1)
 					iVar1 = 0;
 					while (iVar1 < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar0))
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar0, iVar1, &Var3))
+						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar0, iVar1, &Var41))
 						{
-							if (Var3.f_3 == iParam0)
+							if (Var41.f_3 == iParam0)
 							{
-								return func_27(&(Var3.f_6));
+								return func_27(&(Var41.f_6));
 							}
 						}
 						iVar1++;
@@ -8820,7 +8820,7 @@ char* func_81(int iParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	int* iVar2;
-	struct<15> Var3;
+	struct<15> Var41;
 	
 	switch (iParam0)
 	{
@@ -9193,11 +9193,11 @@ char* func_81(int iParam0, int iParam1)
 					iVar1 = 0;
 					while (iVar1 < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar0))
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar0, iVar1, &Var3))
+						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar0, iVar1, &Var41))
 						{
-							if (Var3.f_3 == iParam0)
+							if (Var41.f_3 == iParam0)
 							{
-								return func_27(&(Var3.f_14));
+								return func_27(&(Var41.f_14));
 							}
 						}
 						iVar1++;
@@ -9255,7 +9255,7 @@ int func_85(int iParam0, int iParam1)
 	int iVar2;
 	int iVar3;
 	int* iVar4;
-	struct<4> Var5;
+	struct<4> Var43;
 	
 	iVar0 = 0;
 	switch (iParam0)
@@ -10002,13 +10002,13 @@ int func_85(int iParam0, int iParam1)
 					iVar2 = 0;
 					while (iVar2 < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar1))
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar1, iVar2, &Var5))
+						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(iVar1, iVar2, &Var43))
 						{
-							if (!func_86(Var5.f_3))
+							if (!func_86(Var43.f_3))
 							{
 								if (iVar3 == iParam1)
 								{
-									return Var5.f_3;
+									return Var43.f_3;
 								}
 								iVar3++;
 							}
@@ -11193,144 +11193,144 @@ int func_106(bool bParam0, bool bParam1)
 void func_107(int iParam0, var uParam1, int iParam2, int iParam3)
 {
 	struct<2> Var0;
-	char cVar1[16];
-	float fVar2;
-	var uVar3;
-	var uVar4;
-	int iVar5;
-	var uVar6;
-	struct<5> Var7;
-	struct<5> Var8;
-	struct<5> Var9;
-	int iVar10;
+	char cVar4[16];
+	float fVar8;
+	var uVar9;
+	var uVar10;
 	int iVar11;
-	int iVar12;
-	bool bVar13;
+	var uVar12;
+	struct<5> Var13;
+	struct<5> Var18;
+	struct<5> Var23;
+	int iVar28;
+	int iVar29;
+	int iVar30;
+	bool bVar31;
 	
 	iParam3 = iParam3;
 	StringCopy(&Var0, func_26(iParam0, 0), 16);
 	if (((iParam0 == joaat("WEAPON_DOUBLEACTION") || iParam0 == joaat("weapon_compactrifle")) || iParam0 == joaat("WEAPON_COMPACTLAUNCHER")) || iParam0 == joaat("weapon_marksmanrifle"))
 	{
-		StringCopy(&cVar1, func_137(iParam0, 1), 16);
+		StringCopy(&cVar4, func_137(iParam0, 1), 16);
 	}
 	else
 	{
-		StringCopy(&cVar1, func_137(iParam0, 0), 16);
+		StringCopy(&cVar4, func_137(iParam0, 0), 16);
 	}
-	fVar2 = func_134(iParam0);
-	uVar3 = func_133(iParam0, iParam2);
-	uVar4 = func_132(iParam0, iParam2);
-	iVar5 = func_131(iParam0, iParam2);
-	uVar6 = func_130(iParam0, iParam2);
-	WEAPON::GET_WEAPON_HUD_STATS(iParam0, &Var7);
-	Var7.f_2 = WEAPON::GET_WEAPON_CLIP_SIZE(iParam0);
-	bVar13 = false;
-	iVar12 = 0;
-	while (iVar12 <= 8)
+	fVar8 = func_134(iParam0);
+	uVar9 = func_133(iParam0, iParam2);
+	uVar10 = func_132(iParam0, iParam2);
+	iVar11 = func_131(iParam0, iParam2);
+	uVar12 = func_130(iParam0, iParam2);
+	WEAPON::GET_WEAPON_HUD_STATS(iParam0, &Var13);
+	Var13.f_2 = WEAPON::GET_WEAPON_CLIP_SIZE(iParam0);
+	bVar31 = false;
+	iVar30 = 0;
+	while (iVar30 <= 8)
 	{
-		if (uParam1->f_1[iVar12] == 0 && WEAPON::IS_WEAPON_VALID(iParam0))
+		if (uParam1->f_1[iVar30] == 0 && WEAPON::IS_WEAPON_VALID(iParam0))
 		{
 			if (func_96(iParam0))
 			{
 				if (func_94(1623028892, func_95(iParam0), -1))
 				{
-					bVar13 = true;
+					bVar31 = true;
 				}
 				else
 				{
-					bVar13 = false;
+					bVar31 = false;
 				}
 			}
 			else if (func_90(iParam0, iParam2, 0))
 			{
-				bVar13 = true;
-				if (bVar13)
+				bVar31 = true;
+				if (bVar31)
 				{
 				}
 			}
 			else
 			{
-				bVar13 = false;
+				bVar31 = false;
 			}
-			iVar11 = 0;
-			while (iVar11 <= 35)
+			iVar29 = 0;
+			while (iVar29 <= 35)
 			{
-				iVar10 = func_85(iParam0, iVar11);
-				if (iVar10 != 0)
+				iVar28 = func_85(iParam0, iVar29);
+				if (iVar28 != 0)
 				{
-					if (func_53(iVar10, iParam0, iParam2) && bVar13)
+					if (func_53(iVar28, iParam0, iParam2) && bVar31)
 					{
-						if (WEAPON::GET_WEAPON_COMPONENT_HUD_STATS(iVar10, &Var8))
+						if (WEAPON::GET_WEAPON_COMPONENT_HUD_STATS(iVar28, &Var18))
 						{
-							Var9 = (Var9 + Var8);
-							Var9.f_1 = (Var9.f_1 + Var8.f_1);
-							Var9.f_3 = (Var9.f_3 + Var8.f_3);
-							Var9.f_4 = (Var9.f_4 + Var8.f_4);
+							Var23 = (Var23 + Var18);
+							Var23.f_1 = (Var23.f_1 + Var18.f_1);
+							Var23.f_3 = (Var23.f_3 + Var18.f_3);
+							Var23.f_4 = (Var23.f_4 + Var18.f_4);
 						}
 					}
-					if (func_64(iVar10, iParam0, iParam2))
+					if (func_64(iVar28, iParam0, iParam2))
 					{
-						if (func_129(iVar10))
+						if (func_129(iVar28))
 						{
-							Var9.f_2 = func_128(iParam0);
+							Var23.f_2 = func_128(iParam0);
 						}
-						else if (func_127(iVar10))
+						else if (func_127(iVar28))
 						{
-							Var9.f_2 = func_126(iParam0);
+							Var23.f_2 = func_126(iParam0);
 						}
 					}
-					if (func_94(iVar10, iParam0, iParam2))
+					if (func_94(iVar28, iParam0, iParam2))
 					{
 					}
 				}
-				iVar11++;
+				iVar29++;
 			}
-			if (Var9.f_2 == 0)
+			if (Var23.f_2 == 0)
 			{
-				Var9.f_2 = Var7.f_2;
+				Var23.f_2 = Var13.f_2;
 			}
-			func_125(iVar12, &Var0, &cVar1, uParam1);
-			func_124(iVar12, Var7, uParam1);
-			func_123(iVar12, Var9, uParam1);
+			func_125(iVar30, &Var0, &cVar4, uParam1);
+			func_124(iVar30, Var13, uParam1);
+			func_123(iVar30, Var23, uParam1);
 			if (func_15(iParam0))
 			{
-				func_122(iVar12, -1, uParam1);
-				func_121(iVar12, Var9.f_3, uParam1);
-				func_120(iVar12, -1, uParam1);
-				func_119(iVar12, Var9.f_4, uParam1);
-				func_118(iVar12, -1, uParam1);
-				func_117(iVar12, Var9.f_2, uParam1);
+				func_122(iVar30, -1, uParam1);
+				func_121(iVar30, Var23.f_3, uParam1);
+				func_120(iVar30, -1, uParam1);
+				func_119(iVar30, Var23.f_4, uParam1);
+				func_118(iVar30, -1, uParam1);
+				func_117(iVar30, Var23.f_2, uParam1);
 			}
 			else
 			{
-				func_122(iVar12, Var7.f_3, uParam1);
-				func_121(iVar12, Var9.f_3, uParam1);
-				func_120(iVar12, Var7.f_4, uParam1);
-				func_119(iVar12, Var9.f_4, uParam1);
-				func_118(iVar12, Var7.f_2, uParam1);
-				func_117(iVar12, Var9.f_2, uParam1);
+				func_122(iVar30, Var13.f_3, uParam1);
+				func_121(iVar30, Var23.f_3, uParam1);
+				func_120(iVar30, Var13.f_4, uParam1);
+				func_119(iVar30, Var23.f_4, uParam1);
+				func_118(iVar30, Var13.f_2, uParam1);
+				func_117(iVar30, Var23.f_2, uParam1);
 			}
-			func_116(iVar12, uVar4, uParam1);
-			func_115(iVar12, uVar3, uParam1);
+			func_116(iVar30, uVar10, uParam1);
+			func_115(iVar30, uVar9, uParam1);
 			if (func_15(iParam0))
 			{
-				func_114(iVar12, -1f, uParam1);
-				func_113(iVar12, -1, uParam1);
+				func_114(iVar30, -1f, uParam1);
+				func_113(iVar30, -1, uParam1);
 			}
 			else
 			{
-				func_114(iVar12, fVar2, uParam1);
-				func_113(iVar12, iVar5, uParam1);
+				func_114(iVar30, fVar8, uParam1);
+				func_113(iVar30, iVar11, uParam1);
 			}
-			func_112(iVar12, uVar6, uParam1);
-			func_111(iVar12, Var7.f_1, uParam1);
-			func_110(iVar12, Var9.f_1, uParam1);
-			func_109(iVar12, iParam0, uParam1);
+			func_112(iVar30, uVar12, uParam1);
+			func_111(iVar30, Var13.f_1, uParam1);
+			func_110(iVar30, Var23.f_1, uParam1);
+			func_109(iVar30, iParam0, uParam1);
 			func_108(iParam2, uParam1);
-			uParam1->f_1[iVar12] = 1;
-			iVar12 = 9;
+			uParam1->f_1[iVar30] = 1;
+			iVar30 = 9;
 		}
-		iVar12++;
+		iVar30++;
 	}
 }
 
@@ -13109,9 +13109,9 @@ int func_136(int iParam0)
 char* func_137(int iParam0, bool bParam1)
 {
 	struct<16> Var0;
-	struct<16> Var1;
-	struct<16> Var2;
-	struct<16> Var3;
+	struct<16> Var39;
+	struct<16> Var78;
+	struct<16> Var117;
 	
 	if (func_139(iParam0) && !bParam1)
 	{
@@ -13427,9 +13427,9 @@ char* func_137(int iParam0, bool bParam1)
 					return "WCD_MK1_LOCK";
 				}
 			}
-			if (func_28(iParam0, &Var1) != -1)
+			if (func_28(iParam0, &Var39) != -1)
 			{
-				return func_27(&(Var1.f_15));
+				return func_27(&(Var39.f_15));
 			}
 			break;
 		
@@ -13441,9 +13441,9 @@ char* func_137(int iParam0, bool bParam1)
 					return "WCD_MK1_LOCK";
 				}
 			}
-			if (func_28(iParam0, &Var2) != -1)
+			if (func_28(iParam0, &Var78) != -1)
 			{
-				return func_27(&(Var2.f_15));
+				return func_27(&(Var78.f_15));
 			}
 			break;
 		
@@ -13468,9 +13468,9 @@ char* func_137(int iParam0, bool bParam1)
 			break;
 		
 		default:
-			if (func_28(iParam0, &Var3) != -1)
+			if (func_28(iParam0, &Var117) != -1)
 			{
-				return func_27(&(Var3.f_15));
+				return func_27(&(Var117.f_15));
 			}
 			break;
 	}

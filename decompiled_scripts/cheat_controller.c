@@ -80,10 +80,10 @@
 	float fLocal_78 = 0f;
 	int iLocal_79 = 0;
 	int iLocal_80[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	int iLocal_81 = 0;
-	int iLocal_82 = 0;
-	int iLocal_83 = 0;
-	int iLocal_84 = 0;
+	int iLocal_91 = 0;
+	int iLocal_92 = 0;
+	int iLocal_93 = 0;
+	int iLocal_94 = 0;
 #endregion
 
 void __EntryFunction__()
@@ -229,10 +229,10 @@ void func_3(int iParam0)
 void func_4(int iParam0)
 {
 	struct<3> Var0;
-	float fVar1;
-	bool bVar2;
+	float fVar3;
+	bool bVar4;
 	
-	bVar2 = false;
+	bVar4 = false;
 	if (STREAMING::HAS_MODEL_LOADED(iParam0))
 	{
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
@@ -244,14 +244,14 @@ void func_4(int iParam0)
 					if (PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iLocal_68, false))
 					{
 						Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_68, true) };
-						fVar1 = ENTITY::GET_ENTITY_HEADING(iLocal_68);
+						fVar3 = ENTITY::GET_ENTITY_HEADING(iLocal_68);
 						ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0.x, Var0.f_1, (Var0.f_2 + 4f), true, false, false, true);
-						bVar2 = true;
+						bVar4 = true;
 					}
 				}
 				VEHICLE::DELETE_VEHICLE(&iLocal_68);
 			}
-			if (!bVar2)
+			if (!bVar4)
 			{
 				if (iParam0 == joaat("duster") || iParam0 == joaat("stunt"))
 				{
@@ -265,11 +265,11 @@ void func_4(int iParam0)
 				{
 					Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 3.5f, 1f) };
 				}
-				fVar1 = (ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) + 90f);
+				fVar3 = (ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) + 90f);
 			}
-			if (func_18(iParam0, Var0, fVar1))
+			if (func_18(iParam0, Var0, fVar3))
 			{
-				iLocal_68 = VEHICLE::CREATE_VEHICLE(iParam0, Var0, fVar1, false, true, false);
+				iLocal_68 = VEHICLE::CREATE_VEHICLE(iParam0, Var0, fVar3, false, true, false);
 				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_68, 5f);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iParam0);
 				ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iLocal_68);
@@ -409,7 +409,7 @@ var func_13(int iParam0)
 
 int func_14(char* sParam0)
 {
-	if (iLocal_84 != 0)
+	if (iLocal_94 != 0)
 	{
 		if (func_15(14) && CAM::IS_SCREEN_FADED_IN())
 		{
@@ -448,88 +448,88 @@ void func_16(char* sParam0)
 
 void func_17(int iParam0)
 {
-	iLocal_80[iLocal_81] = iParam0;
-	iLocal_81++;
-	if (iLocal_81 >= 10)
+	iLocal_80[iLocal_91] = iParam0;
+	iLocal_91++;
+	if (iLocal_91 >= 10)
 	{
-		iLocal_81 = 0;
+		iLocal_91 = 0;
 	}
 }
 
-int func_18(int iParam0, struct<3> Param1, float fParam2)
+int func_18(int iParam0, struct<3> Param1, float fParam4)
 {
 	struct<3> Var0[9];
-	struct<3> Var1;
-	struct<3> Var2;
-	struct<3> Var3;
-	var uVar4;
-	var uVar5;
-	int iVar6;
-	int iVar7;
-	int iVar8;
-	int iVar9;
-	int iVar10;
-	int iVar11;
-	int iVar12;
-	int iVar13;
-	var uVar14;
+	struct<3> Var28;
+	struct<3> Var31;
+	struct<3> Var34;
+	var uVar37;
+	var uVar40;
+	int iVar43;
+	int iVar44;
+	int iVar45;
+	int iVar46;
+	int iVar47;
+	int iVar48;
+	int iVar49;
+	int iVar50;
+	var uVar51;
 	
-	MISC::GET_MODEL_DIMENSIONS(iParam0, &Var1, &Var2);
-	Var3.x = (MISC::ABSF((Var2.x - Var1.x)) / 2f);
-	Var3.f_1 = (MISC::ABSF((Var2.f_1 - Var1.f_1)) / 2f);
-	Var3.f_2 = (MISC::ABSF((Var2.f_2 - Var1.f_2)) / 2f);
+	MISC::GET_MODEL_DIMENSIONS(iParam0, &Var28, &Var31);
+	Var34.x = (MISC::ABSF((Var31.x - Var28.x)) / 2f);
+	Var34.f_1 = (MISC::ABSF((Var31.f_1 - Var28.f_1)) / 2f);
+	Var34.f_2 = (MISC::ABSF((Var31.f_2 - Var28.f_2)) / 2f);
 	Var0[0 /*3*/] = { Param1 };
-	Var0[1 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam2, -Var3.x, -Var3.f_1, -Var3.f_2) };
-	Var0[2 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam2, Var3.x, -Var3.f_1, -Var3.f_2) };
-	Var0[3 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam2, Var3.x, Var3.f_1, -Var3.f_2) };
-	Var0[4 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam2, -Var3.x, Var3.f_1, -Var3.f_2) };
-	Var0[5 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam2, -Var3.x, -Var3.f_1, Var3.f_2) };
-	Var0[6 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam2, Var3.x, -Var3.f_1, Var3.f_2) };
-	Var0[7 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam2, Var3.x, Var3.f_1, Var3.f_2) };
-	Var0[8 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam2, -Var3.x, Var3.f_1, Var3.f_2) };
+	Var0[1 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.x, -Var34.f_1, -Var34.f_2) };
+	Var0[2 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.x, -Var34.f_1, -Var34.f_2) };
+	Var0[3 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.x, Var34.f_1, -Var34.f_2) };
+	Var0[4 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.x, Var34.f_1, -Var34.f_2) };
+	Var0[5 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.x, -Var34.f_1, Var34.f_2) };
+	Var0[6 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.x, -Var34.f_1, Var34.f_2) };
+	Var0[7 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.x, Var34.f_1, Var34.f_2) };
+	Var0[8 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.x, Var34.f_1, Var34.f_2) };
 	if (!INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Param1))
 	{
 		return 0;
 	}
-	iVar13 = SHAPETEST::_START_SHAPE_TEST_RAY(func_19(PLAYER::PLAYER_ID()) + Vector(1f, 0f, 0f), Param1, 87, PLAYER::PLAYER_PED_ID(), 0);
-	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar13, &iVar6, &uVar4, &uVar5, &uVar14);
-	if (iVar6 != 0)
+	iVar50 = SHAPETEST::_START_SHAPE_TEST_RAY(func_19(PLAYER::PLAYER_ID()) + Vector(1f, 0f, 0f), Param1, 87, PLAYER::PLAYER_PED_ID(), 0);
+	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar50, &iVar43, &uVar37, &uVar40, &uVar51);
+	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar7 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[1 /*3*/], Var0[3 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
-	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar7, &iVar6, &uVar4, &uVar5, &uVar14);
-	if (iVar6 != 0)
+	iVar44 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[1 /*3*/], Var0[3 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar44, &iVar43, &uVar37, &uVar40, &uVar51);
+	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar8 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[2 /*3*/], Var0[4 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
-	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar8, &iVar6, &uVar4, &uVar5, &uVar14);
-	if (iVar6 != 0)
+	iVar45 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[2 /*3*/], Var0[4 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar45, &iVar43, &uVar37, &uVar40, &uVar51);
+	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar9 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[5 /*3*/], Var0[7 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
-	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar9, &iVar6, &uVar4, &uVar5, &uVar14);
-	if (iVar6 != 0)
+	iVar46 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[5 /*3*/], Var0[7 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar46, &iVar43, &uVar37, &uVar40, &uVar51);
+	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar10 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[6 /*3*/], Var0[8 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
-	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar10, &iVar6, &uVar4, &uVar5, &uVar14);
-	if (iVar6 != 0)
+	iVar47 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[6 /*3*/], Var0[8 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar47, &iVar43, &uVar37, &uVar40, &uVar51);
+	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar11 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[1 /*3*/], Var0[8 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
-	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar11, &iVar6, &uVar4, &uVar5, &uVar14);
-	if (iVar6 != 0)
+	iVar48 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[1 /*3*/], Var0[8 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar48, &iVar43, &uVar37, &uVar40, &uVar51);
+	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar12 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[2 /*3*/], Var0[7 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
-	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar12, &iVar6, &uVar4, &uVar5, &uVar14);
-	if (iVar6 != 0)
+	iVar49 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[2 /*3*/], Var0[7 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar49, &iVar43, &uVar37, &uVar40, &uVar51);
+	if (iVar43 != 0)
 	{
 		return 0;
 	}
@@ -813,8 +813,8 @@ void func_35()
 void func_36()
 {
 	struct<3> Var0;
-	float fVar1;
-	float fVar2;
+	float fVar3;
+	float fVar4;
 	
 	switch (iLocal_64)
 	{
@@ -828,11 +828,11 @@ void func_36()
 			ENTITY::SET_ENTITY_PROOFS(PLAYER::PLAYER_PED_ID(), true, true, true, true, true, false, false, false);
 			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("gadget_parachute"), 1, false, true);
 			Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-			fVar1 = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
-			MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &fVar2, false, false);
-			fVar2 = (fVar2 + 500f);
-			ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0.x, Var0.f_1, fVar2, true, false, false, true);
-			ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), fVar1);
+			fVar3 = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
+			MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &fVar4, false, false);
+			fVar4 = (fVar4 + 500f);
+			ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0.x, Var0.f_1, fVar4, true, false, false, true);
+			ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), fVar3);
 			iLocal_72 = MISC::GET_GAME_TIMER();
 			CAM::DO_SCREEN_FADE_OUT(0);
 			iLocal_64 = 3;
@@ -1717,9 +1717,9 @@ void func_69()
 
 int func_70()
 {
-	if (iLocal_83)
+	if (iLocal_93)
 	{
-		iLocal_83 = 0;
+		iLocal_93 = 0;
 		return 0;
 	}
 	if (func_71(0))
@@ -2308,16 +2308,16 @@ int func_83(int iParam0, int iParam1, bool bParam2)
 {
 	int iVar0;
 	char* sVar1;
-	int iVar2;
+	int iVar9;
 	
 	if (!ENTITY::DOES_ENTITY_EXIST(iParam0) || !VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, false))
 	{
 		return 0;
 	}
 	iVar0 = 0;
-	while (func_84(iParam1, iVar0, &sVar1, &iVar2))
+	while (func_84(iParam1, iVar0, &sVar1, &iVar9))
 	{
-		if (!bParam2 || MISC::IS_BIT_SET(Global_111638.f_7224[iVar2], 0))
+		if (!bParam2 || MISC::IS_BIT_SET(Global_111638.f_7224[iVar9], 0))
 		{
 			if (VEHICLE::IS_VEHICLE_IN_GARAGE_AREA(&sVar1, iParam0))
 			{
@@ -2561,7 +2561,7 @@ void func_87()
 
 void func_88()
 {
-	if ((func_111() || iLocal_84 != 0) || func_15(14))
+	if ((func_111() || iLocal_94 != 0) || func_15(14))
 	{
 		PAD::DISABLE_CONTROL_ACTION(2, 243, true);
 	}
@@ -2588,15 +2588,15 @@ void func_88()
 	}
 	if (func_109())
 	{
-		if (!iLocal_82)
+		if (!iLocal_92)
 		{
 			func_108();
-			iLocal_82 = 1;
+			iLocal_92 = 1;
 		}
 		return;
 	}
-	iLocal_82 = 0;
-	iLocal_83 = 0;
+	iLocal_92 = 0;
+	iLocal_93 = 0;
 	if ((func_107(988027572, 12) || MISC::_HAS_CHEAT_STRING_JUST_BEEN_ENTERED(joaat("buzzoff"))) || func_106(20, joaat("buzzard")))
 	{
 		func_103(joaat("buzzard"), "CHEAT_SPAWN_VEH1");
@@ -3202,7 +3202,7 @@ int func_106(int iParam0, int iParam1)
 			if (iParam1 == Global_31019)
 			{
 				MISC::CLEAR_BIT(&Global_31018, iParam0);
-				iLocal_83 = 1;
+				iLocal_93 = 1;
 				return 1;
 			}
 			else
@@ -3213,7 +3213,7 @@ int func_106(int iParam0, int iParam1)
 		else
 		{
 			MISC::CLEAR_BIT(&Global_31018, iParam0);
-			iLocal_83 = 1;
+			iLocal_93 = 1;
 			return 1;
 		}
 	}
@@ -3256,17 +3256,17 @@ int func_109()
 
 void func_110()
 {
-	if (func_15(14) || (!CAM::IS_SCREEN_FADED_IN() && iLocal_84 != 0))
+	if (func_15(14) || (!CAM::IS_SCREEN_FADED_IN() && iLocal_94 != 0))
 	{
-		iLocal_84 = MISC::GET_GAME_TIMER();
+		iLocal_94 = MISC::GET_GAME_TIMER();
 	}
-	if (iLocal_84 != 0)
+	if (iLocal_94 != 0)
 	{
 		if (!func_15(14))
 		{
-			if ((MISC::GET_GAME_TIMER() - iLocal_84) > 1000)
+			if ((MISC::GET_GAME_TIMER() - iLocal_94) > 1000)
 			{
-				iLocal_84 = 0;
+				iLocal_94 = 0;
 			}
 		}
 	}
@@ -3295,8 +3295,8 @@ void func_112()
 		iLocal_80[iVar0] = -1;
 		iVar0++;
 	}
-	iLocal_82 = 0;
-	iLocal_81 = 0;
+	iLocal_92 = 0;
+	iLocal_91 = 0;
 }
 
 void func_113()

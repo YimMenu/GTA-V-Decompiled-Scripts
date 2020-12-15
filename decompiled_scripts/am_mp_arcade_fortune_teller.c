@@ -156,7 +156,7 @@
 	var uLocal_154 = 0;
 	var uLocal_155 = 0;
 	struct<117> Local_156 = { 0, -1, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1065353216, 1065353216, 0, 0, 0, 1065353216, 1065353216, 0, 0, 0, 1065353216, 1065353216, 0, 1040187392, 1040187392, -1, 0, 0, 0, 0, 0, 0, 1065353216, 1065353216, 0, 0, 0, 1065353216, 1065353216, 0, 0, 0, 1065353216, 1065353216, 0, 1040187392, 1040187392, -1, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 1073741824, -1073741824, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ;
-	struct<18> Local_157 = { 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ;
+	struct<18> ScriptParam_0 = { 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ;
 #endregion
 
 void __EntryFunction__()
@@ -188,7 +188,7 @@ void __EntryFunction__()
 	fLocal_62 = ((0.05f + 0.275f) - 0.01f);
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		func_122(ScriptParam_157);
+		func_122(ScriptParam_0);
 	}
 	else
 	{
@@ -346,21 +346,21 @@ void func_9(int iParam0)
 	}
 }
 
-void func_10(char[64] cParam0, bool bParam1)
+void func_10(char[64] cParam0, bool bParam16)
 {
 	Local_156.f_9 = func_21(PLAYER::PLAYER_ID());
 	Local_156.f_76.f_36 = 11;
 	Local_156.f_76.f_35 = Local_156.f_9;
 	Local_156.f_76 = { cParam0 };
 	Local_156.f_76.f_33 = 1;
-	func_11(&(Local_156.f_76), bParam1);
+	func_11(&(Local_156.f_76), bParam16);
 }
 
 void func_11(var uParam0, bool bParam1)
 {
 	struct<39> Var0;
-	bool bVar1;
-	int iVar2;
+	bool bVar39;
+	int iVar40;
 	
 	Var0 = -503716486;
 	Var0.f_1 = PLAYER::PLAYER_ID();
@@ -374,12 +374,12 @@ void func_11(var uParam0, bool bParam1)
 	{
 		func_19(&(uParam0->f_37), 0, 0);
 	}
-	bVar1 = true;
+	bVar39 = true;
 	if (MISC::ARE_STRINGS_EQUAL(&(uParam0->f_16), &(Var0.f_2)))
 	{
 		if (func_20(&(uParam0->f_37)) && !func_18(&(uParam0->f_37), 1000, 0))
 		{
-			bVar1 = false;
+			bVar39 = false;
 		}
 		else
 		{
@@ -392,17 +392,17 @@ void func_11(var uParam0, bool bParam1)
 		func_5(&(uParam0->f_37));
 	}
 	uParam0->f_32 = 0;
-	if (bVar1)
+	if (bVar39)
 	{
-		iVar2 = func_17(PLAYER::PLAYER_ID());
+		iVar40 = func_17(PLAYER::PLAYER_ID());
 		if (bParam1)
 		{
-			iVar2 = func_12(1, 1);
+			iVar40 = func_12(1, 1);
 		}
-		if (iVar2 != 0)
+		if (iVar40 != 0)
 		{
 			uParam0->f_32 = 1;
-			SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 39, iVar2);
+			SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 39, iVar40);
 		}
 	}
 }
@@ -625,15 +625,15 @@ void func_23()
 int func_24(int iParam0, int iParam1)
 {
 	struct<3> Var0;
-	float fVar1;
+	float fVar3;
 	
 	if ((!ENTITY::DOES_ENTITY_EXIST(iParam1) || !ENTITY::DOES_ENTITY_EXIST(PLAYER::GET_PLAYER_PED(iParam0))) || ENTITY::IS_ENTITY_DEAD(PLAYER::GET_PLAYER_PED(iParam0), false))
 	{
 		return 0;
 	}
 	Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(iParam0), true) };
-	fVar1 = Var0.f_2;
-	if (fVar1 <= -48f)
+	fVar3 = Var0.f_2;
+	if (fVar3 <= -48f)
 	{
 		return MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, ENTITY::GET_ENTITY_COORDS(iParam1, true), true) <= 4f;
 	}
@@ -2520,13 +2520,13 @@ void func_67(int iParam0)
 void func_68()
 {
 	struct<10> Var0;
-	struct<16> Var1;
+	struct<16> Var10;
 	
 	Var0 = -438538740;
 	Var0.f_2 = 1;
 	Var0.f_6 = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), Local_156.f_13));
-	Var1 = { func_33(Local_156.f_2) };
-	Var0.f_8 = MISC::GET_HASH_KEY(func_69(&Var1));
+	Var10 = { func_33(Local_156.f_2) };
+	Var0.f_8 = MISC::GET_HASH_KEY(func_69(&Var10));
 	if (Local_156.f_2 == 19)
 	{
 		Var0.f_9 = 1;
@@ -2685,9 +2685,9 @@ int func_77(int iParam0)
 void func_78(var uParam0, int iParam1)
 {
 	struct<8> Var0;
-	bool bVar1;
-	bool bVar2;
-	int iVar3;
+	bool bVar8;
+	bool bVar9;
+	int iVar10;
 	
 	Var0.f_5 = 1073741824;
 	Var0.f_6 = -1073741824;
@@ -2699,13 +2699,13 @@ void func_78(var uParam0, int iParam1)
 	Var0.f_5 = uParam0->f_6;
 	Var0.f_6 = uParam0->f_7;
 	Var0.f_7 = uParam0->f_8;
-	bVar1 = false;
+	bVar8 = false;
 	if (iParam1 == 11)
 	{
 		if (MISC::IS_BIT_SET(Global_2425662[PLAYER::PLAYER_ID() /*421*/].f_416, 1))
 		{
 			MISC::CLEAR_BIT(&(Global_2425662[PLAYER::PLAYER_ID() /*421*/].f_416), 1);
-			bVar1 = true;
+			bVar8 = true;
 		}
 	}
 	uParam0->f_5 = 0;
@@ -2713,12 +2713,12 @@ void func_78(var uParam0, int iParam1)
 	{
 		func_19(&(uParam0->f_1), 0, 0);
 	}
-	bVar2 = true;
-	if (*uParam0 == iParam1 && !bVar1)
+	bVar9 = true;
+	if (*uParam0 == iParam1 && !bVar8)
 	{
 		if (func_20(&(uParam0->f_1)) && !func_18(&(uParam0->f_1), 1000, 0))
 		{
-			bVar2 = false;
+			bVar9 = false;
 		}
 		else
 		{
@@ -2730,12 +2730,12 @@ void func_78(var uParam0, int iParam1)
 		*uParam0 = iParam1;
 		func_5(&(uParam0->f_1));
 	}
-	if (bVar2)
+	if (bVar9)
 	{
-		iVar3 = func_17(PLAYER::PLAYER_ID());
-		if (iVar3 != -1)
+		iVar10 = func_17(PLAYER::PLAYER_ID());
+		if (iVar10 != -1)
 		{
-			SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 8, iVar3);
+			SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 8, iVar10);
 			uParam0->f_5 = 1;
 		}
 	}
@@ -2828,7 +2828,7 @@ void func_83()
 void func_84(var uParam0, var uParam1, var uParam2, var uParam3)
 {
 	struct<6> Var0;
-	int iVar1;
+	int iVar6;
 	
 	Var0 = -559810780;
 	Var0.f_1 = PLAYER::PLAYER_ID();
@@ -2836,10 +2836,10 @@ void func_84(var uParam0, var uParam1, var uParam2, var uParam3)
 	Var0.f_3 = uParam1;
 	Var0.f_4 = uParam0;
 	Var0.f_5 = uParam2;
-	iVar1 = func_85(1);
-	if (!iVar1 == 0)
+	iVar6 = func_85(1);
+	if (!iVar6 == 0)
 	{
-		SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 6, iVar1);
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 6, iVar6);
 	}
 }
 
@@ -3524,7 +3524,7 @@ void func_115(var uParam0)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	struct<3> Var3;
+	struct<3> Var4;
 	
 	iVar0 = 0;
 	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
@@ -3540,8 +3540,8 @@ void func_115(var uParam0)
 					break;
 				
 				case 589125870:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.f_2 == 653923311)
+					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
+					if (Var4.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -3555,29 +3555,29 @@ void func_115(var uParam0)
 void func_116(int iParam0)
 {
 	struct<3> Var0;
-	int iVar1;
-	int iVar2;
-	bool bVar3;
+	int iVar3;
+	int iVar4;
+	bool bVar5;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_16(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
+			iVar3 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar3, false))
 				{
-					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_117(iVar2, &bVar3))
+						if (func_117(iVar4, &bVar5))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
 						}
-						if (bVar3)
+						if (bVar5)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar4);
 						}
 					}
 				}

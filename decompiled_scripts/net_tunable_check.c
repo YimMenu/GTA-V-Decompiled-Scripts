@@ -62,10 +62,10 @@ int func_1(var uParam0, var uParam1)
 	int iVar1;
 	int iVar2;
 	struct<6> Var3;
-	int iVar4;
-	int iVar5;
-	int iVar6;
-	int iVar7;
+	int iVar9;
+	int iVar10;
+	int iVar11;
+	int iVar12;
 	
 	if (uParam0->f_2)
 	{
@@ -80,23 +80,23 @@ int func_1(var uParam0, var uParam1)
 		{
 			return 0;
 		}
-		iVar4 = 5;
+		iVar9 = 5;
 		if (NETWORK::NETWORK_CAN_BAIL())
 		{
-			iVar5 = 2348;
-			iVar6 = (uParam0->f_4 + iVar4);
-			iVar7 = func_4(*uParam0);
+			iVar10 = 2348;
+			iVar11 = (uParam0->f_4 + iVar9);
+			iVar12 = func_4(*uParam0);
 			iVar2 = uParam0->f_4;
-			while (iVar2 <= iVar6)
+			while (iVar2 <= iVar11)
 			{
-				if (iVar2 < iVar5)
+				if (iVar2 < iVar10)
 				{
 					func_2(iVar2, &Var3);
 					if (iVar2 >= Var3.f_4 && iVar2 != 27)
 					{
-						if (iVar7 != 0 && Var3.f_5 != 0)
+						if (iVar12 != 0 && Var3.f_5 != 0)
 						{
-							if (NETWORK::NETWORK_ACCESS_TUNABLE_FLOAT_HASH(iVar7, Var3.f_5, &fVar0))
+							if (NETWORK::NETWORK_ACCESS_TUNABLE_FLOAT_HASH(iVar12, Var3.f_5, &fVar0))
 							{
 								if (fVar0 > Var3.f_1 || fVar0 < Var3)
 								{
@@ -105,7 +105,7 @@ int func_1(var uParam0, var uParam1)
 									uParam0->f_1 = MISC::GET_GAME_TIMER();
 								}
 							}
-							else if (NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(iVar7, Var3.f_5, &iVar1))
+							else if (NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(iVar12, Var3.f_5, &iVar1))
 							{
 								if (iVar1 > Var3.f_3 || iVar1 < Var3.f_2)
 								{
@@ -21609,7 +21609,7 @@ void func_15(var uParam0)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	struct<3> Var3;
+	struct<3> Var4;
 	
 	iVar0 = 0;
 	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
@@ -21625,8 +21625,8 @@ void func_15(var uParam0)
 					break;
 				
 				case 589125870:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var3, 4);
-					if (Var3.f_2 == 653923311)
+					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
+					if (Var4.f_2 == 653923311)
 					{
 						*uParam0 = 1;
 					}
@@ -21640,29 +21640,29 @@ void func_15(var uParam0)
 void func_16(int iParam0)
 {
 	struct<3> Var0;
-	int iVar1;
-	int iVar2;
-	bool bVar3;
+	int iVar3;
+	int iVar4;
+	bool bVar5;
 	
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
 	{
 		if (func_18(Var0.f_1, 1, 1))
 		{
-			iVar1 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar1))
+			iVar3 = PLAYER::GET_PLAYER_PED(Var0.f_1);
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false))
+				if (PED::IS_PED_IN_ANY_VEHICLE(iVar3, false))
 				{
-					iVar2 = PED::GET_VEHICLE_PED_IS_IN(iVar1, false);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar2, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
+					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
+					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_17(iVar2, &bVar3))
+						if (func_17(iVar4, &bVar5))
 						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar2, Var0.f_2);
+							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
 						}
-						if (bVar3)
+						if (bVar5)
 						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar2);
+							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar4);
 						}
 					}
 				}

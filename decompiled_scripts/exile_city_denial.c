@@ -40,11 +40,11 @@ void __EntryFunction__()
 	int iVar0;
 	int iVar1;
 	struct<3> Var2;
-	bool bVar3;
-	bool bVar4;
 	bool bVar5;
 	bool bVar6;
-	int iVar7;
+	bool bVar7;
+	bool bVar8;
+	int iVar9;
 	
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -136,17 +136,17 @@ void __EntryFunction__()
 		{
 			bLocal_29 = false;
 		}
-		bVar3 = false;
-		bVar4 = false;
+		bVar5 = false;
+		bVar6 = false;
 		if (func_40(131))
 		{
-			bVar3 = true;
+			bVar5 = true;
 		}
 		if (!func_40(130))
 		{
-			bVar3 = true;
+			bVar5 = true;
 		}
-		if (bVar3)
+		if (bVar5)
 		{
 			Global_41396 = 0;
 			func_39(18);
@@ -154,7 +154,7 @@ void __EntryFunction__()
 		}
 		if (func_22() == 1)
 		{
-			bVar4 = true;
+			bVar6 = true;
 		}
 		Global_41396 = bLocal_29;
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
@@ -173,22 +173,22 @@ void __EntryFunction__()
 			{
 				func_20();
 			}
-			if (bLocal_29 && !bVar4)
+			if (bLocal_29 && !bVar6)
 			{
-				bVar5 = false;
-				bVar6 = true;
-				while (bVar6)
+				bVar7 = false;
+				bVar8 = true;
+				while (bVar8)
 				{
 					switch (func_18(&iLocal_28, 6, 12, 0, 0))
 					{
 						case 0:
-							bVar6 = false;
-							bVar5 = false;
+							bVar8 = false;
+							bVar7 = false;
 							break;
 						
 						case 1:
-							bVar6 = false;
-							bVar5 = true;
+							bVar8 = false;
+							bVar7 = true;
 							break;
 						
 						default:
@@ -200,19 +200,19 @@ void __EntryFunction__()
 						SCRIPT::TERMINATE_THIS_THREAD();
 					}
 				}
-				if (bVar5)
+				if (bVar7)
 				{
 					PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
 					if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 					{
-						iVar7 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
-						while (INTERIOR::IS_VALID_INTERIOR(iVar7))
+						iVar9 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
+						while (INTERIOR::IS_VALID_INTERIOR(iVar9))
 						{
 							SYSTEM::WAIT(5000);
 							PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
 							if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 							{
-								iVar7 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
+								iVar9 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
 							}
 						}
 					}
@@ -246,7 +246,7 @@ void __EntryFunction__()
 							func_10(-2009081795, 7, 4, 31, 3, 10000, 20000, -1, -1, 151, -1, 1024);
 						}
 					}
-					if (iVar1 == 0 && !bVar4)
+					if (iVar1 == 0 && !bVar6)
 					{
 						if ((!func_9(0) && !func_9(4)) && !func_9(3))
 						{
@@ -328,7 +328,7 @@ void __EntryFunction__()
 			}
 		}
 		bLocal_30 = bLocal_29;
-		if (bVar4)
+		if (bVar6)
 		{
 			Global_41396 = 0;
 			if (bLocal_29)
@@ -341,7 +341,7 @@ void __EntryFunction__()
 				SYSTEM::WAIT(2000);
 			}
 			func_41();
-			bVar4 = false;
+			bVar6 = false;
 		}
 		if (bLocal_29)
 		{
@@ -637,7 +637,7 @@ bool func_9(int iParam0)
 int func_10(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11)
 {
 	struct<15> Var0;
-	int iVar1;
+	int iVar15;
 	
 	if (func_14(0))
 	{
@@ -708,14 +708,14 @@ int func_10(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 		}
 		Global_111638.f_7683[Global_111638.f_7683.f_136 /*15*/] = { Var0 };
 		Global_111638.f_7683.f_136++;
-		iVar1 = 0;
-		while (iVar1 < 3)
+		iVar15 = 0;
+		while (iVar15 < 3)
 		{
-			if (MISC::IS_BIT_SET(iParam2, iVar1))
+			if (MISC::IS_BIT_SET(iParam2, iVar15))
 			{
-				func_11(iVar1);
+				func_11(iVar15);
 			}
-			iVar1++;
+			iVar15++;
 		}
 		return 1;
 	}
@@ -1026,7 +1026,7 @@ void func_23()
 	Global_111638.f_2358.f_539.f_4321 = 145;
 }
 
-int func_24(struct<2> Param0, var uParam1, int iParam2)
+int func_24(struct<2> Param0, var uParam2, int iParam3)
 {
 	if (!(CAM::IS_SCREEN_FADED_IN() || CAM::IS_SCREEN_FADING_IN()))
 	{
@@ -1040,7 +1040,7 @@ int func_24(struct<2> Param0, var uParam1, int iParam2)
 			{
 				if (Param0.f_1 > -3500f)
 				{
-					*iParam2 = 1;
+					*iParam3 = 1;
 					return 1;
 				}
 			}
@@ -1054,7 +1054,7 @@ int func_24(struct<2> Param0, var uParam1, int iParam2)
 			{
 				if (Param0 > 1278.08f)
 				{
-					*iParam2 = 0;
+					*iParam3 = 0;
 					return 1;
 				}
 			}
@@ -1182,51 +1182,51 @@ void func_27(int iParam0)
 void func_28(int iParam0)
 {
 	struct<15> Var0;
-	int iVar1;
-	int iVar2;
+	int iVar15;
+	int iVar16;
 	
-	iVar1 = 0;
-	while (iVar1 < Global_111638.f_7683.f_650)
+	iVar15 = 0;
+	while (iVar15 < Global_111638.f_7683.f_650)
 	{
-		if (Global_111638.f_7683.f_199[iVar1 /*15*/] == iParam0)
+		if (Global_111638.f_7683.f_199[iVar15 /*15*/] == iParam0)
 		{
-			iVar2 = iVar1;
-			while (iVar2 <= (Global_111638.f_7683.f_650 - 2))
+			iVar16 = iVar15;
+			while (iVar16 <= (Global_111638.f_7683.f_650 - 2))
 			{
-				Global_111638.f_7683.f_199[iVar2 /*15*/] = { Global_111638.f_7683.f_199[iVar2 + 1 /*15*/] };
-				iVar2++;
+				Global_111638.f_7683.f_199[iVar16 /*15*/] = { Global_111638.f_7683.f_199[iVar16 + 1 /*15*/] };
+				iVar16++;
 			}
 			Global_111638.f_7683.f_199[(Global_111638.f_7683.f_650 - 1) /*15*/] = { Var0 };
 			Global_111638.f_7683.f_650 = (Global_111638.f_7683.f_650 - 1);
 			return;
 		}
-		iVar1++;
+		iVar15++;
 	}
 }
 
 void func_29(int iParam0)
 {
 	struct<15> Var0;
-	int iVar1;
-	int iVar2;
+	int iVar15;
+	int iVar16;
 	
-	iVar1 = 0;
-	while (iVar1 < Global_111638.f_7683.f_198)
+	iVar15 = 0;
+	while (iVar15 < Global_111638.f_7683.f_198)
 	{
-		if (Global_111638.f_7683.f_137[iVar1 /*15*/] == iParam0)
+		if (Global_111638.f_7683.f_137[iVar15 /*15*/] == iParam0)
 		{
-			func_30(Global_111638.f_7683.f_137[iVar1 /*15*/].f_6);
-			iVar2 = iVar1;
-			while (iVar2 <= (Global_111638.f_7683.f_198 - 2))
+			func_30(Global_111638.f_7683.f_137[iVar15 /*15*/].f_6);
+			iVar16 = iVar15;
+			while (iVar16 <= (Global_111638.f_7683.f_198 - 2))
 			{
-				Global_111638.f_7683.f_137[iVar2 /*15*/] = { Global_111638.f_7683.f_137[iVar2 + 1 /*15*/] };
-				iVar2++;
+				Global_111638.f_7683.f_137[iVar16 /*15*/] = { Global_111638.f_7683.f_137[iVar16 + 1 /*15*/] };
+				iVar16++;
 			}
 			Global_111638.f_7683.f_137[(Global_111638.f_7683.f_198 - 1) /*15*/] = { Var0 };
 			Global_111638.f_7683.f_198 = (Global_111638.f_7683.f_198 - 1);
 			return;
 		}
-		iVar1++;
+		iVar15++;
 	}
 }
 
