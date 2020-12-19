@@ -182,7 +182,7 @@ int func_3(int iParam0, int iParam1, bool bParam2)
 	}
 	if (iParam1 > -1)
 	{
-		Global_1312501 = iVar0;
+		Global_1312519 = iVar0;
 	}
 	if (iParam0 == 0)
 	{
@@ -223,12 +223,12 @@ int func_4(int iParam0)
 
 bool func_5()
 {
-	return Global_2450632.f_593;
+	return Global_2451787.f_691;
 }
 
 bool func_6()
 {
-	return Global_1312854;
+	return Global_1312872;
 }
 
 void func_7()

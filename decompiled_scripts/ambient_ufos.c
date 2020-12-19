@@ -162,7 +162,7 @@ void __EntryFunction__()
 	while (true)
 	{
 		func_11(PLAYER::PLAYER_PED_ID());
-		if (Global_30772 == 1)
+		if (Global_30972 == 1)
 		{
 			func_12();
 		}

@@ -27,12 +27,12 @@ void __EntryFunction__()
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
-	Global_1299917 = -1;
+	Global_1299919 = -1;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	iVar0 = 0;
 	while (iVar0 < 127)
 	{
-		func_1(&(Global_1049922[iVar0 /*1951*/]), iVar0);
+		func_1(&(Global_1049924[iVar0 /*1951*/]), iVar0);
 		iVar0++;
 	}
 }
@@ -2165,8 +2165,8 @@ void func_5(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	else
 	{
-		Var0[0 /*6*/] = { Global_4008564[iParam0 /*45*/].f_4 };
-		Var0[0 /*6*/].f_3 = { 0f, 0f, Global_4008564[iParam0 /*45*/].f_7 };
+		Var0[0 /*6*/] = { Global_4014600[iParam0 /*45*/].f_4 };
+		Var0[0 /*6*/].f_3 = { 0f, 0f, Global_4014600[iParam0 /*45*/].f_7 };
 	}
 	if (!bParam3)
 	{
@@ -2174,8 +2174,8 @@ void func_5(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	else
 	{
-		Var0[1 /*6*/] = { Global_4008564[iParam0 /*45*/].f_4 };
-		Var0[1 /*6*/].f_3 = { 0f, 0f, Global_4008564[iParam0 /*45*/].f_7 };
+		Var0[1 /*6*/] = { Global_4014600[iParam0 /*45*/].f_4 };
+		Var0[1 /*6*/].f_3 = { 0f, 0f, Global_4014600[iParam0 /*45*/].f_7 };
 	}
 	*uParam2 = { func_7(iParam1, 86) };
 	Var13 = { *uParam2 - Var0[0 /*6*/] };
@@ -2806,6 +2806,21 @@ struct<6> func_9(int iParam0)
 		case 36:
 			Var0 = { 3634.999f, -4781.017f, 9.7065f };
 			Var0.f_3 = { 0f, 0f, -179.95f };
+			break;
+		
+		case 37:
+			Var0 = { 50.6219f, -3312.563f, 9.7065f };
+			Var0.f_3 = { 0f, 0f, 90.05f };
+			break;
+		
+		case 38:
+			Var0 = { -3556.677f, 738.4581f, 9.7065f };
+			Var0.f_3 = { 0f, 0f, 0.05f };
+			break;
+		
+		case 39:
+			Var0 = { -1766.835f, 5334.093f, 9.7065f };
+			Var0.f_3 = { 0f, 0f, -9.95f };
 			break;
 	}
 	return Var0;
@@ -11391,178 +11406,178 @@ int func_34(int iParam0)
 			break;
 		
 		case 61:
-			return Global_262145.f_6603[0];
+			return Global_262145.f_6604[0];
 			break;
 		
 		case 62:
-			return Global_262145.f_6603[1];
+			return Global_262145.f_6604[1];
 			break;
 		
 		case 63:
-			return Global_262145.f_6603[2];
+			return Global_262145.f_6604[2];
 			break;
 		
 		case 64:
-			return Global_262145.f_6603[3];
+			return Global_262145.f_6604[3];
 			break;
 		
 		case 65:
-			return Global_262145.f_6603[4];
+			return Global_262145.f_6604[4];
 			break;
 		
 		case 66:
-			return Global_262145.f_7825;
-			break;
-		
-		case 67:
 			return Global_262145.f_7826;
 			break;
 		
-		case 68:
+		case 67:
 			return Global_262145.f_7827;
 			break;
 		
-		case 69:
+		case 68:
 			return Global_262145.f_7828;
 			break;
 		
-		case 70:
+		case 69:
 			return Global_262145.f_7829;
 			break;
 		
-		case 71:
+		case 70:
 			return Global_262145.f_7830;
 			break;
 		
-		case 72:
+		case 71:
 			return Global_262145.f_7831;
 			break;
 		
+		case 72:
+			return Global_262145.f_7832;
+			break;
+		
 		case 73:
-			return Global_262145.f_12840;
-		
-		case 74:
-			return Global_262145.f_12841;
-		
-		case 75:
-			return Global_262145.f_12842;
-		
-		case 76:
-			return Global_262145.f_12843;
-		
-		case 77:
-			return Global_262145.f_12844;
-		
-		case 78:
-			return Global_262145.f_12845;
-		
-		case joaat("MPSV_LP0_31"):
-			return Global_262145.f_12846;
-		
-		case 80:
-			return Global_262145.f_12847;
-		
-		case 81:
 			return Global_262145.f_12848;
 		
-		case 82:
+		case 74:
 			return Global_262145.f_12849;
 		
+		case 75:
+			return Global_262145.f_12850;
+		
+		case 76:
+			return Global_262145.f_12851;
+		
+		case 77:
+			return Global_262145.f_12852;
+		
+		case 78:
+			return Global_262145.f_12853;
+		
+		case joaat("MPSV_LP0_31"):
+			return Global_262145.f_12854;
+		
+		case 80:
+			return Global_262145.f_12855;
+		
+		case 81:
+			return Global_262145.f_12856;
+		
+		case 82:
+			return Global_262145.f_12857;
+		
 		case 83:
-			return Global_262145.f_12837;
+			return Global_262145.f_12845;
 		
 		case 84:
-			return Global_262145.f_12838;
+			return Global_262145.f_12846;
 		
 		case 85:
-			return Global_262145.f_12839;
+			return Global_262145.f_12847;
 		
 		case 86:
 			return 27000000;
 		
 		case 87:
-			return Global_262145.f_15433;
+			return Global_262145.f_15441;
 		
 		case 88:
-			return Global_262145.f_15434;
+			return Global_262145.f_15442;
 		
 		case 89:
-			return Global_262145.f_15435;
+			return Global_262145.f_15443;
 		
 		case 90:
-			return Global_262145.f_15436;
+			return Global_262145.f_15444;
 		
 		case 91:
-			return Global_262145.f_17518;
+			return Global_262145.f_17526;
 		
 		case 92:
-			return Global_262145.f_17520;
+			return Global_262145.f_17528;
 		
 		case 93:
-			return Global_262145.f_17516;
-		
-		case 94:
-			return Global_262145.f_17525;
-		
-		case 95:
-			return Global_262145.f_17522;
-		
-		case 96:
 			return Global_262145.f_17524;
 		
+		case 94:
+			return Global_262145.f_17533;
+		
+		case 95:
+			return Global_262145.f_17530;
+		
+		case 96:
+			return Global_262145.f_17532;
+		
 		case 97:
-			return Global_262145.f_17517;
+			return Global_262145.f_17525;
 		
 		case 98:
-			return Global_262145.f_17515;
-		
-		case 99:
-			return Global_262145.f_17514;
-		
-		case 100:
 			return Global_262145.f_17523;
 		
+		case 99:
+			return Global_262145.f_17522;
+		
+		case 100:
+			return Global_262145.f_17531;
+		
 		case 101:
-			return Global_262145.f_17521;
+			return Global_262145.f_17529;
 		
 		case 102:
-			return Global_262145.f_17519;
+			return Global_262145.f_17527;
 		
 		case 103:
-			return Global_262145.f_19183;
+			return Global_262145.f_19191;
 		
 		case 104:
-			return Global_262145.f_19076;
+			return Global_262145.f_19084;
 		
 		case 105:
-			return Global_262145.f_19077;
+			return Global_262145.f_19085;
 		
 		case 106:
-			return Global_262145.f_19183;
+			return Global_262145.f_19191;
 		
 		case 107:
-			return Global_262145.f_19076;
+			return Global_262145.f_19084;
 		
 		case 108:
-			return Global_262145.f_19077;
+			return Global_262145.f_19085;
 		
 		case 109:
-			return Global_262145.f_19183;
+			return Global_262145.f_19191;
 		
 		case 110:
-			return Global_262145.f_19076;
+			return Global_262145.f_19084;
 		
 		case 111:
-			return Global_262145.f_19077;
+			return Global_262145.f_19085;
 		
 		case 112:
-			return Global_262145.f_19183;
+			return Global_262145.f_19191;
 		
 		case 113:
-			return Global_262145.f_19076;
+			return Global_262145.f_19084;
 		
 		case 114:
-			return Global_262145.f_19077;
+			return Global_262145.f_19085;
 		
 		case 115:
 			return 3000000;
@@ -11687,7 +11702,7 @@ int func_41()
 	}
 	if (STATS::STAT_SLOT_IS_LOADED(0))
 	{
-		if (Global_150473.f_3)
+		if (Global_150694.f_3)
 		{
 			iVar2 = joaat("MPPLY_PLAT_UP_LB_CHECK");
 			if (STATS::STAT_GET_INT(iVar2, &iVar1, -1))
@@ -11763,11 +11778,11 @@ int func_42()
 			}
 		}
 	}
-	if (Global_150472 == 2)
+	if (Global_150693 == 2)
 	{
 		return 1;
 	}
-	else if (Global_150472 == 3)
+	else if (Global_150693 == 3)
 	{
 		return 0;
 	}

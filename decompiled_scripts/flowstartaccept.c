@@ -92,8 +92,8 @@ void __EntryFunction__()
 		func_3(1, 1);
 		func_1();
 	}
-	Global_76891.f_1 = 0;
-	MISC::SET_BIT(&(Global_111638.f_10011.f_25), 0);
+	Global_77102.f_1 = 0;
+	MISC::SET_BIT(&(Global_111858.f_10012.f_25), 0);
 	func_6();
 }
 
@@ -103,18 +103,18 @@ int func_1()
 	{
 		return 0;
 	}
-	if (Global_98783.f_8)
+	if (Global_98994.f_8)
 	{
-		if (Global_98783.f_10 > 0)
+		if (Global_98994.f_10 > 0)
 		{
 			return 0;
 		}
 	}
-	else if (Global_98783.f_10 > 1)
+	else if (Global_98994.f_10 > 1)
 	{
 		return 0;
 	}
-	Global_98783.f_10++;
+	Global_98994.f_10++;
 	return 1;
 }
 
@@ -124,13 +124,13 @@ bool func_2(bool bParam0)
 	{
 		return 1;
 	}
-	return MISC::IS_BIT_SET(Global_76870, 0);
+	return MISC::IS_BIT_SET(Global_77081, 0);
 }
 
 void func_3(int iParam0, int iParam1)
 {
-	Global_98783.f_7 = iParam0;
-	Global_98783.f_8 = iParam1;
+	Global_98994.f_7 = iParam0;
+	Global_98994.f_8 = iParam1;
 }
 
 void func_4(char* sParam0)
