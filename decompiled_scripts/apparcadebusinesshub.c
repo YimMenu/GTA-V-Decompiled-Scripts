@@ -4564,7 +4564,7 @@ char* func_172()
 			{
 				return func_174(iVar0, 0);
 			}
-			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 			{
 				return func_174(iVar0, 0);
 			}
@@ -7225,7 +7225,7 @@ void func_277()
 	
 	Var0 = { func_284(49, 50, -1) };
 	func_280(&Var0, 0);
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_279())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_279())
 	{
 		func_315(28);
 	}
@@ -7248,7 +7248,7 @@ int func_279()
 	}
 	if (MISC::IS_PS3_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(1, -1))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -7268,14 +7268,14 @@ int func_279()
 	}
 	if (MISC::IS_XBOX360_VERSION() || MISC::IS_DURANGO_VERSION())
 	{
-		if (NETWORK::_0x595F028698072DD9(0, -3, true))
+		if (NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -3, true))
 		{
 			return 1;
 		}
 	}
 	if (MISC::IS_PC_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(0, -1))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, -1))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -7299,7 +7299,7 @@ void func_280(char* sParam0, bool bParam1)
 	{
 		StringCopy(&(Global_1630317[PLAYER::PLAYER_ID() /*595*/].f_11.f_349), sParam0, 64);
 	}
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_279())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_279())
 	{
 		func_315(28);
 	}
@@ -7396,7 +7396,7 @@ void func_285()
 	
 	Var0 = { func_284(45, 46, -1) };
 	func_286(&Var0, 0);
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_279())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_279())
 	{
 		func_315(28);
 	}
@@ -7423,7 +7423,7 @@ void func_286(char* sParam0, bool bParam1)
 			}
 		}
 	}
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_279())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_279())
 	{
 		func_315(28);
 	}
@@ -7993,7 +7993,7 @@ void func_324()
 		StringCopy(&Var0, func_174(PLAYER::PLAYER_ID(), 0), 64);
 	}
 	func_325(&Var0, iVar16, 0);
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_279())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_279())
 	{
 		func_315(28);
 	}
@@ -8026,7 +8026,7 @@ void func_325(char* sParam0, int iParam1, bool bParam2)
 	}
 	StringCopy(&(Global_1630317[PLAYER::PLAYER_ID() /*595*/].f_11.f_104), sParam0, 64);
 	Global_1630317[PLAYER::PLAYER_ID() /*595*/].f_11.f_120 = LOCALIZATION::_LOCALIZATION_GET_SYSTEM_LANGUAGE();
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_279())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_279())
 	{
 		func_315(28);
 	}
@@ -9763,7 +9763,7 @@ struct<16> func_338()
 				StringCopy(&Var1, func_174(iVar0, 0), 64);
 				return Var1;
 			}
-			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 			{
 				StringCopy(&Var1, func_174(iVar0, 0), 64);
 				return Var1;
@@ -9786,7 +9786,7 @@ struct<16> func_339(int iParam0)
 	}
 	if (iParam0 != PLAYER::PLAYER_ID())
 	{
-		if (!MISC::IS_DURANGO_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+		if (!MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 		{
 			StringCopy(&Var0, func_175(), 64);
 			return Var0;
@@ -9827,7 +9827,7 @@ struct<16> func_340(int iParam0)
 	}
 	if (iParam0 != PLAYER::PLAYER_ID())
 	{
-		if (!MISC::IS_DURANGO_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+		if (!MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 		{
 			StringCopy(&Var0, func_174(iParam0, 0), 64);
 			return Var0;

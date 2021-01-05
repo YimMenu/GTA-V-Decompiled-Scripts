@@ -599,7 +599,7 @@ void func_2()
 
 void func_3(int iParam0, char* sParam1, char* sParam2, int iParam3)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sParam1, sParam2, func_4(iParam3), false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sParam1, sParam2, func_4(iParam3), false);
 }
 
 int func_4(int iParam0)

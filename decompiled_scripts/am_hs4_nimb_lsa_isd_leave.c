@@ -7317,7 +7317,7 @@ int func_113(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_106(iParam0) + iVar0);
@@ -7326,7 +7326,7 @@ int func_113(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_105(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_104(iParam0, func_105(iParam2)) + iVar1);
@@ -39640,7 +39640,7 @@ int func_187(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);

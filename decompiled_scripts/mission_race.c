@@ -17055,7 +17055,7 @@ void func_289(var uParam0, var uParam1)
 									{
 										bVar63 = true;
 									}
-									else if (!NETWORK::_0xBA9775570DB788CF())
+									else if (!NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 									{
 										bVar63 = true;
 									}
@@ -21945,7 +21945,7 @@ void func_347(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 		{
 			if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT())
 			{
-				if (NETWORK::_0xBA9775570DB788CF())
+				if (NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 				{
 					if (NETWORK::NETWORK_IS_SIGNED_ONLINE() && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 					{
@@ -26679,7 +26679,7 @@ int func_427()
 
 void func_428(int iParam0, char* sParam1, char* sParam2, int iParam3)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sParam1, sParam2, func_429(iParam3), false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sParam1, sParam2, func_429(iParam3), false);
 }
 
 int func_429(int iParam0)

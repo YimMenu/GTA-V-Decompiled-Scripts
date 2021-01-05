@@ -3938,7 +3938,7 @@ int func_58(struct<3> Param0, bool bParam3)
 
 void func_59(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_60(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_60(iParam2), 1);
 }
 
 int func_60(int iParam0)
@@ -18375,7 +18375,7 @@ void func_281()
 
 void func_282(int iParam0, char* sParam1, char* sParam2, int iParam3)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sParam1, sParam2, func_60(iParam3), false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sParam1, sParam2, func_60(iParam3), false);
 }
 
 int func_283(int iParam0, int iParam1, bool bParam2)

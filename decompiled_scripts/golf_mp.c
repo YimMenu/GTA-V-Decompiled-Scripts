@@ -3455,7 +3455,7 @@ void func_63(var uParam0, var uParam1)
 									{
 										bVar63 = true;
 									}
-									else if (!NETWORK::_0xBA9775570DB788CF())
+									else if (!NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 									{
 										bVar63 = true;
 									}
@@ -8464,7 +8464,7 @@ void func_129(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 		{
 			if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT())
 			{
-				if (NETWORK::_0xBA9775570DB788CF())
+				if (NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 				{
 					if (NETWORK::NETWORK_IS_SIGNED_ONLINE() && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 					{
@@ -16176,7 +16176,7 @@ int func_303(int iParam0)
 	}
 	if (MISC::IS_PS3_VERSION() || MISC::IS_ORBIS_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(0, iVar0))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, iVar0))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -16188,7 +16188,7 @@ int func_303(int iParam0)
 	{
 		if (iParam0 == PLAYER::PLAYER_ID())
 		{
-			if (NETWORK::_0x83F28CE49FBBFFBA(0, -3, true) || NETWORK::_0xAEEF48CDF5B6CE7C(1, -1))
+			if (NETWORK::NETWORK_CHECK_COMMUNICATION_PRIVILEGES(0, -3, true) || NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1))
 			{
 				return 1;
 			}
@@ -16196,7 +16196,7 @@ int func_303(int iParam0)
 		else
 		{
 			Var1 = { func_134(iParam0) };
-			if (NETWORK::_0xAEEF48CDF5B6CE7C(0, -1) || (NETWORK::_0xAEEF48CDF5B6CE7C(1, -1) && NETWORK::NETWORK_IS_FRIEND(&Var1)))
+			if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, -1) || (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1) && NETWORK::NETWORK_IS_FRIEND(&Var1)))
 			{
 				return 1;
 			}
@@ -16204,7 +16204,7 @@ int func_303(int iParam0)
 	}
 	if (MISC::IS_PC_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(0, iVar0))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, iVar0))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -16223,7 +16223,7 @@ int func_304()
 	}
 	if (MISC::IS_PS3_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(1, -1))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -16243,14 +16243,14 @@ int func_304()
 	}
 	if (MISC::IS_XBOX360_VERSION() || MISC::IS_DURANGO_VERSION())
 	{
-		if (NETWORK::_0x595F028698072DD9(0, -3, true))
+		if (NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -3, true))
 		{
 			return 1;
 		}
 	}
 	if (MISC::IS_PC_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(0, -1))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, -1))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -21253,7 +21253,7 @@ int func_355(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::_0x595F028698072DD9(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_230()) || !func_466(iVar0, 0, 0)) || !bVar1) || func_356(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_230()) || !func_466(iVar0, 0, 0)) || !bVar1) || func_356(iParam0))
 	{
 		return 0;
 	}
@@ -58606,7 +58606,7 @@ int func_528(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_530(iParam0) + iVar0);
@@ -58615,7 +58615,7 @@ int func_528(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_425(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_529(iParam0, func_425(iParam2)) + iVar1);
@@ -117072,7 +117072,7 @@ int func_1570(var uParam0)
 
 void func_1571(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_1572(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_1572(iParam2), 1);
 }
 
 int func_1572(int iParam0)
@@ -119943,7 +119943,7 @@ void func_1684(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4,
 			IntToString(&(Global_1676778.f_3), MISC::GET_HASH_KEY(&(Global_4456448.f_82995)), 32);
 			Global_1676778.f_11 = iParam2;
 			Global_1676778.f_19 = (func_1686(PLAYER::PLAYER_ID(), 1) - Global_1575095);
-			unk_0xC1E963C58664B556(&Global_1676778);
+			STATS::_0xC1E963C58664B556(&Global_1676778);
 			func_1714();
 			Global_1575110 = 0;
 		}
@@ -143062,7 +143062,7 @@ int func_2005(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -150823,7 +150823,7 @@ int func_2035(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_2036()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_529(iParam0, func_425(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -150972,7 +150972,7 @@ int func_2035(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_529(iParam0, func_425(8)) + iVar28);
 				iVar1 = 1;
 			}

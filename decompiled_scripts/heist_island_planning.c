@@ -13153,7 +13153,7 @@ int func_468()
 			Var1.f_9 = -1;
 			func_469(&Var1);
 			Var1.f_7 = Global_262145.f_29184;
-			unk_0xE86689E5F82DE429(Global_262145.f_29184, 0, 1, &Var1);
+			MONEY::_0xE86689E5F82DE429(Global_262145.f_29184, 0, 1, &Var1);
 		}
 		return 1;
 	}
@@ -17500,7 +17500,7 @@ void func_581(var uParam0)
 				Var3.f_9 = -1;
 				func_469(&Var3);
 				func_588(&Var3, iLocal_1447, iVar0);
-				unk_0xE86689E5F82DE429(iVar0, 0, 1, &Var3);
+				MONEY::_0xE86689E5F82DE429(iVar0, 0, 1, &Var3);
 			}
 			func_586(func_587(iLocal_1447), 1);
 			func_547(uParam0->f_711, iLocal_1447, 1);
@@ -17540,7 +17540,7 @@ void func_581(var uParam0)
 				Var13.f_9 = -1;
 				func_469(&Var13);
 				Var13.f_6 = Global_262145.f_29183;
-				unk_0xE86689E5F82DE429(Global_262145.f_29183, 0, 1, &Var13);
+				MONEY::_0xE86689E5F82DE429(Global_262145.f_29183, 0, 1, &Var13);
 			}
 			func_583(1);
 			func_582(uParam0->f_711, 59, 1);

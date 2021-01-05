@@ -1890,46 +1890,46 @@ void func_32(int iParam0, bool bParam1)
 		
 		case -1896606724:
 			Var6 = Global_4264051[iParam0 /*85*/].f_66.f_1;
-			unk_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
+			MONEY::_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
 			break;
 		
 		case -1291433573:
 			Var6.f_1 = Global_4264051[iParam0 /*85*/].f_66.f_1;
-			unk_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
+			MONEY::_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
 			break;
 		
 		case 538631715:
 			Var6.f_2 = Global_4264051[iParam0 /*85*/].f_66.f_1;
-			unk_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
+			MONEY::_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
 			break;
 		
 		case 133782822:
 			Var6.f_3 = Global_4264051[iParam0 /*85*/].f_66.f_1;
-			unk_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
+			MONEY::_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
 			break;
 		
 		case 2081885153:
 			Var6.f_4 = Global_4264051[iParam0 /*85*/].f_66.f_1;
-			unk_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
+			MONEY::_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
 			break;
 		
 		case -1314365345:
 			Var6.f_5 = Global_4264051[iParam0 /*85*/].f_66.f_1;
-			unk_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
+			MONEY::_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
 			break;
 		
 		case 1322977732:
 			Var6.f_6 = Global_4264051[iParam0 /*85*/].f_66.f_1;
-			unk_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
+			MONEY::_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
 			break;
 		
 		case 396623013:
 			Var6.f_7 = Global_4264051[iParam0 /*85*/].f_66.f_1;
-			unk_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
+			MONEY::_0xE86689E5F82DE429(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
 			break;
 		
 		case 1981664462:
-			unk_0x54ABA22FA6371249(Global_4264051[iParam0 /*85*/]);
+			MONEY::_0x54ABA22FA6371249(Global_4264051[iParam0 /*85*/]);
 			break;
 		
 		case -518651910:
@@ -1947,27 +1947,27 @@ void func_32(int iParam0, bool bParam1)
 		case -1261799063:
 		case 784631574:
 		case -2027479156:
-			unk_0xD21D111C46BA9F15(Global_4264051[iParam0 /*85*/].f_66.f_1, Global_4264051[iParam0 /*85*/].f_66.f_15, Global_4264051[iParam0 /*85*/].f_66.f_16, Global_4264051[iParam0 /*85*/], 0, 0);
+			MONEY::_0xD21D111C46BA9F15(Global_4264051[iParam0 /*85*/].f_66.f_1, Global_4264051[iParam0 /*85*/].f_66.f_15, Global_4264051[iParam0 /*85*/].f_66.f_16, Global_4264051[iParam0 /*85*/], 0, 0);
 			break;
 		
 		case -837690641:
-			unk_0xD21D111C46BA9F15(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 0, 0, Global_4264051[iParam0 /*85*/].f_66.f_15, Global_4264051[iParam0 /*85*/].f_66.f_16);
+			MONEY::_0xD21D111C46BA9F15(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 0, 0, Global_4264051[iParam0 /*85*/].f_66.f_15, Global_4264051[iParam0 /*85*/].f_66.f_16);
 			break;
 		
 		case -1921250821:
-			unk_0x6C8BC1488527AAAB(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 0);
+			MONEY::_0x6C8BC1488527AAAB(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 0);
 			break;
 		
 		case -1370731547:
-			unk_0x6C8BC1488527AAAB(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, 0, Global_4264051[iParam0 /*85*/].f_66.f_1, 0);
+			MONEY::_0x6C8BC1488527AAAB(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, 0, Global_4264051[iParam0 /*85*/].f_66.f_1, 0);
 			break;
 		
 		case 1683798242:
-			unk_0x6C8BC1488527AAAB(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, 0, 0, Global_4264051[iParam0 /*85*/].f_66.f_1);
+			MONEY::_0x6C8BC1488527AAAB(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, 0, 0, Global_4264051[iParam0 /*85*/].f_66.f_1);
 			break;
 		
 		case -910968288:
-			unk_0xC991C255AA6D90B2(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, Global_4264051[iParam0 /*85*/], Global_4264051[iParam0 /*85*/].f_10, Global_4264051[iParam0 /*85*/].f_11, Global_4264051[iParam0 /*85*/].f_12, Global_4264051[iParam0 /*85*/].f_6, Global_4264051[iParam0 /*85*/].f_7);
+			MONEY::_0xC991C255AA6D90B2(Global_4264051[iParam0 /*85*/].f_66.f_1, 0, 1, Global_4264051[iParam0 /*85*/], Global_4264051[iParam0 /*85*/].f_10, Global_4264051[iParam0 /*85*/].f_11, Global_4264051[iParam0 /*85*/].f_12, Global_4264051[iParam0 /*85*/].f_6, Global_4264051[iParam0 /*85*/].f_7);
 			break;
 	}
 	if (func_13())

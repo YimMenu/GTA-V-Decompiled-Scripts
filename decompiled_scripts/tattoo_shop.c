@@ -9267,7 +9267,7 @@ int func_71(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_64(iParam0) + iVar0);
@@ -9276,7 +9276,7 @@ int func_71(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_63(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_62(iParam0, func_63(iParam2)) + iVar1);
@@ -41717,7 +41717,7 @@ int func_149(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -106374,7 +106374,7 @@ int func_685(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_686()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_62(iParam0, func_63(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -106523,7 +106523,7 @@ int func_685(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_62(iParam0, func_63(8)) + iVar28);
 				iVar1 = 1;
 			}
@@ -117537,7 +117537,7 @@ void func_823()
 						INTERIOR::_0x405DC2AEF6AF95B9(Local_103.f_4);
 						CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 						func_534(&Local_103, 1f);
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_TATTOO_APPLIED", "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_TATTOO_APPLIED", "SPEECH_PARAMS_FORCE", 1);
 						Local_742.f_19 = 1;
 						StringCopy(&(Local_103.f_118.f_11), "SHOP_INTRO", 16);
 						iLocal_812 = 0;
@@ -117621,15 +117621,15 @@ void func_823()
 									PED::_0x2208438012482A1A(Local_103.f_12, false, false);
 									if (func_826(PLAYER::PLAYER_PED_ID()) || (func_619(PLAYER::PLAYER_PED_ID()) && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS()))
 									{
-										AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_GREET_UNUSUAL", "SPEECH_PARAMS_FORCE", 1);
+										AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_GREET_UNUSUAL", "SPEECH_PARAMS_FORCE", 1);
 									}
 									else if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == joaat("player_zero")) && (func_557(PLAYER::PLAYER_PED_ID(), 12, 8) || func_557(PLAYER::PLAYER_PED_ID(), 12, 28)))
 									{
-										AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "KIFFLOM_GREET", "SPEECH_PARAMS_FORCE", 1);
+										AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "KIFFLOM_GREET", "SPEECH_PARAMS_FORCE", 1);
 									}
 									else
 									{
-										AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_GREET", "SPEECH_PARAMS_FORCE", 1);
+										AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_GREET", "SPEECH_PARAMS_FORCE", 1);
 									}
 									iLocal_789 = 1;
 								}
@@ -117817,7 +117817,7 @@ char* func_828(int iParam0)
 
 void func_829(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_830(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_830(iParam2), 1);
 }
 
 int func_830(int iParam0)
@@ -119139,46 +119139,46 @@ void func_862()
 				case 0:
 					if (func_788(-1))
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_NO_COPS", "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_NO_COPS", "SPEECH_PARAMS_FORCE", 1);
 					}
 					else if (func_826(PLAYER::PLAYER_PED_ID()) || (func_619(PLAYER::PLAYER_PED_ID()) && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS()))
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_GREET_UNUSUAL", "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_GREET_UNUSUAL", "SPEECH_PARAMS_FORCE", 1);
 					}
 					else if ((!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == joaat("player_zero")) && (func_557(PLAYER::PLAYER_PED_ID(), 12, 8) || func_557(PLAYER::PLAYER_PED_ID(), 12, 28)))
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "KIFFLOM_GREET", "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "KIFFLOM_GREET", "SPEECH_PARAMS_FORCE", 1);
 					}
 					else
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_GREET", "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_GREET", "SPEECH_PARAMS_FORCE", 1);
 					}
 					break;
 				
 				case 1:
 					if (MISC::GET_RANDOM_INT_IN_RANGE(0, 2) == 0)
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_BANTER", "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_BANTER", "SPEECH_PARAMS_FORCE", 1);
 					}
 					else
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_BROWSE_TATTOO_MENU", "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_BROWSE_TATTOO_MENU", "SPEECH_PARAMS_FORCE", 1);
 					}
 					break;
 				
 				case 2:
 					if (MISC::GET_RANDOM_INT_IN_RANGE(0, 2) == 0)
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_SELL", "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_SELL", "SPEECH_PARAMS_FORCE", 1);
 					}
 					else
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_TATTOO_APPLIED", "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_TATTOO_APPLIED", "SPEECH_PARAMS_FORCE", 1);
 					}
 					break;
 				
 				case 3:
-					AUDIO::_PLAY_AMBIENT_SPEECH1(Local_103.f_12, "SHOP_GOODBYE", "SPEECH_PARAMS_FORCE", 1);
+					AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_103.f_12, "SHOP_GOODBYE", "SPEECH_PARAMS_FORCE", 1);
 					break;
 				
 				default:
@@ -120168,7 +120168,7 @@ void func_894(int iParam0)
 		{
 			if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0))
 			{
-				AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, "GENERIC_SHOCKED_HIGH", "SPEECH_PARAMS_FORCE", 1);
+				AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, "GENERIC_SHOCKED_HIGH", "SPEECH_PARAMS_FORCE", 1);
 				func_22("Telling shop keeper to cower", -1);
 				TASK::CLEAR_PED_TASKS(iParam0);
 				PED::SET_PED_CONFIG_FLAG(iParam0, 185, false);

@@ -11543,7 +11543,7 @@ void func_386()
 						GRAPHICS::SET_TIMECYCLE_MODIFIER("eyeinthesky");
 					}
 					Var0 = { func_395() };
-					unk_0x202A5ED9CE01D6E7(Local_183.f_168, NETWORK::NET_TO_OBJ(Local_183.f_158), 0f, 0f, 180f, Var0, 1);
+					CAM::_0x202A5ED9CE01D6E7(Local_183.f_168, NETWORK::NET_TO_OBJ(Local_183.f_158), 0f, 0f, 180f, Var0, 1);
 					if (func_35())
 					{
 						CAM::SET_CAM_ROT(Local_183.f_168, func_394() - Vector(0f, -180f, 180f), 2);
@@ -14587,11 +14587,11 @@ void func_508()
 	}
 }
 
-void func_509(int iParam0, var uParam1)
+void func_509(int iParam0, int iParam1)
 {
 	if (Global_2540384.f_337 > 0 || Global_2540384.f_337.f_1 > 0)
 	{
-		unk_0xD4367D310F079DB0(iParam0, uParam1, Global_2540384.f_337, Global_2540384.f_337.f_1);
+		STATS::_0xD4367D310F079DB0(iParam0, iParam1, Global_2540384.f_337, Global_2540384.f_337.f_1);
 	}
 	func_416();
 }

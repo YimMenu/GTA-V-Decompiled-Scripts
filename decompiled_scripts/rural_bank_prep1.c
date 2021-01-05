@@ -3306,7 +3306,7 @@ int func_58(struct<3> Param0, bool bParam3)
 
 void func_59(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_60(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_60(iParam2), 1);
 }
 
 int func_60(int iParam0)
@@ -7518,7 +7518,7 @@ void func_115()
 					{
 						func_34(&uLocal_238, 1, Local_111[iVar0 /*14*/], "ArmyPed", 0, 1);
 						func_147();
-						AUDIO::_PLAY_AMBIENT_SPEECH1(Local_111[iVar0 /*14*/], "GENERIC_WAR_CRY", func_60(3), 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_111[iVar0 /*14*/], "GENERIC_WAR_CRY", func_60(3), 1);
 						iLocal_450 = 1;
 					}
 				}
@@ -9116,37 +9116,37 @@ void func_151()
 		{
 			if (ENTITY::GET_ENTITY_HEALTH(Local_111[iLocal_447 /*14*/]) < 110)
 			{
-				AUDIO::_PLAY_AMBIENT_SPEECH1(Local_111[iLocal_447 /*14*/], "DYING_MOAN", func_60(3), 1);
+				AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_111[iLocal_447 /*14*/], "DYING_MOAN", func_60(3), 1);
 				iLocal_455 = MISC::GET_GAME_TIMER();
 			}
 			else if (ENTITY::GET_ENTITY_HEALTH(Local_111[iLocal_447 /*14*/]) < 140)
 			{
-				AUDIO::_PLAY_AMBIENT_SPEECH1(Local_111[iLocal_447 /*14*/], "DYING_HELP", func_60(3), 1);
+				AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_111[iLocal_447 /*14*/], "DYING_HELP", func_60(3), 1);
 				iLocal_455 = MISC::GET_GAME_TIMER();
 			}
 			else if (PED::IS_PED_GOING_INTO_COVER(Local_111[iLocal_447 /*14*/]))
 			{
-				AUDIO::_PLAY_AMBIENT_SPEECH1(Local_111[iLocal_447 /*14*/], "TAKE_COVER", func_60(3), 1);
+				AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_111[iLocal_447 /*14*/], "TAKE_COVER", func_60(3), 1);
 				iLocal_455 = MISC::GET_GAME_TIMER();
 			}
 			else if (TASK::IS_PED_RUNNING(Local_111[iLocal_447 /*14*/]))
 			{
-				AUDIO::_PLAY_AMBIENT_SPEECH1(Local_111[iLocal_447 /*14*/], "COVER_ME", func_60(3), 1);
+				AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_111[iLocal_447 /*14*/], "COVER_ME", func_60(3), 1);
 				iLocal_455 = MISC::GET_GAME_TIMER();
 			}
 			else if (PED::IS_PED_SHOOTING(Local_111[iLocal_447 /*14*/]))
 			{
-				AUDIO::_PLAY_AMBIENT_SPEECH1(Local_111[iLocal_447 /*14*/], "COVER_YOU", func_60(3), 1);
+				AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_111[iLocal_447 /*14*/], "COVER_YOU", func_60(3), 1);
 				iLocal_455 = MISC::GET_GAME_TIMER();
 			}
 			else if (!WEAPON::IS_PED_WEAPON_READY_TO_SHOOT(Local_111[iLocal_447 /*14*/]))
 			{
-				AUDIO::_PLAY_AMBIENT_SPEECH1(Local_111[iLocal_447 /*14*/], "RELOADING", func_60(3), 1);
+				AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_111[iLocal_447 /*14*/], "RELOADING", func_60(3), 1);
 				iLocal_455 = MISC::GET_GAME_TIMER();
 			}
 			else if (func_188(Local_111[iLocal_447 /*14*/], -828834893, 1) || func_188(Local_111[iLocal_447 /*14*/], 451360105, 1))
 			{
-				AUDIO::_PLAY_AMBIENT_SPEECH1(Local_111[iLocal_447 /*14*/], "GENERIC_WAR_CRY", func_60(3), 1);
+				AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_111[iLocal_447 /*14*/], "GENERIC_WAR_CRY", func_60(3), 1);
 				iLocal_455 = MISC::GET_GAME_TIMER();
 			}
 		}

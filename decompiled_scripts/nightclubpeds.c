@@ -14607,14 +14607,14 @@ int func_26(var uParam0, int iParam1, var uParam2, int iParam3, int iParam4)
 			if (MISC::ARE_STRINGS_EQUAL(sVar1, sVar2))
 			{
 			}
-			AUDIO::_PLAY_AMBIENT_SPEECH1(*uParam0, sVar2, func_53(iParam4), bVar20);
+			AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(*uParam0, sVar2, func_53(iParam4), bVar20);
 		}
 		else
 		{
 			if (MISC::ARE_STRINGS_EQUAL(sVar1, sVar2))
 			{
 			}
-			AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(*uParam0, sVar2, sVar21, func_53(iParam4), bVar20);
+			AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(*uParam0, sVar2, sVar21, func_53(iParam4), bVar20);
 		}
 		if ((((((iVar0 == 54 || iVar0 == 60) || iVar0 == 55) || iVar0 == 53) || iVar0 == 58) || iVar0 == 56) && iParam1 == 9)
 		{

@@ -16364,7 +16364,7 @@ int func_183(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_180(iParam0) + iVar0);
@@ -16373,7 +16373,7 @@ int func_183(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_166(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_179(iParam0, func_166(iParam2)) + iVar1);
@@ -51000,12 +51000,12 @@ void func_409(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 										{
 											if (MISC::GET_RANDOM_INT_IN_RANGE(0, 2) == 0)
 											{
-												AUDIO::_PLAY_AMBIENT_SPEECH1(Local_1071[5 /*10*/], "CHAT_STATE", "SPEECH_PARAMS_FORCE", 1);
+												AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_1071[5 /*10*/], "CHAT_STATE", "SPEECH_PARAMS_FORCE", 1);
 												Local_267[iParam0 /*6*/].f_3 = 2;
 											}
 											else
 											{
-												AUDIO::_PLAY_AMBIENT_SPEECH1(Local_1071[6 /*10*/], "CHAT_STATE", "SPEECH_PARAMS_FORCE", 1);
+												AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_1071[6 /*10*/], "CHAT_STATE", "SPEECH_PARAMS_FORCE", 1);
 												Local_267[iParam0 /*6*/].f_3 = 3;
 											}
 										}
@@ -51015,7 +51015,7 @@ void func_409(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 								case 2:
 									if (!AUDIO::IS_AMBIENT_SPEECH_PLAYING(Local_1071[5 /*10*/]))
 									{
-										AUDIO::_PLAY_AMBIENT_SPEECH1(Local_1071[6 /*10*/], "CHAT_RESP", "SPEECH_PARAMS_FORCE", 1);
+										AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_1071[6 /*10*/], "CHAT_RESP", "SPEECH_PARAMS_FORCE", 1);
 										Local_267[iParam0 /*6*/].f_3 = 4;
 									}
 									break;
@@ -51023,7 +51023,7 @@ void func_409(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 								case 3:
 									if (!AUDIO::IS_AMBIENT_SPEECH_PLAYING(Local_1071[6 /*10*/]))
 									{
-										AUDIO::_PLAY_AMBIENT_SPEECH1(Local_1071[5 /*10*/], "CHAT_RESP", "SPEECH_PARAMS_FORCE", 1);
+										AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_1071[5 /*10*/], "CHAT_RESP", "SPEECH_PARAMS_FORCE", 1);
 										Local_267[iParam0 /*6*/].f_3 = 4;
 									}
 									break;
@@ -52020,7 +52020,7 @@ bool func_414(var uParam0, char* sParam1, char* sParam2, char* sParam3, int iPar
 
 void func_415(int iParam0, char* sParam1, char* sParam2, int iParam3)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sParam1, sParam2, func_416(iParam3), false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sParam1, sParam2, func_416(iParam3), false);
 }
 
 int func_416(int iParam0)
@@ -52234,7 +52234,7 @@ void func_421(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 
 void func_422(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_416(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_416(iParam2), 1);
 }
 
 bool func_423(char* sParam0, int iParam1, char* sParam2)

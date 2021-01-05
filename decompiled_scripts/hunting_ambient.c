@@ -4144,7 +4144,7 @@ void func_104(var uParam0, var uParam1)
 									{
 										bVar63 = true;
 									}
-									else if (!NETWORK::_0xBA9775570DB788CF())
+									else if (!NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 									{
 										bVar63 = true;
 									}
@@ -9039,7 +9039,7 @@ void func_163(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 		{
 			if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT())
 			{
-				if (NETWORK::_0xBA9775570DB788CF())
+				if (NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 				{
 					if (NETWORK::NETWORK_IS_SIGNED_ONLINE() && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 					{
@@ -34526,7 +34526,7 @@ int func_286(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_288(iParam0) + iVar0);
@@ -34535,7 +34535,7 @@ int func_286(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_227(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_287(iParam0, func_227(iParam2)) + iVar1);
@@ -52013,7 +52013,7 @@ int func_383(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -60150,7 +60150,7 @@ int func_422(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_423()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_287(iParam0, func_227(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -60299,7 +60299,7 @@ int func_422(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_287(iParam0, func_227(8)) + iVar28);
 				iVar1 = 1;
 			}
@@ -98981,7 +98981,7 @@ void func_582(char* sParam0, bool bParam1)
 	{
 		return;
 	}
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(PLAYER::PLAYER_PED_ID(), sParam0, "TREVOR_NORMAL", func_583(3), false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(PLAYER::PLAYER_PED_ID(), sParam0, "TREVOR_NORMAL", func_583(3), false);
 	Local_676.f_54 += 8000;
 }
 

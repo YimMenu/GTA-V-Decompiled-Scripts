@@ -1050,7 +1050,7 @@ void func_10(int* iParam0)
 	{
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(sLocal_2187))
 		{
-			AUDIO::_PLAY_AMBIENT_SPEECH1(*iParam0, sLocal_2187, "SPEECH_PARAMS_FORCE", 1);
+			AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(*iParam0, sLocal_2187, "SPEECH_PARAMS_FORCE", 1);
 		}
 	}
 }
@@ -4548,7 +4548,7 @@ void func_114(int* iParam0)
 		{
 			WEAPON::GIVE_WEAPON_TO_PED(*iParam0, joaat("WEAPON_MOLOTOV"), 4, true, true);
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(*iParam0, true);
-			AUDIO::_PLAY_AMBIENT_SPEECH1(*iParam0, sLocal_2187, "SPEECH_PARAMS_FORCE", 1);
+			AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(*iParam0, sLocal_2187, "SPEECH_PARAMS_FORCE", 1);
 			TASK::CLEAR_PED_TASKS(*iParam0);
 			TASK::OPEN_SEQUENCE_TASK(&iVar5);
 			TASK::TASK_THROW_PROJECTILE(0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 0, 0);
@@ -14016,7 +14016,7 @@ int func_293(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_290(iParam0) + iVar0);
@@ -14025,7 +14025,7 @@ int func_293(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_276(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_289(iParam0, func_276(iParam2)) + iVar1);

@@ -6370,7 +6370,7 @@ int func_107(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -7551,7 +7551,7 @@ int func_122(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_59(iParam0) + iVar0);
@@ -7560,7 +7560,7 @@ int func_122(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_58(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_57(iParam0, func_58(iParam2)) + iVar1);
@@ -49948,7 +49948,7 @@ int func_410(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_411()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_57(iParam0, func_58(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -50097,7 +50097,7 @@ int func_410(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_57(iParam0, func_58(8)) + iVar28);
 				iVar1 = 1;
 			}
@@ -131761,7 +131761,7 @@ void func_658(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4)
 	int iVar42;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID());
-	if (((func_423() && NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0)) && (!MISC::IS_PS3_VERSION() || NETWORK::_0x83F28CE49FBBFFBA(0, -1, true))) && Global_4269380)
+	if (((func_423() && NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0)) && (!MISC::IS_PS3_VERSION() || NETWORK::NETWORK_CHECK_COMMUNICATION_PRIVILEGES(0, -1, true))) && Global_4269380)
 	{
 		if (iVar0 == joaat("mp_m_freemode_01"))
 		{

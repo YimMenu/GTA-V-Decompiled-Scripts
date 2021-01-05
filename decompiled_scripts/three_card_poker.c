@@ -4016,7 +4016,7 @@ int func_53(int iParam0, var uParam1, int iParam2, int iParam3)
 		return 0;
 	}
 	sVar17 = func_54(7);
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iVar16, &cVar0, sVar17, 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iVar16, &cVar0, sVar17, 1);
 	return 1;
 }
 

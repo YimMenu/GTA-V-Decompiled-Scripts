@@ -1307,7 +1307,7 @@ struct<4> func_33(char* sParam0)
 
 void func_34(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_35(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_35(iParam2), 1);
 }
 
 int func_35(int iParam0)

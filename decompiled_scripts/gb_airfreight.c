@@ -14144,7 +14144,7 @@ char* func_406(int iParam0)
 	{
 		if (iVar1 != PLAYER::PLAYER_ID())
 		{
-			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 			{
 				return func_409(iVar1, 0);
 			}
@@ -30069,7 +30069,7 @@ int func_753(struct<3> Param0, float fParam3, int iParam4, struct<3> Param5, flo
 	{
 		func_745(Param0, fParam3, iParam4, &Global_1707737, &(Global_1707737.f_3), &(Global_1707737.f_6), 1036831949);
 		func_745(Param5, fParam8, iParam9, &(Global_1707737.f_7), &(Global_1707737.f_10), &(Global_1707737.f_13), 1036831949);
-		if (unk_0xA0AD167E4B39D9A2(Global_1707737, Global_1707737.f_3, Global_1707737.f_6, Global_1707737.f_7, Global_1707737.f_10, Global_1707737.f_13))
+		if (MISC::_0xA0AD167E4B39D9A2(Global_1707737, Global_1707737.f_3, Global_1707737.f_6, Global_1707737.f_7, Global_1707737.f_10, Global_1707737.f_13))
 		{
 			return 1;
 		}
@@ -39372,7 +39372,7 @@ void func_1002(bool bParam0, var uParam1, int iParam2, bool bParam3, int iParam4
 
 void func_1003(int iParam0)
 {
-	unk_0xD6CA58B3B53A0F22(&Global_1676855);
+	STATS::_0xD6CA58B3B53A0F22(&Global_1676855);
 	func_1004();
 }
 
@@ -39388,7 +39388,7 @@ void func_1005(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	unk_0xDFCDB14317A9B361(&Global_1676743);
+	STATS::_0xDFCDB14317A9B361(&Global_1676743);
 	func_1006();
 }
 

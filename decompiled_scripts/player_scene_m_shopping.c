@@ -833,7 +833,7 @@ void func_7(int iParam0)
 
 void func_8(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_9(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_9(iParam2), 1);
 }
 
 int func_9(int iParam0)
@@ -5755,7 +5755,7 @@ bool func_133(struct<3> Param0, struct<3> Param3, bool bParam6)
 
 void func_134(int iParam0, char* sParam1, char* sParam2, int iParam3)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sParam1, sParam2, func_9(iParam3), false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sParam1, sParam2, func_9(iParam3), false);
 }
 
 void func_135(int iParam0, char* sParam1)

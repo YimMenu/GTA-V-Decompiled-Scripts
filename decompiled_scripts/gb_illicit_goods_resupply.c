@@ -7812,7 +7812,7 @@ void func_170(int iParam0)
 
 void func_171(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_172(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_172(iParam2), 1);
 }
 
 int func_172(int iParam0)
@@ -16821,7 +16821,7 @@ int func_292(struct<3> Param0, float fParam3, int iParam4, struct<3> Param5, flo
 	{
 		func_283(Param0, fParam3, iParam4, &Global_1707737, &(Global_1707737.f_3), &(Global_1707737.f_6), 1036831949);
 		func_283(Param5, fParam8, iParam9, &(Global_1707737.f_7), &(Global_1707737.f_10), &(Global_1707737.f_13), 1036831949);
-		if (unk_0xA0AD167E4B39D9A2(Global_1707737, Global_1707737.f_3, Global_1707737.f_6, Global_1707737.f_7, Global_1707737.f_10, Global_1707737.f_13))
+		if (MISC::_0xA0AD167E4B39D9A2(Global_1707737, Global_1707737.f_3, Global_1707737.f_6, Global_1707737.f_7, Global_1707737.f_10, Global_1707737.f_13))
 		{
 			return 1;
 		}
@@ -126227,7 +126227,7 @@ void func_2434(bool bParam0, var uParam1, int iParam2, bool bParam3, int iParam4
 
 void func_2435(int iParam0)
 {
-	unk_0xD6CA58B3B53A0F22(&Global_1676855);
+	STATS::_0xD6CA58B3B53A0F22(&Global_1676855);
 	func_2436();
 }
 
@@ -126243,7 +126243,7 @@ void func_2437(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	unk_0xDFCDB14317A9B361(&Global_1676743);
+	STATS::_0xDFCDB14317A9B361(&Global_1676743);
 	func_2438();
 }
 

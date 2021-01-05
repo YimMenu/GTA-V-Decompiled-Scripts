@@ -1684,7 +1684,7 @@ void func_67()
 				{
 					if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(Local_79.f_1))
 					{
-						if (unk_0x99015ED7DBEA5113(iVar1))
+						if (VEHICLE::_DOES_VEHICLE_HAVE_SEARCHLIGHT(iVar1))
 						{
 							if (func_79())
 							{

@@ -4219,7 +4219,7 @@ void func_128(int iParam0)
 				}
 				else
 				{
-					AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(Local_389[iParam0 /*22*/], "ARREST_PLAYER", sVar0, "SPEECH_PARAMS_FORCE", false);
+					AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(Local_389[iParam0 /*22*/], "ARREST_PLAYER", sVar0, "SPEECH_PARAMS_FORCE", false);
 				}
 				iLocal_659 = 1;
 			}
@@ -5603,12 +5603,12 @@ void func_177(int iParam0, int iParam1, int iParam2)
 				if (iParam0 == 0)
 				{
 					sVar1 = "S_M_Y_COP_01_WHITE_MINI_03";
-					AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(Local_389[iParam0 /*22*/], "CHALLENGE_THREATEN", sVar1, "SPEECH_PARAMS_FORCE", false);
+					AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(Local_389[iParam0 /*22*/], "CHALLENGE_THREATEN", sVar1, "SPEECH_PARAMS_FORCE", false);
 				}
 				else if (iParam0 == 1)
 				{
 					sVar1 = "S_M_Y_COP_01_BLACK_MINI_04";
-					AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(Local_389[iParam0 /*22*/], "CHALLENGE_THREATEN", sVar1, "SPEECH_PARAMS_FORCE", false);
+					AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(Local_389[iParam0 /*22*/], "CHALLENGE_THREATEN", sVar1, "SPEECH_PARAMS_FORCE", false);
 				}
 				else if (iParam0 == 2)
 				{
@@ -5819,7 +5819,7 @@ void func_182(int iParam0, int iParam1, int iParam2)
 				{
 					sVar1 = "S_M_Y_COP_01_BLACK_MINI_04";
 				}
-				AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(Local_389[iParam0 /*22*/], "BUMP", sVar1, "SPEECH_PARAMS_FORCE", false);
+				AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(Local_389[iParam0 /*22*/], "BUMP", sVar1, "SPEECH_PARAMS_FORCE", false);
 				func_183(iParam0, iParam1, 0);
 			}
 		}
@@ -12917,7 +12917,7 @@ int func_287(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_281(iParam0) + iVar0);
@@ -12926,7 +12926,7 @@ int func_287(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_274(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_280(iParam0, func_274(iParam2)) + iVar1);

@@ -3799,7 +3799,7 @@ void func_110(var uParam0, char* sParam1, char* sParam2, char[4] cParam3, char[4
 
 void func_111(int iParam0, char* sParam1, char* sParam2, int iParam3)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sParam1, sParam2, func_112(iParam3), false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sParam1, sParam2, func_112(iParam3), false);
 }
 
 int func_112(int iParam0)

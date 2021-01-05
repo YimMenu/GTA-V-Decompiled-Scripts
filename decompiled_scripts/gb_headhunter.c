@@ -11396,7 +11396,7 @@ char* func_441()
 			{
 				return func_443(iVar0, 0);
 			}
-			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 			{
 				return func_443(iVar0, 0);
 			}
@@ -19991,7 +19991,7 @@ void func_630(bool bParam0, int iParam1, int iParam2, bool bParam3, int iParam4,
 
 void func_631(int iParam0)
 {
-	unk_0xD6CA58B3B53A0F22(&Global_1676855);
+	STATS::_0xD6CA58B3B53A0F22(&Global_1676855);
 	func_632();
 }
 
@@ -20019,7 +20019,7 @@ void func_634(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	unk_0xDFCDB14317A9B361(&Global_1676743);
+	STATS::_0xDFCDB14317A9B361(&Global_1676743);
 	func_635();
 }
 
@@ -24169,7 +24169,7 @@ char* func_751(int iParam0)
 	{
 		if (iVar1 != PLAYER::PLAYER_ID())
 		{
-			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 			{
 				return func_443(iVar1, 0);
 			}

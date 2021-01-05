@@ -2806,7 +2806,7 @@ void func_92()
 		StringCopy(&Var0, func_105(PLAYER::PLAYER_ID(), 0), 64);
 	}
 	func_96(&Var0, iVar16, 0);
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_95())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_95())
 	{
 		func_94(28);
 	}
@@ -2834,7 +2834,7 @@ int func_95()
 	}
 	if (MISC::IS_PS3_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(1, -1))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -2854,14 +2854,14 @@ int func_95()
 	}
 	if (MISC::IS_XBOX360_VERSION() || MISC::IS_DURANGO_VERSION())
 	{
-		if (NETWORK::_0x595F028698072DD9(0, -3, true))
+		if (NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -3, true))
 		{
 			return 1;
 		}
 	}
 	if (MISC::IS_PC_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(0, -1))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, -1))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -2895,7 +2895,7 @@ void func_96(char* sParam0, int iParam1, bool bParam2)
 	}
 	StringCopy(&(Global_1630317[PLAYER::PLAYER_ID() /*595*/].f_11.f_104), sParam0, 64);
 	Global_1630317[PLAYER::PLAYER_ID() /*595*/].f_11.f_120 = LOCALIZATION::_LOCALIZATION_GET_SYSTEM_LANGUAGE();
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_95())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_95())
 	{
 		func_94(28);
 	}
@@ -2922,7 +2922,7 @@ void func_97(char* sParam0, bool bParam1)
 			}
 		}
 	}
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_95())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_95())
 	{
 		func_94(28);
 	}
@@ -3011,7 +3011,7 @@ void func_101(char* sParam0, bool bParam1)
 	{
 		StringCopy(&(Global_1630317[PLAYER::PLAYER_ID() /*595*/].f_11.f_349), sParam0, 64);
 	}
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_95())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_95())
 	{
 		func_94(28);
 	}
@@ -3459,7 +3459,7 @@ void func_126()
 	
 	Var0 = { func_107(49, 50, -1) };
 	func_101(&Var0, 0);
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_95())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_95())
 	{
 		func_94(28);
 	}
@@ -3475,7 +3475,7 @@ void func_127()
 	
 	Var0 = { func_107(45, 46, -1) };
 	func_97(&Var0, 0);
-	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::_0x595F028698072DD9(0, -1, true)) || func_95())
+	if ((!MISC::IS_DURANGO_VERSION() && NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || func_95())
 	{
 		func_94(28);
 	}

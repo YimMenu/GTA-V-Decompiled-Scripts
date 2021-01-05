@@ -9018,7 +9018,7 @@ void func_191(int iParam0, var uParam1, var uParam2)
 				if ((MISC::GET_GAME_TIMER() - iParam0->f_2) > iParam0->f_3)
 				{
 					AUDIO::PLAY_SOUND_FROM_COORD(iParam0->f_1, "TRUNK_THUMPS", ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(*uParam1, 0f, -2.2f, 0.5f), 0, false, 0, false);
-					AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(*uParam2, "NIGE3_CXAA", "DINAPOLI", func_192(0), false);
+					AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(*uParam2, "NIGE3_CXAA", "DINAPOLI", func_192(0), false);
 					iParam0->f_4 = MISC::GET_RANDOM_INT_IN_RANGE(3, 7);
 					iParam0->f_5 = 0;
 					iParam0->f_6 = MISC::GET_GAME_TIMER();

@@ -5385,7 +5385,7 @@ void func_130()
 									iVar10 = 2;
 								}
 							}
-							else if (NETWORK::_NETWORK_IS_CLOUD_BACKGROUND_SCRIPTS_REQUEST_PENDING())
+							else if (NETWORK::NETWORK_IS_CLOUD_BACKGROUND_SCRIPT_REQUEST_PENDING())
 							{
 							}
 							else if (iVar9 == 12)
@@ -5615,7 +5615,7 @@ void func_130()
 							iVar10 = 2;
 						}
 					}
-					else if (NETWORK::_NETWORK_IS_CLOUD_BACKGROUND_SCRIPTS_REQUEST_PENDING())
+					else if (NETWORK::NETWORK_IS_CLOUD_BACKGROUND_SCRIPT_REQUEST_PENDING())
 					{
 						if (HUD::BUSYSPINNER_IS_ON() == 0)
 						{
@@ -35234,7 +35234,7 @@ int func_269(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_263(iParam0) + iVar0);
@@ -35243,7 +35243,7 @@ int func_269(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_201(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_262(iParam0, func_201(iParam2)) + iVar1);
@@ -51618,7 +51618,7 @@ int func_345(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -59745,7 +59745,7 @@ int func_382(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_383()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_262(iParam0, func_201(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -59894,7 +59894,7 @@ int func_382(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_262(iParam0, func_201(8)) + iVar28);
 				iVar1 = 1;
 			}
@@ -100923,7 +100923,7 @@ int func_748(int iParam0)
 {
 	if (MISC::IS_PS3_VERSION() || (MISC::IS_ORBIS_VERSION() && iParam0 == 0))
 	{
-		if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(1) == 0 || NETWORK::_0xAEEF48CDF5B6CE7C(1, -1) == 0)
+		if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(1) == 0 || NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1) == 0)
 		{
 			return 0;
 		}

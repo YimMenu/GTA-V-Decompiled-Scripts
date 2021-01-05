@@ -565,7 +565,7 @@ void __EntryFunction__()
 				iLocal_250 = 5;
 				iVar41 = MISC::GET_GAME_TIMER();
 			}
-			AUDIO::_PLAY_AMBIENT_SPEECH1(iLocal_240, "GENERIC_CURSE_MED", "SPEECH_PARAMS_FORCE", 1);
+			AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iLocal_240, "GENERIC_CURSE_MED", "SPEECH_PARAMS_FORCE", 1);
 		}
 		if (((func_108() || MISC::GET_MISSION_FLAG()) || func_107()) || !func_109())
 		{

@@ -7545,7 +7545,7 @@ int func_181(struct<3> Param0, float fParam3, int iParam4, struct<3> Param5, flo
 	{
 		func_76(Param0, fParam3, iParam4, &Global_1707737, &(Global_1707737.f_3), &(Global_1707737.f_6), 1036831949);
 		func_76(Param5, fParam8, iParam9, &(Global_1707737.f_7), &(Global_1707737.f_10), &(Global_1707737.f_13), 1036831949);
-		if (unk_0xA0AD167E4B39D9A2(Global_1707737, Global_1707737.f_3, Global_1707737.f_6, Global_1707737.f_7, Global_1707737.f_10, Global_1707737.f_13))
+		if (MISC::_0xA0AD167E4B39D9A2(Global_1707737, Global_1707737.f_3, Global_1707737.f_6, Global_1707737.f_7, Global_1707737.f_10, Global_1707737.f_13))
 		{
 			return 1;
 		}
@@ -19656,7 +19656,7 @@ char* func_626(int iParam0)
 	{
 		if (iVar1 != PLAYER::PLAYER_ID())
 		{
-			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 			{
 				return func_629(iVar1, 0);
 			}
@@ -24120,7 +24120,7 @@ char* func_761()
 			{
 				return func_629(iVar0, 0);
 			}
-			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+			if (!MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 			{
 				return func_629(iVar0, 0);
 			}
@@ -32591,7 +32591,7 @@ void func_936(bool bParam0, int iParam1, int iParam2, bool bParam3, int iParam4,
 
 void func_937(int iParam0)
 {
-	unk_0xD6CA58B3B53A0F22(&Global_1676855);
+	STATS::_0xD6CA58B3B53A0F22(&Global_1676855);
 	func_938();
 }
 
@@ -32619,7 +32619,7 @@ void func_940(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	unk_0xDFCDB14317A9B361(&Global_1676743);
+	STATS::_0xDFCDB14317A9B361(&Global_1676743);
 	func_941();
 }
 

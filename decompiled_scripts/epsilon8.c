@@ -7777,7 +7777,7 @@ int func_150(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_147(iParam0) + iVar0);
@@ -7786,7 +7786,7 @@ int func_150(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_164(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_146(iParam0, func_164(iParam2)) + iVar1);
@@ -39485,7 +39485,7 @@ void func_310()
 					{
 						if (func_66(iLocal_570[5], PLAYER::PLAYER_PED_ID(), 4.5f, 1))
 						{
-							AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iLocal_570[5], "EPS8_ANAA", "EPSGUARD2", "SPEECH_PARAMS_FORCE", false);
+							AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iLocal_570[5], "EPS8_ANAA", "EPSGUARD2", "SPEECH_PARAMS_FORCE", false);
 							iLocal_324 = 1;
 						}
 					}
@@ -39496,7 +39496,7 @@ void func_310()
 					{
 						if (func_66(iLocal_570[3], PLAYER::PLAYER_PED_ID(), 5f, 1))
 						{
-							AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iLocal_570[3], "EPS8_AOAA", "EPSGUARD7", "SPEECH_PARAMS_FORCE", false);
+							AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iLocal_570[3], "EPS8_AOAA", "EPSGUARD7", "SPEECH_PARAMS_FORCE", false);
 							TASK::TASK_PLAY_ANIM(iLocal_570[3], "rcmepsilonism8", "security_greet", 2f, -2f, -1, 32, 0.2f, true, false, false);
 							iLocal_325 = 1;
 						}
@@ -39508,7 +39508,7 @@ void func_310()
 					{
 						if (func_66(iLocal_570[4], PLAYER::PLAYER_PED_ID(), 5f, 1))
 						{
-							AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iLocal_570[4], "EPS8_APAA", "EPSGUARD8", "SPEECH_PARAMS_FORCE", false);
+							AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iLocal_570[4], "EPS8_APAA", "EPSGUARD8", "SPEECH_PARAMS_FORCE", false);
 							TASK::TASK_PLAY_ANIM(iLocal_570[4], "rcmepsilonism8", "security_greet", 2f, -2f, -1, 32, 0.2f, true, false, false);
 							iLocal_326 = 1;
 						}

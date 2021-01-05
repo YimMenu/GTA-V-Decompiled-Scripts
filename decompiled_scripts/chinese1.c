@@ -25001,7 +25001,7 @@ int func_82(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_84(iParam0) + iVar0);
@@ -25010,7 +25010,7 @@ int func_82(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_23(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_83(iParam0, func_23(iParam2)) + iVar1);
@@ -42505,7 +42505,7 @@ int func_181(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -50642,7 +50642,7 @@ int func_220(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_221()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_83(iParam0, func_23(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -50791,7 +50791,7 @@ int func_220(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_83(iParam0, func_23(8)) + iVar28);
 				iVar1 = 1;
 			}
@@ -110986,7 +110986,7 @@ int func_731()
 							PED::SET_PED_ENABLE_WEAPON_BLOCKING(Local_398[iLocal_1867 /*22*/], true);
 							PED::SET_PED_COMBAT_ATTRIBUTES(Local_398[iLocal_1867 /*22*/], 47, true);
 							PED::REGISTER_TARGET(Local_398[iLocal_1867 /*22*/], Local_332);
-							AUDIO::_PLAY_AMBIENT_SPEECH1(Local_398[iLocal_1867 /*22*/], "GENERIC_WAR_CRY", "SPEECH_PARAMS_FORCE", 1);
+							AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(Local_398[iLocal_1867 /*22*/], "GENERIC_WAR_CRY", "SPEECH_PARAMS_FORCE", 1);
 							if (!func_662(&Local_398, Local_2424))
 							{
 								if (func_652(PLAYER::PLAYER_PED_ID(), 1390.91f, 3608.21f, 38.91f, "v_39_UpperRm3"))
@@ -113931,7 +113931,7 @@ void func_785(int iParam0, int* iParam1)
 
 void func_786(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_787(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_787(iParam2), 1);
 }
 
 int func_787(int iParam0)

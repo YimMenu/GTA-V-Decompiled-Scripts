@@ -3383,7 +3383,7 @@ int func_103(var uParam0, int iParam1, int iParam2)
 	{
 		return 0;
 	}
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(*uParam0, sVar0, sVar1, func_104(6), false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(*uParam0, sVar0, sVar1, func_104(6), false);
 	return 1;
 }
 

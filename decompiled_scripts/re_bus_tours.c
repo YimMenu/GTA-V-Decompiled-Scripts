@@ -3505,7 +3505,7 @@ void func_86()
 							sVar25 = "TOUR_LANDMARK";
 						}
 						GRAPHICS::DRAW_DEBUG_TEXT_2D("AMBIENT LINE", 0.02f, 0.3f, 0f, 0, 0, 255, 255);
-						AUDIO::_PLAY_AMBIENT_SPEECH1(uLocal_287[iLocal_540], sVar25, "SPEECH_PARAMS_FORCE", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(uLocal_287[iLocal_540], sVar25, "SPEECH_PARAMS_FORCE", 1);
 						iLocal_541++;
 						if (iLocal_541 == 3)
 						{
@@ -7084,7 +7084,7 @@ void func_170()
 
 void func_171(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_172(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_172(iParam2), 1);
 }
 
 int func_172(int iParam0)

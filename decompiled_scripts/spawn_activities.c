@@ -15487,7 +15487,7 @@ void func_375()
 	{
 		return;
 	}
-	unk_0x9A9D1BA639675CF1("HeistIsland", 0);
+	STREAMING::_SET_ISLAND_HOPPER_ENABLED("HeistIsland", false);
 	func_669();
 	func_376();
 }
@@ -15496,8 +15496,8 @@ void func_376()
 {
 	func_666(0);
 	TASK::SET_SCENARIO_GROUP_ENABLED("Heist_Island_Peds", false);
-	unk_0x5E1460624D194A38(0);
-	unk_0xF74B1FFA4A15FBEA(0);
+	HUD::_SET_TOGGLE_MINIMAP_HEIST_ISLAND(false);
+	PATHFIND::_0xF74B1FFA4A15FBEA(0);
 	PLAYER::SET_MAX_WANTED_LEVEL(5);
 	PLAYER::SET_WANTED_LEVEL_MULTIPLIER(1f);
 	PLAYER::SET_DISPATCH_COPS_FOR_PLAYER(PLAYER::PLAYER_ID(), true);
@@ -23597,7 +23597,7 @@ int func_400(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -27942,7 +27942,7 @@ int func_422(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_10(iParam0) + iVar0);
@@ -27951,7 +27951,7 @@ int func_422(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_9(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_8(iParam0, func_9(iParam2)) + iVar1);
@@ -69713,7 +69713,7 @@ int func_550(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_551()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_8(iParam0, func_9(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -69862,7 +69862,7 @@ int func_550(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_8(iParam0, func_9(8)) + iVar28);
 				iVar1 = 1;
 			}
@@ -98666,17 +98666,17 @@ void func_666(bool bParam0)
 {
 	if (bParam0)
 	{
-		if (unk_0xF741BD853611592D() != 1)
+		if (STREAMING::_GET_GLOBAL_WATER_TYPE() != 1)
 		{
 			if (!func_667())
 			{
-				unk_0x7E3F55ED251B76D3(1);
+				STREAMING::_LOAD_GLOBAL_WATER_TYPE(1);
 			}
 		}
 	}
-	else if (unk_0xF741BD853611592D() != 0)
+	else if (STREAMING::_GET_GLOBAL_WATER_TYPE() != 0)
 	{
-		unk_0x7E3F55ED251B76D3(0);
+		STREAMING::_LOAD_GLOBAL_WATER_TYPE(0);
 	}
 }
 

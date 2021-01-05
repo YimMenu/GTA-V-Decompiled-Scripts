@@ -12878,7 +12878,7 @@ void func_60(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, i
 			IntToString(&(Global_1676778.f_3), MISC::GET_HASH_KEY(&(Global_4456448.f_82995)), 32);
 			Global_1676778.f_11 = iParam2;
 			Global_1676778.f_19 = (func_62(PLAYER::PLAYER_ID(), 1) - Global_1575095);
-			unk_0xC1E963C58664B556(&Global_1676778);
+			STATS::_0xC1E963C58664B556(&Global_1676778);
 			func_96();
 			Global_1575110 = 0;
 		}
@@ -24656,7 +24656,7 @@ int func_267(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_269(iParam0) + iVar0);
@@ -24665,7 +24665,7 @@ int func_267(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_252(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_268(iParam0, func_252(iParam2)) + iVar1);
@@ -37634,7 +37634,7 @@ int func_324(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -45362,7 +45362,7 @@ int func_356(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_357()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_268(iParam0, func_252(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -45511,7 +45511,7 @@ int func_356(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_268(iParam0, func_252(8)) + iVar28);
 				iVar1 = 1;
 			}
@@ -127954,7 +127954,7 @@ int func_1125(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::_0x595F028698072DD9(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_47()) || !func_647(iVar0, 0, 0)) || !bVar1) || func_1126(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_47()) || !func_647(iVar0, 0, 0)) || !bVar1) || func_1126(iParam0))
 	{
 		return 0;
 	}
@@ -140046,15 +140046,15 @@ void func_1368(int iParam0, bool bParam1)
 	}
 }
 
-void func_1369(char* sParam0, bool bParam1)
+void func_1369(int iParam0, bool bParam1)
 {
 	if (bParam1)
 	{
-		unk_0x1178E104409FE58C(sParam0, 1);
+		MISC::_0x1178E104409FE58C(iParam0, 1);
 	}
 	else
 	{
-		MISC::SET_OVERRIDE_WEATHER(sParam0);
+		MISC::SET_OVERRIDE_WEATHER(iParam0);
 	}
 }
 
@@ -142854,7 +142854,7 @@ void func_1458(var uParam0, var uParam1)
 									{
 										bVar63 = true;
 									}
-									else if (!NETWORK::_0xBA9775570DB788CF())
+									else if (!NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 									{
 										bVar63 = true;
 									}
@@ -147661,7 +147661,7 @@ void func_1509(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4
 		{
 			if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT())
 			{
-				if (NETWORK::_0xBA9775570DB788CF())
+				if (NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 				{
 					if (NETWORK::NETWORK_IS_SIGNED_ONLINE() && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 					{

@@ -1010,7 +1010,7 @@ void func_35()
 
 void func_36(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_37(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_37(iParam2), 1);
 }
 
 int func_37(int iParam0)

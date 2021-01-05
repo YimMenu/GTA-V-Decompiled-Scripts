@@ -7684,7 +7684,7 @@ void func_163()
 			{
 				if (((iLocal_1189[0] == 8 || iLocal_1189[0] == 6) || iLocal_1189[0] == 1) || iLocal_1189[0] == 10)
 				{
-					if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() || !NETWORK::_0xBA9775570DB788CF())
+					if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() || !NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 					{
 						if (iLocal_1189[0] == 8)
 						{
@@ -7704,7 +7704,7 @@ void func_163()
 				{
 					if (iLocal_1189[1] == 1)
 					{
-						if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() || !NETWORK::_0xBA9775570DB788CF())
+						if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() || !NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 						{
 							HUD::SET_SOCIAL_CLUB_TOUR("Playlists");
 							HUD::OPEN_SOCIAL_CLUB_MENU();
@@ -7718,7 +7718,7 @@ void func_163()
 				{
 					if (iLocal_1189[2] == iLocal_270 || iLocal_1189[2] == iLocal_269)
 					{
-						if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() || !NETWORK::_0xBA9775570DB788CF())
+						if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() || !NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 						{
 							HUD::SET_SOCIAL_CLUB_TOUR("Missions");
 							HUD::OPEN_SOCIAL_CLUB_MENU();
@@ -10447,7 +10447,7 @@ bool func_245()
 
 int func_246()
 {
-	return NETWORK::_0x595F028698072DD9(0, -1, true);
+	return NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true);
 	return 1;
 }
 
@@ -10459,7 +10459,7 @@ int func_247()
 	}
 	if (MISC::IS_PS3_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(1, -1))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -10479,14 +10479,14 @@ int func_247()
 	}
 	if (MISC::IS_XBOX360_VERSION() || MISC::IS_DURANGO_VERSION())
 	{
-		if (NETWORK::_0x595F028698072DD9(0, -3, true))
+		if (NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -3, true))
 		{
 			return 1;
 		}
 	}
 	if (MISC::IS_PC_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(0, -1))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, -1))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -10582,7 +10582,7 @@ int func_253()
 {
 	if (!func_45())
 	{
-		if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() || !NETWORK::_0xBA9775570DB788CF())
+		if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() || !NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 		{
 			if (iLocal_1188 == 0)
 			{
@@ -26954,7 +26954,7 @@ void func_580()
 						{
 							if (iLocal_1188 == 2)
 							{
-								if ((NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && NETWORK::_0xBA9775570DB788CF()) && func_527(0, 0))
+								if ((NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT()) && func_527(0, 0))
 								{
 									if (func_182())
 									{
@@ -30120,11 +30120,11 @@ char* func_614(int iParam0)
 
 char* func_615()
 {
-	if (MISC::IS_XBOX360_VERSION() && !NETWORK::_0x595F028698072DD9(0, -1, true))
+	if (MISC::IS_XBOX360_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true))
 	{
 		return "NT_INV_INCOMPATIBLE_CREATOR";
 	}
-	else if (MISC::IS_XBOX360_VERSION() && !NETWORK::_0x595F028698072DD9(0, -2, false))
+	else if (MISC::IS_XBOX360_VERSION() && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -2, false))
 	{
 		return "NT_INV_INCOMPATIBLE_CREATOR_INACTIVE";
 	}
@@ -30147,7 +30147,7 @@ int func_616(int iParam0)
 {
 	if (MISC::IS_PS3_VERSION() || (MISC::IS_ORBIS_VERSION() && iParam0 == 0))
 	{
-		if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(1) == 0 || NETWORK::_0xAEEF48CDF5B6CE7C(1, -1) == 0)
+		if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(1) == 0 || NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1) == 0)
 		{
 			return 0;
 		}
@@ -30208,7 +30208,7 @@ int func_618(int iParam0)
 	}
 	if (MISC::IS_PS3_VERSION() || MISC::IS_ORBIS_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(0, iVar0))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, iVar0))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -30220,7 +30220,7 @@ int func_618(int iParam0)
 	{
 		if (iParam0 == PLAYER::PLAYER_ID())
 		{
-			if (NETWORK::_0x83F28CE49FBBFFBA(0, -3, true) || NETWORK::_0xAEEF48CDF5B6CE7C(1, -1))
+			if (NETWORK::NETWORK_CHECK_COMMUNICATION_PRIVILEGES(0, -3, true) || NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1))
 			{
 				return 1;
 			}
@@ -30228,7 +30228,7 @@ int func_618(int iParam0)
 		else
 		{
 			Var1 = { func_156(iParam0) };
-			if (NETWORK::_0xAEEF48CDF5B6CE7C(0, -1) || (NETWORK::_0xAEEF48CDF5B6CE7C(1, -1) && NETWORK::NETWORK_IS_FRIEND(&Var1)))
+			if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, -1) || (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1) && NETWORK::NETWORK_IS_FRIEND(&Var1)))
 			{
 				return 1;
 			}
@@ -30236,7 +30236,7 @@ int func_618(int iParam0)
 	}
 	if (MISC::IS_PC_VERSION())
 	{
-		if (NETWORK::_0xAEEF48CDF5B6CE7C(0, iVar0))
+		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, iVar0))
 		{
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 			{
@@ -64064,7 +64064,7 @@ int func_888(int iParam0)
 {
 	if (MISC::IS_PS3_VERSION() || (MISC::IS_ORBIS_VERSION() && iParam0 == 0))
 	{
-		if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0) == 0 || NETWORK::_0xAEEF48CDF5B6CE7C(0, -1) == 0)
+		if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0) == 0 || NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, -1) == 0)
 		{
 			return 0;
 		}
@@ -72482,7 +72482,7 @@ void func_1121()
 						break;
 					
 					case 1:
-						if ((NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && NETWORK::_0xBA9775570DB788CF()) && func_191() == 0)
+						if ((NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT()) && func_191() == 0)
 						{
 							if (((((((((((((iLocal_1189[2] == iLocal_275 || iLocal_1189[2] == iLocal_276) || iLocal_1189[2] == iLocal_277) || iLocal_1189[2] == iLocal_278) || iLocal_1189[2] == iLocal_286) || iLocal_1189[2] == iLocal_285) || iLocal_1189[2] == iLocal_279) || iLocal_1189[2] == iLocal_287) || iLocal_1189[2] == iLocal_284) || iLocal_1189[2] == iLocal_280) || iLocal_1189[2] == iLocal_281) || iLocal_1189[2] == iLocal_289) || iLocal_1189[2] == iLocal_290) || iLocal_1189[2] == iLocal_291)
 							{
@@ -72900,7 +72900,7 @@ int func_1125()
 				switch (iLocal_1189[1])
 				{
 					case 1:
-						if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && NETWORK::_0xBA9775570DB788CF())
+						if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT())
 						{
 							if (iLocal_1188 == 2)
 							{
@@ -72987,7 +72987,7 @@ int func_1125()
 								}
 								if (Global_961130.f_65 > 0)
 								{
-									if ((NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && NETWORK::_0xBA9775570DB788CF()) && func_527(0, 0))
+									if ((NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && NETWORK::NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT()) && func_527(0, 0))
 									{
 										if (func_182())
 										{
@@ -75269,7 +75269,7 @@ char* func_1191(int iParam0)
 				{
 					return "HUD_PRIVIL";
 				}
-				else if (!NETWORK::_0xAEEF48CDF5B6CE7C(1, -1))
+				else if (!NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(1, -1))
 				{
 					return "CONT_CHATR";
 				}
@@ -75683,7 +75683,7 @@ void func_1197()
 							break;
 						
 						case 8:
-							if (((((((((func_45() || func_248() == 2) || ((!func_250(1, 0) && !func_250(1, 1)) && !func_250(1, 2))) || !NETWORK::NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV()) || (((!MISC::IS_DURANGO_VERSION() && !MISC::IS_ORBIS_VERSION()) && !func_246()) && !NETWORK::_0x595F028698072DD9(1, -2, true))) || (MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_HAS_ROS_PRIVILEGE(18))) || (!func_247() && MISC::IS_ORBIS_VERSION())) || NETWORK::NETWORK_PLAYER_IS_CHEATER()) || func_242(0)) || !func_243())
+							if (((((((((func_45() || func_248() == 2) || ((!func_250(1, 0) && !func_250(1, 1)) && !func_250(1, 2))) || !NETWORK::NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV()) || (((!MISC::IS_DURANGO_VERSION() && !MISC::IS_ORBIS_VERSION()) && !func_246()) && !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(1, -2, true))) || (MISC::IS_DURANGO_VERSION() && !NETWORK::NETWORK_HAS_ROS_PRIVILEGE(18))) || (!func_247() && MISC::IS_ORBIS_VERSION())) || NETWORK::NETWORK_PLAYER_IS_CHEATER()) || func_242(0)) || !func_243())
 							{
 								bVar5 = false;
 							}
@@ -76836,7 +76836,7 @@ int func_1203(int iParam0, bool bParam1, int iParam2)
 	bParam1->f_16 = 1;
 	if (bVar0)
 	{
-		if (func_621(bParam1, &Var3, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0) || NETWORK::_0x595F028698072DD9(0, -2, false))
+		if (func_621(bParam1, &Var3, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0) || NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -2, false))
 		{
 			if (*bParam1)
 			{

@@ -1604,7 +1604,7 @@ bool func_32(struct<3> Param0, struct<3> Param3, bool bParam6)
 
 void func_33(int iParam0, char* sParam1, char* sParam2, int iParam3)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sParam1, sParam2, func_34(iParam3), false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sParam1, sParam2, func_34(iParam3), false);
 }
 
 int func_34(int iParam0)

@@ -4797,7 +4797,7 @@ int func_118(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_24(iParam0) + iVar0);
@@ -4806,7 +4806,7 @@ int func_118(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_23(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_22(iParam0, func_23(iParam2)) + iVar1);
@@ -51210,7 +51210,7 @@ int func_258(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -59899,7 +59899,7 @@ int func_300(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_301()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_22(iParam0, func_23(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -60048,7 +60048,7 @@ int func_300(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_22(iParam0, func_23(8)) + iVar28);
 				iVar1 = 1;
 			}
@@ -88749,7 +88749,7 @@ void func_712(int iParam0, int iParam1, char* sParam2, bool bParam3, int iParam4
 
 void func_713(char* sParam0, char* sParam1, struct<3> Param2, int iParam5)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH_AT_COORDS(sParam0, sParam1, Param2, func_714(iParam5));
+	AUDIO::PLAY_AMBIENT_SPEECH_FROM_POSITION_NATIVE(sParam0, sParam1, Param2, func_714(iParam5));
 }
 
 int func_714(int iParam0)
@@ -91007,7 +91007,7 @@ void func_801(int* iParam0, var uParam1, int iParam2, int iParam3, int iParam4, 
 	{
 		iVar0 = iParam4;
 	}
-	unk_0x2FA3173480008493(iParam2, iParam3, MISC::IS_BIT_SET(*iParam0, 0), iVar0, iParam5);
+	STATS::_0x2FA3173480008493(iParam2, iParam3, MISC::IS_BIT_SET(*iParam0, 0), iVar0, iParam5);
 }
 
 void func_802(int* iParam0, var uParam1, int iParam2)
@@ -93504,15 +93504,15 @@ void func_893(int iParam0, int iParam1)
 	}
 }
 
-void func_894(var* uParam0, int* iParam1, bool bParam2, int iParam3, var uParam4)
+void func_894(var* uParam0, int* iParam1, bool bParam2, int iParam3, int iParam4)
 {
 	int iVar0;
 	char cVar1[32];
 	
 	if (!bParam2)
 	{
-		uParam4 = func_124(9567, -1, 0);
-		func_801(iParam1, uParam0, uParam4, -2060373942, uParam0->f_755 + 1, func_804(&(uParam0->f_748), 0, 0));
+		iParam4 = func_124(9567, -1, 0);
+		func_801(iParam1, uParam0, iParam4, -2060373942, uParam0->f_755 + 1, func_804(&(uParam0->f_748), 0, 0));
 	}
 	func_895(uParam0, "DLC_H4_Fingerprint_Hack_Scene");
 	MISC::CLEAR_BIT(&(uParam0->f_740), 2);

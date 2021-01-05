@@ -2771,7 +2771,7 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_42(iParam0) + iVar0);
@@ -2780,7 +2780,7 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_41(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_40(iParam0, func_41(iParam2)) + iVar1);
@@ -49179,7 +49179,7 @@ int func_188(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = unk_0x10144267DD22866C(iParam1, -1, iParam0);
+	iVar0 = FILES::_0x10144267DD22866C(iParam1, -1, iParam0);
 	if (iVar0 != -1)
 	{
 		return (129 + iVar0);
@@ -57944,7 +57944,7 @@ int func_231(int iParam0, int iParam1, int iParam2, int iParam3)
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_232()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar13 = unk_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
+				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_40(iParam0, func_41(8)) + iVar13);
 				iVar1 = 1;
 			}
@@ -58093,7 +58093,7 @@ int func_231(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
 				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
-				iVar28 = unk_0x96E2929292A4DB77(iVar27);
+				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_40(iParam0, func_41(8)) + iVar28);
 				iVar1 = 1;
 			}
@@ -71745,7 +71745,7 @@ bool func_290()
 
 void func_291(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_292(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_292(iParam2), 1);
 }
 
 int func_292(int iParam0)
@@ -74887,7 +74887,7 @@ void func_399(struct<8> Param0)
 	}
 	sVar1 = "PLAYER_DRUNK";
 	sVar2 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iVar0, sVar1, "WFStewardess", sVar2, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iVar0, sVar1, "WFStewardess", sVar2, false);
 }
 
 int func_400(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8)
@@ -74915,7 +74915,7 @@ void func_401(struct<8> Param0)
 	}
 	sVar1 = "BARTENDER_SERVE";
 	sVar2 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iVar0, sVar1, "WFStewardess", sVar2, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iVar0, sVar1, "WFStewardess", sVar2, false);
 }
 
 void func_402(struct<8> Param0)
@@ -74930,7 +74930,7 @@ void func_402(struct<8> Param0)
 	}
 	sVar1 = "BARTENDER_GREET";
 	sVar2 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iVar0, sVar1, "WFStewardess", sVar2, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iVar0, sVar1, "WFStewardess", sVar2, false);
 }
 
 void func_403(int iParam0, int iParam1, char* sParam2, char* sParam3, float fParam4, float fParam5, int iParam6, bool bParam7, bool bParam8)
@@ -75564,7 +75564,7 @@ void func_442(struct<8> Param0)
 	}
 	sVar1 = "BARTENDER_CHAT";
 	sVar2 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iVar0, sVar1, "WFStewardess", sVar2, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iVar0, sVar1, "WFStewardess", sVar2, false);
 }
 
 void func_443(struct<8> Param0)
@@ -75579,7 +75579,7 @@ void func_443(struct<8> Param0)
 	}
 	sVar1 = "BARSTAFF_IDLE";
 	sVar2 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iVar0, sVar1, "WFStewardess", sVar2, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iVar0, sVar1, "WFStewardess", sVar2, false);
 }
 
 void func_444(struct<8> Param0)
@@ -75607,7 +75607,7 @@ void func_444(struct<8> Param0)
 		sVar2 = "GENERIC_HI_MALE";
 	}
 	sVar3 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iVar0, sVar2, "WFStewardess", sVar3, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iVar0, sVar2, "WFStewardess", sVar3, false);
 	iLocal_654 = 1;
 	iLocal_655 = 0;
 }
@@ -76010,7 +76010,7 @@ void func_467(int iParam0)
 	
 	sVar0 = "GENERIC_SHOCKED_MED";
 	sVar1 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sVar0, "WFStewardess", sVar1, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sVar0, "WFStewardess", sVar1, false);
 }
 
 void func_468(int iParam0)
@@ -76020,7 +76020,7 @@ void func_468(int iParam0)
 	
 	sVar0 = "GENERIC_SHOCKED_HIGH";
 	sVar1 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sVar0, "WFStewardess", sVar1, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sVar0, "WFStewardess", sVar1, false);
 }
 
 void func_469(int iParam0)
@@ -76030,7 +76030,7 @@ void func_469(int iParam0)
 	
 	sVar0 = "GENERIC_FRIGHTENED_MED";
 	sVar1 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sVar0, "WFStewardess", sVar1, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sVar0, "WFStewardess", sVar1, false);
 }
 
 void func_470(int iParam0)
@@ -76040,7 +76040,7 @@ void func_470(int iParam0)
 	
 	sVar0 = "GENERIC_FRIGHTENED_HIGH";
 	sVar1 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam0, sVar0, "WFStewardess", sVar1, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam0, sVar0, "WFStewardess", sVar1, false);
 }
 
 int func_471(int iParam0)
@@ -76102,7 +76102,7 @@ void func_473(struct<8> Param0)
 	}
 	sVar1 = "GENERIC_THANKS";
 	sVar2 = func_292(3);
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iVar0, sVar1, "WFStewardess", sVar2, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iVar0, sVar1, "WFStewardess", sVar2, false);
 }
 
 void func_474(struct<8> Param0)
@@ -76125,7 +76125,7 @@ void func_474(struct<8> Param0)
 		sVar1 = "GENERIC_BYE";
 		sVar2 = func_292(3);
 	}
-	AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iVar0, sVar1, "WFStewardess", sVar2, false);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iVar0, sVar1, "WFStewardess", sVar2, false);
 }
 
 int func_475(int iParam0)
@@ -76147,7 +76147,7 @@ void func_476(struct<8> Param0)
 	{
 		sVar1 = "BUMP";
 		sVar2 = func_292(3);
-		AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iVar0, sVar1, "WFStewardess", sVar2, false);
+		AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iVar0, sVar1, "WFStewardess", sVar2, false);
 		iLocal_653 = 1;
 	}
 	else if (func_462(PLAYER::PLAYER_PED_ID(), iVar0, 1) >= 2f)

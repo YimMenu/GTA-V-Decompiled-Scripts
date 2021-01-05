@@ -4710,7 +4710,7 @@ int func_60(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_57(iParam0) + iVar0);
@@ -4719,7 +4719,7 @@ int func_60(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_77(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_56(iParam0, func_77(iParam2)) + iVar1);
@@ -35919,7 +35919,7 @@ void func_255()
 							if (func_231(Local_295[0 /*9*/]))
 							{
 								TASK::CLEAR_PED_TASKS(Local_295[0 /*9*/]);
-								AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(Local_295[0 /*9*/], "PAP3B_BFAA", "Paparazzo3BBodyGuard1", "SPEECH_PARAMS_STANDARD", false);
+								AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(Local_295[0 /*9*/], "PAP3B_BFAA", "Paparazzo3BBodyGuard1", "SPEECH_PARAMS_STANDARD", false);
 								TASK::TASK_TURN_PED_TO_FACE_ENTITY(Local_295[0 /*9*/], PLAYER::PLAYER_PED_ID(), -1);
 							}
 						}
@@ -37431,7 +37431,7 @@ void func_286()
 						if (func_231(Local_295[3 /*9*/]))
 						{
 							TASK::TASK_LOOK_AT_ENTITY(Local_295[3 /*9*/], PLAYER::PLAYER_PED_ID(), -1, 0, 2);
-							AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(Local_295[3 /*9*/], "PAP3B_BCAA", "Paparazzo3BBodyGuard1", "SPEECH_PARAMS_STANDARD", false);
+							AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(Local_295[3 /*9*/], "PAP3B_BCAA", "Paparazzo3BBodyGuard1", "SPEECH_PARAMS_STANDARD", false);
 							iLocal_427 = 1;
 						}
 					}
@@ -37711,7 +37711,7 @@ void func_286()
 									WEAPON::GIVE_WEAPON_TO_PED(Local_295[0 /*9*/], joaat("WEAPON_COMBATPISTOL"), -1, true, true);
 									WEAPON::GIVE_WEAPON_COMPONENT_TO_PED(Local_295[0 /*9*/], joaat("WEAPON_COMBATPISTOL"), joaat("component_at_pi_flsh"));
 									TASK::TASK_AIM_GUN_AT_ENTITY(Local_295[0 /*9*/], PLAYER::PLAYER_PED_ID(), 5000, false);
-									AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(Local_295[0 /*9*/], "PAP3B_BDAA", "Paparazzo3BBodyGuard1", "SPEECH_PARAMS_FORCE", false);
+									AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(Local_295[0 /*9*/], "PAP3B_BDAA", "Paparazzo3BBodyGuard1", "SPEECH_PARAMS_FORCE", false);
 								}
 							}
 						}
@@ -37949,7 +37949,7 @@ void func_286()
 											{
 												TASK::TASK_TURN_PED_TO_FACE_ENTITY(Local_295[0 /*9*/], PLAYER::PLAYER_PED_ID(), -1);
 											}
-											AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(Local_295[0 /*9*/], "PAP3B_BDAA", "Paparazzo3BBodyGuard1", "SPEECH_PARAMS_STANDARD", false);
+											AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(Local_295[0 /*9*/], "PAP3B_BDAA", "Paparazzo3BBodyGuard1", "SPEECH_PARAMS_STANDARD", false);
 											iLocal_464 = MISC::GET_GAME_TIMER();
 										}
 										iLocal_428 = 1;
@@ -39288,7 +39288,7 @@ void func_317(char* sParam0, int iParam1)
 
 void func_318(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_319(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_319(iParam2), 1);
 }
 
 int func_319(int iParam0)

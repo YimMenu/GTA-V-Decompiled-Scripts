@@ -5941,7 +5941,7 @@ int func_108(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_105(iParam0) + iVar0);
@@ -5950,7 +5950,7 @@ int func_108(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_125(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_104(iParam0, func_125(iParam2)) + iVar1);
@@ -35857,7 +35857,7 @@ void func_255()
 					func_267(773, 0);
 					HUD::SET_BLIP_SCALE(iLocal_475, 1f);
 					PLAYER::SET_WANTED_LEVEL_MULTIPLIER(0.2f);
-					AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iLocal_471, "JOSH2_BCAA", "AVERY", "SPEECH_PARAMS_STANDARD", false);
+					AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iLocal_471, "JOSH2_BCAA", "AVERY", "SPEECH_PARAMS_STANDARD", false);
 				}
 			}
 		}
@@ -42886,7 +42886,7 @@ void func_379()
 						func_267(773, 0);
 						HUD::SET_BLIP_SCALE(iLocal_475, 1f);
 						PLAYER::SET_WANTED_LEVEL_MULTIPLIER(0.2f);
-						AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iLocal_471, "JOSH2_BCAA", "AVERY", "SPEECH_PARAMS_STANDARD", false);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iLocal_471, "JOSH2_BCAA", "AVERY", "SPEECH_PARAMS_STANDARD", false);
 					}
 				}
 			}
@@ -54786,7 +54786,7 @@ bool func_599(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 
 void func_600(int iParam0, char* sParam1, int iParam2)
 {
-	AUDIO::_PLAY_AMBIENT_SPEECH1(iParam0, sParam1, func_601(iParam2), 1);
+	AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam0, sParam1, func_601(iParam2), 1);
 }
 
 int func_601(int iParam0)

@@ -6346,7 +6346,7 @@ var func_127(int iParam0, int iParam1)
 	struct<2> Var3;
 	
 	cVar0 = "";
-	iVar1 = unk_0xDBF860CF1DB8E599(0);
+	iVar1 = DATAFILE::_0xDBF860CF1DB8E599(0);
 	func_130(&iVar2, iVar1, func_131(iParam0));
 	StringCopy(&Var3, "clip", 16);
 	StringIntConCat(&Var3, iParam1, 16);
@@ -6439,7 +6439,7 @@ var func_134(int iParam0, int iParam1)
 	struct<2> Var3;
 	
 	cVar0 = "";
-	iVar1 = unk_0xDBF860CF1DB8E599(0);
+	iVar1 = DATAFILE::_0xDBF860CF1DB8E599(0);
 	func_130(&iVar2, iVar1, func_135(iParam0));
 	StringCopy(&Var3, "clip", 16);
 	StringIntConCat(&Var3, iParam1, 16);
@@ -8179,7 +8179,7 @@ var func_147(int iParam0, int iParam1)
 	if (iParam1 < 1)
 	{
 	}
-	iVar1 = unk_0xDBF860CF1DB8E599(0);
+	iVar1 = DATAFILE::_0xDBF860CF1DB8E599(0);
 	StringCopy(&Var3, "dancer", 16);
 	StringIntConCat(&Var3, iParam1, 16);
 	StringConCat(&Var3, "anim", 16);
@@ -72153,11 +72153,11 @@ void func_908(struct<6> Param0, var uParam6, int iParam7, int iParam8)
 	}
 	if (MISC::ARE_STRINGS_EQUAL(Param0.f_5, "NULL"))
 	{
-		AUDIO::_PLAY_AMBIENT_SPEECH1(iParam7, Param0.f_4, func_909(6), 0);
+		AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iParam7, Param0.f_4, func_909(6), 0);
 	}
 	else
 	{
-		AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(iParam7, Param0.f_4, Param0.f_5, func_909(6), false);
+		AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(iParam7, Param0.f_4, Param0.f_5, func_909(6), false);
 	}
 }
 

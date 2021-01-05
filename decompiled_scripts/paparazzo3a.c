@@ -5033,7 +5033,7 @@ int func_60(int iParam0, int iParam1, int iParam2, int iParam3)
 	else if (iParam2 == 14)
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
-		iVar0 = unk_0x6CEBE002E58DEE97(iParam1);
+		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
 			return (func_57(iParam0) + iVar0);
@@ -5042,7 +5042,7 @@ int func_60(int iParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_77(iParam2));
-		iVar1 = unk_0x96E2929292A4DB77(iParam1);
+		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
 			return (func_56(iParam0, func_77(iParam2)) + iVar1);
@@ -36700,7 +36700,7 @@ void func_257()
 								{
 									if (!AUDIO::IS_ANY_SPEECH_PLAYING(Local_3371[1 /*9*/]))
 									{
-										AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(Local_3371[1 /*9*/], "PAP3A_APAA", "Paparazzo3ACop3", "SPEECH_PARAMS_FORCE", false);
+										AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(Local_3371[1 /*9*/], "PAP3A_APAA", "Paparazzo3ACop3", "SPEECH_PARAMS_FORCE", false);
 									}
 									else
 									{
@@ -40057,7 +40057,7 @@ void func_344()
 						{
 							if (func_255() || func_236("PAP3_POP", 0, 0))
 							{
-								AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(PLAYER::PLAYER_PED_ID(), "PAP3A_AOAF", "FRANKLIN", "SPEECH_PARAMS_STANDARD", false);
+								AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(PLAYER::PLAYER_PED_ID(), "PAP3A_AOAF", "FRANKLIN", "SPEECH_PARAMS_STANDARD", false);
 							}
 							else
 							{
@@ -40211,7 +40211,7 @@ void func_344()
 				{
 					if (func_255() || func_236("PAP3_POP", 0, 0))
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH_WITH_VOICE(PLAYER::PLAYER_PED_ID(), "PAP3A_AOAF", "FRANKLIN", "SPEECH_PARAMS_STANDARD", false);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(PLAYER::PLAYER_PED_ID(), "PAP3A_AOAF", "FRANKLIN", "SPEECH_PARAMS_STANDARD", false);
 					}
 					else
 					{
@@ -46823,7 +46823,7 @@ void func_471()
 					if (func_238(iLocal_3142, Local_3408, 30f, 1))
 					{
 						TASK::TASK_SHOCKING_EVENT_REACT(iLocal_3142, iLocal_3185);
-						AUDIO::_PLAY_AMBIENT_SPEECH1(iLocal_3142, "GENERIC_SHOCKED_HIGH", "SPEECH_PARAMS_STANDARD", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iLocal_3142, "GENERIC_SHOCKED_HIGH", "SPEECH_PARAMS_STANDARD", 1);
 						iLocal_3193 = 4;
 					}
 				}
@@ -46837,7 +46837,7 @@ void func_471()
 				{
 					if (!AUDIO::IS_ANY_SPEECH_PLAYING(iLocal_3142))
 					{
-						AUDIO::_PLAY_AMBIENT_SPEECH1(iLocal_3142, "GENERIC_SHOCKED_HIGH", "SPEECH_PARAMS_STANDARD", 1);
+						AUDIO::PLAY_PED_AMBIENT_SPEECH_NATIVE(iLocal_3142, "GENERIC_SHOCKED_HIGH", "SPEECH_PARAMS_STANDARD", 1);
 					}
 					if (fLocal_3258 > 90000f)
 					{
