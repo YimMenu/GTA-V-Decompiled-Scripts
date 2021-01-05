@@ -38,14 +38,18 @@ foreach($argv as $i => $arg)
 if($total_scripts == 0)
 {
 	$full_decompile = true;
+	$fh = fopen("all_script_names.txt", "w");
 	foreach(scandir("scripts") as $script)
 	{
 		if(substr($script, -4) == "_ysc")
 		{
 			$scripts_to_decompile[substr($script, 0, -4)] = true;
 			$total_scripts++;
+			fwrite($fh, substr($script, 0, -4)."\n");
 		}
 	}
+	fflush($fh);
+	fclose($fh);
 }
 
 function manageprocs()
