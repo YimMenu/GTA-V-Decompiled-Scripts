@@ -1744,7 +1744,7 @@ void func_31(var uParam0, int iParam1)
 			PED::_0x2F3C3D9F50681DE4(iVar0, true);
 			PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(iVar0, false);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 208, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 			func_32(iVar0, iParam1);
 			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iVar0, func_34(iParam1), false, false, true);
 			ENTITY::SET_ENTITY_HEADING(iVar0, func_33(iParam1));
@@ -5308,7 +5308,7 @@ void func_179(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -5362,7 +5362,7 @@ void func_179(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_180(Global_4456448.f_129348))
@@ -70469,7 +70469,7 @@ int func_497(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPa
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -77185,7 +77185,7 @@ int func_573(struct<3> Param0, float fParam3, bool bParam4, int iParam5, bool bP
 									func_497(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38), iVar1, Param0, fParam3, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0);
 									NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38, PLAYER::PLAYER_ID(), true);
 									iVar0 = NETWORK::NET_TO_VEH(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38);
-									ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 									VEHICLE::_0xB2E0C0D6922D31F2(iVar0, true);
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iVar0, 5f);
 									func_631(&iVar0, iParam5);

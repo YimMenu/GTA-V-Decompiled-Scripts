@@ -62668,7 +62668,7 @@ void func_231(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -62722,7 +62722,7 @@ void func_231(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_232(Global_4456448.f_129348))

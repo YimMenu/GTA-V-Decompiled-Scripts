@@ -2812,7 +2812,7 @@ void func_117(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -2866,7 +2866,7 @@ void func_117(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_118(Global_4456448.f_129348))
@@ -41315,15 +41315,15 @@ int func_621(int iParam0)
 			return 85;
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			return 86;
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			return 88;
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			return 87;
 			break;
 	}
@@ -41544,7 +41544,7 @@ int func_628(int* iParam0, int iParam1)
 				VEHICLE::_0x2311DD7159F00582(*iParam0, true);
 				ENTITY::SET_ENTITY_CAN_BE_DAMAGED(*iParam0, false);
 				AUDIO::SET_VEHICLE_RADIO_ENABLED(*iParam0, false);
-				ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iParam1);
 			}
 			else if (func_129(*iParam0))
@@ -57133,7 +57133,7 @@ void func_852()
 			return;
 		}
 		Local_268.f_72 = OBJECT::CREATE_OBJECT_NO_OFFSET(func_853(), func_758(), false, false, true);
-		ENTITY::_SET_ENTITY_SOMETHING(Local_268.f_72, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_268.f_72, true);
 		ENTITY::SET_ENTITY_CAN_BE_DAMAGED(Local_268.f_72, false);
 	}
 }
@@ -58147,15 +58147,15 @@ int func_874(int iParam0)
 				return 11572;
 				break;
 			
-			case -1658906650:
+			case joaat("WEAPON_MILITARYRIFLE"):
 				return 11742;
 				break;
 			
-			case 1470379660:
+			case joaat("WEAPON_GADGETPISTOL"):
 				return 11732;
 				break;
 			
-			case 94989220:
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 11722;
 				break;
 			}
@@ -58582,15 +58582,15 @@ int func_878(int iParam0)
 			return 432;
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			return 436;
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			return 438;
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			return 434;
 			break;
 	}
@@ -61082,7 +61082,7 @@ int func_885(int iParam0, int iParam1)
 			}
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			switch (iParam0)
 			{
 				case -971688363:
@@ -61098,7 +61098,7 @@ int func_885(int iParam0, int iParam1)
 			}
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			switch (iParam0)
 			{
 				case 759617595:
@@ -61127,7 +61127,7 @@ int func_885(int iParam0, int iParam1)
 			}
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			switch (iParam0)
 			{
 				case -1423479223:
@@ -61390,9 +61390,9 @@ int func_890(int iParam0)
 		case joaat("WEAPON_RAYMINIGUN"):
 		case joaat("WEAPON_NAVYREVOLVER"):
 		case joaat("WEAPON_CERAMICPISTOL"):
-		case 1470379660:
-		case -1658906650:
-		case 94989220:
+		case joaat("WEAPON_GADGETPISTOL"):
+		case joaat("WEAPON_MILITARYRIFLE"):
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			return 1;
 			break;
 	}
@@ -61755,15 +61755,15 @@ int func_891(int iParam0, bool bParam1)
 			break;
 		
 		case 86:
-			return 94989220;
+			return joaat("WEAPON_COMBATSHOTGUN");
 			break;
 		
 		case 88:
-			return -1658906650;
+			return joaat("WEAPON_MILITARYRIFLE");
 			break;
 		
 		case 87:
-			return 1470379660;
+			return joaat("WEAPON_GADGETPISTOL");
 			break;
 	}
 	return joaat("weapon_unarmed");

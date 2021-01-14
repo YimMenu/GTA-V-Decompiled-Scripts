@@ -92105,9 +92105,9 @@ int func_447(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -108531,7 +108531,7 @@ void func_708(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_1635[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_2782[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2782[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_2782[iVar0], Local_2255[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_2782[iVar0], fLocal_811[iVar0], fLocal_839[iVar0], fLocal_867[iVar0], fLocal_895[iVar0]);
@@ -109274,7 +109274,7 @@ void func_721(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_2746[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_2746[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2746[iVar0], true);
 									iLocal_1706 = (iLocal_1706 - 1);
 									iLocal_1701++;
 									iLocal_1663[iVar0]++;
@@ -109503,7 +109503,7 @@ void func_722(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_1434[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_2593[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2593[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_1434[iVar0], 0))
 									{

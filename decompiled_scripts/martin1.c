@@ -8102,7 +8102,7 @@ void func_16(char* sParam0)
 						{
 							if (ENTITY::IS_ENTITY_IN_AIR(iLocal_3943))
 							{
-								ENTITY::_SET_ENTITY_SOMETHING(iLocal_3943, false);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3943, false);
 								if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(iLocal_3943))
 								{
 									VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(iLocal_3943);
@@ -9452,7 +9452,7 @@ int func_51(var uParam0, int iParam1, int iParam2, var uParam3)
 						}
 					}
 				}
-				ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_62.f_12, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_62.f_12, true);
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(uParam0->f_62.f_12, true, 1);
 				PED::SET_PED_GET_OUT_UPSIDE_DOWN_VEHICLE(uParam0->f_62.f_12, false);
 				PED::RELEASE_PED_PRELOAD_VARIATION_DATA(uParam0->f_17[uParam0->f_61]);
@@ -9471,7 +9471,7 @@ int func_51(var uParam0, int iParam1, int iParam2, var uParam3)
 			{
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(uParam0->f_62.f_12, true, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_62.f_12, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_62.f_12, true);
 			ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(uParam0->f_62.f_12, true, 1);
 			PED::SET_PED_GET_OUT_UPSIDE_DOWN_VEHICLE(uParam0->f_62.f_12, false);
 			MISC::CLEAR_AREA_OF_PROJECTILES(uParam0->f_4, 10f, 0);
@@ -9735,7 +9735,7 @@ int func_51(var uParam0, int iParam1, int iParam2, var uParam3)
 			if (!PED::IS_PED_INJURED(uParam0->f_62.f_13))
 			{
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(uParam0->f_62.f_13, false, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_62.f_13, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_62.f_13, true);
 				PED::SET_PED_GET_OUT_UPSIDE_DOWN_VEHICLE(uParam0->f_62.f_12, true);
 			}
 			if (!PED::IS_PED_INJURED(uParam0->f_62.f_12))
@@ -108474,9 +108474,9 @@ int func_527(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -127058,7 +127058,7 @@ int func_735()
 						ENTITY::SET_ENTITY_COORDS(iLocal_4056, 2807.692f, 4796.449f, 47.6684f, true, false, false, true);
 						ENTITY::SET_ENTITY_ROTATION(iLocal_4056, 0f, 0f, -11.34007f, 2, true);
 						ENTITY::SET_ENTITY_QUATERNION(iLocal_4056, -0.0162f, -0.0524f, -0.1071f, 0.9927f);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_4056, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4056, true);
 						ENTITY::FREEZE_ENTITY_POSITION(iLocal_4056, true);
 					}
 				}
@@ -131765,7 +131765,7 @@ void func_762()
 				if (fLocal_3879 > 42784f)
 				{
 					iLocal_3951 = VEHICLE::CREATE_VEHICLE(joaat("baller"), 961.7518f, 2697.295f, 39.2009f, 85.8753f, true, true, false);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_3951, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3951, true);
 					VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(iLocal_3951, 294, "BB_SOL_BLR", true);
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_3951, false))
 					{
@@ -146869,7 +146869,7 @@ void func_946()
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_3945))
 			{
 				iLocal_3945 = VEHICLE::CREATE_VEHICLE(joaat("sanchez"), 2776.957f, 4740.372f, 44.9082f, 341.7251f, true, true, false);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_3945, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3945, true);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("sanchez"));
 			}
 			if (func_945() != 2)
@@ -147027,7 +147027,7 @@ void func_946()
 							STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_967());
 						}
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_3946, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3946, true);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_967());
 				}
 			}

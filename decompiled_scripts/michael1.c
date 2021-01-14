@@ -3057,9 +3057,9 @@ int func_15(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -4704,7 +4704,7 @@ int func_67(int iParam0)
 				{
 					if (VEHICLE::IS_THIS_MODEL_A_HELI(ENTITY::GET_ENTITY_MODEL(Local_183)))
 					{
-						ENTITY::_SET_ENTITY_SOMETHING(Local_183, false);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_183, false);
 					}
 					func_87(Local_183, Local_183.f_2, Local_183.f_5, 24, 0);
 					iLocal_649 = 1;
@@ -108169,7 +108169,7 @@ int func_703(var uParam0)
 							Local_169 = Global_95452[0];
 							VEHICLE::SET_VEHICLE_ENGINE_ON(Local_169, true, true, false);
 							VEHICLE::SET_VEHICLE_LIGHTS(Local_169, 3);
-							VEHICLE::_SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(Local_169, true);
+							VEHICLE::SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(Local_169, true);
 							VEHICLE::SET_VEHICLE_DOORS_LOCKED(Local_169, 1);
 							CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(Local_169, "Michaels_car", 0, joaat("tailgater"), 0);
 						}
@@ -108438,7 +108438,7 @@ int func_703(var uParam0)
 									func_766(&Local_169, 1);
 									VEHICLE::SET_VEHICLE_ENGINE_ON(Local_169, true, true, false);
 									VEHICLE::SET_VEHICLE_LIGHTS(Local_169, 3);
-									VEHICLE::_SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(Local_169, true);
+									VEHICLE::SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(Local_169, true);
 									VEHICLE::SET_VEHICLE_DOORS_LOCKED(Local_169, 1);
 								}
 							}
@@ -113472,7 +113472,7 @@ int func_772(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 										VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_183, 5f);
 										if (VEHICLE::IS_THIS_MODEL_A_HELI(func_867()))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(Local_183, true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_183, true);
 										}
 										STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_867());
 									}
@@ -113495,7 +113495,7 @@ int func_772(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 										VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_183, 5f);
 										if (VEHICLE::IS_THIS_MODEL_A_HELI(func_867()))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(Local_183, true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_183, true);
 										}
 										STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_867());
 									}
@@ -113513,7 +113513,7 @@ int func_772(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 									{
 										if (VEHICLE::IS_THIS_MODEL_A_HELI(ENTITY::GET_ENTITY_MODEL(Local_183)))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(Local_183, true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_183, true);
 										}
 									}
 								}
@@ -113536,7 +113536,7 @@ int func_772(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_183, 5f);
 									if (VEHICLE::IS_THIS_MODEL_A_HELI(func_867()))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(Local_183, true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_183, true);
 									}
 									STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_867());
 								}
@@ -113559,7 +113559,7 @@ int func_772(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_183, 5f);
 									if (VEHICLE::IS_THIS_MODEL_A_HELI(func_867()))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(Local_183, true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_183, true);
 									}
 									STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_867());
 								}
@@ -113577,7 +113577,7 @@ int func_772(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 								{
 									if (VEHICLE::IS_THIS_MODEL_A_HELI(ENTITY::GET_ENTITY_MODEL(Local_183)))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(Local_183, true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_183, true);
 									}
 								}
 							}

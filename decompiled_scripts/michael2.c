@@ -3233,7 +3233,7 @@ void __EntryFunction__()
 					if (ENTITY::DOES_ENTITY_EXIST(iLocal_4656))
 					{
 						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_4656, true, true);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_4656, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4656, true);
 					}
 				}
 			}
@@ -38938,9 +38938,9 @@ int func_269(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -42967,7 +42967,7 @@ void func_322()
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4662))
 		{
 			iLocal_4662 = VEHICLE::CREATE_VEHICLE(joaat("coquette"), 950.4739f, -2104.952f, 29.6107f, 106.1659f, true, true, false);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4662, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4662, true);
 			VEHICLE::SET_VEHICLE_COLOURS(iLocal_4662, 4, 0);
 			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(iLocal_4662, 0, 0);
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4662, 5f);
@@ -42977,7 +42977,7 @@ void func_322()
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4663))
 		{
 			iLocal_4663 = VEHICLE::CREATE_VEHICLE(joaat("feltzer2"), 953.9548f, -2113.352f, 29.5516f, 88.135f, true, true, false);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4663, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4663, true);
 			VEHICLE::SET_VEHICLE_COLOURS(iLocal_4663, 38, 0);
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4663, 5f);
 			VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(iLocal_4663, false);
@@ -46614,14 +46614,14 @@ void func_398()
 		PLAYER::SPECIAL_ABILITY_FILL_METER(PLAYER::PLAYER_ID(), true, 0);
 		iLocal_4578 = 1;
 		iLocal_4662 = VEHICLE::CREATE_VEHICLE(joaat("coquette"), 950.4739f, -2104.952f, 29.6107f, 106.1659f, true, true, false);
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_4662, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4662, true);
 		VEHICLE::SET_VEHICLE_COLOURS(iLocal_4662, 4, 0);
 		VEHICLE::SET_VEHICLE_EXTRA_COLOURS(iLocal_4662, 0, 0);
 		VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4662, 5f);
 		VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(iLocal_4662, false);
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("coquette"));
 		iLocal_4663 = VEHICLE::CREATE_VEHICLE(joaat("feltzer2"), 953.9548f, -2113.352f, 29.5516f, 88.135f, true, true, false);
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_4663, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4663, true);
 		VEHICLE::SET_VEHICLE_COLOURS(iLocal_4663, 38, 0);
 		VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4663, 5f);
 		VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(iLocal_4663, false);
@@ -50204,7 +50204,7 @@ void func_448()
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4657[0]))
 		{
 			iLocal_4657[0] = VEHICLE::CREATE_VEHICLE(joaat("bison"), 952.7221f, -2187.867f, 29.5517f, 187.2181f, true, true, false);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4657[0], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4657[0], true);
 			VEHICLE::SET_VEHICLE_COLOURS(iLocal_4657[0], 42, 42);
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4657[0], 5f);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_4657[0], 2);
@@ -50212,7 +50212,7 @@ void func_448()
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4657[1]))
 		{
 			iLocal_4657[1] = VEHICLE::CREATE_VEHICLE(joaat("bison"), 941.906f, -2177.288f, 29.5517f, 9.5321f, true, true, false);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4657[1], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4657[1], true);
 			VEHICLE::SET_VEHICLE_COLOURS(iLocal_4657[0], 52, 52);
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4657[1], 5f);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_4657[1], 2);
@@ -55987,7 +55987,7 @@ void func_490()
 		iLocal_4513 = 0;
 		func_444(40);
 		iLocal_4679 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_ld_hook"), Local_321[0 /*6*/], true, true, false);
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_4679, false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4679, false);
 		ENTITY::FREEZE_ENTITY_POSITION(iLocal_4679, true);
 		INTERIOR::_0x82EBB79E258FA2B7(iLocal_4679, iLocal_4675);
 		iLocal_4680 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_leg_chain_01"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(0.01f, 0f, 0f), true, true, false);
@@ -56013,7 +56013,7 @@ void func_490()
 		PED::SET_PED_RESET_FLAG(func_937(0), 55, true);
 		func_236(&(Local_562[0 /*58*/]), 996.986f, -2185.071f, 28.9775f, 9.6956f, joaat("WEAPON_SMG"), joaat("csb_chin_goon"));
 		PED::SET_PED_DEFAULT_COMPONENT_VARIATION(Local_562[0 /*58*/]);
-		ENTITY::_SET_ENTITY_SOMETHING(Local_562[0 /*58*/], false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_562[0 /*58*/], false);
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("csb_chin_goon"));
 		func_236(&(Local_562[1 /*58*/]), 992.2509f, (-2175.349f - 0.4f), 28.9769f, 242.3f, joaat("WEAPON_PISTOL"), joaat("g_m_m_chigoon_01"));
 		func_236(&(Local_562[2 /*58*/]), 988.6379f, -2170.675f, 29.2006f, 352.4113f, joaat("WEAPON_PISTOL"), joaat("g_m_m_chigoon_02"));
@@ -56748,7 +56748,7 @@ void func_490()
 					if (func_730(joaat("bison")))
 					{
 						iLocal_4657[0] = VEHICLE::CREATE_VEHICLE(joaat("bison"), 953.1112f, -2187.533f, 29.5516f, 159.9804f, true, true, false);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_4657[0], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4657[0], true);
 						VEHICLE::SET_VEHICLE_COLOURS(iLocal_4657[0], 42, 42);
 						VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4657[0], 5f);
 						VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_4657[0], 2);
@@ -56759,7 +56759,7 @@ void func_490()
 					if (func_730(joaat("bison")))
 					{
 						iLocal_4657[1] = VEHICLE::CREATE_VEHICLE(joaat("bison"), 941.906f, -2177.288f, 29.5517f, 9.5321f, true, true, false);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_4657[1], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4657[1], true);
 						VEHICLE::SET_VEHICLE_COLOURS(iLocal_4657[0], 52, 52);
 						VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4657[1], 5f);
 						VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_4657[1], 2);
@@ -116860,7 +116860,7 @@ void func_733()
 			{
 				SYSTEM::WAIT(0);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4656, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4656, true);
 		}
 		else if (!ENTITY::IS_ENTITY_DEAD(iLocal_4656, false))
 		{
@@ -117011,7 +117011,7 @@ void func_734(int iParam0)
 			func_233(&uLocal_131, 7, Local_1143[2 /*58*/], "MCH2CHIN5", 0, 1);
 			func_444(31);
 			iLocal_4679 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_ld_hook"), Local_321[31 /*6*/], true, true, false);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4679, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4679, false);
 			ENTITY::FREEZE_ENTITY_POSITION(iLocal_4679, true);
 			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4679, iLocal_4675);
 			iLocal_4680 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_leg_chain_01"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(0.01f, 0f, 0f), true, true, false);
@@ -117069,7 +117069,7 @@ void func_734(int iParam0)
 			func_233(&uLocal_131, 1, func_937(1), "FRANKLIN", 0, 1);
 			func_444(31);
 			iLocal_4679 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_ld_hook"), Local_321[31 /*6*/], true, true, false);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4679, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4679, false);
 			ENTITY::FREEZE_ENTITY_POSITION(iLocal_4679, true);
 			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4679, iLocal_4675);
 			iLocal_4680 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_leg_chain_01"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(0.01f, 0f, 0f), true, true, false);
@@ -117131,7 +117131,7 @@ void func_734(int iParam0)
 			func_233(&uLocal_131, 1, func_937(1), "FRANKLIN", 0, 1);
 			func_444(31);
 			iLocal_4679 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_ld_hook"), Local_321[31 /*6*/], true, true, false);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4679, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4679, false);
 			ENTITY::FREEZE_ENTITY_POSITION(iLocal_4679, true);
 			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4679, iLocal_4675);
 			iLocal_4680 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_leg_chain_01"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(0.01f, 0f, 0f), true, true, false);
@@ -117202,7 +117202,7 @@ void func_734(int iParam0)
 				SYSTEM::WAIT(0);
 			}
 			iLocal_4662 = VEHICLE::CREATE_VEHICLE(joaat("coquette"), 950.4739f, -2104.952f, 29.6107f, 106.1659f, true, true, false);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4662, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4662, true);
 			VEHICLE::SET_VEHICLE_COLOURS(iLocal_4662, 4, 0);
 			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(iLocal_4662, 0, 0);
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4662, 5f);
@@ -117214,7 +117214,7 @@ void func_734(int iParam0)
 				SYSTEM::WAIT(0);
 			}
 			iLocal_4663 = VEHICLE::CREATE_VEHICLE(joaat("feltzer2"), 953.9548f, -2113.352f, 29.5516f, 88.135f, true, true, false);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_4663, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4663, true);
 			VEHICLE::SET_VEHICLE_COLOURS(iLocal_4663, 38, 0);
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_4663, 5f);
 			VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(iLocal_4663, false);

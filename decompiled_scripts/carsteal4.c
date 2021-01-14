@@ -3759,7 +3759,7 @@ int func_51(bool bParam0)
 					VEHICLE::SET_VEHICLE_EXTRA_COLOURS(iLocal_1610, 67, 0);
 					VEHICLE::SET_VEHICLE_DIRT_LEVEL(iLocal_1610, 1f);
 					VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_1610, 5f);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_1610, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1610, true);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iLocal_2041);
 					return 1;
 				}
@@ -3807,10 +3807,10 @@ int func_52(bool bParam0)
 					VEHICLE::SET_VEHICLE_DIRT_LEVEL(iLocal_1609, 0f);
 					VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_1609, 5f);
 					VEHICLE::SET_VEHICLE_DOOR_OPEN(iLocal_1609, 3, true, false);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_1609, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1609, true);
 					AUDIO::SET_VEHICLE_RADIO_ENABLED(iLocal_1609, false);
 					iLocal_1623 = PED::CREATE_PED(26, iLocal_2038, Var0, fVar6, true, true);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_1623, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1623, true);
 					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1623, 1862763509);
 					PED::SET_PED_PROP_INDEX(iLocal_1623, 1, 0, 0, false);
 					PED::SET_PED_LOD_MULTIPLIER(iLocal_1623, 2f);
@@ -90097,9 +90097,9 @@ int func_370(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

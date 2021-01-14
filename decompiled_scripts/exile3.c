@@ -4615,9 +4615,9 @@ int func_23(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -121639,7 +121639,7 @@ void func_862(int iParam0)
 			TASK::TASK_SKY_DIVE(Local_150[iParam0 /*16*/], false);
 			ENTITY::SET_ENTITY_LOD_DIST(Local_150[iParam0 /*16*/], 1000);
 			PED::SET_PED_PARACHUTE_TINT_INDEX(Local_150[iParam0 /*16*/], 6);
-			ENTITY::_SET_ENTITY_SOMETHING(Local_150[iParam0 /*16*/], false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_150[iParam0 /*16*/], false);
 		}
 		else
 		{

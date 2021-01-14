@@ -4001,7 +4001,7 @@ int func_54(var uParam0, int iParam1, int iParam2, struct<3> Param3, float fPara
 	*uParam0 = NETWORK::PED_TO_NET(iVar0);
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, bParam9);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, bParam9);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 		{
 			if (bParam7)
@@ -4641,7 +4641,7 @@ int func_78(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, boo
 	*uParam0 = NETWORK::PED_TO_NET(PED::CREATE_PED_INSIDE_VEHICLE(NETWORK::NET_TO_VEH(iParam1), iParam2, iParam3, iParam4, bParam6, bParam5));
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_PED(*uParam0), bParam7);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_PED(*uParam0), bParam7);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(NETWORK::NET_TO_PED(*uParam0)))
 		{
 			if (bParam5)
@@ -4752,12 +4752,12 @@ int func_80(int iParam0)
 							VEHICLE::SET_HELI_BLADES_FULL_SPEED(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]));
 							ENTITY::SET_ENTITY_DYNAMIC(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]), true);
 							PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]));
-							ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]), false);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]), false);
 						}
 						else if (VEHICLE::IS_THIS_MODEL_A_PLANE(Local_82.f_240))
 						{
 							VEHICLE::CONTROL_LANDING_GEAR(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]), 3);
-							ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]), false);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]), false);
 							ENTITY::SET_ENTITY_DYNAMIC(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]), true);
 							PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]));
 							VEHICLE::SET_VEHICLE_FORWARD_SPEED(NETWORK::NET_TO_VEH(Local_82.f_73[iParam0]), 30f);
@@ -4858,7 +4858,7 @@ int func_82(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -8020,7 +8020,7 @@ int func_141()
 					ENTITY::SET_ENTITY_DYNAMIC(NETWORK::NET_TO_VEH(Local_82.f_7[iVar0]), true);
 					PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_VEH(Local_82.f_7[iVar0]));
 					VEHICLE::SET_VEHICLE_ENGINE_ON(NETWORK::NET_TO_VEH(Local_82.f_7[iVar0]), true, true, false);
-					ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_VEH(Local_82.f_7[iVar0]), true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_VEH(Local_82.f_7[iVar0]), true);
 					VEHICLE::_0x0AD9E8F87FF7C16F(NETWORK::NET_TO_VEH(Local_82.f_7[iVar0]), false);
 					if (VEHICLE::IS_THIS_MODEL_A_HELI(Local_82.f_27) || VEHICLE::IS_THIS_MODEL_A_PLANE(Local_82.f_27))
 					{

@@ -2933,7 +2933,7 @@ int func_39(var uParam0, int iParam1, int iParam2, struct<3> Param3, float fPara
 	*uParam0 = NETWORK::PED_TO_NET(iVar0);
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, bParam9);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, bParam9);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 		{
 			if (bParam7)
@@ -10418,7 +10418,7 @@ int func_230(var uParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPar
 	}
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
 		if (bParam10)
 		{
 			NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(NETWORK::NET_TO_OBJ(*uParam0), true);
@@ -10679,11 +10679,11 @@ void func_232(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 	}
 	else if (MISC::IS_BIT_SET(Global_4718592.f_58908[iParam1 /*339*/].f_78, 18) && !(Global_4718592.f_58908[iParam1 /*339*/].f_12 == joaat("titan") && func_351(Global_4456448.f_82708)))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iParam0, false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iParam0, false);
 	}
 	else
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iParam0, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iParam0, true);
 	}
 	if (((VEHICLE::IS_THIS_MODEL_A_PLANE(Global_4718592.f_58908[iParam1 /*339*/].f_12) && MISC::IS_BIT_SET(Global_4718592.f_58908[iParam1 /*339*/].f_78, 18)) && MISC::IS_BIT_SET(Global_4718592.f_58908[iParam1 /*339*/].f_79, 24)) && !(Global_4718592.f_58908[iParam1 /*339*/].f_12 == joaat("titan") && func_351(Global_4456448.f_82708)))
 	{
@@ -10696,7 +10696,7 @@ void func_232(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 	if (Global_4718592.f_58908[iParam1 /*339*/].f_12 == joaat("titan") && func_351(Global_4456448.f_82708))
 	{
 		VEHICLE::CONTROL_LANDING_GEAR(iParam0, 2);
-		ENTITY::_SET_ENTITY_SOMETHING(iParam0, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iParam0, true);
 	}
 	VEHICLE::SET_DISABLE_VEHICLE_PETROL_TANK_DAMAGE(iParam0, false);
 	if (MISC::IS_BIT_SET(Global_4718592.f_58908[iParam1 /*339*/].f_81, 2))
@@ -10950,7 +10950,7 @@ void func_232(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 			if (bVar5)
 			{
 				VEHICLE::CREATE_PICK_UP_ROPE_FOR_CARGOBOB(iParam0, 1);
-				VEHICLE::_SET_CARGOBOB_HOOK_POSITION(iParam0, 4f, 6f, 0);
+				VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(iParam0, 4f, 6f, false);
 				VEHICLE::_0x9BDDC73CC6A115D4(iParam0, true, true);
 				VEHICLE::SET_CARGOBOB_PICKUP_MAGNET_ACTIVE(iParam0, false);
 				VEHICLE::SET_CARGOBOB_PICKUP_MAGNET_REDUCED_FALLOFF(iParam0, 0f);
@@ -11079,7 +11079,7 @@ void func_232(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 			VEHICLE::SET_VEHICLE_ENGINE_ON(iParam0, true, true, false);
 			VEHICLE::SET_HELI_BLADES_FULL_SPEED(iParam0);
 			VEHICLE::CREATE_PICK_UP_ROPE_FOR_CARGOBOB(iParam0, 1);
-			VEHICLE::_SET_CARGOBOB_HOOK_POSITION(iParam0, 4f, 6f, 1);
+			VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(iParam0, 4f, 6f, true);
 		}
 	}
 	func_265(&iParam0, Global_4718592.f_58908[iParam1 /*339*/].f_12, Global_4718592.f_58908[iParam1 /*339*/].f_29, Global_4718592.f_58908[iParam1 /*339*/].f_26);
@@ -25366,7 +25366,7 @@ int func_366(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPa
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -30504,7 +30504,7 @@ void func_516(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -30558,7 +30558,7 @@ void func_516(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_517(Global_4456448.f_129348))
@@ -111514,7 +111514,7 @@ int func_1152(struct<3> Param0, float fParam3, bool bParam4, int iParam5, bool b
 									func_366(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38), iVar1, Param0, fParam3, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0);
 									NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38, PLAYER::PLAYER_ID(), true);
 									iVar0 = NETWORK::NET_TO_VEH(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38);
-									ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 									VEHICLE::_0xB2E0C0D6922D31F2(iVar0, true);
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iVar0, 5f);
 									func_1200(&iVar0, iParam5);

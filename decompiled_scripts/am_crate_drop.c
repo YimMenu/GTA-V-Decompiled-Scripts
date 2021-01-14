@@ -667,7 +667,7 @@ int func_20(var uParam0, int iParam1, int iParam2, struct<3> Param3, float fPara
 	*uParam0 = NETWORK::PED_TO_NET(iVar0);
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, bParam9);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, bParam9);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 		{
 			if (bParam7)
@@ -1125,7 +1125,7 @@ int func_41(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, boo
 	*uParam0 = NETWORK::PED_TO_NET(PED::CREATE_PED_INSIDE_VEHICLE(NETWORK::NET_TO_VEH(iParam1), iParam2, iParam3, iParam4, bParam6, bParam5));
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_PED(*uParam0), bParam7);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_PED(*uParam0), bParam7);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(NETWORK::NET_TO_PED(*uParam0)))
 		{
 			if (bParam5)
@@ -1257,7 +1257,7 @@ int func_46(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -1478,12 +1478,12 @@ int func_53()
 								ENTITY::SET_ENTITY_HEADING(NETWORK::NET_TO_OBJ(Local_75.f_181[iVar0 /*2*/]), ENTITY::GET_ENTITY_HEADING(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iVar0 /*66*/].f_1)));
 								ENTITY::ATTACH_ENTITY_TO_ENTITY(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iVar0 /*66*/].f_1), NETWORK::NET_TO_OBJ(Local_75.f_181[iVar0 /*2*/]), 0, 0f, 0f, 0.35f, 0f, 0f, 0f, true, false, true, false, 2, true);
 								OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_75.f_181[iVar0 /*2*/]), true);
-								ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_75.f_181[iVar0 /*2*/]), false);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_75.f_181[iVar0 /*2*/]), false);
 								PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ(Local_75.f_181[iVar0 /*2*/]));
 								ENTITY::SET_ENTITY_VELOCITY(NETWORK::NET_TO_OBJ(Local_75.f_181[iVar0 /*2*/]), 0f, 0f, -0.2f);
 								ENTITY::ATTACH_ENTITY_TO_ENTITY(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iVar0 /*66*/].f_2), NETWORK::NET_TO_OBJ(Local_75.f_181[iVar0 /*2*/]), 0, 0f, 0f, 0.1f, 0f, 0f, 0f, false, false, false, false, 2, true);
 								OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iVar0 /*66*/].f_2), true);
-								ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iVar0 /*66*/].f_2), false);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iVar0 /*66*/].f_2), false);
 								ENTITY::PLAY_ENTITY_ANIM(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iVar0 /*66*/].f_2), &(Local_75.f_2.f_1[iVar0 /*66*/].f_14), &(Local_75.f_2.f_1[iVar0 /*66*/].f_8), 1000f, false, false, false, 0f, 0);
 								ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iVar0 /*66*/].f_2));
 								ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(NETWORK::NET_TO_OBJ(Local_75.f_181[iVar0 /*2*/]), NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iVar0 /*66*/].f_1), false);
@@ -1533,7 +1533,7 @@ int func_54(var uParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPara
 	}
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
 		if (bParam10)
 		{
 			NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(NETWORK::NET_TO_OBJ(*uParam0), true);
@@ -1579,7 +1579,7 @@ int func_55(int iParam0)
 				ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), true);
 				OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), true);
 				OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), true);
-				ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), false);
 				PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1));
 				ENTITY::SET_ENTITY_VELOCITY(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), 0f, 0f, -0.2f);
 				OBJECT::_0x92AEFB5F6E294023(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), true, false);
@@ -1610,7 +1610,7 @@ int func_55(int iParam0)
 						{
 							ENTITY::ATTACH_ENTITY_TO_ENTITY(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_2), NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), 0, 0f, 0f, 0f, 0f, 0f, 0f, false, false, false, false, 2, true);
 							OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_2), true);
-							ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_2), false);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_2), false);
 							ENTITY::PLAY_ENTITY_ANIM(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_2), &(Local_75.f_2.f_1[iParam0 /*66*/].f_14), &(Local_75.f_2.f_1[iParam0 /*66*/].f_8), 1000f, false, false, false, 0f, 0);
 							ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_2));
 						}
@@ -13052,8 +13052,8 @@ void func_190(int iParam0, struct<3> Param1)
 							}
 							if ((MISC::IS_BIT_SET(Local_75.f_2.f_1[iParam0 /*66*/].f_65, 13) && ENTITY::IS_ENTITY_STATIC(iVar3)) && iVar4 == 1)
 							{
-								ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), true);
-								ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_75.f_181[iParam0 /*2*/]), true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_75.f_2.f_1[iParam0 /*66*/].f_1), true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_75.f_181[iParam0 /*2*/]), true);
 								ENTITY::SET_ENTITY_VELOCITY(iVar3, 0f, 0f, 0f);
 								if (func_195(Param1, 0f, 0f, 0f, 0))
 								{
@@ -51444,7 +51444,7 @@ char* func_332(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			if (bParam1)
 			{
 				return "WTU_GDGTPST";
@@ -51455,7 +51455,7 @@ char* func_332(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			if (bParam1)
 			{
 				return "WTU_MLTRYRFL";
@@ -51466,7 +51466,7 @@ char* func_332(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
 			{
 				return "WTU_CMBSHGN";
@@ -52053,15 +52053,15 @@ int func_338(int iParam0)
 			return 85;
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			return 86;
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			return 88;
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			return 87;
 			break;
 	}

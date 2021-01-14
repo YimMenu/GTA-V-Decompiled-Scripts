@@ -8424,7 +8424,7 @@ int func_195(var uParam0, int iParam1, int iParam2, struct<3> Param3, float fPar
 	*uParam0 = NETWORK::PED_TO_NET(iVar0);
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, bParam9);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, bParam9);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 		{
 			if (bParam7)
@@ -9203,7 +9203,7 @@ int func_199(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, bo
 	*uParam0 = NETWORK::PED_TO_NET(PED::CREATE_PED_INSIDE_VEHICLE(NETWORK::NET_TO_VEH(iParam1), iParam2, iParam3, iParam4, bParam6, bParam5));
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_PED(*uParam0), bParam7);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_PED(*uParam0), bParam7);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(NETWORK::NET_TO_PED(*uParam0)))
 		{
 			if (bParam5)
@@ -12790,7 +12790,7 @@ int func_276(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPa
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -21929,7 +21929,7 @@ void func_410(int iParam0)
 		VEHICLE::SET_HELI_BLADES_FULL_SPEED(iVar0);
 		ENTITY::SET_ENTITY_DYNAMIC(iVar0, true);
 		PHYSICS::ACTIVATE_PHYSICS(iVar0);
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 		if (func_37(8))
 		{
 			VEHICLE::DISABLE_VEHICLE_WEAPON(true, joaat("vehicle_weapon_space_rocket"), iVar0, 0);
@@ -23633,7 +23633,7 @@ int func_461(struct<3> Param0, float fParam3, int iParam4)
 			ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/][iParam4]), true);
 			OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/][iParam4]), true);
 			OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/][iParam4]), true);
-			ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/][iParam4]), false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/][iParam4]), false);
 			PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/][iParam4]));
 			ENTITY::SET_ENTITY_VELOCITY(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/][iParam4]), 0f, 0f, -0.2f);
 			OBJECT::_0x92AEFB5F6E294023(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/][iParam4]), true, false);
@@ -23657,7 +23657,7 @@ int func_461(struct<3> Param0, float fParam3, int iParam4)
 					{
 						ENTITY::ATTACH_ENTITY_TO_ENTITY(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/].f_4[iParam4]), NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/][iParam4]), 0, 0f, 0f, 0f, 0f, 0f, 0f, false, false, false, false, 2, true);
 						OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/].f_4[iParam4]), true);
-						ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/].f_4[iParam4]), false);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/].f_4[iParam4]), false);
 						ENTITY::PLAY_ENTITY_ANIM(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/].f_4[iParam4]), "P_cargo_chute_S_deploy", "P_cargo_chute_S", 1000f, false, false, false, 0f, 0);
 						ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/].f_4[iParam4]));
 						ENTITY::SET_ENTITY_LOD_DIST(NETWORK::NET_TO_OBJ(Local_533.f_75[iVar6 /*30*/].f_4[iParam4]), 1200);
@@ -23694,7 +23694,7 @@ int func_462(var uParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPar
 	}
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
 		if (bParam10)
 		{
 			NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(NETWORK::NET_TO_OBJ(*uParam0), true);
@@ -106887,7 +106887,7 @@ int func_1175(struct<3> Param0, float fParam3, bool bParam4, int iParam5, bool b
 									func_276(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38), iVar1, Param0, fParam3, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0);
 									NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38, PLAYER::PLAYER_ID(), true);
 									iVar0 = NETWORK::NET_TO_VEH(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38);
-									ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 									VEHICLE::_0xB2E0C0D6922D31F2(iVar0, true);
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iVar0, 5f);
 									func_1223(&iVar0, iParam5);

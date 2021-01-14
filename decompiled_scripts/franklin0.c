@@ -38397,9 +38397,9 @@ int func_305(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -42813,7 +42813,7 @@ void func_371(int iParam0, bool bParam1, int iParam2, int iParam3, bool bParam4)
 			{
 				AUDIO::ADD_ENTITY_TO_AUDIO_MIX_GROUP(iLocal_1370[iVar0], "FRANKLIN_0_Reversing_Bus", 0f);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_1370[iVar0], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1370[iVar0], true);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_1370[iVar0], 3);
 			if (iVar1 > 0 && !bVar12)
 			{
@@ -120758,7 +120758,7 @@ void func_922(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_651[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_1070[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1070[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_1070[iVar0], Local_844[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_1070[iVar0], fLocal_338[iVar0], fLocal_354[iVar0], fLocal_370[iVar0], fLocal_386[iVar0]);
@@ -121501,7 +121501,7 @@ void func_935(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_1068[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_1068[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1068[iVar0], true);
 									iLocal_676 = (iLocal_676 - 1);
 									iLocal_671++;
 									iLocal_667[iVar0]++;
@@ -121730,7 +121730,7 @@ void func_936(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_567[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_1007[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1007[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_567[iVar0], 0))
 									{

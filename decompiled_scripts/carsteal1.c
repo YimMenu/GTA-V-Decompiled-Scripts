@@ -5415,12 +5415,12 @@ void func_35()
 					PED::SET_PED_COMPONENT_VARIATION(iLocal_5844, 0, 2, 0, 0);
 					func_342(&iLocal_5842, 45, 479.5576f, -1315.942f, 28.2028f, -66.9277f, 1);
 					PED::SET_PED_PROP_INDEX(iLocal_5842, 1, 0, 0, false);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_5842, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5842, true);
 					func_342(&iLocal_5841, 29, 479.905f, -1314.857f, 28.2028f, 170.8332f, 1);
 					PED::SET_PED_COMPONENT_VARIATION(iLocal_5841, 3, 2, 0, 0);
 					PED::SET_PED_COMPONENT_VARIATION(iLocal_5841, 4, 2, 0, 0);
 					PED::SET_PED_COMPONENT_VARIATION(iLocal_5841, 10, 1, 0, 0);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_5841, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5841, true);
 					func_348();
 				}
 				break;
@@ -89826,7 +89826,7 @@ void func_344(int* iParam0, int iParam1, struct<3> Param2, float fParam5, int iP
 		{
 			PED::SET_PED_DEFAULT_COMPONENT_VARIATION(*iParam0);
 		}
-		ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 	}
 }
 
@@ -89841,7 +89841,7 @@ void func_345(int iParam0, int iParam1, struct<3> Param2, float fParam5, int iPa
 			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(*iParam0, iParam6, iParam6);
 		}
 		VEHICLE::SET_VEHICLE_DIRT_LEVEL(*iParam0, fParam7);
-		ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 	}
 }
 
@@ -90846,9 +90846,9 @@ void func_366()
 			}
 			else
 			{
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_5845, false);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_5846, false);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_5847, false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5845, false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5846, false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5847, false);
 				func_878("LOAD_ALL_PATH_NODES", 1);
 			}
 		}
@@ -96741,9 +96741,9 @@ int func_500(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -111959,7 +111959,7 @@ void func_684()
 			iLocal_5846 = func_687(joaat("entityxf"), Local_5814, 0f);
 			func_672(iLocal_5846, 0);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5846, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5846, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5846, true);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_5846, 2);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 1, false);
@@ -111978,7 +111978,7 @@ void func_684()
 			iLocal_5847 = func_687(joaat("cheetah"), Local_5817, -1.3639f);
 			func_672(iLocal_5847, 1);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5847, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5847, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5847, true);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_5847, 2);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 1, false);
@@ -112567,7 +112567,7 @@ void func_688()
 						iLocal_5846 = func_687(joaat("entityxf"), Local_5814, 0f);
 						func_672(iLocal_5846, 0);
 						VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5846, true);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_5846, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5846, true);
 						VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_5846, 3);
 						VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 0, false);
 						VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 1, false);
@@ -112593,7 +112593,7 @@ void func_688()
 						iLocal_5847 = func_687(joaat("cheetah"), Local_5817, -1.3639f);
 						func_672(iLocal_5847, 1);
 						VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5847, true);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_5847, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5847, true);
 						VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_5847, 3);
 						VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 0, false);
 						VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 1, false);
@@ -117629,7 +117629,7 @@ void func_755(int iParam0)
 			if (func_842() == joaat("f620"))
 			{
 				func_756(&iLocal_5845, 2570.577f, 364.8711f, 107.4569f, 357.8433f, 1, 1, 0, 0, 1, joaat("f620"), 0, 145, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_5845, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5845, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5845, true);
 			}
 			else
@@ -117653,7 +117653,7 @@ void func_755(int iParam0)
 			iLocal_5846 = func_687(joaat("entityxf"), Local_5814, 0f);
 			func_672(iLocal_5846, 0);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5846, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5846, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5846, true);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_5846, 2);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 1, false);
@@ -117676,7 +117676,7 @@ void func_755(int iParam0)
 			iLocal_5847 = func_687(joaat("cheetah"), Local_5817, -1.3639f);
 			func_672(iLocal_5847, 1);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5847, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5847, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5847, true);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_5847, 2);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 1, false);
@@ -117718,7 +117718,7 @@ void func_755(int iParam0)
 			if (func_842() == joaat("f620"))
 			{
 				func_756(&iLocal_5845, 2716.992f, 4787.348f, 43.5334f, 11.8873f, 1, 1, 0, 0, 1, joaat("f620"), 0, 145, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_5845, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5845, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5845, true);
 			}
 			else
@@ -117742,7 +117742,7 @@ void func_755(int iParam0)
 			iLocal_5846 = func_687(joaat("entityxf"), Local_5814, 0f);
 			func_672(iLocal_5846, 0);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5846, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5846, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5846, true);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_5846, 2);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 1, false);
@@ -117765,7 +117765,7 @@ void func_755(int iParam0)
 			iLocal_5847 = func_687(joaat("cheetah"), Local_5817, -1.3639f);
 			func_672(iLocal_5847, 1);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5847, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5847, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5847, true);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_5847, 2);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 1, false);
@@ -117867,7 +117867,7 @@ void func_755(int iParam0)
 			if (func_842() == joaat("f620"))
 			{
 				func_756(&iLocal_5845, -1912.547f, 4616.361f, 56.0427f, 134.6697f, 1, 1, 0, 0, 1, joaat("f620"), 0, 145, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_5845, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5845, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5845, true);
 			}
 			else
@@ -117944,7 +117944,7 @@ void func_755(int iParam0)
 			iLocal_5846 = func_687(joaat("entityxf"), -1923.022f, 4605.493f, 56.044f, 135.0786f);
 			func_672(iLocal_5846, 0);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5846, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5846, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5846, true);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 1, false);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("entityxf"));
@@ -117966,7 +117966,7 @@ void func_755(int iParam0)
 			iLocal_5847 = func_687(joaat("cheetah"), -1919.328f, 4609.285f, 56.0532f, 135.0284f);
 			func_672(iLocal_5847, 1);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5847, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5847, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5847, true);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 1, false);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("cheetah"));
@@ -118009,7 +118009,7 @@ void func_755(int iParam0)
 			if (func_842() == joaat("f620"))
 			{
 				func_756(&iLocal_5845, 485.399f, -1332.901f, 28.3095f, 292.4873f, 1, 1, 0, 0, 1, joaat("f620"), 0, 145, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_5845, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5845, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5845, true);
 			}
 			else
@@ -118070,7 +118070,7 @@ void func_755(int iParam0)
 			iLocal_5846 = func_687(joaat("entityxf"), 485.9952f, -1335.449f, 28.2862f, 286.6455f);
 			func_672(iLocal_5846, 0);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5846, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5846, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5846, true);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5846, 1, false);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("entityxf"));
@@ -118082,7 +118082,7 @@ void func_755(int iParam0)
 			iLocal_5847 = func_687(joaat("cheetah"), 487.1696f, -1337.845f, 28.2688f, 293.0351f);
 			func_672(iLocal_5847, 1);
 			VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_5847, true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_5847, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5847, true);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 0, false);
 			VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_5847, 1, false);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("cheetah"));
@@ -128855,7 +128855,7 @@ void func_893(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_3408[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_5645[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5645[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_5645[iVar0], Local_4609[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_5645[iVar0], fLocal_1772[iVar0], fLocal_1833[iVar0], fLocal_1894[iVar0], fLocal_1955[iVar0]);
@@ -129581,7 +129581,7 @@ void func_904(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_5619[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_5619[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5619[iVar0], true);
 									iLocal_3502 = (iLocal_3502 - 1);
 									iLocal_3497++;
 									iLocal_3469[iVar0]++;
@@ -129810,7 +129810,7 @@ void func_905(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_2945[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_5265[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_5265[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_2945[iVar0], 0))
 									{

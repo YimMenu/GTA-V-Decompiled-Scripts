@@ -5291,7 +5291,7 @@ char* func_74(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			if (bParam1)
 			{
 				return "WTU_GDGTPST";
@@ -5302,7 +5302,7 @@ char* func_74(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			if (bParam1)
 			{
 				return "WTU_MLTRYRFL";
@@ -5313,7 +5313,7 @@ char* func_74(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
 			{
 				return "WTU_CMBSHGN";
@@ -116348,7 +116348,7 @@ int func_1550(struct<3> Param0, float fParam3)
 	NETWORK::_NETWORK_SET_NETWORK_ID_DYNAMIC(iVar1, true);
 	NETWORK::_0x0379DAF89BA09AA5(NETWORK::NET_TO_OBJ(iVar1), 1);
 	OBJECT::_0xC6033D32241F6FB5(iVar0, true);
-	ENTITY::_SET_ENTITY_SOMETHING(iVar0, false);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, false);
 	ENTITY::SET_ENTITY_HEADING(iVar0, fParam3);
 	if (bLocal_0)
 	{
@@ -116372,7 +116372,7 @@ int func_1551(var uParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPa
 	}
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
 		if (bParam10)
 		{
 			NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(NETWORK::NET_TO_OBJ(*uParam0), true);
@@ -130330,7 +130330,7 @@ void func_1909(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -130384,7 +130384,7 @@ void func_1909(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_1910(Global_4456448.f_129348))

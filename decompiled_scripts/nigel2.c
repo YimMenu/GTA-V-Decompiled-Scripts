@@ -41302,7 +41302,7 @@ void func_395()
 				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(Local_3497, true);
 				VEHICLE::SMASH_VEHICLE_WINDOW(Local_3497, 0);
 				VEHICLE::SMASH_VEHICLE_WINDOW(Local_3497, 1);
-				VEHICLE::_DETACH_VEHICLE_WINDSCREEN(Local_3497);
+				VEHICLE::POP_OUT_VEHICLE_WINDSCREEN(Local_3497);
 				VEHICLE::SET_VEHICLE_DAMAGE(Local_3497, 0f, 1f, 0.1f, 800f, 1850f, true);
 				VEHICLE::SET_VEHICLE_DAMAGE(Local_3497, -0.2f, 1f, 0.5f, 50f, 650f, true);
 				VEHICLE::SET_VEHICLE_DAMAGE(Local_3497, -0.7f, -0.2f, 0.3f, 50f, 500f, true);
@@ -42823,7 +42823,7 @@ void func_413(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_1719[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_3004[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3004[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_3004[iVar0], Local_2345[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_3004[iVar0], fLocal_588[iVar0], fLocal_659[iVar0], fLocal_730[iVar0], fLocal_801[iVar0]);
@@ -43544,7 +43544,7 @@ void func_423(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_2933[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_2933[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2933[iVar0], true);
 									iLocal_1868 = (iLocal_1868 - 1);
 									iLocal_1863++;
 									iLocal_1790[iVar0]++;
@@ -43773,7 +43773,7 @@ void func_424(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_1491[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_2831[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2831[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_1491[iVar0], 0))
 									{

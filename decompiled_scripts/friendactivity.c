@@ -3844,9 +3844,9 @@ int func_100(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -45700,7 +45700,7 @@ void func_514(var uParam0, var uParam1, bool bParam2)
 				PED::SET_PED_CAN_BE_TARGETTED(uParam0->f_7, false);
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(uParam0->f_7, 1862763509);
 				PED::SET_PED_HELMET(uParam0->f_7, true);
-				ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_7, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_7, true);
 				TASK::SET_PED_PATH_CAN_USE_CLIMBOVERS(uParam0->f_7, true);
 				TASK::SET_PED_PATH_CAN_USE_LADDERS(uParam0->f_7, true);
 				TASK::SET_PED_PATH_CAN_DROP_FROM_HEIGHT(uParam0->f_7, true);

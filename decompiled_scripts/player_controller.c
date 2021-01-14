@@ -34295,9 +34295,9 @@ int func_128(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -47966,7 +47966,7 @@ void func_382()
 							{
 								ENTITY::SET_ENTITY_COORDS(Local_75.f_17[iLocal_280], Global_111858.f_2359.f_539.f_2300[iLocal_280 /*3*/], true, false, false, true);
 								ENTITY::SET_ENTITY_HEADING(Local_75.f_17[iLocal_280], Global_111858.f_2359.f_539.f_2310[iLocal_280]);
-								ENTITY::_SET_ENTITY_SOMETHING(Local_75.f_17[iLocal_280], true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_75.f_17[iLocal_280], true);
 							}
 						}
 					}
@@ -48160,7 +48160,7 @@ int func_386(int* iParam0, int iParam1, struct<98> Param2, bool bParam100)
 		VEHICLE::SET_VEHICLE_CAN_SAVE_IN_GARAGE(iVar12, false);
 		VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iVar12, true);
 		func_601(&iVar12, Param2);
-		ENTITY::_SET_ENTITY_SOMETHING(iVar12, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar12, true);
 		if (Param2.f_97)
 		{
 			func_600(iVar12, iParam1);

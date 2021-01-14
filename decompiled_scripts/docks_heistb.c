@@ -8068,9 +8068,9 @@ int func_134(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -18680,7 +18680,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 				{
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4994[3 /*19*/], false))
 					{
-						ENTITY::_SET_ENTITY_SOMETHING(Local_4994[3 /*19*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[3 /*19*/], true);
 						VEHICLE::SET_VEHICLE_DISABLE_TOWING(Local_4994[3 /*19*/], true);
 						VEHICLE::SET_VEHICLE_AUTOMATICALLY_ATTACHES(Local_4994[3 /*19*/], false, 0);
 						VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_4994[3 /*19*/], 5f);
@@ -18712,7 +18712,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					{
 						if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4994[4 /*19*/], false))
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(Local_4994[4 /*19*/], true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[4 /*19*/], true);
 							VEHICLE::SET_VEHICLE_DISABLE_TOWING(Local_4994[4 /*19*/], true);
 							VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_4994[4 /*19*/], true);
 							return 1;
@@ -18744,7 +18744,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					{
 						if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4994[32 /*19*/], false))
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(Local_4994[32 /*19*/], true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[32 /*19*/], true);
 							VEHICLE::SET_VEHICLE_DISABLE_TOWING(Local_4994[32 /*19*/], true);
 							VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_4994[32 /*19*/], true);
 							return 1;
@@ -18766,7 +18766,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					STREAMING::REQUEST_COLLISION_AT_COORD(1731.78f, 3443.08f, 38.54f);
 					VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Local_4994[5 /*19*/], false);
 					VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_4994[5 /*19*/], 5f);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4994[5 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[5 /*19*/], true);
 					AUDIO::ADD_ENTITY_TO_AUDIO_MIX_GROUP(Local_4994[5 /*19*/], "DH_2B_TRUCK_GROUP", 0f);
 				}
 			}
@@ -18808,7 +18808,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 						{
 							if (!ENTITY::IS_ENTITY_ATTACHED(Local_4994[1 /*19*/]))
 							{
-								ENTITY::_SET_ENTITY_SOMETHING(Local_4994[1 /*19*/], false);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[1 /*19*/], false);
 								VEHICLE::ATTACH_VEHICLE_ON_TO_TRAILER(Local_4994[1 /*19*/], Local_4994[6 /*19*/], 0f, -4f, -0.7f, 0f, 0f, 0f, 0f, 0f, 0f, -1f);
 							}
 							else
@@ -18833,7 +18833,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					STREAMING::REQUEST_COLLISION_FOR_MODEL(joaat("packer"));
 					STREAMING::REQUEST_COLLISION_AT_COORD(1728.96f, 3264.86f, 41.22f);
 					VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_4994[5 /*19*/], 5f);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4994[5 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[5 /*19*/], true);
 				}
 			}
 			else if (!ENTITY::DOES_ENTITY_EXIST(Local_4994[6 /*19*/]))
@@ -19030,7 +19030,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					{
 						if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4994[4 /*19*/], false))
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(Local_4994[4 /*19*/], true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[4 /*19*/], true);
 							VEHICLE::SET_VEHICLE_DISABLE_TOWING(Local_4994[4 /*19*/], true);
 							VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_4994[4 /*19*/], true);
 							return 1;
@@ -19169,10 +19169,10 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					Local_4994[0 /*19*/] = VEHICLE::CREATE_VEHICLE(joaat("cargobob3"), Param1, fParam4, true, true, false);
 					VEHICLE::SET_VEHICLE_STRONG(Local_4994[0 /*19*/], true);
 					func_307(Local_4994[0 /*19*/], 0);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4994[0 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[0 /*19*/], true);
 					VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(Local_4994[0 /*19*/], false);
 					VEHICLE::SET_DISABLE_VEHICLE_PETROL_TANK_FIRES(Local_4994[0 /*19*/], true);
-					VEHICLE::_SET_CARGOBOB_HOOK_POSITION(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, 0);
+					VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, false);
 					func_304(Local_4994[0 /*19*/], func_305(0, 5));
 				}
 			}
@@ -19192,7 +19192,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 							ENTITY::FREEZE_ENTITY_POSITION(Local_4994[0 /*19*/], true);
 							VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(Local_4994[0 /*19*/], false);
 							VEHICLE::SET_DISABLE_VEHICLE_PETROL_TANK_FIRES(Local_4994[0 /*19*/], true);
-							VEHICLE::_SET_CARGOBOB_HOOK_POSITION(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, 0);
+							VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, false);
 							func_304(Local_4994[0 /*19*/], func_305(0, 5));
 							func_307(Local_4994[0 /*19*/], 0);
 							return 1;
@@ -19217,7 +19217,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					Local_4994[0 /*19*/] = VEHICLE::CREATE_VEHICLE(joaat("cargobob3"), Param1, fParam4, true, true, false);
 					VEHICLE::SET_VEHICLE_STRONG(Local_4994[0 /*19*/], true);
 					func_307(Local_4994[0 /*19*/], 0);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4994[0 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[0 /*19*/], true);
 					VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(Local_4994[0 /*19*/], false);
 					VEHICLE::SET_DISABLE_VEHICLE_PETROL_TANK_FIRES(Local_4994[0 /*19*/], true);
 					func_304(Local_4994[0 /*19*/], func_305(0, 5));
@@ -19266,7 +19266,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					{
 						VEHICLE::CREATE_PICK_UP_ROPE_FOR_CARGOBOB(Local_4994[0 /*19*/], 0);
 					}
-					VEHICLE::_SET_CARGOBOB_HOOK_POSITION(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, 1);
+					VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, true);
 					VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(Local_4994[0 /*19*/], false);
 				}
 			}
@@ -19308,7 +19308,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 						else
 						{
 							VEHICLE::CREATE_PICK_UP_ROPE_FOR_CARGOBOB(Local_4994[0 /*19*/], 0);
-							VEHICLE::_SET_CARGOBOB_HOOK_POSITION(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, 1);
+							VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, true);
 							ENTITY::SET_ENTITY_COORDS(Local_4994[1 /*19*/], Local_8302, true, false, false, true);
 							VEHICLE::ATTACH_VEHICLE_TO_CARGOBOB(Local_4994[0 /*19*/], Local_4994[1 /*19*/], -1, 0f, 0f, 1f);
 						}
@@ -19624,7 +19624,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					{
 						STREAMING::REQUEST_COLLISION_FOR_MODEL(joaat("s_m_y_blackops_01"));
 						STREAMING::REQUEST_COLLISION_AT_COORD(-1309.16f, 6145.46f, 2.36f);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_1071[0 /*40*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1071[0 /*40*/], true);
 						TASK::TASK_START_SCENARIO_IN_PLACE(Local_1071[0 /*40*/], "WORLD_HUMAN_CLIPBOARD", 0, false);
 					}
 				}
@@ -19635,7 +19635,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					{
 						STREAMING::REQUEST_COLLISION_FOR_MODEL(joaat("s_m_y_blackops_01"));
 						STREAMING::REQUEST_COLLISION_AT_COORD(-1309.16f, 6145.46f, 2.36f);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_1071[1 /*40*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1071[1 /*40*/], true);
 						TASK::TASK_START_SCENARIO_IN_PLACE(Local_1071[1 /*40*/], "WORLD_HUMAN_CLIPBOARD", 0, false);
 					}
 				}
@@ -19646,7 +19646,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					{
 						STREAMING::REQUEST_COLLISION_FOR_MODEL(joaat("s_m_y_blackops_01"));
 						STREAMING::REQUEST_COLLISION_AT_COORD(-1309.16f, 6145.46f, 2.36f);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_1071[2 /*40*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1071[2 /*40*/], true);
 						TASK::TASK_START_SCENARIO_IN_PLACE(Local_1071[2 /*40*/], "WORLD_HUMAN_STAND_IMPATIENT", 0, false);
 					}
 				}
@@ -19657,7 +19657,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					{
 						STREAMING::REQUEST_COLLISION_FOR_MODEL(joaat("s_m_y_blackops_01"));
 						STREAMING::REQUEST_COLLISION_AT_COORD(-1309.16f, 6145.46f, 2.36f);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_1071[3 /*40*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1071[3 /*40*/], true);
 						TASK::TASK_START_SCENARIO_IN_PLACE(Local_1071[3 /*40*/], "WORLD_HUMAN_STAND_IMPATIENT", 0, false);
 					}
 				}
@@ -19668,7 +19668,7 @@ int func_299(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool bP
 					{
 						STREAMING::REQUEST_COLLISION_FOR_MODEL(joaat("s_m_y_blackops_01"));
 						STREAMING::REQUEST_COLLISION_AT_COORD(-1309.16f, 6145.46f, 2.36f);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_1071[4 /*40*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1071[4 /*40*/], true);
 						TASK::TASK_START_SCENARIO_IN_PLACE(Local_1071[4 /*40*/], "WORLD_HUMAN_BINOCULARS", 0, false);
 					}
 				}
@@ -119138,7 +119138,7 @@ void func_824()
 			{
 				ENTITY::FREEZE_ENTITY_POSITION(Local_4994[1 /*19*/], false);
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Local_4994[1 /*19*/], true, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_4994[1 /*19*/], false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[1 /*19*/], false);
 				ENTITY::SET_ENTITY_PROOFS(Local_4994[1 /*19*/], false, false, false, true, false, false, false, false);
 				ENTITY::APPLY_FORCE_TO_ENTITY(Local_4994[1 /*19*/], 1, 0f, 0f, -1f, 0f, 0f, 0f, 0, true, true, false, false, true);
 			}
@@ -119188,7 +119188,7 @@ void func_824()
 				{
 					VEHICLE::CREATE_PICK_UP_ROPE_FOR_CARGOBOB(Local_4994[0 /*19*/], 0);
 				}
-				VEHICLE::_SET_CARGOBOB_HOOK_POSITION(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, 0);
+				VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, false);
 			}
 			func_155(6, "Pick Up Sub", 0, 0, 0, 1);
 			iLocal_6096 = MISC::GET_GAME_TIMER();
@@ -119209,7 +119209,7 @@ void func_824()
 					if (!VEHICLE::DOES_CARGOBOB_HAVE_PICK_UP_ROPE(Local_4994[0 /*19*/]))
 					{
 						VEHICLE::CREATE_PICK_UP_ROPE_FOR_CARGOBOB(Local_4994[0 /*19*/], 0);
-						VEHICLE::_SET_CARGOBOB_HOOK_POSITION(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, 0);
+						VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, false);
 					}
 				}
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4994[1 /*19*/], false))
@@ -120028,14 +120028,14 @@ void func_837()
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(Local_4994[1 /*19*/]))
 				{
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4994[1 /*19*/], false);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[1 /*19*/], false);
 					ENTITY::FREEZE_ENTITY_POSITION(Local_4994[1 /*19*/], false);
 					ENTITY::SET_ENTITY_INVINCIBLE(Local_4994[1 /*19*/], false);
 				}
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4994[1 /*19*/], false))
 				{
 					VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Local_4994[1 /*19*/], true);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4994[1 /*19*/], false);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[1 /*19*/], false);
 					VEHICLE::SET_VEHICLE_LIGHTS(Local_4994[1 /*19*/], 3);
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(Local_4994[26 /*19*/]))
@@ -121759,7 +121759,7 @@ void func_857()
 				{
 					if (!func_914("DS2_GRAPPLEH"))
 					{
-						VEHICLE::_SET_CARGOBOB_HOOK_POSITION(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, 0);
+						VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(Local_4994[0 /*19*/], fLocal_5865, fLocal_5864, false);
 						HUD::CLEAR_HELP(true);
 						func_829("DS2_GRAPPLEH", -1);
 						func_911("DS2_GRAPPLEH", 1);
@@ -125633,7 +125633,7 @@ void func_893(int iParam0)
 					}
 					if (ENTITY::DOES_ENTITY_EXIST(Local_4994[1 /*19*/]))
 					{
-						ENTITY::_SET_ENTITY_SOMETHING(Local_4994[1 /*19*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[1 /*19*/], true);
 					}
 					if (func_896())
 					{
@@ -125687,12 +125687,12 @@ void func_893(int iParam0)
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4994[1 /*19*/], false))
 					{
 						VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Local_4994[1 /*19*/], true);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_4994[1 /*19*/], false);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[1 /*19*/], false);
 						VEHICLE::SET_VEHICLE_LIGHTS(Local_4994[1 /*19*/], 3);
 					}
 					if (ENTITY::DOES_ENTITY_EXIST(Local_4994[1 /*19*/]))
 					{
-						ENTITY::_SET_ENTITY_SOMETHING(Local_4994[1 /*19*/], false);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4994[1 /*19*/], false);
 					}
 					if (ENTITY::DOES_ENTITY_EXIST(iLocal_5910[0]))
 					{

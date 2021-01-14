@@ -5982,7 +5982,7 @@ void func_85()
 					}
 					if (!PED::IS_PED_INJURED(Local_755[iVar0 /*33*/]))
 					{
-						ENTITY::_SET_ENTITY_SOMETHING(Local_755[iVar0 /*33*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_755[iVar0 /*33*/], true);
 						Local_1619[iVar0 /*24*/].f_3 = 3;
 						iVar0 = (iVar0 - 1);
 					}
@@ -7923,7 +7923,7 @@ int func_107(int iParam0, int iParam1, struct<3> Param2, float fParam5, int iPar
 		func_108(Local_755[iParam0 /*33*/], 1);
 	}
 	PED::STOP_PED_WEAPON_FIRING_WHEN_DROPPED(Local_755[iParam0 /*33*/]);
-	ENTITY::_SET_ENTITY_SOMETHING(Local_755[iParam0 /*33*/], true);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_755[iParam0 /*33*/], true);
 	PED::_0xEC6935EBE0847B90(Local_755[iParam0 /*33*/], 0f, 0f, 0f);
 	PED::_0x5B6010B3CBC29095(Local_755[iParam0 /*33*/], true);
 	PED::_0xCEDA60A74219D064(Local_755[iParam0 /*33*/], true);
@@ -27086,9 +27086,9 @@ int func_391(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

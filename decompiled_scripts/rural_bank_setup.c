@@ -10004,9 +10004,9 @@ int func_174(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -11850,13 +11850,13 @@ void func_192()
 			{
 				ENTITY::SET_ENTITY_PROOFS(iLocal_1351, true, true, false, true, false, false, false, false);
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(uLocal_313[iLocal_1349], true, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(uLocal_313[iLocal_1349], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uLocal_313[iLocal_1349], true);
 				func_260(&uLocal_722, 10, "RBsetup");
 				func_260(&uLocal_1023, 11, "RBsetup");
 				if (func_191() == 2)
 				{
 					AUDIO::_0xD2DCCD8E16E20997(iLocal_358);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_67, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_67, true);
 					func_259(&iLocal_1369, 11, "RBsetup", &uLocal_1023);
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_67, false))
 					{
@@ -11869,7 +11869,7 @@ void func_192()
 					{
 						VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(iLocal_358, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_358, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_358, true);
 					func_259(&iLocal_1390, 10, "RBsetup", &uLocal_722);
 				}
 				AUDIO::SET_HORN_ENABLED(iLocal_1351, false);

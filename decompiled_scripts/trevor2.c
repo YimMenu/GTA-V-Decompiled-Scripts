@@ -1816,11 +1816,11 @@ void func_26()
 					func_27(14, joaat("hexer"), 1748.88f, 3045.37f, 61.45f, 262.61f, joaat("g_m_y_lost_01"), 1, 14, 0, 0, -1, joaat("WEAPON_PISTOL"));
 					func_27(24, joaat("hexer"), 1330.454f, 3159.925f, 39.4563f, 278.982f, joaat("g_m_y_lost_01"), 1, 24, 0, 0, -1, joaat("WEAPON_PISTOL"));
 					func_27(8, joaat("gburrito"), 1088.475f, 3145.329f, 39.4609f, 296.792f, joaat("g_m_y_lost_01"), 0, 0, 0, 0, -1, joaat("WEAPON_PISTOL"));
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4415[8 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[8 /*19*/], true);
 					func_27(25, joaat("gburrito"), 1417.43f, 3006.3f, 40.33f, 283.3621f, joaat("g_m_y_lost_01"), 1, 25, 2, 0, -1, joaat("WEAPON_CARBINERIFLE"));
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4415[25 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[25 /*19*/], true);
 					func_27(27, joaat("gburrito"), 1548.637f, 3140.068f, 39.5341f, 317.6045f, joaat("g_m_y_lost_01"), 1, 25, 3, 0, -1, joaat("WEAPON_CARBINERIFLE"));
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4415[27 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[27 /*19*/], true);
 					iLocal_5820++;
 				}
 			}
@@ -2452,7 +2452,7 @@ void func_40()
 					}
 					VEHICLE::CONTROL_LANDING_GEAR(Local_4415[1 /*19*/], 2);
 					VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_4415[1 /*19*/], 5f);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4415[1 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[1 /*19*/], true);
 				}
 				STREAMING::SET_GAME_PAUSES_FOR_STREAMING(false);
 				STREAMING::NEW_LOAD_SCENE_START_SPHERE(-68.64695f, -1819.643f, 25.94197f, 30f, 2);
@@ -2503,7 +2503,7 @@ void func_40()
 					func_41(1, 1, 1, 0, 0, 0, 0);
 					PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
 					STREAMING::SET_FOCUS_POS_AND_VEL(-68.64695f, -1819.643f, 25.94197f, 0f, 0f, 0f);
-					ENTITY::_SET_ENTITY_SOMETHING(PLAYER::PLAYER_PED_ID(), true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(PLAYER::PLAYER_PED_ID(), true);
 					SYSTEM::SETTIMERB(0);
 					iLocal_5822++;
 				}
@@ -2893,7 +2893,7 @@ void func_52()
 					{
 						VEHICLE::CONTROL_LANDING_GEAR(Local_4415[1 /*19*/], 2);
 						VEHICLE::SET_VEHICLE_FIXED(Local_4415[1 /*19*/]);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_4415[1 /*19*/], false);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[1 /*19*/], false);
 					}
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4415[1 /*19*/], false))
 					{
@@ -3020,7 +3020,7 @@ void func_52()
 					}
 					VEHICLE::CONTROL_LANDING_GEAR(Local_4415[1 /*19*/], 2);
 					VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_4415[1 /*19*/], 5f);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4415[1 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[1 /*19*/], true);
 				}
 			}
 			if (CUTSCENE::HAS_CUTSCENE_FINISHED() && iLocal_5814 == 1)
@@ -3059,7 +3059,7 @@ void func_52()
 				VEHICLE::SET_VEHICLE_DOORS_LOCKED(Local_4415[1 /*19*/], 1);
 				VEHICLE::CONTROL_LANDING_GEAR(Local_4415[1 /*19*/], 2);
 				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_4415[1 /*19*/], 5f);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_4415[1 /*19*/], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[1 /*19*/], true);
 			}
 			if (func_20(0))
 			{
@@ -3249,7 +3249,7 @@ void func_57()
 				{
 					if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(Local_4415[1 /*19*/]))
 					{
-						ENTITY::_SET_ENTITY_SOMETHING(Local_4415[1 /*19*/], false);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[1 /*19*/], false);
 						VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(Local_4415[1 /*19*/]);
 						TASK::TASK_PLANE_LAND(Local_5547, Local_4415[1 /*19*/], 1917.368f, 4707.804f, 40.19184f, 2001.851f, 4746.581f, 40.06049f);
 						ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Local_4415[1 /*19*/], true, 1);
@@ -8549,9 +8549,9 @@ int func_174(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -101402,9 +101402,9 @@ void func_593()
 						func_27(14, joaat("hexer"), 1748.88f, 3045.37f, 61.45f, 262.61f, joaat("g_m_y_lost_01"), 1, 14, 0, 0, -1, joaat("WEAPON_PISTOL"));
 						func_27(24, joaat("hexer"), 1330.454f, 3159.925f, 39.4563f, 278.982f, joaat("g_m_y_lost_01"), 1, 24, 0, 0, -1, joaat("WEAPON_SAWNOFFSHOTGUN"));
 						func_27(8, joaat("gburrito"), 1088.475f, 3145.329f, 39.4609f, 296.792f, joaat("g_m_y_lost_01"), 0, 0, 0, 0, -1, joaat("WEAPON_PISTOL"));
-						ENTITY::_SET_ENTITY_SOMETHING(Local_4415[8 /*19*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[8 /*19*/], true);
 						func_27(25, joaat("gburrito"), 1417.43f, 3006.3f, 40.33f, 283.3621f, joaat("g_m_y_lost_01"), 1, 25, 3, 0, -1, joaat("WEAPON_CARBINERIFLE"));
-						ENTITY::_SET_ENTITY_SOMETHING(Local_4415[25 /*19*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[25 /*19*/], true);
 						if (!ENTITY::DOES_ENTITY_EXIST(Local_492[11 /*40*/]))
 						{
 							func_605(11, 17, 0, 0, 0, 1, 1);
@@ -101722,7 +101722,7 @@ void func_593()
 				else
 				{
 					func_27(27, joaat("gburrito"), 1548.637f, 3140.068f, 39.5341f, 317.6045f, joaat("g_m_y_lost_01"), 1, 25, 3, 0, -1, joaat("WEAPON_CARBINERIFLE"));
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4415[27 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[27 /*19*/], true);
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4415[22 /*19*/], false))
 					{
 						if (!VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(Local_4415[22 /*19*/]))
@@ -102570,7 +102570,7 @@ void func_605(int iParam0, int iParam1, bool bParam2, int iParam3, bool bParam4,
 				PED::SET_PED_ACCURACY(Local_492[iVar0 /*40*/], 10);
 				PED::SET_PED_COMBAT_ATTRIBUTES(Local_492[iVar0 /*40*/], 5, true);
 				PED::SET_PED_COMBAT_ATTRIBUTES(Local_492[iVar0 /*40*/], 49, true);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_492[iVar0 /*40*/], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_492[iVar0 /*40*/], true);
 				func_28(Local_492[iVar0 /*40*/], 1);
 				if (iParam3 == 1)
 				{
@@ -104582,7 +104582,7 @@ void func_624()
 		if (STREAMING::HAS_MODEL_LOADED(joaat("gburrito")))
 		{
 			func_27(6, joaat("gburrito"), 1745.71f, 3275.38f, 40.94f, 133.23f, joaat("g_m_y_lost_01"), 0, 0, 0, 0, -1, joaat("WEAPON_CARBINERIFLE"));
-			ENTITY::_SET_ENTITY_SOMETHING(Local_4415[6 /*19*/], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[6 /*19*/], true);
 		}
 	}
 	if (iLocal_5820 > 1)
@@ -104793,7 +104793,7 @@ void func_624()
 					if (!ENTITY::DOES_ENTITY_EXIST(Local_4415[26 /*19*/]))
 					{
 						func_27(26, joaat("gburrito"), 1776.792f, 3331.993f, 40.2483f, 213.6601f, joaat("g_m_y_lost_01"), 1, 29, 2, 0, -1, joaat("WEAPON_CARBINERIFLE"));
-						ENTITY::_SET_ENTITY_SOMETHING(Local_4415[26 /*19*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[26 /*19*/], true);
 						VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Local_4415[26 /*19*/], false);
 						if (VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(26, "RCSJC"))
 						{
@@ -110641,7 +110641,7 @@ void func_668(var uParam0, int iParam1)
 				if (iLocal_5652 == 1)
 				{
 					Local_5505[0 /*20*/] = VEHICLE::CREATE_VEHICLE(Local_5505[0 /*20*/].f_6, Local_5505[0 /*20*/].f_2, Local_5505[0 /*20*/].f_5, true, true, false);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_5505[0 /*20*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_5505[0 /*20*/], true);
 					AUDIO::ADD_ENTITY_TO_AUDIO_MIX_GROUP(Local_5505[0 /*20*/], "TREVOR_2_BIKER_VAN_GROUP", 0f);
 					*uParam0 = func_660(Local_5505[0 /*20*/], uParam0->f_14, iLocal_491, -1, joaat("WEAPON_ASSAULTRIFLE"), joaat("component_at_ar_flsh"), 135);
 					func_621(*uParam0, 507);
@@ -118036,7 +118036,7 @@ int func_726(int iParam0, int iParam1)
 			}
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			switch (iParam0)
 			{
 				case -971688363:
@@ -118052,7 +118052,7 @@ int func_726(int iParam0, int iParam1)
 			}
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			switch (iParam0)
 			{
 				case 759617595:
@@ -118081,7 +118081,7 @@ int func_726(int iParam0, int iParam1)
 			}
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			switch (iParam0)
 			{
 				case -1423479223:
@@ -118694,15 +118694,15 @@ int func_730(int iParam0)
 			return 85;
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			return 86;
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			return 88;
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			return 87;
 			break;
 	}
@@ -125355,12 +125355,12 @@ void func_770(int iParam0)
 				if (!ENTITY::DOES_ENTITY_EXIST(Local_4415[8 /*19*/]))
 				{
 					func_27(8, joaat("gburrito"), 1698.52f, 3313.73f, 40.97f, 21.63f, joaat("g_m_y_lost_01"), 0, 0, 0, 0, -1, joaat("WEAPON_CARBINERIFLE"));
-					ENTITY::_SET_ENTITY_SOMETHING(Local_4415[8 /*19*/], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[8 /*19*/], true);
 				}
 				func_27(6, joaat("gburrito"), 1745.71f, 3275.38f, 40.94f, 133.23f, joaat("g_m_y_lost_01"), 0, 0, 0, 0, -1, joaat("WEAPON_CARBINERIFLE"));
-				ENTITY::_SET_ENTITY_SOMETHING(Local_4415[6 /*19*/], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[6 /*19*/], true);
 				func_27(10, joaat("maverick"), 1706.702f, 3322.242f, 40.1486f, 311.7382f, joaat("g_m_y_lost_01"), 1, 10, 0, 0, -1, joaat("WEAPON_CARBINERIFLE"));
-				ENTITY::_SET_ENTITY_SOMETHING(Local_4415[10 /*19*/], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_4415[10 /*19*/], true);
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4415[2 /*19*/], false))
 				{
 					ENTITY::SET_ENTITY_COORDS(Local_4415[2 /*19*/], 1564.581f, 3225.473f, 39.4794f, true, false, false, true);

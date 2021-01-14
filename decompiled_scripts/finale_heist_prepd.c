@@ -7886,9 +7886,9 @@ int func_178(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -103680,7 +103680,7 @@ void func_668()
 	VEHICLE::SET_VEHICLE_STRONG(iLocal_50, true);
 	ENTITY::SET_ENTITY_HEALTH(iLocal_50, 3000, 0);
 	VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(iLocal_50, false);
-	ENTITY::_SET_ENTITY_SOMETHING(iLocal_50, true);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_50, true);
 	ENTITY::SET_ENTITY_LOD_DIST(iLocal_50, 3000);
 	VEHICLE::SET_VEHICLE_LOD_MULTIPLIER(iLocal_50, 100f);
 	ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_50, true, 1);

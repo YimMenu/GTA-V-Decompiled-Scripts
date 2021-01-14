@@ -73598,7 +73598,7 @@ void func_354(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -73652,7 +73652,7 @@ void func_354(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_355(Global_4456448.f_129348))
@@ -74907,7 +74907,7 @@ int func_409(var uParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPar
 	}
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
 		if (bParam10)
 		{
 			NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(NETWORK::NET_TO_OBJ(*uParam0), true);
@@ -80499,7 +80499,7 @@ void func_536(var uParam0, int iParam1, int iParam2)
 						ENTITY::SET_ENTITY_VISIBLE(uParam0->f_744[iParam1], false, false);
 					}
 					ENTITY::SET_ENTITY_HEADING(uParam0->f_744[iParam1], uParam0->f_156[iParam1]);
-					ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_744[iParam1], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_744[iParam1], true);
 					ENTITY::SET_ENTITY_CAN_BE_DAMAGED(uParam0->f_744[iParam1], false);
 					ENTITY::SET_ENTITY_INVINCIBLE(uParam0->f_744[iParam1], true);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(uParam0->f_743);
@@ -88508,7 +88508,7 @@ void func_705(var uParam0, int iParam1, int iParam2)
 						ENTITY::SET_ENTITY_COORDS_NO_OFFSET(uParam0->f_786[iParam1 /*3*/][iParam2], uParam0->f_198[iParam1 /*3*/], false, false, true);
 						ENTITY::SET_ENTITY_HEADING(uParam0->f_786[iParam1 /*3*/][iParam2], uParam0->f_156[iParam1]);
 						ENTITY::SET_ENTITY_VISIBLE(uParam0->f_786[iParam1 /*3*/][iParam2], true, false);
-						ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_786[iParam1 /*3*/][iParam2], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_786[iParam1 /*3*/][iParam2], true);
 						ENTITY::SET_ENTITY_CAN_BE_DAMAGED(uParam0->f_786[iParam1 /*3*/][iParam2], false);
 						ENTITY::SET_ENTITY_INVINCIBLE(uParam0->f_786[iParam1 /*3*/][iParam2], true);
 						STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);

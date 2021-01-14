@@ -2134,7 +2134,7 @@ int func_24()
 						if (func_26(&(Local_804.f_729[iLocal_85 /*2*/].f_1), Var0, Var2, fVar5, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0))
 						{
 							VEHICLE::SET_VEHICLE_DOORS_LOCKED(NETWORK::NET_TO_VEH(Local_804.f_729[iLocal_85 /*2*/].f_1), 1);
-							ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_VEH(Local_804.f_729[iLocal_85 /*2*/].f_1), true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_VEH(Local_804.f_729[iLocal_85 /*2*/].f_1), true);
 							VEHICLE::_0x0AD9E8F87FF7C16F(NETWORK::NET_TO_VEH(Local_804.f_729[iLocal_85 /*2*/].f_1), false);
 							func_25(NETWORK::NET_TO_VEH(Local_804.f_729[iLocal_85 /*2*/].f_1), 1);
 							if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Not_Allow_As_Saved_Veh", 3))
@@ -2223,7 +2223,7 @@ int func_26(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)

@@ -4342,7 +4342,7 @@ int func_149(int iParam0, struct<3> Param1, float fParam4)
 				{
 					func_36(Local_868, 0);
 					VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_868, true);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_868, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_868, true);
 					return 1;
 				}
 			}
@@ -4350,7 +4350,7 @@ int func_149(int iParam0, struct<3> Param1, float fParam4)
 			{
 				func_36(Local_868, 0);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_868, true);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_868, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_868, true);
 				return 1;
 			}
 			break;

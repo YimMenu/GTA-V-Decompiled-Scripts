@@ -91895,9 +91895,9 @@ int func_410(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -106856,8 +106856,8 @@ void func_637()
 				{
 					ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_1011, true, 1);
 					ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_1007, true, 1);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_1011, false);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_1007, false);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1011, false);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1007, false);
 					if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(iLocal_1011))
 					{
 						VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(iLocal_1011);

@@ -37423,13 +37423,13 @@ void func_266()
 		if (!ENTITY::IS_ENTITY_DEAD(Local_3048[0 /*7*/], false))
 		{
 			ENTITY::FREEZE_ENTITY_POSITION(Local_3048[0 /*7*/], false);
-			ENTITY::_SET_ENTITY_SOMETHING(Local_3048[0 /*7*/], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_3048[0 /*7*/], true);
 			ENTITY::CLEAR_ENTITY_LAST_DAMAGE_ENTITY(Local_3048[0 /*7*/]);
 		}
 		if (!ENTITY::IS_ENTITY_DEAD(Local_3048[1 /*7*/], false))
 		{
 			ENTITY::FREEZE_ENTITY_POSITION(Local_3048[1 /*7*/], false);
-			ENTITY::_SET_ENTITY_SOMETHING(Local_3048[1 /*7*/], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_3048[1 /*7*/], true);
 			ENTITY::CLEAR_ENTITY_LAST_DAMAGE_ENTITY(Local_3048[1 /*7*/]);
 		}
 		func_340(&(iLocal_2784[0]), 0);
@@ -41122,20 +41122,20 @@ int func_352(bool bParam0)
 				iLocal_2779[0] = VEHICLE::CREATE_VEHICLE(joaat("ninef"), -49.9f, -1094.7f, 26.1366f, 96.8607f, true, true, false);
 				VEHICLE::SET_VEHICLE_COLOURS(iLocal_2779[0], 31, 0);
 				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(iLocal_2779[0], 42, 0);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_2779[0], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2779[0], true);
 				iLocal_2779[1] = VEHICLE::CREATE_VEHICLE(joaat("bjxl"), -46.5f, -1097.5f, 26.35f, 108.8107f, true, true, false);
 				VEHICLE::SET_VEHICLE_COLOURS(iLocal_2779[1], 126, 126);
 				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(iLocal_2779[1], 126, 0);
 				VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(iLocal_2779[1], "57EIG117");
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_2779[1], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2779[1], true);
 				iLocal_2779[2] = VEHICLE::CREATE_VEHICLE(joaat("ninef"), -41.7f, -1099.5f, 26.0304f, 137.6117f, true, true, false);
 				VEHICLE::SET_VEHICLE_COLOURS(iLocal_2779[2], 1, 1);
 				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(iLocal_2779[2], 15, 0);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_2779[2], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2779[2], true);
 				iLocal_2779[3] = VEHICLE::CREATE_VEHICLE(joaat("bjxl"), -36.8f, -1101.2f, 26.0912f, 151.7322f, true, true, false);
 				VEHICLE::SET_VEHICLE_COLOURS(iLocal_2779[3], 1, 111);
 				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(iLocal_2779[3], 4, 0);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_2779[3], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2779[3], true);
 			}
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("bjxl"));
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("ninef"));
@@ -49562,8 +49562,8 @@ void func_466()
 					if (STREAMING::HAS_MODEL_LOADED(joaat("tanker")) && !bVar0)
 					{
 						iLocal_2778 = VEHICLE::CREATE_VEHICLE(joaat("tanker"), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_2394[15], 0f, -10f, 0f), ENTITY::GET_ENTITY_HEADING(iLocal_2394[15]), true, true, false);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_2778, true);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_2394[15], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2778, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2394[15], true);
 						VEHICLE::ATTACH_VEHICLE_TO_TRAILER(iLocal_2394[15], iLocal_2778, 1f);
 						STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("tanker"));
 						bVar0 = true;
@@ -51530,7 +51530,7 @@ void func_482(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_1439[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_2394[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2394[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_2394[iVar0], Local_1909[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_2394[iVar0], fLocal_688[iVar0], fLocal_727[iVar0], fLocal_766[iVar0], fLocal_805[iVar0]);
@@ -52273,7 +52273,7 @@ void func_495(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_2378[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_2378[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2378[iVar0], true);
 									iLocal_1501 = (iLocal_1501 - 1);
 									iLocal_1496++;
 									iLocal_1478[iVar0]++;
@@ -52502,7 +52502,7 @@ void func_496(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_1243[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_2244[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2244[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_1243[iVar0], 0))
 									{
@@ -59705,9 +59705,9 @@ int func_580(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

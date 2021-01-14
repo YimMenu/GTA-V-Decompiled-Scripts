@@ -15192,7 +15192,7 @@ void func_271()
 				Local_1347[0 /*2*/] = OBJECT::CREATE_OBJECT(iLocal_85, ENTITY::GET_ENTITY_COORDS(Local_1343, true), true, true, false);
 				OBJECT::SET_OBJECT_PHYSICS_PARAMS(Local_1347[0 /*2*/], 3.5f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f);
 				ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_1347[0 /*2*/], Local_1343, -1, -0.2f, -2.675f, 0.05f, -90f, 0f, -90f, false, false, false, false, 2, true);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_1347[0 /*2*/], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1347[0 /*2*/], true);
 			}
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(Local_1347[1 /*2*/]))
@@ -15208,7 +15208,7 @@ void func_271()
 				Local_1347[1 /*2*/] = OBJECT::CREATE_OBJECT(iLocal_85, ENTITY::GET_ENTITY_COORDS(Local_1343, true), true, true, false);
 				OBJECT::SET_OBJECT_PHYSICS_PARAMS(Local_1347[1 /*2*/], 3.5f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f);
 				ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_1347[1 /*2*/], Local_1343, -1, 0f, -2.675f, 0.05f, -90f, 0f, -90f, false, false, false, false, 2, true);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_1347[1 /*2*/], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1347[1 /*2*/], true);
 			}
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(Local_1347[2 /*2*/]))
@@ -15224,7 +15224,7 @@ void func_271()
 				Local_1347[2 /*2*/] = OBJECT::CREATE_OBJECT(iLocal_85, ENTITY::GET_ENTITY_COORDS(Local_1343, true), true, true, false);
 				OBJECT::SET_OBJECT_PHYSICS_PARAMS(Local_1347[2 /*2*/], 3.5f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f);
 				ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_1347[2 /*2*/], Local_1343, -1, 0.2f, -2.675f, 0.05f, -90f, 0f, -90f, false, false, false, false, 2, true);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_1347[2 /*2*/], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1347[2 /*2*/], true);
 			}
 		}
 	}

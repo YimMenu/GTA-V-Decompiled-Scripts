@@ -10803,9 +10803,9 @@ int func_112(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -119322,7 +119322,7 @@ void func_845()
 								func_908(Local_2092[1 /*88*/], 0);
 								VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(Local_2092[1 /*88*/], 0);
 								VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_2092[1 /*88*/], 5f);
-								ENTITY::_SET_ENTITY_SOMETHING(Local_2092[1 /*88*/], true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_2092[1 /*88*/], true);
 								VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Local_2092[1 /*88*/], false);
 								VEHICLE::SET_VEHICLE_DOORS_LOCKED(Local_2092[1 /*88*/], 10);
 								iLocal_4203 = 1;
@@ -119333,7 +119333,7 @@ void func_845()
 								PED::SET_PED_COMPONENT_VARIATION(Local_631[5 /*20*/], 9, 0, 0, 0);
 								func_594(&Local_4445, iLocal_370);
 								PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_631[5 /*20*/], true);
-								ENTITY::_SET_ENTITY_SOMETHING(Local_631[5 /*20*/], true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_631[5 /*20*/], true);
 								iLocal_4202 = 1;
 								iLocal_4207 = 1;
 							}
@@ -119342,7 +119342,7 @@ void func_845()
 								if (func_905(&(Local_631[3 /*20*/]), 3, 2510.989f, -319.4904f, 91.9927f, 46.8987f, 8, 40, 0, 1, 0, 0))
 								{
 									PED::SET_PED_COMPONENT_VARIATION(Local_631[3 /*20*/], 2, 1, 0, 0);
-									ENTITY::_SET_ENTITY_SOMETHING(Local_631[3 /*20*/], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_631[3 /*20*/], true);
 									iLocal_4206 = 1;
 								}
 							}
@@ -119355,7 +119355,7 @@ void func_845()
 								VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_2092[17 /*88*/], 5f);
 								VEHICLE::SET_VEHICLE_ENGINE_ON(Local_2092[17 /*88*/], true, false, false);
 								VEHICLE::SET_VEHICLE_LIGHTS(Local_2092[17 /*88*/], 3);
-								ENTITY::_SET_ENTITY_SOMETHING(Local_2092[17 /*88*/], true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_2092[17 /*88*/], true);
 							}
 							if (!ENTITY::DOES_ENTITY_EXIST(Local_2092[16 /*88*/]))
 							{
@@ -119365,7 +119365,7 @@ void func_845()
 								VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_2092[16 /*88*/], 5f);
 								VEHICLE::SET_VEHICLE_ENGINE_ON(Local_2092[16 /*88*/], true, false, false);
 								VEHICLE::SET_VEHICLE_LIGHTS(Local_2092[16 /*88*/], 3);
-								ENTITY::_SET_ENTITY_SOMETHING(Local_2092[16 /*88*/], true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_2092[16 /*88*/], true);
 								iLocal_4204 = 1;
 							}
 							if (ENTITY::DOES_ENTITY_EXIST(Local_2092[17 /*88*/]))

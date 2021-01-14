@@ -35690,7 +35690,7 @@ int func_254(int iParam0, bool bParam1)
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_127[iParam0]) && VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_127[iParam0], false))
 		{
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_127[iParam0], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_127[iParam0], true);
 			ENTITY::SET_ENTITY_PROOFS(iLocal_127[iParam0], false, false, false, true, true, false, false, false);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_127[iParam0], 3);
 			if (bParam1)
@@ -35738,7 +35738,7 @@ int func_254(int iParam0, bool bParam1)
 			PED::SET_PED_ACCURACY(iLocal_130[iParam0], 0);
 			PED::SET_PED_SHOOT_RATE(iLocal_130[iParam0], 15);
 			ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_130[iParam0], true, 1);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_130[iParam0], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_130[iParam0], true);
 			PED::SET_PED_CAN_BE_DRAGGED_OUT(iLocal_130[iParam0], false);
 			PED::SET_PED_CAN_BE_SHOT_IN_VEHICLE(iLocal_130[iParam0], true);
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_130[iParam0], iLocal_94);
@@ -37233,9 +37233,9 @@ void func_274()
 				PED::SET_SCENARIO_PEDS_SPAWN_IN_SPHERE_AREA(-1361.568f, -1207.053f, 3.4492f, 10f, 0);
 				PED::SET_SCENARIO_PEDS_SPAWN_IN_SPHERE_AREA(-1396.34f, -1059.049f, 3.2013f, 15f, 0);
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_108, true, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_108, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_108, true);
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_117, true, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_117, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_117, true);
 				func_237(&uLocal_334, iLocal_273, sLocal_271);
 				iLocal_274++;
 				AUDIO::_0x149AEE66F0CB3A99(0.5f, 0.5f);
@@ -37437,8 +37437,8 @@ void func_274()
 					if (ENTITY::IS_ENTITY_AT_COORD(iLocal_108, Local_259, Global_19, false, true, 0))
 					{
 						ENTITY::SET_ENTITY_COLLISION(iLocal_117, true, false);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_108, true);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_117, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_108, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_117, true);
 						if (!bLocal_295)
 						{
 							CUTSCENE::REMOVE_CUTSCENE();
@@ -40021,7 +40021,7 @@ void func_318()
 				}
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_118, false))
 				{
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_126, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_126, true);
 				}
 				if (!TASK::IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_PED(iLocal_108))
 				{
@@ -40124,7 +40124,7 @@ void func_318()
 						{
 							iLocal_118 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 							ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_118, true, true);
-							ENTITY::_SET_ENTITY_SOMETHING(iLocal_118, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_118, true);
 							RECORDING::_0x293220DA1B46CEBC(3f, 5f, 3);
 							func_324(iLocal_118, 209);
 						}
@@ -40141,7 +40141,7 @@ void func_318()
 							{
 								iLocal_118 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 								ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_118, true, true);
-								ENTITY::_SET_ENTITY_SOMETHING(iLocal_118, true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_118, true);
 								func_324(iLocal_118, 209);
 							}
 						}
@@ -51375,7 +51375,7 @@ void func_479()
 				}
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_118, false))
 				{
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_118, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_118, true);
 				}
 				while (!func_385(0, 1))
 				{
@@ -51970,7 +51970,7 @@ void func_485(int iParam0, struct<3> Param1, float fParam4)
 				}
 				VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_118, 0, false);
 				VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iLocal_118, 1, false);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_118, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_118, true);
 				VEHICLE::SET_VEHICLE_NAME_DEBUG(iLocal_118, "Mike's Car");
 			}
 			else if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_118, false))
@@ -53064,9 +53064,9 @@ int func_502(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

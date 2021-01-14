@@ -40600,7 +40600,7 @@ char* func_312(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			if (bParam1)
 			{
 				return "WTU_GDGTPST";
@@ -40611,7 +40611,7 @@ char* func_312(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			if (bParam1)
 			{
 				return "WTU_MLTRYRFL";
@@ -40622,7 +40622,7 @@ char* func_312(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
 			{
 				return "WTU_CMBSHGN";
@@ -41414,13 +41414,13 @@ int func_323(int iParam0)
 		case joaat("WEAPON_NAVYREVOLVER"):
 			return joaat("PICKUP_WEAPON_NAVYREVOLVER");
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			return 884272848;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			return 2074855423;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			return 2010690963;
 	}
 	return joaat("pickup_weapon_pistol");
@@ -46727,7 +46727,7 @@ void func_492(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -46781,7 +46781,7 @@ void func_492(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_493(Global_4456448.f_129348))

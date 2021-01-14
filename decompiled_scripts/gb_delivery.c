@@ -3652,7 +3652,7 @@ void func_181(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -3706,7 +3706,7 @@ void func_181(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_182(Global_4456448.f_129348))
@@ -68546,7 +68546,7 @@ int func_487(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPa
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -75284,7 +75284,7 @@ int func_565(struct<3> Param0, float fParam3, bool bParam4, int iParam5, bool bP
 									func_487(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38), iVar1, Param0, fParam3, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0);
 									NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38, PLAYER::PLAYER_ID(), true);
 									iVar0 = NETWORK::NET_TO_VEH(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38);
-									ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 									VEHICLE::_0xB2E0C0D6922D31F2(iVar0, true);
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iVar0, 5f);
 									func_620(&iVar0, iParam5);
@@ -138734,7 +138734,7 @@ void func_1476(var uParam0)
 		ENTITY::SET_ENTITY_COLLISION(uParam0->f_9, false, false);
 		TASK::TASK_PLAY_ANIM(uParam0->f_11.f_587[0], "anim@amb@waving@male", "air_wave", 8f, -8f, -1, 9, 0f, false, false, false);
 		VEHICLE::CREATE_PICK_UP_ROPE_FOR_CARGOBOB(uParam0->f_11.f_553[0 /*12*/], 0);
-		VEHICLE::_SET_CARGOBOB_HOOK_POSITION(uParam0->f_11.f_553[0 /*12*/], 3f, 3f, 1);
+		VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(uParam0->f_11.f_553[0 /*12*/], 3f, 3f, true);
 		func_1477(1, &(uParam0->f_11.f_553[0 /*12*/]), &(uParam0->f_11.f_553[1 /*12*/]));
 		ENTITY::SET_ENTITY_VISIBLE(uParam0->f_11.f_553[1 /*12*/], false, false);
 	}
@@ -163459,7 +163459,7 @@ void func_1889(var uParam0, int iParam1)
 				ENTITY::FREEZE_ENTITY_POSITION(uParam0->f_11.f_553[0 /*12*/], true);
 				ENTITY::SET_ENTITY_COLLISION(uParam0->f_11.f_553[0 /*12*/], false, false);
 				VEHICLE::CREATE_PICK_UP_ROPE_FOR_CARGOBOB(uParam0->f_11.f_553[0 /*12*/], 0);
-				VEHICLE::_SET_CARGOBOB_HOOK_POSITION(uParam0->f_11.f_553[0 /*12*/], 3f, 3f, 1);
+				VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(uParam0->f_11.f_553[0 /*12*/], 3f, 3f, true);
 				VEHICLE::_0x571FEB383F629926(uParam0->f_11.f_553[0 /*12*/], true);
 				if (ENTITY::DOES_ENTITY_EXIST(uParam0->f_9) && !ENTITY::IS_ENTITY_DEAD(uParam0->f_9, false))
 				{

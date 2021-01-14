@@ -1921,7 +1921,7 @@ void func_38()
 										fVar7 = ENTITY::GET_ENTITY_HEADING(iLocal_285);
 										ENTITY::SET_ENTITY_ROTATION(iLocal_285, 0f, 0f, fVar6, 2, true);
 										VEHICLE::CONTROL_LANDING_GEAR(iLocal_285, 3);
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_285, false);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_285, false);
 										iLocal_291 = PED::CREATE_PED_INSIDE_VEHICLE(iLocal_285, 5, joaat("s_m_y_marine_01"), -1, true, true);
 										PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_291, true);
 										if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))

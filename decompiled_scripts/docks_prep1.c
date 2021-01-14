@@ -8079,9 +8079,9 @@ int func_140(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -13056,7 +13056,7 @@ int func_222()
 	if (!ENTITY::DOES_ENTITY_EXIST(Local_169[8 /*2*/]))
 	{
 		Local_169[8 /*2*/] = OBJECT::CREATE_OBJECT(iLocal_425, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_169[7 /*2*/], Local_426), true, true, false);
-		ENTITY::_SET_ENTITY_SOMETHING(Local_169[8 /*2*/], false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_169[8 /*2*/], false);
 		ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_169[8 /*2*/], Local_169[7 /*2*/], -1, Local_426, 0f, 0f, fLocal_429, false, false, false, false, 2, true);
 		ENTITY::DETACH_ENTITY(Local_169[8 /*2*/], true, false);
 		ENTITY::FREEZE_ENTITY_POSITION(Local_169[8 /*2*/], true);
@@ -19215,7 +19215,7 @@ void func_304()
 		func_305(Local_55[0 /*2*/], 0);
 		ENTITY::FREEZE_ENTITY_POSITION(Local_55[0 /*2*/], true);
 		ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Local_55[0 /*2*/], true, 1);
-		ENTITY::_SET_ENTITY_SOMETHING(Local_55[0 /*2*/], false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_55[0 /*2*/], false);
 		AUDIO::SET_VEHICLE_RADIO_ENABLED(Local_55[0 /*2*/], true);
 	}
 	if (!ENTITY::DOES_ENTITY_EXIST(Local_64[4 /*10*/]))

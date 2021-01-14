@@ -10855,9 +10855,9 @@ int func_181(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -21567,7 +21567,7 @@ void func_354(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_1697[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_2849[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2849[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_2849[iVar0], Local_2318[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_2849[iVar0], fLocal_865[iVar0], fLocal_894[iVar0], fLocal_923[iVar0], fLocal_952[iVar0]);
@@ -22310,7 +22310,7 @@ void func_367(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_2813[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_2813[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2813[iVar0], true);
 									iLocal_1769 = (iLocal_1769 - 1);
 									iLocal_1764++;
 									iLocal_1726[iVar0]++;
@@ -22539,7 +22539,7 @@ void func_368(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_1494[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_2660[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2660[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_1494[iVar0], 0))
 									{
@@ -23903,7 +23903,7 @@ void func_381()
 			PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(iLocal_3207, false);
 			WEAPON::GIVE_WEAPON_TO_PED(iLocal_3207, joaat("WEAPON_PISTOL"), -1, true, true);
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_3207, iLocal_2952);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_3207, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3207, false);
 			AUDIO::PREPARE_MUSIC_EVENT("FAM1_1ST_ENEMY_OS");
 			iLocal_3215 = 0;
 			func_80(&uLocal_3325, 3, iLocal_3207, "YACHTPED1", 0, 1);
@@ -24150,7 +24150,7 @@ void func_381()
 				PED::SET_PED_COMPONENT_VARIATION(iLocal_3208, 9, 0, 0, 0);
 				WEAPON::GIVE_WEAPON_TO_PED(iLocal_3208, joaat("WEAPON_PISTOL"), -1, true, true);
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_3208, iLocal_2952);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_3208, false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3208, false);
 				WEAPON::SET_PED_DROPS_WEAPONS_WHEN_DEAD(iLocal_3208, false);
 				STREAMING::REQUEST_PTFX_ASSET();
 				func_432(iLocal_3208, 0);
@@ -24530,7 +24530,7 @@ void func_381()
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_3209, true);
 				PED::SET_PED_SUFFERS_CRITICAL_HITS(iLocal_3209, false);
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_3209, iLocal_2952);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_3209, false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3209, false);
 				ENTITY::SET_ENTITY_LOD_DIST(iLocal_3209, 200);
 				func_80(&uLocal_3325, 5, iLocal_3209, "YACHTPED4", 0, 1);
 				func_432(iLocal_3209, 0);
@@ -27282,7 +27282,7 @@ void func_422()
 				PED::SET_PED_COMPONENT_VARIATION(iLocal_3210, 4, 0, 0, 0);
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_3210, true);
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_3210, iLocal_2952);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_3210, false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3210, false);
 				iLocal_3230 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
 				PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(iLocal_3230, iLocal_3031, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iLocal_3031, "chassis"));
 				func_80(&uLocal_3325, 6, iLocal_3210, "YACHTPED3", 0, 1);
@@ -27675,7 +27675,7 @@ void func_429()
 	ENTITY::SET_ENTITY_HEALTH(iLocal_3211, 1000, 0);
 	PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_3211, true);
 	PED::SET_PED_SUFFERS_CRITICAL_HITS(iLocal_3211, false);
-	ENTITY::_SET_ENTITY_SOMETHING(iLocal_3211, false);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3211, false);
 	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_3211, 1862763509);
 	func_80(&uLocal_3325, 2, iLocal_3211, "JIMMY", 0, 1);
 }
@@ -116401,7 +116401,7 @@ void func_791(int iParam0)
 	{
 		PED::SET_PED_SUFFERS_CRITICAL_HITS(func_2(), false);
 		PED::SET_PED_CONFIG_FLAG(func_2(), 32, false);
-		ENTITY::_SET_ENTITY_SOMETHING(func_2(), false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(func_2(), false);
 		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(func_2(), true);
 		PED::SET_PED_CAN_BE_DRAGGED_OUT(func_2(), false);
 		PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(func_2(), false);

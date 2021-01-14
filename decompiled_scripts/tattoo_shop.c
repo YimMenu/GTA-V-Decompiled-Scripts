@@ -42638,7 +42638,7 @@ void func_179(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -42692,7 +42692,7 @@ void func_179(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_180(Global_4456448.f_129348))
@@ -118574,7 +118574,7 @@ void func_852()
 						{
 							INTERIOR::_0x82EBB79E258FA2B7(Local_103.f_12, INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_789(Local_103, 0), func_805(Local_103)));
 						}
-						ENTITY::_SET_ENTITY_SOMETHING(Local_103.f_12, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_103.f_12, true);
 						ENTITY::SET_ENTITY_LOD_DIST(Local_103.f_12, 300);
 						PED::SET_PED_LEG_IK_MODE(Local_103.f_12, 0);
 						if (!iLocal_740)
@@ -118859,7 +118859,7 @@ int func_856(var uParam0, int iParam1, int iParam2, struct<3> Param3, float fPar
 	*uParam0 = NETWORK::PED_TO_NET(iVar0);
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, bParam9);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, bParam9);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 		{
 			if (bParam7)

@@ -40591,7 +40591,7 @@ void func_375()
 				{
 					func_9("bad_driver_car no longer needed");
 					ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_167, false, 1);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_167, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_167, true);
 					func_237(&iLocal_167);
 					iLocal_328 = 0;
 				}
@@ -42432,9 +42432,9 @@ int func_405(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

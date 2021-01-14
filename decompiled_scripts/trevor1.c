@@ -7911,7 +7911,7 @@ int func_128(int iParam0, struct<3> Param1, float fParam4, bool bParam5)
 							VEHICLE::SET_VEHICLE_AUTOMATICALLY_ATTACHES(Local_6148, false, 0);
 							VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(Local_6148, 0, false);
 							VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(Local_6148, 1, false);
-							ENTITY::_SET_ENTITY_SOMETHING(Local_6148, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_6148, true);
 							VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_6148, true);
 							func_466(Local_6148, -1);
 							return 1;
@@ -7945,7 +7945,7 @@ int func_128(int iParam0, struct<3> Param1, float fParam4, bool bParam5)
 						PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_5760, 1862763509);
 						func_135(&Local_6623, 3, Local_5760, "NervousRon", 0, 1);
 						PED::SET_PED_CAN_BE_DRAGGED_OUT(Local_5760, false);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_5760, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_5760, true);
 						func_134();
 						return 1;
 					}
@@ -7977,7 +7977,7 @@ int func_128(int iParam0, struct<3> Param1, float fParam4, bool bParam5)
 						PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_5770, 1862763509);
 						func_135(&Local_6623, 4, Local_5770, "Wade", 0, 1);
 						PED::SET_PED_CAN_BE_DRAGGED_OUT(Local_5770, false);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_5770, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_5770, true);
 						PED::SET_RAGDOLL_BLOCKING_FLAGS(Local_5770, 1);
 						ENTITY::SET_ENTITY_LOD_DIST(Local_5770, 50);
 						func_133(Local_5770, 1, 0);
@@ -94714,9 +94714,9 @@ int func_453(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -120074,7 +120074,7 @@ void func_767(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_375[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_626[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_626[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_626[iVar0], Local_455[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_626[iVar0], fLocal_126[iVar0], fLocal_149[iVar0], fLocal_172[iVar0], fLocal_195[iVar0]);
@@ -120907,7 +120907,7 @@ void func_784(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_624[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_624[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_624[iVar0], true);
 									iLocal_407 = (iLocal_407 - 1);
 									iLocal_402++;
 									iLocal_398[iVar0]++;
@@ -121176,7 +121176,7 @@ void func_788(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_317[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_606[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_606[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_317[iVar0], 0))
 									{
@@ -128904,21 +128904,21 @@ int func_875()
 					{
 						ENTITY::SET_ENTITY_COORDS(Local_5760, 2000.46f, 3831.18f, 31.29f, true, false, false, true);
 						ENTITY::SET_ENTITY_HEADING(Local_5760, 90.19f);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_5760, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_5760, true);
 						func_134();
 					}
 					if (!ENTITY::IS_ENTITY_DEAD(Local_5770, false))
 					{
 						ENTITY::SET_ENTITY_COORDS(Local_5770, 1999.89f, 3829.58f, 31.3f, true, false, false, true);
 						ENTITY::SET_ENTITY_HEADING(Local_5770, 91.42f);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_5770, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_5770, true);
 						func_878();
 					}
 					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 					{
 						ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1995.97f, 3829.84f, 31.2735f, true, false, false, true);
 						ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 100.81f);
-						ENTITY::_SET_ENTITY_SOMETHING(PLAYER::PLAYER_PED_ID(), true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(PLAYER::PLAYER_PED_ID(), true);
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0f);
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0f, 1f);
 					}
@@ -130445,21 +130445,21 @@ void func_884()
 			{
 				ENTITY::SET_ENTITY_COORDS(Local_5760, 2001.55f, 3831.55f, 31.2735f, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(Local_5760, 94.23f);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_5760, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_5760, true);
 				func_134();
 			}
 			if (!ENTITY::IS_ENTITY_DEAD(Local_5770, false))
 			{
 				ENTITY::SET_ENTITY_COORDS(Local_5770, 2000.4f, 3829.17f, 32.3f, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(Local_5770, 85.16f);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_5770, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_5770, true);
 				func_878();
 			}
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			{
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1995.97f, 3829.84f, 31.2735f, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 100.81f);
-				ENTITY::_SET_ENTITY_SOMETHING(PLAYER::PLAYER_PED_ID(), true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(PLAYER::PLAYER_PED_ID(), true);
 			}
 			if (CAM::IS_SCREEN_FADED_OUT() || CAM::IS_SCREEN_FADING_OUT())
 			{
@@ -132356,14 +132356,14 @@ void func_931()
 			{
 				ENTITY::SET_ENTITY_COORDS(Local_5760, 2000.46f, 3831.18f, 31.29f, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(Local_5760, 90.19f);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_5760, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_5760, true);
 				func_134();
 			}
 			if (!ENTITY::IS_ENTITY_DEAD(Local_5770, false))
 			{
 				ENTITY::SET_ENTITY_COORDS(Local_5770, 1999.89f, 3829.58f, 31.3f, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(Local_5770, 91.42f);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_5770, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_5770, true);
 				func_878();
 			}
 			if (func_942())
@@ -132374,7 +132374,7 @@ void func_931()
 			{
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1995.97f, 3829.84f, 32.27f, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 100.81f);
-				ENTITY::_SET_ENTITY_SOMETHING(PLAYER::PLAYER_PED_ID(), true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(PLAYER::PLAYER_PED_ID(), true);
 			}
 			func_651(132, 0);
 			func_673(3, 0, 0, 1, 0);

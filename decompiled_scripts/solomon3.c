@@ -4077,9 +4077,9 @@ int func_63(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -8195,7 +8195,7 @@ void func_122()
 				VEHICLE::SET_VEHICLE_STRONG(iLocal_3259, true);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("rapidgt"));
 				VEHICLE::SET_VEHICLE_MODEL_IS_SUPPRESSED(joaat("rapidgt"), true);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_3276))
@@ -8277,7 +8277,7 @@ void func_122()
 					ENTITY::SET_ENTITY_HEALTH(iLocal_3259, 3000, 0);
 					VEHICLE::SET_VEHICLE_STRONG(iLocal_3259, true);
 					ENTITY::SET_ENTITY_PROOFS(iLocal_3259, false, true, false, false, false, false, false, false);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("rapidgt"));
 					VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 				}
@@ -8290,7 +8290,7 @@ void func_122()
 				ENTITY::SET_ENTITY_HEALTH(iLocal_3259, 3000, 0);
 				VEHICLE::SET_VEHICLE_STRONG(iLocal_3259, true);
 				ENTITY::SET_ENTITY_PROOFS(iLocal_3259, false, true, false, false, false, false, false, false);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 			}
 			break;
@@ -8356,7 +8356,7 @@ void func_122()
 					if (func_184())
 					{
 						iLocal_3259 = func_143(-918.6263f, -2926.631f, 12.9666f, 43.1705f);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 						STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_183());
 						VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 					}
@@ -8364,7 +8364,7 @@ void func_122()
 					{
 						iLocal_3259 = VEHICLE::CREATE_VEHICLE(joaat("rapidgt"), -918.6263f, -2926.631f, 12.9666f, 43.1705f, true, true, false);
 						VEHICLE::SET_VEHICLE_COLOURS(iLocal_3259, 112, 112);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 						STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("rapidgt"));
 						VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 					}
@@ -8375,7 +8375,7 @@ void func_122()
 				iLocal_3259 = VEHICLE::CREATE_VEHICLE(joaat("rapidgt"), -918.6263f, -2926.631f, 12.9666f, 43.1705f, true, true, false);
 				VEHICLE::SET_VEHICLE_COLOURS(iLocal_3259, 112, 112);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("rapidgt"));
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_3258))
@@ -8437,7 +8437,7 @@ void func_122()
 					if (func_184())
 					{
 						iLocal_3259 = func_143(-918.6263f, -2926.631f, 12.9666f, 43.1705f);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 						STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_183());
 						VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 					}
@@ -8445,7 +8445,7 @@ void func_122()
 					{
 						iLocal_3259 = VEHICLE::CREATE_VEHICLE(joaat("rapidgt"), -918.6263f, -2926.631f, 12.9666f, 43.1705f, true, true, false);
 						VEHICLE::SET_VEHICLE_COLOURS(iLocal_3259, 112, 112);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 						STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("rapidgt"));
 						VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 					}
@@ -8456,7 +8456,7 @@ void func_122()
 				iLocal_3259 = VEHICLE::CREATE_VEHICLE(joaat("rapidgt"), -918.6263f, -2926.631f, 12.9666f, 43.1705f, true, true, false);
 				VEHICLE::SET_VEHICLE_COLOURS(iLocal_3259, 112, 112);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("rapidgt"));
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_3258))
@@ -17253,7 +17253,7 @@ void func_247()
 										{
 											VEHICLE::SET_VEHICLE_CAN_BREAK(iLocal_3121[13], false);
 											ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_3121[13], true, 1);
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_3121[13], false);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3121[13], false);
 											SYSTEM::SETTIMERA(0);
 											iLocal_3486 = 1;
 										}
@@ -20725,7 +20725,7 @@ void func_317(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_1894[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_3121[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3121[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_3121[iVar0], Local_2535[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_3121[iVar0], fLocal_993[iVar0], fLocal_1029[iVar0], fLocal_1065[iVar0], fLocal_1101[iVar0]);
@@ -21468,7 +21468,7 @@ void func_330(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_3105[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_3105[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3105[iVar0], true);
 									iLocal_1953 = (iLocal_1953 - 1);
 									iLocal_1948++;
 									iLocal_1930[iVar0]++;
@@ -21697,7 +21697,7 @@ void func_331(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_1646[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_2916[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2916[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_1646[iVar0], 0))
 									{
@@ -25773,7 +25773,7 @@ void func_402()
 				VEHICLE::SET_VEHICLE_STRONG(iLocal_3259, true);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("rapidgt"));
 				VEHICLE::SET_VEHICLE_MODEL_IS_SUPPRESSED(joaat("rapidgt"), true);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_3259, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3259, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_3259, true);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_3276))

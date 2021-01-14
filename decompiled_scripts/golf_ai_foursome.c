@@ -6687,7 +6687,7 @@ int func_247(struct<3> Param0, float fParam3)
 	}
 	iVar0 = OBJECT::CREATE_OBJECT(joaat("prop_golf_ball"), Param0, true, true, false);
 	OBJECT::_0xC6033D32241F6FB5(iVar0, true);
-	ENTITY::_SET_ENTITY_SOMETHING(iVar0, false);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, false);
 	ENTITY::SET_ENTITY_HEADING(iVar0, fParam3);
 	if (bLocal_0)
 	{
@@ -8487,7 +8487,7 @@ void func_312(var uParam0, var uParam1, int iParam2, int iParam3)
 			{
 				func_285(uParam1, VEHICLE::CREATE_VEHICLE(joaat("caddy"), Var0, fVar3, true, true, false), iVar4);
 				VEHICLE::SET_VEHICLE_EXTRA(func_294(uParam1, iVar4), 5, true);
-				ENTITY::_SET_ENTITY_SOMETHING(func_294(uParam1, iVar4), true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(func_294(uParam1, iVar4), true);
 			}
 		}
 		iVar4++;

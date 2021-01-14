@@ -2622,7 +2622,7 @@ int func_33()
 				ENTITY::SET_ENTITY_DYNAMIC(NETWORK::NET_TO_VEH(Local_82.f_2), true);
 				PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_VEH(Local_82.f_2));
 				VEHICLE::SET_VEHICLE_ENGINE_ON(NETWORK::NET_TO_VEH(Local_82.f_2), true, true, false);
-				ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_VEH(Local_82.f_2), true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_VEH(Local_82.f_2), true);
 				ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_VEH(Local_82.f_2), true);
 				VEHICLE::SET_VEHICLE_CAN_BE_VISIBLY_DAMAGED(NETWORK::NET_TO_VEH(Local_82.f_2), false);
 				VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_NON_SCRIPT_PLAYERS(NETWORK::NET_TO_VEH(Local_82.f_2), true);
@@ -3055,7 +3055,7 @@ int func_38(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -81137,7 +81137,7 @@ int func_644(struct<3> Param0, float fParam3, bool bParam4, int iParam5, bool bP
 									func_38(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38), iVar1, Param0, fParam3, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0);
 									NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38, PLAYER::PLAYER_ID(), true);
 									iVar0 = NETWORK::NET_TO_VEH(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38);
-									ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 									VEHICLE::_0xB2E0C0D6922D31F2(iVar0, true);
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iVar0, 5f);
 									func_695(&iVar0, iParam5);

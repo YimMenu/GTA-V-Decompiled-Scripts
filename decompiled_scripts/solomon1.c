@@ -39708,9 +39708,9 @@ int func_292(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -109465,7 +109465,7 @@ int func_659(struct<3> Param0, float fParam3)
 			MISC::CLEAR_AREA_OF_VEHICLES(Param0, 2f, false, false, false, false, false, false);
 			Local_117[1 /*2*/] = func_660(Param0, fParam3);
 			ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Local_117[1 /*2*/], true, 1);
-			ENTITY::_SET_ENTITY_SOMETHING(Local_117[1 /*2*/], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_117[1 /*2*/], true);
 			return 1;
 		}
 		else

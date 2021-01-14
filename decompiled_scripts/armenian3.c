@@ -567,7 +567,7 @@ void __EntryFunction__()
 					{
 						VEHICLE::SET_VEHICLE_DOORS_SHUT(iLocal_178, true);
 						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_178, true, true);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_178, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_178, true);
 					}
 				}
 			}
@@ -28904,9 +28904,9 @@ int func_133(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -104593,7 +104593,7 @@ void func_616()
 				iLocal_178 = PED::GET_VEHICLE_PED_IS_USING(PLAYER::PLAYER_PED_ID());
 				VEHICLE::SET_VEHICLE_DOORS_SHUT(iLocal_178, true);
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_178, true, true);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_178, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_178, true);
 			}
 			else if (PLAYER::GET_PLAYERS_LAST_VEHICLE() != 0)
 			{
@@ -104605,7 +104605,7 @@ void func_616()
 				else
 				{
 					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_178, true, true);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_178, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_178, true);
 				}
 			}
 		}
@@ -105284,7 +105284,7 @@ int func_622(int iParam0)
 		VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(iParam0, "57EIG117");
 		VEHICLE::SET_VEHICLE_CAN_SAVE_IN_GARAGE(iParam0, false);
 		VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iParam0, true);
-		ENTITY::_SET_ENTITY_SOMETHING(iParam0, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iParam0, true);
 		VEHICLE::_SET_VEHICLE_DOOR_CAN_BREAK(iParam0, 0, false);
 		VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(iParam0, false);
 		return 1;
@@ -105307,7 +105307,7 @@ void func_624(int iParam0, int iParam1, struct<3> Param2, float fParam5, int iPa
 			VEHICLE::SET_VEHICLE_COLOURS(*iParam0, iParam6, iParam6);
 		}
 		VEHICLE::SET_VEHICLE_DIRT_LEVEL(*iParam0, fParam7);
-		ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 	}
 }
 
@@ -109119,7 +109119,7 @@ void func_686(int iParam0)
 				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_178, 5f);
 				VEHICLE::SET_VEHICLE_DOORS_SHUT(iLocal_178, true);
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_178, true, true);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_178, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_178, true);
 			}
 			WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
 			iLocal_337 = 3;
@@ -109138,7 +109138,7 @@ void func_686(int iParam0)
 				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_178, 5f);
 				VEHICLE::SET_VEHICLE_DOORS_SHUT(iLocal_178, true);
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_178, true, true);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_178, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_178, true);
 			}
 			STREAMING::REQUEST_MODEL(joaat("bjxl"));
 			while (!STREAMING::HAS_MODEL_LOADED(joaat("bjxl")))
@@ -109156,7 +109156,7 @@ void func_686(int iParam0)
 				SYSTEM::WAIT(0);
 			}
 			func_624(&iLocal_179, joaat("bison3"), -800.1796f, 164.9729f, 70.5296f, 111.0221f, 132, 0);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_179, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_179, true);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_179, 2);
 			VEHICLE::SET_VEHICLE_ALARM(iLocal_179, true);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("bison3"));
@@ -109184,7 +109184,7 @@ void func_686(int iParam0)
 				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_178, 5f);
 				VEHICLE::SET_VEHICLE_DOORS_SHUT(iLocal_178, true);
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_178, true, true);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_178, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_178, true);
 			}
 			STREAMING::REQUEST_MODEL(joaat("bjxl"));
 			while (!STREAMING::HAS_MODEL_LOADED(joaat("bjxl")))

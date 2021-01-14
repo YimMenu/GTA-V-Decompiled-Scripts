@@ -34946,7 +34946,7 @@ void func_286(var uParam0, var uParam1, var uParam2)
 		AUDIO::STOP_PED_SPEAKING(uParam1->f_2, false);
 		WEAPON::SET_CURRENT_PED_WEAPON(uParam1->f_2, joaat("weapon_unarmed"), true);
 		ENTITY::FREEZE_ENTITY_POSITION(uParam1->f_2, false);
-		ENTITY::_SET_ENTITY_SOMETHING(uParam1->f_2, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam1->f_2, true);
 		if (func_363(uParam1, 0))
 		{
 			func_281(uParam0, uParam1, 1);
@@ -39055,9 +39055,9 @@ int func_395(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

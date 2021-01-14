@@ -8631,7 +8631,7 @@ void func_272(int iParam0)
 					{
 						Local_3161 = { Local_3161 + Vector(0.5f, 0f, 0f) };
 						ENTITY::SET_ENTITY_COORDS_NO_OFFSET(func_1384(iParam0), Local_3161, false, false, true);
-						ENTITY::_SET_ENTITY_SOMETHING(func_1384(iParam0), true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(func_1384(iParam0), true);
 						Local_1117[iParam0 /*21*/].f_17 = 3;
 					}
 				}
@@ -83852,7 +83852,7 @@ int func_865(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPa
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -90017,7 +90017,7 @@ int func_931(struct<3> Param0, float fParam3, bool bParam4, int iParam5, bool bP
 									func_865(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38), iVar1, Param0, fParam3, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0);
 									NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38, PLAYER::PLAYER_ID(), true);
 									iVar0 = NETWORK::NET_TO_VEH(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38);
-									ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 									VEHICLE::_0xB2E0C0D6922D31F2(iVar0, true);
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iVar0, 5f);
 									func_984(&iVar0, iParam5);
@@ -122417,7 +122417,7 @@ int func_1422(int iParam0)
 						ENTITY::SET_ENTITY_COORDS_NO_OFFSET(func_1384(iParam0), Local_3161 + Vector(0.5f, 0f, 0f), false, false, true);
 						STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_1426(iParam0));
 						ENTITY::SET_ENTITY_INVINCIBLE(func_1384(iParam0), true);
-						ENTITY::_SET_ENTITY_SOMETHING(func_1384(iParam0), true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(func_1384(iParam0), true);
 					}
 				}
 			}

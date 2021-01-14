@@ -100622,7 +100622,7 @@ char* func_631(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			if (bParam1)
 			{
 				return "WTU_GDGTPST";
@@ -100633,7 +100633,7 @@ char* func_631(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			if (bParam1)
 			{
 				return "WTU_MLTRYRFL";
@@ -100644,7 +100644,7 @@ char* func_631(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
 			{
 				return "WTU_CMBSHGN";
@@ -115254,7 +115254,7 @@ int func_894(struct<11> Param0, var uParam11, var uParam12, var uParam13, var uP
 					if (ENTITY::DOES_ENTITY_EXIST(Local_1717.f_396[iVar0 + 1 /*203*/].f_9))
 					{
 						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Local_1717.f_396[iVar0 + 1 /*203*/].f_9, true, true);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_1717.f_396[iVar0 + 1 /*203*/].f_9, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1717.f_396[iVar0 + 1 /*203*/].f_9, true);
 						VEHICLE::SET_VEHICLE_IS_RACING(Local_1717.f_396[iVar0 + 1 /*203*/].f_9, true);
 					}
 				}

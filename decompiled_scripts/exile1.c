@@ -13992,9 +13992,9 @@ int func_221(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -18383,7 +18383,7 @@ void func_282()
 		Local_199[iVar0 /*3*/].f_1 = 0;
 		Local_199[iVar0 /*3*/].f_2 = 0;
 		ENTITY::FREEZE_ENTITY_POSITION(Local_199[iVar0 /*3*/], true);
-		ENTITY::_SET_ENTITY_SOMETHING(Local_199[iVar0 /*3*/], false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_199[iVar0 /*3*/], false);
 		ENTITY::SET_ENTITY_LOD_DIST(Local_199[iVar0 /*3*/], 1000);
 		iVar0++;
 	}
@@ -19260,7 +19260,7 @@ void func_310(bool bParam0, bool bParam1)
 			Local_119[iVar0 /*3*/] = OBJECT::CREATE_OBJECT(iVar1, func_311(iVar2, 1), true, true, false);
 			Local_119[iVar0 /*3*/].f_2 = iVar3;
 			Local_119[iVar0 /*3*/].f_1 = 0;
-			ENTITY::_SET_ENTITY_SOMETHING(Local_119[iVar0 /*3*/], false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_119[iVar0 /*3*/], false);
 			if (bParam0)
 			{
 				ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_119[iVar0 /*3*/], iLocal_525[2], 0, func_311(iVar2, 0), 0f, 0f, 0f, false, false, true, false, 2, true);
@@ -19286,7 +19286,7 @@ void func_310(bool bParam0, bool bParam1)
 			Local_159[iVar0 /*3*/] = OBJECT::CREATE_OBJECT(iVar4, func_311(iVar5, 1), true, true, false);
 			Local_159[iVar0 /*3*/].f_2 = iVar6;
 			Local_159[iVar0 /*3*/].f_1 = 0;
-			ENTITY::_SET_ENTITY_SOMETHING(Local_159[iVar0 /*3*/], false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_159[iVar0 /*3*/], false);
 			if (bParam0)
 			{
 				ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_159[iVar0 /*3*/], iLocal_530, 0, func_311(iVar5, 0), 0f, 0f, 0f, false, false, true, false, 2, true);
@@ -19617,7 +19617,7 @@ void func_318(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool b
 				VEHICLE::SET_VEHICLE_CAN_BREAK(iLocal_525[iParam0], false);
 				VEHICLE::SET_VEHICLE_CAN_BE_VISIBLY_DAMAGED(iLocal_525[iParam0], false);
 				VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(iLocal_525[iParam0], false);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_525[iParam0], false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_525[iParam0], false);
 				VEHICLE::SET_VEHICLE_EXPLODES_ON_HIGH_EXPLOSION_DAMAGE(iLocal_525[iParam0], false);
 				ENTITY::SET_ENTITY_LOD_DIST(iLocal_525[iParam0], 6000);
 				VEHICLE::_SET_VEHICLE_JET_ENGINE_ON(iLocal_525[iParam0], true);
@@ -117632,7 +117632,7 @@ void func_829()
 					Local_225[iVar1 /*14*/].f_9 = { func_123(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_212[iVar2 /*6*/], fVar3, 200f, 0f) - Local_225[iVar1 /*14*/].f_3) };
 					Local_225[iVar1 /*14*/].f_1 = OBJECT::CREATE_OBJECT(WEAPON::GET_WEAPONTYPE_MODEL(joaat("AMMO_SPACE_ROCKET")), Local_225[iVar1 /*14*/].f_3, true, true, false);
 					ENTITY::SET_ENTITY_ROTATION(Local_225[iVar1 /*14*/].f_1, Local_225[iVar1 /*14*/].f_6, 2, true);
-					ENTITY::_SET_ENTITY_SOMETHING(Local_225[iVar1 /*14*/].f_1, false);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_225[iVar1 /*14*/].f_1, false);
 					AUDIO::PLAY_SOUND_FROM_ENTITY(Local_225[iVar1 /*14*/].f_12, "SPL_RPG_DIST_FLIGHT_MASTER", Local_225[iVar1 /*14*/].f_1, 0, false, 0);
 					if (func_186(Local_212[iVar2 /*6*/], iVar0, 60f))
 					{
@@ -117910,7 +117910,7 @@ void func_832()
 				VEHICLE::SET_VEHICLE_ENGINE_ON(Local_212[iVar2 /*6*/], true, true, false);
 				VEHICLE::SET_VEHICLE_FORWARD_SPEED(Local_212[iVar2 /*6*/], 100f);
 				ENTITY::SET_ENTITY_LOD_DIST(Local_212[iVar2 /*6*/], 900);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_212[iVar2 /*6*/], false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_212[iVar2 /*6*/], false);
 				VEHICLE::CONTROL_LANDING_GEAR(Local_212[iVar2 /*6*/], 3);
 				VEHICLE::SET_VEHICLE_FORCE_AFTERBURNER(Local_212[iVar2 /*6*/], true);
 				ENTITY::SET_ENTITY_INVINCIBLE(Local_212[iVar2 /*6*/], true);
@@ -120433,7 +120433,7 @@ void func_861()
 					VEHICLE::SET_VEHICLE_CAN_BREAK(iLocal_530, false);
 					VEHICLE::SET_VEHICLE_CAN_BE_VISIBLY_DAMAGED(iLocal_530, false);
 					VEHICLE::SET_VEHICLE_ENGINE_CAN_DEGRADE(iLocal_530, false);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_530, false);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_530, false);
 					VEHICLE::SET_VEHICLE_EXPLODES_ON_HIGH_EXPLOSION_DAMAGE(iLocal_530, false);
 					ENTITY::SET_ENTITY_LOD_DIST(iLocal_530, 3000);
 					VEHICLE::_SET_VEHICLE_JET_ENGINE_ON(iLocal_530, true);

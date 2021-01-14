@@ -3558,9 +3558,9 @@ int func_69(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -7769,7 +7769,7 @@ void func_126(int iParam0)
 									if (iLocal_1067 <= 4)
 									{
 										func_161(1, joaat("bison"), -1090.038f, -1634.969f, 4.1764f, 125.6f, -1027080192);
-										ENTITY::_SET_ENTITY_SOMETHING(Local_1450[1 /*2*/], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1450[1 /*2*/], true);
 										VEHICLE::SET_VEHICLE_COLOURS(Local_1450[1 /*2*/], 58, 63);
 										Local_1071[4 /*14*/] = PED::CREATE_PED_INSIDE_VEHICLE(Local_1450[1 /*2*/], 26, iLocal_2219, -1, true, true);
 										Local_1071[5 /*14*/] = PED::CREATE_PED_INSIDE_VEHICLE(Local_1450[1 /*2*/], 26, iLocal_2219, 0, true, true);
@@ -47365,7 +47365,7 @@ void func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 												switch (Local_1920[iVar59 /*3*/].f_2)
 												{
 													case 0:
-														VEHICLE::_DETACH_VEHICLE_WINDSCREEN(Local_1450[6 /*2*/]);
+														VEHICLE::POP_OUT_VEHICLE_WINDSCREEN(Local_1450[6 /*2*/]);
 														break;
 													
 													case 1:
@@ -48335,7 +48335,7 @@ void func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 													ENTITY::SET_ENTITY_HEADING(Local_1450[0 /*2*/], 270f);
 													func_354(Local_1450[0 /*2*/], -17.347f, -1401.371f, 28.3343f, 270f, 24, 0);
 													ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Local_1450[0 /*2*/], true, 1);
-													ENTITY::_SET_ENTITY_SOMETHING(Local_1450[0 /*2*/], true);
+													ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1450[0 /*2*/], true);
 													VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Local_1450[0 /*2*/], true);
 												}
 												else if (PED::IS_PED_IN_ANY_VEHICLE(Local_1071[2 /*14*/], false))
@@ -48349,7 +48349,7 @@ void func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 															ENTITY::SET_ENTITY_COORDS(Local_1450[0 /*2*/], -17.347f, -1401.371f, 28.3343f, true, false, false, true);
 															ENTITY::SET_ENTITY_HEADING(Local_1450[0 /*2*/], 270f);
 															ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Local_1450[0 /*2*/], true, 1);
-															ENTITY::_SET_ENTITY_SOMETHING(Local_1450[0 /*2*/], true);
+															ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1450[0 /*2*/], true);
 														}
 														VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Local_1450[0 /*2*/], true);
 														func_354(Local_1450[0 /*2*/], 0f, 0f, 0f, 0f, 24, 0);
@@ -48367,7 +48367,7 @@ void func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 															ENTITY::SET_ENTITY_COORDS(iVar71, -17.347f, -1401.371f, 28.3343f, true, false, false, true);
 															ENTITY::SET_ENTITY_HEADING(iVar71, 270f);
 															ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iVar71, true, 1);
-															ENTITY::_SET_ENTITY_SOMETHING(iVar71, true);
+															ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar71, true);
 															VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(iVar71, true);
 														}
 													}

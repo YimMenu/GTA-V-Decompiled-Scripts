@@ -5974,7 +5974,7 @@ void func_142(struct<3> Param0, float fParam3)
 			VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(Local_287, 6);
 		}
 		iLocal_86 = Local_287;
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_86, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_86, true);
 		if (MISC::GET_GROUND_Z_FOR_3D_COORD(Param0, &uVar0, false, false))
 		{
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_287, 5f);

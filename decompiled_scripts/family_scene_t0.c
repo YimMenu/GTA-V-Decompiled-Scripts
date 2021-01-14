@@ -49922,7 +49922,7 @@ void func_371(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool b
 					if (ENTITY::GET_ENTITY_MODEL(iVar106) == Var8)
 					{
 						*iParam0 = iVar106;
-						ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 						return;
 					}
 				}
@@ -49965,7 +49965,7 @@ void func_371(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool b
 					if (func_372(iParam0, iVar5, Param2 + Var1, func_140((fParam5 + fVar4), 0f, 360f), 1, iVar6))
 					{
 						VEHICLE::REQUEST_VEHICLE_ASSET(ENTITY::GET_ENTITY_MODEL(*iParam0), 15);
-						ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 						if (iParam1 == 2)
 						{
 							VEHICLE::LOWER_CONVERTIBLE_ROOF(*iParam0, true);
@@ -49979,7 +49979,7 @@ void func_371(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool b
 				else
 				{
 					VEHICLE::REQUEST_VEHICLE_ASSET(ENTITY::GET_ENTITY_MODEL(*iParam0), 15);
-					ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 					if (iParam1 == 2)
 					{
 						VEHICLE::LOWER_CONVERTIBLE_ROOF(*iParam0, true);
@@ -50013,7 +50013,7 @@ void func_371(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool b
 						*iParam0 = VEHICLE::CREATE_VEHICLE(iVar107, Param2 + Var1, func_140((fParam5 + fVar4), 0f, 360f), false, false, false);
 						VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(*iParam0, 5f);
 						VEHICLE::REQUEST_VEHICLE_ASSET(ENTITY::GET_ENTITY_MODEL(*iParam0), 15);
-						ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 						if (iVar107 == joaat("police"))
 						{
 							VEHICLE::SET_VEHICLE_HAS_BEEN_OWNED_BY_PLAYER(*iParam0, false);
@@ -51325,7 +51325,7 @@ int func_387(int* iParam0, int iParam1, struct<3> Param2, float fParam5, var uPa
 						func_100(iParam0, iParam10);
 						func_411(*iParam0, iParam1, Global_93961[iParam1]);
 						func_98(*iParam0, iParam1, iParam10, 0);
-						ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 						func_57(uParam8, iParam9, *iParam0, func_410(iParam1), 0, 1);
 						iVar20 = func_409(iVar1);
 						Global_96433[iVar20] = *iParam0;
@@ -51340,7 +51340,7 @@ int func_387(int* iParam0, int iParam1, struct<3> Param2, float fParam5, var uPa
 					func_100(iParam0, iParam10);
 					func_411(*iParam0, iParam1, Global_93961[iParam1]);
 					func_98(*iParam0, iParam1, iParam10, 0);
-					ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 					func_57(uParam8, iParam9, *iParam0, func_410(iParam1), 0, 1);
 					*uParam7 = INTERIOR::GET_INTERIOR_FROM_ENTITY(*iParam0);
 				}
@@ -51356,7 +51356,7 @@ int func_387(int* iParam0, int iParam1, struct<3> Param2, float fParam5, var uPa
 				func_100(iParam0, iParam10);
 				func_411(*iParam0, iParam1, Global_93961[iParam1]);
 				func_98(*iParam0, iParam1, iParam10, 0);
-				ENTITY::_SET_ENTITY_SOMETHING(*iParam0, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*iParam0, true);
 				func_57(uParam8, iParam9, *iParam0, func_410(iParam1), 0, 1);
 			}
 		}
@@ -52107,9 +52107,9 @@ int func_404(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

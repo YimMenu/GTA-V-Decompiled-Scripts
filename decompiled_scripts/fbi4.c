@@ -97035,9 +97035,9 @@ int func_420(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -109013,7 +109013,7 @@ void func_587(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_619[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_1042[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1042[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_1042[iVar0], Local_798[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_1042[iVar0], fLocal_271[iVar0], fLocal_294[iVar0], fLocal_317[iVar0], fLocal_340[iVar0]);
@@ -109832,7 +109832,7 @@ void func_603(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_1037[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_1037[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1037[iVar0], true);
 									iLocal_654 = (iLocal_654 - 1);
 									iLocal_649++;
 									iLocal_642[iVar0]++;
@@ -110101,7 +110101,7 @@ void func_607(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_532[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_981[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_981[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_532[iVar0], 0))
 									{
@@ -127557,7 +127557,7 @@ void func_947()
 						{
 							Local_3147.f_19 = 1;
 							ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(PLAYER::PLAYER_PED_ID(), false, 1);
-							ENTITY::_SET_ENTITY_SOMETHING(PLAYER::PLAYER_PED_ID(), true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(PLAYER::PLAYER_PED_ID(), true);
 							ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 							PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 102, true);
 							if (ENTITY::DOES_ENTITY_EXIST(iLocal_3103[0]))

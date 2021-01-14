@@ -1589,7 +1589,7 @@ int func_69(var uParam0, int iParam1, int iParam2, struct<3> Param3, float fPara
 	*uParam0 = NETWORK::PED_TO_NET(iVar0);
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, bParam9);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, bParam9);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 		{
 			if (bParam7)
@@ -1640,7 +1640,7 @@ int func_71()
 						DECORATOR::DECOR_SET_INT(func_19(), "MPBitset", iVar0);
 					}
 					VEHICLE::SET_VEHICLE_ENGINE_ON(func_19(), false, true, false);
-					ENTITY::_SET_ENTITY_SOMETHING(func_19(), true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(func_19(), true);
 					ENTITY::SET_ENTITY_DYNAMIC(func_19(), true);
 					PHYSICS::ACTIVATE_PHYSICS(func_19());
 					VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(func_19(), 5f);
@@ -1702,7 +1702,7 @@ int func_73(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -1799,7 +1799,7 @@ int func_76()
 				if (func_78(&(Local_240.f_22), Local_240.f_27, Local_240.f_23, 1, 1, 0, 1, 0, 0, 0))
 				{
 					NETWORK::NETWORK_FADE_IN_ENTITY(func_934(), true, 1);
-					ENTITY::_SET_ENTITY_SOMETHING(func_934(), false);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(func_934(), false);
 					ENTITY::SET_ENTITY_DYNAMIC(func_934(), true);
 					PHYSICS::ACTIVATE_PHYSICS(func_934());
 					ENTITY::SET_ENTITY_HEADING(func_934(), Local_240.f_26);
@@ -1838,7 +1838,7 @@ int func_78(var uParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPara
 	}
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
 		if (bParam10)
 		{
 			NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(NETWORK::NET_TO_OBJ(*uParam0), true);
@@ -1891,7 +1891,7 @@ int func_79()
 					VEHICLE::_SET_VEHICLE_INTERIOR_COLOR(func_31(), 0);
 					VEHICLE::_SET_VEHICLE_DASHBOARD_COLOR(func_31(), 0);
 					VEHICLE::SET_VEHICLE_ENGINE_ON(func_31(), false, true, false);
-					ENTITY::_SET_ENTITY_SOMETHING(func_31(), true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(func_31(), true);
 					ENTITY::SET_ENTITY_DYNAMIC(func_31(), true);
 					PHYSICS::ACTIVATE_PHYSICS(func_31());
 					VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(func_31(), 5f);
@@ -28914,7 +28914,7 @@ void func_717()
 		{
 			if ((VEHICLE::DOES_CARGOBOB_HAVE_PICK_UP_ROPE(func_31()) && !func_8(21)) && !func_9(NETWORK::PARTICIPANT_ID(), 7))
 			{
-				VEHICLE::_SET_CARGOBOB_HOOK_POSITION(func_31(), func_719(), func_718(), 0);
+				VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(func_31(), func_719(), func_718(), false);
 				func_435(7);
 			}
 		}
@@ -28998,11 +28998,11 @@ void func_725()
 		{
 			if (ENTITY::IS_ENTITY_ATTACHED(NETWORK::NET_TO_ENT(Local_240.f_22)))
 			{
-				ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_ENT(Local_240.f_22), true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_ENT(Local_240.f_22), true);
 			}
 			else
 			{
-				ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_ENT(Local_240.f_22), false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_ENT(Local_240.f_22), false);
 			}
 		}
 	}

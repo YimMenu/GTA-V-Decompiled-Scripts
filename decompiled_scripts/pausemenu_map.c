@@ -2068,7 +2068,7 @@ int func_43(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4, i
 			break;
 		
 		case 2:
-			switch (NETWORK::_GET_STATUS_OF_TEXTURE_DOWNLOAD(*uParam0))
+			switch (NETWORK::GET_STATUS_OF_TEXTURE_DOWNLOAD(*uParam0))
 			{
 				case 1:
 					return 0;
@@ -2472,7 +2472,7 @@ void func_51(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -2526,7 +2526,7 @@ void func_51(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_52(Global_4456448.f_129348))

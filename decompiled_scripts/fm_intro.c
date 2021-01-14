@@ -887,7 +887,7 @@ int func_4(var uParam0, var uParam1, struct<3> Param2, float fParam5, var uParam
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(NETWORK::NET_TO_PED(*uParam1), true);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Global_2540384.f_834);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Global_2540384.f_835);
-				ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_VEH(*uParam0), false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_VEH(*uParam0), false);
 				PED::SET_PED_GET_OUT_UPSIDE_DOWN_VEHICLE(NETWORK::NET_TO_PED(*uParam1), true);
 				func_412(uParam6, 8, NETWORK::NET_TO_PED(*uParam1), "FM_TAXI", 0, 1);
 			}
@@ -917,7 +917,7 @@ int func_5(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, bool
 	*uParam0 = NETWORK::PED_TO_NET(PED::CREATE_PED_INSIDE_VEHICLE(NETWORK::NET_TO_VEH(iParam1), iParam2, iParam3, iParam4, bParam6, bParam5));
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_PED(*uParam0), bParam7);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_PED(*uParam0), bParam7);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(NETWORK::NET_TO_PED(*uParam0)))
 		{
 			if (bParam5)
@@ -963,7 +963,7 @@ int func_6(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPara
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -10225,7 +10225,7 @@ int func_277(int* iParam0)
 		{
 			iParam0->f_33 = OBJECT::CREATE_OBJECT(joaat("p_cs_mp_jet_01_s"), Var1, false, false, false);
 			ENTITY::SET_ENTITY_LOD_DIST(iParam0->f_33, 3000);
-			ENTITY::_SET_ENTITY_SOMETHING(iParam0->f_33, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iParam0->f_33, false);
 			ENTITY::SET_ENTITY_VISIBLE(iParam0->f_33, false, false);
 			if (iParam0->f_294)
 			{
@@ -10700,7 +10700,7 @@ int func_286(var uParam0)
 						if (STREAMING::HAS_MODEL_LOADED(iVar0))
 						{
 							uParam0->f_49[iVar5] = VEHICLE::CREATE_VEHICLE(iVar0, Var1, fVar4, false, false, false);
-							ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_49[iVar5], true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_49[iVar5], true);
 							VEHICLE::SET_VEHICLE_DIRT_LEVEL(uParam0->f_49[iVar5], 0f);
 							VEHICLE::_0xAB04325045427AAE(uParam0->f_49[iVar5], false);
 							if (iVar5 == 2)
@@ -14785,7 +14785,7 @@ void func_367(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -14839,7 +14839,7 @@ void func_367(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_368(Global_4456448.f_129348))

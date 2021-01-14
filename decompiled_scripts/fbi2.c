@@ -102064,9 +102064,9 @@ int func_414(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -105232,7 +105232,7 @@ void func_495()
 		{
 			ENTITY::DETACH_ENTITY(iLocal_64[1], true, true);
 		}
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_64[1], true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_64[1], true);
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_200[0], false))
 		{
 			if ((ENTITY::IS_ENTITY_TOUCHING_ENTITY(iLocal_200[0], iLocal_64[1]) && ENTITY::GET_ENTITY_SPEED(iLocal_200[0]) >= 2f) || (PED::IS_PED_RAGDOLL(iLocal_64[1]) && (iLocal_38 == 1 || iLocal_38 == 0)))
@@ -105330,7 +105330,7 @@ void func_495()
 				}
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_232, false))
 				{
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_232, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_232, true);
 				}
 				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_232, 5f);
 				iLocal_43 = 2;
@@ -105903,7 +105903,7 @@ void func_495()
 				ENTITY::CLEAR_ENTITY_LAST_DAMAGE_ENTITY(iLocal_200[0]);
 				GRAPHICS::_0xB3C641F3630BF6DA(fLocal_654);
 				PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(PLAYER::PLAYER_PED_ID(), 16);
-				ENTITY::_SET_ENTITY_SOMETHING(PLAYER::PLAYER_PED_ID(), false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(PLAYER::PLAYER_PED_ID(), false);
 				func_497(0);
 				WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), func_710(4), true);
 				iLocal_226 = 0;
@@ -118215,7 +118215,7 @@ void func_691(int iParam0)
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iLocal_228[iVar6], 5f);
 			VEHICLE::SET_VEHICLE_DIRT_LEVEL(iLocal_228[iVar6], fVar4);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_228[iVar6], 2);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_228[iVar6], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_228[iVar6], true);
 			iVar7 = 1;
 			while (iVar7 <= 8)
 			{
@@ -121100,7 +121100,7 @@ void func_713(int iParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4
 			{
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_200[0], false))
 				{
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_200[0], false);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_200[0], false);
 					VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_200[0], 1);
 				}
 				if (!PED::IS_PED_INJURED(iLocal_64[0]))
@@ -126160,7 +126160,7 @@ void func_791(bool bParam0)
 	{
 		func_908(&iLocal_198, 1, Var0, fVar3, 0, 0, 0);
 		WEAPON::GIVE_WEAPON_TO_PED(iLocal_198, func_710(4), 800, true, true);
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_198, false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_198, false);
 		func_323(iLocal_198, 14, 158, 1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 		ENTITY::FREEZE_ENTITY_POSITION(iLocal_198, true);
 		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_198, true);
@@ -145591,7 +145591,7 @@ void func_1059()
 {
 	func_868(0, func_454(5), -15.08f, 1, 1, 0, 0);
 	func_868(2, func_454(12), -78.9f, 1, 1, 0, 1);
-	ENTITY::_SET_ENTITY_SOMETHING(iLocal_200[0], true);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_200[0], true);
 	VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_200[0], 3);
 }
 
@@ -149058,7 +149058,7 @@ void func_1126()
 	{
 		ENTITY::SET_ENTITY_PROOFS(PLAYER::PLAYER_PED_ID(), false, false, false, false, false, false, false, false);
 		AUDIO::STOP_PED_SPEAKING(PLAYER::PLAYER_PED_ID(), false);
-		ENTITY::_SET_ENTITY_SOMETHING(PLAYER::PLAYER_PED_ID(), false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(PLAYER::PLAYER_PED_ID(), false);
 		func_1118();
 		ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(PLAYER::PLAYER_PED_ID(), false);
 		if (ENTITY::IS_ENTITY_ATTACHED(PLAYER::PLAYER_PED_ID()))
@@ -149135,14 +149135,14 @@ void func_1126()
 	{
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_228[iVar5], false))
 		{
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_228[iVar5], false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_228[iVar5], false);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_228[iVar5], 1);
 		}
 		iVar5++;
 	}
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_232, false))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_232, false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_232, false);
 	}
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_200[0], false))
 	{

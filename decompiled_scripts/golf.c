@@ -4666,7 +4666,7 @@ char* func_39(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			if (bParam1)
 			{
 				return "WTU_GDGTPST";
@@ -4677,7 +4677,7 @@ char* func_39(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			if (bParam1)
 			{
 				return "WTU_MLTRYRFL";
@@ -4688,7 +4688,7 @@ char* func_39(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
 			{
 				return "WTU_CMBSHGN";
@@ -118665,7 +118665,7 @@ int func_1194(struct<3> Param0, float fParam3)
 	}
 	iVar0 = OBJECT::CREATE_OBJECT(joaat("prop_golf_ball"), Param0, true, true, false);
 	OBJECT::_0xC6033D32241F6FB5(iVar0, true);
-	ENTITY::_SET_ENTITY_SOMETHING(iVar0, false);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, false);
 	ENTITY::SET_ENTITY_HEADING(iVar0, fParam3);
 	if (bLocal_45)
 	{
@@ -122162,7 +122162,7 @@ void func_1331(var uParam0, var uParam1)
 	func_1333(uParam0, VEHICLE::CREATE_VEHICLE(joaat("caddy"), func_1341(uParam1, 0), 0f, true, true, false), 0);
 	VEHICLE::SET_VEHICLE_EXTRA(func_1317(uParam0, 0), 5, true);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(func_1317(uParam0, 0), true);
-	ENTITY::_SET_ENTITY_SOMETHING(func_1317(uParam0, 0), true);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(func_1317(uParam0, 0), true);
 	if (func_1322(uParam0) > 2)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(func_1317(uParam0, 1)))
@@ -122173,7 +122173,7 @@ void func_1331(var uParam0, var uParam1)
 		func_1333(uParam0, VEHICLE::CREATE_VEHICLE(joaat("caddy"), func_1341(uParam1, 1), 0f, true, true, false), 1);
 		VEHICLE::SET_VEHICLE_EXTRA(func_1317(uParam0, 1), 5, true);
 		VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(func_1317(uParam0, 1), true);
-		ENTITY::_SET_ENTITY_SOMETHING(func_1317(uParam0, 1), true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(func_1317(uParam0, 1), true);
 	}
 	iVar2 = 0;
 	while (iVar2 < func_1322(uParam0))
@@ -129827,7 +129827,7 @@ void func_1518(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -129881,7 +129881,7 @@ void func_1518(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_1519(Global_4456448.f_129348))

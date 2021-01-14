@@ -6774,7 +6774,7 @@ void func_74(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -6828,7 +6828,7 @@ void func_74(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_75(Global_4456448.f_129348))
@@ -99409,7 +99409,7 @@ void func_930(var uParam0)
 						{
 							INTERIOR::_0x82EBB79E258FA2B7(uParam0->f_12, INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_867(*uParam0, 0), func_731(*uParam0)));
 						}
-						ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_12, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_12, true);
 						ENTITY::SET_ENTITY_LOD_DIST(uParam0->f_12, 300);
 						if (func_728(uParam0))
 						{
@@ -99449,7 +99449,7 @@ void func_930(var uParam0)
 				{
 					INTERIOR::_0x82EBB79E258FA2B7(uParam0->f_448, INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_867(*uParam0, 0), func_731(*uParam0)));
 				}
-				ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_448, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_448, true);
 				PED::SET_PED_CONFIG_FLAG(uParam0->f_448, 185, true);
 				PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(uParam0->f_12, false);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(uParam0->f_448.f_3);
@@ -99489,7 +99489,7 @@ void func_930(var uParam0)
 				{
 					INTERIOR::_0x82EBB79E258FA2B7(uParam0->f_42, INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_867(*uParam0, 0), func_731(*uParam0)));
 				}
-				ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_42, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_42, true);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(uParam0->f_42.f_1);
 				uParam0->f_42.f_7 = 0;
 				STREAMING::REQUEST_ANIM_DICT("amb@prop_human_seat_chair@male@generic@react_cowering");
@@ -100574,7 +100574,7 @@ int func_944(var uParam0, int iParam1, int iParam2, struct<3> Param3, float fPar
 	*uParam0 = NETWORK::PED_TO_NET(iVar0);
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, bParam9);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, bParam9);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 		{
 			if (bParam7)
@@ -100727,7 +100727,7 @@ int func_951(var uParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPar
 	}
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
 		if (bParam10)
 		{
 			NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(NETWORK::NET_TO_OBJ(*uParam0), true);

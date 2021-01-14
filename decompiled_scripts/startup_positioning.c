@@ -258,7 +258,7 @@ void __EntryFunction__()
 			{
 				Var364 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var352, fVar355, 0f, 0f, 5f) };
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var364, true, false, false, true);
-				ENTITY::_SET_ENTITY_SOMETHING(PLAYER::PLAYER_PED_ID(), true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(PLAYER::PLAYER_PED_ID(), true);
 				ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 				STREAMING::NEW_LOAD_SCENE_START_SPHERE(Var352, 2000f, 1);
 				iVar367 = 0;
@@ -7674,7 +7674,7 @@ int func_104(var uParam0, int iParam1, int iParam2, var uParam3)
 						}
 					}
 				}
-				ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_62.f_12, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_62.f_12, true);
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(uParam0->f_62.f_12, true, 1);
 				PED::SET_PED_GET_OUT_UPSIDE_DOWN_VEHICLE(uParam0->f_62.f_12, false);
 				PED::RELEASE_PED_PRELOAD_VARIATION_DATA(uParam0->f_17[uParam0->f_61]);
@@ -7693,7 +7693,7 @@ int func_104(var uParam0, int iParam1, int iParam2, var uParam3)
 			{
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(uParam0->f_62.f_12, true, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_62.f_12, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_62.f_12, true);
 			ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(uParam0->f_62.f_12, true, 1);
 			PED::SET_PED_GET_OUT_UPSIDE_DOWN_VEHICLE(uParam0->f_62.f_12, false);
 			MISC::CLEAR_AREA_OF_PROJECTILES(uParam0->f_4, 10f, 0);
@@ -7957,7 +7957,7 @@ int func_104(var uParam0, int iParam1, int iParam2, var uParam3)
 			if (!PED::IS_PED_INJURED(uParam0->f_62.f_13))
 			{
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(uParam0->f_62.f_13, false, 1);
-				ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_62.f_13, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_62.f_13, true);
 				PED::SET_PED_GET_OUT_UPSIDE_DOWN_VEHICLE(uParam0->f_62.f_12, true);
 			}
 			if (!PED::IS_PED_INJURED(uParam0->f_62.f_12))
@@ -21380,9 +21380,9 @@ int func_226(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

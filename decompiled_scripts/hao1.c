@@ -43409,9 +43409,9 @@ int func_440(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -49176,7 +49176,7 @@ void func_541(int iParam0)
 		PED::SET_PED_DIES_IN_WATER(Local_853[iParam0 /*18*/].f_3, false);
 		if (Local_582.f_1 == 3)
 		{
-			ENTITY::_SET_ENTITY_SOMETHING(Local_853[iParam0 /*18*/].f_6, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_853[iParam0 /*18*/].f_6, false);
 			PED::SET_PED_CAN_BE_KNOCKED_OFF_VEHICLE(Local_853[iParam0 /*18*/].f_3, 3);
 		}
 		Local_853[iParam0 /*18*/] = 0;

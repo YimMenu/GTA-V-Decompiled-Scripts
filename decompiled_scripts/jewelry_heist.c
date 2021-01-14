@@ -34882,9 +34882,9 @@ int func_243(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -116359,7 +116359,7 @@ void func_850(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_819[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_1379[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1379[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_1379[iVar0], Local_1051[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_1379[iVar0], fLocal_327[iVar0], fLocal_363[iVar0], fLocal_399[iVar0], fLocal_435[iVar0]);
@@ -117102,7 +117102,7 @@ void func_863(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_1361[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_1361[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1361[iVar0], true);
 									iLocal_880 = (iLocal_880 - 1);
 									iLocal_875++;
 									iLocal_855[iVar0]++;
@@ -117331,7 +117331,7 @@ void func_864(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_710[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_1295[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_1295[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_710[iVar0], 0))
 									{
@@ -118804,7 +118804,7 @@ void func_878(int iParam0)
 		VEHICLE::SET_VEHICLE_LOD_MULTIPLIER(iLocal_2537[0], 2f);
 		VEHICLE::_0x1F9FB66F3A3842D2(iLocal_2537[0], true);
 		VEHICLE::SET_VEHICLE_ACTIVE_DURING_PLAYBACK(iLocal_2537[0], true);
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_2537[0], false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2537[0], false);
 		ENTITY::SET_ENTITY_PROOFS(iLocal_2537[0], false, false, false, true, false, true, false, false);
 	}
 	if (!ENTITY::IS_ENTITY_DEAD(iLocal_2537[1], false))
@@ -118812,14 +118812,14 @@ void func_878(int iParam0)
 		VEHICLE::SET_VEHICLE_LOD_MULTIPLIER(iLocal_2537[1], 2f);
 		VEHICLE::_0x1F9FB66F3A3842D2(iLocal_2537[1], true);
 		VEHICLE::SET_VEHICLE_ACTIVE_DURING_PLAYBACK(iLocal_2537[1], true);
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_2537[1], false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2537[1], false);
 		ENTITY::SET_ENTITY_PROOFS(iLocal_2537[1], false, false, false, true, false, true, false, false);
 	}
 	if (!ENTITY::IS_ENTITY_DEAD(iLocal_2537[2], false))
 	{
 		VEHICLE::SET_VEHICLE_LOD_MULTIPLIER(iLocal_2537[2], 2f);
 		ENTITY::SET_ENTITY_PROOFS(iLocal_2537[2], false, false, false, true, false, true, false, false);
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_2537[2], false);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2537[2], false);
 		if (Local_3374 == joaat("bati2"))
 		{
 			AUDIO::_FORCE_VEHICLE_ENGINE_AUDIO(iLocal_2537[2], "CARBONRS");

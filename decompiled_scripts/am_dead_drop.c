@@ -1907,7 +1907,7 @@ int func_14()
 				ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_82.f_2), true);
 				OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_82.f_2), true);
 				OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_82.f_2), true);
-				ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_82.f_2), false);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_82.f_2), false);
 				PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ(Local_82.f_2));
 				ENTITY::SET_ENTITY_LOD_DIST(NETWORK::NET_TO_OBJ(Local_82.f_2), 1200);
 			}
@@ -72512,7 +72512,7 @@ int func_551(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPa
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -79203,7 +79203,7 @@ int func_625(struct<3> Param0, float fParam3, bool bParam4, int iParam5, bool bP
 									func_551(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38), iVar1, Param0, fParam3, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0);
 									NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38, PLAYER::PLAYER_ID(), true);
 									iVar0 = NETWORK::NET_TO_VEH(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38);
-									ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 									VEHICLE::_0xB2E0C0D6922D31F2(iVar0, true);
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iVar0, 5f);
 									func_678(&iVar0, iParam5);
@@ -117086,7 +117086,7 @@ void func_1228()
 							OBJECT::DETACH_PORTABLE_PICKUP_FROM_PED(NETWORK::NET_TO_OBJ(Local_82.f_2));
 						}
 						ENTITY::SET_ENTITY_COORDS_NO_OFFSET(NETWORK::NET_TO_OBJ(Local_82.f_2), Local_2195, false, false, true);
-						ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_82.f_2), true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_82.f_2), true);
 						func_1216(10);
 						iLocal_2190 = 0;
 					}

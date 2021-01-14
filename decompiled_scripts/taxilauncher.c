@@ -4567,7 +4567,7 @@ int func_100(var uParam0, var uParam1, struct<3> Param2, float fParam5)
 					VEHICLE::SET_TAXI_LIGHTS(*uParam0, true);
 					VEHICLE::SET_VEHICLE_HAS_BEEN_OWNED_BY_PLAYER(*uParam0, true);
 					VEHICLE::SET_VEHICLE_AUTOMATICALLY_ATTACHES(*uParam0, false, 0);
-					ENTITY::_SET_ENTITY_SOMETHING(*uParam0, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(*uParam0, true);
 					*uParam1 = PED::CREATE_PED_INSIDE_VEHICLE(*uParam0, 25, func_147(), -1, true, true);
 					if (ENTITY::DOES_ENTITY_EXIST(*uParam1))
 					{

@@ -70490,7 +70490,7 @@ int func_420()
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_406, false))
 		{
 			func_436(iLocal_406, 0, "Has_Player_Started_New_Scene");
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, false);
 			if (VEHICLE::IS_THIS_MODEL_A_BOAT(ENTITY::GET_ENTITY_MODEL(iLocal_406)))
 			{
 				if (fLocal_410 == 0f)
@@ -77558,7 +77558,7 @@ int func_444()
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_406, false))
 			{
 				TASK::TASK_VEHICLE_DRIVE_TO_COORD(iLocal_404, iLocal_406, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_406, Local_407), fLocal_410, 0, ENTITY::GET_ENTITY_MODEL(iLocal_406), 786469, 4f, 30f);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 				func_436(iLocal_406, 0, "Buddy_Loop");
 				func_434(iLocal_406, fLocal_410);
 				return 1;
@@ -77840,7 +77840,7 @@ int func_448()
 				{
 					func_436(iLocal_406, 0, "Player_Loop.VEHICLE_DRIVE_TO_COORD");
 					func_436(PLAYER::PLAYER_PED_ID(), 0, "Player_Loop.VEHICLE_DRIVE_TO_COORD");
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 					TASK::OPEN_SEQUENCE_TASK(&iVar156);
 					TASK::TASK_VEHICLE_DRIVE_TO_COORD(0, iLocal_406, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_406, Local_407 * Vector(1.5f, 1.5f, 1.5f)), fVar155, 0, ENTITY::GET_ENTITY_MODEL(iLocal_406), 786469, 4f, 30f);
 					TASK::TASK_VEHICLE_DRIVE_WANDER(0, iLocal_406, fVar155, 786469);
@@ -77894,7 +77894,7 @@ int func_448()
 						PED::SET_PED_INTO_VEHICLE(PLAYER::PLAYER_PED_ID(), iLocal_406, -1);
 						PLAYER::SET_PLAYER_CLOTH_LOCK_COUNTER(240);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 					func_436(iLocal_406, 0, "Player_Loop.VEHICLE_RECORDING");
 					VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(iLocal_406, iLocal_421, &sLocal_417, true);
 					VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(iLocal_406, fLocal_422);
@@ -77952,7 +77952,7 @@ int func_448()
 							fVar161 = 10f;
 						}
 						TASK::TASK_VEHICLE_MISSION_COORS_TARGET(PLAYER::PLAYER_PED_ID(), iLocal_406, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_406, Var158), 4, fVar161, 262144, -1f, -1f, true);
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 						func_434(iLocal_406, fVar161);
 						return 1;
 					}
@@ -78160,7 +78160,7 @@ void func_450()
 			}
 		}
 		ENTITY::_0x694E00132F2823ED(iLocal_406, true);
-		ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 	}
 }
 
@@ -137024,7 +137024,7 @@ int func_651()
 			{
 				TASK::TASK_VEHICLE_DRIVE_TO_COORD(iLocal_404, iLocal_406, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_406, Local_407), fLocal_410, 0, ENTITY::GET_ENTITY_MODEL(iLocal_406), 786469, 4f, 30f);
 				func_436(iLocal_406, 0, "Buddy_Out");
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 				func_434(iLocal_406, fLocal_410);
 				if (fLocal_410 > 5f)
 				{
@@ -137775,7 +137775,7 @@ int func_662()
 						return 1;
 					}
 					func_436(iLocal_406, 0, "Player_Out.VEHICLE_DRIVE_TO_COORD");
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 					Var312.f_11 = 12;
 					Var312.f_31 = 49;
 					Var312.f_81 = 2;
@@ -137838,7 +137838,7 @@ int func_662()
 				{
 					if (!VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(iLocal_406))
 					{
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 						func_436(iLocal_406, 0, "Player_Out.VEHICLE_RECORDING");
 						VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(iLocal_406, iLocal_421, &sLocal_417, true);
 						VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(iLocal_406, fLocal_422);
@@ -139299,7 +139299,7 @@ void func_676()
 									}
 									VEHICLE::SET_LAST_DRIVEN_VEHICLE(iLocal_406);
 									func_436(iLocal_406, 1, "Setup_Player_Timetable_Scene.PLAYER");
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 									if (Local_71.f_110 != 451360105)
 									{
 										func_450();
@@ -139375,7 +139375,7 @@ void func_676()
 											VEHICLE::SET_HELI_BLADES_FULL_SPEED(iLocal_406);
 										}
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, true);
 									if (Var1 == joaat("dinghy"))
 									{
 										PLAYER::SET_AUTO_GIVE_SCUBA_GEAR_WHEN_EXIT_VEHICLE(PLAYER::PLAYER_ID(), true);
@@ -151690,7 +151690,7 @@ void func_802(bool bParam0, bool bParam1)
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_406, false))
 		{
 			VEHICLE::SET_VEHICLE_LIGHTS(iLocal_406, 0);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_406, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_406, false);
 		}
 		if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(iLocal_406))
 		{

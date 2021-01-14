@@ -4771,9 +4771,9 @@ int func_16(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -55055,7 +55055,7 @@ int func_499(bool bParam0, bool bParam1, bool bParam2)
 				{
 					if (func_502(&iLocal_3083, 23, Local_190, 190.2745f, 0))
 					{
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_3083, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3083, true);
 						PED::SET_PED_COMPONENT_VARIATION(iLocal_3083, 3, 0, 1, 0);
 						PED::SET_PED_COMPONENT_VARIATION(iLocal_3083, 4, 0, 1, 0);
 						func_69(&uLocal_712, func_64(23));
@@ -55125,7 +55125,7 @@ int func_499(bool bParam0, bool bParam1, bool bParam2)
 				if (!bVar1)
 				{
 					iLocal_3082 = PED::CREATE_PED(26, iLocal_238, 143.5551f, -2201.591f, 3.688f, 261.297f, true, true);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_3082, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_3082, true);
 					func_69(&uLocal_712, iLocal_238);
 					func_501();
 					func_211();

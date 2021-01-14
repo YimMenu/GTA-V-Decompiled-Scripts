@@ -8705,9 +8705,9 @@ int func_115(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -96984,7 +96984,7 @@ void func_503()
 						TASK::TASK_PERFORM_SEQUENCE(Local_1224[0 /*14*/], iVar8);
 						TASK::CLEAR_SEQUENCE_TASK(&iVar8);
 						TASK::TASK_LOOK_AT_ENTITY(Local_1224[0 /*14*/], PLAYER::PLAYER_PED_ID(), -1, 2048, 2);
-						ENTITY::_SET_ENTITY_SOMETHING(Local_3893[1 /*3*/], true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_3893[1 /*3*/], true);
 						Local_1224[0 /*14*/].f_4++;
 					}
 					else
@@ -97068,7 +97068,7 @@ void func_503()
 								}
 								ENTITY::SET_ENTITY_COORDS(iLocal_960, 2136.821f, 4775.634f, 19.9703f, true, false, false, true);
 								ENTITY::FREEZE_ENTITY_POSITION(iLocal_960, true);
-								ENTITY::_SET_ENTITY_SOMETHING(iLocal_960, true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_960, true);
 								Local_1281.f_4++;
 							}
 						}
@@ -97094,7 +97094,7 @@ void func_503()
 							ENTITY::SET_ENTITY_HEADING(iLocal_960, 74.5414f);
 							ENTITY::SET_ENTITY_COORDS(iLocal_960, 2195.976f, 4747.809f, 39.8789f, true, false, false, true);
 						}
-						ENTITY::_SET_ENTITY_SOMETHING(iLocal_960, true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_960, true);
 						ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_960, true, 1);
 						Local_1281.f_4++;
 					}
@@ -101059,7 +101059,7 @@ int func_594(int iParam0, bool bParam1)
 				ENTITY::DETACH_ENTITY(iLocal_890[iParam0], true, true);
 			}
 			OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(iLocal_890[iParam0], true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_890[iParam0], false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_890[iParam0], false);
 			ENTITY::FREEZE_ENTITY_POSITION(iLocal_890[iParam0], false);
 			PHYSICS::ACTIVATE_PHYSICS(iLocal_890[iParam0]);
 			ENTITY::SET_ENTITY_LOD_DIST(iLocal_890[iParam0], 500);
@@ -112503,7 +112503,7 @@ void func_731()
 				{
 					VEHICLE::SET_VEHICLE_STRONG(iLocal_971, true);
 					VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_971, true);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_971, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_971, true);
 				}
 				bLocal_423 = true;
 			}
@@ -120342,7 +120342,7 @@ int func_802(int iParam0)
 				ENTITY::DETACH_ENTITY(iLocal_890[iParam0], true, true);
 			}
 			OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(iLocal_890[iParam0], true);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_890[iParam0], false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_890[iParam0], false);
 			ENTITY::FREEZE_ENTITY_POSITION(iLocal_890[iParam0], false);
 			PHYSICS::ACTIVATE_PHYSICS(iLocal_890[iParam0]);
 			if (ENTITY::DOES_ENTITY_HAVE_PHYSICS(iLocal_890[iParam0]) && ENTITY::DOES_ENTITY_HAVE_PHYSICS(Local_3893[iParam0 /*3*/]))

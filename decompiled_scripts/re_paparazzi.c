@@ -3095,7 +3095,7 @@ void func_65(int iParam0, struct<3> Param1, float fParam4)
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_204[iParam0 /*18*/], true);
 	PED::SET_PED_COMBAT_ATTRIBUTES(Local_204[iParam0 /*18*/], 17, true);
 	PED::SET_PED_FLEE_ATTRIBUTES(Local_204[iParam0 /*18*/], 2, false);
-	ENTITY::_SET_ENTITY_SOMETHING(Local_204[iParam0 /*18*/], false);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_204[iParam0 /*18*/], false);
 	PED::SET_PED_KEEP_TASK(Local_204[iParam0 /*18*/], true);
 	PED::SET_PED_SHOOT_RATE(Local_204[iParam0 /*18*/], 100);
 	PED::SET_PED_FIRING_PATTERN(Local_204[iParam0 /*18*/], -957453492);
@@ -3111,7 +3111,7 @@ void func_65(int iParam0, struct<3> Param1, float fParam4)
 	PED::SET_PED_TARGET_LOSS_RESPONSE(Local_204[iParam0 /*18*/], 1);
 	PED::SET_PED_COMBAT_ATTRIBUTES(Local_204[iParam0 /*18*/], 2, true);
 	PED::SET_PED_MAX_MOVE_BLEND_RATIO(Local_204[iParam0 /*18*/], 2f);
-	ENTITY::_SET_ENTITY_SOMETHING(Local_204[iParam0 /*18*/], false);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_204[iParam0 /*18*/], false);
 	PED::SET_PED_HELMET(Local_204[iParam0 /*18*/], false);
 	Local_204[iParam0 /*18*/].f_2 = OBJECT::CREATE_OBJECT(joaat("prop_pap_camera_01"), PED::GET_PED_BONE_COORDS(Local_204[iParam0 /*18*/], 28422, 0f, 0f, 0f), true, true, false);
 	ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_204[iParam0 /*18*/].f_2, Local_204[iParam0 /*18*/], PED::GET_PED_BONE_INDEX(Local_204[iParam0 /*18*/], 28422), 0f, 0f, 0f, 0f, 0f, 0f, false, false, false, false, 2, true);

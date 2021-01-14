@@ -91201,9 +91201,9 @@ int func_350(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -107912,7 +107912,7 @@ void func_592(int iParam0, float fParam1, bool bParam2)
 										}
 										if (MISC::IS_BIT_SET(iLocal_357[iVar0], 3))
 										{
-											ENTITY::_SET_ENTITY_SOMETHING(iLocal_591[iVar0], true);
+											ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_591[iVar0], true);
 										}
 										ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_591[iVar0], Local_427[iVar0 /*3*/], false, false, true);
 										ENTITY::SET_ENTITY_QUATERNION(iLocal_591[iVar0], fLocal_118[iVar0], fLocal_141[iVar0], fLocal_164[iVar0], fLocal_187[iVar0]);
@@ -108745,7 +108745,7 @@ void func_609(int iParam0)
 									{
 										VEHICLE::SET_VEHICLE_COLOURS(iLocal_584[iVar0], 0, 0);
 									}
-									ENTITY::_SET_ENTITY_SOMETHING(iLocal_584[iVar0], true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_584[iVar0], true);
 									iLocal_394 = (iLocal_394 - 1);
 									iLocal_389++;
 									iLocal_380[iVar0]++;
@@ -109014,7 +109014,7 @@ void func_613(int iParam0, float fParam1, int iParam2)
 									}
 									if (MISC::IS_BIT_SET(iLocal_309[iVar0], 3))
 									{
-										ENTITY::_SET_ENTITY_SOMETHING(iLocal_573[iVar0], true);
+										ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_573[iVar0], true);
 									}
 									if (!MISC::IS_BIT_SET(iLocal_309[iVar0], 0))
 									{
@@ -123432,7 +123432,7 @@ int func_867()
 							iLocal_2342 = OBJECT::CREATE_OBJECT(Local_1809.f_2, Local_1809.f_3, true, true, false);
 							ENTITY::SET_ENTITY_ROTATION(iLocal_2342, Local_1809.f_12, 2, true);
 							ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iLocal_2342, true, 1);
-							ENTITY::_SET_ENTITY_SOMETHING(iLocal_2342, false);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_2342, false);
 							iLocal_843 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_ex2_rpg_trail", iLocal_2342, 0f, -0.2f, 0f, 0f, 0f, 0f, 1f, false, false, false);
 							Local_2369 = { func_557(Vector(19f, 4469.92f, -1537.21f) - ENTITY::GET_ENTITY_COORDS(iLocal_2342, true)) };
 							Local_1809.f_12 = MISC::ATAN2(Local_2369.f_2, SYSTEM::VMAG(Local_2369.x, Local_2369.f_1, 0f));
@@ -129200,7 +129200,7 @@ int func_962()
 			MISC::CLEAR_AREA(1554.667f, 3743.115f, 33.5237f, 100f, true, false, false, false);
 			func_694(&uLocal_2119, 2);
 			func_636(&Local_1764, 2, 1554.667f, 3743.115f, 33.5237f, 212.649f, 1, 0);
-			VEHICLE::_SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(Local_1764, true);
+			VEHICLE::SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(Local_1764, true);
 			VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(Local_1764, 2, "lkexile2", true);
 			VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(Local_1764, 5000f);
 			VEHICLE::FORCE_PLAYBACK_RECORDED_VEHICLE_UPDATE(Local_1764, true);
@@ -129243,7 +129243,7 @@ int func_962()
 			VEHICLE::SET_VEHICLE_COLOURS(Local_1719, 34, 34);
 			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(Local_1719, 0, 0);
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_1719, 5f);
-			ENTITY::_SET_ENTITY_SOMETHING(Local_1719, true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1719, true);
 			AUDIO::TRIGGER_MUSIC_EVENT("EXL2_SWITCH_START");
 			if (AUDIO::IS_AUDIO_SCENE_ACTIVE("EXILE_2_GO_TO_CRASH_SITE"))
 			{
@@ -129292,7 +129292,7 @@ int func_962()
 										}
 									}
 									STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_1764.f_1);
-									ENTITY::_SET_ENTITY_SOMETHING(Local_1719, false);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1719, false);
 									ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Local_1719, true, 1);
 									iLocal_803 = 1;
 									RECORDING::_0x293220DA1B46CEBC(2f, 10f, 4);

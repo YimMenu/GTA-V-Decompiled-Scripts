@@ -36453,9 +36453,9 @@ int func_269(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -104949,7 +104949,7 @@ void func_655()
 					VEHICLE::SET_VEHICLE_COLOURS(iLocal_359[iVar0], 66, 0);
 					VEHICLE::SET_VEHICLE_EXTRA_COLOURS(iLocal_359[iVar0], 66, 0);
 					VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_359[iVar0], 7);
-					ENTITY::_SET_ENTITY_SOMETHING(iLocal_359[iVar0], true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_359[iVar0], true);
 				}
 				iVar0 = (iVar0 + 1);
 			}
@@ -107468,7 +107468,7 @@ int func_663(struct<3> Param0, float fParam3)
 				iLocal_358 = func_664(Param0, fParam3);
 				VEHICLE::SET_VEHICLE_AUTOMATICALLY_ATTACHES(iLocal_358, false, 0);
 				VEHICLE::_0x0AD9E8F87FF7C16F(iLocal_358, false);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_358, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_358, true);
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_358, true, true);
 				return 1;
 			}
@@ -111975,7 +111975,7 @@ int func_718(struct<3> Param0, float fParam3, bool bParam4)
 				VEHICLE::SET_VEHICLE_AUTOMATICALLY_ATTACHES(iLocal_356, false, 0);
 				VEHICLE::SET_VEHICLE_STRONG(iLocal_356, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_356, true);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_356, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_356, true);
 				VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(iLocal_356, false);
 				return 1;
 			}
@@ -114837,7 +114837,7 @@ int func_756(struct<3> Param0, float fParam3, bool bParam4)
 				VEHICLE::SET_VEHICLE_AUTOMATICALLY_ATTACHES(iLocal_355, false, 0);
 				VEHICLE::SET_VEHICLE_STRONG(iLocal_355, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(iLocal_355, true);
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_355, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_355, true);
 				VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(iLocal_355, false);
 				return 1;
 			}
@@ -121497,7 +121497,7 @@ int func_853(struct<3> Param0, float fParam3, bool bParam4)
 				VEHICLE::SET_VEHICLE_AUTOMATICALLY_ATTACHES(Local_1899.x, false, 0);
 				VEHICLE::SET_VEHICLE_STRONG(Local_1899.x, true);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_1899.x, true);
-				ENTITY::_SET_ENTITY_SOMETHING(Local_1899.x, true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_1899.x, true);
 				VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Local_1899.x, false);
 				AUDIO::ADD_ENTITY_TO_AUDIO_MIX_GROUP(Local_1899.x, "FRANKLIN_2_BULLDOZER_Group", 0f);
 				ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(Local_1899.x, true);

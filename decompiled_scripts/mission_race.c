@@ -2764,7 +2764,7 @@ void func_28(int iParam0)
 		PED::SET_PED_DIES_IN_WATER(Local_851[iParam0 /*18*/].f_3, false);
 		if (Local_580.f_1 == 3)
 		{
-			ENTITY::_SET_ENTITY_SOMETHING(Local_851[iParam0 /*18*/].f_6, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_851[iParam0 /*18*/].f_6, false);
 			PED::SET_PED_CAN_BE_KNOCKED_OFF_VEHICLE(Local_851[iParam0 /*18*/].f_3, 3);
 		}
 		Local_851[iParam0 /*18*/] = 0;
@@ -18891,7 +18891,7 @@ char* func_300(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			if (bParam1)
 			{
 				return "WTU_GDGTPST";
@@ -18902,7 +18902,7 @@ char* func_300(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			if (bParam1)
 			{
 				return "WTU_MLTRYRFL";
@@ -18913,7 +18913,7 @@ char* func_300(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
 			{
 				return "WTU_CMBSHGN";

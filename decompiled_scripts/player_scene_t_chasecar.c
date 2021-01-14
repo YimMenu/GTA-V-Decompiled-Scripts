@@ -3342,7 +3342,7 @@ void func_89()
 			iLocal_462[iVar0] = VEHICLE::CREATE_VEHICLE(iLocal_467[iVar0], Local_492 + Local_472[iVar0 /*3*/], (fLocal_495 + fLocal_485[iVar0]), true, true, false);
 			VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(iLocal_462[iVar0], iLocal_490);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iLocal_467[iVar0]);
-			ENTITY::_SET_ENTITY_SOMETHING(iLocal_462[iVar0], true);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_462[iVar0], true);
 		}
 		if (iLocal_456[iVar0] != 0)
 		{

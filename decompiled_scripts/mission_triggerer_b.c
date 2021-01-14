@@ -95665,9 +95665,9 @@ int func_556(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -100062,7 +100062,7 @@ void func_626()
 		MISC::CLEAR_AREA(-1866.446f, 3071.395f, 31.8104f, 10f, true, false, false, false);
 		Global_95452[1] = VEHICLE::CREATE_VEHICLE(joaat("buzzard"), -1866.446f, 3071.395f, 31.8104f, 150.2863f, true, true, false);
 		VEHICLE::SET_VEHICLE_CAN_BE_TARGETTED(Global_95452[1], true);
-		ENTITY::_SET_ENTITY_SOMETHING(Global_95452[1], true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Global_95452[1], true);
 		ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Global_95452[1], true, 1);
 		VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Global_95452[1], 5f);
 	}
@@ -100371,7 +100371,7 @@ void func_639()
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("submersible"));
 	ENTITY::FREEZE_ENTITY_POSITION(Global_95452[0], true);
 	ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Global_95452[0], true, 1);
-	ENTITY::_SET_ENTITY_SOMETHING(Global_95452[0], false);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Global_95452[0], false);
 	Global_95452.f_9[0] = PED::CREATE_PED(26, joaat("s_m_m_dockwork_01"), 1229.322f, -3002.879f, 8.31861f, 270f, true, true);
 	TASK::TASK_PLAY_ANIM(Global_95452.f_9[0], "cellphone@str", "cellphone_call_listen_c", 8f, -8f, -1, 49, 0f, false, false, false);
 	PED::SET_PED_FLEE_ATTRIBUTES(Global_95452.f_9[0], 512, false);

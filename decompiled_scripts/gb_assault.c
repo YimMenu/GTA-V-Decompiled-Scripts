@@ -1113,7 +1113,7 @@ int func_28(int iParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 						ENTITY::SET_ENTITY_DYNAMIC(NETWORK::NET_TO_VEH(Local_82.f_29[iParam0]), true);
 						PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_VEH(Local_82.f_29[iParam0]));
 						VEHICLE::SET_VEHICLE_ENGINE_ON(NETWORK::NET_TO_VEH(Local_82.f_29[iParam0]), true, true, false);
-						ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_VEH(Local_82.f_29[iParam0]), true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_VEH(Local_82.f_29[iParam0]), true);
 						VEHICLE::_0x0AD9E8F87FF7C16F(NETWORK::NET_TO_VEH(Local_82.f_29[iParam0]), false);
 						if (func_1145() == 1)
 						{
@@ -1179,7 +1179,7 @@ int func_30(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -1669,7 +1669,7 @@ int func_50(bool bParam0, int iParam1, bool bParam2)
 					ENTITY::SET_ENTITY_COORDS_NO_OFFSET(NETWORK::NET_TO_OBJ(Local_82.f_12), Local_467 + Vector(0.5f, 0f, 0f), false, false, true);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);
 					ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_82.f_12), true);
-					ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_82.f_12), true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_82.f_12), true);
 					if (bParam0)
 					{
 						if (NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(Local_82.f_13[iParam1]))
@@ -8834,7 +8834,7 @@ int func_214(var uParam0, int iParam1, int iParam2, struct<3> Param3, float fPar
 	*uParam0 = NETWORK::PED_TO_NET(iVar0);
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, bParam9);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, bParam9);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 		{
 			if (bParam7)
@@ -22209,7 +22209,7 @@ void func_704()
 							OBJECT::DETACH_PORTABLE_PICKUP_FROM_PED(NETWORK::NET_TO_OBJ(Local_82.f_12));
 						}
 						ENTITY::SET_ENTITY_COORDS_NO_OFFSET(NETWORK::NET_TO_OBJ(Local_82.f_12), Local_485, false, false, true);
-						ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(Local_82.f_12), true);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_82.f_12), true);
 						ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ(Local_82.f_12), true, true);
 						MISC::SET_BIT(&iLocal_341, 3);
 						iLocal_480 = 0;

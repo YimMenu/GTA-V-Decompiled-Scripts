@@ -1816,7 +1816,7 @@ int func_73(var uParam0, int iParam1, int iParam2, struct<3> Param3, float fPara
 	*uParam0 = NETWORK::PED_TO_NET(iVar0);
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(iVar0, bParam9);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, bParam9);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 		{
 			if (bParam7)
@@ -2542,7 +2542,7 @@ void func_104(int iParam0, int iParam1)
 	{
 		func_62(iParam0, 2);
 		PHYSICS::ACTIVATE_PHYSICS(iParam1);
-		ENTITY::_SET_ENTITY_SOMETHING(iParam1, true);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iParam1, true);
 		ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(iParam1, true, 1);
 	}
 	if (func_49(iParam0, 11))
@@ -2641,7 +2641,7 @@ int func_110(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, bo
 	*uParam0 = NETWORK::PED_TO_NET(PED::CREATE_PED_INSIDE_VEHICLE(NETWORK::NET_TO_VEH(iParam1), iParam2, iParam3, iParam4, bParam6, bParam5));
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_PED(*uParam0), bParam7);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_PED(*uParam0), bParam7);
 		if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(NETWORK::NET_TO_PED(*uParam0)))
 		{
 			if (bParam5)
@@ -3865,7 +3865,7 @@ int func_163(var uParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPar
 	}
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
 	{
-		ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
+		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(*uParam0), bParam8);
 		if (bParam10)
 		{
 			NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(NETWORK::NET_TO_OBJ(*uParam0), true);
@@ -10270,7 +10270,7 @@ int func_257(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPa
 			{
 				NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(iVar1, true);
 			}
-			ENTITY::_SET_ENTITY_SOMETHING(iVar1, bParam10);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar1, bParam10);
 			if (NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar1))
 			{
 				if (bParam8)
@@ -20695,7 +20695,7 @@ void func_459(int iParam0, struct<3> Param1)
 	ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_1542.f_2[iParam0]), true);
 	ENTITY::SET_ENTITY_PROOFS(NETWORK::NET_TO_OBJ(Local_1542.f_2[iParam0]), true, true, false, true, true, true, true, false);
 	ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(NETWORK::NET_TO_ENT(Local_1542.f_2[iParam0]), true, 1);
-	ENTITY::_SET_ENTITY_SOMETHING(NETWORK::NET_TO_ENT(Local_1542.f_2[iParam0]), true);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_ENT(Local_1542.f_2[iParam0]), true);
 	OBJECT::_0x641F272B52E2F0F8(NETWORK::NET_TO_OBJ(Local_1542.f_2[iParam0]), 1);
 	OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_1542.f_2[iParam0]), true);
 	OBJECT::_0x4C134B4DF76025D0(NETWORK::NET_TO_OBJ(Local_1542.f_2[iParam0]), 1);
@@ -101895,7 +101895,7 @@ int func_1113(struct<3> Param0, float fParam3, bool bParam4, int iParam5, bool b
 									func_257(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38), iVar1, Param0, fParam3, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0);
 									NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38, PLAYER::PLAYER_ID(), true);
 									iVar0 = NETWORK::NET_TO_VEH(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_38);
-									ENTITY::_SET_ENTITY_SOMETHING(iVar0, true);
+									ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar0, true);
 									VEHICLE::_0xB2E0C0D6922D31F2(iVar0, true);
 									VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iVar0, 5f);
 									func_1160(&iVar0, iParam5);
@@ -128222,7 +128222,7 @@ void func_1536(int iParam0, bool bParam1, var uParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -128276,7 +128276,7 @@ void func_1536(int iParam0, bool bParam1, var uParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_1537(Global_4456448.f_129348))
@@ -129251,15 +129251,15 @@ int func_1562(int iParam0)
 			return 427;
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			return 435;
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			return 437;
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			return 433;
 			break;
 	}
@@ -129627,15 +129627,15 @@ int func_1564(int iParam0, bool bParam1)
 			break;
 		
 		case 86:
-			return 94989220;
+			return joaat("WEAPON_COMBATSHOTGUN");
 			break;
 		
 		case 88:
-			return -1658906650;
+			return joaat("WEAPON_MILITARYRIFLE");
 			break;
 		
 		case 87:
-			return 1470379660;
+			return joaat("WEAPON_GADGETPISTOL");
 			break;
 	}
 	return joaat("weapon_unarmed");
@@ -130037,15 +130037,15 @@ int func_1565(int iParam0)
 			return 85;
 			break;
 		
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			return 86;
 			break;
 		
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			return 88;
 			break;
 		
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			return 87;
 			break;
 	}
@@ -141186,7 +141186,7 @@ void func_2071(int iParam0, int iParam1)
 	{
 		if (func_155(Local_1542.f_71[iParam0 /*6*/]))
 		{
-			VEHICLE::_SET_CARGOBOB_HOOK_POSITION(iParam1, 5f, 5f, 0);
+			VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(iParam1, 5f, 5f, false);
 			func_2093(iParam0, 7);
 		}
 	}
@@ -148986,7 +148986,7 @@ void func_2388(int iParam0, int iParam1)
 					{
 						Var3 = { func_2387(iParam0, -1) };
 						PED::SET_PED_CONFIG_FLAG(iParam1, 429, false);
-						ENTITY::_SET_ENTITY_SOMETHING(iVar2, false);
+						ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar2, false);
 						VEHICLE::SET_HELI_BLADES_SPEED(iVar2, 1f);
 						VEHICLE::SET_HELI_BLADES_FULL_SPEED(iVar2);
 						VEHICLE::SET_VEHICLE_ENGINE_ON(iVar2, true, true, false);

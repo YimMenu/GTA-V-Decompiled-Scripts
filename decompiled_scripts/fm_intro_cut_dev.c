@@ -4997,7 +4997,7 @@ int func_101(int* iParam0)
 		{
 			iParam0->f_33 = OBJECT::CREATE_OBJECT(joaat("p_cs_mp_jet_01_s"), Var1, false, false, false);
 			ENTITY::SET_ENTITY_LOD_DIST(iParam0->f_33, 3000);
-			ENTITY::_SET_ENTITY_SOMETHING(iParam0->f_33, false);
+			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iParam0->f_33, false);
 			ENTITY::SET_ENTITY_VISIBLE(iParam0->f_33, false, false);
 			if (iParam0->f_294)
 			{
@@ -5501,7 +5501,7 @@ int func_111(var uParam0)
 						if (STREAMING::HAS_MODEL_LOADED(iVar0))
 						{
 							uParam0->f_49[iVar5] = VEHICLE::CREATE_VEHICLE(iVar0, Var1, fVar4, false, false, false);
-							ENTITY::_SET_ENTITY_SOMETHING(uParam0->f_49[iVar5], true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(uParam0->f_49[iVar5], true);
 							VEHICLE::SET_VEHICLE_DIRT_LEVEL(uParam0->f_49[iVar5], 0f);
 							VEHICLE::_0xAB04325045427AAE(uParam0->f_49[iVar5], false);
 							if (iVar5 == 2)
@@ -9683,7 +9683,7 @@ void func_201(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, false);
 					}
-					ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 				}
 				else if (!bVar21)
 				{
@@ -9737,7 +9737,7 @@ void func_201(int iParam0, bool bParam1, int iParam2, int iParam3)
 						}
 						if (!bVar16)
 						{
-							ENTITY::_SET_ENTITY_SOMETHING(iVar27, true);
+							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
 					if (func_202(Global_4456448.f_129348))

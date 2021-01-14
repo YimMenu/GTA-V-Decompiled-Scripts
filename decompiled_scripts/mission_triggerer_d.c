@@ -10397,7 +10397,7 @@ void func_200()
 	VEHICLE::SET_VEHICLE_STRONG(Global_95452[0], true);
 	ENTITY::SET_ENTITY_PROOFS(Global_95452[0], false, true, false, false, false, false, false, false);
 	VEHICLE::SET_VEHICLE_MODEL_IS_SUPPRESSED(joaat("rapidgt"), true);
-	ENTITY::_SET_ENTITY_SOMETHING(Global_95452[0], true);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Global_95452[0], true);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Global_95452[0], true);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("rapidgt"));
 	MISC::CLEAR_AREA(-1037.398f, -491.6539f, 35.5545f, 5f, true, false, false, false);
@@ -10407,7 +10407,7 @@ void func_200()
 	VEHICLE::SET_VEHICLE_STRONG(Global_95452[1], true);
 	ENTITY::SET_ENTITY_PROOFS(Global_95452[1], false, true, true, false, false, false, false, false);
 	VEHICLE::SET_VEHICLE_MODEL_IS_SUPPRESSED(joaat("surano"), true);
-	ENTITY::_SET_ENTITY_SOMETHING(Global_95452[1], true);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Global_95452[1], true);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Global_95452[1], true);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("surano"));
 	MISC::CLEAR_AREA(-1033.938f, -489.7475f, 35.8323f, 5f, true, false, false, false);
@@ -10417,7 +10417,7 @@ void func_200()
 	VEHICLE::SET_VEHICLE_STRONG(Global_95452[2], true);
 	ENTITY::SET_ENTITY_PROOFS(Global_95452[2], false, true, true, false, false, false, false, false);
 	VEHICLE::SET_VEHICLE_MODEL_IS_SUPPRESSED(joaat("carbonizzare"), true);
-	ENTITY::_SET_ENTITY_SOMETHING(Global_95452[2], true);
+	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Global_95452[2], true);
 	VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Global_95452[2], true);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("carbonizzare"));
 	func_201(61, "sol_3_int", 0, -1, -1);
@@ -98436,9 +98436,9 @@ int func_600(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

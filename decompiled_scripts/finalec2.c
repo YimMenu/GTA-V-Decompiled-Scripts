@@ -41322,9 +41322,9 @@ int func_315(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}
@@ -110775,15 +110775,15 @@ void func_724(int iParam0)
 				break;
 			
 			case 1:
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_594[iParam0], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_594[iParam0], true);
 				break;
 			
 			case 2:
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_594[iParam0], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_594[iParam0], true);
 				break;
 			
 			case 0:
-				ENTITY::_SET_ENTITY_SOMETHING(iLocal_594[iParam0], true);
+				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_594[iParam0], true);
 				break;
 			}
 	}
@@ -126513,7 +126513,7 @@ void func_965()
 							iLocal_594[iVar8] = iVar9;
 							if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(iLocal_594[iVar8]))
 							{
-								ENTITY::_SET_ENTITY_SOMETHING(iLocal_594[iVar8], true);
+								ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_594[iVar8], true);
 								ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_594[iVar8], true, true);
 							}
 						}

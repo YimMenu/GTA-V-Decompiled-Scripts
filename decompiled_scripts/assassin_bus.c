@@ -14929,7 +14929,7 @@ void func_281(var uParam0, var uParam1)
 				GRAPHICS::_0x03FC694AE06C5A20();
 				if (!ENTITY::IS_ENTITY_DEAD(uParam1->f_1, false))
 				{
-					VEHICLE::_SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(uParam1->f_1, true);
+					VEHICLE::SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(uParam1->f_1, true);
 				}
 				func_298(uParam1->f_1);
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
@@ -15050,7 +15050,7 @@ void func_281(var uParam0, var uParam1)
 			func_282(uParam1->f_1, 1);
 			if (!ENTITY::IS_ENTITY_DEAD(uParam1->f_1, false))
 			{
-				VEHICLE::_SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(uParam1->f_1, false);
+				VEHICLE::SET_VEHICLE_USE_PLAYER_LIGHT_SETTINGS(uParam1->f_1, false);
 			}
 			iLocal_1461 = 5;
 			break;
@@ -19719,9 +19719,9 @@ int func_397(int iParam0)
 			case joaat("WEAPON_RAYPISTOL"):
 			case joaat("WEAPON_NAVYREVOLVER"):
 			case joaat("WEAPON_CERAMICPISTOL"):
-			case 1470379660:
-			case -1658906650:
-			case 94989220:
+			case joaat("WEAPON_GADGETPISTOL"):
+			case joaat("WEAPON_MILITARYRIFLE"):
+			case joaat("WEAPON_COMBATSHOTGUN"):
 				return 1;
 				break;
 			}

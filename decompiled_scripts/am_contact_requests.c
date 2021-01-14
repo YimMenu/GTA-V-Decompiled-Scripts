@@ -12359,7 +12359,7 @@ int func_275(int iParam0)
 			break;
 		
 		case 14:
-			return 1470379660;
+			return joaat("WEAPON_GADGETPISTOL");
 			break;
 		
 		case 15:
@@ -12455,7 +12455,7 @@ int func_275(int iParam0)
 			break;
 		
 		case 38:
-			return -1658906650;
+			return joaat("WEAPON_MILITARYRIFLE");
 			break;
 		
 		case 39:
@@ -12503,7 +12503,7 @@ int func_275(int iParam0)
 			break;
 		
 		case 50:
-			return 94989220;
+			return joaat("WEAPON_COMBATSHOTGUN");
 			break;
 		
 		case 51:
