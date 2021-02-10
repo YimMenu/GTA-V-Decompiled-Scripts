@@ -309,7 +309,7 @@ void __EntryFunction__()
 {
 	int iVar0;
 	
-	sLocal_0 = "1.50.12";
+	sLocal_0 = "1.53.00";
 	iLocal_24 = -1;
 	iLocal_25 = -1;
 	iLocal_150 = -1;
