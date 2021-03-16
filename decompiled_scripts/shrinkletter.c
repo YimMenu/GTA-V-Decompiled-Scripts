@@ -773,7 +773,7 @@ int func_18()
 
 bool func_19()
 {
-	return Global_2462752;
+	return Global_2462980;
 }
 
 struct<4> func_20(var uParam0)
@@ -1541,7 +1541,7 @@ void func_47(bool bParam0, bool bParam1)
 
 bool func_48()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 5);
+	return MISC::IS_BIT_SET(Global_1689733, 5);
 }
 
 int func_49(int iParam0)
@@ -1577,7 +1577,7 @@ int func_49(int iParam0)
 
 bool func_50()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 19);
+	return MISC::IS_BIT_SET(Global_1689733, 19);
 }
 
 void func_51(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4, bool bParam5, bool bParam6)
@@ -1706,7 +1706,7 @@ int func_56(int iParam0)
 			return 1;
 		}
 	}
-	if (MISC::IS_BIT_SET(Global_2425869[iParam0 /*443*/].f_199, 2))
+	if (MISC::IS_BIT_SET(Global_2426097[iParam0 /*443*/].f_199, 2))
 	{
 		return 1;
 	}

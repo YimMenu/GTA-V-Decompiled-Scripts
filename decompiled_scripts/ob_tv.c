@@ -573,7 +573,7 @@ int func_10(int iParam0)
 			return 1;
 		}
 	}
-	if (MISC::IS_BIT_SET(Global_2425869[iParam0 /*443*/].f_199, 2))
+	if (MISC::IS_BIT_SET(Global_2426097[iParam0 /*443*/].f_199, 2))
 	{
 		return 1;
 	}
@@ -786,7 +786,7 @@ void func_19(bool bParam0, bool bParam1)
 
 bool func_20()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 5);
+	return MISC::IS_BIT_SET(Global_1689733, 5);
 }
 
 int func_21(int iParam0)
@@ -822,7 +822,7 @@ int func_21(int iParam0)
 
 bool func_22()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 19);
+	return MISC::IS_BIT_SET(Global_1689733, 19);
 }
 
 void func_23(bool bParam0, bool bParam1)

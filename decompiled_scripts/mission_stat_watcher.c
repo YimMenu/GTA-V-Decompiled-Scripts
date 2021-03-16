@@ -2504,7 +2504,7 @@ int func_53(int iParam0)
 
 bool func_54()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 19);
+	return MISC::IS_BIT_SET(Global_1689733, 19);
 }
 
 void func_55(int iParam0)
@@ -2588,7 +2588,7 @@ void func_57(bool bParam0, bool bParam1)
 
 bool func_58()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 5);
+	return MISC::IS_BIT_SET(Global_1689733, 5);
 }
 
 int func_59()

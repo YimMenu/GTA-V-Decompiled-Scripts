@@ -2264,7 +2264,7 @@ void func_2(var uParam0, int iParam1)
 
 void func_3(int iParam0)
 {
-	Global_2462279 = iParam0;
+	Global_2462507 = iParam0;
 	Global_1590682[PLAYER::PLAYER_ID() /*883*/].f_877 = iParam0;
 }
 
@@ -2359,7 +2359,7 @@ void func_8(var uParam0)
 			break;
 		
 		case 1:
-			Global_1678269 = 0;
+			Global_1678270 = 0;
 			if (func_59(uParam0))
 			{
 				uParam0->f_11 = MISC::GET_GAME_TIMER();
@@ -2370,7 +2370,7 @@ void func_8(var uParam0)
 		case 2:
 			if (func_58(PLAYER::PLAYER_PED_ID(), &(uParam0->f_16[uParam0->f_9 /*14*/])) && func_57(PLAYER::PLAYER_PED_ID(), uParam0->f_16[uParam0->f_9 /*14*/].f_3, uParam0->f_16[uParam0->f_9 /*14*/].f_13))
 			{
-				if (((((((((((func_56(uParam0) || func_52(uParam0)) || func_51(uParam0)) || !func_50(uParam0)) || func_48(PLAYER::PLAYER_ID())) || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true)) || PED::IS_PED_IN_COMBAT(PLAYER::PLAYER_PED_ID(), 0)) || PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID())) || PED::IS_PED_PERFORMING_MELEE_ACTION(PLAYER::PLAYER_PED_ID())) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID())) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID())) || MISC::IS_BIT_SET(Global_1678288.f_4, 2))
+				if (((((((((((func_56(uParam0) || func_52(uParam0)) || func_51(uParam0)) || !func_50(uParam0)) || func_48(PLAYER::PLAYER_ID())) || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true)) || PED::IS_PED_IN_COMBAT(PLAYER::PLAYER_PED_ID(), 0)) || PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID())) || PED::IS_PED_PERFORMING_MELEE_ACTION(PLAYER::PLAYER_PED_ID())) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID())) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID())) || MISC::IS_BIT_SET(Global_1678289.f_4, 2))
 				{
 					if (func_52(uParam0))
 					{
@@ -2388,7 +2388,7 @@ void func_8(var uParam0)
 				}
 				else
 				{
-					Global_1678269 = 1;
+					Global_1678270 = 1;
 					if (uParam0->f_6 == -1)
 					{
 						if ((MISC::GET_GAME_TIMER() - uParam0->f_11) > 150)
@@ -2705,7 +2705,7 @@ void func_15(var uParam0)
 		fVar3 = SYSTEM::VMAG(Var0);
 		if ((uParam0->f_13 == 6 && !ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("BLOCK_INTERRUPT"))) && !func_23(&(uParam0->f_7), 12))
 		{
-			if ((fVar3 >= 0.35f && !Global_2516796) && !Global_2516798)
+			if ((fVar3 >= 0.35f && !Global_2517024) && !Global_2517026)
 			{
 				func_20(uParam0);
 			}
@@ -2718,7 +2718,7 @@ void func_15(var uParam0)
 		{
 			func_4(uParam0, 1);
 		}
-		else if (Global_2516796 || Global_2516798)
+		else if (Global_2517024 || Global_2517026)
 		{
 			func_4(uParam0, 1);
 		}
@@ -2842,7 +2842,7 @@ int func_17(int iParam0)
 
 int func_18()
 {
-	if (Global_2440049.f_1267.f_5 == -1)
+	if (Global_2440277.f_1267.f_5 == -1)
 	{
 		return 0;
 	}
@@ -2886,7 +2886,7 @@ void func_21(var uParam0)
 
 bool func_22()
 {
-	return MISC::IS_BIT_SET(Global_1678288.f_3, 25);
+	return MISC::IS_BIT_SET(Global_1678289.f_3, 25);
 }
 
 bool func_23(var uParam0, int iParam1)
@@ -2975,18 +2975,18 @@ void func_28(bool bParam0)
 	{
 		if (func_29())
 		{
-			Global_2451787.f_40 = 1;
+			Global_2452015.f_40 = 1;
 		}
 	}
 	else
 	{
-		Global_2451787.f_40 = 0;
+		Global_2452015.f_40 = 0;
 	}
 }
 
 bool func_29()
 {
-	return MISC::IS_BIT_SET(Global_2451787.f_2, 11);
+	return MISC::IS_BIT_SET(Global_2452015.f_2, 11);
 }
 
 void func_30()
@@ -3091,7 +3091,7 @@ void func_34(bool bParam0, bool bParam1)
 
 bool func_35()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 5);
+	return MISC::IS_BIT_SET(Global_1689733, 5);
 }
 
 int func_36(int iParam0)
@@ -3127,7 +3127,7 @@ int func_36(int iParam0)
 
 bool func_37()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 19);
+	return MISC::IS_BIT_SET(Global_1689733, 19);
 }
 
 Vector3 func_38(var uParam0)
@@ -3770,7 +3770,7 @@ int func_55(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440049.f_3[iVar0])
+				if (!Global_2440277.f_3[iVar0])
 				{
 					return 0;
 				}
@@ -3919,7 +3919,7 @@ int func_67()
 	{
 		return 1;
 	}
-	if (Global_2464493)
+	if (Global_2464721)
 	{
 		return 1;
 	}
@@ -3969,7 +3969,7 @@ int func_68()
 
 int func_69()
 {
-	switch (Global_2464595)
+	switch (Global_2464823)
 	{
 		case 0:
 			return joaat("freemode");
@@ -3986,7 +3986,7 @@ int func_70()
 
 bool func_71()
 {
-	return Global_2451787.f_696;
+	return Global_2452015.f_696;
 }
 
 int func_72(int iParam0)
@@ -4000,12 +4000,12 @@ int func_72(int iParam0)
 
 bool func_73()
 {
-	return Global_2462250;
+	return Global_2462478;
 }
 
 bool func_74()
 {
-	return Global_2451787.f_691;
+	return Global_2452015.f_691;
 }
 
 void func_75(var uParam0)
@@ -4103,12 +4103,12 @@ int func_77(int iParam0, var uParam1)
 
 bool func_78(int iParam0)
 {
-	return func_23(&(Global_2425869[iParam0 /*443*/].f_429), 0);
+	return func_23(&(Global_2426097[iParam0 /*443*/].f_429), 0);
 }
 
 void func_79()
 {
-	Global_1678269 = 0;
+	Global_1678270 = 0;
 	func_81(&uLocal_85);
 	func_80();
 }

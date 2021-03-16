@@ -585,7 +585,7 @@ void func_15()
 	{
 		Global_7558[14 /*15*/].f_4 = -99;
 		Global_7558[4 /*15*/].f_4 = -99;
-		if (Global_2462245)
+		if (Global_2462473)
 		{
 			if (func_17(14))
 			{
@@ -898,12 +898,12 @@ void func_24(bool bParam0, bool bParam1)
 
 bool func_25()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 5);
+	return MISC::IS_BIT_SET(Global_1689733, 5);
 }
 
 bool func_26()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 19);
+	return MISC::IS_BIT_SET(Global_1689733, 19);
 }
 
 int func_27()

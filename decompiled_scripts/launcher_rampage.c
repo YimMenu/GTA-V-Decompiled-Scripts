@@ -2388,7 +2388,7 @@ int func_52(int iParam0, int iParam1, int iParam2)
 		if (iParam2 == 0)
 		{
 		}
-		iVar0 = Global_2551832[iParam0 /*3*/][func_53(iParam1)];
+		iVar0 = Global_2552060[iParam0 /*3*/][func_53(iParam1)];
 		if (STATS::STAT_GET_INT(iVar0, &uVar1, -1))
 		{
 			return uVar1;
@@ -2408,13 +2408,13 @@ int func_53(var uParam0)
 		iVar1 = func_54();
 		if (iVar1 > -1)
 		{
-			Global_2551544 = 0;
+			Global_2551772 = 0;
 			iVar0 = iVar1;
 		}
 		else
 		{
 			iVar0 = 0;
-			Global_2551544 = 1;
+			Global_2551772 = 1;
 		}
 	}
 	return iVar0;
@@ -2430,7 +2430,7 @@ int func_55(int iParam0, int iParam1)
 	int iVar0;
 	var uVar1;
 	
-	iVar0 = Global_2587834[iParam0 /*3*/][func_53(iParam1)];
+	iVar0 = Global_2588062[iParam0 /*3*/][func_53(iParam1)];
 	if (STATS::STAT_GET_BOOL(iVar0, &uVar1, -1))
 	{
 		return uVar1;
@@ -5099,7 +5099,7 @@ Vector3 func_80(int iParam0, bool bParam1)
 			break;
 		
 		case 50:
-			return Global_1696916;
+			return Global_1696919;
 			break;
 		
 		case 51:
@@ -5763,7 +5763,7 @@ int func_92()
 
 int func_93(int iParam0)
 {
-	return MISC::GET_BITS_IN_RANGE(Global_2425869[iParam0 /*443*/].f_314.f_3, 28, 31);
+	return MISC::GET_BITS_IN_RANGE(Global_2426097[iParam0 /*443*/].f_314.f_3, 28, 31);
 }
 
 int func_94(int iParam0)
@@ -7569,7 +7569,7 @@ int func_139(int iParam0)
 			return 1;
 		}
 	}
-	if (MISC::IS_BIT_SET(Global_2425869[iParam0 /*443*/].f_199, 2))
+	if (MISC::IS_BIT_SET(Global_2426097[iParam0 /*443*/].f_199, 2))
 	{
 		return 1;
 	}
@@ -9363,7 +9363,7 @@ void func_198(bool bParam0, bool bParam1)
 
 bool func_199()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 5);
+	return MISC::IS_BIT_SET(Global_1689733, 5);
 }
 
 int func_200(int iParam0)
@@ -9399,7 +9399,7 @@ int func_200(int iParam0)
 
 bool func_201()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 19);
+	return MISC::IS_BIT_SET(Global_1689733, 19);
 }
 
 int func_202(int iParam0)
@@ -10483,15 +10483,15 @@ void func_232()
 	}
 	if (Global_21011)
 	{
-		MemCopy(&(Global_1703978.f_1), {Global_20624}, 4);
-		Global_1703978 = Global_6866;
-		Global_1703978.f_6 = Global_21015;
+		MemCopy(&(Global_1703981.f_1), {Global_20624}, 4);
+		Global_1703981 = Global_6866;
+		Global_1703981.f_6 = Global_21015;
 	}
 }
 
 int func_233()
 {
-	if (!Global_262145.f_28160)
+	if (!Global_262145.f_28161)
 	{
 		return 0;
 	}
@@ -18336,11 +18336,11 @@ int func_279(int iParam0, int iParam1)
 						break;
 					
 					case -2122814295:
-						iVar0 = Global_262145.f_27979;
+						iVar0 = Global_262145.f_27980;
 						break;
 					
 					case -1828202758:
-						iVar0 = Global_262145.f_27980;
+						iVar0 = Global_262145.f_27981;
 						break;
 				}
 				break;
@@ -18353,11 +18353,11 @@ int func_279(int iParam0, int iParam1)
 						break;
 					
 					case joaat("component_at_ar_flsh"):
-						iVar0 = Global_262145.f_30087;
+						iVar0 = Global_262145.f_30088;
 						break;
 					
 					case joaat("component_at_ar_supp"):
-						iVar0 = Global_262145.f_30088;
+						iVar0 = Global_262145.f_30089;
 						break;
 				}
 				break;
@@ -18375,27 +18375,27 @@ int func_279(int iParam0, int iParam1)
 				switch (iParam1)
 				{
 					case 759617595:
-						iVar0 = Global_262145.f_30073;
-						break;
-					
-					case 1749732930:
 						iVar0 = Global_262145.f_30074;
 						break;
 					
-					case 1803744149:
+					case 1749732930:
 						iVar0 = Global_262145.f_30075;
 						break;
 					
-					case joaat("component_at_scope_small"):
+					case 1803744149:
 						iVar0 = Global_262145.f_30076;
 						break;
 					
-					case joaat("component_at_ar_flsh"):
+					case joaat("component_at_scope_small"):
 						iVar0 = Global_262145.f_30077;
 						break;
 					
-					case joaat("component_at_ar_supp"):
+					case joaat("component_at_ar_flsh"):
 						iVar0 = Global_262145.f_30078;
+						break;
+					
+					case joaat("component_at_ar_supp"):
+						iVar0 = Global_262145.f_30079;
 						break;
 				}
 				break;

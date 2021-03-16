@@ -366,12 +366,12 @@ int func_10(int iParam0)
 
 bool func_11()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 5);
+	return MISC::IS_BIT_SET(Global_1689733, 5);
 }
 
 bool func_12()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 19);
+	return MISC::IS_BIT_SET(Global_1689733, 19);
 }
 
 void func_13(int iParam0)
@@ -518,7 +518,7 @@ void func_20(int iParam0)
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar2);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
-							if (Global_2462245)
+							if (Global_2462473)
 							{
 								if (iVar1 == 14)
 								{
@@ -786,7 +786,7 @@ void func_26(int iParam0, var uParam1)
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))
 		{
 			Global_1630317[PLAYER::PLAYER_ID() /*595*/].f_11.f_26 = iParam0;
-			Global_2540384.f_5188.f_222 = uParam1;
+			Global_2540612.f_5188.f_222 = uParam1;
 			func_27(func_28(iParam0));
 		}
 	}
@@ -1106,7 +1106,7 @@ int func_46(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440049.f_3[iVar0])
+				if (!Global_2440277.f_3[iVar0])
 				{
 					return 0;
 				}

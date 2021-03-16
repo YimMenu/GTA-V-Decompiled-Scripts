@@ -271,7 +271,7 @@ void __EntryFunction__()
 	{
 		Global_4456448.f_2 = uLocal_225;
 	}
-	Global_1655251 = 0;
+	Global_1655252 = 0;
 	while (true)
 	{
 		if (iLocal_224 != Global_4456448)
@@ -307,8 +307,8 @@ void __EntryFunction__()
 				}
 				HUD::DISABLE_FRONTEND_THIS_FRAME();
 				func_16(&Local_104);
+				Global_1655253 = 0;
 				Global_1655252 = 0;
-				Global_1655251 = 0;
 				iLocal_222 = 4;
 				if (!func_15())
 				{
@@ -373,10 +373,10 @@ void __EntryFunction__()
 						iLocal_222 = 2;
 					}
 				}
-				if (Global_1655251 == 1)
+				if (Global_1655252 == 1)
 				{
 					iLocal_222 = 3;
-					Global_1655251 = 0;
+					Global_1655252 = 0;
 				}
 				break;
 			

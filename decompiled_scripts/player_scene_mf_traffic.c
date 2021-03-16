@@ -459,7 +459,7 @@ int func_16()
 	{
 		return 1;
 	}
-	if (Global_2440049.f_74)
+	if (Global_2440277.f_74)
 	{
 		return 1;
 	}

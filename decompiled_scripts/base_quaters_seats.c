@@ -682,7 +682,7 @@ int func_20(int iParam0)
 
 int func_21()
 {
-	if (Global_2440049.f_1267.f_5 == -1)
+	if (Global_2440277.f_1267.f_5 == -1)
 	{
 		return 0;
 	}
@@ -769,18 +769,18 @@ void func_28(bool bParam0)
 	{
 		if (func_29())
 		{
-			Global_2451787.f_40 = 1;
+			Global_2452015.f_40 = 1;
 		}
 	}
 	else
 	{
-		Global_2451787.f_40 = 0;
+		Global_2452015.f_40 = 0;
 	}
 }
 
 bool func_29()
 {
-	return MISC::IS_BIT_SET(Global_2451787.f_2, 11);
+	return MISC::IS_BIT_SET(Global_2452015.f_2, 11);
 }
 
 void func_30()
@@ -885,7 +885,7 @@ void func_34(bool bParam0, bool bParam1)
 
 bool func_35()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 5);
+	return MISC::IS_BIT_SET(Global_1689733, 5);
 }
 
 int func_36(int iParam0)
@@ -921,7 +921,7 @@ int func_36(int iParam0)
 
 bool func_37()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 19);
+	return MISC::IS_BIT_SET(Global_1689733, 19);
 }
 
 Vector3 func_38(var uParam0)
@@ -1241,7 +1241,7 @@ int func_48(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440049.f_3[iVar0])
+				if (!Global_2440277.f_3[iVar0])
 				{
 					return 0;
 				}
@@ -1401,7 +1401,7 @@ int func_61()
 	{
 		return 1;
 	}
-	if (Global_2464493)
+	if (Global_2464721)
 	{
 		return 1;
 	}
@@ -1451,7 +1451,7 @@ int func_62()
 
 int func_63()
 {
-	switch (Global_2464595)
+	switch (Global_2464823)
 	{
 		case 0:
 			return joaat("freemode");
@@ -1468,7 +1468,7 @@ int func_64()
 
 bool func_65()
 {
-	return Global_2451787.f_696;
+	return Global_2452015.f_696;
 }
 
 int func_66(int iParam0)
@@ -1482,12 +1482,12 @@ int func_66(int iParam0)
 
 bool func_67()
 {
-	return Global_2462250;
+	return Global_2462478;
 }
 
 bool func_68()
 {
-	return Global_2451787.f_691;
+	return Global_2452015.f_691;
 }
 
 void func_69(var uParam0)

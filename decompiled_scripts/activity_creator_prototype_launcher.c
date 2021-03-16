@@ -223,7 +223,7 @@ int func_4(int iParam0)
 
 bool func_5()
 {
-	return Global_2451787.f_691;
+	return Global_2452015.f_691;
 }
 
 bool func_6()

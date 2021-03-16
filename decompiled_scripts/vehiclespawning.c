@@ -201,7 +201,7 @@ int func_7()
 	{
 		return 1;
 	}
-	if (Global_2464493)
+	if (Global_2464721)
 	{
 		return 1;
 	}
@@ -251,7 +251,7 @@ int func_8()
 
 int func_9()
 {
-	switch (Global_2464595)
+	switch (Global_2464823)
 	{
 		case 0:
 			return joaat("freemode");
@@ -268,7 +268,7 @@ int func_10()
 
 bool func_11()
 {
-	return Global_2451787.f_696;
+	return Global_2452015.f_696;
 }
 
 int func_12(int iParam0)
@@ -282,12 +282,12 @@ int func_12(int iParam0)
 
 bool func_13()
 {
-	return Global_2462250;
+	return Global_2462478;
 }
 
 bool func_14()
 {
-	return Global_2451787.f_691;
+	return Global_2452015.f_691;
 }
 
 void func_15(var uParam0)
@@ -401,7 +401,7 @@ int func_18(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440049.f_3[iVar0])
+				if (!Global_2440277.f_3[iVar0])
 				{
 					return 0;
 				}

@@ -678,7 +678,7 @@ bool func_3()
 	{
 		return SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("stripclub")) == 0;
 	}
-	if (func_4(PLAYER::PLAYER_ID()) == 185 && Global_2540384.f_4641 == 2)
+	if (func_4(PLAYER::PLAYER_ID()) == 185 && Global_2540612.f_4641 == 2)
 	{
 		return 1;
 	}
@@ -1680,13 +1680,13 @@ int func_51(int iParam0)
 		iVar1 = func_52();
 		if (iVar1 > -1)
 		{
-			Global_2551544 = 0;
+			Global_2551772 = 0;
 			iVar0 = iVar1;
 		}
 		else
 		{
 			iVar0 = 0;
-			Global_2551544 = 1;
+			Global_2551772 = 1;
 		}
 	}
 	return iVar0;
@@ -2305,15 +2305,15 @@ void func_71()
 	}
 	if (Global_21011)
 	{
-		MemCopy(&(Global_1703978.f_1), {Global_20624}, 4);
-		Global_1703978 = Global_6866;
-		Global_1703978.f_6 = Global_21015;
+		MemCopy(&(Global_1703981.f_1), {Global_20624}, 4);
+		Global_1703981 = Global_6866;
+		Global_1703981.f_6 = Global_21015;
 	}
 }
 
 int func_72()
 {
-	if (!Global_262145.f_28160)
+	if (!Global_262145.f_28161)
 	{
 		return 0;
 	}
@@ -2696,7 +2696,7 @@ int func_94()
 {
 	if (bLocal_339)
 	{
-		if (func_4(PLAYER::PLAYER_ID()) == 185 && Global_2540384.f_4641 == 2)
+		if (func_4(PLAYER::PLAYER_ID()) == 185 && Global_2540612.f_4641 == 2)
 		{
 			return 0;
 		}
@@ -3012,7 +3012,7 @@ int func_108()
 	{
 		return 1;
 	}
-	if (Global_2464493)
+	if (Global_2464721)
 	{
 		return 1;
 	}
@@ -3062,7 +3062,7 @@ int func_109()
 
 int func_110()
 {
-	switch (Global_2464595)
+	switch (Global_2464823)
 	{
 		case 0:
 			return joaat("freemode");
@@ -3074,7 +3074,7 @@ int func_110()
 
 bool func_111()
 {
-	return Global_2451787.f_696;
+	return Global_2452015.f_696;
 }
 
 int func_112(int iParam0)
@@ -3088,12 +3088,12 @@ int func_112(int iParam0)
 
 bool func_113()
 {
-	return Global_2462250;
+	return Global_2462478;
 }
 
 bool func_114()
 {
-	return Global_2451787.f_691;
+	return Global_2452015.f_691;
 }
 
 void func_115(var uParam0)
@@ -3207,7 +3207,7 @@ int func_118(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440049.f_3[iVar0])
+				if (!Global_2440277.f_3[iVar0])
 				{
 					return 0;
 				}

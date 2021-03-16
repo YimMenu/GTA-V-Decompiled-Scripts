@@ -239,7 +239,7 @@ int func_9(int iParam0)
 			return 1;
 		}
 	}
-	if (MISC::IS_BIT_SET(Global_2425869[iParam0 /*443*/].f_199, 2))
+	if (MISC::IS_BIT_SET(Global_2426097[iParam0 /*443*/].f_199, 2))
 	{
 		return 1;
 	}
@@ -489,7 +489,7 @@ void func_26(bool bParam0, bool bParam1)
 
 bool func_27()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 5);
+	return MISC::IS_BIT_SET(Global_1689733, 5);
 }
 
 int func_28(int iParam0)
@@ -525,7 +525,7 @@ int func_28(int iParam0)
 
 bool func_29()
 {
-	return MISC::IS_BIT_SET(Global_1689730, 19);
+	return MISC::IS_BIT_SET(Global_1689733, 19);
 }
 
 void func_30(bool bParam0)
@@ -562,7 +562,7 @@ void func_31(int iParam0, int iParam1)
 
 void func_32()
 {
-	Global_2540384.f_4595 = 0;
+	Global_2540612.f_4595 = 0;
 }
 
 int func_33()
@@ -590,7 +590,7 @@ int func_34()
 	{
 		return 1;
 	}
-	if (Global_2464493)
+	if (Global_2464721)
 	{
 		return 1;
 	}
@@ -640,7 +640,7 @@ int func_35()
 
 int func_36()
 {
-	switch (Global_2464595)
+	switch (Global_2464823)
 	{
 		case 0:
 			return joaat("freemode");
@@ -657,7 +657,7 @@ int func_37()
 
 bool func_38()
 {
-	return Global_2451787.f_696;
+	return Global_2452015.f_696;
 }
 
 int func_39(int iParam0)
@@ -671,12 +671,12 @@ int func_39(int iParam0)
 
 bool func_40()
 {
-	return Global_2462250;
+	return Global_2462478;
 }
 
 bool func_41()
 {
-	return Global_2451787.f_691;
+	return Global_2452015.f_691;
 }
 
 void func_42(var uParam0)
@@ -790,7 +790,7 @@ int func_45(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440049.f_3[iVar0])
+				if (!Global_2440277.f_3[iVar0])
 				{
 					return 0;
 				}

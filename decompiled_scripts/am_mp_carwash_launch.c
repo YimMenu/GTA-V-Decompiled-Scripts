@@ -222,7 +222,7 @@ int func_7()
 {
 	int iVar0;
 	
-	iVar0 = Global_2440049;
+	iVar0 = Global_2440277;
 	if (MISC::IS_BIT_SET(Global_1627436[iVar0 /*90*/].f_14, 0) && Global_1627436[iVar0 /*90*/].f_23 == 2)
 	{
 		return 1;

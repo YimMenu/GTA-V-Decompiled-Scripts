@@ -292,7 +292,7 @@ void func_2()
 
 bool func_3()
 {
-	return Global_1694995;
+	return Global_1694998;
 }
 
 int func_4()
@@ -431,7 +431,7 @@ int func_10(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440049.f_3[iVar0])
+				if (!Global_2440277.f_3[iVar0])
 				{
 					return 0;
 				}
@@ -743,9 +743,9 @@ int func_29(int iParam0)
 	{
 		if (func_10(iParam0, 1, 1))
 		{
-			if (Global_2425869[iParam0 /*443*/].f_314.f_6 != -1)
+			if (Global_2426097[iParam0 /*443*/].f_314.f_6 != -1)
 			{
-				return func_30(Global_2425869[iParam0 /*443*/].f_314.f_6) == 11;
+				return func_30(Global_2426097[iParam0 /*443*/].f_314.f_6) == 11;
 			}
 		}
 	}
@@ -977,12 +977,12 @@ int func_31()
 
 bool func_32(int iParam0)
 {
-	return Global_2425869[iParam0 /*443*/].f_119 == 7;
+	return Global_2426097[iParam0 /*443*/].f_119 == 7;
 }
 
 bool func_33(int iParam0)
 {
-	return Global_2425869[iParam0 /*443*/].f_119 == 2;
+	return Global_2426097[iParam0 /*443*/].f_119 == 2;
 }
 
 int func_34()
@@ -1001,7 +1001,7 @@ int func_34()
 	{
 		return 1;
 	}
-	if (Global_2464493)
+	if (Global_2464721)
 	{
 		return 1;
 	}
@@ -1051,7 +1051,7 @@ int func_35()
 
 int func_36()
 {
-	switch (Global_2464595)
+	switch (Global_2464823)
 	{
 		case 0:
 			return joaat("freemode");
@@ -1068,7 +1068,7 @@ int func_37()
 
 bool func_38()
 {
-	return Global_2451787.f_696;
+	return Global_2452015.f_696;
 }
 
 int func_39(int iParam0)
@@ -1082,12 +1082,12 @@ int func_39(int iParam0)
 
 bool func_40()
 {
-	return Global_2462250;
+	return Global_2462478;
 }
 
 bool func_41()
 {
-	return Global_2451787.f_691;
+	return Global_2452015.f_691;
 }
 
 void func_42(var uParam0)
@@ -1211,7 +1211,7 @@ void func_46()
 	{
 		PLAYER::FORCE_CLEANUP_FOR_ALL_THREADS_WITH_THIS_NAME("pb_prostitute", 1);
 	}
-	Global_2540384.f_4 = 0;
+	Global_2540612.f_4 = 0;
 	func_47();
 }
 
@@ -1222,7 +1222,7 @@ void func_47()
 
 void func_48()
 {
-	Global_2440049.f_1267.f_10 = 0;
+	Global_2440277.f_1267.f_10 = 0;
 }
 
 int func_49(int iParam0)

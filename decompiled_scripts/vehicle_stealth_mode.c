@@ -168,12 +168,12 @@ void func_7(bool bParam0, bool bParam1)
 		if (bParam0)
 		{
 			Global_2416085.f_1598 = SCRIPT::GET_ID_OF_THIS_THREAD();
-			MISC::SET_BIT(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_71.f_2), 23);
+			MISC::SET_BIT(&(Global_2426097[PLAYER::PLAYER_ID() /*443*/].f_71.f_2), 23);
 		}
 		else
 		{
 			Global_2416085.f_1598 = -1;
-			MISC::CLEAR_BIT(&(Global_2425869[PLAYER::PLAYER_ID() /*443*/].f_71.f_2), 23);
+			MISC::CLEAR_BIT(&(Global_2426097[PLAYER::PLAYER_ID() /*443*/].f_71.f_2), 23);
 		}
 	}
 	else if (!bParam1)
@@ -1137,14 +1137,14 @@ int func_60(int iParam0)
 {
 	if (iParam0 > -1)
 	{
-		if (Global_2425869[iParam0 /*443*/].f_240 > -1)
+		if (Global_2426097[iParam0 /*443*/].f_240 > -1)
 		{
-			if (func_61(Global_2425869[iParam0 /*443*/].f_240) == 4)
+			if (func_61(Global_2426097[iParam0 /*443*/].f_240) == 4)
 			{
 				return 1;
 			}
 		}
-		if (MISC::IS_BIT_SET(Global_2425869[iParam0 /*443*/].f_199, 4))
+		if (MISC::IS_BIT_SET(Global_2426097[iParam0 /*443*/].f_199, 4))
 		{
 			return 1;
 		}
@@ -1383,7 +1383,7 @@ int func_62(int iParam0)
 {
 	if (iParam0 != func_64() && func_63(iParam0, 1, 1))
 	{
-		return MISC::IS_BIT_SET(Global_2425869[iParam0 /*443*/].f_314, 3);
+		return MISC::IS_BIT_SET(Global_2426097[iParam0 /*443*/].f_314, 3);
 	}
 	return 0;
 }
@@ -1406,7 +1406,7 @@ int func_63(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440049.f_3[iVar0])
+				if (!Global_2440277.f_3[iVar0])
 				{
 					return 0;
 				}
@@ -1454,7 +1454,7 @@ int func_66(int iParam0, bool bParam1, bool bParam2)
 	}
 	if (bParam2)
 	{
-		if (Global_2425869[iParam0 /*443*/].f_314.f_6 != -1)
+		if (Global_2426097[iParam0 /*443*/].f_314.f_6 != -1)
 		{
 			return 1;
 		}
@@ -1711,7 +1711,7 @@ int func_82()
 	{
 		return 1;
 	}
-	if (Global_2464493)
+	if (Global_2464721)
 	{
 		return 1;
 	}
@@ -1761,7 +1761,7 @@ int func_83()
 
 int func_84()
 {
-	switch (Global_2464595)
+	switch (Global_2464823)
 	{
 		case 0:
 			return joaat("freemode");
@@ -1778,7 +1778,7 @@ int func_85()
 
 bool func_86()
 {
-	return Global_2451787.f_696;
+	return Global_2452015.f_696;
 }
 
 int func_87(int iParam0)
@@ -1792,12 +1792,12 @@ int func_87(int iParam0)
 
 bool func_88()
 {
-	return Global_2462250;
+	return Global_2462478;
 }
 
 bool func_89()
 {
-	return Global_2451787.f_691;
+	return Global_2452015.f_691;
 }
 
 void func_90(var uParam0)
