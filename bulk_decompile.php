@@ -1,5 +1,5 @@
 <?php
-$proc_limit = 8;
+$proc_limit = 20;
 $out_dir = "decompiled_scripts";
 $native_tables_dir = "native_tables";
 
