@@ -599,7 +599,7 @@ int func_4(int iParam0, bool bParam1)
 					iVar3 = (iVar2 - 1);
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iVar0, iVar3, false))
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, 0) == iParam0)
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, false) == iParam0)
 						{
 							return iVar3;
 						}
@@ -1561,7 +1561,7 @@ int func_60(int iParam0)
 	}
 	if (ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("btype") || ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("btype3"))
 	{
-		if (((((func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 3, 0)) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 4, 0))) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 5, 0))) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 6, 0))) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 7, 0))) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 8, 0)))
+		if (((((func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 3, false)) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 4, false))) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 5, false))) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 6, false))) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 7, false))) || func_28(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 8, false)))
 		{
 			return 1;
 		}

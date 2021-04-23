@@ -889,9 +889,9 @@ void func_20(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -1115,7 +1115,7 @@ void func_25(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_26(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_26(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -2071,7 +2071,7 @@ int func_75(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -2377,7 +2377,7 @@ void func_80()
 	func_81("MPInvPersMessages", "facade", 0.5f, 0.5f, 1f, 1f, 0f, Local_166.f_1765);
 }
 
-void func_81(char* sParam0, int iParam1, float fParam2, float fParam3, float fParam4, float fParam5, int iParam6, struct<4> Param7)
+void func_81(char* sParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, struct<4> Param7)
 {
 	int iVar0;
 	
@@ -2389,7 +2389,7 @@ void func_81(char* sParam0, int iParam1, float fParam2, float fParam3, float fPa
 	fParam3 = (SYSTEM::TO_FLOAT(iVar0) * (1f / IntToFloat(iLocal_144)));
 	iVar0 = SYSTEM::ROUND(((fParam5 * IntToFloat(iLocal_144)) / 4f)) * 4;
 	fParam5 = (SYSTEM::TO_FLOAT(iVar0) * (1f / IntToFloat(iLocal_144)));
-	GRAPHICS::_0x2D3B147AFAD49DE0(sParam0, iParam1, func_96(fParam2), fParam3, (fParam4 * fLocal_142), fParam5, iParam6, Param7, Param7.f_1, Param7.f_2, Param7.f_3, 0);
+	GRAPHICS::_0x2D3B147AFAD49DE0(sParam0, sParam1, func_96(fParam2), fParam3, (fParam4 * fLocal_142), fParam5, fParam6, Param7, Param7.f_1, Param7.f_2, Param7.f_3, 0);
 }
 
 void func_82()
@@ -2488,11 +2488,11 @@ void func_83(int iParam0)
 	}
 }
 
-void func_84(char* sParam0, int iParam1, struct<2> Param2, struct<2> Param4, int iParam6, struct<4> Param7)
+void func_84(char* sParam0, char* sParam1, struct<2> Param2, struct<2> Param4, float fParam6, struct<4> Param7)
 {
 	Param2 = { func_85(Param2) };
 	Param4 = { func_85(Param4) };
-	func_81(sParam0, iParam1, Param2, Param2.f_1, Param4, Param4.f_1, iParam6, Param7);
+	func_81(sParam0, sParam1, Param2, Param2.f_1, Param4, Param4.f_1, fParam6, Param7);
 }
 
 struct<2> func_85(struct<2> Param0)
@@ -4739,13 +4739,13 @@ bool func_124(int iParam0, bool bParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar6 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
+		iVar6 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
 		iVar1 = ((iParam0 - 3111) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 3111)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar6, bParam1, iVar1, bParam3);
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar7 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar7 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 		iVar1 = ((iParam0 - 2919) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 2919)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar7, bParam1, iVar1, bParam3);
 	}
@@ -5795,9 +5795,9 @@ void func_173(struct<4> Param0)
 	func_174(func_16(), &Var5, Var3, Var3.f_1, 0.104167f, 0.059259f, (IntToFloat(Local_166.f_2368.f_325) * -15f), Param0);
 }
 
-void func_174(int iParam0, int iParam1, float fParam2, int iParam3, float fParam4, int iParam5, int iParam6, struct<4> Param7)
+void func_174(char* sParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, struct<4> Param7)
 {
-	GRAPHICS::_0x2D3B147AFAD49DE0(iParam0, iParam1, func_175(fParam2), iParam3, (fParam4 * fLocal_142), iParam5, iParam6, Param7, Param7.f_1, Param7.f_2, Param7.f_3, 0);
+	GRAPHICS::_0x2D3B147AFAD49DE0(sParam0, sParam1, func_175(fParam2), fParam3, (fParam4 * fLocal_142), fParam5, fParam6, Param7, Param7.f_1, Param7.f_2, Param7.f_3, 0);
 }
 
 float func_175(float fParam0)
@@ -5906,7 +5906,7 @@ void func_182()
 	int iVar0;
 	struct<8> Var1;
 	struct<2> Var17;
-	int iVar19;
+	float fVar19;
 	float fVar20;
 	
 	iVar0 = 0;
@@ -5930,7 +5930,7 @@ void func_182()
 				StringIntConCat(&Var1, Local_166.f_2368.f_3[iVar0 /*14*/].f_12 + 1, 64);
 			}
 			Var17 = { Local_166.f_1734[Local_166.f_2368.f_3[iVar0 /*14*/] /*5*/].f_3 };
-			iVar19 = Local_166.f_2368.f_3[iVar0 /*14*/].f_9;
+			fVar19 = Local_166.f_2368.f_3[iVar0 /*14*/].f_9;
 			if (Local_166.f_2368.f_3[iVar0 /*14*/] == 3)
 			{
 				fVar20 = (SYSTEM::TO_FLOAT((NETWORK::GET_NETWORK_TIME() - Local_166.f_2368.f_3[iVar0 /*14*/].f_11)) / (IntToFloat(Local_166.f_1734[Local_166.f_2368.f_3[iVar0 /*14*/] /*5*/].f_2) * 0.75f));
@@ -5941,7 +5941,7 @@ void func_182()
 				Var17 = func_154((Var17 / 2f), Var17, fVar20, 1);
 				Var17.f_1 = func_154((Var17.f_1 / 2f), Var17.f_1, fVar20, 1);
 			}
-			func_81("MPInvPersCommon", &Var1, Local_166.f_2368.f_3[iVar0 /*14*/].f_5, Local_166.f_2368.f_3[iVar0 /*14*/].f_5.f_1, Var17, Var17.f_1, iVar19, Local_166.f_1765);
+			func_81("MPInvPersCommon", &Var1, Local_166.f_2368.f_3[iVar0 /*14*/].f_5, Local_166.f_2368.f_3[iVar0 /*14*/].f_5.f_1, Var17, Var17.f_1, fVar19, Local_166.f_1765);
 		}
 		iVar0++;
 	}
@@ -5957,7 +5957,7 @@ void func_183(int iParam0)
 	float fVar9;
 	struct<2> Var10;
 	float fVar12;
-	int iVar13;
+	float fVar13;
 	struct<4> Var14;
 	struct<8> Var18;
 	
@@ -5979,16 +5979,16 @@ void func_183(int iParam0)
 	Var6 = (((Var6 * 1920f) - ((1920f - 1080f) / 2f)) / 1080f);
 	Var10 = (((Var10 * 1920f) - ((1920f - 1080f) / 2f)) / 1080f);
 	fVar12 = (((Local_166.f_2368.f_3[iParam0 /*14*/].f_1 * 1920f) - ((1920f - 1080f) / 2f)) / 1080f);
-	iVar13 = MISC::ABSF((Var10 - fVar12));
+	fVar13 = MISC::ABSF((Var10 - fVar12));
 	Var14 = { Local_166.f_1765.f_16 };
 	Var14.f_3 = SYSTEM::ROUND((MISC::ABSF(((SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) * 0.1f) % 1f)) * 100f)) + 155;
-	func_174("MPInvPersCommon", "Beam_Glow_Tapered", Var6, Var6.f_1, (Var0.f_1 / 2f), iVar13, (Local_166.f_2368.f_3[iParam0 /*14*/].f_9 + 90f), Var14);
+	func_174("MPInvPersCommon", "Beam_Glow_Tapered", Var6, Var6.f_1, (Var0.f_1 / 2f), fVar13, (Local_166.f_2368.f_3[iParam0 /*14*/].f_9 + 90f), Var14);
 	Var14.f_3 = SYSTEM::ROUND((MISC::ABSF(MISC::TAN((SYSTEM::TO_FLOAT((NETWORK::GET_NETWORK_TIME() + Local_166.f_2368.f_3[iParam0 /*14*/].f_11)) * 0.5f))) * 180f)) + 75;
-	func_174("MPInvPersCommon", "beam_middle", Var6, Var6.f_1, Var0.f_1, iVar13, (Local_166.f_2368.f_3[iParam0 /*14*/].f_9 + 90f), Var14);
+	func_174("MPInvPersCommon", "beam_middle", Var6, Var6.f_1, Var0.f_1, fVar13, (Local_166.f_2368.f_3[iParam0 /*14*/].f_9 + 90f), Var14);
 	Var14 = { Local_166.f_1765 };
 	func_108(&Var14, 255, 255, 255, 255);
 	Var14.f_3 = SYSTEM::ROUND((MISC::ABSF(SYSTEM::SIN(SYSTEM::TO_FLOAT((NETWORK::GET_NETWORK_TIME() + Local_166.f_2368.f_3[iParam0 /*14*/].f_11)))) * 155f)) + 100;
-	func_174("MPInvPersCommon", "beam_top", Var6, Var6.f_1, Var0.f_1, iVar13, (Local_166.f_2368.f_3[iParam0 /*14*/].f_9 + 90f), Var14);
+	func_174("MPInvPersCommon", "beam_top", Var6, Var6.f_1, Var0.f_1, fVar13, (Local_166.f_2368.f_3[iParam0 /*14*/].f_9 + 90f), Var14);
 	Var14 = { Local_166.f_1765 };
 	if ((Local_166.f_2368.f_3[iParam0 /*14*/].f_3 > 0.15625f && Local_166.f_2368.f_3[iParam0 /*14*/].f_3 < (1f - 0.15625f)) && Local_166.f_2368.f_3[iParam0 /*14*/].f_3.f_1 > 0f)
 	{
@@ -6043,7 +6043,7 @@ void func_188()
 	struct<2> Var3;
 	struct<4> Var5;
 	struct<8> Var9;
-	int iVar25;
+	float fVar25;
 	struct<2> Var26;
 	struct<2> Var28;
 	
@@ -6082,23 +6082,23 @@ void func_188()
 				{
 					StringIntConCat(&Var9, Local_166.f_1801[iVar1 /*14*/].f_1 + 1, 64);
 				}
-				iVar25 = 0f;
+				fVar25 = 0f;
 				Var26 = { Local_166.f_1801[iVar1 /*14*/].f_3 };
 				if (Local_166.f_753[Local_166.f_1801[iVar1 /*14*/] /*28*/] == 5 && Local_166.f_1801[iVar1 /*14*/].f_10 == 2)
 				{
-					iVar25 = (fVar0 * 20f);
+					fVar25 = (fVar0 * 20f);
 					Var28 = { Var26 };
 					Var28.f_1 = (Var28.f_1 - ((Var3.f_1 / 2f) + (0.037037f / 2f)));
 					Var28 = { func_187(Var28) };
-					Var28 = { func_177(func_187(Var26), Var28, iVar25) };
+					Var28 = { func_177(func_187(Var26), Var28, fVar25) };
 					Var28 = { func_85(Var28) };
-					func_81(sVar2, "parachute", Var28, Var28.f_1, 0.020833f, 0.037037f, iVar25, Var5);
+					func_81(sVar2, "parachute", Var28, Var28.f_1, 0.020833f, 0.037037f, fVar25, Var5);
 				}
 				if (Local_166.f_753[Local_166.f_1801[iVar1 /*14*/] /*28*/] == 3 && Local_166.f_1801[iVar1 /*14*/].f_11 & 1 != 0)
 				{
 					Var26 = { func_143(Var26, func_189()) };
 				}
-				func_81(sVar2, &Var9, Var26, Var26.f_1, Var3, Var3.f_1, iVar25, Var5);
+				func_81(sVar2, &Var9, Var26, Var26.f_1, Var3, Var3.f_1, fVar25, Var5);
 			}
 			iVar1++;
 		}

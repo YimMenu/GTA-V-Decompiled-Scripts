@@ -44,7 +44,7 @@ void __EntryFunction__()
 	Global_1653113 = -1;
 	Global_1653116 = joaat("s_m_y_blackops_01");
 	Global_1653117 = joaat("patriot");
-	Global_1653118 = joaat("WEAPON_MICROSMG");
+	Global_1653118 = joaat("weapon_microsmg");
 	Global_1654387 = -1;
 	Global_1654394 = -1;
 	Global_1663054 = -1f;

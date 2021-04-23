@@ -597,19 +597,19 @@ int func_15()
 			switch (MISC::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
-					return joaat("WEAPON_COMBATPISTOL");
+					return joaat("weapon_combatpistol");
 				
 				case 1:
-					return joaat("WEAPON_PUMPSHOTGUN");
+					return joaat("weapon_pumpshotgun");
 				
 				case 2:
-					return joaat("WEAPON_MICROSMG");
+					return joaat("weapon_microsmg");
 				
 				case 3:
-					return joaat("WEAPON_MG");
+					return joaat("weapon_mg");
 				
 				case 4:
-					return joaat("WEAPON_ASSAULTRIFLE");
+					return joaat("weapon_assaultrifle");
 				
 				default:
 			}
@@ -620,19 +620,19 @@ int func_15()
 			switch (MISC::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
-					return joaat("WEAPON_PISTOL");
+					return joaat("weapon_pistol");
 				
 				case 1:
-					return joaat("WEAPON_PUMPSHOTGUN");
+					return joaat("weapon_pumpshotgun");
 				
 				case 2:
-					return joaat("WEAPON_MICROSMG");
+					return joaat("weapon_microsmg");
 				
 				case 3:
-					return joaat("WEAPON_MG");
+					return joaat("weapon_mg");
 				
 				case 4:
-					return joaat("WEAPON_ASSAULTRIFLE");
+					return joaat("weapon_assaultrifle");
 				
 				default:
 			}
@@ -643,19 +643,19 @@ int func_15()
 			switch (MISC::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
-					return joaat("WEAPON_COMBATPISTOL");
+					return joaat("weapon_combatpistol");
 				
 				case 1:
-					return joaat("WEAPON_SAWNOFFSHOTGUN");
+					return joaat("weapon_sawnoffshotgun");
 				
 				case 2:
-					return joaat("WEAPON_SMG");
+					return joaat("weapon_smg");
 				
 				case 3:
-					return joaat("WEAPON_MG");
+					return joaat("weapon_mg");
 				
 				case 4:
-					return joaat("WEAPON_ASSAULTRIFLE");
+					return joaat("weapon_assaultrifle");
 				
 				default:
 			}
@@ -666,19 +666,19 @@ int func_15()
 			switch (MISC::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
-					return joaat("WEAPON_PISTOL");
+					return joaat("weapon_pistol");
 				
 				case 1:
-					return joaat("WEAPON_PUMPSHOTGUN");
+					return joaat("weapon_pumpshotgun");
 				
 				case 2:
-					return joaat("WEAPON_ADVANCEDRIFLE");
+					return joaat("weapon_advancedrifle");
 				
 				case 3:
-					return joaat("WEAPON_MG");
+					return joaat("weapon_mg");
 				
 				case 4:
-					return joaat("WEAPON_CARBINERIFLE");
+					return joaat("weapon_carbinerifle");
 				
 				default:
 			}
@@ -689,19 +689,19 @@ int func_15()
 			switch (MISC::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
-					return joaat("WEAPON_PISTOL");
+					return joaat("weapon_pistol");
 				
 				case 1:
-					return joaat("WEAPON_SAWNOFFSHOTGUN");
+					return joaat("weapon_sawnoffshotgun");
 				
 				case 2:
-					return joaat("WEAPON_SMG");
+					return joaat("weapon_smg");
 				
 				case 3:
-					return joaat("WEAPON_MG");
+					return joaat("weapon_mg");
 				
 				case 4:
-					return joaat("WEAPON_CARBINERIFLE");
+					return joaat("weapon_carbinerifle");
 				
 				default:
 			}
@@ -712,19 +712,19 @@ int func_15()
 			switch (MISC::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
-					return joaat("WEAPON_COMBATPISTOL");
+					return joaat("weapon_combatpistol");
 				
 				case 1:
-					return joaat("WEAPON_SAWNOFFSHOTGUN");
+					return joaat("weapon_sawnoffshotgun");
 				
 				case 2:
-					return joaat("WEAPON_MICROSMG");
+					return joaat("weapon_microsmg");
 				
 				case 3:
-					return joaat("WEAPON_MG");
+					return joaat("weapon_mg");
 				
 				case 4:
-					return joaat("WEAPON_COMBATMG");
+					return joaat("weapon_combatmg");
 				
 				default:
 			}
@@ -735,19 +735,19 @@ int func_15()
 			switch (MISC::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
-					return joaat("WEAPON_PISTOL");
+					return joaat("weapon_pistol");
 				
 				case 1:
-					return joaat("WEAPON_PUMPSHOTGUN");
+					return joaat("weapon_pumpshotgun");
 				
 				case 2:
-					return joaat("WEAPON_MICROSMG");
+					return joaat("weapon_microsmg");
 				
 				case 3:
-					return joaat("WEAPON_MG");
+					return joaat("weapon_mg");
 				
 				case 4:
-					return joaat("WEAPON_ASSAULTRIFLE");
+					return joaat("weapon_assaultrifle");
 				
 				default:
 			}
@@ -758,19 +758,19 @@ int func_15()
 			switch (MISC::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
-					return joaat("WEAPON_PISTOL");
+					return joaat("weapon_pistol");
 				
 				case 1:
-					return joaat("WEAPON_SAWNOFFSHOTGUN");
+					return joaat("weapon_sawnoffshotgun");
 				
 				case 2:
-					return joaat("WEAPON_MICROSMG");
+					return joaat("weapon_microsmg");
 				
 				case 3:
-					return joaat("WEAPON_MG");
+					return joaat("weapon_mg");
 				
 				case 4:
-					return joaat("WEAPON_ASSAULTRIFLE");
+					return joaat("weapon_assaultrifle");
 				
 				default:
 			}
@@ -780,25 +780,25 @@ int func_15()
 			switch (MISC::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
-					return joaat("WEAPON_PISTOL");
+					return joaat("weapon_pistol");
 				
 				case 1:
-					return joaat("WEAPON_PUMPSHOTGUN");
+					return joaat("weapon_pumpshotgun");
 				
 				case 2:
-					return joaat("WEAPON_SMG");
+					return joaat("weapon_smg");
 				
 				case 3:
-					return joaat("WEAPON_COMBATMG");
+					return joaat("weapon_combatmg");
 				
 				case 4:
-					return joaat("WEAPON_CARBINERIFLE");
+					return joaat("weapon_carbinerifle");
 				
 				default:
 			}
 			break;
 	}
-	return joaat("WEAPON_PISTOL");
+	return joaat("weapon_pistol");
 }
 
 int func_16(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, bool bParam5, bool bParam6, bool bParam7)
@@ -1002,7 +1002,7 @@ int func_22(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 				}
 				if (bParam13)
 				{
-					NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
+					NETWORK::SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
 				}
 			}
 			VEHICLE::SET_VEHICLE_IS_STOLEN(iVar1, bParam9);
@@ -4204,7 +4204,7 @@ void func_157(int iParam0)
 	if (func_183())
 	{
 		Global_1590682[PLAYER::PLAYER_ID() /*883*/].f_211.f_5 = iParam0;
-		func_158(joaat("MPPLY_GLOBALXP"), iParam0);
+		func_158(joaat("mpply_globalxp"), iParam0);
 	}
 }
 
@@ -4227,7 +4227,7 @@ int func_159(int iParam0)
 		{
 			if (iParam0 == PLAYER::PLAYER_ID())
 			{
-				return func_160(joaat("MPPLY_GLOBALXP"));
+				return func_160(joaat("mpply_globalxp"));
 			}
 			else
 			{
@@ -4236,7 +4236,7 @@ int func_159(int iParam0)
 		}
 		else
 		{
-			return func_160(joaat("MPPLY_GLOBALXP"));
+			return func_160(joaat("mpply_globalxp"));
 		}
 	}
 	return 0;
@@ -4269,27 +4269,27 @@ void func_161(int iParam0)
 			if (iVar13 == 0)
 			{
 				func_163(&Global_1388052, iParam0);
-				func_162(joaat("MPPLY_CREW_LOCAL_XP_0"), Global_1388052);
+				func_162(joaat("mpply_crew_local_xp_0"), Global_1388052);
 			}
 			else if (iVar13 == 1)
 			{
 				func_163(&Global_1388053, iParam0);
-				func_162(joaat("MPPLY_CREW_LOCAL_XP_1"), Global_1388053);
+				func_162(joaat("mpply_crew_local_xp_1"), Global_1388053);
 			}
 			else if (iVar13 == 2)
 			{
 				func_163(&Global_1388054, iParam0);
-				func_162(joaat("MPPLY_CREW_LOCAL_XP_2"), Global_1388054);
+				func_162(joaat("mpply_crew_local_xp_2"), Global_1388054);
 			}
 			else if (iVar13 == 3)
 			{
 				func_163(&Global_1388055, iParam0);
-				func_162(joaat("MPPLY_CREW_LOCAL_XP_3"), Global_1388055);
+				func_162(joaat("mpply_crew_local_xp_3"), Global_1388055);
 			}
 			else if (iVar13 == 4)
 			{
 				func_163(&Global_1388056, iParam0);
-				func_162(joaat("MPPLY_CREW_LOCAL_XP_4"), Global_1388056);
+				func_162(joaat("mpply_crew_local_xp_4"), Global_1388056);
 			}
 		}
 	}
@@ -4306,71 +4306,71 @@ void func_162(int iParam0, int iParam1)
 	}
 	switch (iParam0)
 	{
-		case joaat("MPPLY_CREW_0_ID"):
+		case joaat("mpply_crew_0_id"):
 			Global_1388047 = iParam1;
 			break;
 		
-		case joaat("MPPLY_CREW_1_ID"):
+		case joaat("mpply_crew_1_id"):
 			Global_1388049 = iParam1;
 			break;
 		
-		case joaat("MPPLY_CREW_2_ID"):
+		case joaat("mpply_crew_2_id"):
 			Global_1388049 = iParam1;
 			break;
 		
-		case joaat("MPPLY_CREW_3_ID"):
+		case joaat("mpply_crew_3_id"):
 			Global_1388050 = iParam1;
 			break;
 		
-		case joaat("MPPLY_CREW_4_ID"):
+		case joaat("mpply_crew_4_id"):
 			Global_1388051 = iParam1;
 			break;
 		
-		case joaat("MPPLY_CREW_LOCAL_XP_0"):
+		case joaat("mpply_crew_local_xp_0"):
 			Global_1388052 = iParam1;
 			break;
 		
-		case joaat("MPPLY_CREW_LOCAL_XP_1"):
+		case joaat("mpply_crew_local_xp_1"):
 			Global_1388053 = iParam1;
 			break;
 		
-		case joaat("MPPLY_CREW_LOCAL_XP_2"):
+		case joaat("mpply_crew_local_xp_2"):
 			Global_1388054 = iParam1;
 			break;
 		
-		case joaat("MPPLY_CREW_LOCAL_XP_3"):
+		case joaat("mpply_crew_local_xp_3"):
 			Global_1388055 = iParam1;
 			break;
 		
-		case joaat("MPPLY_CREW_LOCAL_XP_4"):
+		case joaat("mpply_crew_local_xp_4"):
 			Global_1388056 = iParam1;
 			break;
 		
-		case joaat("MPPLY_BECAME_CHEATER_NUM"):
+		case joaat("mpply_became_cheater_num"):
 			Global_1388057 = iParam1;
 			break;
 		
-		case joaat("MPPLY_FRIENDLY"):
+		case joaat("mpply_friendly"):
 			Global_1388058 = iParam1;
 			break;
 		
-		case joaat("MPPLY_OFFENSIVE_LANGUAGE"):
+		case joaat("mpply_offensive_language"):
 			Global_1388059 = iParam1;
 			break;
 		
-		case joaat("MPPLY_GRIEFING"):
+		case joaat("mpply_griefing"):
 			Global_1388060 = iParam1;
 			break;
 		
-		case joaat("MPPLY_HELPFUL"):
+		case joaat("mpply_helpful"):
 			Global_1388061 = iParam1;
 			break;
 		
-		case joaat("MPPLY_OFFENSIVE_TAGPLATE"):
+		case joaat("mpply_offensive_tagplate"):
 			Global_1388062 = iParam1;
 			break;
 		
-		case joaat("MPPLY_OFFENSIVE_UGC"):
+		case joaat("mpply_offensive_ugc"):
 			Global_1388063 = iParam1;
 			break;
 		
@@ -6430,7 +6430,7 @@ int func_233()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}
@@ -6712,7 +6712,7 @@ int func_236(int iParam0)
 		case 78:
 			return 32;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 32;
 		
 		case 80:

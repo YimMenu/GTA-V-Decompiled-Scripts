@@ -4101,7 +4101,7 @@ void func_102(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam
 		Global_61723 = 0;
 		if (bParam1)
 		{
-			GRAPHICS::_0x03FC694AE06C5A20();
+			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);
@@ -4538,9 +4538,9 @@ void func_122(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -4764,7 +4764,7 @@ void func_127(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_128(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_128(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -4921,7 +4921,7 @@ int func_138()
 					ENTITY::SET_ENTITY_COORDS(iLocal_254, 1275.256f, -1722.368f, 53.655f, true, false, false, true);
 					ENTITY::SET_ENTITY_HEADING(iLocal_254, 12.6638f);
 					PED::FORCE_PED_MOTION_STATE(iLocal_254, -668482597, false, 0, false);
-					PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), false, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_254, joaat("weapon_unarmed"), true);
 				}
 				iLocal_433 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
@@ -5017,7 +5017,7 @@ int func_138()
 						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
 						{
 							PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), 1063765679, false, 0, false);
-							PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), false, false);
+							PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 						}
 					}
 					func_143();
@@ -5128,7 +5128,7 @@ int func_139()
 	}
 	if (!PED::IS_PED_INJURED(iLocal_253))
 	{
-		if (!PED::_HAS_STREAMED_PED_ASSETS_LOADED(iLocal_253))
+		if (!PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iLocal_253))
 		{
 			return 0;
 		}
@@ -5583,7 +5583,7 @@ int func_152()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -6235,7 +6235,7 @@ int func_190()
 	}
 	if (!PED::IS_PED_INJURED(iLocal_254))
 	{
-		if (!PED::_HAS_STREAMED_PED_ASSETS_LOADED(iLocal_254))
+		if (!PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iLocal_254))
 		{
 			return 0;
 		}
@@ -6845,7 +6845,7 @@ int func_233()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}
@@ -7132,7 +7132,7 @@ int func_237(int iParam0)
 		case 78:
 			return 32;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 32;
 		
 		case 80:

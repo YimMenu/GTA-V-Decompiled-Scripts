@@ -5293,7 +5293,7 @@ void func_86()
 						if (CAM::_0xEE778F8C7E1142E2(0) == 4 && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 						{
 							TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
-							PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), false, false);
+							PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 						}
 						func_360(4);
 					}
@@ -8116,13 +8116,13 @@ void func_111(int iParam0)
 	}
 	if ((iParam0 + iVar2) >= Global_262145.f_26473)
 	{
-		func_112(joaat("MPPLY_CASINO_CHIPS_WON_GD"), Global_262145.f_26473);
+		func_112(joaat("mpply_casino_chips_won_gd"), Global_262145.f_26473);
 		func_113();
 		Global_2462411 = 1;
 	}
 	else
 	{
-		func_112(joaat("MPPLY_CASINO_CHIPS_WON_GD"), (iVar2 + iParam0));
+		func_112(joaat("mpply_casino_chips_won_gd"), (iVar2 + iParam0));
 	}
 }
 
@@ -8144,12 +8144,12 @@ void func_113()
 
 void func_114()
 {
-	func_112(joaat("MPPLY_CASINO_CHIPS_WONTIM"), NETWORK::GET_CLOUD_TIME_AS_INT());
+	func_112(joaat("mpply_casino_chips_wontim"), NETWORK::GET_CLOUD_TIME_AS_INT());
 }
 
 int func_115()
 {
-	return func_116(joaat("MPPLY_CASINO_CHIPS_WON_GD"));
+	return func_116(joaat("mpply_casino_chips_won_gd"));
 }
 
 int func_116(int iParam0)
@@ -8167,7 +8167,7 @@ int func_116(int iParam0)
 
 int func_117()
 {
-	return func_116(joaat("MPPLY_CASINO_CHIPS_WONTIM"));
+	return func_116(joaat("mpply_casino_chips_wontim"));
 }
 
 void func_118(int iParam0)
@@ -8190,12 +8190,12 @@ void func_118(int iParam0)
 	}
 	if (iParam0 + iVar2) > func_119()
 	{
-		func_112(joaat("MPPLY_CASINO_CHIPS_PUR_GD"), func_119());
+		func_112(joaat("mpply_casino_chips_pur_gd"), func_119());
 		func_120();
 	}
 	else
 	{
-		func_112(joaat("MPPLY_CASINO_CHIPS_PUR_GD"), (iVar2 + iParam0));
+		func_112(joaat("mpply_casino_chips_pur_gd"), (iVar2 + iParam0));
 	}
 }
 
@@ -8215,17 +8215,17 @@ void func_120()
 
 void func_121()
 {
-	func_112(joaat("MPPLY_CASINO_CHIPS_PURTIM"), NETWORK::GET_CLOUD_TIME_AS_INT());
+	func_112(joaat("mpply_casino_chips_purtim"), NETWORK::GET_CLOUD_TIME_AS_INT());
 }
 
 int func_122()
 {
-	return func_116(joaat("MPPLY_CASINO_CHIPS_PUR_GD"));
+	return func_116(joaat("mpply_casino_chips_pur_gd"));
 }
 
 int func_123()
 {
-	return func_116(joaat("MPPLY_CASINO_CHIPS_PURTIM"));
+	return func_116(joaat("mpply_casino_chips_purtim"));
 }
 
 void func_124()
@@ -10558,13 +10558,13 @@ void func_189(int iParam0)
 	}
 	if ((iVar2 - iParam0) >= Global_262145.f_26472)
 	{
-		func_112(joaat("MPPLY_CASINO_CHIPS_WON_GD"), Global_262145.f_26472);
+		func_112(joaat("mpply_casino_chips_won_gd"), Global_262145.f_26472);
 		func_113();
 		Global_2462411 = 1;
 	}
 	else
 	{
-		func_112(joaat("MPPLY_CASINO_CHIPS_WON_GD"), (iVar2 - iParam0));
+		func_112(joaat("mpply_casino_chips_won_gd"), (iVar2 - iParam0));
 	}
 }
 
@@ -11774,23 +11774,23 @@ int func_218(int iParam0)
 	switch (iParam0)
 	{
 		case 1:
-			return 177789876;
+			return joaat("h4_prop_casino_blckjack_01a");
 			break;
 		
 		case 2:
-			return 248767530;
+			return joaat("h4_prop_casino_blckjack_01b");
 			break;
 		
 		case 3:
-			return -552237906;
+			return joaat("h4_prop_casino_blckjack_01c");
 			break;
 		
 		case 4:
-			return -322953213;
+			return joaat("h4_prop_casino_blckjack_01d");
 			break;
 		
 		case 5:
-			return 1284693927;
+			return joaat("h4_prop_casino_blckjack_01e");
 			break;
 	}
 	return joaat("vw_prop_casino_blckjack_01b");
@@ -11875,7 +11875,7 @@ void func_225(int iParam0)
 
 void func_226()
 {
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24_PX"), NETWORK::GET_CLOUD_TIME_AS_INT());
+	func_112(joaat("mpply_cas_gmblng_l24_px"), NETWORK::GET_CLOUD_TIME_AS_INT());
 	func_228();
 	func_227();
 	Global_1696939 = 1;
@@ -11884,22 +11884,22 @@ void func_226()
 
 void func_227()
 {
-	func_112(joaat("MPPLY_CAS_24H_GMBLNG_PX"), NETWORK::GET_CLOUD_TIME_AS_INT());
+	func_112(joaat("mpply_cas_24h_gmblng_px"), NETWORK::GET_CLOUD_TIME_AS_INT());
 }
 
 void func_228()
 {
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24"), 0);
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24_1"), 0);
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24_2"), 0);
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24_3"), 0);
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24_4"), 0);
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24_5"), 0);
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24_6"), 0);
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24_7"), 0);
-	func_112(joaat("MPPLY_CAS_GMBLNG_L24_8"), 0);
-	func_112(joaat("MPPLY_CAS_CUR_GMBLNG_HR"), 0);
-	func_112(joaat("MPPLY_CAS_24H_GMBLNG_PX"), 0);
+	func_112(joaat("mpply_cas_gmblng_l24"), 0);
+	func_112(joaat("mpply_cas_gmblng_l24_1"), 0);
+	func_112(joaat("mpply_cas_gmblng_l24_2"), 0);
+	func_112(joaat("mpply_cas_gmblng_l24_3"), 0);
+	func_112(joaat("mpply_cas_gmblng_l24_4"), 0);
+	func_112(joaat("mpply_cas_gmblng_l24_5"), 0);
+	func_112(joaat("mpply_cas_gmblng_l24_6"), 0);
+	func_112(joaat("mpply_cas_gmblng_l24_7"), 0);
+	func_112(joaat("mpply_cas_gmblng_l24_8"), 0);
+	func_112(joaat("mpply_cas_cur_gmblng_hr"), 0);
+	func_112(joaat("mpply_cas_24h_gmblng_px"), 0);
 }
 
 bool func_229()
@@ -11909,7 +11909,7 @@ bool func_229()
 
 void func_230()
 {
-	func_112(joaat("MPPLY_CASINO_GMBLNG_GD"), NETWORK::GET_CLOUD_TIME_AS_INT());
+	func_112(joaat("mpply_casino_gmblng_gd"), NETWORK::GET_CLOUD_TIME_AS_INT());
 	func_232();
 	func_231((NETWORK::GET_CLOUD_TIME_AS_INT() + 86400));
 	Global_1696938 = 1;
@@ -11922,12 +11922,12 @@ void func_231(int iParam0)
 
 void func_232()
 {
-	func_112(joaat("MPPLY_CAS_CUR_GMBLNG_PX"), NETWORK::GET_CLOUD_TIME_AS_INT());
+	func_112(joaat("mpply_cas_cur_gmblng_px"), NETWORK::GET_CLOUD_TIME_AS_INT());
 }
 
 bool func_233()
 {
-	return func_116(joaat("MPPLY_CASINO_GMBLNG_GD")) != 0;
+	return func_116(joaat("mpply_casino_gmblng_gd")) != 0;
 }
 
 bool func_234(int iParam0)
@@ -12151,7 +12151,7 @@ int func_241(int iParam0)
 
 int func_242()
 {
-	return func_116(joaat("MPPLY_CAS_CUR_GMBLNG_HR"));
+	return func_116(joaat("mpply_cas_cur_gmblng_hr"));
 }
 
 void func_243()
@@ -12658,7 +12658,7 @@ void func_247(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(140, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "Gradient_Bgd", (Global_22547 + (fParam5 * 0.5f)), ((fVar51 + ((((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))) * 0.5f)) - 0.00138888f), fParam5, (((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))), 0f, iVar1, iVar2, iVar3, iVar4, false);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "Gradient_Bgd", (Global_22547 + (fParam5 * 0.5f)), ((fVar51 + ((((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))) * 0.5f)) - 0.00138888f), fParam5, (((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))), 0f, iVar1, iVar2, iVar3, iVar4, false);
 				func_266(fVar42);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(&(Global_22550.f_4690));
 				iVar15 = 0;
@@ -12716,7 +12716,7 @@ void func_247(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 					func_265(Global_22550.f_4768, 1, &iVar47, &iVar48, &iVar49, &iVar50);
 					GRAPHICS::DRAW_SPRITE(func_274(Global_22550.f_4768), func_271(Global_22550.f_4768, 1), ((Global_22547 + (fVar36 * 0.5f)) + (0.00078125f * 2f)), ((fVar51 + (fVar37 * 0.5f)) - (0.00138888f * 4f)), fVar36, fVar37, 0f, iVar47, iVar48, iVar49, iVar50, false);
 				}
-				fVar51 = (fVar51 + (((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))));
+				fVar51 = (fVar51 + (((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))));
 				if (Global_22550.f_4766 > 0)
 				{
 					if ((MISC::GET_GAME_TIMER() - Global_22550.f_4767) > Global_22550.f_4766)
@@ -12799,7 +12799,7 @@ void func_247(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(140, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "Gradient_Bgd", (Global_22547 + (fParam5 * 0.5f)), ((fVar51 + ((((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))) * 0.5f)) - 0.00138888f), fParam5, (((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))), 0f, iVar1, iVar2, iVar3, iVar4, false);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "Gradient_Bgd", (Global_22547 + (fParam5 * 0.5f)), ((fVar51 + ((((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))) * 0.5f)) - 0.00138888f), fParam5, (((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))), 0f, iVar1, iVar2, iVar3, iVar4, false);
 				func_266(fVar42);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(&(Global_4269680.f_21));
 				iVar15 = 0;
@@ -12857,7 +12857,7 @@ void func_247(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 					func_265(Global_4269680.f_67, 1, &iVar47, &iVar48, &iVar49, &iVar50);
 					GRAPHICS::DRAW_SPRITE(func_274(Global_4269680.f_67), func_271(Global_4269680.f_67, 1), ((Global_22547 + (fVar36 * 0.5f)) + (0.00078125f * 2f)), ((fVar51 + (fVar37 * 0.5f)) - (0.00138888f * 4f)), fVar36, fVar37, 0f, iVar47, iVar48, iVar49, iVar50, false);
 				}
-				fVar51 = (fVar51 + (((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))));
+				fVar51 = (fVar51 + (((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))));
 				if (Global_4269680.f_65 > 0)
 				{
 					if ((MISC::GET_GAME_TIMER() - Global_4269680.f_66) > Global_4269680.f_65)
@@ -15036,7 +15036,7 @@ float func_276(char* sParam0)
 	if (!HUD::DOES_TEXT_LABEL_EXIST(sParam0))
 	{
 	}
-	return HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0);
+	return HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0);
 }
 
 float func_277(char* sParam0)
@@ -15850,9 +15850,9 @@ void func_297(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -16076,7 +16076,7 @@ void func_302(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_303(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_303(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -16835,52 +16835,52 @@ Vector3 func_358(int iParam0)
 		switch (iParam0)
 		{
 			case 0:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_04"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_04"));
 			
 			case 1:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_03"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_03"));
 			
 			case 2:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_02"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_02"));
 			
 			case 3:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_01"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_01"));
 			
 			case 4:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_04"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_04"));
 			
 			case 5:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_03"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_03"));
 			
 			case 6:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_02"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_02"));
 			
 			case 7:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_01"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_01"));
 			
 			case 8:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_04"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_04"));
 			
 			case 9:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_03"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_03"));
 			
 			case 10:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_02"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_02"));
 			
 			case 11:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_01"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_01"));
 			
 			case 12:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_04"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_04"));
 			
 			case 13:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_03"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_03"));
 			
 			case 14:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_02"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_02"));
 			
 			case 15:
-				return ENTITY::_GET_ENTITY_BONE_COORDS(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_01"));
+				return ENTITY::_GET_ENTITY_BONE_POSITION_2(iVar0, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iVar0, "Chair_Base_01"));
 			}
 		
 		default:
@@ -21057,7 +21057,7 @@ int func_422(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -21614,7 +21614,7 @@ int func_444()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}

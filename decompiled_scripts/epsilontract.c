@@ -148,7 +148,7 @@ void func_1()
 					PAD::SET_PAD_SHAKE(0, 200, 250);
 					iVar0 = (805 + iLocal_41);
 					func_40(iVar0, 1, -1, 1);
-					STATS::STAT_INCREMENT(joaat("NUM_HIDDEN_PACKAGES_2"), 1f);
+					STATS::STAT_INCREMENT(joaat("num_hidden_packages_2"), 1f);
 					bLocal_46 = true;
 					if (iLocal_41 < 10)
 					{
@@ -305,15 +305,15 @@ int func_4(int iParam0)
 	}
 	else if (iParam0 == 6)
 	{
-		STATS::STAT_GET_INT(joaat("NUM_HIDDEN_PACKAGES_5"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("num_hidden_packages_5"), &iVar0, -1);
 	}
 	else if (iParam0 == 7)
 	{
-		STATS::STAT_GET_INT(joaat("NUM_HIDDEN_PACKAGES_7"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("num_hidden_packages_7"), &iVar0, -1);
 	}
 	else if (iParam0 == 8)
 	{
-		STATS::STAT_GET_INT(joaat("NUM_HIDDEN_PACKAGES_6"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("num_hidden_packages_6"), &iVar0, -1);
 	}
 	else
 	{
@@ -482,11 +482,11 @@ int func_7(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -1912,13 +1912,13 @@ bool func_40(int iParam0, bool bParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar6 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
+		iVar6 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
 		iVar1 = ((iParam0 - 3111) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 3111)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar6, bParam1, iVar1, bParam3);
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar7 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar7 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 		iVar1 = ((iParam0 - 2919) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 2919)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar7, bParam1, iVar1, bParam3);
 	}

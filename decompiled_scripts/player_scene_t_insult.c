@@ -782,7 +782,7 @@ int func_13()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -1079,7 +1079,7 @@ void func_26(int iParam0, int iParam1)
 							}
 							TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(iParam0, Local_273 + Local_284[iParam1 /*3*/], fVar3, -1, (fLocal_294[iParam1] * 0.1f), false, 40000f);
 							PED::FORCE_PED_MOTION_STATE(iParam0, iVar4, false, 0, false);
-							PED::_0x2208438012482A1A(iParam0, false, false);
+							PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iParam0, false, false);
 							iLocal_240[iParam1] = 1;
 							return;
 						}
@@ -1994,7 +1994,7 @@ void func_43()
 	{
 		return;
 	}
-	STREAMING::_0x74DE2E8739086740();
+	STREAMING::ALLOW_PLAYER_SWITCH_OUTRO();
 }
 
 void func_44()
@@ -2376,7 +2376,7 @@ int func_49(int iParam0, char* sParam1, char* sParam2, char* sParam3, var uParam
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(sParam1, "SAFE@MICHAEL@IG_3", 64);
 			StringCopy(sParam2, "BASE_MICHAEL", 64);
 			StringCopy(sParam3, "EXIT_MICHAEL", 64);
@@ -4152,7 +4152,7 @@ int func_53(int iParam0, var uParam1, char* sParam2)
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			*uParam1 = 20.353f;
 			StringCopy(sParam2, "v_michael", 32);
 			return 1;
@@ -6363,7 +6363,7 @@ int func_54(int iParam0, int iParam1, var uParam2, var uParam3)
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 86:
 			switch (iParam0)
 			{

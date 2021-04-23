@@ -233,7 +233,7 @@ void __EntryFunction__()
 		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(1655527845);
 		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-2086579765);
 		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-1770673475);
-		HUD::_0xC78E239AC5B2DDB9(false, -1, 0);
+		HUD::PAUSE_MENU_SET_BUSY_SPINNER(false, -1, 0);
 		Global_1312453 = 0;
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
@@ -269,7 +269,7 @@ void __EntryFunction__()
 					{
 						if (HUD::IS_FRONTEND_READY_FOR_CONTROL())
 						{
-							HUD::_0xEC9264727EEC0F28();
+							HUD::TAKE_CONTROL_OF_FRONTEND();
 							Global_1373272.f_7 = 0;
 							GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("MENU_SHIFT_DEPTH");
 							GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
@@ -329,7 +329,7 @@ void __EntryFunction__()
 					if (iVar1 == 0)
 					{
 						AUDIO::PLAY_SOUND_FRONTEND(-1, "CANCEL", "HUD_FRONTEND_DEFAULT_SOUNDSET", true);
-						HUD::_0x14621BB1DF14E2B2();
+						HUD::RELEASE_CONTROL_OF_FRONTEND();
 						iVar0 = 1;
 					}
 					else
@@ -403,9 +403,9 @@ void __EntryFunction__()
 	func_1();
 	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&uVar3);
 	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&uVar4);
-	HUD::_0x14621BB1DF14E2B2();
+	HUD::RELEASE_CONTROL_OF_FRONTEND();
 	Global_1312453 = 0;
-	HUD::_0xC78E239AC5B2DDB9(false, -1, 0);
+	HUD::PAUSE_MENU_SET_BUSY_SPINNER(false, -1, 0);
 	while (true)
 	{
 		SYSTEM::WAIT(0);
@@ -625,7 +625,7 @@ void func_2(var uParam0, var uParam1, var uParam2)
 	}
 	if (HUD::_0xF284AC67940C6812())
 	{
-		HUD::_0x36C1451A88A09630(&uVar3, &iVar4);
+		HUD::_GET_PAUSE_MENU_SELECTION(&uVar3, &iVar4);
 		switch (uParam1->f_7)
 		{
 			case 0:
@@ -643,7 +643,7 @@ void func_2(var uParam0, var uParam1, var uParam2)
 	}
 	if (HUD::_0x2E22FEFA0100275E())
 	{
-		HUD::_0x7E17BE53E1AAABAF(&uVar8, &iVar9, &iVar10);
+		HUD::_GET_PAUSE_MENU_SELECTION_DATA(&uVar8, &iVar9, &iVar10);
 		iVar11 = iVar9 + 1000;
 		if (iVar11 >= 0)
 		{
@@ -709,7 +709,7 @@ void func_2(var uParam0, var uParam1, var uParam2)
 
 void func_3(bool bParam0)
 {
-	HUD::_0xC78E239AC5B2DDB9(bParam0, 6, 0);
+	HUD::PAUSE_MENU_SET_BUSY_SPINNER(bParam0, 6, 0);
 }
 
 int func_4(var uParam0, int iParam1, bool bParam2)
@@ -5073,7 +5073,7 @@ int func_49(int iParam0, int iParam1, int iParam2)
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			switch (iParam1)
 			{
 				case 0:
@@ -6574,11 +6574,11 @@ int func_60(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 1361 && iParam0 < 1393)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
 	}
 	else if (iParam0 >= 1393 && iParam0 < 2919)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
 	}
 	else if (iParam0 >= 4143 && iParam0 < 4207)
 	{
@@ -7069,7 +7069,7 @@ int func_63(int iParam0, int iParam1)
 		case 78:
 			return 1;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 1;
 		
 		case 80:
@@ -7332,11 +7332,11 @@ int func_70(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -9078,7 +9078,7 @@ void func_89(int iParam0, int iParam1, int iParam2, var uParam3)
 		{
 			case 17:
 				iVar11 = 0;
-				iVar13 = func_90(joaat("MPPLY_HEISTFLOWORDERPROGRESS"));
+				iVar13 = func_90(joaat("mpply_heistfloworderprogress"));
 				iVar0 = 0;
 				while (iVar0 < 28)
 				{
@@ -9107,7 +9107,7 @@ void func_89(int iParam0, int iParam1, int iParam2, var uParam3)
 			
 			case 18:
 				iVar11 = 0;
-				iVar13 = func_90(joaat("MPPLY_HEISTTEAMPROGRESSBITSET"));
+				iVar13 = func_90(joaat("mpply_heistteamprogressbitset"));
 				iVar0 = 0;
 				while (iVar0 < 28)
 				{
@@ -9136,7 +9136,7 @@ void func_89(int iParam0, int iParam1, int iParam2, var uParam3)
 			
 			case 19:
 				iVar11 = 0;
-				iVar13 = func_90(joaat("MPPLY_HEISTNODEATHPROGREITSET"));
+				iVar13 = func_90(joaat("mpply_heistnodeathprogreitset"));
 				iVar0 = 0;
 				while (iVar0 < 28)
 				{
@@ -9165,7 +9165,7 @@ void func_89(int iParam0, int iParam1, int iParam2, var uParam3)
 			
 			case 20:
 				iVar11 = 0;
-				iVar13 = func_90(joaat("MPPLY_HEIST_1STPERSON_PROG"));
+				iVar13 = func_90(joaat("mpply_heist_1stperson_prog"));
 				iVar0 = 0;
 				while (iVar0 < 28)
 				{
@@ -9194,7 +9194,7 @@ void func_89(int iParam0, int iParam1, int iParam2, var uParam3)
 			
 			case 21:
 				iVar11 = 0;
-				iVar13 = func_90(joaat("MPPLY_HEISTMEMBERPROGRESSBITSET"));
+				iVar13 = func_90(joaat("mpply_heistmemberprogressbitset"));
 				iVar0 = 0;
 				while (iVar0 < 28)
 				{
@@ -9336,32 +9336,32 @@ int func_94(int iParam0)
 	switch (iParam0)
 	{
 		case 3:
-			return joaat("MPPLY_GANGOPS_ALLINORDER");
+			return joaat("mpply_gangops_allinorder");
 		
 		case 4:
-			return joaat("MPPLY_GANGOPS_LOYALTY");
+			return joaat("mpply_gangops_loyalty");
 		
 		case 7:
-			return joaat("MPPLY_GANGOPS_LOYALTY2");
+			return joaat("mpply_gangops_loyalty2");
 		
 		case 8:
-			return joaat("MPPLY_GANGOPS_LOYALTY3");
+			return joaat("mpply_gangops_loyalty3");
 		
 		case 5:
-			return joaat("MPPLY_GANGOPS_CRIMMASMD");
+			return joaat("mpply_gangops_crimmasmd");
 		
 		case 9:
-			return joaat("MPPLY_GANGOPS_CRIMMASMD2");
+			return joaat("mpply_gangops_crimmasmd2");
 		
 		case 10:
-			return joaat("MPPLY_GANGOPS_CRIMMASMD3");
+			return joaat("mpply_gangops_crimmasmd3");
 		
 		case 11:
-			return joaat("MPPLY_GANGOPS_SUPPORT");
+			return joaat("mpply_gangops_support");
 		
 		default:
 	}
-	return joaat("MPPLY_GANGOPS_ALLINORDER");
+	return joaat("mpply_gangops_allinorder");
 }
 
 int func_95(int iParam0, int iParam1, int iParam2)
@@ -10580,7 +10580,7 @@ char* func_111(int iParam0, int iParam1)
 		case 78:
 			return "MPAwardCasinoHeist";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "MPAwardCasinoHeist";
 		
 		case 80:
@@ -10938,7 +10938,7 @@ char* func_112(int iParam0, int iParam1)
 		case 78:
 			return "PistolAtDawn";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "BeatTheTraffic";
 		
 		case 80:
@@ -11309,7 +11309,7 @@ char* func_113(int iParam0, int iParam1, int iParam2, bool bParam3)
 		case 78:
 			return "AWS_872";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "AWS_873";
 		
 		case 80:
@@ -11665,7 +11665,7 @@ char* func_114(int iParam0, int iParam1, bool bParam2)
 		case 78:
 			return "AWT_872";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "AWT_873";
 		
 		case 80:
@@ -12020,7 +12020,7 @@ int func_115(int iParam0, int iParam1)
 		case 78:
 			return 1;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 1;
 		
 		case 80:
@@ -12532,7 +12532,7 @@ char* func_119(int iParam0, int iParam1, int iParam2)
 		case 78:
 			return "MPAwardsArena";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "MPAwardsArena";
 		
 		case 80:
@@ -12881,7 +12881,7 @@ char* func_120(int iParam0, int iParam1, int iParam2)
 		case 78:
 			return "CROWDPARTICIPATION";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "KILLORBEKILLED";
 		
 		case 80:
@@ -13341,7 +13341,7 @@ char* func_121(int iParam0, int iParam1, int iParam2)
 		case 78:
 			return "AWS_827";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "AWS_828";
 		
 		case 80:
@@ -14029,7 +14029,7 @@ char* func_122(int iParam0, int iParam1)
 		case 78:
 			return "AWT_827";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "AWT_828";
 		
 		case 80:

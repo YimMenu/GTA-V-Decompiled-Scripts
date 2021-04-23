@@ -304,15 +304,15 @@ void func_6()
 	switch (iVar0)
 	{
 		case 0:
-			func_7(joaat("SP0_TIMES_CHEATED"), 1);
+			func_7(joaat("sp0_times_cheated"), 1);
 			break;
 		
 		case 1:
-			func_7(joaat("SP1_TIMES_CHEATED"), 1);
+			func_7(joaat("sp1_times_cheated"), 1);
 			break;
 		
 		case 2:
-			func_7(joaat("SP2_TIMES_CHEATED"), 1);
+			func_7(joaat("sp2_times_cheated"), 1);
 			break;
 	}
 }
@@ -491,43 +491,43 @@ int func_18(int iParam0, struct<3> Param1, float fParam4)
 	{
 		return 0;
 	}
-	iVar50 = SHAPETEST::_START_SHAPE_TEST_RAY(func_19(PLAYER::PLAYER_ID()) + Vector(1f, 0f, 0f), Param1, 87, PLAYER::PLAYER_PED_ID(), 0);
+	iVar50 = SHAPETEST::START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(func_19(PLAYER::PLAYER_ID()) + Vector(1f, 0f, 0f), Param1, 87, PLAYER::PLAYER_PED_ID(), 0);
 	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar50, &iVar43, &uVar37, &uVar40, &uVar51);
 	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar44 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[1 /*3*/], Var0[3 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	iVar44 = SHAPETEST::START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(Var0[1 /*3*/], Var0[3 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
 	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar44, &iVar43, &uVar37, &uVar40, &uVar51);
 	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar45 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[2 /*3*/], Var0[4 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	iVar45 = SHAPETEST::START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(Var0[2 /*3*/], Var0[4 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
 	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar45, &iVar43, &uVar37, &uVar40, &uVar51);
 	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar46 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[5 /*3*/], Var0[7 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	iVar46 = SHAPETEST::START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(Var0[5 /*3*/], Var0[7 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
 	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar46, &iVar43, &uVar37, &uVar40, &uVar51);
 	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar47 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[6 /*3*/], Var0[8 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	iVar47 = SHAPETEST::START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(Var0[6 /*3*/], Var0[8 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
 	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar47, &iVar43, &uVar37, &uVar40, &uVar51);
 	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar48 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[1 /*3*/], Var0[8 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	iVar48 = SHAPETEST::START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(Var0[1 /*3*/], Var0[8 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
 	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar48, &iVar43, &uVar37, &uVar40, &uVar51);
 	if (iVar43 != 0)
 	{
 		return 0;
 	}
-	iVar49 = SHAPETEST::_START_SHAPE_TEST_RAY(Var0[2 /*3*/], Var0[7 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
+	iVar49 = SHAPETEST::START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(Var0[2 /*3*/], Var0[7 /*3*/], 87, PLAYER::PLAYER_PED_ID(), 0);
 	SHAPETEST::GET_SHAPE_TEST_RESULT(iVar49, &iVar43, &uVar37, &uVar40, &uVar51);
 	if (iVar43 != 0)
 	{
@@ -973,7 +973,7 @@ void func_39()
 			}
 			PLAYER::SET_PLAYER_INVINCIBLE(PLAYER::PLAYER_ID(), true);
 			ENTITY::SET_ENTITY_PROOFS(PLAYER::PLAYER_PED_ID(), true, true, true, true, true, false, false, false);
-			STATS::_0x047CBED6F6F8B63C();
+			STATS::STAT_SET_CHEAT_IS_ACTIVE();
 			break;
 		
 		case 9:
@@ -2016,13 +2016,13 @@ void func_78()
 		func_5(4);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_KNIFE"), -1, false);
-			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_SMG"), 300, false);
-			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_ASSAULTRIFLE"), 300, true);
-			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_PUMPSHOTGUN"), 150, false);
-			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_SNIPERRIFLE"), 30, false);
-			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_GRENADE"), 5, false);
-			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_RPG"), 5, false);
+			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_knife"), -1, false);
+			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_smg"), 300, false);
+			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_assaultrifle"), 300, true);
+			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_pumpshotgun"), 150, false);
+			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_sniperrifle"), 30, false);
+			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_grenade"), 5, false);
+			WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_rpg"), 5, false);
 		}
 	}
 }
@@ -2048,7 +2048,7 @@ void func_79()
 			else
 			{
 				PLAYER::SET_SWIM_MULTIPLIER_FOR_PLAYER(PLAYER::PLAYER_ID(), 1.49f);
-				STATS::_0x047CBED6F6F8B63C();
+				STATS::STAT_SET_CHEAT_IS_ACTIVE();
 			}
 			break;
 		
@@ -2092,7 +2092,7 @@ void func_80()
 				{
 					PLAYER::SET_RUN_SPRINT_MULTIPLIER_FOR_PLAYER(PLAYER::PLAYER_ID(), 1f);
 				}
-				STATS::_0x047CBED6F6F8B63C();
+				STATS::STAT_SET_CHEAT_IS_ACTIVE();
 			}
 			break;
 		
@@ -2133,7 +2133,7 @@ void func_81()
 				iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 				if (!ENTITY::IS_ENTITY_DEAD(iVar0, false))
 				{
-					if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) == PLAYER::PLAYER_PED_ID())
+					if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) == PLAYER::PLAYER_PED_ID())
 					{
 						if (iLocal_69 == 0)
 						{
@@ -3095,14 +3095,14 @@ int func_102()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);

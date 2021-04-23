@@ -2488,7 +2488,7 @@ int func_38()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -3417,7 +3417,7 @@ int func_61(bool bParam0, bool bParam1, bool bParam2)
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(iVar0, false))
 			{
-				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) != PLAYER::PLAYER_PED_ID())
+				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) != PLAYER::PLAYER_PED_ID())
 				{
 					return 0;
 				}
@@ -4713,7 +4713,7 @@ int func_89(int iParam0, var uParam1)
 				}
 				iVar2++;
 			}
-			iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 0, 0);
+			iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 0, false);
 			if (!PED::IS_PED_INJURED(iVar3))
 			{
 				if ((iVar3 == uParam1->f_17[0] || iVar3 == uParam1->f_17[1]) || iVar3 == uParam1->f_17[2])
@@ -4725,7 +4725,7 @@ int func_89(int iParam0, var uParam1)
 			{
 				iVar1++;
 			}
-			iVar4 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 1, 0);
+			iVar4 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 1, false);
 			if (!PED::IS_PED_INJURED(iVar4))
 			{
 				if ((iVar4 == uParam1->f_17[0] || iVar4 == uParam1->f_17[1]) || iVar4 == uParam1->f_17[2])
@@ -4737,7 +4737,7 @@ int func_89(int iParam0, var uParam1)
 			{
 				iVar1++;
 			}
-			iVar5 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 2, 0);
+			iVar5 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 2, false);
 			if (!PED::IS_PED_INJURED(iVar5))
 			{
 				if ((iVar5 == uParam1->f_17[0] || iVar5 == uParam1->f_17[1]) || iVar5 == uParam1->f_17[2])
@@ -4879,7 +4879,7 @@ void func_94()
 		iVar0 = PED::GET_VEHICLE_PED_IS_ENTERING(PLAYER::PLAYER_PED_ID());
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false))
 		{
-			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, 0);
+			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, false);
 			if (!PED::IS_PED_INJURED(iVar1))
 			{
 				if (iVar1 != PLAYER::PLAYER_PED_ID())
@@ -5271,7 +5271,7 @@ void func_114(int iParam0, int iParam1)
 	}
 	if ((iParam1 != 0 && iParam1 != 1) && iParam1 != 2)
 	{
-		iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, 0);
+		iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, false);
 		if (!ENTITY::DOES_ENTITY_EXIST(iVar0))
 		{
 			iVar0 = VEHICLE::GET_LAST_PED_IN_VEHICLE_SEAT(iParam0, -1);
@@ -7436,14 +7436,14 @@ int func_125()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);
@@ -10550,7 +10550,7 @@ int func_188(bool bParam0)
 		PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_469, iLocal_2550);
 		PED::SET_PED_TARGET_LOSS_RESPONSE(Local_469, 2);
 		PED::SET_PED_COMBAT_ATTRIBUTES(Local_469, 2, false);
-		WEAPON::GIVE_WEAPON_TO_PED(Local_469, joaat("WEAPON_NIGHTSTICK"), -1, false, true);
+		WEAPON::GIVE_WEAPON_TO_PED(Local_469, joaat("weapon_nightstick"), -1, false, true);
 		PED::SET_PED_ACCURACY(Local_469, 5);
 		func_178(Local_469, 40f, 5f, 90f, -90f, 90f);
 		StringCopy(&(Local_469.f_1), "sec", 16);
@@ -11945,7 +11945,7 @@ int func_219(int iParam0, int iParam1)
 			iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::GET_PLAYER_PED(iParam0), false);
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false))
 			{
-				if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iParam1, 0))
+				if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iParam1, false))
 				{
 					return 1;
 				}
@@ -12697,7 +12697,7 @@ int func_236(var uParam0)
 			{
 				if (uParam0->f_687[iVar1 /*7*/])
 				{
-					iVar2 = GRAPHICS::_0x9B6E70C5CEEF4EEB(uParam0->f_687[iVar1 /*7*/].f_5);
+					iVar2 = GRAPHICS::QUERY_MOVIE_MESH_SET_STATE(uParam0->f_687[iVar1 /*7*/].f_5);
 					if (!uParam0->f_687[iVar1 /*7*/].f_1)
 					{
 						switch (iVar2)
@@ -13839,7 +13839,7 @@ void func_262(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	PED::_0xF1C03A5352243A30(*iParam0);
+	PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(*iParam0);
 	if (func_263(*iParam0))
 	{
 		Local_469.f_46 = 0;
@@ -13875,19 +13875,19 @@ void func_262(int iParam0)
 				case 1376342146:
 				case 1681313069:
 				case 1156217463:
-					if (WEAPON::HAS_PED_GOT_WEAPON(*iParam0, joaat("WEAPON_PISTOL"), false))
+					if (WEAPON::HAS_PED_GOT_WEAPON(*iParam0, joaat("weapon_pistol"), false))
 					{
-						WEAPON::REMOVE_WEAPON_FROM_PED(*iParam0, joaat("WEAPON_PISTOL"));
+						WEAPON::REMOVE_WEAPON_FROM_PED(*iParam0, joaat("weapon_pistol"));
 					}
-					if (!WEAPON::HAS_PED_GOT_WEAPON(*iParam0, joaat("WEAPON_NIGHTSTICK"), false))
+					if (!WEAPON::HAS_PED_GOT_WEAPON(*iParam0, joaat("weapon_nightstick"), false))
 					{
-						WEAPON::GIVE_WEAPON_TO_PED(*iParam0, joaat("WEAPON_NIGHTSTICK"), -1, true, true);
+						WEAPON::GIVE_WEAPON_TO_PED(*iParam0, joaat("weapon_nightstick"), -1, true, true);
 					}
 					if (WEAPON::GET_CURRENT_PED_WEAPON(*iParam0, &iVar0, true))
 					{
-						if (iVar0 != joaat("WEAPON_NIGHTSTICK"))
+						if (iVar0 != joaat("weapon_nightstick"))
 						{
-							WEAPON::SET_CURRENT_PED_WEAPON(*iParam0, joaat("WEAPON_NIGHTSTICK"), false);
+							WEAPON::SET_CURRENT_PED_WEAPON(*iParam0, joaat("weapon_nightstick"), false);
 						}
 					}
 					break;
@@ -13903,19 +13903,19 @@ void func_262(int iParam0)
 				case 1682434916:
 				case -924218668:
 				case 600040296:
-					if (WEAPON::HAS_PED_GOT_WEAPON(*iParam0, joaat("WEAPON_NIGHTSTICK"), false))
+					if (WEAPON::HAS_PED_GOT_WEAPON(*iParam0, joaat("weapon_nightstick"), false))
 					{
-						WEAPON::REMOVE_WEAPON_FROM_PED(*iParam0, joaat("WEAPON_NIGHTSTICK"));
+						WEAPON::REMOVE_WEAPON_FROM_PED(*iParam0, joaat("weapon_nightstick"));
 					}
-					if (!WEAPON::HAS_PED_GOT_WEAPON(*iParam0, joaat("WEAPON_PISTOL"), false))
+					if (!WEAPON::HAS_PED_GOT_WEAPON(*iParam0, joaat("weapon_pistol"), false))
 					{
-						WEAPON::GIVE_WEAPON_TO_PED(*iParam0, joaat("WEAPON_PISTOL"), -1, true, true);
+						WEAPON::GIVE_WEAPON_TO_PED(*iParam0, joaat("weapon_pistol"), -1, true, true);
 					}
 					if (WEAPON::GET_CURRENT_PED_WEAPON(*iParam0, &iVar0, true))
 					{
-						if (iVar0 != joaat("WEAPON_PISTOL"))
+						if (iVar0 != joaat("weapon_pistol"))
 						{
-							WEAPON::SET_CURRENT_PED_WEAPON(*iParam0, joaat("WEAPON_PISTOL"), false);
+							WEAPON::SET_CURRENT_PED_WEAPON(*iParam0, joaat("weapon_pistol"), false);
 						}
 					}
 					break;
@@ -14030,7 +14030,7 @@ void func_264(var uParam0)
 	float fVar13;
 	int iVar14;
 	
-	PED::_0xF1C03A5352243A30(*uParam0);
+	PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(*uParam0);
 	if (func_263(*uParam0))
 	{
 		uParam0->f_46 = 0;
@@ -16418,7 +16418,7 @@ void func_284(int iParam0)
 			func_285(14);
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			func_285(3);
 			break;
 		

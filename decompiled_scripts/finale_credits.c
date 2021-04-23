@@ -476,7 +476,7 @@ void __EntryFunction__()
 				func_2();
 				if (iLocal_29 > 0)
 				{
-					ENTITY::_SET_ENTITY_COORDS_2(PLAYER::PLAYER_PED_ID(), CAM::GET_FINAL_RENDERED_CAM_COORD() + Vector(3f, 0f, 0f), true, false, false, true);
+					ENTITY::SET_ENTITY_COORDS_WITHOUT_PLANTS_RESET(PLAYER::PLAYER_PED_ID(), CAM::GET_FINAL_RENDERED_CAM_COORD() + Vector(3f, 0f, 0f), true, false, false, true);
 					ENTITY::SET_ENTITY_VISIBLE(PLAYER::PLAYER_PED_ID(), false, false);
 					ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), true);
 				}
@@ -2367,7 +2367,7 @@ void func_54(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4
 		Global_61723 = 0;
 		if (bParam1)
 		{
-			GRAPHICS::_0x03FC694AE06C5A20();
+			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);

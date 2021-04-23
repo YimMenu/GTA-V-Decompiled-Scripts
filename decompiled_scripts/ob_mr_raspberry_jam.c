@@ -497,12 +497,12 @@ void func_1()
 		case 5:
 			if (func_2(iLocal_295))
 			{
-				CAM::_RENDER_FIRST_PERSON_CAM(false, 0f, 3, 0);
+				CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 			}
 			AUDIO::RELEASE_AMBIENT_AUDIO_BANK();
-			if (STATS::STAT_GET_INT(joaat("NUM_SH_MR_JAM_USED"), &iLocal_301, -1))
+			if (STATS::STAT_GET_INT(joaat("num_sh_mr_jam_used"), &iLocal_301, -1))
 			{
-				STATS::STAT_SET_INT(joaat("NUM_SH_MR_JAM_USED"), iLocal_301 + 1, true);
+				STATS::STAT_SET_INT(joaat("num_sh_mr_jam_used"), iLocal_301 + 1, true);
 			}
 			PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 			iLocal_36 = 0;
@@ -856,7 +856,7 @@ int func_13()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -1693,7 +1693,7 @@ void func_40(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4
 		Global_61723 = 0;
 		if (bParam1)
 		{
-			GRAPHICS::_0x03FC694AE06C5A20();
+			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);
@@ -1859,7 +1859,7 @@ int func_49(bool bParam0, bool bParam1, bool bParam2)
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(iVar0, false))
 			{
-				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) != PLAYER::PLAYER_PED_ID())
+				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) != PLAYER::PLAYER_PED_ID())
 				{
 					return 0;
 				}

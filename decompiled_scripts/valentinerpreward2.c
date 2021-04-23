@@ -476,7 +476,7 @@ void func_2()
 										MISC::GET_GROUND_Z_FOR_3D_COORD(Var67, &fVar70, false, false);
 										Var67.f_2 = fVar70;
 										ENTITY::SET_ENTITY_COORDS(uVar1[iVar66], Var67, true, false, false, true);
-										PED::_0x2208438012482A1A(uVar1[iVar66], false, false);
+										PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(uVar1[iVar66], false, false);
 									}
 								}
 							}
@@ -1258,7 +1258,7 @@ int func_39(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -1549,7 +1549,7 @@ int func_54(int iParam0, bool bParam1)
 					iVar3 = (iVar2 - 1);
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iVar0, iVar3, false))
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, 0) == iParam0)
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, false) == iParam0)
 						{
 							return iVar3;
 						}
@@ -1658,7 +1658,7 @@ int func_63(int iParam0, int iParam1)
 			iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::GET_PLAYER_PED(iParam0), false);
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false))
 			{
-				if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iParam1, 0))
+				if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iParam1, false))
 				{
 					return 1;
 				}
@@ -1742,7 +1742,7 @@ var func_67()
 		iVar1 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 		if (func_36(iVar1))
 		{
-			iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, 0);
+			iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, false);
 			if (func_36(iVar2) && PED::IS_PED_A_PLAYER(iVar2))
 			{
 				iVar0 = NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(iVar2);
@@ -1949,7 +1949,7 @@ int func_79()
 		iVar1 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 		if (func_36(iVar1))
 		{
-			iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, 0);
+			iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, false);
 			if (func_36(iVar2) && PED::IS_PED_A_PLAYER(iVar2))
 			{
 				iVar0 = NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(iVar2);
@@ -2447,7 +2447,7 @@ void func_106()
 	
 	if (((func_36(PLAYER::PLAYER_PED_ID()) && func_112(PLAYER::PLAYER_ID()) == 256) && func_111(PLAYER::PLAYER_ID()) == 18) && func_110())
 	{
-		iVar0 = 1506325614;
+		iVar0 = joaat("h4_prop_h4_card_hack_01a");
 		iVar1 = ENTITY::_GET_ENTITY_PICKUP(PLAYER::PLAYER_PED_ID(), iVar0);
 		if (ENTITY::DOES_ENTITY_EXIST(iVar1) && NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iVar1))
 		{
@@ -3116,7 +3116,7 @@ void func_130(bool bParam0)
 				Global_1312436.f_2 = 0;
 				if (bParam0)
 				{
-					NETWORK::USE_PLAYER_COLOUR_INSTEAD_OF_TEAM_COLOUR(false, false);
+					NETWORK::_SET_LOCAL_PLAYER_AS_GHOST(false, false);
 				}
 			}
 		}
@@ -3131,7 +3131,7 @@ void func_130(bool bParam0)
 				PLAYER::SET_PLAYER_VEHICLE_DEFENSE_MODIFIER(PLAYER::PLAYER_ID(), 0.5f);
 				if (Global_1312436.f_1 == 0 || Global_1312436.f_2 == 1)
 				{
-					NETWORK::USE_PLAYER_COLOUR_INSTEAD_OF_TEAM_COLOUR(true, false);
+					NETWORK::_SET_LOCAL_PLAYER_AS_GHOST(true, false);
 				}
 			}
 			NETWORK::NETWORK_SET_PLAYER_IS_PASSIVE(true);
@@ -4675,7 +4675,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 10:
-					iVar0 = 2087822032;
+					iVar0 = joaat("h4_prop_h4_board_01a");
 					break;
 				
 				case 14:
@@ -4728,7 +4728,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 10:
-					iVar0 = 2087822032;
+					iVar0 = joaat("h4_prop_h4_board_01a");
 					break;
 				
 				case 14:
@@ -4781,7 +4781,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 10:
-					iVar0 = 2087822032;
+					iVar0 = joaat("h4_prop_h4_board_01a");
 					break;
 				
 				case 14:
@@ -4794,59 +4794,59 @@ int func_182(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1743972815;
+					iVar0 = joaat("h4_prop_h4_win_blind_02a");
 					break;
 				
 				case 1:
-					iVar0 = 1743972815;
+					iVar0 = joaat("h4_prop_h4_win_blind_02a");
 					break;
 				
 				case 2:
-					iVar0 = 1743972815;
+					iVar0 = joaat("h4_prop_h4_win_blind_02a");
 					break;
 				
 				case 3:
-					iVar0 = 1743972815;
+					iVar0 = joaat("h4_prop_h4_win_blind_02a");
 					break;
 				
 				case 4:
-					iVar0 = 1743972815;
+					iVar0 = joaat("h4_prop_h4_win_blind_02a");
 					break;
 				
 				case 5:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 6:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 7:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 8:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 9:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 10:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 11:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 12:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 13:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 14:
@@ -4854,7 +4854,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 15:
-					iVar0 = 1049338225;
+					iVar0 = joaat("hei_prop_hei_drug_case");
 					break;
 				
 				case 16:
@@ -4886,7 +4886,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 23:
-					iVar0 = 1784997875;
+					iVar0 = joaat("bkr_prop_money_counter");
 					break;
 			}
 			break;
@@ -4895,59 +4895,59 @@ int func_182(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 1:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 2:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 3:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 4:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 5:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 6:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 7:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 8:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 9:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 10:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 11:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 12:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 13:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 14:
@@ -4955,7 +4955,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 15:
-					iVar0 = 1049338225;
+					iVar0 = joaat("hei_prop_hei_drug_case");
 					break;
 				
 				case 16:
@@ -4971,7 +4971,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 19:
-					iVar0 = 1784997875;
+					iVar0 = joaat("bkr_prop_money_counter");
 					break;
 				
 				case 20:
@@ -4988,59 +4988,59 @@ int func_182(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 1:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 2:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 3:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 4:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 5:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 6:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 7:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 8:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 9:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 10:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 11:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 12:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 13:
-					iVar0 = 1028231429;
+					iVar0 = joaat("h4_prop_h4_win_blind_03a");
 					break;
 				
 				case 14:
@@ -5048,7 +5048,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 15:
-					iVar0 = 1049338225;
+					iVar0 = joaat("hei_prop_hei_drug_case");
 					break;
 				
 				case 16:
@@ -5064,7 +5064,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 19:
-					iVar0 = 1784997875;
+					iVar0 = joaat("bkr_prop_money_counter");
 					break;
 				
 				case 20:
@@ -5081,59 +5081,59 @@ int func_182(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 1:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 2:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 3:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 4:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 5:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 6:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 7:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 8:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 9:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 10:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 11:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 12:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 14:
-					iVar0 = 698941631;
+					iVar0 = joaat("hei_p_attache_case_shut");
 					break;
 				
 				case 15:
@@ -5145,7 +5145,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 17:
-					iVar0 = -1393014804;
+					iVar0 = joaat("w_sb_pdw");
 					break;
 				
 				case 18:
@@ -5166,59 +5166,59 @@ int func_182(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 1:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 2:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 3:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 4:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 5:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 6:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 7:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 8:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 9:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 10:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 11:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 12:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 14:
-					iVar0 = 698941631;
+					iVar0 = joaat("hei_p_attache_case_shut");
 					break;
 				
 				case 15:
@@ -5238,7 +5238,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 19:
-					iVar0 = -1393014804;
+					iVar0 = joaat("w_sb_pdw");
 					break;
 				
 				case 20:
@@ -5251,59 +5251,59 @@ int func_182(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 1:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 2:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 3:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 4:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 5:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 6:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 7:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 8:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 9:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 10:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 11:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 12:
-					iVar0 = -1357220123;
+					iVar0 = joaat("h4_prop_h4_win_blind_01a");
 					break;
 				
 				case 14:
-					iVar0 = 388143302;
+					iVar0 = joaat("bkr_prop_biker_case_shut");
 					break;
 				
 				case 15:
@@ -5319,7 +5319,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 18:
-					iVar0 = -1393014804;
+					iVar0 = joaat("w_sb_pdw");
 					break;
 				
 				case 19:
@@ -5332,11 +5332,11 @@ int func_182(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 2:
-					iVar0 = 998865347;
+					iVar0 = joaat("xm_base_cia_data_desks");
 					break;
 				
 				case 3:
-					iVar0 = 998865347;
+					iVar0 = joaat("xm_base_cia_data_desks");
 					break;
 				
 				case 4:
@@ -5344,11 +5344,11 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 5:
-					iVar0 = 286149026;
+					iVar0 = joaat("bkr_prop_coke_doll");
 					break;
 				
 				case 6:
-					iVar0 = 998865347;
+					iVar0 = joaat("xm_base_cia_data_desks");
 					break;
 				
 				case 7:
@@ -5380,15 +5380,15 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 14:
-					iVar0 = 2084153992;
+					iVar0 = joaat("xm_prop_base_staff_desk_02");
 					break;
 				
 				case 15:
-					iVar0 = -1141961823;
+					iVar0 = joaat("h4_prop_h4_crate_cloth_01a");
 					break;
 				
 				case 16:
-					iVar0 = -1789904450;
+					iVar0 = joaat("h4_prop_h4_bag_hook_01a");
 					break;
 				
 				case 17:
@@ -5420,11 +5420,11 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 24:
-					iVar0 = -1141961823;
+					iVar0 = joaat("h4_prop_h4_crate_cloth_01a");
 					break;
 				
 				case 25:
-					iVar0 = -710382954;
+					iVar0 = joaat("h4_prop_h4_bolt_cutter_01a");
 					break;
 			}
 			break;
@@ -5433,11 +5433,11 @@ int func_182(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 2:
-					iVar0 = 998865347;
+					iVar0 = joaat("xm_base_cia_data_desks");
 					break;
 				
 				case 3:
-					iVar0 = 998865347;
+					iVar0 = joaat("xm_base_cia_data_desks");
 					break;
 				
 				case 4:
@@ -5445,11 +5445,11 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 5:
-					iVar0 = 286149026;
+					iVar0 = joaat("bkr_prop_coke_doll");
 					break;
 				
 				case 6:
-					iVar0 = 998865347;
+					iVar0 = joaat("xm_base_cia_data_desks");
 					break;
 				
 				case 7:
@@ -5481,15 +5481,15 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 14:
-					iVar0 = 2084153992;
+					iVar0 = joaat("xm_prop_base_staff_desk_02");
 					break;
 				
 				case 15:
-					iVar0 = -1141961823;
+					iVar0 = joaat("h4_prop_h4_crate_cloth_01a");
 					break;
 				
 				case 16:
-					iVar0 = -1789904450;
+					iVar0 = joaat("h4_prop_h4_bag_hook_01a");
 					break;
 				
 				case 17:
@@ -5521,11 +5521,11 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 24:
-					iVar0 = -710382954;
+					iVar0 = joaat("h4_prop_h4_bolt_cutter_01a");
 					break;
 				
 				case 25:
-					iVar0 = -710382954;
+					iVar0 = joaat("h4_prop_h4_bolt_cutter_01a");
 					break;
 			}
 			break;
@@ -5534,11 +5534,11 @@ int func_182(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 2:
-					iVar0 = 998865347;
+					iVar0 = joaat("xm_base_cia_data_desks");
 					break;
 				
 				case 3:
-					iVar0 = 998865347;
+					iVar0 = joaat("xm_base_cia_data_desks");
 					break;
 				
 				case 4:
@@ -5546,11 +5546,11 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 5:
-					iVar0 = 286149026;
+					iVar0 = joaat("bkr_prop_coke_doll");
 					break;
 				
 				case 6:
-					iVar0 = 998865347;
+					iVar0 = joaat("xm_base_cia_data_desks");
 					break;
 				
 				case 7:
@@ -5582,15 +5582,15 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 14:
-					iVar0 = 2084153992;
+					iVar0 = joaat("xm_prop_base_staff_desk_02");
 					break;
 				
 				case 15:
-					iVar0 = -1141961823;
+					iVar0 = joaat("h4_prop_h4_crate_cloth_01a");
 					break;
 				
 				case 16:
-					iVar0 = -1789904450;
+					iVar0 = joaat("h4_prop_h4_bag_hook_01a");
 					break;
 				
 				case 17:
@@ -5622,11 +5622,11 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 24:
-					iVar0 = -710382954;
+					iVar0 = joaat("h4_prop_h4_bolt_cutter_01a");
 					break;
 				
 				case 25:
-					iVar0 = -710382954;
+					iVar0 = joaat("h4_prop_h4_bolt_cutter_01a");
 					break;
 			}
 			break;
@@ -5679,23 +5679,23 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 20:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 21:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 22:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 23:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 24:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 			}
 			break;
@@ -5748,23 +5748,23 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 21:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 22:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 23:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 24:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 25:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 			}
 			break;
@@ -5813,23 +5813,23 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 19:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 20:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 21:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 22:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 				
 				case 23:
-					iVar0 = 390858268;
+					iVar0 = joaat("h4_prop_h4_mil_crate_02");
 					break;
 			}
 			break;
@@ -5925,11 +5925,11 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 7:
-					iVar0 = 316090149;
+					iVar0 = joaat("gr_prop_gr_prop_welder_01a");
 					break;
 				
 				case 8:
-					iVar0 = 316090149;
+					iVar0 = joaat("gr_prop_gr_prop_welder_01a");
 					break;
 				
 				case 9:
@@ -5983,7 +5983,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 22:
-					iVar0 = -1524553731;
+					iVar0 = joaat("prop_cd_folder_pile1");
 					break;
 				
 				case 23:
@@ -6039,11 +6039,11 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 8:
-					iVar0 = 316090149;
+					iVar0 = joaat("gr_prop_gr_prop_welder_01a");
 					break;
 				
 				case 9:
-					iVar0 = 316090149;
+					iVar0 = joaat("gr_prop_gr_prop_welder_01a");
 					break;
 				
 				case 10:
@@ -6094,7 +6094,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 22:
-					iVar0 = -1524553731;
+					iVar0 = joaat("prop_cd_folder_pile1");
 					break;
 				
 				case 23:
@@ -6150,11 +6150,11 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 8:
-					iVar0 = 316090149;
+					iVar0 = joaat("gr_prop_gr_prop_welder_01a");
 					break;
 				
 				case 9:
-					iVar0 = 316090149;
+					iVar0 = joaat("gr_prop_gr_prop_welder_01a");
 					break;
 				
 				case 10:
@@ -6213,7 +6213,7 @@ int func_182(int iParam0, int iParam1)
 					break;
 				
 				case 24:
-					iVar0 = -1524553731;
+					iVar0 = joaat("prop_cd_folder_pile1");
 					break;
 				
 				case 25:
@@ -8389,11 +8389,11 @@ int func_203(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -8649,7 +8649,7 @@ void func_213()
 	{
 		if (Global_1574217)
 		{
-			iVar0 = func_214(joaat("MPPLY_CHAR_EXPLOIT_LEVEL"));
+			iVar0 = func_214(joaat("mpply_char_exploit_level"));
 			if (iVar0 >= 4)
 			{
 				Global_262145.f_10128 = 1;
@@ -8705,15 +8705,15 @@ int func_216()
 	var uVar1[4];
 	int iVar6;
 	
-	iVar0 = func_214(joaat("MPPLY_CHAR_PEAK_EXPLOIT_LEVEL"));
+	iVar0 = func_214(joaat("mpply_char_peak_exploit_level"));
 	if (iVar0 < Global_262145.f_10237)
 	{
 		return 0;
 	}
-	uVar1[0] = func_214(joaat("MPPLY_PREVSEASONEXPLOITLEVEL"));
-	uVar1[1] = func_214(joaat("MPPLY_PREVSEASON2EXPLOITLEVEL"));
-	uVar1[2] = func_214(joaat("MPPLY_PREVSEASON3EXPLOITLEVEL"));
-	uVar1[3] = func_214(joaat("MPPLY_PREVSEASON4EXPLOITLEVEL"));
+	uVar1[0] = func_214(joaat("mpply_prevseasonexploitlevel"));
+	uVar1[1] = func_214(joaat("mpply_prevseason2exploitlevel"));
+	uVar1[2] = func_214(joaat("mpply_prevseason3exploitlevel"));
+	uVar1[3] = func_214(joaat("mpply_prevseason4exploitlevel"));
 	iVar6 = 0;
 	while (iVar6 < (Global_262145.f_10233 - 1))
 	{
@@ -8732,15 +8732,15 @@ int func_217()
 	var uVar1[4];
 	int iVar6;
 	
-	iVar0 = func_214(joaat("MPPLY_CHAR_PEAK_EXPLOIT_LEVEL"));
+	iVar0 = func_214(joaat("mpply_char_peak_exploit_level"));
 	if (iVar0 < Global_262145.f_10236)
 	{
 		return 0;
 	}
-	uVar1[0] = func_214(joaat("MPPLY_PREVSEASONEXPLOITLEVEL"));
-	uVar1[1] = func_214(joaat("MPPLY_PREVSEASON2EXPLOITLEVEL"));
-	uVar1[2] = func_214(joaat("MPPLY_PREVSEASON3EXPLOITLEVEL"));
-	uVar1[3] = func_214(joaat("MPPLY_PREVSEASON4EXPLOITLEVEL"));
+	uVar1[0] = func_214(joaat("mpply_prevseasonexploitlevel"));
+	uVar1[1] = func_214(joaat("mpply_prevseason2exploitlevel"));
+	uVar1[2] = func_214(joaat("mpply_prevseason3exploitlevel"));
+	uVar1[3] = func_214(joaat("mpply_prevseason4exploitlevel"));
 	iVar6 = 0;
 	while (iVar6 < (Global_262145.f_10232 - 1))
 	{

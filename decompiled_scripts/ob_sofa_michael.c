@@ -668,9 +668,9 @@ void func_1()
 					ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(func_24(), iLocal_331, "tv_enter_remote", sLocal_338, 8f, -8f, 0, 1000f);
 					if (!iLocal_318)
 					{
-						if (STATS::STAT_GET_INT(joaat("NUM_SH_SOFA_USED"), &iLocal_333, -1))
+						if (STATS::STAT_GET_INT(joaat("num_sh_sofa_used"), &iLocal_333, -1))
 						{
-							STATS::STAT_SET_INT(joaat("NUM_SH_SOFA_USED"), iLocal_333 + 1, true);
+							STATS::STAT_SET_INT(joaat("num_sh_sofa_used"), iLocal_333 + 1, true);
 							iLocal_318 = 1;
 						}
 					}
@@ -1071,13 +1071,13 @@ void func_1()
 		
 		case 12:
 			GRAPHICS::ENABLE_MOVIE_SUBTITLES(false);
-			if (STATS::STAT_GET_INT(joaat("NUM_SH_SOFA_USED"), &iLocal_332, -1))
+			if (STATS::STAT_GET_INT(joaat("num_sh_sofa_used"), &iLocal_332, -1))
 			{
-				STATS::STAT_SET_INT(joaat("NUM_SH_SOFA_USED"), iLocal_332 + 1, true);
+				STATS::STAT_SET_INT(joaat("num_sh_sofa_used"), iLocal_332 + 1, true);
 			}
 			if (CAM::GET_FOLLOW_PED_CAM_VIEW_MODE() != 4)
 			{
-				CAM::_RENDER_FIRST_PERSON_CAM(false, 0f, 3, 0);
+				CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 			}
 			if (AUDIO::IS_AUDIO_SCENE_ACTIVE("TV_MICHAELS_HOUSE"))
 			{
@@ -1708,9 +1708,9 @@ void func_20()
 	if (PAD::IS_CONTROL_JUST_PRESSED(2, 224))
 	{
 		func_21(203, 1);
-		if (STATS::STAT_GET_INT(joaat("NUM_SH_SOFA_SMOKED"), &iLocal_334, -1))
+		if (STATS::STAT_GET_INT(joaat("num_sh_sofa_smoked"), &iLocal_334, -1))
 		{
-			STATS::STAT_SET_INT(joaat("NUM_SH_SOFA_SMOKED"), iLocal_334 + 1, true);
+			STATS::STAT_SET_INT(joaat("num_sh_sofa_smoked"), iLocal_334 + 1, true);
 		}
 		if (Global_31028[4 /*11*/].f_2)
 		{
@@ -1992,7 +1992,7 @@ void func_30(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4
 		Global_61723 = 0;
 		if (bParam1)
 		{
-			GRAPHICS::_0x03FC694AE06C5A20();
+			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);
@@ -2172,7 +2172,7 @@ int func_41(bool bParam0, bool bParam1, bool bParam2)
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(iVar0, false))
 			{
-				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) != PLAYER::PLAYER_PED_ID())
+				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) != PLAYER::PLAYER_PED_ID())
 				{
 					return 0;
 				}
@@ -3302,7 +3302,7 @@ int func_73(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			return -1;
 		}
-		iVar18 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
+		iVar18 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, true, -1, -1);
 		if (iVar18 <= iVar17)
 		{
 			return -1;
@@ -3322,7 +3322,7 @@ int func_73(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			return Global_76769.f_13[iParam2];
 		}
-		iVar37 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_71(iParam2));
+		iVar37 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, false, -1, func_71(iParam2));
 		if (iVar37 <= iVar36)
 		{
 			return -1;
@@ -3823,7 +3823,7 @@ int func_79(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 	else if (iParam2 == 14)
 	{
-		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
+		FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, true, -1, -1);
 		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
@@ -3832,7 +3832,7 @@ int func_79(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 	else
 	{
-		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_71(iParam2));
+		FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, false, -1, func_71(iParam2));
 		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{

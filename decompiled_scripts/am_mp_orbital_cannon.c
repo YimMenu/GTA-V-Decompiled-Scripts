@@ -1042,7 +1042,7 @@ void func_12(var uParam0, bool bParam1)
 	func_29();
 	if (MISC::IS_BIT_SET(uParam0->f_8, 1))
 	{
-		GRAPHICS::_0x6DDBF9DFFC4AC080(false);
+		GRAPHICS::CASCADE_SHADOWS_SET_AIRCRAFT_MODE(false);
 	}
 	if (MISC::IS_BIT_SET(uParam0->f_8, 0))
 	{
@@ -1246,9 +1246,9 @@ void func_13(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -1472,7 +1472,7 @@ void func_18(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_19(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_19(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -1940,7 +1940,7 @@ void func_51(var uParam0)
 				MISC::SET_BIT(&(uParam0->f_5), 1);
 			}
 			STREAMING::_0x472397322E92A856();
-			STREAMING::_0xA76359FC80B2438E(1f);
+			STREAMING::OVERRIDE_LODSCALE_THIS_FRAME(1f);
 			CAM::_0x271401846BD26E92(true, true);
 			PED::SET_SCRIPTED_CONVERSION_COORD_THIS_FRAME(CAM::GET_FINAL_RENDERED_CAM_COORD());
 			if (func_158(0, 1, 0))
@@ -1957,7 +1957,7 @@ void func_51(var uParam0)
 	if (uParam0->f_19 == 3)
 	{
 		STREAMING::_0x472397322E92A856();
-		STREAMING::_0xA76359FC80B2438E(1f);
+		STREAMING::OVERRIDE_LODSCALE_THIS_FRAME(1f);
 		CAM::_0x271401846BD26E92(true, true);
 		PED::SET_SCRIPTED_CONVERSION_COORD_THIS_FRAME(CAM::GET_FINAL_RENDERED_CAM_COORD());
 		if (!uParam0->f_3)
@@ -2451,7 +2451,7 @@ void func_61(var uParam0)
 			func_42(uParam0);
 			func_41(uParam0);
 		}
-		MISC::_GET_GROUND_Z_FOR_3D_COORD_2(Var7, &fVar16, 1, 0);
+		MISC::_GET_GROUND_Z_FOR_3D_COORD_2(Var7, &fVar16, true, false);
 		STREAMING::SET_FOCUS_POS_AND_VEL((Var7.x + fVar11), (Var7.f_1 + fVar12), (fVar16 + 50f), -90f, 0f, 0f);
 	}
 }
@@ -2818,7 +2818,7 @@ int func_75(int iParam0, int iParam1, int iParam2)
 				{
 					return 0;
 				}
-				if (iParam2 && (((Global_2426097[iVar0 /*443*/].f_204 || Global_2426097[iVar0 /*443*/].f_205) || Global_2426097[iVar0 /*443*/].f_206) || NETWORK::_0x21D04D7BC538C146(PLAYER::GET_PLAYER_PED(iParam0))))
+				if (iParam2 && (((Global_2426097[iVar0 /*443*/].f_204 || Global_2426097[iVar0 /*443*/].f_205) || Global_2426097[iVar0 /*443*/].f_206) || NETWORK::_IS_ENTITY_GHOSTED_TO_LOCAL_PLAYER(PLAYER::GET_PLAYER_PED(iParam0))))
 				{
 					return 0;
 				}
@@ -2832,7 +2832,7 @@ int func_75(int iParam0, int iParam1, int iParam2)
 		{
 			return 0;
 		}
-		if (iParam2 && (((Global_2426097[iVar0 /*443*/].f_204 || Global_2426097[iVar0 /*443*/].f_205) || Global_2426097[iVar0 /*443*/].f_206) || NETWORK::_0x21D04D7BC538C146(PLAYER::GET_PLAYER_PED(iParam0))))
+		if (iParam2 && (((Global_2426097[iVar0 /*443*/].f_204 || Global_2426097[iVar0 /*443*/].f_205) || Global_2426097[iVar0 /*443*/].f_206) || NETWORK::_IS_ENTITY_GHOSTED_TO_LOCAL_PLAYER(PLAYER::GET_PLAYER_PED(iParam0))))
 		{
 			return 0;
 		}
@@ -3120,7 +3120,7 @@ int func_87(int iParam0)
 		case 78:
 			return 6;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 6;
 		
 		case 80:
@@ -3760,7 +3760,7 @@ int func_102(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -4194,7 +4194,7 @@ int func_123(var uParam0)
 				HUD::CLEAR_HELP(true);
 				MISC::SET_OVERRIDE_WEATHER("Clear");
 				GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();
-				GRAPHICS::_0x6DDBF9DFFC4AC080(true);
+				GRAPHICS::CASCADE_SHADOWS_SET_AIRCRAFT_MODE(true);
 				MISC::SET_BIT(&(uParam0->f_8), 0);
 				MISC::SET_BIT(&(uParam0->f_8), 1);
 				func_149(uParam0);
@@ -4205,7 +4205,7 @@ int func_123(var uParam0)
 				GRAPHICS::ANIMPOSTFX_STOP("MP_OrbitalCannon");
 				if (MISC::IS_BIT_SET(uParam0->f_8, 1))
 				{
-					GRAPHICS::_0x6DDBF9DFFC4AC080(false);
+					GRAPHICS::CASCADE_SHADOWS_SET_AIRCRAFT_MODE(false);
 					MISC::CLEAR_BIT(&(uParam0->f_8), 1);
 				}
 				HUD::CLEAR_HELP(true);

@@ -149,7 +149,7 @@ void __EntryFunction__()
 				func_53();
 				if (func_49(202))
 				{
-					HUD::_0x14621BB1DF14E2B2();
+					HUD::RELEASE_CONTROL_OF_FRONTEND();
 					iLocal_85 = 1;
 				}
 				if (HUD::_0x2E22FEFA0100275E())
@@ -163,7 +163,7 @@ void __EntryFunction__()
 					}
 					else
 					{
-						HUD::_0x7E17BE53E1AAABAF(&uVar0, &iVar1, &iVar2);
+						HUD::_GET_PAUSE_MENU_SELECTION_DATA(&uVar0, &iVar1, &iVar2);
 						if (iVar1 == 50)
 						{
 							iLocal_89 = iVar2;
@@ -186,7 +186,7 @@ void __EntryFunction__()
 	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-1871331138);
 	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(337714004);
 	HUD::_0x4895BDEA16E7C080(0);
-	HUD::_0x14621BB1DF14E2B2();
+	HUD::RELEASE_CONTROL_OF_FRONTEND();
 	while (true)
 	{
 		SYSTEM::WAIT(0);
@@ -1125,7 +1125,7 @@ int func_28(int iParam0)
 			return func_26(86, -1);
 		
 		case 36:
-			if (func_31(joaat("MPPLY_RACE_2_POINT_WINS")) > 0 || func_31(joaat("MPPLY_RACE_2_POINT_LOST")) > 0)
+			if (func_31(joaat("mpply_race_2_point_wins")) > 0 || func_31(joaat("mpply_race_2_point_lost")) > 0)
 			{
 				return 1;
 			}
@@ -1394,11 +1394,11 @@ int func_36(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -1710,7 +1710,7 @@ void func_45()
 	var uVar1;
 	var uVar2;
 	
-	HUD::_0x7E17BE53E1AAABAF(&uVar0, &uVar1, &uVar2);
+	HUD::_GET_PAUSE_MENU_SELECTION_DATA(&uVar0, &uVar1, &uVar2);
 	func_43(0);
 	iLocal_89 = 0;
 	func_47(0, 0, iLocal_83, 0, 1, "PM_UL_D0", 0, 0, 0);

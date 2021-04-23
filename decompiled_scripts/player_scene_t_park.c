@@ -568,15 +568,15 @@ int func_3(int* iParam0, int iParam1)
 			break;
 		
 		case 7:
-			if (ENTITY::GET_ENTITY_MODEL(*iParam0) == WEAPON::GET_WEAPONTYPE_MODEL(joaat("WEAPON_PISTOL")))
+			if (ENTITY::GET_ENTITY_MODEL(*iParam0) == WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_pistol")))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 				{
-					if (!WEAPON::HAS_PED_GOT_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_PISTOL"), false))
+					if (!WEAPON::HAS_PED_GOT_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_pistol"), false))
 					{
-						WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_PISTOL"), 30, false, true);
+						WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_pistol"), 30, false, true);
 					}
-					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_PISTOL"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_pistol"), true);
 				}
 				OBJECT::DELETE_OBJECT(iParam0);
 				return 1;
@@ -791,7 +791,7 @@ int func_4(int iParam0, char* sParam1, char* sParam2, char* sParam3, var uParam4
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(sParam1, "SAFE@MICHAEL@IG_3", 64);
 			StringCopy(sParam2, "BASE_MICHAEL", 64);
 			StringCopy(sParam3, "EXIT_MICHAEL", 64);
@@ -2891,7 +2891,7 @@ void func_48()
 	{
 		return;
 	}
-	STREAMING::_0x74DE2E8739086740();
+	STREAMING::ALLOW_PLAYER_SWITCH_OUTRO();
 }
 
 void func_49()
@@ -3638,7 +3638,7 @@ int func_54(struct<109> Param0, var uParam109)
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
@@ -5921,7 +5921,7 @@ int func_60(int iParam0, var uParam1, char* sParam2)
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			*uParam1 = 20.353f;
 			StringCopy(sParam2, "v_michael", 32);
 			return 1;
@@ -8132,7 +8132,7 @@ int func_61(int iParam0, int iParam1, var uParam2, var uParam3)
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 86:
 			switch (iParam0)
 			{

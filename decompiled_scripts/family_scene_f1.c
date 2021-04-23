@@ -936,7 +936,7 @@ void func_8(struct<3> Param0, struct<3> Param3, var uParam6)
 				Global_93978 = 3;
 			}
 		}
-		else if ((FIRE::IS_EXPLOSION_IN_AREA(0, Param0, Param3) || FIRE::IS_EXPLOSION_IN_AREA(2, Param0, Param3)) || MISC::IS_PROJECTILE_TYPE_IN_AREA(Param0, Param3, joaat("WEAPON_GRENADELAUNCHER"), true))
+		else if ((FIRE::IS_EXPLOSION_IN_AREA(0, Param0, Param3) || FIRE::IS_EXPLOSION_IN_AREA(2, Param0, Param3)) || MISC::IS_PROJECTILE_TYPE_IN_AREA(Param0, Param3, joaat("weapon_grenadelauncher"), true))
 		{
 			Global_93978 = 5;
 		}
@@ -949,7 +949,7 @@ void func_9(struct<3> Param0, struct<3> Param3)
 	
 	if (WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar0, true))
 	{
-		if (iVar0 == joaat("WEAPON_MOLOTOV") || iVar0 == joaat("WEAPON_PETROLCAN"))
+		if (iVar0 == joaat("weapon_molotov") || iVar0 == joaat("weapon_petrolcan"))
 		{
 			if (FIRE::IS_EXPLOSION_IN_AREA(3, Param0, Param3))
 			{
@@ -1069,7 +1069,7 @@ void func_13(struct<3> Param0, struct<3> Param3)
 	
 	if (WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar0, true))
 	{
-		if (iVar0 == joaat("WEAPON_RPG"))
+		if (iVar0 == joaat("weapon_rpg"))
 		{
 			if (MISC::IS_PROJECTILE_TYPE_IN_AREA(Param0, Param3, iVar0, true))
 			{
@@ -3071,7 +3071,7 @@ int func_81(int iParam0, char* sParam1)
 			StringCopy(sParam1, "TIMETABLE@MAID@CLEANING_SURFACE_1@", 64);
 			return 1;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(sParam1, "TIMETABLE@MAID@CLEANING_WINDOW@BASE", 64);
 			return 1;
 			break;

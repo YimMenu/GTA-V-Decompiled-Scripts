@@ -2204,7 +2204,7 @@ void func_46()
 		case 6:
 			func_54(iLocal_234);
 			func_51(iLocal_82);
-			STATS::STAT_SET_INT(joaat("NUM_HIDDEN_PACKAGES_7"), func_27(), true);
+			STATS::STAT_SET_INT(joaat("num_hidden_packages_7"), func_27(), true);
 			bLocal_235 = true;
 			func_48(&iLocal_226);
 			func_48(&iLocal_229);
@@ -3226,14 +3226,14 @@ int func_81()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);

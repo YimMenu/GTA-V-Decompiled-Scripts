@@ -390,9 +390,9 @@ void func_5(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -616,7 +616,7 @@ void func_10(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_11(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_11(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -1238,7 +1238,7 @@ void func_46()
 					}
 					else
 					{
-						ENTITY::REMOVE_MODEL_HIDE(func_51(iVar1), 0.5f, joaat("xs_prop_x18_vip_greeenlight"), 0);
+						ENTITY::REMOVE_MODEL_HIDE(func_51(iVar1), 0.5f, joaat("xs_prop_x18_vip_greeenlight"), false);
 					}
 				}
 				else
@@ -2685,7 +2685,7 @@ int func_81(int iParam0)
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
 			WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, true);
-			if (((iVar0 == joaat("WEAPON_SNIPERRIFLE") || iVar0 == joaat("WEAPON_HEAVYSNIPER")) || iVar0 == joaat("WEAPON_MARKSMANRIFLE")) || iVar0 == joaat("WEAPON_HEAVYSNIPER_MK2"))
+			if (((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle")) || iVar0 == joaat("weapon_heavysniper_mk2"))
 			{
 				return 1;
 			}
@@ -3993,7 +3993,7 @@ void func_145(var uParam0)
 	}
 	else if (uParam0->f_281.f_5 > 5)
 	{
-		CAM::_0x2AED6301F67007D5(PLAYER::PLAYER_PED_ID());
+		CAM::_DISABLE_CAM_COLLISION_FOR_ENTITY(PLAYER::PLAYER_PED_ID());
 		PED::SET_PED_CAPSULE(PLAYER::PLAYER_PED_ID(), func_146());
 		uParam0->f_281.f_8 = MISC::GET_FRAME_COUNT();
 	}

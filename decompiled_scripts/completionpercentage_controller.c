@@ -313,7 +313,7 @@ void __EntryFunction__()
 			{
 				if (func_123())
 				{
-					STATS::_UPDATE_STAT_FLOAT(joaat("TOTAL_PROGRESS_MADE"), Global_111858.f_10190.f_3853, 0);
+					STATS::_UPDATE_STAT_FLOAT(joaat("total_progress_made"), Global_111858.f_10190.f_3853, 0);
 					if (NETWORK::_FACEBOOK_IS_AVAILABLE())
 					{
 						NETWORK::_FACEBOOK_SET_MILESTONE_COMPLETE(0);
@@ -340,20 +340,20 @@ void __EntryFunction__()
 			Global_111858.f_10045 = MISC::GET_NUM_SUCCESSFUL_STUNT_JUMPS();
 			if (Global_111858.f_10045 >= 50)
 			{
-				STATS::_UPDATE_STAT_INT(joaat("SP0_WATER_CANNON_KILLS"), 100, 0);
+				STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_kills"), 100, 0);
 			}
 			else if (Global_111858.f_10045 >= 38)
 			{
-				STATS::_UPDATE_STAT_INT(joaat("SP0_WATER_CANNON_KILLS"), 75, 0);
+				STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_kills"), 75, 0);
 			}
 			else if (Global_111858.f_10045 >= 25)
 			{
 				func_1(289, 0, 0);
-				STATS::_UPDATE_STAT_INT(joaat("SP0_WATER_CANNON_KILLS"), 50, 0);
+				STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_kills"), 50, 0);
 			}
 			else if (Global_111858.f_10045 >= 13)
 			{
-				STATS::_UPDATE_STAT_INT(joaat("SP0_WATER_CANNON_KILLS"), 25, 0);
+				STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_kills"), 25, 0);
 			}
 		}
 	}
@@ -388,15 +388,15 @@ void func_1(int iParam0, int iParam1, int iParam2)
 		Global_111858.f_10190[iParam0 /*12*/].f_11 = iParam2;
 		if (iParam0 == 287)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("NUM_HIDDEN_PACKAGES_0"), 50, 0);
+			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_0"), 50, 0);
 		}
 		if (iParam0 == 286)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("NUM_HIDDEN_PACKAGES_1"), 50, 0);
+			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_1"), 50, 0);
 		}
 		if (iParam0 == 299)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("NUM_HIDDEN_PACKAGES_3"), 50, 0);
+			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_3"), 50, 0);
 		}
 	}
 	if (bVar0)
@@ -465,13 +465,13 @@ bool func_2(int iParam0, bool bParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar6 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
+		iVar6 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
 		iVar1 = ((iParam0 - 3111) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 3111)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar6, bParam1, iVar1, bParam3);
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar7 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar7 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 		iVar1 = ((iParam0 - 2919) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 2919)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar7, bParam1, iVar1, bParam3);
 	}
@@ -1697,7 +1697,7 @@ int func_36(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 	else if (iParam2 == 14)
 	{
-		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
+		FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, true, -1, -1);
 		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
@@ -1706,7 +1706,7 @@ int func_36(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 	else
 	{
-		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_38(iParam2));
+		FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, false, -1, func_38(iParam2));
 		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
@@ -3030,7 +3030,7 @@ void func_43(var uParam0, int iParam1, int iParam2, int iParam3)
 	{
 		iVar0 = 4;
 	}
-	FILES::_0xF3FBE2D50A6A8C28(iVar0, false);
+	FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar0, false);
 	FILES::GET_SHOP_PED_QUERY_OUTFIT((iParam2 - iParam3), &Var1);
 	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
 	{
@@ -4895,7 +4895,7 @@ void func_49(int iParam0)
 			iVar8 = 0;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "PROPS_P1_H26_8", 16);
 			iVar6 = 26;
 			iVar7 = 8;
@@ -6665,7 +6665,7 @@ bool func_55(int iParam0, int iParam1, var uParam2, var uParam3, bool bParam4, b
 					*uParam2 = 3793;
 					break;
 				
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					*uParam2 = 3794;
 					break;
 				
@@ -7598,7 +7598,7 @@ bool func_55(int iParam0, int iParam1, var uParam2, var uParam3, bool bParam4, b
 					*uParam2 = 3801;
 					break;
 				
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					*uParam2 = 3802;
 					break;
 				
@@ -8310,7 +8310,7 @@ void func_57(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar17 = (iParam1 - iParam2);
 		if (iVar17 >= 0)
 		{
-			iVar18 = FILES::_0xF3FBE2D50A6A8C28(iVar1, false);
+			iVar18 = FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar1, false);
 			if (iVar18 > iVar17)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
@@ -8331,7 +8331,7 @@ void func_57(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar37 = (iParam1 - iParam2);
 		if (iVar37 >= 0)
 		{
-			iVar38 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, true, -1, -1);
+			iVar38 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iVar1, 7, -1, true, -1, -1);
 			if (iVar38 > iVar37)
 			{
 				FILES::GET_SHOP_PED_QUERY_PROP(iVar37, &Var19);
@@ -8396,7 +8396,7 @@ void func_57(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar56 = (iParam1 - iParam2);
 		if (iVar56 >= 0)
 		{
-			iVar57 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, false, -1, func_38(iParam0));
+			iVar57 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iVar1, 7, -1, false, -1, func_38(iParam0));
 			if (iVar57 > iVar56)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
@@ -10142,7 +10142,7 @@ void func_67(int iParam0)
 			iVar1 = 120;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "FEET_P2_20_11", 16);
 			iVar6 = 20;
 			iVar7 = 11;
@@ -10753,7 +10753,7 @@ void func_68(int iParam0)
 			iVar1 = 80;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "LEGS_P2_21_8", 16);
 			iVar6 = 21;
 			iVar7 = 8;
@@ -12264,7 +12264,7 @@ void func_71(int iParam0)
 			iVar1 = 50;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "TORSO_P2_14_0", 16);
 			iVar6 = 14;
 			iVar7 = 0;
@@ -14240,7 +14240,7 @@ void func_75(int iParam0)
 			iVar8 = 0;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "PROPS_P1_H19_15", 16);
 			iVar6 = 19;
 			iVar7 = 15;
@@ -16830,7 +16830,7 @@ void func_85(int iParam0)
 			iVar1 = 700;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "FEET_P1_16_5", 16);
 			iVar6 = 16;
 			iVar7 = 5;
@@ -17772,7 +17772,7 @@ void func_86(int iParam0)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "LEGS_P1_20_0", 16);
 			iVar6 = 20;
 			iVar7 = 0;
@@ -20237,7 +20237,7 @@ void func_90(int iParam0)
 			iVar1 = 38;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "TORSO_P1_8_6", 16);
 			iVar6 = 8;
 			iVar7 = 6;
@@ -21385,7 +21385,7 @@ void func_94(int iParam0)
 			iVar8 = 10;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "PROPS_P0_E5_9", 16);
 			iVar6 = 5;
 			iVar7 = 9;
@@ -23932,7 +23932,7 @@ void func_104(int iParam0)
 			iVar1 = 130;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "FEET_P0_20_8", 16);
 			iVar6 = 20;
 			iVar7 = 8;
@@ -24635,7 +24635,7 @@ void func_105(int iParam0)
 			iVar1 = 15;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "LEGS_P0_18_7", 16);
 			iVar6 = 18;
 			iVar7 = 7;
@@ -25046,7 +25046,7 @@ void func_107(int iParam0)
 			iVar1 = 20;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "TORSO_P0_16_2", 16);
 			iVar6 = 16;
 			iVar7 = 2;
@@ -26511,7 +26511,7 @@ bool func_115(int iParam0, bool bParam1, int iParam2, bool bParam3)
 					{
 						if (Var3.f_4[iVar1] != 0)
 						{
-							ENTITY::REMOVE_MODEL_HIDE(Var3, 10f, Var3.f_4[iVar1], 0);
+							ENTITY::REMOVE_MODEL_HIDE(Var3, 10f, Var3.f_4[iVar1], false);
 						}
 						if (Var3.f_4[iVar2] != 0)
 						{
@@ -27492,7 +27492,7 @@ int func_119(var uParam0, int iParam1)
 			uParam0->f_33 = 0;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			uParam0->f_3 = 1;
 			StringCopy(&(uParam0->f_8[0 /*8*/]), "scafstartimap", 32);
 			StringCopy(&(uParam0->f_8[1 /*8*/]), "scafendimap", 32);
@@ -30021,7 +30021,7 @@ void func_142()
 						{
 							if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 18))
 							{
-								STATS::_UPDATE_STAT_INT(joaat("SP0_STARS_EVADED"), 5, 0);
+								STATS::_UPDATE_STAT_INT(joaat("sp0_stars_evaded"), 5, 0);
 								MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 18);
 							}
 							iLocal_409 = 0;
@@ -30059,17 +30059,17 @@ void func_143()
 	int iVar1;
 	
 	iVar0 = 0;
-	STATS::STAT_GET_INT(joaat("SP0_SHOTS"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp0_shots"), &iVar1, -1);
 	iVar0 = (iVar0 + iVar1);
-	STATS::STAT_GET_INT(joaat("SP1_SHOTS"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp1_shots"), &iVar1, -1);
 	iVar0 = (iVar0 + iVar1);
-	STATS::STAT_GET_INT(joaat("SP2_SHOTS"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp2_shots"), &iVar1, -1);
 	iVar0 = (iVar0 + iVar1);
 	if (iVar0 > 4999999)
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 17))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_SHOTS"), 5000000, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 5000000, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 13);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 14);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 15);
@@ -30081,7 +30081,7 @@ void func_143()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 16))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_SHOTS"), 4000000, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 4000000, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 13);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 14);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 15);
@@ -30092,7 +30092,7 @@ void func_143()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 15))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_SHOTS"), 3000000, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 3000000, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 13);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 14);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 15);
@@ -30102,7 +30102,7 @@ void func_143()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 14))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_SHOTS"), 2000000, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 2000000, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 13);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 14);
 		}
@@ -30111,7 +30111,7 @@ void func_143()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 13))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_SHOTS"), 1000000, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 1000000, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 13);
 		}
 	}
@@ -30123,17 +30123,17 @@ void func_144()
 	int iVar1;
 	
 	iVar0 = 0;
-	STATS::STAT_GET_INT(joaat("SP0_DEATHS"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp0_deaths"), &iVar1, -1);
 	iVar0 = (iVar0 + iVar1);
-	STATS::STAT_GET_INT(joaat("SP1_DEATHS"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp1_deaths"), &iVar1, -1);
 	iVar0 = (iVar0 + iVar1);
-	STATS::STAT_GET_INT(joaat("SP2_DEATHS"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp2_deaths"), &iVar1, -1);
 	iVar0 = (iVar0 + iVar1);
 	if (iVar0 > 249)
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 12))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_DEATHS"), 250, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 250, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 8);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 9);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 10);
@@ -30145,7 +30145,7 @@ void func_144()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 11))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_DEATHS"), 100, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 100, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 8);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 9);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 10);
@@ -30156,7 +30156,7 @@ void func_144()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 10))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_DEATHS"), 50, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 50, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 8);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 9);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 10);
@@ -30166,7 +30166,7 @@ void func_144()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 9))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_DEATHS"), 25, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 25, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 8);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 9);
 		}
@@ -30175,7 +30175,7 @@ void func_144()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 8))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_DEATHS"), 10, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 10, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 8);
 		}
 	}
@@ -30187,17 +30187,17 @@ void func_145()
 	int iVar1;
 	
 	iVar0 = 0;
-	STATS::STAT_GET_INT(joaat("SP0_BUSTED"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp0_busted"), &iVar1, -1);
 	iVar0 = (iVar0 + iVar1);
-	STATS::STAT_GET_INT(joaat("SP1_BUSTED"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp1_busted"), &iVar1, -1);
 	iVar0 = (iVar0 + iVar1);
-	STATS::STAT_GET_INT(joaat("SP2_BUSTED"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp2_busted"), &iVar1, -1);
 	iVar0 = (iVar0 + iVar1);
 	if (iVar0 > 249)
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 7))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_BUSTED"), 250, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 250, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 3);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 4);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 5);
@@ -30209,7 +30209,7 @@ void func_145()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 6))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_BUSTED"), 100, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 100, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 3);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 4);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 5);
@@ -30220,7 +30220,7 @@ void func_145()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 5))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_BUSTED"), 50, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 50, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 3);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 4);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 5);
@@ -30230,7 +30230,7 @@ void func_145()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 4))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_BUSTED"), 25, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 25, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 3);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 4);
 		}
@@ -30239,7 +30239,7 @@ void func_145()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 3))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("SP0_BUSTED"), 10, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 10, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 3);
 		}
 	}
@@ -30251,17 +30251,17 @@ void func_146()
 	float fVar1;
 	
 	fVar0 = 0f;
-	STATS::STAT_GET_FLOAT(joaat("SP0_DIST_SWIMMING"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp0_dist_swimming"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP1_DIST_SWIMMING"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp1_dist_swimming"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP2_DIST_SWIMMING"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp2_dist_swimming"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
 	if (fVar0 > (1609.344f * 1000f))
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 27))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_SWIMMING"), 1000f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_swimming"), 1000f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 25);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 26);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 27);
@@ -30271,7 +30271,7 @@ void func_146()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 26))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_SWIMMING"), 100f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_swimming"), 100f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 25);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 26);
 		}
@@ -30280,7 +30280,7 @@ void func_146()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 25))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_SWIMMING"), 50f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_swimming"), 50f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 25);
 		}
 	}
@@ -30292,17 +30292,17 @@ void func_147()
 	float fVar1;
 	
 	fVar0 = 0f;
-	STATS::STAT_GET_FLOAT(joaat("SP0_DIST_RUNNING"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp0_dist_running"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP1_DIST_RUNNING"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp1_dist_running"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP2_DIST_RUNNING"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp2_dist_running"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
 	if (fVar0 > (1609.344f * 1000f))
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 24))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_RUNNING"), 1000f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_running"), 1000f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 22);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 23);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 24);
@@ -30312,7 +30312,7 @@ void func_147()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 23))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_RUNNING"), 100f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_running"), 100f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 22);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 23);
 		}
@@ -30321,7 +30321,7 @@ void func_147()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 22))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_RUNNING"), 50f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_running"), 50f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 22);
 		}
 	}
@@ -30333,26 +30333,26 @@ void func_148()
 	float fVar1;
 	
 	fVar0 = 0f;
-	STATS::STAT_GET_FLOAT(joaat("SP0_DIST_DRIVING_PLANE"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp0_dist_driving_plane"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP0_DIST_DRIVING_HELI"), &fVar1, -1);
-	fVar0 = (fVar0 + fVar1);
-	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP1_DIST_DRIVING_PLANE"), &fVar1, -1);
-	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP1_DIST_DRIVING_HELI"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp0_dist_driving_heli"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP2_DIST_DRIVING_PLANE"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp1_dist_driving_plane"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP2_DIST_DRIVING_HELI"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp1_dist_driving_heli"), &fVar1, -1);
+	fVar0 = (fVar0 + fVar1);
+	fVar0 = (fVar0 + fVar1);
+	STATS::STAT_GET_FLOAT(joaat("sp2_dist_driving_plane"), &fVar1, -1);
+	fVar0 = (fVar0 + fVar1);
+	STATS::STAT_GET_FLOAT(joaat("sp2_dist_driving_heli"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
 	fVar0 = (fVar0 + fVar1);
 	if (fVar0 > (1609.344f * 50000f))
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 21))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_DRIVING_PLANE"), 50000f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_plane"), 50000f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 19);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 20);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 21);
@@ -30362,7 +30362,7 @@ void func_148()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 20))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_DRIVING_PLANE"), 5000f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_plane"), 5000f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 19);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 20);
 		}
@@ -30371,7 +30371,7 @@ void func_148()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 19))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_DRIVING_PLANE"), 500f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_plane"), 500f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 19);
 		}
 	}
@@ -30383,38 +30383,38 @@ void func_149()
 	float fVar1;
 	
 	fVar0 = 0f;
-	STATS::STAT_GET_FLOAT(joaat("SP0_DIST_DRIVING_CAR"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp0_dist_driving_car"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP0_DIST_DRIVING_QUADBIKE"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp0_dist_driving_quadbike"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP0_DIST_DRIVING_BIKE"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp0_dist_driving_bike"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP0_DIST_DRIVING_BICYCLE"), &fVar1, -1);
-	fVar0 = (fVar0 + fVar1);
-	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP1_DIST_DRIVING_CAR"), &fVar1, -1);
-	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP1_DIST_DRIVING_QUADBIKE"), &fVar1, -1);
-	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP1_DIST_DRIVING_BIKE"), &fVar1, -1);
-	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP1_DIST_DRIVING_BICYCLE"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp0_dist_driving_bicycle"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP2_DIST_DRIVING_CAR"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp1_dist_driving_car"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP2_DIST_DRIVING_QUADBIKE"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp1_dist_driving_quadbike"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP2_DIST_DRIVING_BIKE"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp1_dist_driving_bike"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
-	STATS::STAT_GET_FLOAT(joaat("SP2_DIST_DRIVING_BICYCLE"), &fVar1, -1);
+	STATS::STAT_GET_FLOAT(joaat("sp1_dist_driving_bicycle"), &fVar1, -1);
+	fVar0 = (fVar0 + fVar1);
+	fVar0 = (fVar0 + fVar1);
+	STATS::STAT_GET_FLOAT(joaat("sp2_dist_driving_car"), &fVar1, -1);
+	fVar0 = (fVar0 + fVar1);
+	STATS::STAT_GET_FLOAT(joaat("sp2_dist_driving_quadbike"), &fVar1, -1);
+	fVar0 = (fVar0 + fVar1);
+	STATS::STAT_GET_FLOAT(joaat("sp2_dist_driving_bike"), &fVar1, -1);
+	fVar0 = (fVar0 + fVar1);
+	STATS::STAT_GET_FLOAT(joaat("sp2_dist_driving_bicycle"), &fVar1, -1);
 	fVar0 = (fVar0 + fVar1);
 	fVar0 = (fVar0 + fVar1);
 	if (fVar0 > (1609.344f * 50000f))
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 2))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_DRIVING_CAR"), 50000f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_car"), 50000f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 1);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 2);
@@ -30424,7 +30424,7 @@ void func_149()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 1))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_DRIVING_CAR"), 5000f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_car"), 5000f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 1);
 		}
@@ -30433,7 +30433,7 @@ void func_149()
 	{
 		if (!MISC::IS_BIT_SET(Global_111858.f_10190.f_3855, 0))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("SP0_DIST_DRIVING_CAR"), 500f, 0);
+			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_car"), 500f, 0);
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3855), 0);
 		}
 	}
@@ -30446,7 +30446,7 @@ void func_150()
 		if (STATS::_0x5EAD2BF6484852E4())
 		{
 			MISC::SET_BIT(&(Global_111858.f_10190.f_3856), 15);
-			STATS::_UPDATE_STAT_INT(joaat("SP_VEHICLE_MODELS_DRIVEN"), 200, 0);
+			STATS::_UPDATE_STAT_INT(joaat("sp_vehicle_models_driven"), 200, 0);
 		}
 	}
 }
@@ -30564,7 +30564,7 @@ void func_151()
 			{
 				if (Global_111598 == Global_111581)
 				{
-					STATS::_UPDATE_STAT_INT(joaat("NUM_RNDEVENTS_COMPLETED"), Global_111581, 0);
+					STATS::_UPDATE_STAT_INT(joaat("num_rndevents_completed"), Global_111581, 0);
 					MISC::SET_BIT(&(Global_111858.f_10190.f_3856), 14);
 				}
 			}
@@ -30594,26 +30594,26 @@ void func_151()
 	{
 		iVar9 = Global_111598;
 	}
-	STATS::STAT_SET_INT(joaat("NUM_MISSIONS_COMPLETED"), Global_111594, true);
-	STATS::STAT_SET_INT(joaat("NUM_MISSIONS_AVAILABLE"), Global_111577, true);
-	STATS::STAT_SET_INT(joaat("NUM_MINIGAMES_COMPLETED"), Global_111595, true);
-	STATS::STAT_SET_INT(joaat("NUM_MINIGAMES_AVAILABLE"), Global_111578, true);
-	STATS::STAT_SET_INT(joaat("NUM_ODDJOBS_COMPLETED"), Global_111596, true);
-	STATS::STAT_SET_INT(joaat("NUM_ODDJOBS_AVAILABLE"), Global_111579, true);
-	STATS::STAT_SET_INT(joaat("NUM_RNDPEOPLE_COMPLETED"), Global_111597, true);
-	STATS::STAT_SET_INT(joaat("NUM_RNDPEOPLE_AVAILABLE"), Global_111580, true);
-	STATS::STAT_SET_INT(joaat("NUM_RNDEVENTS_COMPLETED"), iVar9, true);
-	STATS::STAT_SET_INT(joaat("NUM_RNDEVENTS_AVAILABLE"), Global_111584, true);
-	STATS::STAT_SET_INT(joaat("NUM_MISC_COMPLETED"), (Global_111600 + Global_111599), true);
-	STATS::STAT_SET_INT(joaat("NUM_MISC_AVAILABLE"), (Global_111583 + Global_111582), true);
+	STATS::STAT_SET_INT(joaat("num_missions_completed"), Global_111594, true);
+	STATS::STAT_SET_INT(joaat("num_missions_available"), Global_111577, true);
+	STATS::STAT_SET_INT(joaat("num_minigames_completed"), Global_111595, true);
+	STATS::STAT_SET_INT(joaat("num_minigames_available"), Global_111578, true);
+	STATS::STAT_SET_INT(joaat("num_oddjobs_completed"), Global_111596, true);
+	STATS::STAT_SET_INT(joaat("num_oddjobs_available"), Global_111579, true);
+	STATS::STAT_SET_INT(joaat("num_rndpeople_completed"), Global_111597, true);
+	STATS::STAT_SET_INT(joaat("num_rndpeople_available"), Global_111580, true);
+	STATS::STAT_SET_INT(joaat("num_rndevents_completed"), iVar9, true);
+	STATS::STAT_SET_INT(joaat("num_rndevents_available"), Global_111584, true);
+	STATS::STAT_SET_INT(joaat("num_misc_completed"), (Global_111600 + Global_111599), true);
+	STATS::STAT_SET_INT(joaat("num_misc_available"), (Global_111583 + Global_111582), true);
 	Global_111601 = (Global_111594 * 100 / Global_111577);
 	Global_111603 = ((Global_111596 + Global_111595) * 100 / (Global_111579 + Global_111578));
 	Global_111602 = ((Global_111597 + iVar9) * 100 / (Global_111580 + Global_111584));
 	Global_111604 = ((Global_111599 + Global_111600) * 100 / (Global_111582 + Global_111583));
-	STATS::STAT_SET_FLOAT(joaat("TOTAL_PROGRESS_MADE"), Global_111858.f_10190.f_3853, true);
-	STATS::STAT_SET_INT(joaat("PERCENT_STORY_MISSIONS"), Global_111601, true);
-	STATS::STAT_SET_INT(joaat("PERCENT_AMBIENT_MISSIONS"), Global_111602, true);
-	STATS::STAT_SET_INT(joaat("PERCENT_ODDJOBS"), Global_111603, true);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_111858.f_10190.f_3853, true);
+	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_111601, true);
+	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_111602, true);
+	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_111603, true);
 	if (fVar8 > 0f && SYSTEM::FLOOR(fVar8) < SYSTEM::FLOOR(Global_111858.f_10190.f_3853))
 	{
 		func_154(13, SYSTEM::FLOOR(Global_111858.f_10190.f_3853));

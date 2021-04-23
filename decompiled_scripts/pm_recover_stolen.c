@@ -341,8 +341,8 @@ void func_1()
 					}
 					if (Local_37.f_20)
 					{
-						WEAPON::GIVE_WEAPON_TO_PED(iLocal_245, joaat("WEAPON_PISTOL"), 120, false, false);
-						WEAPON::GIVE_WEAPON_TO_PED(iLocal_245, joaat("WEAPON_MICROSMG"), 120, true, true);
+						WEAPON::GIVE_WEAPON_TO_PED(iLocal_245, joaat("weapon_pistol"), 120, false, false);
+						WEAPON::GIVE_WEAPON_TO_PED(iLocal_245, joaat("weapon_microsmg"), 120, true, true);
 					}
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_37.f_8);
 					ENTITY::SET_ENTITY_PROOFS(iLocal_245, false, false, false, Local_37.f_27, false, false, false, false);
@@ -620,7 +620,7 @@ void func_1()
 				{
 					if (!TASK::IS_DRIVEBY_TASK_UNDERNEATH_DRIVING_TASK(iLocal_245))
 					{
-						WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(iLocal_245, joaat("WEAPON_MICROSMG"));
+						WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(iLocal_245, joaat("weapon_microsmg"));
 						TASK::TASK_DRIVE_BY(iLocal_245, PLAYER::PLAYER_PED_ID(), 0, 0f, 0f, 0f, 1000f, 100, true, -753768974);
 					}
 				}
@@ -1276,7 +1276,7 @@ int func_17()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -2313,7 +2313,7 @@ int func_56(int iParam0, bool bParam1)
 					iVar3 = (iVar2 - 1);
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iVar0, iVar3, false))
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, 0) == iParam0)
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, false) == iParam0)
 						{
 							return iVar3;
 						}

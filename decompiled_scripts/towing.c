@@ -2128,7 +2128,7 @@ int func_24()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -3445,11 +3445,11 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_TOWI");
+					return joaat("prop_bought_towi");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_TOWI");
+					return joaat("prop_earned_towi");
 					break;
 			}
 			break;
@@ -3458,15 +3458,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_TAXI");
+					return joaat("prop_bought_taxi");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_TAXI");
+					return joaat("prop_earned_taxi");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_TAXI");
+					return joaat("prop_missions_taxi");
 					break;
 			}
 			break;
@@ -3475,11 +3475,11 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_TRAF");
+					return joaat("prop_bought_traf");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_TRAF");
+					return joaat("prop_earned_traf");
 					break;
 			}
 			break;
@@ -3488,11 +3488,11 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_SOCO");
+					return joaat("prop_bought_soco");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_SOCO");
+					return joaat("prop_earned_soco");
 					break;
 			}
 			break;
@@ -3501,11 +3501,11 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_CMSH");
+					return joaat("prop_bought_cmsh");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_CMSH");
+					return joaat("prop_earned_cmsh");
 					break;
 			}
 			break;
@@ -3514,15 +3514,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_CINV");
+					return joaat("prop_bought_cinv");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_CINV");
+					return joaat("prop_earned_cinv");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_CINV");
+					return joaat("prop_missions_cinv");
 					break;
 			}
 			break;
@@ -3531,15 +3531,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_CIND");
+					return joaat("prop_bought_cind");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_CIND");
+					return joaat("prop_earned_cind");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_CIND");
+					return joaat("prop_missions_cind");
 					break;
 			}
 			break;
@@ -3548,15 +3548,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_CINM");
+					return joaat("prop_bought_cinm");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_CINM");
+					return joaat("prop_earned_cinm");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_CINM");
+					return joaat("prop_missions_cinm");
 					break;
 			}
 			break;
@@ -3565,11 +3565,11 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_GOLF");
+					return joaat("prop_bought_golf");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_GOLF");
+					return joaat("prop_earned_golf");
 					break;
 			}
 			break;
@@ -3578,15 +3578,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_CSCR");
+					return joaat("prop_bought_cscr");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_CSCR");
+					return joaat("prop_earned_cscr");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_CSCR");
+					return joaat("prop_missions_cscr");
 					break;
 			}
 			break;
@@ -3595,15 +3595,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_WEED");
+					return joaat("prop_bought_weed");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_WEED");
+					return joaat("prop_earned_weed");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_WEED");
+					return joaat("prop_missions_weed");
 					break;
 			}
 			break;
@@ -3612,15 +3612,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_BARTE");
+					return joaat("prop_bought_barte");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_BARTE");
+					return joaat("prop_earned_barte");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_BARTE");
+					return joaat("prop_missions_barte");
 					break;
 			}
 			break;
@@ -3629,15 +3629,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_BARPI");
+					return joaat("prop_bought_barpi");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_BARPI");
+					return joaat("prop_earned_barpi");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_BARPI");
+					return joaat("prop_missions_barpi");
 					break;
 			}
 			break;
@@ -3646,15 +3646,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_BARHE");
+					return joaat("prop_bought_barhe");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_BARHE");
+					return joaat("prop_earned_barhe");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_BARHE");
+					return joaat("prop_missions_barhe");
 					break;
 			}
 			break;
@@ -3663,15 +3663,15 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_BARHO");
+					return joaat("prop_bought_barho");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_BARHO");
+					return joaat("prop_earned_barho");
 					break;
 				
 				case 2:
-					return joaat("PROP_MISSIONS_BARHO");
+					return joaat("prop_missions_barho");
 					break;
 			}
 			break;
@@ -3680,16 +3680,16 @@ int func_63(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return joaat("PROP_BOUGHT_STRIP");
+					return joaat("prop_bought_strip");
 					break;
 				
 				case 1:
-					return joaat("PROP_EARNED_STRIP");
+					return joaat("prop_earned_strip");
 					break;
 			}
 			break;
 	}
-	return joaat("PROP_BOUGHT_TOWI");
+	return joaat("prop_bought_towi");
 }
 
 void func_64(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
@@ -3714,15 +3714,15 @@ void func_64(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 			switch (iParam0)
 			{
 				case 0:
-					iVar1 = joaat("SP0_MONEY_MADE_FROM_RANDOM_PEDS");
+					iVar1 = joaat("sp0_money_made_from_random_peds");
 					break;
 				
 				case 1:
-					iVar1 = joaat("SP1_MONEY_MADE_FROM_RANDOM_PEDS");
+					iVar1 = joaat("sp1_money_made_from_random_peds");
 					break;
 				
 				case 2:
-					iVar1 = joaat("SP2_MONEY_MADE_FROM_RANDOM_PEDS");
+					iVar1 = joaat("sp2_money_made_from_random_peds");
 					break;
 				
 				default:
@@ -3734,15 +3734,15 @@ void func_64(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 			switch (iParam0)
 			{
 				case 0:
-					iVar1 = joaat("SP0_MONEY_MADE_FROM_MISSIONS");
+					iVar1 = joaat("sp0_money_made_from_missions");
 					break;
 				
 				case 1:
-					iVar1 = joaat("SP1_MONEY_MADE_FROM_MISSIONS");
+					iVar1 = joaat("sp1_money_made_from_missions");
 					break;
 				
 				case 2:
-					iVar1 = joaat("SP2_MONEY_MADE_FROM_MISSIONS");
+					iVar1 = joaat("sp2_money_made_from_missions");
 					break;
 				
 				default:
@@ -3777,15 +3777,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 			{
 				case 0:
 					func_97(99, 1);
-					func_96(joaat("SP0_MONEY_TOTAL_SPENT"), iParam3);
+					func_96(joaat("sp0_money_total_spent"), iParam3);
 					break;
 				
 				case 1:
-					func_96(joaat("SP1_MONEY_TOTAL_SPENT"), iParam3);
+					func_96(joaat("sp1_money_total_spent"), iParam3);
 					break;
 				
 				case 2:
-					func_96(joaat("SP2_MONEY_TOTAL_SPENT"), iParam3);
+					func_96(joaat("sp2_money_total_spent"), iParam3);
 					break;
 			}
 			func_81(0);
@@ -3812,15 +3812,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 					switch (iParam0)
 					{
 						case 0:
-							func_96(joaat("SP0_MONEY_SPENT_ON_TATTOOS"), iParam3);
+							func_96(joaat("sp0_money_spent_on_tattoos"), iParam3);
 							break;
 						
 						case 1:
-							func_96(joaat("SP1_MONEY_SPENT_ON_TATTOOS"), iParam3);
+							func_96(joaat("sp1_money_spent_on_tattoos"), iParam3);
 							break;
 						
 						case 2:
-							func_96(joaat("SP2_MONEY_SPENT_ON_TATTOOS"), iParam3);
+							func_96(joaat("sp2_money_spent_on_tattoos"), iParam3);
 							break;
 					}
 					if (func_76(1))
@@ -3834,15 +3834,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 					switch (iParam0)
 					{
 						case 0:
-							func_96(joaat("SP0_MONEY_SPENT_ON_TAXIS"), iParam3);
+							func_96(joaat("sp0_money_spent_on_taxis"), iParam3);
 							break;
 						
 						case 1:
-							func_96(joaat("SP1_MONEY_SPENT_ON_TAXIS"), iParam3);
+							func_96(joaat("sp1_money_spent_on_taxis"), iParam3);
 							break;
 						
 						case 2:
-							func_96(joaat("SP2_MONEY_SPENT_ON_TAXIS"), iParam3);
+							func_96(joaat("sp2_money_spent_on_taxis"), iParam3);
 							break;
 					}
 					break;
@@ -3851,15 +3851,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 					switch (iParam0)
 					{
 						case 0:
-							func_96(joaat("SP0_MONEY_SPENT_IN_STRIP_CLUBS"), iParam3);
+							func_96(joaat("sp0_money_spent_in_strip_clubs"), iParam3);
 							break;
 						
 						case 1:
-							func_96(joaat("SP1_MONEY_SPENT_IN_STRIP_CLUBS"), iParam3);
+							func_96(joaat("sp1_money_spent_in_strip_clubs"), iParam3);
 							break;
 						
 						case 2:
-							func_96(joaat("SP2_MONEY_SPENT_IN_STRIP_CLUBS"), iParam3);
+							func_96(joaat("sp2_money_spent_in_strip_clubs"), iParam3);
 							break;
 					}
 					break;
@@ -3881,15 +3881,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 					switch (iParam0)
 					{
 						case 0:
-							func_96(joaat("SP0_MONEY_SPENT_PROPERTY"), iParam3);
+							func_96(joaat("sp0_money_spent_property"), iParam3);
 							break;
 						
 						case 1:
-							func_96(joaat("SP1_MONEY_SPENT_PROPERTY"), iParam3);
+							func_96(joaat("sp1_money_spent_property"), iParam3);
 							break;
 						
 						case 2:
-							func_96(joaat("SP2_MONEY_SPENT_PROPERTY"), iParam3);
+							func_96(joaat("sp2_money_spent_property"), iParam3);
 							break;
 					}
 					break;
@@ -3901,15 +3901,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 							switch (iParam0)
 							{
 								case 0:
-									func_96(joaat("SP0_MONEY_SPENT_IN_CLOTHES"), iParam3);
+									func_96(joaat("sp0_money_spent_in_clothes"), iParam3);
 									break;
 								
 								case 1:
-									func_96(joaat("SP1_MONEY_SPENT_IN_CLOTHES"), iParam3);
+									func_96(joaat("sp1_money_spent_in_clothes"), iParam3);
 									break;
 								
 								case 2:
-									func_96(joaat("SP2_MONEY_SPENT_IN_CLOTHES"), iParam3);
+									func_96(joaat("sp2_money_spent_in_clothes"), iParam3);
 									break;
 							}
 							break;
@@ -3918,15 +3918,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 							switch (iParam0)
 							{
 								case 0:
-									func_96(joaat("SP0_MONEY_SPENT_ON_HAIRDOS"), iParam3);
+									func_96(joaat("sp0_money_spent_on_hairdos"), iParam3);
 									break;
 								
 								case 1:
-									func_96(joaat("SP1_MONEY_SPENT_ON_HAIRDOS"), iParam3);
+									func_96(joaat("sp1_money_spent_on_hairdos"), iParam3);
 									break;
 								
 								case 2:
-									func_96(joaat("SP2_MONEY_SPENT_ON_HAIRDOS"), iParam3);
+									func_96(joaat("sp2_money_spent_on_hairdos"), iParam3);
 									break;
 							}
 							if (func_76(0))
@@ -3940,15 +3940,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 							switch (iParam0)
 							{
 								case 0:
-									func_96(joaat("SP0_MONEY_SPENT_IN_BUYING_GUNS"), iParam3);
+									func_96(joaat("sp0_money_spent_in_buying_guns"), iParam3);
 									break;
 								
 								case 1:
-									func_96(joaat("SP1_MONEY_SPENT_IN_BUYING_GUNS"), iParam3);
+									func_96(joaat("sp1_money_spent_in_buying_guns"), iParam3);
 									break;
 								
 								case 2:
-									func_96(joaat("SP2_MONEY_SPENT_IN_BUYING_GUNS"), iParam3);
+									func_96(joaat("sp2_money_spent_in_buying_guns"), iParam3);
 									break;
 							}
 							break;
@@ -3957,15 +3957,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 							switch (iParam0)
 							{
 								case 0:
-									func_96(joaat("SP0_MONEY_SPENT_CAR_MODS"), iParam3);
+									func_96(joaat("sp0_money_spent_car_mods"), iParam3);
 									break;
 								
 								case 1:
-									func_96(joaat("SP1_MONEY_SPENT_CAR_MODS"), iParam3);
+									func_96(joaat("sp1_money_spent_car_mods"), iParam3);
 									break;
 								
 								case 2:
-									func_96(joaat("SP2_MONEY_SPENT_CAR_MODS"), iParam3);
+									func_96(joaat("sp2_money_spent_car_mods"), iParam3);
 									break;
 							}
 							func_75(iParam3);
@@ -4024,15 +4024,15 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 			switch (iParam0)
 			{
 				case 0:
-					func_96(joaat("SP0_TOTAL_CASH_EARNED"), iParam3);
+					func_96(joaat("sp0_total_cash_earned"), iParam3);
 					break;
 				
 				case 1:
-					func_96(joaat("SP1_TOTAL_CASH_EARNED"), iParam3);
+					func_96(joaat("sp1_total_cash_earned"), iParam3);
 					break;
 				
 				case 2:
-					func_96(joaat("SP2_TOTAL_CASH_EARNED"), iParam3);
+					func_96(joaat("sp2_total_cash_earned"), iParam3);
 					break;
 			}
 			break;
@@ -4135,15 +4135,15 @@ void func_67(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			STATS::STAT_SET_INT(joaat("SP0_TOTAL_CASH"), iVar0, true);
+			STATS::STAT_SET_INT(joaat("sp0_total_cash"), iVar0, true);
 			break;
 		
 		case 1:
-			STATS::STAT_SET_INT(joaat("SP1_TOTAL_CASH"), iVar0, true);
+			STATS::STAT_SET_INT(joaat("sp1_total_cash"), iVar0, true);
 			break;
 		
 		case 2:
-			STATS::STAT_SET_INT(joaat("SP2_TOTAL_CASH"), iVar0, true);
+			STATS::STAT_SET_INT(joaat("sp2_total_cash"), iVar0, true);
 			break;
 	}
 }
@@ -4400,13 +4400,13 @@ bool func_74(int iParam0, bool bParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar6 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
+		iVar6 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
 		iVar1 = ((iParam0 - 3111) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 3111)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar6, bParam1, iVar1, bParam3);
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar7 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar7 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 		iVar1 = ((iParam0 - 2919) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 2919)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar7, bParam1, iVar1, bParam3);
 	}
@@ -4796,11 +4796,11 @@ int func_80(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -4888,15 +4888,15 @@ int func_81(bool bParam0)
 	{
 		return 0;
 	}
-	if (STATS::STAT_GET_INT(joaat("SP0_MONEY_TOTAL_SPENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp0_money_total_spent"), &iVar0, -1))
 	{
 		iVar1 = (iVar1 + iVar0);
 	}
-	if (STATS::STAT_GET_INT(joaat("SP1_MONEY_TOTAL_SPENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp1_money_total_spent"), &iVar0, -1))
 	{
 		iVar1 = (iVar1 + iVar0);
 	}
-	if (STATS::STAT_GET_INT(joaat("SP2_MONEY_TOTAL_SPENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp2_money_total_spent"), &iVar0, -1))
 	{
 		iVar1 = (iVar1 + iVar0);
 	}
@@ -4904,10 +4904,10 @@ int func_81(bool bParam0)
 	{
 	}
 	iVar2 = 0;
-	STATS::STAT_GET_INT(joaat("NUM_CASH_SPENT"), &iVar2, -1);
+	STATS::STAT_GET_INT(joaat("num_cash_spent"), &iVar2, -1);
 	if (iVar1 > 0 && (iVar2 / 2000000) != (iVar1 / 2000000))
 	{
-		STATS::STAT_SET_INT(joaat("NUM_CASH_SPENT"), iVar1, true);
+		STATS::STAT_SET_INT(joaat("num_cash_spent"), iVar1, true);
 		func_95(27, iVar1);
 	}
 	if (iVar1 < 200000000)
@@ -5190,17 +5190,17 @@ void func_98()
 	
 	if (NETWORK::NETWORK_IS_SIGNED_IN())
 	{
-		STATS::STAT_GET_INT(joaat("SP0_TOTAL_CASH"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("sp0_total_cash"), &iVar0, -1);
 		if (!Global_58891[0] == iVar0)
 		{
 			Global_58891[0] = iVar0;
 		}
-		STATS::STAT_GET_INT(joaat("SP1_TOTAL_CASH"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("sp1_total_cash"), &iVar0, -1);
 		if (!Global_58891[1] == iVar0)
 		{
 			Global_58891[1] = iVar0;
 		}
-		STATS::STAT_GET_INT(joaat("SP2_TOTAL_CASH"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("sp2_total_cash"), &iVar0, -1);
 		if (!Global_58891[2] == iVar0)
 		{
 			Global_58891[2] = iVar0;
@@ -6627,14 +6627,14 @@ int func_135(struct<3> Param0, float fParam3, int iParam4, bool bParam5, var uPa
 	}
 	if (!func_11(Local_650[iLocal_2604 /*23*/].f_10))
 	{
-		Local_2996[*iParam4 /*20*/].f_17 = VEHICLE::_ADD_SPEED_ZONE_FOR_COORD(Local_650[iLocal_2604 /*23*/].f_10, fVar0, 0f, false);
+		Local_2996[*iParam4 /*20*/].f_17 = VEHICLE::ADD_ROAD_NODE_SPEED_ZONE(Local_650[iLocal_2604 /*23*/].f_10, fVar0, 0f, false);
 	}
 	else
 	{
-		Local_2996[*iParam4 /*20*/].f_17 = VEHICLE::_ADD_SPEED_ZONE_FOR_COORD(Param0, fVar0, 0f, false);
+		Local_2996[*iParam4 /*20*/].f_17 = VEHICLE::ADD_ROAD_NODE_SPEED_ZONE(Param0, fVar0, 0f, false);
 	}
-	Local_2996[*iParam4 /*20*/].f_18 = VEHICLE::_ADD_SPEED_ZONE_FOR_COORD(Param0, fVar1, 2.5f, false);
-	Local_2996[*iParam4 /*20*/].f_19 = VEHICLE::_ADD_SPEED_ZONE_FOR_COORD(Param0, fVar2, 4f, false);
+	Local_2996[*iParam4 /*20*/].f_18 = VEHICLE::ADD_ROAD_NODE_SPEED_ZONE(Param0, fVar1, 2.5f, false);
+	Local_2996[*iParam4 /*20*/].f_19 = VEHICLE::ADD_ROAD_NODE_SPEED_ZONE(Param0, fVar2, 4f, false);
 	if (bParam5)
 	{
 		if (Local_2996[*iParam4 /*20*/].f_15)
@@ -6712,8 +6712,8 @@ int func_138(struct<3> Param0, float fParam3, var uParam4, int iParam5)
 	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_2996[*uParam4 /*20*/].f_6, 1.5f, 0f, 0f) };
 	Var12 = { ENTITY::GET_ENTITY_COORDS(Local_2996[*uParam4 /*20*/].f_6, true) };
 	fVar15 = ENTITY::GET_ENTITY_HEADING(Local_2996[*uParam4 /*20*/].f_6);
-	iLocal_3048 = VEHICLE::_ADD_SPEED_ZONE_FOR_COORD(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var12, fVar15, -1.5f, -30f, 0f), 10f, 0f, false);
-	iLocal_3049 = VEHICLE::_ADD_SPEED_ZONE_FOR_COORD(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var12, fVar15, -1.5f, 30f, 0f), 10f, 0f, false);
+	iLocal_3048 = VEHICLE::ADD_ROAD_NODE_SPEED_ZONE(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var12, fVar15, -1.5f, -30f, 0f), 10f, 0f, false);
+	iLocal_3049 = VEHICLE::ADD_ROAD_NODE_SPEED_ZONE(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var12, fVar15, -1.5f, 30f, 0f), 10f, 0f, false);
 	MISC::CLEAR_AREA_OF_VEHICLES(Var0, 30f, false, false, false, false, false, false);
 	Local_1870[func_256() /*28*/][0 /*3*/] = { Var0.x, Var0.f_1, (Var0.f_2 + 1f) };
 	return 1;
@@ -7411,7 +7411,7 @@ int func_157(int iParam0, bool bParam1)
 					iVar3 = (iVar2 - 1);
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iVar0, iVar3, false))
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, 0) == iParam0)
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, false) == iParam0)
 						{
 							return iVar3;
 						}
@@ -8100,7 +8100,7 @@ int func_177(int iParam0, int iParam1)
 	int iVar0;
 	
 	WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, true);
-	if (iVar0 == joaat("WEAPON_PETROLCAN"))
+	if (iVar0 == joaat("weapon_petrolcan"))
 	{
 		if (PED::IS_PED_SHOOTING(iParam0))
 		{
@@ -8198,17 +8198,17 @@ int func_180(int iParam0)
 	{
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, false))
 		{
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, 0) != 0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, false) != 0)
 			{
 				if (WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar0, true))
 				{
-					if (iVar0 == joaat("WEAPON_STICKYBOMB"))
+					if (iVar0 == joaat("weapon_stickybomb"))
 					{
 						if (func_119(PLAYER::PLAYER_PED_ID(), iParam0, 1) < 40f)
 						{
 							if (PLAYER::GET_ENTITY_PLAYER_IS_FREE_AIMING_AT(PLAYER::PLAYER_ID(), &iVar1))
 							{
-								if ((ENTITY::IS_ENTITY_A_VEHICLE(iVar1) && ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(iVar1) == iParam0) || (ENTITY::IS_ENTITY_A_PED(iVar1) && ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(iVar1) == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, 0)))
+								if ((ENTITY::IS_ENTITY_A_VEHICLE(iVar1) && ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(iVar1) == iParam0) || (ENTITY::IS_ENTITY_A_PED(iVar1) && ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(iVar1) == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, false)))
 								{
 									if ((PED::IS_PED_ON_FOOT(PLAYER::PLAYER_PED_ID()) && PAD::IS_CONTROL_PRESSED(0, 24)) || (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && PAD::IS_CONTROL_PRESSED(0, 69)))
 									{
@@ -8799,17 +8799,17 @@ void func_193()
 		VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_3109, 1);
 		VEHICLE::SET_VEHICLE_SIREN(iLocal_3109, false);
 	}
-	VEHICLE::_REMOVE_SPEED_ZONE(iLocal_3048);
-	VEHICLE::_REMOVE_SPEED_ZONE(iLocal_3049);
+	VEHICLE::REMOVE_ROAD_NODE_SPEED_ZONE(iLocal_3048);
+	VEHICLE::REMOVE_ROAD_NODE_SPEED_ZONE(iLocal_3049);
 	PED::REMOVE_SCENARIO_BLOCKING_AREA(iLocal_3112, false);
 	PED::REMOVE_SCENARIO_BLOCKING_AREA(iLocal_3113, false);
 	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(Local_3060 - Vector(15f, 15f, 15f), Local_3060 + Vector(15f, 15f, 15f), true, true);
 	iVar0 = 0;
 	while (iVar0 < 1)
 	{
-		VEHICLE::_REMOVE_SPEED_ZONE(Local_2996[iVar0 /*20*/].f_17);
-		VEHICLE::_REMOVE_SPEED_ZONE(Local_2996[iVar0 /*20*/].f_18);
-		VEHICLE::_REMOVE_SPEED_ZONE(Local_2996[iVar0 /*20*/].f_19);
+		VEHICLE::REMOVE_ROAD_NODE_SPEED_ZONE(Local_2996[iVar0 /*20*/].f_17);
+		VEHICLE::REMOVE_ROAD_NODE_SPEED_ZONE(Local_2996[iVar0 /*20*/].f_18);
+		VEHICLE::REMOVE_ROAD_NODE_SPEED_ZONE(Local_2996[iVar0 /*20*/].f_19);
 		iVar0++;
 	}
 	if (!func_11(Local_1870[func_256() /*28*/].f_17))
@@ -9859,7 +9859,7 @@ void func_206(int iParam0)
 			PED::SET_PED_COMBAT_RANGE(iParam0, 1);
 			PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 23, false);
 			PED::SET_PED_COMBAT_MOVEMENT(iParam0, 2);
-			WEAPON::GIVE_WEAPON_TO_PED(iParam0, joaat("WEAPON_MICROSMG"), 1000, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iParam0, joaat("weapon_microsmg"), 1000, true, true);
 			PED::SET_PED_SHOOT_RATE(iParam0, 500);
 		}
 	}

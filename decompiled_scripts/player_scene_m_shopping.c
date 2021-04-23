@@ -1595,7 +1595,7 @@ int func_26()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -2464,15 +2464,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 			{
 				case 0:
 					func_81(99, 1);
-					func_80(joaat("SP0_MONEY_TOTAL_SPENT"), iParam3);
+					func_80(joaat("sp0_money_total_spent"), iParam3);
 					break;
 				
 				case 1:
-					func_80(joaat("SP1_MONEY_TOTAL_SPENT"), iParam3);
+					func_80(joaat("sp1_money_total_spent"), iParam3);
 					break;
 				
 				case 2:
-					func_80(joaat("SP2_MONEY_TOTAL_SPENT"), iParam3);
+					func_80(joaat("sp2_money_total_spent"), iParam3);
 					break;
 			}
 			func_65(0);
@@ -2499,15 +2499,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 					switch (iParam0)
 					{
 						case 0:
-							func_80(joaat("SP0_MONEY_SPENT_ON_TATTOOS"), iParam3);
+							func_80(joaat("sp0_money_spent_on_tattoos"), iParam3);
 							break;
 						
 						case 1:
-							func_80(joaat("SP1_MONEY_SPENT_ON_TATTOOS"), iParam3);
+							func_80(joaat("sp1_money_spent_on_tattoos"), iParam3);
 							break;
 						
 						case 2:
-							func_80(joaat("SP2_MONEY_SPENT_ON_TATTOOS"), iParam3);
+							func_80(joaat("sp2_money_spent_on_tattoos"), iParam3);
 							break;
 					}
 					if (func_60(1))
@@ -2521,15 +2521,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 					switch (iParam0)
 					{
 						case 0:
-							func_80(joaat("SP0_MONEY_SPENT_ON_TAXIS"), iParam3);
+							func_80(joaat("sp0_money_spent_on_taxis"), iParam3);
 							break;
 						
 						case 1:
-							func_80(joaat("SP1_MONEY_SPENT_ON_TAXIS"), iParam3);
+							func_80(joaat("sp1_money_spent_on_taxis"), iParam3);
 							break;
 						
 						case 2:
-							func_80(joaat("SP2_MONEY_SPENT_ON_TAXIS"), iParam3);
+							func_80(joaat("sp2_money_spent_on_taxis"), iParam3);
 							break;
 					}
 					break;
@@ -2538,15 +2538,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 					switch (iParam0)
 					{
 						case 0:
-							func_80(joaat("SP0_MONEY_SPENT_IN_STRIP_CLUBS"), iParam3);
+							func_80(joaat("sp0_money_spent_in_strip_clubs"), iParam3);
 							break;
 						
 						case 1:
-							func_80(joaat("SP1_MONEY_SPENT_IN_STRIP_CLUBS"), iParam3);
+							func_80(joaat("sp1_money_spent_in_strip_clubs"), iParam3);
 							break;
 						
 						case 2:
-							func_80(joaat("SP2_MONEY_SPENT_IN_STRIP_CLUBS"), iParam3);
+							func_80(joaat("sp2_money_spent_in_strip_clubs"), iParam3);
 							break;
 					}
 					break;
@@ -2568,15 +2568,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 					switch (iParam0)
 					{
 						case 0:
-							func_80(joaat("SP0_MONEY_SPENT_PROPERTY"), iParam3);
+							func_80(joaat("sp0_money_spent_property"), iParam3);
 							break;
 						
 						case 1:
-							func_80(joaat("SP1_MONEY_SPENT_PROPERTY"), iParam3);
+							func_80(joaat("sp1_money_spent_property"), iParam3);
 							break;
 						
 						case 2:
-							func_80(joaat("SP2_MONEY_SPENT_PROPERTY"), iParam3);
+							func_80(joaat("sp2_money_spent_property"), iParam3);
 							break;
 					}
 					break;
@@ -2588,15 +2588,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 							switch (iParam0)
 							{
 								case 0:
-									func_80(joaat("SP0_MONEY_SPENT_IN_CLOTHES"), iParam3);
+									func_80(joaat("sp0_money_spent_in_clothes"), iParam3);
 									break;
 								
 								case 1:
-									func_80(joaat("SP1_MONEY_SPENT_IN_CLOTHES"), iParam3);
+									func_80(joaat("sp1_money_spent_in_clothes"), iParam3);
 									break;
 								
 								case 2:
-									func_80(joaat("SP2_MONEY_SPENT_IN_CLOTHES"), iParam3);
+									func_80(joaat("sp2_money_spent_in_clothes"), iParam3);
 									break;
 							}
 							break;
@@ -2605,15 +2605,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 							switch (iParam0)
 							{
 								case 0:
-									func_80(joaat("SP0_MONEY_SPENT_ON_HAIRDOS"), iParam3);
+									func_80(joaat("sp0_money_spent_on_hairdos"), iParam3);
 									break;
 								
 								case 1:
-									func_80(joaat("SP1_MONEY_SPENT_ON_HAIRDOS"), iParam3);
+									func_80(joaat("sp1_money_spent_on_hairdos"), iParam3);
 									break;
 								
 								case 2:
-									func_80(joaat("SP2_MONEY_SPENT_ON_HAIRDOS"), iParam3);
+									func_80(joaat("sp2_money_spent_on_hairdos"), iParam3);
 									break;
 							}
 							if (func_60(0))
@@ -2627,15 +2627,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 							switch (iParam0)
 							{
 								case 0:
-									func_80(joaat("SP0_MONEY_SPENT_IN_BUYING_GUNS"), iParam3);
+									func_80(joaat("sp0_money_spent_in_buying_guns"), iParam3);
 									break;
 								
 								case 1:
-									func_80(joaat("SP1_MONEY_SPENT_IN_BUYING_GUNS"), iParam3);
+									func_80(joaat("sp1_money_spent_in_buying_guns"), iParam3);
 									break;
 								
 								case 2:
-									func_80(joaat("SP2_MONEY_SPENT_IN_BUYING_GUNS"), iParam3);
+									func_80(joaat("sp2_money_spent_in_buying_guns"), iParam3);
 									break;
 							}
 							break;
@@ -2644,15 +2644,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 							switch (iParam0)
 							{
 								case 0:
-									func_80(joaat("SP0_MONEY_SPENT_CAR_MODS"), iParam3);
+									func_80(joaat("sp0_money_spent_car_mods"), iParam3);
 									break;
 								
 								case 1:
-									func_80(joaat("SP1_MONEY_SPENT_CAR_MODS"), iParam3);
+									func_80(joaat("sp1_money_spent_car_mods"), iParam3);
 									break;
 								
 								case 2:
-									func_80(joaat("SP2_MONEY_SPENT_CAR_MODS"), iParam3);
+									func_80(joaat("sp2_money_spent_car_mods"), iParam3);
 									break;
 							}
 							func_59(iParam3);
@@ -2711,15 +2711,15 @@ int func_49(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 			switch (iParam0)
 			{
 				case 0:
-					func_80(joaat("SP0_TOTAL_CASH_EARNED"), iParam3);
+					func_80(joaat("sp0_total_cash_earned"), iParam3);
 					break;
 				
 				case 1:
-					func_80(joaat("SP1_TOTAL_CASH_EARNED"), iParam3);
+					func_80(joaat("sp1_total_cash_earned"), iParam3);
 					break;
 				
 				case 2:
-					func_80(joaat("SP2_TOTAL_CASH_EARNED"), iParam3);
+					func_80(joaat("sp2_total_cash_earned"), iParam3);
 					break;
 			}
 			break;
@@ -2822,15 +2822,15 @@ void func_51(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			STATS::STAT_SET_INT(joaat("SP0_TOTAL_CASH"), iVar0, true);
+			STATS::STAT_SET_INT(joaat("sp0_total_cash"), iVar0, true);
 			break;
 		
 		case 1:
-			STATS::STAT_SET_INT(joaat("SP1_TOTAL_CASH"), iVar0, true);
+			STATS::STAT_SET_INT(joaat("sp1_total_cash"), iVar0, true);
 			break;
 		
 		case 2:
-			STATS::STAT_SET_INT(joaat("SP2_TOTAL_CASH"), iVar0, true);
+			STATS::STAT_SET_INT(joaat("sp2_total_cash"), iVar0, true);
 			break;
 	}
 }
@@ -3087,13 +3087,13 @@ bool func_58(int iParam0, bool bParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar6 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
+		iVar6 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
 		iVar1 = ((iParam0 - 3111) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 3111)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar6, bParam1, iVar1, bParam3);
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar7 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar7 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 		iVar1 = ((iParam0 - 2919) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 2919)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar7, bParam1, iVar1, bParam3);
 	}
@@ -3483,11 +3483,11 @@ int func_64(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -3575,15 +3575,15 @@ int func_65(bool bParam0)
 	{
 		return 0;
 	}
-	if (STATS::STAT_GET_INT(joaat("SP0_MONEY_TOTAL_SPENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp0_money_total_spent"), &iVar0, -1))
 	{
 		iVar1 = (iVar1 + iVar0);
 	}
-	if (STATS::STAT_GET_INT(joaat("SP1_MONEY_TOTAL_SPENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp1_money_total_spent"), &iVar0, -1))
 	{
 		iVar1 = (iVar1 + iVar0);
 	}
-	if (STATS::STAT_GET_INT(joaat("SP2_MONEY_TOTAL_SPENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp2_money_total_spent"), &iVar0, -1))
 	{
 		iVar1 = (iVar1 + iVar0);
 	}
@@ -3591,10 +3591,10 @@ int func_65(bool bParam0)
 	{
 	}
 	iVar2 = 0;
-	STATS::STAT_GET_INT(joaat("NUM_CASH_SPENT"), &iVar2, -1);
+	STATS::STAT_GET_INT(joaat("num_cash_spent"), &iVar2, -1);
 	if (iVar1 > 0 && (iVar2 / 2000000) != (iVar1 / 2000000))
 	{
-		STATS::STAT_SET_INT(joaat("NUM_CASH_SPENT"), iVar1, true);
+		STATS::STAT_SET_INT(joaat("num_cash_spent"), iVar1, true);
 		func_79(27, iVar1);
 	}
 	if (iVar1 < 200000000)
@@ -3877,17 +3877,17 @@ void func_82()
 	
 	if (NETWORK::NETWORK_IS_SIGNED_IN())
 	{
-		STATS::STAT_GET_INT(joaat("SP0_TOTAL_CASH"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("sp0_total_cash"), &iVar0, -1);
 		if (!Global_58891[0] == iVar0)
 		{
 			Global_58891[0] = iVar0;
 		}
-		STATS::STAT_GET_INT(joaat("SP1_TOTAL_CASH"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("sp1_total_cash"), &iVar0, -1);
 		if (!Global_58891[1] == iVar0)
 		{
 			Global_58891[1] = iVar0;
 		}
-		STATS::STAT_GET_INT(joaat("SP2_TOTAL_CASH"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("sp2_total_cash"), &iVar0, -1);
 		if (!Global_58891[2] == iVar0)
 		{
 			Global_58891[2] = iVar0;
@@ -3907,15 +3907,15 @@ int func_84(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			STATS::STAT_GET_INT(joaat("SP0_TOTAL_CASH"), &uVar0, -1);
+			STATS::STAT_GET_INT(joaat("sp0_total_cash"), &uVar0, -1);
 			return uVar0;
 		
 		case 1:
-			STATS::STAT_GET_INT(joaat("SP1_TOTAL_CASH"), &uVar0, -1);
+			STATS::STAT_GET_INT(joaat("sp1_total_cash"), &uVar0, -1);
 			return uVar0;
 		
 		case 2:
-			STATS::STAT_GET_INT(joaat("SP2_TOTAL_CASH"), &uVar0, -1);
+			STATS::STAT_GET_INT(joaat("sp2_total_cash"), &uVar0, -1);
 			return uVar0;
 		
 		default:
@@ -6005,7 +6005,7 @@ void func_143()
 	{
 		return;
 	}
-	STREAMING::_0x74DE2E8739086740();
+	STREAMING::ALLOW_PLAYER_SWITCH_OUTRO();
 }
 
 void func_144()
@@ -6208,7 +6208,7 @@ int func_150(int iParam0, char* sParam1, char* sParam2, char* sParam3, var uPara
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			func_151(sParam1, sParam2, sParam3, "SWITCH@MICHAEL@SITTING", "IDLE", "EXIT_FORWARD");
 			*uParam4 |= 1024;
 			*uParam5 |= 1024;
@@ -10489,14 +10489,14 @@ int func_163()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);
@@ -11324,7 +11324,7 @@ int func_167(int iParam0, var uParam1, char* sParam2)
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			*uParam1 = 20.353f;
 			StringCopy(sParam2, "v_michael", 32);
 			return 1;
@@ -13535,7 +13535,7 @@ int func_168(int iParam0, int iParam1, var uParam2, var uParam3)
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 86:
 			switch (iParam0)
 			{

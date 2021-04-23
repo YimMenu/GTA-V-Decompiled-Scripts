@@ -224,7 +224,7 @@ void __EntryFunction__()
 			else if (!func_24())
 			{
 				func_23(101, 1);
-				STATS::STAT_SET_BOOL(joaat("SP_KILLED_AL"), true, true);
+				STATS::STAT_SET_BOOL(joaat("sp_killed_al"), true, true);
 				if (!MISC::IS_BIT_SET(Global_111858.f_18570.f_382, 5))
 				{
 					MISC::SET_BIT(&(Global_111858.f_18570.f_382), 5);
@@ -617,7 +617,7 @@ int func_13()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}

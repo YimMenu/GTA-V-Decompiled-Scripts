@@ -818,7 +818,7 @@ int func_13()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -1176,7 +1176,7 @@ int func_28(int iParam0, int iParam1)
 									if (STREAMING::HAS_ANIM_DICT_LOADED(sVar4))
 									{
 										TASK::TASK_START_SCENARIO_IN_PLACE((*iParam0)[iVar0], &(Local_453[iVar0 /*16*/]), 0, false);
-										PED::_0x2208438012482A1A((*iParam0)[iVar0], false, false);
+										PED::FORCE_PED_AI_AND_ANIMATION_UPDATE((*iParam0)[iVar0], false, false);
 										SYSTEM::WAIT(0);
 										iLocal_486[iVar0] = -1;
 										(*iParam1)[iVar0] = 5;
@@ -1190,7 +1190,7 @@ int func_28(int iParam0, int iParam1)
 							if (0.95f < PED::GET_SYNCHRONIZED_SCENE_PHASE(Global_96285))
 							{
 								TASK::TASK_PUT_PED_DIRECTLY_INTO_MELEE((*iParam0)[iVar0], PLAYER::PLAYER_PED_ID(), 0f, -1f, 0f, false);
-								PED::_0x2208438012482A1A((*iParam0)[iVar0], false, false);
+								PED::FORCE_PED_AI_AND_ANIMATION_UPDATE((*iParam0)[iVar0], false, false);
 								SYSTEM::WAIT(0);
 								(*iParam1)[iVar0] = 10;
 								break;
@@ -1201,7 +1201,7 @@ int func_28(int iParam0, int iParam1)
 							if (0.95f < PED::GET_SYNCHRONIZED_SCENE_PHASE(Global_96285))
 							{
 								TASK::TASK_PUT_PED_DIRECTLY_INTO_MELEE((*iParam0)[iVar0], PLAYER::PLAYER_PED_ID(), 0f, -1f, 0f, false);
-								PED::_0x2208438012482A1A((*iParam0)[iVar0], false, false);
+								PED::FORCE_PED_AI_AND_ANIMATION_UPDATE((*iParam0)[iVar0], false, false);
 								SYSTEM::WAIT(0);
 								if (!PED::IS_PED_INJURED((*iParam0)[iVar0]))
 								{
@@ -1408,7 +1408,7 @@ int func_28(int iParam0, int iParam1)
 							ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&(iLocal_290[iVar0]));
 						}
 						TASK::CLEAR_PED_TASKS((*iParam0)[iVar0]);
-						PED::_0xF1C03A5352243A30((*iParam0)[iVar0]);
+						PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT((*iParam0)[iVar0]);
 						(*iParam1)[iVar0] = 10;
 						break;
 					}
@@ -1658,7 +1658,7 @@ int func_35(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4)
 	if (func_42(PLAYER::PLAYER_PED_ID()) && func_42(iParam0))
 	{
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar2, true);
-		if (iVar2 == joaat("WEAPON_PETROLCAN"))
+		if (iVar2 == joaat("weapon_petrolcan"))
 		{
 			fVar0 = 3f;
 			fVar1 = 3f;
@@ -1722,7 +1722,7 @@ int func_36(int iParam0, float fParam1, bool bParam2, bool bParam3)
 	Var3.f_2 = (Var3.f_2 + fParam1);
 	if (bParam2)
 	{
-		if (((MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, true), joaat("WEAPON_GRENADE"), fParam1, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, true), joaat("WEAPON_MOLOTOV"), fParam1, true)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, true), joaat("WEAPON_SMOKEGRENADE"), fParam1, true)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, true), joaat("WEAPON_STICKYBOMB"), 5f, true))
+		if (((MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, true), joaat("weapon_grenade"), fParam1, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, true), joaat("weapon_molotov"), fParam1, true)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, true), joaat("weapon_smokegrenade"), fParam1, true)) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(iParam0, true), joaat("weapon_stickybomb"), 5f, true))
 		{
 			if (bParam3)
 			{
@@ -1764,7 +1764,7 @@ int func_37(int iParam0, float fParam1)
 	var uVar0;
 	struct<3> Var1;
 	
-	if ((((MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("WEAPON_GRENADE"), fParam1, &Var1, &uVar0, false) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("WEAPON_SMOKEGRENADE"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("WEAPON_BZGAS"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("WEAPON_STICKYBOMB"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("WEAPON_MOLOTOV"), fParam1, &Var1, &uVar0, false))
+	if ((((MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_grenade"), fParam1, &Var1, &uVar0, false) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_smokegrenade"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_bzgas"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_stickybomb"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_molotov"), fParam1, &Var1, &uVar0, false))
 	{
 		if (func_38(iParam0, Var1, 90f, 0))
 		{
@@ -2069,7 +2069,7 @@ void func_52()
 	{
 		return;
 	}
-	STREAMING::_0x74DE2E8739086740();
+	STREAMING::ALLOW_PLAYER_SWITCH_OUTRO();
 }
 
 void func_53()
@@ -2479,7 +2479,7 @@ int func_59(int iParam0, char* sParam1, char* sParam2, char* sParam3, var uParam
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(sParam1, "SAFE@MICHAEL@IG_3", 64);
 			StringCopy(sParam2, "BASE_MICHAEL", 64);
 			StringCopy(sParam3, "EXIT_MICHAEL", 64);
@@ -4255,7 +4255,7 @@ int func_63(int iParam0, var uParam1, char* sParam2)
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			*uParam1 = 20.353f;
 			StringCopy(sParam2, "v_michael", 32);
 			return 1;
@@ -6466,7 +6466,7 @@ int func_64(int iParam0, int iParam1, var uParam2, var uParam3)
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 86:
 			switch (iParam0)
 			{

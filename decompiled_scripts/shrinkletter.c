@@ -829,8 +829,8 @@ struct<4> func_23(var uParam0)
 	int iVar7;
 	
 	StringCopy(&Var0, "RAND_", 16);
-	STATS::STAT_GET_INT(joaat("NUM_RNDPEOPLE_COMPLETED"), &iVar5, -1);
-	STATS::STAT_GET_INT(joaat("NUM_RNDEVENTS_COMPLETED"), &iVar6, -1);
+	STATS::STAT_GET_INT(joaat("num_rndpeople_completed"), &iVar5, -1);
+	STATS::STAT_GET_INT(joaat("num_rndevents_completed"), &iVar6, -1);
 	iVar7 = (iVar5 + iVar6);
 	if (iVar7 > 10)
 	{
@@ -897,35 +897,35 @@ void func_27(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = joaat("SP0_SPECIAL_ABILITY_UNLOCKED");
+					*uParam2 = joaat("sp0_special_ability_unlocked");
 					break;
 				
 				case 1:
-					*uParam2 = joaat("SP0_STAMINA");
+					*uParam2 = joaat("sp0_stamina");
 					break;
 				
 				case 3:
-					*uParam2 = joaat("SP0_LUNG_CAPACITY");
+					*uParam2 = joaat("sp0_lung_capacity");
 					break;
 				
 				case 2:
-					*uParam2 = joaat("SP0_STRENGTH");
+					*uParam2 = joaat("sp0_strength");
 					break;
 				
 				case 4:
-					*uParam2 = joaat("SP0_WHEELIE_ABILITY");
+					*uParam2 = joaat("sp0_wheelie_ability");
 					break;
 				
 				case 5:
-					*uParam2 = joaat("SP0_FLYING_ABILITY");
+					*uParam2 = joaat("sp0_flying_ability");
 					break;
 				
 				case 6:
-					*uParam2 = joaat("SP0_SHOOTING_ABILITY");
+					*uParam2 = joaat("sp0_shooting_ability");
 					break;
 				
 				case 7:
-					*uParam2 = joaat("SP0_STEALTH_ABILITY");
+					*uParam2 = joaat("sp0_stealth_ability");
 					break;
 			}
 			break;
@@ -934,35 +934,35 @@ void func_27(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = joaat("SP1_SPECIAL_ABILITY_UNLOCKED");
+					*uParam2 = joaat("sp1_special_ability_unlocked");
 					break;
 				
 				case 1:
-					*uParam2 = joaat("SP1_STAMINA");
+					*uParam2 = joaat("sp1_stamina");
 					break;
 				
 				case 3:
-					*uParam2 = joaat("SP1_LUNG_CAPACITY");
+					*uParam2 = joaat("sp1_lung_capacity");
 					break;
 				
 				case 2:
-					*uParam2 = joaat("SP1_STRENGTH");
+					*uParam2 = joaat("sp1_strength");
 					break;
 				
 				case 4:
-					*uParam2 = joaat("SP1_WHEELIE_ABILITY");
+					*uParam2 = joaat("sp1_wheelie_ability");
 					break;
 				
 				case 5:
-					*uParam2 = joaat("SP1_FLYING_ABILITY");
+					*uParam2 = joaat("sp1_flying_ability");
 					break;
 				
 				case 6:
-					*uParam2 = joaat("SP1_SHOOTING_ABILITY");
+					*uParam2 = joaat("sp1_shooting_ability");
 					break;
 				
 				case 7:
-					*uParam2 = joaat("SP1_STEALTH_ABILITY");
+					*uParam2 = joaat("sp1_stealth_ability");
 					break;
 			}
 			break;
@@ -971,35 +971,35 @@ void func_27(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = joaat("SP2_SPECIAL_ABILITY_UNLOCKED");
+					*uParam2 = joaat("sp2_special_ability_unlocked");
 					break;
 				
 				case 1:
-					*uParam2 = joaat("SP2_STAMINA");
+					*uParam2 = joaat("sp2_stamina");
 					break;
 				
 				case 3:
-					*uParam2 = joaat("SP2_LUNG_CAPACITY");
+					*uParam2 = joaat("sp2_lung_capacity");
 					break;
 				
 				case 2:
-					*uParam2 = joaat("SP2_STRENGTH");
+					*uParam2 = joaat("sp2_strength");
 					break;
 				
 				case 4:
-					*uParam2 = joaat("SP2_WHEELIE_ABILITY");
+					*uParam2 = joaat("sp2_wheelie_ability");
 					break;
 				
 				case 5:
-					*uParam2 = joaat("SP2_FLYING_ABILITY");
+					*uParam2 = joaat("sp2_flying_ability");
 					break;
 				
 				case 6:
-					*uParam2 = joaat("SP2_SHOOTING_ABILITY");
+					*uParam2 = joaat("sp2_shooting_ability");
 					break;
 				
 				case 7:
-					*uParam2 = joaat("SP2_STEALTH_ABILITY");
+					*uParam2 = joaat("sp2_stealth_ability");
 					break;
 			}
 			break;
@@ -1085,47 +1085,47 @@ struct<4> func_30(var uParam0)
 	int iVar6;
 	
 	StringCopy(&Var0, "VEHS_", 16);
-	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_COP_VEHICLE"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_cop_vehicle"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_CARS"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_cars"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_BIKES"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_bikes"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_BOATS"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_boats"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_HELIS"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_helis"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_QUADBIKES"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_quadbikes"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP0_NUMBER_STOLEN_BICYCLES"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_bicycles"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_COP_VEHICLE"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_cop_vehicle"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_CARS"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_cars"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_BIKES"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_bikes"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_BOATS"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_boats"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_HELIS"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_helis"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_QUADBIKES"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_quadbikes"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_NUMBER_STOLEN_BICYCLES"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_bicycles"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_COP_VEHICLE"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_cop_vehicle"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_CARS"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_cars"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_BIKES"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_bikes"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_BOATS"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_boats"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_HELIS"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_helis"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_QUADBIKES"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_quadbikes"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_NUMBER_STOLEN_BICYCLES"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_bicycles"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
 	if (iVar6 >= 100)
 	{
@@ -1151,11 +1151,11 @@ struct<4> func_31(var uParam0)
 	int iVar6;
 	
 	StringCopy(&Var0, "PEDS_", 16);
-	STATS::STAT_GET_INT(joaat("SP0_KILLS_INNOCENTS"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_kills_innocents"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_KILLS_INNOCENTS"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_kills_innocents"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_KILLS_INNOCENTS"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_kills_innocents"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
 	if (iVar6 >= 100)
 	{
@@ -1180,7 +1180,7 @@ struct<4> func_32(var uParam0)
 	int iVar5;
 	
 	StringCopy(&Var0, "STOCK_", 16);
-	STATS::STAT_GET_INT(joaat("TIME_SPENT_ON_STOCKMARKET"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("time_spent_on_stockmarket"), &iVar5, 0);
 	if (iVar5 >= 120000)
 	{
 		StringCopy(&(uParam0->f_8), "Y", 4);
@@ -1279,17 +1279,17 @@ struct<4> func_37(var uParam0)
 	int iVar8;
 	
 	StringCopy(&Var0, "STRIP_", 16);
-	STATS::STAT_GET_INT(joaat("SP0_LAP_DANCED_BOUGHT"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_lap_danced_bought"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_LAP_DANCED_BOUGHT"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_lap_danced_bought"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_LAP_DANCED_BOUGHT"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_lap_danced_bought"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP0_MONEY_SPENT_IN_STRIP_CLUBS"), &iVar7, 0);
+	STATS::STAT_GET_INT(joaat("sp0_money_spent_in_strip_clubs"), &iVar7, 0);
 	iVar8 = (iVar8 + iVar7);
-	STATS::STAT_GET_INT(joaat("SP1_MONEY_SPENT_IN_STRIP_CLUBS"), &iVar7, 1);
+	STATS::STAT_GET_INT(joaat("sp1_money_spent_in_strip_clubs"), &iVar7, 1);
 	iVar8 = (iVar8 + iVar7);
-	STATS::STAT_GET_INT(joaat("SP2_MONEY_SPENT_IN_STRIP_CLUBS"), &iVar7, 2);
+	STATS::STAT_GET_INT(joaat("sp2_money_spent_in_strip_clubs"), &iVar7, 2);
 	iVar8 = (iVar8 + iVar7);
 	if (iVar6 >= 3 || iVar8 >= 100)
 	{
@@ -1316,11 +1316,11 @@ struct<4> func_38(var uParam0)
 	int iVar6;
 	
 	StringCopy(&Var0, "CASH_", 16);
-	STATS::STAT_GET_INT(joaat("SP0_MONEY_TOTAL_SPENT"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_money_total_spent"), &iVar5, 0);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP1_MONEY_TOTAL_SPENT"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_money_total_spent"), &iVar5, 1);
 	iVar6 = (iVar6 + iVar5);
-	STATS::STAT_GET_INT(joaat("SP2_MONEY_TOTAL_SPENT"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_money_total_spent"), &iVar5, 2);
 	iVar6 = (iVar6 + iVar5);
 	if (iVar6 >= 1000000)
 	{
@@ -1350,14 +1350,14 @@ struct<4> func_39(var uParam0)
 	StringCopy(&Var0, "CHAR_", 16);
 	iVar5 = 0;
 	iVar7 = 0;
-	STATS::STAT_GET_INT(joaat("SP0_TOTAL_PLAYING_TIME"), &iVar7, 0);
-	STATS::STAT_GET_INT(joaat("SP1_TOTAL_PLAYING_TIME"), &iVar6, 1);
+	STATS::STAT_GET_INT(joaat("sp0_total_playing_time"), &iVar7, 0);
+	STATS::STAT_GET_INT(joaat("sp1_total_playing_time"), &iVar6, 1);
 	if (iVar6 > iVar7)
 	{
 		iVar7 = iVar6;
 		iVar5 = 1;
 	}
-	STATS::STAT_GET_INT(joaat("SP2_TOTAL_PLAYING_TIME"), &iVar6, 2);
+	STATS::STAT_GET_INT(joaat("sp2_total_playing_time"), &iVar6, 2);
 	if (iVar6 > iVar7)
 	{
 		iVar7 = iVar6;
@@ -1614,7 +1614,7 @@ void func_51(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4
 		Global_61723 = 0;
 		if (bParam1)
 		{
-			GRAPHICS::_0x03FC694AE06C5A20();
+			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);

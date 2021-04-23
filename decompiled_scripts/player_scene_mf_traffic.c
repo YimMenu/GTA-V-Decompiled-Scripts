@@ -179,7 +179,7 @@ int func_2()
 		iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 12);
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_77[iVar0], false))
 		{
-			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_77[iVar0], -1, 0);
+			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_77[iVar0], -1, false);
 			if (!PED::IS_PED_INJURED(iVar1))
 			{
 				fVar2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0.5f, 1f);
@@ -288,7 +288,7 @@ int func_11()
 		iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 12);
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_77[iVar0], false))
 		{
-			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_77[iVar0], -1, 0);
+			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_77[iVar0], -1, false);
 			if (!PED::IS_PED_INJURED(iVar1))
 			{
 				fVar2 = (MISC::GET_RANDOM_FLOAT_IN_RANGE(0.5f, 1f) * 2f);
@@ -332,7 +332,7 @@ void func_13()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_77[iVar0], false))
 		{
-			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_77[iVar0], -1, 0);
+			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_77[iVar0], -1, false);
 			if (!PED::IS_PED_INJURED(iVar1))
 			{
 				func_14(iVar1, iLocal_77[iVar0], 10f, 786603);
@@ -346,7 +346,7 @@ void func_13()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_153[iVar0], false))
 		{
-			iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_153[iVar0], -1, 0);
+			iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_153[iVar0], -1, false);
 			if (!PED::IS_PED_INJURED(iVar2))
 			{
 				func_14(iVar2, iLocal_153[iVar0], 5f, 786603);
@@ -360,7 +360,7 @@ void func_13()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_181[iVar0], false))
 		{
-			iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_181[iVar0], -1, 0);
+			iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_181[iVar0], -1, false);
 			if (!PED::IS_PED_INJURED(iVar3))
 			{
 				func_14(iVar3, iLocal_181[iVar0], 5f, 786603);
@@ -374,7 +374,7 @@ void func_13()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_209[iVar0], false))
 		{
-			iVar4 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_209[iVar0], -1, 0);
+			iVar4 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_209[iVar0], -1, false);
 			if (!PED::IS_PED_INJURED(iVar4))
 			{
 				func_14(iVar4, iLocal_209[iVar0], 5f, 786603);
@@ -692,7 +692,7 @@ void func_29()
 	{
 		return;
 	}
-	STREAMING::_0x74DE2E8739086740();
+	STREAMING::ALLOW_PLAYER_SWITCH_OUTRO();
 }
 
 void func_30()
@@ -2276,7 +2276,7 @@ int func_52(int iParam0, var uParam1, char* sParam2)
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			*uParam1 = 20.353f;
 			StringCopy(sParam2, "v_michael", 32);
 			return 1;
@@ -4487,7 +4487,7 @@ int func_53(int iParam0, int iParam1, var uParam2, var uParam3)
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 86:
 			switch (iParam0)
 			{

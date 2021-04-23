@@ -844,7 +844,7 @@ void func_16()
 			if (PED::IS_PED_SITTING_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Global_110889))
 			{
 				func_21();
-				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(Global_110889, 1, 0) == PLAYER::PLAYER_PED_ID())
+				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(Global_110889, 1, false) == PLAYER::PLAYER_PED_ID())
 				{
 					iLocal_279 = 1;
 				}
@@ -921,7 +921,7 @@ void func_18()
 	{
 		if (!VEHICLE::IS_VEHICLE_SEAT_FREE(Global_110889, 1, false))
 		{
-			iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(Global_110889, 1, 0);
+			iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(Global_110889, 1, false);
 			if (PLAYER::PLAYER_PED_ID() != iVar0)
 			{
 				if (!PED::IS_PED_GROUP_MEMBER(iVar0, PLAYER::GET_PLAYER_GROUP(PLAYER::PLAYER_ID())))
@@ -932,7 +932,7 @@ void func_18()
 		}
 		if (!VEHICLE::IS_VEHICLE_SEAT_FREE(Global_110889, 2, false))
 		{
-			iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(Global_110889, 2, 0);
+			iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(Global_110889, 2, false);
 			if (PLAYER::PLAYER_PED_ID() != iVar0)
 			{
 				if (!PED::IS_PED_GROUP_MEMBER(iVar0, PLAYER::GET_PLAYER_GROUP(PLAYER::PLAYER_ID())))
@@ -985,7 +985,7 @@ void func_20(var uParam0, int iParam1)
 					iVar5 = 2;
 				}
 				bVar4 = true;
-				iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*uParam0, iVar5, 0);
+				iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*uParam0, iVar5, false);
 				if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 				{
 					if (iVar3 == PLAYER::PLAYER_PED_ID())
@@ -1017,7 +1017,7 @@ void func_20(var uParam0, int iParam1)
 				{
 					bVar4 = true;
 					iVar5 = 0;
-					iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*uParam0, iVar5, 0);
+					iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*uParam0, iVar5, false);
 					if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 					{
 						if (iVar3 == PLAYER::PLAYER_PED_ID())
@@ -1063,7 +1063,7 @@ int func_22(int iParam0, int iParam1, int iParam2)
 		{
 			if (ENTITY::GET_ENTITY_MODEL(*iParam0) == iParam1)
 			{
-				iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, -1, 0);
+				iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, -1, false);
 				if (ENTITY::DOES_ENTITY_EXIST(iVar0))
 				{
 					if (!PED::IS_PED_INJURED(iVar0))
@@ -1208,17 +1208,17 @@ void func_27()
 			{
 				if (PED::IS_PED_SITTING_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iLocal_277))
 				{
-					iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_277, -1, 0);
+					iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_277, -1, false);
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iLocal_277, 1, false))
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_277, 1, 0) == PLAYER::PLAYER_PED_ID())
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_277, 1, false) == PLAYER::PLAYER_PED_ID())
 						{
 							iLocal_279 = 1;
 						}
 					}
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iLocal_277, 2, false))
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_277, 2, 0) == PLAYER::PLAYER_PED_ID())
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_277, 2, false) == PLAYER::PLAYER_PED_ID())
 						{
 							iLocal_279 = 2;
 						}
@@ -1329,7 +1329,7 @@ void func_29()
 		{
 			if (iVar0 == iLocal_277)
 			{
-				iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_277, -1, 0);
+				iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_277, -1, false);
 				if (iLocal_55 == 4 || iLocal_55 == 2)
 				{
 					if (iLocal_277 != Global_110889)
@@ -2184,7 +2184,7 @@ void func_58()
 							}
 							else
 							{
-								iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_278, -1, 0);
+								iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_278, -1, false);
 								if (func_28(&iLocal_278, &iVar0, 0))
 								{
 									iLocal_278 = 0;
@@ -2288,9 +2288,9 @@ void func_60()
 			Var24.f_20 = iVar46;
 		}
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar47, true);
-		if (WEAPON::IS_PED_ARMED(PLAYER::PLAYER_PED_ID(), 7) || (MISC::ARE_STRINGS_EQUAL(Var24.f_2, "FP_HAIL_TAXI") && iVar47 == joaat("WEAPON_PETROLCAN")))
+		if (WEAPON::IS_PED_ARMED(PLAYER::PLAYER_PED_ID(), 7) || (MISC::ARE_STRINGS_EQUAL(Var24.f_2, "FP_HAIL_TAXI") && iVar47 == joaat("weapon_petrolcan")))
 		{
-			if (iVar47 != joaat("WEAPON_PETROLCAN") || !MISC::ARE_STRINGS_EQUAL(Var24.f_2, "FP_HAIL_TAXI"))
+			if (iVar47 != joaat("weapon_petrolcan") || !MISC::ARE_STRINGS_EQUAL(Var24.f_2, "FP_HAIL_TAXI"))
 			{
 				PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 113, true);
 			}
@@ -2430,7 +2430,7 @@ int func_63(int iParam0)
 	
 	if (!VEHICLE::IS_VEHICLE_SEAT_FREE(*iParam0, 1, false))
 	{
-		iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, 1, 0);
+		iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, 1, false);
 		if (!iVar0 == PLAYER::PLAYER_PED_ID())
 		{
 			if (!PED::IS_PED_GROUP_MEMBER(iVar0, func_12()))
@@ -2445,7 +2445,7 @@ int func_63(int iParam0)
 	}
 	if (!VEHICLE::IS_VEHICLE_SEAT_FREE(*iParam0, 2, false))
 	{
-		iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, 2, 0);
+		iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, 2, false);
 		if (!iVar0 == PLAYER::PLAYER_PED_ID())
 		{
 			if (!PED::IS_PED_GROUP_MEMBER(iVar0, func_12()))
@@ -4410,7 +4410,7 @@ int func_95(struct<3> Param0, struct<3> Param3, struct<3> Param6)
 
 int func_96(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Param0, Param0.f_1, Param3, Param3.f_1))
+	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Param0, Param0.f_1, Param3, Param3.f_1))
 	{
 		return 1;
 	}
@@ -4449,7 +4449,7 @@ void func_97(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5, var u
 		*uParam6 = { Var0 };
 		*uParam7 = { Var3 };
 	}
-	PATHFIND::_0x07FB139B592FA687(*uParam6, uParam6->f_1, *uParam7, uParam7->f_1);
+	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(*uParam6, uParam6->f_1, *uParam7, uParam7->f_1);
 }
 
 int func_98(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
@@ -5425,7 +5425,7 @@ void func_109(int iParam0, bool bParam1)
 	{
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(*iParam0, false))
 		{
-			iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, -1, 0);
+			iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, -1, false);
 			if (ENTITY::DOES_ENTITY_EXIST(iVar0))
 			{
 				if (PED::IS_PED_MODEL(iVar0, func_147()))
@@ -5890,7 +5890,7 @@ int func_123()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}

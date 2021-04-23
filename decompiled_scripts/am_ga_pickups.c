@@ -315,7 +315,7 @@ int func_6(int iParam0)
 					if (!ENTITY::DOES_ENTITY_EXIST(Local_104.f_2[iParam0 /*15*/].f_10[iVar0]))
 					{
 						Var1 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Local_104.f_2[iParam0 /*15*/].f_2, Local_104.f_2[iParam0 /*15*/].f_5, (0.6f - (IntToFloat(iVar0) * 0.4f)), 0f, 0.1f) };
-						Local_104.f_2[iParam0 /*15*/].f_10[iVar0] = OBJECT::CREATE_AMBIENT_PICKUP(joaat("PICKUP_GANG_ATTACK_MONEY"), Var1, iVar4, Local_104.f_2[iParam0 /*15*/].f_9, 0, true, true);
+						Local_104.f_2[iParam0 /*15*/].f_10[iVar0] = OBJECT::CREATE_AMBIENT_PICKUP(joaat("pickup_gang_attack_money"), Var1, iVar4, Local_104.f_2[iParam0 /*15*/].f_9, 0, true, true);
 					}
 					iVar0++;
 				}
@@ -379,7 +379,7 @@ int func_7(int iParam0, int iParam1)
 		if (!ENTITY::DOES_ENTITY_EXIST(Local_104.f_2[iParam0 /*15*/].f_10[iParam1]))
 		{
 			Var0 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Local_104.f_2[iParam0 /*15*/].f_2, Local_104.f_2[iParam0 /*15*/].f_5, 0f, (0.25f - (IntToFloat(iParam1) * 0.25f)), 0.1f) };
-			Local_104.f_2[iParam0 /*15*/].f_10[iParam1] = OBJECT::CREATE_AMBIENT_PICKUP(joaat("PICKUP_GANG_ATTACK_MONEY"), Var0, iVar3, Global_262145.f_4446, 0, true, true);
+			Local_104.f_2[iParam0 /*15*/].f_10[iParam1] = OBJECT::CREATE_AMBIENT_PICKUP(joaat("pickup_gang_attack_money"), Var0, iVar3, Global_262145.f_4446, 0, true, true);
 		}
 		return 1;
 	}
@@ -750,7 +750,7 @@ int func_30()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}
@@ -1037,7 +1037,7 @@ int func_34(int iParam0)
 		case 78:
 			return 32;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 32;
 		
 		case 80:

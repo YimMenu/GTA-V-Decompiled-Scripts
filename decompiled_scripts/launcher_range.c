@@ -2152,15 +2152,15 @@ int func_54(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			STATS::STAT_GET_INT(joaat("SP0_TOTAL_CASH"), &uVar0, -1);
+			STATS::STAT_GET_INT(joaat("sp0_total_cash"), &uVar0, -1);
 			return uVar0;
 		
 		case 1:
-			STATS::STAT_GET_INT(joaat("SP1_TOTAL_CASH"), &uVar0, -1);
+			STATS::STAT_GET_INT(joaat("sp1_total_cash"), &uVar0, -1);
 			return uVar0;
 		
 		case 2:
-			STATS::STAT_GET_INT(joaat("SP2_TOTAL_CASH"), &uVar0, -1);
+			STATS::STAT_GET_INT(joaat("sp2_total_cash"), &uVar0, -1);
 			return uVar0;
 		
 		default:
@@ -2638,9 +2638,9 @@ void func_85()
 			func_87(iLocal_123, &uLocal_126, &uLocal_129);
 			func_87(iLocal_124, &uLocal_127, &uLocal_130);
 			func_87(iLocal_125, &uLocal_128, &uLocal_131);
-			WEAPON::GIVE_WEAPON_TO_PED(iLocal_123, joaat("WEAPON_PISTOL"), -1, true, true);
-			WEAPON::GIVE_WEAPON_TO_PED(iLocal_124, joaat("WEAPON_COMBATPISTOL"), -1, true, true);
-			WEAPON::GIVE_WEAPON_TO_PED(iLocal_125, joaat("WEAPON_PISTOL"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iLocal_123, joaat("weapon_pistol"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iLocal_124, joaat("weapon_combatpistol"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iLocal_125, joaat("weapon_pistol"), -1, true, true);
 			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_123, true, false);
 			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_124, true, false);
 			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_125, true, false);

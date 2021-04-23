@@ -1626,15 +1626,15 @@ int func_46(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			STATS::STAT_GET_INT(joaat("SP0_TOTAL_CASH"), &uVar0, -1);
+			STATS::STAT_GET_INT(joaat("sp0_total_cash"), &uVar0, -1);
 			return uVar0;
 		
 		case 1:
-			STATS::STAT_GET_INT(joaat("SP1_TOTAL_CASH"), &uVar0, -1);
+			STATS::STAT_GET_INT(joaat("sp1_total_cash"), &uVar0, -1);
 			return uVar0;
 		
 		case 2:
-			STATS::STAT_GET_INT(joaat("SP2_TOTAL_CASH"), &uVar0, -1);
+			STATS::STAT_GET_INT(joaat("sp2_total_cash"), &uVar0, -1);
 			return uVar0;
 		
 		default:

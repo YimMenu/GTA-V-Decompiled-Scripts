@@ -944,7 +944,7 @@ int func_21(int iParam0)
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
 			WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, true);
-			if (((iVar0 == joaat("WEAPON_SNIPERRIFLE") || iVar0 == joaat("WEAPON_HEAVYSNIPER")) || iVar0 == joaat("WEAPON_MARKSMANRIFLE")) || iVar0 == joaat("WEAPON_HEAVYSNIPER_MK2"))
+			if (((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle")) || iVar0 == joaat("weapon_heavysniper_mk2"))
 			{
 				return 1;
 			}
@@ -1059,7 +1059,7 @@ void func_29(var uParam0)
 		NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->f_127.f_1, &sVar0, &sVar16, 4f, -1.5f, 13, 16, 1000f, 0);
 		NETWORK::NETWORK_START_SYNCHRONISED_SCENE(uParam0->f_127.f_1);
 		func_33(&(uParam0->f_127), 8);
-		PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), false, false);
+		PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 	}
 }
 
@@ -1951,7 +1951,7 @@ void func_67(var uParam0)
 	}
 	else if (uParam0->f_127.f_4 > 4)
 	{
-		CAM::_0x2AED6301F67007D5(PLAYER::PLAYER_PED_ID());
+		CAM::_DISABLE_CAM_COLLISION_FOR_ENTITY(PLAYER::PLAYER_PED_ID());
 		PED::SET_PED_CAPSULE(PLAYER::PLAYER_PED_ID(), func_68());
 		uParam0->f_127.f_7 = MISC::GET_FRAME_COUNT();
 	}

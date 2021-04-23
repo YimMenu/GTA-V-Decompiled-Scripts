@@ -424,7 +424,7 @@ void func_16()
 	{
 		return;
 	}
-	STREAMING::_0x74DE2E8739086740();
+	STREAMING::ALLOW_PLAYER_SWITCH_OUTRO();
 }
 
 void func_17()
@@ -513,7 +513,7 @@ void func_20()
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_72[iVar0], true);
 			PED::SET_PED_CAN_BE_TARGETTED(iLocal_72[iVar0], false);
 			TASK::TASK_PLAY_ANIM_ADVANCED(iLocal_72[iVar0], &cLocal_117, &(Local_125[iVar0 /*8*/]), Local_82 + Local_86[iVar0 /*3*/], Vector(uLocal_85, 0f, 0f) + Local_99[iVar0 /*3*/], 1000f, -8f, -1, iLocal_158, 0f, 2, 0);
-			PED::_0x2208438012482A1A(iLocal_72[iVar0], false, false);
+			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_72[iVar0], false, false);
 			PED::SET_PED_KEEP_TASK(iLocal_72[iVar0], true);
 			PED::SET_PED_RESET_FLAG(iLocal_72[iVar0], 55, true);
 			if (iLocal_166[iVar0] > 0)
@@ -1195,7 +1195,7 @@ int func_23(struct<109> Param0, var uParam109)
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			*uParam109 = { Param0 };
 			uParam109->f_109 = 1785177548;
@@ -3478,7 +3478,7 @@ int func_29(int iParam0, var uParam1, char* sParam2)
 			return 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			*uParam1 = 20.353f;
 			StringCopy(sParam2, "v_michael", 32);
 			return 1;
@@ -5689,7 +5689,7 @@ int func_30(int iParam0, int iParam1, var uParam2, var uParam3)
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 86:
 			switch (iParam0)
 			{

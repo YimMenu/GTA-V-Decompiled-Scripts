@@ -370,10 +370,10 @@ void func_7(int iParam0)
 	int iVar0;
 	
 	iVar0 = 0;
-	STATS::STAT_GET_INT(joaat("NUM_STOCK_RACES_COMPLETED"), &iVar0, -1);
+	STATS::STAT_GET_INT(joaat("num_stock_races_completed"), &iVar0, -1);
 	if (iVar0 < iParam0 + 1)
 	{
-		STATS::STAT_SET_INT(joaat("NUM_STOCK_RACES_COMPLETED"), iParam0 + 1, true);
+		STATS::STAT_SET_INT(joaat("num_stock_races_completed"), iParam0 + 1, true);
 	}
 }
 
@@ -1339,7 +1339,7 @@ int func_42()
 			iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false))
 			{
-				if (!PED::IS_PED_INJURED(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, 0)))
+				if (!PED::IS_PED_INJURED(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, false)))
 				{
 					return 1;
 				}
@@ -1559,7 +1559,7 @@ void func_51()
 			}
 			if (func_52(iLocal_156) || Global_111858.f_25069.f_9)
 			{
-				PED::_0xF1C03A5352243A30(iLocal_157);
+				PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(iLocal_157);
 				TASK::TASK_COMBAT_PED(iLocal_157, PLAYER::PLAYER_PED_ID(), 0, 16);
 			}
 			fLocal_160 = ENTITY::GET_ENTITY_SPEED(PLAYER::PLAYER_PED_ID());
@@ -1568,7 +1568,7 @@ void func_51()
 		{
 			if (!func_53(iLocal_157, 780511057, 1))
 			{
-				PED::_0xF1C03A5352243A30(iLocal_157);
+				PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(iLocal_157);
 				TASK::TASK_COMBAT_PED(iLocal_157, PLAYER::PLAYER_PED_ID(), 0, 16);
 			}
 		}
@@ -1720,14 +1720,14 @@ int func_57()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);

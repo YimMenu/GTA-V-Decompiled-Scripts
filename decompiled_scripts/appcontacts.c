@@ -2106,7 +2106,7 @@ int func_20()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -3634,7 +3634,7 @@ struct<5> func_53(int iParam0)
 			Var0.f_4 = Var0.f_3;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0 = { -787.7805f, 334.9232f, 186.1134f };
 			Var0.f_3 = "apa_v_mp_h_05";
 			Var0.f_4 = Var0.f_3;
@@ -4659,7 +4659,7 @@ struct<6> func_54(int iParam0, bool bParam1)
 			Var0.f_3 = { 0f, 0f, -14.5f };
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0 = { -742.2565f, 587.6547f, 143.0577f };
 			Var0.f_3 = { 0f, 0f, -29f };
 			break;
@@ -5415,14 +5415,14 @@ int func_82()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);
@@ -11771,7 +11771,7 @@ int func_226(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 					{
 						iVar9 = 64;
 					}
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_4456448.f_82715)))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
@@ -11785,7 +11785,7 @@ int func_226(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 				{
 					sVar4 = "CST_KEY_TEXT";
 					iVar9 = 63;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_4456448.f_129926)))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
@@ -11806,7 +11806,7 @@ int func_226(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = "FMMC_KEY_BTIPF";
 					}
 					iVar9 = 60;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_4456448.f_129926)))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
@@ -11827,7 +11827,7 @@ int func_226(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = "FMMC_KEY_BTIPF";
 					}
 					iVar9 = 60;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					Var10 = { Global_4456448.f_129958[iParam30 /*16*/] };
 					if (iParam31 > -1)
 					{
@@ -11853,7 +11853,7 @@ int func_226(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = "FMMC_CDP_ADD2";
 					}
 					iVar9 = 60;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
 				}
 				else if (bParam34)
@@ -11867,7 +11867,7 @@ int func_226(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = "FMMC_CDM_F1";
 					}
 					iVar9 = 60;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
 				}
 				else if (bParam13)
@@ -11890,7 +11890,7 @@ int func_226(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = sParam33;
 					}
 					iVar9 = 63;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(sParam5))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
@@ -12220,7 +12220,7 @@ int func_226(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar5 = sVar4;
 						sVar4 = "FMMC_KEY_TIP16N";
 					}
-					MISC::_0x3ED1438C1F5C6612(64);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(64);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(sParam5))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(0, sVar4, sVar5, "", "", "", "", iVar9);

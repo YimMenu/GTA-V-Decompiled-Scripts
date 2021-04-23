@@ -180,7 +180,7 @@ void __EntryFunction__()
 	MISC::CLEAR_BIT(&Global_7551, 30);
 	Global_2550685 = 0;
 	iLocal_122 = 0;
-	GRAPHICS::_0x1072F115DAB0717E(false, false);
+	GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(false, false);
 	MOBILE::SCRIPT_IS_MOVING_MOBILE_PHONE_OFFSCREEN(false);
 	Global_19647 = 0;
 	iLocal_74 = 0;
@@ -1436,7 +1436,7 @@ void __EntryFunction__()
 						if (!func_73())
 						{
 							WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iLocal_113, true);
-							if ((iLocal_113 == joaat("WEAPON_SNIPERRIFLE") || iLocal_113 == joaat("WEAPON_HEAVYSNIPER")) || iLocal_113 == joaat("weapon_remotesniper"))
+							if ((iLocal_113 == joaat("weapon_sniperrifle") || iLocal_113 == joaat("weapon_heavysniper")) || iLocal_113 == joaat("weapon_remotesniper"))
 							{
 								bLocal_112 = true;
 							}
@@ -1543,43 +1543,43 @@ int func_2(int iParam0, int iParam1)
 	{
 		if (PED::IS_PED_SITTING_IN_VEHICLE(iParam0, iParam1))
 		{
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, -1, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, -1, false) == iParam0)
 			{
 				return -1;
 			}
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 0, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 0, false) == iParam0)
 			{
 				return 0;
 			}
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 1, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 1, false) == iParam0)
 			{
 				return 1;
 			}
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 2, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 2, false) == iParam0)
 			{
 				return 2;
 			}
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 3, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 3, false) == iParam0)
 			{
 				return 3;
 			}
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 4, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 4, false) == iParam0)
 			{
 				return 4;
 			}
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 5, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 5, false) == iParam0)
 			{
 				return 5;
 			}
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 6, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 6, false) == iParam0)
 			{
 				return 6;
 			}
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 7, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 7, false) == iParam0)
 			{
 				return 3;
 			}
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 8, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, 8, false) == iParam0)
 			{
 				return 4;
 			}

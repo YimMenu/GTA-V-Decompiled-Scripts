@@ -3905,7 +3905,7 @@ int func_89()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -6186,13 +6186,13 @@ void func_158()
 				{
 					iLocal_998 = 3;
 				}
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1212) <= 0 && !VEHICLE::_IS_ANY_PASSENGER_RAPPELING_FROM_VEHICLE(iLocal_1212))
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1212) <= 0 && !VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1212))
 				{
 					if (!MISC::IS_BIT_SET(Local_158.f_2, 9))
 					{
 						if (func_270())
 						{
-							if (VEHICLE::_IS_ANY_PASSENGER_RAPPELING_FROM_VEHICLE(iLocal_1212))
+							if (VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1212))
 							{
 								if (func_156())
 								{
@@ -6219,7 +6219,7 @@ void func_158()
 				}
 				if (!MISC::IS_BIT_SET(Local_158.f_2, 8))
 				{
-					if (VEHICLE::_IS_ANY_PASSENGER_RAPPELING_FROM_VEHICLE(iLocal_1212))
+					if (VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1212))
 					{
 						if (func_270())
 						{
@@ -6277,7 +6277,7 @@ void func_158()
 				}
 				if (MISC::IS_BIT_SET(Local_158.f_1, 12))
 				{
-					if (!VEHICLE::_IS_ANY_PASSENGER_RAPPELING_FROM_VEHICLE(iLocal_1212))
+					if (!VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1212))
 					{
 						if (HUD::IS_WAYPOINT_ACTIVE())
 						{
@@ -8130,7 +8130,7 @@ int func_195(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -9075,7 +9075,7 @@ int func_240(int iParam0)
 			return 29;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 30;
 			break;
 		
@@ -9662,7 +9662,7 @@ Vector3 func_248(int iParam0)
 			Var0 = { 939.7161f, -1459.204f, 30.467f };
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0 = { 189.7624f, 309.7488f, 104.4714f };
 			break;
 		
@@ -10147,7 +10147,7 @@ int func_258(int iParam0)
 			return 63;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 64;
 			break;
 		
@@ -10567,7 +10567,7 @@ void func_275()
 		case 5:
 			if (!func_149(iLocal_1212))
 			{
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1212) <= 0 && !VEHICLE::_IS_ANY_PASSENGER_RAPPELING_FROM_VEHICLE(iLocal_1212))
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1212) <= 0 && !VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1212))
 				{
 					if (func_143(Local_158.f_5, 1, 1) && !ENTITY::IS_ENTITY_IN_AIR(PLAYER::GET_PLAYER_PED(Local_158.f_5)))
 					{
@@ -11382,7 +11382,7 @@ int func_307(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPa
 				}
 				if (bParam13)
 				{
-					NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
+					NETWORK::SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
 				}
 			}
 			VEHICLE::SET_VEHICLE_IS_STOLEN(iVar1, bParam9);
@@ -13546,7 +13546,7 @@ int func_365()
 
 bool func_366(int iParam0)
 {
-	return func_367(iParam0) == joaat("WEAPON_MINIGUN");
+	return func_367(iParam0) == joaat("weapon_minigun");
 }
 
 int func_367(int iParam0)
@@ -14402,7 +14402,7 @@ void func_385(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(140, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "Gradient_Bgd", (Global_22547 + (fParam5 * 0.5f)), ((fVar51 + ((((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))) * 0.5f)) - 0.00138888f), fParam5, (((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))), 0f, iVar1, iVar2, iVar3, iVar4, false);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "Gradient_Bgd", (Global_22547 + (fParam5 * 0.5f)), ((fVar51 + ((((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))) * 0.5f)) - 0.00138888f), fParam5, (((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))), 0f, iVar1, iVar2, iVar3, iVar4, false);
 				func_402(fVar42);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(&(Global_22550.f_4690));
 				iVar15 = 0;
@@ -14460,7 +14460,7 @@ void func_385(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 					func_401(Global_22550.f_4768, 1, &iVar47, &iVar48, &iVar49, &iVar50);
 					GRAPHICS::DRAW_SPRITE(func_409(Global_22550.f_4768), func_407(Global_22550.f_4768, 1), ((Global_22547 + (fVar36 * 0.5f)) + (0.00078125f * 2f)), ((fVar51 + (fVar37 * 0.5f)) - (0.00138888f * 4f)), fVar36, fVar37, 0f, iVar47, iVar48, iVar49, iVar50, false);
 				}
-				fVar51 = (fVar51 + (((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))));
+				fVar51 = (fVar51 + (((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))));
 				if (Global_22550.f_4766 > 0)
 				{
 					if ((MISC::GET_GAME_TIMER() - Global_22550.f_4767) > Global_22550.f_4766)
@@ -14543,7 +14543,7 @@ void func_385(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(140, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "Gradient_Bgd", (Global_22547 + (fParam5 * 0.5f)), ((fVar51 + ((((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))) * 0.5f)) - 0.00138888f), fParam5, (((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))), 0f, iVar1, iVar2, iVar3, iVar4, false);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "Gradient_Bgd", (Global_22547 + (fParam5 * 0.5f)), ((fVar51 + ((((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))) * 0.5f)) - 0.00138888f), fParam5, (((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))), 0f, iVar1, iVar2, iVar3, iVar4, false);
 				func_402(fVar42);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(&(Global_4269680.f_21));
 				iVar15 = 0;
@@ -14601,7 +14601,7 @@ void func_385(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 					func_401(Global_4269680.f_67, 1, &iVar47, &iVar48, &iVar49, &iVar50);
 					GRAPHICS::DRAW_SPRITE(func_409(Global_4269680.f_67), func_407(Global_4269680.f_67, 1), ((Global_22547 + (fVar36 * 0.5f)) + (0.00078125f * 2f)), ((fVar51 + (fVar37 * 0.5f)) - (0.00138888f * 4f)), fVar36, fVar37, 0f, iVar47, iVar48, iVar49, iVar50, false);
 				}
-				fVar51 = (fVar51 + (((HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))));
+				fVar51 = (fVar51 + (((HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0) * IntToFloat(iVar6)) + (0.00138888f * 13f)) + ((0.00138888f * 5f) * IntToFloat((iVar6 - 1)))));
 				if (Global_4269680.f_65 > 0)
 				{
 					if ((MISC::GET_GAME_TIMER() - Global_4269680.f_66) > Global_4269680.f_65)
@@ -16732,7 +16732,7 @@ float func_411(char* sParam0)
 	if (!HUD::DOES_TEXT_LABEL_EXIST(sParam0))
 	{
 	}
-	return HUD::_GET_TEXT_SCALE_HEIGHT(0.35f, 0);
+	return HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0);
 }
 
 float func_412(char* sParam0)
@@ -17726,7 +17726,7 @@ struct<4> func_430(int iParam0)
 			StringCopy(&Var0, "MP_PROP_89", 16);
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var0, "MP_PROP_90", 16);
 			break;
 		
@@ -19261,7 +19261,7 @@ void func_465()
 					break;
 				
 				case 8:
-					if (!VEHICLE::_IS_ANY_PASSENGER_RAPPELING_FROM_VEHICLE(iLocal_1212))
+					if (!VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1212))
 					{
 						func_144();
 						if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1212) > 0)
@@ -20324,7 +20324,7 @@ int func_507()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}

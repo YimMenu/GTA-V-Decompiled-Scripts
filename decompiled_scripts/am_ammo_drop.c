@@ -2055,7 +2055,7 @@ int func_54()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -2667,7 +2667,7 @@ int func_82(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 				}
 				if (bParam13)
 				{
-					NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
+					NETWORK::SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
 				}
 			}
 			VEHICLE::SET_VEHICLE_IS_STOLEN(iVar1, bParam9);
@@ -3228,7 +3228,7 @@ void func_109()
 		if (func_37(PLAYER::PLAYER_ID(), 1, 1))
 		{
 			iVar1 = func_112(PLAYER::PLAYER_PED_ID());
-			if (((((((((((((((((iVar1 == joaat("weapon_unarmed") || iVar1 == joaat("WEAPON_FLARE")) || iVar1 == joaat("WEAPON_KNIFE")) || iVar1 == joaat("WEAPON_NIGHTSTICK")) || iVar1 == joaat("WEAPON_BAT")) || iVar1 == joaat("WEAPON_HAMMER")) || iVar1 == joaat("WEAPON_GOLFCLUB")) || iVar1 == joaat("WEAPON_CROWBAR")) || iVar1 == joaat("WEAPON_MOLOTOV")) || iVar1 == joaat("WEAPON_GRENADE")) || iVar1 == joaat("WEAPON_GRENADELAUNCHER")) || iVar1 == joaat("WEAPON_GRENADELAUNCHER_SMOKE")) || iVar1 == joaat("WEAPON_PETROLCAN")) || iVar1 == joaat("WEAPON_RPG")) || iVar1 == joaat("WEAPON_SMOKEGRENADE")) || iVar1 == joaat("WEAPON_STICKYBOMB")) || iVar1 == joaat("WEAPON_BZGAS")) || iVar1 == joaat("WEAPON_BOTTLE"))
+			if (((((((((((((((((iVar1 == joaat("weapon_unarmed") || iVar1 == joaat("weapon_flare")) || iVar1 == joaat("weapon_knife")) || iVar1 == joaat("weapon_nightstick")) || iVar1 == joaat("weapon_bat")) || iVar1 == joaat("weapon_hammer")) || iVar1 == joaat("weapon_golfclub")) || iVar1 == joaat("weapon_crowbar")) || iVar1 == joaat("weapon_molotov")) || iVar1 == joaat("weapon_grenade")) || iVar1 == joaat("weapon_grenadelauncher")) || iVar1 == joaat("weapon_grenadelauncher_smoke")) || iVar1 == joaat("weapon_petrolcan")) || iVar1 == joaat("weapon_rpg")) || iVar1 == joaat("weapon_smokegrenade")) || iVar1 == joaat("weapon_stickybomb")) || iVar1 == joaat("weapon_bzgas")) || iVar1 == joaat("weapon_bottle"))
 			{
 				iVar1 = Global_1312434;
 			}
@@ -3280,7 +3280,7 @@ void func_109()
 
 int func_110(int iParam0)
 {
-	if ((((((((((iParam0 == joaat("gadget_parachute") || iParam0 == joaat("WEAPON_KNIFE")) || iParam0 == joaat("WEAPON_BAT")) || iParam0 == joaat("WEAPON_CROWBAR")) || iParam0 == joaat("WEAPON_NIGHTSTICK")) || iParam0 == joaat("WEAPON_GOLFCLUB")) || iParam0 == joaat("WEAPON_HAMMER")) || iParam0 == joaat("WEAPON_BAT")) || iParam0 == joaat("WEAPON_BOTTLE")) || iParam0 == joaat("WEAPON_DAGGER")) || iParam0 == joaat("WEAPON_HATCHET"))
+	if ((((((((((iParam0 == joaat("gadget_parachute") || iParam0 == joaat("weapon_knife")) || iParam0 == joaat("weapon_bat")) || iParam0 == joaat("weapon_crowbar")) || iParam0 == joaat("weapon_nightstick")) || iParam0 == joaat("weapon_golfclub")) || iParam0 == joaat("weapon_hammer")) || iParam0 == joaat("weapon_bat")) || iParam0 == joaat("weapon_bottle")) || iParam0 == joaat("weapon_dagger")) || iParam0 == joaat("weapon_hatchet"))
 	{
 		return 0;
 	}
@@ -3289,7 +3289,7 @@ int func_110(int iParam0)
 
 int func_111(int iParam0)
 {
-	if (iParam0 == joaat("WEAPON_FLARE"))
+	if (iParam0 == joaat("weapon_flare"))
 	{
 		return 0;
 	}
@@ -4213,7 +4213,7 @@ int func_150()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}
@@ -4500,7 +4500,7 @@ int func_154(int iParam0)
 		case 78:
 			return 32;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 32;
 		
 		case 80:

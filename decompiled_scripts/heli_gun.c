@@ -276,7 +276,7 @@ void func_1()
 	func_189();
 	func_188();
 	func_187();
-	if (((VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_339, false) && NETWORK::_0x21D04D7BC538C146(iLocal_339)) && !func_186(PLAYER::PLAYER_ID()) == 129) && (((bLocal_301 || bLocal_302) || bLocal_303) || Global_1319177 != -1))
+	if (((VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_339, false) && NETWORK::_IS_ENTITY_GHOSTED_TO_LOCAL_PLAYER(iLocal_339)) && !func_186(PLAYER::PLAYER_ID()) == 129) && (((bLocal_301 || bLocal_302) || bLocal_303) || Global_1319177 != -1))
 	{
 		func_185();
 		bLocal_298 = true;
@@ -2060,7 +2060,7 @@ int func_30(int iParam0, int iParam1)
 			iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::GET_PLAYER_PED(iParam0), false);
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false))
 			{
-				if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iParam1, 0))
+				if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iParam1, false))
 				{
 					return 1;
 				}
@@ -2264,7 +2264,7 @@ int func_38(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -3360,7 +3360,7 @@ int func_69(int iParam0)
 	iVar0 = ENTITY::GET_ENTITY_MODEL(ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(iParam0));
 	if (func_142(PLAYER::PLAYER_ID()) || func_141(PLAYER::PLAYER_ID()))
 	{
-		return joaat("VEHICLE_WEAPON_AVENGER_CANNON");
+		return joaat("vehicle_weapon_avenger_cannon");
 	}
 	switch (iVar0)
 	{
@@ -3370,14 +3370,14 @@ int func_69(int iParam0)
 			break;
 		
 		case joaat("avenger"):
-			return joaat("VEHICLE_WEAPON_MOBILEOPS_CANNON");
+			return joaat("vehicle_weapon_mobileops_cannon");
 			break;
 	}
 	if (func_125(3))
 	{
-		return joaat("VEHICLE_WEAPON_MOBILEOPS_CANNON");
+		return joaat("vehicle_weapon_mobileops_cannon");
 	}
-	return joaat("VEHICLE_WEAPON_MOBILEOPS_CANNON");
+	return joaat("vehicle_weapon_mobileops_cannon");
 }
 
 bool func_70()
@@ -6722,7 +6722,7 @@ int func_136(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 				{
 					GRAPHICS::SET_TIMECYCLE_MODIFIER("eyeinthesky");
 				}
-				GRAPHICS::_0x6DDBF9DFFC4AC080(true);
+				GRAPHICS::CASCADE_SHADOWS_SET_AIRCRAFT_MODE(true);
 				MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &fVar7, false, false);
 				uParam0->f_199 = (fVar7 * 10f);
 				if (uParam0->f_200 == 1)
@@ -6880,7 +6880,7 @@ int func_136(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 				uParam0->f_200 = 0;
 			}
 			GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();
-			GRAPHICS::_0x6DDBF9DFFC4AC080(false);
+			GRAPHICS::CASCADE_SHADOWS_SET_AIRCRAFT_MODE(false);
 			GRAPHICS::SET_STREAMED_TEXTURE_DICT_AS_NO_LONGER_NEEDED("helicopterHUD");
 			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_71);
 			GRAPHICS::POP_TIMECYCLE_MODIFIER();
@@ -7065,7 +7065,7 @@ void func_145(var uParam0, bool bParam1, bool bParam2)
 	}
 }
 
-void func_146(int iParam0)
+void func_146(bool bParam0)
 {
 	int iVar0;
 	
@@ -7075,9 +7075,9 @@ void func_146(int iParam0)
 		switch (iVar0)
 		{
 			case joaat("avenger"):
-				VEHICLE::_0xC60060EB0D8AC7B1(iLocal_339, 0, iParam0);
-				VEHICLE::_0xC60060EB0D8AC7B1(iLocal_339, 1, iParam0);
-				VEHICLE::_0xC60060EB0D8AC7B1(iLocal_339, 2, iParam0);
+				VEHICLE::_SET_VEHICLE_TURRET_UNK(iLocal_339, 0, bParam0);
+				VEHICLE::_SET_VEHICLE_TURRET_UNK(iLocal_339, 1, bParam0);
+				VEHICLE::_SET_VEHICLE_TURRET_UNK(iLocal_339, 2, bParam0);
 				break;
 		}
 	}
@@ -7227,7 +7227,7 @@ int func_151()
 				{
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iLocal_339, -1, false))
 					{
-						iLocal_341 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, -1, 0);
+						iLocal_341 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, -1, false);
 					}
 				}
 			}
@@ -7554,7 +7554,7 @@ void func_163()
 	}
 	if (iLocal_328 != -2)
 	{
-		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, iLocal_328, 0) == PLAYER::PLAYER_PED_ID())
+		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, iLocal_328, false) == PLAYER::PLAYER_PED_ID())
 		{
 			iLocal_329 = 0;
 			iLocal_328 = -2;
@@ -7627,7 +7627,7 @@ void func_164()
 	}
 	if (iLocal_328 != -2)
 	{
-		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, iLocal_328, 0) == PLAYER::PLAYER_PED_ID())
+		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, iLocal_328, false) == PLAYER::PLAYER_PED_ID())
 		{
 			iLocal_329 = 0;
 			iLocal_328 = -2;
@@ -8653,7 +8653,7 @@ void func_209()
 				bLocal_311 = true;
 				if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iLocal_339, -1, false))
 				{
-					iLocal_341 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, -1, 0);
+					iLocal_341 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, -1, false);
 					bLocal_306 = ENTITY::DOES_ENTITY_EXIST(iLocal_341);
 					if (bLocal_306)
 					{
@@ -8666,7 +8666,7 @@ void func_209()
 				}
 				if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iLocal_339, 0, false))
 				{
-					iLocal_342 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, 0, 0);
+					iLocal_342 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, 0, false);
 					bLocal_308 = ENTITY::DOES_ENTITY_EXIST(iLocal_342);
 					if (bLocal_308)
 					{
@@ -8702,7 +8702,7 @@ void func_209()
 				{
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iLocal_339, 1, false))
 					{
-						iLocal_314 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, 1, 0);
+						iLocal_314 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, 1, false);
 						bLocal_315 = ENTITY::DOES_ENTITY_EXIST(iLocal_314);
 						if (bLocal_315)
 						{
@@ -8733,7 +8733,7 @@ void func_209()
 					}
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iLocal_339, 2, false))
 					{
-						iLocal_318 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, 2, 0);
+						iLocal_318 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_339, 2, false);
 						bLocal_319 = ENTITY::DOES_ENTITY_EXIST(iLocal_318);
 						if (bLocal_319)
 						{
@@ -8794,7 +8794,7 @@ int func_210(int iParam0, int iParam1, int iParam2)
 	{
 		if (PED::IS_PED_SITTING_IN_VEHICLE(iParam0, iParam1))
 		{
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, iParam2, 0) == iParam0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, iParam2, false) == iParam0)
 			{
 				return 1;
 			}
@@ -9196,7 +9196,7 @@ int func_228()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}
@@ -9483,7 +9483,7 @@ int func_232(int iParam0)
 		case 78:
 			return 32;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 32;
 		
 		case 80:

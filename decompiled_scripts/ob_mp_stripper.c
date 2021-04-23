@@ -839,7 +839,7 @@ void func_1()
 				}
 				func_2();
 				TASK::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
-				CAM::_RENDER_FIRST_PERSON_CAM(false, 1f, 3, 0);
+				CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 1f, 3, 0);
 				func_32(PLAYER::PLAYER_ID(), 1, 0, 0);
 				iLocal_36 = 0;
 				iLocal_312 = 0;
@@ -1151,7 +1151,7 @@ void func_23(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4
 		Global_61723 = 0;
 		if (bParam1)
 		{
-			GRAPHICS::_0x03FC694AE06C5A20();
+			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);
@@ -1454,9 +1454,9 @@ void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -1680,7 +1680,7 @@ void func_37(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_38(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_38(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -1984,7 +1984,7 @@ int func_52(bool bParam0, bool bParam1, bool bParam2)
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(iVar0, false))
 			{
-				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) != PLAYER::PLAYER_PED_ID())
+				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) != PLAYER::PLAYER_PED_ID())
 				{
 					return 0;
 				}
@@ -2436,7 +2436,7 @@ void func_74(var uParam0, int iParam1)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 		case 81:
 		case 82:
@@ -3207,7 +3207,7 @@ void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
 		
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 		case 81:
 		case 82:
@@ -3352,7 +3352,7 @@ void func_76(int iParam0, int iParam1, var uParam2, bool bParam3)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 		case 81:
 		case 82:
@@ -4047,7 +4047,7 @@ void func_81(var uParam0, int iParam1)
 		
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 		case 81:
 		case 82:
@@ -4219,7 +4219,7 @@ int func_84(int iParam0, int iParam1)
 			case 75:
 			case 76:
 			case 78:
-			case joaat("MPSV_LP0_31"):
+			case joaat("mpsv_lp0_31"):
 			case 80:
 			case 81:
 			case 82:
@@ -4234,7 +4234,7 @@ int func_84(int iParam0, int iParam1)
 		{
 			case 77:
 			case 78:
-			case joaat("MPSV_LP0_31"):
+			case joaat("mpsv_lp0_31"):
 			case 80:
 			case 81:
 			case 82:
@@ -4342,7 +4342,7 @@ void func_86(int iParam0, int iParam1, var uParam2, int iParam3, bool bParam4)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 		case 81:
 		case 82:
@@ -5219,7 +5219,7 @@ struct<6> func_87(int iParam0, bool bParam1)
 			Var0.f_3 = { 0f, 0f, -14.5f };
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0 = { -742.2565f, 587.6547f, 143.0577f };
 			Var0.f_3 = { 0f, 0f, -29f };
 			break;
@@ -5549,7 +5549,7 @@ int func_88(int iParam0)
 		
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 		case 81:
 		case 82:

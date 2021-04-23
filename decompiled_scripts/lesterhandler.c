@@ -314,7 +314,7 @@ void __EntryFunction__()
 					TASK::TASK_PLAY_ANIM_ADVANCED(0, "MISSHEIST_JEWEL@HACKING", "HACK_LOOP", Var0, Var3, 8f, -8f, -1, 262153, 0f, 2, 0);
 					TASK::CLOSE_SEQUENCE_TASK(iLocal_49);
 					TASK::TASK_PERFORM_SEQUENCE(iLocal_46, iLocal_49);
-					PED::_0x2208438012482A1A(iLocal_46, false, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_46, false, false);
 					ENTITY::FREEZE_ENTITY_POSITION(iLocal_46, true);
 					func_28(&uLocal_51, 3, iLocal_46, "LESTER", 0, 1);
 					iLocal_47 = OBJECT::CREATE_OBJECT(joaat("prop_cs_walking_stick"), 706.9874f, -967.0945f, 30.4f, false, false, false);
@@ -755,7 +755,7 @@ int func_14()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -1054,7 +1054,7 @@ void func_30()
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("prop_laptop_lester2"));
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("re_lured");
 	STREAMING::REMOVE_ANIM_DICT("MISSHEIST_JEWEL@HACKING");
-	ENTITY::REMOVE_MODEL_HIDE(707.3041f, -967.6456f, 30.376f, 1f, joaat("prop_laptop_lester2"), 0);
+	ENTITY::REMOVE_MODEL_HIDE(707.3041f, -967.6456f, 30.376f, 1f, joaat("prop_laptop_lester2"), false);
 	PED::REMOVE_RELATIONSHIP_GROUP(iLocal_50);
 	func_31();
 	SCRIPT::TERMINATE_THIS_THREAD();

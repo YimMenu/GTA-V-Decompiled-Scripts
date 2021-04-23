@@ -2294,7 +2294,7 @@ int func_26(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, boo
 			func_28(uParam0[iParam1 /*94*/], "TennisServeSet", 0f);
 		}
 		func_262(iVar1, 1);
-		PED::_0x2208438012482A1A(iVar1, false, false);
+		PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iVar1, false, false);
 		func_59(uParam0[iParam1 /*94*/], 8192);
 	}
 	else if (func_105(uParam0[iParam1 /*94*/], 8192) && iParam1 == iParam3)
@@ -2326,7 +2326,7 @@ int func_26(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, boo
 			func_28(uParam0[iParam2 /*94*/], "TennisServeSet", 0f);
 		}
 		func_262(iVar2, 1);
-		PED::_0x2208438012482A1A(iVar2, false, false);
+		PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iVar2, false, false);
 		func_59(uParam0[iParam2 /*94*/], 8192);
 	}
 	else if (func_105(uParam0[iParam2 /*94*/], 8192) && iParam2 == iParam3)
@@ -6230,7 +6230,7 @@ int func_215(var uParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 			func_28(uParam0[iParam1 /*94*/], "TennisServeSet", 0f);
 		}
 		func_262(func_266(uParam0[iParam1 /*94*/]), 1);
-		PED::_0x2208438012482A1A(func_266(uParam0[iParam1 /*94*/]), false, false);
+		PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_266(uParam0[iParam1 /*94*/]), false, false);
 		func_59(uParam0[iParam1 /*94*/], 8192);
 	}
 	else if (func_105(uParam0[iParam1 /*94*/], 8192) && iParam1 == iParam2)
@@ -6398,7 +6398,7 @@ void func_219(var uParam0, var uParam1, int iParam2, int iParam3, bool bParam4, 
 	}
 	if (bParam4 && ENTITY::DOES_ENTITY_EXIST(func_266(uParam0)))
 	{
-		PED::_0x2208438012482A1A(func_266(uParam0), false, false);
+		PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_266(uParam0), false, false);
 	}
 }
 
@@ -6621,7 +6621,7 @@ void func_228(var uParam0, var uParam1, int iParam2, int iParam3, bool bParam4, 
 	}
 	if (bParam4 && ENTITY::DOES_ENTITY_EXIST(func_266(uParam0)))
 	{
-		PED::_0x2208438012482A1A(func_266(uParam0), false, false);
+		PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_266(uParam0), false, false);
 	}
 	uParam0->f_37 = { ENTITY::GET_ENTITY_COORDS(uParam0->f_32, false) };
 }

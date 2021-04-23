@@ -163,7 +163,7 @@ void func_4()
 	switch (Local_36.f_3)
 	{
 		case 9:
-			PATHFIND::_0x07FB139B592FA687(1435f, -2385f, 1690f, -1885f);
+			PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(1435f, -2385f, 1690f, -1885f);
 			break;
 	}
 	switch (Local_36.f_83)
@@ -1052,9 +1052,9 @@ void func_31(var uParam0, int iParam1)
 			uParam0->f_53[2] = 0;
 			uParam0->f_57[0] = joaat("gburrito");
 			uParam0->f_57[1] = joaat("hexer");
-			uParam0->f_60[0] = joaat("WEAPON_PISTOL");
-			uParam0->f_60[1] = joaat("WEAPON_SAWNOFFSHOTGUN");
-			uParam0->f_60[2] = joaat("WEAPON_ASSAULTRIFLE");
+			uParam0->f_60[0] = joaat("weapon_pistol");
+			uParam0->f_60[1] = joaat("weapon_sawnoffshotgun");
+			uParam0->f_60[2] = joaat("weapon_assaultrifle");
 			uParam0->f_72 = { 1533.77f, -2135.35f, 82.04f };
 			uParam0->f_75 = 90f;
 			uParam0->f_76 = { 1533.77f, -2135.35f, 82.04f };
@@ -1102,16 +1102,16 @@ void func_31(var uParam0, int iParam1)
 			Local_143[1 /*122*/].f_83[0 /*9*/].f_8 = joaat("gburrito");
 			Local_143[1 /*122*/].f_2[0 /*20*/].f_18 = 0;
 			Local_143[1 /*122*/].f_2[0 /*20*/].f_19 = -1;
-			Local_143[1 /*122*/].f_2[0 /*20*/].f_15 = joaat("WEAPON_PISTOL");
+			Local_143[1 /*122*/].f_2[0 /*20*/].f_15 = joaat("weapon_pistol");
 			Local_143[1 /*122*/].f_2[1 /*20*/].f_18 = 0;
 			Local_143[1 /*122*/].f_2[1 /*20*/].f_19 = 0;
-			Local_143[1 /*122*/].f_2[1 /*20*/].f_15 = joaat("WEAPON_PISTOL");
+			Local_143[1 /*122*/].f_2[1 /*20*/].f_15 = joaat("weapon_pistol");
 			Local_143[1 /*122*/].f_2[2 /*20*/].f_18 = 0;
 			Local_143[1 /*122*/].f_2[2 /*20*/].f_19 = 1;
-			Local_143[1 /*122*/].f_2[2 /*20*/].f_15 = joaat("WEAPON_ASSAULTRIFLE");
+			Local_143[1 /*122*/].f_2[2 /*20*/].f_15 = joaat("weapon_assaultrifle");
 			Local_143[1 /*122*/].f_2[3 /*20*/].f_18 = 0;
 			Local_143[1 /*122*/].f_2[3 /*20*/].f_19 = 2;
-			Local_143[1 /*122*/].f_2[3 /*20*/].f_15 = joaat("WEAPON_ASSAULTRIFLE");
+			Local_143[1 /*122*/].f_2[3 /*20*/].f_15 = joaat("weapon_assaultrifle");
 			Local_143[2 /*122*/] = 1;
 			Local_143[2 /*122*/].f_111 = 4;
 			Local_143[2 /*122*/].f_112 = 1;
@@ -1119,16 +1119,16 @@ void func_31(var uParam0, int iParam1)
 			Local_143[2 /*122*/].f_83[0 /*9*/].f_8 = joaat("gburrito");
 			Local_143[2 /*122*/].f_2[0 /*20*/].f_18 = 0;
 			Local_143[2 /*122*/].f_2[0 /*20*/].f_19 = -1;
-			Local_143[2 /*122*/].f_2[0 /*20*/].f_15 = joaat("WEAPON_PISTOL");
+			Local_143[2 /*122*/].f_2[0 /*20*/].f_15 = joaat("weapon_pistol");
 			Local_143[2 /*122*/].f_2[1 /*20*/].f_18 = 0;
 			Local_143[2 /*122*/].f_2[1 /*20*/].f_19 = 0;
-			Local_143[2 /*122*/].f_2[1 /*20*/].f_15 = joaat("WEAPON_PISTOL");
+			Local_143[2 /*122*/].f_2[1 /*20*/].f_15 = joaat("weapon_pistol");
 			Local_143[2 /*122*/].f_2[2 /*20*/].f_18 = 0;
 			Local_143[2 /*122*/].f_2[2 /*20*/].f_19 = 1;
-			Local_143[2 /*122*/].f_2[2 /*20*/].f_15 = joaat("WEAPON_ASSAULTRIFLE");
+			Local_143[2 /*122*/].f_2[2 /*20*/].f_15 = joaat("weapon_assaultrifle");
 			Local_143[2 /*122*/].f_2[3 /*20*/].f_18 = 0;
 			Local_143[2 /*122*/].f_2[3 /*20*/].f_19 = 2;
-			Local_143[2 /*122*/].f_2[3 /*20*/].f_15 = joaat("WEAPON_ASSAULTRIFLE");
+			Local_143[2 /*122*/].f_2[3 /*20*/].f_15 = joaat("weapon_assaultrifle");
 			break;
 		
 		default:
@@ -1136,9 +1136,9 @@ void func_31(var uParam0, int iParam1)
 			uParam0->f_53[0] = joaat("g_m_y_mexgoon_01");
 			uParam0->f_53[1] = joaat("g_m_y_mexgoon_02");
 			uParam0->f_53[2] = joaat("g_m_y_mexgoon_03");
-			uParam0->f_60[0] = joaat("WEAPON_PISTOL");
-			uParam0->f_60[1] = joaat("WEAPON_MICROSMG");
-			uParam0->f_60[2] = joaat("WEAPON_ASSAULTRIFLE");
+			uParam0->f_60[0] = joaat("weapon_pistol");
+			uParam0->f_60[1] = joaat("weapon_microsmg");
+			uParam0->f_60[2] = joaat("weapon_assaultrifle");
 			uParam0->f_69 = 10;
 			break;
 	}

@@ -134,7 +134,7 @@ int func_1()
 
 void func_2()
 {
-	iLocal_25 = GRAPHICS::_0xF5BED327CEA362B1(0);
+	iLocal_25 = GRAPHICS::GET_STATUS_OF_SORTED_LIST_OPERATION(0);
 	switch (iLocal_25)
 	{
 		case 0:

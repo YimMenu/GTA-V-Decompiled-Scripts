@@ -1184,7 +1184,7 @@ int func_27(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -1802,11 +1802,11 @@ int func_53(int iParam0)
 	{
 		if (iParam0 == 0)
 		{
-			return joaat("VEHICLE_WEAPON_HACKER_MISSILE_HOMING");
+			return joaat("vehicle_weapon_hacker_missile_homing");
 		}
 		else
 		{
-			return joaat("VEHICLE_WEAPON_HACKER_MISSILE");
+			return joaat("vehicle_weapon_hacker_missile");
 		}
 	}
 	return 0;
@@ -2087,7 +2087,7 @@ void func_63(int iParam0, bool bParam1, int iParam2)
 					}
 					else if (ENTITY::IS_ENTITY_A_VEHICLE(iParam0))
 					{
-						iVar9 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(iParam0), -1, 0);
+						iVar9 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(iParam0), -1, false);
 						if (ENTITY::DOES_ENTITY_EXIST(iVar9))
 						{
 							if (PED::IS_PED_A_PLAYER(iVar9))
@@ -2235,7 +2235,7 @@ int func_67(int iParam0, int iParam1)
 			iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::GET_PLAYER_PED(iParam0), false);
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false))
 			{
-				if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iParam1, 0))
+				if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iParam1, false))
 				{
 					return 1;
 				}
@@ -2403,7 +2403,7 @@ int func_73(int iParam0, bool bParam1, bool bParam2)
 		{
 			if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iParam0, (iVar0 - 1), false))
 			{
-				iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, (iVar0 - 1), 0);
+				iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, (iVar0 - 1), false);
 				if (bParam1)
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(iVar2))
@@ -3898,7 +3898,7 @@ int func_124()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(func_30()))
 		{
-			iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(func_30(), -1, 0);
+			iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(func_30(), -1, false);
 			if (ENTITY::DOES_ENTITY_EXIST(iVar0))
 			{
 				if (PED::IS_PED_A_PLAYER(iVar0))
@@ -3987,7 +3987,7 @@ int func_128(int iParam0)
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
 			WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, true);
-			if (((iVar0 == joaat("WEAPON_SNIPERRIFLE") || iVar0 == joaat("WEAPON_HEAVYSNIPER")) || iVar0 == joaat("WEAPON_MARKSMANRIFLE")) || iVar0 == joaat("WEAPON_HEAVYSNIPER_MK2"))
+			if (((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle")) || iVar0 == joaat("weapon_heavysniper_mk2"))
 			{
 				return 1;
 			}
@@ -4376,9 +4376,9 @@ void func_139(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -4602,7 +4602,7 @@ void func_144(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_145(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_145(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -5305,7 +5305,7 @@ int func_183(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false))
 	{
-		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, 0) == PLAYER::PLAYER_PED_ID() && VEHICLE::IS_VEHICLE_SEAT_FREE(iParam0, 0, true))
+		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, false) == PLAYER::PLAYER_PED_ID() && VEHICLE::IS_VEHICLE_SEAT_FREE(iParam0, 0, true))
 		{
 			switch (ENTITY::GET_ENTITY_MODEL(iParam0))
 			{
@@ -5803,7 +5803,7 @@ int func_208()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}

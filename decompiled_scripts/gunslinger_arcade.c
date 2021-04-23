@@ -1243,7 +1243,7 @@ int func_10(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -1605,7 +1605,7 @@ int func_17(int iParam0)
 		case 78:
 			return 32;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 32;
 		
 		case 80:
@@ -2668,7 +2668,7 @@ float func_48(int iParam0, int iParam1)
 			fVar0 = 0.695f;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 78:
 			fVar0 = 0.98f;
 			break;
@@ -2822,19 +2822,19 @@ void func_55(var uParam0, var uParam1)
 	uParam1->f_1[0] = 0;
 	uParam1->f_16[0 /*3*/] = { 0.005f, -0.2f, 0.985f };
 	uParam1->f_59[0 /*3*/] = { 0f, 180f, 0f };
-	uParam1->f_102[0] = -1924271972;
+	uParam1->f_102[0] = joaat("sum_prop_arcade_strength_ham_01a");
 	uParam1->f_1[1] = 0;
 	uParam1->f_16[1 /*3*/] = { 0f, 0f, 0f };
 	uParam1->f_59[1 /*3*/] = { 0f, 0f, 0f };
-	uParam1->f_102[1] = -185450186;
+	uParam1->f_102[1] = joaat("sum_prop_arcade_str_lighton");
 	uParam1->f_1[2] = 0;
 	uParam1->f_16[2 /*3*/] = { 0f, 0f, 0f };
 	uParam1->f_59[2 /*3*/] = { 0f, 0f, 0f };
-	uParam1->f_102[2] = -1801615368;
+	uParam1->f_102[2] = joaat("sum_prop_arcade_str_lightoff");
 	uParam1->f_1[3] = 0;
 	uParam1->f_16[3 /*3*/] = { 0f, 0f, 0f };
 	uParam1->f_59[3 /*3*/] = { 0f, 0f, 0f };
-	uParam1->f_102[3] = -1994484629;
+	uParam1->f_102[3] = joaat("sum_prop_arcade_str_bar_01a");
 }
 
 void func_56(var uParam0, char* sParam1, char* sParam2, bool bParam3)
@@ -3054,7 +3054,7 @@ int func_64(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			return -1;
 		}
-		iVar18 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
+		iVar18 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, true, -1, -1);
 		if (iVar18 <= iVar17)
 		{
 			return -1;
@@ -3074,7 +3074,7 @@ int func_64(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			return Global_76769.f_13[iParam2];
 		}
-		iVar37 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_66(iParam2));
+		iVar37 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, false, -1, func_66(iParam2));
 		if (iVar37 <= iVar36)
 		{
 			return -1;
@@ -3535,7 +3535,7 @@ void func_73(var uParam0, var uParam1)
 
 void func_74(var uParam0, var uParam1)
 {
-	uParam1->f_743 = 478384131;
+	uParam1->f_743 = joaat("sum_prop_arcade_strength_01a");
 	StringCopy(&(uParam1->f_338), "dlc_ch_strength_test_gameplay_scene", 64);
 }
 
@@ -4455,7 +4455,7 @@ void func_124(int iParam0, int iParam1, var uParam2)
 			break;
 		
 		case 15:
-			*uParam2 = 709673356;
+			*uParam2 = joaat("sum_prop_arcade_qub3d_01a_scrn_uv");
 			break;
 	}
 }
@@ -5097,7 +5097,7 @@ void func_139(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 			{
 				TASK::_0x0FFB3C758E8C07B9(iVar0, true);
 				func_441(&(iParam0->f_5));
-				PED::_0x2208438012482A1A(iVar0, false, true);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iVar0, false, true);
 				iParam0->f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(Var10, 0f, 0f, fVar2, 2, true, false, 1f, 0f, 1f);
 				if (bParam7)
 				{
@@ -5160,7 +5160,7 @@ void func_139(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 			{
 				if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iParam0->f_5)))
 				{
-					if (!ENTITY::IS_ENTITY_VISIBLE_TO_SCRIPT(NETWORK::NET_TO_OBJ((*uParam1)[1])) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar0))
+					if (!ENTITY::IS_ENTITY_VISIBLE_TO_SCRIPT(NETWORK::NET_TO_OBJ((*uParam1)[1])) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar0))
 					{
 						ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ((*uParam1)[1]), true, false);
 					}
@@ -5589,7 +5589,7 @@ void func_139(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 			func_441(&(iParam0->f_5));
 			ENTITY::FREEZE_ENTITY_POSITION(iVar0, false);
 			TASK::CLEAR_PED_TASKS_IMMEDIATELY(iVar0);
-			PED::_0x2208438012482A1A(iVar0, false, false);
+			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iVar0, false, false);
 			if (MISC::IS_BIT_SET(*iParam0, 1))
 			{
 				TASK::TASK_TURN_PED_TO_FACE_COORD(iVar0, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iVar0, 4f, 0f, 0f), 0);
@@ -5831,7 +5831,7 @@ void func_146(int iParam0, int iParam1, int iParam2)
 		}
 		else if (iParam1 == 3)
 		{
-			PLAYER::_0xA0D3E4F7AAFB7E78(NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(iParam0), 100f);
+			PLAYER::_SET_PLAYER_UNDERWATER_TIME_REMAINING(NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(iParam0), 100f);
 		}
 		iVar51 = 0;
 		while (iVar51 < 12)
@@ -6165,7 +6165,7 @@ int func_152(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 	else if (iParam2 == 14)
 	{
-		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
+		FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, true, -1, -1);
 		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
@@ -6174,7 +6174,7 @@ int func_152(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 	else
 	{
-		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_66(iParam2));
+		FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, false, -1, func_66(iParam2));
 		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
@@ -8569,7 +8569,7 @@ void func_170(var uParam0, int iParam1, int iParam2, int iParam3)
 	{
 		iVar0 = 4;
 	}
-	FILES::_0xF3FBE2D50A6A8C28(iVar0, false);
+	FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar0, false);
 	FILES::GET_SHOP_PED_QUERY_OUTFIT((iParam2 - iParam3), &Var1);
 	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
 	{
@@ -11130,7 +11130,7 @@ bool func_182(int iParam0, int iParam1, var uParam2, var uParam3, bool bParam4, 
 					*uParam2 = 3793;
 					break;
 				
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					*uParam2 = 3794;
 					break;
 				
@@ -12063,7 +12063,7 @@ bool func_182(int iParam0, int iParam1, var uParam2, var uParam3, bool bParam4, 
 					*uParam2 = 3801;
 					break;
 				
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					*uParam2 = 3802;
 					break;
 				
@@ -12789,7 +12789,7 @@ void func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar17 = (iParam1 - iParam2);
 		if (iVar17 >= 0)
 		{
-			iVar18 = FILES::_0xF3FBE2D50A6A8C28(iVar1, false);
+			iVar18 = FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar1, false);
 			if (iVar18 > iVar17)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
@@ -12810,7 +12810,7 @@ void func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar37 = (iParam1 - iParam2);
 		if (iVar37 >= 0)
 		{
-			iVar38 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, true, -1, -1);
+			iVar38 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iVar1, 7, -1, true, -1, -1);
 			if (iVar38 > iVar37)
 			{
 				FILES::GET_SHOP_PED_QUERY_PROP(iVar37, &Var19);
@@ -12875,7 +12875,7 @@ void func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar56 = (iParam1 - iParam2);
 		if (iVar56 >= 0)
 		{
-			iVar57 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, false, -1, func_66(iParam0));
+			iVar57 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iVar1, 7, -1, false, -1, func_66(iParam0));
 			if (iVar57 > iVar56)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
@@ -13897,7 +13897,7 @@ void func_189(int iParam0, int iParam1)
 			iVar11 = 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "HT_FMF_9_4", 16);
 			iVar6 = 9;
 			iVar7 = 4;
@@ -17671,7 +17671,7 @@ void func_193(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -19356,7 +19356,7 @@ void func_194(int iParam0, int iParam1)
 			iVar1 = 230;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 280;
@@ -21439,7 +21439,7 @@ void func_197(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "U_FMF_11_8", 16);
 			iVar6 = 11;
 			iVar7 = 8;
@@ -22691,7 +22691,7 @@ void func_205(int iParam0, int iParam1)
 			iVar1 = 40;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -24484,7 +24484,7 @@ void func_206(int iParam0, int iParam1)
 			iVar1 = 0;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 14;
 			iVar7 = 0;
 			iVar1 = 475;
@@ -25818,7 +25818,7 @@ void func_212(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "HT_FMM_9_4", 16);
 			iVar6 = 9;
 			iVar7 = 4;
@@ -28853,7 +28853,7 @@ void func_214(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 12;
 			iVar7 = 6;
 			iVar1 = 0;
@@ -29690,7 +29690,7 @@ void func_216(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -31376,7 +31376,7 @@ void func_217(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -33555,7 +33555,7 @@ void func_220(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "SP_FMM_3_15", 16);
 			iVar6 = 4;
 			iVar7 = 15;
@@ -35776,7 +35776,7 @@ void func_221(int iParam0, int iParam1)
 			iVar1 = 3125;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -37418,7 +37418,7 @@ void func_222(int iParam0, int iParam1)
 			iVar1 = SYSTEM::ROUND((SYSTEM::TO_FLOAT(iVar1) * Global_262145.f_2533[65]));
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 13;
 			iVar7 = 5;
 			iVar1 = 0;
@@ -37639,7 +37639,7 @@ int func_224(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 13;
 		
 		case 80:
@@ -38178,7 +38178,7 @@ int func_230(int iParam0, int iParam1)
 	var uVar1;
 	
 	iVar0 = Global_2552060[iParam0 /*3*/][func_159(iParam1)];
-	if (HUD::_0xEF4CED81CEBEDC6D(iVar0, &uVar1))
+	if (HUD::GET_MENU_PED_INT_STAT(iVar0, &uVar1))
 	{
 		return uVar1;
 	}
@@ -38268,12 +38268,12 @@ int func_233(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 1393 && iParam0 < 2919)
 	{
-		iVar1 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
+		iVar1 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
 		iVar2 = ((iParam0 - 1393) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 1393)) * 8) * 8;
 	}
 	else if (iParam0 >= 1361 && iParam0 < 1393)
 	{
-		iVar1 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
+		iVar1 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
 		iVar2 = ((iParam0 - 1361) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 1361)) * 8) * 8;
 	}
 	else if (iParam0 >= 3879 && iParam0 < 4143)
@@ -38366,7 +38366,7 @@ int func_233(int iParam0, int iParam1)
 		iVar1 = STATS::_GET_NGSTAT_INT_HASH((iParam0 - 30483), false, true, iParam1, "_HISLANDPSTAT_INT");
 		iVar2 = ((iParam0 - 30483) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 30483)) * 8) * 8;
 	}
-	if (!HUD::_0x90A6526CF0381030(iVar1, &iVar0, iVar2, 8))
+	if (!HUD::GET_MENU_PED_MASKED_INT_STAT(iVar1, &iVar0, iVar2, 8))
 	{
 		iVar0 = 0;
 	}
@@ -38530,11 +38530,11 @@ int func_236(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 1361 && iParam0 < 1393)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
 	}
 	else if (iParam0 >= 1393 && iParam0 < 2919)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
 	}
 	else if (iParam0 >= 4143 && iParam0 < 4207)
 	{
@@ -38761,7 +38761,7 @@ float func_240(int iParam0, int iParam1)
 	var uVar1;
 	
 	iVar0 = Global_2587374[iParam0 /*3*/][func_159(iParam1)];
-	if (HUD::_0x5FBD7095FE7AE57F(iVar0, &uVar1))
+	if (HUD::GET_MENU_PED_FLOAT_STAT(iVar0, &uVar1))
 	{
 		return uVar1;
 	}
@@ -44874,11 +44874,11 @@ void func_278(int iParam0, bool bParam1, bool bParam2, int iParam3)
 				PED::ADD_PED_DECORATION_FROM_HASHES(iParam0, joaat("mpBeach_overlays"), joaat("FM_Hair_Fuzz"));
 			}
 		}
-		iVar20 = FILES::_GET_NUM_DECORATIONS(iVar14);
+		iVar20 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(iVar14);
 		iVar19 = 0;
 		while (iVar19 < iVar20)
 		{
-			if (FILES::_GET_TATTOO_COLLECTION_DATA(iVar14, iVar19, &Var21))
+			if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iVar14, iVar19, &Var21))
 			{
 				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21))
 				{
@@ -49337,14 +49337,14 @@ int func_281()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);
@@ -51812,7 +51812,7 @@ int func_286(int iParam0, int iParam1, int iParam2)
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			switch (iParam1)
 			{
 				case 0:
@@ -52738,11 +52738,11 @@ int func_295(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -53638,7 +53638,7 @@ char* func_297(int iParam0)
 			return "LEG_LEFT_KNEE";
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "LEG_LEFT_ANKLE";
 			break;
 		
@@ -55669,7 +55669,7 @@ bool func_299(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 						func_305(sParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_006", "torsoDecal", iParam2, 100, 0);
 						break;
 					
-					case joaat("MPSV_LP0_31"):
+					case joaat("mpsv_lp0_31"):
 						func_305(sParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_009", "torsoDecal", iParam2, 100, 0);
 						break;
 					
@@ -55886,7 +55886,7 @@ bool func_299(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 						func_305(sParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_052", "torsoDecal", iParam2, 100, 0);
 						break;
 					
-					case joaat("MPSV_LP0_31"):
+					case joaat("mpsv_lp0_31"):
 						func_305(sParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_053", "torsoDecal", iParam2, 100, 0);
 						break;
 					
@@ -56091,10 +56091,10 @@ void func_300(char* sParam0, int iParam1, int iParam2, int iParam3)
 	struct<8> Var2;
 	
 	iVar0 = (iParam2 - iParam3);
-	iVar1 = FILES::_GET_NUM_DECORATIONS(iParam1);
+	iVar1 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(iParam1);
 	if (iVar1 > 0 && iVar0 < iVar1)
 	{
-		if (FILES::_GET_TATTOO_COLLECTION_DATA(iParam1, iVar0, &Var2))
+		if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iParam1, iVar0, &Var2))
 		{
 			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2))
 			{
@@ -56132,7 +56132,7 @@ int func_301()
 			return 0;
 		}
 	}
-	if (STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1))
 	{
 		if (MISC::IS_BIT_SET(iVar0, 5))
 		{
@@ -56150,7 +56150,7 @@ int func_301()
 	{
 		if (Global_150694.f_3)
 		{
-			iVar2 = joaat("MPPLY_PLAT_UP_LB_CHECK");
+			iVar2 = joaat("mpply_plat_up_lb_check");
 			if (STATS::STAT_GET_INT(iVar2, &iVar1, -1))
 			{
 				if (MISC::IS_BIT_SET(iVar1, 5))
@@ -56174,14 +56174,14 @@ int func_301()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_25())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar4, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar4, -1);
 				MISC::SET_BIT(&iVar4, 1);
 				MISC::SET_BIT(&iVar4, 3);
 				MISC::SET_BIT(&iVar4, 5);
 				MISC::SET_BIT(&Global_25, 1);
 				MISC::SET_BIT(&Global_25, 3);
 				MISC::SET_BIT(&Global_25, 5);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar4, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar4, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar4 = MISC::GET_PROFILE_SETTING(866);
@@ -56214,7 +56214,7 @@ int func_302()
 			return 0;
 		}
 	}
-	if (STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1))
 	{
 		if (MISC::IS_BIT_SET(iVar0, 6))
 		{
@@ -56232,7 +56232,7 @@ int func_302()
 	{
 		if (Global_150694.f_3)
 		{
-			iVar2 = joaat("MPPLY_PLAT_UP_LB_CHECK");
+			iVar2 = joaat("mpply_plat_up_lb_check");
 			if (STATS::STAT_GET_INT(iVar2, &iVar1, -1))
 			{
 				if (MISC::IS_BIT_SET(iVar1, 8))
@@ -58732,11 +58732,11 @@ void func_321(int iParam0, int iParam1)
 						func_352(87, 0, Global_76644);
 						func_352(88, 0, Global_76644);
 						func_352(89, 0, Global_76644);
-						iVar15 = FILES::_GET_NUM_DECORATIONS(3);
+						iVar15 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(3);
 						iVar14 = 0;
 						while (iVar14 < iVar15)
 						{
-							if (FILES::_GET_TATTOO_COLLECTION_DATA(3, iVar14, &Var16))
+							if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(3, iVar14, &Var16))
 							{
 								if (Var16.f_6 == 277073536)
 								{
@@ -58765,11 +58765,11 @@ void func_321(int iParam0, int iParam1)
 						func_352(87, 0, Global_76644);
 						func_352(88, 0, Global_76644);
 						func_352(89, 0, Global_76644);
-						iVar32 = FILES::_GET_NUM_DECORATIONS(4);
+						iVar32 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(4);
 						iVar31 = 0;
 						while (iVar31 < iVar32)
 						{
-							if (FILES::_GET_TATTOO_COLLECTION_DATA(4, iVar31, &Var33))
+							if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(4, iVar31, &Var33))
 							{
 								if (Var33.f_6 == 277073536)
 								{
@@ -58810,11 +58810,11 @@ void func_321(int iParam0, int iParam1)
 						func_352(116, 0, Global_76644);
 						func_352(117, 0, Global_76644);
 						func_352(123, 0, Global_76644);
-						iVar49 = FILES::_GET_NUM_DECORATIONS(3);
+						iVar49 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(3);
 						iVar48 = 0;
 						while (iVar48 < iVar49)
 						{
-							if (FILES::_GET_TATTOO_COLLECTION_DATA(3, iVar48, &Var50))
+							if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(3, iVar48, &Var50))
 							{
 								if (Var50.f_6 == 2140335355)
 								{
@@ -58857,11 +58857,11 @@ void func_321(int iParam0, int iParam1)
 						func_352(121, 0, Global_76644);
 						func_352(122, 0, Global_76644);
 						func_352(123, 0, Global_76644);
-						iVar66 = FILES::_GET_NUM_DECORATIONS(4);
+						iVar66 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(4);
 						iVar65 = 0;
 						while (iVar65 < iVar66)
 						{
-							if (FILES::_GET_TATTOO_COLLECTION_DATA(4, iVar65, &Var67))
+							if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(4, iVar65, &Var67))
 							{
 								if (Var67.f_6 == 2140335355)
 								{
@@ -58954,7 +58954,7 @@ int func_322(int iParam0)
 			return 160;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 161;
 			break;
 		
@@ -61267,7 +61267,7 @@ int func_334(int iParam0, int iParam1, int iParam2, int iParam3)
 			}
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_335()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
-				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
+				FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(3, 7, -1, false, -1, 8);
 				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_65(iParam0, func_66(8)) + iVar13);
 				iVar1 = 1;
@@ -61416,7 +61416,7 @@ int func_334(int iParam0, int iParam1, int iParam2, int iParam3)
 				{
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
-				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
+				FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(3, 7, -1, false, -1, 8);
 				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_65(iParam0, func_66(8)) + iVar28);
 				iVar1 = 1;
@@ -69483,7 +69483,7 @@ int func_363(var uParam0, struct<9> Param1, var uParam10, var uParam11, var uPar
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			if (bVar85)
 			{
 				FILES::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_HEIST_M_BERD_12_1"), &Var51);
@@ -74976,9 +74976,9 @@ void func_388(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -75202,7 +75202,7 @@ void func_393(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_394(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_394(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -77547,7 +77547,7 @@ int func_481(int iParam0)
 			case 74:
 			case 78:
 			case 75:
-			case joaat("MPSV_LP0_31"):
+			case joaat("mpsv_lp0_31"):
 			case 80:
 			case 82:
 			case 81:
@@ -77824,7 +77824,7 @@ int func_482(int iParam0)
 		case 78:
 			return 6;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 6;
 		
 		case 80:
@@ -78398,7 +78398,7 @@ char* func_483(int iParam0)
 		case 78:
 			return "GB_TRANSPORTER";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "GB_FORTIFIED";
 		
 		case 80:
@@ -79715,7 +79715,7 @@ void func_499(int iParam0, int iParam1, int iParam2, var uParam3)
 					uParam3->f_2[1] = "exit_prop_phone_ing";
 					break;
 				
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					uParam3->f_1 = "fail_react";
 					uParam3->f_2[0] = "fail_react_ch_prop_ch_usb_drive01x";
 					uParam3->f_2[1] = "fail_react_prop_phone_ing";
@@ -80044,7 +80044,7 @@ void func_503(int iParam0, var uParam1)
 			break;
 		
 		case 15:
-			uParam1->f_743 = -165961666;
+			uParam1->f_743 = joaat("sum_prop_arcade_qub3d_01a");
 			StringCopy(&(uParam1->f_338), "dlc_ch_arcade_machine_in_use_scene", 64);
 			break;
 	}
@@ -81246,7 +81246,7 @@ void func_555(int iParam0, char* sParam1, char* sParam2)
 			StringCopy(sParam2, "DLC_H3_ArcMac_BR2_Animal_Sounds", 64);
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(sParam1, "Vulture_Appear", 32);
 			StringCopy(sParam2, "DLC_H3_ArcMac_BR2_Animal_Sounds", 64);
 			break;
@@ -81449,14 +81449,14 @@ void func_558()
 	func_559(&(Local_155.f_3730), "Badlands_Bezel", func_556((1920f / 2f), (1080f / 2f)), func_556(1920f, 1080f), 0f, Local_155.f_111);
 }
 
-void func_559(char* sParam0, int iParam1, struct<2> Param2, struct<2> Param4, int iParam6, struct<4> Param7)
+void func_559(char* sParam0, char* sParam1, struct<2> Param2, struct<2> Param4, float fParam6, struct<4> Param7)
 {
 	Param2 = { func_554(Param2) };
 	Param4 = { func_554(Param4) };
-	func_560(sParam0, iParam1, Param2, Param2.f_1, Param4, Param4.f_1, iParam6, Param7);
+	func_560(sParam0, sParam1, Param2, Param2.f_1, Param4, Param4.f_1, fParam6, Param7);
 }
 
-void func_560(char* sParam0, int iParam1, float fParam2, float fParam3, float fParam4, float fParam5, int iParam6, struct<4> Param7)
+void func_560(char* sParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, struct<4> Param7)
 {
 	int iVar0;
 	
@@ -81468,7 +81468,7 @@ void func_560(char* sParam0, int iParam1, float fParam2, float fParam3, float fP
 	fParam3 = (SYSTEM::TO_FLOAT(iVar0) * (1f / IntToFloat(iLocal_144)));
 	iVar0 = SYSTEM::ROUND(((fParam5 * IntToFloat(iLocal_144)) / 4f)) * 4;
 	fParam5 = (SYSTEM::TO_FLOAT(iVar0) * (1f / IntToFloat(iLocal_144)));
-	GRAPHICS::_0x2D3B147AFAD49DE0(sParam0, iParam1, func_561(fParam2), fParam3, (fParam4 * fLocal_142), fParam5, iParam6, Param7, Param7.f_1, Param7.f_2, Param7.f_3, 0);
+	GRAPHICS::_0x2D3B147AFAD49DE0(sParam0, sParam1, func_561(fParam2), fParam3, (fParam4 * fLocal_142), fParam5, fParam6, Param7, Param7.f_1, Param7.f_2, Param7.f_3, 0);
 }
 
 float func_561(float fParam0)
@@ -82599,7 +82599,7 @@ bool func_600()
 
 void func_601(int iParam0, bool bParam1)
 {
-	struct<3> Var0;
+	char cVar0[24];
 	struct<8> Var6;
 	float fVar14;
 	int iVar15[10];
@@ -82624,50 +82624,50 @@ void func_601(int iParam0, bool bParam1)
 					case 0:
 						if (Local_155.f_224[iVar29 /*23*/].f_8 == 0)
 						{
-							StringCopy(&Var0, "outhouse_01", 24);
+							StringCopy(&cVar0, "outhouse_01", 24);
 							Var6 = { Local_155.f_3754 };
 						}
 						else
 						{
-							StringCopy(&Var0, "outhouse_empty", 24);
+							StringCopy(&cVar0, "outhouse_empty", 24);
 							Var6 = { Local_155.f_3754 };
 						}
 						break;
 					
 					case 1:
-						StringCopy(&Var0, "cactus-1", 24);
+						StringCopy(&cVar0, "cactus-1", 24);
 						Var6 = { Local_155.f_3858 };
 						break;
 					
 					case 2:
-						StringCopy(&Var0, "cactus-2", 24);
+						StringCopy(&cVar0, "cactus-2", 24);
 						Var6 = { Local_155.f_3858 };
 						break;
 					
 					case 3:
-						StringCopy(&Var0, "cactus-3", 24);
+						StringCopy(&cVar0, "cactus-3", 24);
 						Var6 = { Local_155.f_3858 };
 						break;
 					
 					case 4:
-						StringCopy(&Var0, "PROP_CACTUS_02", 24);
+						StringCopy(&cVar0, "PROP_CACTUS_02", 24);
 						Var6 = { Local_155.f_3858 };
 						break;
 					
 					case 5:
 						if (Local_155.f_224[iVar29 /*23*/].f_8 == 0)
 						{
-							StringCopy(&Var0, "crate_01", 24);
+							StringCopy(&cVar0, "crate_01", 24);
 							Var6 = { Local_155.f_3826 };
 						}
 						else if (Local_155.f_224[iVar29 /*23*/].f_8 == 1)
 						{
-							StringCopy(&Var0, "crate_02", 24);
+							StringCopy(&cVar0, "crate_02", 24);
 							Var6 = { Local_155.f_3826 };
 						}
 						else if (Local_155.f_224[iVar29 /*23*/].f_8 == 2)
 						{
-							StringCopy(&Var0, "crate_03", 24);
+							StringCopy(&cVar0, "crate_03", 24);
 							Var6 = { Local_155.f_3826 };
 						}
 					else
@@ -82678,213 +82678,213 @@ void func_601(int iParam0, bool bParam1)
 							break;
 						
 						case 6:
-							StringCopy(&Var0, "LEVEL_02_TOWN_PROP_03", 24);
+							StringCopy(&cVar0, "LEVEL_02_TOWN_PROP_03", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 7:
-							StringCopy(&Var0, "LEVEL_02_TOWN_PROP_04", 24);
+							StringCopy(&cVar0, "LEVEL_02_TOWN_PROP_04", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 8:
-							StringCopy(&Var0, "LEVEL_02_TOWN_PROP_05", 24);
+							StringCopy(&cVar0, "LEVEL_02_TOWN_PROP_05", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 9:
-							StringCopy(&Var0, "LEVEL_02_TOWN_PROP_06", 24);
+							StringCopy(&cVar0, "LEVEL_02_TOWN_PROP_06", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 10:
-							StringCopy(&Var0, "LEVEL_02_TOWN_PROP_07", 24);
+							StringCopy(&cVar0, "LEVEL_02_TOWN_PROP_07", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 11:
-							StringCopy(&Var0, "LEVEL_02_TOWN_PROP_08", 24);
+							StringCopy(&cVar0, "LEVEL_02_TOWN_PROP_08", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 12:
-							StringCopy(&Var0, "LEVEL_02_TOWN_PROP_09", 24);
+							StringCopy(&cVar0, "LEVEL_02_TOWN_PROP_09", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 13:
-							StringCopy(&Var0, "LEVEL_02_TOWN_PROP_10", 24);
+							StringCopy(&cVar0, "LEVEL_02_TOWN_PROP_10", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 14:
-							StringCopy(&Var0, "fence", 24);
+							StringCopy(&cVar0, "fence", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 15:
-							StringCopy(&Var0, "fence-small", 24);
+							StringCopy(&cVar0, "fence-small", 24);
 							Var6 = { Local_155.f_3762 };
 							break;
 						
 						case 16:
-							StringCopy(&Var0, "PROP_CACTUS_03", 24);
+							StringCopy(&cVar0, "PROP_CACTUS_03", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 17:
-							StringCopy(&Var0, "PROP_CACTUS_04", 24);
+							StringCopy(&cVar0, "PROP_CACTUS_04", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 18:
-							StringCopy(&Var0, "PROP_CACTUS_05", 24);
+							StringCopy(&cVar0, "PROP_CACTUS_05", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 19:
-							StringCopy(&Var0, "PROP_CACTUS_06", 24);
+							StringCopy(&cVar0, "PROP_CACTUS_06", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 20:
-							StringCopy(&Var0, "PROP_CACTUS_07", 24);
+							StringCopy(&cVar0, "PROP_CACTUS_07", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 21:
-							StringCopy(&Var0, "PROP_CACTUS_08", 24);
+							StringCopy(&cVar0, "PROP_CACTUS_08", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 22:
-							StringCopy(&Var0, "PROP_CACTUS_09", 24);
+							StringCopy(&cVar0, "PROP_CACTUS_09", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 23:
-							StringCopy(&Var0, "TREE_01", 24);
+							StringCopy(&cVar0, "TREE_01", 24);
 							Var6 = { Local_155.f_3770 };
 							break;
 						
 						case 24:
-							StringCopy(&Var0, "TREE_02", 24);
+							StringCopy(&cVar0, "TREE_02", 24);
 							Var6 = { Local_155.f_3770 };
 							break;
 						
 						case 25:
-							StringCopy(&Var0, "FOREST_FLOOR_GRASS", 24);
+							StringCopy(&cVar0, "FOREST_FLOOR_GRASS", 24);
 							Var6 = { Local_155.f_3770 };
 							break;
 						
 						case 26:
-							StringCopy(&Var0, "PROP_BUSH_SMALL", 24);
+							StringCopy(&cVar0, "PROP_BUSH_SMALL", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 27:
-							StringCopy(&Var0, "PROP_BUSH_LARGE", 24);
+							StringCopy(&cVar0, "PROP_BUSH_LARGE", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 28:
-							StringCopy(&Var0, "PROP_ROCK_SMALL", 24);
+							StringCopy(&cVar0, "PROP_ROCK_SMALL", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 29:
-							StringCopy(&Var0, "PROP_ROCK_LARGE", 24);
+							StringCopy(&cVar0, "PROP_ROCK_LARGE", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 30:
 							Var6 = { Local_155.f_3778 };
-							StringCopy(&Var0, "PROP_STACKED_CRATES_01", 24);
+							StringCopy(&cVar0, "PROP_STACKED_CRATES_01", 24);
 							break;
 						
 						case 31:
 							Var6 = { Local_155.f_3778 };
-							StringCopy(&Var0, "PROP_STACKED_CRATES_02", 24);
+							StringCopy(&cVar0, "PROP_STACKED_CRATES_02", 24);
 							break;
 						
 						case 32:
-							StringCopy(&Var0, "PROP_BARRELS", 24);
+							StringCopy(&cVar0, "PROP_BARRELS", 24);
 							Var6 = { Local_155.f_3858 };
 							break;
 						
 						case 33:
 							Var6 = { Local_155.f_3786 };
-							StringCopy(&Var0, "GRAVEYARD_PROP_06", 24);
+							StringCopy(&cVar0, "GRAVEYARD_PROP_06", 24);
 							break;
 						
 						case 34:
 							Var6 = { Local_155.f_3786 };
-							StringCopy(&Var0, "GRAVEYARD_PROP_01", 24);
+							StringCopy(&cVar0, "GRAVEYARD_PROP_01", 24);
 							break;
 						
 						case 35:
 							Var6 = { Local_155.f_3786 };
-							StringCopy(&Var0, "GRAVEYARD_PROP_02", 24);
+							StringCopy(&cVar0, "GRAVEYARD_PROP_02", 24);
 							break;
 						
 						case 36:
 							Var6 = { Local_155.f_3786 };
-							StringCopy(&Var0, "GRAVEYARD_PROP_03", 24);
+							StringCopy(&cVar0, "GRAVEYARD_PROP_03", 24);
 							break;
 						
 						case 37:
 							Var6 = { Local_155.f_3786 };
-							StringCopy(&Var0, "GRAVEYARD_PROP_04", 24);
+							StringCopy(&cVar0, "GRAVEYARD_PROP_04", 24);
 							break;
 						
 						case 38:
 							Var6 = { Local_155.f_3786 };
-							StringCopy(&Var0, "GRAVEYARD_PROP_05", 24);
+							StringCopy(&cVar0, "GRAVEYARD_PROP_05", 24);
 							break;
 						
 						case 39:
-							StringCopy(&Var0, "GRAVEYARD_COFFIN_01", 24);
+							StringCopy(&cVar0, "GRAVEYARD_COFFIN_01", 24);
 							if (Local_155.f_224[iVar29 /*23*/].f_8 == 0)
 							{
-								StringCopy(&Var0, "GRAVEYARD_COFFIN_01", 24);
+								StringCopy(&cVar0, "GRAVEYARD_COFFIN_01", 24);
 								Var6 = { Local_155.f_3786 };
 							}
 							else
 							{
-								StringCopy(&Var0, "GRAVEYARD_COFFIN_EMPTY", 24);
+								StringCopy(&cVar0, "GRAVEYARD_COFFIN_EMPTY", 24);
 								Var6 = { Local_155.f_3786 };
 							}
 							break;
 						
 						case 40:
 							Var6 = { Local_155.f_3762 };
-							StringCopy(&Var0, "WATER-TANK", 24);
+							StringCopy(&cVar0, "WATER-TANK", 24);
 							break;
 						
 						case 41:
-							StringCopy(&Var0, "PROP_TNT_CRATE_STATE_01", 24);
+							StringCopy(&cVar0, "PROP_TNT_CRATE_STATE_01", 24);
 							Var6 = { Local_155.f_3826 };
 							break;
 						
 						case 42:
-							StringCopy(&Var0, "BARREL_HORIZONTAL", 24);
+							StringCopy(&cVar0, "BARREL_HORIZONTAL", 24);
 							Var6 = { Local_155.f_3778 };
 							break;
 						
 						case 43:
-							StringCopy(&Var0, "BARREL_VERTICAL", 24);
+							StringCopy(&cVar0, "BARREL_VERTICAL", 24);
 							break;
 						
 						case 44:
 							Var6 = { Local_155.f_3754 };
-							StringCopy(&Var0, "OUTHOUSE_EMPTY", 24);
+							StringCopy(&cVar0, "OUTHOUSE_EMPTY", 24);
 							break;
 					}
 					if (Local_155.f_224[iVar29 /*23*/].f_15 < 1920f && Local_155.f_224[iVar29 /*23*/].f_15 > 0f)
 					{
 						if (Local_155.f_224[iVar29 /*23*/])
 						{
-							func_559(&Var6, &Var0, Local_155.f_224[iVar29 /*23*/].f_15, func_556((Local_155.f_224[iVar29 /*23*/].f_19 * fVar14), (Local_155.f_224[iVar29 /*23*/].f_20 * fVar14)), 0f, Local_155.f_111);
+							func_559(&Var6, &cVar0, Local_155.f_224[iVar29 /*23*/].f_15, func_556((Local_155.f_224[iVar29 /*23*/].f_19 * fVar14), (Local_155.f_224[iVar29 /*23*/].f_20 * fVar14)), 0f, Local_155.f_111);
 						}
 						if ((Local_155.f_224[iVar29 /*23*/].f_15 - (Local_155.f_224[iVar29 /*23*/].f_19 / 2f)) < 1605f && (Local_155.f_224[iVar29 /*23*/].f_15 + (Local_155.f_224[iVar29 /*23*/].f_19 / 2f)) > 250f)
 						{
@@ -85374,7 +85374,7 @@ char* func_655(int iParam0)
 				
 				case 77:
 				case 78:
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 				case 80:
 				case 81:
 				case 82:
@@ -86165,7 +86165,7 @@ char* func_656(int iParam0)
 		case 78:
 			return "Attack";
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "Death";
 		
 		case 80:
@@ -88200,7 +88200,7 @@ void func_678(bool bParam0)
 
 void func_679(bool bParam0)
 {
-	struct<3> Var0;
+	char cVar0[24];
 	int iVar6;
 	int iVar7;
 	int iVar8;
@@ -88274,15 +88274,15 @@ void func_679(bool bParam0)
 	}
 	if (bParam0)
 	{
-		StringCopy(&Var0, "FINAL_SCENE", 24);
-		func_559(&(Local_155.f_3842), &Var0, func_556(1280f, 540f), func_556(556f, 836f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "FINAL_SCENE_TEXT", 24);
-		func_559(&(Local_155.f_3842), &Var0, func_556(670f, 360f), func_556(660f, 360f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "FINAL_SCENE", 24);
+		func_559(&(Local_155.f_3842), &cVar0, func_556(1280f, 540f), func_556(556f, 836f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "FINAL_SCENE_TEXT", 24);
+		func_559(&(Local_155.f_3842), &cVar0, func_556(670f, 360f), func_556(660f, 360f), 0f, Local_155.f_111);
 		StringCopy(&Var17, "BADII_FNL", 16);
 		if (bVar13)
 		{
-			StringCopy(&Var0, "SCORE_SCREEN_TEXT_01", 24);
-			func_559(&(Local_155.f_3722), &Var0, func_556(530.625f, 625.5f), func_556(116f, 56f), 0f, Local_155.f_111);
+			StringCopy(&cVar0, "SCORE_SCREEN_TEXT_01", 24);
+			func_559(&(Local_155.f_3722), &cVar0, func_556(530.625f, 625.5f), func_556(116f, 56f), 0f, Local_155.f_111);
 			func_689("NUMERICAL_DOLLAR", func_556(719.625f, 624.75f), func_556((28f * 1f), (40f * 1f)));
 			iVar6 = func_659();
 			func_686(iVar6, func_556(749.25f, 625.375f), Local_155.f_111, iVar21, 1f, 0);
@@ -88294,8 +88294,8 @@ void func_679(bool bParam0)
 		}
 		if (bVar14)
 		{
-			StringCopy(&Var0, "SCORE_SCREEN_TEXT_02", 24);
-			func_559(&(Local_155.f_3722), &Var0, func_556(562.625f, 684.125f), func_556(184f, 56f), 0f, Local_155.f_111);
+			StringCopy(&cVar0, "SCORE_SCREEN_TEXT_02", 24);
+			func_559(&(Local_155.f_3722), &cVar0, func_556(562.625f, 684.125f), func_556(184f, 56f), 0f, Local_155.f_111);
 			func_686(iVar7, func_556(721.25f, 684f), Local_155.f_111, iVar21, 1f, 1);
 			if (!func_629(11))
 			{
@@ -88305,11 +88305,11 @@ void func_679(bool bParam0)
 		}
 		if (bVar15)
 		{
-			StringCopy(&Var0, "SCORE_SCREEN_TEXT_03", 24);
-			func_559(&(Local_155.f_3722), &Var0, func_556(558f, 742.75f), func_556(176f, 56f), 0f, Local_155.f_111);
+			StringCopy(&cVar0, "SCORE_SCREEN_TEXT_03", 24);
+			func_559(&(Local_155.f_3722), &cVar0, func_556(558f, 742.75f), func_556(176f, 56f), 0f, Local_155.f_111);
 			func_685(iVar9, 0, func_556(721.25f, 742.25f), Local_155.f_111, iVar21, 1f);
-			MemCopy(&Var0, {func_684(iVar21)}, 6);
-			func_559(&(Local_155.f_3722), &Var0, func_556(755.5f, 742.85f), func_556((32f * 1f), (36f * 1f)), 0f, Local_155.f_111);
+			MemCopy(&cVar0, {func_684(iVar21)}, 6);
+			func_559(&(Local_155.f_3722), &cVar0, func_556(755.5f, 742.85f), func_556((32f * 1f), (36f * 1f)), 0f, Local_155.f_111);
 			func_689("NUMERICAL_DOLLAR", func_556(787.625f, 742.975f), func_556((28f * 1f), (40f * 1f)));
 			func_686(1000, func_556(813.25f, 742.475f), Local_155.f_111, iVar21, 1f, 0);
 			if (!func_629(12))
@@ -88322,18 +88322,18 @@ void func_679(bool bParam0)
 	else if (!bVar16)
 	{
 		Var17 = { func_683(1) };
-		StringCopy(&Var0, "LVL0", 24);
-		StringIntConCat(&Var0, Local_155.f_139 + 1, 24);
-		StringConCat(&Var0, "_COMPLETED", 24);
-		func_559(&(Local_155.f_3746), &Var0, func_556(((1920f / 6f) * 2f), (1080f / 2f)), func_556(420f, 520f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "TYPE_LEVEL_0", 24);
-		StringIntConCat(&Var0, Local_155.f_139 + 1, 24);
-		StringConCat(&Var0, "_OUTRO_WIN", 24);
-		func_559(&(Local_155.f_3842), &Var0, func_556(((1920f / 8f) * 5f), (1080f / 3f)), func_556(660f, 264f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "LVL0", 24);
+		StringIntConCat(&cVar0, Local_155.f_139 + 1, 24);
+		StringConCat(&cVar0, "_COMPLETED", 24);
+		func_559(&(Local_155.f_3746), &cVar0, func_556(((1920f / 6f) * 2f), (1080f / 2f)), func_556(420f, 520f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "TYPE_LEVEL_0", 24);
+		StringIntConCat(&cVar0, Local_155.f_139 + 1, 24);
+		StringConCat(&cVar0, "_OUTRO_WIN", 24);
+		func_559(&(Local_155.f_3842), &cVar0, func_556(((1920f / 8f) * 5f), (1080f / 3f)), func_556(660f, 264f), 0f, Local_155.f_111);
 		if (bVar13)
 		{
-			StringCopy(&Var0, "SCORE_SCREEN_TEXT_01", 24);
-			func_559(&(Local_155.f_3722), &Var0, func_556(998.75f, 577.125f), func_556(116f, 56f), 0f, Local_155.f_111);
+			StringCopy(&cVar0, "SCORE_SCREEN_TEXT_01", 24);
+			func_559(&(Local_155.f_3722), &cVar0, func_556(998.75f, 577.125f), func_556(116f, 56f), 0f, Local_155.f_111);
 			func_689("NUMERICAL_DOLLAR", func_556(1208.5f, 574.25f), func_556((28f * 1f), (40f * 1f)));
 			iVar6 = func_673(func_532());
 			func_686(iVar6, func_556(1238.125f, 574.25f), Local_155.f_111, iVar21, 1f, 0);
@@ -88345,8 +88345,8 @@ void func_679(bool bParam0)
 		}
 		if (bVar14)
 		{
-			StringCopy(&Var0, "SCORE_SCREEN_TEXT_02", 24);
-			func_559(&(Local_155.f_3722), &Var0, func_556(1031.125f, 637.125f), func_556(184f, 56f), 0f, Local_155.f_111);
+			StringCopy(&cVar0, "SCORE_SCREEN_TEXT_02", 24);
+			func_559(&(Local_155.f_3722), &cVar0, func_556(1031.125f, 637.125f), func_556(184f, 56f), 0f, Local_155.f_111);
 			func_686(iVar7, func_556(1209.875f, 636.625f), Local_155.f_111, iVar21, 1f, 1);
 			if (!func_629(11))
 			{
@@ -88356,11 +88356,11 @@ void func_679(bool bParam0)
 		}
 		if (bVar15)
 		{
-			StringCopy(&Var0, "SCORE_SCREEN_TEXT_03", 24);
-			func_559(&(Local_155.f_3722), &Var0, func_556(1027.875f, 697.125f), func_556(176f, 56f), 0f, Local_155.f_111);
+			StringCopy(&cVar0, "SCORE_SCREEN_TEXT_03", 24);
+			func_559(&(Local_155.f_3722), &cVar0, func_556(1027.875f, 697.125f), func_556(176f, 56f), 0f, Local_155.f_111);
 			func_685(iVar9, 0, func_556(1210.875f, 695.25f), Local_155.f_111, iVar21, 1f);
-			MemCopy(&Var0, {func_684(iVar21)}, 6);
-			func_559(&(Local_155.f_3722), &Var0, func_556(1245.125f, 695.625f), func_556((32f * 1f), (36f * 1f)), 0f, Local_155.f_111);
+			MemCopy(&cVar0, {func_684(iVar21)}, 6);
+			func_559(&(Local_155.f_3722), &cVar0, func_556(1245.125f, 695.625f), func_556((32f * 1f), (36f * 1f)), 0f, Local_155.f_111);
 			func_689("NUMERICAL_DOLLAR", func_556(1277.25f, 695.75f), func_556((28f * 1f), (40f * 1f)));
 			func_686(1000, func_556(1302.875f, 695.25f), Local_155.f_111, iVar21, 1f, 0);
 			if (!func_629(12))
@@ -88373,24 +88373,24 @@ void func_679(bool bParam0)
 	else
 	{
 		Var17 = { func_683(0) };
-		StringCopy(&Var0, "LVL0", 24);
-		StringIntConCat(&Var0, Local_155.f_139 + 1, 24);
-		StringConCat(&Var0, "_OUTRO_FAIL", 24);
-		func_559(&(Local_155.f_3842), &Var0, func_556(684.5f, (1080f / 3f)), func_556(660f, 264f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "DEAD_SCREEN_DESATURATED", 24);
-		func_559(&(Local_155.f_3866), &Var0, func_556(((1920f / 6f) * 4f), (1080f / 2f)), func_556(516f, 880f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "LVL0", 24);
+		StringIntConCat(&cVar0, Local_155.f_139 + 1, 24);
+		StringConCat(&cVar0, "_OUTRO_FAIL", 24);
+		func_559(&(Local_155.f_3842), &cVar0, func_556(684.5f, (1080f / 3f)), func_556(660f, 264f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "DEAD_SCREEN_DESATURATED", 24);
+		func_559(&(Local_155.f_3866), &cVar0, func_556(((1920f / 6f) * 4f), (1080f / 2f)), func_556(516f, 880f), 0f, Local_155.f_111);
 		if (Local_155.f_21 > 0)
 		{
 			Var22.f_3 = 255;
 			func_585(&Var22, 255, 255, 255, Local_155.f_21);
-			StringCopy(&Var0, "DEAD_SCREEN_COLOR", 24);
-			func_559(&(Local_155.f_3866), &Var0, func_556(((1920f / 6f) * 4f), (1080f / 2f)), func_556(516f, 880f), 0f, Var22);
+			StringCopy(&cVar0, "DEAD_SCREEN_COLOR", 24);
+			func_559(&(Local_155.f_3866), &cVar0, func_556(((1920f / 6f) * 4f), (1080f / 2f)), func_556(516f, 880f), 0f, Var22);
 			Local_155.f_21 = (Local_155.f_21 - 2);
 		}
 		else
 		{
-			StringCopy(&Var0, "DEAD_SCREEN_TEXT", 24);
-			func_559(&(Local_155.f_3866), &Var0, func_556(((1920f / 6f) * 4f), (1080f / 3f)), func_556(280f, 228f), 0f, Local_155.f_111);
+			StringCopy(&cVar0, "DEAD_SCREEN_TEXT", 24);
+			func_559(&(Local_155.f_3866), &cVar0, func_556(((1920f / 6f) * 4f), (1080f / 3f)), func_556(280f, 228f), 0f, Local_155.f_111);
 			if (!func_629(13))
 			{
 				func_552(108);
@@ -88399,8 +88399,8 @@ void func_679(bool bParam0)
 		}
 		if (bVar13)
 		{
-			StringCopy(&Var0, "SCORE_SCREEN_TEXT_01", 24);
-			func_559(&(Local_155.f_3722), &Var0, func_556(559.875f, 599.375f), func_556(116f, 56f), 0f, Local_155.f_111);
+			StringCopy(&cVar0, "SCORE_SCREEN_TEXT_01", 24);
+			func_559(&(Local_155.f_3722), &cVar0, func_556(559.875f, 599.375f), func_556(116f, 56f), 0f, Local_155.f_111);
 			func_689("NUMERICAL_DOLLAR", func_556(717.125f, 599.125f), func_556((28f * 1f), (40f * 1f)));
 			iVar6 = func_673(func_532());
 			if (iVar6 > 0)
@@ -88447,11 +88447,11 @@ int func_680()
 void func_681(struct<2> Param0, struct<4> Param2, int iParam6, float fParam7)
 {
 	struct<2> Var0;
-	struct<16> Var2;
+	char cVar2[128];
 	
 	Var0 = { func_556((32f * fParam7), (36f * fParam7)) };
-	Var2 = { func_682(iParam6, 0) };
-	func_559(&(Local_155.f_3722), &Var2, Param0, Var0, 0f, Param2);
+	cVar2 = { func_682(iParam6, 0) };
+	func_559(&(Local_155.f_3722), &cVar2, Param0, Var0, 0f, Param2);
 }
 
 struct<16> func_682(int iParam0, int iParam1)
@@ -88524,8 +88524,8 @@ void func_685(int iParam0, int iParam1, struct<2> Param2, struct<4> Param4, int 
 	bool bVar4;
 	int iVar5;
 	int iVar6;
-	struct<16> Var7;
-	struct<16> Var23;
+	char cVar7[128];
+	char cVar23[128];
 	
 	Var0 = { Param2 };
 	Var2 = { func_556((32f * fParam9), (36f * fParam9)) };
@@ -88545,9 +88545,9 @@ void func_685(int iParam0, int iParam1, struct<2> Param2, struct<4> Param4, int 
 		{
 			bVar4 = false;
 			Var0 = ((Param2 + ((Var2 * IntToFloat((iParam1 - 1))) / 2f)) - (Var2 * IntToFloat(iVar5)));
-			Var7 = { func_682(iParam8, (iVar6 % 10)) };
+			cVar7 = { func_682(iParam8, (iVar6 % 10)) };
 			iVar6 = (iVar6 / 10);
-			func_559(&(Local_155.f_3722), &Var7, Var0, Var2, 0f, Param4);
+			func_559(&(Local_155.f_3722), &cVar7, Var0, Var2, 0f, Param4);
 			iVar5++;
 		}
 	}
@@ -88557,8 +88557,8 @@ void func_685(int iParam0, int iParam1, struct<2> Param2, struct<4> Param4, int 
 		while (iVar5 < iParam1)
 		{
 			Var0 = ((Param2 + ((Var2 * IntToFloat((iParam1 - 1))) / 2f)) - (Var2 * IntToFloat(iVar5)));
-			Var23 = { func_682(iParam8, ((iParam0 / SYSTEM::ROUND(SYSTEM::POW(10f, SYSTEM::TO_FLOAT(iVar5)))) % 10)) };
-			func_559(&(Local_155.f_3722), &Var23, Var0, Var2, 0f, Param4);
+			cVar23 = { func_682(iParam8, ((iParam0 / SYSTEM::ROUND(SYSTEM::POW(10f, SYSTEM::TO_FLOAT(iVar5)))) % 10)) };
+			func_559(&(Local_155.f_3722), &cVar23, Var0, Var2, 0f, Param4);
 			iVar5++;
 		}
 	}
@@ -88570,9 +88570,9 @@ void func_686(int iParam0, struct<2> Param1, struct<4> Param3, int iParam7, floa
 	var uVar2[10];
 	int iVar13;
 	int iVar14;
-	struct<16> Var15;
+	char cVar15[128];
 	struct<2> Var31;
-	struct<16> Var33;
+	char cVar33[128];
 	
 	Var0 = { func_556((32f * fParam8), (36f * fParam8)) };
 	Var0 = { func_556((32f * fParam8), (36f * fParam8)) };
@@ -88581,17 +88581,17 @@ void func_686(int iParam0, struct<2> Param1, struct<4> Param3, int iParam7, floa
 	iVar13 = 0;
 	while (iVar13 < iVar14)
 	{
-		Var15 = { func_682(iParam7, uVar2[iVar13]) };
+		cVar15 = { func_682(iParam7, uVar2[iVar13]) };
 		Var31.f_1 = Param1.f_1;
 		Var31 = (Param1 + (IntToFloat(iVar13) * Var0));
-		func_559(&(Local_155.f_3722), &Var15, Var31, Var0, 0f, Param3);
+		func_559(&(Local_155.f_3722), &cVar15, Var31, Var0, 0f, Param3);
 		iVar13++;
 	}
 	if (bParam9)
 	{
-		Var33 = { func_687(iParam7) };
+		cVar33 = { func_687(iParam7) };
 		Var31 = (Param1 + (IntToFloat(iVar13) * Var0));
-		func_559(&(Local_155.f_3722), &Var33, Var31, func_556((28f * fParam8), (36f * fParam8)), 0f, Param3);
+		func_559(&(Local_155.f_3722), &cVar33, Var31, func_556((28f * fParam8), (36f * fParam8)), 0f, Param3);
 	}
 }
 
@@ -88628,9 +88628,9 @@ void func_688(int iParam0, int iParam1, var uParam2)
 	}
 }
 
-void func_689(int iParam0, struct<2> Param1, struct<2> Param3)
+void func_689(char[4] cParam0, struct<2> Param1, struct<2> Param3)
 {
-	func_559(&(Local_155.f_3722), iParam0, Param1, Param3, 0f, Local_155.f_111);
+	func_559(&(Local_155.f_3722), cParam0, Param1, Param3, 0f, Local_155.f_111);
 }
 
 var func_690()
@@ -88856,13 +88856,13 @@ void func_708()
 
 void func_709()
 {
-	struct<3> Var0;
+	char cVar0[24];
 	struct<4> Var6;
 	struct<4> Var10;
 	float fVar14;
 	float fVar15;
-	struct<3> Var16;
-	struct<3> Var22;
+	char cVar16[24];
+	char cVar22[24];
 	int iVar28;
 	int iVar29;
 	int iVar30;
@@ -88875,8 +88875,8 @@ void func_709()
 		Var6.f_3 = Local_155.f_21;
 		func_565(func_556((1920f / 2f), (1080f / 2f)), func_556(1920f, 1080f), Var6);
 		Local_155.f_21 = (Local_155.f_21 - 2);
-		StringCopy(&Var0, "goodluck", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556((1920f / 2f), (1080f / 2f)), func_556(328f, 140f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "goodluck", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556((1920f / 2f), (1080f / 2f)), func_556(328f, 140f), 0f, Local_155.f_111);
 	}
 	else if (Local_155 && Local_155.f_21 < 255)
 	{
@@ -88886,54 +88886,54 @@ void func_709()
 		Local_155.f_21 += 2;
 		if (func_40() > 0f)
 		{
-			StringCopy(&Var0, "scenecleared", 24);
-			func_559(&(Local_155.f_3722), &Var0, func_556((1920f / 2f), (1080f / 2f)), func_556(500f, 152f), 0f, Local_155.f_111);
+			StringCopy(&cVar0, "scenecleared", 24);
+			func_559(&(Local_155.f_3722), &cVar0, func_556((1920f / 2f), (1080f / 2f)), func_556(500f, 152f), 0f, Local_155.f_111);
 		}
 	}
 	if (!func_736(0))
 	{
-		StringCopy(&Var0, "HPbar", 24);
+		StringCopy(&cVar0, "HPbar", 24);
 	}
 	else
 	{
-		StringCopy(&Var0, "HPBarYellow", 24);
+		StringCopy(&cVar0, "HPBarYellow", 24);
 	}
 	fVar14 = (216f * func_40());
 	fVar15 = ((216f - fVar14) / 2f);
-	func_559(&(Local_155.f_3722), &Var0, func_586(func_556(0f, 0f), func_556((500f - fVar15), 130f)), func_735(func_556(fVar14, 40f), 1f), 0f, Local_155.f_111);
-	StringCopy(&Var0, "HPborder", 24);
-	func_559(&(Local_155.f_3722), &Var0, func_556(500f, 130f), func_556(216f, 40f), 0f, Local_155.f_111);
+	func_559(&(Local_155.f_3722), &cVar0, func_586(func_556(0f, 0f), func_556((500f - fVar15), 130f)), func_735(func_556(fVar14, 40f), 1f), 0f, Local_155.f_111);
+	StringCopy(&cVar0, "HPborder", 24);
+	func_559(&(Local_155.f_3722), &cVar0, func_556(500f, 130f), func_556(216f, 40f), 0f, Local_155.f_111);
 	if (func_731() == 3)
 	{
 		func_559(&(Local_155.f_3722), "HPborder", func_556(447.375f, 174.75f), func_556(108f, 40f), 0f, Local_155.f_111);
 		if (!func_736(3))
 		{
-			StringCopy(&Var0, "HPbar", 24);
+			StringCopy(&cVar0, "HPbar", 24);
 		}
 		else
 		{
-			StringCopy(&Var0, "HPBarYellow", 24);
+			StringCopy(&cVar0, "HPBarYellow", 24);
 		}
 		fVar14 = (108f * Local_155.f_141[0 /*82*/].f_36);
 		fVar15 = ((108f - fVar14) / 2f);
-		func_559(&(Local_155.f_3722), &Var0, func_586(func_556(0f, 0f), func_556((447.375f - fVar15), 174.75f)), func_735(func_556(fVar14, 40f), 1f), 0f, Local_155.f_111);
+		func_559(&(Local_155.f_3722), &cVar0, func_586(func_556(0f, 0f), func_556((447.375f - fVar15), 174.75f)), func_735(func_556(fVar14, 40f), 1f), 0f, Local_155.f_111);
 	}
 	func_727();
 	iVar28 = func_725(0);
 	if (iVar28 > 99)
 	{
-		StringCopy(&Var16, "AMMO_NUMERICAL_9", 24);
-		StringCopy(&Var22, "AMMO_NUMERICAL_9", 24);
+		StringCopy(&cVar16, "AMMO_NUMERICAL_9", 24);
+		StringCopy(&cVar22, "AMMO_NUMERICAL_9", 24);
 	}
 	else
 	{
-		StringCopy(&Var16, "AMMO_NUMERICAL_", 24);
-		StringIntConCat(&Var16, (iVar28 / 10), 24);
-		StringCopy(&Var22, "AMMO_NUMERICAL_", 24);
-		StringIntConCat(&Var22, (iVar28 % 10), 24);
+		StringCopy(&cVar16, "AMMO_NUMERICAL_", 24);
+		StringIntConCat(&cVar16, (iVar28 / 10), 24);
+		StringCopy(&cVar22, "AMMO_NUMERICAL_", 24);
+		StringIntConCat(&cVar22, (iVar28 % 10), 24);
 	}
-	func_559(&(Local_155.f_3722), &Var16, func_556(544.625f, 174.875f), func_556(44f, 48f), 0f, Local_155.f_111);
-	func_559(&(Local_155.f_3722), &Var22, func_556(584.625f, 174.875f), func_556(44f, 48f), 0f, Local_155.f_111);
+	func_559(&(Local_155.f_3722), &cVar16, func_556(544.625f, 174.875f), func_556(44f, 48f), 0f, Local_155.f_111);
+	func_559(&(Local_155.f_3722), &cVar22, func_556(584.625f, 174.875f), func_556(44f, 48f), 0f, Local_155.f_111);
 	iVar29 = func_532();
 	if (func_724() <= 1)
 	{
@@ -89171,7 +89171,7 @@ int func_726(int iParam0, bool bParam1)
 
 void func_727()
 {
-	struct<4> Var0;
+	char cVar0[32];
 	int iVar8;
 	int iVar9;
 	int iVar10;
@@ -89181,47 +89181,47 @@ void func_727()
 	switch (func_731())
 	{
 		case 0:
-			StringCopy(&Var0, "ammo_pistol1", 32);
+			StringCopy(&cVar0, "ammo_pistol1", 32);
 			iVar8 = func_712();
 			iVar9 = func_730();
 			iVar10 = 0;
 			while (iVar10 <= (iVar9 - 1))
 			{
 				func_729(0, iVar10, &Var11, &Var13);
-				func_728(&Var0, Var11, Var13, iVar10, iVar8, iVar9);
+				func_728(&cVar0, Var11, Var13, iVar10, iVar8, iVar9);
 				iVar10++;
 			}
 			break;
 		
 		case 2:
-			StringCopy(&Var0, "INDIVIDUAL_AMMO_ICON_SHOTGUN", 32);
+			StringCopy(&cVar0, "INDIVIDUAL_AMMO_ICON_SHOTGUN", 32);
 			iVar8 = func_712();
 			iVar9 = func_730();
 			iVar10 = 0;
 			while (iVar10 <= (iVar9 - 1))
 			{
 				func_729(0, iVar10, &Var11, &Var13);
-				func_728(&Var0, Var11, Var13, iVar10, iVar8, iVar9);
+				func_728(&cVar0, Var11, Var13, iVar10, iVar8, iVar9);
 				iVar10++;
 			}
 			break;
 		
 		case 1:
-			StringCopy(&Var0, "INDIVIDUAL_AMMO_ICON_RIFLE", 32);
+			StringCopy(&cVar0, "INDIVIDUAL_AMMO_ICON_RIFLE", 32);
 			iVar8 = func_712();
 			iVar9 = func_730();
 			iVar10 = 0;
 			while (iVar10 <= (iVar9 - 1))
 			{
 				func_729(0, iVar10, &Var11, &Var13);
-				func_728(&Var0, Var11, Var13, iVar10, iVar8, iVar9);
+				func_728(&cVar0, Var11, Var13, iVar10, iVar8, iVar9);
 				iVar10++;
 			}
 			break;
 	}
 }
 
-void func_728(int iParam0, struct<2> Param1, struct<2> Param3, int iParam5, int iParam6, int iParam7)
+void func_728(char[4] cParam0, struct<2> Param1, struct<2> Param3, int iParam5, int iParam6, int iParam7)
 {
 	struct<4> Var0;
 	int iVar4;
@@ -89232,7 +89232,7 @@ void func_728(int iParam0, struct<2> Param1, struct<2> Param3, int iParam5, int 
 	{
 		Var0 = { Local_155.f_131 };
 	}
-	func_559(&(Local_155.f_3722), iParam0, Param1, Param3, 0f, Var0);
+	func_559(&(Local_155.f_3722), cParam0, Param1, Param3, 0f, Var0);
 }
 
 void func_729(int iParam0, int iParam1, var uParam2, var uParam3)
@@ -89381,7 +89381,7 @@ bool func_736(int iParam0)
 
 void func_737()
 {
-	struct<3> Var0;
+	char cVar0[24];
 	int iVar6;
 	bool bVar7;
 	bool bVar8;
@@ -89411,53 +89411,53 @@ void func_737()
 	}
 	if (func_40() <= 0.2f || func_738() <= 0)
 	{
-		StringCopy(&Var0, "damage1", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage2", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(500f, 400f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage3", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(900f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage4", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(1400f, 500f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage1", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(900f, 300f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage1", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage2", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(500f, 400f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage3", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(900f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage4", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(1400f, 500f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage1", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(900f, 300f), func_556(504f, 460f), 0f, Local_155.f_111);
 	}
 	else if (func_40() < 0.35f)
 	{
-		StringCopy(&Var0, "damage1", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage2", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(500f, 400f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage3", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(900f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage4", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(1400f, 500f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage1", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage2", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(500f, 400f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage3", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(900f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage4", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(1400f, 500f), func_556(504f, 460f), 0f, Local_155.f_111);
 	}
 	else if (func_40() < 0.5f)
 	{
-		StringCopy(&Var0, "damage1", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage2", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(500f, 400f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage3", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(900f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage1", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage2", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(500f, 400f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage3", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(900f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
 	}
 	else if (func_40() < 0.75f)
 	{
-		StringCopy(&Var0, "damage1", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
-		StringCopy(&Var0, "damage2", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(500f, 400f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage1", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage2", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(500f, 400f), func_556(504f, 460f), 0f, Local_155.f_111);
 	}
 	else if (func_40() < 1f)
 	{
-		StringCopy(&Var0, "damage1", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "damage1", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(1200f, 900f), func_556(504f, 460f), 0f, Local_155.f_111);
 	}
 	if (bVar8)
 	{
-		StringCopy(&Var0, "BEARCLAWS_SCREEN_DAMAGE", 24);
-		func_559(&(Local_155.f_3722), &Var0, func_556(913.75f, 658.25f), func_556(392f, 612f), 0f, Local_155.f_111);
+		StringCopy(&cVar0, "BEARCLAWS_SCREEN_DAMAGE", 24);
+		func_559(&(Local_155.f_3722), &cVar0, func_556(913.75f, 658.25f), func_556(392f, 612f), 0f, Local_155.f_111);
 	}
 }
 
@@ -89477,7 +89477,7 @@ int func_738()
 
 void func_739()
 {
-	struct<3> Var0;
+	char cVar0[24];
 	struct<4> Var6;
 	
 	if (func_40() <= 0f)
@@ -89486,23 +89486,23 @@ void func_739()
 	}
 	if (func_600())
 	{
-		StringCopy(&Var0, "RETICLE_PLAYER1", 24);
+		StringCopy(&cVar0, "RETICLE_PLAYER1", 24);
 	}
 	else
 	{
-		StringCopy(&Var0, "RETICLE_PLAYER2", 24);
+		StringCopy(&cVar0, "RETICLE_PLAYER2", 24);
 	}
 	Var6 = { Local_155.f_111 };
 	if (func_740())
 	{
 		if (func_712() <= 0)
 		{
-			StringCopy(&Var0, "RETICLE_RELOAD", 24);
+			StringCopy(&cVar0, "RETICLE_RELOAD", 24);
 		}
 	}
 	if (!func_736(1))
 	{
-		func_559(&(Local_155.f_3722), &Var0, Local_155.f_141[0 /*82*/].f_39, func_556(104f, 104f), 0f, Var6);
+		func_559(&(Local_155.f_3722), &cVar0, Local_155.f_141[0 /*82*/].f_39, func_556(104f, 104f), 0f, Var6);
 	}
 }
 
@@ -89514,7 +89514,7 @@ bool func_740()
 void func_741()
 {
 	int iVar0;
-	struct<4> Var1;
+	char cVar1[32];
 	struct<2> Var9;
 	
 	iVar0 = 0;
@@ -89531,38 +89531,38 @@ void func_741()
 					switch (Local_155.f_3463[iVar0 /*10*/].f_2)
 					{
 						case 0:
-							StringCopy(&Var1, "THROWING_DYNAMITE_SMALL_01", 32);
+							StringCopy(&cVar1, "THROWING_DYNAMITE_SMALL_01", 32);
 							Var9 = { func_556(76f, 76f) };
 							break;
 						
 						case 1:
-							StringCopy(&Var1, "THROWING_DYNAMITE_SMALL_02", 32);
+							StringCopy(&cVar1, "THROWING_DYNAMITE_SMALL_02", 32);
 							Var9 = { func_556(76f, 76f) };
 							break;
 						
 						case 2:
-							StringCopy(&Var1, "THROWING_DYNAMITE_MEDIUM_01", 32);
+							StringCopy(&cVar1, "THROWING_DYNAMITE_MEDIUM_01", 32);
 							Var9 = { func_556(128f, 128f) };
 							break;
 						
 						case 3:
-							StringCopy(&Var1, "THROWING_DYNAMITE_MEDIUM_02", 32);
+							StringCopy(&cVar1, "THROWING_DYNAMITE_MEDIUM_02", 32);
 							Var9 = { func_556(128f, 128f) };
 							break;
 						
 						case 4:
-							StringCopy(&Var1, "THROWING_DYNAMITE_LARGE_01", 32);
+							StringCopy(&cVar1, "THROWING_DYNAMITE_LARGE_01", 32);
 							Var9 = { func_556(284f, 276f) };
 							break;
 						
 						case 5:
-							StringCopy(&Var1, "THROWING_DYNAMITE_LARGE_02", 32);
+							StringCopy(&cVar1, "THROWING_DYNAMITE_LARGE_02", 32);
 							Var9 = { func_556(284f, 276f) };
 							break;
 					}
 					break;
 			}
-			func_559(&(Local_155.f_3858), &Var1, Local_155.f_3463[iVar0 /*10*/].f_6, Var9, 0f, Local_155.f_111);
+			func_559(&(Local_155.f_3858), &cVar1, Local_155.f_3463[iVar0 /*10*/].f_6, Var9, 0f, Local_155.f_111);
 		}
 		else if (Local_155.f_3463[iVar0 /*10*/].f_4 == 2)
 		{
@@ -89573,7 +89573,7 @@ void func_741()
 
 void func_742()
 {
-	struct<3> Var0;
+	char cVar0[24];
 	struct<8> Var6;
 	float fVar14;
 	int iVar15;
@@ -89588,61 +89588,61 @@ void func_742()
 			switch (Local_155.f_1825[iVar15 /*33*/].f_9)
 			{
 				case 5:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_01_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_01_01", 24);
 					Var6 = { Local_155.f_3802 };
 					break;
 				
 				case 6:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_02_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_02_01", 24);
 					Var6 = { Local_155.f_3802 };
 					break;
 				
 				case 7:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_03_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_03_01", 24);
 					Var6 = { Local_155.f_3802 };
 					break;
 				
 				case 8:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_04_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_04_01", 24);
 					Var6 = { Local_155.f_3802 };
 					break;
 				
 				case 9:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_05_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_05_01", 24);
 					Var6 = { Local_155.f_3810 };
 					break;
 				
 				case 10:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_06_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_06_01", 24);
 					Var6 = { Local_155.f_3810 };
 					break;
 				
 				case 11:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_07_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_07_01", 24);
 					Var6 = { Local_155.f_3810 };
 					break;
 				
 				case 12:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_08_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_08_01", 24);
 					Var6 = { Local_155.f_3818 };
 					break;
 				
 				case 13:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_09_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_09_01", 24);
 					Var6 = { Local_155.f_3818 };
 					break;
 				
 				case 14:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_10_01", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_10_01", 24);
 					Var6 = { Local_155.f_3818 };
 					break;
 				
 				case 15:
-					StringCopy(&Var0, "LEVEL_03_FOREST_BEAR_01", 24);
+					StringCopy(&cVar0, "LEVEL_03_FOREST_BEAR_01", 24);
 					Var6 = { Local_155.f_3834 };
 					break;
 			}
-			func_559(&Var6, &Var0, Local_155.f_1825[iVar15 /*33*/].f_27, func_556((Local_155.f_1825[iVar15 /*33*/].f_31 * fVar14), (Local_155.f_1825[iVar15 /*33*/].f_31.f_1 * fVar14)), 0f, Local_155.f_111);
+			func_559(&Var6, &cVar0, Local_155.f_1825[iVar15 /*33*/].f_27, func_556((Local_155.f_1825[iVar15 /*33*/].f_31 * fVar14), (Local_155.f_1825[iVar15 /*33*/].f_31.f_1 * fVar14)), 0f, Local_155.f_111);
 		}
 		else if (Local_155.f_1825[iVar15 /*33*/].f_21 == 2 && Local_155.f_1825[iVar15 /*33*/].f_10 == 3)
 		{
@@ -89650,65 +89650,65 @@ void func_742()
 			{
 				case 5:
 					Var6 = { Local_155.f_3802 };
-					StringCopy(&Var0, "FOREGROUND_ENEMY_01_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_01_02", 24);
 					break;
 				
 				case 6:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_02_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_02_02", 24);
 					Var6 = { Local_155.f_3802 };
 					break;
 				
 				case 7:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_03_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_03_02", 24);
 					Var6 = { Local_155.f_3802 };
 					break;
 				
 				case 8:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_04_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_04_02", 24);
 					Var6 = { Local_155.f_3802 };
 					break;
 				
 				case 9:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_05_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_05_02", 24);
 					Var6 = { Local_155.f_3810 };
 					break;
 				
 				case 10:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_06_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_06_02", 24);
 					Var6 = { Local_155.f_3810 };
 					break;
 				
 				case 11:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_07_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_07_02", 24);
 					Var6 = { Local_155.f_3810 };
 					break;
 				
 				case 12:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_08_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_08_02", 24);
 					Var6 = { Local_155.f_3818 };
 					break;
 				
 				case 13:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_09_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_09_02", 24);
 					Var6 = { Local_155.f_3818 };
 					break;
 				
 				case 14:
-					StringCopy(&Var0, "FOREGROUND_ENEMY_10_02", 24);
+					StringCopy(&cVar0, "FOREGROUND_ENEMY_10_02", 24);
 					Var6 = { Local_155.f_3818 };
 					break;
 				
 				case 15:
-					StringCopy(&Var0, "LEVEL_03_FOREST_BEAR_02", 24);
+					StringCopy(&cVar0, "LEVEL_03_FOREST_BEAR_02", 24);
 					break;
 			}
 			if (Local_155.f_1825[iVar15 /*33*/].f_9 == 15)
 			{
-				func_559(&(Local_155.f_3834), &Var0, Local_155.f_1825[iVar15 /*33*/].f_27, func_556((768f * 1.2f), (504f * 1.2f)), 0f, Local_155.f_111);
+				func_559(&(Local_155.f_3834), &cVar0, Local_155.f_1825[iVar15 /*33*/].f_27, func_556((768f * 1.2f), (504f * 1.2f)), 0f, Local_155.f_111);
 			}
 			else
 			{
-				func_559(&Var6, &Var0, Local_155.f_1825[iVar15 /*33*/].f_27, func_556((452f * 1.2f), (540f * 1.2f)), 0f, Local_155.f_111);
+				func_559(&Var6, &cVar0, Local_155.f_1825[iVar15 /*33*/].f_27, func_556((452f * 1.2f), (540f * 1.2f)), 0f, Local_155.f_111);
 			}
 		}
 		iVar15++;
@@ -89717,7 +89717,7 @@ void func_742()
 
 void func_743(int iParam0)
 {
-	struct<8> Var0;
+	char cVar0[64];
 	int iVar16;
 	int iVar17;
 	struct<2> Var18;
@@ -89733,17 +89733,17 @@ void func_743(int iParam0)
 			{
 				if (Local_155.f_141[iVar16 /*82*/].f_41[iVar17 /*10*/].f_1)
 				{
-					StringCopy(&Var0, "bullet-hole", 64);
+					StringCopy(&cVar0, "bullet-hole", 64);
 				}
 				else if (Local_155.f_141[iVar16 /*82*/].f_41[iVar17 /*10*/].f_2 || Local_155.f_141[iVar16 /*82*/].f_41[iVar17 /*10*/].f_8.f_1 < 300f)
 				{
-					StringCopy(&Var0, "smoke", 64);
+					StringCopy(&cVar0, "smoke", 64);
 				}
 				else
 				{
-					StringCopy(&Var0, "bullet", 64);
+					StringCopy(&cVar0, "bullet", 64);
 				}
-				func_559(&(Local_155.f_3722), &Var0, Local_155.f_141[iVar16 /*82*/].f_41[iVar17 /*10*/].f_8, func_556(96f, 96f), 0f, Local_155.f_111);
+				func_559(&(Local_155.f_3722), &cVar0, Local_155.f_141[iVar16 /*82*/].f_41[iVar17 /*10*/].f_8, func_556(96f, 96f), 0f, Local_155.f_111);
 				if (!Local_155.f_141[iVar16 /*82*/].f_41[iVar17 /*10*/].f_3)
 				{
 					Local_155.f_141[iVar16 /*82*/].f_41[iVar17 /*10*/].f_3 = 1;
@@ -89761,51 +89761,51 @@ void func_743(int iParam0)
 			switch (Local_155.f_1375[iVar17 /*8*/].f_5)
 			{
 				case 1:
-					StringCopy(&Var0, "fg-enemy-gunfire", 64);
-					func_559(&(Local_155.f_3826), &Var0, Local_155.f_1375[iVar17 /*8*/].f_6, func_556(128f, 128f), 0f, Local_155.f_111);
+					StringCopy(&cVar0, "fg-enemy-gunfire", 64);
+					func_559(&(Local_155.f_3826), &cVar0, Local_155.f_1375[iVar17 /*8*/].f_6, func_556(128f, 128f), 0f, Local_155.f_111);
 					break;
 				
 				case 0:
-					StringCopy(&Var0, "PROP_TNT_CRATE_STATE_0", 64);
-					StringIntConCat(&Var0, Local_155.f_1375[iVar17 /*8*/].f_1 + 2, 64);
-					func_559(&(Local_155.f_3826), &Var0, Local_155.f_1375[iVar17 /*8*/].f_6, func_556(408f, 268f), 0f, Local_155.f_111);
+					StringCopy(&cVar0, "PROP_TNT_CRATE_STATE_0", 64);
+					StringIntConCat(&cVar0, Local_155.f_1375[iVar17 /*8*/].f_1 + 2, 64);
+					func_559(&(Local_155.f_3826), &cVar0, Local_155.f_1375[iVar17 /*8*/].f_6, func_556(408f, 268f), 0f, Local_155.f_111);
 					break;
 				
 				case 3:
 					if (Local_155.f_1375[iVar17 /*8*/].f_1 == 0 || Local_155.f_1375[iVar17 /*8*/].f_1 == 1)
 					{
-						StringCopy(&Var0, "THROWN_WEAPON_EXP_01", 64);
+						StringCopy(&cVar0, "THROWN_WEAPON_EXP_01", 64);
 						Var18 = { func_556(412f, 344f) };
 					}
 					else
 					{
-						StringCopy(&Var0, "THROWN_WEAPON_EXP_02", 64);
+						StringCopy(&cVar0, "THROWN_WEAPON_EXP_02", 64);
 						Var18 = { func_556(572f, 504f) };
 					}
-					func_559(&(Local_155.f_3826), &Var0, Local_155.f_1375[iVar17 /*8*/].f_6, Var18, 0f, Local_155.f_111);
+					func_559(&(Local_155.f_3826), &cVar0, Local_155.f_1375[iVar17 /*8*/].f_6, Var18, 0f, Local_155.f_111);
 					break;
 				
 				case 4:
 					if (Local_155.f_1375[iVar17 /*8*/].f_1 == 0)
 					{
-						StringCopy(&Var0, "CRATE_04", 64);
+						StringCopy(&cVar0, "CRATE_04", 64);
 					}
 					else if (Local_155.f_1375[iVar17 /*8*/].f_1 == 1)
 					{
-						StringCopy(&Var0, "CRATE_05", 64);
+						StringCopy(&cVar0, "CRATE_05", 64);
 					}
 					else if (Local_155.f_1375[iVar17 /*8*/].f_1 == 2)
 					{
-						StringCopy(&Var0, "CRATE_06", 64);
+						StringCopy(&cVar0, "CRATE_06", 64);
 					}
 					Var18 = { func_556(356f, 228f) };
-					func_559(&(Local_155.f_3826), &Var0, Local_155.f_1375[iVar17 /*8*/].f_6, Var18, 0f, Local_155.f_111);
+					func_559(&(Local_155.f_3826), &cVar0, Local_155.f_1375[iVar17 /*8*/].f_6, Var18, 0f, Local_155.f_111);
 					break;
 				
 				case 5:
-					StringCopy(&Var0, "ANIMALBONUS_BIRDS_KILL_FEATHERS_0", 64);
-					StringIntConCat(&Var0, Local_155.f_1375[iVar17 /*8*/].f_1 + 1, 64);
-					func_559(&(Local_155.f_3826), &Var0, Local_155.f_1375[iVar17 /*8*/].f_6, func_556(204f, 116f), 0f, Local_155.f_111);
+					StringCopy(&cVar0, "ANIMALBONUS_BIRDS_KILL_FEATHERS_0", 64);
+					StringIntConCat(&cVar0, Local_155.f_1375[iVar17 /*8*/].f_1 + 1, 64);
+					func_559(&(Local_155.f_3826), &cVar0, Local_155.f_1375[iVar17 /*8*/].f_6, func_556(204f, 116f), 0f, Local_155.f_111);
 					break;
 				}
 		}
@@ -89898,7 +89898,7 @@ void func_746(struct<4> Param0, int iParam4)
 
 void func_747(int iParam0)
 {
-	struct<3> Var0;
+	char cVar0[24];
 	float fVar6;
 	int iVar7;
 	
@@ -89923,36 +89923,36 @@ void func_747(int iParam0)
 			switch (Local_155.f_3318[iVar7 /*12*/].f_3)
 			{
 				case 0:
-					StringCopy(&Var0, "POWERUP_HEALTH", 24);
+					StringCopy(&cVar0, "POWERUP_HEALTH", 24);
 					break;
 				
 				case 5:
-					StringCopy(&Var0, "ammo1", 24);
+					StringCopy(&cVar0, "ammo1", 24);
 					break;
 				
 				case 6:
-					StringCopy(&Var0, "ammo4", 24);
+					StringCopy(&cVar0, "ammo4", 24);
 					break;
 				
 				case 8:
-					StringCopy(&Var0, "ammo2", 24);
+					StringCopy(&cVar0, "ammo2", 24);
 					break;
 				
 				case 7:
-					StringCopy(&Var0, "ammo3", 24);
+					StringCopy(&cVar0, "ammo3", 24);
 					break;
 				
 				case 1:
-					StringCopy(&Var0, "POWERUP_SNAKEOIL", 24);
+					StringCopy(&cVar0, "POWERUP_SNAKEOIL", 24);
 					break;
 				
 				case 2:
-					StringCopy(&Var0, "POWERUP_SHERIFFBADGE", 24);
+					StringCopy(&cVar0, "POWERUP_SHERIFFBADGE", 24);
 					break;
 			}
 			if (Local_155.f_3318[iVar7 /*12*/].f_1)
 			{
-				func_559(&(Local_155.f_3722), &Var0, Local_155.f_3318[iVar7 /*12*/].f_8, func_556((Local_155.f_3318[iVar7 /*12*/].f_10 * fVar6), (Local_155.f_3318[iVar7 /*12*/].f_10.f_1 * fVar6)), 0f, Local_155.f_111);
+				func_559(&(Local_155.f_3722), &cVar0, Local_155.f_3318[iVar7 /*12*/].f_8, func_556((Local_155.f_3318[iVar7 /*12*/].f_10 * fVar6), (Local_155.f_3318[iVar7 /*12*/].f_10.f_1 * fVar6)), 0f, Local_155.f_111);
 			}
 			if (func_630())
 			{
@@ -90011,7 +90011,7 @@ float func_748()
 
 void func_749(int iParam0)
 {
-	struct<8> Var0;
+	char cVar0[64];
 	struct<8> Var16;
 	int iVar24;
 	float fVar25;
@@ -90030,54 +90030,54 @@ void func_749(int iParam0)
 			switch (Local_155.f_1825[iVar24 /*33*/].f_9)
 			{
 				case 0:
-					StringCopy(&Var0, "ENEMY_01_DEAD", 64);
+					StringCopy(&cVar0, "ENEMY_01_DEAD", 64);
 					Var26 = { func_556((160f * fVar25), (200f * fVar25)) };
 					break;
 				
 				case 1:
-					StringCopy(&Var0, "ENEMY_02_DEAD", 64);
+					StringCopy(&cVar0, "ENEMY_02_DEAD", 64);
 					Var26 = { func_556((160f * fVar25), (200f * fVar25)) };
 					break;
 				
 				case 2:
-					StringCopy(&Var0, "ENEMY_03_DEAD", 64);
+					StringCopy(&cVar0, "ENEMY_03_DEAD", 64);
 					Var26 = { func_556((160f * fVar25), (200f * fVar25)) };
 					break;
 				
 				case 3:
-					StringCopy(&Var0, "ENEMY_04_DEAD", 64);
+					StringCopy(&cVar0, "ENEMY_04_DEAD", 64);
 					Var26 = { func_556((160f * fVar25), (200f * fVar25)) };
 					break;
 				
 				case 4:
-					StringCopy(&Var0, "ENEMY_05_DEAD", 64);
+					StringCopy(&cVar0, "ENEMY_05_DEAD", 64);
 					Var26 = { func_556((160f * fVar25), (200f * fVar25)) };
 					break;
 				
 				case 17:
-					StringCopy(&Var0, "THROWING_ENEMY_06", 64);
+					StringCopy(&cVar0, "THROWING_ENEMY_06", 64);
 					Var26 = { func_556((160f * fVar25), (200f * fVar25)) };
 					break;
 				
 				case 16:
-					StringCopy(&Var0, "cart", 64);
-					StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
+					StringCopy(&cVar0, "cart", 64);
+					StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
 					Var26 = { func_556((536f * fVar25), (404f * fVar25)) };
 					break;
 				
 				case 18:
 					if (Local_155.f_1825[iVar24 /*33*/].f_16 == 5)
 					{
-						StringCopy(&Var0, "OUTHOUSE_ENEMY_06", 64);
+						StringCopy(&cVar0, "OUTHOUSE_ENEMY_06", 64);
 					}
 					else if (Local_155.f_1825[iVar24 /*33*/].f_16 == 6)
 					{
-						StringCopy(&Var0, "OUTHOUSE_EMPTY", 64);
+						StringCopy(&cVar0, "OUTHOUSE_EMPTY", 64);
 						Var16 = { Local_155.f_3754 };
 					}
 					else
 					{
-						StringCopy(&Var0, "OUTHOUSE_ENEMY_05", 64);
+						StringCopy(&cVar0, "OUTHOUSE_ENEMY_05", 64);
 					}
 					Var26 = { func_556((216f * fVar25), (332f * fVar25)) };
 					break;
@@ -90085,17 +90085,17 @@ void func_749(int iParam0)
 				case 19:
 					if (Local_155.f_1825[iVar24 /*33*/].f_16 == 5)
 					{
-						StringCopy(&Var0, "LEVEL_05_GRAVEYARD_COFFIN_ENEMY_06", 64);
+						StringCopy(&cVar0, "LEVEL_05_GRAVEYARD_COFFIN_ENEMY_06", 64);
 						Var16 = { Local_155.f_3786 };
 					}
 					else if (Local_155.f_1825[iVar24 /*33*/].f_16 == 6)
 					{
-						StringCopy(&Var0, "GRAVEYARD_COFFIN_EMPTY", 64);
+						StringCopy(&cVar0, "GRAVEYARD_COFFIN_EMPTY", 64);
 						Var16 = { Local_155.f_3786 };
 					}
 					else
 					{
-						StringCopy(&Var0, "LEVEL_05_GRAVEYARD_COFFIN_ENEMY_05", 64);
+						StringCopy(&cVar0, "LEVEL_05_GRAVEYARD_COFFIN_ENEMY_05", 64);
 						Var16 = { Local_155.f_3786 };
 					}
 					Var26 = { func_556((200f * fVar25), (248f * fVar25)) };
@@ -90103,7 +90103,7 @@ void func_749(int iParam0)
 			}
 			if (Local_155.f_1825[iVar24 /*33*/].f_27 > 0f && Local_155.f_1825[iVar24 /*33*/].f_27 < 1920f)
 			{
-				func_559(&Var16, &Var0, Local_155.f_1825[iVar24 /*33*/].f_27, Var26, 0f, Local_155.f_111);
+				func_559(&Var16, &cVar0, Local_155.f_1825[iVar24 /*33*/].f_27, Var26, 0f, Local_155.f_111);
 			}
 		}
 		else if (Local_155.f_1825[iVar24 /*33*/].f_10 != 4 && Local_155.f_1825[iVar24 /*33*/].f_10 != 0)
@@ -90135,77 +90135,77 @@ void func_749(int iParam0)
 					case 0:
 						if (Local_155.f_1825[iVar24 /*33*/].f_10 == 2)
 						{
-							StringCopy(&Var0, "ENEMY_01_ATTACKING", 64);
+							StringCopy(&cVar0, "ENEMY_01_ATTACKING", 64);
 						}
 						else
 						{
-							StringCopy(&Var0, "ENEMY_01_RUNNING_0", 64);
-							StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
+							StringCopy(&cVar0, "ENEMY_01_RUNNING_0", 64);
+							StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
 						}
 						break;
 					
 					case 1:
 						if (Local_155.f_1825[iVar24 /*33*/].f_10 == 2)
 						{
-							StringCopy(&Var0, "ENEMY_02_ATTACKING", 64);
+							StringCopy(&cVar0, "ENEMY_02_ATTACKING", 64);
 						}
 						else
 						{
-							StringCopy(&Var0, "ENEMY_02_RUNNING_0", 64);
-							StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
+							StringCopy(&cVar0, "ENEMY_02_RUNNING_0", 64);
+							StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
 						}
 						break;
 					
 					case 2:
 						if (Local_155.f_1825[iVar24 /*33*/].f_10 == 2)
 						{
-							StringCopy(&Var0, "ENEMY_03_ATTACKING", 64);
+							StringCopy(&cVar0, "ENEMY_03_ATTACKING", 64);
 						}
 						else
 						{
-							StringCopy(&Var0, "ENEMY_03_RUNNING_0", 64);
-							StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
+							StringCopy(&cVar0, "ENEMY_03_RUNNING_0", 64);
+							StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
 						}
 						break;
 					
 					case 3:
 						if (Local_155.f_1825[iVar24 /*33*/].f_10 == 2)
 						{
-							StringCopy(&Var0, "ENEMY_04_ATTACKING", 64);
+							StringCopy(&cVar0, "ENEMY_04_ATTACKING", 64);
 						}
 						else
 						{
-							StringCopy(&Var0, "ENEMY_04_RUNNING_0", 64);
-							StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
+							StringCopy(&cVar0, "ENEMY_04_RUNNING_0", 64);
+							StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
 						}
 						break;
 					
 					case 4:
 						if (Local_155.f_1825[iVar24 /*33*/].f_10 == 2)
 						{
-							StringCopy(&Var0, "ENEMY_05_ATTACKING", 64);
+							StringCopy(&cVar0, "ENEMY_05_ATTACKING", 64);
 						}
 						else
 						{
-							StringCopy(&Var0, "ENEMY_05_RUNNING_0", 64);
-							StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
+							StringCopy(&cVar0, "ENEMY_05_RUNNING_0", 64);
+							StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
 						}
 						break;
 					
 					case 16:
-						StringCopy(&Var0, "cart1", 64);
+						StringCopy(&cVar0, "cart1", 64);
 						break;
 					
 					case 17:
 						if (Local_155.f_1825[iVar24 /*33*/].f_10 == 2)
 						{
-							StringCopy(&Var0, "THROWING_ENEMY_0", 64);
-							StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 3, 64);
+							StringCopy(&cVar0, "THROWING_ENEMY_0", 64);
+							StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 3, 64);
 						}
 						else
 						{
-							StringCopy(&Var0, "THROWING_ENEMY_0", 64);
-							StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
+							StringCopy(&cVar0, "THROWING_ENEMY_0", 64);
+							StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
 						}
 						break;
 					
@@ -90214,18 +90214,18 @@ void func_749(int iParam0)
 						{
 							if (!Local_155.f_1825[iVar24 /*33*/].f_5)
 							{
-								StringCopy(&Var0, "OUTHOUSE_01", 64);
+								StringCopy(&cVar0, "OUTHOUSE_01", 64);
 								Var16 = { Local_155.f_3754 };
 							}
 							else
 							{
-								StringCopy(&Var0, "OUTHOUSE_ENEMY_0", 64);
-								StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
+								StringCopy(&cVar0, "OUTHOUSE_ENEMY_0", 64);
+								StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
 							}
 						}
 						else if (Local_155.f_1825[iVar24 /*33*/].f_10 == 2)
 						{
-							StringCopy(&Var0, "OUTHOUSE_ENEMY_05", 64);
+							StringCopy(&cVar0, "OUTHOUSE_ENEMY_05", 64);
 						}
 						break;
 					
@@ -90234,26 +90234,26 @@ void func_749(int iParam0)
 						{
 							if (!Local_155.f_1825[iVar24 /*33*/].f_5)
 							{
-								StringCopy(&Var0, "GRAVEYARD_COFFIN_01", 64);
+								StringCopy(&cVar0, "GRAVEYARD_COFFIN_01", 64);
 								Var16 = { Local_155.f_3786 };
 							}
 							else
 							{
-								StringCopy(&Var0, "LEVEL_05_GRAVEYARD_COFFIN_ENEMY_0", 64);
-								StringIntConCat(&Var0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
+								StringCopy(&cVar0, "LEVEL_05_GRAVEYARD_COFFIN_ENEMY_0", 64);
+								StringIntConCat(&cVar0, Local_155.f_1825[iVar24 /*33*/].f_16 + 1, 64);
 								Var16 = { Local_155.f_3786 };
 							}
 						}
 						else if (Local_155.f_1825[iVar24 /*33*/].f_10 == 2)
 						{
-							StringCopy(&Var0, "LEVEL_05_GRAVEYARD_COFFIN_ENEMY_05", 64);
+							StringCopy(&cVar0, "LEVEL_05_GRAVEYARD_COFFIN_ENEMY_05", 64);
 							Var16 = { Local_155.f_3786 };
 						}
 						break;
 				}
 				if (Local_155.f_1825[iVar24 /*33*/].f_27 > 0f && Local_155.f_1825[iVar24 /*33*/].f_27 < 1920f)
 				{
-					func_559(&Var16, &Var0, Local_155.f_1825[iVar24 /*33*/].f_27, func_556((Local_155.f_1825[iVar24 /*33*/].f_31 * fVar25), (Local_155.f_1825[iVar24 /*33*/].f_31.f_1 * fVar25)), 0f, Var28);
+					func_559(&Var16, &cVar0, Local_155.f_1825[iVar24 /*33*/].f_27, func_556((Local_155.f_1825[iVar24 /*33*/].f_31 * fVar25), (Local_155.f_1825[iVar24 /*33*/].f_31.f_1 * fVar25)), 0f, Var28);
 				}
 			}
 		}
@@ -90321,7 +90321,7 @@ float func_750(int iParam0, int iParam1)
 
 void func_751(int iParam0)
 {
-	struct<3> Var0;
+	char cVar0[24];
 	int iVar6;
 	
 	if (iParam0 == 1)
@@ -90337,52 +90337,52 @@ void func_751(int iParam0)
 				switch (Local_155.f_3146[iVar6 /*19*/].f_11)
 				{
 					case 0:
-						StringCopy(&Var0, "hostage1", 24);
-						StringIntConCat(&Var0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
+						StringCopy(&cVar0, "hostage1", 24);
+						StringIntConCat(&cVar0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
 						break;
 					
 					case 1:
-						StringCopy(&Var0, "hostage2", 24);
-						StringIntConCat(&Var0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
+						StringCopy(&cVar0, "hostage2", 24);
+						StringIntConCat(&cVar0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
 						break;
 					
 					case 6:
-						StringCopy(&Var0, "eagle", 24);
-						StringIntConCat(&Var0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
+						StringCopy(&cVar0, "eagle", 24);
+						StringIntConCat(&cVar0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
 						break;
 					
 					case 5:
-						StringCopy(&Var0, "vulture_0", 24);
-						StringIntConCat(&Var0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
+						StringCopy(&cVar0, "vulture_0", 24);
+						StringIntConCat(&cVar0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
 						break;
 					
 					case 7:
-						StringCopy(&Var0, "bat_0", 24);
-						StringIntConCat(&Var0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
+						StringCopy(&cVar0, "bat_0", 24);
+						StringIntConCat(&cVar0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
 						break;
 					
 					case 9:
-						StringCopy(&Var0, "ANIMALBONUS_SCORPION_0", 24);
-						StringIntConCat(&Var0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
+						StringCopy(&cVar0, "ANIMALBONUS_SCORPION_0", 24);
+						StringIntConCat(&cVar0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
 						break;
 					
 					case 8:
-						StringCopy(&Var0, "ANIMALBONUS_RAT_0", 24);
-						StringIntConCat(&Var0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
+						StringCopy(&cVar0, "ANIMALBONUS_RAT_0", 24);
+						StringIntConCat(&cVar0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
 						break;
 					
 					case 2:
-						StringCopy(&Var0, "prisoner", 24);
-						StringIntConCat(&Var0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
+						StringCopy(&cVar0, "prisoner", 24);
+						StringIntConCat(&cVar0, Local_155.f_3146[iVar6 /*19*/].f_9 + 1, 24);
 						break;
 				}
 				if (Local_155.f_3146[iVar6 /*19*/].f_3 && (Local_155.f_3146[iVar6 /*19*/].f_11 != 6 && Local_155.f_3146[iVar6 /*19*/].f_11 != 5))
 				{
-					func_559(&(Local_155.f_3834), &Var0, Local_155.f_3146[iVar6 /*19*/].f_15, func_556(-Local_155.f_3146[iVar6 /*19*/].f_17, Local_155.f_3146[iVar6 /*19*/].f_17.f_1), 0f, Local_155.f_111);
+					func_559(&(Local_155.f_3834), &cVar0, Local_155.f_3146[iVar6 /*19*/].f_15, func_556(-Local_155.f_3146[iVar6 /*19*/].f_17, Local_155.f_3146[iVar6 /*19*/].f_17.f_1), 0f, Local_155.f_111);
 				}
 				else
 				{
-					func_559(&(Local_155.f_3834), &Var0, Local_155.f_3146[iVar6 /*19*/].f_15, func_556(Local_155.f_3146[iVar6 /*19*/].f_17, Local_155.f_3146[iVar6 /*19*/].f_17.f_1), 0f, Local_155.f_111);
+					func_559(&(Local_155.f_3834), &cVar0, Local_155.f_3146[iVar6 /*19*/].f_15, func_556(Local_155.f_3146[iVar6 /*19*/].f_17, Local_155.f_3146[iVar6 /*19*/].f_17.f_1), 0f, Local_155.f_111);
 				}
 			}
 			else if (Local_155.f_3146[iVar6 /*19*/].f_2)
@@ -90390,13 +90390,13 @@ void func_751(int iParam0)
 				switch (Local_155.f_3146[iVar6 /*19*/].f_11)
 				{
 					case 0:
-						StringCopy(&Var0, "ouch1", 24);
-						func_559(&(Local_155.f_3834), &Var0, Local_155.f_3146[iVar6 /*19*/].f_15, func_556(116f, 96f), 0f, Local_155.f_111);
+						StringCopy(&cVar0, "ouch1", 24);
+						func_559(&(Local_155.f_3834), &cVar0, Local_155.f_3146[iVar6 /*19*/].f_15, func_556(116f, 96f), 0f, Local_155.f_111);
 						break;
 					
 					case 1:
-						StringCopy(&Var0, "ouch1", 24);
-						func_559(&(Local_155.f_3834), &Var0, Local_155.f_3146[iVar6 /*19*/].f_15, func_556(116f, 96f), 0f, Local_155.f_111);
+						StringCopy(&cVar0, "ouch1", 24);
+						func_559(&(Local_155.f_3834), &cVar0, Local_155.f_3146[iVar6 /*19*/].f_15, func_556(116f, 96f), 0f, Local_155.f_111);
 						break;
 					}
 				}
@@ -90407,7 +90407,7 @@ void func_751(int iParam0)
 
 void func_752()
 {
-	struct<8> Var0;
+	char cVar0[64];
 	struct<8> Var16;
 	int iVar24;
 	int iVar25;
@@ -90418,34 +90418,34 @@ void func_752()
 	switch (Local_155.f_139)
 	{
 		case 0:
-			StringCopy(&Var0, "LEVEL_01_DESERT_BACKGROUND_TILE", 64);
+			StringCopy(&cVar0, "LEVEL_01_DESERT_BACKGROUND_TILE", 64);
 			Var16 = { Local_155.f_3754 };
 			break;
 		
 		case 1:
-			StringCopy(&Var0, "LEVEL_02_TOWN_BACKGROUND_TILE", 64);
+			StringCopy(&cVar0, "LEVEL_02_TOWN_BACKGROUND_TILE", 64);
 			Var16 = { Local_155.f_3762 };
 			break;
 		
 		case 2:
-			StringCopy(&Var0, "LEVEL_03_FOREST_BACKGROUND_TILE", 64);
+			StringCopy(&cVar0, "LEVEL_03_FOREST_BACKGROUND_TILE", 64);
 			Var16 = { Local_155.f_3770 };
 			break;
 		
 		case 3:
-			StringCopy(&Var0, "LEVEL_04_GOLDMINE_BACKGROUND_TILE", 64);
+			StringCopy(&cVar0, "LEVEL_04_GOLDMINE_BACKGROUND_TILE", 64);
 			Var16 = { Local_155.f_3778 };
 			break;
 		
 		case 4:
-			StringCopy(&Var0, "LEVEL_05_GRAVEYARD_BACKGROUND_TILE", 64);
+			StringCopy(&cVar0, "LEVEL_05_GRAVEYARD_BACKGROUND_TILE", 64);
 			Var16 = { Local_155.f_3786 };
 			break;
 	}
 	iVar24 = 0;
 	while (iVar24 <= 6)
 	{
-		func_559(&Var16, &Var0, func_556(Local_155.f_1424[iVar24 /*7*/].f_1, (1080f / 2f)), func_556(276f, 930f), 0f, Local_155.f_111);
+		func_559(&Var16, &cVar0, func_556(Local_155.f_1424[iVar24 /*7*/].f_1, (1080f / 2f)), func_556(276f, 930f), 0f, Local_155.f_111);
 		if (Local_155.f_1424[iVar24 /*7*/].f_1 < (276f / 2f))
 		{
 			iVar25 = (iVar24 - 1);
@@ -95538,7 +95538,7 @@ void func_901()
 void func_902()
 {
 	float fVar0;
-	struct<3> Var1;
+	char cVar1[24];
 	struct<8> Var7;
 	int iVar15;
 	int iVar16;
@@ -95553,69 +95553,69 @@ void func_902()
 	fVar0 = 0.65f;
 	iVar15 = func_724();
 	iVar17 = 2;
-	StringCopy(&Var1, "selectbounty", 24);
-	func_559(&(Local_155.f_3738), &Var1, func_556((1920f / 2f), (1080f / 8f)), func_556(328f, 52f), 0f, Local_155.f_111);
+	StringCopy(&cVar1, "selectbounty", 24);
+	func_559(&(Local_155.f_3738), &cVar1, func_556((1920f / 2f), (1080f / 8f)), func_556(328f, 52f), 0f, Local_155.f_111);
 	Var7 = { Local_155.f_3738 };
-	StringCopy(&Var1, "LVL01", 24);
+	StringCopy(&cVar1, "LVL01", 24);
 	if (Local_155.f_1[0])
 	{
-		StringConCat(&Var1, "_COMPLETED", 24);
+		StringConCat(&cVar1, "_COMPLETED", 24);
 		Var7 = { Local_155.f_3746 };
 	}
-	func_559(&Var7, &Var1, func_556(((1920f / 10f) * 3f), ((1080f / 8f) * 3f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
+	func_559(&Var7, &cVar1, func_556(((1920f / 10f) * 3f), ((1080f / 8f) * 3f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
 	Var7 = { Local_155.f_3738 };
-	StringCopy(&Var1, "LVL02", 24);
+	StringCopy(&cVar1, "LVL02", 24);
 	if (Local_155.f_1[1])
 	{
-		StringConCat(&Var1, "_COMPLETED", 24);
+		StringConCat(&cVar1, "_COMPLETED", 24);
 		Var7 = { Local_155.f_3746 };
 	}
-	func_559(&Var7, &Var1, func_556(((1920f / 10f) * 5f), ((1080f / 8f) * 3f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
+	func_559(&Var7, &cVar1, func_556(((1920f / 10f) * 5f), ((1080f / 8f) * 3f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
 	Var7 = { Local_155.f_3738 };
 	if (Local_155.f_1[2])
 	{
-		StringCopy(&Var1, "LVL03_COMPLETED", 24);
+		StringCopy(&cVar1, "LVL03_COMPLETED", 24);
 		Var7 = { Local_155.f_3746 };
 	}
 	else if (func_849(2))
 	{
-		StringCopy(&Var1, "LVL03", 24);
+		StringCopy(&cVar1, "LVL03", 24);
 	}
 	else
 	{
-		StringCopy(&Var1, "LVL03_LOCKED", 24);
+		StringCopy(&cVar1, "LVL03_LOCKED", 24);
 	}
-	func_559(&Var7, &Var1, func_556(((1920f / 10f) * 7f), ((1080f / 8f) * 3f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
+	func_559(&Var7, &cVar1, func_556(((1920f / 10f) * 7f), ((1080f / 8f) * 3f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
 	Var7 = { Local_155.f_3738 };
 	if (Local_155.f_1[3])
 	{
-		StringCopy(&Var1, "LVL04_COMPLETED", 24);
+		StringCopy(&cVar1, "LVL04_COMPLETED", 24);
 		Var7 = { Local_155.f_3746 };
 	}
 	else if (func_849(3))
 	{
-		StringCopy(&Var1, "LVL04", 24);
+		StringCopy(&cVar1, "LVL04", 24);
 	}
 	else
 	{
-		StringCopy(&Var1, "LVL04_LOCKED", 24);
+		StringCopy(&cVar1, "LVL04_LOCKED", 24);
 	}
-	func_559(&Var7, &Var1, func_556(((1920f / 10f) * 4f), ((1080f / 8f) * 6f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
+	func_559(&Var7, &cVar1, func_556(((1920f / 10f) * 4f), ((1080f / 8f) * 6f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
 	Var7 = { Local_155.f_3738 };
 	if (Local_155.f_1[4])
 	{
-		StringCopy(&Var1, "LVL05_COMPLETED", 24);
+		StringCopy(&cVar1, "LVL05_COMPLETED", 24);
 		Var7 = { Local_155.f_3746 };
 	}
 	else if (func_849(4))
 	{
-		StringCopy(&Var1, "LVL05", 24);
+		StringCopy(&cVar1, "LVL05", 24);
 	}
 	else
 	{
-		StringCopy(&Var1, "LVL05_LOCKED", 24);
+		StringCopy(&cVar1, "LVL05_LOCKED", 24);
 	}
-	func_559(&Var7, &Var1, func_556(((1920f / 10f) * 6f), ((1080f / 8f) * 6f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
+	func_559(&Var7, &cVar1, func_556(((1920f / 10f) * 6f), ((1080f / 8f) * 6f)), func_556((420f * fVar0), (520f * fVar0)), 0f, Local_155.f_111);
 	if (iVar15 == 1)
 	{
 		bVar18 = true;
@@ -95811,14 +95811,14 @@ int func_904()
 	return iVar1;
 }
 
-void func_905(int iParam0, struct<2> Param1, struct<4> Param3, int iParam7, int iParam8, float fParam9)
+void func_905(int iParam0, struct<2> Param1, struct<4> Param3, int iParam7, char[4] cParam8, float fParam9)
 {
 	struct<2> Var0;
 	var uVar2[6];
 	int iVar9;
 	int iVar10;
 	int iVar11;
-	struct<16> Var12;
+	char cVar12[128];
 	struct<2> Var28;
 	struct<2> Var30;
 	struct<2> Var32;
@@ -95829,17 +95829,17 @@ void func_905(int iParam0, struct<2> Param1, struct<4> Param3, int iParam7, int 
 	iVar9 = (iVar11 - 1);
 	while (iVar9 >= 0)
 	{
-		Var12 = { func_682(iParam7, uVar2[iVar9]) };
+		cVar12 = { func_682(iParam7, uVar2[iVar9]) };
 		Var28.f_1 = Param1.f_1;
 		Var28 = (Param1 - (IntToFloat(iVar10) * Var0));
 		iVar10++;
-		func_559(&(Local_155.f_3722), &Var12, Var28, Var0, 0f, Param3);
+		func_559(&(Local_155.f_3722), &cVar12, Var28, Var0, 0f, Param3);
 		iVar9 = (iVar9 + -1);
 	}
 	Var30.f_1 = Param1.f_1;
 	Var30 = (Var28 - (fParam9 * 28f));
 	Var32 = { func_556((28f * fParam9), (40f * fParam9)) };
-	func_689(iParam8, Var30, Var32);
+	func_689(cParam8, Var30, Var32);
 }
 
 void func_906(int iParam0, struct<2> Param1, struct<4> Param3, int iParam7, float fParam8)
@@ -95850,7 +95850,7 @@ void func_906(int iParam0, struct<2> Param1, struct<4> Param3, int iParam7, floa
 	int iVar5;
 	int iVar6;
 	int iVar7;
-	struct<16> Var8;
+	char cVar8[128];
 	
 	Var0 = { Param1 };
 	Var2 = { func_556((32f * fParam8), (36f * fParam8)) };
@@ -95871,9 +95871,9 @@ void func_906(int iParam0, struct<2> Param1, struct<4> Param3, int iParam7, floa
 		{
 			bVar4 = false;
 			Var0 = ((Param1 + ((Var2 * IntToFloat((iVar6 - 1))) / 2f)) - (Var2 * IntToFloat(iVar5)));
-			Var8 = { func_682(iParam7, (iVar7 % 10)) };
+			cVar8 = { func_682(iParam7, (iVar7 % 10)) };
 			iVar7 = (iVar7 / 10);
-			func_559(&(Local_155.f_3722), &Var8, Var0, Var2, 0f, Param3);
+			func_559(&(Local_155.f_3722), &cVar8, Var0, Var2, 0f, Param3);
 			iVar5++;
 		}
 		Var0 = ((Param1 + ((Var2 * IntToFloat((iVar6 - 1))) / 2f)) - (Var2 * IntToFloat(iVar5)));
@@ -95954,16 +95954,16 @@ void func_912()
 	float fVar2;
 	float fVar3;
 	float fVar4;
-	struct<4> Var5;
+	char cVar5[32];
 	
 	fVar1 = (Local_155.f_3474[0 /*6*/].f_2 - (Local_155.f_3474[0 /*6*/].f_4 / 2f));
 	fVar3 = (Local_155.f_3474[0 /*6*/].f_2.f_1 - (Local_155.f_3474[0 /*6*/].f_4.f_1 / 2f));
 	fVar2 = (Local_155.f_3474[0 /*6*/].f_2 + (Local_155.f_3474[0 /*6*/].f_4 / 2f));
 	fVar4 = (Local_155.f_3474[0 /*6*/].f_2.f_1 + (Local_155.f_3474[0 /*6*/].f_4.f_1 / 2f));
-	StringCopy(&Var5, "COWBOY_CHARACTER", 32);
-	func_559(&(Local_155.f_3714), &Var5, func_556((1920f / 2f), ((1080f / 3f) + 60f)), func_556(412f, 640f), 0f, Local_155.f_111);
-	StringCopy(&Var5, "TITLE_SCREEN_LOGO", 32);
-	func_559(&(Local_155.f_3714), &Var5, func_556((1920f / 2f), ((1080f / 2f) + 80f)), func_556(536f, 276f), 0f, Local_155.f_111);
+	StringCopy(&cVar5, "COWBOY_CHARACTER", 32);
+	func_559(&(Local_155.f_3714), &cVar5, func_556((1920f / 2f), ((1080f / 3f) + 60f)), func_556(412f, 640f), 0f, Local_155.f_111);
+	StringCopy(&cVar5, "TITLE_SCREEN_LOGO", 32);
+	func_559(&(Local_155.f_3714), &cVar5, func_556((1920f / 2f), ((1080f / 2f) + 80f)), func_556(536f, 276f), 0f, Local_155.f_111);
 	fVar1 = (Local_155.f_3474[0 /*6*/].f_2 - (Local_155.f_3474[0 /*6*/].f_4 / 2f));
 	fVar3 = (Local_155.f_3474[0 /*6*/].f_2.f_1 - (Local_155.f_3474[0 /*6*/].f_4.f_1 / 2f));
 	fVar2 = (Local_155.f_3474[0 /*6*/].f_2 + (Local_155.f_3474[0 /*6*/].f_4 / 2f));
@@ -95974,8 +95974,8 @@ void func_912()
 	}
 	if (!bVar0)
 	{
-		StringCopy(&Var5, "start", 32);
-		func_559(&(Local_155.f_3714), &Var5, Local_155.f_3474[0 /*6*/].f_2, Local_155.f_3474[0 /*6*/].f_4, 0f, Local_155.f_111);
+		StringCopy(&cVar5, "start", 32);
+		func_559(&(Local_155.f_3714), &cVar5, Local_155.f_3474[0 /*6*/].f_2, Local_155.f_3474[0 /*6*/].f_4, 0f, Local_155.f_111);
 	}
 	else
 	{
@@ -95994,16 +95994,16 @@ void func_912()
 		}
 		if (!bVar0)
 		{
-			StringCopy(&Var5, "leaderboards", 32);
-			func_559(&(Local_155.f_3714), &Var5, Local_155.f_3474[1 /*6*/].f_2, Local_155.f_3474[1 /*6*/].f_4, 0f, Local_155.f_111);
+			StringCopy(&cVar5, "leaderboards", 32);
+			func_559(&(Local_155.f_3714), &cVar5, Local_155.f_3474[1 /*6*/].f_2, Local_155.f_3474[1 /*6*/].f_4, 0f, Local_155.f_111);
 		}
 		else
 		{
 			func_559(&(Local_155.f_3714), "TYPE_MAIN_MENU_LEADERBOARDS_HIGHLIGHT", Local_155.f_3474[1 /*6*/].f_2, Local_155.f_3474[1 /*6*/].f_4, 0f, Local_155.f_111);
 		}
 	}
-	StringCopy(&Var5, "PIXTRO_LOGO", 32);
-	func_559(&(Local_155.f_3714), &Var5, func_556((1920f / 2f), (((1080f / 6f) * 5f) + 60f)), func_556(196f, 44f), 0f, Local_155.f_111);
+	StringCopy(&cVar5, "PIXTRO_LOGO", 32);
+	func_559(&(Local_155.f_3714), &cVar5, func_556((1920f / 2f), (((1080f / 6f) * 5f) + 60f)), func_556(196f, 44f), 0f, Local_155.f_111);
 }
 
 void func_913()

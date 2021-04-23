@@ -90,7 +90,7 @@ void __EntryFunction__()
 	func_54(14);
 	func_52();
 	func_51(&Local_42, 0, joaat("prop_power_cell"), "SSHIP_COLLECT");
-	func_49(&Local_42, joaat("NUM_HIDDEN_PACKAGES_1"), 755, 50);
+	func_49(&Local_42, joaat("num_hidden_packages_1"), 755, 50);
 	while (true)
 	{
 		SYSTEM::WAIT(0);
@@ -644,15 +644,15 @@ int func_19(int iParam0)
 	}
 	else if (iParam0 == 6)
 	{
-		STATS::STAT_GET_INT(joaat("NUM_HIDDEN_PACKAGES_5"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("num_hidden_packages_5"), &iVar0, -1);
 	}
 	else if (iParam0 == 7)
 	{
-		STATS::STAT_GET_INT(joaat("NUM_HIDDEN_PACKAGES_7"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("num_hidden_packages_7"), &iVar0, -1);
 	}
 	else if (iParam0 == 8)
 	{
-		STATS::STAT_GET_INT(joaat("NUM_HIDDEN_PACKAGES_6"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("num_hidden_packages_6"), &iVar0, -1);
 	}
 	else
 	{
@@ -821,11 +821,11 @@ int func_22(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -1095,7 +1095,7 @@ void func_33()
 	{
 		iVar3 = (iVar1 * 100 / iVar2);
 	}
-	STATS::STAT_SET_INT(joaat("PERCENT_HIDDEN_PACKAGES"), iVar3, true);
+	STATS::STAT_SET_INT(joaat("percent_hidden_packages"), iVar3, true);
 }
 
 int func_34(int iParam0, int iParam1)
@@ -1126,21 +1126,21 @@ int func_35(int iParam0)
 {
 	if (iParam0 == 3)
 	{
-		return joaat("NUM_HIDDEN_PACKAGES_3");
+		return joaat("num_hidden_packages_3");
 	}
 	if (iParam0 == 1)
 	{
-		return joaat("NUM_HIDDEN_PACKAGES_0");
+		return joaat("num_hidden_packages_0");
 	}
 	if (iParam0 == 0)
 	{
-		return joaat("NUM_HIDDEN_PACKAGES_1");
+		return joaat("num_hidden_packages_1");
 	}
 	if (iParam0 == 5)
 	{
-		return joaat("NUM_HIDDEN_PACKAGES_4");
+		return joaat("num_hidden_packages_4");
 	}
-	return joaat("NUM_HIDDEN_PACKAGES_2");
+	return joaat("num_hidden_packages_2");
 }
 
 void func_36(var uParam0)
@@ -1251,13 +1251,13 @@ bool func_38(int iParam0, bool bParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar6 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
+		iVar6 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
 		iVar1 = ((iParam0 - 3111) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 3111)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar6, bParam1, iVar1, bParam3);
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar7 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar7 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 		iVar1 = ((iParam0 - 2919) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 2919)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar7, bParam1, iVar1, bParam3);
 	}

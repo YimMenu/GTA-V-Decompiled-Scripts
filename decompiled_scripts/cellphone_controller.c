@@ -390,17 +390,17 @@ void __EntryFunction__()
 		{
 			if (MISC::IS_BIT_SET(Global_7551, 25))
 			{
-				STATS::STAT_GET_INT(joaat("SP_CELLPHONE_SLEEP_TIME"), &iLocal_92, -1);
+				STATS::STAT_GET_INT(joaat("sp_cellphone_sleep_time"), &iLocal_92, -1);
 				iLocal_90 = MISC::GET_GAME_TIMER();
 				iLocal_93 = 1;
 			}
 		}
 		else if (!MISC::IS_BIT_SET(Global_7551, 25))
 		{
-			STATS::STAT_GET_INT(joaat("SP_CELLPHONE_SLEEP_TIME"), &iLocal_92, -1);
+			STATS::STAT_GET_INT(joaat("sp_cellphone_sleep_time"), &iLocal_92, -1);
 			iLocal_91 = MISC::GET_GAME_TIMER();
 			iLocal_93 = 0;
-			STATS::STAT_SET_INT(joaat("SP_CELLPHONE_SLEEP_TIME"), (iLocal_92 + (iLocal_91 - iLocal_90)), true);
+			STATS::STAT_SET_INT(joaat("sp_cellphone_sleep_time"), (iLocal_92 + (iLocal_91 - iLocal_90)), true);
 		}
 		func_80();
 		func_79();
@@ -702,7 +702,7 @@ bool func_7()
 
 void func_8()
 {
-	iLocal_70 = GRAPHICS::_0xF5BED327CEA362B1(1);
+	iLocal_70 = GRAPHICS::GET_STATUS_OF_SORTED_LIST_OPERATION(1);
 	switch (iLocal_70)
 	{
 		case 0:
@@ -724,7 +724,7 @@ void func_9()
 	switch (iLocal_70)
 	{
 		case 0:
-			GRAPHICS::_0x1072F115DAB0717E(true, true);
+			GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(true, true);
 			Global_22040 = 6;
 			break;
 		
@@ -735,9 +735,9 @@ void func_9()
 			if (iLocal_71 == 3)
 			{
 				MISC::SET_BIT(&Global_7552, 14);
-				GRAPHICS::_0x1072F115DAB0717E(false, false);
-				GRAPHICS::_0xD801CC02177FA3F1();
-				GRAPHICS::_0x6A12D88881435DCA();
+				GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(false, false);
+				GRAPHICS::FREE_MEMORY_FOR_HIGH_QUALITY_PHOTO();
+				GRAPHICS::FREE_MEMORY_FOR_LOW_QUALITY_PHOTO();
 				Global_22040 = 6;
 			}
 			if (Global_22040 == 5)
@@ -746,7 +746,7 @@ void func_9()
 				{
 					Global_22040 = 4;
 					iLocal_71 = 1;
-					GRAPHICS::_0x6A12D88881435DCA();
+					GRAPHICS::FREE_MEMORY_FOR_LOW_QUALITY_PHOTO();
 					SYSTEM::WAIT(0);
 				}
 			}
@@ -756,7 +756,7 @@ void func_9()
 				{
 					Global_22040 = 4;
 					iLocal_71 = 2;
-					GRAPHICS::_0x6A12D88881435DCA();
+					GRAPHICS::FREE_MEMORY_FOR_LOW_QUALITY_PHOTO();
 					SYSTEM::WAIT(0);
 				}
 			}
@@ -766,7 +766,7 @@ void func_9()
 				{
 					Global_22040 = 4;
 					iLocal_71 = 3;
-					GRAPHICS::_0x6A12D88881435DCA();
+					GRAPHICS::FREE_MEMORY_FOR_LOW_QUALITY_PHOTO();
 					SYSTEM::WAIT(0);
 				}
 			}
@@ -825,9 +825,9 @@ void func_13()
 
 void func_14()
 {
-	GRAPHICS::_0x1072F115DAB0717E(false, false);
-	GRAPHICS::_0xD801CC02177FA3F1();
-	GRAPHICS::_0x6A12D88881435DCA();
+	GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(false, false);
+	GRAPHICS::FREE_MEMORY_FOR_HIGH_QUALITY_PHOTO();
+	GRAPHICS::FREE_MEMORY_FOR_LOW_QUALITY_PHOTO();
 	HUD::BUSYSPINNER_OFF();
 	Global_22041 = 0;
 	Global_22042 = 0;
@@ -1132,7 +1132,7 @@ int func_21(int iParam0)
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
 			WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, true);
-			if (((iVar0 == joaat("WEAPON_SNIPERRIFLE") || iVar0 == joaat("WEAPON_HEAVYSNIPER")) || iVar0 == joaat("WEAPON_MARKSMANRIFLE")) || iVar0 == joaat("WEAPON_HEAVYSNIPER_MK2"))
+			if (((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle")) || iVar0 == joaat("weapon_heavysniper_mk2"))
 			{
 				return 1;
 			}
@@ -5303,7 +5303,7 @@ struct<5> func_100(int iParam0)
 			Var0.f_4 = Var0.f_3;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0 = { -787.7805f, 334.9232f, 186.1134f };
 			Var0.f_3 = "apa_v_mp_h_05";
 			Var0.f_4 = Var0.f_3;
@@ -6328,7 +6328,7 @@ struct<6> func_101(int iParam0, bool bParam1)
 			Var0.f_3 = { 0f, 0f, -14.5f };
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0 = { -742.2565f, 587.6547f, 143.0577f };
 			Var0.f_3 = { 0f, 0f, -29f };
 			break;

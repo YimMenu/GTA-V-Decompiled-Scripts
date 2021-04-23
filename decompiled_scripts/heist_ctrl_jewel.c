@@ -2173,7 +2173,7 @@ void func_69(var uParam0, bool bParam1)
 			CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0f);
 			CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0f, 1f);
 			PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -1871534317, false, 0, false);
-			PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), true, false);
+			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), true, false);
 		}
 	}
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
@@ -2185,7 +2185,7 @@ void func_69(var uParam0, bool bParam1)
 	func_71();
 	HUD::THEFEED_RESUME();
 	HUD::RESET_HUD_COMPONENT_VALUES(17);
-	GRAPHICS::_0xD39D13C9FEBF0511(false);
+	GRAPHICS::CASCADE_SHADOWS_SET_DYNAMIC_DEPTH_MODE(false);
 	func_70(&(uParam0->f_649), 0, 1);
 	func_13(&(uParam0->f_1.f_20[0 /*4*/]), 1);
 	func_13(&(uParam0->f_1.f_20[1 /*4*/]), 1);
@@ -3158,7 +3158,7 @@ int func_97()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -4222,11 +4222,11 @@ void func_112(int iParam0)
 			iVar0 = Global_111858.f_9081.f_99.f_205[7];
 			if (iVar0 == 1)
 			{
-				STATS::STAT_SET_BOOL(joaat("SP_HEIST_CHOSE_JEWEL_STEALTH"), true, true);
+				STATS::STAT_SET_BOOL(joaat("sp_heist_chose_jewel_stealth"), true, true);
 			}
 			else
 			{
-				STATS::STAT_SET_BOOL(joaat("SP_HEIST_CHOSE_JEWEL_STEALTH"), false, true);
+				STATS::STAT_SET_BOOL(joaat("sp_heist_chose_jewel_stealth"), false, true);
 			}
 			break;
 		
@@ -4234,11 +4234,11 @@ void func_112(int iParam0)
 			iVar0 = Global_111858.f_9081.f_99.f_205[8];
 			if (iVar0 == 3)
 			{
-				STATS::STAT_SET_BOOL(joaat("SP_HEIST_CHOSE_DOCKS_SINK_SHIP"), true, true);
+				STATS::STAT_SET_BOOL(joaat("sp_heist_chose_docks_sink_ship"), true, true);
 			}
 			else
 			{
-				STATS::STAT_SET_BOOL(joaat("SP_HEIST_CHOSE_DOCKS_SINK_SHIP"), false, true);
+				STATS::STAT_SET_BOOL(joaat("sp_heist_chose_docks_sink_ship"), false, true);
 			}
 			break;
 		
@@ -4246,11 +4246,11 @@ void func_112(int iParam0)
 			iVar0 = Global_111858.f_9081.f_99.f_205[10];
 			if (iVar0 == 6)
 			{
-				STATS::STAT_SET_BOOL(joaat("SP_HEIST_CHOSE_BUREAU_FIRECREW"), true, true);
+				STATS::STAT_SET_BOOL(joaat("sp_heist_chose_bureau_firecrew"), true, true);
 			}
 			else
 			{
-				STATS::STAT_SET_BOOL(joaat("SP_HEIST_CHOSE_BUREAU_FIRECREW"), false, true);
+				STATS::STAT_SET_BOOL(joaat("sp_heist_chose_bureau_firecrew"), false, true);
 			}
 			break;
 		
@@ -4258,11 +4258,11 @@ void func_112(int iParam0)
 			iVar0 = Global_111858.f_9081.f_99.f_205[11];
 			if (iVar0 == 8)
 			{
-				STATS::STAT_SET_BOOL(joaat("SP_HEIST_CHOSE_BIGS_TRAFFIC"), true, true);
+				STATS::STAT_SET_BOOL(joaat("sp_heist_chose_bigs_traffic"), true, true);
 			}
 			else
 			{
-				STATS::STAT_SET_BOOL(joaat("SP_HEIST_CHOSE_BIGS_TRAFFIC"), false, true);
+				STATS::STAT_SET_BOOL(joaat("sp_heist_chose_bigs_traffic"), false, true);
 			}
 			break;
 	}
@@ -4551,7 +4551,7 @@ void func_123(var uParam0)
 	HUD::THEFEED_PAUSE();
 	MISC::CLEAR_AREA(uParam0->f_401, 5f, true, true, false, false);
 	GRAPHICS::REMOVE_PARTICLE_FX_IN_RANGE(uParam0->f_401, 5f);
-	GRAPHICS::_0xD39D13C9FEBF0511(true);
+	GRAPHICS::CASCADE_SHADOWS_SET_DYNAMIC_DEPTH_MODE(true);
 	GRAPHICS::SET_SCRIPT_GFX_ALIGN(82, 66);
 	HUD::SET_HUD_COMPONENT_POSITION(17, 0.612f, 0.818f);
 	GRAPHICS::RESET_SCRIPT_GFX_ALIGN();
@@ -5448,7 +5448,7 @@ void func_153()
 						}
 						PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -668482597, false, 0, false);
 					}
-					PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), false, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 				}
 			}
 			if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_CAMERA(false))
@@ -9926,14 +9926,14 @@ int func_175()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);
@@ -10721,7 +10721,7 @@ void func_193(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam
 		Global_61723 = 0;
 		if (bParam1)
 		{
-			GRAPHICS::_0x03FC694AE06C5A20();
+			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);

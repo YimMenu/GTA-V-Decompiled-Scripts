@@ -299,7 +299,7 @@ void func_18(int* iParam0)
 {
 	int iVar0;
 	
-	if (((((((!func_9(&(iParam0->f_6), 0) && !func_9(&(iParam0->f_6), 2)) && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED()) && func_35(iParam0)) && !func_34(0)) && !func_33()) && func_31()) && ENTITY::DOES_ENTITY_EXIST(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0->f_1, -1, 0)))
+	if (((((((!func_9(&(iParam0->f_6), 0) && !func_9(&(iParam0->f_6), 2)) && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED()) && func_35(iParam0)) && !func_34(0)) && !func_33()) && func_31()) && ENTITY::DOES_ENTITY_EXIST(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0->f_1, -1, false)))
 	{
 		func_25(iParam0, 1);
 		func_24(&(iParam0->f_6), 3);
@@ -419,12 +419,12 @@ bool func_26(int iParam0, int iParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 1393 && iParam0 < 2919)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1393), false, true, iParam2);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1393), false, true, iParam2);
 		iVar1 = ((iParam0 - 1393) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 1393)) * 8) * 8;
 	}
 	else if (iParam0 >= 1361 && iParam0 < 1393)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
 		iVar1 = ((iParam0 - 1361) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 1361)) * 8) * 8;
 	}
 	else if (iParam0 >= 3879 && iParam0 < 4143)
@@ -680,11 +680,11 @@ int func_30(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 1361 && iParam0 < 1393)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
 	}
 	else if (iParam0 >= 1393 && iParam0 < 2919)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
 	}
 	else if (iParam0 >= 4143 && iParam0 < 4207)
 	{
@@ -930,7 +930,7 @@ void func_42(int* iParam0)
 {
 	int iVar0;
 	
-	if (((((((!func_9(&(iParam0->f_6), 0) && !func_9(&(iParam0->f_6), 1)) && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED()) && func_9(&(iParam0->f_6), 3)) && !func_34(0)) && !func_33()) && func_31()) && ENTITY::DOES_ENTITY_EXIST(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0->f_1, -1, 0)))
+	if (((((((!func_9(&(iParam0->f_6), 0) && !func_9(&(iParam0->f_6), 1)) && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED()) && func_9(&(iParam0->f_6), 3)) && !func_34(0)) && !func_33()) && func_31()) && ENTITY::DOES_ENTITY_EXIST(VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0->f_1, -1, false)))
 	{
 		iVar0 = func_23(iParam0->f_6.f_2, 3333, 10000);
 		iParam0->f_6.f_2 = 0;
@@ -1012,13 +1012,13 @@ void func_49(int* iParam0)
 	func_24(&(iParam0->f_6), 1);
 }
 
-void func_50(int* iParam0, bool bParam1, int iParam2)
+void func_50(int* iParam0, bool bParam1, bool bParam2)
 {
 	switch (iParam0->f_2)
 	{
 		case joaat("akula"):
 		case joaat("annihilator2"):
-			VEHICLE::_0xB251E0B33E58B424(iParam0->f_1, !bParam1, iParam2);
+			VEHICLE::_SET_DEPLOY_HELI_STUB_WINGS(iParam0->f_1, !bParam1, bParam2);
 			break;
 	}
 }
@@ -1040,7 +1040,7 @@ bool func_53(int* iParam0)
 
 bool func_54(int* iParam0)
 {
-	return ((func_40(iParam0) && iParam0->f_3 == PLAYER::PLAYER_PED_ID()) || VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0->f_1, -1, 0) == PLAYER::PLAYER_PED_ID());
+	return ((func_40(iParam0) && iParam0->f_3 == PLAYER::PLAYER_PED_ID()) || VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0->f_1, -1, false) == PLAYER::PLAYER_PED_ID());
 }
 
 void func_55(int* iParam0)
@@ -1524,7 +1524,7 @@ void func_69(int* iParam0)
 	{
 		if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iParam0->f_1, -1, false))
 		{
-			iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0->f_1, -1, 0);
+			iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0->f_1, -1, false);
 			if ((ENTITY::DOES_ENTITY_EXIST(iVar2) && !ENTITY::IS_ENTITY_DEAD(iVar2, false)) && PED::IS_PED_A_PLAYER(iVar2))
 			{
 				iParam0->f_3 = iVar2;
@@ -1589,7 +1589,7 @@ bool func_72(int* iParam0)
 		{
 			case joaat("akula"):
 			case joaat("annihilator2"):
-				bVar0 = !VEHICLE::_0xAEF12960FA943792(iParam0->f_1);
+				bVar0 = !VEHICLE::_ARE_HELI_STUB_WINGS_DEPLOYED(iParam0->f_1);
 				break;
 		}
 	}
@@ -1664,7 +1664,7 @@ int func_79(int iParam0, bool bParam1)
 					iVar3 = (iVar2 - 1);
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iVar0, iVar3, false))
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, 0) == iParam0)
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, false) == iParam0)
 						{
 							return iVar3;
 						}

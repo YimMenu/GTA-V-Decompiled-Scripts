@@ -1338,7 +1338,7 @@ int func_20(int iParam0, int iParam1)
 	int iVar0;
 	
 	WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, true);
-	if (iVar0 == joaat("WEAPON_PETROLCAN"))
+	if (iVar0 == joaat("weapon_petrolcan"))
 	{
 		if (PED::IS_PED_SHOOTING(iParam0))
 		{
@@ -1436,17 +1436,17 @@ int func_23(int iParam0)
 	{
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(iParam0, false))
 		{
-			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, 0) != 0)
+			if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, false) != 0)
 			{
 				if (WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar0, true))
 				{
-					if (iVar0 == joaat("WEAPON_STICKYBOMB"))
+					if (iVar0 == joaat("weapon_stickybomb"))
 					{
 						if (func_19(PLAYER::PLAYER_PED_ID(), iParam0, 1) < 40f)
 						{
 							if (PLAYER::GET_ENTITY_PLAYER_IS_FREE_AIMING_AT(PLAYER::PLAYER_ID(), &iVar1))
 							{
-								if ((ENTITY::IS_ENTITY_A_VEHICLE(iVar1) && ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(iVar1) == iParam0) || (ENTITY::IS_ENTITY_A_PED(iVar1) && ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(iVar1) == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, 0)))
+								if ((ENTITY::IS_ENTITY_A_VEHICLE(iVar1) && ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(iVar1) == iParam0) || (ENTITY::IS_ENTITY_A_PED(iVar1) && ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(iVar1) == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, false)))
 								{
 									if ((PED::IS_PED_ON_FOOT(PLAYER::PLAYER_PED_ID()) && PAD::IS_CONTROL_PRESSED(0, 24)) || (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && PAD::IS_CONTROL_PRESSED(0, 69)))
 									{
@@ -1498,7 +1498,7 @@ bool func_25(var uParam0, int iParam1)
 
 void func_26(int iParam0)
 {
-	WEAPON::GIVE_WEAPON_TO_PED(*iParam0, joaat("WEAPON_ASSAULTSHOTGUN"), -1, false, true);
+	WEAPON::GIVE_WEAPON_TO_PED(*iParam0, joaat("weapon_assaultshotgun"), -1, false, true);
 	PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(*iParam0, true);
 	PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0, 13, true);
 	PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0, 0, true);
@@ -1876,7 +1876,7 @@ void func_31(int iParam0)
 	{
 		TASK::TASK_SHOOT_AT_ENTITY(Local_318.f_64[iParam0], PLAYER::PLAYER_PED_ID(), -1, 0);
 		PED::SET_PED_SEEING_RANGE(Local_318.f_64[iParam0], 1000f);
-		PED::_0xF1C03A5352243A30(Local_318.f_64[iParam0]);
+		PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(Local_318.f_64[iParam0]);
 		Local_318.f_53[iParam0] = 1;
 		if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) == 0)
 		{
@@ -2403,7 +2403,7 @@ int func_47()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -2717,7 +2717,7 @@ void func_67()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(Local_629.f_27[iVar0]) && !ENTITY::IS_ENTITY_DEAD(Local_629.f_27[iVar0], false))
 		{
-			WEAPON::GIVE_WEAPON_TO_PED(Local_629.f_27[iVar0], joaat("WEAPON_ASSAULTRIFLE"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(Local_629.f_27[iVar0], joaat("weapon_assaultrifle"), -1, true, true);
 			ENTITY::SET_ENTITY_LOD_DIST(Local_629.f_27[iVar0], 1000);
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_629.f_27[iVar0], -183807561);
 			PED::_0xA9B61A329BFDCBEA(Local_629.f_27[iVar0], false);
@@ -2762,7 +2762,7 @@ void func_68()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(Local_629.f_31[iVar0]))
 		{
-			WEAPON::GIVE_WEAPON_TO_PED(Local_629.f_31[iVar0], joaat("WEAPON_ASSAULTRIFLE"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(Local_629.f_31[iVar0], joaat("weapon_assaultrifle"), -1, true, true);
 			ENTITY::SET_ENTITY_LOD_DIST(Local_629.f_31[iVar0], 500);
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_629.f_31[iVar0], -183807561);
 			PED::SET_PED_STEERS_AROUND_PEDS(Local_629.f_31[iVar0], false);
@@ -2970,7 +2970,7 @@ void func_72()
 			PED::SET_PED_ACCURACY(Local_318.f_64[iVar0], 20);
 			PED::SET_PED_COMBAT_RANGE(Local_318.f_64[iVar0], 2);
 			PED::SET_PED_COMBAT_ATTRIBUTES(Local_318.f_64[iVar0], 23, false);
-			WEAPON::GIVE_WEAPON_TO_PED(Local_318.f_64[iVar0], joaat("WEAPON_SNIPERRIFLE"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(Local_318.f_64[iVar0], joaat("weapon_sniperrifle"), -1, true, true);
 			ENTITY::SET_ENTITY_LOD_DIST(Local_318.f_64[iVar0], 1000);
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_318.f_64[iVar0], true);
 			PED::SET_PED_SEEING_RANGE(Local_318.f_64[iVar0], 1000f);

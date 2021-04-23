@@ -618,15 +618,15 @@ void func_9()
 			{
 				iVar3 = 0;
 				WEAPON::GET_CURRENT_PED_WEAPON(uLocal_284[iVar0], &iVar3, true);
-				if (iVar3 == joaat("WEAPON_MOLOTOV"))
+				if (iVar3 == joaat("weapon_molotov"))
 				{
-					if (WEAPON::HAS_PED_GOT_WEAPON(uLocal_284[iVar0], joaat("WEAPON_MICROSMG"), false))
+					if (WEAPON::HAS_PED_GOT_WEAPON(uLocal_284[iVar0], joaat("weapon_microsmg"), false))
 					{
-						WEAPON::SET_CURRENT_PED_WEAPON(uLocal_284[iVar0], joaat("WEAPON_MICROSMG"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(uLocal_284[iVar0], joaat("weapon_microsmg"), true);
 					}
 					else
 					{
-						WEAPON::GIVE_WEAPON_TO_PED(uLocal_284[iVar0], joaat("WEAPON_MICROSMG"), -1, true, true);
+						WEAPON::GIVE_WEAPON_TO_PED(uLocal_284[iVar0], joaat("weapon_microsmg"), -1, true, true);
 					}
 				}
 			}
@@ -1049,7 +1049,7 @@ int func_20()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -1504,11 +1504,11 @@ void func_39(int iParam0, struct<3> Param1)
 	if (!func_42(Param1))
 	{
 		WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar1, true);
-		if (iVar0 == joaat("WEAPON_MOLOTOV"))
+		if (iVar0 == joaat("weapon_molotov"))
 		{
-			if (iVar1 != joaat("WEAPON_MOLOTOV"))
+			if (iVar1 != joaat("weapon_molotov"))
 			{
-				WEAPON::SET_CURRENT_PED_WEAPON(iParam0, joaat("WEAPON_MOLOTOV"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(iParam0, joaat("weapon_molotov"), true);
 			}
 			if (TASK::GET_SCRIPT_TASK_STATUS(iParam0, 242628503) != 1 && TASK::GET_SCRIPT_TASK_STATUS(iParam0, 242628503) != 0)
 			{
@@ -1752,15 +1752,15 @@ void func_45()
 			{
 				iVar17 = 0;
 				WEAPON::GET_CURRENT_PED_WEAPON(uLocal_284[iVar0], &iVar17, true);
-				if (iVar17 == joaat("WEAPON_MOLOTOV"))
+				if (iVar17 == joaat("weapon_molotov"))
 				{
-					if (WEAPON::HAS_PED_GOT_WEAPON(uLocal_284[iVar0], joaat("WEAPON_MICROSMG"), false))
+					if (WEAPON::HAS_PED_GOT_WEAPON(uLocal_284[iVar0], joaat("weapon_microsmg"), false))
 					{
-						WEAPON::SET_CURRENT_PED_WEAPON(uLocal_284[iVar0], joaat("WEAPON_MICROSMG"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(uLocal_284[iVar0], joaat("weapon_microsmg"), true);
 					}
 					else
 					{
-						WEAPON::GIVE_WEAPON_TO_PED(uLocal_284[iVar0], joaat("WEAPON_MICROSMG"), -1, true, true);
+						WEAPON::GIVE_WEAPON_TO_PED(uLocal_284[iVar0], joaat("weapon_microsmg"), -1, true, true);
 					}
 				}
 			}
@@ -1842,7 +1842,7 @@ void func_45()
 						}
 						else
 						{
-							iVar18 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(PED::GET_VEHICLE_PED_IS_IN(uLocal_284[iVar0], false), -1, 0);
+							iVar18 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(PED::GET_VEHICLE_PED_IS_IN(uLocal_284[iVar0], false), -1, false);
 							if (!ENTITY::DOES_ENTITY_EXIST(iVar18) || PED::IS_PED_INJURED(iVar18))
 							{
 								if (!func_38(uLocal_284[iVar0], 355471868, 1))
@@ -1959,7 +1959,7 @@ int func_46(int iParam0, bool bParam1)
 					iVar3 = (iVar2 - 1);
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iVar0, iVar3, false))
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, 0) == iParam0)
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, false) == iParam0)
 						{
 							return iVar3;
 						}
@@ -2191,7 +2191,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -543.6415f, 303.5388f, 82.0202f };
 					uParam0->f_3 = 231.5559f;
 					uParam0->f_4 = { 0f, 0f, 0f };
-					uParam0->f_7 = joaat("WEAPON_PUMPSHOTGUN");
+					uParam0->f_7 = joaat("weapon_pumpshotgun");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
@@ -2200,7 +2200,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -563.5045f, 303.3635f, 82.192f };
 					uParam0->f_3 = 191.6703f;
 					uParam0->f_4 = { -561.9358f, 293.7914f, 84.1827f };
-					uParam0->f_7 = joaat("WEAPON_MICROSMG");
+					uParam0->f_7 = joaat("weapon_microsmg");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = -1;
 					break;
@@ -2209,7 +2209,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -547.9926f, 299.531f, 82.0218f };
 					uParam0->f_3 = 170.2791f;
 					uParam0->f_4 = { -550.0999f, 292.7203f, 87.8903f };
-					uParam0->f_7 = joaat("WEAPON_ASSAULTRIFLE");
+					uParam0->f_7 = joaat("weapon_assaultrifle");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
@@ -2218,7 +2218,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -551.7525f, 301.2135f, 82.1226f };
 					uParam0->f_3 = 132.7229f;
 					uParam0->f_4 = { -561.2323f, 294.0457f, 87.6588f };
-					uParam0->f_7 = joaat("WEAPON_MICROSMG");
+					uParam0->f_7 = joaat("weapon_microsmg");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = -1;
 					break;
@@ -2227,7 +2227,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -549.7384f, 303.0894f, 82.0981f };
 					uParam0->f_3 = 167.5811f;
 					uParam0->f_4 = { -552.8337f, 292.7388f, 88.2295f };
-					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
+					uParam0->f_7 = joaat("weapon_molotov");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = 0;
 					break;
@@ -2236,7 +2236,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -558.4697f, 303.0401f, 82.2333f };
 					uParam0->f_3 = 161.0839f;
 					uParam0->f_4 = { -561.9985f, 293.9765f, 87.8096f };
-					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
+					uParam0->f_7 = joaat("weapon_molotov");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = 0;
 					break;
@@ -2250,7 +2250,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { 231.2834f, 345.2137f, 104.3893f };
 					uParam0->f_3 = 324.6404f;
 					uParam0->f_4 = { 0f, 0f, 0f };
-					uParam0->f_7 = joaat("WEAPON_SAWNOFFSHOTGUN");
+					uParam0->f_7 = joaat("weapon_sawnoffshotgun");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
@@ -2259,7 +2259,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { 236.5094f, 339.3164f, 104.5298f };
 					uParam0->f_3 = 112.7911f;
 					uParam0->f_4 = { 230.1282f, 337.069f, 106.8048f };
-					uParam0->f_7 = joaat("WEAPON_MICROSMG");
+					uParam0->f_7 = joaat("weapon_microsmg");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = -1;
 					break;
@@ -2268,7 +2268,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { 224.3295f, 348.2992f, 104.4469f };
 					uParam0->f_3 = 165.7146f;
 					uParam0->f_4 = { 221.6486f, 340.3152f, 106.6212f };
-					uParam0->f_7 = joaat("WEAPON_ASSAULTRIFLE");
+					uParam0->f_7 = joaat("weapon_assaultrifle");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = -1;
 					break;
@@ -2277,7 +2277,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { 234.1038f, 341.6698f, 104.5309f };
 					uParam0->f_3 = 110.0142f;
 					uParam0->f_4 = { 223.9347f, 338.3914f, 106.8137f };
-					uParam0->f_7 = joaat("WEAPON_MICROSMG");
+					uParam0->f_7 = joaat("weapon_microsmg");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
@@ -2286,7 +2286,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { 228.9968f, 344.3681f, 104.5384f };
 					uParam0->f_3 = 153.6073f;
 					uParam0->f_4 = { 224.4416f, 336.0886f, 106.1191f };
-					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
+					uParam0->f_7 = joaat("weapon_molotov");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = 0;
 					break;
@@ -2295,7 +2295,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { 221.382f, 346.3744f, 104.5675f };
 					uParam0->f_3 = 165.8422f;
 					uParam0->f_4 = { 219.6116f, 340.9911f, 106.4532f };
-					uParam0->f_7 = joaat("WEAPON_MICROSMG");
+					uParam0->f_7 = joaat("weapon_microsmg");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = 0;
 					break;
@@ -2309,7 +2309,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -325.1079f, 6263.833f, 30.4151f };
 					uParam0->f_3 = 195.9702f;
 					uParam0->f_4 = { 0f, 0f, 0f };
-					uParam0->f_7 = joaat("WEAPON_SAWNOFFSHOTGUN");
+					uParam0->f_7 = joaat("weapon_sawnoffshotgun");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
@@ -2318,7 +2318,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -312.9843f, 6250.115f, 30.4899f };
 					uParam0->f_3 = 319.1074f;
 					uParam0->f_4 = { -308.3476f, 6254.857f, 32.6941f };
-					uParam0->f_7 = joaat("WEAPON_ASSAULTRIFLE");
+					uParam0->f_7 = joaat("weapon_assaultrifle");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = 0;
 					break;
@@ -2327,7 +2327,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -326.1756f, 6268.338f, 30.4714f };
 					uParam0->f_3 = 261.9836f;
 					uParam0->f_4 = { -312.8552f, 6265.857f, 43.5835f };
-					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
+					uParam0->f_7 = joaat("weapon_molotov");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = -1;
 					break;
@@ -2336,7 +2336,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -323.9344f, 6259.659f, 30.3539f };
 					uParam0->f_3 = 292.4941f;
 					uParam0->f_4 = { -313.3472f, 6263.395f, 42.7414f };
-					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
+					uParam0->f_7 = joaat("weapon_molotov");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = 0;
 					break;
@@ -2345,7 +2345,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -318.7812f, 6259.576f, 30.5161f };
 					uParam0->f_3 = 295.0701f;
 					uParam0->f_4 = { -313.766f, 6261.479f, 32.6516f };
-					uParam0->f_7 = joaat("WEAPON_MICROSMG");
+					uParam0->f_7 = joaat("weapon_microsmg");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = -1;
 					break;
@@ -2354,7 +2354,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -314.925f, 6255.542f, 30.5164f };
 					uParam0->f_3 = 309.7791f;
 					uParam0->f_4 = { -310.572f, 6258.45f, 32.6648f };
-					uParam0->f_7 = joaat("WEAPON_PUMPSHOTGUN");
+					uParam0->f_7 = joaat("weapon_pumpshotgun");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
@@ -2368,7 +2368,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -2215.32f, 4275.046f, 46.475f };
 					uParam0->f_3 = 16.955f;
 					uParam0->f_4 = { 0f, 0f, 0f };
-					uParam0->f_7 = joaat("WEAPON_PUMPSHOTGUN");
+					uParam0->f_7 = joaat("weapon_pumpshotgun");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
@@ -2377,7 +2377,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -2195.425f, 4262.31f, 47.2741f };
 					uParam0->f_3 = 241.4366f;
 					uParam0->f_4 = { -2185.362f, 4256.376f, 48.4082f };
-					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
+					uParam0->f_7 = joaat("weapon_molotov");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = 0;
 					break;
@@ -2386,7 +2386,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -2200.848f, 4268.19f, 47.3093f };
 					uParam0->f_3 = 331.1949f;
 					uParam0->f_4 = { -2196.575f, 4275.129f, 49.0669f };
-					uParam0->f_7 = joaat("WEAPON_ASSAULTRIFLE");
+					uParam0->f_7 = joaat("weapon_assaultrifle");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
@@ -2395,7 +2395,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -2202.818f, 4294.149f, 47.4518f };
 					uParam0->f_3 = 263.7257f;
 					uParam0->f_4 = { -2192.783f, 4289.572f, 50.3251f };
-					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
+					uParam0->f_7 = joaat("weapon_molotov");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = 0;
 					break;
@@ -2404,7 +2404,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -2196.271f, 4265.064f, 47.3446f };
 					uParam0->f_3 = 325.4524f;
 					uParam0->f_4 = { -2191.183f, 4271.747f, 49.867f };
-					uParam0->f_7 = joaat("WEAPON_PUMPSHOTGUN");
+					uParam0->f_7 = joaat("weapon_pumpshotgun");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = -1;
 					break;
@@ -2413,7 +2413,7 @@ void func_57(var uParam0, int iParam1, int iParam2)
 					*uParam0 = { -2204.492f, 4290.059f, 47.3773f };
 					uParam0->f_3 = 269.5739f;
 					uParam0->f_4 = { -2193.017f, 4292.669f, 54.873f };
-					uParam0->f_7 = joaat("WEAPON_MICROSMG");
+					uParam0->f_7 = joaat("weapon_microsmg");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = -1;
 					break;

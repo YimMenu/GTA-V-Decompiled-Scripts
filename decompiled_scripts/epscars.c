@@ -1275,10 +1275,10 @@ void func_19()
 	int iVar0;
 	
 	iLocal_285 = 0;
-	STATS::STAT_GET_INT(joaat("NUM_EPSILON_STEP"), &iVar0, -1);
+	STATS::STAT_GET_INT(joaat("num_epsilon_step"), &iVar0, -1);
 	if (iVar0 < (6 + func_3()))
 	{
-		STATS::STAT_SET_INT(joaat("NUM_EPSILON_STEP"), (6 + func_3()), true);
+		STATS::STAT_SET_INT(joaat("num_epsilon_step"), (6 + func_3()), true);
 		func_20(23, (6 + func_3()));
 	}
 }
@@ -1637,7 +1637,7 @@ int func_32()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -2668,7 +2668,7 @@ void func_61(int iParam0)
 					}
 					if (func_81(iVar0) && VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar0) > 0)
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, 0) != PLAYER::PLAYER_PED_ID())
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, false) != PLAYER::PLAYER_PED_ID())
 						{
 							func_82(3);
 							return;
@@ -2826,7 +2826,7 @@ void func_67(int iParam0)
 			}
 			if (func_81(iVar0) && VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar0) > 0)
 			{
-				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, 0) != PLAYER::PLAYER_PED_ID())
+				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, false) != PLAYER::PLAYER_PED_ID())
 				{
 					func_82(3);
 					return;
@@ -3297,10 +3297,10 @@ void func_96()
 		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_284);
 		iLocal_284 = 0;
 	}
-	STATS::STAT_GET_INT(joaat("NUM_EPSILON_STEP"), &iVar0, -1);
+	STATS::STAT_GET_INT(joaat("num_epsilon_step"), &iVar0, -1);
 	if (iVar0 < (6 + func_3()))
 	{
-		STATS::STAT_SET_INT(joaat("NUM_EPSILON_STEP"), (6 + func_3()), true);
+		STATS::STAT_SET_INT(joaat("num_epsilon_step"), (6 + func_3()), true);
 		func_20(23, (6 + func_3()));
 	}
 	SCRIPT::TERMINATE_THIS_THREAD();

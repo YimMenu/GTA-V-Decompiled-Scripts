@@ -686,7 +686,7 @@ void __EntryFunction__()
 				{
 					GRAPHICS::DRAW_DEBUG_TEXT_2D("WAIT_MOVE_BACK_TO_INITIAL_POSITION TASK_PLAY_ANIM", 0.02f, 0.26f, 0f, 0, 0, 255, 255);
 					TASK::TASK_PLAY_ANIM(iLocal_240, &cLocal_340, "idle_intro", 4f, -4f, -1, 0, 0f, false, false, false);
-					PED::_0x2208438012482A1A(iLocal_240, false, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_240, false, false);
 					func_118();
 					iLocal_250 = 0;
 				}
@@ -961,7 +961,7 @@ void __EntryFunction__()
 						}
 						func_16(&sVar13);
 						TASK::TASK_PLAY_ANIM(iLocal_240, &Local_404, &sVar13, 1000f, -1000f, -1, 0, 0f, false, false, false);
-						PED::_0x2208438012482A1A(iLocal_240, false, false);
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_240, false, false);
 						iLocal_250 = 12;
 					}
 				}
@@ -1954,7 +1954,7 @@ int func_43()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -2183,7 +2183,7 @@ void func_54()
 	Local_372 = { Local_388 };
 	func_56(&Local_356);
 	TASK::TASK_PLAY_ANIM(iLocal_240, &Local_388, &Var8, 1000f, -8f, -1, 0, 0f, false, false, false);
-	PED::_0x2208438012482A1A(iLocal_240, false, false);
+	PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_240, false, false);
 	func_55(Global_111803[iLocal_251]);
 }
 
@@ -2974,7 +2974,7 @@ void func_101(int iParam0, bool bParam1)
 	{
 		if (!PED::IS_PED_INJURED(iLocal_240) && !PED::IS_PED_DEAD_OR_DYING(iLocal_240, true))
 		{
-			PED::_0x2208438012482A1A(iLocal_240, false, false);
+			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_240, false, false);
 		}
 	}
 }

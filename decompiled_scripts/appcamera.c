@@ -258,7 +258,7 @@ void __EntryFunction__()
 			{
 				Global_22038 = 1;
 			}
-			else if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_149, -1, 0) == PLAYER::PLAYER_PED_ID())
+			else if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_149, -1, false) == PLAYER::PLAYER_PED_ID())
 			{
 				if (ENTITY::GET_ENTITY_UPRIGHT_VALUE(iLocal_149) > 0f)
 				{
@@ -1091,12 +1091,12 @@ int func_3()
 
 void func_4()
 {
-	iLocal_106 = GRAPHICS::_0xF5BED327CEA362B1(0);
+	iLocal_106 = GRAPHICS::GET_STATUS_OF_SORTED_LIST_OPERATION(0);
 	switch (iLocal_106)
 	{
 		case 0:
 			iLocal_103 = 0;
-			iLocal_109 = GRAPHICS::_GET_CURRENT_NUMBER_OF_PHOTOS();
+			iLocal_109 = GRAPHICS::GET_CURRENT_NUMBER_OF_CLOUD_PHOTOS();
 			iLocal_110 = GRAPHICS::GET_MAXIMUM_NUMBER_OF_CLOUD_PHOTOS();
 			if (iLocal_104 == 1)
 			{
@@ -1245,15 +1245,15 @@ void func_5()
 		{
 			func_1(0);
 			MISC::SET_GAME_PAUSED(false);
-			GRAPHICS::_0x1072F115DAB0717E(false, false);
+			GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(false, false);
 			SYSTEM::WAIT(0);
 			RECORDING::_STOP_RECORDING_THIS_FRAME();
 			func_152();
 			SYSTEM::WAIT(0);
 			RECORDING::_STOP_RECORDING_THIS_FRAME();
 			func_152();
-			GRAPHICS::_0xD801CC02177FA3F1();
-			GRAPHICS::_0x6A12D88881435DCA();
+			GRAPHICS::FREE_MEMORY_FOR_HIGH_QUALITY_PHOTO();
+			GRAPHICS::FREE_MEMORY_FOR_LOW_QUALITY_PHOTO();
 			Global_22042 = 1;
 			iLocal_143 = 0;
 			iLocal_126 = 0;
@@ -1871,7 +1871,7 @@ void func_10()
 	{
 		fLocal_75 = CAM::GET_GAMEPLAY_CAM_RELATIVE_PITCH();
 		fLocal_76 = CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING();
-		GRAPHICS::_0x1072F115DAB0717E(false, false);
+		GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(false, false);
 		MISC::SET_BIT(&Global_7551, 21);
 		AUDIO::STOP_SOUND(iLocal_112);
 		iLocal_127 = 1;
@@ -1927,15 +1927,15 @@ void func_10()
 				switch (func_11())
 				{
 					case 0:
-						STATS::STAT_INCREMENT(joaat("SP0_NO_PHOTOS_TAKEN"), 1f);
+						STATS::STAT_INCREMENT(joaat("sp0_no_photos_taken"), 1f);
 						break;
 					
 					case 1:
-						STATS::STAT_INCREMENT(joaat("SP1_NO_PHOTOS_TAKEN"), 1f);
+						STATS::STAT_INCREMENT(joaat("sp1_no_photos_taken"), 1f);
 						break;
 					
 					case 2:
-						STATS::STAT_INCREMENT(joaat("SP2_NO_PHOTOS_TAKEN"), 1f);
+						STATS::STAT_INCREMENT(joaat("sp2_no_photos_taken"), 1f);
 						break;
 				}
 				func_20();
@@ -1948,15 +1948,15 @@ void func_10()
 	{
 		if (func_106(2, Global_19653, 0))
 		{
-			GRAPHICS::_0x1072F115DAB0717E(false, false);
+			GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(false, false);
 			SYSTEM::WAIT(0);
 			RECORDING::_STOP_RECORDING_THIS_FRAME();
 			func_152();
 			SYSTEM::WAIT(0);
 			RECORDING::_STOP_RECORDING_THIS_FRAME();
 			func_152();
-			GRAPHICS::_0xD801CC02177FA3F1();
-			GRAPHICS::_0x6A12D88881435DCA();
+			GRAPHICS::FREE_MEMORY_FOR_HIGH_QUALITY_PHOTO();
+			GRAPHICS::FREE_MEMORY_FOR_LOW_QUALITY_PHOTO();
 			Global_22042 = 1;
 			iLocal_143 = 0;
 			iLocal_126 = 1;
@@ -9315,7 +9315,7 @@ int func_113(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -9752,7 +9752,7 @@ void func_130()
 
 void func_131()
 {
-	GRAPHICS::_0x1072F115DAB0717E(false, false);
+	GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(false, false);
 	iLocal_121 = 1;
 	iLocal_122 = 1;
 	iLocal_123 = 1;
@@ -9963,7 +9963,7 @@ int func_140()
 			{
 				return 1;
 			}
-			else if (!VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) == PLAYER::PLAYER_PED_ID())
+			else if (!VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) == PLAYER::PLAYER_PED_ID())
 			{
 				return 1;
 			}
@@ -10413,7 +10413,7 @@ int func_163(int iParam0, bool bParam1)
 					iVar3 = (iVar2 - 1);
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iVar0, iVar3, false))
 					{
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, 0) == iParam0)
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, iVar3, false) == iParam0)
 						{
 							return iVar3;
 						}

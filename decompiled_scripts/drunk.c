@@ -609,8 +609,8 @@ void func_12(char* sParam0, var uParam1, char* sParam2)
 	ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 	MISC::SET_GAME_PAUSED(false);
 	MISC::CLEAR_AREA(uParam1->f_5, 15f, true, false, false, false);
-	PED::_0x4759CC730F947C81();
-	VEHICLE::_0x48ADC8A773564670();
+	PED::INSTANTLY_FILL_PED_POPULATION();
+	VEHICLE::INSTANTLY_FILL_VEHICLE_POPULATION();
 	func_51();
 	while (func_50())
 	{
@@ -838,7 +838,7 @@ void func_12(char* sParam0, var uParam1, char* sParam2)
 					{
 						case -1871534317:
 							PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -1871534317, true, 0, false);
-							CAM::_RENDER_FIRST_PERSON_CAM(false, 0f, 3, 0);
+							CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 							break;
 						
 						case -668482597:
@@ -1506,7 +1506,7 @@ int func_32()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -2063,10 +2063,10 @@ int func_57(struct<3> Param0, float fParam3, int iParam4, int iParam5)
 				}
 				MISC::SET_GAME_PAUSED(false);
 				SYSTEM::SETTIMERA(0);
-				PED::_0x4759CC730F947C81();
+				PED::INSTANTLY_FILL_PED_POPULATION();
 				if (iParam5 == 1)
 				{
-					VEHICLE::_0x48ADC8A773564670();
+					VEHICLE::INSTANTLY_FILL_VEHICLE_POPULATION();
 				}
 				else
 				{
@@ -2075,7 +2075,7 @@ int func_57(struct<3> Param0, float fParam3, int iParam4, int iParam5)
 				MISC::POPULATE_NOW();
 			}
 		}
-		while ((!VEHICLE::_0x91D6DD290888CBAB() && !func_58()) && SYSTEM::TIMERA() < 1500)
+		while ((!VEHICLE::_HAS_FILLED_VEHICLE_POPULATION() && !func_58()) && SYSTEM::TIMERA() < 1500)
 		{
 			SYSTEM::WAIT(0);
 		}
@@ -2779,9 +2779,9 @@ void func_91(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -3005,7 +3005,7 @@ void func_96(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_97(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_97(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -3948,7 +3948,7 @@ int func_127(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -4164,7 +4164,7 @@ int func_137()
 	{
 		return 0;
 	}
-	if (!VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) == Local_43.f_1)
+	if (!VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) == Local_43.f_1)
 	{
 		return 0;
 	}
@@ -4236,7 +4236,7 @@ void func_140()
 	if (PED::IS_PED_IN_ANY_VEHICLE(Local_43.f_1, false))
 	{
 		iVar1 = PED::GET_VEHICLE_PED_IS_IN(Local_43.f_1, false);
-		iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, 0);
+		iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, false);
 		if (!iVar2 == Local_43.f_1)
 		{
 			return;
@@ -4430,7 +4430,7 @@ void func_144()
 		return;
 	}
 	iVar1 = PED::GET_VEHICLE_PED_IS_IN(Local_43.f_1, false);
-	iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, 0);
+	iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, false);
 	if (iVar2 == Local_43.f_1)
 	{
 		func_145();
@@ -4526,7 +4526,7 @@ void func_147()
 		if (!bLocal_50)
 		{
 		}
-		iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(Local_43.f_4, -1, 0);
+		iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(Local_43.f_4, -1, false);
 		if (iVar2 == Local_43.f_1)
 		{
 			func_145();
@@ -5026,9 +5026,9 @@ void func_166()
 			iVar2 = 0;
 			iVar3 = 0;
 			iVar4 = 0;
-			STATS::STAT_GET_INT(joaat("SP0_SP_NUM_TIMES_DRUNK"), &iVar2, -1);
-			STATS::STAT_GET_INT(joaat("SP1_SP_NUM_TIMES_DRUNK"), &iVar3, -1);
-			STATS::STAT_GET_INT(joaat("SP2_SP_NUM_TIMES_DRUNK"), &iVar4, -1);
+			STATS::STAT_GET_INT(joaat("sp0_sp_num_times_drunk"), &iVar2, -1);
+			STATS::STAT_GET_INT(joaat("sp1_sp_num_times_drunk"), &iVar3, -1);
+			STATS::STAT_GET_INT(joaat("sp2_sp_num_times_drunk"), &iVar4, -1);
 			iVar5 = ((iVar2 + iVar3) + iVar4);
 			iVar6 = (iVar5 / 10) + 1 * 10;
 			if (iVar5 + 1 >= iVar6)
@@ -5038,15 +5038,15 @@ void func_166()
 			switch (func_67())
 			{
 				case 0:
-					STATS::STAT_SET_INT(joaat("SP0_SP_NUM_TIMES_DRUNK"), iVar2 + 1, true);
+					STATS::STAT_SET_INT(joaat("sp0_sp_num_times_drunk"), iVar2 + 1, true);
 					break;
 				
 				case 1:
-					STATS::STAT_SET_INT(joaat("SP1_SP_NUM_TIMES_DRUNK"), iVar3 + 1, true);
+					STATS::STAT_SET_INT(joaat("sp1_sp_num_times_drunk"), iVar3 + 1, true);
 					break;
 				
 				case 2:
-					STATS::STAT_SET_INT(joaat("SP2_SP_NUM_TIMES_DRUNK"), iVar4 + 1, true);
+					STATS::STAT_SET_INT(joaat("sp2_sp_num_times_drunk"), iVar4 + 1, true);
 					break;
 				}
 		}
@@ -5325,7 +5325,7 @@ void func_179()
 	if (PED::IS_PED_IN_ANY_VEHICLE(Local_43.f_1, false))
 	{
 		iVar1 = PED::GET_VEHICLE_PED_IS_IN(Local_43.f_1, false);
-		iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, 0);
+		iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar1, -1, false);
 		if (!Local_43.f_1 == iVar2)
 		{
 			return;

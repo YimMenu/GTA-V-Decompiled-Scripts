@@ -671,14 +671,14 @@ void func_1()
 			break;
 		
 		case 8:
-			if (STATS::STAT_GET_INT(joaat("NUM_SH_TV_WATCHED"), &iLocal_320, -1))
+			if (STATS::STAT_GET_INT(joaat("num_sh_tv_watched"), &iLocal_320, -1))
 			{
-				STATS::STAT_SET_INT(joaat("NUM_SH_TV_WATCHED"), iLocal_320 + 1, true);
+				STATS::STAT_SET_INT(joaat("num_sh_tv_watched"), iLocal_320 + 1, true);
 			}
 			BRAIN::_0x6D6840CEE8845831("chop");
 			if (func_6(iLocal_321))
 			{
-				CAM::_RENDER_FIRST_PERSON_CAM(false, 0f, 3, 0);
+				CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 			}
 			PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 			iLocal_51 = 0;
@@ -1177,7 +1177,7 @@ void func_21(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4
 		Global_61723 = 0;
 		if (bParam1)
 		{
-			GRAPHICS::_0x03FC694AE06C5A20();
+			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);
@@ -1352,7 +1352,7 @@ int func_31(bool bParam0, bool bParam1, bool bParam2)
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(iVar0, false))
 			{
-				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) != PLAYER::PLAYER_PED_ID())
+				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) != PLAYER::PLAYER_PED_ID())
 				{
 					return 0;
 				}

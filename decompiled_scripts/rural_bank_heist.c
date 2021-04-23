@@ -1425,8 +1425,8 @@ void __EntryFunction__()
 	Local_73 = { 0f, 270f, 180f };
 	Local_82 = { 0.05f, 0f, 0.58f };
 	Local_85 = { 0f, 0f, 0f };
-	iLocal_91 = joaat("WEAPON_CARBINERIFLE");
-	iLocal_92 = joaat("WEAPON_COMBATMG");
+	iLocal_91 = joaat("weapon_carbinerifle");
+	iLocal_92 = joaat("weapon_combatmg");
 	Local_535 = { -137.9823f, 6460.204f, 30.5964f };
 	Local_538 = { -126.8281f, 6466.896f, 30.44632f };
 	iLocal_675 = -1;
@@ -1437,8 +1437,8 @@ void __EntryFunction__()
 	Local_982 = { -145.6f, 6435.7f, 31.5f };
 	Local_985 = { -147.1f, 6436.9f, 31.6f };
 	iLocal_1562 = 1;
-	iLocal_1612 = joaat("WEAPON_MINIGUN");
-	iLocal_1613 = joaat("WEAPON_COMBATMG");
+	iLocal_1612 = joaat("weapon_minigun");
+	iLocal_1613 = joaat("weapon_combatmg");
 	iLocal_1702 = -1;
 	sLocal_1718 = "missheistpaletoscore2mcs_2_pt1";
 	iLocal_1780 = 5000;
@@ -3829,7 +3829,7 @@ void func_28(int iParam0)
 			iVar8 = 0;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "PROPS_P1_H26_8", 16);
 			iVar6 = 26;
 			iVar7 = 8;
@@ -5646,7 +5646,7 @@ bool func_37(int iParam0, int iParam1, var uParam2, var uParam3, bool bParam4, b
 					*uParam2 = 3793;
 					break;
 				
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					*uParam2 = 3794;
 					break;
 				
@@ -6579,7 +6579,7 @@ bool func_37(int iParam0, int iParam1, var uParam2, var uParam3, bool bParam4, b
 					*uParam2 = 3801;
 					break;
 				
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					*uParam2 = 3802;
 					break;
 				
@@ -7291,7 +7291,7 @@ void func_39(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar17 = (iParam1 - iParam2);
 		if (iVar17 >= 0)
 		{
-			iVar18 = FILES::_0xF3FBE2D50A6A8C28(iVar1, false);
+			iVar18 = FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar1, false);
 			if (iVar18 > iVar17)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
@@ -7312,7 +7312,7 @@ void func_39(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar37 = (iParam1 - iParam2);
 		if (iVar37 >= 0)
 		{
-			iVar38 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, true, -1, -1);
+			iVar38 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iVar1, 7, -1, true, -1, -1);
 			if (iVar38 > iVar37)
 			{
 				FILES::GET_SHOP_PED_QUERY_PROP(iVar37, &Var19);
@@ -7377,7 +7377,7 @@ void func_39(int iParam0, int iParam1, int iParam2, int iParam3)
 		iVar56 = (iParam1 - iParam2);
 		if (iVar56 >= 0)
 		{
-			iVar57 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iVar1, 7, -1, false, -1, func_40(iParam0));
+			iVar57 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iVar1, 7, -1, false, -1, func_40(iParam0));
 			if (iVar57 > iVar56)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
@@ -9178,7 +9178,7 @@ void func_50(int iParam0)
 			iVar1 = 120;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "FEET_P2_20_11", 16);
 			iVar6 = 20;
 			iVar7 = 11;
@@ -9789,7 +9789,7 @@ void func_51(int iParam0)
 			iVar1 = 80;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "LEGS_P2_21_8", 16);
 			iVar6 = 21;
 			iVar7 = 8;
@@ -11300,7 +11300,7 @@ void func_54(int iParam0)
 			iVar1 = 50;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "TORSO_P2_14_0", 16);
 			iVar6 = 14;
 			iVar7 = 0;
@@ -13276,7 +13276,7 @@ void func_58(int iParam0)
 			iVar8 = 0;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "PROPS_P1_H19_15", 16);
 			iVar6 = 19;
 			iVar7 = 15;
@@ -15866,7 +15866,7 @@ void func_68(int iParam0)
 			iVar1 = 700;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "FEET_P1_16_5", 16);
 			iVar6 = 16;
 			iVar7 = 5;
@@ -16808,7 +16808,7 @@ void func_69(int iParam0)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "LEGS_P1_20_0", 16);
 			iVar6 = 20;
 			iVar7 = 0;
@@ -19273,7 +19273,7 @@ void func_73(int iParam0)
 			iVar1 = 38;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "TORSO_P1_8_6", 16);
 			iVar6 = 8;
 			iVar7 = 6;
@@ -20421,7 +20421,7 @@ void func_77(int iParam0)
 			iVar8 = 10;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "PROPS_P0_E5_9", 16);
 			iVar6 = 5;
 			iVar7 = 9;
@@ -22968,7 +22968,7 @@ void func_87(int iParam0)
 			iVar1 = 130;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "FEET_P0_20_8", 16);
 			iVar6 = 20;
 			iVar7 = 8;
@@ -23671,7 +23671,7 @@ void func_88(int iParam0)
 			iVar1 = 15;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "LEGS_P0_18_7", 16);
 			iVar6 = 18;
 			iVar7 = 7;
@@ -24082,7 +24082,7 @@ void func_90(int iParam0)
 			iVar1 = 20;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "TORSO_P0_16_2", 16);
 			iVar6 = 16;
 			iVar7 = 2;
@@ -26026,7 +26026,7 @@ int func_99(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 	else if (iParam2 == 14)
 	{
-		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
+		FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, true, -1, -1);
 		iVar0 = FILES::_0x6CEBE002E58DEE97(iParam1);
 		if (iVar0 != -1)
 		{
@@ -26035,7 +26035,7 @@ int func_99(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 	else
 	{
-		FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_40(iParam2));
+		FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, false, -1, func_40(iParam2));
 		iVar1 = FILES::_0x96E2929292A4DB77(iParam1);
 		if (iVar1 != -1)
 		{
@@ -27286,7 +27286,7 @@ void func_104(var uParam0, int iParam1, int iParam2, int iParam3)
 	{
 		iVar0 = 4;
 	}
-	FILES::_0xF3FBE2D50A6A8C28(iVar0, false);
+	FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar0, false);
 	FILES::GET_SHOP_PED_QUERY_OUTFIT((iParam2 - iParam3), &Var1);
 	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
 	{
@@ -28216,7 +28216,7 @@ int func_120(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			return -1;
 		}
-		iVar18 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, true, -1, -1);
+		iVar18 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, true, -1, -1);
 		if (iVar18 <= iVar17)
 		{
 			return -1;
@@ -28236,7 +28236,7 @@ int func_120(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			return Global_76769.f_13[iParam2];
 		}
-		iVar37 = FILES::_GET_NUM_PROPS_FROM_OUTFIT(iParam3, 7, -1, false, -1, func_40(iParam2));
+		iVar37 = FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 7, -1, false, -1, func_40(iParam2));
 		if (iVar37 <= iVar36)
 		{
 			return -1;
@@ -33311,7 +33311,7 @@ int func_159(int iParam0, int iParam1)
 	var uVar1;
 	
 	iVar0 = Global_2552060[iParam0 /*3*/][func_33(iParam1)];
-	if (HUD::_0xEF4CED81CEBEDC6D(iVar0, &uVar1))
+	if (HUD::GET_MENU_PED_INT_STAT(iVar0, &uVar1))
 	{
 		return uVar1;
 	}
@@ -33401,12 +33401,12 @@ int func_162(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 1393 && iParam0 < 2919)
 	{
-		iVar1 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
+		iVar1 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
 		iVar2 = ((iParam0 - 1393) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 1393)) * 8) * 8;
 	}
 	else if (iParam0 >= 1361 && iParam0 < 1393)
 	{
-		iVar1 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
+		iVar1 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
 		iVar2 = ((iParam0 - 1361) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 1361)) * 8) * 8;
 	}
 	else if (iParam0 >= 3879 && iParam0 < 4143)
@@ -33499,7 +33499,7 @@ int func_162(int iParam0, int iParam1)
 		iVar1 = STATS::_GET_NGSTAT_INT_HASH((iParam0 - 30483), false, true, iParam1, "_HISLANDPSTAT_INT");
 		iVar2 = ((iParam0 - 30483) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 30483)) * 8) * 8;
 	}
-	if (!HUD::_0x90A6526CF0381030(iVar1, &iVar0, iVar2, 8))
+	if (!HUD::GET_MENU_PED_MASKED_INT_STAT(iVar1, &iVar0, iVar2, 8))
 	{
 		iVar0 = 0;
 	}
@@ -33663,11 +33663,11 @@ int func_165(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 1361 && iParam0 < 1393)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
 	}
 	else if (iParam0 >= 1393 && iParam0 < 2919)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
 	}
 	else if (iParam0 >= 4143 && iParam0 < 4207)
 	{
@@ -33894,7 +33894,7 @@ float func_169(int iParam0, int iParam1)
 	var uVar1;
 	
 	iVar0 = Global_2587374[iParam0 /*3*/][func_33(iParam1)];
-	if (HUD::_0x5FBD7095FE7AE57F(iVar0, &uVar1))
+	if (HUD::GET_MENU_PED_FLOAT_STAT(iVar0, &uVar1))
 	{
 		return uVar1;
 	}
@@ -35580,11 +35580,11 @@ void func_176(int iParam0, bool bParam1, bool bParam2, int iParam3)
 				PED::ADD_PED_DECORATION_FROM_HASHES(iParam0, joaat("mpBeach_overlays"), joaat("FM_Hair_Fuzz"));
 			}
 		}
-		iVar20 = FILES::_GET_NUM_DECORATIONS(iVar14);
+		iVar20 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(iVar14);
 		iVar19 = 0;
 		while (iVar19 < iVar20)
 		{
-			if (FILES::_GET_TATTOO_COLLECTION_DATA(iVar14, iVar19, &Var21))
+			if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iVar14, iVar19, &Var21))
 			{
 				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21))
 				{
@@ -40043,14 +40043,14 @@ int func_179()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);
@@ -42764,7 +42764,7 @@ int func_192(int iParam0, int iParam1, int iParam2)
 			}
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			switch (iParam1)
 			{
 				case 0:
@@ -43690,11 +43690,11 @@ int func_201(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -44590,7 +44590,7 @@ char* func_203(int iParam0)
 			return "LEG_LEFT_KNEE";
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "LEG_LEFT_ANKLE";
 			break;
 		
@@ -46621,7 +46621,7 @@ bool func_205(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 						func_211(sParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_006", "torsoDecal", iParam2, 100, 0);
 						break;
 					
-					case joaat("MPSV_LP0_31"):
+					case joaat("mpsv_lp0_31"):
 						func_211(sParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_009", "torsoDecal", iParam2, 100, 0);
 						break;
 					
@@ -46838,7 +46838,7 @@ bool func_205(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 						func_211(sParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_052", "torsoDecal", iParam2, 100, 0);
 						break;
 					
-					case joaat("MPSV_LP0_31"):
+					case joaat("mpsv_lp0_31"):
 						func_211(sParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_053", "torsoDecal", iParam2, 100, 0);
 						break;
 					
@@ -47043,10 +47043,10 @@ void func_206(char* sParam0, int iParam1, int iParam2, int iParam3)
 	struct<8> Var2;
 	
 	iVar0 = (iParam2 - iParam3);
-	iVar1 = FILES::_GET_NUM_DECORATIONS(iParam1);
+	iVar1 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(iParam1);
 	if (iVar1 > 0 && iVar0 < iVar1)
 	{
-		if (FILES::_GET_TATTOO_COLLECTION_DATA(iParam1, iVar0, &Var2))
+		if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iParam1, iVar0, &Var2))
 		{
 			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2))
 			{
@@ -47084,7 +47084,7 @@ int func_207()
 			return 0;
 		}
 	}
-	if (STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1))
 	{
 		if (MISC::IS_BIT_SET(iVar0, 5))
 		{
@@ -47102,7 +47102,7 @@ int func_207()
 	{
 		if (Global_150694.f_3)
 		{
-			iVar2 = joaat("MPPLY_PLAT_UP_LB_CHECK");
+			iVar2 = joaat("mpply_plat_up_lb_check");
 			if (STATS::STAT_GET_INT(iVar2, &iVar1, -1))
 			{
 				if (MISC::IS_BIT_SET(iVar1, 5))
@@ -47126,14 +47126,14 @@ int func_207()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_25())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar4, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar4, -1);
 				MISC::SET_BIT(&iVar4, 1);
 				MISC::SET_BIT(&iVar4, 3);
 				MISC::SET_BIT(&iVar4, 5);
 				MISC::SET_BIT(&Global_25, 1);
 				MISC::SET_BIT(&Global_25, 3);
 				MISC::SET_BIT(&Global_25, 5);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar4, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar4, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar4 = MISC::GET_PROFILE_SETTING(866);
@@ -47166,7 +47166,7 @@ int func_208()
 			return 0;
 		}
 	}
-	if (STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1))
 	{
 		if (MISC::IS_BIT_SET(iVar0, 6))
 		{
@@ -47184,7 +47184,7 @@ int func_208()
 	{
 		if (Global_150694.f_3)
 		{
-			iVar2 = joaat("MPPLY_PLAT_UP_LB_CHECK");
+			iVar2 = joaat("mpply_plat_up_lb_check");
 			if (STATS::STAT_GET_INT(iVar2, &iVar1, -1))
 			{
 				if (MISC::IS_BIT_SET(iVar1, 8))
@@ -49684,11 +49684,11 @@ void func_227(int iParam0, int iParam1)
 						func_252(87, 0, Global_76644);
 						func_252(88, 0, Global_76644);
 						func_252(89, 0, Global_76644);
-						iVar15 = FILES::_GET_NUM_DECORATIONS(3);
+						iVar15 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(3);
 						iVar14 = 0;
 						while (iVar14 < iVar15)
 						{
-							if (FILES::_GET_TATTOO_COLLECTION_DATA(3, iVar14, &Var16))
+							if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(3, iVar14, &Var16))
 							{
 								if (Var16.f_6 == 277073536)
 								{
@@ -49717,11 +49717,11 @@ void func_227(int iParam0, int iParam1)
 						func_252(87, 0, Global_76644);
 						func_252(88, 0, Global_76644);
 						func_252(89, 0, Global_76644);
-						iVar32 = FILES::_GET_NUM_DECORATIONS(4);
+						iVar32 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(4);
 						iVar31 = 0;
 						while (iVar31 < iVar32)
 						{
-							if (FILES::_GET_TATTOO_COLLECTION_DATA(4, iVar31, &Var33))
+							if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(4, iVar31, &Var33))
 							{
 								if (Var33.f_6 == 277073536)
 								{
@@ -49762,11 +49762,11 @@ void func_227(int iParam0, int iParam1)
 						func_252(116, 0, Global_76644);
 						func_252(117, 0, Global_76644);
 						func_252(123, 0, Global_76644);
-						iVar49 = FILES::_GET_NUM_DECORATIONS(3);
+						iVar49 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(3);
 						iVar48 = 0;
 						while (iVar48 < iVar49)
 						{
-							if (FILES::_GET_TATTOO_COLLECTION_DATA(3, iVar48, &Var50))
+							if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(3, iVar48, &Var50))
 							{
 								if (Var50.f_6 == 2140335355)
 								{
@@ -49809,11 +49809,11 @@ void func_227(int iParam0, int iParam1)
 						func_252(121, 0, Global_76644);
 						func_252(122, 0, Global_76644);
 						func_252(123, 0, Global_76644);
-						iVar66 = FILES::_GET_NUM_DECORATIONS(4);
+						iVar66 = FILES::GET_NUM_TATTOO_SHOP_DLC_ITEMS(4);
 						iVar65 = 0;
 						while (iVar65 < iVar66)
 						{
-							if (FILES::_GET_TATTOO_COLLECTION_DATA(4, iVar65, &Var67))
+							if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(4, iVar65, &Var67))
 							{
 								if (Var67.f_6 == 2140335355)
 								{
@@ -51667,7 +51667,7 @@ int func_237(int iParam0, int iParam1, int iParam2, int iParam3)
 			}
 			else if (((iParam1 >= 220 && iParam1 <= 235) && func_238()) && !FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(iVar2, joaat("BIKER_DRAW_4"), 0))
 			{
-				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
+				FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(3, 7, -1, false, -1, 8);
 				iVar13 = FILES::_0x96E2929292A4DB77(joaat("DLC_MP_BUSI_M_ACCS5_0"));
 				iVar0 = (func_100(iParam0, func_40(8)) + iVar13);
 				iVar1 = 1;
@@ -51816,7 +51816,7 @@ int func_237(int iParam0, int iParam1, int iParam2, int iParam3)
 				{
 					iVar27 = joaat("DLC_MP_BUSI_M_ACCS5_0");
 				}
-				FILES::_GET_NUM_PROPS_FROM_OUTFIT(3, 7, -1, false, -1, 8);
+				FILES::SETUP_SHOP_PED_APPAREL_QUERY_TU(3, 7, -1, false, -1, 8);
 				iVar28 = FILES::_0x96E2929292A4DB77(iVar27);
 				iVar0 = (func_100(iParam0, func_40(8)) + iVar28);
 				iVar1 = 1;
@@ -59681,7 +59681,7 @@ void func_268(int iParam0, int iParam1)
 			iVar11 = 1;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "HT_FMF_9_4", 16);
 			iVar6 = 9;
 			iVar7 = 4;
@@ -63455,7 +63455,7 @@ void func_272(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -65140,7 +65140,7 @@ void func_273(int iParam0, int iParam1)
 			iVar1 = 230;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 280;
@@ -67223,7 +67223,7 @@ void func_276(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "U_FMF_11_8", 16);
 			iVar6 = 11;
 			iVar7 = 8;
@@ -68234,7 +68234,7 @@ void func_277(int iParam0, int iParam1)
 			iVar1 = 40;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -70027,7 +70027,7 @@ void func_278(int iParam0, int iParam1)
 			iVar1 = 0;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 14;
 			iVar7 = 0;
 			iVar1 = 475;
@@ -71361,7 +71361,7 @@ void func_284(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "HT_FMM_9_4", 16);
 			iVar6 = 9;
 			iVar7 = 4;
@@ -74396,7 +74396,7 @@ void func_286(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 12;
 			iVar7 = 6;
 			iVar1 = 0;
@@ -75233,7 +75233,7 @@ void func_288(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -76919,7 +76919,7 @@ void func_289(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -79098,7 +79098,7 @@ void func_292(int iParam0, int iParam1)
 			bVar0 = true;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			StringCopy(&Var2, "SP_FMM_3_15", 16);
 			iVar6 = 4;
 			iVar7 = 15;
@@ -81319,7 +81319,7 @@ void func_293(int iParam0, int iParam1)
 			iVar1 = 3125;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 4;
 			iVar7 = 15;
 			iVar1 = 0;
@@ -82961,7 +82961,7 @@ void func_294(int iParam0, int iParam1)
 			iVar1 = SYSTEM::ROUND((SYSTEM::TO_FLOAT(iVar1) * Global_262145.f_2533[65]));
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			iVar6 = 13;
 			iVar7 = 5;
 			iVar1 = 0;
@@ -83120,7 +83120,7 @@ int func_295(int iParam0)
 			return 160;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 161;
 			break;
 		
@@ -84589,7 +84589,7 @@ int func_310(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 										iVar0 = 8;
 										break;
 									
-									case joaat("MPSV_LP0_31"):
+									case joaat("mpsv_lp0_31"):
 										iVar0 = 9;
 										break;
 									
@@ -86074,7 +86074,7 @@ bool func_328(int iParam0, bool bParam1, int iParam2, bool bParam3)
 					{
 						if (Var3.f_4[iVar1] != 0)
 						{
-							ENTITY::REMOVE_MODEL_HIDE(Var3, 10f, Var3.f_4[iVar1], 0);
+							ENTITY::REMOVE_MODEL_HIDE(Var3, 10f, Var3.f_4[iVar1], false);
 						}
 						if (Var3.f_4[iVar2] != 0)
 						{
@@ -87045,7 +87045,7 @@ int func_330(var uParam0, int iParam1)
 			uParam0->f_33 = 0;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			uParam0->f_3 = 1;
 			StringCopy(&(uParam0->f_8[0 /*8*/]), "scafstartimap", 32);
 			StringCopy(&(uParam0->f_8[1 /*8*/]), "scafendimap", 32);
@@ -88137,41 +88137,41 @@ void func_338(int iParam0, int iParam1, int iParam2)
 			switch (iParam0)
 			{
 				case 0:
-					STATS::STAT_SET_INT(joaat("HCS_PENALTY_JEWEL_DROP_MONEY"), iParam2, true);
+					STATS::STAT_SET_INT(joaat("hcs_penalty_jewel_drop_money"), iParam2, true);
 					break;
 				
 				case 2:
-					STATS::STAT_SET_INT(joaat("HCS_PENALTY_PALETO_DROP_MONEY"), iParam2, true);
+					STATS::STAT_SET_INT(joaat("hcs_penalty_paleto_drop_money"), iParam2, true);
 					break;
 				
 				case 4:
-					STATS::STAT_SET_INT(joaat("HCS_PENALTY_BIGS_DROP_MONEY"), iParam2, true);
+					STATS::STAT_SET_INT(joaat("hcs_penalty_bigs_drop_money"), iParam2, true);
 					break;
 			}
 			break;
 		
 		case 1:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_JEWEL_DROP_MONEY"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_jewel_drop_money"), iParam2, true);
 			break;
 		
 		case 2:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_JEWEL_MADR_HOUSE"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_jewel_madr_house"), iParam2, true);
 			break;
 		
 		case 4:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_DOCKS_UNSELL_WPN"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_docks_unsell_wpn"), iParam2, true);
 			break;
 		
 		case 3:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_PALETO_AGENT_CUT"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_paleto_agent_cut"), iParam2, true);
 			break;
 		
 		case 5:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_BIGS_SLOW_LOADING"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_bigs_slow_loading"), iParam2, true);
 			break;
 		
 		case 6:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_BIGS_HOSTAGE_GIFT"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_bigs_hostage_gift"), iParam2, true);
 			break;
 	}
 	Global_95185[iParam0 /*38*/].f_25[Global_95185[iParam0 /*38*/].f_37] = iParam1;
@@ -88240,7 +88240,7 @@ void func_342()
 			func_22(func_324());
 			func_22(PLAYER::PLAYER_PED_ID());
 			PED::CLEAR_PED_PARACHUTE_PACK_VARIATION(func_324());
-			WEAPON::REMOVE_WEAPON_FROM_PED(iLocal_98[2], joaat("WEAPON_MINIGUN"));
+			WEAPON::REMOVE_WEAPON_FROM_PED(iLocal_98[2], joaat("weapon_minigun"));
 			WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
 			ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 2105.868f, 3661.877f, 37.3045f, true, false, false, true);
 			STREAMING::LOAD_SCENE(2105.868f, 3661.877f, 37.3045f);
@@ -88345,7 +88345,7 @@ void func_342()
 				if (func_344(iLocal_1573) && func_344(func_355()))
 				{
 					PED::SET_PED_INTO_VEHICLE(func_355(), iLocal_1573, 0);
-					PED::_0x2208438012482A1A(func_355(), false, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_355(), false, false);
 				}
 			}
 			if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("RBH_Truck", 0))
@@ -88365,7 +88365,7 @@ void func_342()
 					TASK::CLOSE_SEQUENCE_TASK(iVar0);
 					TASK::TASK_PERFORM_SEQUENCE(func_324(), iVar0);
 					TASK::CLEAR_SEQUENCE_TASK(&iVar0);
-					PED::_0x2208438012482A1A(func_324(), false, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_324(), false, false);
 				}
 			}
 			if (CUTSCENE::HAS_CUTSCENE_FINISHED())
@@ -88445,7 +88445,7 @@ void func_346(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam
 		Global_61723 = 0;
 		if (bParam1)
 		{
-			GRAPHICS::_0x03FC694AE06C5A20();
+			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);
@@ -90643,7 +90643,7 @@ struct<7> func_388(int iParam0)
 			Var0.f_5 = 2047070410;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0.f_3 = joaat("prop_com_gar_door_01");
 			Var0 = { 483.56f, -1316.08f, 32.18f };
 			Var0.f_5 = 1417775309;
@@ -91687,35 +91687,35 @@ void func_393(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = joaat("SP0_SPECIAL_ABILITY_UNLOCKED");
+					*uParam2 = joaat("sp0_special_ability_unlocked");
 					break;
 				
 				case 1:
-					*uParam2 = joaat("SP0_STAMINA");
+					*uParam2 = joaat("sp0_stamina");
 					break;
 				
 				case 3:
-					*uParam2 = joaat("SP0_LUNG_CAPACITY");
+					*uParam2 = joaat("sp0_lung_capacity");
 					break;
 				
 				case 2:
-					*uParam2 = joaat("SP0_STRENGTH");
+					*uParam2 = joaat("sp0_strength");
 					break;
 				
 				case 4:
-					*uParam2 = joaat("SP0_WHEELIE_ABILITY");
+					*uParam2 = joaat("sp0_wheelie_ability");
 					break;
 				
 				case 5:
-					*uParam2 = joaat("SP0_FLYING_ABILITY");
+					*uParam2 = joaat("sp0_flying_ability");
 					break;
 				
 				case 6:
-					*uParam2 = joaat("SP0_SHOOTING_ABILITY");
+					*uParam2 = joaat("sp0_shooting_ability");
 					break;
 				
 				case 7:
-					*uParam2 = joaat("SP0_STEALTH_ABILITY");
+					*uParam2 = joaat("sp0_stealth_ability");
 					break;
 			}
 			break;
@@ -91724,35 +91724,35 @@ void func_393(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = joaat("SP1_SPECIAL_ABILITY_UNLOCKED");
+					*uParam2 = joaat("sp1_special_ability_unlocked");
 					break;
 				
 				case 1:
-					*uParam2 = joaat("SP1_STAMINA");
+					*uParam2 = joaat("sp1_stamina");
 					break;
 				
 				case 3:
-					*uParam2 = joaat("SP1_LUNG_CAPACITY");
+					*uParam2 = joaat("sp1_lung_capacity");
 					break;
 				
 				case 2:
-					*uParam2 = joaat("SP1_STRENGTH");
+					*uParam2 = joaat("sp1_strength");
 					break;
 				
 				case 4:
-					*uParam2 = joaat("SP1_WHEELIE_ABILITY");
+					*uParam2 = joaat("sp1_wheelie_ability");
 					break;
 				
 				case 5:
-					*uParam2 = joaat("SP1_FLYING_ABILITY");
+					*uParam2 = joaat("sp1_flying_ability");
 					break;
 				
 				case 6:
-					*uParam2 = joaat("SP1_SHOOTING_ABILITY");
+					*uParam2 = joaat("sp1_shooting_ability");
 					break;
 				
 				case 7:
-					*uParam2 = joaat("SP1_STEALTH_ABILITY");
+					*uParam2 = joaat("sp1_stealth_ability");
 					break;
 			}
 			break;
@@ -91761,35 +91761,35 @@ void func_393(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = joaat("SP2_SPECIAL_ABILITY_UNLOCKED");
+					*uParam2 = joaat("sp2_special_ability_unlocked");
 					break;
 				
 				case 1:
-					*uParam2 = joaat("SP2_STAMINA");
+					*uParam2 = joaat("sp2_stamina");
 					break;
 				
 				case 3:
-					*uParam2 = joaat("SP2_LUNG_CAPACITY");
+					*uParam2 = joaat("sp2_lung_capacity");
 					break;
 				
 				case 2:
-					*uParam2 = joaat("SP2_STRENGTH");
+					*uParam2 = joaat("sp2_strength");
 					break;
 				
 				case 4:
-					*uParam2 = joaat("SP2_WHEELIE_ABILITY");
+					*uParam2 = joaat("sp2_wheelie_ability");
 					break;
 				
 				case 5:
-					*uParam2 = joaat("SP2_FLYING_ABILITY");
+					*uParam2 = joaat("sp2_flying_ability");
 					break;
 				
 				case 6:
-					*uParam2 = joaat("SP2_SHOOTING_ABILITY");
+					*uParam2 = joaat("sp2_shooting_ability");
 					break;
 				
 				case 7:
-					*uParam2 = joaat("SP2_STEALTH_ABILITY");
+					*uParam2 = joaat("sp2_stealth_ability");
 					break;
 			}
 			break;
@@ -91902,7 +91902,7 @@ void func_394()
 	func_395(1358, Var0.f_49[7], -1, 1);
 	func_395(1359, Var0.f_49[8], -1, 1);
 	func_395(1360, func_429(), -1, 1);
-	STATS::STAT_SET_BOOL(joaat("CLO_STORED_INITIAL"), true, true);
+	STATS::STAT_SET_BOOL(joaat("clo_stored_initial"), true, true);
 	Global_111858.f_2359.f_539.f_4315 = 1;
 }
 
@@ -91944,12 +91944,12 @@ bool func_395(int iParam0, int iParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 1393 && iParam0 < 2919)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1393), false, true, iParam2);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1393), false, true, iParam2);
 		iVar1 = ((iParam0 - 1393) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 1393)) * 8) * 8;
 	}
 	else if (iParam0 >= 1361 && iParam0 < 1393)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
 		iVar1 = ((iParam0 - 1361) - STATS::_STAT_GET_PACKED_INT_MASK((iParam0 - 1361)) * 8) * 8;
 	}
 	else if (iParam0 >= 3879 && iParam0 < 4143)
@@ -92126,10 +92126,10 @@ void func_397(int iParam0, int iParam1, var uParam2, var uParam3, int iParam4, i
 		{
 			if (iParam0 != 0)
 			{
-				if (PED::IS_PED_WEARING_HELMET(iParam0) && PED::_0x451294E859ECC018(iParam0) != -1)
+				if (PED::IS_PED_WEARING_HELMET(iParam0) && PED::GET_PED_HELMET_STORED_HAT_PROP_INDEX(iParam0) != -1)
 				{
-					*uParam2 = PED::_0x451294E859ECC018(iParam0);
-					*uParam3 = PED::_0x9D728C1E12BF5518(iParam0);
+					*uParam2 = PED::GET_PED_HELMET_STORED_HAT_PROP_INDEX(iParam0);
+					*uParam3 = PED::GET_PED_HELMET_STORED_HAT_TEX_INDEX(iParam0);
 				}
 			}
 		}
@@ -93165,15 +93165,15 @@ void func_417(int iParam0, bool bParam1)
 			PLAYER::GET_PLAYER_PARACHUTE_PACK_TINT_INDEX(PLAYER::PLAYER_ID(), &iVar3);
 			if (iVar0 == 0)
 			{
-				STATS::STAT_SET_INT(joaat("SP0_PARACHUTE_CURRENT_TINT"), iVar3, true);
+				STATS::STAT_SET_INT(joaat("sp0_parachute_current_tint"), iVar3, true);
 			}
 			else if (iVar0 == 1)
 			{
-				STATS::STAT_SET_INT(joaat("SP1_PARACHUTE_CURRENT_TINT"), iVar3, true);
+				STATS::STAT_SET_INT(joaat("sp1_parachute_current_tint"), iVar3, true);
 			}
 			else if (iVar0 == 2)
 			{
-				STATS::STAT_SET_INT(joaat("SP2_PARACHUTE_CURRENT_TINT"), iVar3, true);
+				STATS::STAT_SET_INT(joaat("sp2_parachute_current_tint"), iVar3, true);
 			}
 		}
 	}
@@ -93353,50 +93353,50 @@ int func_420(int iParam0)
 	{
 		switch (iParam0)
 		{
-			case joaat("WEAPON_PISTOL50"):
-			case joaat("WEAPON_BULLPUPSHOTGUN"):
-			case joaat("WEAPON_ASSAULTSMG"):
+			case joaat("weapon_pistol50"):
+			case joaat("weapon_bullpupshotgun"):
+			case joaat("weapon_assaultsmg"):
 				return 0;
 				break;
 			
-			case joaat("WEAPON_BOTTLE"):
-			case joaat("WEAPON_SNSPISTOL"):
-			case joaat("WEAPON_GUSENBERG"):
+			case joaat("weapon_bottle"):
+			case joaat("weapon_snspistol"):
+			case joaat("weapon_gusenberg"):
 				return 0;
 				break;
 			
-			case joaat("WEAPON_HEAVYPISTOL"):
-			case joaat("WEAPON_SPECIALCARBINE"):
+			case joaat("weapon_heavypistol"):
+			case joaat("weapon_specialcarbine"):
 				return 0;
 				break;
 			
-			case joaat("WEAPON_BULLPUPRIFLE"):
+			case joaat("weapon_bullpuprifle"):
 				return 0;
 				break;
 			
-			case joaat("WEAPON_DAGGER"):
-			case joaat("WEAPON_VINTAGEPISTOL"):
+			case joaat("weapon_dagger"):
+			case joaat("weapon_vintagepistol"):
 				return 0;
 				break;
 			
-			case joaat("WEAPON_FIREWORK"):
-			case joaat("WEAPON_MUSKET"):
+			case joaat("weapon_firework"):
+			case joaat("weapon_musket"):
 				return 0;
 				break;
 			
-			case joaat("WEAPON_HEAVYSHOTGUN"):
-			case joaat("WEAPON_MARKSMANRIFLE"):
+			case joaat("weapon_heavyshotgun"):
+			case joaat("weapon_marksmanrifle"):
 				return 0;
 				break;
 			
-			case joaat("WEAPON_HOMINGLAUNCHER"):
-			case joaat("WEAPON_PROXMINE"):
+			case joaat("weapon_hominglauncher"):
+			case joaat("weapon_proxmine"):
 				return 0;
 				break;
 			
-			case joaat("WEAPON_COMBATPDW"):
-			case joaat("WEAPON_KNUCKLE"):
-			case joaat("WEAPON_MARKSMANPISTOL"):
+			case joaat("weapon_combatpdw"):
+			case joaat("weapon_knuckle"):
+			case joaat("weapon_marksmanpistol"):
 				return 0;
 				break;
 			
@@ -93409,31 +93409,31 @@ int func_420(int iParam0)
 			case -1887867191:
 			case -837150131:
 			case -344484024:
-			case joaat("WEAPON_FLAREGUN"):
+			case joaat("weapon_flaregun"):
 			case joaat("weapon_handcuffs"):
-			case joaat("WEAPON_SNOWBALL"):
+			case joaat("weapon_snowball"):
 			case joaat("weapon_garbagebag"):
-			case joaat("WEAPON_FLASHLIGHT"):
-			case joaat("WEAPON_SWITCHBLADE"):
-			case joaat("WEAPON_REVOLVER"):
-			case joaat("WEAPON_DBSHOTGUN"):
-			case joaat("WEAPON_COMPACTRIFLE"):
-			case joaat("WEAPON_AUTOSHOTGUN"):
-			case joaat("WEAPON_MINISMG"):
-			case joaat("WEAPON_COMPACTLAUNCHER"):
-			case joaat("WEAPON_BATTLEAXE"):
-			case joaat("WEAPON_PIPEBOMB"):
-			case joaat("WEAPON_POOLCUE"):
-			case joaat("WEAPON_WRENCH"):
-			case joaat("WEAPON_DOUBLEACTION"):
-			case joaat("WEAPON_RAYCARBINE"):
-			case joaat("WEAPON_RAYMINIGUN"):
-			case joaat("WEAPON_RAYPISTOL"):
-			case joaat("WEAPON_NAVYREVOLVER"):
-			case joaat("WEAPON_CERAMICPISTOL"):
-			case joaat("WEAPON_GADGETPISTOL"):
-			case joaat("WEAPON_MILITARYRIFLE"):
-			case joaat("WEAPON_COMBATSHOTGUN"):
+			case joaat("weapon_flashlight"):
+			case joaat("weapon_switchblade"):
+			case joaat("weapon_revolver"):
+			case joaat("weapon_dbshotgun"):
+			case joaat("weapon_compactrifle"):
+			case joaat("weapon_autoshotgun"):
+			case joaat("weapon_minismg"):
+			case joaat("weapon_compactlauncher"):
+			case joaat("weapon_battleaxe"):
+			case joaat("weapon_pipebomb"):
+			case joaat("weapon_poolcue"):
+			case joaat("weapon_wrench"):
+			case joaat("weapon_doubleaction"):
+			case joaat("weapon_raycarbine"):
+			case joaat("weapon_rayminigun"):
+			case joaat("weapon_raypistol"):
+			case joaat("weapon_navyrevolver"):
+			case joaat("weapon_ceramicpistol"):
+			case joaat("weapon_gadgetpistol"):
+			case joaat("weapon_militaryrifle"):
+			case joaat("weapon_combatshotgun"):
 				return 1;
 				break;
 			}
@@ -93453,7 +93453,7 @@ int func_421(int iParam0, int iParam1)
 	iVar0 = 0;
 	switch (iParam0)
 	{
-		case joaat("WEAPON_PISTOL"):
+		case joaat("weapon_pistol"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93482,7 +93482,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_COMBATPISTOL"):
+		case joaat("weapon_combatpistol"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93507,7 +93507,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_APPISTOL"):
+		case joaat("weapon_appistol"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93532,7 +93532,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_MICROSMG"):
+		case joaat("weapon_microsmg"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93561,7 +93561,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_SMG"):
+		case joaat("weapon_smg"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93602,7 +93602,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_ASSAULTRIFLE"):
+		case joaat("weapon_assaultrifle"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93643,7 +93643,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_CARBINERIFLE"):
+		case joaat("weapon_carbinerifle"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93688,7 +93688,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_ADVANCEDRIFLE"):
+		case joaat("weapon_advancedrifle"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93717,7 +93717,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_MG"):
+		case joaat("weapon_mg"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93742,7 +93742,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_COMBATMG"):
+		case joaat("weapon_combatmg"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93771,7 +93771,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_PUMPSHOTGUN"):
+		case joaat("weapon_pumpshotgun"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93788,7 +93788,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_ASSAULTSHOTGUN"):
+		case joaat("weapon_assaultshotgun"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93813,7 +93813,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_SNIPERRIFLE"):
+		case joaat("weapon_sniperrifle"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93838,7 +93838,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_HEAVYSNIPER"):
+		case joaat("weapon_heavysniper"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93859,7 +93859,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_GRENADELAUNCHER"):
+		case joaat("weapon_grenadelauncher"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93876,7 +93876,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_MINIGUN"):
+		case joaat("weapon_minigun"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93885,7 +93885,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_ASSAULTSMG"):
+		case joaat("weapon_assaultsmg"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93914,7 +93914,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_BULLPUPSHOTGUN"):
+		case joaat("weapon_bullpupshotgun"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93931,7 +93931,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_PISTOL50"):
+		case joaat("weapon_pistol50"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93956,7 +93956,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_COMBATPDW"):
+		case joaat("weapon_combatpdw"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93985,7 +93985,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_SAWNOFFSHOTGUN"):
+		case joaat("weapon_sawnoffshotgun"):
 			switch (iParam1)
 			{
 				case 0:
@@ -93994,7 +93994,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_BULLPUPRIFLE"):
+		case joaat("weapon_bullpuprifle"):
 			switch (iParam1)
 			{
 				case 0:
@@ -94027,7 +94027,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_SNSPISTOL"):
+		case joaat("weapon_snspistol"):
 			switch (iParam1)
 			{
 				case 0:
@@ -94044,7 +94044,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_SPECIALCARBINE"):
+		case joaat("weapon_specialcarbine"):
 			switch (iParam1)
 			{
 				case 0:
@@ -94081,7 +94081,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_KNUCKLE"):
+		case joaat("weapon_knuckle"):
 			switch (iParam1)
 			{
 				case 0:
@@ -94122,7 +94122,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_MACHINEPISTOL"):
+		case joaat("weapon_machinepistol"):
 			switch (iParam1)
 			{
 				case 0:
@@ -94143,7 +94143,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_SWITCHBLADE"):
+		case joaat("weapon_switchblade"):
 			switch (iParam1)
 			{
 				case 0:
@@ -94156,7 +94156,7 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_REVOLVER"):
+		case joaat("weapon_revolver"):
 			switch (iParam1)
 			{
 				case 0:
@@ -94173,15 +94173,15 @@ int func_421(int iParam0, int iParam1)
 			}
 			break;
 		
-		case joaat("WEAPON_MINISMG"):
+		case joaat("weapon_minismg"):
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = joaat("COMPONENT_MINISMG_CLIP_01");
+					iVar0 = joaat("component_minismg_clip_01");
 					break;
 				
 				case 1:
-					iVar0 = joaat("COMPONENT_MINISMG_CLIP_02");
+					iVar0 = joaat("component_minismg_clip_02");
 					break;
 			}
 			break;
@@ -94409,7 +94409,7 @@ void func_431()
 			AUDIO::TRIGGER_MUSIC_EVENT("RH2A_PLATFORM");
 			if (func_344(func_324()))
 			{
-				WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("WEAPON_ASSAULTRIFLE"), 1500, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("weapon_assaultrifle"), 1500, true, true);
 				PED::SET_PED_ACCURACY(func_324(), 4);
 				PED::SET_PED_SPHERE_DEFENSIVE_AREA(func_324(), -154.801f, 6143.107f, 31.3351f, 2.75f, true, false);
 			}
@@ -95145,7 +95145,7 @@ int func_452()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -95440,7 +95440,7 @@ void func_462(int iParam0)
 		{
 			if (!PED::IS_PED_INJURED(iLocal_1202[iVar0]))
 			{
-				func_465(&(iLocal_1202[iVar0]), joaat("WEAPON_CARBINERIFLE"), 0, 0, 2.1f, 1, 0, 1);
+				func_465(&(iLocal_1202[iVar0]), joaat("weapon_carbinerifle"), 0, 0, 2.1f, 1, 0, 1);
 				switch (iVar0)
 				{
 					case 0:
@@ -95993,9 +95993,9 @@ void func_486()
 		}
 		PED::DELETE_PED(&(iLocal_98[2]));
 	}
-	ENTITY::REMOVE_MODEL_HIDE(-111.48f, 6463.94f, 31.985f, 5f, joaat("v_ilev_bank4door02"), 0);
+	ENTITY::REMOVE_MODEL_HIDE(-111.48f, 6463.94f, 31.985f, 5f, joaat("v_ilev_bank4door02"), false);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_bank4door02"));
-	ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.985f, 5f, joaat("v_ilev_bank4door01"), 0);
+	ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.985f, 5f, joaat("v_ilev_bank4door01"), false);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_bank4door01"));
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_60))
 	{
@@ -96960,19 +96960,19 @@ void func_504()
 				{
 					AUDIO::ADD_ENTITY_TO_AUDIO_MIX_GROUP(iLocal_98[1], "PS_2A_BUDDY_GROUP", 0f);
 					ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(iLocal_98[1], true);
-					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[1], joaat("WEAPON_CARBINERIFLE"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[1], joaat("weapon_carbinerifle"), true);
 				}
 				if (func_344(iLocal_98[0]))
 				{
 					AUDIO::ADD_ENTITY_TO_AUDIO_MIX_GROUP(iLocal_98[0], "PS_2A_BUDDY_GROUP", 0f);
 					ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(iLocal_98[0], true);
-					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[0], joaat("WEAPON_COMBATMG"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[0], joaat("weapon_combatmg"), true);
 				}
 				if (func_344(iLocal_98[2]))
 				{
 					AUDIO::ADD_ENTITY_TO_AUDIO_MIX_GROUP(iLocal_98[2], "PS_2A_BUDDY_GROUP", 0f);
 					ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(iLocal_98[2], true);
-					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[2], joaat("WEAPON_PUMPSHOTGUN"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[2], joaat("weapon_pumpshotgun"), true);
 				}
 				if (func_344(PLAYER::PLAYER_PED_ID()))
 				{
@@ -97366,7 +97366,7 @@ int func_511(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 				}
 				else if (Global_98678 == 0)
 				{
-					STREAMING::_0xAD5FDF34B81BFE79();
+					STREAMING::ALLOW_PLAYER_SWITCH_DESCENT();
 				}
 			}
 			if (STREAMING::GET_PLAYER_SWITCH_TYPE() == 3)
@@ -97422,7 +97422,7 @@ int func_511(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 				{
 					if (STREAMING::GET_PLAYER_SWITCH_STATE() >= 3)
 					{
-						GRAPHICS::_CASCADESHADOWS_SET_TYPE("CSM_ST_BOX3x3");
+						GRAPHICS::CASCADE_SHADOWS_SET_SHADOW_SAMPLE_TYPE("CSM_ST_BOX3x3");
 						uParam0->f_23 = 1;
 					}
 				}
@@ -97452,7 +97452,7 @@ int func_511(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 		}
 		if (uParam0->f_23)
 		{
-			GRAPHICS::_CASCADESHADOWS_RESET_TYPE();
+			GRAPHICS::_CASCADE_SHADOWS_CLEAR_SHADOW_SAMPLE_TYPE();
 			uParam0->f_23 = 0;
 		}
 		uParam0->f_16 = 0;
@@ -97948,7 +97948,7 @@ int func_534(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -98329,7 +98329,7 @@ void func_540(bool bParam0, bool bParam1)
 	int iVar0;
 	
 	func_541(&Global_22331, bParam1);
-	GRAPHICS::_0x22A249A53034450A(false);
+	GRAPHICS::DONT_RENDER_IN_GAME_UI(false);
 	iVar0 = 1;
 	if (bParam0)
 	{
@@ -98726,18 +98726,18 @@ bool func_557(int iParam0, bool bParam1, int iParam2)
 						Global_22411.f_76[iVar0] = PED::GET_PED_ARMOUR((*iParam0)[iVar0]);
 						if (iVar0 == 0)
 						{
-							STATS::STAT_GET_INT(joaat("SP0_SPECIAL_ABILITY"), &(Global_22411.f_94[iVar0]), -1);
-							STATS::STAT_GET_INT(joaat("SP0_SPECIAL_ABILITY_UNLOCKED"), &(Global_22411.f_99[iVar0]), -1);
+							STATS::STAT_GET_INT(joaat("sp0_special_ability"), &(Global_22411.f_94[iVar0]), -1);
+							STATS::STAT_GET_INT(joaat("sp0_special_ability_unlocked"), &(Global_22411.f_99[iVar0]), -1);
 						}
 						else if (iVar0 == 1)
 						{
-							STATS::STAT_GET_INT(joaat("SP1_SPECIAL_ABILITY"), &(Global_22411.f_94[iVar0]), -1);
-							STATS::STAT_GET_INT(joaat("SP1_SPECIAL_ABILITY_UNLOCKED"), &(Global_22411.f_99[iVar0]), -1);
+							STATS::STAT_GET_INT(joaat("sp1_special_ability"), &(Global_22411.f_94[iVar0]), -1);
+							STATS::STAT_GET_INT(joaat("sp1_special_ability_unlocked"), &(Global_22411.f_99[iVar0]), -1);
 						}
 						else if (iVar0 == 2)
 						{
-							STATS::STAT_GET_INT(joaat("SP2_SPECIAL_ABILITY"), &(Global_22411.f_94[iVar0]), -1);
-							STATS::STAT_GET_INT(joaat("SP2_SPECIAL_ABILITY_UNLOCKED"), &(Global_22411.f_99[iVar0]), -1);
+							STATS::STAT_GET_INT(joaat("sp2_special_ability"), &(Global_22411.f_94[iVar0]), -1);
+							STATS::STAT_GET_INT(joaat("sp2_special_ability_unlocked"), &(Global_22411.f_99[iVar0]), -1);
 						}
 						Global_22411.f_81[iVar0 /*3*/] = { ENTITY::GET_ENTITY_COORDS((*iParam0)[iVar0], true) };
 					}
@@ -98971,7 +98971,7 @@ int func_558(int iParam0)
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
 			WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, true);
-			if (((iVar0 == joaat("WEAPON_SNIPERRIFLE") || iVar0 == joaat("WEAPON_HEAVYSNIPER")) || iVar0 == joaat("WEAPON_MARKSMANRIFLE")) || iVar0 == joaat("WEAPON_HEAVYSNIPER_MK2"))
+			if (((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle")) || iVar0 == joaat("weapon_heavysniper_mk2"))
 			{
 				return 1;
 			}
@@ -99573,7 +99573,7 @@ void func_576()
 	PLAYER::REPORT_POLICE_SPOTTED_PLAYER(PLAYER::PLAYER_ID());
 	if (func_344(func_324()))
 	{
-		WEAPON::REMOVE_WEAPON_FROM_PED(func_324(), joaat("WEAPON_MINIGUN"));
+		WEAPON::REMOVE_WEAPON_FROM_PED(func_324(), joaat("weapon_minigun"));
 	}
 	if (iLocal_1595 > 0)
 	{
@@ -99741,7 +99741,7 @@ void func_576()
 			PED::SET_PED_STRAFE_CLIPSET(PLAYER::PLAYER_PED_ID(), "MOVE_STRAFE_BALLISTIC");
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(PLAYER::PLAYER_PED_ID(), iLocal_89);
 			ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(PLAYER::PLAYER_PED_ID(), false);
-			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_COMBATMG"), 1500, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_combatmg"), 1500, true, true);
 			func_443(&iLocal_95);
 			func_443(&iLocal_97);
 			func_443(&iLocal_94);
@@ -99798,7 +99798,7 @@ void func_576()
 				iLocal_2023 = PED::CREATE_SYNCHRONIZED_SCENE(Local_2017, Local_2020, 2);
 				TASK::TASK_SYNCHRONIZED_SCENE(iLocal_2037, iLocal_2023, "missheistpaletoscoreextra", "factory_manager", 1000f, -1000f, 5, 0, 1000f, 0);
 				PED::SET_SYNCHRONIZED_SCENE_PHASE(iLocal_2023, 0f);
-				PED::_0x2208438012482A1A(iLocal_2037, false, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_2037, false, false);
 				ENTITY::SET_ENTITY_HEALTH(iLocal_2037, 101, 0);
 				ENTITY::PLAY_SYNCHRONIZED_MAP_ENTITY_ANIM(-70.522f, 6254.584f, 31.233f, 3f, joaat("v_ilev_cf_officedoor"), iLocal_2023, "factory_manager_door", "missheistpaletoscoreextra", 1000f, -1000f, 1, 1000f);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_cf_officedoor"));
@@ -99880,8 +99880,8 @@ void func_576()
 				}
 				iLocal_1273[0] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -78.7341f, 6232.929f, 30.0931f, 19.427f, true, true);
 				iLocal_1273[2] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -78.9554f, 6231.959f, 30.0929f, 32.2838f, true, true);
-				func_465(&(iLocal_1273[0]), joaat("WEAPON_CARBINERIFLE"), 0, 0, 1074161254, 0, 0, 1);
-				func_465(&(iLocal_1273[2]), joaat("WEAPON_CARBINERIFLE"), 0, 0, 1074161254, 0, 0, 1);
+				func_465(&(iLocal_1273[0]), joaat("weapon_carbinerifle"), 0, 0, 1074161254, 0, 0, 1);
+				func_465(&(iLocal_1273[2]), joaat("weapon_carbinerifle"), 0, 0, 1074161254, 0, 0, 1);
 				func_591(&iLocal_1273);
 				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1273[0], 37, false);
 				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1273[2], 37, false);
@@ -99947,8 +99947,8 @@ void func_576()
 				}
 				iLocal_1302[3] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -77.7394f, 6227.572f, 30.0911f, 301.0586f, true, true);
 				iLocal_1302[4] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -80.5896f, 6222.241f, 30.09f, 210.8178f, true, true);
-				func_465(&(iLocal_1302[3]), joaat("WEAPON_CARBINERIFLE"), 0, 0, 1074161254, 0, 0, 1);
-				func_465(&(iLocal_1302[4]), joaat("WEAPON_CARBINERIFLE"), 0, 0, 1074161254, 0, 0, 1);
+				func_465(&(iLocal_1302[3]), joaat("weapon_carbinerifle"), 0, 0, 1074161254, 0, 0, 1);
+				func_465(&(iLocal_1302[4]), joaat("weapon_carbinerifle"), 0, 0, 1074161254, 0, 0, 1);
 				func_591(&iLocal_1302);
 				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1302[3], 37, false);
 				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1302[4], 37, false);
@@ -100140,19 +100140,19 @@ void func_576()
 				iLocal_1349[0] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -107.4732f, 6195.843f, 30.025f, 57.5445f, true, true);
 				if (!ENTITY::IS_ENTITY_DEAD(iLocal_1349[0], false))
 				{
-					func_465(&(iLocal_1349[0]), joaat("WEAPON_CARBINERIFLE"), 1, 0, 1074161254, 0, 0, 1);
+					func_465(&(iLocal_1349[0]), joaat("weapon_carbinerifle"), 1, 0, 1074161254, 0, 0, 1);
 					PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1349[0], ENTITY::GET_ENTITY_COORDS(iLocal_1349[0], true), 1.75f, false, false);
 					TASK::TASK_COMBAT_PED(iLocal_1349[0], PLAYER::PLAYER_PED_ID(), 0, 16);
 				}
 				iLocal_1349[1] = func_584(26, joaat("s_m_y_marine_03"), -99.98f, 6204.73f, 30.025f, 62.2306f, -99.3285f, 6195.638f, 30.0249f, 1, 0, 1073741824, 0);
-				func_465(&(iLocal_1349[1]), joaat("WEAPON_CARBINERIFLE"), 1, 0, 1074161254, 0, 0, 1);
+				func_465(&(iLocal_1349[1]), joaat("weapon_carbinerifle"), 1, 0, 1074161254, 0, 0, 1);
 				PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1349[1], -99.98f, 6204.73f, 30.025f, 1.75f, false, false);
 				func_593(iLocal_1349[1], "COVER_ME", "s_m_y_genericmarine_01_black_mini_01", 3);
 				iLocal_1349[4] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -111.0848f, 6198.045f, 30.0252f, 292.2246f, true, true);
-				func_465(&(iLocal_1349[4]), joaat("WEAPON_CARBINERIFLE"), 1, 0, 2.1f, 0, 0, 0);
+				func_465(&(iLocal_1349[4]), joaat("weapon_carbinerifle"), 1, 0, 2.1f, 0, 0, 0);
 				TASK::TASK_PUT_PED_DIRECTLY_INTO_COVER(iLocal_1349[4], -111.0848f, 6198.045f, 30.0252f, 2000, true, 0f, false, false, 0, false);
 				iLocal_1349[5] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -115.9783f, 6201.048f, 30.025f, 320.102f, true, true);
-				func_465(&(iLocal_1349[5]), joaat("WEAPON_CARBINERIFLE"), 1, 0, 2.1f, 0, 0, 0);
+				func_465(&(iLocal_1349[5]), joaat("weapon_carbinerifle"), 1, 0, 2.1f, 0, 0, 0);
 				PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1349[5], -109.6764f, 6208.56f, 30.0627f, 2.5f, false, false);
 				PED::SET_PED_NAME_DEBUG(iLocal_1349[0], "swatStage4[0]");
 				PED::SET_PED_NAME_DEBUG(iLocal_1349[1], "swatStage4[1]");
@@ -100162,10 +100162,10 @@ void func_576()
 				ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(iLocal_1349[1], true);
 				ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(iLocal_1349[4], true);
 				ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(iLocal_1349[5], true);
-				PED::_0x2208438012482A1A(iLocal_1349[0], false, false);
-				PED::_0x2208438012482A1A(iLocal_1349[1], false, false);
-				PED::_0x2208438012482A1A(iLocal_1349[4], false, false);
-				PED::_0x2208438012482A1A(iLocal_1349[5], false, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_1349[0], false, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_1349[1], false, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_1349[4], false, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_1349[5], false, false);
 				func_586(&(iLocal_1349[0]));
 				func_586(&(iLocal_1349[4]));
 				func_586(&(iLocal_1349[5]));
@@ -100210,7 +100210,7 @@ void func_576()
 				iLocal_1349[6] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -104.478f, 6191.352f, 30.025f, 271.2726f, true, true);
 				if (!ENTITY::IS_ENTITY_DEAD(iLocal_1349[6], false))
 				{
-					func_465(&(iLocal_1349[6]), joaat("WEAPON_CARBINERIFLE"), 1, 0, 1074161254, 0, 0, 1);
+					func_465(&(iLocal_1349[6]), joaat("weapon_carbinerifle"), 1, 0, 1074161254, 0, 0, 1);
 					PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1349[6], -100.161f, 6204.848f, 30.025f, 1.75f, false, false);
 					TASK::TASK_COMBAT_PED(iLocal_1349[6], PLAYER::PLAYER_PED_ID(), 0, 16);
 					PED::SET_PED_NAME_DEBUG(iLocal_1349[6], "swatStage4[6]");
@@ -100218,7 +100218,7 @@ void func_576()
 				iLocal_1349[7] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -104.9413f, 6193.38f, 30.025f, 321.7174f, true, true);
 				if (!ENTITY::IS_ENTITY_DEAD(iLocal_1349[7], false))
 				{
-					func_465(&(iLocal_1349[7]), joaat("WEAPON_CARBINERIFLE"), 1, 0, 1074161254, 0, 0, 1);
+					func_465(&(iLocal_1349[7]), joaat("weapon_carbinerifle"), 1, 0, 1074161254, 0, 0, 1);
 					PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1349[7], -105.1344f, 6204.052f, 30.026f, 1.75f, false, false);
 					TASK::TASK_COMBAT_PED(iLocal_1349[7], PLAYER::PLAYER_PED_ID(), 0, 16);
 					PED::SET_PED_NAME_DEBUG(iLocal_1349[7], "swatStage4[7]");
@@ -100407,15 +100407,15 @@ void func_576()
 				iLocal_1611 = 0;
 				func_582();
 				iLocal_1497[0] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -157.594f, 6153.396f, 30.2064f, 296.5156f, true, true);
-				func_465(&(iLocal_1497[0]), joaat("WEAPON_CARBINERIFLE"), 1, 0, 2.6f, 0, 0, 0);
+				func_465(&(iLocal_1497[0]), joaat("weapon_carbinerifle"), 1, 0, 2.6f, 0, 0, 0);
 				PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1497[0], -157.594f, 6153.396f, 30.2064f, 2f, false, false);
 				iLocal_1497[1] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -149.721f, 6150.888f, 30.2254f, 43.8815f, true, true);
-				func_465(&(iLocal_1497[1]), joaat("WEAPON_PUMPSHOTGUN"), 1, 0, 2.6f, 0, 0, 0);
+				func_465(&(iLocal_1497[1]), joaat("weapon_pumpshotgun"), 1, 0, 2.6f, 0, 0, 0);
 				iLocal_1497[2] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -170.9224f, 6166.25f, 30.2064f, 224.4871f, true, true);
-				func_465(&(iLocal_1497[2]), joaat("WEAPON_PUMPSHOTGUN"), 1, 0, 2.6f, 0, 0, 0);
+				func_465(&(iLocal_1497[2]), joaat("weapon_pumpshotgun"), 1, 0, 2.6f, 0, 0, 0);
 				PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1497[2], -157.2036f, 6153.746f, 30.2254f, 6f, false, false);
 				iLocal_1497[3] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -167.8347f, 6155.146f, 30.2064f, 201.3296f, true, true);
-				func_465(&(iLocal_1497[3]), joaat("WEAPON_CARBINERIFLE"), 1, 0, 2.6f, 0, 0, 0);
+				func_465(&(iLocal_1497[3]), joaat("weapon_carbinerifle"), 1, 0, 2.6f, 0, 0, 0);
 				PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1497[3], -160.3316f, 6146.485f, 30.2064f, 2f, false, false);
 				TASK::TASK_COMBAT_PED(iLocal_1497[0], PLAYER::PLAYER_PED_ID(), 0, 16);
 				TASK::TASK_COMBAT_PED(iLocal_1497[1], PLAYER::PLAYER_PED_ID(), 0, 16);
@@ -100527,7 +100527,7 @@ void func_577()
 		{
 			if (!PED::IS_PED_INJURED(iLocal_1423[7]))
 			{
-				WEAPON::GIVE_WEAPON_TO_PED(iLocal_1423[7], joaat("WEAPON_GRENADE"), 4, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(iLocal_1423[7], joaat("weapon_grenade"), 4, true, true);
 				PED::REMOVE_PED_DEFENSIVE_AREA(iLocal_1423[7], false);
 				PED::SET_PED_COMBAT_MOVEMENT(iLocal_1423[7], 2);
 				PED::SET_PED_CONFIG_FLAG(iLocal_1423[7], 118, false);
@@ -100570,8 +100570,8 @@ void func_578()
 	{
 		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1423[7], 37, false);
 		func_586(&(iLocal_1423[7]));
-		WEAPON::GIVE_WEAPON_TO_PED(iLocal_1423[7], joaat("WEAPON_GRENADE"), 4, true, true);
-		WEAPON::GIVE_WEAPON_TO_PED(iLocal_1423[7], joaat("WEAPON_CARBINERIFLE"), -1, false, true);
+		WEAPON::GIVE_WEAPON_TO_PED(iLocal_1423[7], joaat("weapon_grenade"), 4, true, true);
+		WEAPON::GIVE_WEAPON_TO_PED(iLocal_1423[7], joaat("weapon_carbinerifle"), -1, false, true);
 		TASK::TASK_SEEK_COVER_FROM_PED(iLocal_1423[7], PLAYER::PLAYER_PED_ID(), -1, false);
 	}
 	iLocal_1423[0] = func_579(26, joaat("s_m_y_marine_03"), -129.7268f, 6167.095f, 30.025f, 282.7433f, -139.934f, 6158.438f, 30.2062f, 1, 0, 3f, 0);
@@ -100579,14 +100579,14 @@ void func_578()
 	iLocal_1423[2] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -124.1019f, 6173.625f, 30.0249f, 224.8725f, true, true);
 	if (!ENTITY::IS_ENTITY_DEAD(iLocal_1423[2], false))
 	{
-		func_465(&(iLocal_1423[2]), joaat("WEAPON_CARBINERIFLE"), 0, 0, 1074161254, 0, 0, 1);
+		func_465(&(iLocal_1423[2]), joaat("weapon_carbinerifle"), 0, 0, 1074161254, 0, 0, 1);
 		TASK::CLEAR_PED_TASKS_IMMEDIATELY(iLocal_1423[2]);
 		TASK::TASK_COMBAT_PED(iLocal_1423[2], PLAYER::PLAYER_PED_ID(), 0, 16);
 	}
 	iLocal_1423[3] = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -120.8138f, 6171.895f, 30.0227f, 44.9428f, true, true);
 	if (!ENTITY::IS_ENTITY_DEAD(iLocal_1423[3], false))
 	{
-		func_465(&(iLocal_1423[3]), joaat("WEAPON_CARBINERIFLE"), 0, 0, 1074161254, 0, 0, 1);
+		func_465(&(iLocal_1423[3]), joaat("weapon_carbinerifle"), 0, 0, 1074161254, 0, 0, 1);
 		TASK::CLEAR_PED_TASKS_IMMEDIATELY(iLocal_1423[3]);
 		TASK::TASK_COMBAT_PED(iLocal_1423[3], PLAYER::PLAYER_PED_ID(), 0, 16);
 	}
@@ -100609,7 +100609,7 @@ int func_579(int iParam0, int iParam1, struct<3> Param2, float fParam5, struct<3
 	iVar0 = PED::CREATE_PED(iParam0, iParam1, Param6, fParam5, true, true);
 	if (bParam9)
 	{
-		func_465(&iVar0, joaat("WEAPON_CARBINERIFLE"), bParam12, 0, 1074161254, 0, 0, 1);
+		func_465(&iVar0, joaat("weapon_carbinerifle"), bParam12, 0, 1074161254, 0, 0, 1);
 	}
 	if (fParam11 == fParam11)
 	{
@@ -100690,7 +100690,7 @@ int func_584(int iParam0, int iParam1, struct<3> Param2, float fParam5, struct<3
 	iVar0 = PED::CREATE_PED(iParam0, iParam1, Param6, fParam5, true, true);
 	if (bParam9)
 	{
-		func_465(&iVar0, joaat("WEAPON_CARBINERIFLE"), bParam12, 0, 1074161254, 0, 0, 1);
+		func_465(&iVar0, joaat("weapon_carbinerifle"), bParam12, 0, 1074161254, 0, 0, 1);
 		PED::SET_PED_SPHERE_DEFENSIVE_AREA(iVar0, Param2, 1.5f, false, false);
 	}
 	if (fParam11 == 2f)
@@ -101133,8 +101133,8 @@ void func_601()
 {
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(func_324(), true);
 	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(func_324(), false);
-	WEAPON::REMOVE_WEAPON_FROM_PED(func_324(), joaat("WEAPON_MINIGUN"));
-	WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("WEAPON_PUMPSHOTGUN"), 15000, true, true);
+	WEAPON::REMOVE_WEAPON_FROM_PED(func_324(), joaat("weapon_minigun"));
+	WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("weapon_pumpshotgun"), 15000, true, true);
 	PED::SET_PED_ACCURACY(func_324(), 4);
 	ENTITY::SET_ENTITY_PROOFS(func_324(), false, false, false, false, false, false, false, false);
 	PED::SET_PED_RELATIONSHIP_GROUP_HASH(func_324(), iLocal_89);
@@ -101150,7 +101150,7 @@ void func_602()
 {
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(func_355(), true);
 	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(func_355(), false);
-	WEAPON::GIVE_WEAPON_TO_PED(func_355(), joaat("WEAPON_CARBINERIFLE"), 2000, true, true);
+	WEAPON::GIVE_WEAPON_TO_PED(func_355(), joaat("weapon_carbinerifle"), 2000, true, true);
 	PED::SET_PED_RELATIONSHIP_GROUP_HASH(func_355(), iLocal_89);
 	PED::SET_PED_SUFFERS_CRITICAL_HITS(func_355(), false);
 	PED::SET_PED_CAN_BE_TARGETTED(func_355(), false);
@@ -101183,7 +101183,7 @@ void func_603(bool bParam0, bool bParam1, int iParam2, int iParam3, bool bParam4
 	}
 	else
 	{
-		CAM::_RENDER_FIRST_PERSON_CAM(false, 0f, 3, 0);
+		CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 	}
 	func_346(bParam0, 1, 1, 0, 0, 0, 0);
 	func_547(bParam0);
@@ -101346,69 +101346,69 @@ void func_606(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4,
 		switch (iVar1)
 		{
 			case 0:
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_PURCH_0"), &(uParam0->f_2244[iVar1 /*32*/][0]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_PURCH_1"), &(uParam0->f_2244[iVar1 /*32*/][1]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_ADDON_PURCH_0"), &(uParam0->f_2244[iVar1 /*32*/].f_5[0]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_ADDON_PURCH_1"), &(uParam0->f_2244[iVar1 /*32*/].f_5[1]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_ADDON_PURCH_2"), &(uParam0->f_2244[iVar1 /*32*/].f_5[2]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_ADDON_PURCH_3"), &(uParam0->f_2244[iVar1 /*32*/].f_5[3]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_ADDON_PURCH_4"), &(uParam0->f_2244[iVar1 /*32*/].f_5[4]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_0"), &(uParam0->f_2244[iVar1 /*32*/].f_16[0]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_1"), &(uParam0->f_2244[iVar1 /*32*/].f_16[1]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_2"), &(uParam0->f_2244[iVar1 /*32*/].f_16[2]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_3"), &(uParam0->f_2244[iVar1 /*32*/].f_16[3]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_4"), &(uParam0->f_2244[iVar1 /*32*/].f_16[4]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_5"), &(uParam0->f_2244[iVar1 /*32*/].f_16[5]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_6"), &(uParam0->f_2244[iVar1 /*32*/].f_16[6]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_7"), &(uParam0->f_2244[iVar1 /*32*/].f_16[7]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_8"), &(uParam0->f_2244[iVar1 /*32*/].f_16[8]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_9"), &(uParam0->f_2244[iVar1 /*32*/].f_16[9]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_10"), &(uParam0->f_2244[iVar1 /*32*/].f_16[10]), -1);
-				STATS::STAT_GET_INT(joaat("SP0_WEAP_TINT_PURCH_11"), &(uParam0->f_2244[iVar1 /*32*/].f_16[11]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_purch_0"), &(uParam0->f_2244[iVar1 /*32*/][0]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_purch_1"), &(uParam0->f_2244[iVar1 /*32*/][1]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_addon_purch_0"), &(uParam0->f_2244[iVar1 /*32*/].f_5[0]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_addon_purch_1"), &(uParam0->f_2244[iVar1 /*32*/].f_5[1]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_addon_purch_2"), &(uParam0->f_2244[iVar1 /*32*/].f_5[2]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_addon_purch_3"), &(uParam0->f_2244[iVar1 /*32*/].f_5[3]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_addon_purch_4"), &(uParam0->f_2244[iVar1 /*32*/].f_5[4]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_0"), &(uParam0->f_2244[iVar1 /*32*/].f_16[0]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_1"), &(uParam0->f_2244[iVar1 /*32*/].f_16[1]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_2"), &(uParam0->f_2244[iVar1 /*32*/].f_16[2]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_3"), &(uParam0->f_2244[iVar1 /*32*/].f_16[3]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_4"), &(uParam0->f_2244[iVar1 /*32*/].f_16[4]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_5"), &(uParam0->f_2244[iVar1 /*32*/].f_16[5]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_6"), &(uParam0->f_2244[iVar1 /*32*/].f_16[6]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_7"), &(uParam0->f_2244[iVar1 /*32*/].f_16[7]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_8"), &(uParam0->f_2244[iVar1 /*32*/].f_16[8]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_9"), &(uParam0->f_2244[iVar1 /*32*/].f_16[9]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_10"), &(uParam0->f_2244[iVar1 /*32*/].f_16[10]), -1);
+				STATS::STAT_GET_INT(joaat("sp0_weap_tint_purch_11"), &(uParam0->f_2244[iVar1 /*32*/].f_16[11]), -1);
 				break;
 			
 			case 1:
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_PURCH_0"), &(uParam0->f_2244[iVar1 /*32*/][0]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_PURCH_1"), &(uParam0->f_2244[iVar1 /*32*/][1]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_ADDON_PURCH_0"), &(uParam0->f_2244[iVar1 /*32*/].f_5[0]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_ADDON_PURCH_1"), &(uParam0->f_2244[iVar1 /*32*/].f_5[1]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_ADDON_PURCH_2"), &(uParam0->f_2244[iVar1 /*32*/].f_5[2]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_ADDON_PURCH_3"), &(uParam0->f_2244[iVar1 /*32*/].f_5[3]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_ADDON_PURCH_4"), &(uParam0->f_2244[iVar1 /*32*/].f_5[4]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_0"), &(uParam0->f_2244[iVar1 /*32*/].f_16[0]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_1"), &(uParam0->f_2244[iVar1 /*32*/].f_16[1]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_2"), &(uParam0->f_2244[iVar1 /*32*/].f_16[2]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_3"), &(uParam0->f_2244[iVar1 /*32*/].f_16[3]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_4"), &(uParam0->f_2244[iVar1 /*32*/].f_16[4]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_5"), &(uParam0->f_2244[iVar1 /*32*/].f_16[5]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_6"), &(uParam0->f_2244[iVar1 /*32*/].f_16[6]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_7"), &(uParam0->f_2244[iVar1 /*32*/].f_16[7]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_8"), &(uParam0->f_2244[iVar1 /*32*/].f_16[8]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_9"), &(uParam0->f_2244[iVar1 /*32*/].f_16[9]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_10"), &(uParam0->f_2244[iVar1 /*32*/].f_16[10]), -1);
-				STATS::STAT_GET_INT(joaat("SP1_WEAP_TINT_PURCH_11"), &(uParam0->f_2244[iVar1 /*32*/].f_16[11]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_purch_0"), &(uParam0->f_2244[iVar1 /*32*/][0]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_purch_1"), &(uParam0->f_2244[iVar1 /*32*/][1]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_addon_purch_0"), &(uParam0->f_2244[iVar1 /*32*/].f_5[0]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_addon_purch_1"), &(uParam0->f_2244[iVar1 /*32*/].f_5[1]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_addon_purch_2"), &(uParam0->f_2244[iVar1 /*32*/].f_5[2]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_addon_purch_3"), &(uParam0->f_2244[iVar1 /*32*/].f_5[3]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_addon_purch_4"), &(uParam0->f_2244[iVar1 /*32*/].f_5[4]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_0"), &(uParam0->f_2244[iVar1 /*32*/].f_16[0]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_1"), &(uParam0->f_2244[iVar1 /*32*/].f_16[1]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_2"), &(uParam0->f_2244[iVar1 /*32*/].f_16[2]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_3"), &(uParam0->f_2244[iVar1 /*32*/].f_16[3]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_4"), &(uParam0->f_2244[iVar1 /*32*/].f_16[4]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_5"), &(uParam0->f_2244[iVar1 /*32*/].f_16[5]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_6"), &(uParam0->f_2244[iVar1 /*32*/].f_16[6]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_7"), &(uParam0->f_2244[iVar1 /*32*/].f_16[7]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_8"), &(uParam0->f_2244[iVar1 /*32*/].f_16[8]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_9"), &(uParam0->f_2244[iVar1 /*32*/].f_16[9]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_10"), &(uParam0->f_2244[iVar1 /*32*/].f_16[10]), -1);
+				STATS::STAT_GET_INT(joaat("sp1_weap_tint_purch_11"), &(uParam0->f_2244[iVar1 /*32*/].f_16[11]), -1);
 				break;
 			
 			case 2:
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_PURCH_0"), &(uParam0->f_2244[iVar1 /*32*/][0]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_PURCH_1"), &(uParam0->f_2244[iVar1 /*32*/][1]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_ADDON_PURCH_0"), &(uParam0->f_2244[iVar1 /*32*/].f_5[0]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_ADDON_PURCH_1"), &(uParam0->f_2244[iVar1 /*32*/].f_5[1]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_ADDON_PURCH_2"), &(uParam0->f_2244[iVar1 /*32*/].f_5[2]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_ADDON_PURCH_3"), &(uParam0->f_2244[iVar1 /*32*/].f_5[3]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_ADDON_PURCH_4"), &(uParam0->f_2244[iVar1 /*32*/].f_5[4]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_0"), &(uParam0->f_2244[iVar1 /*32*/].f_16[0]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_1"), &(uParam0->f_2244[iVar1 /*32*/].f_16[1]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_2"), &(uParam0->f_2244[iVar1 /*32*/].f_16[2]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_3"), &(uParam0->f_2244[iVar1 /*32*/].f_16[3]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_4"), &(uParam0->f_2244[iVar1 /*32*/].f_16[4]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_5"), &(uParam0->f_2244[iVar1 /*32*/].f_16[5]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_6"), &(uParam0->f_2244[iVar1 /*32*/].f_16[6]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_7"), &(uParam0->f_2244[iVar1 /*32*/].f_16[7]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_8"), &(uParam0->f_2244[iVar1 /*32*/].f_16[8]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_9"), &(uParam0->f_2244[iVar1 /*32*/].f_16[9]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_10"), &(uParam0->f_2244[iVar1 /*32*/].f_16[10]), -1);
-				STATS::STAT_GET_INT(joaat("SP2_WEAP_TINT_PURCH_11"), &(uParam0->f_2244[iVar1 /*32*/].f_16[11]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_purch_0"), &(uParam0->f_2244[iVar1 /*32*/][0]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_purch_1"), &(uParam0->f_2244[iVar1 /*32*/][1]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_addon_purch_0"), &(uParam0->f_2244[iVar1 /*32*/].f_5[0]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_addon_purch_1"), &(uParam0->f_2244[iVar1 /*32*/].f_5[1]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_addon_purch_2"), &(uParam0->f_2244[iVar1 /*32*/].f_5[2]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_addon_purch_3"), &(uParam0->f_2244[iVar1 /*32*/].f_5[3]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_addon_purch_4"), &(uParam0->f_2244[iVar1 /*32*/].f_5[4]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_0"), &(uParam0->f_2244[iVar1 /*32*/].f_16[0]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_1"), &(uParam0->f_2244[iVar1 /*32*/].f_16[1]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_2"), &(uParam0->f_2244[iVar1 /*32*/].f_16[2]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_3"), &(uParam0->f_2244[iVar1 /*32*/].f_16[3]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_4"), &(uParam0->f_2244[iVar1 /*32*/].f_16[4]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_5"), &(uParam0->f_2244[iVar1 /*32*/].f_16[5]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_6"), &(uParam0->f_2244[iVar1 /*32*/].f_16[6]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_7"), &(uParam0->f_2244[iVar1 /*32*/].f_16[7]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_8"), &(uParam0->f_2244[iVar1 /*32*/].f_16[8]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_9"), &(uParam0->f_2244[iVar1 /*32*/].f_16[9]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_10"), &(uParam0->f_2244[iVar1 /*32*/].f_16[10]), -1);
+				STATS::STAT_GET_INT(joaat("sp2_weap_tint_purch_11"), &(uParam0->f_2244[iVar1 /*32*/].f_16[11]), -1);
 				break;
 		}
 		uParam0->f_9[iVar1] = Global_111858.f_20560.f_233[iVar1 /*69*/].f_1;
@@ -101471,9 +101471,9 @@ void func_606(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4,
 		}
 		iVar1++;
 	}
-	STATS::STAT_GET_INT(joaat("SP0_SPECIAL_ABILITY"), &(uParam0->f_2341[0]), -1);
-	STATS::STAT_GET_INT(joaat("SP1_SPECIAL_ABILITY"), &(uParam0->f_2341[1]), -1);
-	STATS::STAT_GET_INT(joaat("SP2_SPECIAL_ABILITY"), &(uParam0->f_2341[2]), -1);
+	STATS::STAT_GET_INT(joaat("sp0_special_ability"), &(uParam0->f_2341[0]), -1);
+	STATS::STAT_GET_INT(joaat("sp1_special_ability"), &(uParam0->f_2341[1]), -1);
+	STATS::STAT_GET_INT(joaat("sp2_special_ability"), &(uParam0->f_2341[2]), -1);
 	uParam0->f_5 = 145;
 	if (iParam4 == 1)
 	{
@@ -102172,7 +102172,7 @@ int func_622(int iParam0, var uParam1, int iParam2, int iParam3)
 					{
 						if (VEHICLE::IS_VEHICLE_MODEL(*uParam1, joaat("taxi")))
 						{
-							if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(*uParam1, -1, 0) != iParam0 && VEHICLE::GET_PED_IN_VEHICLE_SEAT(*uParam1, -1, 0) != 0)
+							if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(*uParam1, -1, false) != iParam0 && VEHICLE::GET_PED_IN_VEHICLE_SEAT(*uParam1, -1, false) != 0)
 							{
 								return 0;
 							}
@@ -105810,7 +105810,7 @@ void func_673(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 	{
 		if (func_344(iParam0->f_1))
 		{
-			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_1, joaat("WEAPON_PISTOL"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_1, joaat("weapon_pistol"), -1, true, true);
 			PED::SET_PED_PROP_INDEX(iParam0->f_1, 1, MISC::GET_RANDOM_INT_IN_RANGE(0, 2), 0, false);
 			PED::SET_PED_PROP_INDEX(iParam0->f_1, 0, MISC::GET_RANDOM_INT_IN_RANGE(0, 1), 0, false);
 			if (func_666())
@@ -105825,7 +105825,7 @@ void func_673(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 		}
 		if (func_344(iParam0->f_2))
 		{
-			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_2, joaat("WEAPON_PUMPSHOTGUN"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_2, joaat("weapon_pumpshotgun"), -1, true, true);
 			PED::SET_PED_PROP_INDEX(iParam0->f_2, 1, MISC::GET_RANDOM_INT_IN_RANGE(0, 2), 0, false);
 			PED::SET_PED_PROP_INDEX(iParam0->f_2, 0, MISC::GET_RANDOM_INT_IN_RANGE(0, 1), 0, false);
 			if (func_666())
@@ -105843,7 +105843,7 @@ void func_673(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 	{
 		if (func_344(iParam0->f_1))
 		{
-			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_1, joaat("WEAPON_CARBINERIFLE"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_1, joaat("weapon_carbinerifle"), -1, true, true);
 			if (iParam1 == joaat("crusader"))
 			{
 				PED::SET_PED_ACCURACY(iParam0->f_1, 1);
@@ -105852,7 +105852,7 @@ void func_673(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iParam0->f_2))
 		{
-			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_2, joaat("WEAPON_CARBINERIFLE"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_2, joaat("weapon_carbinerifle"), -1, true, true);
 			if (iVar0 != iLocal_58)
 			{
 				PED::SET_PED_COMPONENT_VARIATION(iParam0->f_2, 2, 1, 0, 0);
@@ -105866,7 +105866,7 @@ void func_673(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iParam0->f_3))
 		{
-			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_3, joaat("WEAPON_CARBINERIFLE"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iParam0->f_3, joaat("weapon_carbinerifle"), -1, true, true);
 			if (iVar0 != iLocal_58)
 			{
 				PED::SET_PED_COMPONENT_VARIATION(iParam0->f_3, 2, 1, 0, 0);
@@ -106035,16 +106035,16 @@ void func_675()
 					if (func_344(func_324()))
 					{
 						ENTITY::ATTACH_ENTITY_TO_ENTITY(func_324(), iLocal_1054, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iLocal_1054, "seat_dside_r"), 0f, 0f, 0f, 0f, 0f, 0f, false, false, false, false, 2, true);
-						WEAPON::SET_CURRENT_PED_WEAPON(func_324(), joaat("WEAPON_MINIGUN"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(func_324(), joaat("weapon_minigun"), true);
 						TASK::TASK_PLAY_ANIM(func_324(), "MISSHeistBank_Bulldozer", "Shovel_Idle_Trevor", 1000f, -1000f, -1, 9, 0f, false, false, false);
-						PED::_0x2208438012482A1A(func_324(), false, false);
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_324(), false, false);
 					}
 					if (func_344(iLocal_98[0]))
 					{
 						ENTITY::ATTACH_ENTITY_TO_ENTITY(iLocal_98[0], iLocal_1054, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iLocal_1054, "seat_pside_r"), 0f, 0f, 0f, 0f, 0f, 0f, false, false, false, false, 2, true);
-						WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[0], joaat("WEAPON_COMBATMG"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[0], joaat("weapon_combatmg"), true);
 						TASK::TASK_PLAY_ANIM(iLocal_98[0], "MISSHeistBank_Bulldozer", "Shovel_Idle_Michael", 1000f, -1000f, -1, 9, 0f, false, false, false);
-						PED::_0x2208438012482A1A(iLocal_98[0], false, false);
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_98[0], false, false);
 					}
 				}
 				if (func_344(Local_1241.f_1))
@@ -106211,10 +106211,10 @@ void func_675()
 				TASK::TASK_SYNCHRONIZED_SCENE(iLocal_98[0], iLocal_1938, "MISSHeistPaletoScore2", "Dump_Exit_Michael", 1000f, -8f, 0, 0, 1000f, 0);
 				TASK::TASK_SYNCHRONIZED_SCENE(func_324(), iLocal_1938, "MISSHeistPaletoScore2", "Dump_Exit_Trevor", 1000f, -8f, 4, 0, 1000f, 0);
 				PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_1938, false);
-				PED::_0x2208438012482A1A(iLocal_98[0], false, false);
-				PED::_0x2208438012482A1A(func_324(), false, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_98[0], false, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_324(), false, false);
 				PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(iLocal_1938, iLocal_1054, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iLocal_1054, "bodyshell"));
-				WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_PUMPSHOTGUN"), 1000, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_pumpshotgun"), 1000, true, true);
 				TASK::TASK_LEAVE_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0, 262144);
 				iLocal_1941 = CAM::CREATE_CAM("DEFAULT_ANIMATED_CAMERA", false);
 				CAM::PLAY_SYNCHRONIZED_CAM_ANIM(iLocal_1941, iLocal_1938, "dump_exit_camera", "MISSHeistpaletoscore2");
@@ -106961,7 +106961,7 @@ int func_687(bool bParam0, bool bParam1, bool bParam2)
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(iVar0, false))
 			{
-				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) != PLAYER::PLAYER_PED_ID())
+				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) != PLAYER::PLAYER_PED_ID())
 				{
 					return 0;
 				}
@@ -108083,7 +108083,7 @@ int func_711(int iParam0, var uParam1)
 				}
 				iVar2++;
 			}
-			iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 0, 0);
+			iVar3 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 0, false);
 			if (!PED::IS_PED_INJURED(iVar3))
 			{
 				if ((iVar3 == uParam1->f_17[0] || iVar3 == uParam1->f_17[1]) || iVar3 == uParam1->f_17[2])
@@ -108095,7 +108095,7 @@ int func_711(int iParam0, var uParam1)
 			{
 				iVar1++;
 			}
-			iVar4 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 1, 0);
+			iVar4 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 1, false);
 			if (!PED::IS_PED_INJURED(iVar4))
 			{
 				if ((iVar4 == uParam1->f_17[0] || iVar4 == uParam1->f_17[1]) || iVar4 == uParam1->f_17[2])
@@ -108107,7 +108107,7 @@ int func_711(int iParam0, var uParam1)
 			{
 				iVar1++;
 			}
-			iVar5 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 2, 0);
+			iVar5 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, 2, false);
 			if (!PED::IS_PED_INJURED(iVar5))
 			{
 				if ((iVar5 == uParam1->f_17[0] || iVar5 == uParam1->f_17[1]) || iVar5 == uParam1->f_17[2])
@@ -108249,7 +108249,7 @@ void func_716()
 		iVar0 = PED::GET_VEHICLE_PED_IS_ENTERING(PLAYER::PLAYER_PED_ID());
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false))
 		{
-			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, 0);
+			iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, false);
 			if (!PED::IS_PED_INJURED(iVar1))
 			{
 				if (iVar1 != PLAYER::PLAYER_PED_ID())
@@ -108578,7 +108578,7 @@ void func_730()
 	
 	if (func_344(Local_1241) && func_344(iLocal_1054))
 	{
-		VEHICLE::_0x1093408B4B9D1146(Local_1241, fLocal_1920);
+		VEHICLE::SET_VEHICLE_TURRET_SPEED_THIS_FRAME(Local_1241, fLocal_1920);
 		VEHICLE::SET_PLAYBACK_SPEED(Local_1241, fLocal_1933);
 		fVar0 = MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(Local_1241, true), ENTITY::GET_ENTITY_COORDS(iLocal_1054, true), true);
 		if (fVar0 <= fLocal_1922)
@@ -108616,7 +108616,7 @@ int func_731()
 {
 	if (!ENTITY::IS_ENTITY_DEAD(Local_1241, false))
 	{
-		VEHICLE::_0x1093408B4B9D1146(Local_1241, 0.5f);
+		VEHICLE::SET_VEHICLE_TURRET_SPEED_THIS_FRAME(Local_1241, 0.5f);
 	}
 	switch (iLocal_1902)
 	{
@@ -108963,8 +108963,8 @@ void func_740()
 	func_468();
 	Local_1141[0 /*6*/].f_1 = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -70.9615f, 6312.339f, 30.3057f, 144.7231f, true, true);
 	Local_1141[0 /*6*/].f_2 = PED::CREATE_PED(26, joaat("s_m_y_marine_03"), -57.9858f, 6297.651f, 30.3243f, 30.916f, true, true);
-	func_465(&(Local_1141[0 /*6*/].f_1), joaat("WEAPON_CARBINERIFLE"), 0, 0, 1074161254, 0, 0, 1);
-	func_465(&(Local_1141[0 /*6*/].f_2), joaat("WEAPON_CARBINERIFLE"), 0, 0, 1074161254, 0, 0, 1);
+	func_465(&(Local_1141[0 /*6*/].f_1), joaat("weapon_carbinerifle"), 0, 0, 1074161254, 0, 0, 1);
+	func_465(&(Local_1141[0 /*6*/].f_2), joaat("weapon_carbinerifle"), 0, 0, 1074161254, 0, 0, 1);
 	PED::SET_PED_ANGLED_DEFENSIVE_AREA(Local_1141[0 /*6*/].f_1, -90.78626f, 6286.27f, 30.06741f, -64.87567f, 6313.888f, 33.07095f, 19.5f, false, false);
 	PED::SET_PED_ANGLED_DEFENSIVE_AREA(Local_1141[0 /*6*/].f_2, -90.78626f, 6286.27f, 30.06741f, -64.87567f, 6313.888f, 33.07095f, 19.5f, false, false);
 }
@@ -109293,8 +109293,8 @@ void func_748()
 			PLAYER::SET_PLAYER_CAN_USE_COVER(PLAYER::PLAYER_ID(), true);
 			PED::SET_PED_MAX_HEALTH(PLAYER::PLAYER_PED_ID(), 850);
 			ENTITY::SET_ENTITY_HEALTH(PLAYER::PLAYER_PED_ID(), 850, 0);
-			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_MICROSMG"), 400, false, true);
-			WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_MICROSMG"), true);
+			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_microsmg"), 400, false, true);
+			WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_microsmg"), true);
 			if (!ENTITY::IS_ENTITY_DEAD(func_324(), false))
 			{
 				ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(func_324(), true);
@@ -109816,7 +109816,7 @@ void func_756(bool bParam0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_1003[iVar0]))
 		{
-			func_465(&(iLocal_1003[iVar0]), joaat("WEAPON_CARBINERIFLE"), 0, 0, 2.1f, 0, bParam0, 1);
+			func_465(&(iLocal_1003[iVar0]), joaat("weapon_carbinerifle"), 0, 0, 2.1f, 0, bParam0, 1);
 			PED::SET_PED_CAN_BE_TARGETTED(iLocal_1003[iVar0], true);
 			StringCopy(&cVar17, "ArmyPed ", 64);
 			StringIntConCat(&cVar17, iVar0, 64);
@@ -110133,49 +110133,49 @@ void func_762()
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(997, "RBHdzCop");
 		func_765(&Local_1055, iVar1);
-		func_763(Local_1055, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_1055, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (func_672(Local_1067, "RBHdzCop") > fVar0)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(999, "RBHdzCop");
 		func_765(&Local_1067, iVar1);
-		func_763(Local_1067, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_1067, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (func_672(Local_1109, "RBHdzCop") > fVar0)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(1002, "RBHdzCop");
 		func_765(&Local_1109, iVar1);
-		func_763(Local_1109, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_1109, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (func_672(Local_1115, "RBHdzCop") > fVar0)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(1003, "RBHdzCop");
 		func_765(&Local_1115, iVar1);
-		func_763(Local_1115, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_1115, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (func_672(Local_1073, "RBHdzCop") > 69f)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(1005, "RBHdzCop");
 		func_765(&Local_1073, iVar1);
-		func_763(Local_1073, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_1073, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (func_672(Local_1079, "RBHdzCop") > fVar0)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(1006, "RBHdzCop");
 		func_765(&Local_1079, iVar1);
-		func_763(Local_1079, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_1079, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (func_672(Local_1085, "RBHdzCop") > 93f)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(7, "RBHdzCop");
 		func_765(&Local_1085, iVar1);
-		func_763(Local_1085, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_1085, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (func_672(Local_1091, "RBHdzCop") > fVar0)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(1008, "RBHdzCop");
 		func_765(&Local_1091, iVar1);
-		func_763(Local_1091, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_1091, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 }
 
@@ -110396,7 +110396,7 @@ void func_768()
 						ENTITY::SET_ENTITY_COORDS(iLocal_93, -190.0519f, 6281.453f, 30.4891f, true, false, false, true);
 						ENTITY::SET_ENTITY_HEADING(iLocal_93, 88.9563f);
 						TASK::TASK_AIM_GUN_AT_COORD(iLocal_93, -285.3361f, 6285.992f, 53.2497f, 5000, false, false);
-						PED::_0x2208438012482A1A(iLocal_93, false, false);
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_93, false, false);
 					}
 				}
 				else if (!PED::IS_PED_INJURED(func_474()))
@@ -110692,7 +110692,7 @@ void func_768()
 				{
 					if (iLocal_2185 >= 8)
 					{
-						STREAMING::_0x74DE2E8739086740();
+						STREAMING::ALLOW_PLAYER_SWITCH_OUTRO();
 						iLocal_1592 = 16;
 					}
 				}
@@ -110743,7 +110743,7 @@ void func_768()
 				func_475(&iLocal_1025, 0, -1);
 				func_662(&iLocal_1021);
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("cargobob"));
-				CAM::_0x8BBACBF51DA047A8(Local_142.f_12);
+				CAM::SET_GAMEPLAY_CAM_FOLLOW_PED_THIS_UPDATE(Local_142.f_12);
 				CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
 				HUD::DISPLAY_HUD(true);
 				HUD::DISPLAY_RADAR(true);
@@ -111407,12 +111407,12 @@ void func_786(int iParam0, bool bParam1, bool bParam2)
 		iVar1 = 0;
 		while (iVar1 <= (8 - 1))
 		{
-			HUD::_HUD_WEAPON_WHEEL_SET_SLOT_HASH(Global_111858.f_2359.f_539.f_1730[iVar1 /*4*/][iVar0]);
+			HUD::HUD_SET_WEAPON_WHEEL_TOP_SLOT(Global_111858.f_2359.f_539.f_1730[iVar1 /*4*/][iVar0]);
 			if (bParam2)
 			{
 				if (iVar1 == Global_111858.f_2359.f_539.f_1763 || (Global_111858.f_2359.f_539.f_1763 == -1 && iVar1 == 4))
 				{
-					if (Global_111858.f_2359.f_539.f_1730[iVar1 /*4*/][iVar0] != 0 && Global_111858.f_2359.f_539.f_1730[iVar1 /*4*/][iVar0] != joaat("WEAPON_MOLOTOV"))
+					if (Global_111858.f_2359.f_539.f_1730[iVar1 /*4*/][iVar0] != 0 && Global_111858.f_2359.f_539.f_1730[iVar1 /*4*/][iVar0] != joaat("weapon_molotov"))
 					{
 						if (WEAPON::HAS_PED_GOT_WEAPON(iParam0, Global_111858.f_2359.f_539.f_1730[iVar1 /*4*/][iVar0], false))
 						{
@@ -111425,15 +111425,15 @@ void func_786(int iParam0, bool bParam1, bool bParam2)
 		}
 		if (iVar0 == 0)
 		{
-			STATS::STAT_GET_INT(joaat("SP0_PARACHUTE_CURRENT_TINT"), &iVar2, -1);
+			STATS::STAT_GET_INT(joaat("sp0_parachute_current_tint"), &iVar2, -1);
 		}
 		else if (iVar0 == 1)
 		{
-			STATS::STAT_GET_INT(joaat("SP1_PARACHUTE_CURRENT_TINT"), &iVar2, -1);
+			STATS::STAT_GET_INT(joaat("sp1_parachute_current_tint"), &iVar2, -1);
 		}
 		else if (iVar0 == 2)
 		{
-			STATS::STAT_GET_INT(joaat("SP2_PARACHUTE_CURRENT_TINT"), &iVar2, -1);
+			STATS::STAT_GET_INT(joaat("sp2_parachute_current_tint"), &iVar2, -1);
 		}
 		PLAYER::SET_PLAYER_PARACHUTE_PACK_TINT_INDEX(PLAYER::PLAYER_ID(), iVar2);
 	}
@@ -111558,7 +111558,7 @@ void func_787(int iParam0, var uParam1, bool bParam2)
 						{
 							WEAPON::SET_PED_AMMO(iParam0, iVar3, iVar0, false);
 						}
-						if (iVar3 != joaat("WEAPON_PETROLCAN") && WEAPON::HAS_PED_GOT_WEAPON(iParam0, iVar3, false))
+						if (iVar3 != joaat("weapon_petrolcan") && WEAPON::HAS_PED_GOT_WEAPON(iParam0, iVar3, false))
 						{
 							WEAPON::SET_PED_WEAPON_TINT_INDEX(iParam0, iVar3, (uParam1[iVar5 /*5*/])->f_3);
 						}
@@ -111943,13 +111943,13 @@ bool func_793(int iParam0)
 			return 0;
 		}
 	}
-	if (iParam0 == joaat("WEAPON_FIREWORK") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
+	if (iParam0 == joaat("weapon_firework") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		return 0;
 	}
 	switch (iParam0)
 	{
-		case joaat("WEAPON_ASSAULTSMG"):
+		case joaat("weapon_assaultsmg"):
 			if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
 				if (!func_794(1, 1))
@@ -111959,7 +111959,7 @@ bool func_793(int iParam0)
 			}
 			break;
 		
-		case joaat("WEAPON_SAWNOFFSHOTGUN"):
+		case joaat("weapon_sawnoffshotgun"):
 			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
 				if (!func_794(1, 1))
@@ -111969,14 +111969,14 @@ bool func_793(int iParam0)
 			}
 			break;
 		
-		case joaat("WEAPON_RAILGUN"):
+		case joaat("weapon_railgun"):
 			if (!func_179() || NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
 				return 0;
 			}
 			break;
 		
-		case joaat("WEAPON_HATCHET"):
+		case joaat("weapon_hatchet"):
 			if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
 				if (!func_179() && !Global_262145.f_19760)
@@ -111986,8 +111986,8 @@ bool func_793(int iParam0)
 			}
 			break;
 		
-		case joaat("WEAPON_KNUCKLE"):
-		case joaat("WEAPON_MARKSMANPISTOL"):
+		case joaat("weapon_knuckle"):
+		case joaat("weapon_marksmanpistol"):
 			break;
 	}
 	iVar0 = 0;
@@ -112586,8 +112586,8 @@ void func_812()
 							PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_902[5 /*6*/].f_1, true);
 						}
 					}
-					WEAPON::REQUEST_WEAPON_ASSET(joaat("WEAPON_PISTOL"), 31, 0);
-					if (WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("WEAPON_PISTOL")))
+					WEAPON::REQUEST_WEAPON_ASSET(joaat("weapon_pistol"), 31, 0);
+					if (WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_pistol")))
 					{
 					}
 					WEAPON::REQUEST_WEAPON_ASSET(iLocal_91, 31, 0);
@@ -112645,8 +112645,8 @@ void func_812()
 					break;
 				
 				case 4:
-					WEAPON::GIVE_WEAPON_TO_PED(iLocal_93, joaat("WEAPON_PISTOL"), -1, true, true);
-					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_93, joaat("WEAPON_PISTOL"), true);
+					WEAPON::GIVE_WEAPON_TO_PED(iLocal_93, joaat("weapon_pistol"), -1, true, true);
+					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_93, joaat("weapon_pistol"), true);
 					iLocal_2141++;
 					break;
 				
@@ -112808,11 +112808,11 @@ void func_814()
 		}
 		if (MISC::GET_RANDOM_INT_IN_RANGE(0, 10) > 6)
 		{
-			func_465(&(iLocal_2157[iVar0]), joaat("WEAPON_PISTOL"), 1, 0, 1074161254, 0, 0, 1);
+			func_465(&(iLocal_2157[iVar0]), joaat("weapon_pistol"), 1, 0, 1074161254, 0, 0, 1);
 		}
 		else
 		{
-			func_465(&(iLocal_2157[iVar0]), joaat("WEAPON_CARBINERIFLE"), 1, 0, 1074161254, 0, 0, 1);
+			func_465(&(iLocal_2157[iVar0]), joaat("weapon_carbinerifle"), 1, 0, 1074161254, 0, 0, 1);
 		}
 		PED::SET_PED_COMBAT_MOVEMENT(iLocal_2157[iVar0], 2);
 		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_2157[iVar0], 50, true);
@@ -112859,7 +112859,7 @@ void func_815(float fParam0)
 						VEHICLE::SET_VEHICLE_ACTIVE_DURING_PLAYBACK(iLocal_1021[0], true);
 						VEHICLE::SET_HELI_BLADES_FULL_SPEED(iLocal_1021[0]);
 						iLocal_1025[0] = PED::CREATE_PED_INSIDE_VEHICLE(iLocal_1021[0], 26, joaat("s_m_y_marine_03"), -1, true, true);
-						func_465(&(iLocal_1025[0]), joaat("WEAPON_CARBINERIFLE"), 0, 0, 1074161254, 0, 0, 1);
+						func_465(&(iLocal_1025[0]), joaat("weapon_carbinerifle"), 0, 0, 1074161254, 0, 0, 1);
 						PED::SET_PED_CAN_BE_TARGETTED(iLocal_1025[0], false);
 						ENTITY::SET_ENTITY_PROOFS(iLocal_1021[0], true, true, true, true, true, true, false, false);
 						if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(iLocal_1021[0]))
@@ -113191,13 +113191,13 @@ void func_820()
 			AUDIO::REQUEST_SCRIPT_AUDIO_BANK("PS2A_Jeep_Skids", false, -1);
 			if (func_404(func_429()) == 2)
 			{
-				if (iLocal_1612 == joaat("WEAPON_MINIGUN"))
+				if (iLocal_1612 == joaat("weapon_minigun"))
 				{
 					if (WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), iLocal_1612) == 0)
 					{
 						WEAPON::SET_AMMO_IN_CLIP(PLAYER::PLAYER_PED_ID(), iLocal_1612, 2000);
 					}
-					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_MINIGUN"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_minigun"), true);
 				}
 			}
 			else
@@ -113319,7 +113319,7 @@ void func_820()
 					TASK::TASK_PLAY_ANIM(0, "MissHeistPaletoPinned", "pinned_against_wall_pro_loop_buddy", 1000f, -1000f, -1, 9, 0f, false, false, false);
 					TASK::CLOSE_SEQUENCE_TASK(iLocal_1051);
 					TASK::TASK_PERFORM_SEQUENCE(iLocal_93, iLocal_1051);
-					PED::_0x2208438012482A1A(iLocal_93, false, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_93, false, false);
 					TASK::CLEAR_SEQUENCE_TASK(&iLocal_1051);
 				}
 				iLocal_1590++;
@@ -113779,7 +113779,7 @@ void func_825(int iParam0, struct<3> Param1, bool bParam4, float fParam5, bool b
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		func_465(&iParam0, joaat("WEAPON_CARBINERIFLE"), 1, 1, 1074161254, 0, 0, 1);
+		func_465(&iParam0, joaat("weapon_carbinerifle"), 1, 1, 1074161254, 0, 0, 1);
 		PED::SET_PED_SPHERE_DEFENSIVE_AREA(iParam0, Param1, fParam5, false, false);
 		if (bParam4)
 		{
@@ -113835,9 +113835,9 @@ void func_827()
 		{
 			if ((SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(iLocal_98[2], true), Local_2098[0 /*3*/]) < 1.5f || SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(iLocal_98[2], true), Local_2098[1 /*3*/]) < 1.5f) || SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(iLocal_98[2], true), Local_2098[2 /*3*/]) < 1.5f)
 			{
-				if (iVar5 == joaat("WEAPON_MINIGUN"))
+				if (iVar5 == joaat("weapon_minigun"))
 				{
-					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[2], joaat("WEAPON_COMBATMG"), false);
+					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[2], joaat("weapon_combatmg"), false);
 				}
 			}
 		}
@@ -114000,13 +114000,13 @@ void func_830()
 		func_770(&(Local_861.f_5), &(Local_861.f_2), 0);
 		if (func_672(Local_855, "RBHArmySt") >= 95f || (PED::IS_PED_INJURED(Local_855.f_1) && PED::IS_PED_INJURED(Local_855.f_2)))
 		{
-			func_763(Local_855, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+			func_763(Local_855, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&Local_855);
 			VEHICLE::REMOVE_VEHICLE_RECORDING(998, "RBHArmySt");
 		}
 		if (func_672(Local_861, "RBHArmySt") >= 95f || (PED::IS_PED_INJURED(Local_861.f_1) && PED::IS_PED_INJURED(Local_861.f_2)))
 		{
-			func_763(Local_861, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+			func_763(Local_861, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&Local_861);
 			VEHICLE::REMOVE_VEHICLE_RECORDING(999, "RBHArmySt");
 		}
@@ -114047,8 +114047,8 @@ int func_832(int iParam0, int iParam1, bool bParam2, bool bParam3)
 					}
 					else
 					{
-						iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, -1, 0);
-						iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, 0, 0);
+						iVar1 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, -1, false);
+						iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, 0, false);
 						if (ENTITY::DOES_ENTITY_EXIST(iVar1))
 						{
 							if (PED::IS_PED_IN_ANY_VEHICLE(iVar1, false) && !PED::IS_PED_SITTING_IN_ANY_VEHICLE(iVar1))
@@ -114117,23 +114117,23 @@ void func_834()
 	}
 	else if (iLocal_63 > 5)
 	{
-		if (WEAPON::HAS_PED_GOT_WEAPON(iLocal_98[2], joaat("WEAPON_MINIGUN"), false))
+		if (WEAPON::HAS_PED_GOT_WEAPON(iLocal_98[2], joaat("weapon_minigun"), false))
 		{
-			if (WEAPON::GET_PED_AMMO_BY_TYPE(iLocal_98[2], WEAPON::GET_PED_AMMO_TYPE_FROM_WEAPON(iLocal_98[2], joaat("WEAPON_MINIGUN"))) < 100)
+			if (WEAPON::GET_PED_AMMO_BY_TYPE(iLocal_98[2], WEAPON::GET_PED_AMMO_TYPE_FROM_WEAPON(iLocal_98[2], joaat("weapon_minigun"))) < 100)
 			{
-				if (WEAPON::GET_PED_AMMO_BY_TYPE(iLocal_98[2], WEAPON::GET_PED_AMMO_TYPE_FROM_WEAPON(iLocal_98[2], joaat("WEAPON_MINIGUN"))) != -1)
+				if (WEAPON::GET_PED_AMMO_BY_TYPE(iLocal_98[2], WEAPON::GET_PED_AMMO_TYPE_FROM_WEAPON(iLocal_98[2], joaat("weapon_minigun"))) != -1)
 				{
-					WEAPON::GIVE_WEAPON_TO_PED(iLocal_98[2], joaat("WEAPON_MINIGUN"), 100, true, true);
+					WEAPON::GIVE_WEAPON_TO_PED(iLocal_98[2], joaat("weapon_minigun"), 100, true, true);
 				}
 			}
 		}
-		if (WEAPON::HAS_PED_GOT_WEAPON(iLocal_98[2], joaat("WEAPON_COMBATMG"), false))
+		if (WEAPON::HAS_PED_GOT_WEAPON(iLocal_98[2], joaat("weapon_combatmg"), false))
 		{
-			if (WEAPON::GET_PED_AMMO_BY_TYPE(iLocal_98[2], WEAPON::GET_PED_AMMO_TYPE_FROM_WEAPON(iLocal_98[2], joaat("WEAPON_COMBATMG"))) < 100)
+			if (WEAPON::GET_PED_AMMO_BY_TYPE(iLocal_98[2], WEAPON::GET_PED_AMMO_TYPE_FROM_WEAPON(iLocal_98[2], joaat("weapon_combatmg"))) < 100)
 			{
-				if (WEAPON::GET_PED_AMMO_BY_TYPE(iLocal_98[2], WEAPON::GET_PED_AMMO_TYPE_FROM_WEAPON(iLocal_98[2], joaat("WEAPON_COMBATMG"))) != -1)
+				if (WEAPON::GET_PED_AMMO_BY_TYPE(iLocal_98[2], WEAPON::GET_PED_AMMO_TYPE_FROM_WEAPON(iLocal_98[2], joaat("weapon_combatmg"))) != -1)
 				{
-					WEAPON::GIVE_WEAPON_TO_PED(iLocal_98[2], joaat("WEAPON_COMBATMG"), 100, true, true);
+					WEAPON::GIVE_WEAPON_TO_PED(iLocal_98[2], joaat("weapon_combatmg"), 100, true, true);
 				}
 			}
 		}
@@ -114181,11 +114181,11 @@ void func_834()
 							func_509(&iLocal_98, 2, 0, 1);
 							if (iLocal_63 > 5)
 							{
-								WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[2], joaat("WEAPON_MINIGUN"), true);
+								WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[2], joaat("weapon_minigun"), true);
 							}
 							else
 							{
-								WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[2], joaat("WEAPON_SAWNOFFSHOTGUN"), true);
+								WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[2], joaat("weapon_sawnoffshotgun"), true);
 							}
 							PED::SET_PED_FIRING_PATTERN(iLocal_98[2], 1122960381);
 							func_574(&iLocal_98, 0, 0);
@@ -114196,7 +114196,7 @@ void func_834()
 							iLocal_98[2] = PLAYER::PLAYER_PED_ID();
 							AUDIO::ADD_ENTITY_TO_AUDIO_MIX_GROUP(iLocal_98[0], "PS_2A_BUDDY_GROUP", 0f);
 							func_509(&iLocal_98, 0, 2, 1);
-							WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[0], joaat("WEAPON_COMBATMG"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[0], joaat("weapon_combatmg"), true);
 							func_574(&iLocal_98, 0, 1);
 						}
 						AUDIO::REMOVE_ENTITY_FROM_AUDIO_MIX_GROUP(PLAYER::PLAYER_PED_ID(), 0f);
@@ -114405,7 +114405,7 @@ void func_835(int iParam0, struct<3> Param1, bool bParam4, int iParam5, float fP
 		}
 		if (bParam4)
 		{
-			func_465(&iParam0, joaat("WEAPON_CARBINERIFLE"), 1, 1, 2.1f, 0, 0, bParam10);
+			func_465(&iParam0, joaat("weapon_carbinerifle"), 1, 1, 2.1f, 0, 0, bParam10);
 		}
 		PED::SET_PED_SPHERE_DEFENSIVE_AREA(iParam0, Param1, fParam9, false, false);
 		if (fParam6 == fParam6)
@@ -114531,17 +114531,17 @@ void func_839()
 			VEHICLE::REMOVE_VEHICLE_RECORDING(11, "RBHStreet");
 			bLocal_991 = false;
 			bLocal_992 = false;
-			WEAPON::REQUEST_WEAPON_ASSET(joaat("WEAPON_MINIGUN"), 31, 0);
-			WEAPON::REQUEST_WEAPON_ASSET(joaat("WEAPON_ASSAULTRIFLE"), 31, 0);
+			WEAPON::REQUEST_WEAPON_ASSET(joaat("weapon_minigun"), 31, 0);
+			WEAPON::REQUEST_WEAPON_ASSET(joaat("weapon_assaultrifle"), 31, 0);
 			iLocal_1585 = 99;
 			break;
 		
 		case 99:
-			if (WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("WEAPON_MINIGUN")) && WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("WEAPON_ASSAULTRIFLE")))
+			if (WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_minigun")) && WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_assaultrifle")))
 			{
 				WEAPON::GET_CURRENT_PED_WEAPON(iLocal_98[2], &iLocal_1612, true);
 				WEAPON::GET_CURRENT_PED_WEAPON(iLocal_98[0], &iLocal_1613, true);
-				if (iLocal_1612 != joaat("WEAPON_MINIGUN"))
+				if (iLocal_1612 != joaat("weapon_minigun"))
 				{
 					AUDIO::SET_CUTSCENE_AUDIO_OVERRIDE("_AK");
 				}
@@ -114554,7 +114554,7 @@ void func_839()
 			if (CUTSCENE::HAS_CUTSCENE_LOADED())
 			{
 				WEAPON::GET_CURRENT_PED_WEAPON(iLocal_98[2], &iLocal_1612, true);
-				if (iLocal_1612 == joaat("WEAPON_MINIGUN") && WEAPON::GET_AMMO_IN_PED_WEAPON(iLocal_98[2], joaat("WEAPON_MINIGUN")) != 0)
+				if (iLocal_1612 == joaat("weapon_minigun") && WEAPON::GET_AMMO_IN_PED_WEAPON(iLocal_98[2], joaat("weapon_minigun")) != 0)
 				{
 					bLocal_991 = true;
 				}
@@ -114569,7 +114569,7 @@ void func_839()
 				if (bLocal_992)
 				{
 					func_848(1);
-					CAM::_0x8BBACBF51DA047A8(iLocal_98[2]);
+					CAM::SET_GAMEPLAY_CAM_FOLLOW_PED_THIS_UPDATE(iLocal_98[2]);
 				}
 				func_331();
 				func_847();
@@ -114593,7 +114593,7 @@ void func_839()
 						{
 							CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(iLocal_990, "Trevor_Minigun", 0, 0, 0);
 						}
-						CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "Trevor_AssaultRifle", 3, WEAPON::GET_WEAPONTYPE_MODEL(joaat("WEAPON_ASSAULTRIFLE")), 0);
+						CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "Trevor_AssaultRifle", 3, WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_assaultrifle")), 0);
 					}
 					else
 					{
@@ -114604,7 +114604,7 @@ void func_839()
 						{
 							CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(iLocal_990, "Trevor_AssaultRifle", 0, 0, 0);
 						}
-						CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "Trevor_Minigun", 3, WEAPON::GET_WEAPONTYPE_MODEL(joaat("WEAPON_MINIGUN")), 0);
+						CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "Trevor_Minigun", 3, WEAPON::GET_WEAPONTYPE_MODEL(joaat("weapon_minigun")), 0);
 					}
 				}
 				if (AUDIO::IS_AUDIO_SCENE_ACTIVE("PS_2A_SHOOTOUT_STREET_MAIN"))
@@ -114759,8 +114759,8 @@ void func_839()
 				func_846();
 				OBJECT::DELETE_OBJECT(&iLocal_990);
 				func_345(0);
-				WEAPON::REMOVE_WEAPON_ASSET(joaat("WEAPON_MINIGUN"));
-				WEAPON::REMOVE_WEAPON_ASSET(joaat("WEAPON_ASSAULTRIFLE"));
+				WEAPON::REMOVE_WEAPON_ASSET(joaat("weapon_minigun"));
+				WEAPON::REMOVE_WEAPON_ASSET(joaat("weapon_assaultrifle"));
 				if (func_473())
 				{
 					func_600(&uLocal_203, 1, func_474(), "MICHAEL", 0, 1);
@@ -114831,7 +114831,7 @@ void func_841()
 				ENTITY::SET_ENTITY_HEADING(func_474(), 65.2353f);
 			}
 			TASK::TASK_SHOOT_AT_COORD(func_474(), -178.5373f, 6318.262f, 30.2044f, 1000, -957453492);
-			PED::_0x2208438012482A1A(func_474(), true, false);
+			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_474(), true, false);
 			PED::SET_PED_RESET_FLAG(func_474(), 156, true);
 		}
 		else if (func_472())
@@ -114855,7 +114855,7 @@ void func_841()
 			ENTITY::SET_ENTITY_COORDS(iLocal_93, -160.3512f, 6300.137f, 30.1831f, true, false, false, true);
 			ENTITY::SET_ENTITY_HEADING(iLocal_93, 300.2267f);
 			TASK::TASK_AIM_GUN_AT_COORD(iLocal_93, -143.8007f, 6313.969f, 32.1725f, -1, false, false);
-			PED::_0x2208438012482A1A(iLocal_93, true, false);
+			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_93, true, false);
 			PED::SET_PED_CAN_RAGDOLL(iLocal_93, false);
 			ENTITY::SET_ENTITY_INVINCIBLE(iLocal_93, true);
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_93, true);
@@ -115251,7 +115251,7 @@ void func_851()
 			{
 				if (!PED::IS_PED_INJURED(iLocal_761[0]))
 				{
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f), 25, true, joaat("WEAPON_ASSAULTRIFLE"), 0, true, true, -1f);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f), 25, true, joaat("weapon_assaultrifle"), 0, true, true, -1f);
 					PED::APPLY_DAMAGE_TO_PED(iLocal_761[0], 1000, true, 0);
 				}
 			}
@@ -115275,13 +115275,13 @@ void func_851()
 					func_855(func_474(), -159.9952f, 6358.181f, 30.4825f, -180.516f, 6341.968f, 32.1969f, 0, 0, 2f);
 					if (!PED::IS_PED_INJURED(iLocal_761[1]))
 					{
-						MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[1], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[1], 31086, 0f, 0f, 0f), 25, true, joaat("WEAPON_ASSAULTRIFLE"), 0, true, true, -1f);
+						MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[1], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[1], 31086, 0f, 0f, 0f), 25, true, joaat("weapon_assaultrifle"), 0, true, true, -1f);
 						PED::APPLY_DAMAGE_TO_PED(iLocal_761[1], 1000, true, 0);
 						ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&(iLocal_761[1]));
 					}
 					if (!PED::IS_PED_INJURED(iLocal_761[8]))
 					{
-						MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[8], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[8], 31086, 0f, 0f, 0f), 25, true, joaat("WEAPON_ASSAULTRIFLE"), 0, true, true, -1f);
+						MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[8], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[8], 31086, 0f, 0f, 0f), 25, true, joaat("weapon_assaultrifle"), 0, true, true, -1f);
 						PED::APPLY_DAMAGE_TO_PED(iLocal_761[8], 1000, true, 0);
 					}
 					if (!PED::IS_PED_INJURED(Local_867.f_3))
@@ -115308,13 +115308,13 @@ void func_851()
 				SYSTEM::SETTIMERA(0);
 				if (!PED::IS_PED_INJURED(iLocal_761[0]))
 				{
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f), 25, true, joaat("WEAPON_ASSAULTRIFLE"), 0, true, true, -1f);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f), 25, true, joaat("weapon_assaultrifle"), 0, true, true, -1f);
 					PED::APPLY_DAMAGE_TO_PED(iLocal_761[0], 1000, true, 0);
 					ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&(iLocal_761[0]));
 				}
 				if (!PED::IS_PED_INJURED(iLocal_761[6]))
 				{
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[6], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[6], 31086, 0f, 0f, 0f), 25, true, joaat("WEAPON_ASSAULTRIFLE"), 0, true, true, -1f);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(PED::GET_PED_BONE_COORDS(iLocal_761[6], 31086, 0f, 0f, 0f) + Vector(0.5f, 20f, 20f), PED::GET_PED_BONE_COORDS(iLocal_761[6], 31086, 0f, 0f, 0f), 25, true, joaat("weapon_assaultrifle"), 0, true, true, -1f);
 					PED::APPLY_DAMAGE_TO_PED(iLocal_761[6], 1000, true, 0);
 					ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&(iLocal_761[6]));
 				}
@@ -115369,12 +115369,12 @@ void func_851()
 	}
 	if (func_672(Local_1894, "RBHSTREET") >= 95.5f && iLocal_1900 == 0)
 	{
-		func_763(Local_1894, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_1894, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 		iLocal_1900 = 1;
 	}
 	if (func_672(Local_843, "CBSTG2") >= 95.5f && iLocal_899 == 0)
 	{
-		func_763(Local_843, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_843, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 		iLocal_899 = 1;
 	}
 	if (!iLocal_897)
@@ -115389,7 +115389,7 @@ void func_851()
 	else if (func_672(Local_879, "RBHStreet") >= 95f)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(7, "RBHStreet");
-		func_763(Local_879, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_879, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (!iLocal_898)
 	{
@@ -115414,7 +115414,7 @@ void func_852()
 		iLocal_774[iVar0] = PED::CREATE_PED(26, iLocal_58, Var1[iVar0 /*3*/], 313.4194f, true, true);
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_774[iVar0]) && !ENTITY::IS_ENTITY_DEAD(iLocal_774[iVar0], false))
 		{
-			func_465(&(iLocal_774[iVar0]), joaat("WEAPON_ASSAULTRIFLE"), 0, 0, 1074161254, 0, 0, 1);
+			func_465(&(iLocal_774[iVar0]), joaat("weapon_assaultrifle"), 0, 0, 1074161254, 0, 0, 1);
 			PED::REMOVE_PED_DEFENSIVE_AREA(iLocal_774[iVar0], true);
 			func_853(iLocal_774[iVar0], Local_1877, 0, 0);
 			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_774[iVar0], 37, true);
@@ -115444,7 +115444,7 @@ void func_854(int iParam0, struct<3> Param1, struct<3> Param4, bool bParam7, int
 		}
 		if (bParam7)
 		{
-			func_465(&iParam0, joaat("WEAPON_CARBINERIFLE"), 1, 1, 1074161254, 0, 0, 1);
+			func_465(&iParam0, joaat("weapon_carbinerifle"), 1, 1, 1074161254, 0, 0, 1);
 		}
 		PED::SET_PED_SPHERE_DEFENSIVE_AREA(iParam0, Param1, 2.5f, false, false);
 		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iParam0, true);
@@ -115471,7 +115471,7 @@ void func_855(int iParam0, struct<3> Param1, struct<3> Param4, bool bParam7, int
 		}
 		if (bParam7)
 		{
-			func_465(&iParam0, joaat("WEAPON_CARBINERIFLE"), 1, 1, 1074161254, 0, 0, 1);
+			func_465(&iParam0, joaat("weapon_carbinerifle"), 1, 1, 1074161254, 0, 0, 1);
 		}
 		PED::SET_PED_SPHERE_DEFENSIVE_AREA(iParam0, Param1, 2.5f, false, false);
 		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iParam0, true);
@@ -115501,18 +115501,18 @@ int func_856()
 	int iVar10;
 	int iVar11;
 	
-	STATS::STAT_GET_INT(joaat("SP0_CARS_COPS_EXPLODED"), &iVar0, -1);
-	STATS::STAT_GET_INT(joaat("SP1_CARS_COPS_EXPLODED"), &iVar1, -1);
-	STATS::STAT_GET_INT(joaat("SP2_CARS_COPS_EXPLODED"), &iVar2, -1);
-	STATS::STAT_GET_INT(joaat("SP0_HELIS_EXPLODED"), &iVar3, -1);
-	STATS::STAT_GET_INT(joaat("SP1_HELIS_EXPLODED"), &iVar4, -1);
-	STATS::STAT_GET_INT(joaat("SP2_HELIS_EXPLODED"), &iVar5, -1);
-	STATS::STAT_GET_INT(joaat("SP0_KILLS_SWAT"), &iVar6, -1);
-	STATS::STAT_GET_INT(joaat("SP1_KILLS_SWAT"), &iVar7, -1);
-	STATS::STAT_GET_INT(joaat("SP2_KILLS_SWAT"), &iVar8, -1);
-	STATS::STAT_GET_INT(joaat("SP0_KILLS_COP"), &iVar9, -1);
-	STATS::STAT_GET_INT(joaat("SP1_KILLS_COP"), &iVar10, -1);
-	STATS::STAT_GET_INT(joaat("SP2_KILLS_COP"), &iVar11, -1);
+	STATS::STAT_GET_INT(joaat("sp0_cars_cops_exploded"), &iVar0, -1);
+	STATS::STAT_GET_INT(joaat("sp1_cars_cops_exploded"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp2_cars_cops_exploded"), &iVar2, -1);
+	STATS::STAT_GET_INT(joaat("sp0_helis_exploded"), &iVar3, -1);
+	STATS::STAT_GET_INT(joaat("sp1_helis_exploded"), &iVar4, -1);
+	STATS::STAT_GET_INT(joaat("sp2_helis_exploded"), &iVar5, -1);
+	STATS::STAT_GET_INT(joaat("sp0_kills_swat"), &iVar6, -1);
+	STATS::STAT_GET_INT(joaat("sp1_kills_swat"), &iVar7, -1);
+	STATS::STAT_GET_INT(joaat("sp2_kills_swat"), &iVar8, -1);
+	STATS::STAT_GET_INT(joaat("sp0_kills_cop"), &iVar9, -1);
+	STATS::STAT_GET_INT(joaat("sp1_kills_cop"), &iVar10, -1);
+	STATS::STAT_GET_INT(joaat("sp2_kills_cop"), &iVar11, -1);
 	return (((((((((((iVar0 + iVar1) + iVar2) + iVar3) + iVar4) + iVar5) + iVar6) + iVar7) + iVar8) + iVar9) + iVar10) + iVar11);
 }
 
@@ -115604,7 +115604,7 @@ void func_863()
 			if (func_672(Local_891, "RBHStreet") >= 86f)
 			{
 				VEHICLE::REMOVE_VEHICLE_RECORDING(10, "RBHStreet");
-				func_763(Local_891, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+				func_763(Local_891, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 				func_864(&Local_891);
 				iLocal_1889 = 4;
 			}
@@ -115768,8 +115768,8 @@ void func_867()
 		case 3:
 			if (func_672(Local_849.x, "RBHChinLand") < 5f || ENTITY::IS_ENTITY_DEAD(Local_849.x, false))
 			{
-				func_764(Local_849.f_1, Local_849.x, joaat("WEAPON_CARBINERIFLE"), 50, 3f, 1);
-				func_764(Local_849.f_2, Local_849.x, joaat("WEAPON_CARBINERIFLE"), 500, 3f, 0);
+				func_764(Local_849.f_1, Local_849.x, joaat("weapon_carbinerifle"), 50, 3f, 1);
+				func_764(Local_849.f_2, Local_849.x, joaat("weapon_carbinerifle"), 500, 3f, 0);
 				AUDIO::STOP_AUDIO_SCENE("PS_2A_SHOOTOUT_STREET_ARMY_HELI");
 				iLocal_1885 = 1000;
 			}
@@ -116105,7 +116105,7 @@ void func_871()
 			{
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_867.f_1, false);
 			}
-			func_763(Local_867, joaat("WEAPON_ASSAULTRIFLE"), joaat("WEAPON_ASSAULTRIFLE"), 1074161254, 0);
+			func_763(Local_867, joaat("weapon_assaultrifle"), joaat("weapon_assaultrifle"), 1074161254, 0);
 			func_864(&Local_867);
 		}
 		if (func_672(Local_873, "RBHStreet") >= 95f)
@@ -116115,7 +116115,7 @@ void func_871()
 			{
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_873.f_1, false);
 			}
-			func_763(Local_873, joaat("WEAPON_ASSAULTRIFLE"), joaat("WEAPON_ASSAULTRIFLE"), 1074161254, 0);
+			func_763(Local_873, joaat("weapon_assaultrifle"), joaat("weapon_assaultrifle"), 1074161254, 0);
 			func_864(&Local_873);
 		}
 		if (func_672(Local_885, "RBHStreet") >= 95f)
@@ -116125,7 +116125,7 @@ void func_871()
 			{
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_885.f_1, false);
 			}
-			func_763(Local_885, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+			func_763(Local_885, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			func_864(&Local_885);
 		}
 		if (!iLocal_1559)
@@ -116331,7 +116331,7 @@ void func_873()
 			TASK::TASK_LOOK_AT_COORD(iLocal_93, -135.0391f, 6421.146f, 39.8513f, 5000, 0, 2);
 			TASK::TASK_LOOK_AT_COORD(func_474(), -135.0391f, 6421.146f, 39.8513f, 3000, 0, 2);
 			TASK::TASK_LOOK_AT_COORD(PLAYER::PLAYER_PED_ID(), -135.0391f, 6421.146f, 39.8513f, 4000, 0, 2);
-			PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), false, false);
+			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 			ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), func_811(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), -139.0459f, 6421.618f, 40.8127f));
 			func_878();
 			func_877();
@@ -116760,7 +116760,7 @@ void func_884()
 		
 		case 3:
 			VEHICLE::REMOVE_VEHICLE_RECORDING(3, "CBCops");
-			func_763(Local_704[0 /*6*/], joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+			func_763(Local_704[0 /*6*/], joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			iLocal_1810 = 4;
 			break;
 		
@@ -116784,7 +116784,7 @@ void func_884()
 		
 		case 5:
 			VEHICLE::REMOVE_VEHICLE_RECORDING(1, "CBSWat");
-			func_763(Local_704[1 /*6*/], joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+			func_763(Local_704[1 /*6*/], joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			iLocal_1810 = 6;
 			break;
 		
@@ -116949,17 +116949,17 @@ void func_889()
 	if (func_672(Local_717[0 /*6*/], "RBHPoolCops") >= 95f)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(9, "RBHPoolCops");
-		func_763(Local_717[0 /*6*/], joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_717[0 /*6*/], joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (func_672(Local_717[1 /*6*/], "RBHPoolCops") >= 95f)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(1, "RBHPoolCops");
-		func_763(Local_717[1 /*6*/], joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+		func_763(Local_717[1 /*6*/], joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 	}
 	if (func_672(Local_717[2 /*6*/], "RBHPoolCops") >= 95f)
 	{
 		VEHICLE::REMOVE_VEHICLE_RECORDING(2, "RBHPoolCops");
-		func_763(Local_717[2 /*6*/], joaat("WEAPON_ASSAULTRIFLE"), joaat("WEAPON_ASSAULTRIFLE"), 1074161254, 0);
+		func_763(Local_717[2 /*6*/], joaat("weapon_assaultrifle"), joaat("weapon_assaultrifle"), 1074161254, 0);
 	}
 	func_832(&(Local_717[1 /*6*/]), iLocal_54, 0, 1);
 	func_832(&(Local_717[2 /*6*/]), iLocal_54, 0, 1);
@@ -117742,7 +117742,7 @@ void func_895()
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_761[iVar0]))
 		{
 			PED::SET_PED_CONFIG_FLAG(iLocal_761[iVar0], 118, false);
-			func_465(&(iLocal_761[iVar0]), joaat("WEAPON_SMG"), 1, 0, 1074161254, 0, 0, 1);
+			func_465(&(iLocal_761[iVar0]), joaat("weapon_smg"), 1, 0, 1074161254, 0, 0, 1);
 			PED::REMOVE_PED_DEFENSIVE_AREA(iLocal_761[iVar0], false);
 			Local_790[iVar0 /*3*/] = { ENTITY::GET_ENTITY_COORDS(iLocal_761[iVar0], true) };
 		}
@@ -118093,11 +118093,11 @@ void func_906()
 						iLocal_1815[iVar0] = PED::CREATE_PED(6, iLocal_57, Local_1824[iVar0 /*3*/], 0f, true, true);
 						if (MISC::GET_RANDOM_INT_IN_RANGE(0, 10) > 6)
 						{
-							func_465(&(iLocal_1815[iVar0]), joaat("WEAPON_PUMPSHOTGUN"), 0, 0, 1074161254, 0, 0, 1);
+							func_465(&(iLocal_1815[iVar0]), joaat("weapon_pumpshotgun"), 0, 0, 1074161254, 0, 0, 1);
 						}
 						else
 						{
-							func_465(&(iLocal_1815[iVar0]), joaat("WEAPON_PISTOL"), 0, 0, 1074161254, 0, 0, 1);
+							func_465(&(iLocal_1815[iVar0]), joaat("weapon_pistol"), 0, 0, 1074161254, 0, 0, 1);
 						}
 						PED::SET_PED_COMPONENT_VARIATION(iLocal_1815[iVar0], 9, 2, 0, 0);
 						PED::SET_PED_ARMOUR(iLocal_1815[iVar0], 50);
@@ -118403,11 +118403,11 @@ void func_911()
 			PED::SET_PED_CONFIG_FLAG(iLocal_671, 272, true);
 			PED::SET_PED_CONFIG_FLAG(iLocal_672, 272, true);
 			PED::SET_PED_CONFIG_FLAG(iLocal_673, 272, true);
-			func_465(&iLocal_673, joaat("WEAPON_CARBINERIFLE"), 1, 0, 1074161254, 0, 0, 1);
-			func_465(&iLocal_672, joaat("WEAPON_CARBINERIFLE"), 1, 0, 1074161254, 0, 0, 1);
+			func_465(&iLocal_673, joaat("weapon_carbinerifle"), 1, 0, 1074161254, 0, 0, 1);
+			func_465(&iLocal_672, joaat("weapon_carbinerifle"), 1, 0, 1074161254, 0, 0, 1);
 			if (func_344(iLocal_671))
 			{
-				WEAPON::GIVE_WEAPON_TO_PED(iLocal_672, joaat("WEAPON_CARBINERIFLE"), -1, false, true);
+				WEAPON::GIVE_WEAPON_TO_PED(iLocal_672, joaat("weapon_carbinerifle"), -1, false, true);
 				PED::SET_PED_HEARING_RANGE(iLocal_672, 150f);
 				PED::SET_PED_SEEING_RANGE(iLocal_672, 150f);
 				PED::SET_PED_ID_RANGE(iLocal_672, 150f);
@@ -118417,7 +118417,7 @@ void func_911()
 			}
 			if (func_344(iLocal_673))
 			{
-				WEAPON::GIVE_WEAPON_TO_PED(iLocal_673, joaat("WEAPON_CARBINERIFLE"), -1, false, true);
+				WEAPON::GIVE_WEAPON_TO_PED(iLocal_673, joaat("weapon_carbinerifle"), -1, false, true);
 				PED::SET_PED_HEARING_RANGE(iLocal_673, 150f);
 				PED::SET_PED_SEEING_RANGE(iLocal_673, 150f);
 				PED::SET_PED_ID_RANGE(iLocal_673, 150f);
@@ -118558,7 +118558,7 @@ void func_911()
 				{
 					if (!PED::IS_PED_INJURED(func_474()))
 					{
-						MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(iLocal_670, true) + Vector(-2f, 0f, 0f), PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f), 25, true, joaat("WEAPON_ASSAULTRIFLE"), 0, true, true, -1f);
+						MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(iLocal_670, true) + Vector(-2f, 0f, 0f), PED::GET_PED_BONE_COORDS(iLocal_761[0], 31086, 0f, 0f, 0f), 25, true, joaat("weapon_assaultrifle"), 0, true, true, -1f);
 						PED::APPLY_DAMAGE_TO_PED(func_474(), 1000, true, 0);
 					}
 					ENTITY::SET_ENTITY_HEALTH(func_474(), 0, 0);
@@ -118890,7 +118890,7 @@ void func_917()
 	func_836();
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_61))
 	{
-		ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.99f, 10f, joaat("v_ilev_bank4door01"), 0);
+		ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.99f, 10f, joaat("v_ilev_bank4door01"), false);
 		OBJECT::DELETE_OBJECT(&iLocal_61);
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_bank4door01"));
 	}
@@ -119139,7 +119139,7 @@ void func_917()
 		{
 			if (func_672(Local_614, "RBHInitial") >= 97f)
 			{
-				func_763(Local_614, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+				func_763(Local_614, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			}
 		}
 	}
@@ -119149,7 +119149,7 @@ void func_917()
 		{
 			if (func_672(Local_620, "RBHInitial") >= 97f)
 			{
-				func_763(Local_620, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+				func_763(Local_620, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			}
 		}
 	}
@@ -119159,7 +119159,7 @@ void func_917()
 		{
 			if (func_672(Local_626, "RBHInitial") >= 97f)
 			{
-				func_763(Local_626, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+				func_763(Local_626, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			}
 		}
 	}
@@ -119169,7 +119169,7 @@ void func_917()
 		{
 			if (func_672(Local_638, "RBHInitial") >= 96f)
 			{
-				func_763(Local_638, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+				func_763(Local_638, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			}
 		}
 	}
@@ -119179,7 +119179,7 @@ void func_917()
 		{
 			if (func_672(Local_632, "RBHInitial") >= 96f)
 			{
-				func_763(Local_632, joaat("WEAPON_PISTOL"), joaat("WEAPON_PISTOL"), 1074161254, 0);
+				func_763(Local_632, joaat("weapon_pistol"), joaat("weapon_pistol"), 1074161254, 0);
 			}
 		}
 	}
@@ -119310,9 +119310,9 @@ int func_923()
 	int iVar1;
 	int iVar2;
 	
-	STATS::STAT_GET_INT(joaat("SP0_KILLS_COP"), &iVar0, -1);
-	STATS::STAT_GET_INT(joaat("SP1_KILLS_COP"), &iVar1, -1);
-	STATS::STAT_GET_INT(joaat("SP2_KILLS_COP"), &iVar2, -1);
+	STATS::STAT_GET_INT(joaat("sp0_kills_cop"), &iVar0, -1);
+	STATS::STAT_GET_INT(joaat("sp1_kills_cop"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("sp2_kills_cop"), &iVar2, -1);
 	return ((iVar0 + iVar1) + iVar2);
 }
 
@@ -119706,7 +119706,7 @@ void func_938()
 			break;
 		
 		case 2:
-			if ((((((((((CUTSCENE::HAS_CUTSCENE_LOADED() && WEAPON::HAS_WEAPON_ASSET_LOADED(iLocal_91)) && WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("WEAPON_COMBATMG"))) && STREAMING::HAS_ANIM_SET_LOADED("ANIM_GROUP_MOVE_BALLISTIC")) && STREAMING::HAS_ANIM_SET_LOADED("MOVE_STRAFE_BALLISTIC")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "RBHInitial")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(2, "RBHInitial")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "RBHInitial")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "RBHINitial")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "RBHINitial")) && STREAMING::HAS_PTFX_ASSET_LOADED())
+			if ((((((((((CUTSCENE::HAS_CUTSCENE_LOADED() && WEAPON::HAS_WEAPON_ASSET_LOADED(iLocal_91)) && WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_combatmg"))) && STREAMING::HAS_ANIM_SET_LOADED("ANIM_GROUP_MOVE_BALLISTIC")) && STREAMING::HAS_ANIM_SET_LOADED("MOVE_STRAFE_BALLISTIC")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "RBHInitial")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(2, "RBHInitial")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(3, "RBHInitial")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "RBHINitial")) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "RBHINitial")) && STREAMING::HAS_PTFX_ASSET_LOADED())
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(func_324(), false))
 				{
@@ -119754,9 +119754,9 @@ void func_938()
 				if (iLocal_2122 == 0)
 				{
 					func_947();
-					WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_MINIGUN"), 7000, true, true);
-					WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_GRENADELAUNCHER"), 10, true, true);
-					WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_COMBATMG"), 500, true, true);
+					WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_minigun"), 7000, true, true);
+					WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_grenadelauncher"), 10, true, true);
+					WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_combatmg"), 500, true, true);
 					func_341();
 					OBJECT::DELETE_OBJECT(&iLocal_62);
 					OBJECT::DELETE_OBJECT(&iLocal_1745);
@@ -119872,7 +119872,7 @@ void func_938()
 				PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 156, true);
 				TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 				PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), 1063765679, true, 0, false);
-				PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), true, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), true, false);
 				PLAYER::SET_PLAYER_SIMULATE_AIMING(PLAYER::PLAYER_ID(), true);
 				WEAPON::_0xE4DCEC7FD5B739A5(PLAYER::PLAYER_PED_ID());
 				func_946();
@@ -119880,7 +119880,7 @@ void func_938()
 				VEHICLE::DELETE_VEHICLE(&iLocal_531);
 				PED::DELETE_PED(&(iLocal_98[1]));
 				MISC::CLEAR_AREA_OF_VEHICLES(Local_535, 60f, false, false, false, false, false, false);
-				CAM::_0x8BBACBF51DA047A8(PLAYER::PLAYER_PED_ID());
+				CAM::SET_GAMEPLAY_CAM_FOLLOW_PED_THIS_UPDATE(PLAYER::PLAYER_PED_ID());
 				if (iLocal_567 != 0)
 				{
 					INTERIOR::UNPIN_INTERIOR(iLocal_567);
@@ -119901,11 +119901,11 @@ void func_939(bool bParam0)
 {
 	if (bLocal_1053)
 	{
-		iLocal_91 = joaat("WEAPON_COMBATMG");
+		iLocal_91 = joaat("weapon_combatmg");
 	}
 	else
 	{
-		iLocal_91 = joaat("WEAPON_CARBINERIFLE");
+		iLocal_91 = joaat("weapon_carbinerifle");
 	}
 	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(-10000f, -10000f, -200f, 10000f, 10000f, 200f, false, true);
 	VEHICLE::REMOVE_VEHICLES_FROM_GENERATORS_IN_AREA(-10000f, -10000f, -200f, 10000f, 10000f, 200f, 0);
@@ -119956,13 +119956,13 @@ void func_939(bool bParam0)
 	}
 	if (!PED::IS_PED_INJURED(iLocal_98[0]))
 	{
-		if (WEAPON::GET_AMMO_IN_PED_WEAPON(iLocal_98[0], joaat("WEAPON_COMBATMG")) < 1000)
+		if (WEAPON::GET_AMMO_IN_PED_WEAPON(iLocal_98[0], joaat("weapon_combatmg")) < 1000)
 		{
-			WEAPON::GIVE_WEAPON_TO_PED(iLocal_98[0], joaat("WEAPON_COMBATMG"), (1000 - WEAPON::GET_AMMO_IN_PED_WEAPON(iLocal_98[0], joaat("WEAPON_COMBATMG"))), true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iLocal_98[0], joaat("weapon_combatmg"), (1000 - WEAPON::GET_AMMO_IN_PED_WEAPON(iLocal_98[0], joaat("weapon_combatmg"))), true, true);
 		}
 		else
 		{
-			WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[0], joaat("WEAPON_COMBATMG"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(iLocal_98[0], joaat("weapon_combatmg"), true);
 		}
 		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_98[0], 1, false);
 		PED::SET_PED_CAN_BE_TARGETTED(iLocal_98[0], false);
@@ -120002,10 +120002,10 @@ void func_939(bool bParam0)
 		PED::CLEAR_PED_PARACHUTE_PACK_VARIATION(PLAYER::PLAYER_PED_ID());
 		if (!bParam0)
 		{
-			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_MINIGUN"), 7000, true, true);
-			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_ASSAULTRIFLE"), 300, true, true);
-			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_GRENADELAUNCHER"), 10, true, true);
-			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_COMBATMG"), 500, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_minigun"), 7000, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_assaultrifle"), 300, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_grenadelauncher"), 10, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_combatmg"), 500, true, true);
 		}
 		func_940();
 		PED::SET_PED_MAX_HEALTH(PLAYER::PLAYER_PED_ID(), 1000);
@@ -120048,7 +120048,7 @@ void func_940()
 	{
 		iLocal_2082 = 1;
 	}
-	WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_MINIGUN"), true);
+	WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_minigun"), true);
 }
 
 void func_941(int iParam0, int iParam1, int iParam2, bool bParam3)
@@ -120416,9 +120416,9 @@ void func_945()
 			PED::SET_PED_NAME_DEBUG(iLocal_579[iVar0], &cVar17);
 			ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(iLocal_579[iVar0], true);
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_579[iVar0], true);
-			WEAPON::GIVE_WEAPON_TO_PED(iLocal_579[iVar0], joaat("WEAPON_PISTOL"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iLocal_579[iVar0], joaat("weapon_pistol"), -1, true, true);
 			TASK::TASK_AIM_GUN_AT_COORD(iLocal_579[iVar0], -113.4377f, 6460.438f, 30.4685f, 7500, true, false);
-			PED::_0x2208438012482A1A(iLocal_579[iVar0], true, false);
+			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_579[iVar0], true, false);
 			PED::SET_PED_KEEP_TASK(iLocal_579[iVar0], true);
 			PED::SET_PED_RESET_FLAG(iLocal_579[iVar0], 156, true);
 			PED::SET_PED_PROP_INDEX(iLocal_579[iVar0], 1, MISC::GET_RANDOM_INT_IN_RANGE(0, 2), 0, false);
@@ -120503,8 +120503,8 @@ void func_950()
 {
 	CUTSCENE::REQUEST_CUTSCENE("RBH_2A_MCS_2_P7", 8);
 	WEAPON::REQUEST_WEAPON_ASSET(iLocal_91, 31, 0);
-	WEAPON::REQUEST_WEAPON_ASSET(joaat("WEAPON_COMBATMG"), 31, 0);
-	WEAPON::REQUEST_WEAPON_ASSET(joaat("WEAPON_PISTOL"), 31, 0);
+	WEAPON::REQUEST_WEAPON_ASSET(joaat("weapon_combatmg"), 31, 0);
+	WEAPON::REQUEST_WEAPON_ASSET(joaat("weapon_pistol"), 31, 0);
 	VEHICLE::REQUEST_VEHICLE_RECORDING(1, "RBHInitial");
 	VEHICLE::REQUEST_VEHICLE_RECORDING(2, "RBHInitial");
 	VEHICLE::REQUEST_VEHICLE_RECORDING(3, "RBHInitial");
@@ -120715,7 +120715,7 @@ void func_951()
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("squalo"));
 			CUTSCENE::REMOVE_CUTSCENE();
 			TASK::REMOVE_WAYPOINT_RECORDING("RBHFRANKBOAT");
-			WEAPON::REQUEST_WEAPON_ASSET(joaat("WEAPON_MINIGUN"), 31, 0);
+			WEAPON::REQUEST_WEAPON_ASSET(joaat("weapon_minigun"), 31, 0);
 			WEAPON::REQUEST_WEAPON_ASSET(iLocal_91, 31, 0);
 			STREAMING::REQUEST_MODEL(joaat("s_f_y_airhostess_01"));
 			STREAMING::REQUEST_MODEL(joaat("a_m_m_business_01"));
@@ -120748,7 +120748,7 @@ void func_951()
 			iLocal_1782 = 0;
 			if (!ENTITY::IS_ENTITY_DEAD(func_324(), false))
 			{
-				WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("WEAPON_SAWNOFFSHOTGUN"), 150, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("weapon_sawnoffshotgun"), 150, true, true);
 			}
 			if (!ENTITY::IS_ENTITY_DEAD(iLocal_93, false))
 			{
@@ -120808,9 +120808,9 @@ void func_951()
 				if (ENTITY::IS_ENTITY_AT_COORD(iLocal_531, Local_538, 4.25f, 4.25f, 3f, false, true, 0))
 				{
 					func_604(3, "STAGE_ROB_THE_BANK", 0, 0, 0, 1);
-					if (WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_COMBATMG")) < 1000)
+					if (WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_combatmg")) < 1000)
 					{
-						WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_COMBATMG"), (1000 - WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_COMBATMG"))), true, true);
+						WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_combatmg"), (1000 - WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_combatmg"))), true, true);
 					}
 					func_956(&Local_178, 0);
 					Local_1752 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION("missheistpaletoscore2ig_8_p2", "Walk_In_Bank_Intro_Player2", -109.622f, 6467.932f, 30.712f, 0f, 0f, -45f, 0f, 2) };
@@ -120866,7 +120866,7 @@ void func_951()
 					if (!PED::IS_PED_INJURED(func_324()))
 					{
 						TASK::CLEAR_PED_TASKS_IMMEDIATELY(func_324());
-						WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("WEAPON_SAWNOFFSHOTGUN"), 150, true, true);
+						WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("weapon_sawnoffshotgun"), 150, true, true);
 						PED::SET_RAGDOLL_BLOCKING_FLAGS(func_324(), 32768);
 						TASK::TASK_SYNCHRONIZED_SCENE(func_324(), iLocal_1741, "missheistpaletoscore2ig_8", "Exit_Van_ToBank_Player2", 1000f, -4f, 0, 0, 1000f, 32);
 					}
@@ -120964,7 +120964,7 @@ void func_951()
 					ENTITY::DETACH_ENTITY(iLocal_548, true, true);
 					ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(iLocal_62, iLocal_1738, "Walk_In_Bank_Intro_Player2_Bag", "missheistpaletoscore2ig_8_p2", 1000f, -1000f, 0, 1000f);
 					ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(iLocal_548, iLocal_1738, "Walk_In_Bank_Intro_Player2_strap", "missheistpaletoscore2ig_8_p2", 1000f, -1000f, 0, 1000f);
-					PED::_0x2208438012482A1A(func_324(), false, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_324(), false, false);
 					ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(iLocal_62);
 					ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(iLocal_548);
 					iLocal_1764 = 1;
@@ -121020,7 +121020,7 @@ void func_951()
 						ENTITY::PLAY_SYNCHRONIZED_MAP_ENTITY_ANIM(-108.9147f, 6469.104f, 31.9103f, 1f, joaat("v_ilev_cbankcountdoor01"), iLocal_1738, "start_loop_CountDoor", "missheistpaletoscore2mcs_2_pt1", 1000f, -8f, 0, 1000f);
 						ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(iLocal_60);
 						ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(iLocal_61);
-						PED::_0x2208438012482A1A(func_324(), false, false);
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_324(), false, false);
 						ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(iLocal_62);
 						ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(iLocal_548);
 						iLocal_1767 = 1;
@@ -121034,7 +121034,7 @@ void func_951()
 					iLocal_1740 = PED::CREATE_SYNCHRONIZED_SCENE(-109.622f, 6467.932f, 30.712f, 0f, 0f, -45f, 2);
 					TASK::TASK_SYNCHRONIZED_SCENE(iLocal_93, iLocal_1740, "missheistpaletoscore2ig_8_p2", "Walk_In_Bank_Intro_Gunman", 4f, -1000f, 0, 0, 1000f, 0);
 					PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_1740, false);
-					PED::_0x2208438012482A1A(iLocal_93, false, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_93, false, false);
 					iLocal_1765 = 1;
 				}
 			}
@@ -121047,7 +121047,7 @@ void func_951()
 						iLocal_1740 = PED::CREATE_SYNCHRONIZED_SCENE(-109.622f, 6467.932f, 30.712f, 0f, 0f, -45f, 2);
 						TASK::TASK_SYNCHRONIZED_SCENE(iLocal_93, iLocal_1740, "missheistpaletoscore2ig_8_p2", "Start_Loop_A_Gunman", 1000f, -1000f, 0, 0, 1000f, 0);
 						PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_1740, true);
-						PED::_0x2208438012482A1A(iLocal_93, false, false);
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_93, false, false);
 						iLocal_1766 = 1;
 					}
 				}
@@ -121963,13 +121963,13 @@ void func_964()
 						PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_1740, false);
 						ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(iLocal_1742, iLocal_1740, "burn_door_VaultGate", "missheistpaletoscore2mcs_2_p5", 1000f, 8f, 0, 1000f);
 						ENTITY::PLAY_ENTITY_ANIM(iLocal_1746, "burn_door_Mask", "missheistpaletoscore2mcs_2_p5", 1000f, false, true, false, 0f, 0);
-						PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), true, false);
-						PED::_0x2208438012482A1A(iLocal_93, true, false);
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), true, false);
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_93, true, false);
 						ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(iLocal_1742);
 						ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(iLocal_1746);
-						ENTITY::REMOVE_MODEL_HIDE(-111.48f, 6463.94f, 31.985f, 5f, joaat("v_ilev_bank4door02"), 0);
+						ENTITY::REMOVE_MODEL_HIDE(-111.48f, 6463.94f, 31.985f, 5f, joaat("v_ilev_bank4door02"), false);
 						STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_bank4door02"));
-						ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.985f, 5f, joaat("v_ilev_bank4door01"), 0);
+						ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.985f, 5f, joaat("v_ilev_bank4door01"), false);
 						STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_bank4door01"));
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_60))
 						{
@@ -122114,22 +122114,22 @@ void func_964()
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(iLocal_1748, false))
 				{
-					func_465(&iLocal_1748, joaat("WEAPON_PISTOL"), 1, 0, 2.1f, 0, 0, 1);
+					func_465(&iLocal_1748, joaat("weapon_pistol"), 1, 0, 2.1f, 0, 0, 1);
 					PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_1748, true);
 					PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1748, -123.3953f, 6445.951f, 30.5228f, 5f, false, false);
 					TASK::TASK_AIM_GUN_AT_ENTITY(iLocal_1748, PLAYER::PLAYER_PED_ID(), -1, true);
-					PED::_0x2208438012482A1A(iLocal_1748, true, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_1748, true, false);
 				}
 			}
 			if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("Sheriff_CarDoor", 0))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(iLocal_1749, false))
 				{
-					func_465(&iLocal_1749, joaat("WEAPON_PISTOL"), 1, 0, 2.1f, 0, 0, 1);
+					func_465(&iLocal_1749, joaat("weapon_pistol"), 1, 0, 2.1f, 0, 0, 1);
 					PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_1749, true);
 					PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_1749, ENTITY::GET_ENTITY_COORDS(iLocal_1749, true), 5f, false, false);
 					TASK::TASK_AIM_GUN_AT_ENTITY(iLocal_1749, PLAYER::PLAYER_PED_ID(), -1, true);
-					PED::_0x2208438012482A1A(iLocal_1749, true, false);
+					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_1749, true, false);
 				}
 			}
 			if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("Trevor", 0))
@@ -122160,7 +122160,7 @@ void func_964()
 				func_600(&uLocal_203, 2, PLAYER::PLAYER_PED_ID(), "TREVOR", 0, 1);
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), -111.5747f, 6466.373f, 30.6267f, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 282.6058f);
-				WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_SAWNOFFSHOTGUN"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_sawnoffshotgun"), true);
 				PED::SET_PED_USING_ACTION_MODE(PLAYER::PLAYER_PED_ID(), true, -1, "TREVOR_ACTION");
 				PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -633298724, true, 1, false);
 				TASK::TASK_LOOK_AT_ENTITY(PLAYER::PLAYER_PED_ID(), func_474(), -1, 0, 2);
@@ -122192,13 +122192,13 @@ void func_964()
 				WEAPON::SET_CURRENT_PED_WEAPON(func_474(), joaat("weapon_unarmed"), true);
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_61))
 				{
-					ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.99f, 10f, joaat("v_ilev_bank4door01"), 0);
+					ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.99f, 10f, joaat("v_ilev_bank4door01"), false);
 					OBJECT::DELETE_OBJECT(&iLocal_61);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_bank4door01"));
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_60))
 				{
-					ENTITY::REMOVE_MODEL_HIDE(-111.5f, 6463.9f, 31.99f, 10f, joaat("v_ilev_bank4door02"), 0);
+					ENTITY::REMOVE_MODEL_HIDE(-111.5f, 6463.9f, 31.99f, 10f, joaat("v_ilev_bank4door02"), false);
 					OBJECT::DELETE_OBJECT(&iLocal_60);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_bank4door02"));
 				}
@@ -122270,7 +122270,7 @@ void func_964()
 					HUD::REMOVE_BLIP(&iLocal_542);
 				}
 			}
-			if (((((ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, false, true, 0) || MISC::IS_BULLET_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, true)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, joaat("WEAPON_GRENADE"), false)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, joaat("WEAPON_STICKYBOMB"), false)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, joaat("WEAPON_RPG"), false)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, joaat("WEAPON_GRENADELAUNCHER"), false))
+			if (((((ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, false, true, 0) || MISC::IS_BULLET_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, true)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, joaat("weapon_grenade"), false)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, joaat("weapon_stickybomb"), false)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, joaat("weapon_rpg"), false)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(-112.725f, 6461.234f, 29.21846f, -143.5491f, 6432.17f, 43.77954f, 49.25f, joaat("weapon_grenadelauncher"), false))
 			{
 				iLocal_1579 = 21;
 			}
@@ -122543,7 +122543,7 @@ void func_968()
 			}
 			if (func_344(func_324()))
 			{
-				WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("WEAPON_SAWNOFFSHOTGUN"), 150, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("weapon_sawnoffshotgun"), 150, true, true);
 			}
 			RECORDING::_0x293220DA1B46CEBC(4f, 5f, 3);
 			PAD::DISABLE_CONTROL_ACTION(0, 75, true);
@@ -122591,15 +122591,15 @@ void func_970()
 		func_499("VANDIED");
 		func_486();
 	}
-	WEAPON::GET_AMMO_IN_CLIP(func_324(), joaat("WEAPON_PISTOL"), &iLocal_2120);
+	WEAPON::GET_AMMO_IN_CLIP(func_324(), joaat("weapon_pistol"), &iLocal_2120);
 	if (iLocal_2120 < 2)
 	{
-		WEAPON::SET_AMMO_IN_CLIP(func_324(), joaat("WEAPON_PISTOL"), 8);
+		WEAPON::SET_AMMO_IN_CLIP(func_324(), joaat("weapon_pistol"), 8);
 	}
-	WEAPON::GET_AMMO_IN_CLIP(func_324(), joaat("WEAPON_PISTOL"), &iLocal_2120);
+	WEAPON::GET_AMMO_IN_CLIP(func_324(), joaat("weapon_pistol"), &iLocal_2120);
 	if (iLocal_2121 < 2)
 	{
-		WEAPON::SET_AMMO_IN_CLIP(func_355(), joaat("WEAPON_PISTOL"), 8);
+		WEAPON::SET_AMMO_IN_CLIP(func_355(), joaat("weapon_pistol"), 8);
 	}
 	switch (iLocal_1575)
 	{
@@ -122623,8 +122623,8 @@ void func_970()
 			func_600(&uLocal_203, 4, func_355(), "FRANKLIN", 0, 1);
 			func_741(iLocal_531, -1);
 			func_974(iLocal_531, -1);
-			WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("WEAPON_PISTOL"), 200, false, true);
-			WEAPON::GIVE_WEAPON_TO_PED(func_355(), joaat("WEAPON_PISTOL"), 200, false, true);
+			WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("weapon_pistol"), 200, false, true);
+			WEAPON::GIVE_WEAPON_TO_PED(func_355(), joaat("weapon_pistol"), 200, false, true);
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(func_324(), false);
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(func_355(), false);
 			func_604(1, "STAGE_DEAL_WITH_FRANKLIN", 0, 0, 0, 1);
@@ -123098,7 +123098,7 @@ void func_976()
 				}
 				if (func_344(iLocal_93) && func_344(iLocal_531))
 				{
-					if (!iLocal_93 == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_531, 2, 0))
+					if (!iLocal_93 == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_531, 2, false))
 					{
 						PED::SET_PED_INTO_VEHICLE(iLocal_93, iLocal_531, 2);
 					}
@@ -123114,7 +123114,7 @@ void func_976()
 					func_676(0);
 				}
 				func_977(2, 0);
-				ENTITY::REMOVE_MODEL_HIDE(1395.71f, 3607.15f, 37.94f, 1f, joaat("prop_table_03_chr"), 0);
+				ENTITY::REMOVE_MODEL_HIDE(1395.71f, 3607.15f, 37.94f, 1f, joaat("prop_table_03_chr"), false);
 				func_849(1, 1);
 				iLocal_63 = 3;
 			}
@@ -123158,7 +123158,7 @@ void func_978(var uParam0, bool bParam1, bool bParam2, int iParam3, int iParam4,
 	}
 	if (!bParam1 && iParam6)
 	{
-		CAM::_RENDER_FIRST_PERSON_CAM(false, 0f, 3, 0);
+		CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 	}
 	else
 	{
@@ -123355,7 +123355,7 @@ void func_982(int iParam0, bool bParam1)
 			}
 			if (func_344(func_324()))
 			{
-				WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("WEAPON_SAWNOFFSHOTGUN"), 150, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(func_324(), joaat("weapon_sawnoffshotgun"), 150, true, true);
 			}
 			if (func_344(iLocal_93))
 			{
@@ -123437,14 +123437,14 @@ void func_982(int iParam0, bool bParam1)
 			AUDIO::TRIGGER_MUSIC_EVENT("RH2A_BANK_RESTART");
 			func_921();
 			func_987(0, -1, 1);
-			WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_MINIGUN"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_minigun"), true);
 			PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 156, true);
 			TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 			PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), 1063765679, true, 0, false);
-			PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), true, false);
+			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), true, false);
 			PLAYER::SET_PLAYER_SIMULATE_AIMING(PLAYER::PLAYER_ID(), true);
 			WEAPON::_0xE4DCEC7FD5B739A5(PLAYER::PLAYER_PED_ID());
-			CAM::_0x8BBACBF51DA047A8(PLAYER::PLAYER_PED_ID());
+			CAM::SET_GAMEPLAY_CAM_FOLLOW_PED_THIS_UPDATE(PLAYER::PLAYER_PED_ID());
 			break;
 		
 		case 8:
@@ -123503,13 +123503,13 @@ void func_982(int iParam0, bool bParam1)
 			{
 				ENTITY::SET_ENTITY_COORDS(iLocal_93, Local_985 - Vector(1f, 0f, 0f), true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(iLocal_93, 317.8662f);
-				PED::_0x2208438012482A1A(iLocal_93, true, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_93, true, false);
 			}
 			if (!PED::IS_PED_INJURED(func_474()))
 			{
 				ENTITY::SET_ENTITY_COORDS(func_474(), Local_982 - Vector(1f, 0f, 0f), true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(func_474(), 339.2789f);
-				PED::_0x2208438012482A1A(func_474(), true, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_474(), true, false);
 			}
 			iLocal_1558 = 0;
 			iLocal_1559 = 0;
@@ -123840,7 +123840,7 @@ void func_982(int iParam0, bool bParam1)
 				ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(func_355(), true);
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(func_355(), true);
 				PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(func_355(), false);
-				WEAPON::GIVE_WEAPON_TO_PED(func_355(), joaat("WEAPON_PUMPSHOTGUN"), -1, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(func_355(), joaat("weapon_pumpshotgun"), -1, true, true);
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(func_355(), iLocal_89);
 				PED::SET_PED_SUFFERS_CRITICAL_HITS(func_355(), false);
 				PED::SET_PED_CAN_BE_TARGETTED(func_355(), false);
@@ -124046,7 +124046,7 @@ int func_986()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		{
-			if (!PED::_HAS_STREAMED_PED_ASSETS_LOADED(PLAYER::PLAYER_PED_ID()))
+			if (!PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(PLAYER::PLAYER_PED_ID()))
 			{
 				return 0;
 			}
@@ -124056,7 +124056,7 @@ int func_986()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(func_474(), false))
 		{
-			if (!PED::_HAS_STREAMED_PED_ASSETS_LOADED(func_474()))
+			if (!PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(func_474()))
 			{
 				return 0;
 			}
@@ -124066,7 +124066,7 @@ int func_986()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(func_324(), false))
 		{
-			if (!PED::_HAS_STREAMED_PED_ASSETS_LOADED(func_324()))
+			if (!PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(func_324()))
 			{
 				return 0;
 			}
@@ -124076,7 +124076,7 @@ int func_986()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(func_355(), false))
 		{
-			if (!PED::_HAS_STREAMED_PED_ASSETS_LOADED(func_355()))
+			if (!PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(func_355()))
 			{
 				return 0;
 			}
@@ -124086,19 +124086,19 @@ int func_986()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_93, false))
 		{
-			if (!PED::_HAS_STREAMED_PED_ASSETS_LOADED(iLocal_93))
+			if (!PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iLocal_93))
 			{
 				return 0;
 			}
 		}
 	}
-	WEAPON::REQUEST_WEAPON_ASSET(joaat("WEAPON_MINIGUN"), 31, 0);
-	if (!WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("WEAPON_MINIGUN")))
+	WEAPON::REQUEST_WEAPON_ASSET(joaat("weapon_minigun"), 31, 0);
+	if (!WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_minigun")))
 	{
 		return 0;
 	}
-	WEAPON::REQUEST_WEAPON_ASSET(joaat("WEAPON_CARBINERIFLE"), 31, 0);
-	if (!WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("WEAPON_CARBINERIFLE")))
+	WEAPON::REQUEST_WEAPON_ASSET(joaat("weapon_carbinerifle"), 31, 0);
+	if (!WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("weapon_carbinerifle")))
 	{
 		return 0;
 	}
@@ -124515,7 +124515,7 @@ void func_995(int iParam0)
 			PED::SET_PED_SUFFERS_CRITICAL_HITS(iLocal_93, false);
 			PED::SET_PED_COMPONENT_VARIATION(iLocal_93, 1, 1, 0, 0);
 			PED::SET_PED_INTO_VEHICLE(iLocal_93, iLocal_531, 2);
-			WEAPON::GIVE_WEAPON_TO_PED(iLocal_93, joaat("WEAPON_PISTOL"), -1, false, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iLocal_93, joaat("weapon_pistol"), -1, false, true);
 		}
 	}
 	PED::SET_PED_RELATIONSHIP_GROUP_HASH(PLAYER::PLAYER_PED_ID(), iLocal_89);
@@ -124773,19 +124773,19 @@ int func_1005(int iParam0, bool bParam1)
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 	{
 		iVar2 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
-		if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar2, -1, 0))
+		if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar2, -1, false))
 		{
 			iVar3 = -1;
 		}
-		else if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar2, 0, 0))
+		else if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar2, 0, false))
 		{
 			iVar3 = 0;
 		}
-		else if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar2, 1, 0))
+		else if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar2, 1, false))
 		{
 			iVar3 = 1;
 		}
-		else if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar2, 2, 0))
+		else if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar2, 2, false))
 		{
 			iVar3 = 2;
 		}
@@ -125376,8 +125376,8 @@ int func_1014(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam
 			func_1022((SYSTEM::TO_FLOAT(uParam4->f_11) / 3600f));
 			if (bParam7)
 			{
-				GRAPHICS::_0x5F0F3F56635809EF(0.6f);
-				GRAPHICS::_SET_FAR_SHADOWS_SUPPRESSED(false);
+				GRAPHICS::CASCADE_SHADOWS_SET_CASCADE_BOUNDS_SCALE(0.6f);
+				GRAPHICS::CASCADE_SHADOWS_ENABLE_ENTITY_TRACKER(false);
 				GRAPHICS::_0x0AE73D8DF3A762B2(false);
 			}
 			func_1021();
@@ -125428,14 +125428,14 @@ int func_1014(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam
 				CLOCK::SET_CLOCK_TIME(func_376(iVar5), func_1020(iVar5), func_1019(iVar5));
 				if (bParam7)
 				{
-					GRAPHICS::_0x03FC694AE06C5A20();
+					GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 				}
 				AUDIO::STOP_SOUND(uParam4->f_10);
 				AUDIO::RELEASE_NAMED_SCRIPT_AUDIO_BANK("TIME_LAPSE");
 				if (bParam7)
 				{
 					GRAPHICS::_0x0AE73D8DF3A762B2(true);
-					GRAPHICS::_SET_FAR_SHADOWS_SUPPRESSED(true);
+					GRAPHICS::CASCADE_SHADOWS_ENABLE_ENTITY_TRACKER(true);
 				}
 				return 1;
 			}
@@ -126475,7 +126475,7 @@ void func_1037(int iParam0, int iParam1)
 	}
 	if ((iParam1 != 0 && iParam1 != 1) && iParam1 != 2)
 	{
-		iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, 0);
+		iVar0 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, -1, false);
 		if (!ENTITY::DOES_ENTITY_EXIST(iVar0))
 		{
 			iVar0 = VEHICLE::GET_LAST_PED_IN_VEHICLE_SEAT(iParam0, -1);
@@ -129720,7 +129720,7 @@ void func_1061(struct<3> Param0, struct<3> Param3, float fParam6, struct<3> Para
 			{
 				if (VEHICLE::IS_VEHICLE_MODEL(iVar0, joaat("taxi")))
 				{
-					if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) != PLAYER::PLAYER_PED_ID() && VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) != 0)
+					if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) != PLAYER::PLAYER_PED_ID() && VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) != 0)
 					{
 						if (MISC::GET_DISTANCE_BETWEEN_COORDS(Param0 + Param3 / Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iVar0, true), true) < 20f)
 						{
@@ -129821,7 +129821,7 @@ void func_1061(struct<3> Param0, struct<3> Param3, float fParam6, struct<3> Para
 			{
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iVar0, true, false);
 			}
-			iVar14 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0);
+			iVar14 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false);
 			if (ENTITY::DOES_ENTITY_EXIST(iVar14) && !PED::IS_PED_INJURED(iVar14))
 			{
 				ENTITY::SET_ENTITY_COORDS(iVar14, ENTITY::GET_ENTITY_COORDS(iVar14, true), true, false, false, true);
@@ -129829,7 +129829,7 @@ void func_1061(struct<3> Param0, struct<3> Param3, float fParam6, struct<3> Para
 			iVar15 = VEHICLE::GET_VEHICLE_MODEL_NUMBER_OF_SEATS(ENTITY::GET_ENTITY_MODEL(iVar0));
 			if (iVar15 <= 2)
 			{
-				iVar14 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, 0);
+				iVar14 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 0, false);
 				if (ENTITY::DOES_ENTITY_EXIST(iVar14) && !PED::IS_PED_INJURED(iVar14))
 				{
 					ENTITY::SET_ENTITY_COORDS(iVar14, ENTITY::GET_ENTITY_COORDS(iVar14, true), true, false, false, true);
@@ -129837,12 +129837,12 @@ void func_1061(struct<3> Param0, struct<3> Param3, float fParam6, struct<3> Para
 			}
 			if (iVar15 <= 4)
 			{
-				iVar14 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 1, 0);
+				iVar14 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 1, false);
 				if (ENTITY::DOES_ENTITY_EXIST(iVar14) && !PED::IS_PED_INJURED(iVar14))
 				{
 					ENTITY::SET_ENTITY_COORDS(iVar14, ENTITY::GET_ENTITY_COORDS(iVar14, true), true, false, false, true);
 				}
-				iVar14 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 2, 0);
+				iVar14 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, 2, false);
 				if (ENTITY::DOES_ENTITY_EXIST(iVar14) && !PED::IS_PED_INJURED(iVar14))
 				{
 					ENTITY::SET_ENTITY_COORDS(iVar14, ENTITY::GET_ENTITY_COORDS(iVar14, true), true, false, false, true);
@@ -130021,10 +130021,10 @@ void func_1068()
 	PATHFIND::SET_ROADS_BACK_TO_ORIGINAL((Local_535.x - 200f), (Local_535.f_1 - 200f), (Local_535.f_2 - 200f), (Local_535.x + 200f), (Local_535.f_1 + 200f), (Local_535.f_2 + 200f), 1);
 	func_1004(1);
 	MISC::CLEAR_WEATHER_TYPE_PERSIST();
-	ENTITY::REMOVE_MODEL_HIDE(-111.48f, 6463.94f, 31.985f, 5f, joaat("v_ilev_bank4door02"), 0);
+	ENTITY::REMOVE_MODEL_HIDE(-111.48f, 6463.94f, 31.985f, 5f, joaat("v_ilev_bank4door02"), false);
 	OBJECT::DELETE_OBJECT(&iLocal_60);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_bank4door02"));
-	ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.985f, 5f, joaat("v_ilev_bank4door01"), 0);
+	ENTITY::REMOVE_MODEL_HIDE(-109.65f, 6462.11f, 31.985f, 5f, joaat("v_ilev_bank4door01"), false);
 	OBJECT::DELETE_OBJECT(&iLocal_61);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("v_ilev_bank4door01"));
 	PLAYER::SET_PLAYER_HEALTH_RECHARGE_MULTIPLIER(PLAYER::PLAYER_ID(), 1f);
@@ -130063,14 +130063,14 @@ void func_1068()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_98[2], false))
 		{
-			WEAPON::REMOVE_WEAPON_FROM_PED(iLocal_98[2], joaat("WEAPON_MINIGUN"));
+			WEAPON::REMOVE_WEAPON_FROM_PED(iLocal_98[2], joaat("weapon_minigun"));
 		}
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_98[0]))
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_98[0], false))
 		{
-			WEAPON::REMOVE_WEAPON_FROM_PED(iLocal_98[0], joaat("WEAPON_COMBATMG"));
+			WEAPON::REMOVE_WEAPON_FROM_PED(iLocal_98[0], joaat("weapon_combatmg"));
 		}
 	}
 	STREAMING::NEW_LOAD_SCENE_STOP();

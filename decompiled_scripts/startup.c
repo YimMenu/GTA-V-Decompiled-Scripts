@@ -208,7 +208,7 @@ void __EntryFunction__()
 	{
 		NETWORK::_0xB606E6CC59664972(0);
 	}
-	PATHFIND::_0x228E5C6AD4D74BFD(false);
+	PATHFIND::_SET_ALL_PATHS_CACHE_BOUNDINGSTRUCT(false);
 	MISC::_SET_PLAYER_IS_IN_ANIMAL_FORM(false);
 	func_2();
 	func_1();
@@ -1562,9 +1562,9 @@ void func_29()
 	int iVar1;
 	int iVar2;
 	
-	STATS::STAT_GET_INT(joaat("CONTENT_HANGER_VEH"), &iVar0, -1);
-	STATS::STAT_GET_INT(joaat("CONTENT_MARINA_VEH"), &iVar1, -1);
-	STATS::STAT_GET_INT(joaat("CONTENT_HELI_VEH"), &iVar2, -1);
+	STATS::STAT_GET_INT(joaat("content_hanger_veh"), &iVar0, -1);
+	STATS::STAT_GET_INT(joaat("content_marina_veh"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("content_heli_veh"), &iVar2, -1);
 	if ((iVar0 >= 0 && iVar1 >= 0) && iVar2 >= 0)
 	{
 		Global_111858.f_668.f_1308 = (Global_111858.f_668.f_1308 - iVar0);

@@ -491,7 +491,7 @@ int func_13()
 					iVar3 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 					if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 					{
-						if (func_12(iVar1) == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar3, 0, 0) || PED::IS_PED_IN_VEHICLE(func_12(iVar1), iVar3, true))
+						if (func_12(iVar1) == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar3, 0, false) || PED::IS_PED_IN_VEHICLE(func_12(iVar1), iVar3, true))
 						{
 							Local_58[iVar1 /*3*/].f_2 = 1;
 							return func_12(iVar1);
@@ -729,7 +729,7 @@ int func_28(int iParam0)
 {
 	if (PED::IS_PED_IN_ANY_VEHICLE(*iParam0, false))
 	{
-		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(PED::GET_VEHICLE_PED_IS_USING(*iParam0), -1, 0) == *iParam0)
+		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(PED::GET_VEHICLE_PED_IS_USING(*iParam0), -1, false) == *iParam0)
 		{
 			return 1;
 		}
@@ -872,7 +872,7 @@ int func_30(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -1525,7 +1525,7 @@ int func_55(int iParam0)
 		case 78:
 			return 32;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 32;
 		
 		case 80:

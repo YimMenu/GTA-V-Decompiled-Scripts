@@ -329,21 +329,21 @@ void __EntryFunction__()
 								switch (iVar6)
 								{
 									case 90:
-										STATS::STAT_SET_INT(joaat("HCS_PENALTY_JEWEL_FUNERAL"), iVar10, true);
+										STATS::STAT_SET_INT(joaat("hcs_penalty_jewel_funeral"), iVar10, true);
 										break;
 									
 									case 93:
-										STATS::STAT_SET_INT(joaat("HCS_PENALTY_PALETO_FUNERAL"), iVar10, true);
+										STATS::STAT_SET_INT(joaat("hcs_penalty_paleto_funeral"), iVar10, true);
 										break;
 									
 									case 69:
 									case 70:
-										STATS::STAT_SET_INT(joaat("HCS_PENALTY_BUREAU_FUNERAL"), iVar10, true);
+										STATS::STAT_SET_INT(joaat("hcs_penalty_bureau_funeral"), iVar10, true);
 										break;
 									
 									case 84:
 									case 85:
-										STATS::STAT_SET_INT(joaat("HCS_PENALTY_BIGS_FUNERAL"), iVar10, true);
+										STATS::STAT_SET_INT(joaat("hcs_penalty_bigs_funeral"), iVar10, true);
 										break;
 									}
 							}
@@ -621,12 +621,12 @@ void func_5()
 void func_6()
 {
 	Global_61736 = 0;
-	Global_61740 = func_7(joaat("SP0_SHOTS"));
-	Global_61739 = func_7(joaat("SP0_HITS"));
-	Global_61742 = func_7(joaat("SP1_SHOTS"));
-	Global_61741 = func_7(joaat("SP1_HITS"));
-	Global_61744 = func_7(joaat("SP2_SHOTS"));
-	Global_61743 = func_7(joaat("SP2_HITS"));
+	Global_61740 = func_7(joaat("sp0_shots"));
+	Global_61739 = func_7(joaat("sp0_hits"));
+	Global_61742 = func_7(joaat("sp1_shots"));
+	Global_61741 = func_7(joaat("sp1_hits"));
+	Global_61744 = func_7(joaat("sp2_shots"));
+	Global_61743 = func_7(joaat("sp2_hits"));
 }
 
 int func_7(int iParam0)
@@ -5242,7 +5242,7 @@ void func_70(int iParam0)
 			STATS::LEADERBOARDS_WRITE_ADD_COLUMN(132, func_71(652), 0f);
 			return;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0.x = 737;
 			STATS::LEADERBOARDS2_WRITE_DATA(&Var0);
 			STATS::LEADERBOARDS_WRITE_ADD_COLUMN(131, Global_73958, 0f);
@@ -7910,7 +7910,7 @@ void func_95(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			STATS::STAT_SET_INT(joaat("JEWEL_HEIST_RAW_TAKE"), Global_111858.f_1.f_126[iParam0 /*23*/], true);
+			STATS::STAT_SET_INT(joaat("jewel_heist_raw_take"), Global_111858.f_1.f_126[iParam0 /*23*/], true);
 			break;
 	}
 	iVar7 = 0;
@@ -8060,41 +8060,41 @@ void func_97(int iParam0, int iParam1, int iParam2)
 			switch (iParam0)
 			{
 				case 0:
-					STATS::STAT_SET_INT(joaat("HCS_PENALTY_JEWEL_DROP_MONEY"), iParam2, true);
+					STATS::STAT_SET_INT(joaat("hcs_penalty_jewel_drop_money"), iParam2, true);
 					break;
 				
 				case 2:
-					STATS::STAT_SET_INT(joaat("HCS_PENALTY_PALETO_DROP_MONEY"), iParam2, true);
+					STATS::STAT_SET_INT(joaat("hcs_penalty_paleto_drop_money"), iParam2, true);
 					break;
 				
 				case 4:
-					STATS::STAT_SET_INT(joaat("HCS_PENALTY_BIGS_DROP_MONEY"), iParam2, true);
+					STATS::STAT_SET_INT(joaat("hcs_penalty_bigs_drop_money"), iParam2, true);
 					break;
 			}
 			break;
 		
 		case 1:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_JEWEL_DROP_MONEY"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_jewel_drop_money"), iParam2, true);
 			break;
 		
 		case 2:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_JEWEL_MADR_HOUSE"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_jewel_madr_house"), iParam2, true);
 			break;
 		
 		case 4:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_DOCKS_UNSELL_WPN"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_docks_unsell_wpn"), iParam2, true);
 			break;
 		
 		case 3:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_PALETO_AGENT_CUT"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_paleto_agent_cut"), iParam2, true);
 			break;
 		
 		case 5:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_BIGS_SLOW_LOADING"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_bigs_slow_loading"), iParam2, true);
 			break;
 		
 		case 6:
-			STATS::STAT_SET_INT(joaat("HCS_PENALTY_BIGS_HOSTAGE_GIFT"), iParam2, true);
+			STATS::STAT_SET_INT(joaat("hcs_penalty_bigs_hostage_gift"), iParam2, true);
 			break;
 	}
 	Global_95185[iParam0 /*38*/].f_25[Global_95185[iParam0 /*38*/].f_37] = iParam1;
@@ -8162,12 +8162,12 @@ void func_100()
 	Global_61736 = 1;
 	iVar0 = 0;
 	iVar1 = 0;
-	iVar0 = (func_7(joaat("SP0_SHOTS")) - Global_61740);
-	iVar1 = (func_7(joaat("SP0_HITS")) - Global_61739);
-	iVar0 = (iVar0 + (func_7(joaat("SP1_SHOTS")) - Global_61742));
-	iVar1 = (iVar1 + (func_7(joaat("SP1_HITS")) - Global_61741));
-	iVar0 = (iVar0 + (func_7(joaat("SP2_SHOTS")) - Global_61744));
-	iVar1 = (iVar1 + (func_7(joaat("SP2_HITS")) - Global_61743));
+	iVar0 = (func_7(joaat("sp0_shots")) - Global_61740);
+	iVar1 = (func_7(joaat("sp0_hits")) - Global_61739);
+	iVar0 = (iVar0 + (func_7(joaat("sp1_shots")) - Global_61742));
+	iVar1 = (iVar1 + (func_7(joaat("sp1_hits")) - Global_61741));
+	iVar0 = (iVar0 + (func_7(joaat("sp2_shots")) - Global_61744));
+	iVar1 = (iVar1 + (func_7(joaat("sp2_hits")) - Global_61743));
 	SYSTEM::WAIT(0);
 	fVar2 = 100f;
 	if (!iVar0 == 0)

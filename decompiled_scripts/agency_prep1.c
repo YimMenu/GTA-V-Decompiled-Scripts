@@ -2610,7 +2610,7 @@ void func_45()
 					while (iVar1 < 3)
 					{
 						iVar2 = func_92(iVar1);
-						if ((!PED::IS_PED_INJURED(iVar2) && PED::IS_PED_IN_VEHICLE(iVar2, iVar0, false)) && VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) == iVar2)
+						if ((!PED::IS_PED_INJURED(iVar2) && PED::IS_PED_IN_VEHICLE(iVar2, iVar0, false)) && VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) == iVar2)
 						{
 							if (!func_91(iVar2) && func_90(iVar2, 0))
 							{
@@ -2630,7 +2630,7 @@ void func_45()
 			case 1:
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false))
 				{
-					if ((((PED::IS_PED_INJURED(func_92(iLocal_1102)) || VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, 0) != func_92(iLocal_1102)) || !PED::IS_PED_IN_VEHICLE(func_92(iLocal_1102), iVar0, false)) || !func_91(func_92(iLocal_1102))) || !PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iVar0, false))
+					if ((((PED::IS_PED_INJURED(func_92(iLocal_1102)) || VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, -1, false) != func_92(iLocal_1102)) || !PED::IS_PED_IN_VEHICLE(func_92(iLocal_1102), iVar0, false)) || !func_91(func_92(iLocal_1102))) || !PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iVar0, false))
 					{
 						func_88(func_92(iLocal_1102));
 						iLocal_1101 = 0;
@@ -2644,7 +2644,7 @@ void func_45()
 								break;
 							
 							case 1:
-								if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Local_1109, Local_1109.f_1, Local_1112, Local_1112.f_1))
+								if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Local_1109, Local_1109.f_1, Local_1112, Local_1112.f_1))
 								{
 									iLocal_1133++;
 								}
@@ -3143,7 +3143,7 @@ int func_60()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -4503,7 +4503,7 @@ void func_100(int iParam0)
 			func_101(14);
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			func_101(3);
 			break;
 		

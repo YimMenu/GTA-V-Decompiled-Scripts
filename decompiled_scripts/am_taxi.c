@@ -1440,7 +1440,7 @@ void func_7(int iParam0, bool bParam1)
 		{
 			if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/])) > 0)
 			{
-				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/]), -1, 0) == NETWORK::NET_TO_PED(Local_68.f_2[iParam0 /*23*/].f_1))
+				if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/]), -1, false) == NETWORK::NET_TO_PED(Local_68.f_2[iParam0 /*23*/].f_1))
 				{
 					iVar0 = VEHICLE::GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS(NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/]));
 					iVar1 = 0;
@@ -1449,7 +1449,7 @@ void func_7(int iParam0, bool bParam1)
 					{
 						if (iVar1 != -1)
 						{
-							iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/]), iVar1, 0);
+							iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/]), iVar1, false);
 							if (ENTITY::DOES_ENTITY_EXIST(iVar2))
 							{
 								if (!PED::IS_PED_INJURED(iVar2))
@@ -1823,7 +1823,7 @@ int func_22(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 				}
 				if (bParam13)
 				{
-					NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
+					NETWORK::SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
 				}
 			}
 			VEHICLE::SET_VEHICLE_IS_STOLEN(iVar1, bParam9);
@@ -2163,7 +2163,7 @@ int func_29(int iParam0, int iParam1)
 		{
 			if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iParam1, (iVar0 - 1), false))
 			{
-				iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, (iVar0 - 1), 0);
+				iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam1, (iVar0 - 1), false);
 				if (!PED::IS_PED_INJURED(iVar2))
 				{
 					if (PED::IS_PED_A_PLAYER(iVar2))
@@ -4703,7 +4703,7 @@ void func_98(int iParam0, bool bParam1, bool bParam2)
 						switch (bParam1)
 						{
 							case 77:
-							case joaat("MPSV_LP0_31"):
+							case joaat("mpsv_lp0_31"):
 							case 293:
 							case 225:
 							case 348:
@@ -5881,7 +5881,7 @@ int func_127()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -7744,7 +7744,7 @@ int func_187(var uParam0)
 
 bool func_188(int iParam0)
 {
-	return func_189(iParam0) == joaat("WEAPON_MINIGUN");
+	return func_189(iParam0) == joaat("weapon_minigun");
 }
 
 int func_189(int iParam0)
@@ -7789,7 +7789,7 @@ int func_191(int iParam0, bool bParam1)
 			}
 			else if (!bParam1)
 			{
-				iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, (iVar0 - 1), 0);
+				iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iParam0, (iVar0 - 1), false);
 				if (PED::IS_PED_INJURED(iVar2))
 				{
 					return 0;
@@ -8192,7 +8192,7 @@ void func_195(int iParam0)
 						{
 							bVar7 = true;
 						}
-						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/]), -1, 0) != NETWORK::NET_TO_PED(Local_68.f_2[iParam0 /*23*/].f_1))
+						if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/]), -1, false) != NETWORK::NET_TO_PED(Local_68.f_2[iParam0 /*23*/].f_1))
 						{
 							bVar7 = true;
 						}
@@ -8327,8 +8327,8 @@ int func_196(int iParam0, struct<3> Param1, var uParam4, var uParam5, var uParam
 	bVar21 = true;
 	iVar24 = *uParam6 + 2;
 	iVar25 = 50;
-	PATHFIND::_0x07FB139B592FA687((Param1.x - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.x + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7)));
-	if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA((Param1.x - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.x + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7))))
+	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Param1.x - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.x + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7)));
+	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA((Param1.x - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.x + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7))))
 	{
 		while (!bVar19 && *uParam6 < iVar24)
 		{
@@ -10107,7 +10107,7 @@ int func_213(int iParam0, struct<3> Param1, var* uParam4, float* fParam5, var uP
 
 int func_214(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	if (PATHFIND::_ARE_PATH_NODES_LOADED_IN_AREA(Param0, Param0.f_1, Param3, Param3.f_1))
+	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Param0, Param0.f_1, Param3, Param3.f_1))
 	{
 		return 1;
 	}
@@ -10146,7 +10146,7 @@ void func_215(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5, var 
 		*uParam6 = { Var0 };
 		*uParam7 = { Var3 };
 	}
-	PATHFIND::_0x07FB139B592FA687(*uParam6, uParam6->f_1, *uParam7, uParam7->f_1);
+	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(*uParam6, uParam6->f_1, *uParam7, uParam7->f_1);
 }
 
 Vector3 func_216(int iParam0)
@@ -14616,7 +14616,7 @@ int func_375()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}

@@ -1244,9 +1244,9 @@ void func_11(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -1470,7 +1470,7 @@ void func_16(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_17(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_17(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -2096,7 +2096,7 @@ int func_38(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -3050,7 +3050,7 @@ int func_84(int iParam0)
 			return 29;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 30;
 			break;
 		
@@ -3642,7 +3642,7 @@ Vector3 func_93(int iParam0)
 			Var0 = { 939.7161f, -1459.204f, 30.467f };
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0 = { 189.7624f, 309.7488f, 104.4714f };
 			break;
 		
@@ -3939,7 +3939,7 @@ int func_94(int iParam0)
 			return 63;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 64;
 			break;
 		
@@ -6604,7 +6604,7 @@ void func_202()
 				if (iLocal_300[iLocal_294] == 1 && !func_211())
 				{
 					GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("PIM_DMAGUT");
-					HUD::ADD_TEXT_COMPONENT_SUBSTRING_TIME((func_210(joaat("MPPLY_H3_COOLDOWN")) - NETWORK::GET_CLOUD_TIME_AS_INT()) * 1000, 14);
+					HUD::ADD_TEXT_COMPONENT_SUBSTRING_TIME((func_210(joaat("mpply_h3_cooldown")) - NETWORK::GET_CLOUD_TIME_AS_INT()) * 1000, 14);
 					bVar1 = false;
 				}
 				else if (iLocal_300[iLocal_294] == 0 && !func_209())
@@ -6762,7 +6762,7 @@ int func_210(int iParam0)
 
 bool func_211()
 {
-	return NETWORK::GET_CLOUD_TIME_AS_INT() >= func_210(joaat("MPPLY_H3_COOLDOWN"));
+	return NETWORK::GET_CLOUD_TIME_AS_INT() >= func_210(joaat("mpply_h3_cooldown"));
 }
 
 bool func_212()
@@ -6775,7 +6775,7 @@ void func_213()
 {
 	if (Global_1574583.f_2 == -1)
 	{
-		Global_1574583.f_2 = func_210(joaat("MPPLY_LAST_PROF_RACE_WON"));
+		Global_1574583.f_2 = func_210(joaat("mpply_last_prof_race_won"));
 	}
 }
 

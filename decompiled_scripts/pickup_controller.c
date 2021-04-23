@@ -108,7 +108,7 @@ void func_2()
 {
 	if (func_9())
 	{
-		func_3(0, joaat("PICKUP_WEAPON_HATCHET"), 156.24f, 0f, 71.2f, 1, 1);
+		func_3(0, joaat("pickup_weapon_hatchet"), 156.24f, 0f, 71.2f, 1, 1);
 	}
 }
 
@@ -155,7 +155,7 @@ void func_6()
 {
 	if (func_9())
 	{
-		func_7(0, joaat("PICKUP_WEAPON_RAILGUN"), 156.24f, 0f, 166.2f, 1, 1);
+		func_7(0, joaat("pickup_weapon_railgun"), 156.24f, 0f, 166.2f, 1, 1);
 	}
 }
 
@@ -199,14 +199,14 @@ int func_9()
 		{
 			if (NETWORK::_NETWORK_GET_ROS_PRIVILEGE_24())
 			{
-				STATS::STAT_GET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
 				MISC::SET_BIT(&iVar0, 4);
 				MISC::SET_BIT(&iVar0, 6);
 				MISC::SET_BIT(&Global_25, 2);
 				MISC::SET_BIT(&Global_25, 4);
 				MISC::SET_BIT(&Global_25, 6);
-				STATS::STAT_SET_INT(joaat("SP_UNLOCK_EXCLUS_CONTENT"), iVar0, true);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, true);
 				if (MISC::ARE_PROFILE_SETTINGS_VALID())
 				{
 					iVar0 = MISC::GET_PROFILE_SETTING(866);
@@ -1244,7 +1244,7 @@ Vector3 func_28(int iParam0, bool bParam1)
 			return -467.0458f, -934.8019f, 46.9844f;
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 226.7f, -1761f, 28.5f;
 			break;
 		

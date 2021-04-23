@@ -3279,7 +3279,7 @@ int func_123()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -3676,13 +3676,13 @@ bool func_142(int iParam0, bool bParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar6 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
+		iVar6 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
 		iVar1 = ((iParam0 - 3111) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 3111)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar6, bParam1, iVar1, bParam3);
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar7 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar7 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 		iVar1 = ((iParam0 - 2919) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 2919)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar7, bParam1, iVar1, bParam3);
 	}
@@ -3958,11 +3958,11 @@ int func_147(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam1);
 	}
 	else if (iParam0 >= 4335 && iParam0 < 4399)
 	{
@@ -6666,7 +6666,7 @@ int func_242(int iParam0)
 		}
 		else
 		{
-			iVar0 = func_244(joaat("MPPLY_VIPGAMEPLAYDISABLEDTIMER"));
+			iVar0 = func_244(joaat("mpply_vipgameplaydisabledtimer"));
 		}
 		iVar1 = ((iVar0 + func_243()) - NETWORK::GET_CLOUD_TIME_AS_INT());
 		return iVar1;
@@ -7619,7 +7619,7 @@ void func_299(bool bParam0)
 				Global_1312436.f_2 = 0;
 				if (bParam0)
 				{
-					NETWORK::USE_PLAYER_COLOUR_INSTEAD_OF_TEAM_COLOUR(false, false);
+					NETWORK::_SET_LOCAL_PLAYER_AS_GHOST(false, false);
 				}
 			}
 		}
@@ -7634,7 +7634,7 @@ void func_299(bool bParam0)
 				PLAYER::SET_PLAYER_VEHICLE_DEFENSE_MODIFIER(PLAYER::PLAYER_ID(), 0.5f);
 				if (Global_1312436.f_1 == 0 || Global_1312436.f_2 == 1)
 				{
-					NETWORK::USE_PLAYER_COLOUR_INSTEAD_OF_TEAM_COLOUR(true, false);
+					NETWORK::_SET_LOCAL_PLAYER_AS_GHOST(true, false);
 				}
 			}
 			NETWORK::NETWORK_SET_PLAYER_IS_PASSIVE(true);
@@ -8863,7 +8863,7 @@ int func_332(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 					{
 						iVar9 = 64;
 					}
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_4456448.f_82715)))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
@@ -8877,7 +8877,7 @@ int func_332(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 				{
 					sVar4 = "CST_KEY_TEXT";
 					iVar9 = 63;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_4456448.f_129926)))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
@@ -8898,7 +8898,7 @@ int func_332(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = "FMMC_KEY_BTIPF";
 					}
 					iVar9 = 60;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_4456448.f_129926)))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
@@ -8919,7 +8919,7 @@ int func_332(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = "FMMC_KEY_BTIPF";
 					}
 					iVar9 = 60;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					Var10 = { Global_4456448.f_129958[iParam30 /*16*/] };
 					if (iParam31 > -1)
 					{
@@ -8945,7 +8945,7 @@ int func_332(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = "FMMC_CDP_ADD2";
 					}
 					iVar9 = 60;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
 				}
 				else if (bParam34)
@@ -8959,7 +8959,7 @@ int func_332(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = "FMMC_CDM_F1";
 					}
 					iVar9 = 60;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
 				}
 				else if (bParam13)
@@ -8982,7 +8982,7 @@ int func_332(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar4 = sParam33;
 					}
 					iVar9 = 63;
-					MISC::_0x3ED1438C1F5C6612(2);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(sParam5))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(iVar8, sVar4, sVar5, "", "", "", "", iVar9);
@@ -9312,7 +9312,7 @@ int func_332(var uParam0, int* iParam1, var uParam2, bool bParam3, bool bParam4,
 						sVar5 = sVar4;
 						sVar4 = "FMMC_KEY_TIP16N";
 					}
-					MISC::_0x3ED1438C1F5C6612(64);
+					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(64);
 					if (MISC::IS_STRING_NULL_OR_EMPTY(sParam5))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(0, sVar4, sVar5, "", "", "", "", iVar9);
@@ -10297,7 +10297,7 @@ void func_365(bool bParam0)
 	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_138);
 	func_363(0);
 	func_373();
-	AUDIO::_0xA5F377B175A699C5(1000);
+	AUDIO::SET_AUDIO_SCRIPT_CLEANUP_TIME(1000);
 	if (bParam0)
 	{
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Exit", "GTAO_SMG_Hangar_Computer_Sounds", true);

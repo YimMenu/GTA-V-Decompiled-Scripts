@@ -365,15 +365,15 @@ int func_9()
 					iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 10);
 					if (iVar0 < 5)
 					{
-						WEAPON::GIVE_DELAYED_WEAPON_TO_PED(NETWORK::NET_TO_PED(Local_61.f_3), joaat("WEAPON_PISTOL"), 25000, func_10());
+						WEAPON::GIVE_DELAYED_WEAPON_TO_PED(NETWORK::NET_TO_PED(Local_61.f_3), joaat("weapon_pistol"), 25000, func_10());
 					}
 					else if (iVar0 > 6)
 					{
-						WEAPON::GIVE_DELAYED_WEAPON_TO_PED(NETWORK::NET_TO_PED(Local_61.f_3), joaat("WEAPON_MICROSMG"), 25000, func_10());
+						WEAPON::GIVE_DELAYED_WEAPON_TO_PED(NETWORK::NET_TO_PED(Local_61.f_3), joaat("weapon_microsmg"), 25000, func_10());
 					}
 					else
 					{
-						WEAPON::GIVE_DELAYED_WEAPON_TO_PED(NETWORK::NET_TO_PED(Local_61.f_3), joaat("WEAPON_PUMPSHOTGUN"), 25000, func_10());
+						WEAPON::GIVE_DELAYED_WEAPON_TO_PED(NETWORK::NET_TO_PED(Local_61.f_3), joaat("weapon_pumpshotgun"), 25000, func_10());
 					}
 				}
 				iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 10);
@@ -557,7 +557,7 @@ int func_13(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 				}
 				if (bParam13)
 				{
-					NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
+					NETWORK::SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
 				}
 			}
 			VEHICLE::SET_VEHICLE_IS_STOLEN(iVar1, bParam9);
@@ -1917,7 +1917,7 @@ int func_66()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}
@@ -2204,7 +2204,7 @@ int func_70(int iParam0)
 		case 78:
 			return 32;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return 32;
 		
 		case 80:

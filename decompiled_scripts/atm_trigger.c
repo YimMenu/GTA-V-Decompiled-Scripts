@@ -784,7 +784,7 @@ void __EntryFunction__()
 										{
 											if (!bVar5)
 											{
-												PED::_0xF1C03A5352243A30(PLAYER::PLAYER_PED_ID());
+												PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(PLAYER::PLAYER_PED_ID());
 												TASK::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 											}
 											if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
@@ -793,7 +793,7 @@ void __EntryFunction__()
 												{
 													if (PED::IS_PED_USING_ANY_SCENARIO(PLAYER::PLAYER_PED_ID()))
 													{
-														PED::_0xF1C03A5352243A30(PLAYER::PLAYER_PED_ID());
+														PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(PLAYER::PLAYER_PED_ID());
 														if (!PED::IS_PED_DEAD_OR_DYING(PLAYER::PLAYER_PED_ID(), true))
 														{
 															TASK::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
@@ -1634,7 +1634,7 @@ int func_10(int iParam0, int iParam1)
 		{
 			return 0;
 		}
-		if (NETSHOPPING::_NET_GAMESERVER_TRANSFER_BANK_TO_WALLET(func_18(joaat("MPPLY_LAST_MP_CHAR")), iParam1))
+		if (NETSHOPPING::_NET_GAMESERVER_TRANSFER_BANK_TO_WALLET(func_18(joaat("mpply_last_mp_char")), iParam1))
 		{
 			iVar3 = NETSHOPPING::_NET_GAMESERVER_TRANSFER_CASH_GET_STATUS();
 			while (iVar3 == 1 && !func_64(iParam0, 1))
@@ -2346,7 +2346,7 @@ int func_20(int iParam0, int iParam1)
 		{
 			return 0;
 		}
-		if (NETSHOPPING::_NET_GAMESERVER_TRANSFER_WALLET_TO_BANK(func_18(joaat("MPPLY_LAST_MP_CHAR")), iParam1))
+		if (NETSHOPPING::_NET_GAMESERVER_TRANSFER_WALLET_TO_BANK(func_18(joaat("mpply_last_mp_char")), iParam1))
 		{
 			iVar3 = NETSHOPPING::_NET_GAMESERVER_TRANSFER_CASH_GET_STATUS_2();
 			while (iVar3 == 1 && !func_64(iParam0, 1))
@@ -2959,7 +2959,7 @@ int func_29(int iParam0)
 	iVar3 = 0;
 	while (iVar2 > 0)
 	{
-		if (Global_2097152[func_30() /*10931*/].f_10754.f_1[iVar1] > 0 && Global_2097152[func_30() /*10931*/].f_10754.f_132[iVar1] != joaat("MONEY_SPENT_BETTING"))
+		if (Global_2097152[func_30() /*10931*/].f_10754.f_1[iVar1] > 0 && Global_2097152[func_30() /*10931*/].f_10754.f_132[iVar1] != joaat("money_spent_betting"))
 		{
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iVar0);
@@ -3012,27 +3012,27 @@ int func_29(int iParam0)
 						iVar4 = Global_2097152[func_30() /*10931*/].f_10754.f_132[iVar1];
 						switch (iVar4)
 						{
-							case joaat("MONEY_SPENT_CONTACT_SERVICE"):
+							case joaat("money_spent_contact_service"):
 								func_31("MONEY_SPENT_CONTACT_SERVICE");
 								break;
 							
-							case joaat("MONEY_SPENT_PROPERTY_UTIL"):
+							case joaat("money_spent_property_util"):
 								func_31("MONEY_SPENT_PROPERTY_UTIL");
 								break;
 							
-							case joaat("MONEY_SPENT_JOB_ACTIVITY"):
+							case joaat("money_spent_job_activity"):
 								func_31("MONEY_SPENT_JOB_ACTIVITY");
 								break;
 							
-							case joaat("MONEY_SPENT_BETTING"):
+							case joaat("money_spent_betting"):
 								func_31("MONEY_SPENT_BETTING");
 								break;
 							
-							case joaat("MONEY_SPENT_STYLE_ENT"):
+							case joaat("money_spent_style_ent"):
 								func_31("MONEY_SPENT_STYLE_ENT");
 								break;
 							
-							case joaat("MONEY_SPENT_HEALTHCARE"):
+							case joaat("money_spent_healthcare"):
 								func_31("MONEY_SPENT_HEALTHCARE");
 								break;
 							
@@ -3040,11 +3040,11 @@ int func_29(int iParam0)
 								func_31("MONEY_SPENT_FROM_DEBUG");
 								break;
 							
-							case joaat("MONEY_SPENT_DROPPED_STOLEN"):
+							case joaat("money_spent_dropped_stolen"):
 								func_31("MONEY_SPENT_DROPPED_STOLEN");
 								break;
 							
-							case joaat("MONEY_SPENT_VEH_MAINTENANCE"):
+							case joaat("money_spent_veh_maintenance"):
 								func_31("MONEY_SPENT_VEH_MAINTENANCE");
 								break;
 							
@@ -3069,35 +3069,35 @@ int func_29(int iParam0)
 						iVar5 = Global_2097152[func_30() /*10931*/].f_10754.f_132[iVar1];
 						switch (iVar5)
 						{
-							case joaat("MONEY_EARN_JOBS"):
+							case joaat("money_earn_jobs"):
 								func_31("MONEY_EARN_JOBS");
 								break;
 							
-							case joaat("MONEY_EARN_SELLING_VEH"):
+							case joaat("money_earn_selling_veh"):
 								func_31("MONEY_EARN_SELLING_VEH");
 								break;
 							
-							case joaat("MONEY_EARN_BETTING"):
+							case joaat("money_earn_betting"):
 								func_31("MONEY_EARN_BETTING");
 								break;
 							
-							case joaat("MONEY_EARN_GOOD_SPORT"):
+							case joaat("money_earn_good_sport"):
 								func_31("MONEY_EARN_GOOD_SPORT");
 								break;
 							
-							case joaat("MONEY_EARN_PICKED_UP"):
+							case joaat("money_earn_picked_up"):
 								func_31("MONEY_EARN_PICKED_UP");
 								break;
 							
-							case joaat("MONEY_EARN_SHARED"):
+							case joaat("money_earn_shared"):
 								func_31("MONEY_EARN_SHARED");
 								break;
 							
-							case joaat("MONEY_EARN_JOBSHARED"):
+							case joaat("money_earn_jobshared"):
 								func_31("MONEY_EARN_JOBSHARED");
 								break;
 							
-							case joaat("MONEY_EARN_ROCKSTAR_AWARD"):
+							case joaat("money_earn_rockstar_award"):
 								func_31("MONEY_EARN_ROCKSTAR_AWARD");
 								break;
 							
@@ -3594,7 +3594,7 @@ char* func_33(int iParam0)
 			return "S_G_10";
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			return "S_G_11";
 			break;
 		
@@ -4604,7 +4604,7 @@ int func_67()
 			if (iVar3 != 0)
 			{
 				iLocal_592 = 0;
-				if (ENTITY::IS_ENTITY_A_VEHICLE(iVar10) && !NETWORK::_0x21D04D7BC538C146(iVar10))
+				if (ENTITY::IS_ENTITY_A_VEHICLE(iVar10) && !NETWORK::_IS_ENTITY_GHOSTED_TO_LOCAL_PLAYER(iVar10))
 				{
 					iLocal_591 = 1;
 				}
@@ -4738,7 +4738,7 @@ void func_70(int iParam0, int iParam1, char* sParam2, int iParam3, char* sParam4
 
 bool func_71(int iParam0)
 {
-	return func_72(iParam0) == joaat("WEAPON_MINIGUN");
+	return func_72(iParam0) == joaat("weapon_minigun");
 }
 
 int func_72(int iParam0)
@@ -4819,7 +4819,7 @@ int func_79()
 {
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 	{
-		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(PED::GET_VEHICLE_PED_IS_USING(PLAYER::PLAYER_PED_ID()), -1, 0) == PLAYER::PLAYER_PED_ID())
+		if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(PED::GET_VEHICLE_PED_IS_USING(PLAYER::PLAYER_PED_ID()), -1, false) == PLAYER::PLAYER_PED_ID())
 		{
 			return 1;
 		}
@@ -5272,7 +5272,7 @@ void func_103()
 			{
 				if (PED::IS_PED_USING_ANY_SCENARIO(PLAYER::PLAYER_PED_ID()))
 				{
-					PED::_0xF1C03A5352243A30(PLAYER::PLAYER_PED_ID());
+					PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(PLAYER::PLAYER_PED_ID());
 					TASK::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 				}
 			}
@@ -5420,7 +5420,7 @@ int func_110()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}

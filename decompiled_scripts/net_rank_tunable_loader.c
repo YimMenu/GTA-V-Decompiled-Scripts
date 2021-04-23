@@ -1347,7 +1347,7 @@ void func_1()
 	func_2(iLocal_27, 27, -1905601195, &(Global_292403[1276]), 1);
 	func_2(iLocal_27, 27, -354447823, &(Global_292403[1277]), 1);
 	func_2(iLocal_27, 27, -116577652, &(Global_292403[1278]), 1);
-	func_2(iLocal_27, 27, 1198835546, &(Global_292403[1279]), 1);
+	func_2(iLocal_27, 27, joaat("h4_prop_bush_rosemary_lrg_01"), &(Global_292403[1279]), 1);
 	func_2(iLocal_27, 27, -950615108, &(Global_292403[1280]), 1);
 	func_2(iLocal_27, 27, 1167736885, &(Global_292403[1281]), 1);
 	func_2(iLocal_27, 27, 62504053, &(Global_292403[1282]), 1);

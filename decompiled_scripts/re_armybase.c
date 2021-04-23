@@ -585,7 +585,7 @@ void func_1()
 					MISC::CLEAR_AREA_OF_VEHICLES(Local_421, 10f, false, false, false, false, false, false);
 					iLocal_413 = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), Local_421, 57.3018f, true, true);
 					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_413, -472287501);
-					WEAPON::GIVE_WEAPON_TO_PED(iLocal_413, joaat("WEAPON_ASSAULTRIFLE"), -1, true, true);
+					WEAPON::GIVE_WEAPON_TO_PED(iLocal_413, joaat("weapon_assaultrifle"), -1, true, true);
 					ENTITY::SET_ENTITY_LOD_DIST(iLocal_413, 1000);
 					PED::SET_PED_KEEP_TASK(iLocal_413, true);
 					TASK::TASK_FOLLOW_WAYPOINT_RECORDING(iLocal_413, "OfficerMarch01", 0, 0, -1);
@@ -599,7 +599,7 @@ void func_1()
 					{
 						iLocal_414[iVar0] = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), Local_446[iVar0 /*3*/], 57.3018f, true, true);
 						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_414[iVar0], -472287501);
-						WEAPON::GIVE_WEAPON_TO_PED(iLocal_414[iVar0], joaat("WEAPON_ASSAULTRIFLE"), -1, true, true);
+						WEAPON::GIVE_WEAPON_TO_PED(iLocal_414[iVar0], joaat("weapon_assaultrifle"), -1, true, true);
 						ENTITY::SET_ENTITY_LOD_DIST(iLocal_414[iVar0], 1000);
 						PED::SET_PED_KEEP_TASK(iLocal_414[iVar0], true);
 						PED::SET_PED_STEERS_AROUND_PEDS(iLocal_414[iVar0], false);
@@ -1409,7 +1409,7 @@ int func_19()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -1776,7 +1776,7 @@ void func_37()
 	{
 		case 0:
 			iLocal_224 = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), Local_232, 140.0094f, true, true);
-			WEAPON::GIVE_WEAPON_TO_PED(iLocal_224, joaat("WEAPON_ASSAULTRIFLE"), -1, true, true);
+			WEAPON::GIVE_WEAPON_TO_PED(iLocal_224, joaat("weapon_assaultrifle"), -1, true, true);
 			ENTITY::SET_ENTITY_LOD_DIST(iLocal_224, 1000);
 			PED::SET_PED_KEEP_TASK(iLocal_224, true);
 			TASK::TASK_FOLLOW_WAYPOINT_RECORDING(iLocal_224, "AccomMarching01", 0, 0, -1);
@@ -1789,7 +1789,7 @@ void func_37()
 			while (iVar0 < 2)
 			{
 				iLocal_225[iVar0] = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), Local_248[iVar0 /*3*/], 140.0094f, true, true);
-				WEAPON::GIVE_WEAPON_TO_PED(iLocal_225[iVar0], joaat("WEAPON_ASSAULTRIFLE"), -1, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(iLocal_225[iVar0], joaat("weapon_assaultrifle"), -1, true, true);
 				ENTITY::SET_ENTITY_LOD_DIST(iLocal_225[iVar0], 1000);
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_225[iVar0], -472287501);
 				PED::SET_PED_KEEP_TASK(iLocal_225[iVar0], true);
@@ -2031,8 +2031,8 @@ void func_42(int iParam0)
 					{
 						if (ENTITY::DOES_ENTITY_EXIST((*iParam0)[iVar0]) && !ENTITY::IS_ENTITY_DEAD((*iParam0)[iVar0], false))
 						{
-							WEAPON::GIVE_WEAPON_TO_PED((*iParam0)[iVar0], joaat("WEAPON_ASSAULTRIFLE"), -1, false, true);
-							WEAPON::SET_CURRENT_PED_WEAPON((*iParam0)[iVar0], joaat("WEAPON_ASSAULTRIFLE"), true);
+							WEAPON::GIVE_WEAPON_TO_PED((*iParam0)[iVar0], joaat("weapon_assaultrifle"), -1, false, true);
+							WEAPON::SET_CURRENT_PED_WEAPON((*iParam0)[iVar0], joaat("weapon_assaultrifle"), true);
 						}
 						iVar0++;
 					}
@@ -2614,7 +2614,7 @@ int func_54()
 				iLocal_228[0] = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), Local_255, fLocal_258, true, true);
 				MISC::CLEAR_AREA(Local_255, 10f, true, false, false, false);
 				PED::ADD_SCENARIO_BLOCKING_AREA(Local_255 - Vector(10f, 10f, 10f), Local_255 + Vector(10f, 10f, 10f), false, true, true, true);
-				WEAPON::GIVE_WEAPON_TO_PED(iLocal_228[0], joaat("WEAPON_ASSAULTRIFLE"), -1, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(iLocal_228[0], joaat("weapon_assaultrifle"), -1, true, true);
 				ENTITY::SET_ENTITY_LOD_DIST(iLocal_228[0], 1000);
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_228[0], -472287501);
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_228[0], true);
@@ -2637,7 +2637,7 @@ int func_54()
 				iLocal_228[1] = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), Local_259, fLocal_262, true, true);
 				MISC::CLEAR_AREA(Local_259, 10f, true, false, false, false);
 				PED::ADD_SCENARIO_BLOCKING_AREA(Local_259 - Vector(10f, 10f, 10f), Local_259 + Vector(10f, 10f, 10f), false, true, true, true);
-				WEAPON::GIVE_WEAPON_TO_PED(iLocal_228[1], joaat("WEAPON_ASSAULTRIFLE"), -1, true, true);
+				WEAPON::GIVE_WEAPON_TO_PED(iLocal_228[1], joaat("weapon_assaultrifle"), -1, true, true);
 				ENTITY::SET_ENTITY_LOD_DIST(iLocal_228[1], 1000);
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_228[1], -472287501);
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_228[1], true);

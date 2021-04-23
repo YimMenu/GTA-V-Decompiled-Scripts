@@ -746,7 +746,7 @@ void func_13(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uParam
 				ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 12.5f);
 				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), -209.867f, 306.969f, 95.9464f, 1f, 20000, 40000f, 0.1f);
 				PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -668482597, false, 0, false);
-				PED::_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), false, false);
+				PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 			}
 		}
 		MISC::CLEAR_AREA_OF_VEHICLES(-209.434f, 305.016f, 95.9464f, 30f, false, false, false, false, false, false);
@@ -1146,9 +1146,9 @@ void func_28(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -1372,7 +1372,7 @@ void func_33(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_34(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_34(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -1488,7 +1488,7 @@ int func_41(var uParam0, int iParam1, int iParam2)
 		
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 		case 81:
 		case 82:
@@ -1585,7 +1585,7 @@ void func_42(int iParam0, int iParam1, var uParam2, int iParam3, bool bParam4)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 		case 81:
 		case 82:
@@ -2562,7 +2562,7 @@ struct<6> func_46(int iParam0, bool bParam1)
 			Var0.f_3 = { 0f, 0f, -14.5f };
 			break;
 		
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 			Var0 = { -742.2565f, 587.6547f, 143.0577f };
 			Var0.f_3 = { 0f, 0f, -29f };
 			break;
@@ -2880,7 +2880,7 @@ int func_47(var uParam0, int iParam1, int iParam2)
 		
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 		case 81:
 		case 82:
@@ -3265,7 +3265,7 @@ int func_67(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -10117,32 +10117,32 @@ int func_301(int iParam0)
 	switch (iParam0)
 	{
 		case 3:
-			return joaat("MPPLY_GANGOPS_ALLINORDER");
+			return joaat("mpply_gangops_allinorder");
 		
 		case 4:
-			return joaat("MPPLY_GANGOPS_LOYALTY");
+			return joaat("mpply_gangops_loyalty");
 		
 		case 7:
-			return joaat("MPPLY_GANGOPS_LOYALTY2");
+			return joaat("mpply_gangops_loyalty2");
 		
 		case 8:
-			return joaat("MPPLY_GANGOPS_LOYALTY3");
+			return joaat("mpply_gangops_loyalty3");
 		
 		case 5:
-			return joaat("MPPLY_GANGOPS_CRIMMASMD");
+			return joaat("mpply_gangops_crimmasmd");
 		
 		case 9:
-			return joaat("MPPLY_GANGOPS_CRIMMASMD2");
+			return joaat("mpply_gangops_crimmasmd2");
 		
 		case 10:
-			return joaat("MPPLY_GANGOPS_CRIMMASMD3");
+			return joaat("mpply_gangops_crimmasmd3");
 		
 		case 11:
-			return joaat("MPPLY_GANGOPS_SUPPORT");
+			return joaat("mpply_gangops_support");
 		
 		default:
 	}
-	return joaat("MPPLY_GANGOPS_ALLINORDER");
+	return joaat("mpply_gangops_allinorder");
 }
 
 int func_302(int iParam0)
@@ -10455,7 +10455,7 @@ void func_308(var uParam0)
 		{
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_BEHIND_PAUSEMENU(true);
 			HUD::SET_TEXT_RENDER_ID(uParam0->f_717);
-			GRAPHICS::_0xE6A9F00D4240B519(uParam0->f_714, 1);
+			GRAPHICS::_SET_SCALEFORM_FIT_RENDERTARGET(uParam0->f_714, true);
 			GRAPHICS::DRAW_SCALEFORM_MOVIE(uParam0->f_714, 0.501f, 0.5f, 1f, 1f, 255, 255, 255, 255, 0);
 			HUD::SET_TEXT_RENDER_ID(HUD::GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID());
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_BEHIND_PAUSEMENU(false);
@@ -19011,7 +19011,7 @@ int func_555(int iParam0, int iParam1, int iParam2)
 			{
 				case 77:
 				case 78:
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					iVar0 += 2;
 					break;
 			}
@@ -19319,7 +19319,7 @@ int func_556(int iParam0, int iParam1)
 					iVar0 = iVar0;
 					break;
 				
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					iVar0 = iVar0;
 					break;
 				
@@ -21755,7 +21755,7 @@ int func_589(int iParam0, int iParam1, int iParam2)
 			{
 				case 77:
 				case 78:
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					iVar0 += 2;
 					break;
 			}
@@ -22099,7 +22099,7 @@ int func_592(int iParam0, int iParam1)
 					iVar0 += 3;
 					break;
 				
-				case joaat("MPSV_LP0_31"):
+				case joaat("mpsv_lp0_31"):
 					iVar0 += 3;
 					break;
 				
@@ -24313,7 +24313,7 @@ void func_644(var uParam0)
 		{
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_BEHIND_PAUSEMENU(true);
 			HUD::SET_TEXT_RENDER_ID(uParam0->f_717);
-			GRAPHICS::_0xE6A9F00D4240B519(uParam0->f_714, 1);
+			GRAPHICS::_SET_SCALEFORM_FIT_RENDERTARGET(uParam0->f_714, true);
 			GRAPHICS::DRAW_SCALEFORM_MOVIE(uParam0->f_714, 0.501f, 0.5f, 1f, 1f, 255, 255, 255, 255, 0);
 			HUD::SET_TEXT_RENDER_ID(HUD::GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID());
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_BEHIND_PAUSEMENU(false);
@@ -26562,7 +26562,7 @@ void func_733(var uParam0)
 		{
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_BEHIND_PAUSEMENU(true);
 			HUD::SET_TEXT_RENDER_ID(uParam0->f_717);
-			GRAPHICS::_0xE6A9F00D4240B519(uParam0->f_714, 1);
+			GRAPHICS::_SET_SCALEFORM_FIT_RENDERTARGET(uParam0->f_714, true);
 			GRAPHICS::DRAW_SCALEFORM_MOVIE(uParam0->f_714, 0.501f, 0.5f, 1f, 1f, 255, 255, 255, 255, 0);
 			HUD::SET_TEXT_RENDER_ID(HUD::GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID());
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_BEHIND_PAUSEMENU(false);
@@ -27671,11 +27671,11 @@ int func_765(int iParam0, int iParam1)
 	}
 	else if (iParam0 >= 1361 && iParam0 < 1393)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1361), false, false, 0);
 	}
 	else if (iParam0 >= 1393 && iParam0 < 2919)
 	{
-		iVar0 = STATS::_GET_PACKED_TITLE_UPDATE_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
+		iVar0 = STATS::GET_PACKED_TU_INT_STAT_KEY((iParam0 - 1393), false, true, iParam1);
 	}
 	else if (iParam0 >= 4143 && iParam0 < 4207)
 	{

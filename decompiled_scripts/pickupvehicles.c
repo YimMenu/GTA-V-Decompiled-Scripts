@@ -84,7 +84,7 @@ void __EntryFunction__()
 					if (VEHICLE::IS_VEHICLE_MODEL(iLocal_28, joaat("handler")))
 					{
 						PAD::SET_INPUT_EXCLUSIVE(0, 51);
-						if (!VEHICLE::_0x62CA17B74C435651(iLocal_28))
+						if (!VEHICLE::IS_ANY_ENTITY_ATTACHED_TO_HANDLER_FRAME(iLocal_28))
 						{
 							if (iLocal_32 == 0)
 							{

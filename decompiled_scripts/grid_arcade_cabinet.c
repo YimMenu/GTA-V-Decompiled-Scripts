@@ -1013,9 +1013,9 @@ void func_26(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_BE_TARGETTED(iVar27, true);
 				PLAYER::SET_PLAYER_INVINCIBLE(iParam0, false);
 				PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(iParam0, false);
-				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::_HAS_STREAMED_PED_ASSETS_LOADED(iVar27))
+				if (PED::HAS_PED_HEAD_BLEND_FINISHED(iVar27) && PED::HAVE_ALL_STREAMING_REQUESTS_COMPLETED(iVar27))
 				{
-					PED::_0x4668D80430D6C299(iVar27);
+					PED::FINALIZE_HEAD_BLEND(iVar27);
 				}
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
@@ -1239,7 +1239,7 @@ void func_31(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_32(joaat("MPPLY_IS_CHAR_SPECTATING"), bParam0);
+		func_32(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
@@ -1810,7 +1810,7 @@ int func_61(int iParam0)
 		case 76:
 		case 77:
 		case 78:
-		case joaat("MPSV_LP0_31"):
+		case joaat("mpsv_lp0_31"):
 		case 80:
 			return 4;
 			break;
@@ -3441,11 +3441,11 @@ void func_106(int iParam0)
 	}
 }
 
-void func_107(char* sParam0, int iParam1, struct<2> Param2, struct<2> Param4, int iParam6, struct<4> Param7)
+void func_107(char* sParam0, char* sParam1, struct<2> Param2, struct<2> Param4, float fParam6, struct<4> Param7)
 {
 	Param2 = { func_108(Param2) };
 	Param4 = { func_108(Param4) };
-	func_124(sParam0, iParam1, Param2, Param2.f_1, Param4, Param4.f_1, iParam6, Param7);
+	func_124(sParam0, sParam1, Param2, Param2.f_1, Param4, Param4.f_1, fParam6, Param7);
 }
 
 struct<2> func_108(struct<2> Param0)
@@ -3772,7 +3772,7 @@ float func_123(float fParam0)
 	return fParam0;
 }
 
-void func_124(char* sParam0, int iParam1, float fParam2, float fParam3, float fParam4, float fParam5, int iParam6, struct<4> Param7)
+void func_124(char* sParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, struct<4> Param7)
 {
 	int iVar0;
 	
@@ -3784,7 +3784,7 @@ void func_124(char* sParam0, int iParam1, float fParam2, float fParam3, float fP
 	fParam3 = (SYSTEM::TO_FLOAT(iVar0) * (1f / IntToFloat(iLocal_144)));
 	iVar0 = SYSTEM::ROUND(((fParam5 * IntToFloat(iLocal_144)) / 4f)) * 4;
 	fParam5 = (SYSTEM::TO_FLOAT(iVar0) * (1f / IntToFloat(iLocal_144)));
-	GRAPHICS::_0x2D3B147AFAD49DE0(sParam0, iParam1, func_123(fParam2), fParam3, (fParam4 * fLocal_142), fParam5, iParam6, Param7, Param7.f_1, Param7.f_2, Param7.f_3, 0);
+	GRAPHICS::_0x2D3B147AFAD49DE0(sParam0, sParam1, func_123(fParam2), fParam3, (fParam4 * fLocal_142), fParam5, fParam6, Param7, Param7.f_1, Param7.f_2, Param7.f_3, 0);
 }
 
 void func_125()
@@ -4669,13 +4669,13 @@ bool func_151(int iParam0, bool bParam1, int iParam2, bool bParam3)
 	}
 	else if (iParam0 >= 3111 && iParam0 < 3879)
 	{
-		iVar6 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
+		iVar6 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 3111), false, true, iParam2);
 		iVar1 = ((iParam0 - 3111) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 3111)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar6, bParam1, iVar1, bParam3);
 	}
 	else if (iParam0 >= 2919 && iParam0 < 3111)
 	{
-		iVar7 = STATS::_GET_PACKED_TITLE_UPDATE_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
+		iVar7 = STATS::GET_PACKED_TU_BOOL_STAT_KEY((iParam0 - 2919), false, false, 0);
 		iVar1 = ((iParam0 - 2919) - STATS::_STAT_GET_PACKED_BOOL_MASK((iParam0 - 2919)) * 64);
 		bVar0 = STATS::STAT_SET_BOOL_MASKED(iVar7, bParam1, iVar1, bParam3);
 	}
@@ -5338,7 +5338,7 @@ void func_179()
 	bool bVar1;
 	struct<2> Var2;
 	int iVar4;
-	struct<8> Var5;
+	char cVar5[64];
 	struct<4> Var21;
 	struct<8> Var25;
 	
@@ -5351,9 +5351,9 @@ void func_179()
 	bVar1 = true;
 	Var2 = { func_109(0.5f, (0.5f + -0.005f)) };
 	iVar4 = 255;
-	StringCopy(&Var5, "text_gang_", 64);
-	StringConCat(&Var5, Local_166.f_422[Local_825[Local_619.f_130 /*9*/].f_6], 64);
-	StringConCat(&Var5, "_", 64);
+	StringCopy(&cVar5, "text_gang_", 64);
+	StringConCat(&cVar5, Local_166.f_422[Local_825[Local_619.f_130 /*9*/].f_6], 64);
+	StringConCat(&cVar5, "_", 64);
 	if (Local_166.f_415 < 4)
 	{
 		Var2.f_1 = (Var2.f_1 + (-0.05f / IntToFloat(Local_166.f_415 + 1)));
@@ -5371,14 +5371,14 @@ void func_179()
 	{
 		if (((Local_166.f_415 + 1 - 4) - 8) < 10)
 		{
-			StringConCat(&Var5, "0", 64);
+			StringConCat(&cVar5, "0", 64);
 		}
-		StringIntConCat(&Var5, ((Local_166.f_415 + 1 - 4) - 8), 64);
+		StringIntConCat(&cVar5, ((Local_166.f_415 + 1 - 4) - 8), 64);
 		Local_166.f_415 = (Local_166.f_415 + Local_166.f_414);
 	}
 	else
 	{
-		StringIntConCat(&Var5, 10, 64);
+		StringIntConCat(&cVar5, 10, 64);
 	}
 	if (bVar0)
 	{
@@ -5391,7 +5391,7 @@ void func_179()
 	{
 		StringCopy(&Var25, "MPArcadeCabinetGridPlayer", 64);
 		StringConCat(&Var25, Local_166.f_422[Local_825[Local_619.f_130 /*9*/].f_6], 64);
-		func_124(&Var25, &Var5, Var2, (Var2.f_1 + 0.07407407f), 0.3125f, 0.1481481f, 0f, Local_166.f_107[Local_825[Local_619.f_130 /*9*/].f_6 /*4*/]);
+		func_124(&Var25, &cVar5, Var2, (Var2.f_1 + 0.07407407f), 0.3125f, 0.1481481f, 0f, Local_166.f_107[Local_825[Local_619.f_130 /*9*/].f_6 /*4*/]);
 	}
 }
 
@@ -5720,7 +5720,7 @@ void func_191()
 void func_192()
 {
 	struct<2> Var0;
-	struct<8> Var2;
+	char cVar2[64];
 	struct<8> Var18;
 	
 	if (Local_619.f_137 == 0)
@@ -5734,25 +5734,25 @@ void func_192()
 	func_180(Local_166.f_107[Local_825[Local_619.f_131[(Local_619.f_137 - 1)] /*9*/].f_6 /*4*/], 102);
 	Var0 = { func_109(0.5f, (0.5f + -0.016f)) };
 	func_124("MPArcadeCabinetGridHUD", "text_round_winner", 0.5f, (0.5f + -0.016f), 0.3125f, 0.2407407f, 0f, Local_166.f_107.f_17);
-	StringCopy(&Var2, "text_gang_", 64);
-	StringConCat(&Var2, Local_166.f_422[Local_825[Local_619.f_131[(Local_619.f_137 - 1)] /*9*/].f_6], 64);
-	StringConCat(&Var2, "_", 64);
+	StringCopy(&cVar2, "text_gang_", 64);
+	StringConCat(&cVar2, Local_166.f_422[Local_825[Local_619.f_131[(Local_619.f_137 - 1)] /*9*/].f_6], 64);
+	StringConCat(&cVar2, "_", 64);
 	if (Local_166.f_415 < 10)
 	{
 		if (Local_166.f_415 + 1 < 10)
 		{
-			StringConCat(&Var2, "0", 64);
+			StringConCat(&cVar2, "0", 64);
 		}
-		StringIntConCat(&Var2, Local_166.f_415 + 1, 64);
+		StringIntConCat(&cVar2, Local_166.f_415 + 1, 64);
 		Local_166.f_415 = (Local_166.f_415 + Local_166.f_414);
 	}
 	else
 	{
-		StringIntConCat(&Var2, 10, 64);
+		StringIntConCat(&cVar2, 10, 64);
 	}
 	StringCopy(&Var18, "MPArcadeCabinetGridPlayer", 64);
 	StringConCat(&Var18, Local_166.f_422[Local_825[Local_619.f_131[(Local_619.f_137 - 1)] /*9*/].f_6], 64);
-	func_124(&Var18, &Var2, Var0, ((Var0.f_1 + 0.07407407f) + ((0.2407407f - 0.1481481f) / 2f)), 0.3125f, 0.1481481f, 0f, Local_166.f_107[Local_825[Local_619.f_131[(Local_619.f_137 - 1)] /*9*/].f_6 /*4*/]);
+	func_124(&Var18, &cVar2, Var0, ((Var0.f_1 + 0.07407407f) + ((0.2407407f - 0.1481481f) / 2f)), 0.3125f, 0.1481481f, 0f, Local_166.f_107[Local_825[Local_619.f_131[(Local_619.f_137 - 1)] /*9*/].f_6 /*4*/]);
 }
 
 void func_193()
@@ -6197,7 +6197,7 @@ void func_206()
 {
 	int iVar0;
 	int iVar1;
-	int iVar2;
+	float fVar2;
 	struct<8> Var3;
 	
 	iVar0 = 0;
@@ -6222,7 +6222,7 @@ void func_206()
 				{
 					func_209(iVar0);
 				}
-				iVar2 = func_207(Local_619.f_148[iVar0 /*4*/].f_2);
+				fVar2 = func_207(Local_619.f_148[iVar0 /*4*/].f_2);
 				Local_166.f_281[iVar0 /*7*/].f_4 = (Local_166.f_281[iVar0 /*7*/].f_4 + Local_166.f_414);
 				if (Local_166.f_281[iVar0 /*7*/].f_4 >= Local_166.f_22[Local_619.f_148[iVar0 /*4*/].f_3 /*4*/].f_1)
 				{
@@ -6234,7 +6234,7 @@ void func_206()
 				{
 					StringIntConCat(&Var3, Local_166.f_281[iVar0 /*7*/].f_4 + 1, 64);
 				}
-				func_124("MPArcadeCabinetGrid", &Var3, Local_166.f_281[iVar0 /*7*/], Local_166.f_281[iVar0 /*7*/].f_1, Local_166.f_22[Local_619.f_148[iVar0 /*4*/].f_3 /*4*/].f_2, Local_166.f_22[Local_619.f_148[iVar0 /*4*/].f_3 /*4*/].f_2.f_1, iVar2, Local_166.f_107.f_17);
+				func_124("MPArcadeCabinetGrid", &Var3, Local_166.f_281[iVar0 /*7*/], Local_166.f_281[iVar0 /*7*/].f_1, Local_166.f_22[Local_619.f_148[iVar0 /*4*/].f_3 /*4*/].f_2, Local_166.f_22[Local_619.f_148[iVar0 /*4*/].f_3 /*4*/].f_2.f_1, fVar2, Local_166.f_107.f_17);
 			}
 		}
 		iVar0++;
@@ -6437,11 +6437,11 @@ void func_213()
 void func_214(int iParam0)
 {
 	struct<8> Var0;
-	struct<8> Var16;
+	char cVar16[64];
 	struct<4> Var32;
 	float fVar36;
-	int iVar37;
-	struct<8> Var38;
+	float fVar37;
+	char cVar38[64];
 	int iVar54;
 	struct<2> Var55;
 	struct<8> Var57;
@@ -6451,9 +6451,9 @@ void func_214(int iParam0)
 	StringConCat(&Var0, Local_166.f_422[Local_825[iParam0 /*9*/].f_6], 64);
 	if (func_69(iParam0))
 	{
-		StringCopy(&Var16, "dead_", 64);
-		StringConCat(&Var16, Local_166.f_422[Local_825[iParam0 /*9*/].f_6], 64);
-		func_124(&Var0, &Var16, Local_166.f_204[iParam0 /*19*/], Local_166.f_204[iParam0 /*19*/].f_1, 0.033333f, 0.059259f, 0f, Local_166.f_107.f_17);
+		StringCopy(&cVar16, "dead_", 64);
+		StringConCat(&cVar16, Local_166.f_422[Local_825[iParam0 /*9*/].f_6], 64);
+		func_124(&Var0, &cVar16, Local_166.f_204[iParam0 /*19*/], Local_166.f_204[iParam0 /*19*/].f_1, 0.033333f, 0.059259f, 0f, Local_166.f_107.f_17);
 		return;
 	}
 	Var32 = { Local_166.f_107.f_17 };
@@ -6474,12 +6474,12 @@ void func_214(int iParam0)
 		fVar36 = MISC::ABSF(SYSTEM::SIN((SYSTEM::TO_FLOAT((Local_825[iParam0 /*9*/].f_3 + 1000 - NETWORK::GET_NETWORK_TIME())) * 0.35f)));
 		Var32.f_3 = (255 - SYSTEM::ROUND(fVar36) * 150);
 	}
-	iVar37 = func_218(Local_862[iParam0 /*16*/].f_4);
-	StringCopy(&Var38, "walk_", 64);
-	StringConCat(&Var38, Local_166.f_422[Local_825[iParam0 /*9*/].f_6], 64);
-	StringConCat(&Var38, "_", 64);
-	StringConCat(&Var38, Local_166.f_59[Local_825[iParam0 /*9*/].f_5 /*5*/], 64);
-	StringIntConCat(&Var38, Local_166.f_204[iParam0 /*19*/].f_4 + 1, 64);
+	fVar37 = func_218(Local_862[iParam0 /*16*/].f_4);
+	StringCopy(&cVar38, "walk_", 64);
+	StringConCat(&cVar38, Local_166.f_422[Local_825[iParam0 /*9*/].f_6], 64);
+	StringConCat(&cVar38, "_", 64);
+	StringConCat(&cVar38, Local_166.f_59[Local_825[iParam0 /*9*/].f_5 /*5*/], 64);
+	StringIntConCat(&cVar38, Local_166.f_204[iParam0 /*19*/].f_4 + 1, 64);
 	if (Local_825[iParam0 /*9*/].f_1 < 1f && Local_166.f_204[iParam0 /*19*/].f_4 > 0)
 	{
 		iVar54 = Var32.f_3;
@@ -6493,16 +6493,16 @@ void func_214(int iParam0)
 		{
 			Var55 = { func_185(Var55, func_109((0.002604167f * SYSTEM::COS(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()))), (0.00462963f * SYSTEM::SIN(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()))))) };
 		}
-		func_124(&Var0, &Var38, Var55, Var55.f_1, 0.033333f, 0.059259f, iVar37, Var32);
+		func_124(&Var0, &cVar38, Var55, Var55.f_1, 0.033333f, 0.059259f, fVar37, Var32);
 		Var32.f_3 = iVar54;
 	}
-	func_124(&Var0, &Var38, Local_166.f_204[iParam0 /*19*/], Local_166.f_204[iParam0 /*19*/].f_1, 0.033333f, 0.059259f, iVar37, Var32);
+	func_124(&Var0, &cVar38, Local_166.f_204[iParam0 /*19*/], Local_166.f_204[iParam0 /*19*/].f_1, 0.033333f, 0.059259f, fVar37, Var32);
 	if (Local_166.f_204[iParam0 /*19*/].f_5 > -1)
 	{
 		StringCopy(&Var57, "muzzle_flare_", 64);
 		StringIntConCat(&Var57, Local_166.f_204[iParam0 /*19*/].f_5 + 1, 64);
-		Var73 = { func_215(iParam0, iVar37) };
-		func_124("MPArcadeCabinetGrid", &Var57, Var73, Var73.f_1, 0.01666667f, 0.02962963f, iVar37, Var32);
+		Var73 = { func_215(iParam0, fVar37) };
+		func_124("MPArcadeCabinetGrid", &Var57, Var73, Var73.f_1, 0.01666667f, 0.02962963f, fVar37, Var32);
 		Local_166.f_204[iParam0 /*19*/].f_5 = (Local_166.f_204[iParam0 /*19*/].f_5 + Local_166.f_412);
 		if (Local_166.f_204[iParam0 /*19*/].f_5 >= 3)
 		{
@@ -6659,7 +6659,7 @@ void func_221()
 {
 	int iVar0;
 	int iVar1;
-	int iVar2;
+	float fVar2;
 	struct<8> Var3;
 	
 	iVar0 = 0;
@@ -6686,16 +6686,16 @@ void func_221()
 				}
 				else
 				{
-					iVar2 = func_218(Local_862[iVar0 /*16*/].f_5[iVar1 /*5*/].f_3);
+					fVar2 = func_218(Local_862[iVar0 /*16*/].f_5[iVar1 /*5*/].f_3);
 					if (Local_862[iVar0 /*16*/].f_5[iVar1 /*5*/].f_4 == 4)
 					{
 						StringCopy(&Var3, "rocket_trail_", 64);
 						StringIntConCat(&Var3, Local_166.f_416 + 1, 64);
-						func_124("MPArcadeCabinetGrid", &Var3, Local_166.f_204[iVar0 /*19*/].f_10[iVar1 /*4*/], Local_166.f_204[iVar0 /*19*/].f_10[iVar1 /*4*/].f_1, 0.004166667f, 0.03333333f, iVar2, Local_166.f_107.f_17);
+						func_124("MPArcadeCabinetGrid", &Var3, Local_166.f_204[iVar0 /*19*/].f_10[iVar1 /*4*/], Local_166.f_204[iVar0 /*19*/].f_10[iVar1 /*4*/].f_1, 0.004166667f, 0.03333333f, fVar2, Local_166.f_107.f_17);
 					}
 					else
 					{
-						func_124("MPArcadeCabinetGrid", "bullet", Local_166.f_204[iVar0 /*19*/].f_10[iVar1 /*4*/], Local_166.f_204[iVar0 /*19*/].f_10[iVar1 /*4*/].f_1, 0.004166667f, 0.01111111f, iVar2, Local_166.f_107.f_17);
+						func_124("MPArcadeCabinetGrid", "bullet", Local_166.f_204[iVar0 /*19*/].f_10[iVar1 /*4*/], Local_166.f_204[iVar0 /*19*/].f_10[iVar1 /*4*/].f_1, 0.004166667f, 0.01111111f, fVar2, Local_166.f_107.f_17);
 					}
 				}
 				iVar1++;
@@ -12201,7 +12201,7 @@ int func_397()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}

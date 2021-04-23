@@ -1718,7 +1718,7 @@ void func_58(float fParam0, float fParam1, var uParam2, var uParam3, var uParam4
 	{
 		Var0 = { func_7(CAM::GET_CAM_ROT(Local_160, 2)) };
 		Var3 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_64.f_95, Local_64.f_88) };
-		Var6 = { ENTITY::_GET_ENTITY_BONE_COORDS(Local_64.f_95, Local_64.f_74.f_1[0]) };
+		Var6 = { ENTITY::_GET_ENTITY_BONE_POSITION_2(Local_64.f_95, Local_64.f_74.f_1[0]) };
 		Var9 = { Var6 - Var3 };
 		*uParam2 = { Var6 };
 		iVar12 = 0;
@@ -1726,7 +1726,7 @@ void func_58(float fParam0, float fParam1, var uParam2, var uParam3, var uParam4
 		iVar14 = 1;
 		while (iVar14 <= (Local_64.f_74 - 1))
 		{
-			Var6 = { ENTITY::_GET_ENTITY_BONE_COORDS(Local_64.f_95, Local_64.f_74.f_1[iVar14]) };
+			Var6 = { ENTITY::_GET_ENTITY_BONE_POSITION_2(Local_64.f_95, Local_64.f_74.f_1[iVar14]) };
 			Var9 = { Var6 - Var3 };
 			fVar15 = func_59(Var9, Var0);
 			if (fVar15 > fVar13)

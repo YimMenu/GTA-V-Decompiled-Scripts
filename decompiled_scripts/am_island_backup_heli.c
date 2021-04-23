@@ -756,7 +756,7 @@ int func_27()
 
 void func_28(int iParam0, int iParam1, bool bParam2, bool bParam3)
 {
-	WEAPON::GIVE_DELAYED_WEAPON_TO_PED(iParam0, joaat("WEAPON_ASSAULTRIFLE"), 300, true);
+	WEAPON::GIVE_DELAYED_WEAPON_TO_PED(iParam0, joaat("weapon_assaultrifle"), 300, true);
 	PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 5, true);
 	PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 3, false);
 	PED::SET_PED_COMBAT_MOVEMENT(iParam0, 2);
@@ -921,7 +921,7 @@ int func_36(var uParam0, int iParam1, struct<3> Param2, float fParam5, bool bPar
 				}
 				if (bParam13)
 				{
-					NETWORK::_SET_NETWORK_ID_SYNC_TO_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
+					NETWORK::SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER(*uParam0, PLAYER::PLAYER_ID(), true);
 				}
 			}
 			VEHICLE::SET_VEHICLE_IS_STOLEN(iVar1, bParam9);
@@ -2388,7 +2388,7 @@ int func_99()
 		{
 			return 0;
 		}
-		if (NETWORK::_0x5D10B3795F3FC886())
+		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 		{
 			return 1;
 		}

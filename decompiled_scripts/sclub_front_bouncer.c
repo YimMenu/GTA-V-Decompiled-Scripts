@@ -714,7 +714,7 @@ void func_6()
 		return;
 	}
 	WEAPON::GET_CURRENT_PED_WEAPON(iLocal_69, &iVar0, true);
-	if (((func_20() && PED::IS_PED_IN_COMBAT(iLocal_69, PLAYER::PLAYER_PED_ID())) && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true)) && iVar0 != joaat("WEAPON_PISTOL"))
+	if (((func_20() && PED::IS_PED_IN_COMBAT(iLocal_69, PLAYER::PLAYER_PED_ID())) && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true)) && iVar0 != joaat("weapon_pistol"))
 	{
 		func_18(16);
 		func_21();
@@ -907,8 +907,8 @@ int func_21()
 	}
 	if (func_15(16, -1))
 	{
-		WEAPON::GIVE_WEAPON_TO_PED(iLocal_69, joaat("WEAPON_PISTOL"), -1, false, true);
-		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_69, joaat("WEAPON_PISTOL"), true);
+		WEAPON::GIVE_WEAPON_TO_PED(iLocal_69, joaat("weapon_pistol"), -1, false, true);
+		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_69, joaat("weapon_pistol"), true);
 		TASK::TASK_COMBAT_PED(iLocal_69, PLAYER::PLAYER_PED_ID(), 0, 16);
 	}
 	else if (func_15(8, -1))
@@ -928,8 +928,8 @@ int func_21()
 	}
 	else
 	{
-		WEAPON::GIVE_WEAPON_TO_PED(iLocal_69, joaat("WEAPON_PISTOL"), -1, false, true);
-		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_69, joaat("WEAPON_PISTOL"), true);
+		WEAPON::GIVE_WEAPON_TO_PED(iLocal_69, joaat("weapon_pistol"), -1, false, true);
+		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_69, joaat("weapon_pistol"), true);
 		TASK::TASK_COMBAT_PED(iLocal_69, PLAYER::PLAYER_PED_ID(), 0, 16);
 		func_18(16);
 	}
@@ -2412,7 +2412,7 @@ int func_79()
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true);
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			if ((iVar1 == joaat("WEAPON_SNIPERRIFLE") || iVar1 == joaat("WEAPON_HEAVYSNIPER")) || iVar1 == joaat("weapon_remotesniper"))
+			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
 			{
 				iVar0 = 1;
 			}
@@ -2728,7 +2728,7 @@ int func_94()
 	{
 		iLocal_69 = PED::CREATE_PED(26, joaat("s_m_m_bouncer_01"), func_34() - Vector(1f, 0f, 0f), func_42(), true, true);
 		func_95(1);
-		WEAPON::GIVE_WEAPON_TO_PED(iLocal_69, joaat("WEAPON_PISTOL"), -1, false, true);
+		WEAPON::GIVE_WEAPON_TO_PED(iLocal_69, joaat("weapon_pistol"), -1, false, true);
 		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_69, true);
 		PED::SET_PED_KEEP_TASK(iLocal_69, true);
 		return 1;
