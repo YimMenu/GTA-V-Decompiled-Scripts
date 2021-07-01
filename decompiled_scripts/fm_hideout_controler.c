@@ -10797,7 +10797,7 @@ void func_232(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 		{
 			if (Global_4718592.f_58908[iParam1 /*339*/].f_38 != 1000f)
 			{
-				VEHICLE::_0x4056EA1105F5ABD7(iParam0, func_343(iParam1, iParam9));
+				VEHICLE::_SET_HELI_MAIN_ROTOR_HEALTH(iParam0, func_343(iParam1, iParam9));
 			}
 			if (Global_4718592.f_58908[iParam1 /*339*/].f_39 != 1000f)
 			{
@@ -10812,7 +10812,7 @@ void func_232(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 		{
 			if (Global_4718592.f_58908[iParam1 /*339*/].f_38 != 1000f)
 			{
-				VEHICLE::_0x4C815EB175086F84(iParam0, func_343(iParam1, iParam9));
+				VEHICLE::_SET_PLANE_PROPELLERS_HEALTH(iParam0, func_343(iParam1, iParam9));
 			}
 			if (Global_4718592.f_58908[iParam1 /*339*/].f_33 != 1000f)
 			{
@@ -10851,7 +10851,7 @@ void func_232(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 		VEHICLE::SET_VEHICLE_PETROL_TANK_HEALTH(iParam0, 50000f);
 		if (VEHICLE::IS_THIS_MODEL_A_PLANE(ENTITY::GET_ENTITY_MODEL(iParam0)))
 		{
-			VEHICLE::_0x4C815EB175086F84(iParam0, 50000f);
+			VEHICLE::_SET_PLANE_PROPELLERS_HEALTH(iParam0, 50000f);
 			VEHICLE::_SET_PLANE_ENGINE_HEALTH(iParam0, 50000f);
 			if (ENTITY::GET_ENTITY_MODEL(iParam0) == joaat("avenger"))
 			{
@@ -10863,7 +10863,7 @@ void func_232(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 		}
 		if (VEHICLE::IS_THIS_MODEL_A_HELI(ENTITY::GET_ENTITY_MODEL(iParam0)))
 		{
-			VEHICLE::_0x4056EA1105F5ABD7(iParam0, 50000f);
+			VEHICLE::_SET_HELI_MAIN_ROTOR_HEALTH(iParam0, 50000f);
 			VEHICLE::_SET_HELI_TAIL_ROTOR_HEALTH(iParam0, 50000f);
 			VEHICLE::SET_HELI_TAIL_EXPLODE_THROW_DASHBOARD(iParam0, false);
 		}
@@ -30723,7 +30723,7 @@ void func_521(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -30765,7 +30765,7 @@ void func_523()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -46580,7 +46580,7 @@ Vector3 func_810(int iParam0, bool bParam1)
 	{
 		Var3 = { CAM::GET_GAMEPLAY_CAM_ROT(2) };
 	}
-	if (iParam0 == func_811(PLAYER::PLAYER_PED_ID()) && CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (iParam0 == func_811(PLAYER::PLAYER_PED_ID()) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, 0f, 8f, -0.2f) };
 	}
@@ -46592,7 +46592,7 @@ Vector3 func_810(int iParam0, bool bParam1)
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0, false))
 	{
 		fVar6 = ENTITY::GET_ENTITY_HEADING(iParam0);
-		if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 		{
 			fVar6 = Var3.f_2;
 		}
@@ -149767,13 +149767,13 @@ void func_1870()
 
 void func_1871()
 {
-	if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) != Global_1388306)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) != Global_1388306)
 	{
-		if (CAM::_0x19CAFA3C87F7C2FF() == 0 && Global_1388306 == 3)
+		if (CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT() == 0 && Global_1388306 == 3)
 		{
-			Global_1388306 = CAM::_0xEE778F8C7E1142E2(0);
+			Global_1388306 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0);
 		}
-		CAM::_0x2A2173E46DAECD12(CAM::_0x19CAFA3C87F7C2FF(), Global_1388306);
+		CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT(), Global_1388306);
 	}
 }
 
@@ -151397,7 +151397,7 @@ void func_1947()
 {
 	int iVar0;
 	
-	iVar0 = CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF());
+	iVar0 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT());
 	Global_1388306 = iVar0;
 }
 

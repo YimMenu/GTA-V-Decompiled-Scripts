@@ -4036,7 +4036,7 @@ void func_130()
 				Local_119.f_107 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 				Var3 = { ENTITY::GET_ENTITY_COORDS(Local_119.f_107, true) };
 				TASK::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
-				TASK::TASK_HELI_MISSION(PLAYER::PLAYER_PED_ID(), Local_119.f_107, 0, 0, Var3, 4, 0f, -1f, -1f, -1, -1, -1082130432, 0);
+				TASK::TASK_HELI_MISSION(PLAYER::PLAYER_PED_ID(), Local_119.f_107, 0, 0, Var3, 4, 0f, -1f, -1f, -1, -1, -1f, 0);
 				VEHICLE::_0xE5810AC70602F2F5(Local_119.f_107, 0f);
 			}
 			func_131("HUNTGUN_2b", -1);
@@ -4586,7 +4586,7 @@ void func_144(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -4628,7 +4628,7 @@ void func_146()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);

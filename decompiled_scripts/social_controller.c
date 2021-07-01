@@ -3298,11 +3298,11 @@ void func_55(var uParam0, bool bParam1)
 				iVar1 = 0;
 				while (iVar1 < iVar0)
 				{
-					if (!SOCIALCLUB::_IS_SC_INBOX_VALID(iVar1))
+					if (!SOCIALCLUB::SC_INBOX_GET_MESSAGE_IS_READ_AT_INDEX(iVar1))
 					{
 						if (func_53() && func_52())
 						{
-							iVar2 = SOCIALCLUB::_SC_INBOX_MESSAGE_INIT(iVar1);
+							iVar2 = SOCIALCLUB::SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX(iVar1);
 							if (func_165(iVar2))
 							{
 								switch (iVar2)
@@ -3339,9 +3339,9 @@ void func_55(var uParam0, bool bParam1)
 			iVar1 = 0;
 			while (iVar1 < iVar0)
 			{
-				if (!SOCIALCLUB::_IS_SC_INBOX_VALID(iVar1))
+				if (!SOCIALCLUB::SC_INBOX_GET_MESSAGE_IS_READ_AT_INDEX(iVar1))
 				{
-					iVar2 = SOCIALCLUB::_SC_INBOX_MESSAGE_INIT(iVar1);
+					iVar2 = SOCIALCLUB::SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX(iVar1);
 					switch (iVar2)
 					{
 						case -877581966:

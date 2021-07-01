@@ -6459,7 +6459,7 @@ int func_104(var uParam0)
 			}
 			if (Global_1835392.f_3183 > 0)
 			{
-				(uParam0[0 /*100*/])->f_79 = NETWORK::_0xD66C9E72B3CC4982(&(Global_1835392.f_3026), Global_1835392.f_3183);
+				(uParam0[0 /*100*/])->f_79 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&(Global_1835392.f_3026), Global_1835392.f_3183);
 				(uParam0[0 /*100*/])->f_78 = 1;
 			}
 			else
@@ -6642,7 +6642,7 @@ int func_107(var uParam0, char* sParam1, char* sParam2, int iParam3, var uParam4
 			{
 				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(&(Var1[0 /*13*/])))
 				{
-					*uParam4 = NETWORK::_0xD66C9E72B3CC4982(&Var1, 1);
+					*uParam4 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&Var1, 1);
 					*uParam0 = 1;
 				}
 				else
@@ -26955,7 +26955,7 @@ void func_409(var uParam0, int iParam1, struct<3> Param2, float fParam5, int iPa
 		if (!PED::IS_PED_INJURED(iParam1))
 		{
 		}
-		*uParam0 = PED::CLONE_PED(iParam1, 0f, false, false);
+		*uParam0 = PED::CLONE_PED(iParam1, false, false, false);
 		if (PED::IS_PED_INJURED(*uParam0))
 		{
 			PED::REVIVE_INJURED_PED(*uParam0);
@@ -95126,7 +95126,7 @@ void func_865(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -95168,7 +95168,7 @@ void func_867()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -95189,14 +95189,14 @@ void func_868(int* iParam0, int iParam1, bool bParam2, bool bParam3)
 	
 	if (!func_847(iParam0, 1048576))
 	{
-		if (STREAMING::_0xBC9823AB80A3DCAC())
+		if (STREAMING::IS_STREAMVOL_ACTIVE())
 		{
-			if (STREAMING::_0x07C313F94746702C(iParam0->f_722))
+			if (STREAMING::STREAMVOL_IS_VALID(iParam0->f_722))
 			{
-				if (STREAMING::_0x7D41E9D2D17C5B2D(iParam0->f_722) || func_847(iParam0, 8388608))
+				if (STREAMING::STREAMVOL_HAS_LOADED(iParam0->f_722) || func_847(iParam0, 8388608))
 				{
 					func_1949(iParam0, 1048576);
-					STREAMING::_0x1EE7D8DF4425F053(iParam0->f_722);
+					STREAMING::STREAMVOL_DELETE(iParam0->f_722);
 				}
 			}
 		}
@@ -95270,15 +95270,15 @@ void func_870(int* iParam0, int iParam1)
 	struct<8> Var10;
 	struct<8> Var18;
 	
-	if (STREAMING::_0x07C313F94746702C(iParam0->f_722))
+	if (STREAMING::STREAMVOL_IS_VALID(iParam0->f_722))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iParam0->f_722);
+		STREAMING::STREAMVOL_DELETE(iParam0->f_722);
 	}
 	Var0 = { func_874(iParam1, iParam0->f_579, &Var6, &uVar9) };
 	Var3 = { func_872(Var6) };
 	Var10 = { func_871(Var0) };
 	Var18 = { func_871(Var3) };
-	iParam0->f_722 = STREAMING::_0x1F3F018BC3AFA77C(Var0, Var3, 100f, 12, 127);
+	iParam0->f_722 = STREAMING::STREAMVOL_CREATE_FRUSTUM(Var0, Var3, 100f, 12, 127);
 }
 
 struct<8> func_871(struct<3> Param0)
@@ -99923,9 +99923,9 @@ int func_1081(var uParam0, var uParam1, var uParam2, var uParam3, int* iParam4)
 			func_1595(uParam2, uParam1, iParam4, uParam3);
 			if ((func_1885(uParam2) != 5 && func_1885(uParam2) != 6) && func_1885(uParam2) > 1)
 			{
-				if (STREAMING::_0x07C313F94746702C(iParam4->f_721))
+				if (STREAMING::STREAMVOL_IS_VALID(iParam4->f_721))
 				{
-					STREAMING::_0x1EE7D8DF4425F053(iParam4->f_721);
+					STREAMING::STREAMVOL_DELETE(iParam4->f_721);
 				}
 			}
 			func_1182(uParam0, uParam1, uParam3[func_1623(uParam2) /*40*/], uParam2, iParam4, uParam3);
@@ -100079,11 +100079,11 @@ int func_1081(var uParam0, var uParam1, var uParam2, var uParam3, int* iParam4)
 		case 3:
 			if (!func_847(iParam4, 4194304))
 			{
-				if (STREAMING::_0x07C313F94746702C(iParam4->f_722))
+				if (STREAMING::STREAMVOL_IS_VALID(iParam4->f_722))
 				{
 					func_1627(iParam4, 32768);
 					func_935(iParam4, 1);
-					STREAMING::_0x1EE7D8DF4425F053(iParam4->f_722);
+					STREAMING::STREAMVOL_DELETE(iParam4->f_722);
 					func_1949(iParam4, 4194304);
 					func_1949(iParam4, 1048576);
 				}
@@ -100125,9 +100125,9 @@ int func_1081(var uParam0, var uParam1, var uParam2, var uParam3, int* iParam4)
 				}
 				if (func_1615(uParam2) != 3)
 				{
-					if (STREAMING::_0x07C313F94746702C(iParam4->f_722))
+					if (STREAMING::STREAMVOL_IS_VALID(iParam4->f_722))
 					{
-						STREAMING::_0x1EE7D8DF4425F053(iParam4->f_722);
+						STREAMING::STREAMVOL_DELETE(iParam4->f_722);
 					}
 					func_869(iParam4, 4194304);
 					func_869(iParam4, 1048576);
@@ -100199,13 +100199,13 @@ int func_1081(var uParam0, var uParam1, var uParam2, var uParam3, int* iParam4)
 			}
 			if (!func_847(iParam4, 4194304))
 			{
-				if (STREAMING::_0x07C313F94746702C(iParam4->f_722))
+				if (STREAMING::STREAMVOL_IS_VALID(iParam4->f_722))
 				{
-					if (STREAMING::_0x7D41E9D2D17C5B2D(iParam4->f_722) || func_847(iParam4, 8388608))
+					if (STREAMING::STREAMVOL_HAS_LOADED(iParam4->f_722) || func_847(iParam4, 8388608))
 					{
 						func_1627(iParam4, 32768);
 						func_935(iParam4, 1);
-						STREAMING::_0x1EE7D8DF4425F053(iParam4->f_722);
+						STREAMING::STREAMVOL_DELETE(iParam4->f_722);
 						func_1949(iParam4, 4194304);
 						func_1949(iParam4, 1048576);
 					}
@@ -103412,9 +103412,9 @@ void func_1182(var uParam0, var uParam1, var uParam2, var uParam3, int* iParam4,
 			}
 			if (ENTITY::DOES_ENTITY_EXIST(func_952(uParam3)))
 			{
-				if (!STREAMING::_0x07C313F94746702C(iParam4->f_721))
+				if (!STREAMING::STREAMVOL_IS_VALID(iParam4->f_721))
 				{
-					iParam4->f_721 = STREAMING::_0x0AD9710CEE2F590F(func_28(uParam1, func_31(uParam3)), func_30(uParam1, func_31(uParam3)), 1);
+					iParam4->f_721 = STREAMING::STREAMVOL_CREATE_LINE(func_28(uParam1, func_31(uParam3)), func_30(uParam1, func_31(uParam3)), 1);
 				}
 				STREAMING::SET_FOCUS_ENTITY(func_952(uParam3));
 				func_1074(uParam3, 128);
@@ -103444,13 +103444,13 @@ void func_1182(var uParam0, var uParam1, var uParam2, var uParam3, int* iParam4,
 				if (!func_847(iParam4, 1) && !PED::IS_PED_INJURED(func_35(uParam3)))
 				{
 					func_1949(iParam4, 1);
-					if (STREAMING::_0x07C313F94746702C(iParam4->f_721))
+					if (STREAMING::STREAMVOL_IS_VALID(iParam4->f_721))
 					{
-						STREAMING::_0x1EE7D8DF4425F053(iParam4->f_721);
+						STREAMING::STREAMVOL_DELETE(iParam4->f_721);
 					}
-					iParam4->f_721 = STREAMING::FORMAT_FOCUS_HEADING(ENTITY::GET_ENTITY_COORDS(func_35(uParam3), true), 10f, 12, 127);
+					iParam4->f_721 = STREAMING::STREAMVOL_CREATE_SPHERE(ENTITY::GET_ENTITY_COORDS(func_35(uParam3), true), 10f, 12, 127);
 				}
-				if ((func_1858(&(iParam4->f_602), 0.75f) && STREAMING::_0x7D41E9D2D17C5B2D(iParam4->f_721)) || func_1858(&(iParam4->f_602), 2f))
+				if ((func_1858(&(iParam4->f_602), 0.75f) && STREAMING::STREAMVOL_HAS_LOADED(iParam4->f_721)) || func_1858(&(iParam4->f_602), 2f))
 				{
 					CAM::STOP_CAM_POINTING(iParam4->f_535);
 					func_1237(uParam3, 1);
@@ -117626,7 +117626,7 @@ void func_1584(var uParam0, var uParam1, var uParam2, var uParam3, int* iParam4)
 		PAD::DISABLE_CONTROL_ACTION(0, 140, true);
 		PAD::DISABLE_CONTROL_ACTION(0, 141, true);
 		PAD::DISABLE_CONTROL_ACTION(0, 142, true);
-		if ((STREAMING::_0xBC9823AB80A3DCAC() && STREAMING::_0x7D41E9D2D17C5B2D(iParam4->f_721)) || func_1858(&(iParam4->f_620), 5f))
+		if ((STREAMING::IS_STREAMVOL_ACTIVE() && STREAMING::STREAMVOL_HAS_LOADED(iParam4->f_721)) || func_1858(&(iParam4->f_620), 5f))
 		{
 			func_1813(uParam2, uParam3);
 			func_1132(iParam4, 0);
@@ -117667,11 +117667,11 @@ void func_1585(var uParam0, var uParam1, var uParam2)
 	GRAPHICS::DRAW_DEBUG_SPHERE(Var1, 0.25f, 255, 0, 0, 255);
 	GRAPHICS::DRAW_DEBUG_SPHERE(Var1 + Var7, 0.25f, 255, 255, 255, 255);
 	GRAPHICS::DRAW_DEBUG_LINE(Var1, Var1 + Var7, 0, 255, 0, 255);
-	if (STREAMING::_0x07C313F94746702C(uParam2->f_721))
+	if (STREAMING::STREAMVOL_IS_VALID(uParam2->f_721))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(uParam2->f_721);
+		STREAMING::STREAMVOL_DELETE(uParam2->f_721);
 	}
-	if (!STREAMING::_0x07C313F94746702C(uParam2->f_721))
+	if (!STREAMING::STREAMVOL_IS_VALID(uParam2->f_721))
 	{
 		if (func_1587(uParam2))
 		{
@@ -117679,7 +117679,7 @@ void func_1585(var uParam0, var uParam1, var uParam2)
 		}
 		fVar10 = 75f;
 		uParam2->f_578 = PATHFIND::ADD_NAVMESH_BLOCKING_OBJECT(Var1 + Var7, 2f, 100f, 10f, func_1586((fVar0 - 90f)), false, 7);
-		uParam2->f_721 = STREAMING::_0x1F3F018BC3AFA77C(Var1, Var4, fVar10, 13, 127);
+		uParam2->f_721 = STREAMING::STREAMVOL_CREATE_FRUSTUM(Var1, Var4, fVar10, 13, 127);
 	}
 }
 
@@ -158762,7 +158762,7 @@ void func_2116()
 {
 	int iVar0;
 	
-	iVar0 = CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF());
+	iVar0 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT());
 	Global_1388306 = iVar0;
 }
 
@@ -158980,13 +158980,13 @@ void func_2125(var uParam0, var uParam1, var uParam2, var uParam3, int* iParam4,
 	{
 		MISC::SET_MINIGAME_IN_PROGRESS(false);
 	}
-	if (STREAMING::_0x07C313F94746702C(iParam4->f_721))
+	if (STREAMING::STREAMVOL_IS_VALID(iParam4->f_721))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iParam4->f_721);
+		STREAMING::STREAMVOL_DELETE(iParam4->f_721);
 	}
-	if (STREAMING::_0x07C313F94746702C(iParam4->f_722))
+	if (STREAMING::STREAMVOL_IS_VALID(iParam4->f_722))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iParam4->f_722);
+		STREAMING::STREAMVOL_DELETE(iParam4->f_722);
 	}
 	PED::REMOVE_RELATIONSHIP_GROUP(iParam4->f_165);
 	func_1928(0);
@@ -162569,13 +162569,13 @@ void func_2320()
 
 void func_2321()
 {
-	if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) != Global_1388306)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) != Global_1388306)
 	{
-		if (CAM::_0x19CAFA3C87F7C2FF() == 0 && Global_1388306 == 3)
+		if (CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT() == 0 && Global_1388306 == 3)
 		{
-			Global_1388306 = CAM::_0xEE778F8C7E1142E2(0);
+			Global_1388306 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0);
 		}
-		CAM::_0x2A2173E46DAECD12(CAM::_0x19CAFA3C87F7C2FF(), Global_1388306);
+		CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT(), Global_1388306);
 	}
 }
 

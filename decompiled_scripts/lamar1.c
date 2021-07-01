@@ -43655,7 +43655,7 @@ void func_309(struct<3> Param0)
 						VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(iLocal_782);
 						if (!PED::IS_PED_INJURED(Local_1786[0 /*25*/]))
 						{
-							TASK::TASK_HELI_MISSION(Local_1786[0 /*25*/], iLocal_782, 0, 0, -165.91f, -1771f, 200f, 4, 30f, 5f, 0f, 200, 100, -1082130432, 0);
+							TASK::TASK_HELI_MISSION(Local_1786[0 /*25*/], iLocal_782, 0, 0, -165.91f, -1771f, 200f, 4, 30f, 5f, 0f, 200, 100, -1f, 0);
 							PED::SET_PED_KEEP_TASK(Local_1786[0 /*25*/], true);
 						}
 						if (HUD::DOES_BLIP_EXIST(Local_1786[0 /*25*/].f_1))

@@ -117882,9 +117882,9 @@ void func_824()
 				{
 					if (func_244())
 					{
-						if (STREAMING::_0x07C313F94746702C(iLocal_583))
+						if (STREAMING::STREAMVOL_IS_VALID(iLocal_583))
 						{
-							STREAMING::_0x1EE7D8DF4425F053(iLocal_583);
+							STREAMING::STREAMVOL_DELETE(iLocal_583);
 						}
 						func_252();
 						func_287(5, 0, 1, 1, 0, 1, 1, 1);
@@ -117930,16 +117930,16 @@ void func_824()
 							bLocal_779 = func_246("FC2_GODEV", 1, 0);
 						}
 					}
-					if (!STREAMING::_0x07C313F94746702C(iLocal_583))
+					if (!STREAMING::STREAMVOL_IS_VALID(iLocal_583))
 					{
 						if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), func_281(16), 50f, 50f, 50f, false, true, 0))
 						{
-							iLocal_583 = STREAMING::_0x1F3F018BC3AFA77C(-2711.9f, 1910.3f, 175.9f, func_830(-1.4f, 0f, -102.8f), 200f, 12, 127);
+							iLocal_583 = STREAMING::STREAMVOL_CREATE_FRUSTUM(-2711.9f, 1910.3f, 175.9f, func_830(-1.4f, 0f, -102.8f), 200f, 12, 127);
 						}
 					}
 					else if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), func_281(16), 75f, 75f, 75f, false, true, 0))
 					{
-						STREAMING::_0x1EE7D8DF4425F053(iLocal_583);
+						STREAMING::STREAMVOL_DELETE(iLocal_583);
 					}
 					if (iVar0 == 0)
 					{
@@ -118131,11 +118131,11 @@ void func_825()
 					{
 						if (MISC::GET_GAME_TIMER() >= iLocal_1059 + 100)
 						{
-							if (STREAMING::_0x07C313F94746702C(iLocal_583))
+							if (STREAMING::STREAMVOL_IS_VALID(iLocal_583))
 							{
-								STREAMING::_0x1EE7D8DF4425F053(iLocal_583);
+								STREAMING::STREAMVOL_DELETE(iLocal_583);
 							}
-							iLocal_583 = STREAMING::_0x1F3F018BC3AFA77C(-2636f, 1881.8f, 160.1f, func_830(1.9f, 0f, 137.1f), 20f, 12, 127);
+							iLocal_583 = STREAMING::STREAMVOL_CREATE_FRUSTUM(-2636f, 1881.8f, 160.1f, func_830(1.9f, 0f, 137.1f), 20f, 12, 127);
 							iLocal_913 = 1;
 						}
 					}
@@ -118155,11 +118155,11 @@ void func_825()
 					{
 						if (MISC::GET_GAME_TIMER() >= iLocal_1059 + 100)
 						{
-							if (STREAMING::_0x07C313F94746702C(iLocal_583))
+							if (STREAMING::STREAMVOL_IS_VALID(iLocal_583))
 							{
-								STREAMING::_0x1EE7D8DF4425F053(iLocal_583);
+								STREAMING::STREAMVOL_DELETE(iLocal_583);
 							}
-							iLocal_583 = STREAMING::_0x1F3F018BC3AFA77C(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_830(0f, 0f, ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID())), 20f, 12, 127);
+							iLocal_583 = STREAMING::STREAMVOL_CREATE_FRUSTUM(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_830(0f, 0f, ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID())), 20f, 12, 127);
 							iLocal_913 = 1;
 						}
 					}
@@ -118169,7 +118169,7 @@ void func_825()
 					}
 					if (!iLocal_940)
 					{
-						if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 						{
 							if (MISC::GET_GAME_TIMER() >= iLocal_1059 + 4700)
 							{
@@ -118194,9 +118194,9 @@ void func_825()
 				TASK::TASK_CLEAR_LOOK_AT(iLocal_586);
 				TASK::TASK_CLEAR_LOOK_AT(Local_420[7 /*16*/]);
 			}
-			if (STREAMING::_0x07C313F94746702C(iLocal_583))
+			if (STREAMING::STREAMVOL_IS_VALID(iLocal_583))
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_583);
+				STREAMING::STREAMVOL_DELETE(iLocal_583);
 			}
 			RECORDING::_0x81CBAE94390F9F89();
 			func_368(0);
@@ -129788,35 +129788,35 @@ void func_1001(var uParam0, int iParam1, struct<3> Param2, char* sParam5, int iP
 			{
 				if (PED::IS_PED_IN_ANY_BOAT(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(3) == 3 || CAM::_0xEE778F8C7E1142E2(3) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 4)
 					{
 						func_644(uParam0, iVar0, 1);
 					}
 				}
 				else if (PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(6) == 3 || CAM::_0xEE778F8C7E1142E2(6) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 4)
 					{
 						func_644(uParam0, iVar0, 1);
 					}
 				}
 				else if (PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(4) == 3 || CAM::_0xEE778F8C7E1142E2(4) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 4)
 					{
 						func_644(uParam0, iVar0, 1);
 					}
 				}
 				else if (PED::IS_PED_IN_ANY_SUB(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(5) == 3 || CAM::_0xEE778F8C7E1142E2(5) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 4)
 					{
 						func_644(uParam0, iVar0, 1);
 					}
 				}
 				else if (PED::IS_PED_ON_ANY_BIKE(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(2) == 3 || CAM::_0xEE778F8C7E1142E2(2) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 4)
 					{
 						func_644(uParam0, iVar0, 1);
 					}
@@ -130012,35 +130012,35 @@ int func_1007(bool bParam0, bool bParam1, bool bParam2)
 		{
 			if (PED::IS_PED_IN_ANY_BOAT(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(3) == 3 || CAM::_0xEE778F8C7E1142E2(3) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 4)
 				{
 					return 0;
 				}
 			}
 			else if (PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(6) == 3 || CAM::_0xEE778F8C7E1142E2(6) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 4)
 				{
 					return 0;
 				}
 			}
 			else if (PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(4) == 3 || CAM::_0xEE778F8C7E1142E2(4) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 4)
 				{
 					return 0;
 				}
 			}
 			else if (PED::IS_PED_IN_ANY_SUB(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(5) == 3 || CAM::_0xEE778F8C7E1142E2(5) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 4)
 				{
 					return 0;
 				}
 			}
 			else if (PED::IS_PED_ON_ANY_BIKE(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(2) == 3 || CAM::_0xEE778F8C7E1142E2(2) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 4)
 				{
 					return 0;
 				}
@@ -131256,7 +131256,7 @@ void func_1025()
 									{
 										if (!iLocal_941)
 										{
-											if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+											if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 											{
 												if (CAM::IS_CAM_ACTIVE(Local_2583.f_1))
 												{
@@ -131283,7 +131283,7 @@ void func_1025()
 									{
 										if (!iLocal_941)
 										{
-											if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+											if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 											{
 												if (CAM::IS_CAM_ACTIVE(Local_3824.f_1))
 												{
@@ -131621,7 +131621,7 @@ void func_1026()
 				Local_995 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 				fLocal_1026 = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
 			}
-			iLocal_582 = STREAMING::_0x1F3F018BC3AFA77C(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_830(0f, 0f, ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID())), 500f, 12, 127);
+			iLocal_582 = STREAMING::STREAMVOL_CREATE_FRUSTUM(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_830(0f, 0f, ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID())), 500f, 12, 127);
 			func_696(3);
 			CUTSCENE::START_CUTSCENE(0);
 			CUTSCENE::SET_CUTSCENE_FADE_VALUES(false, false, false, false);
@@ -131727,9 +131727,9 @@ void func_1026()
 					TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 				}
-				if (STREAMING::_0x07C313F94746702C(iLocal_582))
+				if (STREAMING::STREAMVOL_IS_VALID(iLocal_582))
 				{
-					STREAMING::_0x1EE7D8DF4425F053(iLocal_582);
+					STREAMING::STREAMVOL_DELETE(iLocal_582);
 				}
 				iLocal_814 = 0;
 				iLocal_850 = 1;
@@ -131778,7 +131778,7 @@ void func_1027()
 				}
 			}
 			func_33(17);
-			iLocal_582 = STREAMING::_0x1F3F018BC3AFA77C(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_830(0f, 0f, ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID())), 500f, 12, 127);
+			iLocal_582 = STREAMING::STREAMVOL_CREATE_FRUSTUM(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_830(0f, 0f, ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID())), 500f, 12, 127);
 			iLocal_940 = 0;
 			iLocal_1059 = MISC::GET_GAME_TIMER();
 			if (!bLocal_5065 && !bLocal_5066)
@@ -131809,7 +131809,7 @@ void func_1027()
 			}
 			if (!iLocal_940)
 			{
-				if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 				{
 					if (MISC::GET_GAME_TIMER() >= iLocal_1059 + 5500)
 					{
@@ -131849,9 +131849,9 @@ void func_1027()
 				}
 				iVar0++;
 			}
-			if (STREAMING::_0x07C313F94746702C(iLocal_582))
+			if (STREAMING::STREAMVOL_IS_VALID(iLocal_582))
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_582);
+				STREAMING::STREAMVOL_DELETE(iLocal_582);
 			}
 			func_42(17);
 			iLocal_1130 = MISC::GET_GAME_TIMER() + 3000;
@@ -133052,13 +133052,13 @@ void func_1056()
 	iLocal_49.f_18[0] = 0;
 	iLocal_49.f_18[1] = 0;
 	iLocal_49.f_18[2] = 0;
-	if (STREAMING::_0x07C313F94746702C(iLocal_582))
+	if (STREAMING::STREAMVOL_IS_VALID(iLocal_582))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_582);
+		STREAMING::STREAMVOL_DELETE(iLocal_582);
 	}
-	if (STREAMING::_0x07C313F94746702C(iLocal_583))
+	if (STREAMING::STREAMVOL_IS_VALID(iLocal_583))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_583);
+		STREAMING::STREAMVOL_DELETE(iLocal_583);
 	}
 	SYSTEM::WAIT(100);
 	AUDIO::STOP_SOUND(iLocal_1116);
@@ -133333,13 +133333,13 @@ void func_1062()
 	MISC::WATER_OVERRIDE_SET_STRENGTH(0f);
 	PATHFIND::SET_GPS_DISABLED_ZONE(0f, 0f, 0f, 0f, 0f, 0f);
 	MISC::SET_INSTANCE_PRIORITY_HINT(0);
-	if (STREAMING::_0x07C313F94746702C(iLocal_582))
+	if (STREAMING::STREAMVOL_IS_VALID(iLocal_582))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_582);
+		STREAMING::STREAMVOL_DELETE(iLocal_582);
 	}
-	if (STREAMING::_0x07C313F94746702C(iLocal_583))
+	if (STREAMING::STREAMVOL_IS_VALID(iLocal_583))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_583);
+		STREAMING::STREAMVOL_DELETE(iLocal_583);
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{

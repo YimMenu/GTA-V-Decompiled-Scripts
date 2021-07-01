@@ -17288,7 +17288,7 @@ void func_487(int iParam0)
 												}
 												else if (VEHICLE::IS_THIS_MODEL_A_HELI(iVar10))
 												{
-													TASK::TASK_HELI_MISSION(iVar0, iVar9, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 8, 20f, 0f, -1f, 80, 80, -1082130432, 0);
+													TASK::TASK_HELI_MISSION(iVar0, iVar9, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 8, 20f, 0f, -1f, 80, 80, -1f, 0);
 												}
 												else if (VEHICLE::IS_THIS_MODEL_A_PLANE(iVar10))
 												{

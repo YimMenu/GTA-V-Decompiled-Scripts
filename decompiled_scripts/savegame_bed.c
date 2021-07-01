@@ -760,7 +760,7 @@ void func_18()
 							StringConCat(&cLocal_232, "_CAM", 64);
 							CAM::PLAY_CAM_ANIM(iLocal_93, &cLocal_232, &(Local_96.f_26), Local_96.f_20, Local_96.f_23, false, 2);
 							CAM::SET_CAM_ACTIVE(iLocal_93, true);
-							if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) != 4)
+							if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) != 4)
 							{
 								CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 							}
@@ -947,7 +947,7 @@ void func_18()
 						StringConCat(&cLocal_232, "_CAM", 64);
 						CAM::PLAY_CAM_ANIM(iLocal_93, &cLocal_232, &(Local_96.f_26), Local_96.f_20, Local_96.f_23, false, 2);
 						CAM::SET_CAM_ACTIVE(iLocal_93, true);
-						if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) != 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) != 4)
 						{
 							CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 						}
@@ -973,7 +973,7 @@ void func_18()
 					CAM::SET_CAM_ACTIVE(iLocal_93, false);
 					CAM::DESTROY_CAM(iLocal_93, false);
 				}
-				if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) != 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) != 4)
 				{
 					CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 				}
@@ -91162,7 +91162,7 @@ void func_420()
 				bLocal_77 = true;
 			}
 			iVar2 = 1;
-			if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 			{
 				Var3 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 				fVar6 = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
@@ -91485,7 +91485,7 @@ void func_432()
 		{
 			if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Local_96.f_88[iLocal_78 /*3*/], Local_96.f_95[iLocal_78 /*3*/], Local_96.f_102[iLocal_78], false, true, 0))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 				{
 					bLocal_248 = true;
 				}
@@ -91493,7 +91493,7 @@ void func_432()
 		}
 		else if (!ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), Local_96.f_88[iLocal_78 /*3*/], Local_96.f_95[iLocal_78 /*3*/], Local_96.f_102[iLocal_78], false, true, 0))
 		{
-			if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) != 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) != 4)
 			{
 				bLocal_248 = false;
 			}
@@ -91526,7 +91526,7 @@ void func_432()
 			if (CAM::DOES_CAM_EXIST(iLocal_94))
 			{
 				CAM::DESTROY_CAM(iLocal_94, false);
-				if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false)) && CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) != 4)
+				if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false)) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) != 4)
 				{
 					CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 				}

@@ -41570,35 +41570,35 @@ void func_363(var uParam0, int iParam1, struct<3> Param2, char* sParam5, int iPa
 			{
 				if (PED::IS_PED_IN_ANY_BOAT(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(3) == 3 || CAM::_0xEE778F8C7E1142E2(3) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 4)
 					{
 						func_390(uParam0, iVar0, 1);
 					}
 				}
 				else if (PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(6) == 3 || CAM::_0xEE778F8C7E1142E2(6) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 4)
 					{
 						func_390(uParam0, iVar0, 1);
 					}
 				}
 				else if (PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(4) == 3 || CAM::_0xEE778F8C7E1142E2(4) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 4)
 					{
 						func_390(uParam0, iVar0, 1);
 					}
 				}
 				else if (PED::IS_PED_IN_ANY_SUB(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(5) == 3 || CAM::_0xEE778F8C7E1142E2(5) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 4)
 					{
 						func_390(uParam0, iVar0, 1);
 					}
 				}
 				else if (PED::IS_PED_ON_ANY_BIKE(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(2) == 3 || CAM::_0xEE778F8C7E1142E2(2) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 4)
 					{
 						func_390(uParam0, iVar0, 1);
 					}
@@ -41794,35 +41794,35 @@ int func_369(bool bParam0, bool bParam1, bool bParam2)
 		{
 			if (PED::IS_PED_IN_ANY_BOAT(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(3) == 3 || CAM::_0xEE778F8C7E1142E2(3) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 4)
 				{
 					return 0;
 				}
 			}
 			else if (PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(6) == 3 || CAM::_0xEE778F8C7E1142E2(6) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 4)
 				{
 					return 0;
 				}
 			}
 			else if (PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(4) == 3 || CAM::_0xEE778F8C7E1142E2(4) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 4)
 				{
 					return 0;
 				}
 			}
 			else if (PED::IS_PED_IN_ANY_SUB(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(5) == 3 || CAM::_0xEE778F8C7E1142E2(5) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 4)
 				{
 					return 0;
 				}
 			}
 			else if (PED::IS_PED_ON_ANY_BIKE(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(2) == 3 || CAM::_0xEE778F8C7E1142E2(2) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 4)
 				{
 					return 0;
 				}
@@ -44524,35 +44524,35 @@ void func_448(var uParam0, struct<3> Param1, var uParam4, int iParam5, bool bPar
 		{
 			if (PED::IS_PED_IN_ANY_BOAT(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(3) == 3 || CAM::_0xEE778F8C7E1142E2(3) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 4)
 				{
 					func_390(uParam0, iVar0, 1);
 				}
 			}
 			else if (PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(6) == 3 || CAM::_0xEE778F8C7E1142E2(6) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 4)
 				{
 					func_390(uParam0, iVar0, 1);
 				}
 			}
 			else if (PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(4) == 3 || CAM::_0xEE778F8C7E1142E2(4) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 4)
 				{
 					func_390(uParam0, iVar0, 1);
 				}
 			}
 			else if (PED::IS_PED_IN_ANY_SUB(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(5) == 3 || CAM::_0xEE778F8C7E1142E2(5) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(5) == 4)
 				{
 					func_390(uParam0, iVar0, 1);
 				}
 			}
 			else if (PED::IS_PED_ON_ANY_BIKE(PLAYER::PLAYER_PED_ID()))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(2) == 3 || CAM::_0xEE778F8C7E1142E2(2) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 3 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(2) == 4)
 				{
 					func_390(uParam0, iVar0, 1);
 				}
@@ -45289,7 +45289,7 @@ void func_475()
 			case 0:
 				if (iLocal_524 == 1)
 				{
-					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_629, 4, 25f, 5f, 354.765f, 100, 30, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_629, 4, 25f, 5f, 354.765f, 100, 30, -1f, 0);
 					iLocal_549++;
 				}
 				break;
@@ -45297,7 +45297,7 @@ void func_475()
 			case 1:
 				if (func_395(iLocal_352, Local_629, 30f))
 				{
-					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_635.x, Local_635.f_1, 800f, 4, 25f, 5f, 354.765f, 100, 30, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_635.x, Local_635.f_1, 800f, 4, 25f, 5f, 354.765f, 100, 30, -1f, 0);
 					iLocal_549++;
 				}
 				break;
@@ -45305,7 +45305,7 @@ void func_475()
 			case 2:
 				if (func_395(iLocal_352, Local_635.x, Local_635.f_1, 800f, 500f))
 				{
-					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_635, 4, 100f, 5f, ENTITY::GET_ENTITY_HEADING(iLocal_352), 100, 30, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_635, 4, 100f, 5f, ENTITY::GET_ENTITY_HEADING(iLocal_352), 100, 30, -1f, 0);
 					MISC::SET_WEATHER_TYPE_OVERTIME_PERSIST("CLEAR", 30f);
 					iLocal_549++;
 				}
@@ -45316,11 +45316,11 @@ void func_475()
 				{
 					if (PLAYER::PLAYER_PED_ID() == VEHICLE::GET_PED_IN_VEHICLE_SEAT(iLocal_352, 1, false))
 					{
-						TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_635, 4, 100f, 5f, 270f, 100, 30, -1082130432, 0);
+						TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_635, 4, 100f, 5f, 270f, 100, 30, -1f, 0);
 					}
 					else
 					{
-						TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_635, 4, 100f, 5f, (270f - 180f), 100, 30, -1082130432, 0);
+						TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_635, 4, 100f, 5f, (270f - 180f), 100, 30, -1f, 0);
 					}
 					iLocal_549++;
 				}
@@ -45410,7 +45410,7 @@ void func_478()
 				func_488();
 				if (func_164(iLocal_351))
 				{
-					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_632, 20, 20f, 1f, 278f, 0, 0, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_632, 20, 20f, 1f, 278f, 0, 0, -1f, 0);
 				}
 			}
 			if (func_164(iLocal_344))
@@ -45554,7 +45554,7 @@ void func_482()
 				if ((func_164(iLocal_352) && !func_394(PLAYER::PLAYER_PED_ID(), iLocal_344, 20f, 1)) && func_7(&uLocal_357, "EXT1AU", "EXT1_NOTIN", 8, 0, 0, 0))
 				{
 					iLocal_543 = 1;
-					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_629, 4, 10f, 5f, -1f, 100, 30, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(iLocal_351, iLocal_352, 0, 0, Local_629, 4, 10f, 5f, -1f, 100, 30, -1f, 0);
 				}
 			}
 			else if ((MISC::GET_GAME_TIMER() - iLocal_842) > 62000)
@@ -52312,11 +52312,11 @@ void func_610(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = STREAMING::FORMAT_FOCUS_HEADING(Param0, fParam3, iParam4, 127);
-	if (STREAMING::_0x07C313F94746702C(iVar0))
+	iVar0 = STREAMING::STREAMVOL_CREATE_SPHERE(Param0, fParam3, iParam4, 127);
+	if (STREAMING::STREAMVOL_IS_VALID(iVar0))
 	{
 		iVar1 = (MISC::GET_GAME_TIMER() + iParam5);
-		while (!STREAMING::_0x7D41E9D2D17C5B2D(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
+		while (!STREAMING::STREAMVOL_HAS_LOADED(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
 		{
 			if (bParam7)
 			{
@@ -52331,7 +52331,7 @@ void func_610(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 		if (MISC::GET_GAME_TIMER() < iVar1)
 		{
 		}
-		STREAMING::_0x1EE7D8DF4425F053(iVar0);
+		STREAMING::STREAMVOL_DELETE(iVar0);
 	}
 }
 

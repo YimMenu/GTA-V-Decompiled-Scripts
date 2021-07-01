@@ -1206,9 +1206,9 @@ void func_17(var uParam0)
 				func_35(uParam0, 0);
 				return;
 			}
-			else if (STREAMING::_0x07C313F94746702C(iLocal_52))
+			else if (STREAMING::STREAMVOL_IS_VALID(iLocal_52))
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_52);
+				STREAMING::STREAMVOL_DELETE(iLocal_52);
 			}
 			*uParam0 = 12;
 			return;
@@ -1877,9 +1877,9 @@ void func_42(var uParam0, bool bParam1)
 	if (bParam1 && (uParam0->f_11 == 1 || uParam0->f_34 == 1))
 	{
 		bLocal_208 = false;
-		if (STREAMING::_0x07C313F94746702C(iLocal_52))
+		if (STREAMING::STREAMVOL_IS_VALID(iLocal_52))
 		{
-			STREAMING::_0x1EE7D8DF4425F053(iLocal_52);
+			STREAMING::STREAMVOL_DELETE(iLocal_52);
 		}
 		func_107(uParam0);
 		if (bParam1)
@@ -4032,11 +4032,11 @@ void func_105(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = STREAMING::FORMAT_FOCUS_HEADING(Param0, fParam3, iParam4, 127);
-	if (STREAMING::_0x07C313F94746702C(iVar0))
+	iVar0 = STREAMING::STREAMVOL_CREATE_SPHERE(Param0, fParam3, iParam4, 127);
+	if (STREAMING::STREAMVOL_IS_VALID(iVar0))
 	{
 		iVar1 = (MISC::GET_GAME_TIMER() + iParam5);
-		while (!STREAMING::_0x7D41E9D2D17C5B2D(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
+		while (!STREAMING::STREAMVOL_HAS_LOADED(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
 		{
 			if (bParam7)
 			{
@@ -4051,7 +4051,7 @@ void func_105(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 		if (MISC::GET_GAME_TIMER() < iVar1)
 		{
 		}
-		STREAMING::_0x1EE7D8DF4425F053(iVar0);
+		STREAMING::STREAMVOL_DELETE(iVar0);
 	}
 }
 
@@ -33336,20 +33336,20 @@ void func_258(struct<3> Param0, struct<3> Param3, float fParam6)
 	}
 	if (iLocal_53)
 	{
-		if (STREAMING::_0x07C313F94746702C(iLocal_52))
+		if (STREAMING::STREAMVOL_IS_VALID(iLocal_52))
 		{
-			STREAMING::_0x1EE7D8DF4425F053(iLocal_52);
+			STREAMING::STREAMVOL_DELETE(iLocal_52);
 		}
-		iLocal_52 = STREAMING::_0x1F3F018BC3AFA77C(Param0, func_257(Param3), fParam6, 12, 127);
+		iLocal_52 = STREAMING::STREAMVOL_CREATE_FRUSTUM(Param0, func_257(Param3), fParam6, 12, 127);
 		iLocal_53 = 0;
 	}
-	else if (STREAMING::_0x07C313F94746702C(iLocal_52))
+	else if (STREAMING::STREAMVOL_IS_VALID(iLocal_52))
 	{
-		if (STREAMING::_0xBC9823AB80A3DCAC())
+		if (STREAMING::IS_STREAMVOL_ACTIVE())
 		{
-			if (STREAMING::_0x7D41E9D2D17C5B2D(iLocal_52))
+			if (STREAMING::STREAMVOL_HAS_LOADED(iLocal_52))
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_52);
+				STREAMING::STREAMVOL_DELETE(iLocal_52);
 			}
 		}
 	}
@@ -34773,9 +34773,9 @@ void func_303(bool bParam0)
 	{
 		SYSTEM::WAIT(0);
 	}
-	if (STREAMING::_0x07C313F94746702C(iLocal_52))
+	if (STREAMING::STREAMVOL_IS_VALID(iLocal_52))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_52);
+		STREAMING::STREAMVOL_DELETE(iLocal_52);
 	}
 	SCRIPT::TERMINATE_THIS_THREAD();
 }

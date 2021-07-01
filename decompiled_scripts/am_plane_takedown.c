@@ -890,7 +890,7 @@ void func_27()
 				}
 				else
 				{
-					TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_75.f_3), NETWORK::NET_TO_VEH(Local_75.f_2), 0, 0, Local_75.f_9[Local_75.f_22 /*3*/] + Vector(120f, 0f, 0f), 4, 20f, 50f, -1f, 90, 60, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_75.f_3), NETWORK::NET_TO_VEH(Local_75.f_2), 0, 0, Local_75.f_9[Local_75.f_22 /*3*/] + Vector(120f, 0f, 0f), 4, 20f, 50f, -1f, 90, 60, -1f, 0);
 				}
 			}
 			else if (!MISC::IS_BIT_SET(Local_75.f_1, 2) && !MISC::IS_BIT_SET(Local_103[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_1, 1))
@@ -919,7 +919,7 @@ void func_27()
 				}
 				else
 				{
-					TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_75.f_3), NETWORK::NET_TO_VEH(Local_75.f_2), 0, 0, Var0, 4, 20f, -1f, -1f, 100, 100, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_75.f_3), NETWORK::NET_TO_VEH(Local_75.f_2), 0, 0, Var0, 4, 20f, -1f, -1f, 100, 100, -1f, 0);
 				}
 				MISC::SET_BIT(&(Local_103[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_1), 1);
 			}
@@ -3090,7 +3090,7 @@ Vector3 func_130(int iParam0, bool bParam1)
 	{
 		Var3 = { CAM::GET_GAMEPLAY_CAM_ROT(2) };
 	}
-	if (iParam0 == func_131(PLAYER::PLAYER_PED_ID()) && CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (iParam0 == func_131(PLAYER::PLAYER_PED_ID()) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, 0f, 8f, -0.2f) };
 	}
@@ -3102,7 +3102,7 @@ Vector3 func_130(int iParam0, bool bParam1)
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0, false))
 	{
 		fVar6 = ENTITY::GET_ENTITY_HEADING(iParam0);
-		if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 		{
 			fVar6 = Var3.f_2;
 		}

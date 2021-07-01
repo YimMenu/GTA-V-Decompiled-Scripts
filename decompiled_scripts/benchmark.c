@@ -2517,11 +2517,11 @@ void func_97(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bPa
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = STREAMING::FORMAT_FOCUS_HEADING(Param0, fParam3, iParam4, 127);
-	if (STREAMING::_0x07C313F94746702C(iVar0))
+	iVar0 = STREAMING::STREAMVOL_CREATE_SPHERE(Param0, fParam3, iParam4, 127);
+	if (STREAMING::STREAMVOL_IS_VALID(iVar0))
 	{
 		iVar1 = (MISC::GET_GAME_TIMER() + iParam5);
-		while (!STREAMING::_0x7D41E9D2D17C5B2D(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
+		while (!STREAMING::STREAMVOL_HAS_LOADED(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
 		{
 			if (bParam7)
 			{
@@ -2536,7 +2536,7 @@ void func_97(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bPa
 		if (MISC::GET_GAME_TIMER() < iVar1)
 		{
 		}
-		STREAMING::_0x1EE7D8DF4425F053(iVar0);
+		STREAMING::STREAMVOL_DELETE(iVar0);
 	}
 }
 
@@ -2694,11 +2694,11 @@ void func_107()
 		func_488();
 		func_134(0, 1, 0);
 		MISC::_0xEB2104E905C6F2E9();
-		while (MISC::_0x2B5E102E4A42F2BF() == 1)
+		while (MISC::GET_STATUS_OF_MISSION_REPEAT_SAVE() == 1)
 		{
 			SYSTEM::WAIT(0);
 		}
-		if (MISC::_0x2B5E102E4A42F2BF() == 2)
+		if (MISC::GET_STATUS_OF_MISSION_REPEAT_SAVE() == 2)
 		{
 			SCRIPT::TERMINATE_THIS_THREAD();
 			return;
@@ -98437,7 +98437,7 @@ void func_568(int iParam0)
 		PAD::_0xF239400E16C23E08(0, -1);
 		MISC::CLEAR_WEATHER_TYPE_PERSIST();
 		AUDIO::RELEASE_NAMED_SCRIPT_AUDIO_BANK("TIME_LAPSE");
-		MISC::_0x72DE52178C291CB5();
+		MISC::QUEUE_MISSION_REPEAT_LOAD();
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
 }

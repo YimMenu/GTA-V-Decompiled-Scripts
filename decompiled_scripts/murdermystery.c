@@ -1176,11 +1176,11 @@ void func_36(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bPa
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = STREAMING::FORMAT_FOCUS_HEADING(Param0, fParam3, iParam4, 127);
-	if (STREAMING::_0x07C313F94746702C(iVar0))
+	iVar0 = STREAMING::STREAMVOL_CREATE_SPHERE(Param0, fParam3, iParam4, 127);
+	if (STREAMING::STREAMVOL_IS_VALID(iVar0))
 	{
 		iVar1 = (MISC::GET_GAME_TIMER() + iParam5);
-		while (!STREAMING::_0x7D41E9D2D17C5B2D(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
+		while (!STREAMING::STREAMVOL_HAS_LOADED(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
 		{
 			if (bParam7)
 			{
@@ -1195,7 +1195,7 @@ void func_36(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bPa
 		if (MISC::GET_GAME_TIMER() < iVar1)
 		{
 		}
-		STREAMING::_0x1EE7D8DF4425F053(iVar0);
+		STREAMING::STREAMVOL_DELETE(iVar0);
 	}
 }
 
@@ -3196,7 +3196,7 @@ void func_49()
 			}
 			if (PAD::IS_CONTROL_JUST_PRESSED(2, 51))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					iLocal_86 = MISC::GET_GAME_TIMER() + 300;
 					GRAPHICS::ANIMPOSTFX_PLAY("CamPushInNeutral", 0, false);

@@ -421,7 +421,7 @@ int func_1()
 			func_2();
 			if (SYSTEM::VDIST2(Var0, Var3) < 25f)
 			{
-				if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 				{
 					if (func_5(&uLocal_63, "TOWAUD", "TONYA_MESS", 8, 0, 0, 0))
 					{

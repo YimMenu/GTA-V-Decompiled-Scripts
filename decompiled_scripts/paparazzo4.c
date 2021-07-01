@@ -38623,11 +38623,11 @@ void func_351(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = STREAMING::FORMAT_FOCUS_HEADING(Param0, fParam3, iParam4, 127);
-	if (STREAMING::_0x07C313F94746702C(iVar0))
+	iVar0 = STREAMING::STREAMVOL_CREATE_SPHERE(Param0, fParam3, iParam4, 127);
+	if (STREAMING::STREAMVOL_IS_VALID(iVar0))
 	{
 		iVar1 = (MISC::GET_GAME_TIMER() + iParam5);
-		while (!STREAMING::_0x7D41E9D2D17C5B2D(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
+		while (!STREAMING::STREAMVOL_HAS_LOADED(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
 		{
 			if (bParam7)
 			{
@@ -38642,7 +38642,7 @@ void func_351(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 		if (MISC::GET_GAME_TIMER() < iVar1)
 		{
 		}
-		STREAMING::_0x1EE7D8DF4425F053(iVar0);
+		STREAMING::STREAMVOL_DELETE(iVar0);
 	}
 }
 

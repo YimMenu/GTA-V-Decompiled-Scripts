@@ -1210,7 +1210,7 @@ void func_31()
 		SYSTEM::WAIT(0);
 	}
 	SYSTEM::WAIT(0);
-	if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 	{
 		func_15(0);
 	}

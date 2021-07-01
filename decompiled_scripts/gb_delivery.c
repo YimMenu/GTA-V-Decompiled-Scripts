@@ -3872,7 +3872,7 @@ void func_186(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -3914,7 +3914,7 @@ void func_188()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -123241,7 +123241,7 @@ int func_1281(var uParam0, int iParam1, bool bParam2, bool bParam3)
 	{
 		return 0;
 	}
-	*uParam0 = PED::CLONE_PED(iParam1, 0f, false, bParam2);
+	*uParam0 = PED::CLONE_PED(iParam1, false, false, bParam2);
 	if (func_11(iParam1))
 	{
 		ENTITY::SET_ENTITY_INVINCIBLE(*uParam0, true);

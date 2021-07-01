@@ -89809,10 +89809,10 @@ void func_331()
 					STREAMING::REQUEST_ANIM_DICT("missheistdockssetup1leadinoutlsdhs_mcs_3");
 					iLocal_6035++;
 				}
-				iVar0 = CAM::_0x19CAFA3C87F7C2FF();
+				iVar0 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
 				if (iVar0 == 0)
 				{
-					iVar1 = CAM::_0xEE778F8C7E1142E2(iVar0);
+					iVar1 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 					if (iVar1 == 4)
 					{
 						if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -1149.638f, -1522.367f, 9.382867f, -1151.354f, -1519.901f, 12.38273f, 1.5f, false, true, 0))
@@ -89837,10 +89837,10 @@ void func_331()
 			break;
 		
 		case 3:
-			iVar0 = CAM::_0x19CAFA3C87F7C2FF();
+			iVar0 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
 			if (iVar0 == 0)
 			{
-				iVar1 = CAM::_0xEE778F8C7E1142E2(iVar0);
+				iVar1 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				if (iVar1 != 4)
 				{
 					STREAMING::REQUEST_ANIM_DICT("missheistdockssetup1leadinoutlsdhs_mcs_3");
@@ -89878,10 +89878,10 @@ void func_331()
 				}
 				if (SYSTEM::TIMERB() > 1500)
 				{
-					iVar0 = CAM::_0x19CAFA3C87F7C2FF();
+					iVar0 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
 					if (iVar0 == 0)
 					{
-						iVar1 = CAM::_0xEE778F8C7E1142E2(iVar0);
+						iVar1 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 						if (iVar1 != 4)
 						{
 							if (!func_479("DS1_MCS3LI"))
@@ -109624,7 +109624,7 @@ void func_647()
 	{
 		case 0:
 			func_665();
-			iLocal_5101 = CAM::_0xEE778F8C7E1142E2(0);
+			iLocal_5101 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0);
 			if (bLocal_5250)
 			{
 				Local_7250.f_70 = 0.297f;
@@ -110066,7 +110066,7 @@ void func_651()
 				{
 					if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_5367) > 0.95f)
 					{
-						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 						{
 							TASK::TASK_TURN_PED_TO_FACE_COORD(PLAYER::PLAYER_PED_ID(), -105.3195f, -2603.989f, 5.0007f, 0);
 						}

@@ -1439,7 +1439,7 @@ void __EntryFunction__()
 	Local_2445.f_1 = 0;
 	Local_2445.f_5 = 0;
 	Local_2445.f_6 = 0;
-	Local_2445.f_7 = CAM::_0xEE778F8C7E1142E2(0);
+	Local_2445.f_7 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0);
 	while (true)
 	{
 		GRAPHICS::DRAW_DEBUG_BOX(2366.77f, 4255.247f, 30.3808f, 2426.47f, 4332.712f, 35.244f, 0, 0, 255, 100);
@@ -91798,7 +91798,7 @@ void func_466(int* iParam0)
 	bool bVar0;
 	bool bVar1;
 	
-	bVar0 = CAM::_0xEE778F8C7E1142E2(0) == 4;
+	bVar0 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4;
 	if (func_321(32))
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
@@ -108508,7 +108508,7 @@ int func_840(var uParam0)
 			}
 			if (Global_1835392.f_3183 > 0)
 			{
-				(uParam0[0 /*100*/])->f_79 = NETWORK::_0xD66C9E72B3CC4982(&(Global_1835392.f_3026), Global_1835392.f_3183);
+				(uParam0[0 /*100*/])->f_79 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&(Global_1835392.f_3026), Global_1835392.f_3183);
 				(uParam0[0 /*100*/])->f_78 = 1;
 			}
 			else
@@ -108691,7 +108691,7 @@ int func_843(var uParam0, char* sParam1, char* sParam2, int iParam3, var uParam4
 			{
 				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(&(Var1[0 /*13*/])))
 				{
-					*uParam4 = NETWORK::_0xD66C9E72B3CC4982(&Var1, 1);
+					*uParam4 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&Var1, 1);
 					*uParam0 = 1;
 				}
 				else
@@ -115359,7 +115359,7 @@ void func_993(struct<3> Param0, var uParam3, float fParam4, var uParam5, int iPa
 				{
 					ENTITY::SET_ENTITY_COORDS(*iParam6, Var19, true, false, false, true);
 					ENTITY::SET_ENTITY_HEADING(*iParam6, fVar25);
-					TASK::TASK_HELI_MISSION(*iParam7, *iParam6, 0, 0, Var16, 4, 30f, 3f, fVar25, 1, 1, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(*iParam7, *iParam6, 0, 0, Var16, 4, 30f, 3f, fVar25, 1, 1, -1f, 0);
 				}
 			}
 			break;
@@ -115647,7 +115647,7 @@ void func_993(struct<3> Param0, var uParam3, float fParam4, var uParam5, int iPa
 				}
 				if (!PED::IS_PED_INJURED(*iParam7) && !ENTITY::IS_ENTITY_DEAD(*iParam6, false))
 				{
-					TASK::TASK_HELI_MISSION(*iParam7, *iParam6, 0, 0, Var34, 4, 30f, 3f, fVar33, 1, 1, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(*iParam7, *iParam6, 0, 0, Var34, 4, 30f, 3f, fVar33, 1, 1, -1f, 0);
 				}
 				iLocal_2580 = 10;
 			}

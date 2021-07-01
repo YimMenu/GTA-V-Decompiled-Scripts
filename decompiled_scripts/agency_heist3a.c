@@ -119682,7 +119682,7 @@ void func_831()
 				{
 					iLocal_4927 = MISC::GET_GAME_TIMER();
 				}
-				if ((((CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING() < 40f && CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING() > -40f) && CAM::_0xEE778F8C7E1142E2(1) != 4) || ((CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING() < 90f && CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING() > -22f) && CAM::_0xEE778F8C7E1142E2(1) == 4)) || func_3(&iLocal_4927, 60000))
+				if ((((CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING() < 40f && CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING() > -40f) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) != 4) || ((CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING() < 90f && CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING() > -22f) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)) || func_3(&iLocal_4927, 60000))
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(Local_1019[1 /*32*/]))
 					{
@@ -128791,7 +128791,7 @@ void func_963()
 			break;
 		
 		case 3:
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				if (func_3(&iLocal_4715, 4700))
 				{
@@ -130791,7 +130791,7 @@ int func_991(int iParam0)
 							{
 								if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(Local_82))
 								{
-									if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+									if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 									{
 										VEHICLE::UNPAUSE_PLAYBACK_RECORDED_VEHICLE(Local_82);
 										VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(Local_82, 1800f);
@@ -130849,7 +130849,7 @@ int func_991(int iParam0)
 				}
 				if (!iLocal_7266)
 				{
-					if ((CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(0) == 4))
+					if ((CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4))
 					{
 						if (fVar1 >= 0.78f)
 						{
@@ -130878,7 +130878,7 @@ int func_991(int iParam0)
 				}
 				if (!iLocal_7267)
 				{
-					if ((CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(0) == 4))
+					if ((CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4))
 					{
 						if (fVar1 >= 0.85f)
 						{
@@ -130894,7 +130894,7 @@ int func_991(int iParam0)
 				}
 				if (CAM::GET_CAM_SPLINE_PHASE(iParam0->f_1) >= 1f)
 				{
-					if ((CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(0) == 4))
+					if ((CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4))
 					{
 						func_997(&uLocal_7239, Local_82, 1, 0.65f, 1000, 1000, 700, 700, 1045220557);
 						func_996(&uLocal_7239, 7f, 0f, -10f);
@@ -130926,7 +130926,7 @@ int func_991(int iParam0)
 			break;
 		
 		case 3:
-			if ((CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(0) == 4))
+			if ((CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4))
 			{
 				if (func_992(&uLocal_7239, 1, 1, 1, 0, 1, 0))
 				{
@@ -132458,7 +132458,7 @@ void func_1032(var uParam0, int iParam1, int iParam2)
 		uParam0->f_10[2 /*57*/].f_47.f_1 = 5f;
 		uParam0->f_10[2 /*57*/].f_47.f_2 = 1f;
 		uParam0->f_10[3 /*57*/].f_54 = 1;
-		if ((CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::_0xEE778F8C7E1142E2(0) == 4))
+		if ((CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4) || (!CAM::_0xEAF0FA793D05C592() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4))
 		{
 			uParam0->f_10[4 /*57*/].f_2 = 0;
 			uParam0->f_10[4 /*57*/].f_3 = -1;
@@ -133854,7 +133854,7 @@ void func_1050()
 					AUDIO::STOP_AUDIO_SCENE("AH_3A_ELEVATOR_SCENE");
 				}
 				GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_7220);
+				STREAMING::STREAMVOL_DELETE(iLocal_7220);
 				func_577(0);
 				func_116(0, 0, 0, 0, 1, 1);
 				iLocal_57 = 9;
@@ -137404,7 +137404,7 @@ int func_1106()
 		case 1:
 			if (func_843(PLAYER::PLAYER_PED_ID(), 242628503, 1))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					TASK::OPEN_SEQUENCE_TASK(&iLocal_5062);
 					TASK::TASK_PLAY_ANIM_ADVANCED(0, "missfbi_s4mop", "lobby_security_fp_Player", ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 0f, 0f, 259.3275f, 4f, -4f, -1, 48, 0f, 2, 0);
@@ -139548,7 +139548,7 @@ void func_1149()
 
 void func_1150()
 {
-	if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 	{
 		if (func_443(PLAYER::PLAYER_PED_ID(), 3, -1) == 90)
 		{
@@ -140104,7 +140104,7 @@ void func_1164()
 		iVar0++;
 	}
 	GRAPHICS::RELEASE_MOVIE_MESH_SET(iLocal_7215);
-	STREAMING::_0x1EE7D8DF4425F053(iLocal_7220);
+	STREAMING::STREAMVOL_DELETE(iLocal_7220);
 	AUDIO::RELEASE_MISSION_AUDIO_BANK();
 	AUDIO::SET_AMBIENT_ZONE_STATE("AZ_FIB_HEIST_JANITOR_WALKIE_TALKIE", false, true);
 	GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();

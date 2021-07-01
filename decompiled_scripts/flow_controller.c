@@ -132139,7 +132139,7 @@ int func_1000(int iParam0, int iParam1)
 					{
 						if (!(iVar1 == 15 && func_255() == 1))
 						{
-							if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+							if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 							{
 								if (TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), -828834893) != 1 && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), -828834893) != 0)
 								{

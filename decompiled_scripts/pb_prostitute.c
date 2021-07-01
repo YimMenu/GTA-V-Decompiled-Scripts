@@ -2330,13 +2330,13 @@ bool func_48(bool bParam0, bool bParam1)
 	bVar0 = false;
 	if (bParam0)
 	{
-		bVar0 = CAM::_0xEE778F8C7E1142E2(0) == 4;
+		bVar0 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4;
 	}
 	if (bParam1)
 	{
 		if (!bVar0)
 		{
-			bVar0 = CAM::_0xEE778F8C7E1142E2(1) == 4;
+			bVar0 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4;
 		}
 	}
 	return bVar0;

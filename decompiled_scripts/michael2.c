@@ -46989,7 +46989,7 @@ void func_398()
 						func_879("MichaelFallShot", 1);
 					}
 				}
-				if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 				{
 					if (!func_815("MichaelFallPushIn"))
 					{
@@ -47006,7 +47006,7 @@ void func_398()
 				{
 					func_803(PLAYER::PLAYER_ID(), 1, 256);
 					func_241(func_937(0), 0);
-					if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 					{
 						TASK::CLEAR_PED_TASKS_IMMEDIATELY(func_937(0));
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(func_937(0), false, false);
@@ -57335,7 +57335,7 @@ int func_497(var uParam0, bool bParam1)
 						func_879("MichaelToFranklinCarSwitchCut", 1);
 					}
 				}
-				if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 				{
 					if (!func_815("SwitchFlashIntoFranklinDriving"))
 					{
@@ -57463,7 +57463,7 @@ void func_498(var uParam0, int iParam1, int iParam2)
 		uParam0->f_10[6 /*57*/].f_21 = 45f;
 		uParam0->f_10[6 /*57*/].f_30 = 1;
 		uParam0->f_10[6 /*57*/].f_31 = 1;
-		if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 		{
 			uParam0->f_10[7 /*57*/].f_5 = 500;
 			uParam0->f_10[7 /*57*/].f_6 = { -0.3329f, 0.5154f, 0.5142f };
@@ -57475,7 +57475,7 @@ void func_498(var uParam0, int iParam1, int iParam2)
 			uParam0->f_10[7 /*57*/].f_30 = 1;
 			uParam0->f_10[7 /*57*/].f_31 = 1;
 		}
-		if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 		{
 			uParam0->f_1217 = 8;
 		}
@@ -115683,7 +115683,7 @@ void func_708()
 					{
 						if ((STREAMING::HAS_ANIM_DICT_LOADED("cellphone@") && STREAMING::HAS_MODEL_LOADED(joaat("prop_phone_ing_03"))) && STREAMING::HAS_MODEL_LOADED(iLocal_9974))
 						{
-							if (!(PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4))
+							if (!(PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4))
 							{
 								iLocal_9963 = OBJECT::CREATE_OBJECT(joaat("prop_phone_ing_03"), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), true, true, false);
 								iLocal_9964 = OBJECT::CREATE_OBJECT(iLocal_9974, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), true, true, false);
@@ -115709,7 +115709,7 @@ void func_708()
 									TASK::CLEAR_SEQUENCE_TASK(&iLocal_4674);
 									PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), true, false);
 								}
-								if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+								if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 								{
 									CAM::SET_GAMEPLAY_ENTITY_HINT(iLocal_9963, Local_4594, true, 2000, 500, 2000, 1511508800);
 								}
@@ -122271,7 +122271,7 @@ void func_824()
 
 int func_825()
 {
-	if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		return 1;
 	}

@@ -35590,7 +35590,7 @@ void func_233()
 					SYSTEM::WAIT(0);
 					if (iLocal_2302 == 1)
 					{
-						STREAMING::_0x1EE7D8DF4425F053(iLocal_2301);
+						STREAMING::STREAMVOL_DELETE(iLocal_2301);
 					}
 					func_228(800, 0);
 					iLocal_2170 = 1;
@@ -42509,7 +42509,7 @@ void func_334()
 					{
 						if (fLocal_2291 >= 85000f)
 						{
-							iLocal_2301 = STREAMING::_0x1F3F018BC3AFA77C(-71.5438f, -549.907f, 40.5579f, 2.4313f, 1.2491f, -20.7899f, 200f, 13, 127);
+							iLocal_2301 = STREAMING::STREAMVOL_CREATE_FRUSTUM(-71.5438f, -549.907f, 40.5579f, 2.4313f, 1.2491f, -20.7899f, 200f, 13, 127);
 							STREAMING::REQUEST_MODEL(joaat("prop_pipes_02b"));
 							STREAMING::REQUEST_MODEL(joaat("prop_cablespool_02"));
 							STREAMING::REQUEST_MODEL(joaat("prop_barrier_wat_04c"));
@@ -53693,7 +53693,7 @@ void func_516()
 
 int func_517()
 {
-	if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		return 1;
 	}
@@ -58921,7 +58921,7 @@ void func_659()
 	}
 	if (iLocal_2302 == 1)
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_2301);
+		STREAMING::STREAMVOL_DELETE(iLocal_2301);
 	}
 	if (AUDIO::IS_AUDIO_SCENE_ACTIVE("PAPARAZZO_02_CHASE"))
 	{

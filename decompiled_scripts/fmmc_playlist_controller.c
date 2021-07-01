@@ -104452,7 +104452,7 @@ void func_624(var uParam0, int iParam1, struct<3> Param2, float fParam5, int iPa
 		if (!PED::IS_PED_INJURED(iParam1))
 		{
 		}
-		*uParam0 = PED::CLONE_PED(iParam1, 0f, false, false);
+		*uParam0 = PED::CLONE_PED(iParam1, false, false, false);
 		if (PED::IS_PED_INJURED(*uParam0))
 		{
 			PED::REVIVE_INJURED_PED(*uParam0);
@@ -181622,7 +181622,7 @@ void func_1488(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -181664,7 +181664,7 @@ void func_1490()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);

@@ -100286,7 +100286,7 @@ void func_529()
 							func_549(&Local_2541);
 							RECORDING::_0x293220DA1B46CEBC(10f, 0f, 3);
 							RECORDING::_0x48621C9FCA3EBD28(4);
-							if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+							if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 							{
 								CUTSCENE::_0x7F96F23FA9B73327(Local_2541.f_1);
 							}
@@ -107969,7 +107969,7 @@ int func_678(var uParam0, var uParam1)
 			{
 				if (CAM::GET_CAM_SPLINE_PHASE(uParam1->f_1) >= 1f)
 				{
-					if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 					{
 						func_686(&uLocal_3958, Local_2541, 2, 0.75f, 1000, 1000, 700, 700, 1045220557);
 						func_685(&uLocal_3958, 0f, 0f, -18f);
@@ -107982,7 +107982,7 @@ int func_678(var uParam0, var uParam1)
 			break;
 		
 		case 9:
-			if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 			{
 				if (func_681(&uLocal_3958, 1, 1, 1, 0, 0, 0))
 				{
@@ -118545,7 +118545,7 @@ int func_839()
 					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "marine_on_ramp", 2, Local_1615[1 /*25*/].f_1, 0);
 					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "back_marine", 2, Local_1615[2 /*25*/].f_1, 0);
 					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "outside_marine", 2, Local_1615[3 /*25*/].f_1, 0);
-					if (CAM::_0xEE778F8C7E1142E2(6) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 4)
 					{
 						CUTSCENE::_0x7F96F23FA9B73327(Local_2586.f_1);
 					}
@@ -119406,9 +119406,9 @@ int func_857(var uParam0, bool bParam1)
 		
 		case 1:
 			func_734(&uLocal_3789, 2, 0, "trevor", 0, 1);
-			if (!STREAMING::_0x07C313F94746702C(iLocal_7722))
+			if (!STREAMING::STREAMVOL_IS_VALID(iLocal_7722))
 			{
-				iLocal_7722 = STREAMING::_0x1F3F018BC3AFA77C(Local_7714, Local_7717, fLocal_7713, 12, 94);
+				iLocal_7722 = STREAMING::STREAMVOL_CREATE_FRUSTUM(Local_7714, Local_7717, fLocal_7713, 12, 94);
 			}
 			STREAMING::REQUEST_ANIM_DICT("MISSFBI5IG_33");
 			STREAMING::REQUEST_ANIM_DICT("missswitch");
@@ -119465,9 +119465,9 @@ int func_857(var uParam0, bool bParam1)
 			iVar0 = func_698(uParam0);
 			fVar1 = CAM::GET_CAM_SPLINE_PHASE(uParam0->f_1);
 			STREAMING::SET_FOCUS_POS_AND_VEL(CAM::GET_FINAL_RENDERED_CAM_COORD(), 0f, 0f, 0f);
-			if (!STREAMING::_0x07C313F94746702C(iLocal_7722))
+			if (!STREAMING::STREAMVOL_IS_VALID(iLocal_7722))
 			{
-				iLocal_7722 = STREAMING::_0x1F3F018BC3AFA77C(Local_7714, Local_7717, fLocal_7713, 12, 127);
+				iLocal_7722 = STREAMING::STREAMVOL_CREATE_FRUSTUM(Local_7714, Local_7717, fLocal_7713, 12, 127);
 			}
 			if (CAM::IS_CAM_ACTIVE(uParam0->f_1))
 			{
@@ -119519,7 +119519,7 @@ int func_857(var uParam0, bool bParam1)
 				{
 					if (Local_3755.f_19)
 					{
-						TASK::TASK_HELI_MISSION(PLAYER::PLAYER_PED_ID(), Local_2586.x, 0, 0, Local_7731, 4, fLocal_7734, 3f, -1f, 20, -1, -1082130432, 0);
+						TASK::TASK_HELI_MISSION(PLAYER::PLAYER_PED_ID(), Local_2586.x, 0, 0, Local_7731, 4, fLocal_7734, 3f, -1f, 20, -1, -1f, 0);
 						TASK::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), "missswitch", "mid_mission_inside_helicopter_trevor", 8f, -8f, -1, 32, 0f, false, false, false);
 						ENTITY::FREEZE_ENTITY_POSITION(iLocal_7701, true);
 						ENTITY::SET_ENTITY_VELOCITY(Local_2586.x, 7.895117f, 4.266795f, 1.696478f);
@@ -119543,7 +119543,7 @@ int func_857(var uParam0, bool bParam1)
 						iLocal_3135 = 1;
 					}
 				}
-				if (CAM::_0xEE778F8C7E1142E2(6) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 4)
 				{
 					if (CAM::GET_CAM_SPLINE_PHASE(uParam0->f_1) >= 0.8f)
 					{
@@ -119565,7 +119565,7 @@ int func_857(var uParam0, bool bParam1)
 		
 		case 9:
 			MISC::SET_TIME_SCALE(1f);
-			if (CAM::_0xEE778F8C7E1142E2(6) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(6) == 4)
 			{
 				if (func_681(&uLocal_3958, 1, 1, 1, 0, 0, 0))
 				{
@@ -119615,7 +119615,7 @@ void func_858(var uParam0)
 	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 	TASK::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 	STREAMING::SET_GAME_PAUSES_FOR_STREAMING(true);
-	STREAMING::_0x1EE7D8DF4425F053(iLocal_7722);
+	STREAMING::STREAMVOL_DELETE(iLocal_7722);
 	iLocal_3977 = 0;
 	STREAMING::CLEAR_FOCUS();
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_2586.x, false))
@@ -129094,7 +129094,7 @@ void func_960()
 							AUDIO::STOP_SOUND(iLocal_3199);
 						}
 						SYSTEM::SETTIMERB(0);
-						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 						{
 							GRAPHICS::ANIMPOSTFX_PLAY("CamPushInNeutral", 0, false);
 							AUDIO::PLAY_SOUND_FRONTEND(-1, "1st_Person_Transition", "PLAYER_SWITCH_CUSTOM_SOUNDSET", true);
@@ -129168,7 +129168,7 @@ void func_960()
 						Local_2055[0 /*24*/] = OBJECT::CREATE_OBJECT(Local_2055[0 /*24*/].f_2, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 0f, 1f), true, true, false);
 						ENTITY::ATTACH_ENTITY_TO_ENTITY(Local_2055[0 /*24*/], PLAYER::PLAYER_PED_ID(), PED::GET_PED_BONE_INDEX(PLAYER::PLAYER_PED_ID(), 24818), -0.06f, -0.12f, -0.165f, 0f, 90f, 345f, false, false, false, false, 2, true);
 						iLocal_3568[0] = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_bio_flare", Local_2055[0 /*24*/], 0f, 0f, 0.11f, 0f, 0f, 0f, 1f, false, false, false);
-						if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 						{
 							CAM::SET_CAM_ACTIVE(iLocal_3601, false);
 							CAM::DESTROY_CAM(iLocal_3601, false);
@@ -129288,7 +129288,7 @@ void func_960()
 			iLocal_3568[1] = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_bio_flare", Local_2055[1 /*24*/], 0f, 0f, 0.11f, 0f, 0f, 0f, 1f, false, false, false);
 			AUDIO::PLAY_SOUND_FROM_ENTITY(iLocal_3209, "Flare", Local_2055[1 /*24*/], "FBI_05_SOUNDS", false, 0);
 		}
-		if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 		{
 			iLocal_3604 = CAM::CREATE_CAM_WITH_PARAMS("default_scripted_camera", 3833.168f, 3667.15f, -22.68036f, -15.67588f, 3.090937f, 165.0562f, 45.0126f, false, 2);
 			CAM::SET_CAM_ACTIVE(iLocal_3604, true);
@@ -129317,7 +129317,7 @@ void func_960()
 		{
 			STREAMING::REMOVE_ANIM_DICT("swimming@swim");
 		}
-		if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 		{
 			func_543(0, 1, 0, 0f, 0f, 2000, 0, 1, 1, 1, 1);
 		}
@@ -130089,7 +130089,7 @@ void func_973()
 			{
 				if (func_335(&iLocal_3347, 15000))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						if (!PAD::_IS_USING_KEYBOARD(0))
 						{
@@ -130537,7 +130537,7 @@ void func_977()
 					}
 					else if (!iLocal_3137)
 					{
-						if (CAM::_0xEE778F8C7E1142E2(3) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 4)
 						{
 							if (func_335(&iLocal_3357, 2900))
 							{
@@ -131017,7 +131017,7 @@ void func_985()
 	}
 	if (!bLocal_3136)
 	{
-		if (CAM::_0xEE778F8C7E1142E2(3) != 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) != 4)
 		{
 			GRAPHICS::ANIMPOSTFX_PLAY("SwitchSceneMichael", 0, false);
 			AUDIO::PLAY_SOUND_FRONTEND(-1, "Hit_1", "LONG_PLAYER_SWITCH_SOUNDS", true);
@@ -135301,7 +135301,7 @@ void func_1067()
 	ENTITY::SET_ENTITY_PROOFS(PLAYER::PLAYER_PED_ID(), false, false, false, false, false, false, false, true);
 	PED::SET_PED_USING_ACTION_MODE(PLAYER::PLAYER_PED_ID(), true, -1, 0);
 	PED::SET_PED_USING_ACTION_MODE(PLAYER::PLAYER_PED_ID(), true, -1, "MP_FEMALE_ACTION");
-	if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 	{
 		PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -633298724, false, 0, false);
 	}
@@ -135476,7 +135476,7 @@ void func_1068()
 		SYSTEM::WAIT(0);
 	}
 	MISC::CLEAR_AREA(Local_3386, 10000f, true, false, false, false);
-	if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 	{
 		iLocal_3604 = CAM::CREATE_CAM_WITH_PARAMS("default_scripted_camera", 3833.168f, 3667.15f, -22.68036f, -15.67588f, 3.090937f, 165.0562f, 45.0126f, false, 2);
 		CAM::SET_CAM_ACTIVE(iLocal_3604, true);
@@ -135602,7 +135602,7 @@ void func_1068()
 	}
 	AUDIO::TRIGGER_MUSIC_EVENT("FBI5A_CUT_PIPE_RESTART");
 	CAM::DO_SCREEN_FADE_IN(1000);
-	if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 	{
 		func_543(0, 1, 1, 0f, 0f, 2000, 0, 1, 1, 1, 1);
 	}

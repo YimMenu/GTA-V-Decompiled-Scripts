@@ -2490,11 +2490,11 @@ void func_8(var uParam0)
 				func_2(uParam0, 6);
 				if (uParam0->f_1.f_1 == 3)
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						if (!func_23(&(uParam0->f_7), 13))
 						{
-							CAM::_0x2A2173E46DAECD12(0, 1);
+							CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 1);
 							func_24(&(uParam0->f_7), 13);
 						}
 					}
@@ -2521,9 +2521,9 @@ void func_8(var uParam0)
 				{
 					if (uParam0->f_1.f_1 == 3 && func_23(&(uParam0->f_7), 13))
 					{
-						if (CAM::_0xEE778F8C7E1142E2(0) == 1)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 1)
 						{
-							CAM::_0x2A2173E46DAECD12(0, 4);
+							CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 4);
 						}
 						func_58(&(uParam0->f_7), 13);
 					}

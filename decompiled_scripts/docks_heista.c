@@ -42885,7 +42885,7 @@ void func_286()
 			{
 				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_1748) > fLocal_2009)
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						if (iLocal_2010 == 0)
 						{
@@ -109743,7 +109743,7 @@ void func_677()
 							}
 						}
 						AUDIO::PLAY_SOUND_FROM_ENTITY(-1, "BODY_FALL_DIVE_WATER_MASTER", PLAYER::PLAYER_PED_ID(), "docks_heist_finale_2a_sounds", false, 0);
-						if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 						{
 							AUDIO::PLAY_SOUND_FRONTEND(-1, "Hit_1", "LONG_PLAYER_SWITCH_SOUNDS", true);
 							GRAPHICS::ANIMPOSTFX_PLAY("SwitchSceneMichael", 1000, false);
@@ -113600,7 +113600,7 @@ int func_708()
 				{
 					TASK::CLEAR_PED_TASKS(Local_176[28 /*44*/]);
 					WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(Local_176[28 /*44*/], joaat("vehicle_weapon_player_buzzard"));
-					TASK::TASK_HELI_MISSION(Local_176[28 /*44*/], Local_49[4 /*2*/], 0, func_1021(), ENTITY::GET_ENTITY_COORDS(func_1021(), true), 6, 40f, 40f, -1f, 36, 10, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(Local_176[28 /*44*/], Local_49[4 /*2*/], 0, func_1021(), ENTITY::GET_ENTITY_COORDS(func_1021(), true), 6, 40f, 40f, -1f, 36, 10, -1f, 0);
 					iLocal_1847 = MISC::GET_GAME_TIMER();
 					iLocal_1851 = AUDIO::GET_SOUND_ID();
 					iLocal_1852 = 0;
@@ -118114,7 +118114,7 @@ void func_752()
 		
 		case 70:
 			PAD::DISABLE_CONTROL_ACTION(1, 0, true);
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				if (func_756(&uLocal_1687, bLocal_1999, 1, 1, bLocal_2000, bLocal_2008, 0))
 				{
@@ -118373,7 +118373,7 @@ void func_760(var uParam0, int iParam1, int iParam2, float fParam3, int iParam4,
 
 bool func_761()
 {
-	return CAM::_0xEE778F8C7E1142E2(0) == 4;
+	return CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4;
 }
 
 void func_762(char* sParam0)
@@ -118520,7 +118520,7 @@ void func_763()
 					ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 215f);
 					PED::SET_PED_STEALTH_MOVEMENT(PLAYER::PLAYER_PED_ID(), false, 0);
 					PED::SET_PED_USING_ACTION_MODE(PLAYER::PLAYER_PED_ID(), false, -1, 0);
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						TASK::CLEAR_SEQUENCE_TASK(&iVar11);
 						TASK::OPEN_SEQUENCE_TASK(&iVar11);
@@ -118542,7 +118542,7 @@ void func_763()
 			{
 				if (bLocal_1782)
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 					{
 						GRAPHICS::ANIMPOSTFX_PLAY("SwitchSceneTrevor", 1000, false);
 						AUDIO::PLAY_SOUND_FRONTEND(-1, "Hit_1", "LONG_PLAYER_SWITCH_SOUNDS", true);
@@ -118784,7 +118784,7 @@ void func_763()
 			{
 				if (TASK::GET_SCRIPT_TASK_STATUS(func_149(), -1273030092) > 1)
 				{
-					TASK::TASK_HELI_MISSION(func_149(), PED::GET_VEHICLE_PED_IS_IN(func_149(), false), 0, 0, -160.5122f, -2502.883f, 47.93985f, 19, 10f, 1f, -1f, 48, 0, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(func_149(), PED::GET_VEHICLE_PED_IS_IN(func_149(), false), 0, 0, -160.5122f, -2502.883f, 47.93985f, 19, 10f, 1f, -1f, 48, 0, -1f, 0);
 				}
 			}
 			else
@@ -127636,7 +127636,7 @@ void func_933()
 	}
 	iLocal_1904[1] = Local_70[0 /*15*/];
 	func_919(0, -1, 1);
-	if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 	{
 		TASK::CLEAR_SEQUENCE_TASK(&iVar0);
 		TASK::OPEN_SEQUENCE_TASK(&iVar0);

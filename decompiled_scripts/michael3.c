@@ -105606,7 +105606,7 @@ void func_642()
 				{
 					if (PED::IS_PED_IN_ANY_HELI(func_29()))
 					{
-						TASK::TASK_HELI_MISSION(func_29(), Local_1745[16 /*7*/], 0, 0, 111.969f, -1646.884f, 78.14513f, 4, 50f, 5f, -1f, 100, 30, -1082130432, 0);
+						TASK::TASK_HELI_MISSION(func_29(), Local_1745[16 /*7*/], 0, 0, 111.969f, -1646.884f, 78.14513f, 4, 50f, 5f, -1f, 100, 30, -1f, 0);
 						iLocal_7076 = 2;
 					}
 				}
@@ -112127,7 +112127,7 @@ int func_814()
 			iLocal_6687 = 0;
 			iLocal_6689 = 1;
 			WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(Local_319[51 /*25*/], joaat("vehicle_weapon_player_buzzard"));
-			TASK::TASK_HELI_MISSION(Local_319[51 /*25*/], Local_1745[1 /*7*/], 0, func_28(), -2219.42f, 247.1141f, 183.6227f, 6, 10f, 50f, -1f, 191, 16, -1082130432, 0);
+			TASK::TASK_HELI_MISSION(Local_319[51 /*25*/], Local_1745[1 /*7*/], 0, func_28(), -2219.42f, 247.1141f, 183.6227f, 6, 10f, 50f, -1f, 191, 16, -1f, 0);
 			func_574(2, "TREVOR SHOOTS HELICOPTER", 0, 0, 0, 1);
 			iLocal_6694 = 1;
 			break;
@@ -112142,7 +112142,7 @@ int func_814()
 			if (func_504(&iLocal_6705) && func_501(&iLocal_6705) >= 20f)
 			{
 				WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(Local_319[51 /*25*/], joaat("weapon_vehicle_rocket"));
-				TASK::TASK_HELI_MISSION(Local_319[51 /*25*/], Local_1745[1 /*7*/], 0, func_28(), -2219.42f, 247.1141f, 183.6227f, 6, 10f, 50f, -1f, 191, 16, -1082130432, 0);
+				TASK::TASK_HELI_MISSION(Local_319[51 /*25*/], Local_1745[1 /*7*/], 0, func_28(), -2219.42f, 247.1141f, 183.6227f, 6, 10f, 50f, -1f, 191, 16, -1f, 0);
 				func_634(&iLocal_6705);
 				ENTITY::SET_ENTITY_PROOFS(func_28(), false, false, false, false, false, false, false, false);
 				ENTITY::SET_ENTITY_INVINCIBLE(func_28(), false);
@@ -113845,7 +113845,7 @@ void func_857()
 					ENTITY::SET_ENTITY_INVINCIBLE(Local_319[51 /*25*/], false);
 					PED::SET_PED_ACCURACY(Local_319[51 /*25*/], 5);
 					PED::SET_PED_FIRING_PATTERN(Local_319[51 /*25*/], -1857128337);
-					TASK::TASK_HELI_MISSION(Local_319[51 /*25*/], Local_1745[1 /*7*/], 0, func_28(), 0f, 0f, 0f, 8, 10f, 48f, -1f, 200, 18, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(Local_319[51 /*25*/], Local_1745[1 /*7*/], 0, func_28(), 0f, 0f, 0f, 8, 10f, 48f, -1f, 200, 18, -1f, 0);
 					iLocal_101++;
 				}
 			}
@@ -114089,7 +114089,7 @@ void func_858()
 		}
 		if (iLocal_309)
 		{
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				func_884(70f, 0);
 				CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0f, 1f);
@@ -117623,7 +117623,7 @@ void func_886()
 			{
 				if ((((((ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -2150.921f, 221.2203f, 183.4019f, -2161.752f, 245.5793f, 186.6019f, 4f, false, true, 0) || ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -2156.449f, 238.0331f, 183.4019f, -2157.897f, 246.8302f, 186.6019f, 4.2f, false, true, 0)) || ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -2155.382f, 235.8839f, 183.4019f, -2149.944f, 226.9993f, 186.6019f, 4.2f, false, true, 0)) || ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -2159.87f, 227.7445f, 182.8991f, -2165.928f, 241.479f, 186.5788f, 10.25f, false, true, 0)) || ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -2151.657f, 223.1431f, 183.4019f, -2161.372f, 217.8074f, 186.6019f, 6f, false, true, 0)) || ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -2164.148f, 252.1446f, 183.4019f, -2157.978f, 245.1855f, 186.6019f, 6f, false, true, 0)) || ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -2170.64f, 227.8235f, 183.3519f, -2163.93f, 231.2005f, 186.6019f, 9f, false, true, 0))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) != 4 || func_644(PLAYER::PLAYER_PED_ID(), -2152.264f, 234.4797f, 183.6019f, 1) < 14.125f)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4 || func_644(PLAYER::PLAYER_PED_ID(), -2152.264f, 234.4797f, 183.6019f, 1) < 14.125f)
 					{
 						if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -2159.443f, 230.0957f, 182.6685f, -2171.007f, 256.0823f, 187.73f, 27.5f, false, true, 0))
 						{
@@ -121084,7 +121084,7 @@ void func_936(var uParam0)
 				{
 					VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(Local_1745[3 /*7*/]);
 				}
-				TASK::TASK_HELI_MISSION(Local_319[53 /*25*/], Local_1745[3 /*7*/], 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 6, 50f, 30f, -1f, 5, 5, -1082130432, 0);
+				TASK::TASK_HELI_MISSION(Local_319[53 /*25*/], Local_1745[3 /*7*/], 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 6, 50f, 30f, -1f, 5, 5, -1f, 0);
 				uParam0->f_2 = 1000;
 				uParam0->f_1++;
 			}
@@ -121115,7 +121115,7 @@ void func_936(var uParam0)
 					if (func_30(Local_1745[3 /*7*/]) && func_30(Local_319[53 /*25*/]))
 					{
 						PED::SET_PED_KEEP_TASK(Local_319[53 /*25*/], true);
-						TASK::TASK_HELI_MISSION(Local_319[53 /*25*/], Local_1745[3 /*7*/], 0, 0, -4445.606f, -2004.295f, 157.0255f, 4, 80f, 20f, -1f, 530, 100, -1082130432, 0);
+						TASK::TASK_HELI_MISSION(Local_319[53 /*25*/], Local_1745[3 /*7*/], 0, 0, -4445.606f, -2004.295f, 157.0255f, 4, 80f, 20f, -1f, 530, 100, -1f, 0);
 					}
 					ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&(Local_319[53 /*25*/]));
 					ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&(Local_1745[3 /*7*/]));
@@ -121133,7 +121133,7 @@ void func_936(var uParam0)
 			Var7 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 			if (func_30(Local_1745[3 /*7*/]) && func_30(Local_319[53 /*25*/]))
 			{
-				TASK::TASK_HELI_MISSION(Local_319[53 /*25*/], Local_1745[3 /*7*/], 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 6, fVar0, 30f, -1f, SYSTEM::ROUND(Var7.f_2) + 40, 15, -1082130432, 0);
+				TASK::TASK_HELI_MISSION(Local_319[53 /*25*/], Local_1745[3 /*7*/], 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 6, fVar0, 30f, -1f, SYSTEM::ROUND(Var7.f_2) + 40, 15, -1f, 0);
 			}
 			uParam0->f_2 = MISC::GET_GAME_TIMER();
 		}
@@ -121310,7 +121310,7 @@ void func_941(var uParam0)
 				case 4:
 					if (!func_815(Local_319[52 /*25*/], -1273030092, 1) || (MISC::GET_GAME_TIMER() - Local_319[52 /*25*/].f_9) > 1000)
 					{
-						TASK::TASK_HELI_MISSION(Local_319[52 /*25*/], Local_1745[2 /*7*/], 0, 0, -2267.362f, 313.1219f, 197.7129f, 4, 3f, 0.1f, func_942(Local_1745[2 /*7*/], func_28(), 1), 197, 10, -1082130432, 0);
+						TASK::TASK_HELI_MISSION(Local_319[52 /*25*/], Local_1745[2 /*7*/], 0, 0, -2267.362f, 313.1219f, 197.7129f, 4, 3f, 0.1f, func_942(Local_1745[2 /*7*/], func_28(), 1), 197, 10, -1f, 0);
 						uParam0->f_1++;
 					}
 					break;

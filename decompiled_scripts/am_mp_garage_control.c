@@ -396,7 +396,7 @@ int func_5(var uParam0, struct<2> Param1, var uParam3, var uParam4, var uParam5,
 
 void func_6(int iParam0)
 {
-	OBJECT::_0x190428512B240692(iParam0, true, true, false, true);
+	OBJECT::CLEAR_OBJECTS_INSIDE_GARAGE(iParam0, true, true, false, true);
 }
 
 void func_7(var uParam0)
@@ -965,7 +965,7 @@ void func_22(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -1007,7 +1007,7 @@ void func_24()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);

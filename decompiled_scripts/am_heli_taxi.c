@@ -19064,7 +19064,7 @@ void func_465()
 					{
 						if (MISC::IS_BIT_SET(iLocal_288, 4))
 						{
-							TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_158.f_4), iLocal_1212, 0, 0, Local_158.f_6, 19, 30f, 7.5f, Local_158.f_9, SYSTEM::ROUND(10f), SYSTEM::ROUND(10f), -1082130432, 8225);
+							TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_158.f_4), iLocal_1212, 0, 0, Local_158.f_6, 19, 30f, 7.5f, Local_158.f_9, SYSTEM::ROUND(10f), SYSTEM::ROUND(10f), -1f, 8225);
 							MISC::CLEAR_BIT(&iLocal_288, 17);
 						}
 					}
@@ -19101,7 +19101,7 @@ void func_465()
 					}
 					if (TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_158.f_4), -1273030092) != 1 && TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_158.f_4), -1273030092) != 0)
 					{
-						TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_158.f_4), iLocal_1212, 0, 0, Local_158.f_10, 4, 30f, 7.5f, -1f, 40, 40, -1082130432, 0);
+						TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_158.f_4), iLocal_1212, 0, 0, Local_158.f_10, 4, 30f, 7.5f, -1f, 40, 40, -1f, 0);
 					}
 					break;
 				
@@ -19131,7 +19131,7 @@ void func_465()
 						{
 							if (TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_158.f_4), -1273030092) != 1 && TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_158.f_4), -1273030092) != 0)
 							{
-								TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_158.f_4), iLocal_1212, 0, 0, Local_158.f_20, 4, 30f, 7.5f, -1f, 40, 40, -1082130432, 0);
+								TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_158.f_4), iLocal_1212, 0, 0, Local_158.f_20, 4, 30f, 7.5f, -1f, 40, 40, -1f, 0);
 							}
 						}
 					}
@@ -19187,7 +19187,7 @@ void func_465()
 						}
 						if (TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_158.f_4), -1273030092) != 1 && TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_158.f_4), -1273030092) != 0)
 						{
-							TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_158.f_4), iLocal_1212, 0, 0, Local_158.f_29, 4, 30f, 7.5f, -1f, 40, 40, -1082130432, 0);
+							TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(Local_158.f_4), iLocal_1212, 0, 0, Local_158.f_29, 4, 30f, 7.5f, -1f, 40, 40, -1f, 0);
 						}
 						if (func_480() && MISC::IS_BIT_SET(Local_158.f_1, 15))
 						{
@@ -19885,10 +19885,10 @@ void func_486()
 	if (!func_149(iLocal_1212))
 	{
 		TASK::OPEN_SEQUENCE_TASK(&iLocal_293);
-		TASK::TASK_HELI_MISSION(0, iLocal_1212, 0, 0, Local_158.f_10, 9, 30f, 7.5f, -1f, iVar0, iVar0, -1082130432, 0);
+		TASK::TASK_HELI_MISSION(0, iLocal_1212, 0, 0, Local_158.f_10, 9, 30f, 7.5f, -1f, iVar0, iVar0, -1f, 0);
 		TASK::CLOSE_SEQUENCE_TASK(iLocal_293);
 		TASK::OPEN_SEQUENCE_TASK(&iLocal_292);
-		TASK::TASK_HELI_MISSION(0, iLocal_1212, 0, 0, Local_158.f_17, 9, 30f, 0f, -1f, iVar0 * 2, iVar0 * 2, -1082130432, 0);
+		TASK::TASK_HELI_MISSION(0, iLocal_1212, 0, 0, Local_158.f_17, 9, 30f, 0f, -1f, iVar0 * 2, iVar0 * 2, -1f, 0);
 		TASK::CLOSE_SEQUENCE_TASK(iLocal_292);
 		TASK::OPEN_SEQUENCE_TASK(&iLocal_291);
 		TASK::TASK_LEAVE_ANY_VEHICLE(0, 0, 64);

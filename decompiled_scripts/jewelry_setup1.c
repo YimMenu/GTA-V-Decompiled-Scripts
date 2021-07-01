@@ -101556,7 +101556,7 @@ void func_537()
 			fLocal_65 = 10f;
 			fLocal_66 = 60f;
 			fLocal_232 = 40f;
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				fLocal_232 = CAM::GET_GAMEPLAY_CAM_FOV();
 				fLocal_64 = CAM::GET_GAMEPLAY_CAM_FOV();
@@ -101567,7 +101567,7 @@ void func_537()
 				iLocal_225 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
 			}
 			CAM::SET_CAM_COORD(iLocal_225, Local_236.x, Local_236.f_1, (Local_236.f_2 + 0.6f));
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				CAM::SET_CAM_ROT(iLocal_225, CAM::GET_GAMEPLAY_CAM_ROT(2), 2);
 			}
@@ -101677,7 +101677,7 @@ void func_537()
 			func_549(0, 1, 1, 0);
 			GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();
 			ENTITY::SET_ENTITY_VISIBLE(PLAYER::PLAYER_PED_ID(), true, false);
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				Var2 = { CAM::GET_CAM_ROT(iLocal_225, 2) };
 				ENTITY::SET_ENTITY_ROTATION(PLAYER::PLAYER_PED_ID(), 0f, 0f, Var2.f_2, 2, true);
@@ -102018,7 +102018,7 @@ void func_543()
 	{
 		AUDIO::STOP_SOUND(iLocal_107);
 	}
-	if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 	{
 		ENTITY::SET_ENTITY_ROTATION(PLAYER::PLAYER_PED_ID(), 0f, 0f, Var11.f_2, 2, true);
 		CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0f);
@@ -102407,7 +102407,7 @@ void func_553()
 							{
 								if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), -579.7f, -280.4f, 35.3f, true) < 40f)
 								{
-									if (CAM::_0xEE778F8C7E1142E2(1) != 4)
+									if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) != 4)
 									{
 										CAM::SET_GAMEPLAY_COORD_HINT(-580.5f, -280.4f, 36f, 2000, 6000, 2000, 0);
 									}
@@ -102429,7 +102429,7 @@ void func_553()
 							{
 								if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), -583.2f, -292.5f, 35.1f, true) < 30f)
 								{
-									if (CAM::_0xEE778F8C7E1142E2(1) != 4)
+									if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) != 4)
 									{
 										CAM::SET_GAMEPLAY_COORD_HINT(-583.6f, -291.6f, 36f, 2000, 3000, 2000, 0);
 									}
@@ -105598,7 +105598,7 @@ void func_573()
 						ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 185.8557f);
 					}
 					RECORDING::_0x81CBAE94390F9F89();
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 185.8557f);
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(-15f, 1f);
@@ -105625,7 +105625,7 @@ void func_573()
 				}
 				if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_CAMERA(false))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 185.8557f);
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(-15f, 1f);
@@ -105676,7 +105676,7 @@ void func_573()
 					}
 					if (iLocal_439 == 1)
 					{
-						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 						{
 							ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 717.2747f, -978.3644f, 23.1189f, true, false, false, true);
 							ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 185.8557f);

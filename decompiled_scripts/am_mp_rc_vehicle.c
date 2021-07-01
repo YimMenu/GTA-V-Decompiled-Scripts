@@ -108829,7 +108829,7 @@ void func_1017(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -108871,7 +108871,7 @@ void func_1019()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -109237,7 +109237,7 @@ void func_1040()
 			CAM::SET_CINEMATIC_MODE_ACTIVE(false);
 		}
 	}
-	if (Local_119.f_29 == joaat("minitank") && CAM::_0xEE778F8C7E1142E2(0) == 4)
+	if (Local_119.f_29 == joaat("minitank") && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 	{
 		RECORDING::_DISABLE_ROCKSTAR_EDITOR_CAMERA_CHANGES();
 	}

@@ -125556,7 +125556,7 @@ void func_829()
 		PED::SET_PED_NON_CREATION_AREA(Vector(48.06837f, -4.52605f, -890.9593f) - Vector(10.4375f, 30f, 35f), Vector(48.06837f, -4.52605f, -890.9593f) + Vector(10.4375f, 30f, 35f));
 		PATHFIND::SET_PED_PATHS_IN_AREA(Vector(48.06837f, -4.52605f, -890.9593f) - Vector(10.4375f, 30f, 35f), Vector(48.06837f, -4.52605f, -890.9593f) + Vector(10.4375f, 30f, 35f), false, 0);
 		WEAPON::GIVE_WEAPON_TO_PED(iLocal_3084, joaat("weapon_pistol"), -1, false, true);
-		if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 		{
 			CAM::RENDER_SCRIPT_CAMS(false, true, 2500, false, false, 0);
 		}
@@ -126490,7 +126490,7 @@ void func_836()
 					{
 						VEHICLE::SET_VEHICLE_ENGINE_ON(iLocal_3101, false, false, false);
 					}
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						if (CAM::DOES_CAM_EXIST(iLocal_3188))
 						{

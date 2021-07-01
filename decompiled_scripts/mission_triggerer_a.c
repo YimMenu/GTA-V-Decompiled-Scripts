@@ -6934,7 +6934,7 @@ void func_129(int iParam0)
 				func_96(iVar1, 2.5f, 2, 0.25f, 0, 1, 0);
 				if (!PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()) && !PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 					{
 						if (TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), -828834893) != 1 && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), -828834893) != 0)
 						{
@@ -8407,7 +8407,7 @@ void func_187()
 					VEHICLE::SET_VEHICLE_PETROL_TANK_HEALTH(iVar1, 1f);
 				}
 				func_96(iVar1, 2.5f, 2, 0.5f, 0, 1, 0);
-				if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 				{
 					if (TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), -828834893) != 1 && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), -828834893) != 0)
 					{
@@ -99471,7 +99471,7 @@ void func_604()
 			if (!CAM::IS_GAMEPLAY_HINT_ACTIVE())
 			{
 				TASK::TASK_FOLLOW_WAYPOINT_RECORDING(PLAYER::PLAYER_PED_ID(), "bb_jew_7", 3, 0, -1);
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					CAM::SET_GAMEPLAY_ENTITY_HINT(Global_95452.f_9[0], 0f, 0f, 0.5f, true, -1, 2000, 2000, 0);
 				}
@@ -99710,7 +99710,7 @@ void func_604()
 			WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar3, true);
 			if (iVar3 != joaat("weapon_unarmed") && !func_11(0))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 				{
 					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), false);
 					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
@@ -107771,7 +107771,7 @@ bool func_789(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam
 
 int func_790()
 {
-	if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		return 1;
 	}

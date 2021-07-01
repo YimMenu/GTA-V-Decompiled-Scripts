@@ -5443,7 +5443,7 @@ void func_154()
 				{
 					if (CUTSCENE::GET_CUTSCENE_TIME() >= 35000)
 					{
-						iLocal_50 = STREAMING::_0x1F3F018BC3AFA77C(-1193f, -1525f, 4.4f, func_511(9.4f, 0f, -78.8f), 1000f, 12, 127);
+						iLocal_50 = STREAMING::STREAMVOL_CREATE_FRUSTUM(-1193f, -1525f, 4.4f, func_511(9.4f, 0f, -78.8f), 1000f, 12, 127);
 						iLocal_51 = 1;
 					}
 				}
@@ -5473,9 +5473,9 @@ void func_154()
 			{
 				if (!iLocal_52)
 				{
-					if (STREAMING::_0x07C313F94746702C(iLocal_50))
+					if (STREAMING::STREAMVOL_IS_VALID(iLocal_50))
 					{
-						STREAMING::_0x1EE7D8DF4425F053(iLocal_50);
+						STREAMING::STREAMVOL_DELETE(iLocal_50);
 					}
 					STREAMING::NEW_LOAD_SCENE_STOP();
 					STREAMING::NEW_LOAD_SCENE_START_SPHERE(-1159.273f, -1522.504f, 9.634f, 15f, 0);
@@ -5539,9 +5539,9 @@ void func_154()
 				PAD::DISABLE_CONTROL_ACTION(0, 24, true);
 				HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
 				STREAMING::NEW_LOAD_SCENE_STOP();
-				if (STREAMING::_0x07C313F94746702C(iLocal_50))
+				if (STREAMING::STREAMVOL_IS_VALID(iLocal_50))
 				{
-					STREAMING::_0x1EE7D8DF4425F053(iLocal_50);
+					STREAMING::STREAMVOL_DELETE(iLocal_50);
 				}
 				if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_43))
 				{
@@ -5599,9 +5599,9 @@ void func_154()
 				func_184(13, 136);
 				func_184(14, 136);
 				func_156(&(Global_111858.f_2359.f_539), 71);
-				if (STREAMING::_0x07C313F94746702C(iLocal_50))
+				if (STREAMING::STREAMVOL_IS_VALID(iLocal_50))
 				{
-					STREAMING::_0x1EE7D8DF4425F053(iLocal_50);
+					STREAMING::STREAMVOL_DELETE(iLocal_50);
 				}
 				STREAMING::NEW_LOAD_SCENE_STOP();
 				PAD::_0xF239400E16C23E08(0, -1);
@@ -99395,9 +99395,9 @@ int func_571(int iParam0)
 void func_572()
 {
 	STREAMING::NEW_LOAD_SCENE_STOP();
-	if (STREAMING::_0x07C313F94746702C(iLocal_50))
+	if (STREAMING::STREAMVOL_IS_VALID(iLocal_50))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_50);
+		STREAMING::STREAMVOL_DELETE(iLocal_50);
 	}
 	while (!func_543(&Local_54))
 	{

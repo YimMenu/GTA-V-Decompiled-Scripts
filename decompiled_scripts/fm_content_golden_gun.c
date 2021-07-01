@@ -24003,7 +24003,7 @@ Vector3 func_605(int iParam0, bool bParam1)
 	{
 		Var3 = { CAM::GET_GAMEPLAY_CAM_ROT(2) };
 	}
-	if (iParam0 == func_606(PLAYER::PLAYER_PED_ID()) && CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (iParam0 == func_606(PLAYER::PLAYER_PED_ID()) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, 0f, 8f, -0.2f) };
 	}
@@ -24015,7 +24015,7 @@ Vector3 func_605(int iParam0, bool bParam1)
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0, false))
 	{
 		fVar6 = ENTITY::GET_ENTITY_HEADING(iParam0);
-		if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 		{
 			fVar6 = Var3.f_2;
 		}
@@ -125575,7 +125575,7 @@ void func_1462(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -125617,7 +125617,7 @@ void func_1464()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -146526,7 +146526,7 @@ void func_2316(int iParam0, int iParam1)
 			if (func_556(Local_1403.f_26[iParam0 /*22*/]))
 			{
 				Var1 = { func_2319(iParam0, iVar0) };
-				TASK::TASK_HELI_MISSION(iParam1, iVar0, 0, 0, Var1, 19, 30f, 7.5f, func_2318(iParam0), 10, 10, -1082130432, 8225);
+				TASK::TASK_HELI_MISSION(iParam1, iVar0, 0, 0, Var1, 19, 30f, 7.5f, func_2318(iParam0), 10, 10, -1f, 8225);
 			}
 		}
 		else if (func_2317(iParam0) && TASK::GET_ACTIVE_VEHICLE_MISSION_TYPE(iVar0) == 19)
@@ -146601,7 +146601,7 @@ void func_2320(int iParam0, int iParam1)
 				}
 				else if (VEHICLE::IS_THIS_MODEL_A_HELI(Local_230.f_65.f_1[Local_230.f_36.f_1[iParam0 /*21*/].f_8 /*13*/].f_2))
 				{
-					TASK::TASK_HELI_MISSION(iParam1, iVar0, 0, 0, Var1, 4, 20f, 1f, -1f, SYSTEM::CEIL(Var1.f_2), 10, -1082130432, 128);
+					TASK::TASK_HELI_MISSION(iParam1, iVar0, 0, 0, Var1, 4, 20f, 1f, -1f, SYSTEM::CEIL(Var1.f_2), 10, -1f, 128);
 				}
 				else
 				{
@@ -146910,7 +146910,7 @@ void func_2335(int iParam0, int iParam1)
 						}
 						if (VEHICLE::IS_THIS_MODEL_A_HELI(ENTITY::GET_ENTITY_MODEL(iVar0)))
 						{
-							TASK::TASK_HELI_MISSION(iParam1, iVar0, 0, iVar2, 0f, 0f, 0f, 8, func_2338(iParam0, 0), 10f, -1f, SYSTEM::ROUND(func_2337(iParam0)), func_2336(iParam0), -1082130432, 0);
+							TASK::TASK_HELI_MISSION(iParam1, iVar0, 0, iVar2, 0f, 0f, 0f, 8, func_2338(iParam0, 0), 10f, -1f, SYSTEM::ROUND(func_2337(iParam0)), func_2336(iParam0), -1f, 0);
 						}
 						else if (VEHICLE::IS_THIS_MODEL_A_BOAT(ENTITY::GET_ENTITY_MODEL(iVar0)))
 						{

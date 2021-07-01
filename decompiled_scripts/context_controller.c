@@ -1139,7 +1139,7 @@ void func_35()
 				switch (iLocal_107)
 				{
 					case 0:
-						iLocal_108 = NETWORK::_0xD66C9E72B3CC4982(&Var0, 1);
+						iLocal_108 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&Var0, 1);
 						if (iLocal_108 >= 0)
 						{
 							iLocal_107++;

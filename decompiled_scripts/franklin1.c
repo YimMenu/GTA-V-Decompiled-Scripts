@@ -2518,7 +2518,7 @@ int func_26(int iParam0)
 					}
 					else if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_1046) >= 0.925f)
 					{
-						if ((PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::_0xEE778F8C7E1142E2(1) == 4) || (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::_0xEE778F8C7E1142E2(0) == 4))
+						if ((PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4) || (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4))
 						{
 							if (iLocal_1064 == 0)
 							{
@@ -2758,7 +2758,7 @@ int func_30(int iParam0)
 					}
 					else if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_1045) >= 0.91f)
 					{
-						if ((PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::_0xEE778F8C7E1142E2(1) == 4) || (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::_0xEE778F8C7E1142E2(0) == 4))
+						if ((PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4) || (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4))
 						{
 							if (iLocal_1064 == 0)
 							{
@@ -2913,7 +2913,7 @@ int func_31(int iParam0)
 					}
 					else if (func_32(6700, Local_402.f_8))
 					{
-						if ((PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::_0xEE778F8C7E1142E2(1) == 4) || (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::_0xEE778F8C7E1142E2(0) == 4))
+						if ((PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4) || (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4))
 						{
 							if (iLocal_1064 == 0)
 							{
@@ -19224,7 +19224,7 @@ int func_267(int iParam0)
 			}
 			else if (SYSTEM::TIMERA() > 3300)
 			{
-				if (CAM::_0xEE778F8C7E1142E2(3) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 4)
 				{
 					if (iLocal_1064 == 0)
 					{
@@ -111192,7 +111192,7 @@ int func_672(int iParam0)
 			}
 			else if (SYSTEM::TIMERA() > 3300)
 			{
-				if (CAM::_0xEE778F8C7E1142E2(3) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(3) == 4)
 				{
 					if (iLocal_1064 == 0)
 					{
@@ -119931,7 +119931,7 @@ int func_779(var uParam0)
 				}
 				if (func_811() != 1)
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 					{
 						GRAPHICS::ANIMPOSTFX_PLAY("SwitchSceneFranklin", 0, false);
 						AUDIO::PLAY_SOUND_FRONTEND(-1, "Hit_1", "LONG_PLAYER_SWITCH_SOUNDS", true);

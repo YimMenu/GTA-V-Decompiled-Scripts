@@ -3722,10 +3722,10 @@ void func_95()
 				{
 					PAD::DISABLE_CONTROL_ACTION(0, 75, true);
 					PAD::DISABLE_CONTROL_ACTION(0, 80, true);
-					iVar0 = CAM::_0x19CAFA3C87F7C2FF();
+					iVar0 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
 					if (iVar0 != 0)
 					{
-						iVar1 = CAM::_0xEE778F8C7E1142E2(iVar0);
+						iVar1 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 						if (iVar1 != 4)
 						{
 							PAD::DISABLE_CONTROL_ACTION(0, 79, true);
@@ -3875,10 +3875,10 @@ void func_95()
 							}
 							if (!ENTITY::IS_ENTITY_DEAD(iLocal_59, false))
 							{
-								iVar2 = CAM::_0x19CAFA3C87F7C2FF();
+								iVar2 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
 								if (iVar2 != 0)
 								{
-									iVar3 = CAM::_0xEE778F8C7E1142E2(iVar2);
+									iVar3 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar2);
 									if (iVar3 == 4)
 									{
 										TASK::TASK_LOOK_AT_ENTITY(PLAYER::PLAYER_PED_ID(), iLocal_55, 5000, 0, 2);

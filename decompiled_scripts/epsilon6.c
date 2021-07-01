@@ -36608,11 +36608,11 @@ void func_273(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = STREAMING::FORMAT_FOCUS_HEADING(Param0, fParam3, iParam4, 127);
-	if (STREAMING::_0x07C313F94746702C(iVar0))
+	iVar0 = STREAMING::STREAMVOL_CREATE_SPHERE(Param0, fParam3, iParam4, 127);
+	if (STREAMING::STREAMVOL_IS_VALID(iVar0))
 	{
 		iVar1 = (MISC::GET_GAME_TIMER() + iParam5);
-		while (!STREAMING::_0x7D41E9D2D17C5B2D(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
+		while (!STREAMING::STREAMVOL_HAS_LOADED(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
 		{
 			if (bParam7)
 			{
@@ -36627,7 +36627,7 @@ void func_273(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 		if (MISC::GET_GAME_TIMER() < iVar1)
 		{
 		}
-		STREAMING::_0x1EE7D8DF4425F053(iVar0);
+		STREAMING::STREAMVOL_DELETE(iVar0);
 	}
 }
 
@@ -42429,9 +42429,9 @@ void func_368()
 				VEHICLE::SET_VEHICLE_DOORS_LOCKED(Local_156.x, 3);
 			}
 			func_284(Local_156.x, 1684.78f, 3255.58f, 41.78f, 284.26f, 0, 1);
-			if (STREAMING::_0xBC9823AB80A3DCAC())
+			if (STREAMING::IS_STREAMVOL_ACTIVE())
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_260);
+				STREAMING::STREAMVOL_DELETE(iLocal_260);
 			}
 			PATHFIND::SET_ROADS_BACK_TO_ORIGINAL_IN_ANGLED_AREA(1775.157f, 3373.425f, 37.24686f, 1893.735f, 3203.022f, 48.48723f, 96.5f, 1);
 			func_369(1, 1, 1, 1);
@@ -43518,19 +43518,19 @@ void func_402()
 {
 	if (func_238(PLAYER::PLAYER_PED_ID(), Local_174, 1) <= 15f)
 	{
-		if (!STREAMING::_0xBC9823AB80A3DCAC())
+		if (!STREAMING::IS_STREAMVOL_ACTIVE())
 		{
-			if (!STREAMING::_0x7D41E9D2D17C5B2D(iLocal_260))
+			if (!STREAMING::STREAMVOL_HAS_LOADED(iLocal_260))
 			{
 				func_521("Loading streamvol");
-				iLocal_260 = STREAMING::_0x1F3F018BC3AFA77C(1684.85f, 3276.16f, 39.93f, func_403(-2.1719f, 0f, -78.5672f), 50f, 12, 127);
+				iLocal_260 = STREAMING::STREAMVOL_CREATE_FRUSTUM(1684.85f, 3276.16f, 39.93f, func_403(-2.1719f, 0f, -78.5672f), 50f, 12, 127);
 			}
 		}
 	}
-	else if (STREAMING::_0xBC9823AB80A3DCAC())
+	else if (STREAMING::IS_STREAMVOL_ACTIVE())
 	{
 		func_521("Removing streamvol");
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_260);
+		STREAMING::STREAMVOL_DELETE(iLocal_260);
 	}
 }
 

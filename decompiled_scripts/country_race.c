@@ -1241,11 +1241,11 @@ void func_4(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bPar
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = STREAMING::FORMAT_FOCUS_HEADING(Param0, fParam3, iParam4, 127);
-	if (STREAMING::_0x07C313F94746702C(iVar0))
+	iVar0 = STREAMING::STREAMVOL_CREATE_SPHERE(Param0, fParam3, iParam4, 127);
+	if (STREAMING::STREAMVOL_IS_VALID(iVar0))
 	{
 		iVar1 = (MISC::GET_GAME_TIMER() + iParam5);
-		while (!STREAMING::_0x7D41E9D2D17C5B2D(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
+		while (!STREAMING::STREAMVOL_HAS_LOADED(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
 		{
 			if (bParam7)
 			{
@@ -1260,7 +1260,7 @@ void func_4(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bPar
 		if (MISC::GET_GAME_TIMER() < iVar1)
 		{
 		}
-		STREAMING::_0x1EE7D8DF4425F053(iVar0);
+		STREAMING::STREAMVOL_DELETE(iVar0);
 	}
 }
 
@@ -5533,7 +5533,7 @@ void func_60()
 		case 6:
 			if (SYSTEM::TIMERA() > 4700)
 			{
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4 || CAM::_0xEE778F8C7E1142E2(1) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 				{
 					GRAPHICS::ANIMPOSTFX_PLAY("CamPushInNeutral", 0, false);
 					AUDIO::PLAY_SOUND_FRONTEND(-1, "1st_Person_Transition", "PLAYER_SWITCH_CUSTOM_SOUNDSET", true);
@@ -5548,7 +5548,7 @@ void func_60()
 				if (!CAM::IS_CAM_INTERPOLATING(iLocal_2125))
 				{
 					TASK::TASK_LEAVE_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), 0, 0);
-					if (CAM::_0xEE778F8C7E1142E2(0) != 4 && CAM::_0xEE778F8C7E1142E2(1) != 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4 && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) != 4)
 					{
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(-69.3229f);
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(-10.5361f, 1f);
@@ -5591,7 +5591,7 @@ void func_60()
 		case 11:
 			if (SYSTEM::TIMERA() > 500)
 			{
-				if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 				{
 					if (func_8(iLocal_2129))
 					{
@@ -16249,7 +16249,7 @@ void func_227()
 				}
 				else if (SYSTEM::TIMERA() > 2800 && iLocal_178 == 5)
 				{
-					if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 					{
 						if (!func_245(2, &iLocal_173))
 						{

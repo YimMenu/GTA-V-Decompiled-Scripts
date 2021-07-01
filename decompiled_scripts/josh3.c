@@ -35787,9 +35787,9 @@ void func_260()
 			GRAPHICS::ANIMPOSTFX_PLAY("ExplosionJosh3", 0, false);
 			GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_josh3_light_explosion", Local_868, 0f, 0f, 0f, 1f, false, false, false);
 			GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_josh3_exp_debris", Local_868, 0f, 0f, 0f, 1f, false, false, false);
-			if (STREAMING::_0x07C313F94746702C(iLocal_1000))
+			if (STREAMING::STREAMVOL_IS_VALID(iLocal_1000))
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_1000);
+				STREAMING::STREAMVOL_DELETE(iLocal_1000);
 			}
 			if (((func_16(PLAYER::PLAYER_PED_ID()) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false)) && ENTITY::GET_ENTITY_HEALTH(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)) <= 0) && func_271(&uLocal_936, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)))
 			{
@@ -36959,7 +36959,7 @@ void func_299()
 			}
 			AUDIO::PREPARE_MUSIC_EVENT("JOSH3_HOUSE_EXPLODE");
 			AUDIO::LOAD_STREAM("JOSH_03_HOUSE_EXPLOSION_MASTER", 0);
-			iLocal_1000 = STREAMING::FORMAT_FOCUS_HEADING(Local_615, 50f, 12, 127);
+			iLocal_1000 = STREAMING::STREAMVOL_CREATE_SPHERE(Local_615, 50f, 12, 127);
 			func_258(1);
 			break;
 		
@@ -52645,11 +52645,11 @@ void func_565(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = STREAMING::FORMAT_FOCUS_HEADING(Param0, fParam3, iParam4, 127);
-	if (STREAMING::_0x07C313F94746702C(iVar0))
+	iVar0 = STREAMING::STREAMVOL_CREATE_SPHERE(Param0, fParam3, iParam4, 127);
+	if (STREAMING::STREAMVOL_IS_VALID(iVar0))
 	{
 		iVar1 = (MISC::GET_GAME_TIMER() + iParam5);
-		while (!STREAMING::_0x7D41E9D2D17C5B2D(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
+		while (!STREAMING::STREAMVOL_HAS_LOADED(iVar0) && MISC::GET_GAME_TIMER() < iVar1)
 		{
 			if (bParam7)
 			{
@@ -52664,7 +52664,7 @@ void func_565(struct<3> Param0, float fParam3, int iParam4, int iParam5, bool bP
 		if (MISC::GET_GAME_TIMER() < iVar1)
 		{
 		}
-		STREAMING::_0x1EE7D8DF4425F053(iVar0);
+		STREAMING::STREAMVOL_DELETE(iVar0);
 	}
 }
 
@@ -54226,9 +54226,9 @@ void func_609(int iParam0, int iParam1)
 	AUDIO::RELEASE_AMBIENT_AUDIO_BANK();
 	AUDIO::TRIGGER_MUSIC_EVENT("JOSH3_MISSION_FAIL");
 	PLAYER::RESET_WANTED_LEVEL_DIFFICULTY(PLAYER::PLAYER_ID());
-	if (STREAMING::_0x07C313F94746702C(iLocal_1000))
+	if (STREAMING::STREAMVOL_IS_VALID(iLocal_1000))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_1000);
+		STREAMING::STREAMVOL_DELETE(iLocal_1000);
 	}
 	func_258(0);
 	if (iParam1 == 1)

@@ -15534,7 +15534,7 @@ int func_357(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, in
 	}
 	iVar18 = func_384(iParam0, iParam4, 1, iParam5, iParam6, bVar4, bVar5, bVar6, bVar8, bVar7, bParam8, bVar10, bVar11, bParam9, iVar12);
 	iVar19 = func_384(iParam0, iParam4, 0, iParam5, iParam6, bVar4, bVar5, bVar6, bVar8, bVar7, bParam8, bVar10, bVar11, bParam9, iVar12);
-	NETWORK::_0xF1B84178F8674195((NETWORK::GET_CLOUD_TIME_AS_INT() / Global_262145.f_4667));
+	NETWORK::NETWORK_SEED_RANDOM_NUMBER_GENERATOR((NETWORK::GET_CLOUD_TIME_AS_INT() / Global_262145.f_4667));
 	if (iVar18 == 0)
 	{
 		if (bVar4 == 1)
@@ -108486,7 +108486,7 @@ void func_912(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -108528,7 +108528,7 @@ void func_914()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);

@@ -7388,8 +7388,8 @@ int func_110()
 		return 0;
 	}
 	iVar2 = 0;
-	iVar0 = CAM::_0x19CAFA3C87F7C2FF();
-	iVar1 = CAM::_0xEE778F8C7E1142E2(iVar0);
+	iVar0 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
+	iVar1 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 	if (iVar1 == 4 && (iVar0 == 0 || CAM::_IS_IN_VEHICLE_CAM_DISABLED()))
 	{
 		iVar2 = 1;
@@ -7492,8 +7492,8 @@ int func_112()
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = CAM::_0x19CAFA3C87F7C2FF();
-	iVar1 = CAM::_0xEE778F8C7E1142E2(iVar0);
+	iVar0 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
+	iVar1 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 	if (iVar1 == 4)
 	{
 		return 1;
@@ -8920,8 +8920,8 @@ int func_150()
 		return 0;
 	}
 	iVar2 = 0;
-	iVar0 = CAM::_0x19CAFA3C87F7C2FF();
-	iVar1 = CAM::_0xEE778F8C7E1142E2(iVar0);
+	iVar0 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
+	iVar1 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 	if (iVar1 == 4)
 	{
 		iVar2 = 1;

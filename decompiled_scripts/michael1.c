@@ -9668,10 +9668,10 @@ int func_134(int iParam0)
 					CAM::DESTROY_ALL_CAMS(false);
 					iLocal_694 = CAM::CREATE_CAMERA(964613260, true);
 					CAM::PLAY_SYNCHRONIZED_CAM_ANIM(iLocal_694, iLocal_705, "trevor_plane_cam", "missmic1");
-					if (CAM::_0xEE778F8C7E1142E2(4) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(4) == 4)
 					{
 						iLocal_622 = 1;
-						CAM::_0x2A2173E46DAECD12(4, 1);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(4, 1);
 					}
 					CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				}
@@ -9743,7 +9743,7 @@ int func_134(int iParam0)
 			}
 			else if (iLocal_622 == 1)
 			{
-				CAM::_0x2A2173E46DAECD12(4, 4);
+				CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(4, 4);
 				iLocal_622 = 0;
 			}
 			func_193(&(Local_143.f_12));
@@ -43838,7 +43838,7 @@ int func_406(int iParam0)
 			}
 			if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_CAMERA(false))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(-16.5368f, 1f);
 					CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(-45f);
@@ -43913,7 +43913,7 @@ int func_406(int iParam0)
 					}
 					if (iLocal_603 == 1)
 					{
-						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 						{
 							if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							{
@@ -105726,13 +105726,13 @@ int func_666(int iParam0)
 						{
 							if (CAM::DOES_CAM_EXIST(iLocal_694))
 							{
-								if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+								if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 								{
 									SYSTEM::SETTIMERA(0);
 									SYSTEM::SETTIMERB(0);
 									iLocal_623 = 0;
 									iLocal_622 = 1;
-									CAM::_0x2A2173E46DAECD12(1, 1);
+									CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(1, 1);
 								}
 								CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0f);
 								CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0f, 1f);
@@ -105776,7 +105776,7 @@ int func_666(int iParam0)
 			}
 			else if (iLocal_622 == 1)
 			{
-				CAM::_0x2A2173E46DAECD12(1, 4);
+				CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(1, 4);
 				iLocal_622 = 0;
 			}
 			if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(Local_169))
@@ -105931,7 +105931,7 @@ int func_666(int iParam0)
 				}
 				else if (func_217(1200, Local_156.f_10))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						if (iLocal_623 == 0)
 						{
@@ -105964,7 +105964,7 @@ int func_666(int iParam0)
 		case 10:
 			if (CAM::DOES_CAM_EXIST(iLocal_694))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0f, 1f);
 					CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(45f);
@@ -108512,7 +108512,7 @@ int func_703(var uParam0)
 								func_432(PLAYER::PLAYER_PED_ID(), -808.4427f, 177.8966f, 71.3801f, 18.2986f, 0, 1, 0);
 								TASK::CLEAR_SEQUENCE_TASK(&iVar0);
 								TASK::OPEN_SEQUENCE_TASK(&iVar0);
-								if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+								if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 								{
 									TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, -809.27f, 179.55f, 71.15f, 2f, 20000, 0.25f, true, 40000f);
 									TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, -811.32f, 180.11f, 71.15f, 2f, 20000, 0.25f, true, 40000f);
@@ -108563,7 +108563,7 @@ int func_703(var uParam0)
 						break;
 					
 					case 2:
-						if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 						{
 							iLocal_731 = 1;
 							iLocal_730 = MISC::GET_GAME_TIMER();
@@ -114198,7 +114198,7 @@ int func_772(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 			{
 				if (iLocal_618 == 0)
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(-16.5368f, 1f);
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(-45f);

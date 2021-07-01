@@ -999,7 +999,7 @@ void func_15()
 			{
 				AUDIO::STOP_AUDIO_SCENE("dlc_vw_casino_slot_machines_playing");
 			}
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				if (func_33() < 0.6f)
 				{
@@ -1419,7 +1419,7 @@ void func_22(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -1461,7 +1461,7 @@ void func_24()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -7094,7 +7094,7 @@ void func_169(int iParam0, char* sParam1)
 		
 		case 4:
 			StringCopy(sParam1, "base_idle", 64);
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				func_170(4, &Var0, 1, 0);
 			}
@@ -7131,7 +7131,7 @@ void func_169(int iParam0, char* sParam1)
 		
 		case 10:
 			StringCopy(sParam1, "betidle_idle", 64);
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				func_170(10, &Var0, 1, 0);
 			}
@@ -8330,16 +8330,16 @@ void func_220(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 			{
-				CAM::_0x2A2173E46DAECD12(0, 4);
+				CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 4);
 			}
 			break;
 		
 		case 1:
-			if (CAM::_0xEE778F8C7E1142E2(0) != 0)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 0)
 			{
-				CAM::_0x2A2173E46DAECD12(0, 0);
+				CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 0);
 			}
 			CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
 			break;
@@ -8661,7 +8661,7 @@ bool func_226()
 
 void func_227()
 {
-	if (iLocal_1702 == 0 && CAM::_0xEE778F8C7E1142E2(0) == 4)
+	if (iLocal_1702 == 0 && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 	{
 	}
 }
@@ -12092,11 +12092,11 @@ int func_281()
 			}
 			if ((((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 713668775) != 1) && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 713668775) != 0) && !TASK::IS_PED_WALKING(PLAYER::PLAYER_PED_ID())) || (MISC::IS_BIT_SET(iLocal_1644, 26) && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 713668775) != 0))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(0) == 1 || CAM::_0xEE778F8C7E1142E2(0) == 2)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 1 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 2)
 				{
-					CAM::_0x2A2173E46DAECD12(0, 0);
+					CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 0);
 				}
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					CAM::_0x79C0E43EB9B944E2(518572876);
 				}

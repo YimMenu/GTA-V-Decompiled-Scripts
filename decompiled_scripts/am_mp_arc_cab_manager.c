@@ -73817,7 +73817,7 @@ void func_359(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -73859,7 +73859,7 @@ void func_361()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -89926,7 +89926,7 @@ void func_756()
 			{
 				if (func_697(1))
 				{
-					CAM::_0x2A2173E46DAECD12(0, Local_1310.f_580);
+					CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, Local_1310.f_580);
 				}
 			}
 			func_766();
@@ -98148,10 +98148,10 @@ void func_1046()
 					func_748(iVar2, 0, 0, fVar3, fVar4, 0, 0);
 					if (func_1048(iVar0))
 					{
-						Local_1310.f_580 = CAM::_0xEE778F8C7E1142E2(0);
+						Local_1310.f_580 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0);
 						if (Local_1310.f_580 != 4)
 						{
-							CAM::_0x2A2173E46DAECD12(0, 4);
+							CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 4);
 							func_696(1);
 						}
 					}

@@ -2485,7 +2485,7 @@ void func_2()
 					func_87(4);
 					if (bLocal_3051)
 					{
-						CAM::_0x2A2173E46DAECD12(0, 4);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 4);
 					}
 					if (CAM::DOES_CAM_EXIST(iLocal_3047))
 					{
@@ -2525,7 +2525,7 @@ void func_2()
 					bVar0 = true;
 				}
 			}
-			if (CAM::_0xEE778F8C7E1142E2(0) != 4 || (MISC::GET_GAME_TIMER() - iLocal_2925) >= 4000)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4 || (MISC::GET_GAME_TIMER() - iLocal_2925) >= 4000)
 			{
 				if (!func_89(PLAYER::PLAYER_PED_ID(), -2017877118) || (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), &cLocal_222, func_88(15), 1) && ENTITY::GET_ENTITY_ANIM_CURRENT_TIME(PLAYER::PLAYER_PED_ID(), &cLocal_222, func_88(15)) >= 0.831f))
 				{
@@ -11798,10 +11798,10 @@ void func_137()
 					iLocal_3047 = CAM::CREATE_CAMERA_WITH_PARAMS(26379945, Local_251[3 /*3*/], Local_264[3 /*3*/], 40f, true, 2);
 					CAM::SHAKE_CAM(iLocal_3047, "HAND_SHAKE", 0.3f);
 				}
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					bLocal_3051 = true;
-					CAM::_0x2A2173E46DAECD12(0, 1);
+					CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 1);
 				}
 				GRAPHICS::ENABLE_MOVIE_SUBTITLES(true);
 				CAM::SET_CAM_ACTIVE(iLocal_3047, true);
@@ -51646,7 +51646,7 @@ void func_455()
 				PED::SET_PED_CAN_PLAY_AMBIENT_ANIMS(PLAYER::PLAYER_PED_ID(), false);
 				PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -668482597, false, 1, false);
 				PLAYER::SIMULATE_PLAYER_INPUT_GAIT(PLAYER::PLAYER_ID(), 1f, 4000, 115.2213f, false, false);
-				if (CUTSCENE::WAS_CUTSCENE_SKIPPED() && CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CUTSCENE::WAS_CUTSCENE_SKIPPED() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), -1046.603f, -232.4546f, 38.014f, true, false, false, true);
 					ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 117.5673f);

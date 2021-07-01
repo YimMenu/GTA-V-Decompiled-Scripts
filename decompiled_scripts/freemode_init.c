@@ -2864,7 +2864,7 @@ int func_74(struct<13> Param0)
 		return -1;
 	}
 	Var0[0 /*13*/] = { Param0 };
-	iVar14 = NETWORK::_0xD66C9E72B3CC4982(&Var0, 1);
+	iVar14 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&Var0, 1);
 	if (iVar14 < 0)
 	{
 		return -1;

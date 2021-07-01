@@ -1159,7 +1159,7 @@ void func_1(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var
 			{
 				func_547(uParam1, 131072);
 				func_768(uParam7, 0);
-				if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 				{
 					TASK::OPEN_SEQUENCE_TASK(&iVar4);
 					TASK::TASK_TURN_PED_TO_FACE_COORD(0, uParam5->f_123, 0);
@@ -105252,7 +105252,7 @@ int func_719(var uParam0)
 			}
 			if (Global_1835392.f_3183 > 0)
 			{
-				(uParam0[0 /*100*/])->f_79 = NETWORK::_0xD66C9E72B3CC4982(&(Global_1835392.f_3026), Global_1835392.f_3183);
+				(uParam0[0 /*100*/])->f_79 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&(Global_1835392.f_3026), Global_1835392.f_3183);
 				(uParam0[0 /*100*/])->f_78 = 1;
 			}
 			else
@@ -105435,7 +105435,7 @@ int func_722(var uParam0, char* sParam1, char* sParam2, int iParam3, var uParam4
 			{
 				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(&(Var1[0 /*13*/])))
 				{
-					*uParam4 = NETWORK::_0xD66C9E72B3CC4982(&Var1, 1);
+					*uParam4 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&Var1, 1);
 					*uParam0 = 1;
 				}
 				else
@@ -108349,7 +108349,7 @@ int func_786(var uParam0, var uParam1, var uParam2, var uParam3)
 
 int func_787()
 {
-	if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		return 1;
 	}
@@ -110209,7 +110209,7 @@ void func_832(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			func_547(uParam1, 131072);
 			uParam0->f_10 = 1;
 			func_322(&(uParam0->f_39));
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				return;
 			}
@@ -110316,7 +110316,7 @@ void func_835(var uParam0, int iParam1)
 
 int func_836(var uParam0, var uParam1, var uParam2)
 {
-	if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 	{
 		PED::CLEAR_PED_PROP(iLocal_71, 1);
 		if (ENTITY::DOES_ENTITY_EXIST(uParam0->f_21))
@@ -111535,7 +111535,7 @@ void func_866(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, b
 		ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&(uParam2->f_21));
 	}
 	STREAMING::REMOVE_ANIM_DICT("mini@ears_defenders");
-	if ((!func_2() && CAM::_0xEE778F8C7E1142E2(0) != 4) && !func_878(uParam2))
+	if ((!func_2() && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4) && !func_878(uParam2))
 	{
 		CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 	}

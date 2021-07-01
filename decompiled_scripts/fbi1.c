@@ -113408,7 +113408,7 @@ void func_718()
 						{
 							TASK::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), "missfbi1ig_9", "look_left", 4f, -4f, -1, 0, 0f, false, false, false);
 						}
-						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 						{
 							Var0 = { ENTITY::GET_ENTITY_COORDS(Local_1043[1 /*28*/], false) };
 							Var0.f_2 = (Var0.f_2 - 1f);
@@ -113473,7 +113473,7 @@ void func_718()
 			break;
 		
 		case 2:
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				if (CAM::IS_GAMEPLAY_HINT_ACTIVE())
 				{
@@ -113565,7 +113565,7 @@ void func_721()
 						{
 							TASK::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), "missfbi1ig_9", "look_left", 4f, -4f, -1, 0, 0f, false, false, false);
 						}
-						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 						{
 							Var0 = { ENTITY::GET_ENTITY_COORDS(Local_1043[0 /*28*/], false) };
 							Var0.f_2 = (Var0.f_2 - 1f);
@@ -113635,7 +113635,7 @@ void func_721()
 			break;
 		
 		case 2:
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				if (CAM::IS_GAMEPLAY_HINT_ACTIVE())
 				{

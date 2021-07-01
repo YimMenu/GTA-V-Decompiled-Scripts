@@ -31463,7 +31463,7 @@ void func_178()
 			CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 			SYSTEM::SETTIMERA(0);
 			WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
-			if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 			{
 				PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
 			}
@@ -31486,7 +31486,7 @@ void func_178()
 			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_320) && PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_320) > 0.563f)
 			{
 				CAM::SET_CAM_PARAMS(iLocal_321, CAM::GET_CAM_COORD(iLocal_321), CAM::GET_CAM_ROT(iLocal_321, 2), CAM::GET_CAM_FOV(iLocal_321), 0, 1, 1, 2);
-				if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) != 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) != 4)
 				{
 					CAM::SET_CAM_PARAMS(iLocal_321, -1852.922f, -1252.698f, 9.3524f, -2.9046f, 0f, -46.5763f, 50f, 4000, 1, 1, 2);
 				}
@@ -31526,7 +31526,7 @@ void func_178()
 		case 105:
 			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_320))
 			{
-				if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 				{
 					if (CAM::DOES_CAM_EXIST(iLocal_321))
 					{
@@ -36341,7 +36341,7 @@ void func_261()
 				sLocal_954[2] = "FM2_USWIM1_KM";
 				sLocal_954[0] = "FM2_SWIM_KM";
 			}
-			else if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			else if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				sLocal_954[2] = "FM2_SWIM_FP";
 				sLocal_954[0] = "FM2_SWIM_FP";
@@ -36770,7 +36770,7 @@ void func_263()
 				iLocal_976 = 1;
 			}
 		}
-		else if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+		else if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 		{
 			if (func_266(sLocal_954[iLocal_974], 0))
 			{

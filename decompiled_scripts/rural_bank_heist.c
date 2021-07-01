@@ -108682,7 +108682,7 @@ int func_731()
 		case 4:
 			if (!iLocal_1939)
 			{
-				if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 				{
 					if (func_728(&iLocal_1910) >= (fLocal_1915 - 0.3f))
 					{
@@ -114240,7 +114240,7 @@ void func_834()
 								}
 								TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 								PED::SET_PED_USING_ACTION_MODE(PLAYER::PLAYER_PED_ID(), true, -1, 0);
-								if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+								if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 								{
 									PED::FORCE_PED_MOTION_STATE(PLAYER::PLAYER_PED_ID(), -633298724, false, 0, false);
 								}
@@ -118675,7 +118675,7 @@ void func_911()
 					VEHICLE::SET_VEHICLE_PETROL_TANK_HEALTH(iLocal_670, 1f);
 				}
 				iLocal_1581++;
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					GRAPHICS::ANIMPOSTFX_PLAY("CamPushInNeutral", 0, false);
 					AUDIO::PLAY_SOUND_FRONTEND(-1, "1st_Person_Transition", "PLAYER_SWITCH_CUSTOM_SOUNDSET", true);
@@ -122638,7 +122638,7 @@ void func_970()
 			break;
 		
 		case 1:
-			if ((CAM::IS_FOLLOW_PED_CAM_ACTIVE() || CAM::_0xEE778F8C7E1142E2(0) == 4) || CAM::IS_FOLLOW_VEHICLE_CAM_ACTIVE())
+			if ((CAM::IS_FOLLOW_PED_CAM_ACTIVE() || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4) || CAM::IS_FOLLOW_VEHICLE_CAM_ACTIVE())
 			{
 				func_345(0);
 				func_603(0, 1, 2000, 1, 0);

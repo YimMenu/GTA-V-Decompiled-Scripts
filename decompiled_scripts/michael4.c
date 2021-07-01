@@ -100664,7 +100664,7 @@ void func_583()
 				CAM::SET_GAMEPLAY_COORD_HINT(ENTITY::GET_ENTITY_COORDS(iLocal_3303[2], true), -1, 2000, 2000, 0);
 				CAM::SET_GAMEPLAY_HINT_FOLLOW_DISTANCE_SCALAR(0.35f);
 				CAM::_SET_GAMEPLAY_HINT_ANIM_OFFSETX(0.015f);
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					CAM::_SET_GAMEPLAY_HINT_ANIM_OFFSETY(0.65f);
 					iLocal_3415 = 1;
@@ -100681,12 +100681,12 @@ void func_583()
 			break;
 		
 		case 2:
-			if (!iLocal_3415 && CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (!iLocal_3415 && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				CAM::_SET_GAMEPLAY_HINT_ANIM_OFFSETY(0.65f);
 				iLocal_3415 = 1;
 			}
-			else if (iLocal_3415 && CAM::_0xEE778F8C7E1142E2(0) != 4)
+			else if (iLocal_3415 && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 			{
 				CAM::_SET_GAMEPLAY_HINT_ANIM_OFFSETY(-0.02f);
 				iLocal_3415 = 0;

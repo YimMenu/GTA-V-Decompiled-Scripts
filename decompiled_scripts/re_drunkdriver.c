@@ -6576,10 +6576,10 @@ void func_127()
 	if ((ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "random@drunk_driver_2", "driver_enter_m", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "random@drunk_driver_2", "driver_idle_m", 3)) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "random@drunk_driver_2", "driver_exit_m", 3))
 	{
 		iVar0 = 0;
-		iVar1 = CAM::_0x19CAFA3C87F7C2FF();
+		iVar1 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
 		if (iVar1 != 0)
 		{
-			iVar2 = CAM::_0xEE778F8C7E1142E2(iVar1);
+			iVar2 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1);
 			if (iVar2 == 4)
 			{
 				iVar0 = 1;
@@ -6684,10 +6684,10 @@ void func_127()
 					if ((MISC::GET_GAME_TIMER() - iLocal_347) > 15000)
 					{
 						bVar3 = false;
-						iVar4 = CAM::_0x19CAFA3C87F7C2FF();
+						iVar4 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
 						if (iVar4 != 0)
 						{
-							iVar5 = CAM::_0xEE778F8C7E1142E2(iVar4);
+							iVar5 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar4);
 							if (iVar5 == 4)
 							{
 								bVar3 = true;

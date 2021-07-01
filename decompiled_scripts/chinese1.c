@@ -104929,7 +104929,7 @@ void func_615()
 					}
 					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(PLAYER::PLAYER_PED_ID(), "trevor", 0, joaat("player_two"), 0);
 					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "getaway_car", 2, joaat("premier"), 0);
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						CUTSCENE::START_CUTSCENE(2048);
 					}
@@ -105042,7 +105042,7 @@ void func_615()
 					{
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0f);
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0f, 1f);
-						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 						{
 							iLocal_1991 = CAM::CREATE_CAM_WITH_PARAMS("default_scripted_camera", 1387.45f, 3596.558f, 35.69189f, -8.343739f, 0.054248f, -171.3295f, 50f, false, 2);
 							CAM::SET_CAM_ACTIVE(iLocal_1991, true);
@@ -105068,7 +105068,7 @@ void func_615()
 					VEHICLE::DELETE_VEHICLE(&iLocal_2640);
 				}
 				RECORDING::_0x81CBAE94390F9F89();
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					func_393(1, 1, 0f, 0f, 1000, 1, 1);
 				}
@@ -110239,7 +110239,7 @@ int func_719()
 								ENTITY::SET_ENTITY_HEADING(Local_1307, 108.7487f);
 							}
 							iLocal_1991 = CAM::CREATE_CAM("DEFAULT_ANIMATED_CAMERA", true);
-							if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+							if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 							{
 								iLocal_1992 = CAM::CREATE_CAM_WITH_PARAMS("DEFAULT_SCRIPTED_CAMERA", 1407.337f, 3612.039f, 39.55784f, -17.86413f, -1.011106f, -82.41916f, 44.02363f, false, 2);
 							}
@@ -110323,7 +110323,7 @@ int func_719()
 		case 2:
 			if (!iLocal_1866)
 			{
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_1878) >= 0.68f)
 					{
@@ -110340,7 +110340,7 @@ int func_719()
 			if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_1878) >= 0.99f)
 			{
 				RECORDING::_0x81CBAE94390F9F89();
-				if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 				{
 					if (CAM::DOES_CAM_EXIST(iLocal_1992) && CAM::DOES_CAM_EXIST(iLocal_1991))
 					{
@@ -110363,7 +110363,7 @@ int func_719()
 			iLocal_1943 = MISC::GET_GAME_TIMER();
 			bLocal_1862 = false;
 			iLocal_1877 = 99;
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				func_393(0, 1, -91.8f, -19f, 500, 0, 1);
 			}
@@ -112885,7 +112885,7 @@ void func_759()
 
 int func_760()
 {
-	if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 	{
 		return 1;
 	}

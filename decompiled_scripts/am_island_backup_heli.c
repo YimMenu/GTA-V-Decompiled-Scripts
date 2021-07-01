@@ -1722,7 +1722,7 @@ void func_67()
 									{
 										if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 										{
-											TASK::TASK_HELI_MISSION(iVar0, iVar1, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, iLocal_74, 20f, 40f, -1f, SYSTEM::CEIL(fLocal_71[0]), 10, -1082130432, 0);
+											TASK::TASK_HELI_MISSION(iVar0, iVar1, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, iLocal_74, 20f, 40f, -1f, SYSTEM::CEIL(fLocal_71[0]), 10, -1f, 0);
 										}
 									}
 								}
@@ -1781,7 +1781,7 @@ void func_67()
 								{
 									if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 									{
-										TASK::TASK_HELI_MISSION(iVar0, iVar1, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 8, 20f, 500f, -1f, 40, 10, -1082130432, 0);
+										TASK::TASK_HELI_MISSION(iVar0, iVar1, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 8, 20f, 500f, -1f, 40, 10, -1f, 0);
 										PED::SET_PED_KEEP_TASK(iVar0, true);
 										iLocal_64 = 1;
 									}
@@ -1966,7 +1966,7 @@ void func_71()
 	}
 	if (func_52(iVar1, iVar0) || func_72(iVar1, iVar0, -2, 0))
 	{
-		TASK::TASK_HELI_MISSION(iVar3, iVar4, 0, iVar2, 0f, 0f, 0f, iLocal_74, 20f, 40f, -1f, SYSTEM::CEIL(fLocal_71[0]), 10, -1082130432, 0);
+		TASK::TASK_HELI_MISSION(iVar3, iVar4, 0, iVar2, 0f, 0f, 0f, iLocal_74, 20f, 40f, -1f, SYSTEM::CEIL(fLocal_71[0]), 10, -1f, 0);
 		iLocal_77 = iVar0;
 	}
 }

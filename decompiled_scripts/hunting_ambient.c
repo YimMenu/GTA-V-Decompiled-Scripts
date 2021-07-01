@@ -7048,7 +7048,7 @@ int func_140(var uParam0)
 			}
 			if (Global_1835392.f_3183 > 0)
 			{
-				(uParam0[0 /*100*/])->f_79 = NETWORK::_0xD66C9E72B3CC4982(&(Global_1835392.f_3026), Global_1835392.f_3183);
+				(uParam0[0 /*100*/])->f_79 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&(Global_1835392.f_3026), Global_1835392.f_3183);
 				(uParam0[0 /*100*/])->f_78 = 1;
 			}
 			else
@@ -7231,7 +7231,7 @@ int func_143(var uParam0, char* sParam1, char* sParam2, int iParam3, var uParam4
 			{
 				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(&(Var1[0 /*13*/])))
 				{
-					*uParam4 = NETWORK::_0xD66C9E72B3CC4982(&Var1, 1);
+					*uParam4 = NETWORK::NETWORK_DISPLAYNAMES_FROM_HANDLES_START(&Var1, 1);
 					*uParam0 = 1;
 				}
 				else
@@ -10398,21 +10398,21 @@ int func_208()
 			GRAPHICS::ANIMPOSTFX_PLAY("MinigameTransitionIn", 0, false);
 			iLocal_2463 = CAM::CREATE_CAM_WITH_PARAMS("DEFAULT_SCRIPTED_CAMERA", -1705.311f, 4664.68f, 38.8278f, 10.2934f, -1.8316f, -85.2144f, 42.79f, true, 2);
 			CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
-			iLocal_2454 = STREAMING::_0x1F3F018BC3AFA77C(-1708.517f, 4663.869f, 44.9329f, 6.5082f, 0f, -85.7712f, 200f, 12, 127);
+			iLocal_2454 = STREAMING::STREAMVOL_CREATE_FRUSTUM(-1708.517f, 4663.869f, 44.9329f, 6.5082f, 0f, -85.7712f, 200f, 12, 127);
 			func_507(-1703.123f, 4665.463f, 21.2f, -1704.077f, 4660.555f, 25.4f, 7f, -1710.823f, 4656.964f, 21.8008f, 82.9948f, 1, 1, 1, 0, 0);
 			iLocal_2464 = 1;
 			break;
 		
 		case 1:
-			if (STREAMING::_0x07C313F94746702C(iLocal_2454))
+			if (STREAMING::STREAMVOL_IS_VALID(iLocal_2454))
 			{
-				if (STREAMING::_0x7D41E9D2D17C5B2D(iLocal_2454) || func_52() < MISC::GET_GAME_TIMER())
+				if (STREAMING::STREAMVOL_HAS_LOADED(iLocal_2454) || func_52() < MISC::GET_GAME_TIMER())
 				{
 					if (CAM::IS_SCREEN_FADED_OUT())
 					{
 						CAM::DO_SCREEN_FADE_IN(500);
 					}
-					STREAMING::_0x1EE7D8DF4425F053(iLocal_2454);
+					STREAMING::STREAMVOL_DELETE(iLocal_2454);
 					iLocal_2425 = 0;
 					iLocal_2464 = 2;
 				}
@@ -106539,7 +106539,7 @@ void func_766()
 			}
 			else if (MISC::GET_GAME_TIMER() > iLocal_1946)
 			{
-				if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 				{
 					TASK::TASK_PLAY_ANIM(iVar0, "facials@p_m_one@variations@elkcall", "mood_elkcal_1", 8f, -8f, -1, 32, 0f, false, false, false);
 				}

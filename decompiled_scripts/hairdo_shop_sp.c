@@ -6983,7 +6983,7 @@ void func_79(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -7025,7 +7025,7 @@ void func_81()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -112047,7 +112047,7 @@ int func_770(var uParam0, bool bParam1)
 						}
 						else
 						{
-							uParam0->f_641.f_2 = PED::CLONE_PED(PLAYER::PLAYER_PED_ID(), 0f, false, false);
+							uParam0->f_641.f_2 = PED::CLONE_PED(PLAYER::PLAYER_PED_ID(), false, false, false);
 							Global_4268543 = uParam0->f_641.f_2;
 							ENTITY::SET_ENTITY_COORDS_NO_OFFSET(uParam0->f_641.f_2, uParam0->f_186.f_31, false, false, true);
 							ENTITY::SET_ENTITY_HEADING(uParam0->f_641.f_2, uParam0->f_186.f_34);
@@ -119837,7 +119837,7 @@ void func_982(var uParam0, var uParam1, int iParam2)
 				if (iVar9 != joaat("object"))
 				{
 					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
-					if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 					{
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					}

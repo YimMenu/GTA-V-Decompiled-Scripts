@@ -3648,9 +3648,9 @@ void func_116(var uParam0, bool bParam1)
 			func_167(&(uParam0->f_390), 22);
 		}
 		PED::CLEAR_FACIAL_IDLE_ANIM_OVERRIDE(PLAYER::PLAYER_PED_ID());
-		if (CAM::_0xEE778F8C7E1142E2(0) == 2)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 2)
 		{
-			CAM::_0x2A2173E46DAECD12(0, 1);
+			CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 1);
 		}
 		HUD::CLEAR_HELP(true);
 	}
@@ -3837,9 +3837,9 @@ void func_127(var uParam0)
 		}
 	}
 	CAM::STOP_GAMEPLAY_CAM_SHAKING(false);
-	if (CAM::_0xEE778F8C7E1142E2(0) == 2)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 2)
 	{
-		CAM::_0x2A2173E46DAECD12(0, 1);
+		CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 1);
 	}
 	PED::CLEAR_FACIAL_IDLE_ANIM_OVERRIDE(PLAYER::PLAYER_PED_ID());
 	HUD::CLEAR_HELP(true);
@@ -5527,7 +5527,7 @@ void func_184(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -5569,7 +5569,7 @@ void func_186()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -114306,7 +114306,7 @@ Vector3 func_1234(int iParam0, bool bParam1)
 	{
 		Var3 = { CAM::GET_GAMEPLAY_CAM_ROT(2) };
 	}
-	if (iParam0 == func_1235(PLAYER::PLAYER_PED_ID()) && CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (iParam0 == func_1235(PLAYER::PLAYER_PED_ID()) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, 0f, 8f, -0.2f) };
 	}
@@ -114318,7 +114318,7 @@ Vector3 func_1234(int iParam0, bool bParam1)
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0, false))
 	{
 		fVar6 = ENTITY::GET_ENTITY_HEADING(iParam0);
-		if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 		{
 			fVar6 = Var3.f_2;
 		}
@@ -117715,9 +117715,9 @@ void func_1364(var uParam0)
 		func_164(uParam0, 1);
 		func_144(uParam0);
 		CAM::STOP_GAMEPLAY_CAM_SHAKING(false);
-		if (CAM::_0xEE778F8C7E1142E2(0) == 2)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 2)
 		{
-			CAM::_0x2A2173E46DAECD12(0, 1);
+			CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 1);
 		}
 		if (func_25(&(uParam0->f_390), 21))
 		{
@@ -121394,7 +121394,7 @@ void func_1422(var uParam0, bool bParam1, bool bParam2)
 	iVar1 = PLAYER::PLAYER_PED_ID();
 	fVar2 = (ENTITY::GET_ENTITY_HEADING(iVar1) + fVar0);
 	ENTITY::SET_ENTITY_HEADING(iVar1, fVar2);
-	if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		fVar3 = CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING();
 		fVar4 = CAM::GET_GAMEPLAY_CAM_RELATIVE_PITCH();
@@ -121879,7 +121879,7 @@ void func_1430(var uParam0, int iParam1)
 				{
 					func_1458(&(uParam0->f_795));
 				}
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					bVar4 = false;
 				}
@@ -124761,7 +124761,7 @@ void func_1523(var uParam0, var uParam1, var uParam2)
 				func_117(&(uParam2->f_109));
 				if (func_11(PLAYER::PLAYER_ID()))
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						func_1134(uParam2, 5);
 					}
@@ -124831,7 +124831,7 @@ void func_1523(var uParam0, var uParam1, var uParam2)
 			break;
 		
 		case 7:
-			if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 			{
 				PAD::DISABLE_CONTROL_ACTION(0, 1, true);
 				PAD::DISABLE_CONTROL_ACTION(0, 2, true);
@@ -125214,10 +125214,10 @@ void func_1523(var uParam0, var uParam1, var uParam2)
 					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(uParam0->f_4[uParam2->f_13]), uParam2->f_15, func_1144(), "Bartender_Idle", 2f, -2f, 13, 16, 2f, 0);
 					NETWORK::NETWORK_START_SYNCHRONISED_SCENE(uParam2->f_15);
 					TASK::TASK_MOVE_NETWORK_ADVANCED_BY_NAME(PLAYER::PLAYER_PED_ID(), "Champagne_Drinking_Mini_Game", func_30(uParam2->f_13), func_26(uParam2->f_13), 2, 0f, false, "ANIM@AMB@NIGHTCLUB@MINI@DRINKING@CHAMPAGNE_DRINKING@BASE@", 4);
-					if (CAM::_0xEE778F8C7E1142E2(0) == 1)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 1)
 					{
-						CAM::_0x2A2173E46DAECD12(0, 4);
-						CAM::_0x2A2173E46DAECD12(0, 0);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 4);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 0);
 					}
 					func_1675(uParam0, uParam2, 14);
 					if (uParam2->f_20 == 8)

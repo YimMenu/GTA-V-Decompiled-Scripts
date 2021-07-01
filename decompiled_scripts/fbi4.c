@@ -104260,8 +104260,8 @@ void func_521()
 	{
 		STREAMING::LOAD_SCENE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 	}
-	iLocal_3810 = STREAMING::FORMAT_FOCUS_HEADING(904.981f, -2367.179f, 30.15f, 7f, 1, 127);
-	while (!STREAMING::_0x7D41E9D2D17C5B2D(iLocal_3810))
+	iLocal_3810 = STREAMING::STREAMVOL_CREATE_SPHERE(904.981f, -2367.179f, 30.15f, 7f, 1, 127);
+	while (!STREAMING::STREAMVOL_HAS_LOADED(iLocal_3810))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -104288,7 +104288,7 @@ void func_521()
 		VEHICLE::SET_PLAYBACK_SPEED(Local_1211, 1f);
 	}
 	AUDIO::TRIGGER_MUSIC_EVENT("fbi4_TRUCK_RAM_RESTART_ST");
-	STREAMING::_0x1EE7D8DF4425F053(iLocal_3810);
+	STREAMING::STREAMVOL_DELETE(iLocal_3810);
 	iLocal_3250 = MISC::GET_GAME_TIMER();
 	iLocal_3811 = CAM::GET_FOLLOW_VEHICLE_CAM_VIEW_MODE();
 	CAM::SET_FOLLOW_VEHICLE_CAM_VIEW_MODE(4);
@@ -118509,7 +118509,7 @@ void func_808()
 						if (VEHICLE::IS_THIS_MODEL_A_CAR(ENTITY::GET_ENTITY_MODEL(iVar0)))
 						{
 							PAD::DISABLE_CONTROL_ACTION(0, 75, true);
-							if (CAM::_0xEE778F8C7E1142E2(1) != 4)
+							if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) != 4)
 							{
 								TASK::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), "misscommon@std_take_off_masks", "take_off_mask_ds", 8f, -8f, -1, 0, 0f, false, false, false);
 								iLocal_3410++;
@@ -123313,9 +123313,9 @@ void func_898()
 								if (func_679(Local_2531[1 /*20*/], 242628503, -2, 1))
 								{
 									TASK::OPEN_SEQUENCE_TASK(&iLocal_3469);
-									TASK::TASK_HELI_MISSION(0, Local_1437[1 /*15*/], 0, 0, 834.8f, -2327.7f, 68f, 4, 10f, 1f, 173.2674f, 15, 10, -1082130432, 0);
-									TASK::TASK_HELI_MISSION(0, Local_1437[1 /*15*/], 0, 0, 813.1f, -2338.4f, 68f, 4, 10f, 1f, 173.2674f, 15, 10, -1082130432, 0);
-									TASK::TASK_HELI_MISSION(0, Local_1437[1 /*15*/], 0, 0, 811.4f, -2313.22f, 68f, 4, 10f, 1f, 0f, 15, 10, -1082130432, 0);
+									TASK::TASK_HELI_MISSION(0, Local_1437[1 /*15*/], 0, 0, 834.8f, -2327.7f, 68f, 4, 10f, 1f, 173.2674f, 15, 10, -1f, 0);
+									TASK::TASK_HELI_MISSION(0, Local_1437[1 /*15*/], 0, 0, 813.1f, -2338.4f, 68f, 4, 10f, 1f, 173.2674f, 15, 10, -1f, 0);
+									TASK::TASK_HELI_MISSION(0, Local_1437[1 /*15*/], 0, 0, 811.4f, -2313.22f, 68f, 4, 10f, 1f, 0f, 15, 10, -1f, 0);
 									TASK::CLOSE_SEQUENCE_TASK(iLocal_3469);
 									TASK::TASK_PERFORM_SEQUENCE(Local_2531[1 /*20*/], iLocal_3469);
 									TASK::CLEAR_SEQUENCE_TASK(&iLocal_3469);
@@ -123442,7 +123442,7 @@ void func_899(bool bParam0)
 			{
 				TASK::CLEAR_PED_TASKS(Local_2531[1 /*20*/]);
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_3469);
-				TASK::TASK_HELI_MISSION(0, Local_1437[1 /*15*/], 0, 0, 0f, 0f, 0f, 4, 25f, 0f, -1f, 70, 65, -1082130432, 0);
+				TASK::TASK_HELI_MISSION(0, Local_1437[1 /*15*/], 0, 0, 0f, 0f, 0f, 4, 25f, 0f, -1f, 70, 65, -1f, 0);
 				TASK::CLOSE_SEQUENCE_TASK(iLocal_3469);
 				TASK::TASK_PERFORM_SEQUENCE(Local_2531[1 /*20*/], iLocal_3469);
 				TASK::CLEAR_SEQUENCE_TASK(&iLocal_3469);
@@ -126684,7 +126684,7 @@ int func_933()
 			break;
 		
 		case 4:
-			if (CAM::_0xEE778F8C7E1142E2(1) == 4)
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 			{
 				if (CAM::GET_CAM_ANIM_CURRENT_PHASE(iLocal_3468) >= 0.97f)
 				{
@@ -127286,7 +127286,7 @@ int func_942()
 			CAM::ATTACH_CAM_TO_ENTITY(iLocal_3465, Local_1211, -0.21f, 0.8f, 1.35f, true);
 			CAM::POINT_CAM_AT_ENTITY(iLocal_3465, Local_1211, -3.1f, 20f, -1.3f, true);
 			CAM::SET_CAM_FOV(iLocal_3465, 45f);
-			iLocal_3810 = STREAMING::FORMAT_FOCUS_HEADING(905.92f, -2367.47f, 30.54f, 20f, 1, 127);
+			iLocal_3810 = STREAMING::STREAMVOL_CREATE_SPHERE(905.92f, -2367.47f, 30.54f, 20f, 1, 127);
 			Local_3419 = { 892.138f, -2368.97f, 30.939f };
 			Local_3422 = { 0f, 0f, 0f };
 			CAM::SET_CAM_ACTIVE(iLocal_3461, true);
@@ -127409,7 +127409,7 @@ int func_942()
 				VEHICLE::SET_FORCE_HD_VEHICLE(Local_1196, false);
 				iLocal_3811 = CAM::GET_FOLLOW_VEHICLE_CAM_VIEW_MODE();
 				CAM::SET_FOLLOW_VEHICLE_CAM_VIEW_MODE(4);
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_3810);
+				STREAMING::STREAMVOL_DELETE(iLocal_3810);
 				VEHICLE::SET_DISTANT_CARS_ENABLED(true);
 				iLocal_3250 = MISC::GET_GAME_TIMER();
 				RECORDING::_0x81CBAE94390F9F89();
@@ -127441,7 +127441,7 @@ int func_942()
 				{
 					SYSTEM::WAIT(0);
 				}
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_3810);
+				STREAMING::STREAMVOL_DELETE(iLocal_3810);
 				VEHICLE::SET_DISTANT_CARS_ENABLED(true);
 				if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(Local_1196))
 				{
@@ -127589,8 +127589,8 @@ void func_947()
 			}
 			else
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_3810);
-				iLocal_3810 = STREAMING::FORMAT_FOCUS_HEADING(740.894f, -2475.923f, 19.3226f, 50f, 1, 127);
+				STREAMING::STREAMVOL_DELETE(iLocal_3810);
+				iLocal_3810 = STREAMING::STREAMVOL_CREATE_SPHERE(740.894f, -2475.923f, 19.3226f, 50f, 1, 127);
 				func_742(PLAYER::PLAYER_PED_ID(), -1);
 				func_685(0, 1, 1, 0, 1);
 				func_834(&(Local_3477[0 /*165*/]), 1);
@@ -127613,7 +127613,7 @@ void func_947()
 		case 2:
 			if (func_950())
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_3810);
+				STREAMING::STREAMVOL_DELETE(iLocal_3810);
 				iLocal_3230 = MISC::GET_GAME_TIMER();
 				iLocal_3228++;
 			}
@@ -127634,7 +127634,7 @@ void func_947()
 			{
 				VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(945.8f, -2080.8f, 100f, 1015.3f, -2035.2f, -100f, false, true);
 				MISC::CLEAR_AREA(Local_1181.f_3, 50f, true, false, false, false);
-				iLocal_3810 = STREAMING::FORMAT_FOCUS_HEADING(937.2f, -2080.8f, 30f, 20f, 1, 127);
+				iLocal_3810 = STREAMING::STREAMVOL_CREATE_SPHERE(937.2f, -2080.8f, 30f, 20f, 1, 127);
 				Local_1181 = VEHICLE::CREATE_VEHICLE(Local_1181.f_1, Local_1181.f_3, Local_1181.f_6, true, true, false);
 				VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(Local_1181, true);
 				VEHICLE::SET_VEHICLE_AUTOMATICALLY_ATTACHES(Local_1181, false, 0);
@@ -127720,7 +127720,7 @@ void func_947()
 			}
 			else
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_3810);
+				STREAMING::STREAMVOL_DELETE(iLocal_3810);
 				ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(Local_1181, false, 1);
 				func_742(PLAYER::PLAYER_PED_ID(), -1);
 				if (ENTITY::DOES_ENTITY_EXIST(Local_2961.x))
@@ -131549,7 +131549,7 @@ void func_1015()
 							}
 							if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("michael", func_93(0)))
 							{
-								if (CAM::_0xEE778F8C7E1142E2(0) != 4 && CAM::_0xEE778F8C7E1142E2(1) != 4)
+								if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4 && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) != 4)
 								{
 									func_785(&iLocal_3103, 0);
 									func_532(&iLocal_3103, 1, 1, 0);
@@ -131557,7 +131557,7 @@ void func_1015()
 							}
 							if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_CAMERA(false))
 							{
-								if (CAM::_0xEE778F8C7E1142E2(0) == 4 || CAM::_0xEE778F8C7E1142E2(1) == 4)
+								if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 								{
 									func_785(&iLocal_3103, 0);
 									func_532(&iLocal_3103, 1, 1, 0);
@@ -131589,7 +131589,7 @@ void func_1015()
 							}
 							if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("michael", func_93(0)))
 							{
-								if (CAM::_0xEE778F8C7E1142E2(0) != 4 && CAM::_0xEE778F8C7E1142E2(1) != 4)
+								if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4 && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) != 4)
 								{
 									func_785(&iLocal_3103, 0);
 									func_532(&iLocal_3103, 1, 1, 0);
@@ -131597,7 +131597,7 @@ void func_1015()
 							}
 							if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_CAMERA(false))
 							{
-								if (CAM::_0xEE778F8C7E1142E2(0) == 4 || CAM::_0xEE778F8C7E1142E2(1) == 4)
+								if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4 || CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(1) == 4)
 								{
 									func_785(&iLocal_3103, 0);
 									func_532(&iLocal_3103, 1, 1, 0);
@@ -131810,7 +131810,7 @@ void func_1018()
 	func_480(Local_1211, 1);
 	if (bLocal_3218)
 	{
-		if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 		{
 			GRAPHICS::ANIMPOSTFX_PLAY("SwitchSceneMichael", 0, false);
 			AUDIO::PLAY_SOUND_FRONTEND(-1, "Hit_1", "LONG_PLAYER_SWITCH_SOUNDS", true);
@@ -134027,7 +134027,7 @@ void func_1063()
 	{
 		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_3809);
 	}
-	STREAMING::_0x1EE7D8DF4425F053(iLocal_3810);
+	STREAMING::STREAMVOL_DELETE(iLocal_3810);
 	AUDIO::TRIGGER_MUSIC_EVENT("FBI4_MISSION_FAIL");
 	STREAMING::END_SRL();
 	SCRIPT::TERMINATE_THIS_THREAD();

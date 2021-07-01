@@ -375,11 +375,11 @@ void func_10(bool bParam0)
 	{
 		ENTITY::SET_ENTITY_VISIBLE(Local_268.f_25[3], false, false);
 	}
-	if (CAM::_0xEE778F8C7E1142E2(0) != 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) != 4)
 	{
 		if (func_28(13))
 		{
-			CAM::_0x2A2173E46DAECD12(0, 4);
+			CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 4);
 		}
 	}
 	Local_268.f_7 = 0;
@@ -885,11 +885,11 @@ void func_32(bool bParam0, bool bParam1, bool bParam2)
 						func_12();
 						Local_268.f_45.f_3 = 0;
 						Local_268.f_45.f_4 = 0;
-						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 						{
 							if (!func_28(13))
 							{
-								CAM::_0x2A2173E46DAECD12(0, 1);
+								CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 1);
 								func_560(13);
 							}
 						}
@@ -1017,7 +1017,7 @@ Vector3 func_37(int iParam0, bool bParam1)
 	{
 		Var3 = { CAM::GET_GAMEPLAY_CAM_ROT(2) };
 	}
-	if (iParam0 == func_38(PLAYER::PLAYER_PED_ID()) && CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (iParam0 == func_38(PLAYER::PLAYER_PED_ID()) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, 0f, 8f, -0.2f) };
 	}
@@ -1029,7 +1029,7 @@ Vector3 func_37(int iParam0, bool bParam1)
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0, false))
 	{
 		fVar6 = ENTITY::GET_ENTITY_HEADING(iParam0);
-		if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 		{
 			fVar6 = Var3.f_2;
 		}
@@ -76350,7 +76350,7 @@ void func_448(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -76392,7 +76392,7 @@ void func_450()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -81910,7 +81910,7 @@ int func_589(int iParam0)
 
 int func_590()
 {
-	if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 	{
 		if (!func_28(13))
 		{
@@ -83040,7 +83040,7 @@ void func_629()
 		CAM::SET_CAM_ACTIVE(Local_268.f_40, true);
 		CAM::SHAKE_CAM(Local_268.f_40, "HAND_SHAKE", 0.1f);
 		iVar0 = 0;
-		if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 		{
 			CAM::SET_CAM_PARAMS(Local_268.f_40, CAM::GET_GAMEPLAY_CAM_COORD(), CAM::GET_GAMEPLAY_CAM_ROT(2), CAM::GET_GAMEPLAY_CAM_FOV(), 0, 1, 1, 2);
 			iVar0 = 1000;

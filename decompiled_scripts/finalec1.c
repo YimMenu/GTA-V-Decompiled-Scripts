@@ -113346,7 +113346,7 @@ int func_792(int iParam0)
 								case 1:
 									if (!func_795(Local_196[iVar0 /*14*/], -1273030092, 1) || (MISC::GET_GAME_TIMER() - iLocal_1530) > 1000)
 									{
-										TASK::TASK_HELI_MISSION(Local_196[iVar0 /*14*/], iVar19, 0, 0, Var20, 4, 5f, 0.1f, func_793(iVar19, PLAYER::PLAYER_PED_ID(), 1), 42, 5, -1082130432, 0);
+										TASK::TASK_HELI_MISSION(Local_196[iVar0 /*14*/], iVar19, 0, 0, Var20, 4, 5f, 0.1f, func_793(iVar19, PLAYER::PLAYER_PED_ID(), 1), 42, 5, -1f, 0);
 										iLocal_1529++;
 									}
 									break;

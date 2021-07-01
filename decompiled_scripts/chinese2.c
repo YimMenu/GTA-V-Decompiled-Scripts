@@ -7924,7 +7924,7 @@ int func_107(int iParam0, int iParam1, struct<3> Param2, float fParam5, int iPar
 	}
 	PED::STOP_PED_WEAPON_FIRING_WHEN_DROPPED(Local_755[iParam0 /*33*/]);
 	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_755[iParam0 /*33*/], true);
-	PED::_0xEC6935EBE0847B90(Local_755[iParam0 /*33*/], 0f, 0f, 0f);
+	PED::_SET_PED_SHOULD_PLAY_DIRECTED_SCENARIO_EXIT(Local_755[iParam0 /*33*/], 0f, 0f, 0f);
 	PED::_0x5B6010B3CBC29095(Local_755[iParam0 /*33*/], true);
 	PED::_0xCEDA60A74219D064(Local_755[iParam0 /*33*/], true);
 	ENTITY::SET_ENTITY_HEALTH(Local_755[iParam0 /*33*/], 150, 0);
@@ -15255,7 +15255,7 @@ int func_187(bool bParam0, bool bParam1, int iParam2, bool bParam3)
 
 int func_188()
 {
-	if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		return 1;
 	}

@@ -43867,7 +43867,7 @@ void func_347()
 				{
 					Local_132[3 /*3*/].f_1 = func_366(func_216(), 1, 145);
 				}
-				if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 				{
 					func_365(func_8(), ENTITY::GET_ENTITY_COORDS(func_216(), true));
 				}

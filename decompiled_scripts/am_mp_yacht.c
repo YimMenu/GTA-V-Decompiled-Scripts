@@ -14402,7 +14402,7 @@ void func_254(bool bParam0, int iParam1, int iParam2)
 					iVar1 = 0;
 					while (iVar1 < 8)
 					{
-						CAM::_0x2A2173E46DAECD12(iVar1, Global_2359302.f_58[iVar1]);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(iVar1, Global_2359302.f_58[iVar1]);
 						iVar1++;
 					}
 				}
@@ -14444,7 +14444,7 @@ void func_256()
 			iVar0 = 0;
 			while (iVar0 < 8)
 			{
-				Global_2359302.f_58[iVar0] = CAM::_0xEE778F8C7E1142E2(iVar0);
+				Global_2359302.f_58[iVar0] = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar0);
 				iVar0++;
 			}
 			MISC::SET_BIT(&(Global_2359302.f_67), 2);
@@ -16500,11 +16500,11 @@ void func_362()
 			{
 				if (TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073) != 1)
 				{
-					if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 					{
 						if (!MISC::IS_BIT_SET(iLocal_1644, 16))
 						{
-							CAM::_0x2A2173E46DAECD12(0, 1);
+							CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 1);
 							MISC::SET_BIT(&iLocal_1644, 16);
 						}
 					}
@@ -16529,9 +16529,9 @@ void func_362()
 			{
 				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar8) >= 0.99f)
 				{
-					if (MISC::IS_BIT_SET(iLocal_1644, 16) && CAM::_0xEE778F8C7E1142E2(0) == 1)
+					if (MISC::IS_BIT_SET(iLocal_1644, 16) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 1)
 					{
-						CAM::_0x2A2173E46DAECD12(0, 4);
+						CAM::SET_CAM_VIEW_MODE_FOR_CONTEXT(0, 4);
 						MISC::CLEAR_BIT(&iLocal_1644, 16);
 					}
 					iLocal_1008 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(func_71(iLocal_1038, &uLocal_1064), func_70(iLocal_1038, &uLocal_1064), 2, true, false, 1f, 0f, 1f);
@@ -113767,7 +113767,7 @@ void func_811()
 				if (iVar0 != joaat("object"))
 				{
 					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
-					if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 					{
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					}
@@ -114272,7 +114272,7 @@ void func_827()
 				if (iVar0 != joaat("object"))
 				{
 					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
-					if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 					{
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					}
@@ -116737,7 +116737,7 @@ void func_903()
 			MISC::GET_GROUND_Z_FOR_3D_COORD(Var9, &(Var9.f_2), true, false);
 			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iVar0, Var9, false, false, false);
 			ENTITY::SET_ENTITY_ROTATION(iVar0, 0f, 0f, (Local_2750.f_20 + (Local_2750.f_24 * fVar8)), 2, false);
-			if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) != 4 && func_910(iVar0))
+			if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) != 4 && func_910(iVar0))
 			{
 				PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 436, true);
 			}
@@ -116800,7 +116800,7 @@ int func_904(int iParam0)
 {
 	if (!MISC::IS_BIT_SET(Local_2750, 1))
 	{
-		if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+		if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 		{
 			Local_2750.f_215 = "pov_start_engine";
 		}
@@ -118505,7 +118505,7 @@ void func_955()
 				if (iVar26 != joaat("object"))
 				{
 					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
-					if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+					if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 					{
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					}

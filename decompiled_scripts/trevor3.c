@@ -11679,11 +11679,11 @@ void func_153(int iParam0)
 					{
 						bLocal_261 = false;
 						Local_1738.f_4 = CAM::CREATE_CAMERA(964613260, true);
-						if (STREAMING::_0xBC9823AB80A3DCAC())
+						if (STREAMING::IS_STREAMVOL_ACTIVE())
 						{
-							STREAMING::_0x1EE7D8DF4425F053(iLocal_1627);
+							STREAMING::STREAMVOL_DELETE(iLocal_1627);
 						}
-						iLocal_1627 = STREAMING::_0x1F3F018BC3AFA77C(63.6975f, 3630.125f, 49.8993f, func_289(-4.2671f, 0.6115f, 13.5931f), 150f, 12, 33);
+						iLocal_1627 = STREAMING::STREAMVOL_CREATE_FRUSTUM(63.6975f, 3630.125f, 49.8993f, func_289(-4.2671f, 0.6115f, 13.5931f), 150f, 12, 33);
 						iLocal_1198 = PED::CREATE_SYNCHRONIZED_SCENE(68.185f, 3653.15f, 45.796f, 0f, 0f, 6.38f, 2);
 						CAM::PLAY_SYNCHRONIZED_CAM_ANIM(Local_1738.f_4, iLocal_1198, "ALL_TRAILERS_EXPLOSION_CAM", "misstrevor3");
 						CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
@@ -11814,9 +11814,9 @@ void func_153(int iParam0)
 				PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 				CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0f);
 				CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(-20f, 1f);
-				if (STREAMING::_0xBC9823AB80A3DCAC())
+				if (STREAMING::IS_STREAMVOL_ACTIVE())
 				{
-					STREAMING::_0x1EE7D8DF4425F053(iLocal_1627);
+					STREAMING::STREAMVOL_DELETE(iLocal_1627);
 				}
 				GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();
 				Local_1652[0 /*17*/] = 8;
@@ -11948,10 +11948,10 @@ void func_153(int iParam0)
 		
 		case 70:
 			bVar2 = false;
-			iVar3 = CAM::_0x19CAFA3C87F7C2FF();
+			iVar3 = CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
 			if (iVar3 != 0)
 			{
-				iVar4 = CAM::_0xEE778F8C7E1142E2(iVar3);
+				iVar4 = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(iVar3);
 				if (iVar4 == 4)
 				{
 					bVar2 = true;
@@ -12196,9 +12196,9 @@ void func_153(int iParam0)
 					break;
 				
 				case 4:
-					if (CAM::_0x19CAFA3C87F7C2FF() == 0)
+					if (CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT() == 0)
 					{
-						if (CAM::_0xEE778F8C7E1142E2(0) == 4)
+						if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(0) == 4)
 						{
 							if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							{
@@ -12799,14 +12799,14 @@ void func_153(int iParam0)
 		case 87:
 			if (func_132(PLAYER::PLAYER_PED_ID(), -1152.782f, -1523.988f, 3.5198f, 1) < 80f)
 			{
-				if (!STREAMING::_0xBC9823AB80A3DCAC())
+				if (!STREAMING::IS_STREAMVOL_ACTIVE())
 				{
-					iLocal_1627 = STREAMING::_0x1F3F018BC3AFA77C(-1133.8f, -1514.9f, 6.2f, func_289(11.4f, 0f, 113.5f), 20f, 12, 33);
+					iLocal_1627 = STREAMING::STREAMVOL_CREATE_FRUSTUM(-1133.8f, -1514.9f, 6.2f, func_289(11.4f, 0f, 113.5f), 20f, 12, 33);
 				}
 			}
-			else if (STREAMING::_0xBC9823AB80A3DCAC())
+			else if (STREAMING::IS_STREAMVOL_ACTIVE())
 			{
-				STREAMING::_0x1EE7D8DF4425F053(iLocal_1627);
+				STREAMING::STREAMVOL_DELETE(iLocal_1627);
 			}
 			break;
 		
@@ -13090,9 +13090,9 @@ void func_153(int iParam0)
 						MISC::CLEAR_AREA(-1155.376f, -1518.075f, 3.5626f, 10f, true, false, false, false);
 						func_365(1, 1, 1, 0, 0, 0, 0);
 						CUTSCENE::START_CUTSCENE(0);
-						if (STREAMING::_0xBC9823AB80A3DCAC())
+						if (STREAMING::IS_STREAMVOL_ACTIVE())
 						{
-							STREAMING::_0x1EE7D8DF4425F053(iLocal_1627);
+							STREAMING::STREAMVOL_DELETE(iLocal_1627);
 						}
 						RECORDING::_0x293220DA1B46CEBC(8f, 0f, 3);
 						RECORDING::_0x48621C9FCA3EBD28(4);
@@ -42042,7 +42042,7 @@ void func_287(int iParam0)
 
 int func_288()
 {
-	if (CAM::_0xEE778F8C7E1142E2(CAM::_0x19CAFA3C87F7C2FF()) == 4)
+	if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::_GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == 4)
 	{
 		return 1;
 	}
@@ -44998,9 +44998,9 @@ void func_314(var uParam0)
 				CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0f, 3, 0);
 				PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 				TASK::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
-				if (STREAMING::_0xBC9823AB80A3DCAC())
+				if (STREAMING::IS_STREAMVOL_ACTIVE())
 				{
-					STREAMING::_0x1EE7D8DF4425F053(iLocal_1627);
+					STREAMING::STREAMVOL_DELETE(iLocal_1627);
 				}
 				func_291(3);
 				CAM::DO_SCREEN_FADE_IN(1000);
@@ -64814,9 +64814,9 @@ void func_606(int iParam0)
 	ENTITY::REMOVE_FORCED_OBJECT(32.3311f, 3667.66f, 40.4431f, 3f, joaat("prop_cs4_05_tdoor"));
 	ENTITY::REMOVE_FORCED_OBJECT(29.1f, 3661.49f, 40.85f, 3f, joaat("prop_magenta_door"));
 	STREAMING::NEW_LOAD_SCENE_STOP();
-	if (STREAMING::_0x07C313F94746702C(iLocal_264))
+	if (STREAMING::STREAMVOL_IS_VALID(iLocal_264))
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_264);
+		STREAMING::STREAMVOL_DELETE(iLocal_264);
 	}
 	if (AUDIO::IS_AUDIO_SCENE_ACTIVE("TREVOR_3_DRIVE_TO_TRAILER_PARK"))
 	{
@@ -64885,9 +64885,9 @@ void func_606(int iParam0)
 	}
 	CAM::DESTROY_ALL_CAMS(false);
 	CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
-	if (STREAMING::_0xBC9823AB80A3DCAC())
+	if (STREAMING::IS_STREAMVOL_ACTIVE())
 	{
-		STREAMING::_0x1EE7D8DF4425F053(iLocal_1627);
+		STREAMING::STREAMVOL_DELETE(iLocal_1627);
 	}
 	STREAMING::END_SRL();
 	iVar0 = CUTSCENE::GET_ENTITY_INDEX_OF_REGISTERED_ENTITY("Wade", func_373(24));
