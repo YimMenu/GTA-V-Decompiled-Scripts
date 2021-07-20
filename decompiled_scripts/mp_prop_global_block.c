@@ -27,12 +27,12 @@ void __EntryFunction__()
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
-	Global_1299919 = -1;
+	Global_1301909 = -1;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	iVar0 = 0;
-	while (iVar0 < 127)
+	while (iVar0 < 128)
 	{
-		func_1(&(Global_1049924[iVar0 /*1951*/]), iVar0);
+		func_1(&(Global_1049961[iVar0 /*1951*/]), iVar0);
 		iVar0++;
 	}
 }
@@ -11406,178 +11406,178 @@ int func_34(int iParam0)
 			break;
 		
 		case 61:
-			return Global_262145.f_6604[0];
+			return Global_262145.f_6774[0];
 			break;
 		
 		case 62:
-			return Global_262145.f_6604[1];
+			return Global_262145.f_6774[1];
 			break;
 		
 		case 63:
-			return Global_262145.f_6604[2];
+			return Global_262145.f_6774[2];
 			break;
 		
 		case 64:
-			return Global_262145.f_6604[3];
+			return Global_262145.f_6774[3];
 			break;
 		
 		case 65:
-			return Global_262145.f_6604[4];
+			return Global_262145.f_6774[4];
 			break;
 		
 		case 66:
-			return Global_262145.f_7826;
+			return Global_262145.f_7996;
 			break;
 		
 		case 67:
-			return Global_262145.f_7827;
+			return Global_262145.f_7997;
 			break;
 		
 		case 68:
-			return Global_262145.f_7828;
+			return Global_262145.f_7998;
 			break;
 		
 		case 69:
-			return Global_262145.f_7829;
+			return Global_262145.f_7999;
 			break;
 		
 		case 70:
-			return Global_262145.f_7830;
+			return Global_262145.f_8000;
 			break;
 		
 		case 71:
-			return Global_262145.f_7831;
+			return Global_262145.f_8001;
 			break;
 		
 		case 72:
-			return Global_262145.f_7832;
+			return Global_262145.f_8002;
 			break;
 		
 		case 73:
-			return Global_262145.f_12848;
+			return Global_262145.f_13018;
 		
 		case 74:
-			return Global_262145.f_12849;
+			return Global_262145.f_13019;
 		
 		case 75:
-			return Global_262145.f_12850;
+			return Global_262145.f_13020;
 		
 		case 76:
-			return Global_262145.f_12851;
+			return Global_262145.f_13021;
 		
 		case 77:
-			return Global_262145.f_12852;
+			return Global_262145.f_13022;
 		
 		case 78:
-			return Global_262145.f_12853;
+			return Global_262145.f_13023;
 		
 		case joaat("mpsv_lp0_31"):
-			return Global_262145.f_12854;
+			return Global_262145.f_13024;
 		
 		case 80:
-			return Global_262145.f_12855;
+			return Global_262145.f_13025;
 		
 		case 81:
-			return Global_262145.f_12856;
+			return Global_262145.f_13026;
 		
 		case 82:
-			return Global_262145.f_12857;
+			return Global_262145.f_13027;
 		
 		case 83:
-			return Global_262145.f_12845;
+			return Global_262145.f_13015;
 		
 		case 84:
-			return Global_262145.f_12846;
+			return Global_262145.f_13016;
 		
 		case 85:
-			return Global_262145.f_12847;
+			return Global_262145.f_13017;
 		
 		case 86:
 			return 27000000;
 		
 		case 87:
-			return Global_262145.f_15441;
+			return Global_262145.f_15612;
 		
 		case 88:
-			return Global_262145.f_15442;
+			return Global_262145.f_15613;
 		
 		case 89:
-			return Global_262145.f_15443;
+			return Global_262145.f_15614;
 		
 		case 90:
-			return Global_262145.f_15444;
+			return Global_262145.f_15615;
 		
 		case 91:
-			return Global_262145.f_17526;
+			return Global_262145.f_17697;
 		
 		case 92:
-			return Global_262145.f_17528;
+			return Global_262145.f_17699;
 		
 		case 93:
-			return Global_262145.f_17524;
+			return Global_262145.f_17695;
 		
 		case 94:
-			return Global_262145.f_17533;
+			return Global_262145.f_17704;
 		
 		case 95:
-			return Global_262145.f_17530;
+			return Global_262145.f_17701;
 		
 		case 96:
-			return Global_262145.f_17532;
+			return Global_262145.f_17703;
 		
 		case 97:
-			return Global_262145.f_17525;
+			return Global_262145.f_17696;
 		
 		case 98:
-			return Global_262145.f_17523;
+			return Global_262145.f_17694;
 		
 		case 99:
-			return Global_262145.f_17522;
+			return Global_262145.f_17693;
 		
 		case 100:
-			return Global_262145.f_17531;
+			return Global_262145.f_17702;
 		
 		case 101:
-			return Global_262145.f_17529;
+			return Global_262145.f_17700;
 		
 		case 102:
-			return Global_262145.f_17527;
+			return Global_262145.f_17698;
 		
 		case 103:
-			return Global_262145.f_19191;
+			return Global_262145.f_19362;
 		
 		case 104:
-			return Global_262145.f_19084;
+			return Global_262145.f_19255;
 		
 		case 105:
-			return Global_262145.f_19085;
+			return Global_262145.f_19256;
 		
 		case 106:
-			return Global_262145.f_19191;
+			return Global_262145.f_19362;
 		
 		case 107:
-			return Global_262145.f_19084;
+			return Global_262145.f_19255;
 		
 		case 108:
-			return Global_262145.f_19085;
+			return Global_262145.f_19256;
 		
 		case 109:
-			return Global_262145.f_19191;
+			return Global_262145.f_19362;
 		
 		case 110:
-			return Global_262145.f_19084;
+			return Global_262145.f_19255;
 		
 		case 111:
-			return Global_262145.f_19085;
+			return Global_262145.f_19256;
 		
 		case 112:
-			return Global_262145.f_19191;
+			return Global_262145.f_19362;
 		
 		case 113:
-			return Global_262145.f_19084;
+			return Global_262145.f_19255;
 		
 		case 114:
-			return Global_262145.f_19085;
+			return Global_262145.f_19256;
 		
 		case 115:
 			return 3000000;
@@ -11702,7 +11702,7 @@ int func_41()
 	}
 	if (STATS::STAT_SLOT_IS_LOADED(0))
 	{
-		if (Global_150694.f_3)
+		if (Global_151131.f_3)
 		{
 			iVar2 = joaat("mpply_plat_up_lb_check");
 			if (STATS::STAT_GET_INT(iVar2, &iVar1, -1))
@@ -11778,11 +11778,11 @@ int func_42()
 			}
 		}
 	}
-	if (Global_150693 == 2)
+	if (Global_151130 == 2)
 	{
 		return 1;
 	}
-	else if (Global_150693 == 3)
+	else if (Global_151130 == 3)
 	{
 		return 0;
 	}

@@ -190,7 +190,7 @@ int func_7()
 	var uVar0;
 	
 	func_15(&uVar0);
-	if (Global_1312872 == 0)
+	if (Global_1312878 == 0)
 	{
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
@@ -201,7 +201,7 @@ int func_7()
 	{
 		return 1;
 	}
-	if (Global_2464721)
+	if (Global_2465749)
 	{
 		return 1;
 	}
@@ -251,7 +251,7 @@ int func_8()
 
 int func_9()
 {
-	switch (Global_2464823)
+	switch (Global_2465851)
 	{
 		case 0:
 			return joaat("freemode");
@@ -263,12 +263,12 @@ int func_9()
 
 int func_10()
 {
-	return Global_30968;
+	return Global_31345;
 }
 
 bool func_11()
 {
-	return Global_2452015.f_696;
+	return Global_2453009.f_698;
 }
 
 int func_12(int iParam0)
@@ -282,12 +282,12 @@ int func_12(int iParam0)
 
 bool func_13()
 {
-	return Global_2462478;
+	return Global_2463497;
 }
 
 bool func_14()
 {
-	return Global_2452015.f_691;
+	return Global_2453009.f_693;
 }
 
 void func_15(var uParam0)
@@ -306,13 +306,13 @@ void func_15(var uParam0)
 			SCRIPT::GET_EVENT_DATA(1, iVar0, &iVar2, 2);
 			switch (iVar2)
 			{
-				case 1035596089:
+				case -771178269:
 					func_16(iVar0);
 					break;
 				
-				case 1120313136:
+				case -1320260596:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
-					if (Var4.f_2 == 397890833)
+					if (Var4.f_2 == -2138305833)
 					{
 						*uParam0 = 1;
 					}
@@ -401,7 +401,7 @@ int func_18(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440277.f_3[iVar0])
+				if (!Global_2441237.f_3[iVar0])
 				{
 					return 0;
 				}
@@ -571,6 +571,6 @@ int func_22(int iParam0, int iParam1, bool bParam2)
 
 bool func_23()
 {
-	return Global_1312872;
+	return Global_1312878;
 }
 

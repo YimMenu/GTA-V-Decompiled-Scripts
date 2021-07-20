@@ -462,31 +462,31 @@ void __EntryFunction__()
 	sLocal_369 = "ld_2g_decline_s2";
 	sLocal_370 = "ld_2g_decline_s1_face";
 	sLocal_371 = "ld_2g_decline_s2_face";
-	if (func_95(9) || (func_94() && !func_93()))
+	if (func_96(9) || (func_95() && !func_94()))
 	{
-		func_92();
+		func_93();
 	}
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, -1);
-		func_89(0, -1, 0);
+		func_90(0, -1, 0);
 		MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iScriptParam_0))
 	{
 		iLocal_41 = iScriptParam_0;
-		iLocal_316 = Global_1590682[PLAYER::PLAYER_ID() /*883*/].f_274.f_28;
-		func_74(&Global_1297702, iLocal_316);
-		Local_378 = { Global_1297702.f_146.f_82[5 /*102*/] };
-		fLocal_381 = Global_1297702.f_146.f_82[5 /*102*/].f_3;
+		iLocal_316 = Global_1590908[PLAYER::PLAYER_ID() /*874*/].f_267.f_29;
+		func_75(&Global_1299690, iLocal_316);
+		Local_378 = { Global_1299690.f_146.f_82[5 /*102*/] };
+		fLocal_381 = Global_1299690.f_146.f_82[5 /*102*/].f_3;
 		if (fLocal_381 < 0f)
 		{
 			fLocal_381 = (fLocal_381 + 360f);
 		}
-		Local_388 = { Global_1297702.f_146.f_82[5 /*102*/].f_16 };
-		fLocal_391 = Global_1297702.f_146.f_82[5 /*102*/].f_19.f_2;
-		Local_382 = { Global_1297702.f_146.f_82[5 /*102*/].f_7 };
-		Local_385 = { Global_1297702.f_146.f_82[5 /*102*/].f_10 };
+		Local_388 = { Global_1299690.f_146.f_82[5 /*102*/].f_16 };
+		fLocal_391 = Global_1299690.f_146.f_82[5 /*102*/].f_19.f_2;
+		Local_382 = { Global_1299690.f_146.f_82[5 /*102*/].f_7 };
+		Local_385 = { Global_1299690.f_146.f_82[5 /*102*/].f_10 };
 	}
 	NETWORK::RESERVE_NETWORK_MISSION_PEDS(2);
 	while (true)
@@ -499,20 +499,20 @@ void __EntryFunction__()
 				switch (iLocal_311)
 				{
 					case 0:
-						if (func_73() && func_72())
+						if (func_74() && func_73())
 						{
 							iLocal_311 = 1;
 						}
 						break;
 					
 					case 1:
-						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_61())
+						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_62())
 						{
 							func_1();
 						}
 						else
 						{
-							func_92();
+							func_93();
 						}
 						break;
 					
@@ -522,7 +522,7 @@ void __EntryFunction__()
 			}
 			else if (MISC::GET_DISTANCE_BETWEEN_COORDS(Local_378, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), true) > (3f + 2f))
 			{
-				func_92();
+				func_93();
 			}
 		}
 	}
@@ -536,46 +536,46 @@ void func_1()
 	switch (iLocal_312)
 	{
 		case 0:
-			if (((func_56(Local_378, Var0) && !func_55()) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) > (fLocal_381 - 45f)) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) < (fLocal_381 + 45f))
+			if (((func_57(Local_378, Var0) && !func_56()) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) > (fLocal_381 - 45f)) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) < (fLocal_381 + 45f))
 			{
-				if (Global_1573337 == 13)
+				if (Global_1573341 == 13)
 				{
-					Global_1573337 = -1;
+					Global_1573341 = -1;
 				}
-				if (!func_54("SA_STRIP_CALL"))
+				if (!func_55("SA_STRIP_CALL"))
 				{
-					func_53("SA_STRIP_CALL");
+					func_54("SA_STRIP_CALL");
 				}
 				iLocal_312 = 1;
 			}
 			break;
 		
 		case 1:
-			if (func_52(1, 0, 1))
+			if (func_53(1, 0, 1))
 			{
-				if (((func_56(Local_378, Var0) && !func_55()) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) > (fLocal_381 - 45f)) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) < (fLocal_381 + 45f))
+				if (((func_57(Local_378, Var0) && !func_56()) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) > (fLocal_381 - 45f)) && ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) < (fLocal_381 + 45f))
 				{
 					if ((!PLAYER::IS_PLAYER_FREE_AIMING(PLAYER::PLAYER_ID()) && !PLAYER::IS_PLAYER_TARGETTING_ANYTHING(PLAYER::PLAYER_ID())) && PAD::IS_CONTROL_JUST_PRESSED(2, 51))
 					{
-						func_51();
-						Global_1573337 = 13;
-						func_43();
-						if (func_54("SA_STRIP_CALL"))
+						func_52();
+						Global_1573341 = 13;
+						func_44();
+						if (func_55("SA_STRIP_CALL"))
 						{
 							HUD::CLEAR_HELP(true);
 						}
 						MISC::CLEAR_AREA_OF_PROJECTILES(Local_378, 2.5f, 0);
-						func_32(PLAYER::PLAYER_ID(), 0, 256, 0);
+						func_33(PLAYER::PLAYER_ID(), 0, 256, 0);
 						iLocal_36 = 1;
 						WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
-						func_23(1, 1, 1, 0, 0, 0, 0);
+						func_24(1, 1, 1, 0, 0, 0, 0);
 						TASK::TASK_PED_SLIDE_TO_COORD(PLAYER::PLAYER_PED_ID(), Local_378, fLocal_381, 0.75f);
 						iLocal_312 = 2;
 					}
 				}
 				else
 				{
-					if (func_54("SA_STRIP_CALL"))
+					if (func_55("SA_STRIP_CALL"))
 					{
 						HUD::CLEAR_HELP(true);
 					}
@@ -585,20 +585,20 @@ void func_1()
 			break;
 		
 		case 2:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
+			func_20(1);
 			if (TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 1045468327) == 7)
 			{
-				func_15(104, 1, -1, 1);
+				func_16(104, 1, -1, 1);
 				iLocal_317 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(Local_382, Local_385, 2, false, false, 1f, 0f, 1f);
 				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_317, sLocal_324, sLocal_325, 4f, -2f, 1, 0, 1000f, 0);
-				if (!func_14(iLocal_322))
+				if (!func_15(iLocal_322))
 				{
 					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_322), iLocal_317, sLocal_324, sLocal_326, 4f, -2f, 1, 0, 1000f, 0);
 					PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_322), sLocal_328, sLocal_324);
 				}
-				if (!func_14(iLocal_323))
+				if (!func_15(iLocal_323))
 				{
 					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_323), iLocal_317, sLocal_324, sLocal_327, 4f, -2f, 1, 0, 1000f, 0);
 					PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_323), sLocal_329, sLocal_324);
@@ -609,9 +609,9 @@ void func_1()
 			break;
 		
 		case 3:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
+			func_20(1);
 			iLocal_318 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_317);
 			if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_318) > 0.99f)
 			{
@@ -626,50 +626,50 @@ void func_1()
 			break;
 		
 		case 4:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
+			func_20(1);
 			iLocal_317 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(Local_382, Local_385, 2, false, false, 1f, 0f, 1f);
 			NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_317, sLocal_372, sLocal_373, 4f, -2f, 1, 0, 1000f, 0);
-			if (!func_14(iLocal_322))
+			if (!func_15(iLocal_322))
 			{
 				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_322), iLocal_317, sLocal_372, sLocal_374, 4f, -2f, 1, 0, 1000f, 0);
 				PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_322), sLocal_376, sLocal_372);
 			}
-			if (!func_14(iLocal_323))
+			if (!func_15(iLocal_323))
 			{
 				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_323), iLocal_317, sLocal_372, sLocal_375, 4f, -2f, 1, 0, 1000f, 0);
 				PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_323), sLocal_377, sLocal_372);
 			}
 			NETWORK::NETWORK_START_SYNCHRONISED_SCENE(iLocal_317);
-			if (!func_54("SA_STRIP_CAM"))
+			if (!func_55("SA_STRIP_CAM"))
 			{
-				func_53("SA_STRIP_CAM");
+				func_54("SA_STRIP_CAM");
 			}
 			iLocal_312 = 5;
 			break;
 		
 		case 5:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
+			func_20(1);
 			iLocal_318 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_317);
 			if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_318) > 0.99f)
 			{
 				iLocal_317 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(Local_382, Local_385, 2, false, false, 1f, 0f, 1f);
 				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_317, sLocal_348, sLocal_349, 4f, -2f, 1, 0, 1000f, 0);
-				if (!func_14(iLocal_322))
+				if (!func_15(iLocal_322))
 				{
 					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_322), iLocal_317, sLocal_348, sLocal_350, 4f, -2f, 1, 0, 1000f, 0);
 					PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_322), sLocal_352, sLocal_348);
 				}
-				if (!func_14(iLocal_323))
+				if (!func_15(iLocal_323))
 				{
 					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_323), iLocal_317, sLocal_348, sLocal_351, 4f, -2f, 1, 0, 1000f, 0);
 					PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_323), sLocal_353, sLocal_348);
 				}
 				NETWORK::NETWORK_START_SYNCHRONISED_SCENE(iLocal_317);
-				if (func_54("SA_STRIP_CAM"))
+				if (func_55("SA_STRIP_CAM"))
 				{
 					HUD::CLEAR_HELP(true);
 				}
@@ -678,42 +678,42 @@ void func_1()
 			break;
 		
 		case 6:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
+			func_20(1);
 			if (!PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_317))
 			{
 				iLocal_317 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(Local_382, Local_385, 2, false, true, 1f, 0f, 1f);
 				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_317, sLocal_354, sLocal_355, 4f, -2f, 1, 0, 1000f, 0);
-				if (!func_14(iLocal_322))
+				if (!func_15(iLocal_322))
 				{
 					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_322), iLocal_317, sLocal_354, sLocal_356, 4f, -2f, 1, 0, 1000f, 0);
 					PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_322), sLocal_358, sLocal_354);
 				}
-				if (!func_14(iLocal_323))
+				if (!func_15(iLocal_323))
 				{
 					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_323), iLocal_317, sLocal_354, sLocal_357, 4f, -2f, 1, 0, 1000f, 0);
 					PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_323), sLocal_359, sLocal_354);
 				}
 				NETWORK::NETWORK_START_SYNCHRONISED_SCENE(iLocal_317);
 				iLocal_319++;
-				if (!func_54("SA_STRIP_MENU"))
+				if (!func_55("SA_STRIP_MENU"))
 				{
-					func_53("SA_STRIP_MENU");
+					func_54("SA_STRIP_MENU");
 				}
 				iLocal_312 = 7;
 			}
 			break;
 		
 		case 7:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
-			if (!func_11(PLAYER::PLAYER_ID()))
+			func_20(1);
+			if (!func_12(PLAYER::PLAYER_ID()))
 			{
 				if (PAD::IS_CONTROL_JUST_PRESSED(2, 223))
 				{
-					if (func_54("SA_STRIP_MENU"))
+					if (func_55("SA_STRIP_MENU"))
 					{
 						HUD::CLEAR_HELP(true);
 					}
@@ -721,28 +721,28 @@ void func_1()
 				}
 				if (PAD::IS_CONTROL_JUST_PRESSED(2, 222))
 				{
-					if (func_54("SA_STRIP_MENU"))
+					if (func_55("SA_STRIP_MENU"))
 					{
 						HUD::CLEAR_HELP(true);
 					}
-					func_10();
+					func_11();
 					iLocal_312 = 10;
 				}
 			}
 			break;
 		
 		case 8:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
+			func_20(1);
 			iLocal_317 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(Local_382, Local_385, 2, false, false, 1f, 0f, 1f);
 			NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_317, sLocal_360, sLocal_361, 4f, -2f, 1, 0, 1000f, 0);
-			if (!func_14(iLocal_322))
+			if (!func_15(iLocal_322))
 			{
 				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_322), iLocal_317, sLocal_360, sLocal_362, 4f, -2f, 1, 0, 1000f, 0);
 				PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_322), sLocal_364, sLocal_360);
 			}
-			if (!func_14(iLocal_323))
+			if (!func_15(iLocal_323))
 			{
 				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_323), iLocal_317, sLocal_360, sLocal_363, 4f, -2f, 1, 0, 1000f, 0);
 				PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_323), sLocal_365, sLocal_360);
@@ -752,9 +752,9 @@ void func_1()
 			break;
 		
 		case 9:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
+			func_20(1);
 			iLocal_318 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_317);
 			if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_318) > 0.99f)
 			{
@@ -796,18 +796,18 @@ void func_1()
 			break;
 		
 		case 10:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
-			Global_1573338 = 3;
+			func_20(1);
+			Global_1573342 = 3;
 			iLocal_317 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(Local_382, Local_385, 2, false, false, 1f, 0f, 1f);
 			NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_317, sLocal_366, sLocal_367, 4f, -2f, 1, 0, 1000f, 0);
-			if (!func_14(iLocal_322))
+			if (!func_15(iLocal_322))
 			{
 				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_322), iLocal_317, sLocal_366, sLocal_368, 4f, -2f, 1, 0, 1000f, 0);
 				PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_322), sLocal_370, sLocal_366);
 			}
-			if (!func_14(iLocal_323))
+			if (!func_15(iLocal_323))
 			{
 				NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(NETWORK::NET_TO_PED(iLocal_323), iLocal_317, sLocal_366, sLocal_369, 4f, -2f, 1, 0, 1000f, 0);
 				PED::PLAY_FACIAL_ANIM(NETWORK::NET_TO_PED(iLocal_323), sLocal_371, sLocal_366);
@@ -817,30 +817,30 @@ void func_1()
 			break;
 		
 		case 11:
-			func_22();
+			func_23();
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-			func_19(1);
+			func_20(1);
 			iLocal_318 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_317);
 			if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_318) > 0.5f)
 			{
-				if (!func_14(iLocal_322))
+				if (!func_15(iLocal_322))
 				{
 					if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_322))
 					{
-						func_9(&iLocal_322);
+						func_10(&iLocal_322);
 					}
 				}
-				if (!func_14(iLocal_323))
+				if (!func_15(iLocal_323))
 				{
 					if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_323))
 					{
-						func_9(&iLocal_323);
+						func_10(&iLocal_323);
 					}
 				}
 				func_2();
 				TASK::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 				CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 1f, 3, 0);
-				func_32(PLAYER::PLAYER_ID(), 1, 0, 0);
+				func_33(PLAYER::PLAYER_ID(), 1, 0, 0);
 				iLocal_36 = 0;
 				iLocal_312 = 0;
 			}
@@ -853,23 +853,26 @@ void func_2()
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = Global_1590518;
-	if (iVar0 > -1 && iVar0 != func_8())
+	iVar0 = Global_1590744;
+	if (iVar0 > -1 && iVar0 != func_9())
 	{
 		iVar1 = 0;
-		while (iVar1 < 25)
+		while (iVar1 < 26)
 		{
-			if (Global_1590682[PLAYER::PLAYER_ID() /*883*/].f_274.f_28 == Global_1590682[iVar0 /*883*/].f_274[iVar1])
+			if (Global_1590908[PLAYER::PLAYER_ID() /*874*/].f_267.f_29 == Global_1590908[iVar0 /*874*/].f_267[iVar1])
 			{
-				if (iVar0 == PLAYER::PLAYER_ID())
+				if (func_8(iVar1) != -1)
 				{
-					func_6(iVar1);
-					return;
-				}
-				else if (func_5(iVar0, 0, 1))
-				{
-					func_3(func_4(iVar0), 0, 0, 1, iVar1);
-					return;
+					if (iVar0 == PLAYER::PLAYER_ID())
+					{
+						func_6(iVar1);
+						return;
+					}
+					else if (func_5(iVar0, 0, 1))
+					{
+						func_3(func_4(iVar0), 0, 0, 1, iVar1);
+						return;
+					}
 				}
 			}
 			iVar1++;
@@ -881,7 +884,7 @@ void func_3(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 {
 	struct<6> Var0;
 	
-	Var0 = 1294893057;
+	Var0 = 1763836227;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	Var0.f_3 = iParam2;
@@ -889,7 +892,7 @@ void func_3(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	Var0.f_5 = iParam4;
 	if (!iParam0 == 0)
 	{
-		SCRIPT::TRIGGER_SCRIPT_EVENT(1, &Var0, 6, iParam0);
+		SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var0, 6, iParam0);
 	}
 }
 
@@ -922,7 +925,7 @@ int func_5(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2440277.f_3[iVar0])
+				if (!Global_2441237.f_3[iVar0])
 				{
 					return 0;
 				}
@@ -935,35 +938,38 @@ int func_5(int iParam0, bool bParam1, bool bParam2)
 
 void func_6(int iParam0)
 {
+	int iVar0;
+	
 	switch (iParam0)
 	{
 		case 0:
-			Global_2097152[func_7() /*10931*/].f_5507.f_18++;
+			Global_2097152[func_7() /*5557*/].f_7.f_18++;
 			break;
 		
 		case 1:
-			Global_2097152[func_7() /*10931*/].f_5507.f_21++;
+			Global_2097152[func_7() /*5557*/].f_7.f_21++;
 			break;
 		
 		case 2:
-			Global_2097152[func_7() /*10931*/].f_5507.f_24++;
+			Global_2097152[func_7() /*5557*/].f_7.f_24++;
 			break;
 		
 		case 3:
-			Global_2097152[func_7() /*10931*/].f_5507.f_27++;
+			Global_2097152[func_7() /*5557*/].f_7.f_27++;
 			break;
 		
 		case 4:
-			Global_2097152[func_7() /*10931*/].f_5507.f_30++;
+			Global_2097152[func_7() /*5557*/].f_7.f_30++;
 			break;
 		
 		case 99:
-			Global_2097152[func_7() /*10931*/].f_5507.f_33++;
+			Global_2097152[func_7() /*5557*/].f_7.f_33++;
 			break;
 	}
-	if (iParam0 >= 5 && iParam0 != 99)
+	iVar0 = func_8(iParam0);
+	if (iVar0 != -1)
 	{
-		Global_2097152[func_7() /*10931*/].f_5507.f_78[(iParam0 - 5)]++;
+		Global_2097152[func_7() /*5557*/].f_7.f_78[iVar0]++;
 	}
 }
 
@@ -975,12 +981,24 @@ int func_7()
 	return iVar0;
 }
 
-int func_8()
+int func_8(int iParam0)
+{
+	if (iParam0 >= 5 && iParam0 != 99)
+	{
+		if (iParam0 <= 25)
+		{
+			return (iParam0 - 5);
+		}
+	}
+	return -1;
+}
+
+int func_9()
 {
 	return -1;
 }
 
-void func_9(int iParam0)
+void func_10(int iParam0)
 {
 	int iVar0;
 	
@@ -991,7 +1009,7 @@ void func_9(int iParam0)
 	}
 }
 
-void func_10()
+void func_11()
 {
 	if (MISC::IS_PC_VERSION())
 	{
@@ -1003,22 +1021,22 @@ void func_10()
 	}
 }
 
-bool func_11(int iParam0)
+bool func_12(int iParam0)
 {
-	return MISC::IS_BIT_SET(Global_1377236.f_241.f_136[func_13(9) /*33*/][iParam0], func_12(9));
-}
-
-int func_12(int iParam0)
-{
-	return (iParam0 % 32);
+	return MISC::IS_BIT_SET(Global_1379108.f_241.f_136[func_14(9) /*33*/][iParam0], func_13(9));
 }
 
 int func_13(int iParam0)
 {
-	return (iParam0 / 32);
+	return (iParam0 % 32);
 }
 
 int func_14(int iParam0)
+{
+	return (iParam0 / 32);
+}
+
+int func_15(int iParam0)
 {
 	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(iParam0))
 	{
@@ -1027,13 +1045,13 @@ int func_14(int iParam0)
 	return 1;
 }
 
-void func_15(int iParam0, bool bParam1, int iParam2, bool bParam3)
+void func_16(int iParam0, bool bParam1, int iParam2, bool bParam3)
 {
 	int iVar0;
 	
-	if (func_18())
+	if (func_19())
 	{
-		iVar0 = Global_2588062[iParam0 /*3*/][func_16(iParam2)];
+		iVar0 = Global_2592627[iParam0 /*3*/][func_17(iParam2)];
 		if (iVar0 != 0)
 		{
 			STATS::STAT_SET_BOOL(iVar0, bParam1, bParam3);
@@ -1041,7 +1059,7 @@ void func_15(int iParam0, bool bParam1, int iParam2, bool bParam3)
 	}
 }
 
-int func_16(var uParam0)
+int func_17(var uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -1049,144 +1067,144 @@ int func_16(var uParam0)
 	iVar0 = uParam0;
 	if (iVar0 == -1)
 	{
-		iVar1 = func_17();
+		iVar1 = func_18();
 		if (iVar1 > -1)
 		{
-			Global_2551772 = 0;
+			Global_2555428 = 0;
 			iVar0 = iVar1;
 		}
 		else
 		{
 			iVar0 = 0;
-			Global_2551772 = 1;
+			Global_2555428 = 1;
 		}
 	}
 	return iVar0;
 }
 
-int func_17()
+int func_18()
 {
 	return Global_1312763;
 }
 
-int func_18()
+int func_19()
 {
 	return 1;
 	return 0;
 }
 
-void func_19(bool bParam0)
+void func_20(bool bParam0)
 {
 	if (bParam0)
 	{
-		func_21();
+		func_22();
 	}
-	func_20(4, -1);
-	func_20(6, -1);
-	func_20(7, -1);
-	func_20(3, -1);
-	func_20(1, -1);
-	func_20(2, -1);
-	func_20(11, -1);
-	func_20(13, -1);
-	func_20(14, -1);
-	func_20(16, -1);
+	func_21(4, -1);
+	func_21(6, -1);
+	func_21(7, -1);
+	func_21(3, -1);
+	func_21(1, -1);
+	func_21(2, -1);
+	func_21(11, -1);
+	func_21(13, -1);
+	func_21(14, -1);
+	func_21(16, -1);
 }
 
-void func_20(int iParam0, int iParam1)
+void func_21(int iParam0, int iParam1)
 {
-	MISC::SET_BIT(&(Global_1377236.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1379108.f_1047), iParam0);
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
 			{
-				Global_1377236.f_170[iParam1] = 1;
+				Global_1379108.f_170[iParam1] = 1;
 			}
 			break;
 	}
 }
 
-void func_21()
-{
-	Global_2540612.f_4595 = 0;
-}
-
 void func_22()
 {
-	Global_22411.f_6 = 1;
+	Global_2544210.f_4598 = 0;
 }
 
-void func_23(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4, bool bParam5, bool bParam6)
+void func_23()
+{
+	Global_22531.f_6 = 1;
+}
+
+void func_24(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4, bool bParam5, bool bParam6)
 {
 	if (bParam0)
 	{
 		PLAYER::SPECIAL_ABILITY_DEACTIVATE_FAST(PLAYER::PLAYER_ID(), 0);
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), true);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), true);
-		func_31(1);
+		func_32(1);
 		HUD::THEFEED_FLUSH_QUEUE();
 		HUD::THEFEED_PAUSE();
-		if (Global_19681.f_1 > 3 && !bParam6)
+		if (Global_19798.f_1 > 3 && !bParam6)
 		{
 			if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 			{
 				AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 			}
-			if (!func_30())
+			if (!func_31())
 			{
-				Global_19681.f_1 = 3;
+				Global_19798.f_1 = 3;
 			}
-			Global_21005 = 5;
+			Global_21125 = 5;
 		}
-		func_29(1, bParam3, iParam2, 0);
-		Global_61723 = 1;
-		Global_74033 = 1;
-		Global_76831 = 1;
+		func_30(1, bParam3, iParam2, 0);
+		Global_62104 = 1;
+		Global_74431 = 1;
+		Global_77246 = 1;
 	}
 	else
 	{
-		func_31(0);
+		func_32(0);
 		HUD::THEFEED_RESUME();
-		Global_61723 = 0;
+		Global_62104 = 0;
 		if (bParam1)
 		{
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
 		}
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);
-		func_29(0, bParam3, iParam2, 0);
+		func_30(0, bParam3, iParam2, 0);
 		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
-			if (((((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_27(PLAYER::PLAYER_ID())) && !func_25(PLAYER::PLAYER_ID(), 0)) && !func_24()) && !bParam4) && !bParam5)
+			if (((((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_28(PLAYER::PLAYER_ID())) && !func_26(PLAYER::PLAYER_ID(), 0)) && !func_25()) && !bParam4) && !bParam5)
 			{
 				ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false);
 			}
 		}
-		else if (((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_27(PLAYER::PLAYER_ID())) && !bParam4) && !bParam5)
+		else if (((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_28(PLAYER::PLAYER_ID())) && !bParam4) && !bParam5)
 		{
 			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false);
 		}
-		Global_76831 = 0;
+		Global_77246 = 0;
 	}
 }
 
-bool func_24()
+bool func_25()
 {
-	return MISC::IS_BIT_SET(Global_1590682[PLAYER::PLAYER_ID() /*883*/].f_39.f_18, 14);
+	return MISC::IS_BIT_SET(Global_1590908[PLAYER::PLAYER_ID() /*874*/].f_36.f_18, 14);
 }
 
-bool func_25(int iParam0, int iParam1)
+bool func_26(int iParam0, int iParam1)
 {
 	bool bVar0;
 	
 	if (iParam0 == PLAYER::PLAYER_ID())
 	{
-		bVar0 = func_26(-1, 0) == 8;
+		bVar0 = func_27(-1, 0) == 8;
 	}
 	else
 	{
-		bVar0 = Global_1590682[iParam0 /*883*/].f_211 == 8;
+		bVar0 = Global_1590908[iParam0 /*874*/].f_205 == 8;
 	}
 	if (iParam1 == 1)
 	{
@@ -1198,7 +1216,7 @@ bool func_25(int iParam0, int iParam1)
 	return bVar0;
 }
 
-int func_26(int iParam0, bool bParam1)
+int func_27(int iParam0, bool bParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -1206,9 +1224,9 @@ int func_26(int iParam0, bool bParam1)
 	iVar1 = iParam0;
 	if (iVar1 == -1)
 	{
-		iVar1 = func_17();
+		iVar1 = func_18();
 	}
-	if (Global_1312876[iVar1] == 1)
+	if (Global_1312882[iVar1] == 1)
 	{
 		if (bParam1)
 		{
@@ -1225,32 +1243,32 @@ int func_26(int iParam0, bool bParam1)
 	return iVar0;
 }
 
-int func_27(int iParam0)
+int func_28(int iParam0)
 {
-	if (func_25(iParam0, 0))
+	if (func_26(iParam0, 0))
 	{
 		return 1;
 	}
-	if (func_28())
+	if (func_29())
 	{
 		if (iParam0 == PLAYER::PLAYER_ID())
 		{
 			return 1;
 		}
 	}
-	if (MISC::IS_BIT_SET(Global_2426097[iParam0 /*443*/].f_199, 2))
+	if (MISC::IS_BIT_SET(Global_2426865[iParam0 /*449*/].f_199, 2))
 	{
 		return 1;
 	}
 	return 0;
 }
 
-bool func_28()
+bool func_29()
 {
 	return MISC::IS_BIT_SET(Global_2359302, 3);
 }
 
-int func_29(bool bParam0, bool bParam1, var uParam2, bool bParam3)
+int func_30(bool bParam0, bool bParam1, var uParam2, bool bParam3)
 {
 	int iVar0;
 	
@@ -1266,28 +1284,28 @@ int func_29(bool bParam0, bool bParam1, var uParam2, bool bParam3)
 	return iVar0;
 }
 
-int func_30()
+int func_31()
 {
-	if (Global_19681.f_1 == 1 || Global_19681.f_1 == 0)
+	if (Global_19798.f_1 == 1 || Global_19798.f_1 == 0)
 	{
 		return 1;
 	}
 	return 0;
 }
 
-void func_31(int iParam0)
+void func_32(int iParam0)
 {
 	if (iParam0 == 1)
 	{
-		MISC::SET_BIT(&Global_7551, 13);
+		MISC::SET_BIT(&Global_7668, 13);
 	}
 	else
 	{
-		MISC::CLEAR_BIT(&Global_7551, 13);
+		MISC::CLEAR_BIT(&Global_7668, 13);
 	}
 }
 
-void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
+void func_33(int iParam0, bool bParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	bool bVar1;
@@ -1326,7 +1344,7 @@ void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
 			SCRIPT::SET_NO_LOADING_SCREEN(false);
 		}
 	}
-	if (func_42())
+	if (func_43())
 	{
 		if (bParam1)
 		{
@@ -1373,7 +1391,7 @@ void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
 		{
 			bVar1 = false;
 		}
-		if (!func_40())
+		if (!func_41())
 		{
 			bVar26 = false;
 			if (bParam1 == 1)
@@ -1409,7 +1427,7 @@ void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
 				{
 					NETWORK::FADE_OUT_LOCAL_PLAYER(true);
 				}
-				else if (bVar14 || (!func_25(PLAYER::PLAYER_ID(), 0) && !func_28()))
+				else if (bVar14 || (!func_26(PLAYER::PLAYER_ID(), 0) && !func_29()))
 				{
 					ENTITY::SET_ENTITY_VISIBLE(iVar27, !bVar14, false);
 				}
@@ -1419,20 +1437,20 @@ void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
 					{
 						NETWORK::FADE_OUT_LOCAL_PLAYER(false);
 					}
-					Global_2426097[iParam0 /*443*/].f_248 = 0;
+					Global_2426865[iParam0 /*449*/].f_253 = 0;
 				}
 			}
 			if (bParam1)
 			{
 				if (bVar1)
 				{
-					func_37(0, 0, 0);
+					func_38(0, 0, 0);
 					if (bVar25)
 					{
 						STREAMING::CLEAR_FOCUS();
 					}
 				}
-				if (!func_36(iVar27) && !ENTITY::IS_ENTITY_ATTACHED_TO_ANY_VEHICLE(iVar27))
+				if (!func_37(iVar27) && !ENTITY::IS_ENTITY_ATTACHED_TO_ANY_VEHICLE(iVar27))
 				{
 					if (!bVar22)
 					{
@@ -1461,8 +1479,8 @@ void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
 				PED::SET_PED_CAN_RAGDOLL(iVar27, true);
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) == 0)
 				{
+					func_36();
 					func_35();
-					func_34();
 				}
 				if (PLAYER::IS_PLAYER_TELEPORT_ACTIVE())
 				{
@@ -1473,19 +1491,19 @@ void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
 				if (STREAMING::IS_NEW_LOAD_SCENE_ACTIVE())
 				{
 				}
-				Global_2426097[iParam0 /*443*/].f_249 = 0;
+				Global_2426865[iParam0 /*449*/].f_254 = 0;
 				if (!bVar24)
 				{
 					bVar3 = true;
 				}
-				if (Global_2405074.f_2674)
+				if (Global_2405077.f_2679)
 				{
-					Global_2405074.f_2674 = 0;
+					Global_2405077.f_2679 = 0;
 				}
 			}
 			else
 			{
-				if (!func_36(iVar27) && !ENTITY::IS_ENTITY_ATTACHED_TO_ANY_VEHICLE(iVar27))
+				if (!func_37(iVar27) && !ENTITY::IS_ENTITY_ATTACHED_TO_ANY_VEHICLE(iVar27))
 				{
 					if (!bVar22)
 					{
@@ -1502,12 +1520,12 @@ void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
 							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iVar27, true);
 						}
 					}
-					if (func_33(Global_4456448.f_129348))
+					if (func_34(Global_4456448.f_133963))
 					{
 						ENTITY::FREEZE_ENTITY_POSITION(iVar27, true);
 					}
 				}
-				if (Global_1312872)
+				if (Global_1312878)
 				{
 					bVar10 = false;
 				}
@@ -1582,34 +1600,34 @@ void func_32(int iParam0, bool bParam1, int iParam2, int iParam3)
 	}
 }
 
-bool func_33(int iParam0)
+bool func_34(int iParam0)
 {
 	return iParam0 == 17;
 }
 
-void func_34()
+void func_35()
 {
 	struct<3> Var0;
 	
-	Global_2440277.f_1344 = 0;
-	Global_2440277.f_1345 = 0;
-	Global_2440277.f_1346 = { 9999.9f, 9999.9f, 9999.9f };
-	Global_2440277.f_1351 = -1;
-	Global_2440277.f_1352 = 0;
-	Global_2405074.f_2685 = { Var0 };
+	Global_2441237.f_1351 = 0;
+	Global_2441237.f_1352 = 0;
+	Global_2441237.f_1353 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2441237.f_1358 = -1;
+	Global_2441237.f_1359 = 0;
+	Global_2405077.f_2690 = { Var0 };
 }
 
-void func_35()
+void func_36()
 {
-	Global_2405074.f_696 = 0;
-	Global_2405074.f_2728 = 0;
-	Global_2405074.f_512 = 0;
-	Global_2405074.f_601 = 0;
-	Global_2426097[PLAYER::PLAYER_ID() /*443*/].f_211 = 0;
-	Global_2405074.f_2683 = 0;
+	Global_2405077.f_701 = 0;
+	Global_2405077.f_2733 = 0;
+	Global_2405077.f_514 = 0;
+	Global_2405077.f_605 = 0;
+	Global_2426865[PLAYER::PLAYER_ID() /*449*/].f_216 = 0;
+	Global_2405077.f_2688 = 0;
 }
 
-int func_36(int iParam0)
+int func_37(int iParam0)
 {
 	int iVar0;
 	
@@ -1628,7 +1646,7 @@ int func_36(int iParam0)
 	return 0;
 }
 
-void func_37(bool bParam0, int iParam1, int iParam2)
+void func_38(bool bParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	int iVar1;
@@ -1655,7 +1673,7 @@ void func_37(bool bParam0, int iParam1, int iParam2)
 		{
 			if (bParam0 == 1)
 			{
-				func_39();
+				func_40();
 			}
 			else if (!MISC::IS_BIT_SET(Global_2359302.f_67, 1))
 			{
@@ -1671,7 +1689,7 @@ void func_37(bool bParam0, int iParam1, int iParam2)
 				MISC::SET_BIT(&(Global_2359302.f_67), 1);
 			}
 		}
-		if (func_25(PLAYER::PLAYER_ID(), 0))
+		if (func_26(PLAYER::PLAYER_ID(), 0))
 		{
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE_EXTENDED(bParam0, iParam1, true);
 		}
@@ -1680,11 +1698,11 @@ void func_37(bool bParam0, int iParam1, int iParam2)
 			NETWORK::NETWORK_SET_IN_SPECTATOR_MODE(bParam0, iParam1);
 		}
 		HUD::SET_MINIMAP_IN_SPECTATOR_MODE(bParam0, iParam1);
-		func_38(joaat("mpply_is_char_spectating"), bParam0);
+		func_39(joaat("mpply_is_char_spectating"), bParam0);
 	}
 }
 
-void func_38(int iParam0, bool bParam1)
+void func_39(int iParam0, bool bParam1)
 {
 	int iVar0;
 	
@@ -1695,7 +1713,7 @@ void func_38(int iParam0, bool bParam1)
 	}
 }
 
-void func_39()
+void func_40()
 {
 	int iVar0;
 	
@@ -1715,38 +1733,38 @@ void func_39()
 	}
 }
 
-int func_40()
+int func_41()
 {
-	if (func_41() == 0)
+	if (func_42() == 0)
 	{
 		return 1;
 	}
 	return 0;
-}
-
-int func_41()
-{
-	return Global_1312485.f_18;
 }
 
 int func_42()
 {
-	if (Global_1590682[PLAYER::PLAYER_ID() /*883*/].f_35 && !Global_2452907.f_2846.f_215 == -1)
+	return Global_1312485.f_18;
+}
+
+int func_43()
+{
+	if (MISC::IS_BIT_SET(Global_1590908[PLAYER::PLAYER_ID() /*874*/].f_873, 2) && !Global_2453903.f_2846.f_216 == -1)
 	{
 		return 1;
 	}
 	return 0;
 }
 
-void func_43()
+void func_44()
 {
 	if (!NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(iLocal_322))
 	{
-		if (func_45(2, 0, 1))
+		if (func_46(2, 0, 1))
 		{
 			if (NETWORK::CAN_REGISTER_MISSION_PEDS(2))
 			{
-				if (func_44(&iLocal_322, 5, iLocal_320, Local_388, fLocal_391, 1, 1, 1) && func_44(&iLocal_323, 5, iLocal_321, Local_388, fLocal_391, 1, 1, 1))
+				if (func_45(&iLocal_322, 5, iLocal_320, Local_388, fLocal_391, 1, 1, 1) && func_45(&iLocal_323, 5, iLocal_321, Local_388, fLocal_391, 1, 1, 1))
 				{
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iLocal_320);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iLocal_321);
@@ -1757,7 +1775,7 @@ void func_43()
 	}
 }
 
-int func_44(int iParam0, int iParam1, int iParam2, struct<3> Param3, float fParam6, bool bParam7, bool bParam8, bool bParam9)
+int func_45(int iParam0, int iParam1, int iParam2, struct<3> Param3, float fParam6, bool bParam7, bool bParam8, bool bParam9)
 {
 	int iVar0;
 	
@@ -1782,21 +1800,21 @@ int func_44(int iParam0, int iParam1, int iParam2, struct<3> Param3, float fPara
 	return 0;
 }
 
-bool func_45(int iParam0, bool bParam1, bool bParam2)
+bool func_46(int iParam0, bool bParam1, bool bParam2)
 {
-	return func_46(0, iParam0, 1, bParam1, bParam2);
+	return func_47(0, iParam0, 1, bParam1, bParam2);
 }
 
-int func_46(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4)
+int func_47(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!MISC::IS_BIT_SET(Global_1389439, 0))
+	if (!MISC::IS_BIT_SET(Global_1391771, 0))
 	{
 		return 0;
 	}
-	if ((bParam2 && !bParam3) && iParam1 <= (func_50(iParam0) - func_49(iParam0, 0)))
+	if ((bParam2 && !bParam3) && iParam1 <= (func_51(iParam0) - func_50(iParam0, 0)))
 	{
 		return 1;
 	}
@@ -1806,29 +1824,29 @@ int func_46(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4)
 		{
 			if (bParam2)
 			{
-				iVar0 = (iParam1 - func_49(iParam0, 0));
+				iVar0 = (iParam1 - func_50(iParam0, 0));
 			}
 			else
 			{
 				iVar0 = iParam1;
 			}
-			iVar1 = (func_50(iParam0) - func_48(iParam0));
+			iVar1 = (func_51(iParam0) - func_49(iParam0));
 		}
 		else
 		{
 			if (bParam2)
 			{
-				iVar0 = (iParam1 - func_49(iParam0, 0));
+				iVar0 = (iParam1 - func_50(iParam0, 0));
 			}
 			else
 			{
 				iVar0 = iParam1;
 			}
-			iVar1 = (func_50(iParam0) - func_49(iParam0, 1));
+			iVar1 = (func_51(iParam0) - func_50(iParam0, 1));
 		}
-		if (!bParam4 && Global_1590682[PLAYER::PLAYER_ID() /*883*/] != 3)
+		if (!bParam4 && Global_1590908[PLAYER::PLAYER_ID() /*874*/] != 3)
 		{
-			iVar1 = (iVar1 - func_47(iParam0));
+			iVar1 = (iVar1 - func_48(iParam0));
 		}
 		if (iVar0 < iVar1)
 		{
@@ -1838,45 +1856,45 @@ int func_46(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4)
 	return 0;
 }
 
-int func_47(int iParam0)
-{
-	switch (iParam0)
-	{
-		case 0:
-			return 10;
-			break;
-		
-		case 1:
-			return 10;
-			break;
-		
-		case 2:
-			return 10;
-			break;
-	}
-	return 0;
-}
-
 int func_48(int iParam0)
 {
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1389439.f_1;
+			return 10;
 			break;
 		
 		case 1:
-			return Global_1389439.f_2;
+			return 10;
 			break;
 		
 		case 2:
-			return Global_1389439.f_3;
+			return 10;
 			break;
 	}
 	return 0;
 }
 
-int func_49(int iParam0, bool bParam1)
+int func_49(int iParam0)
+{
+	switch (iParam0)
+	{
+		case 0:
+			return Global_1391771.f_1;
+			break;
+		
+		case 1:
+			return Global_1391771.f_2;
+			break;
+		
+		case 2:
+			return Global_1391771.f_3;
+			break;
+	}
+	return 0;
+}
+
+int func_50(int iParam0, bool bParam1)
 {
 	int iVar0;
 	
@@ -1886,7 +1904,7 @@ int func_49(int iParam0, bool bParam1)
 		case 0:
 			if (!NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 			{
-				return Global_2426097[iVar0 /*443*/].f_213;
+				return Global_2426865[iVar0 /*449*/].f_218;
 			}
 			else
 			{
@@ -1897,7 +1915,7 @@ int func_49(int iParam0, bool bParam1)
 		case 1:
 			if (!NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 			{
-				return Global_2426097[iVar0 /*443*/].f_214;
+				return Global_2426865[iVar0 /*449*/].f_219;
 			}
 			else
 			{
@@ -1908,7 +1926,7 @@ int func_49(int iParam0, bool bParam1)
 		case 2:
 			if (!NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 			{
-				return Global_2426097[iVar0 /*443*/].f_215;
+				return Global_2426865[iVar0 /*449*/].f_220;
 			}
 			else
 			{
@@ -1919,26 +1937,26 @@ int func_49(int iParam0, bool bParam1)
 	return 0;
 }
 
-int func_50(int iParam0)
+int func_51(int iParam0)
 {
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1389447;
+			return Global_1391779;
 			break;
 		
 		case 1:
-			return Global_1389448;
+			return Global_1391780;
 			break;
 		
 		case 2:
-			return Global_1389449;
+			return Global_1391781;
 			break;
 	}
 	return 0;
 }
 
-void func_51()
+void func_52()
 {
 	if (MISC::IS_PC_VERSION())
 	{
@@ -1950,7 +1968,7 @@ void func_51()
 	}
 }
 
-int func_52(bool bParam0, bool bParam1, bool bParam2)
+int func_53(bool bParam0, bool bParam1, bool bParam2)
 {
 	int iVar0;
 	
@@ -2013,28 +2031,28 @@ int func_52(bool bParam0, bool bParam1, bool bParam2)
 	return 1;
 }
 
-void func_53(char* sParam0)
+void func_54(char* sParam0)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
 	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, true, true, -1);
 }
 
-bool func_54(char* sParam0)
+bool func_55(char* sParam0)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam0);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-int func_55()
+int func_56()
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		return Global_96433.f_44 == 1;
+		return Global_96848.f_44 == 1;
 	}
 	return 0;
 }
 
-int func_56(struct<3> Param0, float fParam3, var uParam4, var uParam5)
+int func_57(struct<3> Param0, float fParam3, var uParam4, var uParam5)
 {
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 	{
@@ -2042,13 +2060,13 @@ int func_56(struct<3> Param0, float fParam3, var uParam4, var uParam5)
 		{
 			if (!FIRE::IS_EXPLOSION_IN_SPHERE(-1, Param0, 2f))
 			{
-				if ((((CAM::IS_GAMEPLAY_CAM_RENDERING() && !CUTSCENE::IS_CUTSCENE_PLAYING()) && !CAM::IS_CINEMATIC_CAM_RENDERING()) && !func_60(0)) && !func_59())
+				if ((((CAM::IS_GAMEPLAY_CAM_RENDERING() && !CUTSCENE::IS_CUTSCENE_PLAYING()) && !CAM::IS_CINEMATIC_CAM_RENDERING()) && !func_61(0)) && !func_60())
 				{
-					if ((Global_95883 && Global_95884) || func_58())
+					if ((Global_96298 && Global_96299) || func_59())
 					{
 						return 0;
 					}
-					if (func_57(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Param0, fParam3, 0))
+					if (func_58(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Param0, fParam3, 0))
 					{
 						return 1;
 					}
@@ -2059,7 +2077,7 @@ int func_56(struct<3> Param0, float fParam3, var uParam4, var uParam5)
 	return 0;
 }
 
-int func_57(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
+int func_58(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 {
 	if (fParam6 < 0f)
 	{
@@ -2088,16 +2106,16 @@ int func_57(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	return 0;
 }
 
-int func_58()
+int func_59()
 {
-	if (Global_41631 == 15)
+	if (Global_42009 == 15)
 	{
 		return 0;
 	}
 	return 1;
 }
 
-int func_59()
+int func_60()
 {
 	int iVar0;
 	int iVar1;
@@ -2138,13 +2156,13 @@ int func_59()
 	return 0;
 }
 
-int func_60(int iParam0)
+int func_61(int iParam0)
 {
 	if (iParam0 == 1)
 	{
-		if (Global_19681.f_1 > 3)
+		if (Global_19798.f_1 > 3)
 		{
-			if (MISC::IS_BIT_SET(Global_7551, 14))
+			if (MISC::IS_BIT_SET(Global_7668, 14))
 			{
 				return 1;
 			}
@@ -2162,45 +2180,45 @@ int func_60(int iParam0)
 	{
 		return 1;
 	}
-	if (Global_19681.f_1 > 3)
+	if (Global_19798.f_1 > 3)
 	{
 		return 1;
 	}
 	return 0;
 }
 
-int func_61()
+int func_62()
 {
 	var uVar0;
 	
-	func_69(&uVar0);
-	if (Global_1312872 == 0)
+	func_70(&uVar0);
+	if (Global_1312878 == 0)
 	{
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
 			return 1;
 		}
 	}
+	if (func_69())
+	{
+		return 1;
+	}
+	if (Global_2465749)
+	{
+		return 1;
+	}
 	if (func_68())
 	{
 		return 1;
 	}
-	if (Global_2464721)
+	if (func_67(159))
 	{
-		return 1;
-	}
-	if (func_67())
-	{
-		return 1;
-	}
-	if (func_66(159))
-	{
-		if (!func_65())
+		if (!func_66())
 		{
 			return 1;
 		}
 	}
-	if (func_66(157))
+	if (func_67(157))
 	{
 		return 1;
 	}
@@ -2208,9 +2226,9 @@ int func_61()
 	{
 		return 1;
 	}
-	if (func_62() != 0)
+	if (func_63() != 0)
 	{
-		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(func_62()) == 0)
+		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(func_63()) == 0)
 		{
 			return 1;
 		}
@@ -2218,12 +2236,12 @@ int func_61()
 	return 0;
 }
 
-int func_62()
+int func_63()
 {
-	switch (func_64())
+	switch (func_65())
 	{
 		case 0:
-			return func_63();
+			return func_64();
 			break;
 		
 		case 2:
@@ -2233,9 +2251,9 @@ int func_62()
 	return 0;
 }
 
-int func_63()
+int func_64()
 {
-	switch (Global_2464823)
+	switch (Global_2465851)
 	{
 		case 0:
 			return joaat("freemode");
@@ -2245,17 +2263,17 @@ int func_63()
 	return joaat("freemode");
 }
 
-int func_64()
+int func_65()
 {
-	return Global_30968;
+	return Global_31345;
 }
 
-bool func_65()
+bool func_66()
 {
-	return Global_2452015.f_696;
+	return Global_2453009.f_698;
 }
 
-int func_66(int iParam0)
+int func_67(int iParam0)
 {
 	if (SCRIPT::GET_EVENT_EXISTS(1, iParam0))
 	{
@@ -2264,17 +2282,17 @@ int func_66(int iParam0)
 	return 0;
 }
 
-bool func_67()
-{
-	return Global_2462478;
-}
-
 bool func_68()
 {
-	return Global_2452015.f_691;
+	return Global_2463497;
 }
 
-void func_69(var uParam0)
+bool func_69()
+{
+	return Global_2453009.f_693;
+}
+
+void func_70(var uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -2290,13 +2308,13 @@ void func_69(var uParam0)
 			SCRIPT::GET_EVENT_DATA(1, iVar0, &iVar2, 2);
 			switch (iVar2)
 			{
-				case 1035596089:
-					func_70(iVar0);
+				case -771178269:
+					func_71(iVar0);
 					break;
 				
-				case 1120313136:
+				case -1320260596:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
-					if (Var4.f_2 == 397890833)
+					if (Var4.f_2 == -2138305833)
 					{
 						*uParam0 = 1;
 					}
@@ -2307,7 +2325,7 @@ void func_69(var uParam0)
 	}
 }
 
-void func_70(int iParam0)
+void func_71(int iParam0)
 {
 	struct<3> Var0;
 	int iVar3;
@@ -2326,7 +2344,7 @@ void func_70(int iParam0)
 					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
 					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
 					{
-						if (func_71(iVar4, &bVar5))
+						if (func_72(iVar4, &bVar5))
 						{
 							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
 						}
@@ -2341,7 +2359,7 @@ void func_70(int iParam0)
 	}
 }
 
-int func_71(int iParam0, var uParam1)
+int func_72(int iParam0, var uParam1)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
@@ -2367,7 +2385,7 @@ int func_71(int iParam0, var uParam1)
 	return 0;
 }
 
-int func_72()
+int func_73()
 {
 	STREAMING::REQUEST_MODEL(iLocal_320);
 	STREAMING::REQUEST_MODEL(iLocal_321);
@@ -2379,7 +2397,7 @@ int func_72()
 	return 0;
 }
 
-int func_73()
+int func_74()
 {
 	STREAMING::REQUEST_ANIM_DICT(sLocal_324);
 	STREAMING::REQUEST_ANIM_DICT(sLocal_330);
@@ -2400,7 +2418,7 @@ int func_73()
 	return 1;
 }
 
-void func_74(var uParam0, int iParam1)
+void func_75(var uParam0, int iParam1)
 {
 	struct<3> Var0;
 	int iVar6;
@@ -2471,41 +2489,41 @@ void func_74(var uParam0, int iParam1)
 		case 112:
 		case 113:
 		case 114:
-			iVar6 = func_88(iParam1);
-			func_86(iParam1, 278, &Var0, iVar6, 0);
+			iVar6 = func_89(iParam1);
+			func_87(iParam1, 278, &Var0, iVar6, 0);
 			uParam0->f_121[0 /*12*/] = { Var0 };
-			func_86(iParam1, 279, &Var0, iVar6, 0);
+			func_87(iParam1, 279, &Var0, iVar6, 0);
 			uParam0->f_121[0 /*12*/].f_3 = { Var0 };
-			func_86(iParam1, 282, &Var0, iVar6, 0);
+			func_87(iParam1, 282, &Var0, iVar6, 0);
 			uParam0->f_121[0 /*12*/].f_7 = { Var0 };
-			func_86(iParam1, 280, &Var0, iVar6, 0);
+			func_87(iParam1, 280, &Var0, iVar6, 0);
 			uParam0->f_121[1 /*12*/] = { Var0 };
-			func_86(iParam1, 281, &Var0, iVar6, 0);
+			func_87(iParam1, 281, &Var0, iVar6, 0);
 			uParam0->f_121[1 /*12*/].f_3 = { Var0 };
-			func_86(iParam1, 282, &Var0, iVar6, 0);
+			func_87(iParam1, 282, &Var0, iVar6, 0);
 			uParam0->f_121[0 /*12*/].f_7 = { Var0 };
 			uParam0->f_121[0 /*12*/].f_10 = Var0.f_3;
 			uParam0->f_121[0 /*12*/].f_11 = Var0.f_3.f_1;
-			func_86(iParam1, 283, &Var0, iVar6, 0);
+			func_87(iParam1, 283, &Var0, iVar6, 0);
 			uParam0->f_121[1 /*12*/].f_7 = { Var0 };
 			uParam0->f_121[1 /*12*/].f_10 = Var0.f_3;
 			uParam0->f_121[1 /*12*/].f_11 = Var0.f_3.f_1;
-			func_86(iParam1, 6, &Var0, iVar6, 0);
+			func_87(iParam1, 6, &Var0, iVar6, 0);
 			uParam0->f_38[0 /*27*/].f_8 = { Var0 };
 			uParam0->f_38[0 /*27*/].f_11 = Var0.f_3.f_2;
-			func_86(iParam1, 1, &Var0, iVar6, 0);
+			func_87(iParam1, 1, &Var0, iVar6, 0);
 			uParam0->f_146[0 /*12*/] = { Var0 };
-			func_86(iParam1, 2, &Var0, iVar6, 0);
+			func_87(iParam1, 2, &Var0, iVar6, 0);
 			uParam0->f_146[0 /*12*/].f_3 = { Var0 };
-			if (func_85(iParam1) || func_84(iParam1, -1))
+			if (func_86(iParam1) || func_85(iParam1, -1))
 			{
 				uParam0->f_146[0 /*12*/].f_6 = 1f;
 			}
-			else if (func_83(iParam1, 91))
+			else if (func_84(iParam1, 91))
 			{
 				uParam0->f_146[0 /*12*/].f_6 = 2f;
 			}
-			else if (func_83(iParam1, 97))
+			else if (func_84(iParam1, 97))
 			{
 				uParam0->f_146[0 /*12*/].f_6 = 2.25f;
 			}
@@ -2514,321 +2532,321 @@ void func_74(var uParam0, int iParam1)
 				uParam0->f_146[0 /*12*/].f_6 = 3.5f;
 			}
 			uParam0->f_146[0 /*12*/].f_7 = Var0.f_3.f_2;
-			if (func_82(iParam1))
+			if (func_83(iParam1))
 			{
-				func_86(iParam1, 672, &Var0, iVar6, 0);
+				func_87(iParam1, 672, &Var0, iVar6, 0);
 				uParam0->f_146[1 /*12*/] = { Var0 };
-				func_86(iParam1, 673, &Var0, iVar6, 0);
+				func_87(iParam1, 673, &Var0, iVar6, 0);
 				uParam0->f_146[1 /*12*/].f_3 = { Var0 };
 				uParam0->f_146[1 /*12*/].f_6 = 3.5f;
 				uParam0->f_146[1 /*12*/].f_7 = Var0.f_3.f_2;
 			}
-			func_86(iParam1, 7, &Var0, iVar6, 0);
+			func_87(iParam1, 7, &Var0, iVar6, 0);
 			uParam0->f_146.f_37 = { Var0 };
-			func_86(iParam1, 8, &Var0, iVar6, 0);
+			func_87(iParam1, 8, &Var0, iVar6, 0);
 			uParam0->f_146.f_40 = { Var0 };
 			uParam0->f_146.f_43 = { Var0.f_3 };
 			uParam0->f_146.f_46 = 62.8385f;
-			func_86(iParam1, 3, &Var0, iVar6, 0);
+			func_87(iParam1, 3, &Var0, iVar6, 0);
 			uParam0->f_146.f_47 = { Var0 };
-			func_81(&(uParam0->f_146.f_57), iParam1);
-			if (func_88(iParam1) == 86)
+			func_82(&(uParam0->f_146.f_57), iParam1);
+			if (func_89(iParam1) == 86)
 			{
-				func_86(iParam1, 341, &Var0, 86, 0);
+				func_87(iParam1, 341, &Var0, 86, 0);
 				uParam0->f_146.f_1595 = Var0.f_3.f_2;
 				uParam0->f_146.f_1592 = { Var0 };
 			}
-			func_86(iParam1, 15, &Var0, iVar6, 0);
+			func_87(iParam1, 15, &Var0, iVar6, 0);
 			uParam0->f_146.f_50 = { Var0 };
-			func_75(iParam1, &(uParam0->f_146.f_53), &(uParam0->f_146.f_56), -1);
-			func_86(iParam1, 46, &Var0, iVar6, 0);
+			func_76(iParam1, &(uParam0->f_146.f_53), &(uParam0->f_146.f_56), -1);
+			func_87(iParam1, 46, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[1 /*102*/] = { Var0 };
 			uParam0->f_146.f_82[1 /*102*/].f_3 = Var0.f_3.f_2;
-			func_86(iParam1, 48, &Var0, iVar6, 0);
+			func_87(iParam1, 48, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[1 /*102*/].f_22 = { Var0 };
 			uParam0->f_146.f_82[1 /*102*/].f_25 = { Var0.f_3 };
-			func_86(iParam1, 49, &Var0, iVar6, 0);
+			func_87(iParam1, 49, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[1 /*102*/].f_59 = { Var0 };
 			uParam0->f_146.f_82[1 /*102*/].f_62 = { Var0.f_3 };
-			func_86(iParam1, 47, &Var0, iVar6, 0);
+			func_87(iParam1, 47, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[1 /*102*/].f_7 = { Var0 };
 			uParam0->f_146.f_82[1 /*102*/].f_10 = { Var0.f_3 };
-			func_86(iParam1, 50, &Var0, iVar6, 0);
+			func_87(iParam1, 50, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[1 /*102*/].f_16 = { Var0 };
-			func_86(iParam1, 51, &Var0, iVar6, 0);
+			func_87(iParam1, 51, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[1 /*102*/].f_19 = { Var0 };
-			func_86(iParam1, 41, &Var0, iVar6, 0);
+			func_87(iParam1, 41, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[0 /*102*/] = { Var0 };
 			uParam0->f_146.f_82[0 /*102*/].f_3 = Var0.f_3.f_2;
 			uParam0->f_146.f_82[0 /*102*/].f_85 = 1;
-			func_86(iParam1, 42, &Var0, iVar6, 0);
+			func_87(iParam1, 42, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[0 /*102*/].f_7 = { Var0 };
 			uParam0->f_146.f_82[0 /*102*/].f_10 = { Var0.f_3 };
-			func_86(iParam1, 43, &Var0, iVar6, 0);
+			func_87(iParam1, 43, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[0 /*102*/].f_22 = { Var0 };
 			uParam0->f_146.f_82[0 /*102*/].f_25 = { Var0.f_3 };
-			func_86(iParam1, 44, &Var0, iVar6, 0);
+			func_87(iParam1, 44, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[0 /*102*/].f_29 = { Var0 };
 			uParam0->f_146.f_82[0 /*102*/].f_32 = { Var0.f_3 };
-			func_86(iParam1, 45, &Var0, iVar6, 0);
+			func_87(iParam1, 45, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[0 /*102*/].f_59 = { Var0 };
 			uParam0->f_146.f_82[0 /*102*/].f_62 = { Var0.f_3 };
-			func_86(iParam1, 126, &Var0, iVar6, 0);
+			func_87(iParam1, 126, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[0 /*102*/].f_16 = { Var0 };
-			func_86(iParam1, 127, &Var0, iVar6, 0);
+			func_87(iParam1, 127, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[0 /*102*/].f_19 = { Var0 };
-			func_86(iParam1, 56, &Var0, iVar6, 0);
+			func_87(iParam1, 56, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/] = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_3 = Var0.f_3.f_2;
 			uParam0->f_146.f_82[4 /*102*/].f_4 = { 1f, 1f, 1f };
-			func_86(iParam1, 57, &Var0, iVar6, 0);
+			func_87(iParam1, 57, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_7 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_10 = { Var0.f_3 };
-			func_86(iParam1, 58, &Var0, iVar6, 0);
+			func_87(iParam1, 58, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_22 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_25 = { Var0.f_3 };
-			func_86(iParam1, 59, &Var0, iVar6, 0);
+			func_87(iParam1, 59, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_35 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_38 = { Var0.f_3 };
-			func_86(iParam1, 60, &Var0, iVar6, 0);
+			func_87(iParam1, 60, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_41 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_44 = { Var0.f_3 };
-			func_86(iParam1, 61, &Var0, iVar6, 0);
+			func_87(iParam1, 61, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_47 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_50 = { Var0.f_3 };
-			func_86(iParam1, 62, &Var0, iVar6, 0);
+			func_87(iParam1, 62, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_53 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_56 = { Var0.f_3 };
-			func_86(iParam1, 63, &Var0, iVar6, 0);
+			func_87(iParam1, 63, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_59 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_62 = { Var0.f_3 };
-			func_86(iParam1, 64, &Var0, iVar6, 0);
+			func_87(iParam1, 64, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_65 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_68 = { Var0.f_3 };
-			func_86(iParam1, 65, &Var0, iVar6, 0);
+			func_87(iParam1, 65, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_71 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_74 = { Var0.f_3 };
-			func_86(iParam1, 66, &Var0, iVar6, 0);
+			func_87(iParam1, 66, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_16 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_86 = Var0.f_3.f_2;
-			func_86(iParam1, 67, &Var0, iVar6, 0);
+			func_87(iParam1, 67, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_19 = { Var0 };
-			func_86(iParam1, 110, &Var0, iVar6, 0);
+			func_87(iParam1, 110, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_77 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_80 = Var0.f_3.f_2;
-			func_86(iParam1, 68, &Var0, iVar6, 0);
+			func_87(iParam1, 68, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_93 = { Var0 };
-			func_86(iParam1, 109, &Var0, iVar6, 0);
+			func_87(iParam1, 109, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[4 /*102*/].f_87 = { Var0 };
 			uParam0->f_146.f_82[4 /*102*/].f_90 = { Var0.f_3 };
 			uParam0->f_146.f_82[12 /*102*/].f_4 = { 1f, 1f, 1f };
-			func_86(iParam1, 364, &Var0, iVar6, 0);
+			func_87(iParam1, 364, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_22 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_25 = { Var0.f_3 };
-			func_86(iParam1, 365, &Var0, iVar6, 0);
+			func_87(iParam1, 365, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_35 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_38 = { Var0.f_3 };
-			func_86(iParam1, 366, &Var0, iVar6, 0);
+			func_87(iParam1, 366, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_41 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_44 = { Var0.f_3 };
-			func_86(iParam1, 367, &Var0, iVar6, 0);
+			func_87(iParam1, 367, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_47 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_50 = { Var0.f_3 };
-			func_86(iParam1, 368, &Var0, iVar6, 0);
+			func_87(iParam1, 368, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_59 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_62 = { Var0.f_3 };
-			func_86(iParam1, 362, &Var0, iVar6, 0);
+			func_87(iParam1, 362, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_65 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_68 = { Var0.f_3 };
-			func_86(iParam1, 363, &Var0, iVar6, 0);
+			func_87(iParam1, 363, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_71 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_74 = { Var0.f_3 };
-			func_86(iParam1, 360, &Var0, iVar6, 0);
+			func_87(iParam1, 360, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_16 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_86 = Var0.f_3.f_2;
-			func_86(iParam1, 361, &Var0, iVar6, 0);
+			func_87(iParam1, 361, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_19 = { Var0 };
-			func_86(iParam1, 369, &Var0, iVar6, 0);
+			func_87(iParam1, 369, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_77 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_80 = Var0.f_3.f_2;
-			func_86(iParam1, 68, &Var0, iVar6, 0);
+			func_87(iParam1, 68, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_93 = { Var0 };
-			func_86(iParam1, 109, &Var0, iVar6, 0);
+			func_87(iParam1, 109, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[12 /*102*/].f_87 = { Var0 };
 			uParam0->f_146.f_82[12 /*102*/].f_90 = { Var0.f_3 };
 			uParam0->f_146.f_82[13 /*102*/].f_4 = { 1f, 1f, 1f };
-			func_86(iParam1, 374, &Var0, iVar6, 0);
+			func_87(iParam1, 374, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_22 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_25 = { Var0.f_3 };
-			func_86(iParam1, 375, &Var0, iVar6, 0);
+			func_87(iParam1, 375, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_35 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_38 = { Var0.f_3 };
-			func_86(iParam1, 376, &Var0, iVar6, 0);
+			func_87(iParam1, 376, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_41 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_44 = { Var0.f_3 };
-			func_86(iParam1, 377, &Var0, iVar6, 0);
+			func_87(iParam1, 377, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_47 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_50 = { Var0.f_3 };
-			func_86(iParam1, 378, &Var0, iVar6, 0);
+			func_87(iParam1, 378, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_59 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_62 = { Var0.f_3 };
-			func_86(iParam1, 372, &Var0, iVar6, 0);
+			func_87(iParam1, 372, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_65 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_68 = { Var0.f_3 };
-			func_86(iParam1, 373, &Var0, iVar6, 0);
+			func_87(iParam1, 373, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_71 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_74 = { Var0.f_3 };
-			func_86(iParam1, 370, &Var0, iVar6, 0);
+			func_87(iParam1, 370, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_16 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_86 = Var0.f_3.f_2;
-			func_86(iParam1, 371, &Var0, iVar6, 0);
+			func_87(iParam1, 371, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_19 = { Var0 };
-			func_86(iParam1, 379, &Var0, iVar6, 0);
+			func_87(iParam1, 379, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_77 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_80 = Var0.f_3.f_2;
-			func_86(iParam1, 68, &Var0, iVar6, 0);
+			func_87(iParam1, 68, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_93 = { Var0 };
-			func_86(iParam1, 109, &Var0, iVar6, 0);
+			func_87(iParam1, 109, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[13 /*102*/].f_87 = { Var0 };
 			uParam0->f_146.f_82[13 /*102*/].f_90 = { Var0.f_3 };
-			func_86(iParam1, 69, &Var0, iVar6, 0);
+			func_87(iParam1, 69, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[5 /*102*/] = { Var0 };
 			uParam0->f_146.f_82[5 /*102*/].f_3 = Var0.f_3.f_2;
-			func_86(iParam1, 70, &Var0, iVar6, 0);
+			func_87(iParam1, 70, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[5 /*102*/].f_7 = { Var0 };
 			uParam0->f_146.f_82[5 /*102*/].f_10 = { Var0.f_3 };
-			func_86(iParam1, 71, &Var0, iVar6, 0);
+			func_87(iParam1, 71, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[5 /*102*/].f_65 = { Var0 };
-			func_86(iParam1, 72, &Var0, iVar6, 0);
+			func_87(iParam1, 72, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[5 /*102*/].f_71 = { Var0 };
-			func_86(iParam1, 73, &Var0, iVar6, 0);
+			func_87(iParam1, 73, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[5 /*102*/].f_87 = { Var0 };
-			func_86(iParam1, 74, &Var0, iVar6, 0);
+			func_87(iParam1, 74, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[5 /*102*/].f_16 = { Var0 };
 			uParam0->f_146.f_82[5 /*102*/].f_19 = { Var0.f_3 };
-			func_86(iParam1, 75, &Var0, iVar6, 0);
+			func_87(iParam1, 75, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[5 /*102*/].f_35 = { Var0 };
 			uParam0->f_146.f_82[5 /*102*/].f_38 = { Var0.f_3 };
-			func_86(iParam1, 76, &Var0, iVar6, 0);
+			func_87(iParam1, 76, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[5 /*102*/].f_41 = { Var0 };
 			uParam0->f_146.f_82[5 /*102*/].f_44 = { Var0.f_3 };
-			func_86(iParam1, 77, &Var0, iVar6, 0);
+			func_87(iParam1, 77, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[6 /*102*/] = { Var0 };
 			uParam0->f_146.f_82[6 /*102*/].f_3 = Var0.f_3.f_2;
-			func_86(iParam1, 79, &Var0, iVar6, 0);
+			func_87(iParam1, 79, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[6 /*102*/].f_22 = { Var0 };
 			uParam0->f_146.f_82[6 /*102*/].f_25 = { Var0.f_3 };
-			func_86(iParam1, 80, &Var0, iVar6, 0);
+			func_87(iParam1, 80, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[6 /*102*/].f_59 = { Var0 };
 			uParam0->f_146.f_82[6 /*102*/].f_62 = { Var0.f_3 };
-			func_86(iParam1, 78, &Var0, iVar6, 0);
+			func_87(iParam1, 78, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[6 /*102*/].f_7 = { Var0 };
 			uParam0->f_146.f_82[6 /*102*/].f_10 = { Var0.f_3 };
-			func_86(iParam1, 81, &Var0, iVar6, 0);
+			func_87(iParam1, 81, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[6 /*102*/].f_16 = { Var0 };
-			func_86(iParam1, 82, &Var0, iVar6, 0);
+			func_87(iParam1, 82, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[6 /*102*/].f_19 = { Var0 };
-			func_86(iParam1, 128, &Var0, iVar6, 0);
+			func_87(iParam1, 128, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[9 /*102*/] = { Var0 };
 			uParam0->f_146.f_82[9 /*102*/].f_3 = Var0.f_3.f_2;
-			func_86(iParam1, 298, &Var0, iVar6, 0);
+			func_87(iParam1, 298, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[9 /*102*/].f_81 = { Var0 };
-			func_86(iParam1, 298, &Var0, iVar6, 0);
+			func_87(iParam1, 298, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[6 /*102*/].f_81 = { Var0 };
-			func_86(iParam1, 299, &Var0, iVar6, 0);
+			func_87(iParam1, 299, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[7 /*102*/].f_81 = { Var0 };
-			func_86(iParam1, 131, &Var0, iVar6, 0);
+			func_87(iParam1, 131, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[9 /*102*/].f_22 = { Var0 };
 			uParam0->f_146.f_82[9 /*102*/].f_25 = { Var0.f_3 };
-			func_86(iParam1, 132, &Var0, iVar6, 0);
+			func_87(iParam1, 132, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[9 /*102*/].f_59 = { Var0 };
 			uParam0->f_146.f_82[9 /*102*/].f_62 = { Var0.f_3 };
-			func_86(iParam1, 130, &Var0, iVar6, 0);
+			func_87(iParam1, 130, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[9 /*102*/].f_7 = { Var0 };
 			uParam0->f_146.f_82[9 /*102*/].f_10 = { Var0.f_3 };
-			func_86(iParam1, 133, &Var0, iVar6, 0);
+			func_87(iParam1, 133, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[9 /*102*/].f_16 = { Var0 };
-			func_86(iParam1, 134, &Var0, iVar6, 0);
+			func_87(iParam1, 134, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[9 /*102*/].f_19 = { Var0 };
-			func_86(iParam1, 89, &Var0, iVar6, 0);
+			func_87(iParam1, 89, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[8 /*102*/] = { Var0 };
 			uParam0->f_146.f_82[8 /*102*/].f_3 = Var0.f_3.f_2;
-			func_86(iParam1, 91, &Var0, iVar6, 0);
+			func_87(iParam1, 91, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[8 /*102*/].f_22 = { Var0 };
 			uParam0->f_146.f_82[8 /*102*/].f_25 = { Var0.f_3 };
-			func_86(iParam1, 92, &Var0, iVar6, 0);
+			func_87(iParam1, 92, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[8 /*102*/].f_59 = { Var0 };
 			uParam0->f_146.f_82[8 /*102*/].f_62 = { Var0.f_3 };
-			func_86(iParam1, 90, &Var0, iVar6, 0);
+			func_87(iParam1, 90, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[8 /*102*/].f_7 = { Var0 };
 			uParam0->f_146.f_82[8 /*102*/].f_10 = { Var0.f_3 };
-			func_86(iParam1, 135, &Var0, iVar6, 0);
+			func_87(iParam1, 135, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[8 /*102*/].f_16 = { Var0 };
-			func_86(iParam1, 136, &Var0, iVar6, 0);
+			func_87(iParam1, 136, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[8 /*102*/].f_19 = { Var0 };
-			func_86(iParam1, 83, &Var0, iVar6, 0);
+			func_87(iParam1, 83, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[7 /*102*/] = { Var0 };
 			uParam0->f_146.f_82[7 /*102*/].f_3 = Var0.f_3.f_2;
-			func_86(iParam1, 85, &Var0, iVar6, 0);
+			func_87(iParam1, 85, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[7 /*102*/].f_22 = { Var0 };
 			uParam0->f_146.f_82[7 /*102*/].f_25 = { Var0.f_3 };
-			func_86(iParam1, 88, &Var0, iVar6, 0);
+			func_87(iParam1, 88, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[7 /*102*/].f_59 = { Var0 };
 			uParam0->f_146.f_82[7 /*102*/].f_62 = { Var0.f_3 };
-			func_86(iParam1, 84, &Var0, iVar6, 0);
+			func_87(iParam1, 84, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[7 /*102*/].f_7 = { Var0 };
 			uParam0->f_146.f_82[7 /*102*/].f_10 = { Var0.f_3 };
-			func_86(iParam1, 86, &Var0, iVar6, 0);
+			func_87(iParam1, 86, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[7 /*102*/].f_16 = { Var0 };
-			func_86(iParam1, 87, &Var0, iVar6, 0);
+			func_87(iParam1, 87, &Var0, iVar6, 0);
 			uParam0->f_146.f_82[7 /*102*/].f_19 = { Var0 };
-			func_86(iParam1, 94, &Var0, iVar6, 0);
+			func_87(iParam1, 94, &Var0, iVar6, 0);
 			uParam0->f_146.f_1517.f_8 = { Var0 };
 			uParam0->f_146.f_1517.f_11 = { Var0.f_3 };
-			func_86(iParam1, 95, &Var0, iVar6, 0);
+			func_87(iParam1, 95, &Var0, iVar6, 0);
 			uParam0->f_146.f_1517 = { Var0 };
 			uParam0->f_146.f_1517.f_3 = Var0.f_3.f_2;
 			if (iParam1 == 65)
 			{
 			}
-			func_86(iParam1, 96, &Var0, iVar6, 0);
+			func_87(iParam1, 96, &Var0, iVar6, 0);
 			uParam0->f_146.f_1517.f_4 = { Var0 };
 			uParam0->f_146.f_1517.f_7 = Var0.f_3.f_2;
-			func_86(iParam1, 97, &Var0, iVar6, 0);
+			func_87(iParam1, 97, &Var0, iVar6, 0);
 			uParam0->f_146.f_1517.f_14 = { Var0 };
 			uParam0->f_146.f_1517.f_17 = Var0.f_3.f_2;
-			func_86(iParam1, 98, &Var0, iVar6, 0);
+			func_87(iParam1, 98, &Var0, iVar6, 0);
 			uParam0->f_146.f_1517.f_18 = { Var0 };
 			uParam0->f_146.f_1517.f_21 = Var0.f_3.f_2;
-			func_86(iParam1, 99, &Var0, iVar6, 0);
+			func_87(iParam1, 99, &Var0, iVar6, 0);
 			uParam0->f_146.f_1543.f_4 = { Var0 };
 			uParam0->f_146.f_1543.f_7 = { Var0.f_3 };
-			func_86(iParam1, 100, &Var0, iVar6, 0);
+			func_87(iParam1, 100, &Var0, iVar6, 0);
 			uParam0->f_146.f_1543 = { Var0 };
 			uParam0->f_146.f_1543.f_3 = Var0.f_3.f_2;
-			func_86(iParam1, 108, &Var0, iVar6, 0);
+			func_87(iParam1, 108, &Var0, iVar6, 0);
 			uParam0->f_146.f_1553 = { Var0 };
 			uParam0->f_146.f_1556 = { Var0.f_3 };
-			func_86(iParam1, 119, &Var0, iVar6, 0);
+			func_87(iParam1, 119, &Var0, iVar6, 0);
 			uParam0->f_146.f_1517.f_22 = { Var0 };
 			uParam0->f_146.f_1517.f_25 = Var0.f_3.f_2;
-			func_86(iParam1, 137, &Var0, iVar6, 0);
+			func_87(iParam1, 137, &Var0, iVar6, 0);
 			uParam0->f_146.f_1559 = { Var0 };
-			func_86(iParam1, 142, &Var0, iVar6, 0);
+			func_87(iParam1, 142, &Var0, iVar6, 0);
 			uParam0->f_146.f_1562 = { Var0 };
-			func_86(iParam1, 143, &Var0, iVar6, 0);
+			func_87(iParam1, 143, &Var0, iVar6, 0);
 			uParam0->f_146.f_1562.f_6 = { Var0 };
-			func_86(iParam1, 146, &Var0, iVar6, 0);
+			func_87(iParam1, 146, &Var0, iVar6, 0);
 			uParam0->f_146.f_1562.f_18 = { Var0 };
-			func_86(iParam1, 147, &Var0, iVar6, 0);
+			func_87(iParam1, 147, &Var0, iVar6, 0);
 			uParam0->f_146.f_1562.f_21 = { Var0 };
-			func_86(iParam1, 158, &Var0, iVar6, 0);
+			func_87(iParam1, 158, &Var0, iVar6, 0);
 			uParam0->f_146.f_1562.f_15 = { Var0 };
-			func_86(iParam1, 145, &Var0, iVar6, 0);
+			func_87(iParam1, 145, &Var0, iVar6, 0);
 			uParam0->f_146.f_1562.f_15 = { Var0 };
-			func_86(iParam1, 144, &Var0, iVar6, 0);
+			func_87(iParam1, 144, &Var0, iVar6, 0);
 			uParam0->f_146.f_1562.f_12 = { Var0 };
-			func_86(iParam1, 148, &Var0, iVar6, 0);
+			func_87(iParam1, 148, &Var0, iVar6, 0);
 			uParam0->f_146.f_1562.f_24 = { Var0 };
 			break;
 		
@@ -2856,9 +2874,9 @@ void func_74(var uParam0, int iParam1)
 			uParam0->f_146.f_43 = { 0f, 0f, 37.7289f };
 			uParam0->f_146.f_46 = 50f;
 			uParam0->f_146.f_47 = { 348.132f, -997.2031f, -100.1741f };
-			func_81(&(uParam0->f_146.f_57), iParam1);
+			func_82(&(uParam0->f_146.f_57), iParam1);
 			uParam0->f_146.f_50 = { 346.4337f, -1002.827f, -97.7941f };
-			func_75(iParam1, &(uParam0->f_146.f_53), &(uParam0->f_146.f_56), -1);
+			func_76(iParam1, &(uParam0->f_146.f_53), &(uParam0->f_146.f_56), -1);
 			uParam0->f_146.f_82[1 /*102*/] = { 349.9853f, -997.8344f, -99.1952f };
 			uParam0->f_146.f_82[1 /*102*/].f_3 = 285.4278f;
 			uParam0->f_146.f_82[2 /*102*/] = { 343.8862f, -1002.251f, -100.1962f };
@@ -2958,9 +2976,9 @@ void func_74(var uParam0, int iParam1)
 			uParam0->f_146.f_43 = { 0f, 0f, 46.9484f };
 			uParam0->f_146.f_46 = 50f;
 			uParam0->f_146.f_47 = { 262.6717f, -1000.425f, -100.0087f };
-			func_81(&(uParam0->f_146.f_57), iParam1);
+			func_82(&(uParam0->f_146.f_57), iParam1);
 			uParam0->f_146.f_50 = { 265.9362f, -1001.305f, -97.6834f };
-			func_75(iParam1, &(uParam0->f_146.f_53), &(uParam0->f_146.f_56), -1);
+			func_76(iParam1, &(uParam0->f_146.f_53), &(uParam0->f_146.f_56), -1);
 			uParam0->f_146.f_82[1 /*102*/] = { 261.2055f, -1003.92f, -100.0086f };
 			uParam0->f_146.f_82[1 /*102*/].f_3 = 280.6086f;
 			uParam0->f_146.f_82[2 /*102*/] = { 265.6066f, -996.4553f, -99.0039f };
@@ -3044,7 +3062,7 @@ void func_74(var uParam0, int iParam1)
 	}
 }
 
-void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
+void func_76(int iParam0, var uParam1, var uParam2, int iParam3)
 {
 	struct<4> Var0;
 	
@@ -3067,7 +3085,7 @@ void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
 		case 41:
 		case 42:
 		case 43:
-			func_86(iParam0, 40, &Var0, -1, 0);
+			func_87(iParam0, 40, &Var0, -1, 0);
 			*uParam1 = { Var0 };
 			if (iParam0 == 1)
 			{
@@ -3176,7 +3194,7 @@ void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
 		case 63:
 		case 64:
 		case 65:
-			func_86(iParam0, 40, &Var0, 61, 0);
+			func_87(iParam0, 40, &Var0, 61, 0);
 			*uParam1 = { Var0 };
 			if (iParam0 == 61)
 			{
@@ -3200,7 +3218,7 @@ void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
 		case 74:
 		case 75:
 		case 76:
-			func_86(iParam0, 40, &Var0, 73, 0);
+			func_87(iParam0, 40, &Var0, 73, 0);
 			*uParam1 = { Var0 };
 			*uParam2 = Var0.f_3.f_2;
 			break;
@@ -3211,7 +3229,7 @@ void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
 		case 80:
 		case 81:
 		case 82:
-			func_86(iParam0, 40, &Var0, 77, 0);
+			func_87(iParam0, 40, &Var0, 77, 0);
 			*uParam1 = { Var0 };
 			*uParam2 = Var0.f_3.f_2;
 			break;
@@ -3219,13 +3237,13 @@ void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
 		case 83:
 		case 84:
 		case 85:
-			func_86(iParam0, 40, &Var0, 83, 0);
+			func_87(iParam0, 40, &Var0, 83, 0);
 			*uParam1 = { Var0 };
 			*uParam2 = Var0.f_3.f_2;
 			break;
 		
 		case 86:
-			func_76(iParam3, 40, &Var0, 0);
+			func_77(iParam3, 40, &Var0, 0);
 			*uParam1 = { Var0 };
 			*uParam2 = Var0.f_3.f_2;
 			break;
@@ -3234,7 +3252,7 @@ void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
 		case 88:
 		case 89:
 		case 90:
-			func_86(iParam0, 40, &Var0, 88, 0);
+			func_87(iParam0, 40, &Var0, 88, 0);
 			*uParam1 = { Var0 };
 			*uParam2 = Var0.f_3.f_2;
 			break;
@@ -3245,7 +3263,7 @@ void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
 		case 94:
 		case 95:
 		case 96:
-			func_86(iParam0, 40, &Var0, 91, 0);
+			func_87(iParam0, 40, &Var0, 91, 0);
 			*uParam1 = { Var0 };
 			*uParam2 = Var0.f_3.f_2;
 			break;
@@ -3256,21 +3274,21 @@ void func_75(int iParam0, var uParam1, var uParam2, int iParam3)
 		case 100:
 		case 101:
 		case 102:
-			func_86(iParam0, 40, &Var0, 97, 0);
+			func_87(iParam0, 40, &Var0, 97, 0);
 			*uParam1 = { Var0 };
 			*uParam2 = Var0.f_3.f_2;
 			break;
 	}
 }
 
-void func_76(int iParam0, int iParam1, var uParam2, bool bParam3)
+void func_77(int iParam0, int iParam1, var uParam2, bool bParam3)
 {
 	struct<6> Var0[2];
 	struct<3> Var13;
 	
 	if (!bParam3)
 	{
-		Var0[0 /*6*/] = { func_80(-1) };
+		Var0[0 /*6*/] = { func_81(-1) };
 	}
 	else
 	{
@@ -3279,17 +3297,17 @@ void func_76(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	if (!bParam3)
 	{
-		Var0[1 /*6*/] = { func_80(iParam0) };
+		Var0[1 /*6*/] = { func_81(iParam0) };
 	}
 	else
 	{
 		Var0[1 /*6*/] = { Global_4014600[iParam0 /*45*/].f_4 };
 		Var0[1 /*6*/].f_3 = { 0f, 0f, Global_4014600[iParam0 /*45*/].f_7 };
 	}
-	*uParam2 = { func_78(iParam1, 86) };
+	*uParam2 = { func_79(iParam1, 86) };
 	Var13 = { *uParam2 - Var0[0 /*6*/] };
-	Var13 = { func_77(Var13, -Var0[0 /*6*/].f_3.f_2) };
-	Var13 = { func_77(Var13, Var0[1 /*6*/].f_3.f_2) };
+	Var13 = { func_78(Var13, -Var0[0 /*6*/].f_3.f_2) };
+	Var13 = { func_78(Var13, Var0[1 /*6*/].f_3.f_2) };
 	*uParam2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var0[1 /*6*/], 0f, Var13) };
 	switch (iParam1)
 	{
@@ -3620,7 +3638,7 @@ void func_76(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 }
 
-Vector3 func_77(struct<3> Param0, float fParam3)
+Vector3 func_78(struct<3> Param0, float fParam3)
 {
 	struct<3> Var0;
 	float fVar3;
@@ -3634,14 +3652,14 @@ Vector3 func_77(struct<3> Param0, float fParam3)
 	return Var0;
 }
 
-struct<6> func_78(int iParam0, int iParam1)
+struct<6> func_79(int iParam0, int iParam1)
 {
 	struct<6> Var0;
 	bool bVar6;
 	int iVar23;
 	
 	iVar23 = 0;
-	if (func_79(iParam1, &bVar6))
+	if (func_80(iParam1, &bVar6))
 	{
 		iVar23 = 1;
 	}
@@ -3652,7 +3670,7 @@ struct<6> func_78(int iParam0, int iParam1)
 	return Var0;
 }
 
-int func_79(int iParam0, var uParam1)
+int func_80(int iParam0, var uParam1)
 {
 	switch (iParam0)
 	{
@@ -3720,7 +3738,7 @@ int func_79(int iParam0, var uParam1)
 	return 0;
 }
 
-struct<6> func_80(int iParam0)
+struct<6> func_81(int iParam0)
 {
 	struct<6> Var0;
 	
@@ -3935,7 +3953,7 @@ struct<6> func_80(int iParam0)
 	return Var0;
 }
 
-void func_81(var uParam0, int iParam1)
+void func_82(var uParam0, int iParam1)
 {
 	struct<3> Var0;
 	
@@ -3958,14 +3976,14 @@ void func_81(var uParam0, int iParam1)
 		case 41:
 		case 42:
 		case 43:
-			func_86(iParam1, 4, &Var0, -1, 0);
+			func_87(iParam1, 4, &Var0, -1, 0);
 			*(uParam0[0 /*8*/]) = { Var0 };
-			func_86(iParam1, 5, &Var0, -1, 0);
+			func_87(iParam1, 5, &Var0, -1, 0);
 			(uParam0[0 /*8*/])->f_3 = { Var0 };
 			(uParam0[0 /*8*/])->f_6 = 19f;
-			func_86(iParam1, 276, &Var0, -1, 0);
+			func_87(iParam1, 276, &Var0, -1, 0);
 			*(uParam0[1 /*8*/]) = { Var0 };
-			func_86(iParam1, 277, &Var0, -1, 0);
+			func_87(iParam1, 277, &Var0, -1, 0);
 			(uParam0[1 /*8*/])->f_3 = { Var0 };
 			(uParam0[1 /*8*/])->f_6 = 14.5f;
 			break;
@@ -4012,14 +4030,14 @@ void func_81(var uParam0, int iParam1)
 		case 63:
 		case 64:
 		case 65:
-			func_86(iParam1, 4, &Var0, 61, 0);
+			func_87(iParam1, 4, &Var0, 61, 0);
 			*(uParam0[0 /*8*/]) = { Var0 };
-			func_86(iParam1, 5, &Var0, 61, 0);
+			func_87(iParam1, 5, &Var0, 61, 0);
 			(uParam0[0 /*8*/])->f_3 = { Var0 };
 			(uParam0[0 /*8*/])->f_6 = 21f;
-			func_86(iParam1, 276, &Var0, 61, 0);
+			func_87(iParam1, 276, &Var0, 61, 0);
 			*(uParam0[1 /*8*/]) = { Var0 };
-			func_86(iParam1, 277, &Var0, 61, 0);
+			func_87(iParam1, 277, &Var0, 61, 0);
 			(uParam0[1 /*8*/])->f_3 = { Var0 };
 			(uParam0[1 /*8*/])->f_6 = 14.5f;
 			break;
@@ -4028,19 +4046,19 @@ void func_81(var uParam0, int iParam1)
 		case 74:
 		case 75:
 		case 76:
-			func_86(iParam1, 4, &Var0, 73, 0);
+			func_87(iParam1, 4, &Var0, 73, 0);
 			*(uParam0[0 /*8*/]) = { Var0 };
-			func_86(iParam1, 5, &Var0, 73, 0);
+			func_87(iParam1, 5, &Var0, 73, 0);
 			(uParam0[0 /*8*/])->f_3 = { Var0 };
 			(uParam0[0 /*8*/])->f_6 = 9.75f;
-			func_86(iParam1, 276, &Var0, 73, 0);
+			func_87(iParam1, 276, &Var0, 73, 0);
 			*(uParam0[1 /*8*/]) = { Var0 };
-			func_86(iParam1, 277, &Var0, 73, 0);
+			func_87(iParam1, 277, &Var0, 73, 0);
 			(uParam0[1 /*8*/])->f_3 = { Var0 };
 			(uParam0[1 /*8*/])->f_6 = 10.25f;
-			func_86(iParam1, 483, &Var0, 73, 0);
+			func_87(iParam1, 483, &Var0, 73, 0);
 			*(uParam0[2 /*8*/]) = { Var0 };
-			func_86(iParam1, 484, &Var0, 73, 0);
+			func_87(iParam1, 484, &Var0, 73, 0);
 			(uParam0[2 /*8*/])->f_3 = { Var0 };
 			(uParam0[2 /*8*/])->f_6 = 6.75f;
 			break;
@@ -4051,19 +4069,19 @@ void func_81(var uParam0, int iParam1)
 		case 80:
 		case 81:
 		case 82:
-			func_86(iParam1, 4, &Var0, 77, 0);
+			func_87(iParam1, 4, &Var0, 77, 0);
 			*(uParam0[0 /*8*/]) = { Var0 };
-			func_86(iParam1, 5, &Var0, 77, 0);
+			func_87(iParam1, 5, &Var0, 77, 0);
 			(uParam0[0 /*8*/])->f_3 = { Var0 };
 			(uParam0[0 /*8*/])->f_6 = 9.75f;
-			func_86(iParam1, 276, &Var0, 77, 0);
+			func_87(iParam1, 276, &Var0, 77, 0);
 			*(uParam0[1 /*8*/]) = { Var0 };
-			func_86(iParam1, 277, &Var0, 77, 0);
+			func_87(iParam1, 277, &Var0, 77, 0);
 			(uParam0[1 /*8*/])->f_3 = { Var0 };
 			(uParam0[1 /*8*/])->f_6 = 5f;
-			func_86(iParam1, 483, &Var0, 77, 0);
+			func_87(iParam1, 483, &Var0, 77, 0);
 			*(uParam0[2 /*8*/]) = { Var0 };
-			func_86(iParam1, 484, &Var0, 77, 0);
+			func_87(iParam1, 484, &Var0, 77, 0);
 			(uParam0[2 /*8*/])->f_3 = { Var0 };
 			(uParam0[2 /*8*/])->f_6 = 9.5f;
 			break;
@@ -4071,27 +4089,27 @@ void func_81(var uParam0, int iParam1)
 		case 83:
 		case 84:
 		case 85:
-			func_86(iParam1, 4, &Var0, 83, 0);
+			func_87(iParam1, 4, &Var0, 83, 0);
 			*(uParam0[0 /*8*/]) = { Var0 };
-			func_86(iParam1, 5, &Var0, 83, 0);
+			func_87(iParam1, 5, &Var0, 83, 0);
 			(uParam0[0 /*8*/])->f_3 = { Var0 };
 			(uParam0[0 /*8*/])->f_6 = 26.75f;
-			func_86(iParam1, 276, &Var0, 83, 0);
+			func_87(iParam1, 276, &Var0, 83, 0);
 			*(uParam0[1 /*8*/]) = { Var0 };
-			func_86(iParam1, 277, &Var0, 83, 0);
+			func_87(iParam1, 277, &Var0, 83, 0);
 			(uParam0[1 /*8*/])->f_3 = { Var0 };
 			(uParam0[1 /*8*/])->f_6 = 18.25f;
 			break;
 		
 		case 86:
-			func_86(iParam1, 4, &Var0, 86, 0);
+			func_87(iParam1, 4, &Var0, 86, 0);
 			*(uParam0[0 /*8*/]) = { Var0 };
-			func_86(iParam1, 5, &Var0, 86, 0);
+			func_87(iParam1, 5, &Var0, 86, 0);
 			(uParam0[0 /*8*/])->f_3 = { Var0 };
 			(uParam0[0 /*8*/])->f_6 = 14.75f;
-			func_86(iParam1, 276, &Var0, 86, 0);
+			func_87(iParam1, 276, &Var0, 86, 0);
 			*(uParam0[1 /*8*/]) = { Var0 };
-			func_86(iParam1, 277, &Var0, 86, 0);
+			func_87(iParam1, 277, &Var0, 86, 0);
 			(uParam0[1 /*8*/])->f_3 = { Var0 };
 			(uParam0[1 /*8*/])->f_6 = 11.75f;
 			break;
@@ -4100,14 +4118,14 @@ void func_81(var uParam0, int iParam1)
 		case 88:
 		case 89:
 		case 90:
-			func_86(iParam1, 4, &Var0, 88, 0);
+			func_87(iParam1, 4, &Var0, 88, 0);
 			*(uParam0[0 /*8*/]) = { Var0 };
-			func_86(iParam1, 5, &Var0, 88, 0);
+			func_87(iParam1, 5, &Var0, 88, 0);
 			(uParam0[0 /*8*/])->f_3 = { Var0 };
 			(uParam0[0 /*8*/])->f_6 = 27.25f;
-			func_86(iParam1, 276, &Var0, 88, 0);
+			func_87(iParam1, 276, &Var0, 88, 0);
 			*(uParam0[1 /*8*/]) = { Var0 };
-			func_86(iParam1, 277, &Var0, 88, 0);
+			func_87(iParam1, 277, &Var0, 88, 0);
 			(uParam0[1 /*8*/])->f_3 = { Var0 };
 			(uParam0[1 /*8*/])->f_6 = 7.5f;
 			break;
@@ -4118,9 +4136,9 @@ void func_81(var uParam0, int iParam1)
 		case 94:
 		case 95:
 		case 96:
-			func_86(iParam1, 4, &Var0, 91, 0);
+			func_87(iParam1, 4, &Var0, 91, 0);
 			*(uParam0[0 /*8*/]) = { Var0 };
-			func_86(iParam1, 5, &Var0, 91, 0);
+			func_87(iParam1, 5, &Var0, 91, 0);
 			(uParam0[0 /*8*/])->f_3 = { Var0 };
 			(uParam0[0 /*8*/])->f_6 = 29.75f;
 			break;
@@ -4131,16 +4149,16 @@ void func_81(var uParam0, int iParam1)
 		case 100:
 		case 101:
 		case 102:
-			func_86(iParam1, 4, &Var0, 97, 0);
+			func_87(iParam1, 4, &Var0, 97, 0);
 			*(uParam0[0 /*8*/]) = { Var0 };
-			func_86(iParam1, 5, &Var0, 97, 0);
+			func_87(iParam1, 5, &Var0, 97, 0);
 			(uParam0[0 /*8*/])->f_3 = { Var0 };
 			(uParam0[0 /*8*/])->f_6 = 22f;
 			break;
 	}
 }
 
-int func_82(int iParam0)
+int func_83(int iParam0)
 {
 	switch (iParam0)
 	{
@@ -4154,7 +4172,7 @@ int func_82(int iParam0)
 	return 0;
 }
 
-int func_83(int iParam0, int iParam1)
+int func_84(int iParam0, int iParam1)
 {
 	if (iParam1 == -1)
 	{
@@ -4207,7 +4225,7 @@ int func_83(int iParam0, int iParam1)
 	return 0;
 }
 
-int func_84(int iParam0, int iParam1)
+int func_85(int iParam0, int iParam1)
 {
 	if (iParam1 == -1)
 	{
@@ -4259,7 +4277,7 @@ int func_84(int iParam0, int iParam1)
 	return 0;
 }
 
-int func_85(int iParam0)
+int func_86(int iParam0)
 {
 	switch (iParam0)
 	{
@@ -4272,17 +4290,17 @@ int func_85(int iParam0)
 	return 0;
 }
 
-void func_86(int iParam0, int iParam1, var uParam2, int iParam3, bool bParam4)
+void func_87(int iParam0, int iParam1, var uParam2, int iParam3, bool bParam4)
 {
 	struct<6> Var0[2];
 	struct<3> Var13;
 	
-	Var0[0 /*6*/] = { func_87(iParam3, bParam4) };
-	Var0[1 /*6*/] = { func_87(iParam0, bParam4) };
-	*uParam2 = { func_78(iParam1, iParam3) };
+	Var0[0 /*6*/] = { func_88(iParam3, bParam4) };
+	Var0[1 /*6*/] = { func_88(iParam0, bParam4) };
+	*uParam2 = { func_79(iParam1, iParam3) };
 	Var13 = { *uParam2 - Var0[0 /*6*/] };
-	Var13 = { func_77(Var13, -Var0[0 /*6*/].f_3.f_2) };
-	Var13 = { func_77(Var13, Var0[1 /*6*/].f_3.f_2) };
+	Var13 = { func_78(Var13, -Var0[0 /*6*/].f_3.f_2) };
+	Var13 = { func_78(Var13, Var0[1 /*6*/].f_3.f_2) };
 	*uParam2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var0[1 /*6*/], 0f, Var13) };
 	switch (iParam1)
 	{
@@ -5068,7 +5086,7 @@ void func_86(int iParam0, int iParam1, var uParam2, int iParam3, bool bParam4)
 	}
 }
 
-struct<6> func_87(int iParam0, bool bParam1)
+struct<6> func_88(int iParam0, bool bParam1)
 {
 	struct<6> Var0;
 	
@@ -5489,7 +5507,7 @@ struct<6> func_87(int iParam0, bool bParam1)
 	return Var0;
 }
 
-int func_88(int iParam0)
+int func_89(int iParam0)
 {
 	switch (iParam0)
 	{
@@ -5609,7 +5627,7 @@ int func_88(int iParam0)
 	return -1;
 }
 
-int func_89(int iParam0, int iParam1, bool bParam2)
+int func_90(int iParam0, int iParam1, bool bParam2)
 {
 	int iVar0;
 	
@@ -5620,14 +5638,14 @@ int func_89(int iParam0, int iParam1, bool bParam2)
 		{
 			if (!bParam2)
 			{
-				func_91();
+				func_92();
 			}
 			else
 			{
 				return 0;
 			}
 		}
-		if (!func_90())
+		if (!func_91())
 		{
 			if (iParam0 == 0)
 			{
@@ -5635,29 +5653,29 @@ int func_89(int iParam0, int iParam1, bool bParam2)
 				{
 					if (!bParam2)
 					{
-						func_91();
+						func_92();
 					}
 					else
 					{
 						return 0;
 					}
 				}
-				if (func_68())
+				if (func_69())
 				{
 					if (!bParam2)
 					{
-						func_91();
+						func_92();
 					}
 					else
 					{
 						return 0;
 					}
 				}
-				if (func_66(157))
+				if (func_67(157))
 				{
 					if (!bParam2)
 					{
-						func_91();
+						func_92();
 					}
 					else
 					{
@@ -5669,7 +5687,7 @@ int func_89(int iParam0, int iParam1, bool bParam2)
 			{
 				if (!bParam2)
 				{
-					func_91();
+					func_92();
 				}
 				else
 				{
@@ -5690,7 +5708,7 @@ int func_89(int iParam0, int iParam1, bool bParam2)
 		{
 			if (!bParam2)
 			{
-				func_91();
+				func_92();
 			}
 			else
 			{
@@ -5702,7 +5720,7 @@ int func_89(int iParam0, int iParam1, bool bParam2)
 	{
 		if (!bParam2)
 		{
-			func_91();
+			func_92();
 		}
 		else
 		{
@@ -5712,19 +5730,19 @@ int func_89(int iParam0, int iParam1, bool bParam2)
 	return 1;
 }
 
-bool func_90()
+bool func_91()
 {
-	return Global_1312872;
-}
-
-void func_91()
-{
-	SCRIPT::TERMINATE_THIS_THREAD();
+	return Global_1312878;
 }
 
 void func_92()
 {
-	if (func_54("SA_SHWR_OUT") || func_54("SA_SHWR_IN"))
+	SCRIPT::TERMINATE_THIS_THREAD();
+}
+
+void func_93()
+{
+	if (func_55("SA_SHWR_OUT") || func_55("SA_SHWR_IN"))
 	{
 		HUD::CLEAR_HELP(true);
 	}
@@ -5748,15 +5766,15 @@ void func_92()
 	{
 		CAM::DESTROY_CAM(iLocal_315, false);
 	}
-	func_10();
+	func_11();
 	if (iLocal_36)
 	{
-		func_32(PLAYER::PLAYER_ID(), 1, 0, 0);
+		func_33(PLAYER::PLAYER_ID(), 1, 0, 0);
 	}
-	func_91();
+	func_92();
 }
 
-int func_93()
+int func_94()
 {
 	if (MISC::IS_PC_VERSION())
 	{
@@ -5768,34 +5786,34 @@ int func_93()
 	return 0;
 }
 
-int func_94()
+int func_95()
 {
-	if (Global_95877 != -1)
+	if (Global_96292 != -1)
 	{
-		return MISC::IS_BIT_SET(Global_89743[Global_95877 /*34*/].f_15, 20);
+		return MISC::IS_BIT_SET(Global_90158[Global_96292 /*34*/].f_15, 20);
 	}
 	return 0;
 }
 
-int func_95(int iParam0)
+int func_96(int iParam0)
 {
-	if (Global_41631 == 15)
+	if (Global_42009 == 15)
 	{
 		return 0;
 	}
-	if (func_96(iParam0))
+	if (func_97(iParam0))
 	{
 		return 0;
 	}
 	return 1;
 }
 
-bool func_96(int iParam0)
+bool func_97(int iParam0)
 {
-	return func_97(iParam0, Global_41631);
+	return func_98(iParam0, Global_42009);
 }
 
-int func_97(int iParam0, int iParam1)
+int func_98(int iParam0, int iParam1)
 {
 	if (iParam1 == 15)
 	{

@@ -69,7 +69,7 @@ void __EntryFunction__()
 						{
 							if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("michael2")) > 0)
 							{
-								if (Global_95386)
+								if (Global_95801)
 								{
 									if (STREAMING::HAS_ANIM_DICT_LOADED("map_objects"))
 									{
@@ -94,7 +94,7 @@ void __EntryFunction__()
 							}
 							else
 							{
-								Global_95387 = 1;
+								Global_95802 = 1;
 								iLocal_2 = 4;
 							}
 						}

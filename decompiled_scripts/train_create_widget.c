@@ -49,7 +49,7 @@ void __EntryFunction__()
 				{
 					VEHICLE::DELETE_MISSION_TRAIN(&iLocal_0);
 				}
-				iLocal_0 = VEHICLE::CREATE_MISSION_TRAIN(iLocal_4, Local_1, bLocal_6);
+				iLocal_0 = VEHICLE::CREATE_MISSION_TRAIN(iLocal_4, Local_1, bLocal_6, 0, 0);
 				iLocal_7 = 0;
 			}
 			if (iLocal_9)

@@ -30,6 +30,7 @@ void __EntryFunction__()
 	Global_3934111 = 1;
 	Global_3934112 = 1;
 	Global_4016696 = -1;
+	Global_4016697 = -1;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	func_16();
 	iVar0 = 0;

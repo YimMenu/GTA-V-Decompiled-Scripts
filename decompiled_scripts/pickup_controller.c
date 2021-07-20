@@ -148,7 +148,7 @@ int func_5(int iParam0)
 	{
 		return 0;
 	}
-	return Global_111858.f_9081.f_330[iParam0 /*6*/];
+	return Global_112293.f_9083.f_330[iParam0 /*6*/];
 }
 
 void func_6()
@@ -217,11 +217,11 @@ int func_9()
 			}
 		}
 	}
-	if (Global_150693 == 2)
+	if (Global_151130 == 2)
 	{
 		return 1;
 	}
-	else if (Global_150693 == 3)
+	else if (Global_151130 == 3)
 	{
 		return 0;
 	}
@@ -329,66 +329,66 @@ int func_13(int iParam0)
 	{
 		return 0;
 	}
-	return Global_111858.f_9081.f_99.f_58[iParam0];
+	return Global_112293.f_9083.f_99.f_58[iParam0];
 }
 
 void func_14()
 {
-	switch (Global_31211)
+	switch (Global_31589)
 	{
 		case 0:
 			break;
 		
 		case 1:
-			switch (Global_31212)
+			switch (Global_31590)
 			{
 				case 0:
-					if (OBJECT::DOES_PICKUP_EXIST(iLocal_20[Global_31213]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(iLocal_20[Global_31213]))
+					if (OBJECT::DOES_PICKUP_EXIST(iLocal_20[Global_31591]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(iLocal_20[Global_31591]))
 					{
-						Global_31214 = 0;
+						Global_31592 = 0;
 					}
 					else
 					{
-						Global_31214 = 1;
+						Global_31592 = 1;
 					}
 					break;
 				
 				case 1:
-					if (OBJECT::DOES_PICKUP_EXIST(iLocal_86[Global_31213]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(iLocal_86[Global_31213]))
+					if (OBJECT::DOES_PICKUP_EXIST(iLocal_86[Global_31591]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(iLocal_86[Global_31591]))
 					{
-						Global_31214 = 0;
+						Global_31592 = 0;
 					}
 					else
 					{
-						Global_31214 = 1;
+						Global_31592 = 1;
 					}
 					break;
 				
 				case 2:
-					if (OBJECT::DOES_PICKUP_EXIST(iLocal_163[Global_31213]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(iLocal_163[Global_31213]))
+					if (OBJECT::DOES_PICKUP_EXIST(iLocal_163[Global_31591]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(iLocal_163[Global_31591]))
 					{
-						Global_31214 = 0;
+						Global_31592 = 0;
 					}
 					else
 					{
-						Global_31214 = 1;
+						Global_31592 = 1;
 					}
 					break;
 				
 				case 3:
-					Global_31211 = 3;
+					Global_31589 = 3;
 					break;
 			}
-			Global_31211 = 2;
+			Global_31589 = 2;
 			break;
 		
 		case 2:
 			break;
 		
 		case 3:
-			Global_31213 = 0;
-			Global_31214 = 0;
-			Global_31211 = 0;
+			Global_31591 = 0;
+			Global_31592 = 0;
+			Global_31589 = 0;
 			break;
 	}
 }
@@ -524,7 +524,7 @@ void func_22()
 
 bool func_23(int iParam0)
 {
-	return Global_41631 == iParam0;
+	return Global_42009 == iParam0;
 }
 
 void func_24()

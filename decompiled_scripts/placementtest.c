@@ -246,8 +246,8 @@ void func_12(char* sParam0)
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 }
 
-var func_13()
+int func_13()
 {
-	return unk_0x67D02A194A2FC2BD("SPLASH_TEXT");
+	return GRAPHICS::REQUEST_SCALEFORM_MOVIE("SPLASH_TEXT");
 }
 
