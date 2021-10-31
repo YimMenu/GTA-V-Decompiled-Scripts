@@ -2310,7 +2310,7 @@ void func_29(var uParam0, var uParam1, var uParam2)
 			break;
 		
 		case 14:
-			iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam2->f_3);
+			iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam2->f_3);
 			if (iVar0 != -1)
 			{
 				if (((PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar0) >= 0.99f || PLAYER::IS_PLAYER_DEAD(PLAYER::PLAYER_ID())) || func_393(uParam2)) || PED::IS_PED_BEING_JACKED(PLAYER::PLAYER_PED_ID()))
@@ -2412,7 +2412,7 @@ void func_29(var uParam0, var uParam1, var uParam2)
 			break;
 		
 		case 18:
-			iVar3 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam2->f_3);
+			iVar3 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam2->f_3);
 			if (iVar3 != -1)
 			{
 				iVar4 = 1;
@@ -74721,7 +74721,7 @@ void func_350(var uParam0, var uParam1)
 					fVar1 = 0.32f;
 					fVar2 = 0.31f;
 				}
-				iVar3 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam1->f_3);
+				iVar3 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam1->f_3);
 				if (iLocal_48 == 0)
 				{
 					if (iVar3 != -1)

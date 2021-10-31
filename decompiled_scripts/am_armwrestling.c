@@ -6720,11 +6720,11 @@ int func_90(int iParam0)
 	return -1;
 }
 
-int func_91(int* iParam0)
+int func_91(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -9026,11 +9026,11 @@ int func_147(int iParam0)
 	return 0;
 }
 
-int func_148(int* iParam0)
+int func_148(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -44457,7 +44457,7 @@ void func_265(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			IntToString(&(Global_1682502.f_4), MISC::GET_HASH_KEY(&(Global_4456448.f_85822)), 32);
 			Global_1682502.f_32 = iParam2;
 			Global_1682502.f_19 = (func_269(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0xBBA55BE9AAAABF44(&Global_1682502);
+			STATS::_PLAYSTATS_ROBBERY_FINALE(&Global_1682502);
 			func_303();
 			Global_1575125 = 0;
 		}

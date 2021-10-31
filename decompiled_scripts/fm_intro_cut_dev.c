@@ -9558,7 +9558,7 @@ void func_200(bool bParam0, bool bParam1, bool bParam2, bool bParam3, bool bPara
 	AUDIO::SET_USER_RADIO_CONTROL_ENABLED(false);
 	if (bParam0)
 	{
-		NETWORK::_0xBF22E0F32968E967(PLAYER::PLAYER_ID(), bParam6);
+		NETWORK::NETWORK_LEAVE_PED_BEHIND_BEFORE_CUTSCENE(PLAYER::PLAYER_ID(), bParam6);
 	}
 	if (bParam1)
 	{

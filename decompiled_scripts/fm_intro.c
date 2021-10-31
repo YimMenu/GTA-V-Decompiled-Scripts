@@ -3042,11 +3042,11 @@ void func_76(char* sParam0, int iParam1)
 	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, false, iParam1);
 }
 
-int func_77(int* iParam0)
+int func_77(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -14696,7 +14696,7 @@ void func_366(bool bParam0, bool bParam1, bool bParam2, bool bParam3, bool bPara
 	AUDIO::SET_USER_RADIO_CONTROL_ENABLED(false);
 	if (bParam0)
 	{
-		NETWORK::_0xBF22E0F32968E967(PLAYER::PLAYER_ID(), bParam6);
+		NETWORK::NETWORK_LEAVE_PED_BEHIND_BEFORE_CUTSCENE(PLAYER::PLAYER_ID(), bParam6);
 	}
 	if (bParam1)
 	{

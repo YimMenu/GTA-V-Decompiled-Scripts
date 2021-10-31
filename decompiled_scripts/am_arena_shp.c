@@ -1989,27 +1989,27 @@ void func_32(int iParam0, bool bParam1)
 			break;
 		
 		case -1752851493:
-			MONEY::_0xB40F96D6D252839B(Global_4265506[iParam0 /*85*/].f_66.f_1, 0, 1, Global_4265506[iParam0 /*85*/].f_66.f_1);
+			MONEY::_NETWORK_SPENT_AUTOSHOP_PROPERTY_UTILITY_FEE(Global_4265506[iParam0 /*85*/].f_66.f_1, 0, 1, Global_4265506[iParam0 /*85*/].f_66.f_1);
 			break;
 		
 		case -1503749970:
-			MONEY::_0xBCB266247193AC61(Global_4265506[iParam0 /*85*/].f_66.f_1, -1, -1, Global_4265506[iParam0 /*85*/].f_66.f_1, Global_4265506[iParam0 /*85*/].f_66.f_16);
+			MONEY::_NETWORK_EARN_FROM_TUNER_FINALE(Global_4265506[iParam0 /*85*/].f_66.f_1, -1, -1, Global_4265506[iParam0 /*85*/].f_66.f_1, Global_4265506[iParam0 /*85*/].f_66.f_16);
 			break;
 		
 		case -1843409092:
-			MONEY::_0xBCB266247193AC61(Global_4265506[iParam0 /*85*/].f_66.f_1, Global_4265506[iParam0 /*85*/].f_66.f_1, MISC::GET_HASH_KEY(&(Global_4265506[iParam0 /*85*/].f_14.f_26)), -1, -1);
+			MONEY::_NETWORK_EARN_FROM_TUNER_FINALE(Global_4265506[iParam0 /*85*/].f_66.f_1, Global_4265506[iParam0 /*85*/].f_66.f_1, MISC::GET_HASH_KEY(&(Global_4265506[iParam0 /*85*/].f_14.f_26)), -1, -1);
 			break;
 		
 		case 1669058563:
-			MONEY::_0xBC6227792A188E2E(Global_4265506[iParam0 /*85*/].f_66.f_1);
+			MONEY::_NETWORK_EARN_FROM_CARCLUB_MEMBERSHIP(Global_4265506[iParam0 /*85*/].f_66.f_1);
 			break;
 		
 		case 2102747615:
-			MONEY::_0x533073E8A596008C(Global_4265506[iParam0 /*85*/].f_66.f_1, Global_4265506[iParam0 /*85*/].f_66.f_16);
+			MONEY::_NETWORK_EARN_FROM_VEHICLE_AUTOSHOP(Global_4265506[iParam0 /*85*/].f_66.f_1, Global_4265506[iParam0 /*85*/].f_66.f_16);
 			break;
 		
 		case 2030771998:
-			MONEY::_0xFE65AFE7308E32B2(Global_4265506[iParam0 /*85*/].f_66.f_1);
+			MONEY::_NETWORK_EARN_FROM_VEHICLE_AUTOSHOP_BONUS(Global_4265506[iParam0 /*85*/].f_66.f_1);
 			break;
 		
 		case 1708747007:
@@ -2020,11 +2020,11 @@ void func_32(int iParam0, bool bParam1)
 		case 1058055395:
 		case -321151125:
 		case 2078731875:
-			MONEY::_0xB846F547D3792DF6(Global_4265506[iParam0 /*85*/].f_66.f_1, &(Global_4265506[iParam0 /*85*/].f_14.f_26), &(Global_4265506[iParam0 /*85*/].f_14.f_44));
+			MONEY::_NETWORK_EARN_FROM_TUNER_AWARD(Global_4265506[iParam0 /*85*/].f_66.f_1, &(Global_4265506[iParam0 /*85*/].f_14.f_26), &(Global_4265506[iParam0 /*85*/].f_14.f_44));
 			break;
 		
 		case 1051883823:
-			MONEY::_0x93AA4165CB67E925(Global_4265506[iParam0 /*85*/].f_66.f_1, 0, 1, Global_4265506[iParam0 /*85*/].f_66.f_16);
+			MONEY::_NETWORK_SPENT_IM_ABILITY(Global_4265506[iParam0 /*85*/].f_66.f_1, 0, 1, Global_4265506[iParam0 /*85*/].f_66.f_16);
 			break;
 	}
 	if (func_13())

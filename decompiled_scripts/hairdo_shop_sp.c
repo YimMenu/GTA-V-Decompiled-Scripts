@@ -108497,7 +108497,7 @@ void func_677(int iParam0)
 		}
 		else
 		{
-			MONEY::_0xBC6227792A188E2E(iVar0);
+			MONEY::_NETWORK_EARN_FROM_CARCLUB_MEMBERSHIP(iVar0);
 		}
 	}
 }
@@ -117162,7 +117162,7 @@ void func_708(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4)
 			Var0.f_6 = -1;
 			break;
 	}
-	STATS::_0xFF14D6FEEC507BBE(&Var0);
+	STATS::_PLAYSTATS_CARCLUB_POINTS(&Var0);
 }
 
 int func_709(int iParam0)
@@ -121458,7 +121458,7 @@ float func_789(var uParam0, var uParam1)
 	fVar0 = 0f;
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		*uParam0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(*uParam1);
+		*uParam0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(*uParam1);
 		if (*uParam0 != -1)
 		{
 			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(*uParam0))
@@ -121660,7 +121660,7 @@ void func_797(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		uParam0->f_527 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_529);
+		uParam0->f_527 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_529);
 		if (uParam0->f_527 != -1)
 		{
 			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(uParam0->f_527))
@@ -122436,7 +122436,7 @@ void func_811(var uParam0)
 					{
 						if (TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073) != 1 && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 2106541073) != 0)
 						{
-							uParam0->f_526 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_528);
+							uParam0->f_526 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_528);
 							if (!PED::IS_SYNCHRONIZED_SCENE_RUNNING(uParam0->f_526) || PED::GET_SYNCHRONIZED_SCENE_PHASE(uParam0->f_526) >= 0.7181f)
 							{
 								TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), uParam0->f_183.f_39, 1f, -1, 40000f, 0.5f);
@@ -122484,7 +122484,7 @@ void func_811(var uParam0)
 				}
 				else
 				{
-					uParam0->f_526 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_528);
+					uParam0->f_526 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_528);
 					if (!PED::IS_SYNCHRONIZED_SCENE_RUNNING(uParam0->f_526) || PED::GET_SYNCHRONIZED_SCENE_PHASE(uParam0->f_526) >= fVar8)
 					{
 						uParam0->f_115.f_31 = 7;

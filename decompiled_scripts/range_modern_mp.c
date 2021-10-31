@@ -91450,11 +91450,11 @@ int func_524(int iParam0)
 	return -1;
 }
 
-int func_525(int* iParam0)
+int func_525(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -94067,11 +94067,11 @@ int func_582(int iParam0)
 	return 0;
 }
 
-int func_583(int* iParam0)
+int func_583(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -115313,17 +115313,17 @@ void func_999(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4,
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(sParam5);
 }
 
-int func_1000(int* iParam0, int* iParam1)
+int func_1000(var* uParam0, var* uParam1)
 {
-	if (!func_1001(*iParam0))
+	if (!func_1001(*uParam0))
 	{
 		return 0;
 	}
-	if (!func_1001(*iParam1))
+	if (!func_1001(*uParam1))
 	{
 		return 0;
 	}
-	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, iParam1))
+	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1))
 	{
 		return 1;
 	}
@@ -116006,7 +116006,7 @@ void func_1014(int* iParam0, char* sParam1)
 	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
 }
 
-int func_1015(int* iParam0, var uParam1)
+int func_1015(var* uParam0, var uParam1)
 {
 	int iVar0;
 	
@@ -116015,7 +116015,7 @@ int func_1015(int* iParam0, var uParam1)
 	{
 		if (func_1001(*(uParam1[iVar0 /*13*/])))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, uParam1[iVar0 /*13*/]))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1[iVar0 /*13*/]))
 			{
 				return 1;
 			}
@@ -116082,7 +116082,7 @@ int func_1017(var uParam0)
 	return 1;
 }
 
-int func_1018(var uParam0, int* iParam1, char* sParam2)
+int func_1018(var uParam0, var* uParam1, char* sParam2)
 {
 	if (*uParam0 == 2)
 	{
@@ -116091,27 +116091,27 @@ int func_1018(var uParam0, int* iParam1, char* sParam2)
 	switch (*uParam0)
 	{
 		case 0:
-			if (func_1001(*iParam1))
+			if (func_1001(*uParam1))
 			{
-				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 				{
 					if (MISC::IS_DURANGO_VERSION() || MISC::IS_ORBIS_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else if (MISC::IS_XBOX360_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 						if (MISC::IS_PS3_VERSION())
 						{
 						}
@@ -116126,7 +116126,7 @@ int func_1018(var uParam0, int* iParam1, char* sParam2)
 				}
 				else
 				{
-					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 					*uParam0 = 2;
 				}
 			}
@@ -116137,13 +116137,13 @@ int func_1018(var uParam0, int* iParam1, char* sParam2)
 			break;
 		
 		case 1:
-			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 			{
 				if (!NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_PENDING())
 				{
 					if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED())
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 					}
 					*uParam0 = 2;
 					return 1;
@@ -116151,7 +116151,7 @@ int func_1018(var uParam0, int* iParam1, char* sParam2)
 			}
 			else
 			{
-				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 				*uParam0 = 2;
 			}
 			break;
@@ -124846,7 +124846,7 @@ void func_1197(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4,
 			IntToString(&(Global_1682502.f_4), MISC::GET_HASH_KEY(&(Global_4456448.f_85822)), 32);
 			Global_1682502.f_32 = iParam2;
 			Global_1682502.f_19 = (func_1199(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0xBBA55BE9AAAABF44(&Global_1682502);
+			STATS::_PLAYSTATS_ROBBERY_FINALE(&Global_1682502);
 			func_1228();
 			Global_1575125 = 0;
 		}

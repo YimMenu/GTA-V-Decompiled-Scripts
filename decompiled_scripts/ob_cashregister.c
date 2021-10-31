@@ -174,12 +174,12 @@ struct<5> func_3(int iParam0, struct<3> Param1, int iParam4, int iParam5, int iP
 		return Var0;
 	}
 	MISC::SET_BIT(&iParam4, 5);
-	Var6.f_4 = OBJECT::_0x9C93764223E29C50(iParam0, Param1, iParam4, iParam5, iParam6, bParam7, 0);
+	Var6.f_4 = OBJECT::_CREATE_NON_NETWORKED_AMBIENT_PICKUP(iParam0, Param1, iParam4, iParam5, iParam6, bParam7, false);
 	iVar11 = PLAYER::NETWORK_PLAYER_ID_TO_INT();
 	if (bParam7)
 	{
 		Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_12 = SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME();
-		Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::_0x257ED0FADF750BCF();
+		Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::_NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT();
 		if (Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 == 0)
 		{
 			Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT();

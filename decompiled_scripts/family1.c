@@ -6605,7 +6605,7 @@ void func_100()
 				if (ENTITY::GET_ENTITY_HEALTH(iLocal_3027) >= 1000 && VEHICLE::GET_VEHICLE_ENGINE_HEALTH(iLocal_3027) >= 1000f)
 				{
 					AUDIO::SET_VEHICLE_AUDIO_ENGINE_DAMAGE_FACTOR(iLocal_3027, 0f);
-					AUDIO::_0x1C073274E065C6D2(iLocal_3027, false);
+					AUDIO::ENABLE_VEHICLE_FANBELT_DAMAGE(iLocal_3027, false);
 					if (AUDIO::IS_AUDIO_SCENE_ACTIVE("FAMILY_1_CAR_BREAKS_DOWN"))
 					{
 						AUDIO::STOP_AUDIO_SCENE("FAMILY_1_CAR_BREAKS_DOWN");
@@ -15530,7 +15530,7 @@ int func_263(int iParam0, bool bParam1, bool bParam2, int iParam3)
 		iVar22 = PLAYER::PLAYER_PED_ID();
 		ENTITY::SET_ENTITY_VISIBLE(PLAYER::PLAYER_PED_ID(), true, false);
 		func_296(iVar22);
-		PED::_0xE861D0B05C7662B8(iVar22, false, 0);
+		PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar22, false, 0);
 		if (fVar3 < 25f && !PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()))
 		{
 			ENTITY::SET_ENTITY_HEALTH(PLAYER::PLAYER_PED_ID(), SYSTEM::ROUND((((25f / 100f) * (SYSTEM::TO_FLOAT(PED::GET_PED_MAX_HEALTH(PLAYER::PLAYER_PED_ID())) - 100f)) + 100f)), 0);
@@ -15541,7 +15541,7 @@ int func_263(int iParam0, bool bParam1, bool bParam2, int iParam3)
 			{
 				ENTITY::SET_ENTITY_VISIBLE(iVar0, true, false);
 				func_296(iVar0);
-				PED::_0xE861D0B05C7662B8(iVar0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar0, false, 0);
 				PED::SET_PED_STEALTH_MOVEMENT(iVar0, false, 0);
 			}
 		}
@@ -19393,7 +19393,7 @@ void func_318()
 					iLocal_100 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY_BONE("scr_fam1_veh_smoke", iLocal_3027, 0f, 0f, 0f, 0f, 0f, 0f, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(iLocal_3027, "overheat"), 1f, false, false, false);
 				}
 				AUDIO::SET_VEHICLE_AUDIO_ENGINE_DAMAGE_FACTOR(iLocal_3027, 0.75f);
-				AUDIO::_0x1C073274E065C6D2(iLocal_3027, true);
+				AUDIO::ENABLE_VEHICLE_FANBELT_DAMAGE(iLocal_3027, true);
 				GRAPHICS::SET_PARTICLE_FX_LOOPED_EVOLUTION(iLocal_100, "damage", 1f, false);
 				VEHICLE::SET_VEHICLE_STRONG(iLocal_3027, true);
 				if (CAM::IS_SCREEN_FADED_OUT())
@@ -25220,7 +25220,7 @@ void func_381()
 					RECORDING::_0x293220DA1B46CEBC(3.5f, 5f, 3);
 					GRAPHICS::SET_PARTICLE_FX_LOOPED_EVOLUTION(iLocal_100, "damage", 1f, false);
 					AUDIO::SET_VEHICLE_AUDIO_ENGINE_DAMAGE_FACTOR(iLocal_3027, 0.75f);
-					AUDIO::_0x1C073274E065C6D2(iLocal_3027, true);
+					AUDIO::ENABLE_VEHICLE_FANBELT_DAMAGE(iLocal_3027, true);
 					iLocal_5987 = MISC::GET_GAME_TIMER();
 					iLocal_5902 = 38;
 				}
@@ -117559,7 +117559,7 @@ int func_796(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool bP
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, Param2, fParam5, false, false);
 			func_826(*iParam0, iParam1, bParam7);
-			PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+			PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 			func_819(*iParam0);
 			func_808(*iParam0, 1, 0);
 			func_807(*iParam0);
@@ -121513,7 +121513,7 @@ int func_863(int* iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, 
 			{
 				*iParam0 = PED::CREATE_PED_INSIDE_VEHICLE(iParam2, 26, iVar0, iParam3, true, true);
 				func_826(*iParam0, iParam1, bParam5);
-				PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 				func_819(*iParam0);
 				func_808(*iParam0, 1, 0);
 				func_807(*iParam0);

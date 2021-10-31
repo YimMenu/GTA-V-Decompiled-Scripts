@@ -546,7 +546,7 @@ void func_14(var uParam0)
 		
 		case 3:
 			func_258();
-			iLocal_77 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_78);
+			iLocal_77 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_78);
 			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_77))
 			{
 				iLocal_70 = 1;
@@ -569,7 +569,7 @@ void func_14(var uParam0)
 		
 		case 5:
 			func_258();
-			iLocal_77 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_78);
+			iLocal_77 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_78);
 			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_77))
 			{
 				PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_77, true);
@@ -636,7 +636,7 @@ void func_14(var uParam0)
 			{
 				func_258();
 			}
-			iLocal_77 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_78);
+			iLocal_77 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_78);
 			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_77))
 			{
 				func_17(5);

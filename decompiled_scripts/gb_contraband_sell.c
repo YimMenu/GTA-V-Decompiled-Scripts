@@ -23623,7 +23623,7 @@ int func_464(struct<3> Param0, float fParam3, int iParam4)
 			ENTITY::SET_ENTITY_HEADING(NETWORK::NET_TO_OBJ(Local_535.f_75[iVar6 /*30*/][iParam4]), fParam3);
 			NETWORK::SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES(Local_535.f_75[iVar6 /*30*/][iParam4], true);
 			ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_535.f_75[iVar6 /*30*/][iParam4]), true);
-			OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_535.f_75[iVar6 /*30*/][iParam4]), true);
+			OBJECT::SET_OBJECT_FORCE_VEHICLES_TO_AVOID(NETWORK::NET_TO_OBJ(Local_535.f_75[iVar6 /*30*/][iParam4]), true);
 			OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_535.f_75[iVar6 /*30*/][iParam4]), true);
 			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_535.f_75[iVar6 /*30*/][iParam4]), false);
 			PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ(Local_535.f_75[iVar6 /*30*/][iParam4]));
@@ -30767,11 +30767,11 @@ int func_705(int iParam0)
 	return -1;
 }
 
-int func_706(int* iParam0)
+int func_706(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -112790,12 +112790,12 @@ void func_1197(struct<3> Param0)
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var0, 5, func_29(1, 1));
 }
 
-int func_1198(int iParam0, int* iParam1)
+int func_1198(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!func_1207(iParam0, iParam1))
+	if (!func_1207(iParam0, uParam1))
 	{
 		return 1;
 	}
@@ -112808,7 +112808,7 @@ int func_1198(int iParam0, int* iParam1)
 	{
 		if (!func_1205(iParam0))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (func_1201(&iParam0, iVar1))
 			{
 			}
@@ -116120,14 +116120,14 @@ int func_1206(int iParam0)
 	return 0;
 }
 
-int func_1207(int iParam0, int* iParam1)
+int func_1207(int iParam0, var* uParam1)
 {
 	int iVar0;
 	bool bVar1;
 	
-	if (NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
-		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 	}
 	else
 	{
@@ -116149,7 +116149,7 @@ int func_1207(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_33()) || !func_2489(iVar0, 0, 0)) || !bVar1) || func_1208(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam1))) || iVar0 == func_33()) || !func_2489(iVar0, 0, 0)) || !bVar1) || func_1208(iParam0))
 	{
 		return 0;
 	}
@@ -148135,11 +148135,11 @@ int func_1982(int iParam0)
 	return 0;
 }
 
-int func_1983(int* iParam0)
+int func_1983(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -159822,7 +159822,7 @@ void func_2360(bool bParam0, var uParam1, int iParam2, bool bParam3, int iParam4
 
 void func_2361(int iParam0)
 {
-	STATS::_0x1A67DFBF1F5C3835(&Global_1682470);
+	STATS::_PLAYSTATS_ROBBERY_PREP(&Global_1682470);
 	func_2362();
 }
 

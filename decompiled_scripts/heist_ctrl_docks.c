@@ -5460,7 +5460,7 @@ void func_154()
 						ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), true);
 						PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
 						func_191(71, &uLocal_737, 1, 1, 0, 1, 0);
-						PAD::_0xF239400E16C23E08(0, 0);
+						PAD::SET_PAD_SHAKE_SUPPRESSED_ID(0, 0);
 						MISC::SET_BIT(&iLocal_41, 8);
 					}
 					else
@@ -5604,7 +5604,7 @@ void func_154()
 					STREAMING::STREAMVOL_DELETE(iLocal_50);
 				}
 				STREAMING::NEW_LOAD_SCENE_STOP();
-				PAD::_0xF239400E16C23E08(0, -1);
+				PAD::SET_PAD_SHAKE_SUPPRESSED_ID(0, -1);
 				func_155(&iLocal_42);
 				MISC::CLEAR_BIT(&iLocal_41, 2);
 				PED::REMOVE_SCENARIO_BLOCKING_AREA(iLocal_48, false);
@@ -100609,7 +100609,7 @@ void func_576()
 	PATHFIND::SET_PED_PATHS_IN_AREA(Local_54.f_1.f_394 - Local_54.f_1.f_397, Local_54.f_1.f_394 + Local_54.f_1.f_397, true, 0);
 	PLAYER::SET_MAX_WANTED_LEVEL(5);
 	CUTSCENE::REMOVE_CUTSCENE();
-	PAD::_0xF239400E16C23E08(0, -1);
+	PAD::SET_PAD_SHAKE_SUPPRESSED_ID(0, -1);
 	if (iLocal_42 != -1)
 	{
 		func_155(&iLocal_42);

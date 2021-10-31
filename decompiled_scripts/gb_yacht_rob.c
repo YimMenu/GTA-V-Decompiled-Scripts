@@ -4542,11 +4542,11 @@ int func_184(int iParam0)
 	return 0;
 }
 
-int func_185(int* iParam0)
+int func_185(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -9565,7 +9565,7 @@ void func_385(bool bParam0, int iParam1, int iParam2, bool bParam3, int iParam4,
 
 void func_386(int iParam0)
 {
-	STATS::_0x1A67DFBF1F5C3835(&Global_1682470);
+	STATS::_PLAYSTATS_ROBBERY_PREP(&Global_1682470);
 	func_387();
 }
 
@@ -16749,11 +16749,11 @@ int func_576(int iParam0)
 	return -1;
 }
 
-int func_577(int* iParam0)
+int func_577(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -106621,12 +106621,12 @@ void func_1331(struct<3> Param0)
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var0, 5, func_1313(1, 1));
 }
 
-int func_1332(int iParam0, int* iParam1)
+int func_1332(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!func_1341(iParam0, iParam1))
+	if (!func_1341(iParam0, uParam1))
 	{
 		return 1;
 	}
@@ -106639,7 +106639,7 @@ int func_1332(int iParam0, int* iParam1)
 	{
 		if (!func_1339(iParam0))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (func_1335(&iParam0, iVar1))
 			{
 			}
@@ -109951,14 +109951,14 @@ int func_1340(int iParam0)
 	return 0;
 }
 
-int func_1341(int iParam0, int* iParam1)
+int func_1341(int iParam0, var* uParam1)
 {
 	int iVar0;
 	bool bVar1;
 	
-	if (NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
-		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 	}
 	else
 	{
@@ -109980,7 +109980,7 @@ int func_1341(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_14()) || !func_37(iVar0, 0, 0)) || !bVar1) || func_1342(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam1))) || iVar0 == func_14()) || !func_37(iVar0, 0, 0)) || !bVar1) || func_1342(iParam0))
 	{
 		return 0;
 	}

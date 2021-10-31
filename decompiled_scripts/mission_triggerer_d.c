@@ -12412,7 +12412,7 @@ int func_289(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool bP
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, Param2, fParam5, false, false);
 			func_616(*iParam0, iParam1, bParam7);
-			PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+			PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 			func_609(*iParam0);
 			func_593(*iParam0, 1, 0);
 			func_592(*iParam0);
@@ -102487,7 +102487,7 @@ int func_712(int iParam0, bool bParam1)
 		iVar2++;
 	}
 	iVar7 = iVar1 * 25;
-	if (AUDIO::_0x5DB8010EE71FDEF2(iParam0))
+	if (AUDIO::IS_VEHICLE_AUDIBLY_DAMAGED(iParam0))
 	{
 		iVar11 = 50;
 	}

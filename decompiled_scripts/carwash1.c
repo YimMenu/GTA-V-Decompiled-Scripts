@@ -712,7 +712,7 @@ int func_16(var uParam0, int iParam1)
 		}
 		if (!NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam1))
 		{
-			NETWORK::_0xCD71A4ECAB22709E(iParam1);
+			NETWORK::NETWORK_USE_LOGARITHMIC_BLENDING_THIS_FRAME(iParam1);
 		}
 	}
 	else if (func_57(uParam0) && uParam0->f_344 == 0)

@@ -2699,12 +2699,12 @@ bool func_90()
 	return Global_99422.f_364 > 0;
 }
 
-int func_91(int iParam0, int* iParam1)
+int func_91(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!func_101(iParam0, iParam1))
+	if (!func_101(iParam0, uParam1))
 	{
 		return 1;
 	}
@@ -2717,7 +2717,7 @@ int func_91(int iParam0, int* iParam1)
 	{
 		if (!func_99(iParam0))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (func_94(&iParam0, iVar1))
 			{
 			}
@@ -6038,14 +6038,14 @@ int func_100(int iParam0)
 	return 0;
 }
 
-int func_101(int iParam0, int* iParam1)
+int func_101(int iParam0, var* uParam1)
 {
 	int iVar0;
 	bool bVar1;
 	
-	if (NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
-		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 	}
 	else
 	{
@@ -6067,7 +6067,7 @@ int func_101(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_62()) || !func_7(iVar0, 0, 0)) || !bVar1) || func_102(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam1))) || iVar0 == func_62()) || !func_7(iVar0, 0, 0)) || !bVar1) || func_102(iParam0))
 	{
 		return 0;
 	}

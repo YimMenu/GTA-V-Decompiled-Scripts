@@ -112645,8 +112645,8 @@ void func_997(int iParam0, int iParam1, bool bParam2)
 					func_971(1);
 				}
 			}
-			NETWORK::_0xCAE55F48D3D7875C(4);
-			NETWORK::_0xCAE55F48D3D7875C(0);
+			NETWORK::NETWORK_SESSION_ADD_ACTIVE_MATCHMAKING_GROUP(4);
+			NETWORK::NETWORK_SESSION_ADD_ACTIVE_MATCHMAKING_GROUP(0);
 			bVar3 = func_1001();
 			if (bVar3 > 0)
 			{
@@ -113019,11 +113019,11 @@ int func_1013(int iParam0)
 	return -1;
 }
 
-int func_1014(int* iParam0)
+int func_1014(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}

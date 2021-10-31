@@ -94788,7 +94788,7 @@ int func_494(int* iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, 
 			{
 				*iParam0 = PED::CREATE_PED_INSIDE_VEHICLE(iParam2, 26, iVar0, iParam3, true, true);
 				func_536(*iParam0, iParam1, bParam5);
-				PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 				func_529(*iParam0);
 				func_513(*iParam0, 1, 0);
 				func_512(*iParam0);
@@ -98259,7 +98259,7 @@ int func_537(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool bP
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, Param2, fParam5, false, false);
 			func_536(*iParam0, iParam1, bParam7);
-			PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+			PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 			func_529(*iParam0);
 			func_513(*iParam0, 1, 0);
 			func_512(*iParam0);

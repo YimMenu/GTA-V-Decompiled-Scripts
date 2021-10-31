@@ -51589,7 +51589,7 @@ int func_772(int iParam0)
 		NETWORK::SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES(Local_941.f_33[iParam0], true);
 		ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_941.f_33[iParam0]), true);
 		ENTITY::SET_ENTITY_HEALTH(NETWORK::NET_TO_OBJ(Local_941.f_33[iParam0]), 50, 0);
-		OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_941.f_33[iParam0]), true);
+		OBJECT::SET_OBJECT_FORCE_VEHICLES_TO_AVOID(NETWORK::NET_TO_OBJ(Local_941.f_33[iParam0]), true);
 		OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_941.f_33[iParam0]), true);
 		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_941.f_33[iParam0]), true);
 		PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ(Local_941.f_33[iParam0]));
@@ -58215,11 +58215,11 @@ int func_927(int iParam0)
 	return -1;
 }
 
-int func_928(int* iParam0)
+int func_928(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -73071,11 +73071,11 @@ int func_1410(int iParam0)
 	return 0;
 }
 
-int func_1411(int* iParam0)
+int func_1411(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -105051,7 +105051,7 @@ void func_2039(int iParam0, int iParam1)
 		{
 			if (!PED::IS_PED_PERFORMING_STEALTH_KILL(PLAYER::PLAYER_PED_ID()))
 			{
-				if (PED::_0x06087579E7AA85A9(iParam1, PLAYER::PLAYER_PED_ID(), -1f, -1f, -1f, -1f) && ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY(iParam1, PLAYER::PLAYER_PED_ID(), 287))
+				if (PED::IS_TARGET_PED_IN_PERCEPTION_AREA(iParam1, PLAYER::PLAYER_PED_ID(), -1f, -1f, -1f, -1f) && ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY(iParam1, PLAYER::PLAYER_PED_ID(), 287))
 				{
 					bVar0 = true;
 				}
@@ -126943,7 +126943,7 @@ void func_2445(bool bParam0, var uParam1, int iParam2, bool bParam3, int iParam4
 
 void func_2446(int iParam0)
 {
-	STATS::_0x1A67DFBF1F5C3835(&Global_1682470);
+	STATS::_PLAYSTATS_ROBBERY_PREP(&Global_1682470);
 	func_2447();
 }
 

@@ -72983,7 +72983,7 @@ void func_298(int iParam0, bool bParam1)
 	
 	if (func_299() || bParam1)
 	{
-		iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(*iParam0);
+		iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(*iParam0);
 		if (!PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar0))
 		{
 			NETWORK::NETWORK_START_SYNCHRONISED_SCENE(*iParam0);
@@ -73014,7 +73014,7 @@ void func_301(int iParam0, char* sParam1, char* sParam2, bool bParam3, bool bPar
 	bParam4 = false;
 	if ((func_299() || bParam3) && !bParam4)
 	{
-		NETWORK::_NETWORK_FORCE_LOCAL_USE_OF_SYNCED_SCENE_CAMERA(*iParam0, sParam1, sParam2);
+		NETWORK::NETWORK_ADD_SYNCHRONISED_SCENE_CAMERA(*iParam0, sParam1, sParam2);
 	}
 	else
 	{
@@ -77667,7 +77667,7 @@ int func_503(int iParam0, bool bParam1)
 {
 	if (func_299() || bParam1)
 	{
-		return NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iParam0);
+		return NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iParam0);
 	}
 	return iParam0;
 }

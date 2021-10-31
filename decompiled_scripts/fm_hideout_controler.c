@@ -1700,12 +1700,12 @@ struct<5> func_20(int iParam0, struct<3> Param1, int iParam4, int iParam5, int i
 		return Var0;
 	}
 	MISC::SET_BIT(&iParam4, 5);
-	Var6.f_4 = OBJECT::_0x9C93764223E29C50(iParam0, Param1, iParam4, iParam5, iParam6, bParam7, 0);
+	Var6.f_4 = OBJECT::_CREATE_NON_NETWORKED_AMBIENT_PICKUP(iParam0, Param1, iParam4, iParam5, iParam6, bParam7, false);
 	iVar11 = PLAYER::NETWORK_PLAYER_ID_TO_INT();
 	if (bParam7)
 	{
 		Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_12 = SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME();
-		Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::_0x257ED0FADF750BCF();
+		Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::_NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT();
 		if (Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 == 0)
 		{
 			Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT();
@@ -11494,7 +11494,7 @@ void func_246(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 	}
 	if (MISC::IS_BIT_SET(Global_4456448.f_29, 23))
 	{
-		NETWORK::_0x838DA0936A24ED4D(iParam0, 1);
+		NETWORK::_SET_NETWORK_ENABLE_VEHICLE_POSITION_CORRECTION(iParam0, true);
 	}
 	if (MISC::IS_BIT_SET(Global_4456448.f_31, 12))
 	{
@@ -20468,12 +20468,12 @@ bool func_292()
 	return Global_99422.f_364 > 0;
 }
 
-int func_293(int iParam0, int* iParam1)
+int func_293(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!func_302(iParam0, iParam1))
+	if (!func_302(iParam0, uParam1))
 	{
 		return 1;
 	}
@@ -20486,7 +20486,7 @@ int func_293(int iParam0, int* iParam1)
 	{
 		if (!func_300(iParam0))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (func_296(&iParam0, iVar1))
 			{
 			}
@@ -23798,14 +23798,14 @@ int func_301(int iParam0)
 	return 0;
 }
 
-int func_302(int iParam0, int* iParam1)
+int func_302(int iParam0, var* uParam1)
 {
 	int iVar0;
 	bool bVar1;
 	
-	if (NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
-		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 	}
 	else
 	{
@@ -23827,7 +23827,7 @@ int func_302(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_74()) || !func_1602(iVar0, 0, 0)) || !bVar1) || func_303(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam1))) || iVar0 == func_74()) || !func_1602(iVar0, 0, 0)) || !bVar1) || func_303(iParam0))
 	{
 		return 0;
 	}
@@ -29535,11 +29535,11 @@ int func_470(int iParam0)
 	return -1;
 }
 
-int func_471(int* iParam0)
+int func_471(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -33795,7 +33795,7 @@ void func_585(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			IntToString(&(Global_1682502.f_4), MISC::GET_HASH_KEY(&(Global_4456448.f_85822)), 32);
 			Global_1682502.f_32 = iParam2;
 			Global_1682502.f_19 = (func_588(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0xBBA55BE9AAAABF44(&Global_1682502);
+			STATS::_PLAYSTATS_ROBBERY_FINALE(&Global_1682502);
 			func_618();
 			Global_1575125 = 0;
 		}

@@ -119133,7 +119133,7 @@ int func_776(var uParam0, int iParam1, int iParam2)
 				iVar2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0);
 			}
 			uParam0->f_48 = (uParam0->f_48 + iVar2);
-			iVar3 = (((PED::_GET_NUM_PARENT_PEDS_OF_TYPE(1) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(0)) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(3)) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(2));
+			iVar3 = (((PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0)) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3)) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2));
 			if (uParam0->f_46 >= iVar3)
 			{
 				uParam0->f_46 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1);
@@ -124728,11 +124728,11 @@ void func_849(bool bParam0, char* sParam1)
 	}
 }
 
-int func_850(int* iParam0)
+int func_850(var* uParam0)
 {
 	if (!iLocal_13725)
 	{
-		if (NETWORK::FILLOUT_PM_PLAYER_LIST(iParam0, 1, 106))
+		if (NETWORK::FILLOUT_PM_PLAYER_LIST(uParam0, 1, 106))
 		{
 			NETWORK::REFRESH_PLAYER_LIST_STATS(106);
 			iLocal_13725 = 1;
@@ -124744,9 +124744,9 @@ int func_850(int* iParam0)
 	}
 	else if (NETWORK::REFRESH_PLAYER_LIST_STATS(106))
 	{
-		if (NETWORK::NETWORK_CHECK_DATA_MANAGER_SUCCEEDED_FOR_HANDLE(106, iParam0[0 /*13*/]))
+		if (NETWORK::NETWORK_CHECK_DATA_MANAGER_SUCCEEDED_FOR_HANDLE(106, uParam0[0 /*13*/]))
 		{
-			NETWORK::NETWORK_SET_CURRENT_DATA_MANAGER_HANDLE(iParam0[0 /*13*/]);
+			NETWORK::NETWORK_SET_CURRENT_DATA_MANAGER_HANDLE(uParam0[0 /*13*/]);
 			bLocal_13875 = true;
 			return 1;
 		}
@@ -159575,14 +159575,14 @@ void func_1330(int iParam0, bool bParam1)
 			func_1349(1);
 			func_1419();
 			PLAYER::_SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED(PLAYER::PLAYER_ID(), false);
-			GRAPHICS::_0xE63D7C6EECECB66B(false);
+			GRAPHICS::TOGGLE_PLAYER_DAMAGE_OVERLAY(false);
 			SYSTEM::WAIT(10);
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
 				ENTITY::SET_ENTITY_HEALTH(PLAYER::PLAYER_PED_ID(), iLocal_13833, 0);
 			}
 			SYSTEM::WAIT(10);
-			GRAPHICS::_0xE63D7C6EECECB66B(true);
+			GRAPHICS::TOGGLE_PLAYER_DAMAGE_OVERLAY(true);
 			break;
 		
 		case 3:
@@ -159652,14 +159652,14 @@ void func_1330(int iParam0, bool bParam1)
 				}
 			}
 			ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
-			GRAPHICS::_0xE63D7C6EECECB66B(false);
+			GRAPHICS::TOGGLE_PLAYER_DAMAGE_OVERLAY(false);
 			SYSTEM::WAIT(10);
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
 				ENTITY::SET_ENTITY_HEALTH(PLAYER::PLAYER_PED_ID(), iLocal_13833, 0);
 			}
 			SYSTEM::WAIT(10);
-			GRAPHICS::_0xE63D7C6EECECB66B(true);
+			GRAPHICS::TOGGLE_PLAYER_DAMAGE_OVERLAY(true);
 			HUD::DISPLAY_HUD(true);
 			HUD::DISPLAY_RADAR(true);
 			func_1345();
@@ -164259,7 +164259,7 @@ int func_1378(var uParam0, bool bParam1, bool bParam2, int iParam3)
 		iVar22 = PLAYER::PLAYER_PED_ID();
 		ENTITY::SET_ENTITY_VISIBLE(PLAYER::PLAYER_PED_ID(), true, false);
 		func_1397(iVar22);
-		PED::_0xE861D0B05C7662B8(iVar22, false, 0);
+		PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar22, false, 0);
 		if (fVar3 < 25f && !PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()))
 		{
 			ENTITY::SET_ENTITY_HEALTH(PLAYER::PLAYER_PED_ID(), SYSTEM::ROUND((((25f / 100f) * (SYSTEM::TO_FLOAT(PED::GET_PED_MAX_HEALTH(PLAYER::PLAYER_PED_ID())) - 100f)) + 100f)), 0);
@@ -164270,7 +164270,7 @@ int func_1378(var uParam0, bool bParam1, bool bParam2, int iParam3)
 			{
 				ENTITY::SET_ENTITY_VISIBLE(iVar0, true, false);
 				func_1397(iVar0);
-				PED::_0xE861D0B05C7662B8(iVar0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar0, false, 0);
 				PED::SET_PED_STEALTH_MOVEMENT(iVar0, false, 0);
 			}
 		}
@@ -165338,7 +165338,7 @@ int func_1407(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool b
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, Param2, fParam5, false, false);
 			func_1416(*iParam0, iParam1, bParam7);
-			PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+			PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 			func_470(*iParam0);
 			func_1355(*iParam0, 1, 0);
 			func_1363(*iParam0);
@@ -165876,7 +165876,7 @@ int func_1417(int* iParam0, int iParam1, int iParam2, int iParam3, bool bParam4,
 			{
 				*iParam0 = PED::CREATE_PED_INSIDE_VEHICLE(iParam2, 26, iVar0, iParam3, true, true);
 				func_1416(*iParam0, iParam1, bParam5);
-				PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 				func_470(*iParam0);
 				func_1355(*iParam0, 1, 0);
 				func_1363(*iParam0);

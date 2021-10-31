@@ -7047,11 +7047,11 @@ int func_214(int iParam0)
 	return -1;
 }
 
-int func_215(int* iParam0)
+int func_215(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -39817,7 +39817,7 @@ void func_1013(bool bParam0, var uParam1, int iParam2, bool bParam3, int iParam4
 
 void func_1014(int iParam0)
 {
-	STATS::_0x1A67DFBF1F5C3835(&Global_1682470);
+	STATS::_PLAYSTATS_ROBBERY_PREP(&Global_1682470);
 	func_1015();
 }
 

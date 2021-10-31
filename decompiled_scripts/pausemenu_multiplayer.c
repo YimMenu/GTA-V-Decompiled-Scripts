@@ -16267,7 +16267,7 @@ int func_447(var uParam0, char* sParam1, var* uParam2, char* sParam3, var uParam
 		case 2:
 			if (NETWORK::UGC_HAS_CREATE_FINISHED())
 			{
-				if (NETWORK::_0x24E4E51FC16305F9())
+				if (NETWORK::UGC_DID_CREATE_SUCCEED())
 				{
 					StringCopy(sParam133, NETWORK::UGC_GET_CREATE_CONTENT_ID(), 24);
 					if (iParam136 == 1)

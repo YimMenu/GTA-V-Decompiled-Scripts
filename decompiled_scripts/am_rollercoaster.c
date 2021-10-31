@@ -2134,7 +2134,7 @@ void func_14()
 					break;
 				
 				case 1:
-					iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_2620);
+					iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_2620);
 					if (iVar0 != -1)
 					{
 						if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar0) > 0.99f)
@@ -2157,7 +2157,7 @@ void func_14()
 					break;
 				
 				case 2:
-					iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_2619);
+					iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_2619);
 					if (iVar0 != -1)
 					{
 						if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar0) > 0.99f)
@@ -3874,11 +3874,11 @@ int func_80(int iParam0)
 	return -1;
 }
 
-int func_81(int* iParam0)
+int func_81(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -6824,7 +6824,7 @@ void func_182()
 			
 			case 2:
 				Local_2585 = { Local_2585 };
-				iVar3 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_2619);
+				iVar3 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_2619);
 				if (iVar3 != -1)
 				{
 					if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar3) > 0.99f)

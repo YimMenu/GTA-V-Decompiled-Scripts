@@ -3380,7 +3380,7 @@ int func_81(int* iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, b
 			{
 				*iParam0 = PED::CREATE_PED_INSIDE_VEHICLE(iParam2, 26, iVar0, iParam3, true, true);
 				func_412(*iParam0, iParam1, bParam5);
-				PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 				func_405(*iParam0);
 				func_389(*iParam0, 1, 0);
 				func_388(*iParam0);
@@ -91713,7 +91713,7 @@ int func_427(int iParam0, bool bParam1, bool bParam2, int iParam3)
 		iVar22 = PLAYER::PLAYER_PED_ID();
 		ENTITY::SET_ENTITY_VISIBLE(PLAYER::PLAYER_PED_ID(), true, false);
 		func_456(iVar22);
-		PED::_0xE861D0B05C7662B8(iVar22, false, 0);
+		PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar22, false, 0);
 		if (fVar3 < 25f && !PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()))
 		{
 			ENTITY::SET_ENTITY_HEALTH(PLAYER::PLAYER_PED_ID(), SYSTEM::ROUND((((25f / 100f) * (SYSTEM::TO_FLOAT(PED::GET_PED_MAX_HEALTH(PLAYER::PLAYER_PED_ID())) - 100f)) + 100f)), 0);
@@ -91724,7 +91724,7 @@ int func_427(int iParam0, bool bParam1, bool bParam2, int iParam3)
 			{
 				ENTITY::SET_ENTITY_VISIBLE(iVar0, true, false);
 				func_456(iVar0);
-				PED::_0xE861D0B05C7662B8(iVar0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar0, false, 0);
 				PED::SET_PED_STEALTH_MOVEMENT(iVar0, false, 0);
 			}
 		}
@@ -95296,7 +95296,7 @@ int func_472(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool bP
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, Param2, fParam5, false, false);
 			func_412(*iParam0, iParam1, bParam7);
-			PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+			PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 			func_405(*iParam0);
 			func_389(*iParam0, 1, 0);
 			func_388(*iParam0);
@@ -118721,7 +118721,7 @@ void func_862()
 		case 1:
 			if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), -252.8894f, -1997.574f, 29.1458f, 1.5f, 1.5f, 1.5f, false, true, 0) || ENTITY::IS_ENTITY_AT_COORD(iLocal_3870[0], -252.8894f, -1997.574f, 29.1458f, 1.5f, 1.5f, 1.5f, false, true, 0))
 			{
-				AUDIO::_0x062D5EAD4DA2FA6A();
+				AUDIO::FORCE_PED_PANIC_WALLA();
 				if (!PED::IS_PED_INJURED(Local_3011[0 /*20*/]))
 				{
 					AUDIO::PLAY_PAIN(Local_3011[0 /*20*/], 3, 0, 0);

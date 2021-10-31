@@ -2174,30 +2174,30 @@ void func_56()
 	}
 }
 
-int func_57(int* iParam0)
+int func_57(var* uParam0)
 {
 	struct<20> Var0;
 	
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
-			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, iParam0);
+			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, uParam0);
 			return Var0.f_19;
 		}
 	}
 	return 0;
 }
 
-int func_58(int* iParam0)
+int func_58(var* uParam0)
 {
 	struct<21> Var0;
 	
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
-			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, iParam0);
+			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, uParam0);
 			if (Var0.f_20 == 1)
 			{
 				return 1;
@@ -2216,15 +2216,15 @@ int func_59(int iParam0)
 	return 0;
 }
 
-int func_60(int* iParam0)
+int func_60(var* uParam0)
 {
 	struct<31> Var0;
 	
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
-			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, iParam0);
+			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, uParam0);
 			if (MISC::ARE_STRINGS_EQUAL(&(Var0.f_22), "Leader") && Var0.f_30 == 0)
 			{
 				return 1;
@@ -2234,15 +2234,15 @@ int func_60(int* iParam0)
 	return 0;
 }
 
-int func_61(int* iParam0)
+int func_61(var* uParam0)
 {
 	struct<31> Var0;
 	
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
-			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, iParam0);
+			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, uParam0);
 			if (MISC::ARE_STRINGS_EQUAL(&(Var0.f_22), "Leader") && Var0.f_30 == 0)
 			{
 				return 1;
@@ -2252,7 +2252,7 @@ int func_61(int* iParam0)
 	return 0;
 }
 
-int func_62(int* iParam0)
+int func_62(var* uParam0)
 {
 	struct<22> Var0;
 	
@@ -2260,9 +2260,9 @@ int func_62(int* iParam0)
 	{
 		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 		{
-			if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+			if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 			{
-				NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, iParam0);
+				NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var0, 35, uParam0);
 				if (Var0.f_21 == 0)
 				{
 					return 1;
@@ -2273,26 +2273,26 @@ int func_62(int* iParam0)
 	return 0;
 }
 
-int func_63(int* iParam0)
+int func_63(var* uParam0)
 {
 	var uVar0;
 	
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
-			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&uVar0, 35, iParam0);
+			NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&uVar0, 35, uParam0);
 			return uVar0;
 		}
 	}
 	return -1;
 }
 
-int func_64(int* iParam0)
+int func_64(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}

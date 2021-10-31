@@ -97713,7 +97713,7 @@ void func_613(var uParam0)
 		iLocal_743 = HUD::ADD_BLIP_FOR_COORD(func_614(uParam0));
 		HUD::SET_BLIP_COLOUR(iLocal_743, 3);
 		HUD::SET_BLIP_ALPHA(iLocal_743, 220);
-		HUD::_SET_BLIP_SHRINK(iLocal_743, true);
+		HUD::SET_BLIP_AS_MINIMAL_ON_EDGE(iLocal_743, true);
 		HUD::SET_BLIP_PRIORITY(iLocal_743, 9);
 		HUD::SET_BLIP_DISPLAY(iLocal_743, 4);
 	}
@@ -108852,17 +108852,17 @@ void func_824(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4,
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(sParam5);
 }
 
-int func_825(int* iParam0, int* iParam1)
+int func_825(var* uParam0, var* uParam1)
 {
-	if (!func_826(*iParam0))
+	if (!func_826(*uParam0))
 	{
 		return 0;
 	}
-	if (!func_826(*iParam1))
+	if (!func_826(*uParam1))
 	{
 		return 0;
 	}
-	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, iParam1))
+	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1))
 	{
 		return 1;
 	}
@@ -109594,7 +109594,7 @@ void func_842(int* iParam0, char* sParam1)
 	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
 }
 
-int func_843(int* iParam0, var uParam1)
+int func_843(var* uParam0, var uParam1)
 {
 	int iVar0;
 	
@@ -109603,7 +109603,7 @@ int func_843(int* iParam0, var uParam1)
 	{
 		if (func_826(*(uParam1[iVar0 /*13*/])))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, uParam1[iVar0 /*13*/]))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1[iVar0 /*13*/]))
 			{
 				return 1;
 			}
@@ -109670,7 +109670,7 @@ int func_845(var uParam0)
 	return 1;
 }
 
-int func_846(var uParam0, int* iParam1, char* sParam2)
+int func_846(var uParam0, var* uParam1, char* sParam2)
 {
 	if (*uParam0 == 2)
 	{
@@ -109679,27 +109679,27 @@ int func_846(var uParam0, int* iParam1, char* sParam2)
 	switch (*uParam0)
 	{
 		case 0:
-			if (func_826(*iParam1))
+			if (func_826(*uParam1))
 			{
-				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 				{
 					if (MISC::IS_DURANGO_VERSION() || MISC::IS_ORBIS_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else if (MISC::IS_XBOX360_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 						if (MISC::IS_PS3_VERSION())
 						{
 						}
@@ -109714,7 +109714,7 @@ int func_846(var uParam0, int* iParam1, char* sParam2)
 				}
 				else
 				{
-					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 					*uParam0 = 2;
 				}
 			}
@@ -109725,13 +109725,13 @@ int func_846(var uParam0, int* iParam1, char* sParam2)
 			break;
 		
 		case 1:
-			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 			{
 				if (!NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_PENDING())
 				{
 					if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED())
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 					}
 					*uParam0 = 2;
 					return 1;
@@ -109739,7 +109739,7 @@ int func_846(var uParam0, int* iParam1, char* sParam2)
 			}
 			else
 			{
-				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 				*uParam0 = 2;
 			}
 			break;

@@ -8478,7 +8478,7 @@ int func_141(int iParam0)
 	return 0;
 }
 
-int func_142(int* iParam0, int iParam1)
+int func_142(var* uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -8487,7 +8487,7 @@ int func_142(int* iParam0, int iParam1)
 	{
 		if (func_143(Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/]))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, &(Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/])))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, &(Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/])))
 			{
 				*iParam1 = (NETWORK::GET_CLOUD_TIME_AS_INT() - Global_2097152[func_144() /*5557*/].f_5139.f_224[iVar0]);
 				*iParam1 *= 1000;
@@ -59365,11 +59365,11 @@ int func_883(int iParam0)
 	return 0;
 }
 
-int func_884(int* iParam0)
+int func_884(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -75954,7 +75954,7 @@ void func_1238(int iParam0)
 	}
 }
 
-int func_1239(int* iParam0)
+int func_1239(var* uParam0)
 {
 	int iVar0;
 	
@@ -75963,16 +75963,16 @@ int func_1239(int* iParam0)
 	{
 		if (func_143(Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/]))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, &(Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/])))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, &(Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/])))
 			{
-				Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/] = { *iParam0 };
+				Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/] = { *uParam0 };
 				Global_2097152[func_144() /*5557*/].f_5139.f_224[iVar0] = NETWORK::GET_CLOUD_TIME_AS_INT();
 				return 1;
 			}
 		}
 		else
 		{
-			Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/] = { *iParam0 };
+			Global_2097152[func_144() /*5557*/].f_5139.f_15[iVar0 /*13*/] = { *uParam0 };
 			Global_2097152[func_144() /*5557*/].f_5139.f_224[iVar0] = NETWORK::GET_CLOUD_TIME_AS_INT();
 			return 1;
 		}

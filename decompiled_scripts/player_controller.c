@@ -48440,7 +48440,7 @@ int func_387(int* iParam0, int iParam1, bool bParam2)
 			*iParam0 = PED::CREATE_PED(26, iVar0, Global_112293.f_2361.f_539.f_2300[iParam1 /*3*/], Global_112293.f_2361.f_539.f_2310[iParam1], false, false);
 			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(*iParam0, Global_112293.f_2361.f_539.f_2300[iParam1 /*3*/], false, false, true);
 			func_602(*iParam0, iParam1, 0);
-			PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+			PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 			func_592(*iParam0);
 			func_389(*iParam0, 0);
 			func_388(*iParam0);
@@ -106647,7 +106647,7 @@ int func_603(int* iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, 
 			{
 				*iParam0 = PED::CREATE_PED_INSIDE_VEHICLE(iParam2, 26, iVar0, iParam3, true, true);
 				func_602(*iParam0, iParam1, bParam5);
-				PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 				func_600(*iParam0);
 				func_113(*iParam0, 1, 0);
 				func_598(*iParam0);
@@ -109852,7 +109852,7 @@ void func_671()
 				func_598(iVar1);
 				func_593(iVar1);
 				func_600(iVar1);
-				PED::_0xE861D0B05C7662B8(iVar1, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar1, false, 0);
 			}
 			Global_96656 = 0;
 		}

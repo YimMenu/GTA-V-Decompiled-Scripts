@@ -13142,7 +13142,7 @@ int func_323(int iParam0, bool bParam1)
 								{
 									func_335(iVar1, 75);
 									PED::SET_PED_CONFIG_FLAG(iVar1, 398, true);
-									PED::_0x820E9892A77E97CD(iVar1, 1);
+									PED::_SET_PED_CAN_PLAY_IN_CAR_IDLES(iVar1, true);
 									PED::SET_PED_CAN_BE_TARGETTED(iVar1, false);
 									AUDIO::SET_AMBIENT_VOICE_NAME(iVar1, "A_M_Y_Hippy_01_white_FULL_01");
 									PED::_0x0F62619393661D6E(iVar1, 1, 0);
@@ -29565,7 +29565,7 @@ int func_547(struct<3> Param0, float fParam3, int iParam4)
 			{
 				ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_709.f_193[iVar3 /*47*/][iParam4]), true);
 			}
-			OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_709.f_193[iVar3 /*47*/][iParam4]), true);
+			OBJECT::SET_OBJECT_FORCE_VEHICLES_TO_AVOID(NETWORK::NET_TO_OBJ(Local_709.f_193[iVar3 /*47*/][iParam4]), true);
 			OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_709.f_193[iVar3 /*47*/][iParam4]), true);
 			PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ(Local_709.f_193[iVar3 /*47*/][iParam4]));
 			ENTITY::SET_ENTITY_VELOCITY(NETWORK::NET_TO_OBJ(Local_709.f_193[iVar3 /*47*/][iParam4]), 0f, 0f, -0.2f);
@@ -107063,11 +107063,11 @@ int func_1038(int iParam0)
 	return -1;
 }
 
-int func_1039(int* iParam0)
+int func_1039(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -127754,11 +127754,11 @@ int func_1676(int iParam0)
 	return 0;
 }
 
-int func_1677(int* iParam0)
+int func_1677(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -147946,7 +147946,7 @@ void func_2096(bool bParam0, int iParam1, int iParam2, bool bParam3, int iParam4
 
 void func_2097(int iParam0)
 {
-	STATS::_0x1A67DFBF1F5C3835(&Global_1682470);
+	STATS::_PLAYSTATS_ROBBERY_PREP(&Global_1682470);
 	func_2098();
 }
 

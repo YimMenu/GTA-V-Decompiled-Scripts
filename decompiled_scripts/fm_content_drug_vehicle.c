@@ -4772,12 +4772,12 @@ bool func_184()
 	return Global_99422.f_364 > 0;
 }
 
-int func_185(int iParam0, int* iParam1)
+int func_185(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!func_195(iParam0, iParam1))
+	if (!func_195(iParam0, uParam1))
 	{
 		return 1;
 	}
@@ -4790,7 +4790,7 @@ int func_185(int iParam0, int* iParam1)
 	{
 		if (!func_193(iParam0))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (func_188(&iParam0, iVar1))
 			{
 			}
@@ -8111,14 +8111,14 @@ int func_194(int iParam0)
 	return 0;
 }
 
-int func_195(int iParam0, int* iParam1)
+int func_195(int iParam0, var* uParam1)
 {
 	int iVar0;
 	bool bVar1;
 	
-	if (NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
-		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 	}
 	else
 	{
@@ -8140,7 +8140,7 @@ int func_195(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_59()) || !func_11(iVar0, 0, 0)) || !bVar1) || func_196(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam1))) || iVar0 == func_59()) || !func_11(iVar0, 0, 0)) || !bVar1) || func_196(iParam0))
 	{
 		return 0;
 	}
@@ -20706,7 +20706,7 @@ void func_450(int iParam0, struct<3> Param1)
 	ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(NETWORK::NET_TO_ENT(Local_1498.f_2[iParam0]), true, 1);
 	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_ENT(Local_1498.f_2[iParam0]), true);
 	OBJECT::_0x641F272B52E2F0F8(NETWORK::NET_TO_OBJ(Local_1498.f_2[iParam0]), 1);
-	OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_1498.f_2[iParam0]), true);
+	OBJECT::SET_OBJECT_FORCE_VEHICLES_TO_AVOID(NETWORK::NET_TO_OBJ(Local_1498.f_2[iParam0]), true);
 	if (func_454())
 	{
 		OBJECT::_0x4C134B4DF76025D0(NETWORK::NET_TO_OBJ(Local_1498.f_2[iParam0]), true);
@@ -25933,11 +25933,11 @@ int func_650(int iParam0)
 	return -1;
 }
 
-int func_651(int* iParam0)
+int func_651(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -138410,11 +138410,11 @@ int func_1801(int iParam0)
 	return 0;
 }
 
-int func_1802(int* iParam0)
+int func_1802(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -145087,7 +145087,7 @@ void func_2109(int iParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = PED::_0x32C27A11307B01CC(iParam1, 1);
+	iVar0 = PED::_GET_PED_TASK_COMBAT_TARGET(iParam1, 1);
 	if (!ENTITY::DOES_ENTITY_EXIST(iVar0))
 	{
 		return;
@@ -145390,7 +145390,7 @@ int func_2130(int iParam0, int iParam1)
 	{
 		if (!PED::IS_PED_PERFORMING_STEALTH_KILL(iLocal_1438))
 		{
-			if (PED::_0x06087579E7AA85A9(iParam1, iLocal_1438, -1f, -1f, -1f, -1f) && ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY(iParam1, iLocal_1438, func_2131(iParam0)))
+			if (PED::IS_TARGET_PED_IN_PERCEPTION_AREA(iParam1, iLocal_1438, -1f, -1f, -1f, -1f) && ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY(iParam1, iLocal_1438, func_2131(iParam0)))
 			{
 				return 1;
 			}
@@ -155473,7 +155473,7 @@ void func_2679(bool bParam0, var uParam1, int iParam2, bool bParam3, int iParam4
 
 void func_2680(int iParam0)
 {
-	STATS::_0x1A67DFBF1F5C3835(&Global_1682470);
+	STATS::_PLAYSTATS_ROBBERY_PREP(&Global_1682470);
 	func_2681();
 }
 

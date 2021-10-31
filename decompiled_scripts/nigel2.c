@@ -41090,7 +41090,7 @@ void func_390()
 				if (fLocal_3266 >= 114936f)
 				{
 					AUDIO::PLAY_SOUND_FROM_COORD(-1, "SCREAMS", 310.5149f, -595.4158f, 42.302f, "NIGEL_02_SOUNDSET", false, 0, false);
-					AUDIO::_0x062D5EAD4DA2FA6A();
+					AUDIO::FORCE_PED_PANIC_WALLA();
 					AUDIO::PLAY_SOUND_FROM_COORD(-1, "PANIC_WALLA", 316.4345f, -589.3902f, 42.2919f, "NIGEL_02_SOUNDSET", false, 0, false);
 					iLocal_3247++;
 				}

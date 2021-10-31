@@ -249,7 +249,7 @@ void __EntryFunction__()
 				func_90(PLAYER::PLAYER_PED_ID());
 				func_82(PLAYER::PLAYER_PED_ID());
 				func_120(PLAYER::PLAYER_PED_ID());
-				PED::_0xE861D0B05C7662B8(PLAYER::PLAYER_PED_ID(), false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(PLAYER::PLAYER_PED_ID(), false, 0);
 			}
 			Global_31723 = 0;
 		}

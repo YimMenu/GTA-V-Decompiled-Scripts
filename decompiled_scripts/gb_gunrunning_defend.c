@@ -18995,7 +18995,7 @@ int func_395(var uParam0, struct<3> Param1, int iParam4)
 					NETWORK::SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES((*uParam0)[iParam4], true);
 					ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ((*uParam0)[iParam4]), true);
 					ENTITY::SET_ENTITY_HEALTH(NETWORK::NET_TO_OBJ((*uParam0)[iParam4]), 50, 0);
-					OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ((*uParam0)[iParam4]), true);
+					OBJECT::SET_OBJECT_FORCE_VEHICLES_TO_AVOID(NETWORK::NET_TO_OBJ((*uParam0)[iParam4]), true);
 					OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ((*uParam0)[iParam4]), true);
 					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ((*uParam0)[iParam4]), true);
 					PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ((*uParam0)[iParam4]));
@@ -21155,11 +21155,11 @@ int func_471(int iParam0)
 	return 0;
 }
 
-int func_472(int* iParam0)
+int func_472(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -29520,7 +29520,7 @@ void func_777(bool bParam0, int iParam1, int iParam2, bool bParam3, int iParam4,
 
 void func_778(int iParam0)
 {
-	STATS::_0x1A67DFBF1F5C3835(&Global_1682470);
+	STATS::_PLAYSTATS_ROBBERY_PREP(&Global_1682470);
 	func_779();
 }
 
@@ -36253,11 +36253,11 @@ int func_955(int iParam0)
 	return -1;
 }
 
-int func_956(int* iParam0)
+int func_956(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -117664,12 +117664,12 @@ void func_1415(struct<3> Param0)
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var0, 5, func_317(1, 1));
 }
 
-int func_1416(int iParam0, int* iParam1)
+int func_1416(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!func_1425(iParam0, iParam1))
+	if (!func_1425(iParam0, uParam1))
 	{
 		return 1;
 	}
@@ -117682,7 +117682,7 @@ int func_1416(int iParam0, int* iParam1)
 	{
 		if (!func_1423(iParam0))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (func_1419(&iParam0, iVar1))
 			{
 			}
@@ -120994,14 +120994,14 @@ int func_1424(int iParam0)
 	return 0;
 }
 
-int func_1425(int iParam0, int* iParam1)
+int func_1425(int iParam0, var* uParam1)
 {
 	int iVar0;
 	bool bVar1;
 	
-	if (NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
-		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 	}
 	else
 	{
@@ -121023,7 +121023,7 @@ int func_1425(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_24()) || !func_2342(iVar0, 0, 0)) || !bVar1) || func_1426(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam1))) || iVar0 == func_24()) || !func_2342(iVar0, 0, 0)) || !bVar1) || func_1426(iParam0))
 	{
 		return 0;
 	}
@@ -154441,7 +154441,7 @@ int func_2173(int iParam0)
 		{
 			if (!PED::IS_PED_PERFORMING_STEALTH_KILL(PLAYER::PLAYER_PED_ID()))
 			{
-				if (PED::_0x06087579E7AA85A9(iParam0, PLAYER::PLAYER_PED_ID(), -1f, -1f, -1f, -1f) && ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY(iParam0, PLAYER::PLAYER_PED_ID(), 287))
+				if (PED::IS_TARGET_PED_IN_PERCEPTION_AREA(iParam0, PLAYER::PLAYER_PED_ID(), -1f, -1f, -1f, -1f) && ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY(iParam0, PLAYER::PLAYER_PED_ID(), 287))
 				{
 					return 1;
 				}

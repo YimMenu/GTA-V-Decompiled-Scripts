@@ -3686,7 +3686,7 @@ void func_63()
 					case 3:
 						if ((MISC::GET_GAME_TIMER() - iLocal_389) > 2000)
 						{
-							if (func_11() && !PED::_0xA3F3564A5B3646C0(iLocal_140))
+							if (func_11() && !PED::IS_MOBILE_PHONE_TO_PED_EAR(iLocal_140))
 							{
 								if (func_84("RESNA_CELLR", 0))
 								{

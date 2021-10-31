@@ -29409,7 +29409,7 @@ int func_595(int iParam0)
 		NETWORK::SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES(Local_610.f_14[iParam0], true);
 		ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_610.f_14[iParam0]), true);
 		ENTITY::SET_ENTITY_HEALTH(NETWORK::NET_TO_OBJ(Local_610.f_14[iParam0]), 50, 0);
-		OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_610.f_14[iParam0]), true);
+		OBJECT::SET_OBJECT_FORCE_VEHICLES_TO_AVOID(NETWORK::NET_TO_OBJ(Local_610.f_14[iParam0]), true);
 		OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_610.f_14[iParam0]), true);
 		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_610.f_14[iParam0]), true);
 		PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ(Local_610.f_14[iParam0]));
@@ -41149,11 +41149,11 @@ int func_789(int iParam0)
 	return -1;
 }
 
-int func_790(int* iParam0)
+int func_790(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -51688,11 +51688,11 @@ int func_1148(int iParam0)
 	return 0;
 }
 
-int func_1149(int* iParam0)
+int func_1149(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -92786,7 +92786,7 @@ void func_2059(bool bParam0, var uParam1, int iParam2, bool bParam3, int iParam4
 
 void func_2060(int iParam0)
 {
-	STATS::_0x1A67DFBF1F5C3835(&Global_1682470);
+	STATS::_PLAYSTATS_ROBBERY_PREP(&Global_1682470);
 	func_2061();
 }
 

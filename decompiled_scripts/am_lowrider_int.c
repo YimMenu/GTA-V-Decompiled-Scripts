@@ -2056,7 +2056,7 @@ void func_77(bool bParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam
 	AUDIO::SET_USER_RADIO_CONTROL_ENABLED(false);
 	if (bParam0)
 	{
-		NETWORK::_0xBF22E0F32968E967(PLAYER::PLAYER_ID(), bParam6);
+		NETWORK::NETWORK_LEAVE_PED_BEHIND_BEFORE_CUTSCENE(PLAYER::PLAYER_ID(), bParam6);
 	}
 	if (bParam1)
 	{
@@ -2778,7 +2778,7 @@ int func_82(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4,
 									}
 								}
 							}
-							PED::_0xE861D0B05C7662B8(*uParam0, false, 0);
+							PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*uParam0, false, 0);
 							func_83(*uParam0);
 							uParam0->f_6 = 2;
 							break;

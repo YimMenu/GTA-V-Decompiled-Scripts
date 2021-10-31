@@ -774,7 +774,7 @@ int func_13()
 					ENTITY::SET_ENTITY_COORDS_NO_OFFSET(NETWORK::NET_TO_OBJ(Local_180.f_3), Local_442 + Vector(0.5f, 0f, 0f), false, false, true);
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);
 					ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_180.f_3), true);
-					OBJECT::_SET_OBJECT_SOMETHING(NETWORK::NET_TO_OBJ(Local_180.f_3), true);
+					OBJECT::SET_OBJECT_FORCE_VEHICLES_TO_AVOID(NETWORK::NET_TO_OBJ(Local_180.f_3), true);
 					OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(NETWORK::NET_TO_OBJ(Local_180.f_3), true);
 					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_OBJ(Local_180.f_3), false);
 					PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_OBJ(Local_180.f_3));
@@ -11142,11 +11142,11 @@ int func_320(int iParam0)
 	return 0;
 }
 
-int func_321(int* iParam0)
+int func_321(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -19751,11 +19751,11 @@ int func_626(int iParam0)
 	return -1;
 }
 
-int func_627(int* iParam0)
+int func_627(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -25542,7 +25542,7 @@ void func_742(bool bParam0, int iParam1, int iParam2, bool bParam3, int iParam4,
 
 void func_743(int iParam0)
 {
-	STATS::_0x1A67DFBF1F5C3835(&Global_1682470);
+	STATS::_PLAYSTATS_ROBBERY_PREP(&Global_1682470);
 	func_744();
 }
 

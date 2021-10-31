@@ -331,7 +331,7 @@ void func_1()
 				{
 					if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(Local_124.f_50[iVar0]))
 					{
-						Local_124.f_45[iVar0] = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_124.f_35[iVar0]);
+						Local_124.f_45[iVar0] = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(Local_124.f_35[iVar0]);
 						if (Local_124.f_45[iVar0] != -1)
 						{
 							if (ENTITY::IS_ENTITY_PLAYING_ANIM(NETWORK::NET_TO_PED(Local_124.f_50[iVar0]), func_78(), func_77(iVar0), 3))
@@ -446,7 +446,7 @@ void func_2(int iParam0)
 			Local_124.f_10[iParam0] = 1;
 		}
 	}
-	Local_124.f_45[iParam0] = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_124.f_35[iParam0]);
+	Local_124.f_45[iParam0] = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(Local_124.f_35[iParam0]);
 	switch (Local_124.f_576[iParam0])
 	{
 		case 0:
@@ -4411,7 +4411,7 @@ void func_67(int iParam0)
 		{
 			if (NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(Local_124.f_50[iParam0]))
 			{
-				Local_124.f_45[iParam0] = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_124.f_35[iParam0]);
+				Local_124.f_45[iParam0] = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(Local_124.f_35[iParam0]);
 				if (Local_124.f_45[iParam0] == -1 || (PED::GET_SYNCHRONIZED_SCENE_PHASE(Local_124.f_45[iParam0]) >= 0.99f || ENTITY::HAS_ANIM_EVENT_FIRED(NETWORK::NET_TO_PED(Local_124.f_50[iParam0]), -1424880317)))
 				{
 					Local_124.f_35[iParam0] = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(func_76(iParam0), 0f, 0f, func_75(iParam0), 2, false, true, 1f, 0f, 1f);
@@ -5832,7 +5832,7 @@ void func_91()
 		
 		case 8:
 			CAM::_0x79C0E43EB9B944E2(-1938411241);
-			Local_1046.f_30 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_1046.f_24);
+			Local_1046.f_30 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(Local_1046.f_24);
 			if (func_229())
 			{
 				func_228(&(Local_757[PLAYER::PLAYER_ID() /*9*/]), 2);
@@ -5903,7 +5903,7 @@ void func_91()
 			{
 				func_228(&(Local_757[PLAYER::PLAYER_ID() /*9*/]), func_94());
 				Var22 = { PAD::GET_CONTROL_NORMAL(2, 218), PAD::GET_CONTROL_NORMAL(2, 219), 0f };
-				Local_1046.f_30 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_1046.f_24);
+				Local_1046.f_30 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(Local_1046.f_24);
 				if (Local_1046.f_7)
 				{
 					if (Local_1046.f_30 != -1 && (PED::GET_SYNCHRONIZED_SCENE_PHASE(Local_1046.f_30) >= 0.99f || ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), -1424880317)))
@@ -6091,7 +6091,7 @@ void func_95()
 	}
 	if (Local_1046.f_24 > -1)
 	{
-		Local_1046.f_30 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(Local_1046.f_24);
+		Local_1046.f_30 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(Local_1046.f_24);
 		if (((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), func_92(), "cards_idle", 3)) && !MISC::IS_BIT_SET(Local_1046.f_22, 0)) && !Local_1046.f_1)
 		{
 			if (!ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), func_231(), "idle_cardgames", 3))

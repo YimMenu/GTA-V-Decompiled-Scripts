@@ -8714,9 +8714,9 @@ void func_110()
 	int iVar12;
 	int iVar13;
 	
-	if (MISC::_0xD642319C54AADEB6())
+	if (MISC::HAVE_REPLAY_STATS_BEEN_STORED())
 	{
-		if (MISC::_0x5B1F2E327B6B6FE1() == 33)
+		if (MISC::GET_REPLAY_STAT_MISSION_ID() == 33)
 		{
 			if (MISC::GET_REPLAY_STAT_MISSION_TYPE() == 33)
 			{
@@ -8771,7 +8771,7 @@ void func_110()
 				func_111();
 			}
 		}
-		if (MISC::_0x5B1F2E327B6B6FE1() == 13)
+		if (MISC::GET_REPLAY_STAT_MISSION_ID() == 13)
 		{
 			if (MISC::GET_REPLAY_STAT_MISSION_TYPE() == 37)
 			{

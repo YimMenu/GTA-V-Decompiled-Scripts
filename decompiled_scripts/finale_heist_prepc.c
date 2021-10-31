@@ -41642,7 +41642,7 @@ int func_404(int iParam0, bool bParam1)
 		iVar2++;
 	}
 	iVar7 = iVar1 * 25;
-	if (AUDIO::_0x5DB8010EE71FDEF2(iParam0))
+	if (AUDIO::IS_VEHICLE_AUDIBLY_DAMAGED(iParam0))
 	{
 		iVar11 = 50;
 	}

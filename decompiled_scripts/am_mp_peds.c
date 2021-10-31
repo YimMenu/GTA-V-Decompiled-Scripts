@@ -89071,7 +89071,7 @@ float func_1082(var uParam0, char* sParam1)
 		iVar1 = uParam0->f_30;
 		if (func_86(&(uParam0->f_9), 6))
 		{
-			iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_30);
+			iVar1 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_30);
 		}
 		if (iVar1 != -1 && PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar1))
 		{
@@ -92556,7 +92556,7 @@ int func_1176(var uParam0)
 	}
 	if (func_86(&(uParam0->f_9), 6))
 	{
-		iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_30);
+		iVar1 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_30);
 	}
 	if (func_86(&(uParam0->f_9), 24))
 	{
@@ -92605,7 +92605,7 @@ void func_1178(var uParam0, struct<36> Param1, var uParam37, var uParam38, var u
 	iVar0 = uParam0->f_30;
 	if (func_86(&(uParam0->f_9), 6))
 	{
-		iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_30);
+		iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_30);
 	}
 	if (iVar0 == -1)
 	{
@@ -95269,7 +95269,7 @@ void func_1269(var uParam0)
 	iVar0 = uParam0->f_30;
 	if (func_86(&(uParam0->f_9), 6))
 	{
-		iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_30);
+		iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_30);
 	}
 	if (iVar0 != -1)
 	{

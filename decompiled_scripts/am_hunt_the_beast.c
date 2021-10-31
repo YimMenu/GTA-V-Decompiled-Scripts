@@ -99320,7 +99320,7 @@ int func_422()
 					{
 						WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), 0, true, true);
 						iLocal_3555 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0.05f, 0.5f, -1.11f), 0f, 0f, (ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) + 90f), 2, false, false, 1f, 0f, 1f);
-						NETWORK::_NETWORK_FORCE_LOCAL_USE_OF_SYNCED_SCENE_CAMERA(iLocal_3555, "ANIM@MP_FM_EVENT@INTRO", "BEAST_TRANSFORM_CAM");
+						NETWORK::NETWORK_ADD_SYNCHRONISED_SCENE_CAMERA(iLocal_3555, "ANIM@MP_FM_EVENT@INTRO", "BEAST_TRANSFORM_CAM");
 						TASK::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@MP_FM_EVENT@INTRO", "BEAST_TRANSFORM", 1000f, -2f, -1, 0, 0f, false, false, false);
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 						NETWORK::_0xC9B43A33D09CADA7(iLocal_3555);
@@ -100575,7 +100575,7 @@ int func_452(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4
 									}
 								}
 							}
-							PED::_0xE861D0B05C7662B8(*uParam0, false, 0);
+							PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*uParam0, false, 0);
 							func_453(*uParam0);
 							uParam0->f_6 = 2;
 							break;
@@ -110412,11 +110412,11 @@ int func_699(int iParam0)
 	return -1;
 }
 
-int func_700(int* iParam0)
+int func_700(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -114167,7 +114167,7 @@ int func_832()
 					}
 					WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), 0, true, true);
 					iLocal_3555 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0.05f, 0.5f, -1.11f), 0f, 0f, (ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) + 90f), 2, false, false, 1f, 0f, 1f);
-					NETWORK::_NETWORK_FORCE_LOCAL_USE_OF_SYNCED_SCENE_CAMERA(iLocal_3555, "ANIM@MP_FM_EVENT@INTRO", "BEAST_TRANSFORM_CAM");
+					NETWORK::NETWORK_ADD_SYNCHRONISED_SCENE_CAMERA(iLocal_3555, "ANIM@MP_FM_EVENT@INTRO", "BEAST_TRANSFORM_CAM");
 					TASK::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@MP_FM_EVENT@INTRO", "BEAST_TRANSFORM", 1000f, -2f, -1, 0, 0f, false, false, false);
 					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					if (GRAPHICS::ANIMPOSTFX_IS_RUNNING("BeastLaunch"))
@@ -129489,12 +129489,12 @@ void func_1022(struct<3> Param0)
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var0, 5, func_37(1, 1));
 }
 
-int func_1023(int iParam0, int* iParam1)
+int func_1023(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!func_1033(iParam0, iParam1))
+	if (!func_1033(iParam0, uParam1))
 	{
 		return 1;
 	}
@@ -129507,7 +129507,7 @@ int func_1023(int iParam0, int* iParam1)
 	{
 		if (!func_1031(iParam0))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (func_1026(&iParam0, iVar1))
 			{
 			}
@@ -132828,14 +132828,14 @@ int func_1032(int iParam0)
 	return 0;
 }
 
-int func_1033(int iParam0, int* iParam1)
+int func_1033(int iParam0, var* uParam1)
 {
 	int iVar0;
 	bool bVar1;
 	
-	if (NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
-		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 	}
 	else
 	{
@@ -132857,7 +132857,7 @@ int func_1033(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_46()) || !func_1985(iVar0, 0, 0)) || !bVar1) || func_1034(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam1))) || iVar0 == func_46()) || !func_1985(iVar0, 0, 0)) || !bVar1) || func_1034(iParam0))
 	{
 		return 0;
 	}
@@ -166768,11 +166768,11 @@ int func_1825(int iParam0)
 	return 0;
 }
 
-int func_1826(int* iParam0)
+int func_1826(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}

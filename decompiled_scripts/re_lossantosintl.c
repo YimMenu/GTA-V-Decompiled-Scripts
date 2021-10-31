@@ -352,13 +352,13 @@ void func_4()
 		case 3:
 			iLocal_49[0] = VEHICLE::CREATE_VEHICLE(joaat("jet"), Local_61[0 /*3*/], 0f, true, true, false);
 			ENTITY::SET_ENTITY_HEADING(iLocal_49[0], 240.3179f);
-			VEHICLE::_0x279D50DE5652D935(iLocal_49[0], false);
+			VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(iLocal_49[0], false);
 			iLocal_49[1] = VEHICLE::CREATE_VEHICLE(joaat("jet"), Local_61[1 /*3*/], 0f, true, true, false);
-			VEHICLE::_0x279D50DE5652D935(iLocal_49[1], false);
+			VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(iLocal_49[1], false);
 			iLocal_49[2] = VEHICLE::CREATE_VEHICLE(joaat("jet"), Local_61[2 /*3*/], 0f, true, true, false);
-			VEHICLE::_0x279D50DE5652D935(iLocal_49[2], false);
+			VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(iLocal_49[2], false);
 			iLocal_49[3] = VEHICLE::CREATE_VEHICLE(joaat("jet"), Local_61[3 /*3*/], 0f, true, true, false);
-			VEHICLE::_0x279D50DE5652D935(iLocal_49[3], false);
+			VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(iLocal_49[3], false);
 			iVar0 = 0;
 			while (iVar0 < 4)
 			{
@@ -602,7 +602,7 @@ void func_7()
 				iLocal_54 = VEHICLE::CREATE_VEHICLE(joaat("jet"), -65.3177f, 15.4603f, 703.106f, 0f, true, true, false);
 				ENTITY::SET_ENTITY_LOD_DIST(iLocal_54, 1000);
 				VEHICLE::SET_VEHICLE_ENGINE_ON(iLocal_54, true, true, false);
-				VEHICLE::_0x279D50DE5652D935(iLocal_54, false);
+				VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(iLocal_54, false);
 				iLocal_60 = PED::CREATE_PED_INSIDE_VEHICLE(iLocal_54, 4, iLocal_84, -1, true, true);
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(iLocal_60, true);
 				iLocal_83 = 1;

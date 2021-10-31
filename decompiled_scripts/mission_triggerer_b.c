@@ -9537,7 +9537,7 @@ int func_242(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool bP
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, Param2, fParam5, false, false);
 			func_572(*iParam0, iParam1, bParam7);
-			PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+			PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 			func_565(*iParam0);
 			func_549(*iParam0, 1, 0);
 			func_548(*iParam0);
@@ -108995,7 +108995,7 @@ int func_738(var uParam0, int iParam1, struct<3> Param2, int iParam5, int iParam
 	else if (!ENTITY::DOES_ENTITY_EXIST(*uParam0))
 	{
 		*uParam0 = PED::CREATE_PED(26, func_27(iParam1), Param2, 0f, false, true);
-		PED::_0xE861D0B05C7662B8(*uParam0, false, 0);
+		PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*uParam0, false, 0);
 		func_565(*uParam0);
 		func_549(*uParam0, 1, 0);
 		func_548(*uParam0);

@@ -2280,7 +2280,7 @@ void func_1(var uParam0)
 		if (uParam0->f_13 > 2)
 		{
 			func_3(-1);
-			iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_8);
+			iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_8);
 			if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar0))
 			{
 				NETWORK::NETWORK_STOP_SYNCHRONISED_SCENE(uParam0->f_8);
@@ -2512,7 +2512,7 @@ void func_8(var uParam0)
 			}
 			func_26(uParam0);
 			func_15(uParam0);
-			iVar33 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_8);
+			iVar33 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_8);
 			if (func_23(&(uParam0->f_7), 13))
 			{
 				PAD::DISABLE_CONTROL_ACTION(0, 0, true);
@@ -2555,7 +2555,7 @@ void func_8(var uParam0)
 			break;
 		
 		case 8:
-			iVar34 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_8);
+			iVar34 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_8);
 			iVar35 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 1785177548);
 			if (iVar35 == 0 || iVar35 == 1)
 			{
@@ -92151,7 +92151,7 @@ int func_443(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4
 									}
 								}
 							}
-							PED::_0xE861D0B05C7662B8(*uParam0, false, 0);
+							PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*uParam0, false, 0);
 							func_444(*uParam0);
 							uParam0->f_6 = 2;
 							break;
@@ -101945,7 +101945,7 @@ void func_515(var uParam0)
 	if (uParam0->f_13 > 2)
 	{
 		func_3(-1);
-		iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_8);
+		iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_8);
 		if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar0))
 		{
 			NETWORK::NETWORK_STOP_SYNCHRONISED_SCENE(uParam0->f_8);

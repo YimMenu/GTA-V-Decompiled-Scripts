@@ -4971,17 +4971,17 @@ void func_84(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(sParam5);
 }
 
-int func_85(int* iParam0, int* iParam1)
+int func_85(var* uParam0, var* uParam1)
 {
-	if (!func_86(*iParam0))
+	if (!func_86(*uParam0))
 	{
 		return 0;
 	}
-	if (!func_86(*iParam1))
+	if (!func_86(*uParam1))
 	{
 		return 0;
 	}
-	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, iParam1))
+	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1))
 	{
 		return 1;
 	}
@@ -5752,7 +5752,7 @@ void func_104(int* iParam0, char* sParam1)
 	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
 }
 
-int func_105(int* iParam0, var uParam1)
+int func_105(var* uParam0, var uParam1)
 {
 	int iVar0;
 	
@@ -5761,7 +5761,7 @@ int func_105(int* iParam0, var uParam1)
 	{
 		if (func_86(*(uParam1[iVar0 /*13*/])))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, uParam1[iVar0 /*13*/]))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1[iVar0 /*13*/]))
 			{
 				return 1;
 			}
@@ -5845,7 +5845,7 @@ int func_108(var uParam0)
 	return 1;
 }
 
-int func_109(var uParam0, int* iParam1, char* sParam2)
+int func_109(var uParam0, var* uParam1, char* sParam2)
 {
 	if (*uParam0 == 2)
 	{
@@ -5854,27 +5854,27 @@ int func_109(var uParam0, int* iParam1, char* sParam2)
 	switch (*uParam0)
 	{
 		case 0:
-			if (func_86(*iParam1))
+			if (func_86(*uParam1))
 			{
-				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 				{
 					if (MISC::IS_DURANGO_VERSION() || MISC::IS_ORBIS_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else if (MISC::IS_XBOX360_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 						if (MISC::IS_PS3_VERSION())
 						{
 						}
@@ -5889,7 +5889,7 @@ int func_109(var uParam0, int* iParam1, char* sParam2)
 				}
 				else
 				{
-					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 					*uParam0 = 2;
 				}
 			}
@@ -5900,13 +5900,13 @@ int func_109(var uParam0, int* iParam1, char* sParam2)
 			break;
 		
 		case 1:
-			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 			{
 				if (!NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_PENDING())
 				{
 					if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED())
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 					}
 					*uParam0 = 2;
 					return 1;
@@ -5914,7 +5914,7 @@ int func_109(var uParam0, int* iParam1, char* sParam2)
 			}
 			else
 			{
-				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 				*uParam0 = 2;
 			}
 			break;
@@ -60659,7 +60659,7 @@ void func_930(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4, i
 		PED::SET_PED_COMPONENT_VARIATION(func_1168(uParam1[iParam4 /*94*/]), 4, 0, 2, 0);
 	}
 	PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(func_1168(uParam1[iParam4 /*94*/]), true);
-	AUDIO::_SET_PED_TALK(func_1168(uParam1[iParam4 /*94*/]));
+	AUDIO::REQUEST_TENNIS_BANKS(func_1168(uParam1[iParam4 /*94*/]));
 	(uParam1[iParam5 /*94*/])->f_33 = OBJECT::CREATE_OBJECT(joaat("prop_tennis_rack_01b"), uParam1->f_189.f_3[3 /*3*/], true, true, false);
 	ENTITY::SET_ENTITY_VISIBLE((uParam1[iParam5 /*94*/])->f_33, true, false);
 	(uParam1[iParam4 /*94*/])->f_33 = OBJECT::CREATE_OBJECT(joaat("prop_tennis_rack_01b"), uParam1->f_189.f_3[2 /*3*/], true, true, false);
@@ -62942,7 +62942,7 @@ void func_976(var uParam0, var uParam1, int iParam2, int iParam3, var uParam4, i
 			func_993(joaat("player_two"), 12, 5, 1);
 		}
 		PLAYER::ENABLE_SPECIAL_ABILITY(PLAYER::PLAYER_ID(), true, 0);
-		AUDIO::_0x0150B6FF25A9E2E5();
+		AUDIO::UNREQUEST_TENNIS_BANKS();
 		func_992(1, 1, 1);
 		if (!PED::IS_PED_INJURED(func_1168(uParam0[iParam3 /*94*/])))
 		{

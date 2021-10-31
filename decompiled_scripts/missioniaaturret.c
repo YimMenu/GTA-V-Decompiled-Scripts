@@ -3391,7 +3391,7 @@ int func_28(var uParam0)
 	}
 	else
 	{
-		iVar1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_17.f_6);
+		iVar1 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_17.f_6);
 		if (iVar1 != -1)
 		{
 			func_30(uParam0);
@@ -3439,7 +3439,7 @@ void func_30(var uParam0)
 {
 	int iVar0;
 	
-	iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(uParam0->f_17.f_6);
+	iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_17.f_6);
 	if (iVar0 != -1)
 	{
 		if (uParam0->f_1743 > -1f)

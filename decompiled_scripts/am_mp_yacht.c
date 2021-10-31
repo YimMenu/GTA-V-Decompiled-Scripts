@@ -16430,7 +16430,7 @@ void func_361()
 				HUD::CLEAR_HELP(true);
 			}
 			MISC::CLEAR_BIT(&iLocal_1064, 1);
-			iVar8 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_1010);
+			iVar8 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_1010);
 			if (iVar8 != -1)
 			{
 				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar8) >= 0.99f)
@@ -16452,7 +16452,7 @@ void func_361()
 			break;
 		
 		case 6:
-			iVar9 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_1010);
+			iVar9 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_1010);
 			if (iVar9 != -1)
 			{
 				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar9) >= 0.99f)
@@ -16520,7 +16520,7 @@ void func_361()
 			break;
 		
 		case 9:
-			iVar9 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_1010);
+			iVar9 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_1010);
 			if (iVar9 != -1)
 			{
 				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar9) >= 0.99f || ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), 364629851))
@@ -104729,7 +104729,7 @@ int func_742(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4
 									}
 								}
 							}
-							PED::_0xE861D0B05C7662B8(*uParam0, false, 0);
+							PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*uParam0, false, 0);
 							func_743(*uParam0);
 							uParam0->f_6 = 2;
 							break;
@@ -115083,7 +115083,7 @@ void func_817()
 				HUD::CLEAR_HELP(true);
 			}
 			MISC::CLEAR_BIT(&iLocal_1065, 1);
-			iVar8 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_1011);
+			iVar8 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_1011);
 			if (iVar8 != -1)
 			{
 				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar8) >= 0.99f)
@@ -115100,7 +115100,7 @@ void func_817()
 			break;
 		
 		case 6:
-			iVar10 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_1011);
+			iVar10 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_1011);
 			if (iVar10 != -1)
 			{
 				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar10) >= 0.99f)
@@ -115153,7 +115153,7 @@ void func_817()
 			break;
 		
 		case 8:
-			iVar10 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_1011);
+			iVar10 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_1011);
 			if (iVar10 != -1)
 			{
 				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar10) >= 0.99f || ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), -1376584066))
@@ -123546,7 +123546,7 @@ int func_1105(var uParam0, int* iParam1, int* iParam2, int* iParam3, var uParam4
 		if (MISC::IS_BIT_SET(*iParam1, 12))
 		{
 			func_380(uParam4);
-			iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iParam2->f_792);
+			iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iParam2->f_792);
 			if (iVar0 != -1 && PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar0))
 			{
 				if (CAM::GET_FOLLOW_PED_CAM_VIEW_MODE() != 4)
@@ -123629,7 +123629,7 @@ int func_1106(var uParam0, int* iParam1, int* iParam2, int* iParam3, bool bParam
 		iVar0 = 0;
 		if (MISC::IS_BIT_SET(*iParam1, 8))
 		{
-			iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iParam2->f_792);
+			iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iParam2->f_792);
 			if (iVar0 != -1 && PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar0))
 			{
 				if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar0) >= 0.9f)
@@ -124409,7 +124409,7 @@ int func_1124(int* iParam0, int* iParam1, var uParam2, int iParam3, var uParam4,
 		case 3:
 			if (MISC::IS_BIT_SET(*iParam0, 10))
 			{
-				iVar2 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iParam1->f_792);
+				iVar2 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iParam1->f_792);
 				if (iVar2 != -1 && PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar2))
 				{
 					if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar2) >= 0.9f)
@@ -125541,7 +125541,7 @@ int func_1149()
 			sVar0 = func_1150(4);
 			sVar1 = AUDIO::GET_RADIO_STATION_NAME(func_27());
 			AUDIO::UNLOCK_RADIO_STATION_TRACK_LIST(sVar1, sVar0);
-			AUDIO::_0x4E0AF9114608257C(sVar1, sVar0, (MISC::GET_RANDOM_INT_IN_RANGE(0, 13) * 60000));
+			AUDIO::_FORCE_RADIO_TRACK_LIST_POSITION(sVar1, sVar0, (MISC::GET_RANDOM_INT_IN_RANGE(0, 13) * 60000));
 			return func_27();
 		}
 		else if (!func_420(32271, -1, -1))

@@ -2850,7 +2850,7 @@ int func_57(int* iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, b
 			{
 				*iParam0 = PED::CREATE_PED_INSIDE_VEHICLE(iParam2, 26, iVar0, iParam3, true, true);
 				func_391(*iParam0, iParam1, bParam5);
-				PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 				func_384(*iParam0);
 				func_368(*iParam0, 1, 0);
 				func_367(*iParam0);

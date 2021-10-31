@@ -3110,7 +3110,7 @@ bool func_83()
 	}
 	else if (!func_26(4))
 	{
-		Local_164.f_1 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(func_85());
+		Local_164.f_1 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(func_85());
 		fVar0 = func_84(Local_164.f_63);
 		if (PED::GET_SYNCHRONIZED_SCENE_PHASE(Local_164.f_1) >= fVar0)
 		{

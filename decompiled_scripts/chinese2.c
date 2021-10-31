@@ -12738,7 +12738,7 @@ void func_166(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 									{
 										if (AUDIO::GET_PLAYER_RADIO_STATION_GENRE() != 6 && AUDIO::GET_PLAYER_RADIO_STATION_GENRE() != 0)
 										{
-											if (AUDIO::_0x3A48AB4445D499BE() != 0)
+											if (AUDIO::GET_MUSIC_VOL_SLIDER() != 0)
 											{
 												if (func_35("CHI2_rad", 1, PLAYER::PLAYER_PED_ID(), "Trevor", -1, 0, 0, -1, 0, 0, -1, 0, 0, 8))
 												{
@@ -12812,7 +12812,7 @@ void func_166(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 								{
 									if (AUDIO::GET_PLAYER_RADIO_STATION_GENRE() == 6)
 									{
-										if (AUDIO::_0x3A48AB4445D499BE() != 0)
+										if (AUDIO::GET_MUSIC_VOL_SLIDER() != 0)
 										{
 											if (func_35("CHI2_radb", 1, PLAYER::PLAYER_PED_ID(), "Trevor", -1, 0, 0, -1, 0, 0, -1, 0, 0, 8))
 											{

@@ -36128,7 +36128,7 @@ void func_283()
 						Local_434[iVar0 /*19*/].f_17 = MISC::GET_GAME_TIMER();
 						Local_434[iVar0 /*19*/].f_10 = 20;
 						func_319(Local_434[iVar0 /*19*/].f_9, 1);
-						AUDIO::_0x062D5EAD4DA2FA6A();
+						AUDIO::FORCE_PED_PANIC_WALLA();
 					}
 					else if (func_322(Local_434[iVar0 /*19*/].f_9, Local_434[iVar0 /*19*/].f_18, 0, 1101004800, 1090519040, 1097859072))
 					{
@@ -36137,7 +36137,7 @@ void func_283()
 						Local_434[iVar0 /*19*/].f_17 = 0;
 						Local_434[iVar0 /*19*/].f_10 = 20;
 						func_319(Local_434[iVar0 /*19*/].f_9, 1);
-						AUDIO::_0x062D5EAD4DA2FA6A();
+						AUDIO::FORCE_PED_PANIC_WALLA();
 					}
 					else if (iLocal_262 != 12 && func_301(Local_434[iVar0 /*19*/].f_9, 1090519040, 1097859072))
 					{
@@ -36146,7 +36146,7 @@ void func_283()
 						Local_434[iVar0 /*19*/].f_17 = 0;
 						Local_434[iVar0 /*19*/].f_10 = 20;
 						func_319(Local_434[iVar0 /*19*/].f_9, 1);
-						AUDIO::_0x062D5EAD4DA2FA6A();
+						AUDIO::FORCE_PED_PANIC_WALLA();
 					}
 					else if ((iLocal_262 == 9 && PED::IS_PED_IN_COMBAT(PLAYER::PLAYER_PED_ID(), 0)) || func_300(Local_530.f_9, 9, 1))
 					{
@@ -36155,7 +36155,7 @@ void func_283()
 						Local_434[iVar0 /*19*/].f_17 = MISC::GET_GAME_TIMER();
 						Local_434[iVar0 /*19*/].f_10 = 20;
 						func_319(Local_434[iVar0 /*19*/].f_9, 1);
-						AUDIO::_0x062D5EAD4DA2FA6A();
+						AUDIO::FORCE_PED_PANIC_WALLA();
 					}
 					if (func_298(iVar0))
 					{

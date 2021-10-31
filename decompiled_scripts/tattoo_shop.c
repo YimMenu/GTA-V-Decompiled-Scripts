@@ -68355,7 +68355,7 @@ void func_487(int iParam0)
 		}
 		else
 		{
-			MONEY::_0xBC6227792A188E2E(iVar0);
+			MONEY::_NETWORK_EARN_FROM_CARCLUB_MEMBERSHIP(iVar0);
 		}
 	}
 }
@@ -76971,7 +76971,7 @@ void func_519(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4)
 			Var0.f_6 = -1;
 			break;
 	}
-	STATS::_0xFF14D6FEEC507BBE(&Var0);
+	STATS::_PLAYSTATS_CARCLUB_POINTS(&Var0);
 }
 
 int func_520(int iParam0)

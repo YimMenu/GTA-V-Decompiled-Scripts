@@ -5287,7 +5287,7 @@ int func_101(var uParam0, bool bParam1, bool bParam2, int iParam3)
 		iVar22 = PLAYER::PLAYER_PED_ID();
 		ENTITY::SET_ENTITY_VISIBLE(PLAYER::PLAYER_PED_ID(), true, false);
 		func_155(iVar22);
-		PED::_0xE861D0B05C7662B8(iVar22, false, 0);
+		PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar22, false, 0);
 		if (fVar3 < 25f && !PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()))
 		{
 			ENTITY::SET_ENTITY_HEALTH(PLAYER::PLAYER_PED_ID(), SYSTEM::ROUND((((25f / 100f) * (SYSTEM::TO_FLOAT(PED::GET_PED_MAX_HEALTH(PLAYER::PLAYER_PED_ID())) - 100f)) + 100f)), 0);
@@ -5298,7 +5298,7 @@ int func_101(var uParam0, bool bParam1, bool bParam2, int iParam3)
 			{
 				ENTITY::SET_ENTITY_VISIBLE(iVar0, true, false);
 				func_155(iVar0);
-				PED::_0xE861D0B05C7662B8(iVar0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar0, false, 0);
 				PED::SET_PED_STEALTH_MOVEMENT(iVar0, false, 0);
 			}
 		}
@@ -11886,7 +11886,7 @@ void func_192()
 				func_260(&uLocal_1023, 11, "RBsetup");
 				if (func_191() == 2)
 				{
-					AUDIO::_0xD2DCCD8E16E20997(iLocal_358);
+					AUDIO::_RESET_VEHICLE_STARTUP_REV_SOUND(iLocal_358);
 					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_67, true);
 					func_259(&iLocal_1369, 11, "RBsetup", &uLocal_1023);
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_67, false))
@@ -11915,7 +11915,7 @@ void func_192()
 					{
 						iLocal_1419 = 0;
 						PED::SET_PED_CAN_BE_KNOCKED_OFF_VEHICLE(PLAYER::PLAYER_PED_ID(), 3);
-						AUDIO::_0xD2DCCD8E16E20997(iLocal_358);
+						AUDIO::_RESET_VEHICLE_STARTUP_REV_SOUND(iLocal_358);
 						VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_358, 1);
 						if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_67, false))
 						{
@@ -21509,7 +21509,7 @@ bool func_343()
 			PED::SET_PED_COMPONENT_VARIATION(iLocal_357, 4, 0, 0, 0);
 			VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(iLocal_358, 1);
 			VEHICLE::SET_VEHICLE_ENGINE_HEALTH(iLocal_358, 3000f);
-			AUDIO::_0xF1F8157B8C3F171C(iLocal_358, "Trevor_Revs_Off", "PALETO_SCORE_SETUP_SOUNDS");
+			AUDIO::SET_VEHICLE_STARTUP_REV_SOUND(iLocal_358, "Trevor_Revs_Off", "PALETO_SCORE_SETUP_SOUNDS");
 			ENTITY::SET_ENTITY_HEALTH(iLocal_358, 3000, 0);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_358, 3);
 			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_357, 17, true);
@@ -26792,7 +26792,7 @@ int func_461(int* iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, 
 			{
 				*iParam0 = PED::CREATE_PED_INSIDE_VEHICLE(iParam2, 26, iVar0, iParam3, true, true);
 				func_768(*iParam0, iParam1, bParam5);
-				PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 				func_761(*iParam0);
 				func_750(*iParam0, 1, 0);
 				func_749(*iParam0);
@@ -112686,7 +112686,7 @@ int func_769(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool bP
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, Param2, fParam5, false, false);
 			func_768(*iParam0, iParam1, bParam7);
-			PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+			PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 			func_761(*iParam0);
 			func_750(*iParam0, 1, 0);
 			func_749(*iParam0);

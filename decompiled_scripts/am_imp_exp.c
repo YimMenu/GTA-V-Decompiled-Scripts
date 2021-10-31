@@ -13801,7 +13801,7 @@ int func_386(int iParam0, bool bParam1)
 		iVar2++;
 	}
 	iVar7 = iVar1 * 25;
-	if (AUDIO::_0x5DB8010EE71FDEF2(iParam0))
+	if (AUDIO::IS_VEHICLE_AUDIBLY_DAMAGED(iParam0))
 	{
 		iVar11 = 50;
 	}
@@ -15683,11 +15683,11 @@ int func_417(int iParam0)
 	return -1;
 }
 
-int func_418(int* iParam0)
+int func_418(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}

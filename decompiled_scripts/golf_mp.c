@@ -5549,17 +5549,17 @@ void func_81(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(sParam5);
 }
 
-int func_82(int* iParam0, int* iParam1)
+int func_82(var* uParam0, var* uParam1)
 {
-	if (!func_83(*iParam0))
+	if (!func_83(*uParam0))
 	{
 		return 0;
 	}
-	if (!func_83(*iParam1))
+	if (!func_83(*uParam1))
 	{
 		return 0;
 	}
-	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, iParam1))
+	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1))
 	{
 		return 1;
 	}
@@ -6330,7 +6330,7 @@ void func_101(int* iParam0, char* sParam1)
 	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
 }
 
-int func_102(int* iParam0, var uParam1)
+int func_102(var* uParam0, var uParam1)
 {
 	int iVar0;
 	
@@ -6339,7 +6339,7 @@ int func_102(int* iParam0, var uParam1)
 	{
 		if (func_83(*(uParam1[iVar0 /*13*/])))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, uParam1[iVar0 /*13*/]))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1[iVar0 /*13*/]))
 			{
 				return 1;
 			}
@@ -6423,7 +6423,7 @@ int func_105(var uParam0)
 	return 1;
 }
 
-int func_106(var uParam0, int* iParam1, char* sParam2)
+int func_106(var uParam0, var* uParam1, char* sParam2)
 {
 	if (*uParam0 == 2)
 	{
@@ -6432,27 +6432,27 @@ int func_106(var uParam0, int* iParam1, char* sParam2)
 	switch (*uParam0)
 	{
 		case 0:
-			if (func_83(*iParam1))
+			if (func_83(*uParam1))
 			{
-				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 				{
 					if (MISC::IS_DURANGO_VERSION() || MISC::IS_ORBIS_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else if (MISC::IS_XBOX360_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 						if (MISC::IS_PS3_VERSION())
 						{
 						}
@@ -6467,7 +6467,7 @@ int func_106(var uParam0, int* iParam1, char* sParam2)
 				}
 				else
 				{
-					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 					*uParam0 = 2;
 				}
 			}
@@ -6478,13 +6478,13 @@ int func_106(var uParam0, int* iParam1, char* sParam2)
 			break;
 		
 		case 1:
-			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 			{
 				if (!NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_PENDING())
 				{
 					if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED())
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 					}
 					*uParam0 = 2;
 					return 1;
@@ -6492,7 +6492,7 @@ int func_106(var uParam0, int* iParam1, char* sParam2)
 			}
 			else
 			{
-				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 				*uParam0 = 2;
 			}
 			break;
@@ -15798,11 +15798,11 @@ int func_279(int iParam0)
 	return 0;
 }
 
-int func_280(int* iParam0)
+int func_280(var* uParam0)
 {
 	if (PLAYER::IS_PLAYER_ONLINE())
 	{
-		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID() && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return 1;
 		}
@@ -18242,12 +18242,12 @@ bool func_347()
 	return Global_99422.f_364 > 0;
 }
 
-int func_348(int iParam0, int* iParam1)
+int func_348(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!func_358(iParam0, iParam1))
+	if (!func_358(iParam0, uParam1))
 	{
 		return 1;
 	}
@@ -18260,7 +18260,7 @@ int func_348(int iParam0, int* iParam1)
 	{
 		if (!func_356(iParam0))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (func_351(&iParam0, iVar1))
 			{
 			}
@@ -21581,14 +21581,14 @@ int func_357(int iParam0)
 	return 0;
 }
 
-int func_358(int iParam0, int* iParam1)
+int func_358(int iParam0, var* uParam1)
 {
 	int iVar0;
 	bool bVar1;
 	
-	if (NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
-		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 	}
 	else
 	{
@@ -21610,7 +21610,7 @@ int func_358(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_233()) || !func_472(iVar0, 0, 0)) || !bVar1) || func_359(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam1))) || iVar0 == func_233()) || !func_472(iVar0, 0, 0)) || !bVar1) || func_359(iParam0))
 	{
 		return 0;
 	}
@@ -86490,11 +86490,11 @@ int func_734(int iParam0)
 	return -1;
 }
 
-int func_735(int* iParam0)
+int func_735(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -99446,7 +99446,7 @@ void func_1011(var uParam0, int* iParam1, var uParam2, var uParam3, int* iParam4
 		if (((func_1628(uParam3) == iParam6 && func_1898(uParam3) == 3) && func_1891(iParam1, iVar0, 128)) && !func_1631(iParam4))
 		{
 			NETWORK::NETWORK_SET_ENTITY_CAN_BLEND(func_1879(uParam3, iParam6), true);
-			NETWORK::_0xCD71A4ECAB22709E(func_1879(uParam3, iParam6));
+			NETWORK::NETWORK_USE_LOGARITHMIC_BLENDING_THIS_FRAME(func_1879(uParam3, iParam6));
 		}
 		else
 		{
@@ -106951,7 +106951,7 @@ float func_1257()
 	int iVar0;
 	
 	iVar0 = iLocal_792;
-	iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_792);
+	iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_792);
 	if (func_1258())
 	{
 		return PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar0);
@@ -106964,7 +106964,7 @@ bool func_1258()
 	int iVar0;
 	
 	iVar0 = iLocal_792;
-	iVar0 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_792);
+	iVar0 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_792);
 	return PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar0);
 }
 
@@ -120931,7 +120931,7 @@ void func_1689(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4,
 			IntToString(&(Global_1682502.f_4), MISC::GET_HASH_KEY(&(Global_4456448.f_85822)), 32);
 			Global_1682502.f_32 = iParam2;
 			Global_1682502.f_19 = (func_1693(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0xBBA55BE9AAAABF44(&Global_1682502);
+			STATS::_PLAYSTATS_ROBBERY_FINALE(&Global_1682502);
 			func_1722();
 			Global_1575125 = 0;
 		}

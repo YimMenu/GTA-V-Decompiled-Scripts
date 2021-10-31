@@ -265,7 +265,7 @@ void __EntryFunction__()
 	int iVar0;
 	struct<13> Var1;
 	int iVar14;
-	int* iVar15;
+	var* uVar15;
 	int iVar28;
 	int iVar29;
 	int iVar30;
@@ -334,7 +334,7 @@ void __EntryFunction__()
 			}
 			SYSTEM::WAIT(0);
 			SYSTEM::WAIT(0);
-			while (NETWORK::NETWORK_GET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU(&iVar15) == 0)
+			while (NETWORK::NETWORK_GET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU(&uVar15) == 0)
 			{
 				SYSTEM::WAIT(0);
 			}
@@ -342,7 +342,7 @@ void __EntryFunction__()
 			{
 				SYSTEM::WAIT(0);
 			}
-			while (func_39(&iVar15, &(Global_1312670[0 /*6*/].f_3), iVar0, iVar28, iVar29, iVar30) == 0)
+			while (func_39(&uVar15, &(Global_1312670[0 /*6*/].f_3), iVar0, iVar28, iVar29, iVar30) == 0)
 			{
 				SYSTEM::WAIT(0);
 			}
@@ -658,7 +658,7 @@ int func_15()
 	return Global_1590908[PLAYER::PLAYER_ID() /*874*/].f_192;
 }
 
-int func_16(int iParam0, int* iParam1, char* sParam2, int iParam3, int iParam4, bool bParam5, char* sParam6)
+int func_16(int iParam0, var* uParam1, char* sParam2, int iParam3, int iParam4, bool bParam5, char* sParam6)
 {
 	bool bVar0;
 	int iVar1;
@@ -666,11 +666,11 @@ int func_16(int iParam0, int* iParam1, char* sParam2, int iParam3, int iParam4, 
 	
 	if (iParam4 == 3)
 	{
-		NETWORK::NETWORK_SET_GAMER_INVITED_TO_TRANSITION(iParam1);
+		NETWORK::NETWORK_SET_GAMER_INVITED_TO_TRANSITION(uParam1);
 	}
 	else
 	{
-		NETWORK::NETWORK_REMOVE_TRANSITION_INVITE(iParam1);
+		NETWORK::NETWORK_REMOVE_TRANSITION_INVITE(uParam1);
 	}
 	if (iParam0 < 32)
 	{
@@ -678,13 +678,13 @@ int func_16(int iParam0, int* iParam1, char* sParam2, int iParam3, int iParam4, 
 		{
 			return iParam0;
 		}
-		if (func_29(iParam1))
+		if (func_29(uParam1))
 		{
 			bVar0 = true;
 		}
-		if (NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+		if (NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (iVar1 != func_33())
 			{
 				if (func_26(iVar1, 0))
@@ -695,10 +695,10 @@ int func_16(int iParam0, int* iParam1, char* sParam2, int iParam3, int iParam4, 
 		}
 		if ((iParam4 == 9 && !bVar0) || iParam4 == 11)
 		{
-			func_24(iParam1, sParam2, iParam4, 0);
+			func_24(uParam1, sParam2, iParam4, 0);
 			if (func_23())
 			{
-				func_22(iParam1);
+				func_22(uParam1);
 			}
 			func_21(23);
 			return 0;
@@ -712,21 +712,21 @@ int func_16(int iParam0, int* iParam1, char* sParam2, int iParam3, int iParam4, 
 		{
 			if (!func_38(Global_2450762[iVar2 /*37*/]))
 			{
-				if (func_18(iVar2, iParam1, sParam2, iParam4, sParam6))
+				if (func_18(iVar2, uParam1, sParam2, iParam4, sParam6))
 				{
 					if (func_23())
 					{
-						func_22(iParam1);
+						func_22(uParam1);
 					}
 					if (bParam5)
 					{
-						func_17(iParam1, &(Global_2450762[iVar2 /*37*/].f_13), Global_2450762[iVar2 /*37*/].f_35);
+						func_17(uParam1, &(Global_2450762[iVar2 /*37*/].f_13), Global_2450762[iVar2 /*37*/].f_35);
 					}
 					func_21(23);
 				}
 				return iVar2;
 			}
-			else if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam1, &(Global_2450762[iVar2 /*37*/])))
+			else if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam1, &(Global_2450762[iVar2 /*37*/])))
 			{
 				if (Global_2450762[iVar2 /*37*/].f_35 != 9 && !(Global_2450762[iVar2 /*37*/].f_35 == 3 && iParam4 == 3))
 				{
@@ -735,7 +735,7 @@ int func_16(int iParam0, int* iParam1, char* sParam2, int iParam3, int iParam4, 
 				}
 				if (bParam5)
 				{
-					func_17(iParam1, &(Global_2450762[iVar2 /*37*/].f_13), Global_2450762[iVar2 /*37*/].f_35);
+					func_17(uParam1, &(Global_2450762[iVar2 /*37*/].f_13), Global_2450762[iVar2 /*37*/].f_35);
 				}
 				func_21(23);
 				return iVar2;
@@ -746,7 +746,7 @@ int func_16(int iParam0, int* iParam1, char* sParam2, int iParam3, int iParam4, 
 	return 32;
 }
 
-void func_17(int* iParam0, char* sParam1, int iParam2)
+void func_17(var* uParam0, char* sParam1, int iParam2)
 {
 	int iVar0;
 	
@@ -777,19 +777,19 @@ void func_17(int* iParam0, char* sParam1, int iParam2)
 			iVar0 = 9;
 			break;
 	}
-	NETWORK::NETWORK_SEND_TRANSITION_GAMER_INSTRUCTION(iParam0, sParam1, 1, iVar0, true);
+	NETWORK::NETWORK_SEND_TRANSITION_GAMER_INSTRUCTION(uParam0, sParam1, 1, iVar0, true);
 }
 
-int func_18(int iParam0, int* iParam1, char* sParam2, int iParam3, char* sParam4)
+int func_18(int iParam0, var* uParam1, char* sParam2, int iParam3, char* sParam4)
 {
-	Global_2450762[iParam0 /*37*/] = { *iParam1 };
+	Global_2450762[iParam0 /*37*/] = { *uParam1 };
 	Global_2450762[iParam0 /*37*/].f_35 = iParam3;
 	Global_2450762[iParam0 /*37*/].f_36 = NETWORK::GET_CLOUD_TIME_AS_INT();
 	StringCopy(&(Global_2450762[iParam0 /*37*/].f_13), sParam2, 64);
-	if (NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
 		Global_2450762[iParam0 /*37*/].f_33 = 2;
-		func_19(*iParam1, &(Global_2450762[iParam0 /*37*/].f_29));
+		func_19(*uParam1, &(Global_2450762[iParam0 /*37*/].f_29));
 	}
 	else if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam4))
 	{
@@ -868,7 +868,7 @@ void func_21(int iParam0)
 	MISC::SET_BIT(&(Global_2453903.f_1.f_2813[iVar0]), iVar1);
 }
 
-bool func_22(int* iParam0)
+bool func_22(var* uParam0)
 {
 	int iVar0;
 	bool bVar1;
@@ -887,7 +887,7 @@ bool func_22(int* iParam0)
 		}
 		else if (func_38(Global_2451951[iVar0 /*33*/]))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, &(Global_2451951[iVar0 /*33*/])))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, &(Global_2451951[iVar0 /*33*/])))
 			{
 				bVar1 = true;
 			}
@@ -906,14 +906,14 @@ bool func_23()
 	return Global_2453009.f_840;
 }
 
-void func_24(int* iParam0, char* sParam1, int iParam2, char* sParam3)
+void func_24(var* uParam0, char* sParam1, int iParam2, char* sParam3)
 {
 	int iVar0;
 	bool bVar1;
 	struct<14> Var2;
 	struct<37> Var39;
 	
-	Var39 = { *iParam0 };
+	Var39 = { *uParam0 };
 	StringCopy(&(Var39.f_13), sParam1, 64);
 	StringCopy(&(Var39.f_29), "", 16);
 	Var39.f_33 = 0;
@@ -929,11 +929,11 @@ void func_24(int* iParam0, char* sParam1, int iParam2, char* sParam3)
 	{
 		if (MISC::IS_PS3_VERSION())
 		{
-			StringCopy(&(Var39.f_13), NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam0), 64);
+			StringCopy(&(Var39.f_13), NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam0), 64);
 		}
 		else
 		{
-			Var39.f_13 = { func_25(iParam0) };
+			Var39.f_13 = { func_25(uParam0) };
 			if (MISC::IS_STRING_NULL_OR_EMPTY(&(Var39.f_13)))
 			{
 				Var39.f_34 = 1;
@@ -961,7 +961,7 @@ void func_24(int* iParam0, char* sParam1, int iParam2, char* sParam3)
 			Var39 = { Var2 };
 			if (func_38(Var2))
 			{
-				if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&Var2, iParam0) || MISC::ARE_STRINGS_EQUAL(&(Var2.f_13), sParam1))
+				if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&Var2, uParam0) || MISC::ARE_STRINGS_EQUAL(&(Var2.f_13), sParam1))
 				{
 					return;
 				}
@@ -971,7 +971,7 @@ void func_24(int* iParam0, char* sParam1, int iParam2, char* sParam3)
 	}
 }
 
-struct<16> func_25(int* iParam0)
+struct<16> func_25(var* uParam0)
 {
 	int iVar0;
 	struct<16> Var1;
@@ -982,7 +982,7 @@ struct<16> func_25(int* iParam0)
 	{
 		if (func_38(Global_2450762[iVar0 /*37*/]))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&(Global_2450762[iVar0 /*37*/]), iParam0))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&(Global_2450762[iVar0 /*37*/]), uParam0))
 			{
 				Var1 = { Global_2450762[iVar0 /*37*/].f_13 };
 				iVar0 = 32;
@@ -1047,16 +1047,16 @@ int func_28()
 	return Global_1312763;
 }
 
-int func_29(int* iParam0)
+int func_29(var* uParam0)
 {
 	int iVar0;
 	
 	iVar0 = 0;
 	while (iVar0 < 32)
 	{
-		if (func_38(Global_2453903.f_1.f_845[iVar0 /*57*/]) && func_38(*iParam0))
+		if (func_38(Global_2453903.f_1.f_845[iVar0 /*57*/]) && func_38(*uParam0))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&(Global_2453903.f_1.f_845[iVar0 /*57*/]), iParam0))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&(Global_2453903.f_1.f_845[iVar0 /*57*/]), uParam0))
 			{
 				return 1;
 			}
@@ -1138,7 +1138,7 @@ void func_34(int iParam0)
 	Global_1590553 = iParam0;
 }
 
-bool func_35(int* iParam0, char* sParam1)
+bool func_35(var* uParam0, char* sParam1)
 {
 	int iVar0;
 	bool bVar1;
@@ -1160,7 +1160,7 @@ bool func_35(int* iParam0, char* sParam1)
 		}
 		else if (func_38(Global_2450762[iVar0 /*37*/]))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, &(Global_2450762[iVar0 /*37*/])))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, &(Global_2450762[iVar0 /*37*/])))
 			{
 				bVar1 = true;
 			}
@@ -1212,7 +1212,7 @@ bool func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	return NETWORK::NETWORK_IS_HANDLE_VALID(&uParam0, 13);
 }
 
-int func_39(int* iParam0, var uParam1, int iParam2, int iParam3, int iParam4, int iParam5)
+int func_39(var* uParam0, var uParam1, int iParam2, int iParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	int iVar1;
@@ -1226,11 +1226,11 @@ int func_39(int* iParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 	
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (func_38(*iParam0))
+		if (func_38(*uParam0))
 		{
-			if (NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam0))
+			if (NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam0))
 			{
-				iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam0);
+				iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam0);
 				iVar1 = PLAYER::GET_PLAYER_PED(iVar0);
 				if (iVar0 != func_33())
 				{
@@ -95958,7 +95958,7 @@ int func_409(var uParam0, var uParam1, int iParam2, bool bParam3)
 						ENTITY::SET_ENTITY_VISIBLE(uParam0->f_1, false, false);
 					}
 					func_411(1, &iVar9, &iVar10, iVar5, iVar7, iVar6, iVar8);
-					iVar14 = (((PED::_GET_NUM_PARENT_PEDS_OF_TYPE(1) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(0)) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(3)) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(2));
+					iVar14 = (((PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0)) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3)) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2));
 					if (iVar9 >= iVar14)
 					{
 						iVar9 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1);
@@ -96003,7 +96003,7 @@ int func_409(var uParam0, var uParam1, int iParam2, bool bParam3)
 						ENTITY::SET_ENTITY_VISIBLE(*uParam0, false, false);
 					}
 					func_411(0, &iVar9, &iVar10, iVar5, iVar7, iVar6, iVar8);
-					iVar15 = (((PED::_GET_NUM_PARENT_PEDS_OF_TYPE(1) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(0)) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(3)) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(2));
+					iVar15 = (((PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0)) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3)) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2));
 					if (iVar9 >= iVar15)
 					{
 						iVar9 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1);
@@ -96286,7 +96286,7 @@ int func_412(var uParam0, var uParam1, int iParam2, bool bParam3)
 				}
 				iVar7 = func_414(iVar7, 0, iVar9 == 1);
 				iVar8 = func_414(iVar8, 1, iVar10 == 1);
-				iVar13 = (((PED::_GET_NUM_PARENT_PEDS_OF_TYPE(1) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(0)) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(3)) + PED::_GET_NUM_PARENT_PEDS_OF_TYPE(2));
+				iVar13 = (((PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0)) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3)) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2));
 				if (iVar7 >= iVar13)
 				{
 					iVar7 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1);

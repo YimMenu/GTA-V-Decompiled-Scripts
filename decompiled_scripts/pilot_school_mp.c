@@ -13508,7 +13508,7 @@ void func_62(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, i
 			IntToString(&(Global_1682502.f_4), MISC::GET_HASH_KEY(&(Global_4456448.f_85822)), 32);
 			Global_1682502.f_32 = iParam2;
 			Global_1682502.f_19 = (func_66(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0xBBA55BE9AAAABF44(&Global_1682502);
+			STATS::_PLAYSTATS_ROBBERY_FINALE(&Global_1682502);
 			func_101();
 			Global_1575125 = 0;
 		}
@@ -117669,11 +117669,11 @@ int func_883(int iParam0)
 	return -1;
 }
 
-int func_884(int* iParam0)
+int func_884(var* uParam0)
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam0))
+		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam0))
 		{
 			return Global_2463440;
 		}
@@ -126419,12 +126419,12 @@ bool func_1132()
 	return Global_99422.f_364 > 0;
 }
 
-int func_1133(int iParam0, int* iParam1)
+int func_1133(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
 	
-	if (!func_1138(iParam0, iParam1))
+	if (!func_1138(iParam0, uParam1))
 	{
 		return 1;
 	}
@@ -126437,7 +126437,7 @@ int func_1133(int iParam0, int* iParam1)
 	{
 		if (!func_1114(iParam0))
 		{
-			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 			if (func_1134(&iParam0, iVar1))
 			{
 			}
@@ -129656,14 +129656,14 @@ void func_1137()
 	Global_1683856.f_24 = 0;
 }
 
-int func_1138(int iParam0, int* iParam1)
+int func_1138(int iParam0, var* uParam1)
 {
 	int iVar0;
 	bool bVar1;
 	
-	if (NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+	if (NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 	{
-		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1);
+		iVar0 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);
 	}
 	else
 	{
@@ -129685,7 +129685,7 @@ int func_1138(int iParam0, int* iParam1)
 	{
 		bVar1 = true;
 	}
-	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(iParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(iParam1))) || iVar0 == func_49()) || !func_660(iVar0, 0, 0)) || !bVar1) || func_1139(iParam0))
+	if (((((((!(ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, false)) || !NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0)) || !NETWORK::NETWORK_CHECK_USER_CONTENT_PRIVILEGES(0, -1, true)) || !((NETWORK::NETWORK_IS_HANDLE_VALID(uParam1, 13) && NETWORK::NETWORK_CLAN_SERVICE_IS_VALID()) && NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(uParam1))) || iVar0 == func_49()) || !func_660(iVar0, 0, 0)) || !bVar1) || func_1139(iParam0))
 	{
 		return 0;
 	}
@@ -135191,7 +135191,7 @@ int func_1239()
 			case 5:
 				func_1247();
 				PAD::DISABLE_CONTROL_ACTION(0, 144, true);
-				iVar3 = NETWORK::_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE(iLocal_2342);
+				iVar3 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_2342);
 				if ((PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar3) && PED::GET_SYNCHRONIZED_SCENE_PHASE(iVar3) >= 0.95f) || (!PED::IS_SYNCHRONIZED_SCENE_RUNNING(iVar3) && TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 1264972124) != 1))
 				{
 					if (TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 1264972124) != 1)
@@ -136718,7 +136718,7 @@ int func_1272()
 									GRAPHICS::SET_PARTICLE_FX_LOOPED_EVOLUTION(iLocal_9863, "damage_smoke", 0.5f, false);
 									GRAPHICS::SET_PARTICLE_FX_LOOPED_EVOLUTION(iLocal_9863, "damage_fire", 0.2f, false);
 								}
-								VEHICLE::_DISABLE_PLANE_PROPELLER(Local_2358, 0);
+								VEHICLE::DISABLE_INDIVIDUAL_PLANE_PROPELLER(Local_2358, 0);
 							}
 						}
 						if (func_778() == 3)
@@ -142061,15 +142061,15 @@ void func_1384(int iParam0, bool bParam1)
 	}
 }
 
-void func_1385(int iParam0, bool bParam1)
+void func_1385(char* sParam0, bool bParam1)
 {
 	if (bParam1)
 	{
-		MISC::_0x1178E104409FE58C(iParam0, 1);
+		MISC::_0x1178E104409FE58C(sParam0, true);
 	}
 	else
 	{
-		MISC::SET_OVERRIDE_WEATHER(iParam0);
+		MISC::SET_OVERRIDE_WEATHER(sParam0);
 	}
 }
 
@@ -146940,17 +146940,17 @@ void func_1491(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(sParam5);
 }
 
-int func_1492(int* iParam0, int* iParam1)
+int func_1492(var* uParam0, var* uParam1)
 {
-	if (!func_1122(*iParam0))
+	if (!func_1122(*uParam0))
 	{
 		return 0;
 	}
-	if (!func_1122(*iParam1))
+	if (!func_1122(*uParam1))
 	{
 		return 0;
 	}
-	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, iParam1))
+	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1))
 	{
 		return 1;
 	}
@@ -147662,7 +147662,7 @@ void func_1506(int* iParam0, char* sParam1)
 	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
 }
 
-int func_1507(int* iParam0, var uParam1)
+int func_1507(var* uParam0, var uParam1)
 {
 	int iVar0;
 	
@@ -147671,7 +147671,7 @@ int func_1507(int* iParam0, var uParam1)
 	{
 		if (func_1122(*(uParam1[iVar0 /*13*/])))
 		{
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(iParam0, uParam1[iVar0 /*13*/]))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(uParam0, uParam1[iVar0 /*13*/]))
 			{
 				return 1;
 			}
@@ -147738,7 +147738,7 @@ int func_1509(var uParam0)
 	return 1;
 }
 
-int func_1510(var uParam0, int* iParam1, char* sParam2)
+int func_1510(var uParam0, var* uParam1, char* sParam2)
 {
 	if (*uParam0 == 2)
 	{
@@ -147747,27 +147747,27 @@ int func_1510(var uParam0, int* iParam1, char* sParam2)
 	switch (*uParam0)
 	{
 		case 0:
-			if (func_1122(*iParam1))
+			if (func_1122(*uParam1))
 			{
-				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+				if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 				{
 					if (MISC::IS_DURANGO_VERSION() || MISC::IS_ORBIS_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else if (MISC::IS_XBOX360_VERSION())
 					{
-						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(iParam1))
+						if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(uParam1))
 						{
 							*uParam0 = 1;
 						}
 					}
 					else
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 						if (MISC::IS_PS3_VERSION())
 						{
 						}
@@ -147782,7 +147782,7 @@ int func_1510(var uParam0, int* iParam1, char* sParam2)
 				}
 				else
 				{
-					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+					StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 					*uParam0 = 2;
 				}
 			}
@@ -147793,13 +147793,13 @@ int func_1510(var uParam0, int* iParam1, char* sParam2)
 			break;
 		
 		case 1:
-			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(iParam1))
+			if (!NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(uParam1))
 			{
 				if (!NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_PENDING())
 				{
 					if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED())
 					{
-						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(iParam1), 64);
+						StringCopy(sParam2, NETWORK::NETWORK_GET_GAMERTAG_FROM_HANDLE(uParam1), 64);
 					}
 					*uParam0 = 2;
 					return 1;
@@ -147807,7 +147807,7 @@ int func_1510(var uParam0, int* iParam1, char* sParam2)
 			}
 			else
 			{
-				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(iParam1)), 64);
+				StringCopy(sParam2, PLAYER::GET_PLAYER_NAME(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1)), 64);
 				*uParam0 = 2;
 			}
 			break;

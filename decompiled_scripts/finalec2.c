@@ -46257,7 +46257,7 @@ int func_387(int* iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, 
 			{
 				*iParam0 = PED::CREATE_PED_INSIDE_VEHICLE(iParam2, 26, iVar0, iParam3, true, true);
 				func_595(*iParam0, iParam1, bParam5);
-				PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 				func_588(*iParam0);
 				func_577(*iParam0, 1, 0);
 				func_576(*iParam0);
@@ -104624,7 +104624,7 @@ int func_600(var uParam0, bool bParam1, bool bParam2, int iParam3)
 		iVar22 = PLAYER::PLAYER_PED_ID();
 		ENTITY::SET_ENTITY_VISIBLE(PLAYER::PLAYER_PED_ID(), true, false);
 		func_628(iVar22);
-		PED::_0xE861D0B05C7662B8(iVar22, false, 0);
+		PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar22, false, 0);
 		if (fVar3 < 25f && !PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()))
 		{
 			ENTITY::SET_ENTITY_HEALTH(PLAYER::PLAYER_PED_ID(), SYSTEM::ROUND((((25f / 100f) * (SYSTEM::TO_FLOAT(PED::GET_PED_MAX_HEALTH(PLAYER::PLAYER_PED_ID())) - 100f)) + 100f)), 0);
@@ -104635,7 +104635,7 @@ int func_600(var uParam0, bool bParam1, bool bParam2, int iParam3)
 			{
 				ENTITY::SET_ENTITY_VISIBLE(iVar0, true, false);
 				func_628(iVar0);
-				PED::_0xE861D0B05C7662B8(iVar0, false, 0);
+				PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(iVar0, false, 0);
 				PED::SET_PED_STEALTH_MOVEMENT(iVar0, false, 0);
 			}
 		}
@@ -108115,7 +108115,7 @@ int func_646(int* iParam0, int iParam1, struct<3> Param2, float fParam5, bool bP
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, Param2, fParam5, false, false);
 			func_595(*iParam0, iParam1, bParam7);
-			PED::_0xE861D0B05C7662B8(*iParam0, false, 0);
+			PED::SET_PED_CAN_LOSE_PROPS_ON_DAMAGE(*iParam0, false, 0);
 			func_588(*iParam0);
 			func_577(*iParam0, 1, 0);
 			func_576(*iParam0);

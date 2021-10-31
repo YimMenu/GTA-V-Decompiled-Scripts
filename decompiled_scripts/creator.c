@@ -96937,7 +96937,7 @@ int func_568(var uParam0, var* uParam1, int iParam2)
 		case 3:
 			if (NETWORK::UGC_HAS_CREATE_FINISHED())
 			{
-				if (NETWORK::_0x24E4E51FC16305F9())
+				if (NETWORK::UGC_DID_CREATE_SUCCEED())
 				{
 					NETWORK::UGC_CLEAR_CREATE_RESULT();
 					NETWORK::UGC_CLEAR_MODIFY_RESULT();
@@ -97024,7 +97024,7 @@ void func_570(var uParam0)
 	uParam0->f_35 = 0;
 }
 
-int func_571(var uParam0, var* uParam1, int iParam2, int iParam3)
+int func_571(var uParam0, char* sParam1, int iParam2, int iParam3)
 {
 	char* sVar0;
 	
@@ -97067,7 +97067,7 @@ int func_571(var uParam0, var* uParam1, int iParam2, int iParam3)
 			sVar0 = "FMMC_ENDMTYPES2";
 		}
 	}
-	HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ALERT", "FMMC_COPY", 36, "", false, -1, 2, sVar0, uParam1, true, 0);
+	HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ALERT", "FMMC_COPY", 36, "", false, -1, 2, sVar0, sParam1, true, 0);
 	if (PAD::IS_CONTROL_JUST_PRESSED(2, 202))
 	{
 		PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
@@ -97216,7 +97216,7 @@ int func_575(var uParam0, var* uParam1, int iParam2)
 	return 0;
 }
 
-int func_576(var uParam0, var* uParam1, int iParam2, int iParam3)
+int func_576(var uParam0, char* sParam1, int iParam2, int iParam3)
 {
 	char* sVar0;
 	
@@ -97252,7 +97252,7 @@ int func_576(var uParam0, var* uParam1, int iParam2, int iParam3)
 	{
 		sVar0 = "FMMC_ENDMTYPES";
 	}
-	HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ALERT", "FMMC_DELETE_2", 36, "", false, -1, 2, sVar0, uParam1, true, 0);
+	HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ALERT", "FMMC_DELETE_2", 36, "", false, -1, 2, sVar0, sParam1, true, 0);
 	if (PAD::IS_CONTROL_JUST_PRESSED(2, 202))
 	{
 		PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
@@ -114515,7 +114515,7 @@ void func_939(int iParam0, int iParam1)
 		iVar1 = func_942(iParam0);
 		if (func_941(iVar0) && func_940(iVar1))
 		{
-			NETWORK::_0xC1447451DDB512F0(iVar0, iVar1);
+			NETWORK::_NETWORK_UGC_NAV(iVar0, iVar1);
 		}
 	}
 }
