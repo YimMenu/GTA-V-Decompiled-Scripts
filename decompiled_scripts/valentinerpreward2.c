@@ -299,7 +299,7 @@ void __EntryFunction__()
 {
 	int iVar0;
 	
-	sLocal_0 = "1.55.19_STAGE2";
+	sLocal_0 = "1.55.19_STAGE3";
 	iLocal_21 = -1;
 	iLocal_22 = -1;
 	iLocal_379 = 5;
@@ -9828,61 +9828,71 @@ Vector3 func_244()
 {
 	switch (Global_2544210.f_6621.f_3)
 	{
-		case 18921:
+		case 18927:
 			switch (Global_1701880)
 			{
 				case 0:
-					return 2047.26f, 2948.65f, 69.98f;
+					return -983.0557f, 6242.934f, -40.0311f;
+				
+				case 1:
+					return 759.73f, 7392.77f, -50.93f;
+				
+				case 2:
+					return 451.1f, 5571.43f, 700.7f;
 				
 				default:
 			}
 			break;
 		
-		case 18922:
+		case 18928:
 			switch (Global_1701880)
 			{
 				case 0:
+					return -1005.79f, 4852f, 200.55f;
+				
+				case 1:
 					return -2399.7f, 2740.85f, 1.64f;
 				
-				default:
-			}
-			break;
-		
-		case 18923:
-			switch (Global_1701880)
-			{
-				case 0:
-					return 150.86f, 2290.67f, 105.48f;
-				
-				default:
-			}
-			break;
-		
-		case 18924:
-			switch (Global_1701880)
-			{
-				case 0:
-					return 1377.52f, 2182.52f, 0.9f;
-				
-				default:
-			}
-			break;
-		
-		case 18925:
-			switch (Global_1701880)
-			{
-				case 0:
+				case 2:
 					return -99.2962f, 1910.271f, 196.014f;
 				
 				default:
 			}
 			break;
 		
-		case 18926:
+		case 18929:
 			switch (Global_1701880)
 			{
 				case 0:
 					return 2722.53f, 1540.781f, -50.4364f;
+				
+				case 1:
+					return 1377.52f, 2182.52f, 0.9f;
+				
+				case 2:
+					return 2489.052f, 3759.906f, 10.5049f;
+				
+				default:
+			}
+			break;
+		
+		case 18930:
+			switch (Global_1701880)
+			{
+				case 0:
+					return -417.31f, 1153.42f, 200.94f;
+				
+				case 1:
+					return 1664.93f, -27.97f, 100.94f;
+				
+				case 2:
+					return 748.13f, 1187.96f, 200.97f;
+				
+				case 3:
+					return -2302.893f, 218.3809f, 120.6017f;
+				
+				case 4:
+					return 2500.61f, -383.81f, 95.93f;
 				
 				default:
 			}
