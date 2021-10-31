@@ -144369,7 +144369,7 @@ char* func_1611(int iParam0, int iParam1)
 			default:
 		}
 	}
-	else if ((((((((iParam0 == -1064812128 || iParam0 == -773987253) || iParam0 == -1489531137) || iParam0 == -1235210928) || iParam0 == -965292667) || iParam0 == -788536681) || iParam0 == -1701710420) || iParam0 == -1266013780) || iParam0 == 2030482070)
+	else if ((((((((iParam0 == joaat("tr_prop_tr_container_01a") || iParam0 == joaat("tr_prop_tr_container_01b")) || iParam0 == joaat("tr_prop_tr_container_01c")) || iParam0 == joaat("tr_prop_tr_container_01d")) || iParam0 == joaat("tr_prop_tr_container_01e")) || iParam0 == joaat("tr_prop_tr_container_01f")) || iParam0 == joaat("tr_prop_tr_container_01g")) || iParam0 == joaat("tr_prop_tr_container_01h")) || iParam0 == joaat("tr_prop_tr_container_01i"))
 	{
 		switch (iParam1)
 		{
@@ -144410,7 +144410,7 @@ char* func_1611(int iParam0, int iParam1)
 			default:
 		}
 	}
-	else if (iParam0 == -1666677539)
+	else if (iParam0 == joaat("tr_prop_tr_ramp_01a"))
 	{
 		switch (iParam1)
 		{
@@ -144453,9 +144453,9 @@ char* func_1611(int iParam0, int iParam1)
 			default:
 		}
 	}
-	else if (func_1612(iParam0, 51) && iParam0 != 1562744358)
+	else if (func_1612(iParam0, 51) && iParam0 != joaat("tr_prop_tr_pile_dirt_01a"))
 	{
-		if ((iParam0 == -876149596 || iParam0 == -1365263335) || iParam0 == -1692769214)
+		if ((iParam0 == joaat("tr_prop_tr_skip_ramp_01a") || iParam0 == joaat("tr_prop_tr_trailer_ramp_01a")) || iParam0 == joaat("tr_prop_tr_truktrailer_01a"))
 		{
 			switch (iParam1)
 			{
@@ -145850,31 +145850,31 @@ int func_1613(int iParam0, int iParam1)
 					return joaat("prop_box_wood02a_pu");
 				
 				case 4:
-					return -1064812128;
+					return joaat("tr_prop_tr_container_01a");
 				
 				case 5:
-					return -773987253;
+					return joaat("tr_prop_tr_container_01b");
 				
 				case 6:
-					return -1489531137;
+					return joaat("tr_prop_tr_container_01c");
 				
 				case 7:
-					return -1235210928;
+					return joaat("tr_prop_tr_container_01d");
 				
 				case 8:
-					return -965292667;
+					return joaat("tr_prop_tr_container_01e");
 				
 				case 9:
-					return -788536681;
+					return joaat("tr_prop_tr_container_01f");
 				
 				case 10:
-					return -1701710420;
+					return joaat("tr_prop_tr_container_01g");
 				
 				case 11:
-					return -1266013780;
+					return joaat("tr_prop_tr_container_01h");
 				
 				case 12:
-					return 2030482070;
+					return joaat("tr_prop_tr_container_01i");
 				
 				case 13:
 					return joaat("prop_container_03_ld");
@@ -145901,7 +145901,7 @@ int func_1613(int iParam0, int iParam1)
 					return joaat("prop_beach_volball02");
 				
 				case 21:
-					return -884135540;
+					return joaat("tr_prop_tr_crates_sam_01a");
 				
 				case 22:
 					return joaat("gr_prop_gr_crates_pistols_01a");
@@ -145976,7 +145976,7 @@ int func_1613(int iParam0, int iParam1)
 					return joaat("prop_tool_box_04");
 				
 				case 46:
-					return 1951415382;
+					return joaat("tr_prop_tr_military_pickup_01a");
 				
 				case 47:
 					return joaat("hei_prop_hei_cash_trolly_03");
@@ -146009,7 +146009,7 @@ int func_1613(int iParam0, int iParam1)
 					return joaat("ex_prop_crate_minig");
 				
 				case 57:
-					return 1050902037;
+					return joaat("tr_prop_tr_med_table_01a");
 				
 				case 58:
 					return joaat("prop_dumpster_02a");
@@ -146078,16 +146078,16 @@ int func_1613(int iParam0, int iParam1)
 					return joaat("hei_prop_heist_off_chair");
 				
 				case 80:
-					return -445929577;
+					return joaat("tr_prop_tr_monitor_01a");
 				
 				case 81:
-					return -2022839423;
+					return joaat("tr_prop_tr_monitor_01b");
 				
 				case 82:
 					return joaat("prop_cs_mouse_01");
 				
 				case 83:
-					return 578099798;
+					return joaat("tr_prop_tr_mule_mt_01a");
 				
 				default:
 			}
@@ -148706,34 +148706,34 @@ int func_1613(int iParam0, int iParam1)
 					return joaat("gr_prop_gr_trailer_monitor_03");
 				
 				case 59:
-					return -1666677539;
+					return joaat("tr_prop_tr_ramp_01a");
 				
 				case 60:
-					return -884135540;
+					return joaat("tr_prop_tr_crates_sam_01a");
 				
 				case 61:
 					return joaat("v_ilev_gb_vauldr");
 				
 				case 62:
-					return 1665123410;
+					return joaat("tr_prop_tr_iaa_door_01a");
 				
 				case 63:
-					return 188023466;
+					return joaat("tr_prop_tr_sand_01a");
 				
 				case 64:
-					return 962944778;
+					return joaat("tr_prop_tr_sand_01b");
 				
 				case 65:
-					return -1862267709;
+					return joaat("tr_prop_tr_sand_cs_01a");
 				
 				case 66:
-					return -1078531536;
+					return joaat("tr_prop_tr_sand_cs_01b");
 				
 				case 67:
-					return -445929577;
+					return joaat("tr_prop_tr_monitor_01a");
 				
 				case 68:
-					return -169312631;
+					return joaat("tr_prop_tr_notice_01a");
 				
 				default:
 			}
@@ -149540,79 +149540,79 @@ int func_1613(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					return 331571981;
+					return joaat("tr_prop_tr_wall_sign_0l1");
 				
 				case 1:
-					return 991942513;
+					return joaat("tr_prop_tr_wall_sign_0l1_b");
 				
 				case 2:
-					return 1789145883;
+					return joaat("tr_prop_tr_tyre_wall_u_l");
 				
 				case 3:
-					return -236085966;
+					return joaat("tr_prop_tr_wall_sign_0r1");
 				
 				case 4:
-					return -1903013549;
+					return joaat("tr_prop_tr_wall_sign_0r1_b");
 				
 				case 5:
-					return -1192210510;
+					return joaat("tr_prop_tr_tyre_wall_u_r");
 				
 				case 6:
-					return -2123178139;
+					return joaat("tr_prop_tr_wall_sign_01");
 				
 				case 7:
-					return -326274867;
+					return joaat("tr_prop_tr_wall_sign_01_b");
 				
 				case 8:
-					return 999554854;
+					return joaat("tr_prop_tr_start_grid_01a");
 				
 				case 9:
-					return -415369673;
+					return joaat("tr_prop_tr_finish_line_01a");
 				
 				case 10:
-					return -2147140070;
+					return joaat("tr_prop_tr_races_barrel_01a");
 				
 				case 11:
-					return -1692769214;
+					return joaat("tr_prop_tr_truktrailer_01a");
 				
 				case 12:
-					return -876149596;
+					return joaat("tr_prop_tr_skip_ramp_01a");
 				
 				case 13:
-					return 1562744358;
+					return joaat("tr_prop_tr_pile_dirt_01a");
 				
 				case 14:
-					return -1365263335;
+					return joaat("tr_prop_tr_trailer_ramp_01a");
 				
 				case 15:
-					return -555335515;
+					return joaat("tr_prop_tr_sign_gf_ml_01a");
 				
 				case 16:
-					return 1430348079;
+					return joaat("tr_prop_tr_sign_gf_mr_01a");
 				
 				case 17:
-					return -1007839217;
+					return joaat("tr_prop_tr_sign_gf_mul_01a");
 				
 				case 18:
-					return 1669658196;
+					return joaat("tr_prop_tr_sign_gf_mur_01a");
 				
 				case 19:
-					return -900918930;
+					return joaat("tr_prop_tr_sign_gf_ms_01a");
 				
 				case 20:
-					return -1625644230;
+					return joaat("tr_prop_tr_sign_gf_ll_01a");
 				
 				case 21:
-					return -1878949790;
+					return joaat("tr_prop_tr_sign_gf_lr_01a");
 				
 				case 22:
-					return -1225449875;
+					return joaat("tr_prop_tr_sign_gf_lul_01a");
 				
 				case 23:
-					return -1213788994;
+					return joaat("tr_prop_tr_sign_gf_lur_01a");
 				
 				case 24:
-					return 1649955495;
+					return joaat("tr_prop_tr_sign_gf_ls_01a");
 				
 				default:
 			}
@@ -149647,7 +149647,7 @@ int func_1615(int iParam0)
 	{
 		return 0;
 	}
-	if (((((((((((((((((((((((((((((((((func_1617(iParam0) || iParam0 == joaat("sm_prop_smug_cover_01a")) || iParam0 == joaat("xm_prop_x17_cover_01")) || iParam0 == joaat("stt_prop_stunt_bowling_ball")) || iParam0 == joaat("ar_prop_ar_ammu_sign")) || iParam0 == joaat("sr_mp_spec_races_ammu_sign")) || iParam0 == joaat("gr_prop_inttruck_door_01")) || iParam0 == joaat("sum_prop_race_barrier_01_sec")) || iParam0 == joaat("sum_prop_race_barrier_02_sec")) || iParam0 == joaat("sum_prop_race_barrier_04_sec")) || iParam0 == joaat("sum_prop_race_barrier_08_sec")) || iParam0 == joaat("sum_prop_race_barrier_16_sec")) || iParam0 == joaat("sum_prop_barrier_ac_bend_05d")) || iParam0 == joaat("sum_prop_barrier_ac_bend_15d")) || iParam0 == joaat("sum_prop_barrier_ac_bend_30d")) || iParam0 == joaat("sum_prop_barrier_ac_bend_45d")) || iParam0 == joaat("sum_prop_barrier_ac_bend_90d")) || iParam0 == joaat("sum_prop_ac_long_barrier_05d")) || iParam0 == joaat("sum_prop_ac_long_barrier_15d")) || iParam0 == joaat("sum_prop_ac_long_barrier_30d")) || iParam0 == joaat("sum_prop_ac_long_barrier_45d")) || iParam0 == joaat("sum_prop_ac_long_barrier_90d")) || iParam0 == -1064812128) || iParam0 == -773987253) || iParam0 == -1489531137) || iParam0 == -1235210928) || iParam0 == -965292667) || iParam0 == -788536681) || iParam0 == -1701710420) || iParam0 == -1266013780) || iParam0 == 2030482070) || iParam0 == joaat("prop_container_03_ld")) || func_1616(iParam0)) || func_1612(iParam0, 51))
+	if (((((((((((((((((((((((((((((((((func_1617(iParam0) || iParam0 == joaat("sm_prop_smug_cover_01a")) || iParam0 == joaat("xm_prop_x17_cover_01")) || iParam0 == joaat("stt_prop_stunt_bowling_ball")) || iParam0 == joaat("ar_prop_ar_ammu_sign")) || iParam0 == joaat("sr_mp_spec_races_ammu_sign")) || iParam0 == joaat("gr_prop_inttruck_door_01")) || iParam0 == joaat("sum_prop_race_barrier_01_sec")) || iParam0 == joaat("sum_prop_race_barrier_02_sec")) || iParam0 == joaat("sum_prop_race_barrier_04_sec")) || iParam0 == joaat("sum_prop_race_barrier_08_sec")) || iParam0 == joaat("sum_prop_race_barrier_16_sec")) || iParam0 == joaat("sum_prop_barrier_ac_bend_05d")) || iParam0 == joaat("sum_prop_barrier_ac_bend_15d")) || iParam0 == joaat("sum_prop_barrier_ac_bend_30d")) || iParam0 == joaat("sum_prop_barrier_ac_bend_45d")) || iParam0 == joaat("sum_prop_barrier_ac_bend_90d")) || iParam0 == joaat("sum_prop_ac_long_barrier_05d")) || iParam0 == joaat("sum_prop_ac_long_barrier_15d")) || iParam0 == joaat("sum_prop_ac_long_barrier_30d")) || iParam0 == joaat("sum_prop_ac_long_barrier_45d")) || iParam0 == joaat("sum_prop_ac_long_barrier_90d")) || iParam0 == joaat("tr_prop_tr_container_01a")) || iParam0 == joaat("tr_prop_tr_container_01b")) || iParam0 == joaat("tr_prop_tr_container_01c")) || iParam0 == joaat("tr_prop_tr_container_01d")) || iParam0 == joaat("tr_prop_tr_container_01e")) || iParam0 == joaat("tr_prop_tr_container_01f")) || iParam0 == joaat("tr_prop_tr_container_01g")) || iParam0 == joaat("tr_prop_tr_container_01h")) || iParam0 == joaat("tr_prop_tr_container_01i")) || iParam0 == joaat("prop_container_03_ld")) || func_1616(iParam0)) || func_1612(iParam0, 51))
 	{
 		return 1;
 	}
@@ -149665,7 +149665,7 @@ int func_1617(int iParam0)
 	{
 		return 1;
 	}
-	if (iParam0 == -1666677539)
+	if (iParam0 == joaat("tr_prop_tr_ramp_01a"))
 	{
 		return 1;
 	}
@@ -150112,7 +150112,7 @@ int func_1630(int iParam0)
 	{
 		return 250;
 	}
-	else if (((((((((iParam0 == 1649955495 || iParam0 == -1213788994) || iParam0 == -1225449875) || iParam0 == -1878949790) || iParam0 == -1625644230) || iParam0 == -900918930) || iParam0 == 1669658196) || iParam0 == -1007839217) || iParam0 == 1430348079) || iParam0 == -555335515)
+	else if (((((((((iParam0 == joaat("tr_prop_tr_sign_gf_ls_01a") || iParam0 == joaat("tr_prop_tr_sign_gf_lur_01a")) || iParam0 == joaat("tr_prop_tr_sign_gf_lul_01a")) || iParam0 == joaat("tr_prop_tr_sign_gf_lr_01a")) || iParam0 == joaat("tr_prop_tr_sign_gf_ll_01a")) || iParam0 == joaat("tr_prop_tr_sign_gf_ms_01a")) || iParam0 == joaat("tr_prop_tr_sign_gf_mur_01a")) || iParam0 == joaat("tr_prop_tr_sign_gf_mul_01a")) || iParam0 == joaat("tr_prop_tr_sign_gf_mr_01a")) || iParam0 == joaat("tr_prop_tr_sign_gf_ml_01a"))
 	{
 		return 250;
 	}

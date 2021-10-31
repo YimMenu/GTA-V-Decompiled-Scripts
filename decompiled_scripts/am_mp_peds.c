@@ -88187,7 +88187,7 @@ void func_1052(int iParam0, int iParam1, int iParam2, var uParam3)
 			switch (iParam2)
 			{
 				case 0:
-					*uParam3 = 352550086;
+					*uParam3 = joaat("tr_prop_tr_laptop_jimmy");
 					uParam3->f_11 = { -1358.102f, 137.978f, -95.374f };
 					uParam3->f_14 = { 0f, 0f, 270f };
 					uParam3->f_3 = 1;

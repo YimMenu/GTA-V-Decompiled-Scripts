@@ -32006,7 +32006,7 @@ void func_904(int iParam0, int iParam1, int iParam2, int iParam3, float fParam4,
 	{
 		Var6 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(ENTITY::GET_ENTITY_COORDS(iParam0, true), ENTITY::GET_ENTITY_HEADING(iParam0), -1.45f, 0.5f, 0f) + Vector((((Var3.f_2 - Var0.f_2) / 2f) + fVar9), 0f, 0f) };
 	}
-	else if (iVar10 == 897163609)
+	else if (iVar10 == joaat("tr_prop_tr_break_dev_01a"))
 	{
 		Var6 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(ENTITY::GET_ENTITY_COORDS(iParam0, true), ENTITY::GET_ENTITY_HEADING(iParam0), 0f, -0.3f, (Var3.f_2 + 0.17f)) };
 	}

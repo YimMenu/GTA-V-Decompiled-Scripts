@@ -12728,31 +12728,31 @@ int func_309(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			return -1064812128;
+			return joaat("tr_prop_tr_container_01a");
 		
 		case 1:
-			return -773987253;
+			return joaat("tr_prop_tr_container_01b");
 		
 		case 2:
-			return -1489531137;
+			return joaat("tr_prop_tr_container_01c");
 		
 		case 3:
-			return -1235210928;
+			return joaat("tr_prop_tr_container_01d");
 		
 		case 4:
-			return -965292667;
+			return joaat("tr_prop_tr_container_01e");
 		
 		case 5:
-			return -788536681;
+			return joaat("tr_prop_tr_container_01f");
 		
 		case 6:
-			return -1701710420;
+			return joaat("tr_prop_tr_container_01g");
 		
 		case 7:
-			return -1266013780;
+			return joaat("tr_prop_tr_container_01h");
 		
 		case 8:
-			return 2030482070;
+			return joaat("tr_prop_tr_container_01i");
 		
 		case 9:
 			return joaat("prop_container_03_ld");

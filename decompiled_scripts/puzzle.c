@@ -3570,11 +3570,11 @@ void func_94(int iParam0, int iParam1, var uParam2)
 			switch (iParam1)
 			{
 				case 0:
-					*uParam2 = -1777094198;
+					*uParam2 = joaat("tr_prop_tr_camhedz_01a_screen_p1");
 					break;
 				
 				case 1:
-					*uParam2 = -1948738220;
+					*uParam2 = joaat("tr_prop_tr_camhedz_01a_screen_p2");
 					break;
 			}
 	}
@@ -3780,11 +3780,11 @@ void func_103(int iParam0, var uParam1)
 			uParam1->f_1[0] = 0;
 			uParam1->f_16[0 /*3*/] = { -0.498f, 0.13f, 0.786f };
 			uParam1->f_59[0 /*3*/] = { -75f, 0f, 0f };
-			uParam1->f_102[0] = 679470914;
+			uParam1->f_102[0] = joaat("tr_prop_tr_wpncamhedz_01a");
 			uParam1->f_1[1] = 1;
 			uParam1->f_16[1 /*3*/] = { 0.498f, 0.13f, 0.786f };
 			uParam1->f_59[1 /*3*/] = { -75f, 0f, 0f };
-			uParam1->f_102[1] = 679470914;
+			uParam1->f_102[1] = joaat("tr_prop_tr_wpncamhedz_01a");
 			break;
 		
 		case 5:
@@ -80995,7 +80995,7 @@ void func_483(int iParam0, var uParam1)
 			break;
 		
 		case 16:
-			uParam1->f_745 = -1500319596;
+			uParam1->f_745 = joaat("tr_prop_tr_camhedz_01a");
 			StringCopy(&(uParam1->f_339), "dlc_ch_arcade_machine_in_use_scene", 64);
 			break;
 	}

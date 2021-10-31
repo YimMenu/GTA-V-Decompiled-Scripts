@@ -11901,7 +11901,7 @@ char* func_459()
 
 int func_460()
 {
-	return 289013745;
+	return joaat("tr_prop_tr_planning_board_01a");
 }
 
 char* func_461()

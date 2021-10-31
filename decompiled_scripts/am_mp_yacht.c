@@ -80944,17 +80944,17 @@ bool func_618(int iParam0, int iParam1, var uParam2, var uParam3)
 					break;
 				
 				case 14:
-					*uParam2 = 3316027;
+					*uParam2 = joaat("tr_prop_tr_para_sp_s_01a");
 					*uParam3 = 1;
 					break;
 				
 				case 15:
-					*uParam2 = 3316027;
+					*uParam2 = joaat("tr_prop_tr_para_sp_s_01a");
 					*uParam3 = 2;
 					break;
 				
 				case 16:
-					*uParam2 = 3316027;
+					*uParam2 = joaat("tr_prop_tr_para_sp_s_01a");
 					*uParam3 = 3;
 					break;
 			}
