@@ -6905,7 +6905,7 @@ void func_121()
 	func_122();
 	if ((func_152(5) && func_225(Local_90[iLocal_173 /*4*/])) && MISC::GET_GAME_TIMER() < iLocal_157)
 	{
-		AUDIO::_SOUND_VEHICLE_HORN_THIS_FRAME(Local_90[iLocal_173 /*4*/]);
+		AUDIO::SET_HORN_PERMANENTLY_ON(Local_90[iLocal_173 /*4*/]);
 	}
 	if (func_152(6))
 	{

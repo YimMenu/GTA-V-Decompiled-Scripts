@@ -17616,7 +17616,7 @@ void func_432()
 			case 2:
 				if (NETWORK::_FACEBOOK_IS_SENDING_DATA())
 				{
-					if (NETWORK::_FACEBOOK_SET_CREATE_CHARACTER_COMPLETE())
+					if (NETWORK::FACEBOOK_POST_CREATE_CHARACTER())
 					{
 						Global_1315722 = 3;
 					}

@@ -115867,7 +115867,7 @@ void func_720(var uParam0)
 					func_667(Local_1866[1 /*18*/], 1, 2, 1, -1, 1);
 					func_663(Local_1866[1 /*18*/], 28.82f, -1882f, 21.59f, 3f, 0);
 					func_128(Local_1866[1 /*18*/], 5, 60, -687903391);
-					AUDIO::_0x9D3AF56E94C9AE98(Local_2087[4 /*13*/], 10000f);
+					AUDIO::SET_HORN_PERMANENTLY_ON_TIME(Local_2087[4 /*13*/], 10000f);
 					VEHICLE::SET_VEHICLE_ENGINE_HEALTH(Local_2087[4 /*13*/], 50f);
 					AUDIO::STOP_AUDIO_SCENE("FRANKLIN_1_SHOOTOUT_CAR_ARRIVE_CRASH");
 					AUDIO::REMOVE_ENTITY_FROM_AUDIO_MIX_GROUP(Local_2087[4 /*13*/], 0f);

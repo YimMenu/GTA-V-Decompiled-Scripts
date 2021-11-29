@@ -44608,11 +44608,11 @@ void func_360(int iParam0)
 						switch (iVar1)
 						{
 							case 1:
-								NETWORK::_FACEBOOK_SET_HEIST_COMPLETE("JH2A", iVar0, 0);
+								NETWORK::FACEBOOK_POST_COMPLETED_HEIST("JH2A", iVar0, 0);
 								break;
 							
 							case 2:
-								NETWORK::_FACEBOOK_SET_HEIST_COMPLETE("JH2B", iVar0, 0);
+								NETWORK::FACEBOOK_POST_COMPLETED_HEIST("JH2B", iVar0, 0);
 								break;
 						}
 						func_361("FB_J_HEIST");
@@ -44630,11 +44630,11 @@ void func_360(int iParam0)
 						switch (iVar1)
 						{
 							case 8:
-								NETWORK::_FACEBOOK_SET_HEIST_COMPLETE("FH2A", iVar0, 0);
+								NETWORK::FACEBOOK_POST_COMPLETED_HEIST("FH2A", iVar0, 0);
 								break;
 							
 							case 9:
-								NETWORK::_FACEBOOK_SET_HEIST_COMPLETE("FH2B", iVar0, 0);
+								NETWORK::FACEBOOK_POST_COMPLETED_HEIST("FH2B", iVar0, 0);
 								break;
 						}
 						func_361("FB_BS_HEIST");

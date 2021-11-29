@@ -114860,7 +114860,7 @@ void func_849(var uParam0)
 		{
 			if ((PED::IS_PED_SITTING_IN_ANY_VEHICLE(uParam0->f_3) && !PED::IS_PED_ON_ANY_BIKE(uParam0->f_3)) && ((fVar1 < 2f && iVar7) && fVar0 > 20f))
 			{
-				AUDIO::_0x9D3AF56E94C9AE98(PED::GET_VEHICLE_PED_IS_IN(uParam0->f_3, false), 50f);
+				AUDIO::SET_HORN_PERMANENTLY_ON_TIME(PED::GET_VEHICLE_PED_IS_IN(uParam0->f_3, false), 50f);
 				uParam0->f_16 = MISC::GET_GAME_TIMER() + 500;
 			}
 		}
@@ -114870,7 +114870,7 @@ void func_849(var uParam0)
 		}
 		else if (uParam0->f_16 < MISC::GET_GAME_TIMER())
 		{
-			AUDIO::_0x9D3AF56E94C9AE98(PED::GET_VEHICLE_PED_IS_IN(uParam0->f_3, false), 500f);
+			AUDIO::SET_HORN_PERMANENTLY_ON_TIME(PED::GET_VEHICLE_PED_IS_IN(uParam0->f_3, false), 500f);
 			uParam0->f_16 = -1;
 		}
 	}

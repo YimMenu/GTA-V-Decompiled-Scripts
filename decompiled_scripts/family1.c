@@ -28951,7 +28951,7 @@ void func_464()
 			}
 			if (bLocal_5945)
 			{
-				AUDIO::_SOUND_VEHICLE_HORN_THIS_FRAME(iLocal_3030);
+				AUDIO::SET_HORN_PERMANENTLY_ON(iLocal_3030);
 			}
 		}
 		if (iLocal_2984)
@@ -28976,7 +28976,7 @@ void func_464()
 		{
 			if (func_377(iLocal_2849[iVar0], iLocal_3030, 0) < 15f)
 			{
-				AUDIO::_SOUND_VEHICLE_HORN_THIS_FRAME(iLocal_3030);
+				AUDIO::SET_HORN_PERMANENTLY_ON(iLocal_3030);
 			}
 		}
 		iVar0++;
@@ -28990,7 +28990,7 @@ void func_464()
 			{
 				if (SYSTEM::VMAG2(ENTITY::GET_ENTITY_VELOCITY(iVar1)) > 0.5f)
 				{
-					AUDIO::_0x9D3AF56E94C9AE98(iVar1, 5000f);
+					AUDIO::SET_HORN_PERMANENTLY_ON_TIME(iVar1, 5000f);
 					iLocal_5951 = MISC::GET_GAME_TIMER();
 				}
 			}

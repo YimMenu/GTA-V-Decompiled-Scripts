@@ -368,7 +368,7 @@ void __EntryFunction__()
 		if (!MISC::IS_BIT_SET(Global_112293.f_20116.f_290, 2))
 		{
 			func_13(1);
-			NETWORK::_FACEBOOK_SET_MILESTONE_COMPLETE(1);
+			NETWORK::FACEBOOK_POST_COMPLETED_MILESTONE(1);
 			MISC::SET_BIT(&(Global_112293.f_20116.f_290), 2);
 		}
 	}

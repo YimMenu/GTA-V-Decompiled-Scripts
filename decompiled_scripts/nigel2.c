@@ -41335,7 +41335,7 @@ void func_396()
 	}
 	if ((((((fLocal_3266 > 6500f && fLocal_3266 < 7000f) || (fLocal_3266 > 7500f && fLocal_3266 < 8500f)) || (fLocal_3266 > 10500f && fLocal_3266 < 11250f)) || (fLocal_3266 > 11750f && fLocal_3266 < 12250f)) || (fLocal_3266 > 13250f && fLocal_3266 < 13500f)) || (fLocal_3266 > 14000f && fLocal_3266 < 14500f))
 	{
-		AUDIO::_SOUND_VEHICLE_HORN_THIS_FRAME(Local_3497);
+		AUDIO::SET_HORN_PERMANENTLY_ON(Local_3497);
 	}
 }
 

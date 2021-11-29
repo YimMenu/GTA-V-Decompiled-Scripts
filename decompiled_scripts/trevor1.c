@@ -124306,7 +124306,7 @@ void func_812()
 							}
 							VEHICLE::SET_VEHICLE_PETROL_TANK_HEALTH(Local_5835[12 /*12*/], -100f);
 							VEHICLE::SET_VEHICLE_ENGINE_HEALTH(Local_5835[12 /*12*/], -500f);
-							AUDIO::_0x9D3AF56E94C9AE98(Local_5835[12 /*12*/], 4000f);
+							AUDIO::SET_HORN_PERMANENTLY_ON_TIME(Local_5835[12 /*12*/], 4000f);
 							iLocal_7355 = MISC::GET_GAME_TIMER();
 							iLocal_6555++;
 						}
@@ -124318,7 +124318,7 @@ void func_812()
 					{
 						VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(Local_5835[12 /*12*/]);
 					}
-					AUDIO::_0x9D3AF56E94C9AE98(Local_5835[12 /*12*/], 4000f);
+					AUDIO::SET_HORN_PERMANENTLY_ON_TIME(Local_5835[12 /*12*/], 4000f);
 					iLocal_6555++;
 				}
 			}

@@ -113782,7 +113782,7 @@ void func_816()
 						{
 							VEHICLE::SET_VEHICLE_HAS_MUTED_SIRENS(Local_902[5 /*6*/], true);
 							VEHICLE::SET_VEHICLE_SIREN(Local_902[5 /*6*/], false);
-							AUDIO::_0x9D3AF56E94C9AE98(Local_902[5 /*6*/], 5000f);
+							AUDIO::SET_HORN_PERMANENTLY_ON_TIME(Local_902[5 /*6*/], 5000f);
 							AUDIO::USE_SIREN_AS_HORN(Local_902[5 /*6*/], false);
 						}
 						iLocal_2141++;

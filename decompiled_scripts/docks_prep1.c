@@ -20715,25 +20715,25 @@ void func_325()
 	{
 		if (PHYSICS::DOES_ROPE_EXIST(&(Global_95867.f_37[0])))
 		{
-			PHYSICS::_0xB1B6216CA2E7B55E(Global_95867.f_37[0], true, true);
+			PHYSICS::ROPE_CHANGE_SCRIPT_OWNER(Global_95867.f_37[0], true, true);
 			Local_145[0 /*5*/] = Global_95867.f_37[0];
 			Global_95867.f_37[0] = 0;
 		}
 		if (PHYSICS::DOES_ROPE_EXIST(&(Global_95867.f_37[1])))
 		{
-			PHYSICS::_0xB1B6216CA2E7B55E(Global_95867.f_37[1], true, true);
+			PHYSICS::ROPE_CHANGE_SCRIPT_OWNER(Global_95867.f_37[1], true, true);
 			Local_145[1 /*5*/] = Global_95867.f_37[1];
 			Global_95867.f_37[1] = 0;
 		}
 		if (PHYSICS::DOES_ROPE_EXIST(&(Global_95867.f_37[2])))
 		{
-			PHYSICS::_0xB1B6216CA2E7B55E(Global_95867.f_37[2], true, true);
+			PHYSICS::ROPE_CHANGE_SCRIPT_OWNER(Global_95867.f_37[2], true, true);
 			Local_145[2 /*5*/] = Global_95867.f_37[2];
 			Global_95867.f_37[2] = 0;
 		}
 		if (PHYSICS::DOES_ROPE_EXIST(&(Global_95867.f_37[3])))
 		{
-			PHYSICS::_0xB1B6216CA2E7B55E(Global_95867.f_37[3], true, true);
+			PHYSICS::ROPE_CHANGE_SCRIPT_OWNER(Global_95867.f_37[3], true, true);
 			Local_145[3 /*5*/] = Global_95867.f_37[3];
 			Global_95867.f_37[3] = 0;
 		}

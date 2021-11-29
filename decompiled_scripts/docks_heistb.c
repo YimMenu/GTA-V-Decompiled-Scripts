@@ -124440,7 +124440,7 @@ void func_874()
 				{
 					if (MISC::GET_DISTANCE_BETWEEN_COORDS(1728.97f, 3264.86f, 40.0871f, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), true) < 20f)
 					{
-						AUDIO::_0x9D3AF56E94C9AE98(Local_4994[5 /*19*/], 500f);
+						AUDIO::SET_HORN_PERMANENTLY_ON_TIME(Local_4994[5 /*19*/], 500f);
 						iLocal_8323 = MISC::GET_GAME_TIMER();
 						iLocal_8322++;
 					}
@@ -124453,7 +124453,7 @@ void func_874()
 			{
 				if (func_686(&iLocal_8323, 1000))
 				{
-					AUDIO::_0x9D3AF56E94C9AE98(Local_4994[5 /*19*/], 600f);
+					AUDIO::SET_HORN_PERMANENTLY_ON_TIME(Local_4994[5 /*19*/], 600f);
 					iLocal_8322++;
 				}
 			}
@@ -124464,7 +124464,7 @@ void func_874()
 			{
 				if (func_686(&iLocal_8323, 1000))
 				{
-					AUDIO::_0x9D3AF56E94C9AE98(Local_4994[5 /*19*/], 800f);
+					AUDIO::SET_HORN_PERMANENTLY_ON_TIME(Local_4994[5 /*19*/], 800f);
 					iLocal_8322++;
 				}
 			}

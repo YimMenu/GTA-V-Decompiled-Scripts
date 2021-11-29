@@ -3344,7 +3344,7 @@ void func_55(var uParam0, bool bParam1)
 											if (SOCIALCLUB::SC_INBOX_MESSAGE_GET_DATA_STRING(iVar1, "msg", &uVar3))
 											{
 											}
-											SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+											SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 										}
 										break;
 									
@@ -3356,7 +3356,7 @@ void func_55(var uParam0, bool bParam1)
 						}
 						else
 						{
-							SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+							SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 						}
 					}
 					iVar1++;
@@ -3385,12 +3385,12 @@ void func_55(var uParam0, bool bParam1)
 										if (SOCIALCLUB::SC_INBOX_MESSAGE_GET_DATA_STRING(iVar1, "msg", &uVar3))
 										{
 										}
-										SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+										SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 									}
 								}
 								else
 								{
-									SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+									SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 								}
 							}
 							break;
@@ -3416,11 +3416,11 @@ void func_55(var uParam0, bool bParam1)
 													if (SOCIALCLUB::SC_INBOX_MESSAGE_GET_DATA_STRING(iVar1, "msg", &uVar3))
 													{
 													}
-													SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+													SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 												}
 												else
 												{
-													SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+													SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 												}
 												uParam0->f_168 = 1;
 											}
@@ -3437,11 +3437,11 @@ void func_55(var uParam0, bool bParam1)
 								if (SOCIALCLUB::SC_INBOX_MESSAGE_GET_DATA_STRING(iVar1, "msg", &uVar3))
 								{
 								}
-								SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+								SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 							}
 							else
 							{
-								SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+								SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 							}
 							break;
 						
@@ -3464,12 +3464,12 @@ void func_55(var uParam0, bool bParam1)
 														{
 														}
 														func_78(&(uParam0->f_13.f_10), uParam0->f_13.f_8, uParam0->f_13.f_55, uParam0->f_13.f_56, &(Var167.f_22));
-														SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+														SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 														uParam0->f_168 = 1;
 													}
 													else
 													{
-														SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+														SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 													}
 												}
 											}
@@ -3477,12 +3477,12 @@ void func_55(var uParam0, bool bParam1)
 									}
 									else
 									{
-										SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+										SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 									}
 								}
 								else
 								{
-									SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+									SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 								}
 							}
 							break;
@@ -3499,25 +3499,25 @@ void func_55(var uParam0, bool bParam1)
 											if (SOCIALCLUB::SC_INBOX_MESSAGE_GET_DATA_STRING(iVar1, "gtag", &sVar19))
 											{
 												func_77("SC_PUBLISH", &sVar19, &cVar35, 0, 0);
-												SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+												SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 												uParam0->f_168 = 1;
 											}
 										}
 									}
 									else
 									{
-										SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+										SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 									}
 								}
 								else
 								{
-									SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+									SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 								}
 							}
 							break;
 						
 						case 1662919852:
-							SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+							SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 							break;
 						
 						case -323664079:
@@ -3542,12 +3542,12 @@ void func_55(var uParam0, bool bParam1)
 											func_65("FM_TXT_BNTY5", &Var51, &(Var51.f_8), Var51.f_17, 0);
 										}
 									}
-									SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+									SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 									uParam0->f_168 = 1;
 								}
 								else
 								{
-									SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+									SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 								}
 							}
 							break;
@@ -3564,7 +3564,7 @@ void func_55(var uParam0, bool bParam1)
 								}
 							}
 							func_56(151, 1, -1, 1);
-							SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+							SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 							break;
 						
 						case 1988401830:
@@ -3576,7 +3576,7 @@ void func_55(var uParam0, bool bParam1)
 							{
 								if (MISC::GET_HASH_KEY(SOCIALCLUB::_SC_INBOX_MESSAGE_GET_STRING(iVar1)) != -1879562593)
 								{
-									SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iVar1);
+									SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 								}
 							}
 							break;
@@ -6213,7 +6213,7 @@ void func_164(int iParam0, int iParam1)
 	SOCIALCLUB::SC_INBOX_MESSAGE_GET_DATA_STRING(iParam0, "awardLabel", &Global_2464776);
 	SOCIALCLUB::SC_INBOX_MESSAGE_GET_DATA_STRING(iParam0, "items", &uVar20);
 	SOCIALCLUB::SC_INBOX_MESSAGE_GET_DATA_INT(iParam0, "userScreen", &iVar36);
-	SOCIALCLUB::_SC_INBOX_MESSAGE_POP(iParam0);
+	SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iParam0);
 	if (iVar2 != 0)
 	{
 		if (iVar2 == -99)

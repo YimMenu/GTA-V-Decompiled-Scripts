@@ -6419,7 +6419,7 @@ void func_202(int* iParam0, int iParam1, int iParam2)
 				if (PED::IS_PED_IN_VEHICLE(*iParam0, iLocal_109, false))
 				{
 					TASK::TASK_DRIVE_BY(*iParam0, PLAYER::PLAYER_PED_ID(), 0, 0f, 0f, 0f, 10f, 100, true, -957453492);
-					AUDIO::_0x9D3AF56E94C9AE98(iLocal_109, 2000f);
+					AUDIO::SET_HORN_PERMANENTLY_ON_TIME(iLocal_109, 2000f);
 					iLocal_670 = MISC::GET_GAME_TIMER();
 					iParam0->f_1 = MISC::GET_GAME_TIMER();
 					iParam0->f_6 = 16;

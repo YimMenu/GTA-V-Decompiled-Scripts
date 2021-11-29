@@ -316,7 +316,7 @@ void __EntryFunction__()
 					STATS::_UPDATE_STAT_FLOAT(joaat("total_progress_made"), Global_112293.f_10192.f_3853, 0);
 					if (NETWORK::_FACEBOOK_IS_AVAILABLE())
 					{
-						NETWORK::_FACEBOOK_SET_MILESTONE_COMPLETE(0);
+						NETWORK::FACEBOOK_POST_COMPLETED_MILESTONE(0);
 						func_121(0);
 					}
 				}
