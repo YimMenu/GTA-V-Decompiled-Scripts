@@ -301,7 +301,7 @@ void __EntryFunction__()
 {
 	int iVar0;
 	
-	sLocal_0 = "1.55.25";
+	sLocal_0 = "1.55.26";
 	iLocal_21 = -1;
 	iLocal_22 = -1;
 	iLocal_379 = 5;
@@ -2574,6 +2574,11 @@ void func_102()
 		return;
 	}
 	if (func_103())
+	{
+		func_38(&uLocal_661, 0, 0);
+		return;
+	}
+	if (func_29() || Global_1701009)
 	{
 		func_38(&uLocal_661, 0, 0);
 		return;
