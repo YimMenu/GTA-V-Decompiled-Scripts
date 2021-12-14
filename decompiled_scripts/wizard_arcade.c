@@ -3990,7 +3990,7 @@ void func_116(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 				TASK::_0x29682E2CCF21E9B5(iVar0, "Heist3_minigame_drill_vault", &Var13, Var10, 0f, 0f, fVar2, 2, 0.5f, 0, iVar3, 4);
 			}
 			ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
-			PHYSICS::_SET_ENTITY_PROOF_UNK(iVar0, true);
+			PHYSICS::_0x15F944730C832252(iVar0, true);
 			if (TASK::IS_TASK_MOVE_NETWORK_ACTIVE(iVar0))
 			{
 				TASK::_0x0FFB3C758E8C07B9(iVar0, true);
@@ -88596,7 +88596,7 @@ void func_645()
 	{
 		Local_861.f_521.f_10 = 0;
 	}
-	STATS::_0xF9096193DF1F99D4(&(Local_861.f_521));
+	STATS::_PLAYSTATS_ARCADE_CABINET(&(Local_861.f_521));
 }
 
 int func_646(int iParam0)

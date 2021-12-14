@@ -1995,7 +1995,7 @@ void func_30(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, -1180597171, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, -1180597171, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 int func_31()
@@ -3318,7 +3318,7 @@ void func_70(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 void func_71(int iParam0)
@@ -10444,8 +10444,8 @@ void func_267()
 	if (HUD::IS_WAYPOINT_ACTIVE())
 	{
 		Local_160.f_10 = { HUD::GET_BLIP_INFO_ID_COORD(HUD::GET_FIRST_BLIP_INFO_ID(HUD::GET_WAYPOINT_BLIP_ENUM_ID())) };
-		Local_160.f_10.f_2 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA((Local_160.f_10 - 25f), (Local_160.f_10.f_1 - 25f), (Local_160.f_10 + 25f), (Local_160.f_10.f_1 + 25f));
-		fVar0 = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_AREA((Local_160.f_10 - 25f), (Local_160.f_10.f_1 - 25f), (Local_160.f_10 + 25f), (Local_160.f_10.f_1 + 25f));
+		Local_160.f_10.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA((Local_160.f_10 - 25f), (Local_160.f_10.f_1 - 25f), (Local_160.f_10 + 25f), (Local_160.f_10.f_1 + 25f));
+		fVar0 = PATHFIND::GET_APPROX_FLOOR_FOR_AREA((Local_160.f_10 - 25f), (Local_160.f_10.f_1 - 25f), (Local_160.f_10 + 25f), (Local_160.f_10.f_1 + 25f));
 		if ((Local_160.f_10.f_2 - fVar0) < 20f)
 		{
 			Local_160.f_10.f_2 = (Local_160.f_10.f_2 + 10f);
@@ -11838,7 +11838,7 @@ void func_323(var uParam0, var uParam1, bool bParam2)
 	{
 		*uParam0 = { Local_160.f_6 };
 		*uParam1 = Local_160.f_9;
-		fVar0 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA(*uParam0, uParam0->f_1, *uParam0, uParam0->f_1);
+		fVar0 = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA(*uParam0, uParam0->f_1, *uParam0, uParam0->f_1);
 		if (fVar0 < (Local_160.f_6.f_2 + 100f))
 		{
 			fVar0 = (Local_160.f_6.f_2 + 100f);
@@ -11849,7 +11849,7 @@ void func_323(var uParam0, var uParam1, bool bParam2)
 	{
 		*uParam0 = { func_324(Local_160.f_6, 140f, 180f, (200f / 2f)) };
 		*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D((Local_160.f_6 - *uParam0), (Local_160.f_6.f_1 - uParam0->f_1));
-		fVar1 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA((*uParam0 - 180f), (uParam0->f_1 - 180f), (*uParam0 + 180f), (uParam0->f_1 + 180f));
+		fVar1 = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA((*uParam0 - 180f), (uParam0->f_1 - 180f), (*uParam0 + 180f), (uParam0->f_1 + 180f));
 		if (fVar1 < (Local_160.f_6.f_2 + 100f))
 		{
 			fVar1 = (Local_160.f_6.f_2 + 100f);
@@ -19729,7 +19729,7 @@ void func_472(int iParam0)
 	int iVar0;
 	
 	iVar0 = Global_2405077.f_2689;
-	if ((AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0) && iParam0 == 0)
+	if ((AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0) && iParam0 == 0)
 	{
 		iVar0 = 255;
 	}

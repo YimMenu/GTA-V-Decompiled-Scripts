@@ -15569,7 +15569,7 @@ void func_462(int iParam0)
 	int iVar0;
 	
 	iVar0 = Global_2405077.f_2689;
-	if ((AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0) && iParam0 == 0)
+	if ((AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0) && iParam0 == 0)
 	{
 		iVar0 = 255;
 	}
@@ -95589,7 +95589,7 @@ int func_817(struct<3> Param0, struct<3> Param3, int iParam6, int iParam7, var u
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -104953,7 +104953,7 @@ int func_997(int iParam0, float fParam1)
 				return 1;
 			}
 		}
-		else if (Var0.f_2 > (PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.f_1) + fParam1))
+		else if (Var0.f_2 > (PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.x, Var0.f_1) + fParam1))
 		{
 			return 1;
 		}
@@ -105682,7 +105682,7 @@ int func_1015(var uParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -111763,7 +111763,7 @@ void func_1099(var uParam0, bool bParam1)
 	{
 		func_1101(uParam0, 1, 1, 1, 1, 0);
 	}
-	fVar0 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(*uParam0, uParam0->f_1);
+	fVar0 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(*uParam0, uParam0->f_1);
 	fVar0 = (fVar0 + 100f);
 	if (uParam0->f_2 < fVar0)
 	{
@@ -128460,14 +128460,14 @@ void func_1553(struct<12> Param0, var uParam12, int iParam13, int iParam14, int 
 		{
 			Var1 = { Param0 };
 			Var1.f_12 = uParam12;
-			STATS::_0xBFAFDB5FAAA5C5AB(&Var1);
+			STATS::_PLAYSTATS_FREEMODE_VEHICLE_TARGET(&Var1);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, func_1554()))
 		{
 			Var14 = { Param0 };
 			Var14.f_12 = uParam12;
 			Var14.f_13 = iParam13;
-			STATS::_0xBAA2F0490E146BE8(&Var14);
+			STATS::_PLAYSTATS_FREEMODE_ATOB(&Var14);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_cp_collection"))
 		{
@@ -128478,7 +128478,7 @@ void func_1553(struct<12> Param0, var uParam12, int iParam13, int iParam14, int 
 			Var28.f_15 = iParam15;
 			Var28.f_16 = iParam16;
 			Var28.f_17 = iParam17;
-			STATS::_0x3DE3AA516FB126A4(&Var28);
+			STATS::_PLAYSTATS_FREEMODE_CHECKPOINT_COLLECTION(&Var28);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_challenges"))
 		{
@@ -128489,31 +128489,31 @@ void func_1553(struct<12> Param0, var uParam12, int iParam13, int iParam14, int 
 			{
 				Var52.f_13 = (Var52.f_13 / 10f);
 			}
-			STATS::_0x6A60E43998228229(&Var52);
+			STATS::_PLAYSTATS_FREEMODE_CHALLENGES(&Var52);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_penned_in"))
 		{
-			STATS::_0x1A7CE7CD3E653485(&Param0);
+			STATS::_PLAYSTATS_FREEMODE_PENNED_IN(&Param0);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_pass_the_parcel"))
 		{
 			Var66 = { Param0 };
 			Var66.f_12 = uParam12;
-			STATS::_0x419615486BBF1956(&Var66);
+			STATS::_PLAYSTATS_FREEMODE_PASS_THE_PARCEL(&Var66);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_hot_property"))
 		{
 			Var79 = { Param0 };
 			Var79.f_12 = uParam12;
 			Var79.f_13 = iParam13;
-			STATS::_0x84DFC579C2FC214C(&Var79);
+			STATS::_PLAYSTATS_FREEMODE_HOT_PROPERTY(&Var79);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_dead_drop"))
 		{
 			Var93 = { Param0 };
 			Var93.f_12 = uParam12;
 			Var93.f_13 = iParam13;
-			STATS::_0x0A9C7F36E5D7B683(&Var93);
+			STATS::_PLAYSTATS_FREEMODE_DEADDROP(&Var93);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_king_of_the_castle"))
 		{
@@ -128522,13 +128522,13 @@ void func_1553(struct<12> Param0, var uParam12, int iParam13, int iParam14, int 
 			Var107.f_13 = iParam13;
 			Var107.f_14 = iParam14;
 			Var107.f_15 = iParam15;
-			STATS::_0x164C5FF663790845(&Var107);
+			STATS::_PLAYSTATS_FREEMODE_KING_OF_THE_CASTLE(&Var107);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "AM_CRIMINAL_DAMAGE"))
 		{
 			Var123 = { Param0 };
 			Var123.f_12 = uParam12;
-			STATS::_0xEDBF6C9B0D2C65C8(&Var123);
+			STATS::_PLAYSTATS_FREEMODE_CRIMINAL_DAMAGE(&Var123);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "AM_KILL_LIST"))
 		{
@@ -128537,21 +128537,21 @@ void func_1553(struct<12> Param0, var uParam12, int iParam13, int iParam14, int 
 				Var136 = { Param0 };
 				Var136.f_12 = uParam12;
 				Var136.f_13 = iParam13;
-				STATS::_0x8C9D11605E59D955(&Var136);
+				STATS::_PLAYSTATS_FREEMODE_URBAN_WARFARE(&Var136);
 			}
 			else
 			{
 				Var150 = { Param0 };
 				Var150.f_12 = uParam12;
 				Var150.f_13 = iParam13;
-				STATS::_0x6551B1F7F6CD46EA(&Var150);
+				STATS::_PLAYSTATS_FREEMODE_COMPETITIVE_URBAN_WARFARE(&Var150);
 			}
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_hunt_the_beast"))
 		{
 			Var164 = { Param0 };
 			Var164.f_12 = uParam12;
-			STATS::_0x2CD90358F67D0AA8(&Var164);
+			STATS::_PLAYSTATS_FREEMODE_HUNT_BEAST(&Var164);
 		}
 	}
 }

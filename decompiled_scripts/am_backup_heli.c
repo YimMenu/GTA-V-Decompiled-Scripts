@@ -1148,7 +1148,7 @@ int func_38()
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			{
 				Var0 = { func_55(func_56(PLAYER::PLAYER_ID()), 0f, (-200f * SYSTEM::SIN((SYSTEM::TO_FLOAT(Local_230.f_1.f_15) * 30f))), (200f * SYSTEM::COS((SYSTEM::TO_FLOAT(Local_230.f_1.f_15) * 30f))), 0f) };
-				Var0.f_2 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(Var0.x, Var0.f_1);
+				Var0.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var0.x, Var0.f_1);
 				Var0.f_2 = (Var0.f_2 + 30f);
 				if (func_39(Var0, 20f, 1f, 1f, 15f, 1, 1, 1, 180f, 0, -1, 1, 0, 0, 0, 0, 0))
 				{
@@ -2678,7 +2678,7 @@ void func_93()
 	if (bVar0)
 	{
 		Var1 = { func_56(PLAYER::PLAYER_ID()) };
-		fLocal_58 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(Var1.x, Var1.f_1);
+		fLocal_58 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var1.x, Var1.f_1);
 		if (fLocal_58 < 85f)
 		{
 			fLocal_58 = 85f;

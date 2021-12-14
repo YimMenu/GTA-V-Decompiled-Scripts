@@ -36056,7 +36056,7 @@ void func_242(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 void func_243(int iParam0)
@@ -47000,7 +47000,7 @@ void func_472()
 						}
 						if (iLocal_3235)
 						{
-							if (AUDIO::_0x2DD39BF3E2F9C47F())
+							if (AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2())
 							{
 								AUDIO::TRIGGER_MUSIC_EVENT("PAP3_STOP");
 							}
@@ -47010,7 +47010,7 @@ void func_472()
 				}
 				else
 				{
-					if (AUDIO::_0x2DD39BF3E2F9C47F())
+					if (AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2())
 					{
 						AUDIO::TRIGGER_MUSIC_EVENT("PAP3_STOP");
 					}
@@ -51223,7 +51223,7 @@ void func_540()
 		ENTITY::FREEZE_ENTITY_POSITION(iLocal_3140, true);
 	}
 	func_536(iLocal_3138, -1, 1);
-	if (AUDIO::_0x2DD39BF3E2F9C47F())
+	if (AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2())
 	{
 		AUDIO::TRIGGER_MUSIC_EVENT("PAP3_STOP");
 	}

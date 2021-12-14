@@ -83917,7 +83917,7 @@ int func_451(struct<3> Param0, struct<3> Param3, int iParam6, int iParam7, var u
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -93879,7 +93879,7 @@ int func_661(int iParam0, float fParam1)
 				return 1;
 			}
 		}
-		else if (Var0.f_2 > (PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.f_1) + fParam1))
+		else if (Var0.f_2 > (PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.x, Var0.f_1) + fParam1))
 		{
 			return 1;
 		}
@@ -94608,7 +94608,7 @@ int func_679(var uParam0, var uParam1, int iParam2, bool bParam3, int iParam4, v
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -100728,7 +100728,7 @@ void func_765(var uParam0, bool bParam1)
 	{
 		func_767(uParam0, 1, 1, 1, 1, 0);
 	}
-	fVar0 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(*uParam0, uParam0->f_1);
+	fVar0 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(*uParam0, uParam0->f_1);
 	fVar0 = (fVar0 + 100f);
 	if (uParam0->f_2 < fVar0)
 	{
@@ -109152,7 +109152,7 @@ void func_969(int iParam0)
 	int iVar0;
 	
 	iVar0 = Global_2405077.f_2689;
-	if ((AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0) && iParam0 == 0)
+	if ((AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0) && iParam0 == 0)
 	{
 		iVar0 = 255;
 	}

@@ -96777,7 +96777,7 @@ int func_509(int iParam0)
 	switch (*iParam0)
 	{
 		case 0:
-			STATS::_0x629526ABA383BCAA();
+			STATS::_STAT_MANAGER_SET_IMMUTABLE();
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
 				ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), true);
@@ -96948,7 +96948,7 @@ int func_509(int iParam0)
 				{
 					GRAPHICS::_0x814AF7DCAACC597B(0);
 				}
-				STATS::_0x98E2BC1CA26287C3();
+				STATS::_STAT_MANAGER_SET_MUTABLE();
 				return 1;
 			}
 			break;
@@ -121942,7 +121942,7 @@ void func_885()
 	func_811(1, 1);
 	PAD::_RESET_INPUT_MAPPING_SCHEME();
 	STREAMING::REMOVE_IPL("SpaceInterior");
-	STATS::_0x98E2BC1CA26287C3();
+	STATS::_STAT_MANAGER_SET_MUTABLE();
 	AUDIO::SET_AUDIO_FLAG("DisableReplayScriptStreamRecording", false);
 }
 

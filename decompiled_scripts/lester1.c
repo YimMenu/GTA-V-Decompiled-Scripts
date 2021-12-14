@@ -54903,7 +54903,7 @@ void func_513(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 void func_514(int iParam0)
@@ -124121,7 +124121,7 @@ void func_865()
 		}
 		if (!Global_59270)
 		{
-			if (STATS::_0x5A556B229A169402())
+			if (STATS::STAT_COMMUNITY_START_SYNCH())
 			{
 				Global_59271 = iVar0;
 				Global_59270 = 1;

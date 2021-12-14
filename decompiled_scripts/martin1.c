@@ -122423,7 +122423,7 @@ int func_625()
 			{
 				if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(1219.4f, 1865.5f, 78.3278f, 3f, joaat("prop_barrel_01a"), false))
 				{
-					iLocal_3915 = PED::_CREATE_SYNCHRONIZED_SCENE_2(1219.4f, 1865.5f, 78.3278f, 1f, joaat("prop_barrel_01a"));
+					iLocal_3915 = PED::CREATE_SYNCHRONIZED_SCENE_AT_MAP_OBJECT(1219.4f, 1865.5f, 78.3278f, 1f, joaat("prop_barrel_01a"));
 					TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_3915, "missmartin1@leadinoutmartin_1_ext", "martin_1_ext_leadin", 8f, -8f, 0, 0, 1000f, 0);
 					iLocal_3895 = 2;
 				}

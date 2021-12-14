@@ -36672,7 +36672,7 @@ void func_342(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 int func_343()
@@ -154694,7 +154694,7 @@ void func_1097()
 				Var2.f_45 = 100;
 				Var2.f_49 = func_366(3973, -1, 0);
 				Var2.f_52 = func_1098(PLAYER::PLAYER_ID(), iVar56);
-				STATS::_0xBF371CD2B64212FD(&Var2);
+				STATS::_PLAYSTATS_MISSION_ENDED(&Var2);
 				bVar1 = false;
 			}
 		}
@@ -169024,7 +169024,7 @@ void func_1320(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, -1180597171, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, -1180597171, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 void func_1321(int iParam0)

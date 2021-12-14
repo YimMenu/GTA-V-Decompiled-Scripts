@@ -114359,9 +114359,9 @@ void func_1093()
 	}
 	if ((func_1101() == 0 && NETWORK::_0xD313DE83394AF134()) && Global_42009 == 14)
 	{
-		if (STATS::_0xBE3DB208333D9844() == 0)
+		if (STATS::_STAT_MANAGER_IS_MUTABLE() == 0)
 		{
-			STATS::_0x98E2BC1CA26287C3();
+			STATS::_STAT_MANAGER_SET_MUTABLE();
 		}
 	}
 	if (func_1098(&uVar0) == 0)

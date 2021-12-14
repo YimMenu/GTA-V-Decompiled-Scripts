@@ -1449,7 +1449,7 @@ int func_8(int iParam0, var uParam1)
 						if (HUD::DOES_BLIP_EXIST(Global_2416162[iVar26]))
 						{
 							Var30 = { HUD::GET_BLIP_COORDS(Global_2416162[iVar26]) };
-							Var30.f_2 = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var30.x, Var30.f_1);
+							Var30.f_2 = PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var30.x, Var30.f_1);
 						}
 						else
 						{
@@ -1519,7 +1519,7 @@ int func_9(int iParam0, int iParam1)
 			if (HUD::DOES_BLIP_EXIST(Global_2416162[PLAYER::PLAYER_ID()]))
 			{
 				Var0 = { HUD::GET_BLIP_COORDS(Global_2416162[PLAYER::PLAYER_ID()]) };
-				Var0.f_2 = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.f_1);
+				Var0.f_2 = PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.x, Var0.f_1);
 			}
 			else
 			{
@@ -104721,7 +104721,7 @@ void func_1168(int iParam0)
 	int iVar0;
 	
 	iVar0 = Global_2405077.f_2689;
-	if ((AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0) && iParam0 == 0)
+	if ((AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0) && iParam0 == 0)
 	{
 		iVar0 = 255;
 	}
@@ -121917,7 +121917,7 @@ int func_1305(struct<3> Param0, struct<3> Param3, int iParam6, int iParam7, var 
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -131359,7 +131359,7 @@ int func_1488(int iParam0, float fParam1)
 				return 1;
 			}
 		}
-		else if (Var0.f_2 > (PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.f_1) + fParam1))
+		else if (Var0.f_2 > (PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.x, Var0.f_1) + fParam1))
 		{
 			return 1;
 		}
@@ -132075,7 +132075,7 @@ int func_1505(var uParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -138153,7 +138153,7 @@ void func_1589(var uParam0, bool bParam1)
 	{
 		func_1591(uParam0, 1, 1, 1, 1, 0);
 	}
-	fVar0 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(*uParam0, uParam0->f_1);
+	fVar0 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(*uParam0, uParam0->f_1);
 	fVar0 = (fVar0 + 100f);
 	if (uParam0->f_2 < fVar0)
 	{
@@ -153454,7 +153454,7 @@ void func_1987()
 
 void func_1988(int iParam0)
 {
-	STATS::_0xD6CA58B3B53A0F22(&Global_1682449);
+	STATS::_PLAYSTATS_DJ_MISSION_ENDED(&Global_1682449);
 	func_1989();
 }
 
@@ -153470,7 +153470,7 @@ void func_1990(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xDFCDB14317A9B361(&Global_1682337);
+	STATS::_PLAYSTATS_HEIST4_PREP(&Global_1682337);
 	func_1991();
 }
 
@@ -153489,7 +153489,7 @@ void func_1992(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x53C31853EC9531FF(&Global_1682250);
+	STATS::_PLAYSTATS_HEIST3_PREP(&Global_1682250);
 	func_1993();
 }
 
@@ -153539,7 +153539,7 @@ int func_1997(int iParam0)
 
 void func_1998(int iParam0)
 {
-	STATS::_0x2D7A9B577E72385E(&Global_1682037);
+	STATS::_PLAYSTATS_WAREHOUSE_MISSION_ENDED(&Global_1682037);
 	func_1999();
 }
 
@@ -153598,7 +153598,7 @@ void func_1999()
 
 void func_2000(int iParam0)
 {
-	STATS::_0x830C3A44EB3F2CF9(&Global_1682091);
+	STATS::_PLAYSTATS_NIGHTCLUB_MISSION_ENDED(&Global_1682091);
 	func_2001();
 }
 
@@ -153957,7 +153957,7 @@ void func_2019(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x7D8BA05688AD64C7(&Global_1681794);
+	STATS::_PLAYSTATS_IMPEXP_MISSION_ENDED(&Global_1681794);
 	func_2020();
 }
 
@@ -154029,7 +154029,7 @@ void func_2021(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xBF371CD2B64212FD(&Global_1681740);
+	STATS::_PLAYSTATS_MISSION_ENDED(&Global_1681740);
 	func_2022();
 }
 
@@ -154235,7 +154235,7 @@ int func_2027(bool bParam0)
 
 void func_2028(var uParam0)
 {
-	STATS::_0x316DB59CD14C1774(&Global_1682001);
+	STATS::_PLAYSTATS_BUSINESS_BATTLE_ENDED(&Global_1682001);
 	func_2029();
 }
 

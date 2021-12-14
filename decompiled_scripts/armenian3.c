@@ -1160,7 +1160,7 @@ void __EntryFunction__()
 							{
 								if (!func_836("ACT_stealth_kill_a_gardener"))
 								{
-									MISC::_REMOVE_STEALTH_KILL(784239871, true);
+									MISC::ACTION_MANAGER_ENABLE_ACTION(784239871, true);
 									func_830("ACT_stealth_kill_a_gardener", 1);
 								}
 							}
@@ -109270,7 +109270,7 @@ void func_675(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 void func_676(int iParam0)
@@ -123662,7 +123662,7 @@ void func_894(int iParam0)
 	}
 	if (func_836("ACT_stealth_kill_a_gardener"))
 	{
-		MISC::_REMOVE_STEALTH_KILL(784239871, false);
+		MISC::ACTION_MANAGER_ENABLE_ACTION(784239871, false);
 	}
 	PED::SET_PED_USING_ACTION_MODE(PLAYER::PLAYER_PED_ID(), false, -1, 0);
 	if (iLocal_71)

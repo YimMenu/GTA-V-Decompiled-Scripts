@@ -1030,7 +1030,7 @@ void __EntryFunction__()
 							{
 								Var4 = { 199.4f, -934.3f, 30.7f };
 							}
-							fVar7 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(Var4.x, Var4.f_1);
+							fVar7 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var4.x, Var4.f_1);
 							Var4.f_2 = (fVar7 + 200f);
 							HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
 							StringCopy(&(Local_820.f_1), "FMMC_DOWNLOAD", 64);
@@ -2477,7 +2477,7 @@ void func_1()
 					func_937(0);
 					func_963(0);
 					Var12 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
-					fVar15 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(Var12.x, Var12.f_1);
+					fVar15 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var12.x, Var12.f_1);
 					Var12.f_2 = (fVar15 + 200f);
 					func_44(1, 1, 1, 3, 1, Var12.x, Var12.f_1, Var12.f_2, 1, 0, 0, 0, 1, 0, 0);
 					Local_115.f_2 = { Var12 };
@@ -109810,7 +109810,7 @@ int func_804(int iParam0, bool bParam1, int iParam2, bool bParam3, int iParam4, 
 			}
 			if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() == 0 || (iParam2 && STREAMING::GET_PLAYER_SWITCH_STATE() > 8))
 			{
-				if (((((!Global_2405077.f_2686 == -1 && !Global_1574419) && !Global_2405077.f_2686 >= 254) && !func_806()) && !MISC::IS_BIT_SET(Global_4456448.f_134001, 0)) && !(AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0))
+				if (((((!Global_2405077.f_2686 == -1 && !Global_1574419) && !Global_2405077.f_2686 >= 254) && !func_806()) && !MISC::IS_BIT_SET(Global_4456448.f_134001, 0)) && !(AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0))
 				{
 					if (!func_736(&Global_2463465))
 					{

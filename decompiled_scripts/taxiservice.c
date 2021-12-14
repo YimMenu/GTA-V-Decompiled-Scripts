@@ -6383,7 +6383,7 @@ int func_127(var uParam0, struct<3> Param1, struct<3> Param4, var* uParam7, floa
 				if (uParam7->f_2 == 1f)
 				{
 					fVar17 = 1f;
-					fVar17 = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_AREA((*uParam7 - 2f), (uParam7->f_1 - 2f), (*uParam7 + 2f), (uParam7->f_1 + 2f));
+					fVar17 = PATHFIND::GET_APPROX_FLOOR_FOR_AREA((*uParam7 - 2f), (uParam7->f_1 - 2f), (*uParam7 + 2f), (uParam7->f_1 + 2f));
 					if (fVar17 > 1f)
 					{
 						iLocal_69 = 1;

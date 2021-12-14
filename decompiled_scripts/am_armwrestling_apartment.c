@@ -44708,7 +44708,7 @@ void func_277(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			Global_1682286.f_1 = Global_4456448.f_85535;
 			Global_1682286.f_10 = iParam2;
 			Global_1682286.f_18 = (func_281(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0x2E0259BABC27A327(&Global_1682286);
+			STATS::_PLAYSTATS_HEIST3_FINALE(&Global_1682286);
 			func_315();
 			Global_1575125 = 0;
 		}
@@ -44719,7 +44719,7 @@ void func_277(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			IntToString(&(Global_1682372.f_3), MISC::GET_HASH_KEY(&(Global_4456448.f_85822)), 32);
 			Global_1682372.f_11 = iParam2;
 			Global_1682372.f_19 = (func_281(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0xC1E963C58664B556(&Global_1682372);
+			STATS::_PLAYSTATS_HEIST4_FINALE(&Global_1682372);
 			func_315();
 			Global_1575125 = 0;
 		}
@@ -62324,7 +62324,7 @@ void func_792(int iParam0, var uParam1, var uParam2, var uParam3, int* iParam4, 
 		{
 			STATS::_PLAYSTATS_EARNED_MC_POINTS(func_527(func_528()), func_526(func_528()), func_525(), func_524(), 1, iVar3);
 		}
-		STATS::_0x8989CBD7B4E82534(func_527(func_528()), func_526(func_528()), func_525(), func_524(), 1, -1, 0);
+		STATS::_PLAYSTATS_MC_CLUBHOUSE_ACTIVITY(func_527(func_528()), func_526(func_528()), func_525(), func_524(), 1, -1, 0);
 		func_479(0);
 		func_165(0, 1);
 		func_55(&iLocal_320, 1, 0, 0);

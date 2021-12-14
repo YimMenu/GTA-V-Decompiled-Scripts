@@ -10522,7 +10522,7 @@ void func_308(float fParam0)
 {
 	float fVar0;
 	
-	if (STATS::_0x1A8EA222F9C67DBB(&fVar0))
+	if (STATS::_STAT_GET_HEIGHT_ABOVE_GROUND(&fVar0))
 	{
 		if (fVar0 > fParam0)
 		{
@@ -10557,7 +10557,7 @@ float func_309(int iParam0, float* fParam1)
 	Var1 = { ENTITY::GET_ENTITY_COORDS(iParam0, true) };
 	MISC::GET_GROUND_Z_FOR_3D_COORD(Var1, fParam1, true, false);
 	MISC::GET_GROUND_Z_FOR_3D_COORD(Var1, &uVar4, false, false);
-	if (STATS::_0xF9F2922717B819EC())
+	if (STATS::_STAT_IS_ABOVE_DEEP_WATER())
 	{
 		func_545(3);
 		MISC::SET_BIT(&iLocal_319, 10);
@@ -11506,7 +11506,7 @@ void func_335()
 		
 		case 8:
 			sVar0 = "MP_Near_Miss_High_Score_Boost_Scene";
-			fVar4 = STATS::_0x55A8BECAF28A4EB7();
+			fVar4 = STATS::_STAT_GET_CHALLENGE_HIGHEST_SPEED();
 			bVar3 = (iVar1 >= 30 && fVar4 >= 40f);
 			func_337(sVar0, bVar3);
 			if (AUDIO::IS_AUDIO_SCENE_ACTIVE(sVar0))
@@ -11628,47 +11628,47 @@ int func_339()
 	switch (Local_628.f_3)
 	{
 		case 0:
-			fVar1 = STATS::_0x9EC8858184CD253A();
+			fVar1 = STATS::_STAT_GET_CHALLENGE_LONGEST_JUMP();
 			break;
 		
 		case 1:
-			fVar1 = STATS::_0xAFF47709F1D5DCCE();
+			fVar1 = STATS::_STAT_GET_CHALLENGE_LONGEST_FREEFALL();
 			break;
 		
 		case 2:
-			fVar1 = STATS::_0x55A8BECAF28A4EB7();
+			fVar1 = STATS::_STAT_GET_CHALLENGE_HIGHEST_SPEED();
 			break;
 		
 		case 3:
-			fVar1 = STATS::_0x84A810B375E69C0E();
+			fVar1 = STATS::_STAT_GET_CHALLENGE_LONGEST_STOPPIE();
 			break;
 		
 		case 4:
-			fVar1 = STATS::_0xA943FD1722E11EFD();
+			fVar1 = STATS::_STAT_GET_CHALLENGE_LONGEST_WHEELIE();
 			break;
 		
 		case 5:
-			fVar1 = STATS::_0xBA9749CC94C1FD85();
+			fVar1 = STATS::_STAT_GET_CHALLENGE_NO_CRASHES();
 			break;
 		
 		case 8:
-			iVar0 = STATS::_0xE8853FBCE7D8D0D6();
+			iVar0 = STATS::_STAT_GET_CHALLENGE_NEAR_MISSES();
 			break;
 		
 		case 9:
-			fVar1 = STATS::_0x32CAC93C9DE73D32();
+			fVar1 = STATS::_STAT_GET_CHALLENGE_REVERSE_DRIVING();
 			break;
 		
 		case 11:
-			fVar1 = STATS::_0x6E0A5253375C4584();
+			fVar1 = STATS::_STAT_GET_CHALLENGE_LOW_FLYING();
 			break;
 		
 		case 12:
-			fVar1 = STATS::_0x6E0A5253375C4584();
+			fVar1 = STATS::_STAT_GET_CHALLENGE_LOW_FLYING();
 			break;
 		
 		case 13:
-			fVar1 = STATS::_0x0B8B7F74BF061C6D();
+			fVar1 = STATS::_STAT_GET_LONGEST_BAIL();
 			break;
 	}
 	if (func_18())
@@ -12192,7 +12192,7 @@ int func_364()
 	}
 	else
 	{
-		STATS::_0xF11F01D98113536A(&fVar1);
+		STATS::_STAT_GET_PROGRESS_OF_TRACKED_STAT(&fVar1);
 		if (func_18())
 		{
 			fVar1 = (fVar1 * 10f);
@@ -13657,75 +13657,75 @@ void func_405()
 	switch (Local_628.f_3)
 	{
 		case 0:
-			STATS::_0x33D72899E24C3365(8, 2);
+			STATS::_STAT_TRACKING_ENABLE(8, 2);
 			break;
 		
 		case 1:
-			STATS::_0x33D72899E24C3365(13, 2);
+			STATS::_STAT_TRACKING_ENABLE(13, 2);
 			break;
 		
 		case 2:
-			STATS::_0x33D72899E24C3365(4, 2);
+			STATS::_STAT_TRACKING_ENABLE(4, 2);
 			break;
 		
 		case 4:
-			STATS::_0x33D72899E24C3365(1, 2);
+			STATS::_STAT_TRACKING_ENABLE(1, 2);
 			break;
 		
 		case 3:
-			STATS::_0x33D72899E24C3365(2, 2);
+			STATS::_STAT_TRACKING_ENABLE(2, 2);
 			break;
 		
 		case 5:
-			STATS::_0x33D72899E24C3365(3, 2);
+			STATS::_STAT_TRACKING_ENABLE(3, 2);
 			break;
 		
 		case 6:
-			STATS::_0x33D72899E24C3365(11, 3);
+			STATS::_STAT_TRACKING_ENABLE(11, 3);
 			break;
 		
 		case 7:
-			STATS::_0x33D72899E24C3365(14, 1);
+			STATS::_STAT_TRACKING_ENABLE(14, 1);
 			break;
 		
 		case 8:
-			STATS::_0x33D72899E24C3365(29, 2);
+			STATS::_STAT_TRACKING_ENABLE(29, 2);
 			break;
 		
 		case 9:
-			STATS::_0x33D72899E24C3365(12, 2);
+			STATS::_STAT_TRACKING_ENABLE(12, 2);
 			break;
 		
 		case 10:
-			STATS::_0x33D72899E24C3365(10, 2);
+			STATS::_STAT_TRACKING_ENABLE(10, 2);
 			break;
 		
 		case 11:
-			STATS::_0x33D72899E24C3365(18, 2);
+			STATS::_STAT_TRACKING_ENABLE(18, 2);
 			break;
 		
 		case 12:
-			STATS::_0x33D72899E24C3365(20, 2);
+			STATS::_STAT_TRACKING_ENABLE(20, 2);
 			break;
 		
 		case 13:
-			STATS::_0x33D72899E24C3365(27, 2);
+			STATS::_STAT_TRACKING_ENABLE(27, 2);
 			break;
 		
 		case 15:
-			STATS::_0x33D72899E24C3365(26, 1);
+			STATS::_STAT_TRACKING_ENABLE(26, 1);
 			break;
 		
 		case 16:
-			STATS::_0x33D72899E24C3365(25, 1);
+			STATS::_STAT_TRACKING_ENABLE(25, 1);
 			break;
 		
 		case 17:
-			STATS::_0x33D72899E24C3365(22, 1);
+			STATS::_STAT_TRACKING_ENABLE(22, 1);
 			break;
 		
 		case 18:
-			STATS::_0x33D72899E24C3365(24, 1);
+			STATS::_STAT_TRACKING_ENABLE(24, 1);
 			break;
 	}
 	MISC::SET_BIT(&iLocal_319, 8);
@@ -23963,7 +23963,7 @@ void func_697()
 		{
 			if ((func_7(PLAYER::PLAYER_ID()) || func_166(PLAYER::PLAYER_ID())) || func_406(PLAYER::PLAYER_ID()))
 			{
-				STATS::_0xA761D4AC6115623D();
+				STATS::_STAT_TRACKING_CLEAR_PROGRESS();
 				Local_2595[NETWORK::PARTICIPANT_ID_TO_INT() /*12*/].f_4 = 0;
 				MISC::SET_BIT(&iLocal_319, 9);
 			}
@@ -24939,7 +24939,7 @@ void func_743()
 	}
 	if (!MISC::IS_BIT_SET(iLocal_319, 9))
 	{
-		STATS::_0xA761D4AC6115623D();
+		STATS::_STAT_TRACKING_CLEAR_PROGRESS();
 	}
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
@@ -25505,14 +25505,14 @@ void func_779(struct<12> Param0, var uParam12, int iParam13, int iParam14, int i
 		{
 			Var1 = { Param0 };
 			Var1.f_12 = uParam12;
-			STATS::_0xBFAFDB5FAAA5C5AB(&Var1);
+			STATS::_PLAYSTATS_FREEMODE_VEHICLE_TARGET(&Var1);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, func_780()))
 		{
 			Var14 = { Param0 };
 			Var14.f_12 = uParam12;
 			Var14.f_13 = iParam13;
-			STATS::_0xBAA2F0490E146BE8(&Var14);
+			STATS::_PLAYSTATS_FREEMODE_ATOB(&Var14);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_cp_collection"))
 		{
@@ -25523,7 +25523,7 @@ void func_779(struct<12> Param0, var uParam12, int iParam13, int iParam14, int i
 			Var28.f_15 = iParam15;
 			Var28.f_16 = iParam16;
 			Var28.f_17 = iParam17;
-			STATS::_0x3DE3AA516FB126A4(&Var28);
+			STATS::_PLAYSTATS_FREEMODE_CHECKPOINT_COLLECTION(&Var28);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_challenges"))
 		{
@@ -25534,31 +25534,31 @@ void func_779(struct<12> Param0, var uParam12, int iParam13, int iParam14, int i
 			{
 				Var52.f_13 = (Var52.f_13 / 10f);
 			}
-			STATS::_0x6A60E43998228229(&Var52);
+			STATS::_PLAYSTATS_FREEMODE_CHALLENGES(&Var52);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_penned_in"))
 		{
-			STATS::_0x1A7CE7CD3E653485(&Param0);
+			STATS::_PLAYSTATS_FREEMODE_PENNED_IN(&Param0);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_pass_the_parcel"))
 		{
 			Var66 = { Param0 };
 			Var66.f_12 = uParam12;
-			STATS::_0x419615486BBF1956(&Var66);
+			STATS::_PLAYSTATS_FREEMODE_PASS_THE_PARCEL(&Var66);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_hot_property"))
 		{
 			Var79 = { Param0 };
 			Var79.f_12 = uParam12;
 			Var79.f_13 = iParam13;
-			STATS::_0x84DFC579C2FC214C(&Var79);
+			STATS::_PLAYSTATS_FREEMODE_HOT_PROPERTY(&Var79);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_dead_drop"))
 		{
 			Var93 = { Param0 };
 			Var93.f_12 = uParam12;
 			Var93.f_13 = iParam13;
-			STATS::_0x0A9C7F36E5D7B683(&Var93);
+			STATS::_PLAYSTATS_FREEMODE_DEADDROP(&Var93);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_king_of_the_castle"))
 		{
@@ -25567,13 +25567,13 @@ void func_779(struct<12> Param0, var uParam12, int iParam13, int iParam14, int i
 			Var107.f_13 = iParam13;
 			Var107.f_14 = iParam14;
 			Var107.f_15 = iParam15;
-			STATS::_0x164C5FF663790845(&Var107);
+			STATS::_PLAYSTATS_FREEMODE_KING_OF_THE_CASTLE(&Var107);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "AM_CRIMINAL_DAMAGE"))
 		{
 			Var123 = { Param0 };
 			Var123.f_12 = uParam12;
-			STATS::_0xEDBF6C9B0D2C65C8(&Var123);
+			STATS::_PLAYSTATS_FREEMODE_CRIMINAL_DAMAGE(&Var123);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "AM_KILL_LIST"))
 		{
@@ -25582,21 +25582,21 @@ void func_779(struct<12> Param0, var uParam12, int iParam13, int iParam14, int i
 				Var136 = { Param0 };
 				Var136.f_12 = uParam12;
 				Var136.f_13 = iParam13;
-				STATS::_0x8C9D11605E59D955(&Var136);
+				STATS::_PLAYSTATS_FREEMODE_URBAN_WARFARE(&Var136);
 			}
 			else
 			{
 				Var150 = { Param0 };
 				Var150.f_12 = uParam12;
 				Var150.f_13 = iParam13;
-				STATS::_0x6551B1F7F6CD46EA(&Var150);
+				STATS::_PLAYSTATS_FREEMODE_COMPETITIVE_URBAN_WARFARE(&Var150);
 			}
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "am_hunt_the_beast"))
 		{
 			Var164 = { Param0 };
 			Var164.f_12 = uParam12;
-			STATS::_0x2CD90358F67D0AA8(&Var164);
+			STATS::_PLAYSTATS_FREEMODE_HUNT_BEAST(&Var164);
 		}
 	}
 }

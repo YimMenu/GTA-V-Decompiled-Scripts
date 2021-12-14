@@ -6542,7 +6542,7 @@ int func_167(bool bParam0, float fParam1)
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			{
 				Var0 = { func_182(func_183(Local_610.f_1, func_88(), Local_610.f_6, bParam0, 0, 0), 0f, (-200f * SYSTEM::SIN((SYSTEM::TO_FLOAT(Local_610.f_210) * 30f))), (200f * SYSTEM::COS((SYSTEM::TO_FLOAT(Local_610.f_210) * 30f))), 0f) };
-				Var0.f_2 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(Var0.x, Var0.f_1);
+				Var0.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var0.x, Var0.f_1);
 				Var0.f_2 = (Var0.f_2 + fParam1);
 				if (func_168(Var0, 20f, 1f, 1f, 15f, 1, 1, 1, 180f, 0, -1, 1, 0, 0, 0, 0, 0))
 				{
@@ -8049,7 +8049,7 @@ int func_206(struct<3> Param0, struct<3> Param3, int iParam6, int iParam7, var u
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -20063,7 +20063,7 @@ void func_462()
 								}
 							}
 							Var13 = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_PED(Local_610.f_23[iVar1 /*9*/]), false) };
-							if (Var13.f_2 < (PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var13.x, Var13.f_1) + 20f))
+							if (Var13.f_2 < (PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var13.x, Var13.f_1) + 20f))
 							{
 								if ((PED::GET_PED_PARACHUTE_STATE(NETWORK::NET_TO_PED(Local_610.f_23[iVar1 /*9*/])) == -1 && !ENTITY::IS_ENTITY_IN_AIR(NETWORK::NET_TO_PED(Local_610.f_23[iVar1 /*9*/]))) && !PED::IS_PED_FALLING(NETWORK::NET_TO_PED(Local_610.f_23[iVar1 /*9*/])))
 								{
@@ -28268,7 +28268,7 @@ void func_563()
 							ENTITY::SET_ENTITY_HEADING(iVar2, func_567(iVar1));
 							ENTITY::SET_ENTITY_ROTATION(iVar2, func_564(iVar1), 2, true);
 							STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_574(iVar1));
-							NETWORK::_0xBA7F0B77D80A4EB7(NETWORK::NET_TO_OBJ(Local_610.f_270[iVar1]), 300);
+							NETWORK::_NETWORK_SET_OBJECT_INTEREST_RANGE(NETWORK::NET_TO_OBJ(Local_610.f_270[iVar1]), 4.203895E-43f);
 						}
 					}
 					bVar0 = false;
@@ -70072,7 +70072,7 @@ void func_1635(int iParam0)
 							{
 								if (func_1637(NETWORK::NET_TO_VEH(Local_610.f_159[iParam0 /*4*/])) || func_1636(NETWORK::NET_TO_VEH(Local_610.f_159[iParam0 /*4*/])))
 								{
-									NETWORK::_0x2A5E0621DD815A9A(NETWORK::NET_TO_VEH(Local_610.f_159[iParam0 /*4*/]), 1, 0, 0);
+									NETWORK::_NETWORK_EXPLODE_HELI(NETWORK::NET_TO_VEH(Local_610.f_159[iParam0 /*4*/]), true, false, 0);
 								}
 							}
 						}
@@ -70088,7 +70088,7 @@ int func_1636(int iParam0)
 	struct<3> Var0;
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, false) };
-	if (Var0.f_2 < (PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.f_1) + 40f))
+	if (Var0.f_2 < (PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.x, Var0.f_1) + 40f))
 	{
 		return 1;
 	}
@@ -71814,7 +71814,7 @@ void func_1658(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 int func_1659()
@@ -92799,7 +92799,7 @@ void func_2061()
 
 void func_2062(int iParam0)
 {
-	STATS::_0xD6CA58B3B53A0F22(&Global_1682449);
+	STATS::_PLAYSTATS_DJ_MISSION_ENDED(&Global_1682449);
 	func_2063();
 }
 
@@ -92815,7 +92815,7 @@ void func_2064(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xDFCDB14317A9B361(&Global_1682337);
+	STATS::_PLAYSTATS_HEIST4_PREP(&Global_1682337);
 	func_2065();
 }
 
@@ -92834,7 +92834,7 @@ void func_2066(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x53C31853EC9531FF(&Global_1682250);
+	STATS::_PLAYSTATS_HEIST3_PREP(&Global_1682250);
 	func_2067();
 }
 
@@ -92884,7 +92884,7 @@ int func_2071(int iParam0)
 
 void func_2072(int iParam0)
 {
-	STATS::_0x2D7A9B577E72385E(&Global_1682037);
+	STATS::_PLAYSTATS_WAREHOUSE_MISSION_ENDED(&Global_1682037);
 	func_2073();
 }
 
@@ -92943,7 +92943,7 @@ void func_2073()
 
 void func_2074(int iParam0)
 {
-	STATS::_0x830C3A44EB3F2CF9(&Global_1682091);
+	STATS::_PLAYSTATS_NIGHTCLUB_MISSION_ENDED(&Global_1682091);
 	func_2075();
 }
 
@@ -93372,7 +93372,7 @@ void func_2095(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x7D8BA05688AD64C7(&Global_1681794);
+	STATS::_PLAYSTATS_IMPEXP_MISSION_ENDED(&Global_1681794);
 	func_2096();
 }
 
@@ -93444,7 +93444,7 @@ void func_2097(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xBF371CD2B64212FD(&Global_1681740);
+	STATS::_PLAYSTATS_MISSION_ENDED(&Global_1681740);
 	func_2098();
 }
 
@@ -93650,7 +93650,7 @@ int func_2103(bool bParam0)
 
 void func_2104(var uParam0)
 {
-	STATS::_0x316DB59CD14C1774(&Global_1682001);
+	STATS::_PLAYSTATS_BUSINESS_BATTLE_ENDED(&Global_1682001);
 	func_2105();
 }
 

@@ -1110,7 +1110,7 @@ void func_23()
 				{
 					iLocal_138 = Global_1590908[iLocal_126 /*874*/].f_267.f_352;
 				}
-				STATS::_0x8989CBD7B4E82534(func_27(func_28()), func_26(func_28()), func_25(), func_24(), 4, iLocal_138, 0);
+				STATS::_PLAYSTATS_MC_CLUBHOUSE_ACTIVITY(func_27(func_28()), func_26(func_28()), func_25(), func_24(), 4, iLocal_138, 0);
 				func_158(0);
 			}
 			break;

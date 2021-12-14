@@ -11632,7 +11632,7 @@ int func_258(int iParam0, int iParam1)
 						if (HUD::DOES_BLIP_EXIST(Global_2416162[iVar26]))
 						{
 							Var30 = { HUD::GET_BLIP_COORDS(Global_2416162[iVar26]) };
-							Var30.f_2 = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var30.x, Var30.f_1);
+							Var30.f_2 = PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var30.x, Var30.f_1);
 						}
 						else
 						{
@@ -11702,7 +11702,7 @@ int func_259(int iParam0, int iParam1)
 			if (HUD::DOES_BLIP_EXIST(Global_2416162[PLAYER::PLAYER_ID()]))
 			{
 				Var0 = { HUD::GET_BLIP_COORDS(Global_2416162[PLAYER::PLAYER_ID()]) };
-				Var0.f_2 = PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.f_1);
+				Var0.f_2 = PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.x, Var0.f_1);
 			}
 			else
 			{

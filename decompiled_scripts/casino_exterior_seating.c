@@ -91457,7 +91457,7 @@ void func_441(int iParam0, int iParam1, bool bParam2)
 		{
 			if (!func_494(1))
 			{
-				STATS::_0xD1C9B92BDD3F151D(func_493(func_295()), func_492(func_295()), iParam0);
+				STATS::_PLAYSTATS_CHANGE_UNIFORM(func_493(func_295()), func_492(func_295()), iParam0);
 			}
 			if (iVar0 == 0)
 			{

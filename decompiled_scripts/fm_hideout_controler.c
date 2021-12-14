@@ -33770,7 +33770,7 @@ void func_585(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			Global_1682286.f_1 = Global_4456448.f_85535;
 			Global_1682286.f_10 = iParam2;
 			Global_1682286.f_18 = (func_588(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0x2E0259BABC27A327(&Global_1682286);
+			STATS::_PLAYSTATS_HEIST3_FINALE(&Global_1682286);
 			func_618();
 			Global_1575125 = 0;
 		}
@@ -33781,7 +33781,7 @@ void func_585(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			IntToString(&(Global_1682372.f_3), MISC::GET_HASH_KEY(&(Global_4456448.f_85822)), 32);
 			Global_1682372.f_11 = iParam2;
 			Global_1682372.f_19 = (func_588(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0xC1E963C58664B556(&Global_1682372);
+			STATS::_PLAYSTATS_HEIST4_FINALE(&Global_1682372);
 			func_618();
 			Global_1575125 = 0;
 		}
@@ -52435,7 +52435,7 @@ void func_967(int iParam0)
 	int iVar0;
 	
 	iVar0 = Global_2405077.f_2689;
-	if ((AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0) && iParam0 == 0)
+	if ((AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0) && iParam0 == 0)
 	{
 		iVar0 = 255;
 	}
@@ -125256,7 +125256,7 @@ int func_1240(struct<3> Param0, struct<3> Param3, int iParam6, int iParam7, var 
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -132070,7 +132070,7 @@ int func_1366(int iParam0, float fParam1)
 				return 1;
 			}
 		}
-		else if (Var0.f_2 > (PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.f_1) + fParam1))
+		else if (Var0.f_2 > (PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.x, Var0.f_1) + fParam1))
 		{
 			return 1;
 		}
@@ -132671,7 +132671,7 @@ int func_1382(var uParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -135403,7 +135403,7 @@ void func_1397(var uParam0, bool bParam1)
 	{
 		func_1399(uParam0, 1, 1, 1, 1, 0);
 	}
-	fVar0 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(*uParam0, uParam0->f_1);
+	fVar0 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(*uParam0, uParam0->f_1);
 	fVar0 = (fVar0 + 100f);
 	if (uParam0->f_2 < fVar0)
 	{
@@ -151511,7 +151511,7 @@ void func_1673(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4
 	}
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		NETWORK::_0x5E3AA4CA2B6FB0EE(PLAYER::PLAYER_ID());
+		NETWORK::NETWORK_ENABLE_VOICE_BANDWIDTH_RESTRICTION(PLAYER::PLAYER_ID());
 	}
 	func_1746();
 	if (Global_1660866 == 0)
@@ -154772,7 +154772,7 @@ void func_1896()
 	}
 	iVar0 = NETWORK::NETWORK_GET_NUM_CONNECTED_PLAYERS();
 	iVar1 = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(Global_968149, NETWORK::GET_NETWORK_TIME()));
-	STATS::_0x5BF29846C6527C54(Global_4456448, &(Global_4456448.f_85822), iVar0, iVar1, Global_968149.f_1);
+	STATS::_PLAYSTATS_QUIT_MODE(Global_4456448, &(Global_4456448.f_85822), iVar0, iVar1, Global_968149.f_1);
 	func_1897();
 }
 

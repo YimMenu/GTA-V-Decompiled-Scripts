@@ -2608,7 +2608,7 @@ void func_68()
 	{
 		Var0.f_10 = 0;
 	}
-	STATS::_0xF9096193DF1F99D4(&Var0);
+	STATS::_PLAYSTATS_ARCADE_CABINET(&Var0);
 }
 
 int func_69(int iParam0)

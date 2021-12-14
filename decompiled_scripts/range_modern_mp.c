@@ -122720,7 +122720,7 @@ int func_1139(int iParam0, bool bParam1, int iParam2, bool bParam3, int iParam4,
 			}
 			if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() == 0 || (iParam2 && STREAMING::GET_PLAYER_SWITCH_STATE() > 8))
 			{
-				if (((((!Global_2405077.f_2686 == -1 && !Global_1574419) && !Global_2405077.f_2686 >= 254) && !func_1140()) && !MISC::IS_BIT_SET(Global_4456448.f_134001, 0)) && !(AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0))
+				if (((((!Global_2405077.f_2686 == -1 && !Global_1574419) && !Global_2405077.f_2686 >= 254) && !func_1140()) && !MISC::IS_BIT_SET(Global_4456448.f_134001, 0)) && !(AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0))
 				{
 					if (!func_544(&Global_2463465))
 					{
@@ -124821,7 +124821,7 @@ void func_1197(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4,
 			Global_1682286.f_1 = Global_4456448.f_85535;
 			Global_1682286.f_10 = iParam2;
 			Global_1682286.f_18 = (func_1199(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0x2E0259BABC27A327(&Global_1682286);
+			STATS::_PLAYSTATS_HEIST3_FINALE(&Global_1682286);
 			func_1228();
 			Global_1575125 = 0;
 		}
@@ -124832,7 +124832,7 @@ void func_1197(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4,
 			IntToString(&(Global_1682372.f_3), MISC::GET_HASH_KEY(&(Global_4456448.f_85822)), 32);
 			Global_1682372.f_11 = iParam2;
 			Global_1682372.f_19 = (func_1199(PLAYER::PLAYER_ID(), 1) - Global_1575110);
-			STATS::_0xC1E963C58664B556(&Global_1682372);
+			STATS::_PLAYSTATS_HEIST4_FINALE(&Global_1682372);
 			func_1228();
 			Global_1575125 = 0;
 		}
@@ -140064,7 +140064,7 @@ void func_1435(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4
 	}
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		NETWORK::_0x5E3AA4CA2B6FB0EE(PLAYER::PLAYER_ID());
+		NETWORK::NETWORK_ENABLE_VOICE_BANDWIDTH_RESTRICTION(PLAYER::PLAYER_ID());
 	}
 	func_1501();
 	if (Global_1660866 == 0)
@@ -142743,7 +142743,7 @@ void func_1623()
 	}
 	iVar0 = NETWORK::NETWORK_GET_NUM_CONNECTED_PLAYERS();
 	iVar1 = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(Global_968149, NETWORK::GET_NETWORK_TIME()));
-	STATS::_0x5BF29846C6527C54(Global_4456448, &(Global_4456448.f_85822), iVar0, iVar1, Global_968149.f_1);
+	STATS::_PLAYSTATS_QUIT_MODE(Global_4456448, &(Global_4456448.f_85822), iVar0, iVar1, Global_968149.f_1);
 	func_1624();
 }
 

@@ -5988,7 +5988,7 @@ void func_106(var uParam0)
 				fVar11 = (fVar22 * IntToFloat(iVar12));
 				fVar9 = ((SYSTEM::SIN(Var3.f_2) * fVar11) * -1f);
 				fVar10 = (SYSTEM::COS(Var3.f_2) * fVar11);
-				fVar21 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA(((Var0.x + fVar9) - 3f), ((Var0.f_1 + fVar10) - 3f), ((Var0.x + fVar9) + 3f), ((Var0.f_1 + fVar10) + 3f));
+				fVar21 = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA(((Var0.x + fVar9) - 3f), ((Var0.f_1 + fVar10) - 3f), ((Var0.x + fVar9) + 3f), ((Var0.f_1 + fVar10) + 3f));
 				fVar21 = (fVar21 - 20f);
 				fVar20 = (Var0.f_2 + (SYSTEM::SIN(Var3.x) * (50f * IntToFloat(iVar12))));
 				if (fVar21 > fVar20)

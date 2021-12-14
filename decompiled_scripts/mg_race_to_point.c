@@ -602,7 +602,7 @@ Vector3 func_11()
 			if (HUD::IS_WAYPOINT_ACTIVE())
 			{
 				Var0 = { HUD::GET_BLIP_INFO_ID_COORD(HUD::GET_FIRST_BLIP_INFO_ID(HUD::GET_WAYPOINT_BLIP_ENUM_ID())) };
-				Var0.f_2 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA((Var0.x - 5f), (Var0.f_1 - 5f), (Var0.x + 5f), (Var0.f_1 + 5f));
+				Var0.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA((Var0.x - 5f), (Var0.f_1 - 5f), (Var0.x + 5f), (Var0.f_1 + 5f));
 				if (MISC::GET_DISTANCE_BETWEEN_COORDS(Local_81.f_4, Var0, true) > 1000f)
 				{
 					if (!MISC::IS_BIT_SET(Local_81.f_1, 7))
@@ -9544,7 +9544,7 @@ void func_278()
 	{
 		if (MISC::IS_BIT_SET(Local_81.f_1, 8))
 		{
-			Local_81.f_7.f_2 = (PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_AREA((Local_81.f_7 - 7f), (Local_81.f_7.f_1 - 7f), (Local_81.f_7 + 7f), (Local_81.f_7.f_1 + 7f)) + 5f);
+			Local_81.f_7.f_2 = (PATHFIND::GET_APPROX_FLOOR_FOR_AREA((Local_81.f_7 - 7f), (Local_81.f_7.f_1 - 7f), (Local_81.f_7 + 7f), (Local_81.f_7.f_1 + 7f)) + 5f);
 			Var1 = { Local_81.f_7 };
 			Var4.f_5 = 1115815936;
 			Var4.f_13 = 2;
@@ -9580,7 +9580,7 @@ void func_278()
 	else if (!MISC::IS_BIT_SET(iLocal_237, 2))
 	{
 		Var39 = { HUD::GET_BLIP_INFO_ID_COORD(HUD::GET_FIRST_BLIP_INFO_ID(HUD::GET_WAYPOINT_BLIP_ENUM_ID())) };
-		Var39.f_2 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA((Var39.x - 5f), (Var39.f_1 - 5f), (Var39.x + 5f), (Var39.f_1 + 5f));
+		Var39.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA((Var39.x - 5f), (Var39.f_1 - 5f), (Var39.x + 5f), (Var39.f_1 + 5f));
 		if (MISC::GET_DISTANCE_BETWEEN_COORDS(Local_81.f_4, Var39, true) > 1000f)
 		{
 			func_13();

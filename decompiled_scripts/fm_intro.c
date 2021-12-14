@@ -3962,7 +3962,7 @@ void func_116(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, -1180597171, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, -1180597171, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 int func_117()
@@ -5157,7 +5157,7 @@ void func_148(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 void func_149(int iParam0)
@@ -16421,7 +16421,7 @@ void func_395(int iParam0)
 	int iVar0;
 	
 	iVar0 = Global_2405077.f_2689;
-	if ((AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0) && iParam0 == 0)
+	if ((AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0) && iParam0 == 0)
 	{
 		iVar0 = 255;
 	}
@@ -17503,7 +17503,7 @@ void func_423(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 	}
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		NETWORK::_0x5E3AA4CA2B6FB0EE(PLAYER::PLAYER_ID());
+		NETWORK::NETWORK_ENABLE_VOICE_BANDWIDTH_RESTRICTION(PLAYER::PLAYER_ID());
 	}
 	func_512();
 	if (Global_1660866 == 0)
@@ -21813,7 +21813,7 @@ void func_689()
 	}
 	iVar0 = NETWORK::NETWORK_GET_NUM_CONNECTED_PLAYERS();
 	iVar1 = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(Global_968149, NETWORK::GET_NETWORK_TIME()));
-	STATS::_0x5BF29846C6527C54(Global_4456448, &(Global_4456448.f_85822), iVar0, iVar1, Global_968149.f_1);
+	STATS::_PLAYSTATS_QUIT_MODE(Global_4456448, &(Global_4456448.f_85822), iVar0, iVar1, Global_968149.f_1);
 	func_690();
 }
 

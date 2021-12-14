@@ -14442,7 +14442,7 @@ void func_506(bool bParam0)
 			Var14.f_5 = Local_185.f_29;
 			Var14.f_3 = iVar13;
 			Var14.f_2 = Local_185.f_26;
-			STATS::_0xDFBD93BF2943E29B(&Var14);
+			STATS::_PLAYSTATS_HEIST3_DRONE(&Var14);
 		}
 		else
 		{
@@ -14645,7 +14645,7 @@ void func_509(int iParam0, int iParam1)
 {
 	if (Global_2544210.f_337 > 0 || Global_2544210.f_337.f_1 > 0)
 	{
-		STATS::_0xD4367D310F079DB0(iParam0, iParam1, Global_2544210.f_337, Global_2544210.f_337.f_1);
+		STATS::_PLAYSTATS_SUB_WEAP(iParam0, iParam1, Global_2544210.f_337, Global_2544210.f_337.f_1);
 	}
 	func_416();
 }

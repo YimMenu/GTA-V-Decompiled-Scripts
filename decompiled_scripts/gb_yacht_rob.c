@@ -9578,7 +9578,7 @@ void func_387()
 
 void func_388(int iParam0)
 {
-	STATS::_0xD6CA58B3B53A0F22(&Global_1682449);
+	STATS::_PLAYSTATS_DJ_MISSION_ENDED(&Global_1682449);
 	func_389();
 }
 
@@ -9606,7 +9606,7 @@ void func_391(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xDFCDB14317A9B361(&Global_1682337);
+	STATS::_PLAYSTATS_HEIST4_PREP(&Global_1682337);
 	func_392();
 }
 
@@ -9625,7 +9625,7 @@ void func_393(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x53C31853EC9531FF(&Global_1682250);
+	STATS::_PLAYSTATS_HEIST3_PREP(&Global_1682250);
 	func_394();
 }
 
@@ -9800,7 +9800,7 @@ int func_407(int iParam0)
 
 void func_408(int iParam0)
 {
-	STATS::_0x2D7A9B577E72385E(&Global_1682037);
+	STATS::_PLAYSTATS_WAREHOUSE_MISSION_ENDED(&Global_1682037);
 	func_409();
 }
 
@@ -10168,7 +10168,7 @@ int func_434(int iParam0)
 
 void func_435(int iParam0)
 {
-	STATS::_0x830C3A44EB3F2CF9(&Global_1682091);
+	STATS::_PLAYSTATS_NIGHTCLUB_MISSION_ENDED(&Global_1682091);
 	func_436();
 }
 
@@ -13411,7 +13411,7 @@ void func_493(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x7D8BA05688AD64C7(&Global_1681794);
+	STATS::_PLAYSTATS_IMPEXP_MISSION_ENDED(&Global_1681794);
 	func_494();
 }
 
@@ -13483,7 +13483,7 @@ void func_495(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xBF371CD2B64212FD(&Global_1681740);
+	STATS::_PLAYSTATS_MISSION_ENDED(&Global_1681740);
 	func_496();
 }
 
@@ -13712,7 +13712,7 @@ int func_502(bool bParam0)
 
 void func_503(var uParam0)
 {
-	STATS::_0x316DB59CD14C1774(&Global_1682001);
+	STATS::_PLAYSTATS_BUSINESS_BATTLE_ENDED(&Global_1682001);
 	func_504();
 }
 
@@ -34996,7 +34996,7 @@ void func_906(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 int func_907()
@@ -37807,7 +37807,7 @@ void func_1006(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var15.f_14 = Global_1681722.f_15;
 			Var15.f_15 = Global_1681722.f_16;
 			Var15.f_16 = Global_1681722.f_17;
-			STATS::_0x8D8ADB562F09A245(&Var15);
+			STATS::_PLAYSTATS_BW_BOSS_ON_BOSS_DEATH_MATCH(&Var15);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_YACHT_ROB"))
 		{
@@ -37815,14 +37815,14 @@ void func_1006(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var32.f_14 = Global_1681722.f_15;
 			Var32.f_15 = iParam0;
 			Var32.f_16 = iParam1;
-			STATS::_0xD1A1EE3B4FA8E760(&Var32);
+			STATS::_PLAYSTATS_BW_YACHT_ATTACK(&Var32);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_HUNT_THE_BOSS"))
 		{
 			Var49 = { Var1 };
 			Var49.f_14 = Global_1681722.f_15;
 			Var49.f_15 = iParam0;
-			STATS::_0x88087EE1F28024AE(&Var49);
+			STATS::_PLAYSTATS_BW_HUNT_THE_BOSS(&Var49);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_SIGHTSEER"))
 		{
@@ -37830,14 +37830,14 @@ void func_1006(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var65.f_14 = Global_1681722.f_15;
 			Var65.f_15 = iParam0;
 			Var65.f_16 = iParam1;
-			STATS::_0xFCC228E07217FCAC(&Var65);
+			STATS::_PLAYSTATS_BW_SIGHTSEER(&Var65);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_ASSAULT"))
 		{
 			Var82 = { Var1 };
 			Var82.f_14 = Global_1681722.f_15;
 			Var82.f_15 = iParam0;
-			STATS::_0x678F86D8FC040BDB(&Var82);
+			STATS::_PLAYSTATS_BW_ASSAULT(&Var82);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_BELLYBEAST"))
 		{
@@ -37846,7 +37846,7 @@ void func_1006(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var98.f_15 = iParam0;
 			Var98.f_16 = iParam1;
 			Var98.f_17 = iParam2;
-			STATS::_0xA6F54BB2FFCA35EA(&Var98);
+			STATS::_PLAYSTATS_BW_BELLY_OF_THE_BEAST(&Var98);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_HEADHUNTER"))
 		{
@@ -37855,7 +37855,7 @@ void func_1006(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var116.f_15 = iParam1;
 			Var116.f_16 = iParam2;
 			Var116.f_17 = Global_1681722.f_15;
-			STATS::_0x5FF2C33B13A02A11(&Var116);
+			STATS::_PLAYSTATS_BW_HEADHUNTER(&Var116);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_FRAGILE_GOODS"))
 		{
@@ -37865,7 +37865,7 @@ void func_1006(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var134.f_17 = iParam2;
 			Var134.f_14 = iParam3;
 			Var134.f_18 = Global_1681722.f_15;
-			STATS::_0x282B6739644F4347(&Var134);
+			STATS::_PLAYSTATS_BW_FRAGILE_GOOODS(&Var134);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_AIRFREIGHT"))
 		{
@@ -37874,7 +37874,7 @@ void func_1006(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var153.f_15 = iParam1;
 			Var153.f_16 = iParam2;
 			Var153.f_17 = Global_1681722.f_15;
-			STATS::_0xF06A6F41CB445443(&Var153);
+			STATS::_PLAYSTATS_BW_AIR_FREIGHT(&Var153);
 		}
 	}
 	func_1007();
@@ -39835,7 +39835,7 @@ void func_1059(int iParam0)
 	int iVar0;
 	
 	iVar0 = Global_2405077.f_2689;
-	if ((AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0) && iParam0 == 0)
+	if ((AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0) && iParam0 == 0)
 	{
 		iVar0 = 255;
 	}
@@ -112180,7 +112180,7 @@ int func_1378(struct<3> Param0, struct<3> Param3, int iParam6, int iParam7, var 
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -119635,7 +119635,7 @@ int func_1555(int iParam0, float fParam1)
 				return 1;
 			}
 		}
-		else if (Var0.f_2 > (PATHFIND::_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION(Var0.x, Var0.f_1) + fParam1))
+		else if (Var0.f_2 > (PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.x, Var0.f_1) + fParam1))
 		{
 			return 1;
 		}
@@ -120351,7 +120351,7 @@ int func_1572(var uParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -126412,7 +126412,7 @@ void func_1654(var uParam0, bool bParam1)
 	{
 		func_1656(uParam0, 1, 1, 1, 1, 0);
 	}
-	fVar0 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(*uParam0, uParam0->f_1);
+	fVar0 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(*uParam0, uParam0->f_1);
 	fVar0 = (fVar0 + 100f);
 	if (uParam0->f_2 < fVar0)
 	{

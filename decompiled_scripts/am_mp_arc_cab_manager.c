@@ -2919,7 +2919,7 @@ void func_104(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 				TASK::_0x29682E2CCF21E9B5(iVar0, "Heist3_minigame_drill_vault", &Var13, Var10, 0f, 0f, fVar2, 2, 0.5f, 0, iVar3, 4);
 			}
 			ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
-			PHYSICS::_SET_ENTITY_PROOF_UNK(iVar0, true);
+			PHYSICS::_0x15F944730C832252(iVar0, true);
 			if (TASK::IS_TASK_MOVE_NETWORK_ACTIVE(iVar0))
 			{
 				TASK::_0x0FFB3C758E8C07B9(iVar0, true);
@@ -92183,7 +92183,7 @@ void func_813(int* iParam0, var uParam1, int iParam2, int iParam3, int iParam4, 
 	{
 		iVar0 = iParam4;
 	}
-	STATS::_0x2FA3173480008493(iParam2, iParam3, MISC::IS_BIT_SET(*iParam0, 0), iVar0, iParam5);
+	STATS::_PLAYSTATS_HEIST4_HACK(iParam2, iParam3, MISC::IS_BIT_SET(*iParam0, 0), iVar0, iParam5);
 }
 
 void func_814(int* iParam0, var uParam1, int iParam2)
@@ -96565,7 +96565,7 @@ void func_966(int* iParam0, var uParam1, int iParam2, int iParam3, int iParam4, 
 	{
 		iVar0 = iParam5;
 	}
-	STATS::_0x92FC0EEDFAC04A14(iParam2, iParam3, iParam4, MISC::IS_BIT_SET(*iParam0, 0), iVar0, iVar1);
+	STATS::_PLAYSTATS_HEIST3_HACK(iParam2, iParam3, iParam4, MISC::IS_BIT_SET(*iParam0, 0), iVar0, iVar1);
 }
 
 void func_967(var* uParam0, int* iParam1, int iParam2, int iParam3, bool bParam4)

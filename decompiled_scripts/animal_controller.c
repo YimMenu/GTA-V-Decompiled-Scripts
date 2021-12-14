@@ -536,7 +536,7 @@ void __EntryFunction__()
 								bLocal_1681 = MISC::IS_BIT_SET(Global_112293.f_26432.f_3, iLocal_1329);
 								func_607(iLocal_1354, 1);
 								PAD::SET_PAD_SHAKE(0, 200, 250);
-								STATS::_0x629526ABA383BCAA();
+								STATS::_STAT_MANAGER_SET_IMMUTABLE();
 								func_602(1);
 								PAD::DISABLE_CONTROL_ACTION(0, 27, true);
 								iLocal_53 = 2;
@@ -1490,7 +1490,7 @@ int func_18()
 			iLocal_130 = -1;
 			sLocal_1597 = "";
 			func_19(0, 1, 1, 0, 0, 0, 0);
-			STATS::_0x98E2BC1CA26287C3();
+			STATS::_STAT_MANAGER_SET_MUTABLE();
 			return 1;
 		}
 	}
@@ -106195,7 +106195,7 @@ void func_638()
 	}
 	if (!func_648(14) && !HUD::_HAS_DIRECTOR_MODE_BEEN_TRIGGERED())
 	{
-		STATS::_0x98E2BC1CA26287C3();
+		STATS::_STAT_MANAGER_SET_MUTABLE();
 	}
 	iLocal_1602 = -1;
 	AUDIO::STOP_AUDIO_SCENES();

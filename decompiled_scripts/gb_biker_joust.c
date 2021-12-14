@@ -33461,7 +33461,7 @@ void func_915(struct<14> Param0, int iParam14, int iParam15, int iParam16, int i
 		{
 			Var1 = { Param0 };
 			Var1.f_14 = iParam14;
-			STATS::_0x7B18DA61F6BAE9D5(&Var1);
+			STATS::_PLAYSTATS_BC_CAR_JACKING(&Var1);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_ROB_SHOP"))
 		{
@@ -33471,7 +33471,7 @@ void func_915(struct<14> Param0, int iParam14, int iParam15, int iParam16, int i
 			Var16.f_16 = iParam15;
 			Var16.f_17 = iParam16;
 			Var16.f_18 = iParam17;
-			STATS::_0x06EAF70AE066441E(&Var16);
+			STATS::_PLAYSTATS_BC_SMASH_AND_GRAB(&Var16);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_COLLECT_MONEY"))
 		{
@@ -33481,14 +33481,14 @@ void func_915(struct<14> Param0, int iParam14, int iParam15, int iParam16, int i
 			Var35.f_16 = iParam15;
 			Var35.f_17 = iParam16;
 			Var35.f_18 = iParam17;
-			STATS::_0x14EDA9EE27BD1626(&Var35);
+			STATS::_PLAYSTATS_BC_PROTECTION_RACKET(&Var35);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_FIVESTAR"))
 		{
 			Var54 = { Param0 };
 			Var54.f_14 = Global_1681722.f_14;
 			Var54.f_15 = iParam14;
-			STATS::_0x930F504203F561C9(&Var54);
+			STATS::_PLAYSTATS_BC_MOST_WANTED(&Var54);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_FINDERSKEEPERS"))
 		{
@@ -33496,13 +33496,13 @@ void func_915(struct<14> Param0, int iParam14, int iParam15, int iParam16, int i
 			Var70.f_14 = Global_1681722.f_14;
 			Var70.f_15 = iParam14;
 			Var70.f_16 = iParam15;
-			STATS::_0xE3261D791EB44ACB(&Var70);
+			STATS::_PLAYSTATS_BC_FINDERS_KEEPERS(&Var70);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_POINT_TO_POINT"))
 		{
 			Var87 = { Param0 };
 			Var87.f_14 = Global_1681722.f_14;
-			STATS::_0x73001E34F85137F8(&Var87);
+			STATS::_PLAYSTATS_BC_POINT_TO_POINT(&Var87);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_CASHING_OUT"))
 		{
@@ -33510,7 +33510,7 @@ void func_915(struct<14> Param0, int iParam14, int iParam15, int iParam16, int i
 			Var102.f_14 = iParam14;
 			Var102.f_15 = (SYSTEM::TO_FLOAT(iParam14) / SYSTEM::TO_FLOAT(iParam15));
 			Var102.f_16 = iParam16;
-			STATS::_0x53CAE13E9B426993(&Var102);
+			STATS::_PLAYSTATS_BC_CASHING(&Var102);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_SALVAGE"))
 		{
@@ -33518,7 +33518,7 @@ void func_915(struct<14> Param0, int iParam14, int iParam15, int iParam16, int i
 			Var119.f_14 = iParam14;
 			Var119.f_15 = iParam15;
 			Var119.f_16 = Global_1681722.f_14;
-			STATS::_0x7D36291161859389(&Var119);
+			STATS::_PLAYSTATS_BC_SALVAGE(&Var119);
 		}
 	}
 	func_916();
@@ -33987,7 +33987,7 @@ void func_921()
 
 void func_922(int iParam0)
 {
-	STATS::_0xD6CA58B3B53A0F22(&Global_1682449);
+	STATS::_PLAYSTATS_DJ_MISSION_ENDED(&Global_1682449);
 	func_923();
 }
 
@@ -34003,7 +34003,7 @@ void func_924(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xDFCDB14317A9B361(&Global_1682337);
+	STATS::_PLAYSTATS_HEIST4_PREP(&Global_1682337);
 	func_925();
 }
 
@@ -34022,7 +34022,7 @@ void func_926(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x53C31853EC9531FF(&Global_1682250);
+	STATS::_PLAYSTATS_HEIST3_PREP(&Global_1682250);
 	func_927();
 }
 
@@ -34072,7 +34072,7 @@ int func_931(int iParam0)
 
 void func_932(int iParam0)
 {
-	STATS::_0x2D7A9B577E72385E(&Global_1682037);
+	STATS::_PLAYSTATS_WAREHOUSE_MISSION_ENDED(&Global_1682037);
 	func_933();
 }
 
@@ -34131,7 +34131,7 @@ void func_933()
 
 void func_934(int iParam0)
 {
-	STATS::_0x830C3A44EB3F2CF9(&Global_1682091);
+	STATS::_PLAYSTATS_NIGHTCLUB_MISSION_ENDED(&Global_1682091);
 	func_935();
 }
 
@@ -36711,7 +36711,7 @@ void func_964(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x7D8BA05688AD64C7(&Global_1681794);
+	STATS::_PLAYSTATS_IMPEXP_MISSION_ENDED(&Global_1681794);
 	func_965();
 }
 
@@ -36783,7 +36783,7 @@ void func_966(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xBF371CD2B64212FD(&Global_1681740);
+	STATS::_PLAYSTATS_MISSION_ENDED(&Global_1681740);
 	func_967();
 }
 
@@ -36989,7 +36989,7 @@ int func_972(bool bParam0)
 
 void func_973(var uParam0)
 {
-	STATS::_0x316DB59CD14C1774(&Global_1682001);
+	STATS::_PLAYSTATS_BUSINESS_BATTLE_ENDED(&Global_1682001);
 	func_974();
 }
 

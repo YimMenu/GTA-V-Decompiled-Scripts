@@ -1295,7 +1295,7 @@ int func_51()
 		{
 			if (Local_242.f_10 == func_3())
 			{
-				iVar1 = NETWORK::_0xC434133D9BA52777(func_918(), &uVar0);
+				iVar1 = NETWORK::_NETWORK_GET_DESTROYER_OF_ENTITY(func_918(), &uVar0);
 				iVar2 = func_52();
 				if (iVar1 != func_3())
 				{
@@ -1345,7 +1345,7 @@ int func_52()
 			{
 				if (ENTITY::IS_ENTITY_DEAD(func_918(), false))
 				{
-					if (NETWORK::_0x83660B734994124D(iVar2, func_918(), &iVar1))
+					if (NETWORK::_NETWORK_GET_ASSISTED_DAMAGE_OF_DEAD_ENTITY(iVar2, func_918(), &iVar1))
 					{
 						if (iVar1 > iVar0)
 						{
@@ -1354,7 +1354,7 @@ int func_52()
 						}
 					}
 				}
-				else if (NETWORK::_NETWORK_GET_DESTROYER_OF_ENTITY(iVar2, func_918(), &iVar1))
+				else if (NETWORK::NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY(iVar2, func_918(), &iVar1))
 				{
 					if (iVar1 > iVar0)
 					{
@@ -1923,7 +1923,7 @@ int func_79()
 					VEHICLE::_0xBB2333BB87DDD87F(func_31(), 0);
 					if ((IntToFloat(func_82()) * 0.9f) > 900f)
 					{
-						VEHICLE::_0x5EE5632F47AE9695(func_31(), (IntToFloat(func_82()) * 0.9f));
+						VEHICLE::_OVERRIDE_OVERHEAT_HEALTH(func_31(), (IntToFloat(func_82()) * 0.9f));
 					}
 					func_80(func_31());
 				}
@@ -14975,7 +14975,7 @@ void func_445(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 int func_446()
@@ -30072,7 +30072,7 @@ int func_747(struct<3> Param0, struct<3> Param3, int iParam6, int iParam7, var u
 				{
 					if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Global_2405077.f_698))
 					{
-						if (NETWORK::_0x4DF7CFFF471A7FB1(Global_2405077.f_698))
+						if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Global_2405077.f_698))
 						{
 							if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Global_2405077.f_698))
 							{
@@ -39252,7 +39252,7 @@ void func_1009(var uParam0, var uParam1, var uParam2, int iParam3)
 			Var15.f_14 = Global_1681722.f_15;
 			Var15.f_15 = Global_1681722.f_16;
 			Var15.f_16 = Global_1681722.f_17;
-			STATS::_0x8D8ADB562F09A245(&Var15);
+			STATS::_PLAYSTATS_BW_BOSS_ON_BOSS_DEATH_MATCH(&Var15);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_YACHT_ROB"))
 		{
@@ -39260,14 +39260,14 @@ void func_1009(var uParam0, var uParam1, var uParam2, int iParam3)
 			Var32.f_14 = Global_1681722.f_15;
 			Var32.f_15 = uParam0;
 			Var32.f_16 = uParam1;
-			STATS::_0xD1A1EE3B4FA8E760(&Var32);
+			STATS::_PLAYSTATS_BW_YACHT_ATTACK(&Var32);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_HUNT_THE_BOSS"))
 		{
 			Var49 = { Var1 };
 			Var49.f_14 = Global_1681722.f_15;
 			Var49.f_15 = uParam0;
-			STATS::_0x88087EE1F28024AE(&Var49);
+			STATS::_PLAYSTATS_BW_HUNT_THE_BOSS(&Var49);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_SIGHTSEER"))
 		{
@@ -39275,14 +39275,14 @@ void func_1009(var uParam0, var uParam1, var uParam2, int iParam3)
 			Var65.f_14 = Global_1681722.f_15;
 			Var65.f_15 = uParam0;
 			Var65.f_16 = uParam1;
-			STATS::_0xFCC228E07217FCAC(&Var65);
+			STATS::_PLAYSTATS_BW_SIGHTSEER(&Var65);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_ASSAULT"))
 		{
 			Var82 = { Var1 };
 			Var82.f_14 = Global_1681722.f_15;
 			Var82.f_15 = uParam0;
-			STATS::_0x678F86D8FC040BDB(&Var82);
+			STATS::_PLAYSTATS_BW_ASSAULT(&Var82);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_BELLYBEAST"))
 		{
@@ -39291,7 +39291,7 @@ void func_1009(var uParam0, var uParam1, var uParam2, int iParam3)
 			Var98.f_15 = uParam0;
 			Var98.f_16 = uParam1;
 			Var98.f_17 = uParam2;
-			STATS::_0xA6F54BB2FFCA35EA(&Var98);
+			STATS::_PLAYSTATS_BW_BELLY_OF_THE_BEAST(&Var98);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_HEADHUNTER"))
 		{
@@ -39300,7 +39300,7 @@ void func_1009(var uParam0, var uParam1, var uParam2, int iParam3)
 			Var116.f_15 = uParam1;
 			Var116.f_16 = uParam2;
 			Var116.f_17 = Global_1681722.f_15;
-			STATS::_0x5FF2C33B13A02A11(&Var116);
+			STATS::_PLAYSTATS_BW_HEADHUNTER(&Var116);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_FRAGILE_GOODS"))
 		{
@@ -39310,7 +39310,7 @@ void func_1009(var uParam0, var uParam1, var uParam2, int iParam3)
 			Var134.f_17 = uParam2;
 			Var134.f_14 = iParam3;
 			Var134.f_18 = Global_1681722.f_15;
-			STATS::_0x282B6739644F4347(&Var134);
+			STATS::_PLAYSTATS_BW_FRAGILE_GOOODS(&Var134);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_AIRFREIGHT"))
 		{
@@ -39319,7 +39319,7 @@ void func_1009(var uParam0, var uParam1, var uParam2, int iParam3)
 			Var153.f_15 = uParam1;
 			Var153.f_16 = uParam2;
 			Var153.f_17 = Global_1681722.f_15;
-			STATS::_0xF06A6F41CB445443(&Var153);
+			STATS::_PLAYSTATS_BW_AIR_FREIGHT(&Var153);
 		}
 	}
 	func_1010();
@@ -39830,7 +39830,7 @@ void func_1015()
 
 void func_1016(int iParam0)
 {
-	STATS::_0xD6CA58B3B53A0F22(&Global_1682449);
+	STATS::_PLAYSTATS_DJ_MISSION_ENDED(&Global_1682449);
 	func_1017();
 }
 
@@ -39846,7 +39846,7 @@ void func_1018(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xDFCDB14317A9B361(&Global_1682337);
+	STATS::_PLAYSTATS_HEIST4_PREP(&Global_1682337);
 	func_1019();
 }
 
@@ -39865,7 +39865,7 @@ void func_1020(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x53C31853EC9531FF(&Global_1682250);
+	STATS::_PLAYSTATS_HEIST3_PREP(&Global_1682250);
 	func_1021();
 }
 
@@ -39915,7 +39915,7 @@ int func_1025(int iParam0)
 
 void func_1026(int iParam0)
 {
-	STATS::_0x2D7A9B577E72385E(&Global_1682037);
+	STATS::_PLAYSTATS_WAREHOUSE_MISSION_ENDED(&Global_1682037);
 	func_1027();
 }
 
@@ -39974,7 +39974,7 @@ void func_1027()
 
 void func_1028(int iParam0)
 {
-	STATS::_0x830C3A44EB3F2CF9(&Global_1682091);
+	STATS::_PLAYSTATS_NIGHTCLUB_MISSION_ENDED(&Global_1682091);
 	func_1029();
 }
 
@@ -42554,7 +42554,7 @@ void func_1058(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x7D8BA05688AD64C7(&Global_1681794);
+	STATS::_PLAYSTATS_IMPEXP_MISSION_ENDED(&Global_1681794);
 	func_1059();
 }
 
@@ -42626,7 +42626,7 @@ void func_1060(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xBF371CD2B64212FD(&Global_1681740);
+	STATS::_PLAYSTATS_MISSION_ENDED(&Global_1681740);
 	func_1061();
 }
 
@@ -42832,7 +42832,7 @@ int func_1066(bool bParam0)
 
 void func_1067(var uParam0)
 {
-	STATS::_0x316DB59CD14C1774(&Global_1682001);
+	STATS::_PLAYSTATS_BUSINESS_BATTLE_ENDED(&Global_1682001);
 	func_1068();
 }
 

@@ -1548,7 +1548,7 @@ int func_21(var uParam0, var uParam1)
 			}
 			else if (NETWORK::NETWORK_ENTITY_AREA_DOES_EXIST(Local_374.f_24))
 			{
-				if (NETWORK::_0x4DF7CFFF471A7FB1(Local_374.f_24))
+				if (NETWORK::NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(Local_374.f_24))
 				{
 					if (!NETWORK::NETWORK_ENTITY_AREA_IS_OCCUPIED(Local_374.f_24))
 					{
@@ -10778,7 +10778,7 @@ void func_286(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, -1180597171, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, -1180597171, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 int func_287()
@@ -12096,7 +12096,7 @@ void func_325(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 void func_326(int iParam0)

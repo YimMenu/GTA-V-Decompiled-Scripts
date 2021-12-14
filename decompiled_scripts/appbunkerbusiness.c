@@ -18012,7 +18012,7 @@ void func_401(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 	}
 	Var0.f_5 = Global_1371980[5];
 	Var0.f_6 = func_13(iVar7, iVar8);
-	STATS::_0xDAF80797FC534BEC(&Var0);
+	STATS::_PLAYSTATS_GUNRUN_RND(&Var0);
 }
 
 int func_402(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4, var uParam5, bool bParam6)

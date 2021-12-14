@@ -38501,9 +38501,9 @@ void func_348()
 				}
 				func_360();
 				PATHFIND::SET_ROADS_IN_ANGLED_AREA(Local_473, Local_476, fLocal_479, false, false, true);
-				MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_takedown_a"), false);
-				MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_takedown_heavy"), false);
-				MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_armed_takedown"), false);
+				MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_takedown_a"), false);
+				MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_takedown_heavy"), false);
+				MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_armed_takedown"), false);
 				sLocal_368[0] = "PAP4_ATTACK_1";
 				sLocal_368[1] = "PAP4_ATTACK_2";
 				sLocal_368[2] = "PAP4_ATTACK_3";
@@ -40317,9 +40317,9 @@ void func_407()
 		}
 	}
 	PLAYER::SET_WANTED_LEVEL_MULTIPLIER(1f);
-	MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_takedown_a"), true);
-	MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_takedown_heavy"), true);
-	MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_armed_takedown"), true);
+	MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_takedown_a"), true);
+	MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_takedown_heavy"), true);
+	MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_armed_takedown"), true);
 	STREAMING::REMOVE_ANIM_DICT(sLocal_377);
 	STREAMING::REMOVE_ANIM_DICT(sLocal_380);
 	if (TASK::GET_IS_WAYPOINT_RECORDING_LOADED(sLocal_480))

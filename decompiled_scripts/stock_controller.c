@@ -208,7 +208,7 @@ void func_4()
 	}
 	if (Global_59270)
 	{
-		if (!STATS::_0xB1D2BB1E1631F5B1())
+		if (!STATS::STAT_COMMUNITY_SYNCH_IS_PENDING())
 		{
 			iVar0 = func_5();
 			Global_59270 = 0;
@@ -248,7 +248,7 @@ int func_5()
 				if (Global_54397[iVar0 /*36*/].f_9 > 0f)
 				{
 					fVar3 = 0f;
-					STATS::_0xBED9F5693F34ED17(iVar2, 0, &(Global_54397[iVar0 /*36*/].f_33));
+					STATS::STAT_COMMUNITY_GET_HISTORY(iVar2, 0, &(Global_54397[iVar0 /*36*/].f_33));
 					Global_54397[iVar0 /*36*/].f_31 = Global_54397[iVar0 /*36*/].f_9;
 					Global_54397[iVar0 /*36*/].f_32 = Global_54397[iVar0 /*36*/].f_9;
 					fVar3 = (fVar3 + Global_54397[iVar0 /*36*/].f_33);
@@ -256,7 +256,7 @@ int func_5()
 					while (iVar4 < 4)
 					{
 						fVar5 = 0f;
-						STATS::_0xBED9F5693F34ED17(iVar2, iVar4 + 1, &fVar5);
+						STATS::STAT_COMMUNITY_GET_HISTORY(iVar2, iVar4 + 1, &fVar5);
 						if (fVar5 > Global_54397[iVar0 /*36*/].f_31)
 						{
 							Global_54397[iVar0 /*36*/].f_31 = fVar5;

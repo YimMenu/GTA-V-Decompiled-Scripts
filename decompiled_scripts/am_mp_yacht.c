@@ -16201,7 +16201,7 @@ void func_357()
 	{
 		if (iLocal_1754 == -1)
 		{
-			iLocal_1754 = WATER::_ADD_CURRENT_RISE((Var0.x - fVar3), (Var0.f_1 - fVar3), (Var0.x + fVar3), (Var0.f_1 + fVar3), 0.02f);
+			iLocal_1754 = WATER::ADD_EXTRA_CALMING_QUAD((Var0.x - fVar3), (Var0.f_1 - fVar3), (Var0.x + fVar3), (Var0.f_1 + fVar3), 0.02f);
 			WATER::_0x547237AA71AB44DE(0.02f);
 		}
 	}
@@ -16209,7 +16209,7 @@ void func_357()
 	{
 		if (iLocal_1754 != -1)
 		{
-			WATER::_REMOVE_CURRENT_RISE(iLocal_1754);
+			WATER::REMOVE_EXTRA_CALMING_QUAD(iLocal_1754);
 			WATER::_0x547237AA71AB44DE(1f);
 			iLocal_1754 = -1;
 		}
@@ -104035,7 +104035,7 @@ void func_740(int iParam0, int iParam1, bool bParam2)
 		{
 			if (!func_792(1))
 			{
-				STATS::_0xD1C9B92BDD3F151D(func_791(func_634()), func_790(func_634()), iParam0);
+				STATS::_PLAYSTATS_CHANGE_UNIFORM(func_791(func_634()), func_790(func_634()), iParam0);
 			}
 			if (iVar0 == 0)
 			{
@@ -127433,7 +127433,7 @@ void func_1187()
 	}
 	if (iLocal_1754 != -1)
 	{
-		WATER::_REMOVE_CURRENT_RISE(iLocal_1754);
+		WATER::REMOVE_EXTRA_CALMING_QUAD(iLocal_1754);
 		WATER::_0x547237AA71AB44DE(1f);
 	}
 	if (iLocal_1651 == iLocal_1650)

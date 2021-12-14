@@ -3296,9 +3296,9 @@ void func_106()
 	{
 		return;
 	}
-	HUD::_CLEAR_RACE_GALLERY_BLIPS();
+	HUD::CUSTOM_MINIMAP_CLEAR_BLIPS();
 	HUD::DISPLAY_RADAR(false);
-	HUD::_RACE_GALLERY_FULLSCREEN(false);
+	HUD::CUSTOM_MINIMAP_SET_ACTIVE(false);
 	HUD::SET_RADAR_ZOOM(0);
 	HUD::SET_GPS_CUSTOM_ROUTE_RENDER(false, 18, 30);
 	HUD::UNLOCK_MINIMAP_POSITION();
@@ -39088,13 +39088,13 @@ void func_307()
 void func_308()
 {
 	HUD::DISPLAY_RADAR(false);
-	HUD::_RACE_GALLERY_FULLSCREEN(false);
+	HUD::CUSTOM_MINIMAP_SET_ACTIVE(false);
 }
 
 void func_309()
 {
 	HUD::DISPLAY_RADAR(true);
-	HUD::_RACE_GALLERY_FULLSCREEN(true);
+	HUD::CUSTOM_MINIMAP_SET_ACTIVE(true);
 }
 
 bool func_310(int iParam0)
@@ -39160,8 +39160,8 @@ void func_313()
 		if (!func_345(Global_4718592.f_61833[iVar0 /*150*/]))
 		{
 			iVar1 = func_314(iVar0, -1, -1);
-			HUD::_RACE_GALLERY_NEXT_BLIP_SPRITE(iVar1);
-			HUD::_RACE_GALLERY_ADD_BLIP(Global_4718592.f_61833[iVar0 /*150*/]);
+			HUD::CUSTOM_MINIMAP_SET_BLIP_OBJECT(iVar1);
+			HUD::CUSTOM_MINIMAP_CREATE_BLIP(Global_4718592.f_61833[iVar0 /*150*/]);
 		}
 		iVar0++;
 	}
@@ -42052,8 +42052,8 @@ void func_346()
 				{
 					if (iVar0 != 0 && iVar0 != iVar1)
 					{
-						HUD::_RACE_GALLERY_NEXT_BLIP_SPRITE(146);
-						HUD::_RACE_GALLERY_ADD_BLIP(Global_4456448.f_71035[iVar0 /*3*/]);
+						HUD::CUSTOM_MINIMAP_SET_BLIP_OBJECT(146);
+						HUD::CUSTOM_MINIMAP_CREATE_BLIP(Global_4456448.f_71035[iVar0 /*3*/]);
 					}
 				}
 				iVar0++;
@@ -42061,13 +42061,13 @@ void func_346()
 		}
 		if (!func_345(Global_4456448.f_71035[0 /*3*/]))
 		{
-			HUD::_RACE_GALLERY_NEXT_BLIP_SPRITE(145);
-			HUD::_RACE_GALLERY_ADD_BLIP(Global_4456448.f_71035[0 /*3*/]);
+			HUD::CUSTOM_MINIMAP_SET_BLIP_OBJECT(145);
+			HUD::CUSTOM_MINIMAP_CREATE_BLIP(Global_4456448.f_71035[0 /*3*/]);
 		}
 		if (!func_345(Global_4456448.f_71035[iVar1 /*3*/]))
 		{
-			HUD::_RACE_GALLERY_NEXT_BLIP_SPRITE(144);
-			HUD::_RACE_GALLERY_ADD_BLIP(Global_4456448.f_71035[iVar1 /*3*/]);
+			HUD::CUSTOM_MINIMAP_SET_BLIP_OBJECT(144);
+			HUD::CUSTOM_MINIMAP_CREATE_BLIP(Global_4456448.f_71035[iVar1 /*3*/]);
 		}
 	}
 	else
@@ -42095,8 +42095,8 @@ void func_346()
 				{
 					if (iVar0 != 0 && iVar0 != iVar1)
 					{
-						HUD::_RACE_GALLERY_NEXT_BLIP_SPRITE(146);
-						HUD::_RACE_GALLERY_ADD_BLIP(Global_4456448.f_71035[iVar0 /*3*/]);
+						HUD::CUSTOM_MINIMAP_SET_BLIP_OBJECT(146);
+						HUD::CUSTOM_MINIMAP_CREATE_BLIP(Global_4456448.f_71035[iVar0 /*3*/]);
 					}
 				}
 				iVar0++;
@@ -42110,13 +42110,13 @@ void func_346()
 		iVar2 = 55;
 		if (!func_345(Global_4456448.f_71035[0 /*3*/]))
 		{
-			HUD::_RACE_GALLERY_NEXT_BLIP_SPRITE(144);
-			HUD::_RACE_GALLERY_ADD_BLIP(Global_4456448.f_71035[0 /*3*/]);
+			HUD::CUSTOM_MINIMAP_SET_BLIP_OBJECT(144);
+			HUD::CUSTOM_MINIMAP_CREATE_BLIP(Global_4456448.f_71035[0 /*3*/]);
 		}
 		if (!func_345(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Global_4456448.f_71035[0 /*3*/], func_347(Global_4456448.f_71035[0 /*3*/], Global_4456448.f_71035[1 /*3*/]), 0f, IntToFloat(iVar2), 0f)))
 		{
-			HUD::_RACE_GALLERY_NEXT_BLIP_SPRITE(145);
-			HUD::_RACE_GALLERY_ADD_BLIP(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Global_4456448.f_71035[0 /*3*/], func_347(Global_4456448.f_71035[0 /*3*/], Global_4456448.f_71035[1 /*3*/]), 0f, IntToFloat(iVar2), 0f));
+			HUD::CUSTOM_MINIMAP_SET_BLIP_OBJECT(145);
+			HUD::CUSTOM_MINIMAP_CREATE_BLIP(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Global_4456448.f_71035[0 /*3*/], func_347(Global_4456448.f_71035[0 /*3*/], Global_4456448.f_71035[1 /*3*/]), 0f, IntToFloat(iVar2), 0f));
 		}
 	}
 }
@@ -43357,7 +43357,7 @@ void func_417(int iParam0, var uParam1, bool bParam2, int iParam3, bool bParam4)
 	char* sVar4;
 	
 	iVar0 = SCRIPT::GET_ID_OF_THIS_THREAD();
-	if (NETWORK::_0x560B423D73015E77(iVar0) && NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
+	if (NETWORK::_NETWORK_IS_THREAD_ACTIVE(iVar0) && NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 	{
 		if (*uParam1 != Global_4456448.f_127873.f_2)
 		{

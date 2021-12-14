@@ -1636,7 +1636,7 @@ Vector3 func_56(int iParam0)
 	Var0 = { Local_77.f_2.f_68[iParam0 /*104*/].f_1 };
 	Var0.x = (Var0.x + MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 7.5f));
 	Var0.f_1 = (Var0.f_1 + MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 7.5f));
-	Var0.f_2 = (Var0.f_2 + (PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_POSITION(Var0.x, Var0.f_1) + 100f));
+	Var0.f_2 = (Var0.f_2 + (PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var0.x, Var0.f_1) + 100f));
 	return Var0;
 }
 

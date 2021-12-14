@@ -101284,10 +101284,10 @@ void func_617()
 			PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 			bLocal_1804 = false;
 			HUD::ALLOW_SONAR_BLIPS(true);
-			MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("AR_knife_low_kick_far"), false);
-			MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("AR_knife_low_kick_close"), false);
-			MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_low_kick_close"), false);
-			MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_low_kick_far"), false);
+			MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("AR_knife_low_kick_far"), false);
+			MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("AR_knife_low_kick_close"), false);
+			MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_low_kick_close"), false);
+			MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_low_kick_far"), false);
 			func_783(&(Local_676.f_58));
 			SYSTEM::SETTIMERA(0);
 			iLocal_2443 = 0;
@@ -102716,7 +102716,7 @@ void func_657(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 int func_658()
@@ -110945,10 +110945,10 @@ void func_851(int iParam0)
 	func_31(&(Local_676.f_674), 0);
 	func_865(iParam0);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("a_c_deer"));
-	MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("AR_knife_low_kick_far"), true);
-	MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("AR_knife_low_kick_close"), true);
-	MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_low_kick_close"), true);
-	MISC::_REMOVE_STEALTH_KILL(MISC::GET_HASH_KEY("ACT_low_kick_far"), true);
+	MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("AR_knife_low_kick_far"), true);
+	MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("AR_knife_low_kick_close"), true);
+	MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_low_kick_close"), true);
+	MISC::ACTION_MANAGER_ENABLE_ACTION(MISC::GET_HASH_KEY("ACT_low_kick_far"), true);
 	func_50();
 	VEHICLE::SET_RANDOM_TRAINS(true);
 	PED::REMOVE_SCENARIO_BLOCKING_AREA(iLocal_2457, false);

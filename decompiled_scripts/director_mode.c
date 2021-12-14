@@ -1010,9 +1010,9 @@ void __EntryFunction__()
 		}
 		if ((NETWORK::_0xD313DE83394AF134() == 0 && func_2() == 0) && func_1() == 0)
 		{
-			if (STATS::_0xBE3DB208333D9844())
+			if (STATS::_STAT_MANAGER_IS_MUTABLE())
 			{
-				STATS::_0x629526ABA383BCAA();
+				STATS::_STAT_MANAGER_SET_IMMUTABLE();
 			}
 		}
 		SYSTEM::WAIT(0);
@@ -150779,7 +150779,7 @@ void func_1210()
 	func_1229();
 	AUDIO::SET_AUDIO_FLAG("IsDirectorModeActive", true);
 	AUDIO::SET_AUDIO_FLAG("PoliceScannerDisabled", true);
-	STATS::_0x629526ABA383BCAA();
+	STATS::_STAT_MANAGER_SET_IMMUTABLE();
 	MISC::_SET_PLAYER_IS_IN_ANIMAL_FORM(true);
 	HUD::_SET_PLAYER_IS_IN_DIRECTOR_MODE(true);
 	PLAYER::SET_AUTO_GIVE_PARACHUTE_WHEN_ENTER_PLANE(PLAYER::PLAYER_ID(), false);
@@ -159710,7 +159710,7 @@ void func_1330(int iParam0, bool bParam1)
 			}
 			break;
 	}
-	STATS::_0x98E2BC1CA26287C3();
+	STATS::_STAT_MANAGER_SET_MUTABLE();
 	if (iParam0 != 2)
 	{
 		if (Global_112293.f_2361.f_539.f_2383[0] == 1)

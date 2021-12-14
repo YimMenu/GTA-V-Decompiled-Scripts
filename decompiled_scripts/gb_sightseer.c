@@ -25555,7 +25555,7 @@ void func_744()
 
 void func_745(int iParam0)
 {
-	STATS::_0xD6CA58B3B53A0F22(&Global_1682449);
+	STATS::_PLAYSTATS_DJ_MISSION_ENDED(&Global_1682449);
 	func_746();
 }
 
@@ -25583,7 +25583,7 @@ void func_748(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xDFCDB14317A9B361(&Global_1682337);
+	STATS::_PLAYSTATS_HEIST4_PREP(&Global_1682337);
 	func_749();
 }
 
@@ -25602,7 +25602,7 @@ void func_750(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x53C31853EC9531FF(&Global_1682250);
+	STATS::_PLAYSTATS_HEIST3_PREP(&Global_1682250);
 	func_751();
 }
 
@@ -25756,7 +25756,7 @@ int func_762(int iParam0)
 
 void func_763(int iParam0)
 {
-	STATS::_0x2D7A9B577E72385E(&Global_1682037);
+	STATS::_PLAYSTATS_WAREHOUSE_MISSION_ENDED(&Global_1682037);
 	func_764();
 }
 
@@ -26115,7 +26115,7 @@ int func_788(int iParam0)
 
 void func_789(int iParam0)
 {
-	STATS::_0x830C3A44EB3F2CF9(&Global_1682091);
+	STATS::_PLAYSTATS_NIGHTCLUB_MISSION_ENDED(&Global_1682091);
 	func_790();
 }
 
@@ -29246,7 +29246,7 @@ void func_838(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0x7D8BA05688AD64C7(&Global_1681794);
+	STATS::_PLAYSTATS_IMPEXP_MISSION_ENDED(&Global_1681794);
 	func_839();
 }
 
@@ -29318,7 +29318,7 @@ void func_840(int iParam0)
 	if (iParam0 == 0)
 	{
 	}
-	STATS::_0xBF371CD2B64212FD(&Global_1681740);
+	STATS::_PLAYSTATS_MISSION_ENDED(&Global_1681740);
 	func_841();
 }
 
@@ -29547,7 +29547,7 @@ int func_847(bool bParam0)
 
 void func_848(var uParam0)
 {
-	STATS::_0x316DB59CD14C1774(&Global_1682001);
+	STATS::_PLAYSTATS_BUSINESS_BATTLE_ENDED(&Global_1682001);
 	func_849();
 }
 
@@ -43145,7 +43145,7 @@ void func_1008(int iParam0, char* sParam1)
 	{
 		return;
 	}
-	STATS::_0x0077F15613D36993(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
+	STATS::_PLAYSTATS_NPC_PHONE(iParam0, 1654525105, MISC::GET_HASH_KEY(sParam1), 0);
 }
 
 int func_1009()
@@ -45946,7 +45946,7 @@ void func_1107(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var15.f_14 = Global_1681722.f_15;
 			Var15.f_15 = Global_1681722.f_16;
 			Var15.f_16 = Global_1681722.f_17;
-			STATS::_0x8D8ADB562F09A245(&Var15);
+			STATS::_PLAYSTATS_BW_BOSS_ON_BOSS_DEATH_MATCH(&Var15);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_YACHT_ROB"))
 		{
@@ -45954,14 +45954,14 @@ void func_1107(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var32.f_14 = Global_1681722.f_15;
 			Var32.f_15 = iParam0;
 			Var32.f_16 = iParam1;
-			STATS::_0xD1A1EE3B4FA8E760(&Var32);
+			STATS::_PLAYSTATS_BW_YACHT_ATTACK(&Var32);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_HUNT_THE_BOSS"))
 		{
 			Var49 = { Var1 };
 			Var49.f_14 = Global_1681722.f_15;
 			Var49.f_15 = iParam0;
-			STATS::_0x88087EE1F28024AE(&Var49);
+			STATS::_PLAYSTATS_BW_HUNT_THE_BOSS(&Var49);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_SIGHTSEER"))
 		{
@@ -45969,14 +45969,14 @@ void func_1107(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var65.f_14 = Global_1681722.f_15;
 			Var65.f_15 = iParam0;
 			Var65.f_16 = iParam1;
-			STATS::_0xFCC228E07217FCAC(&Var65);
+			STATS::_PLAYSTATS_BW_SIGHTSEER(&Var65);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_ASSAULT"))
 		{
 			Var82 = { Var1 };
 			Var82.f_14 = Global_1681722.f_15;
 			Var82.f_15 = iParam0;
-			STATS::_0x678F86D8FC040BDB(&Var82);
+			STATS::_PLAYSTATS_BW_ASSAULT(&Var82);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_BELLYBEAST"))
 		{
@@ -45985,7 +45985,7 @@ void func_1107(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var98.f_15 = iParam0;
 			Var98.f_16 = iParam1;
 			Var98.f_17 = iParam2;
-			STATS::_0xA6F54BB2FFCA35EA(&Var98);
+			STATS::_PLAYSTATS_BW_BELLY_OF_THE_BEAST(&Var98);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_HEADHUNTER"))
 		{
@@ -45994,7 +45994,7 @@ void func_1107(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var116.f_15 = iParam1;
 			Var116.f_16 = iParam2;
 			Var116.f_17 = Global_1681722.f_15;
-			STATS::_0x5FF2C33B13A02A11(&Var116);
+			STATS::_PLAYSTATS_BW_HEADHUNTER(&Var116);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_FRAGILE_GOODS"))
 		{
@@ -46004,7 +46004,7 @@ void func_1107(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var134.f_17 = iParam2;
 			Var134.f_14 = iParam3;
 			Var134.f_18 = Global_1681722.f_15;
-			STATS::_0x282B6739644F4347(&Var134);
+			STATS::_PLAYSTATS_BW_FRAGILE_GOOODS(&Var134);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(sVar0, "GB_AIRFREIGHT"))
 		{
@@ -46013,7 +46013,7 @@ void func_1107(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var153.f_15 = iParam1;
 			Var153.f_16 = iParam2;
 			Var153.f_17 = Global_1681722.f_15;
-			STATS::_0xF06A6F41CB445443(&Var153);
+			STATS::_PLAYSTATS_BW_AIR_FREIGHT(&Var153);
 		}
 	}
 	func_1108();

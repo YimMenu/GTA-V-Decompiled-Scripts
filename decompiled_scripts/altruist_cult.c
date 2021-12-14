@@ -7892,7 +7892,7 @@ void func_192()
 	}
 	else if (!iLocal_179)
 	{
-		if (AUDIO::_0x2DD39BF3E2F9C47F())
+		if (AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2())
 		{
 			AUDIO::TRIGGER_MUSIC_EVENT("AC_END");
 		}

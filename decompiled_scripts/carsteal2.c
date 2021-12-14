@@ -128261,7 +128261,7 @@ void func_951(var uParam0)
 			Var32 = { ((SYSTEM::SIN(-fVar13) * fVar30) * -5f), ((SYSTEM::COS(-fVar13) * fVar30) * 5f), 0f };
 			if (uParam0->f_67 != -1f || Var14.f_2 == -1f)
 			{
-				fVar35 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA(((Var3.x + Var32.x) - (fVar30 * 5f)), ((Var3.f_1 + Var32.f_1) - (fVar30 * 5f)), ((Var3.x + Var32.x) + (fVar30 * 5f)), ((Var3.f_1 + Var32.f_1) + (fVar30 * 5f)));
+				fVar35 = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA(((Var3.x + Var32.x) - (fVar30 * 5f)), ((Var3.f_1 + Var32.f_1) - (fVar30 * 5f)), ((Var3.x + Var32.x) + (fVar30 * 5f)), ((Var3.f_1 + Var32.f_1) + (fVar30 * 5f)));
 				if (fVar35 > (uParam0->f_475 / 10f))
 				{
 					fVar36 = fVar35;
@@ -128486,7 +128486,7 @@ void func_954(var uParam0)
 				fVar11 = (fVar22 * IntToFloat(iVar12));
 				fVar9 = ((SYSTEM::SIN(Var3.f_2) * fVar11) * -1f);
 				fVar10 = (SYSTEM::COS(Var3.f_2) * fVar11);
-				fVar21 = PATHFIND::_GET_HEIGHTMAP_TOP_Z_FOR_AREA(((Var0.x + fVar9) - 3f), ((Var0.f_1 + fVar10) - 3f), ((Var0.x + fVar9) + 3f), ((Var0.f_1 + fVar10) + 3f));
+				fVar21 = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA(((Var0.x + fVar9) - 3f), ((Var0.f_1 + fVar10) - 3f), ((Var0.x + fVar9) + 3f), ((Var0.f_1 + fVar10) + 3f));
 				fVar21 = (fVar21 - 20f);
 				fVar20 = (Var0.f_2 + (SYSTEM::SIN(Var3.x) * (50f * IntToFloat(iVar12))));
 				if (uParam0->f_45)

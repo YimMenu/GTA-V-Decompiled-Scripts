@@ -2154,7 +2154,7 @@ void func_85()
 	{
 		Var0.f_10 = 0;
 	}
-	STATS::_0xF9096193DF1F99D4(&Var0);
+	STATS::_PLAYSTATS_ARCADE_CABINET(&Var0);
 }
 
 int func_86(int iParam0)
@@ -6385,7 +6385,7 @@ void func_211()
 	if (func_4(PLAYER::PLAYER_PED_ID()))
 	{
 		ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
-		PHYSICS::_SET_ENTITY_PROOF_UNK(PLAYER::PLAYER_PED_ID(), false);
+		PHYSICS::_0x15F944730C832252(PLAYER::PLAYER_PED_ID(), false);
 	}
 	if (TASK::IS_TASK_MOVE_NETWORK_ACTIVE(PLAYER::PLAYER_PED_ID()))
 	{
@@ -7059,7 +7059,7 @@ int func_240(struct<18> Param0)
 		TASK::_0x29682E2CCF21E9B5(PLAYER::PLAYER_PED_ID(), "Heist_Arcade_Strength_Hammer", &Var14, Var11, Var8, 2, 0.5f, 0, iVar7, 4);
 		PED::PLAY_FACIAL_ANIM(PLAYER::PLAYER_PED_ID(), func_216(0), iVar7);
 		ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
-		PHYSICS::_SET_ENTITY_PROOF_UNK(PLAYER::PLAYER_PED_ID(), true);
+		PHYSICS::_0x15F944730C832252(PLAYER::PLAYER_PED_ID(), true);
 		if (ENTITY::DOES_ENTITY_EXIST(Param0.f_2[0]) && NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(Param0.f_2[0]))
 		{
 			ENTITY::FREEZE_ENTITY_POSITION(Param0.f_2[0], true);
@@ -9118,7 +9118,7 @@ void func_332(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 				TASK::_0x29682E2CCF21E9B5(iVar0, "Heist3_minigame_drill_vault", &Var13, Var10, 0f, 0f, fVar2, 2, 0.5f, 0, iVar3, 4);
 			}
 			ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
-			PHYSICS::_SET_ENTITY_PROOF_UNK(iVar0, true);
+			PHYSICS::_0x15F944730C832252(iVar0, true);
 			if (TASK::IS_TASK_MOVE_NETWORK_ACTIVE(iVar0))
 			{
 				TASK::_0x0FFB3C758E8C07B9(iVar0, true);

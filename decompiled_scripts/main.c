@@ -118741,7 +118741,7 @@ int func_1030(int iParam0, bool bParam1, int iParam2, bool bParam3, int iParam4,
 			}
 			if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() == 0 || (iParam2 && STREAMING::GET_PLAYER_SWITCH_STATE() > 8))
 			{
-				if (((((!Global_2405077.f_2686 == -1 && !Global_1574419) && !Global_2405077.f_2686 >= 254) && !func_1033()) && !MISC::IS_BIT_SET(Global_4456448.f_134001, 0)) && !(AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0))
+				if (((((!Global_2405077.f_2686 == -1 && !Global_1574419) && !Global_2405077.f_2686 >= 254) && !func_1033()) && !MISC::IS_BIT_SET(Global_4456448.f_134001, 0)) && !(AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0))
 				{
 					if (!func_1032(&Global_2463465))
 					{
@@ -125594,7 +125594,7 @@ void func_1164(int iParam0)
 	int iVar0;
 	
 	iVar0 = Global_2405077.f_2689;
-	if ((AUDIO::_0x2DD39BF3E2F9C47F() && Global_2405077.f_2687 == 0) && iParam0 == 0)
+	if ((AUDIO::_AUDIO_IS_SCRIPTED_MUSIC_PLAYING_2() && Global_2405077.f_2687 == 0) && iParam0 == 0)
 	{
 		iVar0 = 255;
 	}
