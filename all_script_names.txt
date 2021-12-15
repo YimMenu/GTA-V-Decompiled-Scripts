@@ -13,6 +13,7 @@ agency_prep2amb
 aicover_test
 ainewengland_test
 altruist_cult
+am_agency_suv
 am_airstrike
 am_ammo_drop
 am_arena_shp
@@ -94,11 +95,13 @@ am_mp_creator_aircraft
 am_mp_creator_trailer
 am_mp_defunct_base
 am_mp_drone
+am_mp_fixer_hq
 am_mp_garage_control
 am_mp_hacker_truck
 am_mp_hangar
 am_mp_ie_warehouse
 am_mp_island
+am_mp_music_studio
 am_mp_nightclub
 am_mp_orbital_cannon
 am_mp_peds
@@ -151,6 +154,7 @@ appcontacts
 appcovertops
 appemail
 appextraction
+appfixersecurity
 apphackertruck
 apphs_sleep
 appimportexport
@@ -383,6 +387,10 @@ finalea
 finaleb
 finalec1
 finalec2
+fixer_hq_carmod
+fixer_hq_seating_op_floor
+fixer_hq_seating_pq
+fixer_hq_seating
 floating_help_controller
 flow_autoplay
 flow_controller
@@ -399,11 +407,15 @@ fm_content_golden_gun
 fm_content_island_dj
 fm_content_island_heist
 fm_content_movie_props
+fm_content_payphone_hit
+fm_content_payphone_intro
 fm_content_phantom_car
+fm_content_security_contract
 fm_content_sightseeing
 fm_content_slasher
 fm_content_tuner_robbery
 fm_content_vehicle_list
+fm_content_vip_contract_1
 fm_deathmatch_controler
 fm_deathmatch_creator
 fm_hideout_controler
@@ -664,6 +676,9 @@ mptestbed
 mrsphilips1
 mrsphilips2
 murdermystery
+music_studio_seating_external
+music_studio_seating
+music_studio_smoking
 navmeshtest
 net_activity_creator_ui
 net_apartment_activity_light
@@ -948,6 +963,7 @@ tuner_property_carmod
 tuner_sandbox_activity
 turret_cam_script
 ufo
+ugc_global_registration_2
 ugc_global_registration
 underwaterpickups
 utvc
