@@ -39,7 +39,7 @@ void __EntryFunction__()
 	iLocal_17 = -1;
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (MISC::IS_BIT_SET(Global_1391771, 1))
+		if (MISC::IS_BIT_SET(Global_1656872, 1))
 		{
 			func_29();
 		}
@@ -178,23 +178,23 @@ struct<5> func_3(int iParam0, struct<3> Param1, int iParam4, int iParam5, int iP
 	iVar11 = PLAYER::NETWORK_PLAYER_ID_TO_INT();
 	if (bParam7)
 	{
-		Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_12 = SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME();
-		Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::_NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT();
-		if (Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 == 0)
+		Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_12 = SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME();
+		Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::_NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT();
+		if (Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_13 == 0)
 		{
-			Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT();
-			Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_11 = 1;
+			Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_13 = NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT();
+			Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_11 = 1;
 		}
 		else
 		{
-			Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_11 = 2;
+			Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_11 = 2;
 		}
 	}
-	Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/] = { Var6 };
-	Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_5 = { Param1 };
-	Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_8 = iParam4;
-	Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_9 = iParam5;
-	Global_1649982[iVar11 /*256*/].f_94.f_21[iVar5 /*14*/].f_10 = iParam6;
+	Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/] = { Var6 };
+	Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_5 = { Param1 };
+	Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_8 = iParam4;
+	Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_9 = iParam5;
+	Global_1912810[iVar11 /*257*/].f_94.f_21[iVar5 /*14*/].f_10 = iParam6;
 	return Var6;
 }
 
@@ -209,7 +209,7 @@ int func_4(var uParam0)
 	iVar0 = 0;
 	while (iVar0 < 10)
 	{
-		if (func_5(uParam0, &(Global_2421635.f_2386[iVar0 /*16*/])))
+		if (func_5(uParam0, &(Global_2683848.f_2452[iVar0 /*16*/])))
 		{
 			return iVar0;
 		}
@@ -267,7 +267,7 @@ int func_9(int iParam0)
 	iVar1 = 0;
 	while (iVar1 < 10)
 	{
-		if (!func_7(&(Global_1649982[iParam0 /*256*/].f_94.f_21[iVar1 /*14*/])))
+		if (!func_7(&(Global_1912810[iParam0 /*257*/].f_94.f_21[iVar1 /*14*/])))
 		{
 			iVar0 = iVar1;
 		}
@@ -288,7 +288,7 @@ int func_10()
 	iVar1 = 0;
 	while (iVar1 < 10)
 	{
-		if (!func_7(&(Global_2421635.f_2386[iVar1 /*16*/])))
+		if (!func_7(&(Global_2683848.f_2452[iVar1 /*16*/])))
 		{
 			iVar0 = iVar1;
 		}
@@ -322,7 +322,7 @@ int func_11(int iParam0)
 
 var func_12()
 {
-	return Global_262145.f_30416;
+	return Global_262145.f_30571;
 }
 
 int func_13(int iParam0, int iParam1)
@@ -353,7 +353,7 @@ int func_14()
 	var uVar0;
 	
 	func_22(&uVar0);
-	if (Global_1312878 == 0)
+	if (Global_1575022 == 0)
 	{
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
@@ -364,7 +364,7 @@ int func_14()
 	{
 		return 1;
 	}
-	if (Global_2465749)
+	if (Global_2727476)
 	{
 		return 1;
 	}
@@ -414,7 +414,7 @@ int func_15()
 
 int func_16()
 {
-	switch (Global_2465851)
+	switch (Global_2727578)
 	{
 		case 0:
 			return joaat("freemode");
@@ -426,12 +426,12 @@ int func_16()
 
 int func_17()
 {
-	return Global_31345;
+	return Global_31505;
 }
 
 bool func_18()
 {
-	return Global_2453009.f_698;
+	return Global_2714627.f_698;
 }
 
 int func_19(int iParam0)
@@ -445,12 +445,12 @@ int func_19(int iParam0)
 
 bool func_20()
 {
-	return Global_2463497;
+	return Global_2725224;
 }
 
 bool func_21()
 {
-	return Global_2453009.f_693;
+	return Global_2714627.f_693;
 }
 
 void func_22(var uParam0)
@@ -469,13 +469,13 @@ void func_22(var uParam0)
 			SCRIPT::GET_EVENT_DATA(1, iVar0, &iVar2, 2);
 			switch (iVar2)
 			{
-				case -771178269:
+				case -1537646326:
 					func_23(iVar0);
 					break;
 				
-				case -1320260596:
+				case 801199324:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
-					if (Var4.f_2 == -2138305833)
+					if (Var4.f_2 == 848999011)
 					{
 						*uParam0 = 1;
 					}
@@ -564,7 +564,7 @@ int func_25(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2441237.f_3[iVar0])
+				if (!Global_2703656.f_3[iVar0])
 				{
 					return 0;
 				}
@@ -648,7 +648,7 @@ int func_26(int iParam0, int iParam1, bool bParam2)
 	}
 	if (iParam1 > -1)
 	{
-		Global_1312519 = iVar0;
+		Global_1574663 = iVar0;
 	}
 	if (iParam0 == 0)
 	{
@@ -680,7 +680,7 @@ int func_26(int iParam0, int iParam1, bool bParam2)
 
 bool func_27()
 {
-	return Global_1312878;
+	return Global_1575022;
 }
 
 void func_28()

@@ -175,7 +175,7 @@ int func_3()
 
 var func_4()
 {
-	return Global_1630816[PLAYER::PLAYER_ID() /*597*/].f_11;
+	return Global_1893548[PLAYER::PLAYER_ID() /*600*/].f_11;
 }
 
 bool func_5(int iParam0, bool bParam1)
@@ -187,16 +187,16 @@ bool func_5(int iParam0, bool bParam1)
 			return 0;
 		}
 	}
-	return Global_1630816[iParam0 /*597*/].f_11 != func_3();
+	return Global_1893548[iParam0 /*600*/].f_11 != func_3();
 }
 
 int func_6(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		if (Global_1630816[iParam0 /*597*/].f_11 != func_3())
+		if (Global_1893548[iParam0 /*600*/].f_11 != func_3())
 		{
-			return Global_1630816[iParam0 /*597*/].f_11 == iParam0;
+			return Global_1893548[iParam0 /*600*/].f_11 == iParam0;
 		}
 	}
 	return 0;
@@ -221,7 +221,7 @@ int func_8(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		return Global_1590908[iParam0 /*874*/].f_267.f_266;
+		return Global_1853128[iParam0 /*888*/].f_267.f_274;
 	}
 	return 0;
 }
@@ -230,7 +230,7 @@ int func_9(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		return Global_1590908[iParam0 /*874*/].f_267.f_266 != 0;
+		return Global_1853128[iParam0 /*888*/].f_267.f_274 != 0;
 	}
 	return 0;
 }
@@ -814,7 +814,7 @@ void func_21()
 
 var func_22()
 {
-	return Global_2359302.f_2;
+	return Global_2621446.f_2;
 }
 
 int func_23(int iParam0)
@@ -830,7 +830,7 @@ int func_23(int iParam0)
 			return 1;
 		}
 	}
-	if (MISC::IS_BIT_SET(Global_2426865[iParam0 /*449*/].f_199, 2))
+	if (MISC::IS_BIT_SET(Global_2689156[iParam0 /*453*/].f_199, 2))
 	{
 		return 1;
 	}
@@ -839,7 +839,7 @@ int func_23(int iParam0)
 
 bool func_24()
 {
-	return MISC::IS_BIT_SET(Global_2359302, 3);
+	return MISC::IS_BIT_SET(Global_2621446, 3);
 }
 
 bool func_25(int iParam0, int iParam1)
@@ -852,7 +852,7 @@ bool func_25(int iParam0, int iParam1)
 	}
 	else
 	{
-		bVar0 = Global_1590908[iParam0 /*874*/].f_205 == 8;
+		bVar0 = Global_1853128[iParam0 /*888*/].f_205 == 8;
 	}
 	if (iParam1 == 1)
 	{
@@ -874,7 +874,7 @@ int func_26(int iParam0, bool bParam1)
 	{
 		iVar1 = func_27();
 	}
-	if (Global_1312882[iVar1] == 1)
+	if (Global_1575026[iVar1] == 1)
 	{
 		if (bParam1)
 		{
@@ -883,7 +883,7 @@ int func_26(int iParam0, bool bParam1)
 	}
 	else
 	{
-		iVar0 = Global_1312757[iVar1];
+		iVar0 = Global_1574901[iVar1];
 		if (bParam1)
 		{
 		}
@@ -893,6 +893,6 @@ int func_26(int iParam0, bool bParam1)
 
 int func_27()
 {
-	return Global_1312763;
+	return Global_1574907;
 }
 

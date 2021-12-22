@@ -11,7 +11,7 @@ void __EntryFunction__()
 		func_10();
 	}
 	STREAMING::SET_GAME_PAUSES_FOR_STREAMING(false);
-	MISC::CLEAR_BIT(&(Global_112293.f_10014.f_25), 1);
+	MISC::CLEAR_BIT(&(Global_112915.f_10016.f_25), 1);
 	func_7();
 	SCRIPT::SET_NO_LOADING_SCREEN(true);
 	if (!CAM::IS_SCREEN_FADED_OUT())
@@ -34,7 +34,7 @@ void __EntryFunction__()
 	while (!CUTSCENE::IS_CUTSCENE_PLAYING())
 	{
 		func_7();
-		if (!MISC::IS_BIT_SET(Global_112293.f_10014.f_25, 1))
+		if (!MISC::IS_BIT_SET(Global_112915.f_10016.f_25, 1))
 		{
 			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_0, 255, 255, 255, 255, 0);
 			if (!iLocal_2)
@@ -48,7 +48,7 @@ void __EntryFunction__()
 			}
 			else if (MISC::GET_GAME_TIMER() > iLocal_1)
 			{
-				MISC::SET_BIT(&(Global_112293.f_10014.f_25), 1);
+				MISC::SET_BIT(&(Global_112915.f_10016.f_25), 1);
 				if (MISC::_0x6FDDF453C0C756EC() || MISC::IS_PC_VERSION())
 				{
 					func_4(1, 1);
@@ -67,7 +67,7 @@ void __EntryFunction__()
 
 void func_1()
 {
-	Global_99409 = 1;
+	Global_100013 = 1;
 }
 
 int func_2()
@@ -76,18 +76,18 @@ int func_2()
 	{
 		return 0;
 	}
-	if (Global_99409.f_8)
+	if (Global_100013.f_8)
 	{
-		if (Global_99409.f_10 > 0)
+		if (Global_100013.f_10 > 0)
 		{
 			return 0;
 		}
 	}
-	else if (Global_99409.f_10 > 1)
+	else if (Global_100013.f_10 > 1)
 	{
 		return 0;
 	}
-	Global_99409.f_10++;
+	Global_100013.f_10++;
 	return 1;
 }
 
@@ -97,13 +97,13 @@ bool func_3(bool bParam0)
 	{
 		return 1;
 	}
-	return MISC::IS_BIT_SET(Global_77496, 0);
+	return MISC::IS_BIT_SET(Global_78100, 0);
 }
 
 void func_4(int iParam0, int iParam1)
 {
-	Global_99409.f_7 = iParam0;
-	Global_99409.f_8 = iParam1;
+	Global_100013.f_7 = iParam0;
+	Global_100013.f_8 = iParam1;
 }
 
 void func_5(char* sParam0)
@@ -147,12 +147,12 @@ void func_8()
 
 void func_9()
 {
-	Global_22531.f_134 = 1;
+	Global_22691.f_134 = 1;
 }
 
 void func_10()
 {
-	MISC::SET_BIT(&(Global_112293.f_10014.f_25), 1);
+	MISC::SET_BIT(&(Global_112915.f_10016.f_25), 1);
 	if (iLocal_0 != 0)
 	{
 		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_0);

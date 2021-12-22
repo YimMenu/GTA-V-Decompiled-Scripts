@@ -141,7 +141,7 @@ void func_3(int iParam0)
 	int iVar0;
 	
 	iVar0 = *iParam0;
-	if (((func_5() && func_4(iVar0)) && iVar0 != 245) && NETWORK::NETWORK_CAN_BAIL())
+	if (((func_5() && func_4(iVar0)) && iVar0 != 246) && NETWORK::NETWORK_CAN_BAIL())
 	{
 		NETWORK::NETWORK_BAIL(0, 1, 0);
 	}
@@ -149,20 +149,20 @@ void func_3(int iParam0)
 
 bool func_4(int iParam0)
 {
-	return (((iParam0 == 246 || iParam0 == 247) || iParam0 == 248) || iParam0 == 245);
+	return (((iParam0 == 247 || iParam0 == 248) || iParam0 == 249) || iParam0 == 246);
 }
 
 bool func_5()
 {
-	return Global_1590908[PLAYER::PLAYER_ID() /*874*/].f_192 != 0;
+	return Global_1853128[PLAYER::PLAYER_ID() /*888*/].f_192 != 0;
 }
 
 int func_6(int iParam0)
 {
-	if (Global_31623.f_61 < 20)
+	if (Global_31783.f_61 < 20)
 	{
-		Global_31623[Global_31623.f_61 /*3*/] = { *iParam0 };
-		Global_31623.f_61++;
+		Global_31783[Global_31783.f_61 /*3*/] = { *iParam0 };
+		Global_31783.f_61++;
 		return 1;
 	}
 	return 0;
@@ -172,9 +172,9 @@ int func_7(int iParam0, var uParam1)
 {
 	*uParam1 = 0;
 	*uParam1 = 0;
-	while (*uParam1 < Global_31623.f_61)
+	while (*uParam1 < Global_31783.f_61)
 	{
-		if (Global_31623[*uParam1 /*3*/] == *iParam0 && Global_31623[*uParam1 /*3*/].f_2 == iParam0->f_2)
+		if (Global_31783[*uParam1 /*3*/] == *iParam0 && Global_31783[*uParam1 /*3*/].f_2 == iParam0->f_2)
 		{
 			return 1;
 		}
@@ -187,7 +187,7 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3)
 {
 	var uVar0;
 	
-	if (((iParam2 == 245 || iParam2 == 246) || iParam2 == 247) || iParam2 == 248)
+	if (((iParam2 == 246 || iParam2 == 247) || iParam2 == 248) || iParam2 == 249)
 	{
 		if (SCRIPT::GET_EVENT_DATA(iParam0, iParam1, &uVar0, 1))
 		{

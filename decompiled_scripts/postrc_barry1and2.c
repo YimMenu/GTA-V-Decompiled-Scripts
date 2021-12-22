@@ -196,36 +196,36 @@ void func_4(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4,
 			iParam3 = 7;
 		}
 	}
-	MISC::SET_BIT(&Global_19991, 0);
-	Global_21128 = iParam3;
-	StringCopy(&Global_21115, sParam2, 24);
+	MISC::SET_BIT(&Global_20151, 0);
+	Global_21288 = iParam3;
+	StringCopy(&Global_21275, sParam2, 24);
 }
 
 void func_5(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5)
 {
-	Global_20579 = { *uParam0 };
-	Global_6984 = iParam1;
-	StringCopy(&Global_21195, sParam2, 24);
-	Global_22114 = iParam5;
+	Global_20739 = { *uParam0 };
+	Global_7140 = iParam1;
+	StringCopy(&Global_21355, sParam2, 24);
+	Global_22274 = iParam5;
 	if (iParam3 == 0)
 	{
-		Global_22112 = 1;
-		Global_22110 = 0;
+		Global_22272 = 1;
+		Global_22270 = 0;
 	}
 	else
 	{
-		Global_22112 = 0;
-		Global_22110 = 1;
+		Global_22272 = 0;
+		Global_22270 = 1;
 	}
 	if (iParam4 == 0)
 	{
-		Global_22113 = 1;
-		Global_22111 = 0;
+		Global_22273 = 1;
+		Global_22271 = 0;
 	}
 	else
 	{
-		Global_22113 = 0;
-		Global_22111 = 1;
+		Global_22273 = 0;
+		Global_22271 = 1;
 	}
 }
 
@@ -273,7 +273,7 @@ void func_7(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, i
 	(uParam0[iParam1 /*10*/])->f_7 = 1;
 	(uParam0[iParam1 /*10*/])->f_8 = iParam4;
 	(uParam0[iParam1 /*10*/])->f_9 = iParam5;
-	if (!Global_77248)
+	if (!Global_77852)
 	{
 		if (!PED::IS_PED_INJURED(iParam2))
 		{
@@ -326,7 +326,7 @@ float func_8(int iParam0, int iParam1, bool bParam2)
 
 int func_9()
 {
-	if (Global_21125 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
+	if (Global_21285 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 	{
 		return 1;
 	}
@@ -378,7 +378,7 @@ void func_12()
 		PED::SET_PED_MONEY(iLocal_43, 0);
 		PED::SET_PED_CAN_BE_TARGETTED(iLocal_43, false);
 		PED::SET_PED_NAME_DEBUG(iLocal_43, "POSTBARRY");
-		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_43, 1862763509);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_43, joaat("player"));
 		ENTITY::SET_ENTITY_COLLISION(iLocal_43, false, false);
 		ENTITY::FREEZE_ENTITY_POSITION(iLocal_43, true);
 		ENTITY::SET_ENTITY_COORDS(iLocal_43, Local_52, true, false, false, true);
@@ -445,7 +445,7 @@ int func_14(var uParam0, int iParam1)
 		iVar0 = 7;
 		return 0;
 	}
-	Global_95204[(iVar0 - 3)] = uParam0;
+	Global_95808[(iVar0 - 3)] = uParam0;
 	return 1;
 }
 
@@ -463,7 +463,7 @@ int func_15(int iParam0)
 
 var func_16(int iParam0)
 {
-	return Global_1878[iParam0 /*29*/];
+	return Global_1918[iParam0 /*29*/];
 }
 
 bool func_17(int iParam0)

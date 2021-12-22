@@ -190,7 +190,7 @@ int func_7()
 	var uVar0;
 	
 	func_15(&uVar0);
-	if (Global_1312878 == 0)
+	if (Global_1575022 == 0)
 	{
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
@@ -201,7 +201,7 @@ int func_7()
 	{
 		return 1;
 	}
-	if (Global_2465749)
+	if (Global_2727476)
 	{
 		return 1;
 	}
@@ -251,7 +251,7 @@ int func_8()
 
 int func_9()
 {
-	switch (Global_2465851)
+	switch (Global_2727578)
 	{
 		case 0:
 			return joaat("freemode");
@@ -263,12 +263,12 @@ int func_9()
 
 int func_10()
 {
-	return Global_31345;
+	return Global_31505;
 }
 
 bool func_11()
 {
-	return Global_2453009.f_698;
+	return Global_2714627.f_698;
 }
 
 int func_12(int iParam0)
@@ -282,12 +282,12 @@ int func_12(int iParam0)
 
 bool func_13()
 {
-	return Global_2463497;
+	return Global_2725224;
 }
 
 bool func_14()
 {
-	return Global_2453009.f_693;
+	return Global_2714627.f_693;
 }
 
 void func_15(var uParam0)
@@ -306,13 +306,13 @@ void func_15(var uParam0)
 			SCRIPT::GET_EVENT_DATA(1, iVar0, &iVar2, 2);
 			switch (iVar2)
 			{
-				case -771178269:
+				case -1537646326:
 					func_16(iVar0);
 					break;
 				
-				case -1320260596:
+				case 801199324:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
-					if (Var4.f_2 == -2138305833)
+					if (Var4.f_2 == 848999011)
 					{
 						*uParam0 = 1;
 					}
@@ -401,7 +401,7 @@ int func_18(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2441237.f_3[iVar0])
+				if (!Global_2703656.f_3[iVar0])
 				{
 					return 0;
 				}
@@ -421,7 +421,7 @@ void func_20()
 {
 	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, -1);
 	func_22(0, -1, 0);
-	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&uLocal_35, 21);
+	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&uLocal_35, 21, 0);
 	if (!func_21())
 	{
 		func_3();
@@ -539,7 +539,7 @@ int func_22(int iParam0, int iParam1, bool bParam2)
 	}
 	if (iParam1 > -1)
 	{
-		Global_1312519 = iVar0;
+		Global_1574663 = iVar0;
 	}
 	if (iParam0 == 0)
 	{
@@ -571,6 +571,6 @@ int func_22(int iParam0, int iParam1, bool bParam2)
 
 bool func_23()
 {
-	return Global_1312878;
+	return Global_1575022;
 }
 

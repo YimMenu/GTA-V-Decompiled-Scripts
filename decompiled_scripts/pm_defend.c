@@ -982,9 +982,9 @@ void func_27()
 		case 3:
 			if (PED::ADD_RELATIONSHIP_GROUP("PMD_ENEMIES", &(Local_36.f_52)))
 			{
-				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, Local_36.f_52);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, joaat("player"), Local_36.f_52);
 				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, Local_36.f_52, joaat("COP"));
-				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, Local_36.f_52, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, Local_36.f_52, joaat("player"));
 				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Local_36.f_52, Local_36.f_52);
 			}
 			Local_36 = 1;
@@ -1204,7 +1204,7 @@ void func_33(var uParam0)
 
 int func_34()
 {
-	return func_35(Global_111003.f_20, Global_111003.f_29);
+	return func_35(Global_111625.f_20, Global_111625.f_29);
 }
 
 int func_35(int iParam0, int iParam1)
@@ -1229,7 +1229,7 @@ int func_35(int iParam0, int iParam1)
 
 int func_36()
 {
-	return Global_111003.f_20;
+	return Global_111625.f_20;
 }
 
 void func_37(var uParam0)
@@ -1318,6 +1318,6 @@ void func_40(struct<61> Param0, var uParam61, var uParam62, var uParam63, var uP
 
 void func_41(int iParam0)
 {
-	Global_111003.f_22 = iParam0;
+	Global_111625.f_22 = iParam0;
 }
 

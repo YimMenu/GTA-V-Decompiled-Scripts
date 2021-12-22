@@ -1,9 +1,9 @@
 void __EntryFunction__()
 {
-	Global_1841019 = 1;
-	Global_1841020 = 1;
-	Global_1841021 = 1;
-	Global_1841022 = 1;
-	Global_1841023 = 1;
+	Global_2103163 = 1;
+	Global_2103164 = 1;
+	Global_2103165 = 1;
+	Global_2103166 = 1;
+	Global_2103167 = 1;
 }
 

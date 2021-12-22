@@ -974,16 +974,16 @@ int func_3(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 
 int func_4()
 {
-	if (Global_2464920 == -15)
+	if (Global_2726647 == -15)
 	{
-		Global_2464920 = func_23();
-		func_15(&Global_2464920, 0, 0, 0, 1, 0, 0);
+		Global_2726647 = func_23();
+		func_15(&Global_2726647, 0, 0, 0, 1, 0, 0);
 		return 1;
 	}
-	if (func_5(func_23(), Global_2464920))
+	if (func_5(func_23(), Global_2726647))
 	{
-		Global_2464920 = func_23();
-		func_15(&Global_2464920, 0, 0, 0, 1, 0, 0);
+		Global_2726647 = func_23();
+		func_15(&Global_2726647, 0, 0, 0, 1, 0, 0);
 		return 1;
 	}
 	return 0;
