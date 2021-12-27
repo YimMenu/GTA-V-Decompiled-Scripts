@@ -389,11 +389,11 @@ void __EntryFunction__()
 	while (true)
 	{
 		SYSTEM::WAIT(0);
-		if (Local_296 == 0)
+		if (Local_296.f_0 == 0)
 		{
 			if (func_259())
 			{
-				Local_296 = 1;
+				Local_296.f_0 = 1;
 			}
 		}
 		func_255(0);
@@ -4685,7 +4685,7 @@ void func_102(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -9558,8 +9558,8 @@ int func_261(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 			Var70.f_3.f_1 = 4;
 			Var139.f_19.f_1 = 4;
 			Var245 = { func_108(PLAYER::PLAYER_ID()) };
-			Var1 = iParam0;
-			if (Var1 >= 1148 && Var1 <= 1197)
+			Var1.f_0 = iParam0;
+			if (Var1.f_0 >= 1148 && Var1.f_0 <= 1197)
 			{
 				Var1.f_1 = 1;
 				Var1.f_3 = 0;
@@ -9696,7 +9696,7 @@ void func_266(struct<2> Param0, var uParam2, var uParam3, var uParam4, var uPara
 {
 	Global_2097152 = 1;
 	func_267(&(Global_2097152.f_1), 1, 0);
-	Global_2097152.f_3 = Param0;
+	Global_2097152.f_3 = Param0.f_0;
 	Global_2097152.f_4 = Param0.f_1;
 }
 

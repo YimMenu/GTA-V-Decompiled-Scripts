@@ -125,7 +125,7 @@ void func_2()
 			func_9(&Var2);
 			func_8(2, iVar0, iVar1, &Var2);
 			Var2.f_1 = (MISC::GET_FRAME_COUNT() - 1);
-			Var2 = iVar1;
+			Var2.f_0 = iVar1;
 			if (!func_7(&Var2, &uVar5))
 			{
 				func_6(&Var2);

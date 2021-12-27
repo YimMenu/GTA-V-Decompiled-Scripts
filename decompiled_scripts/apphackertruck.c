@@ -11645,7 +11645,7 @@ int func_258(int iParam0, int iParam1)
 						if (HUD::DOES_BLIP_EXIST(Global_2678323[iVar26]))
 						{
 							Var30 = { HUD::GET_BLIP_COORDS(Global_2678323[iVar26]) };
-							Var30.f_2 = PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var30.x, Var30.f_1);
+							Var30.f_2 = PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var30.f_0, Var30.f_1);
 						}
 						else
 						{
@@ -11715,7 +11715,7 @@ int func_259(int iParam0, int iParam1)
 			if (HUD::DOES_BLIP_EXIST(Global_2678323[PLAYER::PLAYER_ID()]))
 			{
 				Var0 = { HUD::GET_BLIP_COORDS(Global_2678323[PLAYER::PLAYER_ID()]) };
-				Var0.f_2 = PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.x, Var0.f_1);
+				Var0.f_2 = PATHFIND::GET_APPROX_FLOOR_FOR_POINT(Var0.f_0, Var0.f_1);
 			}
 			else
 			{
@@ -14108,7 +14108,7 @@ int func_318(int iParam0)
 
 int func_319(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -15441,7 +15441,7 @@ void func_378(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -15789,20 +15789,20 @@ int func_383(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	{
 		if (iParam8 != 0 && func_384(iParam1))
 		{
-			Var2 = iParam8;
+			Var2.f_0 = iParam8;
 			Var2.f_1 = iParam2;
 			Var2.f_2 = iParam5;
 			Var2.f_3 = iParam6;
 		}
 		else
 		{
-			Var2 = iParam2;
+			Var2.f_0 = iParam2;
 			Var2.f_1 = iParam8;
 			Var2.f_2 = iParam5;
 			Var2.f_3 = iParam6;
 		}
 		Global_4528329[iVar1 /*85*/].f_66.f_1 = Var2.f_2;
-		Global_4528329[iVar1 /*85*/].f_66.f_15 = Var2;
+		Global_4528329[iVar1 /*85*/].f_66.f_15 = Var2.f_0;
 		Global_4528329[iVar1 /*85*/].f_66.f_16 = Var2.f_1;
 		if (bVar0 || NETSHOPPING::NET_GAMESERVER_BASKET_ADD_ITEM(&Var2, iParam4))
 		{
@@ -16138,7 +16138,7 @@ void func_399(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, v
 {
 	struct<7> Var0;
 	
-	Var0 = 985284033;
+	Var0.f_0 = 985284033;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = uParam2;

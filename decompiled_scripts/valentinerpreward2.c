@@ -361,7 +361,7 @@ void func_11()
 
 int func_12(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -661,7 +661,7 @@ void func_26()
 			iVar1 = func_35(7868, -1, 0);
 			func_32(7868, iVar1 + 1, -1, 1, 0);
 			Var2.f_1 = 1;
-			Var2 = 24;
+			Var2.f_0 = 24;
 			STATS::_PLAYSTATS_GUNRUN_MISSION_ENDED(&Var2);
 			Local_22 = { ENTITY::GET_ENTITY_COORDS(iLocal_11, false) };
 			iLocal_25 = 0;
@@ -784,7 +784,7 @@ void func_31()
 	struct<3> Var0;
 	
 	Var0 = { ENTITY::GET_ENTITY_ROTATION(iLocal_11, 2) };
-	Var0.x = 0f;
+	Var0.f_0 = 0f;
 	Var0.f_1 = 0f;
 	Var0.f_2 = (Var0.f_2 + 1f);
 	ENTITY::SET_ENTITY_ROTATION(iLocal_11, Var0, 2, true);
@@ -2756,10 +2756,10 @@ void func_103()
 			if (!ENTITY::DOES_ENTITY_EXIST(Local_73.f_1))
 			{
 				sVar1 = func_106(0);
-				Local_73 = MISC::GET_HASH_KEY(sVar1);
-				if (func_105(Local_73))
+				Local_73.f_0 = MISC::GET_HASH_KEY(sVar1);
+				if (func_105(Local_73.f_0))
 				{
-					Local_73.f_1 = OBJECT::CREATE_OBJECT_NO_OFFSET(Local_73, -1024.45f, -422.027f, 72.259f, false, false, false);
+					Local_73.f_1 = OBJECT::CREATE_OBJECT_NO_OFFSET(Local_73.f_0, -1024.45f, -422.027f, 72.259f, false, false, false);
 					ENTITY::SET_ENTITY_ROTATION(Local_73.f_1, 0f, 0f, 132f, 2, true);
 					ENTITY::FREEZE_ENTITY_POSITION(Local_73.f_1, true);
 				}
@@ -4804,7 +4804,7 @@ int func_172(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -4815,7 +4815,7 @@ int func_172(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{
@@ -5017,7 +5017,7 @@ int func_176(float fParam0, float fParam1, float fParam2)
 
 Vector3 func_177(struct<3> Param0, struct<3> Param3, float fParam6, float fParam7, float fParam8)
 {
-	return func_178(Param0.x, Param3.x, fParam6, fParam7, fParam8), func_178(Param0.f_1, Param3.f_1, fParam6, fParam7, fParam8), func_178(Param0.f_2, Param3.f_2, fParam6, fParam7, fParam8);
+	return func_178(Param0.f_0, Param3.f_0, fParam6, fParam7, fParam8), func_178(Param0.f_1, Param3.f_1, fParam6, fParam7, fParam8), func_178(Param0.f_2, Param3.f_2, fParam6, fParam7, fParam8);
 }
 
 float func_178(float fParam0, float fParam1, float fParam2, float fParam3, float fParam4)
@@ -5035,16 +5035,16 @@ void func_179(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, v
 	struct<3> Var15;
 	
 	MISC::GET_MODEL_DIMENSIONS(iParam1, &Var0, &Var3);
-	Var6.x = Var0.x;
+	Var6.f_0 = Var0.f_0;
 	Var6.f_1 = Var3.f_1;
 	Var6.f_2 = Var0.f_2;
-	Var9.x = Var3;
+	Var9.f_0 = Var3.f_0;
 	Var9.f_1 = Var3.f_1;
 	Var9.f_2 = Var0.f_2;
-	Var12.x = Var0.x;
+	Var12.f_0 = Var0.f_0;
 	Var12.f_1 = Var0.f_1;
 	Var12.f_2 = Var0.f_2;
-	Var15.x = Var3;
+	Var15.f_0 = Var3.f_0;
 	Var15.f_1 = Var0.f_1;
 	Var15.f_2 = Var0.f_2;
 	*uParam2 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var6) };
@@ -5063,14 +5063,14 @@ void func_180(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, v
 	struct<3> Var15;
 	
 	MISC::GET_MODEL_DIMENSIONS(iParam1, &Var0, &Var3);
-	Var6.x = Var0;
+	Var6.f_0 = Var0.f_0;
 	Var6.f_1 = Var3.f_1;
 	Var6.f_2 = Var3.f_2;
 	Var9 = { Var3 };
-	Var12.x = Var0;
+	Var12.f_0 = Var0.f_0;
 	Var12.f_1 = Var0.f_1;
 	Var12.f_2 = Var3.f_2;
-	Var15.x = Var3.x;
+	Var15.f_0 = Var3.f_0;
 	Var15.f_1 = Var0.f_1;
 	Var15.f_2 = Var3.f_2;
 	*uParam2 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var6) };

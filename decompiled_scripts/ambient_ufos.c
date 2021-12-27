@@ -195,7 +195,7 @@ void __EntryFunction__()
 			case 0:
 				iVar0 = 0;
 				iVar0 = 0;
-				while (iVar0 < Local_78.x)
+				while (iVar0 < Local_78.f_0)
 				{
 					if (func_10(PLAYER::PLAYER_PED_ID(), Local_78[iVar0 /*3*/], fLocal_90))
 					{
@@ -211,7 +211,7 @@ void __EntryFunction__()
 			case 1:
 				iVar0 = 0;
 				iVar0 = 0;
-				while (iVar0 < Local_78.x)
+				while (iVar0 < Local_78.f_0)
 				{
 					if (func_10(PLAYER::PLAYER_PED_ID(), Local_78[iVar0 /*3*/], fLocal_87))
 					{
@@ -430,7 +430,7 @@ Vector3 func_9(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}

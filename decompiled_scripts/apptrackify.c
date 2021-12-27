@@ -410,8 +410,8 @@ void func_10()
 
 float func_11(int iParam0)
 {
-	fLocal_25 = (Global_4535516[iParam0 /*3*/] - Local_20.x);
-	fLocal_26 = (SYSTEM::COS(((3.14159f / 180f) * Local_20.x)) * (Global_4535516[iParam0 /*3*/].f_1 - Local_20.f_1));
+	fLocal_25 = (Global_4535516[iParam0 /*3*/] - Local_20.f_0);
+	fLocal_26 = (SYSTEM::COS(((3.14159f / 180f) * Local_20.f_0)) * (Global_4535516[iParam0 /*3*/].f_1 - Local_20.f_1));
 	fLocal_27 = MISC::ATAN2(fLocal_25, fLocal_26);
 	if (fLocal_27 < 0f)
 	{
@@ -429,7 +429,7 @@ float func_12(int iParam0)
 
 float func_13(int iParam0)
 {
-	fLocal_28 = SYSTEM::SQRT((((Global_4535516[iParam0 /*3*/] - Local_20.x) * (Global_4535516[iParam0 /*3*/] - Local_20.x)) + ((Global_4535516[iParam0 /*3*/].f_1 - Local_20.f_1) * (Global_4535516[iParam0 /*3*/].f_1 - Local_20.f_1))));
+	fLocal_28 = SYSTEM::SQRT((((Global_4535516[iParam0 /*3*/] - Local_20.f_0) * (Global_4535516[iParam0 /*3*/] - Local_20.f_0)) + ((Global_4535516[iParam0 /*3*/].f_1 - Local_20.f_1) * (Global_4535516[iParam0 /*3*/].f_1 - Local_20.f_1))));
 	return fLocal_28;
 }
 
@@ -458,8 +458,8 @@ void func_14(int iParam0, char* sParam1, float fParam2, float fParam3, float fPa
 
 float func_15()
 {
-	fLocal_25 = (Global_22391 - Local_20.x);
-	fLocal_26 = (SYSTEM::COS(((3.14159f / 180f) * Local_20.x)) * (Global_22391.f_1 - Local_20.f_1));
+	fLocal_25 = (Global_22391 - Local_20.f_0);
+	fLocal_26 = (SYSTEM::COS(((3.14159f / 180f) * Local_20.f_0)) * (Global_22391.f_1 - Local_20.f_1));
 	fLocal_27 = MISC::ATAN2(fLocal_25, fLocal_26);
 	if (fLocal_27 < 0f)
 	{
@@ -477,7 +477,7 @@ float func_16()
 
 float func_17()
 {
-	fLocal_28 = SYSTEM::SQRT((((Global_22391 - Local_20.x) * (Global_22391 - Local_20.x)) + ((Global_22391.f_1 - Local_20.f_1) * (Global_22391.f_1 - Local_20.f_1))));
+	fLocal_28 = SYSTEM::SQRT((((Global_22391 - Local_20.f_0) * (Global_22391 - Local_20.f_0)) + ((Global_22391.f_1 - Local_20.f_1) * (Global_22391.f_1 - Local_20.f_1))));
 	return fLocal_28;
 }
 

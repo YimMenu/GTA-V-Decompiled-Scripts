@@ -410,7 +410,7 @@ Vector3 func_9(struct<3> Param0, struct<3> Param3, float fParam6, int iParam7)
 {
 	struct<3> Var0;
 	
-	Var0.x = func_7(Param0.x, Param3.x, fParam6, iParam7);
+	Var0.f_0 = func_7(Param0.f_0, Param3.f_0, fParam6, iParam7);
 	Var0.f_1 = func_7(Param0.f_1, Param3.f_1, fParam6, iParam7);
 	Var0.f_2 = func_7(Param0.f_2, Param3.f_2, fParam6, iParam7);
 	return Var0;
@@ -924,7 +924,7 @@ void func_43()
 	{
 		return;
 	}
-	Var1 = -1034754998;
+	Var1.f_0 = -1034754998;
 	Var1.f_1 = PLAYER::PLAYER_ID();
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var1, 2, iVar0);
 }
@@ -1109,7 +1109,7 @@ void func_53(struct<3> Param0, var uParam3, var uParam4, var uParam5, var uParam
 		Var0.f_59 = 14;
 		Var0.f_102 = 14;
 		func_54(14, &Var0);
-		Var0.f_59[0 /*3*/].f_2 = ENTITY::GET_ENTITY_HEADING(Local_168);
+		Var0.f_59[0 /*3*/].f_2 = ENTITY::GET_ENTITY_HEADING(Local_168.f_0);
 		Var117 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Param0.f_1, Var0.f_16[0 /*3*/]) };
 		Var120 = { Var0.f_59[0 /*3*/] };
 		ENTITY::SET_ENTITY_COORDS_NO_OFFSET(Param0.f_2[0], Var117, false, false, true);
@@ -1153,7 +1153,7 @@ int func_55(struct<3> Param0, var uParam3, var uParam4, var uParam5, var uParam6
 			func_54(14, &Var0);
 			ENTITY::DETACH_ENTITY(Param0.f_2[0], true, true);
 			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(Param0.f_2[0], ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Param0.f_1, Var0.f_16[0 /*3*/]), false, false, true);
-			Var0.f_59[0 /*3*/].f_2 = ENTITY::GET_ENTITY_HEADING(Local_168);
+			Var0.f_59[0 /*3*/].f_2 = ENTITY::GET_ENTITY_HEADING(Local_168.f_0);
 			ENTITY::SET_ENTITY_ROTATION(Param0.f_2[0], Var0.f_59[0 /*3*/], 2, true);
 			return 1;
 		}
@@ -1184,7 +1184,7 @@ void func_57(var uParam0)
 	{
 		return;
 	}
-	Var1.x = -67041920;
+	Var1.f_0 = -67041920;
 	Var1.f_1 = PLAYER::PLAYER_ID();
 	Var1.f_2 = uParam0;
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var1, 3, iVar0);
@@ -2126,7 +2126,7 @@ void func_85()
 	struct<11> Var0;
 	
 	Var0.f_7 = Local_168.f_156;
-	Var0 = 550530467;
+	Var0.f_0 = 550530467;
 	Var0.f_2 = 1;
 	Var0.f_6 = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), Local_168.f_8));
 	Var0.f_9 = 0;
@@ -4966,8 +4966,8 @@ void func_169(int iParam0, var uParam1, var uParam2, var uParam3, bool bParam4)
 	}
 	if (bParam4)
 	{
-		*uParam1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_168, *uParam1) };
-		uParam2->f_2 = (uParam2->f_2 + ENTITY::GET_ENTITY_HEADING(Local_168));
+		*uParam1 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_168.f_0, *uParam1) };
+		uParam2->f_2 = (uParam2->f_2 + ENTITY::GET_ENTITY_HEADING(Local_168.f_0));
 	}
 }
 
@@ -5432,7 +5432,7 @@ void func_191(var uParam0, bool bParam1)
 	bool bVar39;
 	int iVar40;
 	
-	Var0 = -749983132;
+	Var0.f_0 = -749983132;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { *uParam0 };
 	Var0.f_34 = uParam0->f_34;
@@ -5620,7 +5620,7 @@ void func_198(var uParam0)
 	{
 		return;
 	}
-	Var1.x = 2094561812;
+	Var1.f_0 = 2094561812;
 	Var1.f_1 = PLAYER::PLAYER_ID();
 	Var1.f_2 = uParam0;
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var1, 3, iVar0);
@@ -5693,7 +5693,7 @@ void func_201(var uParam0, var uParam1, var uParam2, var uParam3)
 	{
 		return;
 	}
-	Var1 = -1959326027;
+	Var1.f_0 = -1959326027;
 	Var1.f_1 = PLAYER::PLAYER_ID();
 	Var1.f_2 = uParam0;
 	Var1.f_3 = uParam2;
@@ -5901,7 +5901,7 @@ void func_212()
 	{
 		return;
 	}
-	Var1 = 956300253;
+	Var1.f_0 = 956300253;
 	Var1.f_1 = PLAYER::PLAYER_ID();
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var1, 2, iVar0);
 }
@@ -6528,11 +6528,11 @@ int func_238(struct<18> Param0)
 	{
 		func_251(14, &Var0);
 		iVar7 = func_217();
-		Var8 = { 0f, 0f, ENTITY::GET_ENTITY_HEADING(Local_168) };
-		Var11 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_168, Var0[0 /*3*/]) };
+		Var8 = { 0f, 0f, ENTITY::GET_ENTITY_HEADING(Local_168.f_0) };
+		Var11 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_168.f_0, Var0[0 /*3*/]) };
 		Var14.f_6 = -1082130432;
 		Var14.f_9 = -1082130432;
-		Var14 = func_250();
+		Var14.f_0 = func_250();
 		Var14.f_1 = func_249();
 		TASK::_0x29682E2CCF21E9B5(PLAYER::PLAYER_PED_ID(), "Heist_Arcade_Strength_Hammer", &Var14, Var11, Var8, 2, 0.5f, 0, iVar7, 4);
 		PED::PLAY_FACIAL_ANIM(PLAYER::PLAYER_PED_ID(), func_214(0), iVar7);
@@ -6602,7 +6602,7 @@ void func_239()
 	{
 		return;
 	}
-	Var1 = -363590129;
+	Var1.f_0 = -363590129;
 	Var1.f_1 = PLAYER::PLAYER_ID();
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var1, 2, iVar0);
 }
@@ -6699,7 +6699,7 @@ void func_248()
 	{
 		return;
 	}
-	Var1 = -750940877;
+	Var1.f_0 = -750940877;
 	Var1.f_1 = PLAYER::PLAYER_ID();
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var1, 2, iVar0);
 }
@@ -8328,7 +8328,7 @@ void func_326(var uParam0, int iParam1)
 	
 	Var0.f_5 = 1073741824;
 	Var0.f_6 = -1073741824;
-	Var0 = 988620539;
+	Var0.f_0 = 988620539;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	Var0.f_3 = uParam0->f_3;
@@ -8555,13 +8555,13 @@ void func_330(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 				{
 					iParam0->f_7 = 0;
 					Var5 = { func_630(iParam0, -1) };
-					iParam0->f_14 = Var5;
+					iParam0->f_14 = Var5.f_0;
 				}
 			}
 			else if (!MISC::IS_BIT_SET(*iParam0, 5))
 			{
 				Var5 = { func_630(iParam0, -1) };
-				iParam0->f_14 = Var5;
+				iParam0->f_14 = Var5.f_0;
 			}
 			MISC::CLEAR_BIT(iParam0, 5);
 			MISC::CLEAR_BIT(iParam0, 19);
@@ -8587,12 +8587,12 @@ void func_330(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 			}
 			if (MISC::IS_BIT_SET(*iParam0, 8))
 			{
-				Var13 = 1328920460;
+				Var13.f_0 = 1328920460;
 				TASK::_0x29682E2CCF21E9B5(iVar0, "Heist3_minigame_drill_vault", &Var13, Var10, 0f, 0f, fVar2, 2, 0.5f, 0, iVar4, 4);
 			}
 			else
 			{
-				Var13 = -1853844820;
+				Var13.f_0 = -1853844820;
 				TASK::_0x29682E2CCF21E9B5(iVar0, "Heist3_minigame_drill_vault", &Var13, Var10, 0f, 0f, fVar2, 2, 0.5f, 0, iVar3, 4);
 			}
 			ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
@@ -11051,16 +11051,16 @@ void func_354(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar0 = 4;
 		}
 		FILES::GET_SHOP_PED_OUTFIT(iParam2, &Var1);
-		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 		{
 			iVar19 = 0;
 			while (iVar19 < Var1.f_3)
 			{
 				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar19, &Var16) && Var16.f_2 != -1)
 				{
-					if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+					if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 					{
-						(*iParam0)[Var16.f_2] = func_342(iParam1, Var16.x, 14, iVar0);
+						(*iParam0)[Var16.f_2] = func_342(iParam1, Var16.f_0, 14, iVar0);
 					}
 					else if (Var16.f_1 != -1)
 					{
@@ -12013,32 +12013,32 @@ void func_357(var uParam0, int iParam1, int iParam2, int iParam3)
 	}
 	FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar0, false);
 	FILES::GET_SHOP_PED_QUERY_OUTFIT((iParam2 - iParam3), &Var1);
-	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 	{
 		iVar36 = 0;
 		while (iVar36 < Var1.f_4)
 		{
 			if (FILES::GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT(Var1.f_1, iVar36, &Var16))
 			{
-				if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+				if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 				{
 					if (Var16.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var19);
-						FILES::GET_SHOP_PED_COMPONENT(Var16.x, &Var19);
-						if (Var16.x != Var19.f_1)
+						FILES::GET_SHOP_PED_COMPONENT(Var16.f_0, &Var19);
+						if (Var16.f_0 != Var19.f_1)
 						{
 							uParam0->f_16 = 1;
 						}
 					}
 					if (Var16.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_358(Var16.f_2)] = Var16.x;
+						(*uParam0)[func_358(Var16.f_2)] = Var16.f_0;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_358(Var16.f_2)] = func_342(iParam1, Var16.x, func_358(Var16.f_2), iVar0);
+						(*uParam0)[func_358(Var16.f_2)] = func_342(iParam1, Var16.f_0, func_358(Var16.f_2), iVar0);
 					}
 				}
 				else if (Var16.f_1 != -1)
@@ -16400,7 +16400,7 @@ void func_373(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
 				Global_2883588 = Var2.f_1;
-				Global_2883589 = Var2;
+				Global_2883589 = Var2.f_0;
 				func_363(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var2.f_7), 0, 0, Var2.f_2, 0, -1, 2, 1);
 				return;
 			}
@@ -16461,7 +16461,7 @@ void func_373(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar36 = -1;
 				}
 				Global_2883588 = Var19.f_1;
-				Global_2883589 = Var19;
+				Global_2883589 = Var19.f_0;
 				func_363(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var19.f_9), Var19.f_3, Var19.f_4, Var19.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var19.f_1, joaat("OUTFIT_ONLY"), 0), iVar36, 2, Var19.f_1 != 0);
 				return;
 			}
@@ -16474,7 +16474,7 @@ void func_373(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			FILES::GET_SHOP_PED_COMPONENT(iParam3, &Var39);
 			Global_2883588 = Var39.f_1;
-			Global_2883589 = Var39;
+			Global_2883589 = Var39.f_0;
 			func_363(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 			return;
 		}
@@ -16486,7 +16486,7 @@ void func_373(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
 				Global_2883588 = Var39.f_1;
-				Global_2883589 = Var39;
+				Global_2883589 = Var39.f_0;
 				func_363(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 				return;
 			}
@@ -41675,7 +41675,7 @@ void func_413(int iParam0, int iParam1)
 	fVar17 = func_427(135, iParam1);
 	fVar18 = func_427(136, iParam1);
 	bVar19 = func_426(160, iParam1);
-	if (((((((((Var0 != iVar10 || Var0.f_1 != iVar11) || Var0.f_2 != iVar12) || Var0.f_3 != iVar13) || Var0.f_4 != iVar14) || Var0.f_5 != iVar15) || Var0.f_6 != fVar16) || Var0.f_7 != fVar17) || Var0.f_8 != fVar18) || Var0.f_9 != bVar19)
+	if (((((((((Var0.f_0 != iVar10 || Var0.f_1 != iVar11) || Var0.f_2 != iVar12) || Var0.f_3 != iVar13) || Var0.f_4 != iVar14) || Var0.f_5 != iVar15) || Var0.f_6 != fVar16) || Var0.f_7 != fVar17) || Var0.f_8 != fVar18) || Var0.f_9 != bVar19)
 	{
 		PED::SET_PED_HEAD_BLEND_DATA(iParam0, iVar10, iVar11, iVar12, iVar13, iVar14, iVar15, fVar16, fVar17, fVar18, bVar19);
 		iVar20 = func_131(2103, iParam1, 0);
@@ -48865,7 +48865,7 @@ void func_462(int iParam0, bool bParam1, bool bParam2, int iParam3)
 		{
 			if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iVar14, iVar19, &Var21))
 			{
-				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21))
+				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21.f_0))
 				{
 					iVar36 = (129 + iVar19);
 					if (func_487(iVar36, iVar0))
@@ -60382,7 +60382,7 @@ void func_481(char* sParam0, int iParam1, int iParam2, int iParam3)
 	{
 		if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iParam1, iVar0, &Var2))
 		{
-			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2))
+			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2.f_0))
 			{
 				sParam0->f_11 = iParam2;
 				MemCopy(sParam0, {Var2.f_7}, 4);
@@ -72559,7 +72559,7 @@ int func_547(int iParam0, int iParam1)
 	Var50.f_4 = -1;
 	Var50.f_8 = -1;
 	Var50.f_9 = 48;
-	Var50 = iParam0;
+	Var50.f_0 = iParam0;
 	Var50.f_2 = iParam1;
 	if (func_548(&Var0, Var50, 1, 1))
 	{
@@ -72641,7 +72641,7 @@ int func_548(var uParam0, struct<9> Param1, var uParam10, var uParam11, var uPar
 		}
 	}
 	bVar85 = false;
-	if (ENTITY::GET_ENTITY_MODEL(Param1) == joaat("mp_m_freemode_01"))
+	if (ENTITY::GET_ENTITY_MODEL(Param1.f_0) == joaat("mp_m_freemode_01"))
 	{
 		bVar85 = true;
 	}
@@ -77965,7 +77965,7 @@ int func_552(int iParam0, var uParam1, int iParam2, int iParam3)
 			Var36.f_8 = -1;
 			Var36.f_9 = 48;
 			Var36.f_2 = *iParam3;
-			Var36 = iParam0;
+			Var36.f_0 = iParam0;
 			if (func_548(uParam1, Var36, 1, 1))
 			{
 				return 1;
@@ -79856,7 +79856,7 @@ void func_592(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4)
 	struct<7> Var0;
 	int iVar9;
 	
-	Var0 = 1209719233;
+	Var0.f_0 = 1209719233;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	if (iParam2 != 0)
@@ -80116,7 +80116,7 @@ void func_603(int* iParam0, var uParam1)
 		if (!ENTITY::IS_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ((*uParam1)[3])))
 		{
 			Var0 = { func_630(iParam0, 0) };
-			if (iParam0->f_12 > 0.05f && iParam0->f_14 > Var0)
+			if (iParam0->f_12 > 0.05f && iParam0->f_14 > Var0.f_0)
 			{
 				ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ((*uParam1)[3]), true, false);
 				Var2 = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ((*uParam1)[3]), true) };
@@ -80152,7 +80152,7 @@ void func_604(int* iParam0, struct<2> Param1)
 			iParam0->f_13 = 1f;
 			iParam0->f_7++;
 			Var0 = { func_630(iParam0, -1) };
-			iParam0->f_14 = Var0;
+			iParam0->f_14 = Var0.f_0;
 		}
 	}
 }
@@ -80415,8 +80415,8 @@ void func_615(var uParam0, int iParam1, var uParam2, int iParam3)
 
 void func_616(int* iParam0, struct<2> Param1)
 {
-	iParam0->f_15 = ((Param1.f_1 - Param1) * 2f);
-	iParam0->f_16 = (Param1 - 0.0125f);
+	iParam0->f_15 = ((Param1.f_1 - Param1.f_0) * 2f);
+	iParam0->f_16 = (Param1.f_0 - 0.0125f);
 	iParam0->f_17 = (iParam0->f_16 + iParam0->f_15);
 }
 
@@ -81010,7 +81010,7 @@ void func_637(int iParam0)
 	struct<3> Var0;
 	
 	Var0.f_1 = PLAYER::PLAYER_ID();
-	Var0.x = 503866323;
+	Var0.f_0 = 503866323;
 	Var0.f_2 = iParam0;
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var0, 3, func_192(1, 1));
 }
@@ -81445,7 +81445,7 @@ int func_648(int iParam0)
 	Var0.f_19 = -1;
 	Var0.f_20 = -1;
 	Var0.f_16 = ((NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT() * func_660(16)) + iParam0);
-	Var0 = 191;
+	Var0.f_0 = 191;
 	if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("camhedz_arcade", Var0.f_16, true, 0))
 	{
 		if (func_649(Var0, 0))
@@ -81472,7 +81472,7 @@ int func_649(struct<17> Param0, var uParam17, var uParam18, var uParam19, var uP
 		return 0;
 	}
 	bParam21 = bParam21;
-	StringCopy(&cVar0, func_655(Param0), 32);
+	StringCopy(&cVar0, func_655(Param0.f_0), 32);
 	if (SCRIPT::DOES_SCRIPT_EXIST(&cVar0))
 	{
 		SCRIPT::REQUEST_SCRIPT(&cVar0);
@@ -81496,7 +81496,7 @@ int func_649(struct<17> Param0, var uParam17, var uParam18, var uParam19, var uP
 			{
 				return 0;
 			}
-			iVar10 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar0, &Param0, 21, func_650(Param0));
+			iVar10 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar0, &Param0, 21, func_650(Param0.f_0));
 			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&cVar0);
 			if (iVar10 > 0)
 			{
@@ -83343,14 +83343,14 @@ int func_664(int iParam0, struct<3> Param1, struct<3> Param4, struct<3> Param7)
 	if ((SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(joaat("am_mp_drone")) && !SCRIPT::IS_THREAD_ACTIVE(iLocal_130)) && !func_666())
 	{
 		Var0.f_1 = -1;
-		Var0 = 0;
+		Var0.f_0 = 0;
 		Var0.f_2 = { Param1 };
 		Var0.f_5 = { Param4 };
 		Var0.f_8 = { Param7 };
 		Var0.f_1 = iParam0;
 		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("am_mp_drone")) < 1)
 		{
-			if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("AM_MP_DRONE", Var0, true, 0))
+			if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("AM_MP_DRONE", Var0.f_0, true, 0))
 			{
 				iLocal_130 = SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(joaat("am_mp_drone"), &Var0, 12, 1424);
 				SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("am_mp_drone"));
@@ -83504,7 +83504,7 @@ int func_672(int iParam0)
 	Var0.f_19 = -1;
 	Var0.f_20 = -1;
 	Var0.f_16 = ((NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT() * func_660(1)) + iParam0);
-	Var0 = 184;
+	Var0.f_0 = 184;
 	if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("gunslinger_arcade", Var0.f_16, true, 0))
 	{
 		if (func_649(Var0, 0))
@@ -83603,7 +83603,7 @@ int func_677(int iParam0, int iParam1)
 	Var0.f_19 = -1;
 	Var0.f_20 = -1;
 	StringCopy(&cVar21, "grid_arcade_cabinet", 64);
-	Var0 = 180;
+	Var0.f_0 = 180;
 	Var0.f_16 = ((NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT() * func_660(10)) + 33 + iParam0);
 	iVar37 = func_196(PLAYER::PLAYER_ID());
 	if (iVar37 != -1)
@@ -83638,7 +83638,7 @@ int func_677(int iParam0, int iParam1)
 		SCRIPT::REQUEST_SCRIPT(&cVar21);
 		if (SCRIPT::HAS_SCRIPT_LOADED(&cVar21))
 		{
-			SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar21, &Var0, 21, func_650(Var0));
+			SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar21, &Var0, 21, func_650(Var0.f_0));
 			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&cVar21);
 			return 1;
 		}
@@ -83774,7 +83774,7 @@ int func_681(int iParam0)
 	Var0.f_16 = -1;
 	Var0.f_19 = -1;
 	Var0.f_20 = -1;
-	Var0 = 181;
+	Var0.f_0 = 181;
 	Var0.f_16 = (NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT() + 33 + iParam0);
 	Global_1932180 = 1;
 	if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("scroll_arcade_cabinet", Var0.f_16, true, 0))
@@ -84970,10 +84970,10 @@ void func_695(int iParam0)
 
 void func_696()
 {
-	if (ENTITY::DOES_ENTITY_EXIST(Local_168))
+	if (ENTITY::DOES_ENTITY_EXIST(Local_168.f_0))
 	{
-		Local_168.f_5 = { ENTITY::GET_ENTITY_COORDS(Local_168, true) };
-		Local_168.f_4 = ENTITY::GET_ENTITY_HEADING(Local_168);
+		Local_168.f_5 = { ENTITY::GET_ENTITY_COORDS(Local_168.f_0, true) };
+		Local_168.f_4 = ENTITY::GET_ENTITY_HEADING(Local_168.f_0);
 	}
 	func_698();
 	func_84("Start_Game", &(Local_168.f_20), 1);
@@ -85031,7 +85031,7 @@ void func_699(int iParam0, var uParam1, var uParam2)
 	{
 		return;
 	}
-	Var1 = -757954778;
+	Var1.f_0 = -757954778;
 	Var1.f_1 = PLAYER::PLAYER_ID();
 	Var1.f_2 = iParam0;
 	Var1.f_3 = uParam1;
@@ -85524,7 +85524,7 @@ void func_731()
 
 void func_732(struct<18> Param0)
 {
-	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Param0);
+	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Param0.f_0);
 	func_735(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&uLocal_167, 1, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_134, 33, 0);
@@ -85532,7 +85532,7 @@ void func_732(struct<18> Param0)
 	{
 		func_726(Param0);
 	}
-	Local_168 = Param0.f_1;
+	Local_168.f_0 = Param0.f_1;
 	Local_168.f_180 = Param0.f_17;
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{

@@ -607,7 +607,7 @@ void func_13(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uParam
 		if (!bParam10)
 		{
 			Var0 = { Param3 };
-			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.x, Var0.f_1, (Var0.f_2 + 1f)))
+			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.f_0, Var0.f_1, (Var0.f_2 + 1f)))
 			{
 			}
 			else
@@ -2381,8 +2381,8 @@ Vector3 func_46(struct<3> Param0, float fParam3)
 	
 	fVar3 = SYSTEM::SIN(fParam3);
 	fVar4 = SYSTEM::COS(fParam3);
-	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
-	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
+	Var0.f_0 = ((Param0.f_0 * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.f_0 * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
@@ -3578,7 +3578,7 @@ var func_80()
 
 int func_81(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -6048,13 +6048,13 @@ void func_221(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam
 	Var10 = { uParam0->f_8 + uParam0->f_11 };
 	if ((PAD::_IS_USING_KEYBOARD(2) && bParam2) && !uParam0->f_28)
 	{
-		uParam0->f_14 = Var10.x;
+		uParam0->f_14 = Var10.f_0;
 		uParam0->f_14.f_1 = Var10.f_1;
 		uParam0->f_14.f_2 = Var10.f_2;
 	}
 	else
 	{
-		uParam0->f_14 = (uParam0->f_14 + func_222(((((Var10.x - uParam0->f_14) * 0.05f) * fVar9) * fParam7), -3f, 3f));
+		uParam0->f_14 = (uParam0->f_14 + func_222(((((Var10.f_0 - uParam0->f_14) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 		uParam0->f_14.f_1 = (uParam0->f_14.f_1 + func_222(((((Var10.f_1 - uParam0->f_14.f_1) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 		uParam0->f_14.f_2 = (uParam0->f_14.f_2 + func_222(((((Var10.f_2 - uParam0->f_14.f_2) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 	}
@@ -8110,14 +8110,14 @@ void func_259(var uParam0)
 		iVar22 = func_135(func_272(uParam0->f_812.f_77), 0);
 		Var17 = { func_271(iVar22) };
 		fVar13 = func_270(iVar22);
-		func_269(uParam0->f_714, SYSTEM::CEIL(Var17.x), SYSTEM::CEIL(Var17.f_1), fVar13, 0);
+		func_269(uParam0->f_714, SYSTEM::CEIL(Var17.f_0), SYSTEM::CEIL(Var17.f_1), fVar13, 0);
 		if (!func_268(Var17, uParam0->f_725.f_66, 0))
 		{
 			if (uParam0->f_1243)
 			{
 				if (uParam0->f_1243.f_1 != -1)
 				{
-					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_1243.f_1, "x", Var17.x);
+					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_1243.f_1, "x", Var17.f_0);
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_1243.f_1, "y", Var17.f_1);
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_1243.f_1, "scale", fVar13);
 				}
@@ -8195,7 +8195,7 @@ void func_264(int iParam0, int iParam1, struct<2> Param2, var uParam4, int iPara
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "ADD_MAP_MARKER");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam1);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Param2);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Param2.f_0);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Param2.f_1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam5 + 1);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -8817,9 +8817,9 @@ bool func_268(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 void func_269(int iParam0, int iParam1, int iParam2, float fParam3, bool bParam4)
@@ -11317,7 +11317,7 @@ struct<9> func_330()
 {
 	struct<9> Var0;
 	
-	Var0 = 0.5f;
+	Var0.f_0 = 0.5f;
 	Var0.f_1 = 0.5f;
 	Var0.f_2 = 1f;
 	Var0.f_3 = 1f;
@@ -12657,7 +12657,7 @@ void func_383(var uParam0, var uParam1, var uParam2)
 	int iVar38;
 	
 	Var0.f_3 = 32;
-	Var0 = 962740265;
+	Var0.f_0 = 962740265;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_36 = uParam2;
 	Var0.f_2 = uParam0;
@@ -12903,7 +12903,7 @@ void func_398(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, v
 {
 	struct<7> Var0;
 	
-	Var0 = 985284033;
+	Var0.f_0 = 985284033;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = uParam2;
@@ -24459,7 +24459,7 @@ void func_646(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -24711,14 +24711,14 @@ void func_653(var uParam0)
 		iVar9 = func_412(uParam0->f_794, uParam0->f_812.f_1999);
 		Var6 = { func_271(iVar9) };
 		fVar2 = func_270(iVar9);
-		func_269(uParam0->f_714, SYSTEM::CEIL(Var6.x), SYSTEM::CEIL(Var6.f_1), fVar2, 0);
+		func_269(uParam0->f_714, SYSTEM::CEIL(Var6.f_0), SYSTEM::CEIL(Var6.f_1), fVar2, 0);
 		if (!func_268(Var6, uParam0->f_725.f_66, 0))
 		{
 			if (uParam0->f_2821)
 			{
 				if (uParam0->f_2821.f_1 != -1)
 				{
-					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_2821.f_1, "x", Var6.x);
+					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_2821.f_1, "x", Var6.f_0);
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_2821.f_1, "y", Var6.f_1);
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_2821.f_1, "scale", fVar2);
 				}
@@ -26935,7 +26935,7 @@ void func_742(var uParam0)
 	{
 		iVar1 = uParam0->f_812.f_137[func_733(uParam0->f_794)];
 		Var4 = { 350f, 2000f, 0f };
-		func_269(uParam0->f_714, SYSTEM::CEIL(Var4.x), SYSTEM::CEIL(Var4.f_1), 0f, 0);
+		func_269(uParam0->f_714, SYSTEM::CEIL(Var4.f_0), SYSTEM::CEIL(Var4.f_1), 0f, 0);
 		func_266(uParam0->f_714);
 		iVar3 = 0;
 		while (iVar3 <= 9)

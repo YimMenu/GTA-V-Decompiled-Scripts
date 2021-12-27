@@ -3923,7 +3923,7 @@ void func_55(int iParam0)
 
 float func_56(struct<2> Param0, var uParam2, struct<2> Param3, float fParam5)
 {
-	return ((Param0 * Param3) + (Param0.f_1 * Param3.f_1));
+	return ((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1));
 }
 
 int func_57(int iParam0, struct<3> Param1, struct<3> Param4, float fParam7)
@@ -3941,7 +3941,7 @@ int func_57(int iParam0, struct<3> Param1, struct<3> Param4, float fParam7)
 		return 0;
 	}
 	MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(iParam0), &Var3, &Var6);
-	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var3, Var6.f_1, 0f) };
+	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var3.f_0, Var6.f_1, 0f) };
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var0, Param1, Param4, fParam7, false, true))
 	{
 		return 1;
@@ -3951,12 +3951,12 @@ int func_57(int iParam0, struct<3> Param1, struct<3> Param4, float fParam7)
 	{
 		return 1;
 	}
-	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var6, Var6.f_1, 0f) };
+	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var6.f_0, Var6.f_1, 0f) };
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var0, Param1, Param4, fParam7, false, true))
 	{
 		return 1;
 	}
-	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var3, Var3.f_1, 0f) };
+	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var3.f_0, Var3.f_1, 0f) };
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var0, Param1, Param4, fParam7, false, true))
 	{
 		return 1;
@@ -3966,7 +3966,7 @@ int func_57(int iParam0, struct<3> Param1, struct<3> Param4, float fParam7)
 	{
 		return 1;
 	}
-	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var6, Var3.f_1, 0f) };
+	Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam0, Var6.f_0, Var3.f_1, 0f) };
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(Var0, Param1, Param4, fParam7, false, true))
 	{
 		return 1;

@@ -679,8 +679,8 @@ int func_10(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 	}
 	if (Global_112915.f_7688.f_136 < 9)
 	{
-		Var0 = iParam0;
-		if (Global_112915.f_7688.f_911 == Var0)
+		Var0.f_0 = iParam0;
+		if (Global_112915.f_7688.f_911 == Var0.f_0)
 		{
 			Global_112915.f_7688.f_911 = -1;
 		}
@@ -1034,9 +1034,9 @@ int func_24(struct<2> Param0, var uParam2, int iParam3)
 	}
 	if (Param0.f_1 < 400f)
 	{
-		if (Param0 < 1400f)
+		if (Param0.f_0 < 1400f)
 		{
-			if (Param0 > -1900f)
+			if (Param0.f_0 > -1900f)
 			{
 				if (Param0.f_1 > -3500f)
 				{
@@ -1046,13 +1046,13 @@ int func_24(struct<2> Param0, var uParam2, int iParam3)
 			}
 		}
 	}
-	if (Param0 < 1536.35f)
+	if (Param0.f_0 < 1536.35f)
 	{
 		if (Param0.f_1 > 1016.18f)
 		{
 			if (Param0.f_1 < 1213.53f)
 			{
-				if (Param0 > 1278.08f)
+				if (Param0.f_0 > 1278.08f)
 				{
 					*iParam3 = 0;
 					return 1;

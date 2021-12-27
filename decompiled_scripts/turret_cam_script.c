@@ -189,8 +189,8 @@ void func_3(var uParam0, var uParam1)
 	Var0 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 	if ((((HUD::IS_PAUSE_MENU_ACTIVE() || func_8()) || PAD::IS_CONTROL_JUST_PRESSED(2, 199)) || PAD::IS_CONTROL_PRESSED(2, 199)) || PAD::IS_CONTROL_JUST_RELEASED(2, 199))
 	{
-		HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.f_1);
-		HUD::_0xA17784FCA9548D15(Var0.x, Var0.f_1, 0);
+		HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.f_0, Var0.f_1);
+		HUD::_0xA17784FCA9548D15(Var0.f_0, Var0.f_1, 0);
 		if (HUD::IS_PAUSE_MENU_ACTIVE() || func_8())
 		{
 			if (HUD::DOES_BLIP_EXIST(HUD::GET_MAIN_PLAYER_BLIP_ID()))
@@ -203,7 +203,7 @@ void func_3(var uParam0, var uParam1)
 	{
 		HUD::SET_BLIP_ALPHA(HUD::GET_MAIN_PLAYER_BLIP_ID(), 0);
 	}
-	HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
+	HUD::LOCK_MINIMAP_POSITION(Var0.f_0, Var0.f_1);
 	iVar3 = CAM::GET_RENDERING_CAM();
 	if (CAM::DOES_CAM_EXIST(iVar3))
 	{
@@ -230,17 +230,17 @@ void func_3(var uParam0, var uParam1)
 		HUD::SET_BLIP_SCALE(*uParam0, 0.44f);
 		HUD::SET_BLIP_PRIORITY(*uParam0, 13 + 1);
 		HUD::SET_BLIP_HIDDEN_ON_LEGEND(*uParam0, true);
-		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var4.x, Var4.f_1)));
+		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var4.f_0, Var4.f_1)));
 		HUD::SET_BLIP_HIDDEN_ON_LEGEND(*uParam1, true);
-		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var4.x, Var4.f_1)));
+		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var4.f_0, Var4.f_1)));
 	}
 	else
 	{
 		HUD::SET_BLIP_COORDS(*uParam0, Var0);
-		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var4.x, Var4.f_1)));
+		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var4.f_0, Var4.f_1)));
 		HUD::SET_BLIP_DISPLAY(*uParam0, 5);
 		HUD::SET_BLIP_COORDS(*uParam1, Var0);
-		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var4.x, Var4.f_1)));
+		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var4.f_0, Var4.f_1)));
 		HUD::SET_BLIP_DISPLAY(*uParam1, 5);
 	}
 }
@@ -437,11 +437,11 @@ Vector3 func_7(struct<3> Param0)
 {
 	struct<3> Var0;
 	
-	Var0.x = SYSTEM::COS(Param0.x);
+	Var0.f_0 = SYSTEM::COS(Param0.f_0);
 	Var0.f_1 = SYSTEM::COS(Param0.f_2);
-	Var0.f_2 = SYSTEM::SIN(Param0.x);
-	Var0.f_1 = (Var0.f_1 * Var0.x);
-	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.f_2));
+	Var0.f_2 = SYSTEM::SIN(Param0.f_0);
+	Var0.f_1 = (Var0.f_1 * Var0.f_0);
+	Var0.f_0 = (Var0.f_0 * -SYSTEM::SIN(Param0.f_2));
 	return Var0;
 }
 
@@ -1208,7 +1208,7 @@ void func_37()
 		Local_160.f_36 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(Local_64.f_86.f_1);
 		return;
 	}
-	Var0 = { CAM::GET_CAM_ROT(Local_160, 2) };
+	Var0 = { CAM::GET_CAM_ROT(Local_160.f_0, 2) };
 	switch (Local_64.f_17)
 	{
 		case 1:
@@ -1222,7 +1222,7 @@ void func_37()
 			}
 		
 		case 0:
-			func_38(Local_160.f_36, 0f, CAM::GET_CAM_FOV(Local_160), Local_64.f_4, Local_64.f_5, Var0.f_2);
+			func_38(Local_160.f_36, 0f, CAM::GET_CAM_FOV(Local_160.f_0), Local_64.f_4, Local_64.f_5, Var0.f_2);
 			break;
 	}
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(0);
@@ -1269,7 +1269,7 @@ void func_41()
 	}
 	if (!MISC::IS_BIT_SET(Local_160.f_60, 2))
 	{
-		Var0 = { func_46(Local_160, &(Local_160.f_1), Local_64, Local_64.f_6.f_1, Local_64.f_6) };
+		Var0 = { func_46(Local_160.f_0, &(Local_160.f_1), Local_64, Local_64.f_6.f_1, Local_64.f_6) };
 	}
 	Var4 = { Local_64.f_91 + Local_160.f_1 };
 	Var7 = { func_45(Local_64.f_71, Var4.f_2) };
@@ -1277,16 +1277,16 @@ void func_41()
 	switch (Local_64.f_94)
 	{
 		case 0:
-			func_44(Local_160, Var10, Var4);
+			func_44(Local_160.f_0, Var10, Var4);
 			break;
 		
 		case 1:
-			func_43(Local_160, Var10, Var4, Local_64.f_95);
+			func_43(Local_160.f_0, Var10, Var4, Local_64.f_95);
 			break;
 	}
-	func_42(Local_160.f_40, Local_160.f_40.f_2, Local_160.f_40.f_8, Local_160.f_40.f_3, Local_160.f_40.f_9, Local_160.f_40.f_4, Local_160.f_40.f_10, Local_160.f_40.f_5, Local_160.f_40.f_11, Local_160.f_40.f_6, Local_160.f_40.f_12, Local_160.f_40.f_7, Var0, Var0.f_1, Local_160.f_61.f_1, Local_160.f_61.f_2 > 0);
-	Local_160.f_4.f_6 = { CAM::GET_CAM_COORD(Local_160) };
-	Local_160.f_4.f_9 = { CAM::GET_CAM_ROT(Local_160, 2) };
+	func_42(Local_160.f_40, Local_160.f_40.f_2, Local_160.f_40.f_8, Local_160.f_40.f_3, Local_160.f_40.f_9, Local_160.f_40.f_4, Local_160.f_40.f_10, Local_160.f_40.f_5, Local_160.f_40.f_11, Local_160.f_40.f_6, Local_160.f_40.f_12, Local_160.f_40.f_7, Var0.f_0, Var0.f_1, Local_160.f_61.f_1, Local_160.f_61.f_2 > 0);
+	Local_160.f_4.f_6 = { CAM::GET_CAM_COORD(Local_160.f_0) };
+	Local_160.f_4.f_9 = { CAM::GET_CAM_ROT(Local_160.f_0, 2) };
 }
 
 void func_42(char* sParam0, char* sParam1, int iParam2, char* sParam3, int iParam4, char* sParam5, int iParam6, char* sParam7, int iParam8, char* sParam9, int iParam10, char* sParam11, float fParam12, struct<3> Param13, int iParam16, bool bParam17)
@@ -1413,8 +1413,8 @@ Vector3 func_45(struct<3> Param0, float fParam3)
 	
 	fVar3 = SYSTEM::SIN(fParam3);
 	fVar4 = SYSTEM::COS(fParam3);
-	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
-	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
+	Var0.f_0 = ((Param0.f_0 * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.f_0 * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
@@ -1435,7 +1435,7 @@ struct<4> func_46(int iParam0, var uParam1, struct<6> Param2, float fParam8, flo
 	bool bVar22;
 	
 	fVar0 = CAM::GET_CAM_FOV(iParam0);
-	Var1 = -fVar0;
+	Var1.f_0 = -fVar0;
 	Var1.f_1 = { -*uParam1 };
 	fVar5 = PAD::GET_DISABLED_CONTROL_NORMAL(0, 39);
 	Var6 = { -Vector(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(0, 290), 0f, PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(0, 291)) };
@@ -1461,21 +1461,21 @@ struct<4> func_46(int iParam0, var uParam1, struct<6> Param2, float fParam8, flo
 	fVar11 = ((fVar10 - 5f) / 42f);
 	CAM::_0x487A82C650EB7799(1f);
 	GRAPHICS::_0xE2892E7E55D7073A(fVar11);
-	Var12.x = Param2.f_2;
+	Var12.f_0 = Param2.f_2;
 	Var12.f_1 = 0f;
-	Var12.f_2 = Param2;
-	Var15.x = Param2.f_3;
+	Var12.f_2 = Param2.f_0;
+	Var15.f_0 = Param2.f_3;
 	Var15.f_1 = 0f;
 	Var15.f_2 = Param2.f_1;
 	fVar18 = (((fVar9 * fVar10) * fParam8) * (1f + ((fVar10 - Param2.f_4) / (Param2.f_5 - Param2.f_4))));
 	Var19 = { Var6 };
 	Var19.f_2 = (Var19.f_2 * fVar18);
-	Var19.x = (Var19.x * fVar18);
+	Var19.f_0 = (Var19.f_0 * fVar18);
 	*uParam1 = { *uParam1 + Var19 };
 	bVar22 = Var12.f_2 > Var15.f_2;
 	if (bVar22)
 	{
-		*uParam1 = func_49(*uParam1, Var12.x, Var15.x);
+		*uParam1 = func_49(*uParam1, Var12.f_0, Var15.f_0);
 		uParam1->f_1 = func_49(uParam1->f_1, Var12.f_1, Var15.f_1);
 		uParam1->f_2 = func_48(uParam1->f_2);
 	}
@@ -1483,14 +1483,14 @@ struct<4> func_46(int iParam0, var uParam1, struct<6> Param2, float fParam8, flo
 	{
 		*uParam1 = { func_47(*uParam1, Var12, Var15) };
 	}
-	Var1 = (Var1 + fVar10);
+	Var1.f_0 = (Var1.f_0 + fVar10);
 	Var1.f_1 = { Var1.f_1 + *uParam1 };
 	return Var1;
 }
 
 Vector3 func_47(struct<3> Param0, struct<3> Param3, struct<3> Param6)
 {
-	Param0.x = func_49(Param0.x, Param3.x, Param6.x);
+	Param0.f_0 = func_49(Param0.f_0, Param3.f_0, Param6.f_0);
 	Param0.f_1 = func_49(Param0.f_1, Param3.f_1, Param6.f_1);
 	Param0.f_2 = func_49(Param0.f_2, Param3.f_2, Param6.f_2);
 	return Param0;
@@ -1675,9 +1675,9 @@ bool func_56(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 void func_57(bool bParam0)
@@ -1709,14 +1709,14 @@ void func_58(float fParam0, float fParam1, var uParam2, var uParam3, var uParam4
 	
 	if (Local_64.f_74 == 0)
 	{
-		*uParam5 = { CAM::GET_CAM_ROT(Local_160, 2) };
+		*uParam5 = { CAM::GET_CAM_ROT(Local_160.f_0, 2) };
 		*uParam4 = { func_7(*uParam5) };
 		*uParam2 = { Local_160.f_4.f_6 + Vector(fParam0, fParam0, fParam0) * *uParam4 };
 		*uParam3 = { func_60(*uParam2, fParam1) };
 	}
 	else
 	{
-		Var0 = { func_7(CAM::GET_CAM_ROT(Local_160, 2)) };
+		Var0 = { func_7(CAM::GET_CAM_ROT(Local_160.f_0, 2)) };
 		Var3 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Local_64.f_95, Local_64.f_88) };
 		Var6 = { ENTITY::_GET_ENTITY_BONE_POSITION_2(Local_64.f_95, Local_64.f_74.f_1[0]) };
 		Var9 = { Var6 - Var3 };
@@ -1746,7 +1746,7 @@ void func_58(float fParam0, float fParam1, var uParam2, var uParam3, var uParam4
 
 float func_59(struct<3> Param0, struct<3> Param3)
 {
-	return (((Param0.x * Param3.x) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
+	return (((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
 }
 
 Vector3 func_60(struct<3> Param0, float fParam3)
@@ -1821,14 +1821,14 @@ int func_65(int iParam0, struct<3> Param1, struct<3> Param4, struct<3> Param7)
 	if ((SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(joaat("am_mp_drone")) && !SCRIPT::IS_THREAD_ACTIVE(iLocal_50)) && !func_69())
 	{
 		Var0.f_1 = -1;
-		Var0 = 0;
+		Var0.f_0 = 0;
 		Var0.f_2 = { Param1 };
 		Var0.f_5 = { Param4 };
 		Var0.f_8 = { Param7 };
 		Var0.f_1 = iParam0;
 		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("am_mp_drone")) < 1)
 		{
-			if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("AM_MP_DRONE", Var0, true, 0))
+			if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("AM_MP_DRONE", Var0.f_0, true, 0))
 			{
 				iLocal_50 = SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(joaat("am_mp_drone"), &Var0, 12, 1424);
 				SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("am_mp_drone"));
@@ -1962,7 +1962,7 @@ void func_72(int iParam0, bool bParam1, int iParam2)
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(1);
 	Var2 = { ENTITY::GET_ENTITY_COORDS(iParam0, true) };
 	GRAPHICS::SET_DRAW_ORIGIN(Var2, 0);
-	fVar0 = func_74(iParam0, Local_160, 0.5f);
+	fVar0 = func_74(iParam0, Local_160.f_0, 0.5f);
 	fVar0 = func_49(fVar0, 0.015f, fVar0);
 	fVar1 = (fVar0 * GRAPHICS::_GET_ASPECT_RATIO(false));
 	HUD::GET_HUD_COLOUR(iParam2, &iVar5, &iVar6, &iVar7, &iVar8);
@@ -2075,7 +2075,7 @@ void func_79(int iParam0)
 	struct<3> Var0;
 	struct<3> Var3;
 	
-	Var0 = { CAM::GET_CAM_COORD(Local_160) };
+	Var0 = { CAM::GET_CAM_COORD(Local_160.f_0) };
 	Var3 = { ENTITY::GET_ENTITY_COORDS(iParam0, true) };
 	Var3 = { Var3 + Vector(2f, 2f, 2f) * func_80(Var3 - Var0) };
 	Local_160.f_22.f_1 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(Var0, Var3, 511, 0, 4);
@@ -2097,7 +2097,7 @@ Vector3 func_80(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -2912,9 +2912,9 @@ void func_106()
 	{
 		if (!MISC::IS_BIT_SET(Local_64.f_84.f_1, 0) || func_108(Local_64.f_88, 0))
 		{
-			if (!CAM::DOES_CAM_EXIST(Local_160))
+			if (!CAM::DOES_CAM_EXIST(Local_160.f_0))
 			{
-				Local_160 = CAM::CREATE_CAMERA(26379945, true);
+				Local_160.f_0 = CAM::CREATE_CAMERA(26379945, true);
 				MISC::SET_BIT(&(Local_160.f_60), 2);
 				func_41();
 				MISC::CLEAR_BIT(&(Local_160.f_60), 2);

@@ -1570,7 +1570,7 @@ void func_34(var uParam0, int iParam1)
 
 int func_35(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -3096,9 +3096,9 @@ int func_111(var uParam0)
 	{
 		return 0;
 	}
-	if (Local_1460 != 0)
+	if (Local_1460.f_0 != 0)
 	{
-		Call_Loc(Local_1460);
+		Call_Loc(Local_1460.f_0);
 		if (!StackVal)
 		{
 			return 0;
@@ -3498,7 +3498,7 @@ void func_125(var uParam0, int iParam1, int iParam2, struct<3> Param3, var uPara
 		if (!bParam10)
 		{
 			Var0 = { Param3 };
-			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.x, Var0.f_1, (Var0.f_2 + 1f)))
+			if (INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Var0.f_0, Var0.f_1, (Var0.f_2 + 1f)))
 			{
 			}
 			else
@@ -4764,8 +4764,8 @@ Vector3 func_143(struct<3> Param0, float fParam3)
 	
 	fVar3 = SYSTEM::SIN(fParam3);
 	fVar4 = SYSTEM::COS(fParam3);
-	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
-	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
+	Var0.f_0 = ((Param0.f_0 * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.f_0 * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
@@ -10062,13 +10062,13 @@ void func_334(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam
 	Var10 = { uParam0->f_8 + uParam0->f_11 };
 	if ((PAD::_IS_USING_KEYBOARD(2) && bParam2) && !uParam0->f_28)
 	{
-		uParam0->f_14 = Var10.x;
+		uParam0->f_14 = Var10.f_0;
 		uParam0->f_14.f_1 = Var10.f_1;
 		uParam0->f_14.f_2 = Var10.f_2;
 	}
 	else
 	{
-		uParam0->f_14 = (uParam0->f_14 + func_335(((((Var10.x - uParam0->f_14) * 0.05f) * fVar9) * fParam7), -3f, 3f));
+		uParam0->f_14 = (uParam0->f_14 + func_335(((((Var10.f_0 - uParam0->f_14) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 		uParam0->f_14.f_1 = (uParam0->f_14.f_1 + func_335(((((Var10.f_1 - uParam0->f_14.f_1) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 		uParam0->f_14.f_2 = (uParam0->f_14.f_2 + func_335(((((Var10.f_2 - uParam0->f_14.f_2) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 	}
@@ -12643,7 +12643,7 @@ struct<9> func_434()
 {
 	struct<9> Var0;
 	
-	Var0 = 0.5f;
+	Var0.f_0 = 0.5f;
 	Var0.f_1 = 0.5f;
 	Var0.f_2 = 1f;
 	Var0.f_3 = 1f;
@@ -13037,7 +13037,7 @@ bool func_465(var uParam0)
 		{
 			uParam0->f_1084 = func_956();
 		}
-		Local_1460 = 142544;
+		Local_1460.f_0 = 142544;
 		Local_1460.f_1 = 142500;
 		Local_1460.f_2 = 142481;
 		Local_1460.f_3 = 142462;
@@ -14093,7 +14093,7 @@ void func_493(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -17314,7 +17314,7 @@ void func_587(var uParam0)
 	}
 	iVar1 = 0;
 	iVar1 = 0;
-	while (iVar1 < Local_1227)
+	while (iVar1 < Local_1227.f_0)
 	{
 		if (Local_1227[iVar1 /*9*/])
 		{
@@ -18208,7 +18208,7 @@ void func_624(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, v
 {
 	struct<7> Var0;
 	
-	Var0 = 985284033;
+	Var0.f_0 = 985284033;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = uParam2;
@@ -30166,7 +30166,7 @@ void func_918(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, s
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam2);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam3);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam4);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Param5);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Param5.f_0);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(Param5.f_1);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 }
@@ -30376,7 +30376,7 @@ void func_925(var uParam0)
 		return;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_128)
+	while (iVar0 < Local_128.f_0)
 	{
 		if (Local_128[iVar0 /*14*/])
 		{
@@ -30385,7 +30385,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_213)
+	while (iVar0 < Local_213.f_0)
 	{
 		if (Local_213[iVar0 /*14*/])
 		{
@@ -30394,7 +30394,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_326)
+	while (iVar0 < Local_326.f_0)
 	{
 		if (Local_326[iVar0 /*14*/])
 		{
@@ -30403,7 +30403,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_383)
+	while (iVar0 < Local_383.f_0)
 	{
 		if (Local_383[iVar0 /*14*/])
 		{
@@ -30412,7 +30412,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_539)
+	while (iVar0 < Local_539.f_0)
 	{
 		if (Local_539[iVar0 /*14*/])
 		{
@@ -30421,7 +30421,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_454)
+	while (iVar0 < Local_454.f_0)
 	{
 		if (Local_454[iVar0 /*14*/])
 		{
@@ -30430,7 +30430,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_624)
+	while (iVar0 < Local_624.f_0)
 	{
 		if (Local_624[iVar0 /*14*/])
 		{
@@ -30439,7 +30439,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_681)
+	while (iVar0 < Local_681.f_0)
 	{
 		if (Local_681[iVar0 /*14*/])
 		{
@@ -30448,7 +30448,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_822)
+	while (iVar0 < Local_822.f_0)
 	{
 		if (Local_822[iVar0 /*14*/])
 		{
@@ -30457,7 +30457,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_879)
+	while (iVar0 < Local_879.f_0)
 	{
 		if (Local_879[iVar0 /*14*/])
 		{
@@ -30466,7 +30466,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_964)
+	while (iVar0 < Local_964.f_0)
 	{
 		if (Local_964[iVar0 /*14*/])
 		{
@@ -30475,7 +30475,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_1007)
+	while (iVar0 < Local_1007.f_0)
 	{
 		if (Local_1007[iVar0 /*9*/])
 		{
@@ -30484,7 +30484,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_1080)
+	while (iVar0 < Local_1080.f_0)
 	{
 		if (Local_1080[iVar0 /*9*/])
 		{
@@ -30493,7 +30493,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_1135)
+	while (iVar0 < Local_1135.f_0)
 	{
 		if (Local_1135[iVar0 /*9*/])
 		{
@@ -30502,7 +30502,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_1208)
+	while (iVar0 < Local_1208.f_0)
 	{
 		if (Local_1208[iVar0 /*9*/])
 		{
@@ -30511,7 +30511,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_1227)
+	while (iVar0 < Local_1227.f_0)
 	{
 		if (Local_1227[iVar0 /*9*/])
 		{
@@ -30520,7 +30520,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_1264)
+	while (iVar0 < Local_1264.f_0)
 	{
 		if (Local_1264[iVar0 /*9*/])
 		{
@@ -30529,7 +30529,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_1283)
+	while (iVar0 < Local_1283.f_0)
 	{
 		if (Local_1283[iVar0 /*9*/])
 		{
@@ -30542,7 +30542,7 @@ void func_925(var uParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_1338)
+	while (iVar0 < Local_1338.f_0)
 	{
 		if (Local_1338[iVar0 /*9*/])
 		{
@@ -30557,7 +30557,7 @@ void func_925(var uParam0)
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && uParam0->f_1084 == PLAYER::PLAYER_ID())
 	{
 		iVar0 = 0;
-		while (iVar0 < Local_1393)
+		while (iVar0 < Local_1393.f_0)
 		{
 			if (Local_1393[iVar0 /*9*/])
 			{

@@ -12217,7 +12217,7 @@ int func_245()
 			{
 				if (SCRIPT::GET_EVENT_DATA(1, iVar10, &Var0, 7))
 				{
-					if (Var0.x == iLocal_705 && Var0.x != -1)
+					if (Var0.f_0 == iLocal_705 && Var0.f_0 != -1)
 					{
 						if (Var0.f_2 == 0)
 						{
@@ -12871,7 +12871,7 @@ void func_256(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -13349,7 +13349,7 @@ void func_270(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, v
 {
 	struct<7> Var0;
 	
-	Var0 = 985284033;
+	Var0.f_0 = 985284033;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = uParam2;
@@ -14032,20 +14032,20 @@ int func_293(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	{
 		if (iParam8 != 0 && func_294(iParam1))
 		{
-			Var2 = iParam8;
+			Var2.f_0 = iParam8;
 			Var2.f_1 = iParam2;
 			Var2.f_2 = iParam5;
 			Var2.f_3 = iParam6;
 		}
 		else
 		{
-			Var2 = iParam2;
+			Var2.f_0 = iParam2;
 			Var2.f_1 = iParam8;
 			Var2.f_2 = iParam5;
 			Var2.f_3 = iParam6;
 		}
 		Global_4528329[iVar1 /*85*/].f_66.f_1 = Var2.f_2;
-		Global_4528329[iVar1 /*85*/].f_66.f_15 = Var2;
+		Global_4528329[iVar1 /*85*/].f_66.f_15 = Var2.f_0;
 		Global_4528329[iVar1 /*85*/].f_66.f_16 = Var2.f_1;
 		if (bVar0 || NETSHOPPING::NET_GAMESERVER_BASKET_ADD_ITEM(&Var2, iParam4))
 		{
@@ -14395,7 +14395,7 @@ int func_304(int iParam0)
 	{
 		if (iVar2 > 0)
 		{
-			Var8.x = MISC::GET_HASH_KEY(func_235(iLocal_520));
+			Var8.f_0 = MISC::GET_HASH_KEY(func_235(iLocal_520));
 			Var8.f_1 = iVar6;
 			Var8.f_2 = iParam0;
 			MONEY::_0x675D19C6067CAE08(iVar2, &Var8, 0, 1);
@@ -16755,9 +16755,9 @@ bool func_383(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 void func_384(int iParam0)
@@ -17513,7 +17513,7 @@ int func_394(int iParam0, int iParam1, int iParam2)
 				break;
 		}
 	}
-	Var14.x = MISC::GET_HASH_KEY(func_235(iParam0));
+	Var14.f_0 = MISC::GET_HASH_KEY(func_235(iParam0));
 	Var14.f_1 = func_27(iParam0);
 	Var14.f_2 = -1;
 	if (iVar1 > 0)

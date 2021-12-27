@@ -214,8 +214,8 @@ int func_3(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int 
 	}
 	if (Global_112915.f_7688.f_136 < 9)
 	{
-		Var0 = iParam0;
-		if (Global_112915.f_7688.f_911 == Var0)
+		Var0.f_0 = iParam0;
+		if (Global_112915.f_7688.f_911 == Var0.f_0)
 		{
 			Global_112915.f_7688.f_911 = -1;
 		}
@@ -1670,9 +1670,9 @@ bool func_51(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_52(var uParam0, int iParam1)
@@ -2428,7 +2428,7 @@ void func_75(bool bParam0)
 	}
 	func_57();
 	iVar0 = 0;
-	while (iVar0 < Local_55)
+	while (iVar0 < Local_55.f_0)
 	{
 		func_46(&(Local_55[iVar0 /*11*/].f_2));
 		func_35(&(Local_55[iVar0 /*11*/].f_1));

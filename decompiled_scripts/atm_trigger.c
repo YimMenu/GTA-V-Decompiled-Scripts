@@ -5268,11 +5268,11 @@ bool func_101(int iParam0)
 
 int func_102(struct<3> Param0)
 {
-	if ((Param0.x == 129.6975f && Param0.f_1 == -1290.842f) && Param0.f_2 == 28.27142f)
+	if ((Param0.f_0 == 129.6975f && Param0.f_1 == -1290.842f) && Param0.f_2 == 28.27142f)
 	{
 		return 1;
 	}
-	if ((Param0.x == 130.5791f && Param0.f_1 == -1292.369f) && Param0.f_2 == 28.27142f)
+	if ((Param0.f_0 == 130.5791f && Param0.f_1 == -1292.369f) && Param0.f_2 == 28.27142f)
 	{
 		return 1;
 	}

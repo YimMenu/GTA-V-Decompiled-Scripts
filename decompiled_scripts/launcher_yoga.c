@@ -1011,7 +1011,7 @@ void func_22(int* iParam0)
 void func_23()
 {
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_120.f_1);
-	if (ENTITY::DOES_ENTITY_EXIST(Local_120))
+	if (ENTITY::DOES_ENTITY_EXIST(Local_120.f_0))
 	{
 		ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&Local_120);
 	}
@@ -1933,12 +1933,12 @@ bool func_72(int iParam0)
 
 void func_73()
 {
-	if (!ENTITY::DOES_ENTITY_EXIST(Local_120))
+	if (!ENTITY::DOES_ENTITY_EXIST(Local_120.f_0))
 	{
-		Local_120 = OBJECT::CREATE_OBJECT(Local_120.f_1, Local_120.f_2, true, true, false);
-		ENTITY::SET_ENTITY_COORDS_NO_OFFSET(Local_120, Local_120.f_2, false, false, true);
-		ENTITY::SET_ENTITY_ROTATION(Local_120, Local_120.f_5, 2, true);
-		ENTITY::FREEZE_ENTITY_POSITION(Local_120, true);
+		Local_120.f_0 = OBJECT::CREATE_OBJECT(Local_120.f_1, Local_120.f_2, true, true, false);
+		ENTITY::SET_ENTITY_COORDS_NO_OFFSET(Local_120.f_0, Local_120.f_2, false, false, true);
+		ENTITY::SET_ENTITY_ROTATION(Local_120.f_0, Local_120.f_5, 2, true);
+		ENTITY::FREEZE_ENTITY_POSITION(Local_120.f_0, true);
 	}
 }
 

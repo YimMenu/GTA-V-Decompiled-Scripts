@@ -434,7 +434,7 @@ void __EntryFunction__()
 			switch (func_301())
 			{
 				case 0:
-					Local_65 = 2;
+					Local_65.f_0 = 2;
 					break;
 				
 				case 2:
@@ -442,7 +442,7 @@ void __EntryFunction__()
 					func_2();
 					if (func_1())
 					{
-						Local_65 = 6;
+						Local_65.f_0 = 6;
 					}
 					break;
 				
@@ -675,7 +675,7 @@ void func_3()
 {
 	struct<2> Var0;
 	
-	Var0 = 194348342;
+	Var0.f_0 = 194348342;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var0, 2, func_4(1, 1));
 }
@@ -4204,9 +4204,9 @@ bool func_93(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 Vector3 func_94(int iParam0)
@@ -4577,7 +4577,7 @@ void func_107(int iParam0, int iParam1, int iParam2)
 {
 	struct<4> Var0;
 	
-	Var0 = 846342319;
+	Var0.f_0 = 846342319;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = iParam1;
@@ -5364,7 +5364,7 @@ void func_148(int iParam0, int iParam1, int iParam2)
 {
 	struct<4> Var0;
 	
-	Var0 = 1498409190;
+	Var0.f_0 = 1498409190;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = iParam1;
@@ -7032,16 +7032,16 @@ int func_200(struct<6> Param0, struct<6> Param6)
 		}
 		if (Param0.f_4 == Param6.f_4)
 		{
-			Var0 = Param0;
+			Var0.f_0 = Param0.f_0;
 			Var0.f_1 = Param0.f_1 * 60;
 			Var0.f_2 = Param0.f_2 * 3600;
 			Var0.f_3 = (Param0.f_3 * 86400);
-			iVar12 = (((Var0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
-			Var6 = Param6;
+			iVar12 = (((Var0.f_0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
+			Var6.f_0 = Param6.f_0;
 			Var6.f_1 = Param6.f_1 * 60;
 			Var6.f_2 = Param6.f_2 * 3600;
 			Var6.f_3 = (Param6.f_3 * 86400);
-			iVar13 = (((Var6 + Var6.f_1) + Var6.f_2) + Var6.f_3);
+			iVar13 = (((Var6.f_0 + Var6.f_1) + Var6.f_2) + Var6.f_3);
 			if (iVar12 > iVar13 || iVar12 == iVar13)
 			{
 				return 1;
@@ -7997,16 +7997,16 @@ int func_230(struct<6> Param0, struct<6> Param6)
 		}
 		if (Param0.f_4 == Param6.f_4)
 		{
-			Var0 = Param0;
+			Var0.f_0 = Param0.f_0;
 			Var0.f_1 = Param0.f_1 * 60;
 			Var0.f_2 = Param0.f_2 * 3600;
 			Var0.f_3 = (Param0.f_3 * 86400);
-			iVar12 = (((Var0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
-			Var6 = Param6;
+			iVar12 = (((Var0.f_0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
+			Var6.f_0 = Param6.f_0;
 			Var6.f_1 = Param6.f_1 * 60;
 			Var6.f_2 = Param6.f_2 * 3600;
 			Var6.f_3 = (Param6.f_3 * 86400);
-			iVar13 = (((Var6 + Var6.f_1) + Var6.f_2) + Var6.f_3);
+			iVar13 = (((Var6.f_0 + Var6.f_1) + Var6.f_2) + Var6.f_3);
 			if (iVar12 > iVar13 || iVar12 == iVar13)
 			{
 				return 1;
@@ -9194,7 +9194,7 @@ void func_291()
 {
 	struct<3> Var0;
 	
-	Var0.x = -660428494;
+	Var0.f_0 = -660428494;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = MISC::GET_FRAME_COUNT();
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var0, 3, func_4(1, 1));
@@ -9336,7 +9336,7 @@ int func_300()
 
 int func_301()
 {
-	return Local_65;
+	return Local_65.f_0;
 }
 
 int func_302(int iParam0)
@@ -9591,7 +9591,7 @@ void func_316()
 
 void func_317(struct<21> Param0)
 {
-	func_321(func_322(Param0), Param0);
+	func_321(func_322(Param0.f_0), Param0);
 	func_319(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Local_65, 79, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&iLocal_145, 33, 0);

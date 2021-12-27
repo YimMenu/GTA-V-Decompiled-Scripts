@@ -186,7 +186,7 @@ void __EntryFunction__()
 			switch (func_254())
 			{
 				case 0:
-					Local_81 = 1;
+					Local_81.f_0 = 1;
 					break;
 				
 				case 1:
@@ -194,7 +194,7 @@ void __EntryFunction__()
 					func_3();
 					if (func_1())
 					{
-						Local_81 = 4;
+						Local_81.f_0 = 4;
 					}
 					break;
 				
@@ -303,7 +303,7 @@ int func_6()
 
 void func_7(struct<2> Param0, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, int iParam14)
 {
-	Param0 = 677240627;
+	Param0.f_0 = 677240627;
 	Param0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam14 == 0)
 	{
@@ -384,7 +384,7 @@ void func_11()
 {
 	int iVar0;
 	
-	if (Local_81 == 1)
+	if (Local_81.f_0 == 1)
 	{
 		if (NETWORK::NETWORK_IS_PARTICIPANT_ACTIVE(PLAYER::INT_TO_PARTICIPANTINDEX(iLocal_236)))
 		{
@@ -2638,7 +2638,7 @@ void func_104(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -2765,7 +2765,7 @@ void func_112(int iParam0, int iParam1, int iParam2)
 	
 	if (func_284(iParam0, 0, 1))
 	{
-		Var0 = 657959395;
+		Var0.f_0 = 657959395;
 		Var0.f_1 = PLAYER::PLAYER_ID();
 		Var0.f_2 = iParam1;
 		Var0.f_4 = iParam2;
@@ -5424,7 +5424,7 @@ bool func_233(struct<3> Param0, struct<3> Param3, struct<3> Param6, float fParam
 
 int func_234(struct<3> Param0, struct<3> Param3, struct<3> Param6, struct<3> Param9)
 {
-	if (((((Param0.x >= Param6.x && Param0.f_1 >= Param6.f_1) && Param0.f_2 >= Param6.f_2) && Param3.x <= Param9.x) && Param3.f_1 <= Param9.f_1) && Param3.f_2 <= Param9.f_2)
+	if (((((Param0.f_0 >= Param6.f_0 && Param0.f_1 >= Param6.f_1) && Param0.f_2 >= Param6.f_2) && Param3.f_0 <= Param9.f_0) && Param3.f_1 <= Param9.f_1) && Param3.f_2 <= Param9.f_2)
 	{
 		return 1;
 	}
@@ -5450,13 +5450,13 @@ void func_236(var uParam0, var uParam1)
 	
 	if (*uParam0 <= *uParam1)
 	{
-		Var0.x = *uParam0;
-		Var3.x = *uParam1;
+		Var0.f_0 = *uParam0;
+		Var3.f_0 = *uParam1;
 	}
 	else
 	{
-		Var0.x = *uParam1;
-		Var3.x = *uParam0;
+		Var0.f_0 = *uParam1;
+		Var3.f_0 = *uParam0;
 	}
 	if (uParam0->f_1 <= uParam1->f_1)
 	{
@@ -5670,7 +5670,7 @@ void func_253()
 
 int func_254()
 {
-	return Local_81;
+	return Local_81.f_0;
 }
 
 int func_255(int iParam0)
@@ -6115,7 +6115,7 @@ void func_273(int iParam0, bool bParam1)
 
 void func_274(struct<21> Param0)
 {
-	func_280(func_281(Param0), Param0);
+	func_280(func_281(Param0.f_0), Param0);
 	func_278(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Local_81, 20, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&Local_101, 129, 0);

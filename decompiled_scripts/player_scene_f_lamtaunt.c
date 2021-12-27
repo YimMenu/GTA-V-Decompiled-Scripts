@@ -1754,16 +1754,16 @@ int func_31(char* sParam0, char* sParam1, var uParam2)
 			if (!MISC::IS_STRING_NULL_OR_EMPTY(uParam2[iVar72 /*4*/]))
 			{
 				iVar73 = 0;
-				while (iVar73 < Var9)
+				while (iVar73 < Var9.f_0)
 				{
 					if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Var9[iVar73 /*4*/])))
 					{
 						if (MISC::ARE_STRINGS_EQUAL(uParam2[iVar72 /*4*/], &(Var9[iVar73 /*4*/])))
 						{
 							iVar74 = iVar73;
-							while (iVar74 <= (Var9 - 1))
+							while (iVar74 <= (Var9.f_0 - 1))
 							{
-								if (iVar74 + 1 < Var9)
+								if (iVar74 + 1 < Var9.f_0)
 								{
 									Var9[iVar74 /*4*/] = { Var9[iVar74 + 1 /*4*/] };
 								}
@@ -3971,16 +3971,16 @@ int func_95(struct<6> Param0, struct<6> Param6)
 		}
 		if (Param0.f_4 == Param6.f_4)
 		{
-			Var0 = Param0;
+			Var0.f_0 = Param0.f_0;
 			Var0.f_1 = Param0.f_1 * 60;
 			Var0.f_2 = Param0.f_2 * 3600;
 			Var0.f_3 = (Param0.f_3 * 86400);
-			iVar12 = (((Var0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
-			Var6 = Param6;
+			iVar12 = (((Var0.f_0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
+			Var6.f_0 = Param6.f_0;
 			Var6.f_1 = Param6.f_1 * 60;
 			Var6.f_2 = Param6.f_2 * 3600;
 			Var6.f_3 = (Param6.f_3 * 86400);
-			iVar13 = (((Var6 + Var6.f_1) + Var6.f_2) + Var6.f_3);
+			iVar13 = (((Var6.f_0 + Var6.f_1) + Var6.f_2) + Var6.f_3);
 			if (iVar12 > iVar13 || iVar12 == iVar13)
 			{
 				return 1;
@@ -4263,7 +4263,7 @@ int func_101(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	}
 	if (Global_112915.f_7688.f_764 < 8)
 	{
-		Var0 = iParam0;
+		Var0.f_0 = iParam0;
 		Var0.f_3 = func_103(iParam3);
 		Var0.f_4 = (MISC::GET_GAME_TIMER() + iParam6);
 		Var0.f_5 = iParam7;
@@ -4581,7 +4581,7 @@ int func_110(int iParam0, int iParam1)
 	bool bVar10;
 	
 	Var0 = { func_112(iParam0) };
-	if (Var0 != iParam0)
+	if (Var0.f_0 != iParam0)
 	{
 		return 6;
 	}
@@ -4648,7 +4648,7 @@ int func_113(int iParam0, int iParam1)
 	bool bVar14;
 	
 	Var0 = { func_114(iParam0) };
-	if (Var0 != iParam0)
+	if (Var0.f_0 != iParam0)
 	{
 		return 6;
 	}
@@ -4706,7 +4706,7 @@ int func_115(int iParam0, int iParam1)
 	bool bVar15;
 	
 	Var0 = { func_116(iParam0) };
-	if (Var0 != iParam0)
+	if (Var0.f_0 != iParam0)
 	{
 		return 6;
 	}
@@ -5204,7 +5204,7 @@ Vector3 func_126(struct<3> Param0, float fParam3, float fParam4)
 	while (iVar5 < 10)
 	{
 		Var0 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3), MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3), 0f };
-		if (((Var0.x * Var0.x) + (Var0.f_1 * Var0.f_1)) <= fVar3)
+		if (((Var0.f_0 * Var0.f_0) + (Var0.f_1 * Var0.f_1)) <= fVar3)
 		{
 			fVar4 = (fParam4 / 2f);
 			Var0.f_2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(-fVar4, fVar4);
@@ -5269,9 +5269,9 @@ bool func_131(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 void func_132(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5)
@@ -8984,28 +8984,28 @@ int func_153(int iParam0, var uParam1, char* sParam2)
 		
 		case 306:
 			Var8 = { -7.4998f, 7.4995f, -0.5258f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var8.x, -Var8.f_1);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var8.f_0, -Var8.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 307:
 			Var11 = { 10.6345f, 0.7246f, 1.2508f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var11.x, -Var11.f_1);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var11.f_0, -Var11.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 308:
 			Var14 = { -3.4271f, -13.6787f, -1.4107f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var14.x, -Var14.f_1);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var14.f_0, -Var14.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;
 		
 		case 309:
 			Var17 = { -19.6582f, 7.896f, 0.1334f };
-			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var17.x, -Var17.f_1);
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-Var17.f_0, -Var17.f_1);
 			StringCopy(sParam2, "", 32);
 			return 1;
 			break;

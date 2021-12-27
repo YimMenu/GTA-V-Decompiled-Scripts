@@ -14289,24 +14289,24 @@ void func_22(var uParam0)
 		return;
 	}
 	Var1 = { *(uParam0[iVar0 /*58*/]) };
-	if (ENTITY::DOES_ENTITY_EXIST(Var1) && !ENTITY::IS_ENTITY_DEAD(Var1, false))
+	if (ENTITY::DOES_ENTITY_EXIST(Var1.f_0) && !ENTITY::IS_ENTITY_DEAD(Var1.f_0, false))
 	{
 		if (MISC::IS_BIT_SET(Global_1853128[PLAYER::PLAYER_ID() /*888*/].f_267.f_332.f_2, 2))
 		{
 			STREAMING::REQUEST_ANIM_DICT("ANIM@AMB@NIGHTCLUB@PEDS@");
 			if (STREAMING::HAS_ANIM_DICT_LOADED("ANIM@AMB@NIGHTCLUB@PEDS@"))
 			{
-				if (ENTITY::IS_ENTITY_PLAYING_ANIM(Var1, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_e", 3))
+				if (ENTITY::IS_ENTITY_PLAYING_ANIM(Var1.f_0, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_e", 3))
 				{
-					if (ENTITY::GET_ENTITY_ANIM_CURRENT_TIME(Var1, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_e") > 0.99f)
+					if (ENTITY::GET_ENTITY_ANIM_CURRENT_TIME(Var1.f_0, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_e") > 0.99f)
 					{
-						TASK::TASK_PLAY_ANIM_ADVANCED(Var1, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d_v2", Var1.f_45, 0f, 0f, Var1.f_48, 2f, -2f, -1, 790529, 0f, 2, 3);
+						TASK::TASK_PLAY_ANIM_ADVANCED(Var1.f_0, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d_v2", Var1.f_45, 0f, 0f, Var1.f_48, 2f, -2f, -1, 790529, 0f, 2, 3);
 						MISC::CLEAR_BIT(&(Global_1853128[PLAYER::PLAYER_ID() /*888*/].f_267.f_332.f_2), 2);
 					}
 				}
 				else
 				{
-					TASK::TASK_PLAY_ANIM_ADVANCED(Var1, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_e", Var1.f_45, 0f, 0f, Var1.f_48, 2f, -2f, -1, 790528, 0f, 2, 3);
+					TASK::TASK_PLAY_ANIM_ADVANCED(Var1.f_0, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_e", Var1.f_45, 0f, 0f, Var1.f_48, 2f, -2f, -1, 790528, 0f, 2, 3);
 				}
 			}
 		}
@@ -14315,14 +14315,14 @@ void func_22(var uParam0)
 			STREAMING::REQUEST_ANIM_DICT("ANIM@AMB@NIGHTCLUB@PEDS@");
 			if (Var1.f_20)
 			{
-				if (STREAMING::HAS_ANIM_DICT_LOADED("ANIM@AMB@NIGHTCLUB@PEDS@") && !ENTITY::IS_ENTITY_PLAYING_ANIM(Var1, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d_v2", 3))
+				if (STREAMING::HAS_ANIM_DICT_LOADED("ANIM@AMB@NIGHTCLUB@PEDS@") && !ENTITY::IS_ENTITY_PLAYING_ANIM(Var1.f_0, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d_v2", 3))
 				{
-					TASK::TASK_PLAY_ANIM_ADVANCED(Var1, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d_v2", Var1.f_45, 0f, 0f, Var1.f_48, 2f, -2f, -1, 790529, 0f, 2, 3);
+					TASK::TASK_PLAY_ANIM_ADVANCED(Var1.f_0, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d_v2", Var1.f_45, 0f, 0f, Var1.f_48, 2f, -2f, -1, 790529, 0f, 2, 3);
 				}
 			}
-			else if (STREAMING::HAS_ANIM_DICT_LOADED("ANIM@AMB@NIGHTCLUB@PEDS@") && !ENTITY::IS_ENTITY_PLAYING_ANIM(Var1, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d", 3))
+			else if (STREAMING::HAS_ANIM_DICT_LOADED("ANIM@AMB@NIGHTCLUB@PEDS@") && !ENTITY::IS_ENTITY_PLAYING_ANIM(Var1.f_0, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d", 3))
 			{
-				TASK::TASK_PLAY_ANIM_ADVANCED(Var1, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d", Var1.f_45, 0f, 0f, Var1.f_48, 2f, -2f, -1, 790529, 0f, 2, 3);
+				TASK::TASK_PLAY_ANIM_ADVANCED(Var1.f_0, "ANIM@AMB@NIGHTCLUB@PEDS@", "anim_amb_prop_human_seat_bar_female_elbows_on_bar_idle_d", Var1.f_45, 0f, 0f, Var1.f_48, 2f, -2f, -1, 790529, 0f, 2, 3);
 			}
 		}
 	}
@@ -18117,7 +18117,7 @@ void func_98(int iParam0, int iParam1, int iParam2)
 	int iVar5;
 	int iVar6;
 	
-	Var0 = -1195677176;
+	Var0.f_0 = -1195677176;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_3 = iParam2;
 	Var0.f_2 = iParam1;
@@ -18667,7 +18667,7 @@ void func_108(var uParam0)
 		if (iVar61 > -1)
 		{
 			Var1 = { *(uParam0[iVar61 /*58*/]) };
-			if ((ENTITY::DOES_ENTITY_EXIST(Var1) && !ENTITY::IS_ENTITY_DEAD(Var1, false)) && (MISC::IS_BIT_SET(Global_1853128[PLAYER::PLAYER_ID() /*888*/].f_267.f_332.f_2, iVar0) || MISC::IS_BIT_SET(Global_1853128[PLAYER::PLAYER_ID() /*888*/].f_267.f_332.f_2, iVar0 + 1)))
+			if ((ENTITY::DOES_ENTITY_EXIST(Var1.f_0) && !ENTITY::IS_ENTITY_DEAD(Var1.f_0, false)) && (MISC::IS_BIT_SET(Global_1853128[PLAYER::PLAYER_ID() /*888*/].f_267.f_332.f_2, iVar0) || MISC::IS_BIT_SET(Global_1853128[PLAYER::PLAYER_ID() /*888*/].f_267.f_332.f_2, iVar0 + 1)))
 			{
 				sVar62 = "ANIM@AMB@NIGHTCLUB@PEDS@";
 				sVar63 = "mini_strip_club_idles_bouncer_stop_stop";
@@ -18687,20 +18687,20 @@ void func_108(var uParam0)
 				STREAMING::REQUEST_ANIM_DICT("ANIM@AMB@NIGHTCLUB@PEDS@");
 				if (STREAMING::HAS_ANIM_DICT_LOADED(sVar62))
 				{
-					if (ENTITY::IS_ENTITY_PLAYING_ANIM(Var1, sVar62, sVar63, 3))
+					if (ENTITY::IS_ENTITY_PLAYING_ANIM(Var1.f_0, sVar62, sVar63, 3))
 					{
-						if (ENTITY::GET_ENTITY_ANIM_CURRENT_TIME(Var1, sVar62, sVar63) > 0.85f && STREAMING::HAS_ANIM_DICT_LOADED("ANIM@AMB@NIGHTCLUB@PEDS@"))
+						if (ENTITY::GET_ENTITY_ANIM_CURRENT_TIME(Var1.f_0, sVar62, sVar63) > 0.85f && STREAMING::HAS_ANIM_DICT_LOADED("ANIM@AMB@NIGHTCLUB@PEDS@"))
 						{
 							MISC::CLEAR_BIT(&(Global_1853128[PLAYER::PLAYER_ID() /*888*/].f_267.f_332.f_2), iVar0);
 							MISC::CLEAR_BIT(&(Global_1853128[PLAYER::PLAYER_ID() /*888*/].f_267.f_332.f_2), iVar0 + 1);
-							TASK::TASK_PLAY_ANIM(Var1, "ANIM@AMB@NIGHTCLUB@PEDS@", "amb_world_human_stand_guard_male_base", 2f, -2f, -1, 1, 0f, false, false, false);
+							TASK::TASK_PLAY_ANIM(Var1.f_0, "ANIM@AMB@NIGHTCLUB@PEDS@", "amb_world_human_stand_guard_male_base", 2f, -2f, -1, 1, 0f, false, false, false);
 							STREAMING::REMOVE_ANIM_DICT(sVar62);
 							STREAMING::REMOVE_ANIM_DICT("ANIM@AMB@NIGHTCLUB@PEDS@");
 						}
 					}
 					else
 					{
-						TASK::TASK_PLAY_ANIM(Var1, sVar62, sVar63, 8f, -8f, -1, 2, fVar64, false, false, false);
+						TASK::TASK_PLAY_ANIM(Var1.f_0, sVar62, sVar63, 8f, -8f, -1, 2, fVar64, false, false, false);
 					}
 				}
 			}
@@ -19841,7 +19841,7 @@ float func_125(int iParam0, int iParam1)
 
 int func_126(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -26502,7 +26502,7 @@ void func_254(var uParam0)
 				iVar19 = iVar0;
 				func_331(&Var21);
 				func_313(iVar86, iVar87, iVar19, &Var21);
-				if (Var21 != 0)
+				if (Var21.f_0 != 0)
 				{
 					bVar79 = false;
 					iVar1 = 0;
@@ -26519,7 +26519,7 @@ void func_254(var uParam0)
 					}
 					if (bVar79)
 					{
-						STREAMING::REQUEST_MODEL(Var21);
+						STREAMING::REQUEST_MODEL(Var21.f_0);
 					}
 				}
 				iVar0++;
@@ -26566,7 +26566,7 @@ void func_254(var uParam0)
 				iVar19 = iVar0;
 				func_331(&Var21);
 				func_313(iVar86, iVar87, iVar19, &Var21);
-				if (Var21 != 0)
+				if (Var21.f_0 != 0)
 				{
 					bVar79 = false;
 					iVar1 = 0;
@@ -26586,15 +26586,15 @@ void func_254(var uParam0)
 					{
 						if (!ENTITY::DOES_ENTITY_EXIST(uParam0->f_7908.f_6[iVar0]))
 						{
-							STREAMING::REQUEST_MODEL(Var21);
-							if (!STREAMING::HAS_MODEL_LOADED(Var21))
+							STREAMING::REQUEST_MODEL(Var21.f_0);
+							if (!STREAMING::HAS_MODEL_LOADED(Var21.f_0))
 							{
 								return;
 							}
 							else
 							{
-								uParam0->f_7908.f_6[iVar0] = PED::CREATE_PED(4, Var21, Var80, 0f, false, true);
-								if (Var21 != joaat("a_f_y_clubcust_01"))
+								uParam0->f_7908.f_6[iVar0] = PED::CREATE_PED(4, Var21.f_0, Var80, 0f, false, true);
+								if (Var21.f_0 != joaat("a_f_y_clubcust_01"))
 								{
 									iVar1 = 0;
 									iVar1 = 0;
@@ -26610,7 +26610,7 @@ void func_254(var uParam0)
 									iVar1 = 0;
 									while (iVar1 < 9)
 									{
-										if (Var21.f_38[iVar1 /*2*/] != -1 && Var21 != joaat("ig_talmm"))
+										if (Var21.f_38[iVar1 /*2*/] != -1 && Var21.f_0 != joaat("ig_talmm"))
 										{
 											PED::SET_PED_PROP_INDEX(uParam0->f_7908.f_6[iVar0], iVar1, Var21.f_38[iVar1 /*2*/], Var21.f_38[iVar1 /*2*/].f_1, false);
 										}
@@ -26703,7 +26703,7 @@ void func_254(var uParam0)
 						TASK::TASK_PLAY_ANIM(uParam0->f_7908.f_6[iVar0], func_309(iVar86, iVar87, 4), &cVar2, 8f, -8f, -1, 32, 0f, false, false, false);
 					}
 				}
-				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Var21);
+				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Var21.f_0);
 				iVar0++;
 			}
 			iVar0 = 0;
@@ -30771,7 +30771,7 @@ int func_363(var uParam0, var uParam1, var uParam2, struct<3> Param3, float fPar
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(*uParam2))
 			{
-				*uParam2 = PED::CREATE_PED(26, *uParam1, Param3.x, Param3.f_1, (Param3.f_2 - 1f), fParam6, false, true);
+				*uParam2 = PED::CREATE_PED(26, *uParam1, Param3.f_0, Param3.f_1, (Param3.f_2 - 1f), fParam6, false, true);
 				if (func_376(uParam2->f_16))
 				{
 					func_366(uParam2->f_16, &iVar21, &iVar22, func_57(uParam2->f_39));
@@ -51551,10 +51551,10 @@ int func_473()
 	while (iVar0 < 162)
 	{
 		func_381(func_454(iVar0, 0), &Var1);
-		if (!Var1 == 0)
+		if (!Var1.f_0 == 0)
 		{
-			STREAMING::REQUEST_MODEL(Var1);
-			if (!STREAMING::HAS_MODEL_LOADED(Var1))
+			STREAMING::REQUEST_MODEL(Var1.f_0);
+			if (!STREAMING::HAS_MODEL_LOADED(Var1.f_0))
 			{
 				iVar59 = 0;
 			}

@@ -3190,7 +3190,7 @@ void func_70(int iParam0, struct<3> Param1)
 			fVar10 = PAD::GET_CONTROL_NORMAL(2, 239);
 			fVar11 = ((fVar9 - 0.5f) * (-6.5f * 2f));
 			fVar12 = ((fVar10 - 0.5f) * (-12.5f * 2f));
-			Var3.x = (Var3.x + fVar11);
+			Var3.f_0 = (Var3.f_0 + fVar11);
 			Var3.f_2 = (Var3.f_2 + fVar12);
 			while (Var3.f_2 < -180f)
 			{
@@ -3200,13 +3200,13 @@ void func_70(int iParam0, struct<3> Param1)
 			{
 				Var3.f_2 = (Var3.f_2 - 360f);
 			}
-			while (Var3.x < -180f)
+			while (Var3.f_0 < -180f)
 			{
-				Var3.x = (Var3.x + 360f);
+				Var3.f_0 = (Var3.f_0 + 360f);
 			}
-			while (Var3.x > 180f)
+			while (Var3.f_0 > 180f)
 			{
-				Var3.x = (Var3.x - 360f);
+				Var3.f_0 = (Var3.f_0 - 360f);
 			}
 			fVar13 = (Var3.f_2 - Var0.f_2);
 			fVar14 = func_71(fVar13, -180f, 180f);
@@ -3249,7 +3249,7 @@ void func_70(int iParam0, struct<3> Param1)
 			{
 				iVar18 = (iVar18 * -1);
 			}
-			Var3.x = (Var3.x + (IntToFloat(iVar18) * 0.05f));
+			Var3.f_0 = (Var3.f_0 + (IntToFloat(iVar18) * 0.05f));
 			Var3.f_2 = (Var3.f_2 + (IntToFloat(iVar17) * 0.1f));
 			while (Var3.f_2 < -180f)
 			{
@@ -3871,7 +3871,7 @@ int func_91(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -3882,7 +3882,7 @@ int func_91(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{

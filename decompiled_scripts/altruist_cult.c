@@ -4381,7 +4381,7 @@ int func_133(int iParam0, bool bParam1, bool bParam2)
 
 float func_134(struct<2> Param0, Vector3 vParam2, struct<2> Param3, var uParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 void func_135()

@@ -164,7 +164,7 @@ void __EntryFunction__()
 				switch (func_81())
 				{
 					case 0:
-						Local_79 = 2;
+						Local_79.f_0 = 2;
 						break;
 					
 					case 2:
@@ -184,33 +184,33 @@ void func_1()
 	func_7();
 	if (Local_79.f_1.f_2 == 5)
 	{
-		Local_79 = 3;
+		Local_79.f_0 = 3;
 	}
 	if (func_6(&(Local_79.f_1.f_17)))
 	{
 		if (func_4(&(Local_79.f_1.f_17), 20000, 0))
 		{
-			Local_79 = 3;
+			Local_79.f_0 = 3;
 		}
 	}
 	if (func_3())
 	{
-		Local_79 = 3;
+		Local_79.f_0 = 3;
 	}
 	if (bLocal_62)
 	{
 		if (!NETWORK::NETWORK_IS_IN_TUTORIAL_SESSION())
 		{
-			Local_79 = 3;
+			Local_79.f_0 = 3;
 		}
 	}
 	else if (NETWORK::NETWORK_IS_IN_TUTORIAL_SESSION())
 	{
-		Local_79 = 3;
+		Local_79.f_0 = 3;
 	}
 	if (func_2())
 	{
-		Local_79 = 3;
+		Local_79.f_0 = 3;
 	}
 }
 
@@ -1012,7 +1012,7 @@ int func_40()
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			{
 				Var0 = { func_57(func_58(PLAYER::PLAYER_ID()), 0f, (-200f * SYSTEM::SIN((SYSTEM::TO_FLOAT(Local_79.f_1.f_13) * 30f))), (200f * SYSTEM::COS((SYSTEM::TO_FLOAT(Local_79.f_1.f_13) * 30f))), 0f) };
-				Var0.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var0.x, Var0.f_1);
+				Var0.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var0.f_0, Var0.f_1);
 				Var0.f_2 = (Var0.f_2 + 30f);
 				if (func_41(Var0, 20f, 1f, 1f, 15f, 1, 1, 1, 180f, 0, -1, 1, 0, 0, 0, 0, 0))
 				{
@@ -1049,7 +1049,7 @@ int func_41(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -1410,8 +1410,8 @@ Vector3 func_57(struct<3> Param0, float fParam3, struct<2> Param4, float fParam6
 	fVar3 = fParam3;
 	fVar4 = SYSTEM::COS(fVar3);
 	fVar5 = SYSTEM::SIN(fVar3);
-	Var0.x = ((Param4 * fVar4) + (Param4.f_1 * fVar5));
-	Var0.f_1 = ((Param4.f_1 * fVar4) - (Param4 * fVar5));
+	Var0.f_0 = ((Param4.f_0 * fVar4) + (Param4.f_1 * fVar5));
+	Var0.f_1 = ((Param4.f_1 * fVar4) - (Param4.f_0 * fVar5));
 	Var6 = { Param0 + Var0 };
 	return Var6;
 }
@@ -1423,7 +1423,7 @@ Vector3 func_58(int iParam0)
 
 int func_59(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2096,7 +2096,7 @@ int func_80(int iParam0)
 
 int func_81()
 {
-	return Local_79;
+	return Local_79.f_0;
 }
 
 int func_82(int iParam0)
@@ -2124,7 +2124,7 @@ void func_83()
 	if (bVar0)
 	{
 		Var1 = { func_58(PLAYER::PLAYER_ID()) };
-		fLocal_68 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var1.x, Var1.f_1);
+		fLocal_68 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var1.f_0, Var1.f_1);
 		if (fLocal_68 < Global_262145.f_10876)
 		{
 			fLocal_68 = Global_262145.f_10876;
@@ -2494,6 +2494,52 @@ int func_101(int iParam0, int iParam1, bool bParam2)
 		iVar0 = NETWORK::NETWORK_GET_SCRIPT_STATUS();
 	}
 	if (iParam1 > -1)
+	{
+		Global_1574663 = iVar0;
+	}
+	if (iParam0 == 0)
+	{
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
+		{
+			if (!bParam2)
+			{
+				func_85();
+			}
+			else
+			{
+				return 0;
+			}
+		}
+	}
+	else if (!NETWORK::NETWORK_IS_IN_SESSION())
+	{
+		if (!bParam2)
+		{
+			func_85();
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	return 1;
+}
+
+bool func_102()
+{
+	return Global_1575022;
+}
+
+void func_103(int iParam0, struct<17> Param1, var uParam18, var uParam19, var uParam20, var uParam21)
+{
+	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
+	{
+		func_85();
+	}
+	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(iParam0, false, Param1.f_16);
+}
+
+if (iParam1 > -1)
 	{
 		Global_1574663 = iVar0;
 	}

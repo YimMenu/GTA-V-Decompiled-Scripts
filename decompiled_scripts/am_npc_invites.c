@@ -911,7 +911,7 @@ int func_1()
 
 bool func_2()
 {
-	return MISC::IS_BIT_SET(Local_177, 0);
+	return MISC::IS_BIT_SET(Local_177.f_0, 0);
 }
 
 void func_3()
@@ -922,7 +922,7 @@ void func_3()
 	
 	if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 	{
-		if (iLocal_191 >= Local_603.x)
+		if (iLocal_191 >= Local_603.f_0)
 		{
 			iLocal_191 = 0;
 			iLocal_706 = 0;
@@ -945,7 +945,7 @@ void func_3()
 				iVar2 = NETWORK::NETWORK_GET_PLAYER_INDEX(PLAYER::INT_TO_PARTICIPANTINDEX(iVar0));
 				if (func_9(iVar2, 0, 1))
 				{
-					if (!MISC::IS_BIT_SET(Local_177, 5))
+					if (!MISC::IS_BIT_SET(Local_177.f_0, 5))
 					{
 						if (!func_6(iVar2, 1, 0))
 						{
@@ -1029,7 +1029,7 @@ void func_3()
 			}
 		}
 		iLocal_191++;
-		if (iLocal_191 >= Local_603.x)
+		if (iLocal_191 >= Local_603.f_0)
 		{
 			MISC::SET_BIT(&iLocal_705, 0);
 			if (MISC::IS_BIT_SET(iLocal_705, 2))
@@ -1038,7 +1038,7 @@ void func_3()
 				func_4(&uLocal_599);
 				func_5(&uLocal_599, 0, 0);
 			}
-			if (!MISC::IS_BIT_SET(Local_177, 5))
+			if (!MISC::IS_BIT_SET(Local_177.f_0, 5))
 			{
 				if (MISC::IS_BIT_SET(iLocal_705, 1) || MISC::IS_BIT_SET(iLocal_705, 5))
 				{
@@ -1978,7 +1978,7 @@ int func_28(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -1989,7 +1989,7 @@ int func_28(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{
@@ -2081,7 +2081,7 @@ void func_31(int iParam0, bool bParam1, bool bParam2, bool bParam3)
 	{
 		return;
 	}
-	Var0.x = 2125250083;
+	Var0.f_0 = 2125250083;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	NETWORK::NETWORK_GET_LOCAL_HANDLE(&Var23, 13);
 	Var0.f_2 = { Var23 };
@@ -4965,9 +4965,9 @@ int func_144(var uParam0)
 		if (!func_151(iVar0))
 		{
 			Var1 = { func_150(iVar0) };
-			if (Var1 == *uParam0)
+			if (Var1.f_0 == *uParam0)
 			{
-				if (bVar11 == func_153(Var1, Var1.f_1))
+				if (bVar11 == func_153(Var1.f_0, Var1.f_1))
 				{
 					if (bVar11)
 					{
@@ -5538,7 +5538,7 @@ int func_176(int iParam0, struct<3> Param1, struct<30> Param4, struct<5> Param34
 			return -1;
 		}
 	}
-	if (Param70 == 173)
+	if (Param70.f_0 == 173)
 	{
 		if (Global_2666432 != 0)
 		{
@@ -5727,7 +5727,7 @@ int func_176(int iParam0, struct<3> Param1, struct<30> Param4, struct<5> Param34
 		iVar2 = func_84(iVar3);
 		return iVar2;
 	}
-	if (Param70 == 0)
+	if (Param70.f_0 == 0)
 	{
 		return -1;
 	}
@@ -5765,7 +5765,7 @@ int func_176(int iParam0, struct<3> Param1, struct<30> Param4, struct<5> Param34
 		return -1;
 	}
 	bVar6 = Param39.f_19;
-	if (func_160(Param70, bVar6) && func_185(Param70))
+	if (func_160(Param70, bVar6) && func_185(Param70.f_0))
 	{
 		func_184(iVar5);
 	}
@@ -5979,7 +5979,7 @@ void func_183(int iParam0, struct<24> Param1, var uParam25, var uParam26, var uP
 	{
 		MISC::SET_BIT(&(Global_2621865[iParam0 /*26*/].f_12), 25);
 	}
-	Global_2621865[iParam0 /*26*/].f_14 = Param1;
+	Global_2621865[iParam0 /*26*/].f_14 = Param1.f_0;
 	MISC::SET_BIT(&(Global_2621865[iParam0 /*26*/].f_13), 6);
 }
 
@@ -6079,7 +6079,7 @@ int func_187(struct<30> Param0, struct<3> Param30, bool bParam33)
 	}
 	else
 	{
-		HUD::SET_BLIP_AS_SHORT_RANGE(iVar3, Param0);
+		HUD::SET_BLIP_AS_SHORT_RANGE(iVar3, Param0.f_0);
 		HUD::SET_BLIP_PRIORITY(iVar3, Param0.f_25);
 	}
 	HUD::SET_BLIP_COLOUR(iVar3, Param0.f_24);
@@ -6320,7 +6320,7 @@ int func_203(int iParam0, struct<3> Param1, struct<4> Param4, var uParam8, var u
 	{
 		if (!func_96(iVar0))
 		{
-			if ((Global_2621865[iVar0 /*26*/].f_2 == iParam0 && Global_2621865[iVar0 /*26*/].f_15 == Param4) && Global_2621865[iVar0 /*26*/].f_15.f_1 == Param4.f_1)
+			if ((Global_2621865[iVar0 /*26*/].f_2 == iParam0 && Global_2621865[iVar0 /*26*/].f_15 == Param4.f_0) && Global_2621865[iVar0 /*26*/].f_15.f_1 == Param4.f_1)
 			{
 				if (func_28(Global_2621865[iVar0 /*26*/].f_3, Param1, 1056964608, 0))
 				{
@@ -6835,7 +6835,7 @@ struct<5> func_228(var uParam0)
 	fVar8 = 0f;
 	iVar9 = 16777215;
 	func_229(uParam0, &iVar5, &iVar6, &iVar7, &fVar8, &iVar9);
-	Var0 = iVar5;
+	Var0.f_0 = iVar5;
 	Var0.f_1 = iVar6;
 	Var0.f_2 = fVar8;
 	Var0.f_3 = iVar7;
@@ -7308,7 +7308,7 @@ struct<30> func_245(var uParam0)
 	{
 		iVar56 = 0;
 	}
-	Var0 = iVar56;
+	Var0.f_0 = iVar56;
 	Var0.f_1 = iVar30;
 	Var0.f_2 = { Var32 };
 	Var0.f_8 = { Var38 };
@@ -8241,7 +8241,7 @@ struct<10> func_262(int iParam0)
 	iVar10 = Global_2661082[iParam0 /*10*/].f_4;
 	iVar11 = Global_2661082[iParam0 /*10*/].f_5;
 	iVar12 = func_264(iVar10, iVar11);
-	Var0 = func_43(iVar12);
+	Var0.f_0 = func_43(iVar12);
 	Var0.f_1 = iVar11;
 	Var0.f_2 = iVar10;
 	Var0.f_3 = { func_263(iVar10, iVar11) };
@@ -9236,7 +9236,7 @@ void func_293(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -11636,7 +11636,7 @@ void func_370()
 
 void func_371(struct<21> Param0)
 {
-	func_375(func_376(Param0), Param0);
+	func_375(func_376(Param0.f_0), Param0);
 	func_373(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Local_177, 14, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&Local_603, 97, 0);

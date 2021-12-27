@@ -245,7 +245,7 @@ void func_4(int iParam0)
 					{
 						Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_68, true) };
 						fVar3 = ENTITY::GET_ENTITY_HEADING(iLocal_68);
-						ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0.x, Var0.f_1, (Var0.f_2 + 4f), true, false, false, true);
+						ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0.f_0, Var0.f_1, (Var0.f_2 + 4f), true, false, false, true);
 						bVar4 = true;
 					}
 				}
@@ -475,18 +475,18 @@ int func_18(int iParam0, struct<3> Param1, float fParam4)
 	var uVar51;
 	
 	MISC::GET_MODEL_DIMENSIONS(iParam0, &Var28, &Var31);
-	Var34.x = (MISC::ABSF((Var31.x - Var28.x)) / 2f);
+	Var34.f_0 = (MISC::ABSF((Var31.f_0 - Var28.f_0)) / 2f);
 	Var34.f_1 = (MISC::ABSF((Var31.f_1 - Var28.f_1)) / 2f);
 	Var34.f_2 = (MISC::ABSF((Var31.f_2 - Var28.f_2)) / 2f);
 	Var0[0 /*3*/] = { Param1 };
-	Var0[1 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.x, -Var34.f_1, -Var34.f_2) };
-	Var0[2 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.x, -Var34.f_1, -Var34.f_2) };
-	Var0[3 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.x, Var34.f_1, -Var34.f_2) };
-	Var0[4 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.x, Var34.f_1, -Var34.f_2) };
-	Var0[5 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.x, -Var34.f_1, Var34.f_2) };
-	Var0[6 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.x, -Var34.f_1, Var34.f_2) };
-	Var0[7 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.x, Var34.f_1, Var34.f_2) };
-	Var0[8 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.x, Var34.f_1, Var34.f_2) };
+	Var0[1 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.f_0, -Var34.f_1, -Var34.f_2) };
+	Var0[2 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.f_0, -Var34.f_1, -Var34.f_2) };
+	Var0[3 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.f_0, Var34.f_1, -Var34.f_2) };
+	Var0[4 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.f_0, Var34.f_1, -Var34.f_2) };
+	Var0[5 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.f_0, -Var34.f_1, Var34.f_2) };
+	Var0[6 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.f_0, -Var34.f_1, Var34.f_2) };
+	Var0[7 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, Var34.f_0, Var34.f_1, Var34.f_2) };
+	Var0[8 /*3*/] = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param1, fParam4, -Var34.f_0, Var34.f_1, Var34.f_2) };
 	if (!INTERIOR::IS_COLLISION_MARKED_OUTSIDE(Param1))
 	{
 		return 0;
@@ -831,7 +831,7 @@ void func_36()
 			fVar3 = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
 			MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &fVar4, false, false);
 			fVar4 = (fVar4 + 500f);
-			ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0.x, Var0.f_1, fVar4, true, false, false, true);
+			ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0.f_0, Var0.f_1, fVar4, true, false, false, true);
 			ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), fVar3);
 			iLocal_72 = MISC::GET_GAME_TIMER();
 			CAM::DO_SCREEN_FADE_OUT(0);
@@ -2399,7 +2399,7 @@ int func_85(int iParam0, int iParam1)
 		Var0.f_31 = 49;
 		Var0.f_81 = 2;
 		func_86(iParam0, &Var0, iParam1);
-		return Var0;
+		return Var0.f_0;
 	}
 	else if (iParam0 != 145)
 	{

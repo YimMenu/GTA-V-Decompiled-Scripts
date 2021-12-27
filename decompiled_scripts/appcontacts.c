@@ -9884,11 +9884,11 @@ void func_174(var uParam0)
 				NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var1, 35, &(uParam0->f_2963));
 			}
 		}
-		if (Var1 != -1)
+		if (Var1.f_0 != -1)
 		{
 			if (Var1.f_21 == 1)
 			{
-				if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && !func_179(Var1))
+				if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT() && !func_179(Var1.f_0))
 				{
 					bVar38 = true;
 					uParam0->f_2947 = { Var1.f_1 };
@@ -10506,13 +10506,13 @@ void func_188()
 									NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var4, 35, &(Local_306.f_2963));
 								}
 							}
-							if (Var4 != -1)
+							if (Var4.f_0 != -1)
 							{
 								if (Var4.f_21 == 1)
 								{
-									if (!func_179(Var4))
+									if (!func_179(Var4.f_0))
 									{
-										if (NETWORK::NETWORK_CLAN_JOIN(Var4))
+										if (NETWORK::NETWORK_CLAN_JOIN(Var4.f_0))
 										{
 											Local_306.f_2976 = 0;
 											HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("CREW_JOIN");
@@ -10761,7 +10761,7 @@ void func_188()
 				if (func_230(&Local_3306, &(Local_3306.f_1), &(Local_3306.f_2), 0, 0, &cLocal_3309, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, 0, 0))
 				{
 					StringCopy(&cLocal_3309, MISC::GET_ONSCREEN_KEYBOARD_RESULT(), 64);
-					Local_3306.x = 0;
+					Local_3306.f_0 = 0;
 					Local_3306.f_2 = 0;
 					Local_3306.f_1 = 0;
 					iLocal_3325 = 0;
@@ -10780,9 +10780,9 @@ void func_188()
 					}
 					Local_306.f_2999 = 0;
 				}
-				if (Local_3306.x == 2)
+				if (Local_3306.f_0 == 2)
 				{
-					Local_3306.x = 0;
+					Local_3306.f_0 = 0;
 					Local_3306.f_2 = 0;
 					Local_3306.f_1 = 0;
 					iLocal_3325 = 0;
@@ -14091,7 +14091,7 @@ void func_282(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;

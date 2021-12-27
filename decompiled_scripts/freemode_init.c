@@ -1391,21 +1391,21 @@ void func_39(var uParam0, struct<3> Param1)
 	float fVar1;
 	struct<3> Var2;
 	
-	fVar0 = SYSTEM::COS(Param1.x);
-	fVar1 = SYSTEM::SIN(Param1.x);
-	Var2.x = *uParam0;
+	fVar0 = SYSTEM::COS(Param1.f_0);
+	fVar1 = SYSTEM::SIN(Param1.f_0);
+	Var2.f_0 = *uParam0;
 	Var2.f_1 = ((fVar0 * uParam0->f_1) - (fVar1 * uParam0->f_2));
 	Var2.f_2 = ((fVar1 * uParam0->f_1) + (fVar0 * uParam0->f_2));
 	*uParam0 = { Var2 };
 	fVar0 = SYSTEM::COS(Param1.f_1);
 	fVar1 = SYSTEM::SIN(Param1.f_1);
-	Var2.x = ((fVar0 * *uParam0) + (fVar1 * uParam0->f_2));
+	Var2.f_0 = ((fVar0 * *uParam0) + (fVar1 * uParam0->f_2));
 	Var2.f_1 = uParam0->f_1;
 	Var2.f_2 = ((fVar0 * uParam0->f_2) - (fVar1 * *uParam0));
 	*uParam0 = { Var2 };
 	fVar0 = SYSTEM::COS(Param1.f_2);
 	fVar1 = SYSTEM::SIN(Param1.f_2);
-	Var2.x = ((fVar0 * *uParam0) - (fVar1 * uParam0->f_1));
+	Var2.f_0 = ((fVar0 * *uParam0) - (fVar1 * uParam0->f_1));
 	Var2.f_1 = ((fVar1 * *uParam0) + (fVar0 * uParam0->f_1));
 	Var2.f_2 = uParam0->f_2;
 	*uParam0 = { Var2 };
@@ -13022,13 +13022,13 @@ int func_352(var uParam0)
 	iVar25 = 0;
 	while (iVar25 < 4)
 	{
-		if (Var6[iVar25 /*3*/] < Var19.x)
+		if (Var6[iVar25 /*3*/] < Var19.f_0)
 		{
-			Var19.x = Var6[iVar25 /*3*/];
+			Var19.f_0 = Var6[iVar25 /*3*/];
 		}
-		if (Var6[iVar25 /*3*/] > Var22.x)
+		if (Var6[iVar25 /*3*/] > Var22.f_0)
 		{
-			Var22.x = Var6[iVar25 /*3*/];
+			Var22.f_0 = Var6[iVar25 /*3*/];
 		}
 		if (Var6[iVar25 /*3*/].f_1 < Var19.f_1)
 		{
@@ -13040,10 +13040,10 @@ int func_352(var uParam0)
 		}
 		iVar25++;
 	}
-	uVar26[0] = func_353(Var19.x, Var19.f_1, 0f);
-	uVar26[1] = func_353(Var19.x, Var22.f_1, 0f);
-	uVar26[2] = func_353(Var22.x, Var19.f_1, 0f);
-	uVar26[3] = func_353(Var22.x, Var22.f_1, 0f);
+	uVar26[0] = func_353(Var19.f_0, Var19.f_1, 0f);
+	uVar26[1] = func_353(Var19.f_0, Var22.f_1, 0f);
+	uVar26[2] = func_353(Var22.f_0, Var19.f_1, 0f);
+	uVar26[3] = func_353(Var22.f_0, Var22.f_1, 0f);
 	iVar31 = 0;
 	while (iVar31 < 4)
 	{
@@ -13069,7 +13069,7 @@ int func_353(struct<2> Param0, float fParam2)
 	}
 	if (Param0.f_1 > Global_2673711[1])
 	{
-		if (Param0 < Global_2673715[0])
+		if (Param0.f_0 < Global_2673715[0])
 		{
 			return 1;
 		}
@@ -13080,15 +13080,15 @@ int func_353(struct<2> Param0, float fParam2)
 	}
 	if (Param0.f_1 > Global_2673711[2])
 	{
-		if (Param0 < Global_2673715[1])
+		if (Param0.f_0 < Global_2673715[1])
 		{
 			return 3;
 		}
-		else if (Param0 < Global_2673715[2])
+		else if (Param0.f_0 < Global_2673715[2])
 		{
 			return 4;
 		}
-		else if (Param0 < Global_2673715[3])
+		else if (Param0.f_0 < Global_2673715[3])
 		{
 			return 5;
 		}
@@ -13102,7 +13102,7 @@ int func_353(struct<2> Param0, float fParam2)
 
 Vector3 func_354(struct<3> Param0, struct<3> Param3)
 {
-	return ((Param0.f_1 * Param3.f_2) - (Param0.f_2 * Param3.f_1)), ((Param0.f_2 * Param3.x) - (Param0.x * Param3.f_2)), ((Param0.x * Param3.f_1) - (Param0.f_1 * Param3.x));
+	return ((Param0.f_1 * Param3.f_2) - (Param0.f_2 * Param3.f_1)), ((Param0.f_2 * Param3.f_0) - (Param0.f_0 * Param3.f_2)), ((Param0.f_0 * Param3.f_1) - (Param0.f_1 * Param3.f_0));
 }
 
 void func_355(int iParam0, var uParam1, var uParam2, var uParam3)

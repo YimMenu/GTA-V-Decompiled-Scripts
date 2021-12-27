@@ -2473,13 +2473,13 @@ float func_58(int iParam0)
 	Var3 = { Local_90 };
 	if (iParam0 == 0)
 	{
-		if (Var0.x < Var3.x)
+		if (Var0.f_0 < Var3.f_0)
 		{
-			return (Var0.x - 20f);
+			return (Var0.f_0 - 20f);
 		}
 		else
 		{
-			return (Var3.x - 20f);
+			return (Var3.f_0 - 20f);
 		}
 	}
 	if (iParam0 == 1)
@@ -2495,13 +2495,13 @@ float func_58(int iParam0)
 	}
 	if (iParam0 == 2)
 	{
-		if (Var0.x > Var3.x)
+		if (Var0.f_0 > Var3.f_0)
 		{
-			return (Var0.x + 20f);
+			return (Var0.f_0 + 20f);
 		}
 		else
 		{
-			return (Var3.x + 20f);
+			return (Var3.f_0 + 20f);
 		}
 	}
 	if (Var0.f_1 > Var3.f_1)
@@ -3507,7 +3507,7 @@ void func_88()
 						Var10 = { Var13 };
 					}
 					TASK::OPEN_SEQUENCE_TASK(&iLocal_101);
-					TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, Var10.x, Var10.f_1, Var10.f_2, 1f, -1, 0.5f, 8192, 40000f);
+					TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, Var10.f_0, Var10.f_1, Var10.f_2, 1f, -1, 0.5f, 8192, 40000f);
 					TASK::TASK_TURN_PED_TO_FACE_ENTITY(0, iLocal_97, 0);
 					TASK::TASK_STAND_STILL(0, -1);
 					TASK::CLOSE_SEQUENCE_TASK(iLocal_101);
@@ -4619,7 +4619,7 @@ void func_123(bool bParam0)
 	{
 		Var0 = { ENTITY::GET_ENTITY_ROTATION(iLocal_99, 2) };
 		CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(180f);
-		CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH((-5.5f - Var0.x), 1f);
+		CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH((-5.5f - Var0.f_0), 1f);
 	}
 	CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
 	func_124(&(Local_313[0 /*7*/]));
@@ -6296,12 +6296,12 @@ void func_183(int iParam0)
 		fVar6 = (fVar5 + 180f);
 	}
 	fVar7 = (-7f - Var2.f_1);
-	fVar8 = (-5f - Var2.x);
-	fVar9 = (-2.5f + Var2.x);
-	fVar10 = ((0f - (0.7f * Var2.x)) + (0.3f * Var2.f_1));
+	fVar8 = (-5f - Var2.f_0);
+	fVar9 = (-2.5f + Var2.f_0);
+	fVar10 = ((0f - (0.7f * Var2.f_0)) + (0.3f * Var2.f_1));
 	if (!CAM::DOES_CAM_EXIST(Local_313[2 /*7*/]))
 	{
-		func_184(&(Local_313[2 /*7*/]), func_186(2), fVar7, Var2.x, uVar0, 50f);
+		func_184(&(Local_313[2 /*7*/]), func_186(2), fVar7, Var2.f_0, uVar0, 50f);
 	}
 	if (!CAM::DOES_CAM_EXIST(Local_313[1 /*7*/]))
 	{
@@ -6331,7 +6331,7 @@ void func_184(var uParam0, struct<3> Param1, struct<3> Param4, float fParam7)
 
 float func_185(struct<2> Param0, var uParam2, struct<2> Param3, Vector3 vParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 Vector3 func_186(int iParam0)
@@ -6496,23 +6496,23 @@ void func_192(var uParam0)
 	Var5.f_1 = ((-Var5.f_2 * 3f) / 10f);
 	if (PAD::IS_LOOK_INVERTED())
 	{
-		Var5.x = ((SYSTEM::TO_FLOAT(uVar0[3]) / 127f) * 10f);
+		Var5.f_0 = ((SYSTEM::TO_FLOAT(uVar0[3]) / 127f) * 10f);
 	}
 	else
 	{
-		Var5.x = (-(SYSTEM::TO_FLOAT(uVar0[3]) / 127f) * 10f);
+		Var5.f_0 = (-(SYSTEM::TO_FLOAT(uVar0[3]) / 127f) * 10f);
 	}
 	fVar8 = (30f * SYSTEM::TIMESTEP());
 	Var9 = { Var5 };
 	if (PAD::_IS_USING_KEYBOARD(0))
 	{
-		uParam0->f_4 = func_193((uParam0->f_4 + (Var9.x * 0.05f)), -3f, 3f);
+		uParam0->f_4 = func_193((uParam0->f_4 + (Var9.f_0 * 0.05f)), -3f, 3f);
 		uParam0->f_4.f_1 = func_193((uParam0->f_4.f_1 + (Var9.f_1 * 0.05f)), -3f, 3f);
 		uParam0->f_4.f_2 = func_193((uParam0->f_4.f_2 + (Var9.f_2 * 0.05f)), -3f, 3f);
 	}
 	else
 	{
-		uParam0->f_4 = (uParam0->f_4 + func_193((((Var9.x - uParam0->f_4) * 0.05f) * fVar8), -3f, 3f));
+		uParam0->f_4 = (uParam0->f_4 + func_193((((Var9.f_0 - uParam0->f_4) * 0.05f) * fVar8), -3f, 3f));
 		uParam0->f_4.f_1 = (uParam0->f_4.f_1 + func_193((((Var9.f_1 - uParam0->f_4.f_1) * 0.05f) * fVar8), -3f, 3f));
 		uParam0->f_4.f_2 = (uParam0->f_4.f_2 + func_193((((Var9.f_2 - uParam0->f_4.f_2) * 0.05f) * fVar8), -3f, 3f));
 	}
@@ -8878,7 +8878,7 @@ void func_244(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -10669,7 +10669,7 @@ void func_295(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				}
 				func_291(Global_22827, (fVar51 + 0f), fParam5, 0.034722f, iVar1, iVar2, iVar3, iVar4);
 				Var38 = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
-				Var38.x = (Var38.x * (0.5f / fVar62));
+				Var38.f_0 = (Var38.f_0 * (0.5f / fVar62));
 				Var38.f_1 = (Var38.f_1 * (0.5f / fVar62));
 				if (Global_22830.f_8672)
 				{
@@ -10682,7 +10682,7 @@ void func_295(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(1, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22827 + (fParam5 * 0.5f)), ((fVar51 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar62), ((Var38.f_1 / 720f) * fVar62), 0f, iVar1, iVar2, iVar3, iVar4, false);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22827 + (fParam5 * 0.5f)), ((fVar51 + 0f) + (0.034722f * 0.5f)), ((Var38.f_0 / 1280f) * fVar62), ((Var38.f_1 / 720f) * fVar62), 0f, iVar1, iVar2, iVar3, iVar4, false);
 				fVar51 = (fVar51 + (0f + 0.034722f));
 			}
 			if (MISC::GET_HASH_KEY(&(Global_22830.f_4947)) != 0 && Global_22830.f_5023 != -1)
@@ -13161,25 +13161,25 @@ int func_325(int iParam0, bool bParam1, bool bParam2, float fParam3, float fPara
 			GRAPHICS::GET_SCREEN_RESOLUTION(&iVar32, &iVar33);
 		}
 		Var37 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar16) };
-		Var37.x = (Var37.x * (func_326(iParam0) / fVar34));
+		Var37.f_0 = (Var37.f_0 * (func_326(iParam0) / fVar34));
 		Var37.f_1 = (Var37.f_1 * (func_326(iParam0) / fVar34));
 		if (!bParam2)
 		{
-			Var37.x = (Var37.x - 2f);
+			Var37.f_0 = (Var37.f_0 - 2f);
 			Var37.f_1 = (Var37.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
-			Var37.x = 288f;
+			Var37.f_0 = 288f;
 			Var37.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22830.f_7286[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
-			Var37.x = 106f;
+			Var37.f_0 = 106f;
 			Var37.f_1 = 106f;
 		}
-		*fParam3 = ((Var37.x / IntToFloat(iVar32)) * IntToFloat((iVar32 / iVar33)));
-		*fParam4 = (((Var37.f_1 / IntToFloat(iVar33)) / (Var37.x / IntToFloat(iVar32))) * *fParam3);
+		*fParam3 = ((Var37.f_0 / IntToFloat(iVar32)) * IntToFloat((iVar32 / iVar33)));
+		*fParam4 = (((Var37.f_1 / IntToFloat(iVar33)) / (Var37.f_0 / IntToFloat(iVar32))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)
@@ -16681,8 +16681,8 @@ void func_442(var uParam0)
 	MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(iLocal_99), &Var6, &Var3);
 	Var0 = { Var3 - Var6 };
 	Var0 = { Var0 / Vector(2f, 2f, 2f) };
-	Var9 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_99, -(Var0.x + 0.2f), 0f, 0f) };
-	Var12 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_99, (Var0.x + 0.2f), 0f, 0f) };
+	Var9 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_99, -(Var0.f_0 + 0.2f), 0f, 0f) };
+	Var12 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_99, (Var0.f_0 + 0.2f), 0f, 0f) };
 	Var15 = { ENTITY::GET_ENTITY_COORDS(iLocal_96, true) };
 	if (SYSTEM::VDIST(Var15, Var12) < SYSTEM::VDIST(Var15, Var9))
 	{
@@ -16701,7 +16701,7 @@ void func_442(var uParam0)
 			func_443(&uLocal_287, uParam0);
 		}
 		TASK::OPEN_SEQUENCE_TASK(&iVar18);
-		TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, Var9.x, Var9.f_1, Var9.f_2, 1f, -1, 1f, 8192, 40000f);
+		TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, Var9.f_0, Var9.f_1, Var9.f_2, 1f, -1, 1f, 8192, 40000f);
 		TASK::TASK_TURN_PED_TO_FACE_COORD(0, PED::GET_PED_BONE_COORDS(PLAYER::PLAYER_PED_ID(), 31086, 0f, 0f, 0f), 0);
 		TASK::CLOSE_SEQUENCE_TASK(iVar18);
 		TASK::TASK_PERFORM_SEQUENCE(iLocal_96, iVar18);
@@ -18209,7 +18209,7 @@ void func_514()
 		if (iVar1 == 174)
 		{
 			SCRIPT::GET_EVENT_DATA(1, iVar0, &Var2, 2);
-			if (Var2 == -1322571352)
+			if (Var2.f_0 == -1322571352)
 			{
 				if (Var2.f_1 == PLAYER::PLAYER_ID())
 				{
@@ -19016,7 +19016,7 @@ int func_545(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, bo
 	if ((!NETWORK::NETWORK_PLAYER_IS_CHEATER() && (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES() || !NETWORK::_NETWORK_HAS_AGE_RESTRICTED_PROFILE())) && NETWORK::NETWORK_HAVE_ROS_LEADERBOARD_WRITE_PRIV())
 	{
 		Var0.f_2.f_1 = 4;
-		Var0 = iParam0;
+		Var0.f_0 = iParam0;
 		if (iParam4 == -1)
 		{
 			if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())

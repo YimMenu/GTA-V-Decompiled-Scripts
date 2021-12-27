@@ -245,13 +245,13 @@ void func_2()
 	{
 		if (MISC::IS_BIT_SET(Local_134[Local_359.f_2 /*7*/], 3) && MISC::IS_BIT_SET(Local_134[Local_359.f_3 /*7*/], 3))
 		{
-			if (!MISC::IS_BIT_SET(Local_359, 1))
+			if (!MISC::IS_BIT_SET(Local_359.f_0, 1))
 			{
 				MISC::SET_BIT(&Local_359, 1);
 			}
 		}
 	}
-	else if (MISC::IS_BIT_SET(Local_359, 1))
+	else if (MISC::IS_BIT_SET(Local_359.f_0, 1))
 	{
 		MISC::CLEAR_BIT(&Local_359, 1);
 	}
@@ -292,7 +292,7 @@ void func_4()
 	int iVar1;
 	int iVar2;
 	
-	if (!MISC::IS_BIT_SET(Local_359, 0))
+	if (!MISC::IS_BIT_SET(Local_359.f_0, 0))
 	{
 		iVar0 = 0;
 		while (iVar0 < NETWORK::NETWORK_GET_MAX_NUM_PARTICIPANTS())
@@ -524,7 +524,7 @@ void func_16(var uParam0, bool bParam1)
 	bool bVar39;
 	int iVar40;
 	
-	Var0 = -749983132;
+	Var0.f_0 = -749983132;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { *uParam0 };
 	Var0.f_34 = uParam0->f_34;
@@ -689,7 +689,7 @@ void func_23()
 	Var0.f_7 = -1073741824;
 	Local_365.f_23 = { Var0 };
 	Local_134[PLAYER::PLAYER_ID() /*7*/] = 0;
-	Local_365 = 0;
+	Local_365.f_0 = 0;
 	Local_365.f_21 = func_5();
 	if (MISC::IS_BIT_SET(Global_2689156[PLAYER::PLAYER_ID() /*453*/].f_319.f_4, 19))
 	{
@@ -1192,7 +1192,7 @@ void func_39()
 {
 	if (func_3(PLAYER::PLAYER_ID(), 1, 1) && func_3(Local_365.f_21, 1, 1))
 	{
-		if (MISC::IS_BIT_SET(Local_134[Local_365.f_21 /*7*/], 2) && !MISC::IS_BIT_SET(Local_359, 1))
+		if (MISC::IS_BIT_SET(Local_134[Local_365.f_21 /*7*/], 2) && !MISC::IS_BIT_SET(Local_359.f_0, 1))
 		{
 			if (func_40(Local_365.f_32, 0, 0, 0))
 			{
@@ -1202,7 +1202,7 @@ void func_39()
 				}
 			}
 		}
-		else if (MISC::IS_BIT_SET(Local_359, 1))
+		else if (MISC::IS_BIT_SET(Local_359.f_0, 1))
 		{
 			func_24(7);
 		}
@@ -3602,7 +3602,7 @@ void func_135(var uParam0, int iParam1)
 	
 	Var0.f_5 = 1073741824;
 	Var0.f_6 = -1073741824;
-	Var0 = 988620539;
+	Var0.f_0 = 988620539;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	Var0.f_3 = uParam0->f_3;
@@ -3829,13 +3829,13 @@ void func_139(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 				{
 					iParam0->f_7 = 0;
 					Var5 = { func_437(iParam0, -1) };
-					iParam0->f_14 = Var5;
+					iParam0->f_14 = Var5.f_0;
 				}
 			}
 			else if (!MISC::IS_BIT_SET(*iParam0, 5))
 			{
 				Var5 = { func_437(iParam0, -1) };
-				iParam0->f_14 = Var5;
+				iParam0->f_14 = Var5.f_0;
 			}
 			MISC::CLEAR_BIT(iParam0, 5);
 			MISC::CLEAR_BIT(iParam0, 19);
@@ -3861,12 +3861,12 @@ void func_139(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 			}
 			if (MISC::IS_BIT_SET(*iParam0, 8))
 			{
-				Var13 = 1328920460;
+				Var13.f_0 = 1328920460;
 				TASK::_0x29682E2CCF21E9B5(iVar0, "Heist3_minigame_drill_vault", &Var13, Var10, 0f, 0f, fVar2, 2, 0.5f, 0, iVar4, 4);
 			}
 			else
 			{
-				Var13 = -1853844820;
+				Var13.f_0 = -1853844820;
 				TASK::_0x29682E2CCF21E9B5(iVar0, "Heist3_minigame_drill_vault", &Var13, Var10, 0f, 0f, fVar2, 2, 0.5f, 0, iVar3, 4);
 			}
 			ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
@@ -6622,16 +6622,16 @@ void func_167(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar0 = 4;
 		}
 		FILES::GET_SHOP_PED_OUTFIT(iParam2, &Var1);
-		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 		{
 			iVar19 = 0;
 			while (iVar19 < Var1.f_3)
 			{
 				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar19, &Var16) && Var16.f_2 != -1)
 				{
-					if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+					if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 					{
-						(*iParam0)[Var16.f_2] = func_153(iParam1, Var16.x, 14, iVar0);
+						(*iParam0)[Var16.f_2] = func_153(iParam1, Var16.f_0, 14, iVar0);
 					}
 					else if (Var16.f_1 != -1)
 					{
@@ -7584,32 +7584,32 @@ void func_170(var uParam0, int iParam1, int iParam2, int iParam3)
 	}
 	FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar0, false);
 	FILES::GET_SHOP_PED_QUERY_OUTFIT((iParam2 - iParam3), &Var1);
-	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 	{
 		iVar36 = 0;
 		while (iVar36 < Var1.f_4)
 		{
 			if (FILES::GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT(Var1.f_1, iVar36, &Var16))
 			{
-				if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+				if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 				{
 					if (Var16.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var19);
-						FILES::GET_SHOP_PED_COMPONENT(Var16.x, &Var19);
-						if (Var16.x != Var19.f_1)
+						FILES::GET_SHOP_PED_COMPONENT(Var16.f_0, &Var19);
+						if (Var16.f_0 != Var19.f_1)
 						{
 							uParam0->f_16 = 1;
 						}
 					}
 					if (Var16.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_171(Var16.f_2)] = Var16.x;
+						(*uParam0)[func_171(Var16.f_2)] = Var16.f_0;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_171(Var16.f_2)] = func_153(iParam1, Var16.x, func_171(Var16.f_2), iVar0);
+						(*uParam0)[func_171(Var16.f_2)] = func_153(iParam1, Var16.f_0, func_171(Var16.f_2), iVar0);
 					}
 				}
 				else if (Var16.f_1 != -1)
@@ -11971,7 +11971,7 @@ void func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
 				Global_2883588 = Var2.f_1;
-				Global_2883589 = Var2;
+				Global_2883589 = Var2.f_0;
 				func_176(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var2.f_7), 0, 0, Var2.f_2, 0, -1, 2, 1);
 				return;
 			}
@@ -12032,7 +12032,7 @@ void func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar36 = -1;
 				}
 				Global_2883588 = Var19.f_1;
-				Global_2883589 = Var19;
+				Global_2883589 = Var19.f_0;
 				func_176(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var19.f_9), Var19.f_3, Var19.f_4, Var19.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var19.f_1, joaat("OUTFIT_ONLY"), 0), iVar36, 2, Var19.f_1 != 0);
 				return;
 			}
@@ -12045,7 +12045,7 @@ void func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			FILES::GET_SHOP_PED_COMPONENT(iParam3, &Var39);
 			Global_2883588 = Var39.f_1;
-			Global_2883589 = Var39;
+			Global_2883589 = Var39.f_0;
 			func_176(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 			return;
 		}
@@ -12057,7 +12057,7 @@ void func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
 				Global_2883588 = Var39.f_1;
-				Global_2883589 = Var39;
+				Global_2883589 = Var39.f_0;
 				func_176(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 				return;
 			}
@@ -37246,7 +37246,7 @@ void func_226(int iParam0, int iParam1)
 	fVar17 = func_241(135, iParam1);
 	fVar18 = func_241(136, iParam1);
 	bVar19 = func_240(160, iParam1);
-	if (((((((((Var0 != iVar10 || Var0.f_1 != iVar11) || Var0.f_2 != iVar12) || Var0.f_3 != iVar13) || Var0.f_4 != iVar14) || Var0.f_5 != iVar15) || Var0.f_6 != fVar16) || Var0.f_7 != fVar17) || Var0.f_8 != fVar18) || Var0.f_9 != bVar19)
+	if (((((((((Var0.f_0 != iVar10 || Var0.f_1 != iVar11) || Var0.f_2 != iVar12) || Var0.f_3 != iVar13) || Var0.f_4 != iVar14) || Var0.f_5 != iVar15) || Var0.f_6 != fVar16) || Var0.f_7 != fVar17) || Var0.f_8 != fVar18) || Var0.f_9 != bVar19)
 	{
 		PED::SET_PED_HEAD_BLEND_DATA(iParam0, iVar10, iVar11, iVar12, iVar13, iVar14, iVar15, fVar16, fVar17, fVar18, bVar19);
 		iVar20 = func_159(2103, iParam1, 0);
@@ -44459,7 +44459,7 @@ void func_277(int iParam0, bool bParam1, bool bParam2, int iParam3)
 		{
 			if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iVar14, iVar19, &Var21))
 			{
-				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21))
+				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21.f_0))
 				{
 					iVar36 = (129 + iVar19);
 					if (func_303(iVar36, iVar0))
@@ -55989,7 +55989,7 @@ void func_297(char* sParam0, int iParam1, int iParam2, int iParam3)
 	{
 		if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iParam1, iVar0, &Var2))
 		{
-			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2))
+			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2.f_0))
 			{
 				sParam0->f_11 = iParam2;
 				MemCopy(sParam0, {Var2.f_7}, 4);
@@ -68166,7 +68166,7 @@ int func_363(int iParam0, int iParam1)
 	Var50.f_4 = -1;
 	Var50.f_8 = -1;
 	Var50.f_9 = 48;
-	Var50 = iParam0;
+	Var50.f_0 = iParam0;
 	Var50.f_2 = iParam1;
 	if (func_364(&Var0, Var50, 1, 1))
 	{
@@ -68248,7 +68248,7 @@ int func_364(var uParam0, struct<9> Param1, var uParam10, var uParam11, var uPar
 		}
 	}
 	bVar85 = false;
-	if (ENTITY::GET_ENTITY_MODEL(Param1) == joaat("mp_m_freemode_01"))
+	if (ENTITY::GET_ENTITY_MODEL(Param1.f_0) == joaat("mp_m_freemode_01"))
 	{
 		bVar85 = true;
 	}
@@ -73572,7 +73572,7 @@ int func_368(int iParam0, var uParam1, int iParam2, int iParam3)
 			Var36.f_8 = -1;
 			Var36.f_9 = 48;
 			Var36.f_2 = *iParam3;
-			Var36 = iParam0;
+			Var36.f_0 = iParam0;
 			if (func_364(uParam1, Var36, 1, 1))
 			{
 				return 1;
@@ -75007,7 +75007,7 @@ void func_396(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4)
 	struct<7> Var0;
 	int iVar9;
 	
-	Var0 = 1209719233;
+	Var0.f_0 = 1209719233;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	if (iParam2 != 0)
@@ -75292,7 +75292,7 @@ void func_408(int* iParam0, var uParam1)
 		if (!ENTITY::IS_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ((*uParam1)[3])))
 		{
 			Var0 = { func_437(iParam0, 0) };
-			if (iParam0->f_12 > 0.05f && iParam0->f_14 > Var0)
+			if (iParam0->f_12 > 0.05f && iParam0->f_14 > Var0.f_0)
 			{
 				ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ((*uParam1)[3]), true, false);
 				Var2 = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ((*uParam1)[3]), true) };
@@ -75328,7 +75328,7 @@ void func_409(int* iParam0, struct<2> Param1)
 			iParam0->f_13 = 1f;
 			iParam0->f_7++;
 			Var0 = { func_437(iParam0, -1) };
-			iParam0->f_14 = Var0;
+			iParam0->f_14 = Var0.f_0;
 		}
 	}
 }
@@ -75601,8 +75601,8 @@ void func_422(var uParam0, int iParam1, var uParam2, int iParam3)
 
 void func_423(int* iParam0, struct<2> Param1)
 {
-	iParam0->f_15 = ((Param1.f_1 - Param1) * 2f);
-	iParam0->f_16 = (Param1 - 0.0125f);
+	iParam0->f_15 = ((Param1.f_1 - Param1.f_0) * 2f);
+	iParam0->f_16 = (Param1.f_0 - 0.0125f);
 	iParam0->f_17 = (iParam0->f_16 + iParam0->f_15);
 }
 
@@ -76196,7 +76196,7 @@ void func_444(int iParam0)
 	struct<3> Var0;
 	
 	Var0.f_1 = PLAYER::PLAYER_ID();
-	Var0.x = 503866323;
+	Var0.f_0 = 503866323;
 	Var0.f_2 = iParam0;
 	SCRIPT::_TRIGGER_SCRIPT_EVENT_2(1, &Var0, 3, func_17(1, 1));
 }
@@ -76608,7 +76608,7 @@ int func_452(int iParam0)
 	Var0.f_19 = -1;
 	Var0.f_20 = -1;
 	Var0.f_16 = ((NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT() * func_464(16)) + iParam0);
-	Var0 = 191;
+	Var0.f_0 = 191;
 	if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("camhedz_arcade", Var0.f_16, true, 0))
 	{
 		if (func_453(Var0, 0))
@@ -76635,7 +76635,7 @@ int func_453(struct<17> Param0, var uParam17, var uParam18, var uParam19, var uP
 		return 0;
 	}
 	bParam21 = bParam21;
-	StringCopy(&cVar0, func_459(Param0), 32);
+	StringCopy(&cVar0, func_459(Param0.f_0), 32);
 	if (SCRIPT::DOES_SCRIPT_EXIST(&cVar0))
 	{
 		SCRIPT::REQUEST_SCRIPT(&cVar0);
@@ -76659,7 +76659,7 @@ int func_453(struct<17> Param0, var uParam17, var uParam18, var uParam19, var uP
 			{
 				return 0;
 			}
-			iVar10 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar0, &Param0, 21, func_454(Param0));
+			iVar10 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar0, &Param0, 21, func_454(Param0.f_0));
 			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&cVar0);
 			if (iVar10 > 0)
 			{
@@ -78506,14 +78506,14 @@ int func_468(int iParam0, struct<3> Param1, struct<3> Param4, struct<3> Param7)
 	if ((SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(joaat("am_mp_drone")) && !SCRIPT::IS_THREAD_ACTIVE(iLocal_130)) && !func_470())
 	{
 		Var0.f_1 = -1;
-		Var0 = 0;
+		Var0.f_0 = 0;
 		Var0.f_2 = { Param1 };
 		Var0.f_5 = { Param4 };
 		Var0.f_8 = { Param7 };
 		Var0.f_1 = iParam0;
 		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(joaat("am_mp_drone")) < 1)
 		{
-			if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("AM_MP_DRONE", Var0, true, 0))
+			if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("AM_MP_DRONE", Var0.f_0, true, 0))
 			{
 				iLocal_130 = SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(joaat("am_mp_drone"), &Var0, 12, 1424);
 				SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("am_mp_drone"));
@@ -78667,7 +78667,7 @@ int func_476(int iParam0)
 	Var0.f_19 = -1;
 	Var0.f_20 = -1;
 	Var0.f_16 = ((NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT() * func_464(1)) + iParam0);
-	Var0 = 184;
+	Var0.f_0 = 184;
 	if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("gunslinger_arcade", Var0.f_16, true, 0))
 	{
 		if (func_453(Var0, 0))
@@ -78766,7 +78766,7 @@ int func_481(int iParam0, int iParam1)
 	Var0.f_19 = -1;
 	Var0.f_20 = -1;
 	StringCopy(&cVar21, "grid_arcade_cabinet", 64);
-	Var0 = 180;
+	Var0.f_0 = 180;
 	Var0.f_16 = ((NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT() * func_464(10)) + 33 + iParam0);
 	iVar37 = func_87(PLAYER::PLAYER_ID());
 	if (iVar37 != -1)
@@ -78801,7 +78801,7 @@ int func_481(int iParam0, int iParam1)
 		SCRIPT::REQUEST_SCRIPT(&cVar21);
 		if (SCRIPT::HAS_SCRIPT_LOADED(&cVar21))
 		{
-			SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar21, &Var0, 21, func_454(Var0));
+			SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar21, &Var0, 21, func_454(Var0.f_0));
 			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&cVar21);
 			return 1;
 		}
@@ -78937,7 +78937,7 @@ int func_485(int iParam0)
 	Var0.f_16 = -1;
 	Var0.f_19 = -1;
 	Var0.f_20 = -1;
-	Var0 = 181;
+	Var0.f_0 = 181;
 	Var0.f_16 = (NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT() + 33 + iParam0);
 	Global_1932180 = 1;
 	if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("scroll_arcade_cabinet", Var0.f_16, true, 0))
@@ -83593,7 +83593,7 @@ void func_601(int iParam0, int iParam1)
 	struct<11> Var13;
 	
 	Var0 = { func_568(Local_365.f_21) };
-	Var13 = Local_359.f_1;
+	Var13.f_0 = Local_359.f_1;
 	Var13.f_1 = Local_359.f_1;
 	Var13.f_2 = iParam0;
 	Var13.f_3 = func_602(3, 5, 0, -1);
@@ -85635,7 +85635,7 @@ void func_626()
 	
 	if (func_3(PLAYER::PLAYER_ID(), 1, 1) && func_3(Local_365.f_21, 1, 1))
 	{
-		if (MISC::IS_BIT_SET(Local_359, 0))
+		if (MISC::IS_BIT_SET(Local_359.f_0, 0))
 		{
 			if (Local_365.f_2 == 0)
 			{
@@ -85796,11 +85796,11 @@ int func_632()
 	{
 		return 1;
 	}
-	if (MISC::IS_BIT_SET(Local_359, 1))
+	if (MISC::IS_BIT_SET(Local_359.f_0, 1))
 	{
 		return 1;
 	}
-	if (MISC::IS_BIT_SET(Local_359, 0))
+	if (MISC::IS_BIT_SET(Local_359.f_0, 0))
 	{
 		return 1;
 	}
@@ -85967,7 +85967,7 @@ void func_641()
 {
 	if (Local_365.f_83.f_39)
 	{
-		if (!MISC::IS_BIT_SET(Local_359, 0))
+		if (!MISC::IS_BIT_SET(Local_359.f_0, 0))
 		{
 			func_643(0);
 			func_642(0);
@@ -86205,7 +86205,7 @@ void func_648(int iParam0, int iParam1)
 
 void func_649()
 {
-	if (MISC::IS_BIT_SET(Local_359, 0))
+	if (MISC::IS_BIT_SET(Local_359.f_0, 0))
 	{
 		func_643(2);
 		func_642(1);
@@ -87049,7 +87049,7 @@ void func_683(int iParam0, bool bParam1)
 
 void func_684(struct<18> Param0)
 {
-	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Param0);
+	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Param0.f_0);
 	func_687(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Local_359, 6, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&Local_134, 225, 0);

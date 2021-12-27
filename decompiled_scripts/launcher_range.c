@@ -1110,7 +1110,7 @@ int func_24()
 	Var0.f_7 = uLocal_129;
 	Var0.f_8 = uLocal_130;
 	Var0.f_9 = uLocal_131;
-	Var0 = iLocal_138;
+	Var0.f_0 = iLocal_138;
 	iVar10 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&Local_53, &Var0, 10, iLocal_97);
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&Local_53);
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_123) && !ENTITY::IS_ENTITY_DEAD(iLocal_123, false))

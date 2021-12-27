@@ -339,7 +339,7 @@ void func_7(int iParam0, int iParam1)
 	struct<3> Var0;
 	int iVar3;
 	
-	Var0.x = 373340885;
+	Var0.f_0 = 373340885;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	iVar3 = func_8(iParam0);
@@ -4320,7 +4320,7 @@ void func_178(int iParam0, int iParam1, int iParam2, int iParam3)
 	struct<5> Var0;
 	int iVar5;
 	
-	Var0 = 470899337;
+	Var0.f_0 = 470899337;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	Var0.f_3 = iParam2;
@@ -4517,7 +4517,7 @@ void func_183()
 				{
 					Var1 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 					Var4 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-					Var7 = { (-SYSTEM::SIN(Var4.f_2) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.f_2) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
+					Var7 = { (-SYSTEM::SIN(Var4.f_2) * SYSTEM::COS(Var4.f_0)), (SYSTEM::COS(Var4.f_2) * SYSTEM::COS(Var4.f_0)), SYSTEM::SIN(Var4.f_0) };
 					Var10 = { 10f, 10f, 10f };
 					Var13 = { Var1 + Var7 * Var10 };
 					iVar16 = Global_262145.f_24419;
@@ -4789,7 +4789,7 @@ void func_188()
 			{
 				Var0 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 				Var3 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-				Var6 = { (-SYSTEM::SIN(Var3.f_2) * SYSTEM::COS(Var3.x)), (SYSTEM::COS(Var3.f_2) * SYSTEM::COS(Var3.x)), SYSTEM::SIN(Var3.x) };
+				Var6 = { (-SYSTEM::SIN(Var3.f_2) * SYSTEM::COS(Var3.f_0)), (SYSTEM::COS(Var3.f_2) * SYSTEM::COS(Var3.f_0)), SYSTEM::SIN(Var3.f_0) };
 				Var9 = { 10f, 10f, 10f };
 				Var12 = { Var0 + Var6 * Var9 };
 				iVar15 = Global_262145.f_24419;
@@ -4859,7 +4859,7 @@ void func_190(struct<3> Param0, bool bParam3)
 {
 	struct<6> Var0;
 	
-	Var0 = -2042927980;
+	Var0.f_0 = -2042927980;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0 };
 	Var0.f_5 = bParam3;
@@ -5197,7 +5197,7 @@ void func_204()
 				case 0:
 					Var3 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 					Var6 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-					Var9 = { (-SYSTEM::SIN(Var6.f_2) * SYSTEM::COS(Var6.x)), (SYSTEM::COS(Var6.f_2) * SYSTEM::COS(Var6.x)), SYSTEM::SIN(Var6.x) };
+					Var9 = { (-SYSTEM::SIN(Var6.f_2) * SYSTEM::COS(Var6.f_0)), (SYSTEM::COS(Var6.f_2) * SYSTEM::COS(Var6.f_0)), SYSTEM::SIN(Var6.f_0) };
 					Var12 = { 10f, 10f, 10f };
 					if (func_24())
 					{
@@ -5464,7 +5464,7 @@ void func_212()
 						Var14 = { Local_189.f_149 };
 						Var1 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 						Var4 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-						Var7 = { (-SYSTEM::SIN(Var4.f_2) * SYSTEM::COS(Var4.x)), (SYSTEM::COS(Var4.f_2) * SYSTEM::COS(Var4.x)), SYSTEM::SIN(Var4.x) };
+						Var7 = { (-SYSTEM::SIN(Var4.f_2) * SYSTEM::COS(Var4.f_0)), (SYSTEM::COS(Var4.f_2) * SYSTEM::COS(Var4.f_0)), SYSTEM::SIN(Var4.f_0) };
 						Var10 = { 0.9f, 0.9f, 0.9f };
 						if (func_16())
 						{
@@ -6913,19 +6913,19 @@ void func_249()
 						Var17.f_1 = -fVar1;
 					}
 				}
-				if (Var17.x > fVar2)
+				if (Var17.f_0 > fVar2)
 				{
-					Var17.x = fVar2;
+					Var17.f_0 = fVar2;
 				}
-				else if (Var17.x < -fVar2)
+				else if (Var17.f_0 < -fVar2)
 				{
-					Var17.x = -fVar2;
+					Var17.f_0 = -fVar2;
 				}
 				if (!MISC::IS_BIT_SET(Local_189.f_5, 12))
 				{
 					MISC::SET_BIT(&(Local_189.f_5), 12);
 				}
-				ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var17.f_2, Var17.f_1, Var17.x), 2, true);
+				ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var17.f_2, Var17.f_1, Var17.f_0), 2, true);
 			}
 			else if (((Local_189[0] != 0 || Local_189[1] != 0) && !func_252()) && !func_77())
 			{
@@ -6996,19 +6996,19 @@ void func_249()
 				{
 					Var28.f_1 = -fVar1;
 				}
-				if (Var28.x > fVar2)
+				if (Var28.f_0 > fVar2)
 				{
-					Var28.x = fVar2;
+					Var28.f_0 = fVar2;
 				}
-				else if (Var28.x < -fVar2)
+				else if (Var28.f_0 < -fVar2)
 				{
-					Var28.x = -fVar2;
+					Var28.f_0 = -fVar2;
 				}
 				if (MISC::IS_BIT_SET(Local_189.f_5, 12))
 				{
 					MISC::CLEAR_BIT(&(Local_189.f_5), 12);
 				}
-				ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var21.f_2, Var28.f_1, Var28.x), 2, true);
+				ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var21.f_2, Var28.f_1, Var28.f_0), 2, true);
 			}
 			else if (!func_251() && !func_252())
 			{
@@ -7033,7 +7033,7 @@ void func_249()
 					}
 					if (fVar5 != 0f)
 					{
-						if (Var31.x < 0f)
+						if (Var31.f_0 < 0f)
 						{
 							fVar35 = -1f;
 						}
@@ -7061,13 +7061,13 @@ void func_249()
 					{
 						fVar34 = 0f;
 					}
-					if (Var31.x != 0f)
+					if (Var31.f_0 != 0f)
 					{
-						if (Var31.x < 1.5f && Var31.x > 0f)
+						if (Var31.f_0 < 1.5f && Var31.f_0 > 0f)
 						{
 							fVar35 = 0.001f;
 						}
-						else if (Var31.x > -1.5f && Var31.x < 0f)
+						else if (Var31.f_0 > -1.5f && Var31.f_0 < 0f)
 						{
 							fVar35 = -0.001f;
 						}
@@ -7081,9 +7081,9 @@ void func_249()
 					Var38 = { Vector(0f, uVar37, uVar36) + Var31 };
 					if (MISC::IS_BIT_SET(Local_189.f_5, 12))
 					{
-						Var38.x = Var31.x;
+						Var38.f_0 = Var31.f_0;
 					}
-					ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var31.f_2, Var38.f_1, Var38.x), 2, true);
+					ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var31.f_2, Var38.f_1, Var38.f_0), 2, true);
 				}
 			}
 		}
@@ -7264,7 +7264,7 @@ float func_256()
 
 int func_257(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -7657,19 +7657,19 @@ void func_267()
 						Var18.f_1 = -fVar1;
 					}
 				}
-				if (Var18.x > fVar2)
+				if (Var18.f_0 > fVar2)
 				{
-					Var18.x = fVar2;
+					Var18.f_0 = fVar2;
 				}
-				else if (Var18.x < -fVar2)
+				else if (Var18.f_0 < -fVar2)
 				{
-					Var18.x = -fVar2;
+					Var18.f_0 = -fVar2;
 				}
 				if (!MISC::IS_BIT_SET(Local_189.f_5, 12))
 				{
 					MISC::SET_BIT(&(Local_189.f_5), 12);
 				}
-				ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var18.f_2, Var18.f_1, Var18.x), 2, true);
+				ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var18.f_2, Var18.f_1, Var18.f_0), 2, true);
 			}
 			else if (iVar6 && (((Local_189[2] != 0 || Local_189[3] != 0) || Local_189[0] != 0) || Local_189[1] != 0))
 			{
@@ -7745,19 +7745,19 @@ void func_267()
 				{
 					Var29.f_1 = -fVar1;
 				}
-				if (Var29.x > fVar2)
+				if (Var29.f_0 > fVar2)
 				{
-					Var29.x = fVar2;
+					Var29.f_0 = fVar2;
 				}
-				else if (Var29.x < -fVar2)
+				else if (Var29.f_0 < -fVar2)
 				{
-					Var29.x = -fVar2;
+					Var29.f_0 = -fVar2;
 				}
 				if (MISC::IS_BIT_SET(Local_189.f_5, 12))
 				{
 					MISC::CLEAR_BIT(&(Local_189.f_5), 12);
 				}
-				ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var22.f_2, Var29.f_1, Var29.x), 2, true);
+				ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(Var22.f_2, Var29.f_1, Var29.f_0), 2, true);
 			}
 			else
 			{
@@ -7781,7 +7781,7 @@ void func_267()
 					}
 					if (fVar5 != 0f)
 					{
-						if (Var32.x < 0f)
+						if (Var32.f_0 < 0f)
 						{
 							fVar36 = -1f;
 						}
@@ -7809,13 +7809,13 @@ void func_267()
 					{
 						fVar35 = 0f;
 					}
-					if (Var32.x != 0f)
+					if (Var32.f_0 != 0f)
 					{
-						if (Var32.x < 2f && Var32.x > 0f)
+						if (Var32.f_0 < 2f && Var32.f_0 > 0f)
 						{
 							fVar36 = 0.0001f;
 						}
-						else if (Var32.x > -2f && Var32.x < 0f)
+						else if (Var32.f_0 > -2f && Var32.f_0 < 0f)
 						{
 							fVar36 = -0.0001f;
 						}
@@ -7829,7 +7829,7 @@ void func_267()
 					Var39 = { Vector(0f, uVar38, uVar37) + Var32 };
 					if (MISC::IS_BIT_SET(Local_189.f_5, 12))
 					{
-						Var39.x = Var32.x;
+						Var39.f_0 = Var32.f_0;
 					}
 					uVar42 = Var32.f_2;
 					if (func_16())
@@ -7840,7 +7840,7 @@ void func_267()
 							Var39.f_1 = 0f;
 						}
 					}
-					ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(uVar42, Var39.f_1, Var39.x), 2, true);
+					ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), Vector(0f, 0f, 0f) + Vector(uVar42, Var39.f_1, Var39.f_0), 2, true);
 					if (func_16())
 					{
 						if (MISC::ABSF(fVar4) < 2.5f && MISC::ABSF(fVar5) < 2.5f)
@@ -10106,7 +10106,7 @@ Vector3 func_349(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -10130,19 +10130,19 @@ void func_351(var uParam0)
 	
 	fVar0 = SYSTEM::COS(0f);
 	fVar1 = SYSTEM::SIN(0f);
-	Var2.x = *uParam0;
+	Var2.f_0 = *uParam0;
 	Var2.f_1 = ((fVar0 * uParam0->f_1) - (fVar1 * uParam0->f_2));
 	Var2.f_2 = ((fVar1 * uParam0->f_1) + (fVar0 * uParam0->f_2));
 	*uParam0 = { Var2 };
 	fVar0 = SYSTEM::COS(0f);
 	fVar1 = SYSTEM::SIN(0f);
-	Var2.x = ((fVar0 * *uParam0) + (fVar1 * uParam0->f_2));
+	Var2.f_0 = ((fVar0 * *uParam0) + (fVar1 * uParam0->f_2));
 	Var2.f_1 = uParam0->f_1;
 	Var2.f_2 = ((fVar0 * uParam0->f_2) - (fVar1 * *uParam0));
 	*uParam0 = { Var2 };
 	fVar0 = SYSTEM::COS(0f);
 	fVar1 = SYSTEM::SIN(0f);
-	Var2.x = ((fVar0 * *uParam0) - (fVar1 * uParam0->f_1));
+	Var2.f_0 = ((fVar0 * *uParam0) - (fVar1 * uParam0->f_1));
 	Var2.f_1 = ((fVar1 * *uParam0) + (fVar0 * uParam0->f_1));
 	Var2.f_2 = uParam0->f_2;
 	*uParam0 = { Var2 };
@@ -10523,7 +10523,7 @@ void func_352()
 
 Vector3 func_353(struct<3> Param0, struct<3> Param3)
 {
-	return ((Param0.f_1 * Param3.f_2) - (Param0.f_2 * Param3.f_1)), ((Param0.f_2 * Param3.x) - (Param0.x * Param3.f_2)), ((Param0.x * Param3.f_1) - (Param0.f_1 * Param3.x));
+	return ((Param0.f_1 * Param3.f_2) - (Param0.f_2 * Param3.f_1)), ((Param0.f_2 * Param3.f_0) - (Param0.f_0 * Param3.f_2)), ((Param0.f_0 * Param3.f_1) - (Param0.f_1 * Param3.f_0));
 }
 
 float func_354()
@@ -10565,7 +10565,7 @@ Vector3 func_357(struct<2> Param0, var uParam2)
 {
 	struct<3> Var0;
 	
-	Var0 = { SYSTEM::SIN(Param0.f_1), (-SYSTEM::SIN(Param0) * SYSTEM::COS(Param0.f_1)), (SYSTEM::COS(Param0) * SYSTEM::COS(Param0.f_1)) };
+	Var0 = { SYSTEM::SIN(Param0.f_1), (-SYSTEM::SIN(Param0.f_0) * SYSTEM::COS(Param0.f_1)), (SYSTEM::COS(Param0.f_0) * SYSTEM::COS(Param0.f_1)) };
 	return Var0;
 }
 
@@ -10880,12 +10880,12 @@ void func_370()
 	}
 	Var5 = { ENTITY::GET_ENTITY_ROTATION(func_15(), 2) };
 	ENTITY::SET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(Local_189.f_158), Local_189.f_143, true, false, false, true);
-	func_372(Local_189.f_143, (Var5.x + 90f), 180f, 0f);
+	func_372(Local_189.f_143, (Var5.f_0 + 90f), 180f, 0f);
 	Var8 = { ENTITY::GET_ENTITY_COORDS(func_15(), true) };
 	Var11 = { 0f, 0f, 0f };
 	Local_189.f_116 = func_371(Var11, Var8);
 	ENTITY::SET_ENTITY_HEADING(NETWORK::NET_TO_OBJ(Local_189.f_158), Local_189.f_116);
-	ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), (Var5.x - 90f), 0f, Local_189.f_116, 2, true);
+	ENTITY::SET_ENTITY_ROTATION(NETWORK::NET_TO_OBJ(Local_189.f_158), (Var5.f_0 - 90f), 0f, Local_189.f_116, 2, true);
 	if (AUDIO::HAS_SOUND_FINISHED(Local_189.f_115))
 	{
 		Local_189.f_115 = AUDIO::GET_SOUND_ID();
@@ -10895,7 +10895,7 @@ void func_370()
 
 float func_371(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 void func_372(struct<3> Param0, struct<3> Param3)
@@ -10912,9 +10912,9 @@ bool func_373(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 Vector3 func_374(int iParam0)
@@ -11977,7 +11977,7 @@ void func_412()
 				Local_189.f_143 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var1, ENTITY::GET_ENTITY_HEADING(func_15()), 0f, 0f, -2.6f) };
 			}
 			Var4 = { ENTITY::GET_ENTITY_ROTATION(func_15(), 2) };
-			func_372(Local_189.f_143, (Var4.x + 90f), 180f, Var4.f_2);
+			func_372(Local_189.f_143, (Var4.f_0 + 90f), 180f, Var4.f_2);
 			func_391(1);
 			func_415(Local_189.f_82[PLAYER::PLAYER_ID()]);
 			func_383(1);
@@ -12014,7 +12014,7 @@ void func_415(var uParam0)
 	struct<3> Var0;
 	int iVar3;
 	
-	Var0.x = -702437025;
+	Var0.f_0 = -702437025;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = uParam0;
 	iVar3 = func_191(0, 1);
@@ -13206,7 +13206,7 @@ void func_470(int iParam0)
 	{
 		if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 13))
 		{
-			if (ENTITY::DOES_ENTITY_EXIST(Var0) && NETWORK::NET_TO_ENT(Local_189.f_158) == Var0)
+			if (ENTITY::DOES_ENTITY_EXIST(Var0.f_0) && NETWORK::NET_TO_ENT(Local_189.f_158) == Var0.f_0)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(Var0.f_1))
 				{
@@ -14103,11 +14103,11 @@ void func_505(bool bParam0)
 			Var14.f_1 = Global_786547.f_1;
 			if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 			{
-				Var14 = Global_4718592.f_86750;
+				Var14.f_0 = Global_4718592.f_86750;
 			}
 			else
 			{
-				Var14 = func_510(PLAYER::PLAYER_ID());
+				Var14.f_0 = func_510(PLAYER::PLAYER_ID());
 			}
 			Var14.f_6 = 1;
 			Var14.f_4 = Local_189.f_27;
@@ -14567,7 +14567,7 @@ void func_528(var uParam0, int iParam1)
 	
 	Var0.f_5 = 1073741824;
 	Var0.f_6 = -1073741824;
-	Var0 = 988620539;
+	Var0.f_0 = 988620539;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	Var0.f_3 = uParam0->f_3;
@@ -14619,7 +14619,7 @@ void func_528(var uParam0, int iParam1)
 
 void func_529(struct<9> Param0, var uParam9, var uParam10, var uParam11)
 {
-	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Param0);
+	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Param0.f_0);
 	func_538(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&uLocal_188, 1, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&Local_91, 97, 0);

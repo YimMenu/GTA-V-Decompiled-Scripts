@@ -312,7 +312,7 @@ void __EntryFunction__()
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
 			Var0 = { func_86(PLAYER::PLAYER_ID()) };
-			PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Var0.x - 2000f), (Var0.f_1 - 2000f), (Var0.x + 2000f), (Var0.f_1 + 2000f));
+			PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Var0.f_0 - 2000f), (Var0.f_1 - 2000f), (Var0.f_0 + 2000f), (Var0.f_1 + 2000f));
 			PLAYER::SET_ALL_RANDOM_PEDS_FLEE_THIS_FRAME(PLAYER::PLAYER_ID());
 		}
 		if (!func_85())
@@ -412,7 +412,7 @@ void func_3(int iParam0, int iParam1)
 		}
 		if (func_13(iParam0, iParam1) != 322)
 		{
-			func_5(func_13(iParam0, iParam1), Local_44.x, Local_44.f_1);
+			func_5(func_13(iParam0, iParam1), Local_44.f_0, Local_44.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -2890,7 +2890,7 @@ int func_72()
 					iVar4 = 0;
 					while (iVar4 < 3)
 					{
-						Var0.x = (Var0.x + SYSTEM::TO_FLOAT(iVar4));
+						Var0.f_0 = (Var0.f_0 + SYSTEM::TO_FLOAT(iVar4));
 						Var0.f_1 = (Var0.f_1 + SYSTEM::TO_FLOAT(iVar4));
 						iVar5 = MISC::GET_RANDOM_INT_IN_RANGE(0, 5);
 						if (iVar5 > 1)
@@ -4146,9 +4146,9 @@ bool func_92(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_93(int iParam0)

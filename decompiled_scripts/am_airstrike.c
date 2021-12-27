@@ -309,7 +309,7 @@ void __EntryFunction__()
 				switch (func_100())
 				{
 					case 0:
-						Local_242 = 2;
+						Local_242.f_0 = 2;
 						break;
 					
 					case 2:
@@ -338,7 +338,7 @@ void func_1()
 	}
 	if (Local_242.f_2.f_2 == 3 && iLocal_57 == 0)
 	{
-		Local_242 = 3;
+		Local_242.f_0 = 3;
 	}
 	func_45();
 	if (Local_242.f_53 && Local_242.f_50 < 10)
@@ -353,12 +353,12 @@ void func_1()
 		}
 		else if (func_10(&uLocal_69, 10000, 0))
 		{
-			Local_242 = 3;
+			Local_242.f_0 = 3;
 		}
 	}
 	if (func_9())
 	{
-		Local_242 = 3;
+		Local_242.f_0 = 3;
 	}
 	if (!MISC::IS_BIT_SET(Global_43777, 10))
 	{
@@ -378,20 +378,20 @@ void func_1()
 	{
 		if (!func_4(PLAYER::PLAYER_ID(), 1, 0))
 		{
-			Local_242 = 3;
+			Local_242.f_0 = 3;
 		}
 	}
 	else if (func_4(PLAYER::PLAYER_ID(), 1, 0) || func_3())
 	{
-		Local_242 = 3;
+		Local_242.f_0 = 3;
 	}
 	if (CUTSCENE::IS_CUTSCENE_PLAYING())
 	{
-		Local_242 = 3;
+		Local_242.f_0 = 3;
 	}
 	if (Global_2783990.f_224 || func_2(PLAYER::PLAYER_ID()))
 	{
-		Local_242 = 3;
+		Local_242.f_0 = 3;
 	}
 }
 
@@ -1426,7 +1426,7 @@ int func_43(int iParam0)
 
 int func_44(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2248,7 +2248,7 @@ int func_72(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -2579,7 +2579,7 @@ void func_86(var uParam0, var uParam1)
 
 float func_87(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 Vector3 func_88(struct<3> Param0, float fParam3, float fParam4, float fParam5)
@@ -2675,9 +2675,9 @@ bool func_95(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_96()
@@ -2748,7 +2748,7 @@ void func_99()
 
 int func_100()
 {
-	return Local_242;
+	return Local_242.f_0;
 }
 
 int func_101(int iParam0)
@@ -2782,7 +2782,7 @@ void func_105(int iParam0, int iParam1, var uParam2)
 {
 	struct<4> Var0;
 	
-	Var0 = -206137320;
+	Var0.f_0 = -206137320;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_3 = iParam1;
 	Var0.f_2 = uParam2;
@@ -3026,7 +3026,7 @@ void func_118()
 
 void func_119(struct<21> Param0)
 {
-	func_125(func_126(Param0), Param0);
+	func_125(func_126(Param0.f_0), Param0);
 	NETWORK::RESERVE_NETWORK_MISSION_PEDS(1);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(1);
 	func_123(0, -1, 0);

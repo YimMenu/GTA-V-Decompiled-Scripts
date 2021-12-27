@@ -1456,7 +1456,7 @@ void func_40(int iParam0, int iParam1)
 		}
 		if (func_48(iParam0, iParam1) != 322)
 		{
-			func_42(func_48(iParam0, iParam1), Local_44.x, Local_44.f_1);
+			func_42(func_48(iParam0, iParam1), Local_44.f_0, Local_44.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -6681,7 +6681,7 @@ void func_135(struct<3> Param0, int iParam3)
 			func_67(&uLocal_173, "REDR1AU", "REDR1_SWV", 4, 0, 0, 0);
 		}
 	}
-	if (Var3.x > 0.025f)
+	if (Var3.f_0 > 0.025f)
 	{
 		iLocal_163++;
 		if (!func_33("REDR1_SWV") && iLocal_111 < 4)
@@ -6692,7 +6692,7 @@ void func_135(struct<3> Param0, int iParam3)
 			func_67(&uLocal_173, "REDR1AU", "REDR1_SWV", 4, 0, 0, 0);
 		}
 	}
-	if (Var3.x < -0.025f)
+	if (Var3.f_0 < -0.025f)
 	{
 		iLocal_163++;
 		if (!func_33("REDR1_SWV") && iLocal_111 < 4)
@@ -6709,7 +6709,7 @@ Vector3 func_136(struct<3> Param0, int iParam3)
 {
 	struct<3> Var0;
 	
-	Var0.x = (Param0.x / IntToFloat(iParam3));
+	Var0.f_0 = (Param0.f_0 / IntToFloat(iParam3));
 	Var0.f_1 = (Param0.f_1 / IntToFloat(iParam3));
 	Var0.f_2 = (Param0.f_2 / IntToFloat(iParam3));
 	return Var0;
@@ -9627,9 +9627,9 @@ bool func_199(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_200(int iParam0)
@@ -11610,7 +11610,7 @@ int func_261(int iParam0, bool bParam1)
 			{
 				if (iParam0 == Var1.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 					{
 						return 0;
 					}

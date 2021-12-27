@@ -697,7 +697,7 @@ void func_33(int iParam0, int iParam1)
 	struct<4> Var0;
 	int iVar4;
 	
-	Var0 = 1594344388;
+	Var0.f_0 = 1594344388;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = iParam1;
@@ -1081,7 +1081,7 @@ void func_44()
 	}
 	iVar5 = MISC::GET_RANDOM_INT_IN_RANGE(0, iVar6);
 	iVar2 = func_45(iVar8[iVar5]);
-	while (MISC::IS_BIT_SET(Local_449, iVar2) && iVar3 < 10)
+	while (MISC::IS_BIT_SET(Local_449.f_0, iVar2) && iVar3 < 10)
 	{
 		iVar5 = MISC::GET_RANDOM_INT_IN_RANGE(0, iVar6);
 		iVar2 = func_45(iVar8[iVar5]);
@@ -1093,7 +1093,7 @@ void func_44()
 		while (iVar1 < iVar6)
 		{
 			iVar2 = func_45(iVar8[iVar1]);
-			if (!MISC::IS_BIT_SET(Local_449, iVar2))
+			if (!MISC::IS_BIT_SET(Local_449.f_0, iVar2))
 			{
 				MISC::SET_BIT(&Local_449, iVar2);
 				Local_449.f_15 = iVar8[iVar1];
@@ -1560,7 +1560,7 @@ void func_56(var uParam0, int iParam1)
 				}
 			}
 			iVar2 = func_60(iParam1);
-			while (MISC::IS_BIT_SET(Local_449, func_41(iVar2, iParam1)) && iVar0 < 10)
+			while (MISC::IS_BIT_SET(Local_449.f_0, func_41(iVar2, iParam1)) && iVar0 < 10)
 			{
 				iVar2 = func_60(iParam1);
 				iVar0++;
@@ -1570,7 +1570,7 @@ void func_56(var uParam0, int iParam1)
 				iVar3 = 6;
 				while (iVar3 <= 10)
 				{
-					if (!MISC::IS_BIT_SET(Local_449, func_41(iVar3, iParam1)))
+					if (!MISC::IS_BIT_SET(Local_449.f_0, func_41(iVar3, iParam1)))
 					{
 						iVar2 = iVar3;
 					}
@@ -1717,20 +1717,20 @@ int func_60(int iParam0)
 						iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 2);
 						if (iVar0 == 0)
 						{
-							if (!MISC::IS_BIT_SET(Local_449, iVar1))
+							if (!MISC::IS_BIT_SET(Local_449.f_0, iVar1))
 							{
 								iVar0 = 11;
 							}
-							else if (!MISC::IS_BIT_SET(Local_449, iVar2))
+							else if (!MISC::IS_BIT_SET(Local_449.f_0, iVar2))
 							{
 								iVar0 = 6;
 							}
 						}
-						else if (!MISC::IS_BIT_SET(Local_449, iVar2))
+						else if (!MISC::IS_BIT_SET(Local_449.f_0, iVar2))
 						{
 							iVar0 = 6;
 						}
-						else if (!MISC::IS_BIT_SET(Local_449, iVar1))
+						else if (!MISC::IS_BIT_SET(Local_449.f_0, iVar1))
 						{
 							iVar0 = 11;
 						}
@@ -1750,20 +1750,20 @@ int func_60(int iParam0)
 							iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 2);
 							if (iVar0 == 0)
 							{
-								if (!MISC::IS_BIT_SET(Local_449, iVar3))
+								if (!MISC::IS_BIT_SET(Local_449.f_0, iVar3))
 								{
 									iVar0 = 12;
 								}
-								else if (!MISC::IS_BIT_SET(Local_449, iVar2))
+								else if (!MISC::IS_BIT_SET(Local_449.f_0, iVar2))
 								{
 									iVar0 = 6;
 								}
 							}
-							else if (!MISC::IS_BIT_SET(Local_449, iVar2))
+							else if (!MISC::IS_BIT_SET(Local_449.f_0, iVar2))
 							{
 								iVar0 = 6;
 							}
-							else if (!MISC::IS_BIT_SET(Local_449, iVar3))
+							else if (!MISC::IS_BIT_SET(Local_449.f_0, iVar3))
 							{
 								iVar0 = 12;
 							}
@@ -1831,7 +1831,7 @@ int func_62(int iParam0)
 			while (iVar1 <= 10)
 			{
 				iVar0 = func_41(iVar1, iParam0);
-				if (MISC::IS_BIT_SET(Local_449, iVar0))
+				if (MISC::IS_BIT_SET(Local_449.f_0, iVar0))
 				{
 					iVar2++;
 				}
@@ -1845,9 +1845,9 @@ int func_62(int iParam0)
 				case 1:
 					if (Local_449.f_7 == 2)
 					{
-						return (MISC::IS_BIT_SET(Local_449, iVar3) && MISC::IS_BIT_SET(Local_449, iVar4));
+						return (MISC::IS_BIT_SET(Local_449.f_0, iVar3) && MISC::IS_BIT_SET(Local_449.f_0, iVar4));
 					}
-					return MISC::IS_BIT_SET(Local_449, iVar3);
+					return MISC::IS_BIT_SET(Local_449.f_0, iVar3);
 				
 				case 2:
 				case 3:
@@ -1855,27 +1855,27 @@ int func_62(int iParam0)
 					{
 						if (!Local_47.f_389)
 						{
-							return (MISC::IS_BIT_SET(Local_449, iVar5) && MISC::IS_BIT_SET(Local_449, iVar4));
+							return (MISC::IS_BIT_SET(Local_449.f_0, iVar5) && MISC::IS_BIT_SET(Local_449.f_0, iVar4));
 						}
-						return MISC::IS_BIT_SET(Local_449, iVar4);
+						return MISC::IS_BIT_SET(Local_449.f_0, iVar4);
 					}
 					else if (!Local_47.f_389)
 					{
-						return MISC::IS_BIT_SET(Local_449, iVar5);
+						return MISC::IS_BIT_SET(Local_449.f_0, iVar5);
 					}
 					break;
 				
 				case 4:
-					return MISC::IS_BIT_SET(Local_449, iVar4);
+					return MISC::IS_BIT_SET(Local_449.f_0, iVar4);
 					break;
 				
 				case 5:
-					return MISC::IS_BIT_SET(Local_449, iVar4);
+					return MISC::IS_BIT_SET(Local_449.f_0, iVar4);
 			}
 			break;
 		
 		case 3:
-			return MISC::IS_BIT_SET(Local_449, iVar4);
+			return MISC::IS_BIT_SET(Local_449.f_0, iVar4);
 	}
 	return 0;
 }
@@ -4811,7 +4811,7 @@ int func_135(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -4822,7 +4822,7 @@ int func_135(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{
@@ -6217,16 +6217,16 @@ int func_175()
 
 void func_176(struct<3> Param0)
 {
-	Local_47.f_379 = Param0.x;
+	Local_47.f_379 = Param0.f_0;
 	Local_47.f_385 = Param0.f_1;
-	Local_47.f_380 = func_141(Param0.x);
-	Local_47.f_381 = func_140(Param0.x);
-	Local_47.f_386 = func_180(Param0.x, 0);
-	Local_47.f_387 = func_179(Param0.x, 0);
-	Local_47.f_388 = func_178(Param0.x, 0);
-	Local_47.f_389 = func_177(Param0.x);
+	Local_47.f_380 = func_141(Param0.f_0);
+	Local_47.f_381 = func_140(Param0.f_0);
+	Local_47.f_386 = func_180(Param0.f_0, 0);
+	Local_47.f_387 = func_179(Param0.f_0, 0);
+	Local_47.f_388 = func_178(Param0.f_0, 0);
+	Local_47.f_389 = func_177(Param0.f_0);
 	Local_47.f_390 = Param0.f_2;
-	Local_47.f_391 = func_18(Param0.x);
+	Local_47.f_391 = func_18(Param0.f_0);
 }
 
 int func_177(int iParam0)

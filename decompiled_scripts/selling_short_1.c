@@ -124,7 +124,7 @@ void func_1(float fParam0, float fParam1, char* sParam2, int iParam3, int iParam
 
 int func_2()
 {
-	CLOCK::SET_CLOCK_TIME(Local_21.x, Local_21.f_1, Local_21.f_2);
+	CLOCK::SET_CLOCK_TIME(Local_21.f_0, Local_21.f_1, Local_21.f_2);
 	MISC::SET_WIND(-1f);
 	switch (iLocal_6209)
 	{
@@ -485,7 +485,7 @@ void func_18(bool bParam0)
 	}
 	SYSTEM::WAIT(2000);
 	iLocal_6209 = 0;
-	Local_21.x = 12;
+	Local_21.f_0 = 12;
 	Local_21.f_1 = 0;
 	Local_21.f_2 = 0;
 	iVar0 = 0;
@@ -1271,21 +1271,21 @@ void func_43()
 	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_6202);
 	MISC::CLEAR_WEATHER_TYPE_PERSIST();
 	iVar0 = 0;
-	while (iVar0 < Local_90)
+	while (iVar0 < Local_90.f_0)
 	{
 		func_50(&(Local_90[iVar0 /*178*/]));
 		iVar0++;
 	}
 	iVar0 = 0;
 	iVar0 = 0;
-	while (iVar0 < Local_4898)
+	while (iVar0 < Local_4898.f_0)
 	{
 		func_47(&(Local_4898[iVar0 /*24*/]));
 		iVar0++;
 	}
 	iVar0 = 0;
 	iVar0 = 0;
-	while (iVar0 < Local_5620)
+	while (iVar0 < Local_5620.f_0)
 	{
 		func_47(&(Local_5620[iVar0 /*24*/]));
 		iVar0++;

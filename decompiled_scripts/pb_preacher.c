@@ -193,7 +193,7 @@ void func_2()
 		SYSTEM::WAIT(0);
 	}
 	Local_48.f_2 = (Local_45.f_2 - 1f);
-	iLocal_52 = PED::CREATE_PED(19, joaat("s_m_m_strpreach_01"), Local_45.x, Local_45.f_1, Local_48.f_2, 0f, true, true);
+	iLocal_52 = PED::CREATE_PED(19, joaat("s_m_m_strpreach_01"), Local_45.f_0, Local_45.f_1, Local_48.f_2, 0f, true, true);
 	if (!ENTITY::IS_ENTITY_DEAD(iLocal_52, false))
 	{
 		TASK::OPEN_SEQUENCE_TASK(&iLocal_55);

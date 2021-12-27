@@ -167,7 +167,7 @@ struct<5> func_3(int iParam0, struct<3> Param1, int iParam4, int iParam5, int iP
 	{
 		return Var0;
 	}
-	Var6 = iParam0;
+	Var6.f_0 = iParam0;
 	Var6.f_1 = { Param1 };
 	if (func_4(&Var6) != -1)
 	{
@@ -231,9 +231,9 @@ bool func_6(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_7(var uParam0)
@@ -247,7 +247,7 @@ int func_7(var uParam0)
 
 int func_8(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

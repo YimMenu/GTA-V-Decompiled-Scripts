@@ -1658,9 +1658,9 @@ bool func_16(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_17()
@@ -2644,7 +2644,7 @@ void func_45()
 								break;
 							
 							case 1:
-								if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Local_1109, Local_1109.f_1, Local_1112, Local_1112.f_1))
+								if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Local_1109.f_0, Local_1109.f_1, Local_1112.f_0, Local_1112.f_1))
 								{
 									iLocal_1133++;
 								}
@@ -4055,9 +4055,9 @@ int func_86(struct<2> Param0, Vector3 vParam2)
 {
 	if (Param0.f_1 < 400f)
 	{
-		if (Param0 < 1400f)
+		if (Param0.f_0 < 1400f)
 		{
-			if (Param0 > -1900f)
+			if (Param0.f_0 > -1900f)
 			{
 				if (Param0.f_1 > -3500f)
 				{

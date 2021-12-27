@@ -8989,7 +8989,7 @@ void func_91(int iParam0, int iParam1)
 	fVar17 = func_106(135, iParam1);
 	fVar18 = func_106(136, iParam1);
 	bVar19 = func_51(160, iParam1);
-	if (((((((((Var0 != iVar10 || Var0.f_1 != iVar11) || Var0.f_2 != iVar12) || Var0.f_3 != iVar13) || Var0.f_4 != iVar14) || Var0.f_5 != iVar15) || Var0.f_6 != fVar16) || Var0.f_7 != fVar17) || Var0.f_8 != fVar18) || Var0.f_9 != bVar19)
+	if (((((((((Var0.f_0 != iVar10 || Var0.f_1 != iVar11) || Var0.f_2 != iVar12) || Var0.f_3 != iVar13) || Var0.f_4 != iVar14) || Var0.f_5 != iVar15) || Var0.f_6 != fVar16) || Var0.f_7 != fVar17) || Var0.f_8 != fVar18) || Var0.f_9 != bVar19)
 	{
 		PED::SET_PED_HEAD_BLEND_DATA(iParam0, iVar10, iVar11, iVar12, iVar13, iVar14, iVar15, fVar16, fVar17, fVar18, bVar19);
 		iVar20 = func_9(2103, iParam1, 0);
@@ -11234,7 +11234,7 @@ void func_111(int iParam0, bool bParam1, bool bParam2, int iParam3)
 		{
 			if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iVar14, iVar19, &Var21))
 			{
-				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21))
+				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21.f_0))
 				{
 					iVar36 = (129 + iVar19);
 					if (func_144(iVar36, iVar0))
@@ -23013,7 +23013,7 @@ void func_138(char* sParam0, int iParam1, int iParam2, int iParam3)
 	{
 		if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iParam1, iVar0, &Var2))
 		{
-			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2))
+			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2.f_0))
 			{
 				sParam0->f_11 = iParam2;
 				MemCopy(sParam0, {Var2.f_7}, 4);
@@ -34272,16 +34272,16 @@ void func_197(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar0 = 4;
 		}
 		FILES::GET_SHOP_PED_OUTFIT(iParam2, &Var1);
-		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 		{
 			iVar19 = 0;
 			while (iVar19 < Var1.f_3)
 			{
 				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar19, &Var16) && Var16.f_2 != -1)
 				{
-					if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+					if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 					{
-						(*iParam0)[Var16.f_2] = func_59(iParam1, Var16.x, 14, iVar0);
+						(*iParam0)[Var16.f_2] = func_59(iParam1, Var16.f_0, 14, iVar0);
 					}
 					else if (Var16.f_1 != -1)
 					{
@@ -35234,32 +35234,32 @@ void func_200(var uParam0, int iParam1, int iParam2, int iParam3)
 	}
 	FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar0, false);
 	FILES::GET_SHOP_PED_QUERY_OUTFIT((iParam2 - iParam3), &Var1);
-	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 	{
 		iVar36 = 0;
 		while (iVar36 < Var1.f_4)
 		{
 			if (FILES::GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT(Var1.f_1, iVar36, &Var16))
 			{
-				if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+				if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 				{
 					if (Var16.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var19);
-						FILES::GET_SHOP_PED_COMPONENT(Var16.x, &Var19);
-						if (Var16.x != Var19.f_1)
+						FILES::GET_SHOP_PED_COMPONENT(Var16.f_0, &Var19);
+						if (Var16.f_0 != Var19.f_1)
 						{
 							uParam0->f_16 = 1;
 						}
 					}
 					if (Var16.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_43(Var16.f_2)] = Var16.x;
+						(*uParam0)[func_43(Var16.f_2)] = Var16.f_0;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_43(Var16.f_2)] = func_59(iParam1, Var16.x, func_43(Var16.f_2), iVar0);
+						(*uParam0)[func_43(Var16.f_2)] = func_59(iParam1, Var16.f_0, func_43(Var16.f_2), iVar0);
 					}
 				}
 				else if (Var16.f_1 != -1)
@@ -40300,7 +40300,7 @@ void func_218(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
 				Global_2883588 = Var2.f_1;
-				Global_2883589 = Var2;
+				Global_2883589 = Var2.f_0;
 				func_211(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var2.f_7), 0, 0, Var2.f_2, 0, -1, 2, 1);
 				return;
 			}
@@ -40361,7 +40361,7 @@ void func_218(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar36 = -1;
 				}
 				Global_2883588 = Var19.f_1;
-				Global_2883589 = Var19;
+				Global_2883589 = Var19.f_0;
 				func_211(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var19.f_9), Var19.f_3, Var19.f_4, Var19.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var19.f_1, joaat("OUTFIT_ONLY"), 0), iVar36, 2, Var19.f_1 != 0);
 				return;
 			}
@@ -40374,7 +40374,7 @@ void func_218(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			FILES::GET_SHOP_PED_COMPONENT(iParam3, &Var39);
 			Global_2883588 = Var39.f_1;
-			Global_2883589 = Var39;
+			Global_2883589 = Var39.f_0;
 			func_211(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 			return;
 		}
@@ -40386,7 +40386,7 @@ void func_218(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
 				Global_2883588 = Var39.f_1;
-				Global_2883589 = Var39;
+				Global_2883589 = Var39.f_0;
 				func_211(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 				return;
 			}
@@ -87125,70 +87125,70 @@ void func_340()
 			case 1:
 				iVar4 = func_366(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_495(), 1);
 				Var1 = { func_365(Global_95012[iVar4 /*10*/].f_7, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 2:
 				Var1 = { func_361(Global_96907[0 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 3:
 				Var1 = { func_361(Global_96907[1 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 4:
 				Var1 = { func_361(Global_96907[2 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 5:
 				Var1 = { func_361(Global_96907[3 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 6:
 				Var1 = { func_361(Global_96907[4 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 7:
 				Var1 = { func_361(Global_96907[5 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 8:
 				Var1 = { func_361(Global_96907[6 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 9:
 				Var1 = { func_361(Global_96907[7 /*17*/].f_9) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
 			
 			case 10:
 				Var1 = { func_359() };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87196,7 +87196,7 @@ void func_340()
 			case 11:
 				iVar0 = func_357(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 3, -1, 0, 1, -1);
 				Var1 = { func_344(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87204,7 +87204,7 @@ void func_340()
 			case 12:
 				iVar0 = func_357(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 4, -1, 0, 1, 44);
 				Var1 = { func_344(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87212,7 +87212,7 @@ void func_340()
 			case 13:
 				iVar0 = func_343();
 				Var1 = { func_344(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87220,7 +87220,7 @@ void func_340()
 			case 14:
 				iVar0 = func_342();
 				Var1 = { func_344(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87228,7 +87228,7 @@ void func_340()
 			case 15:
 				iVar0 = func_341();
 				Var1 = { func_344(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87236,7 +87236,7 @@ void func_340()
 			case 16:
 				iVar0 = func_357(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 0, -1, 0, 1, -1);
 				Var1 = { func_344(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87244,7 +87244,7 @@ void func_340()
 			case 17:
 				iVar0 = func_357(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 2, -1, 0, 1, -1);
 				Var1 = { func_344(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87252,7 +87252,7 @@ void func_340()
 			case 18:
 				iVar0 = 21;
 				Var1 = { func_344(iVar0, 0) };
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87274,7 +87274,7 @@ void func_340()
 				{
 					Var1 = { HUD::GET_BLIP_COORDS(Global_76670.f_208[iVar5]) };
 				}
-				HUD::SET_NEW_WAYPOINT(Var1.x, Var1.f_1);
+				HUD::SET_NEW_WAYPOINT(Var1.f_0, Var1.f_1);
 				HUD::REFRESH_WAYPOINT();
 				return;
 				break;
@@ -87778,8 +87778,8 @@ Vector3 func_348(struct<3> Param0, float fParam3)
 	
 	fVar3 = SYSTEM::SIN(fParam3);
 	fVar4 = SYSTEM::COS(fParam3);
-	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
-	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
+	Var0.f_0 = ((Param0.f_0 * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.f_0 * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
@@ -88706,7 +88706,7 @@ Vector3 func_361(int iParam0)
 
 int func_362(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -89625,7 +89625,7 @@ void func_380(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				}
 				func_406(Global_22827, (fVar51 + 0f), fParam5, 0.034722f, iVar1, iVar2, iVar3, iVar4);
 				Var38 = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
-				Var38.x = (Var38.x * (0.5f / fVar62));
+				Var38.f_0 = (Var38.f_0 * (0.5f / fVar62));
 				Var38.f_1 = (Var38.f_1 * (0.5f / fVar62));
 				if (Global_22830.f_8672)
 				{
@@ -89638,7 +89638,7 @@ void func_380(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam
 				{
 					HUD::GET_HUD_COLOUR(1, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22827 + (fParam5 * 0.5f)), ((fVar51 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar62), ((Var38.f_1 / 720f) * fVar62), 0f, iVar1, iVar2, iVar3, iVar4, false);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22827 + (fParam5 * 0.5f)), ((fVar51 + 0f) + (0.034722f * 0.5f)), ((Var38.f_0 / 1280f) * fVar62), ((Var38.f_1 / 720f) * fVar62), 0f, iVar1, iVar2, iVar3, iVar4, false);
 				fVar51 = (fVar51 + (0f + 0.034722f));
 			}
 			if (MISC::GET_HASH_KEY(&(Global_22830.f_4947)) != 0 && Global_22830.f_5023 != -1)
@@ -92222,25 +92222,25 @@ int func_416(int iParam0, bool bParam1, bool bParam2, float fParam3, float fPara
 			GRAPHICS::GET_SCREEN_RESOLUTION(&iVar32, &iVar33);
 		}
 		Var37 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar16) };
-		Var37.x = (Var37.x * (func_417(iParam0) / fVar34));
+		Var37.f_0 = (Var37.f_0 * (func_417(iParam0) / fVar34));
 		Var37.f_1 = (Var37.f_1 * (func_417(iParam0) / fVar34));
 		if (!bParam2)
 		{
-			Var37.x = (Var37.x - 2f);
+			Var37.f_0 = (Var37.f_0 - 2f);
 			Var37.f_1 = (Var37.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
-			Var37.x = 288f;
+			Var37.f_0 = 288f;
 			Var37.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22830.f_7286[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
-			Var37.x = 106f;
+			Var37.f_0 = 106f;
 			Var37.f_1 = 106f;
 		}
-		*fParam3 = ((Var37.x / IntToFloat(iVar32)) * IntToFloat((iVar32 / iVar33)));
-		*fParam4 = (((Var37.f_1 / IntToFloat(iVar33)) / (Var37.x / IntToFloat(iVar32))) * *fParam3);
+		*fParam3 = ((Var37.f_0 / IntToFloat(iVar32)) * IntToFloat((iVar32 / iVar33)));
+		*fParam4 = (((Var37.f_1 / IntToFloat(iVar33)) / (Var37.f_0 / IntToFloat(iVar32))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)

@@ -1121,7 +1121,7 @@ void __EntryFunction__()
 			switch (func_352())
 			{
 				case 0:
-					Local_68 = 1;
+					Local_68.f_0 = 1;
 					break;
 				
 				case 1:
@@ -1129,7 +1129,7 @@ void __EntryFunction__()
 					func_3();
 					if (func_1())
 					{
-						Local_68 = 4;
+						Local_68.f_0 = 4;
 					}
 					break;
 				
@@ -1544,9 +1544,9 @@ bool func_11(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_12(struct<3> Param0, struct<3> Param3, float fParam6)
@@ -1908,7 +1908,7 @@ bool func_25(int iParam0)
 
 int func_26(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -3214,7 +3214,7 @@ struct<9> func_70()
 {
 	struct<9> Var0;
 	
-	Var0 = 0.5f;
+	Var0.f_0 = 0.5f;
 	Var0.f_1 = 0.5f;
 	Var0.f_2 = 1f;
 	Var0.f_3 = 1f;
@@ -3724,7 +3724,7 @@ void func_89(int iParam0)
 			Var12 = { HUD::GET_BLIP_COORDS(Local_1721[iLocal_1707 /*3*/]) };
 			if ((!func_26(Var12) && CAM::DOES_CAM_EXIST(iLocal_2600)) && CAM::IS_CAM_ACTIVE(iLocal_2600))
 			{
-				HUD::LOCK_MINIMAP_POSITION(Var12.x, Var12.f_1);
+				HUD::LOCK_MINIMAP_POSITION(Var12.f_0, Var12.f_1);
 			}
 		}
 		iLocal_2599 = 0;
@@ -4641,7 +4641,7 @@ int func_95(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -4652,7 +4652,7 @@ int func_95(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{
@@ -4807,7 +4807,7 @@ int func_97(int iParam0)
 								Var2 = { HUD::GET_BLIP_COORDS(Local_1721[iVar0 /*3*/]) };
 								if ((!func_26(Var2) && CAM::DOES_CAM_EXIST(iLocal_2600)) && CAM::IS_CAM_ACTIVE(iLocal_2600))
 								{
-									HUD::LOCK_MINIMAP_POSITION(Var2.x, Var2.f_1);
+									HUD::LOCK_MINIMAP_POSITION(Var2.f_0, Var2.f_1);
 								}
 								iLocal_1707 = iVar0;
 								iVar0 = 50;
@@ -4988,7 +4988,7 @@ void func_99(struct<3> Param0, bool bParam3, int iParam4)
 	iVar0 = 0;
 	while (iVar0 < 50)
 	{
-		if (func_96(Local_1721[iVar0 /*3*/]) == func_96(Param0.x))
+		if (func_96(Local_1721[iVar0 /*3*/]) == func_96(Param0.f_0))
 		{
 			iVar1 = iVar0;
 			iVar0 = 50;
@@ -5010,7 +5010,7 @@ void func_99(struct<3> Param0, bool bParam3, int iParam4)
 		}
 		if (iVar0 < iLocal_1706)
 		{
-			if (func_96(Local_1721[iVar0 /*3*/]) == func_96(Param0.x))
+			if (func_96(Local_1721[iVar0 /*3*/]) == func_96(Param0.f_0))
 			{
 				if (func_103(Param0, Local_1721[iVar0 /*3*/]))
 				{
@@ -6331,7 +6331,7 @@ void func_142()
 		Var0 = { HUD::GET_BLIP_COORDS(Local_1721[iLocal_1707 /*3*/]) };
 		if (!func_26(Var0))
 		{
-			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
+			HUD::LOCK_MINIMAP_POSITION(Var0.f_0, Var0.f_1);
 		}
 	}
 }
@@ -6383,7 +6383,7 @@ void func_144()
 		Var0 = { HUD::GET_BLIP_COORDS(Local_1721[iLocal_1707 /*3*/]) };
 		if (!func_26(Var0))
 		{
-			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
+			HUD::LOCK_MINIMAP_POSITION(Var0.f_0, Var0.f_1);
 		}
 	}
 }
@@ -6578,9 +6578,9 @@ void func_151(struct<3> Param0, var uParam3, var uParam4, int iParam5)
 	
 	if (Param0.f_1 != 0f)
 	{
-		*uParam4 = MISC::ATAN2(Param0.x, Param0.f_1);
+		*uParam4 = MISC::ATAN2(Param0.f_0, Param0.f_1);
 	}
-	else if (Param0.x < 0f)
+	else if (Param0.f_0 < 0f)
 	{
 		*uParam4 = -90f;
 	}
@@ -6596,7 +6596,7 @@ void func_151(struct<3> Param0, var uParam3, var uParam4, int iParam5)
 			*uParam4 = (*uParam4 + 360f);
 		}
 	}
-	fVar0 = SYSTEM::SQRT(((Param0.x * Param0.x) + (Param0.f_1 * Param0.f_1)));
+	fVar0 = SYSTEM::SQRT(((Param0.f_0 * Param0.f_0) + (Param0.f_1 * Param0.f_1)));
 	if (fVar0 != 0f)
 	{
 		*uParam3 = MISC::ATAN2(Param0.f_2, fVar0);
@@ -6624,7 +6624,7 @@ Vector3 func_152(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -7359,7 +7359,7 @@ void func_167(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -8513,8 +8513,8 @@ int func_196(int iParam0, struct<3> Param1, var uParam4, var uParam5, var uParam
 	bVar21 = true;
 	iVar24 = *uParam6 + 2;
 	iVar25 = 50;
-	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Param1.x - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.x + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7)));
-	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA((Param1.x - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.x + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7))))
+	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Param1.f_0 - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.f_0 + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7)));
+	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA((Param1.f_0 - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.f_0 + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7))))
 	{
 		while (!bVar19 && *uParam6 < iVar24)
 		{
@@ -9718,7 +9718,7 @@ int func_199(struct<3> Param0, var uParam3, float fParam4, int iParam5)
 
 float func_200(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	return SYSTEM::VDIST2(Param0, Param0.f_1, 0f, Param3, Param3.f_1, 0f);
+	return SYSTEM::VDIST2(Param0.f_0, Param0.f_1, 0f, Param3.f_0, Param3.f_1, 0f);
 }
 
 int func_201()
@@ -9768,7 +9768,7 @@ bool func_203(struct<3> Param0, struct<3> Param3, float fParam6)
 	struct<3> Var0;
 	
 	Var0 = { Param3 - Param0 };
-	return ((Var0.x * Var0.x) + (Var0.f_1 * Var0.f_1)) <= (fParam6 * fParam6);
+	return ((Var0.f_0 * Var0.f_0) + (Var0.f_1 * Var0.f_1)) <= (fParam6 * fParam6);
 }
 
 int func_204(struct<3> Param0, int iParam3, int iParam4, bool bParam5)
@@ -10094,7 +10094,7 @@ Vector3 func_207(int iParam0)
 
 int func_208(struct<3> Param0, struct<3> Param3, struct<3> Param6)
 {
-	if (((((Param0.x > Param3.x && Param0.x < Param6.x) && Param0.f_1 > Param3.f_1) && Param0.f_1 < Param6.f_1) && Param0.f_2 > Param3.f_2) && Param0.f_2 < Param6.f_2)
+	if (((((Param0.f_0 > Param3.f_0 && Param0.f_0 < Param6.f_0) && Param0.f_1 > Param3.f_1) && Param0.f_1 < Param6.f_1) && Param0.f_2 > Param3.f_2) && Param0.f_2 < Param6.f_2)
 	{
 		return 1;
 	}
@@ -10165,7 +10165,7 @@ int func_210(struct<3> Param0, struct<3> Param3, var uParam6, var uParam7, var u
 		if (PATHFIND::_GET_POINT_ON_ROAD_SIDE(Var0, 0, &Var3) && PATHFIND::_GET_POINT_ON_ROAD_SIDE(Var0, 1, &Var6))
 		{
 			Var11 = { Var3 - Var0 };
-			Var14 = { -Var11.f_1, Var11.x, 0f };
+			Var14 = { -Var11.f_1, Var11.f_0, 0f };
 			Var17 = { Param0 - Param3 };
 			fVar20 = func_212(Var14, Var17);
 			if (fVar20 < 0f)
@@ -10211,7 +10211,7 @@ float func_211(float fParam0, float fParam1, float fParam2)
 
 float func_212(struct<3> Param0, struct<3> Param3)
 {
-	return (((Param0.x * Param3.x) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
+	return (((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
 }
 
 int func_213(int iParam0, struct<3> Param1, var* uParam4, float* fParam5, var uParam6, int iParam7)
@@ -10293,7 +10293,7 @@ int func_213(int iParam0, struct<3> Param1, var* uParam4, float* fParam5, var uP
 
 int func_214(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Param0, Param0.f_1, Param3, Param3.f_1))
+	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Param0.f_0, Param0.f_1, Param3.f_0, Param3.f_1))
 	{
 		return 1;
 	}
@@ -10305,15 +10305,15 @@ void func_215(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5, var 
 	struct<3> Var0;
 	struct<3> Var3;
 	
-	if (Param3 <= Param0)
+	if (Param3.f_0 <= Param0.f_0)
 	{
-		Var0.x = Param3;
-		Var3.x = Param0;
+		Var0.f_0 = Param3.f_0;
+		Var3.f_0 = Param0.f_0;
 	}
 	else
 	{
-		Var0.x = Param0;
-		Var3.x = Param3;
+		Var0.f_0 = Param0.f_0;
+		Var3.f_0 = Param3.f_0;
 	}
 	if (Param3.f_1 <= Param0.f_1)
 	{
@@ -10387,10 +10387,10 @@ int func_218(int iParam0)
 		fVar6 = 15f;
 		Var7 = { Var3 };
 		Var10 = { Var7 };
-		Var7.x = (Var7.x - fVar6);
+		Var7.f_0 = (Var7.f_0 - fVar6);
 		Var7.f_1 = (Var7.f_1 - fVar6);
 		Var7.f_2 = (Var7.f_2 - fVar6);
-		Var10.x = (Var10.x + fVar6);
+		Var10.f_0 = (Var10.f_0 + fVar6);
 		Var10.f_1 = (Var10.f_1 + fVar6);
 		Var10.f_2 = (Var10.f_2 + fVar6);
 		if (MISC::IS_PROJECTILE_IN_AREA(Var7, Var10, false))
@@ -11446,16 +11446,16 @@ int func_246(struct<6> Param0, struct<6> Param6)
 		}
 		if (Param0.f_4 == Param6.f_4)
 		{
-			Var0 = Param0;
+			Var0.f_0 = Param0.f_0;
 			Var0.f_1 = Param0.f_1 * 60;
 			Var0.f_2 = Param0.f_2 * 3600;
 			Var0.f_3 = (Param0.f_3 * 86400);
-			iVar12 = (((Var0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
-			Var6 = Param6;
+			iVar12 = (((Var0.f_0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
+			Var6.f_0 = Param6.f_0;
 			Var6.f_1 = Param6.f_1 * 60;
 			Var6.f_2 = Param6.f_2 * 3600;
 			Var6.f_3 = (Param6.f_3 * 86400);
-			iVar13 = (((Var6 + Var6.f_1) + Var6.f_2) + Var6.f_3);
+			iVar13 = (((Var6.f_0 + Var6.f_1) + Var6.f_2) + Var6.f_3);
 			if (iVar12 > iVar13 || iVar12 == iVar13)
 			{
 				return 1;
@@ -12288,16 +12288,16 @@ int func_269(struct<6> Param0, struct<6> Param6)
 		}
 		if (Param0.f_4 == Param6.f_4)
 		{
-			Var0 = Param0;
+			Var0.f_0 = Param0.f_0;
 			Var0.f_1 = Param0.f_1 * 60;
 			Var0.f_2 = Param0.f_2 * 3600;
 			Var0.f_3 = (Param0.f_3 * 86400);
-			iVar12 = (((Var0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
-			Var6 = Param6;
+			iVar12 = (((Var0.f_0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
+			Var6.f_0 = Param6.f_0;
 			Var6.f_1 = Param6.f_1 * 60;
 			Var6.f_2 = Param6.f_2 * 3600;
 			Var6.f_3 = (Param6.f_3 * 86400);
-			iVar13 = (((Var6 + Var6.f_1) + Var6.f_2) + Var6.f_3);
+			iVar13 = (((Var6.f_0 + Var6.f_1) + Var6.f_2) + Var6.f_3);
 			if (iVar12 > iVar13 || iVar12 == iVar13)
 			{
 				return 1;
@@ -13071,7 +13071,7 @@ int func_306(struct<3> Param0, float fParam3, float fParam4, float fParam5, floa
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -13427,7 +13427,7 @@ int func_319(struct<3> Param0, var uParam3, var uParam4, var uParam5, int iParam
 								Var16 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var3, fVar9, 0f, 1f, 0f) };
 								Var19 = { Var16 - Var3 };
 								Var22 = { Var0 - Var3 };
-								if (MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var19.x, Var19.f_1, Var22.x, Var22.f_1) > 60f)
+								if (MISC::GET_ANGLE_BETWEEN_2D_VECTORS(Var19.f_0, Var19.f_1, Var22.f_0, Var22.f_1) > 60f)
 								{
 									fVar9 = (fVar9 + 180f);
 									fVar9 = func_211(fVar9, 0f, 360f);
@@ -13634,7 +13634,7 @@ float func_322(struct<2> Param0, float fParam2, struct<2> Param3, var uParam5, i
 	float fVar1;
 	float fVar2;
 	
-	fVar1 = (Param3 - Param0);
+	fVar1 = (Param3.f_0 - Param0.f_0);
 	fVar2 = (Param3.f_1 - Param0.f_1);
 	if (fVar2 != 0f)
 	{
@@ -14393,7 +14393,7 @@ int func_351(int iParam0)
 
 int func_352()
 {
-	return Local_68;
+	return Local_68.f_0;
 }
 
 int func_353(int iParam0)

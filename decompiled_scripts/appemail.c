@@ -126,7 +126,7 @@ void __EntryFunction__()
 	SYSTEM::SETTIMERB(0);
 	Local_47 = { Global_19907[Global_19899 /*3*/] };
 	Local_50 = { Local_47 };
-	Local_50.x = (Local_50.x - 10f);
+	Local_50.f_0 = (Local_50.f_0 - 10f);
 	Local_50.f_1 = (Local_50.f_1 + 20f);
 	while (true)
 	{
@@ -4538,14 +4538,14 @@ void func_67(int iParam0)
 		}
 		if (bVar125)
 		{
-			iVar129 = Var4;
+			iVar129 = Var4.f_0;
 			Var4.f_1[iVar129] = Global_52731[iVar0 /*120*/].f_1[iVar3];
 			Var4.f_18[iVar129] = Global_52731[iVar0 /*120*/].f_18[iVar3];
 			Var4.f_35[iVar129] = Global_52731[iVar0 /*120*/].f_35[iVar3];
 			Var4.f_52[iVar129] = Global_52731[iVar0 /*120*/].f_52[iVar3];
 			Var4.f_69[iVar129] = Global_52731[iVar0 /*120*/].f_69[iVar3];
 			Var4.f_86[iVar129] = Global_52731[iVar0 /*120*/].f_86[iVar3];
-			Var4++;
+			Var4.f_0++;
 		}
 		iVar3++;
 		if (iVar3 == 16)
@@ -4554,7 +4554,7 @@ void func_67(int iParam0)
 		}
 		iVar124++;
 	}
-	Global_52731[iVar0 /*120*/] = Var4;
+	Global_52731[iVar0 /*120*/] = Var4.f_0;
 	iVar124 = 0;
 	while (iVar124 < 16)
 	{

@@ -1788,29 +1788,29 @@ void __EntryFunction__()
 	iLocal_43 = 64;
 	fLocal_62 = ((0.05f + 0.275f) - 0.01f);
 	func_1506(ScriptParam_0);
-	func_1503(ScriptParam_0.x);
-	func_1502(ScriptParam_0.x, &Local_8416);
-	func_1500(ScriptParam_0.x);
-	func_1495(ScriptParam_0.x, &Local_8416, &Local_131);
-	func_1488(ScriptParam_0.x, &Local_8416, &Local_131);
-	func_1480(ScriptParam_0.x, &Local_8416, &Local_131);
-	func_1473(ScriptParam_0.x, &Local_8416, &Local_131);
-	func_1468(ScriptParam_0.x, &Local_8416, &Local_131);
-	func_1461(ScriptParam_0.x, &Local_8416, &Local_131);
+	func_1503(ScriptParam_0.f_0);
+	func_1502(ScriptParam_0.f_0, &Local_8416);
+	func_1500(ScriptParam_0.f_0);
+	func_1495(ScriptParam_0.f_0, &Local_8416, &Local_131);
+	func_1488(ScriptParam_0.f_0, &Local_8416, &Local_131);
+	func_1480(ScriptParam_0.f_0, &Local_8416, &Local_131);
+	func_1473(ScriptParam_0.f_0, &Local_8416, &Local_131);
+	func_1468(ScriptParam_0.f_0, &Local_8416, &Local_131);
+	func_1461(ScriptParam_0.f_0, &Local_8416, &Local_131);
 	func_1458(&Local_8416, &Local_131);
-	func_1456(ScriptParam_0.x, &(Local_131.f_7175));
-	func_1455(ScriptParam_0.x);
+	func_1456(ScriptParam_0.f_0, &(Local_131.f_7175));
+	func_1455(ScriptParam_0.f_0);
 	func_1454(&Local_131);
 	while (true)
 	{
 		func_1453();
 		if (func_1440(ScriptParam_0))
 		{
-			func_1432(ScriptParam_0.x);
+			func_1432(ScriptParam_0.f_0);
 		}
 		else
 		{
-			func_1424(ScriptParam_0.x);
+			func_1424(ScriptParam_0.f_0);
 			switch (Local_131.f_7170)
 			{
 				case 0:
@@ -1828,11 +1828,11 @@ void __EntryFunction__()
 					func_1216(ScriptParam_0);
 					func_1214();
 					func_1205(ScriptParam_0);
-					func_1163(ScriptParam_0.x, &Local_131, &Local_8416);
-					func_1079(ScriptParam_0.x, &Local_131, &Local_8416);
-					func_1068(ScriptParam_0.x);
-					func_1065(ScriptParam_0.x, &Local_131, &Local_8416);
-					func_1(ScriptParam_0.x, &Local_131, &Local_8416);
+					func_1163(ScriptParam_0.f_0, &Local_131, &Local_8416);
+					func_1079(ScriptParam_0.f_0, &Local_131, &Local_8416);
+					func_1068(ScriptParam_0.f_0);
+					func_1065(ScriptParam_0.f_0, &Local_131, &Local_8416);
+					func_1(ScriptParam_0.f_0, &Local_131, &Local_8416);
 					break;
 				}
 		}
@@ -1881,11 +1881,11 @@ void func_1(int iParam0, var uParam1, var uParam2)
 				}
 				func_1060(&Var2);
 				func_5(iParam0, uParam2->f_44[iVar1 /*57*/].f_23, &Var2, 0, -1, -1, 0, 0, 0, 0);
-				if (!func_4(Var2))
+				if (!func_4(Var2.f_0))
 				{
 					return;
 				}
-				PED::SET_PED_ALTERNATE_WALK_ANIM(ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(NETWORK::NETWORK_GET_ENTITY_FROM_NETWORK_ID(uParam2->f_44[iVar0 /*57*/].f_47)), Var2, &(Var2.f_2), 8f, true);
+				PED::SET_PED_ALTERNATE_WALK_ANIM(ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(NETWORK::NETWORK_GET_ENTITY_FROM_NETWORK_ID(uParam2->f_44[iVar0 /*57*/].f_47)), Var2.f_0, &(Var2.f_2), 8f, true);
 			}
 		}
 		iVar0++;
@@ -5717,7 +5717,7 @@ Vector3 func_90(struct<3> Param0, float fParam3, struct<3> Param4)
 
 int func_91(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -11396,7 +11396,7 @@ int func_193(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -11407,7 +11407,7 @@ int func_193(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{
@@ -96637,7 +96637,7 @@ void func_1216(int iParam0, var uParam1, var uParam2)
 	while (iVar2 < func_1373())
 	{
 		iVar3 = func_1070(Local_131.f_6007);
-		if (func_1372(&(Local_8416.f_44[Local_131.f_6007 /*57*/].f_11), Local_8416.f_44[Local_131.f_6007 /*57*/].f_24, Local_8416))
+		if (func_1372(&(Local_8416.f_44[Local_131.f_6007 /*57*/].f_11), Local_8416.f_44[Local_131.f_6007 /*57*/].f_24, Local_8416.f_0))
 		{
 			if (!NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(Local_8416.f_44[Local_131.f_6007 /*57*/].f_47))
 			{
@@ -98639,7 +98639,7 @@ void func_1246(var uParam0, var uParam1)
 
 float func_1247(struct<3> Param0, struct<3> Param3)
 {
-	return (((Param0.x * Param3.x) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
+	return (((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
 }
 
 Vector3 func_1248(struct<3> Param0)
@@ -98655,7 +98655,7 @@ Vector3 func_1248(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -99198,7 +99198,7 @@ int func_1261(int iParam0, var uParam1, struct<103> Param2, int iParam105, int i
 void func_1262(int iParam0, var uParam1, var uParam2, var uParam3, struct<55> Param4, var uParam59, var uParam60, var uParam61, var uParam62, var uParam63, var uParam64, var uParam65, var uParam66, var uParam67, var uParam68, var uParam69, var uParam70, var uParam71, var uParam72, var uParam73, var uParam74, var uParam75, var uParam76, var uParam77, var uParam78, var uParam79, var uParam80, var uParam81, var uParam82, var uParam83, var uParam84, var uParam85, var uParam86, var uParam87, var uParam88, var uParam89, var uParam90, var uParam91, var uParam92, var uParam93, var uParam94, var uParam95, var uParam96, var uParam97, var uParam98, var uParam99, var uParam100, var uParam101, var uParam102, var uParam103, var uParam104, var uParam105, var uParam106, int iParam107, int iParam108, int iParam109, int iParam110, bool bParam111, bool bParam112, int iParam113)
 {
 	func_5(iParam0, uParam3->f_23, &Param4, iParam108, iParam109, iParam110, bParam111, iParam107, uParam3->f_31, iParam113);
-	if (!func_4(Param4))
+	if (!func_4(Param4.f_0))
 	{
 		return;
 	}
@@ -99239,17 +99239,17 @@ void func_1262(int iParam0, var uParam1, var uParam2, var uParam3, struct<55> Pa
 			Param4.f_39 = 2f;
 		}
 	}
-	if (!MISC::IS_STRING_NULL_OR_EMPTY(Param4) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param4.f_2)))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(Param4.f_0) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param4.f_2)))
 	{
-		TASK::TASK_PLAY_ANIM_ADVANCED(*uParam3, Param4, &(Param4.f_2), uParam3->f_25, uParam3->f_28, Param4.f_39, Param4.f_40, Param4.f_37, Param4.f_54, Param4.f_43, Param4.f_50, Param4.f_53);
+		TASK::TASK_PLAY_ANIM_ADVANCED(*uParam3, Param4.f_0, &(Param4.f_2), uParam3->f_25, uParam3->f_28, Param4.f_39, Param4.f_40, Param4.f_37, Param4.f_54, Param4.f_43, Param4.f_50, Param4.f_53);
 		uParam3->f_32.f_5 = MISC::GET_GAME_TIMER();
-		uParam3->f_32.f_4 = func_1267(Param4, &(Param4.f_2), Param4.f_43, Param4.f_37);
+		uParam3->f_32.f_4 = func_1267(Param4.f_0, &(Param4.f_2), Param4.f_43, Param4.f_37);
 		uParam3->f_32.f_6 = iParam108;
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Param4.f_18)))
 		{
 			if (!func_1064(&(uParam3->f_11), 27))
 			{
-				PED::PLAY_FACIAL_ANIM(*uParam3, &(Param4.f_18), Param4);
+				PED::PLAY_FACIAL_ANIM(*uParam3, &(Param4.f_18), Param4.f_0);
 			}
 			else
 			{
@@ -99259,7 +99259,7 @@ void func_1262(int iParam0, var uParam1, var uParam2, var uParam3, struct<55> Pa
 		}
 		if (Param4.f_47)
 		{
-			STREAMING::REMOVE_ANIM_DICT(Param4);
+			STREAMING::REMOVE_ANIM_DICT(Param4.f_0);
 		}
 		func_1266(iParam0, iParam107);
 		if (bParam112)
@@ -99468,7 +99468,7 @@ int func_1270(int iParam0, var uParam1, int iParam2, var uParam3, int iParam4, i
 		func_5(iParam0, uParam1, &Var2, iVar0, iParam4, iParam5, iParam6, 0, 0, 0);
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Var2.f_2)))
 		{
-			iVar105 = SYSTEM::FLOOR(ENTITY::GET_ANIM_DURATION(Var2, &(Var2.f_2)));
+			iVar105 = SYSTEM::FLOOR(ENTITY::GET_ANIM_DURATION(Var2.f_0, &(Var2.f_2)));
 			if (iParam2 == iVar105)
 			{
 				(*uParam3)[iVar1] = iVar0;
@@ -99593,12 +99593,12 @@ int func_1273(int iParam0, var uParam1, int iParam2, int iParam3)
 	Var1.f_79.f_9.f_7 = 1065353216;
 	Var1.f_79.f_9.f_14 = -1;
 	func_5(iParam0, uParam1->f_23, &Var1, uParam1->f_43, iParam2, iParam3, 1, 0, 0, 0);
-	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_2)))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_0) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_2)))
 	{
 		fVar104 = 1f;
 		fVar105 = 0f;
-		fVar106 = ENTITY::GET_ANIM_DURATION(Var1, &(Var1.f_2));
-		if (ENTITY::FIND_ANIM_EVENT_PHASE(Var1, &(Var1.f_2), "Drop_Trans", &fVar105, &fVar104))
+		fVar106 = ENTITY::GET_ANIM_DURATION(Var1.f_0, &(Var1.f_2));
+		if (ENTITY::FIND_ANIM_EVENT_PHASE(Var1.f_0, &(Var1.f_2), "Drop_Trans", &fVar105, &fVar104))
 		{
 			fVar106 = (fVar106 * fVar105);
 			iVar0 = (iVar0 - SYSTEM::ROUND(fVar106));
@@ -99760,16 +99760,16 @@ void func_1279(int iParam0, var uParam1, char[412] cParam2, int iParam105, int i
 			while (iVar14 < 10)
 			{
 				func_5(iParam0, uParam1->f_23, &cParam2, iVar3[iVar14], iParam105, iParam106, bParam107, 0, 0, 0);
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(cParam2) && !MISC::IS_STRING_NULL_OR_EMPTY(&(cParam2.f_2)))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(cParam2.f_0) && !MISC::IS_STRING_NULL_OR_EMPTY(&(cParam2.f_2)))
 				{
-					TASK::TASK_PLAY_ANIM_ADVANCED(0, cParam2, &(cParam2.f_2), uParam1->f_25, uParam1->f_28, cParam2.f_39, cParam2.f_40, cParam2.f_37, cParam2.f_54, cParam2.f_43, cParam2.f_50, cParam2.f_53);
+					TASK::TASK_PLAY_ANIM_ADVANCED(0, cParam2.f_0, &(cParam2.f_2), uParam1->f_25, uParam1->f_28, cParam2.f_39, cParam2.f_40, cParam2.f_37, cParam2.f_54, cParam2.f_43, cParam2.f_50, cParam2.f_53);
 				}
 				iVar14++;
 			}
 		}
-		else if (!MISC::IS_STRING_NULL_OR_EMPTY(cParam2) && !MISC::IS_STRING_NULL_OR_EMPTY(&(cParam2.f_2)))
+		else if (!MISC::IS_STRING_NULL_OR_EMPTY(cParam2.f_0) && !MISC::IS_STRING_NULL_OR_EMPTY(&(cParam2.f_2)))
 		{
-			TASK::TASK_PLAY_ANIM_ADVANCED(0, cParam2, &(cParam2.f_2), uParam1->f_25, uParam1->f_28, cParam2.f_39, cParam2.f_40, cParam2.f_37, cParam2.f_54, cParam2.f_43, cParam2.f_50, cParam2.f_53);
+			TASK::TASK_PLAY_ANIM_ADVANCED(0, cParam2.f_0, &(cParam2.f_2), uParam1->f_25, uParam1->f_28, cParam2.f_39, cParam2.f_40, cParam2.f_37, cParam2.f_54, cParam2.f_43, cParam2.f_50, cParam2.f_53);
 		}
 		if (bParam107)
 		{
@@ -99797,7 +99797,7 @@ bool func_1280(int iParam0, var uParam1, struct<103> Param2, int iParam105, int 
 	while (iVar0 < iVar2)
 	{
 		func_5(iParam0, uParam1->f_23, &Param2, iVar0, iParam105, iParam106, bParam107, 0, 0, 0);
-		if (func_4(Param2))
+		if (func_4(Param2.f_0))
 		{
 			iVar1++;
 		}
@@ -99880,9 +99880,9 @@ void func_1281(int iParam0, var uParam1, var uParam2, var uParam3, struct<103> P
 	{
 		func_5(iParam0, uParam3->f_23, &Param4, uParam3->f_32.f_6, iParam109, iParam110, bParam111, 0, 0, 0);
 		fVar2 = PED::GET_SYNCHRONIZED_SCENE_PHASE(uParam3->f_32);
-		fVar3 = ((fVar2 * ENTITY::GET_ANIM_DURATION(Param4, &(Param4.f_2))) * 1000f);
+		fVar3 = ((fVar2 * ENTITY::GET_ANIM_DURATION(Param4.f_0, &(Param4.f_2))) * 1000f);
 		fVar4 = SYSTEM::TO_FLOAT(uParam3->f_32.f_7);
-		iVar5 = SYSTEM::FLOOR((ENTITY::GET_ANIM_DURATION(Param4, &(Param4.f_2)) * 1000f));
+		iVar5 = SYSTEM::FLOOR((ENTITY::GET_ANIM_DURATION(Param4.f_0, &(Param4.f_2)) * 1000f));
 		fVar6 = func_1282(((IntToFloat(uParam3->f_32.f_7) + fVar3) - IntToFloat(iVar5)), fVar3);
 		uParam3->f_32.f_8 = fVar2;
 		PED::SET_SYNCHRONIZED_SCENE_RATE(uParam3->f_32, fVar6);
@@ -100333,7 +100333,7 @@ void func_1296(int iParam0, var uParam1, var uParam2, var uParam3, struct<103> P
 			return;
 		}
 	}
-	if (!func_4(Param4))
+	if (!func_4(Param4.f_0))
 	{
 		return;
 	}
@@ -100352,14 +100352,14 @@ void func_1296(int iParam0, var uParam1, var uParam2, var uParam3, struct<103> P
 		func_1086(&(uParam3->f_11), 11);
 		Param4.f_39 = 2f;
 	}
-	if ((ENTITY::DOES_ENTITY_EXIST(*uParam3) && !MISC::IS_STRING_NULL_OR_EMPTY(Param4)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param4.f_2)))
+	if ((ENTITY::DOES_ENTITY_EXIST(*uParam3) && !MISC::IS_STRING_NULL_OR_EMPTY(Param4.f_0)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param4.f_2)))
 	{
 		uParam3->f_32 = PED::CREATE_SYNCHRONIZED_SCENE(uParam3->f_25, uParam3->f_28, 2);
-		TASK::TASK_SYNCHRONIZED_SCENE(*uParam3, uParam3->f_32, Param4, &(Param4.f_2), Param4.f_39, Param4.f_40, Param4.f_51, Param4.f_52, Param4.f_41, Param4.f_53);
+		TASK::TASK_SYNCHRONIZED_SCENE(*uParam3, uParam3->f_32, Param4.f_0, &(Param4.f_2), Param4.f_39, Param4.f_40, Param4.f_51, Param4.f_52, Param4.f_41, Param4.f_53);
 		uParam3->f_32.f_6 = iParam108;
 		if (func_1064(&(uParam3->f_11), 24) && !bVar2)
 		{
-			fVar3 = (ENTITY::GET_ANIM_DURATION(Param4, &(Param4.f_2)) * 1000f);
+			fVar3 = (ENTITY::GET_ANIM_DURATION(Param4.f_0, &(Param4.f_2)) * 1000f);
 			fVar4 = SYSTEM::TO_FLOAT(uParam3->f_32.f_7);
 			fVar1 = func_1282(fVar4, fVar3);
 			uParam3->f_32.f_7 = (uParam3->f_32.f_7 + SYSTEM::FLOOR(fVar3));
@@ -100374,7 +100374,7 @@ void func_1296(int iParam0, var uParam1, var uParam2, var uParam3, struct<103> P
 			}
 			else
 			{
-				PED::PLAY_FACIAL_ANIM(*uParam3, &(Param4.f_18), Param4);
+				PED::PLAY_FACIAL_ANIM(*uParam3, &(Param4.f_18), Param4.f_0);
 			}
 		}
 		if (func_1064(&(uParam3->f_11), 23))
@@ -100660,7 +100660,7 @@ void func_1301(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	int iVar0;
 	struct<165> Var1;
 	
-	if (Param5 == -1)
+	if (Param5.f_0 == -1)
 	{
 		return;
 	}
@@ -100676,7 +100676,7 @@ void func_1301(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	{
 		return;
 	}
-	func_1325(uParam4, Param5, iParam12, Param5.f_5, 0, 1);
+	func_1325(uParam4, Param5.f_0, iParam12, Param5.f_5, 0, 1);
 	if (Param5.f_3)
 	{
 		func_1324(iParam0, uParam1, uParam2, uParam3, uParam4, iParam13, iParam14, bParam15);
@@ -101277,7 +101277,7 @@ void func_1324(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 				func_1326(iParam0, &Var2, func_1070(iVar1), uParam1->f_44[iVar1 /*57*/].f_23, uParam6);
 				if (func_43(Var2))
 				{
-					func_1325(uParam4, Var2, ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(NETWORK::NETWORK_GET_ENTITY_FROM_NETWORK_ID(uParam1->f_44[iVar1 /*57*/].f_47)), Var2.f_5, 0, 1);
+					func_1325(uParam4, Var2.f_0, ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(NETWORK::NETWORK_GET_ENTITY_FROM_NETWORK_ID(uParam1->f_44[iVar1 /*57*/].f_47)), Var2.f_5, 0, 1);
 				}
 			}
 		else
@@ -101305,7 +101305,7 @@ void func_1324(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 				func_1326(iParam0, &Var2, iVar1, (uParam2[iVar1 /*47*/])->f_23, uParam6);
 				if (func_43(Var2))
 				{
-					func_1325(uParam4, Var2, (*uParam2)[iVar1 /*47*/], Var2.f_5, 0, 1);
+					func_1325(uParam4, Var2.f_0, (*uParam2)[iVar1 /*47*/], Var2.f_5, 0, 1);
 				}
 			}
 		else
@@ -101404,18 +101404,18 @@ void func_1328(int iParam0, var uParam1, char[144] cParam2, char[4] cParam38, ch
 			func_1329(iParam0, uParam1->f_23, &Var1, iVar0, iParam106, iParam107, iParam108, iParam109, bParam110);
 			if (func_1064(&(cParam2.f_35), 28))
 			{
-				if ((!MISC::IS_STRING_NULL_OR_EMPTY(Var1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_1))) && !ENTITY::IS_ENTITY_VISIBLE(uParam1->f_1[iVar0]))
+				if ((!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_0) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_1))) && !ENTITY::IS_ENTITY_VISIBLE(uParam1->f_1[iVar0]))
 				{
 					ENTITY::SET_ENTITY_VISIBLE(uParam1->f_1[iVar0], true, false);
 				}
-				if (MISC::IS_STRING_NULL_OR_EMPTY(Var1) || (MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_1)) && ENTITY::IS_ENTITY_VISIBLE(uParam1->f_1[iVar0])))
+				if (MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_0) || (MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_1)) && ENTITY::IS_ENTITY_VISIBLE(uParam1->f_1[iVar0])))
 				{
 					ENTITY::SET_ENTITY_VISIBLE(uParam1->f_1[iVar0], false, false);
 				}
 			}
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_1)))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_0) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_1)))
 			{
-				ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(uParam1->f_1[iVar0], iParam105, &(Var1.f_1), Var1, Var1.f_19, Var1.f_20, Var1.f_18, Var1.f_21);
+				ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(uParam1->f_1[iVar0], iParam105, &(Var1.f_1), Var1.f_0, Var1.f_19, Var1.f_20, Var1.f_18, Var1.f_21);
 			}
 			if (func_1064(&(cParam2.f_35), 19) || func_1064(&(cParam2.f_35), 24))
 			{
@@ -101503,9 +101503,9 @@ void func_1330(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 			{
 				func_1060(&Var0);
 				func_5(iParam0, (uParam1[iVar104 /*47*/])->f_23, &Var0, iParam4, iParam6, iParam7, iParam8, 0, 0, 0);
-				if (((func_53((*uParam1)[iVar104 /*47*/]) && !MISC::IS_STRING_NULL_OR_EMPTY(Var0)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var0.f_2))) && ENTITY::IS_ENTITY_A_PED((*uParam1)[iVar104 /*47*/]))
+				if (((func_53((*uParam1)[iVar104 /*47*/]) && !MISC::IS_STRING_NULL_OR_EMPTY(Var0.f_0)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var0.f_2))) && ENTITY::IS_ENTITY_A_PED((*uParam1)[iVar104 /*47*/]))
 				{
-					TASK::TASK_SYNCHRONIZED_SCENE((*uParam1)[iVar104 /*47*/], uParam2->f_32, Var0, &(Var0.f_2), Var0.f_39, Var0.f_40, Var0.f_51, Var0.f_52, Var0.f_41, Var0.f_53);
+					TASK::TASK_SYNCHRONIZED_SCENE((*uParam1)[iVar104 /*47*/], uParam2->f_32, Var0.f_0, &(Var0.f_2), Var0.f_39, Var0.f_40, Var0.f_51, Var0.f_52, Var0.f_41, Var0.f_53);
 					(uParam1[iVar104 /*47*/])->f_32 = uParam2->f_32;
 					(uParam1[iVar104 /*47*/])->f_32.f_6 = iParam4;
 					*iParam5 = 1;
@@ -101562,9 +101562,9 @@ void func_1331(int iParam0, var uParam1, var uParam2, struct<39> Param3, var uPa
 		Var1.f_79.f_9.f_7 = 1065353216;
 		Var1.f_79.f_9.f_14 = -1;
 		func_5(iParam0, (uParam1[iVar0 /*47*/])->f_23, &Var1, iParam107, iParam108, iParam109, iParam110, 0, 0, 0);
-		if (((ENTITY::DOES_ENTITY_EXIST((*uParam1)[iVar0 /*47*/]) && !MISC::IS_STRING_NULL_OR_EMPTY(Var1)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_2))) && ENTITY::IS_ENTITY_A_PED((*uParam1)[iVar0 /*47*/]))
+		if (((ENTITY::DOES_ENTITY_EXIST((*uParam1)[iVar0 /*47*/]) && !MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_0)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_2))) && ENTITY::IS_ENTITY_A_PED((*uParam1)[iVar0 /*47*/]))
 		{
-			TASK::TASK_SYNCHRONIZED_SCENE((*uParam1)[iVar0 /*47*/], uParam2->f_32, Var1, &(Var1.f_2), Var1.f_39, Var1.f_40, Var1.f_51, Var1.f_52, Var1.f_41, Var1.f_53);
+			TASK::TASK_SYNCHRONIZED_SCENE((*uParam1)[iVar0 /*47*/], uParam2->f_32, Var1.f_0, &(Var1.f_2), Var1.f_39, Var1.f_40, Var1.f_51, Var1.f_52, Var1.f_41, Var1.f_53);
 			(uParam1[iVar0 /*47*/])->f_32 = uParam2->f_32;
 			(uParam1[iVar0 /*47*/])->f_32.f_6 = iParam107;
 			if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_18)))
@@ -101576,7 +101576,7 @@ void func_1331(int iParam0, var uParam1, var uParam2, struct<39> Param3, var uPa
 				}
 				else
 				{
-					PED::PLAY_FACIAL_ANIM((*uParam1)[iVar0 /*47*/], &(Var1.f_18), Var1);
+					PED::PLAY_FACIAL_ANIM((*uParam1)[iVar0 /*47*/], &(Var1.f_18), Var1.f_0);
 				}
 			}
 			func_1263(uParam1, &Var1, iVar0);
@@ -101736,15 +101736,15 @@ int func_1334(int iParam0, var uParam1, var uParam2, float fParam3)
 	{
 		func_1060(&Var1);
 		func_5(iParam0, uParam1, &Var1, iVar0, -1, -1, 0, 0, 0, 0);
-		if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_2)) && !MISC::IS_STRING_NULL_OR_EMPTY(Var1))
+		if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_2)) && !MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_0))
 		{
-			*uParam2 = (*uParam2 + SYSTEM::FLOOR((ENTITY::GET_ANIM_DURATION(Var1, &(Var1.f_2)) * 1000f)));
+			*uParam2 = (*uParam2 + SYSTEM::FLOOR((ENTITY::GET_ANIM_DURATION(Var1.f_0, &(Var1.f_2)) * 1000f)));
 			if (*uParam2 > Global_1578985.f_10)
 			{
-				iVar104 = (*uParam2 - SYSTEM::FLOOR((ENTITY::GET_ANIM_DURATION(Var1, &(Var1.f_2)) * 1000f)));
+				iVar104 = (*uParam2 - SYSTEM::FLOOR((ENTITY::GET_ANIM_DURATION(Var1.f_0, &(Var1.f_2)) * 1000f)));
 				iVar105 = (Global_1578985.f_10 - iVar104);
 				fVar106 = (SYSTEM::TO_FLOAT(iVar105) / 1000f);
-				*fParam3 = (fVar106 / ENTITY::GET_ANIM_DURATION(Var1, &(Var1.f_2)));
+				*fParam3 = (fVar106 / ENTITY::GET_ANIM_DURATION(Var1.f_0, &(Var1.f_2)));
 				if (*fParam3 < 0f)
 				{
 					*fParam3 = 0f;
@@ -101824,7 +101824,7 @@ void func_1336(int iParam0, var uParam1, var uParam2, var uParam3, struct<103> P
 	{
 		return;
 	}
-	if (!func_4(Param4))
+	if (!func_4(Param4.f_0))
 	{
 		return;
 	}
@@ -101843,10 +101843,10 @@ void func_1336(int iParam0, var uParam1, var uParam2, var uParam3, struct<103> P
 		func_1086(&(uParam3->f_11), 11);
 		Param4.f_39 = 2f;
 	}
-	if ((ENTITY::DOES_ENTITY_EXIST(*uParam3) && !MISC::IS_STRING_NULL_OR_EMPTY(Param4)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param4.f_2)))
+	if ((ENTITY::DOES_ENTITY_EXIST(*uParam3) && !MISC::IS_STRING_NULL_OR_EMPTY(Param4.f_0)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param4.f_2)))
 	{
 		uParam3->f_32 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(uParam3->f_25, uParam3->f_28, 2, func_1064(&(Param4.f_35), 9), bParam109, Param4.f_44, Param4.f_43, Param4.f_42);
-		NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(*uParam3, uParam3->f_32, Param4, &(Param4.f_2), Param4.f_39, Param4.f_40, Param4.f_51, Param4.f_52, Param4.f_41, Param4.f_53);
+		NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(*uParam3, uParam3->f_32, Param4.f_0, &(Param4.f_2), Param4.f_39, Param4.f_40, Param4.f_51, Param4.f_52, Param4.f_41, Param4.f_53);
 		uParam3->f_32.f_6 = iParam108;
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Param4.f_18)))
 		{
@@ -101857,7 +101857,7 @@ void func_1336(int iParam0, var uParam1, var uParam2, var uParam3, struct<103> P
 			}
 			else
 			{
-				PED::PLAY_FACIAL_ANIM(*uParam3, &(Param4.f_18), Param4);
+				PED::PLAY_FACIAL_ANIM(*uParam3, &(Param4.f_18), Param4.f_0);
 			}
 		}
 		if (func_1064(&(uParam3->f_11), 23))
@@ -101925,7 +101925,7 @@ void func_1337(int iParam0, int iParam1, bool bParam2)
 	{
 		return;
 	}
-	Var1 = -1452784210;
+	Var1.f_0 = -1452784210;
 	Var1.f_1 = PLAYER::PLAYER_ID();
 	Var1.f_2 = iParam1;
 	Var1.f_3 = iParam0;
@@ -101982,9 +101982,9 @@ void func_1340(int iParam0, var uParam1, char[208] cParam2, char[4] cParam54, ch
 		if (ENTITY::DOES_ENTITY_EXIST(uParam1->f_1[iVar0]))
 		{
 			func_1329(iParam0, uParam1->f_23, &Var1, iVar0, iParam106, iParam107, iParam108, bParam109, bParam110);
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_1)))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_0) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_1)))
 			{
-				NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(uParam1->f_1[iVar0], iParam105, Var1, &(Var1.f_1), Var1.f_19, Var1.f_20, cParam2.f_51);
+				NETWORK::NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(uParam1->f_1[iVar0], iParam105, Var1.f_0, &(Var1.f_1), Var1.f_19, Var1.f_20, cParam2.f_51);
 			}
 			if (func_1064(&(cParam2.f_35), 19) || func_1064(&(cParam2.f_35), 24))
 			{
@@ -102047,11 +102047,11 @@ void func_1341(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 		{
 			func_1060(&Var0);
 			func_5(iParam0, uParam1->f_44[iVar104 /*57*/].f_23, &Var0, iParam4, iParam5, iParam6, iParam7, 0, 0, 0);
-			if ((((func_53(uParam1->f_44[iVar104 /*57*/]) || func_1064(&(uParam1->f_44[iVar104 /*57*/].f_11), 53)) && !MISC::IS_STRING_NULL_OR_EMPTY(Var0)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var0.f_2))) && (ENTITY::IS_ENTITY_A_PED(uParam1->f_44[iVar104 /*57*/]) || func_1064(&(uParam1->f_44[iVar104 /*57*/].f_11), 53)))
+			if ((((func_53(uParam1->f_44[iVar104 /*57*/]) || func_1064(&(uParam1->f_44[iVar104 /*57*/].f_11), 53)) && !MISC::IS_STRING_NULL_OR_EMPTY(Var0.f_0)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var0.f_2))) && (ENTITY::IS_ENTITY_A_PED(uParam1->f_44[iVar104 /*57*/]) || func_1064(&(uParam1->f_44[iVar104 /*57*/].f_11), 53)))
 			{
 				if (!func_1064(&(uParam1->f_44[iVar104 /*57*/].f_11), 53))
 				{
-					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(uParam1->f_44[iVar104 /*57*/], uParam2->f_32, Var0, &(Var0.f_2), Var0.f_39, Var0.f_40, Var0.f_51, Var0.f_52, Var0.f_41, Var0.f_53);
+					NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(uParam1->f_44[iVar104 /*57*/], uParam2->f_32, Var0.f_0, &(Var0.f_2), Var0.f_39, Var0.f_40, Var0.f_51, Var0.f_52, Var0.f_41, Var0.f_53);
 				}
 				uParam1->f_44[iVar104 /*57*/].f_32 = uParam2->f_32;
 				uParam1->f_44[iVar104 /*57*/].f_32.f_6 = iParam4;
@@ -102107,9 +102107,9 @@ void func_1342(int iParam0, var uParam1, var uParam2, struct<39> Param3, var uPa
 		Var1.f_79.f_9.f_7 = 1065353216;
 		Var1.f_79.f_9.f_14 = -1;
 		func_5(iParam0, uParam1->f_44[iVar0 /*57*/].f_23, &Var1, iParam107, iParam108, iParam109, iParam110, 0, 0, 0);
-		if (((ENTITY::DOES_ENTITY_EXIST(uParam1->f_44[iVar0 /*57*/]) && !MISC::IS_STRING_NULL_OR_EMPTY(Var1)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_2))) && ENTITY::IS_ENTITY_A_PED(uParam1->f_44[iVar0 /*57*/]))
+		if (((ENTITY::DOES_ENTITY_EXIST(uParam1->f_44[iVar0 /*57*/]) && !MISC::IS_STRING_NULL_OR_EMPTY(Var1.f_0)) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_2))) && ENTITY::IS_ENTITY_A_PED(uParam1->f_44[iVar0 /*57*/]))
 		{
-			NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(uParam1->f_44[iVar0 /*57*/], uParam2->f_32, Var1, &(Var1.f_2), Var1.f_39, Var1.f_40, Var1.f_51, Var1.f_52, Var1.f_41, Var1.f_53);
+			NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(uParam1->f_44[iVar0 /*57*/], uParam2->f_32, Var1.f_0, &(Var1.f_2), Var1.f_39, Var1.f_40, Var1.f_51, Var1.f_52, Var1.f_41, Var1.f_53);
 			uParam1->f_44[iVar0 /*57*/].f_32 = uParam2->f_32;
 			uParam1->f_44[iVar0 /*57*/].f_32.f_6 = iParam107;
 			if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Var1.f_18)))
@@ -102121,7 +102121,7 @@ void func_1342(int iParam0, var uParam1, var uParam2, struct<39> Param3, var uPa
 				}
 				else
 				{
-					PED::PLAY_FACIAL_ANIM(uParam1->f_44[iVar0 /*57*/], &(Var1.f_18), Var1);
+					PED::PLAY_FACIAL_ANIM(uParam1->f_44[iVar0 /*57*/], &(Var1.f_18), Var1.f_0);
 				}
 			}
 			func_1265(uParam1, &Var1, iVar0);
@@ -102937,7 +102937,7 @@ void func_1357(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 	while (iVar0 < 4)
 	{
 		func_1219(iParam0, uParam1->f_23, iVar0, &Var1);
-		if (STREAMING::IS_MODEL_VALID(Var1) && Var1 != 0)
+		if (STREAMING::IS_MODEL_VALID(Var1.f_0) && Var1.f_0 != 0)
 		{
 			if (!NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(uParam1->f_48[iVar0]))
 			{
@@ -102949,7 +102949,7 @@ void func_1357(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 				{
 					NETWORK::SET_NETWORK_CUTSCENE_ENTITIES(true);
 				}
-				if (func_1361(&(uParam1->f_48[iVar0]), Var1, Var41, 1, 1, 0, 1, 0, 0, 0))
+				if (func_1361(&(uParam1->f_48[iVar0]), Var1.f_0, Var41, 1, 1, 0, 1, 0, 0, 0))
 				{
 					uParam1->f_1[iVar0] = ENTITY::GET_OBJECT_INDEX_FROM_ENTITY_INDEX(NETWORK::NETWORK_GET_ENTITY_FROM_NETWORK_ID(uParam1->f_48[iVar0]));
 					func_1360(iParam0, &(uParam1->f_48[iVar0]), &(uParam1->f_11));
@@ -102988,7 +102988,7 @@ void func_1358(int iParam0, var uParam1, var uParam2)
 	func_1359(iParam0, &Var0, uParam2);
 	if (Var0.f_3 != 0)
 	{
-		WEAPON::GIVE_WEAPON_TO_PED(*uParam1, Var0.f_3, Var0, Var0.f_2, Var0.f_1);
+		WEAPON::GIVE_WEAPON_TO_PED(*uParam1, Var0.f_3, Var0.f_0, Var0.f_2, Var0.f_1);
 	}
 }
 
@@ -103066,9 +103066,9 @@ Vector3 func_1362(var uParam0, struct<15> Param1, var uParam16, var uParam17, st
 		{
 			Var0 = { Param1.f_14 };
 		}
-		else if (!MISC::IS_STRING_NULL_OR_EMPTY(Param18) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param18.f_1)))
+		else if (!MISC::IS_STRING_NULL_OR_EMPTY(Param18.f_0) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param18.f_1)))
 		{
-			Var0 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(Param18, &(Param18.f_1), uParam0->f_25, uParam0->f_28, 0f, 2) };
+			Var0 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(Param18.f_0, &(Param18.f_1), uParam0->f_25, uParam0->f_28, 0f, 2) };
 		}
 	}
 	return Var0;
@@ -103085,9 +103085,9 @@ Vector3 func_1363(var uParam0, struct<12> Param1, var uParam13, var uParam14, va
 		{
 			Var0 = { Param1.f_11 };
 		}
-		else if (!MISC::IS_STRING_NULL_OR_EMPTY(Param18) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param18.f_1)))
+		else if (!MISC::IS_STRING_NULL_OR_EMPTY(Param18.f_0) && !MISC::IS_STRING_NULL_OR_EMPTY(&(Param18.f_1)))
 		{
-			Var0 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(Param18, &(Param18.f_1), uParam0->f_25, uParam0->f_28, 0f, 2) };
+			Var0 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(Param18.f_0, &(Param18.f_1), uParam0->f_25, uParam0->f_28, 0f, 2) };
 			if (func_91(Var0))
 			{
 				Var0 = { uParam0->f_25 };
@@ -103137,9 +103137,9 @@ bool func_1364(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4)
 	Var4.f_79.f_9.f_7 = 1065353216;
 	Var4.f_79.f_9.f_14 = -1;
 	func_5(iParam0, uParam1->f_23, &Var4, 0, iParam2, iParam3, iParam4, 0, 0, 0);
-	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4.f_0))
 	{
-		if (STREAMING::HAS_ANIM_DICT_LOADED(Var4))
+		if (STREAMING::HAS_ANIM_DICT_LOADED(Var4.f_0))
 		{
 			iVar2 = 1;
 		}
@@ -103152,9 +103152,9 @@ bool func_1364(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4)
 	Var107.f_20 = -998637568;
 	Var107.f_21 = 1148846080;
 	func_1329(iParam0, uParam1->f_23, &Var107, 0, 0, iParam2, iParam3, iParam4, func_1064(&(uParam1->f_11), 14));
-	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var107))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var107.f_0))
 	{
-		if (STREAMING::HAS_ANIM_DICT_LOADED(Var107))
+		if (STREAMING::HAS_ANIM_DICT_LOADED(Var107.f_0))
 		{
 			iVar3 = 1;
 		}
@@ -103227,17 +103227,17 @@ void func_1365(int iParam0, struct<24> Param1, var uParam25, var uParam26, var u
 	Var0.f_79.f_9.f_7 = 1065353216;
 	Var0.f_79.f_9.f_14 = -1;
 	func_5(iParam0, Param1.f_23, &Var0, 0, iParam48, iParam49, iParam50, 0, 0, 0);
-	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var0.f_0))
 	{
-		STREAMING::REQUEST_ANIM_DICT(Var0);
+		STREAMING::REQUEST_ANIM_DICT(Var0.f_0);
 	}
 	Var103.f_19 = 1148846080;
 	Var103.f_20 = -998637568;
 	Var103.f_21 = 1148846080;
 	func_1329(iParam0, Param1.f_23, &Var103, 0, 0, iParam48, iParam49, iParam50, func_1064(&(Param1.f_11), 14));
-	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var103))
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(Var103.f_0))
 	{
-		STREAMING::REQUEST_ANIM_DICT(Var103);
+		STREAMING::REQUEST_ANIM_DICT(Var103.f_0);
 	}
 	iVar125 = func_1200(Param1.f_22);
 	if (STREAMING::IS_MODEL_VALID(iVar125) && iVar125 != 0)
@@ -103407,7 +103407,7 @@ void func_1374(int iParam0, var uParam1, var uParam2)
 	{
 		if (Local_131.f_5878[iVar0] != -1)
 		{
-			if (func_1372(&(Local_131[Local_131.f_5878[iVar0] /*47*/].f_11), Local_131[Local_131.f_5878[iVar0] /*47*/].f_24, Local_8416))
+			if (func_1372(&(Local_131[Local_131.f_5878[iVar0] /*47*/].f_11), Local_131[Local_131.f_5878[iVar0] /*47*/].f_24, Local_8416.f_0))
 			{
 				if (!ENTITY::DOES_ENTITY_EXIST(Local_131[Local_131.f_5878[iVar0] /*47*/]))
 				{
@@ -103634,14 +103634,14 @@ void func_1386(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 	while (iVar0 < 8)
 	{
 		func_1219(iParam0, uParam1->f_23, iVar0, &Var1);
-		if (STREAMING::IS_MODEL_VALID(Var1) && Var1 != 0)
+		if (STREAMING::IS_MODEL_VALID(Var1.f_0) && Var1.f_0 != 0)
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(uParam1->f_1[iVar0]))
 			{
 				func_1329(iParam0, uParam1->f_23, &Var18, iVar0, 0, iParam3, iParam4, iParam5, func_1064(&(uParam1->f_11), 14));
 				Var40 = { func_1363(uParam1, Var1, Var18) };
 				Var43 = { func_1362(uParam1, Var1, Var18) };
-				uParam1->f_1[iVar0] = OBJECT::CREATE_OBJECT_NO_OFFSET(Var1, Var40, false, false, false);
+				uParam1->f_1[iVar0] = OBJECT::CREATE_OBJECT_NO_OFFSET(Var1.f_0, Var40, false, false, false);
 				if (!bParam6)
 				{
 					func_1211(uParam1, 0);
@@ -103768,9 +103768,9 @@ void func_1392(int iParam0)
 		}
 		else if (iVar0 > iVar2)
 		{
-			if (Local_8416 != iVar1)
+			if (Local_8416.f_0 != iVar1)
 			{
-				Local_8416 = iVar1;
+				Local_8416.f_0 = iVar1;
 			}
 		}
 		else
@@ -104890,9 +104890,9 @@ void func_1435(int iParam0, var uParam1, var uParam2)
 		while (iVar3 < (5 - 1))
 		{
 			func_5(iParam0, (uParam2[iVar0 /*47*/])->f_23, &Var4, 0, iVar3, iVar3, 0, 0, 0, 0);
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4.f_0))
 			{
-				STREAMING::REMOVE_ANIM_DICT(Var4);
+				STREAMING::REMOVE_ANIM_DICT(Var4.f_0);
 			}
 		else
 		{
@@ -104906,9 +104906,9 @@ void func_1435(int iParam0, var uParam1, var uParam2)
 		while (iVar3 < (5 - 1))
 		{
 			func_5(iParam0, (uParam2[iVar0 /*47*/])->f_23, &Var4, 0, iVar3, iVar3, 1, 0, 0, 0);
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4.f_0))
 			{
-				STREAMING::REMOVE_ANIM_DICT(Var4);
+				STREAMING::REMOVE_ANIM_DICT(Var4.f_0);
 			}
 		else
 		{
@@ -104922,9 +104922,9 @@ void func_1435(int iParam0, var uParam1, var uParam2)
 		while (iVar3 < (2 - 1))
 		{
 			func_5(iParam0, (uParam2[iVar0 /*47*/])->f_23, &Var4, 0, -1, -1, 0, 0, iVar3, 0);
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4.f_0))
 			{
-				STREAMING::REMOVE_ANIM_DICT(Var4);
+				STREAMING::REMOVE_ANIM_DICT(Var4.f_0);
 			}
 		else
 		{
@@ -104938,9 +104938,9 @@ void func_1435(int iParam0, var uParam1, var uParam2)
 		while (iVar3 < (2 - 1))
 		{
 			func_5(iParam0, (uParam2[iVar0 /*47*/])->f_23, &Var4, 0, -1, -1, 0, 0, iVar3, 1);
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var4.f_0))
 			{
-				STREAMING::REMOVE_ANIM_DICT(Var4);
+				STREAMING::REMOVE_ANIM_DICT(Var4.f_0);
 			}
 		else
 		{
@@ -104954,9 +104954,9 @@ void func_1435(int iParam0, var uParam1, var uParam2)
 		while (iVar1 < 8)
 		{
 			func_1329(iParam0, (uParam2[iVar0 /*47*/])->f_23, &Var107, iVar1, 0, -1, -1, 0, 0);
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var107))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(Var107.f_0))
 			{
-				STREAMING::REMOVE_ANIM_DICT(Var107);
+				STREAMING::REMOVE_ANIM_DICT(Var107.f_0);
 			}
 		else
 		{
@@ -105141,14 +105141,14 @@ int func_1440(struct<2> Param0, var uParam2)
 		{
 			iVar0 = 1;
 		}
-		if (func_1443(Param0))
+		if (func_1443(Param0.f_0))
 		{
-			if ((!func_1442(Param0, PLAYER::PLAYER_ID()) && !func_1441(PLAYER::PLAYER_ID())) && !MISC::IS_BIT_SET(Global_2689156[PLAYER::PLAYER_ID() /*453*/].f_319, 28))
+			if ((!func_1442(Param0.f_0, PLAYER::PLAYER_ID()) && !func_1441(PLAYER::PLAYER_ID())) && !MISC::IS_BIT_SET(Global_2689156[PLAYER::PLAYER_ID() /*453*/].f_319, 28))
 			{
 				iVar0 = 1;
 			}
 		}
-		else if (!func_1442(Param0, PLAYER::PLAYER_ID()))
+		else if (!func_1442(Param0.f_0, PLAYER::PLAYER_ID()))
 		{
 			iVar0 = 1;
 		}
@@ -106194,7 +106194,7 @@ void func_1506(struct<3> Param0)
 	}
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		func_1432(Param0.x);
+		func_1432(Param0.f_0);
 	}
 	while (!NETWORK::_NETWORK_IS_THIS_SCRIPT_MARKED(32, false, Param0.f_2))
 	{
@@ -106204,7 +106204,7 @@ void func_1506(struct<3> Param0)
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Local_8416, 770, 0);
 	if (!func_1507())
 	{
-		func_1432(Param0.x);
+		func_1432(Param0.f_0);
 	}
 	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 }

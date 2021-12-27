@@ -352,7 +352,7 @@ void func_8()
 
 void func_9(int iParam0)
 {
-	if (MISC::IS_BIT_SET(Local_168, iParam0))
+	if (MISC::IS_BIT_SET(Local_168.f_0, iParam0))
 	{
 		MISC::CLEAR_BIT(&Local_168, iParam0);
 	}
@@ -374,7 +374,7 @@ void func_11(var uParam0, bool bParam1)
 	bool bVar39;
 	int iVar40;
 	
-	Var0 = -749983132;
+	Var0.f_0 = -749983132;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { *uParam0 };
 	Var0.f_34 = uParam0->f_34;
@@ -654,7 +654,7 @@ int func_24(int iParam0, int iParam1)
 
 void func_25(int iParam0)
 {
-	if (!MISC::IS_BIT_SET(Local_168, iParam0))
+	if (!MISC::IS_BIT_SET(Local_168.f_0, iParam0))
 	{
 		MISC::SET_BIT(&Local_168, iParam0);
 	}
@@ -662,7 +662,7 @@ void func_25(int iParam0)
 
 bool func_26(int iParam0)
 {
-	return MISC::IS_BIT_SET(Local_168, iParam0);
+	return MISC::IS_BIT_SET(Local_168.f_0, iParam0);
 }
 
 bool func_27()
@@ -1258,7 +1258,7 @@ void func_43()
 		HUD::CLEAR_HELP(true);
 	}
 	func_66();
-	Local_168 = 0;
+	Local_168.f_0 = 0;
 	Local_168.f_1 = -1;
 	Local_168.f_10 = 0;
 	func_5(&(Local_168.f_13));
@@ -2174,7 +2174,7 @@ void func_66()
 	struct<11> Var0;
 	struct<16> Var11;
 	
-	Var0 = -438538740;
+	Var0.f_0 = -438538740;
 	Var0.f_2 = 1;
 	Var0.f_6 = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), Local_168.f_13));
 	Var11 = { func_33(Local_168.f_2) };
@@ -2632,7 +2632,7 @@ void func_79(var uParam0, int iParam1)
 	
 	Var0.f_5 = 1073741824;
 	Var0.f_6 = -1073741824;
-	Var0 = 988620539;
+	Var0.f_0 = 988620539;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	Var0.f_3 = uParam0->f_3;
@@ -2771,7 +2771,7 @@ void func_85(var uParam0, var uParam1, var uParam2, var uParam3)
 	struct<6> Var0;
 	int iVar6;
 	
-	Var0 = -475541064;
+	Var0.f_0 = -475541064;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = uParam3;
 	Var0.f_3 = uParam1;
@@ -3586,7 +3586,7 @@ void func_122(int iParam0, bool bParam1)
 
 void func_123(struct<18> Param0)
 {
-	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Param0);
+	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Param0.f_0);
 	func_126(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&uLocal_167, 1, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_134, 33, 0);

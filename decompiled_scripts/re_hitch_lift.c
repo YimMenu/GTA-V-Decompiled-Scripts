@@ -1305,7 +1305,7 @@ void func_28(int iParam0, int iParam1)
 		}
 		if (func_36(iParam0, iParam1) != 322)
 		{
-			func_30(func_36(iParam0, iParam1), Local_44.x, Local_44.f_1);
+			func_30(func_36(iParam0, iParam1), Local_44.f_0, Local_44.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -6329,7 +6329,7 @@ void func_145(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, v
 
 int func_146(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -6374,7 +6374,7 @@ void func_148(int iParam0, var uParam1, var uParam2)
 
 float func_149(struct<2> Param0, Vector3 vParam2, struct<2> Param3, Vector3 vParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 int func_150(int iParam0)
@@ -6440,7 +6440,7 @@ void func_151(int* iParam0, int* iParam1, int* iParam2, int* iParam3)
 			{
 				Var1 = { HUD::GET_BLIP_COORDS(*iParam3) };
 				Var4 = { ENTITY::GET_ENTITY_COORDS(*iParam2, true) };
-				Var1.x = (Var1.x + (((Var4.x - Var1.x) / 1f) * SYSTEM::TIMESTEP()));
+				Var1.f_0 = (Var1.f_0 + (((Var4.f_0 - Var1.f_0) / 1f) * SYSTEM::TIMESTEP()));
 				Var1.f_1 = (Var1.f_1 + (((Var4.f_1 - Var1.f_1) / 1f) * SYSTEM::TIMESTEP()));
 				Var1.f_2 = (Var1.f_2 + (((Var4.f_2 - Var1.f_2) / 1f) * SYSTEM::TIMESTEP()));
 				HUD::SET_BLIP_COORDS(*iParam3, Var1);
@@ -6654,7 +6654,7 @@ float func_155(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5, int
 	float fVar1;
 	float fVar2;
 	
-	fVar1 = (Param3 - Param0);
+	fVar1 = (Param3.f_0 - Param0.f_0);
 	fVar2 = (Param3.f_1 - Param0.f_1);
 	if (fVar2 != 0f)
 	{
@@ -10974,9 +10974,9 @@ bool func_227(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_228(int iParam0)

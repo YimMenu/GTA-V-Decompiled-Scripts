@@ -1139,7 +1139,7 @@ int func_15(int iParam0)
 
 void func_16(int iParam0)
 {
-	Local_88 = iParam0;
+	Local_88.f_0 = iParam0;
 }
 
 int func_17(var uParam0)
@@ -16694,7 +16694,7 @@ float func_502(int iParam0)
 
 int func_503(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -17581,7 +17581,7 @@ int func_516(int iParam0)
 
 int func_517()
 {
-	return Local_88;
+	return Local_88.f_0;
 }
 
 int func_518(int iParam0)
@@ -17780,7 +17780,7 @@ void func_520(int iParam0)
 
 void func_521(struct<2> Param0, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, int iParam14)
 {
-	Param0 = 677240627;
+	Param0.f_0 = 677240627;
 	Param0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam14 == 0)
 	{
@@ -19042,11 +19042,11 @@ void func_575(int iParam0)
 	iVar7 = -1;
 	iVar8 = -1;
 	SCRIPT::GET_EVENT_DATA(1, iParam0, &Var11, 13);
-	if (ENTITY::DOES_ENTITY_EXIST(Var11))
+	if (ENTITY::DOES_ENTITY_EXIST(Var11.f_0))
 	{
-		if (ENTITY::IS_ENTITY_A_PED(Var11))
+		if (ENTITY::IS_ENTITY_A_PED(Var11.f_0))
 		{
-			iVar0 = ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(Var11);
+			iVar0 = ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(Var11.f_0);
 			if (PED::IS_PED_A_PLAYER(iVar0))
 			{
 				iVar2 = NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(iVar0);
@@ -20853,7 +20853,7 @@ void func_636(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -20927,7 +20927,7 @@ void func_640(int iParam0, int iParam1, int iParam2)
 	
 	if (func_761(iParam0, 0, 1))
 	{
-		Var0 = 657959395;
+		Var0.f_0 = 657959395;
 		Var0.f_1 = PLAYER::PLAYER_ID();
 		Var0.f_2 = iParam1;
 		Var0.f_4 = iParam2;
@@ -22315,7 +22315,7 @@ void func_713()
 	{
 		Local_372.f_5 = 2;
 	}
-	Local_372 = Local_88.f_214;
+	Local_372.f_0 = Local_88.f_214;
 	Local_372.f_1 = Local_88.f_215;
 	Local_372.f_4 = Local_88.f_216;
 	Local_372.f_3 = iLocal_549;
@@ -22937,7 +22937,7 @@ void func_745(struct<21> Param0)
 	int iVar2;
 	int iVar3;
 	
-	iVar3 = func_759(Param0);
+	iVar3 = func_759(Param0.f_0);
 	func_758(iVar3, Param0);
 	func_757(0, -1, 0);
 	func_755(141);
@@ -22990,7 +22990,7 @@ void func_747(int iParam0)
 	struct<3> Var0;
 	int iVar3;
 	
-	Var0.x = 470437478;
+	Var0.f_0 = 470437478;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	iVar3 = func_748(1, 1);
@@ -24932,6 +24932,407 @@ int func_761(int iParam0, bool bParam1, bool bParam2)
 	int iVar0;
 	
 	iVar0 = iParam0;
+	if (iVar0 != -1)
+	{
+		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))
+		{
+			if (bParam1)
+			{
+				if (!PLAYER::IS_PLAYER_PLAYING(iParam0))
+				{
+					return 0;
+				}
+			}
+			if (bParam2)
+			{
+				if (!Global_2703656.f_3[iVar0])
+				{
+					return 0;
+				}
+			}
+			return 1;
+		}
+	}
+	return 0;
+}
+
+184:
+			return 2;
+		
+		case 189:
+			return 1;
+		
+		case 185:
+			return 1;
+		
+		case 183:
+			return 2;
+		
+		case 186:
+			return 8;
+		
+		case 187:
+			return 8;
+		
+		case 190:
+			return 1;
+		
+		case 191:
+			return 2;
+		
+		case 142:
+			return 8;
+		
+		case 178:
+			return 16;
+		
+		case 179:
+			return 32;
+		
+		default:
+	}
+	switch (func_207(func_760(iParam0, 1)))
+	{
+		case 0:
+			return 8;
+		
+		case 1:
+			return 32;
+		
+		case 2:
+			return 32;
+		
+		default:
+	}
+	return 0;
+}
+
+int func_760(int iParam0, bool bParam1)
+{
+	switch (iParam0)
+	{
+		case 164:
+			return 15;
+		
+		case 171:
+			return 8;
+		
+		case 165:
+			return 14;
+		
+		case 169:
+			return 122;
+		
+		case 172:
+			return 1;
+		
+		case 170:
+			return 5;
+		
+		case 173:
+			return 6;
+		
+		case 166:
+			return 11;
+		
+		case 174:
+			return 0;
+		
+		case 175:
+			return 2;
+		
+		case 167:
+			return 13;
+		
+		case 176:
+			return 3;
+		
+		case 168:
+			return 12;
+		
+		case 49:
+			return 148;
+		
+		case 52:
+			return 151;
+		
+		case 53:
+			return 152;
+		
+		case 54:
+			return 157;
+		
+		case 55:
+			return 153;
+		
+		case 56:
+			return 154;
+		
+		case 57:
+			return 155;
+		
+		case 58:
+			return 159;
+		
+		case 51:
+			return 162;
+		
+		case 60:
+			return 142;
+		
+		case 62:
+			return 160;
+		
+		case 63:
+			return 164;
+		
+		case 64:
+			return 163;
+		
+		case 65:
+			return 166;
+		
+		case 66:
+			return 167;
+		
+		case 67:
+			return 168;
+		
+		case 68:
+			return 169;
+		
+		case 69:
+			return 170;
+		
+		case 70:
+			return 171;
+		
+		case 71:
+			return 172;
+		
+		case 72:
+			return 173;
+		
+		case 73:
+			return 178;
+		
+		case 74:
+			return 188;
+		
+		case 75:
+			return 214;
+		
+		case 76:
+			return 215;
+		
+		case 77:
+			return 216;
+		
+		case 78:
+			return 217;
+		
+		case joaat("mpsv_lp0_31"):
+			return 218;
+		
+		case 80:
+			return 219;
+		
+		case 81:
+			return 220;
+		
+		case 82:
+			return 221;
+		
+		case 84:
+			return 179;
+		
+		case 83:
+			return 189;
+		
+		case 85:
+			return 180;
+		
+		case 87:
+			return 182;
+		
+		case 88:
+			return 183;
+		
+		case 89:
+			return 185;
+		
+		case 90:
+			return 186;
+		
+		case 91:
+			return 190;
+		
+		case 92:
+			return 191;
+		
+		case 93:
+			return 192;
+		
+		case 94:
+			return 193;
+		
+		case 102:
+			return 205;
+		
+		case 95:
+			return 194;
+		
+		case 96:
+			return 197;
+		
+		case 97:
+			return 198;
+		
+		case 99:
+			return 199;
+		
+		case 100:
+			return 200;
+		
+		case 101:
+			return 201;
+		
+		case 103:
+			return 207;
+		
+		case 104:
+			return 208;
+		
+		case 105:
+			return 209;
+		
+		case 106:
+			return 210;
+		
+		case 98:
+			return 195;
+		
+		case 107:
+			return 225;
+		
+		case 108:
+			return 226;
+		
+		case 109:
+			return 227;
+		
+		case 110:
+			return 229;
+		
+		case 111:
+			return 230;
+		
+		case 113:
+			return 233;
+		
+		case 115:
+			return 237;
+		
+		case 116:
+			return 238;
+		
+		case 117:
+			return 239;
+		
+		case 118:
+			return 240;
+		
+		case 119:
+			return 241;
+		
+		case 120:
+			return 242;
+		
+		case 121:
+			return 244;
+		
+		case 122:
+			return 248;
+		
+		case 123:
+			return 249;
+		
+		case 124:
+			return 250;
+		
+		case 125:
+			return 243;
+		
+		case 126:
+			return 158;
+		
+		case 86:
+			return 181;
+		
+		case 127:
+			return 150;
+		
+		case 128:
+			return 24;
+		
+		case 129:
+			return 26;
+		
+		case 130:
+			return 256;
+		
+		case 131:
+			return 258;
+		
+		case 133:
+			return 259;
+		
+		case 134:
+			return 271;
+		
+		case 135:
+			return 273;
+		
+		case 136:
+			return 276;
+		
+		case 137:
+			return 277;
+		
+		case 138:
+			return 262;
+		
+		case 139:
+			return 263;
+		
+		case 140:
+			return 264;
+		
+		case 141:
+			return 268;
+		
+		case 143:
+			return 269;
+		
+		case 144:
+			return 270;
+		
+		case 145:
+			return 275;
+		
+		default:
+	}
+	if (bParam1)
+	{
+	}
+	return 286;
+}
+
+int func_761(int iParam0, bool bParam1, bool bParam2)
+{
+	int iVar0;
+	
+	iVar0.f_0 = iParam0;
 	if (iVar0 != -1)
 	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))

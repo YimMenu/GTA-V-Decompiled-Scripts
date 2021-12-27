@@ -1206,7 +1206,7 @@ void func_25(bool bParam0)
 	bool bVar16;
 	
 	Var12 = { func_70(iLocal_122) };
-	Var12 = { func_69(SYSTEM::COS(Var12.f_2), SYSTEM::SIN(Var12.f_2), MISC::TAN(Var12.x)) };
+	Var12 = { func_69(SYSTEM::COS(Var12.f_2), SYSTEM::SIN(Var12.f_2), MISC::TAN(Var12.f_0)) };
 	STREAMING::NEW_LOAD_SCENE_START(func_68(iLocal_122), Var12, 5000f, 0);
 	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 256);
 	HUD::DISPLAY_HUD(false);
@@ -1455,7 +1455,7 @@ Vector3 func_32(int iParam0)
 
 int func_33(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2057,7 +2057,7 @@ bool func_64()
 
 float func_65(struct<2> Param0, Vector3 vParam2, struct<2> Param3, Vector3 vParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 void func_66(bool bParam0)
@@ -2154,7 +2154,7 @@ Vector3 func_69(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}

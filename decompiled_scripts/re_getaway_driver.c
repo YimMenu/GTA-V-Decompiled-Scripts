@@ -496,7 +496,7 @@ void __EntryFunction__()
 	iVar0 = 0;
 	iVar10 = 0;
 	Local_234 = { ScriptParam_0.f_1[0 /*3*/] };
-	Var1 = joaat("g_m_y_mexgoon_02");
+	Var1.f_0 = joaat("g_m_y_mexgoon_02");
 	Var1.f_1 = joaat("hc_gunman");
 	Var1.f_2 = joaat("mp_m_shopkeep_01");
 	Var1.f_3 = joaat("a_f_y_soucent_01");
@@ -1109,9 +1109,9 @@ int func_1(int iParam0, struct<5> Param1, var uParam6, var uParam7, var uParam8,
 			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, joaat("COP"), iLocal_310);
 			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, joaat("COP"), iLocal_312);
 			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_312, joaat("COP"));
-			(*uParam10)[0] = PED::CREATE_PED(22, Param1, Var1[0 /*3*/], fVar8[0], true, true);
+			(*uParam10)[0] = PED::CREATE_PED(22, Param1.f_0, Var1[0 /*3*/], fVar8[0], true, true);
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS((*uParam10)[0], true);
-			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Param1);
+			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Param1.f_0);
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH((*uParam10)[0], iLocal_310);
 			WEAPON::GIVE_WEAPON_TO_PED((*uParam10)[0], joaat("weapon_appistol"), -1, true, true);
 			PED::SET_PED_MONEY((*uParam10)[0], MISC::GET_RANDOM_INT_IN_RANGE(800, 2000));
@@ -1806,7 +1806,7 @@ int func_1(int iParam0, struct<5> Param1, var uParam6, var uParam7, var uParam8,
 				Var49 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 				fVar31 = 9999f;
 				iVar64 = 0;
-				while (iVar64 < Var15.x)
+				while (iVar64 < Var15.f_0)
 				{
 					if (SYSTEM::VDIST(Var49, Var15[iVar64 /*3*/]) < fVar31)
 					{
@@ -3858,9 +3858,9 @@ bool func_62(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_63()
@@ -4950,7 +4950,7 @@ int func_87(int iParam0, bool bParam1)
 			{
 				if (iParam0 == Var1.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 					{
 						return 0;
 					}
@@ -8581,7 +8581,7 @@ int func_140(int iParam0, struct<7> Param1, var uParam8, var uParam9)
 {
 	if (iParam0 == 1)
 	{
-		func_150(&uLocal_314, Param1);
+		func_150(&uLocal_314, Param1.f_0);
 		func_150(&uLocal_314, Param1.f_1);
 		func_150(&uLocal_314, Param1.f_2);
 		func_150(&uLocal_314, Param1.f_3);
@@ -9895,7 +9895,7 @@ void func_165()
 				{
 					iLocal_306 = VEHICLE::CREATE_VEHICLE(joaat("police3"), Local_237, 0f, true, true, false);
 					Local_240 = { func_184(PLAYER::PLAYER_ID()) - ENTITY::GET_ENTITY_COORDS(iLocal_306, true) };
-					ENTITY::SET_ENTITY_HEADING(iLocal_306, MISC::GET_HEADING_FROM_VECTOR_2D(Local_240.x, Local_240.f_1));
+					ENTITY::SET_ENTITY_HEADING(iLocal_306, MISC::GET_HEADING_FROM_VECTOR_2D(Local_240.f_0, Local_240.f_1));
 					VEHICLE::SET_VEHICLE_SIREN(iLocal_306, true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_299[2]))
@@ -10505,7 +10505,7 @@ void func_188(int iParam0, int iParam1)
 		}
 		if (func_191(iParam0, iParam1) != 322)
 		{
-			func_189(func_191(iParam0, iParam1), Local_49.x, Local_49.f_1);
+			func_189(func_191(iParam0, iParam1), Local_49.f_0, Local_49.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)

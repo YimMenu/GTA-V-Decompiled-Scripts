@@ -238,7 +238,7 @@ void __EntryFunction__()
 				func_178(Global_1853128[iLocal_130 /*888*/].f_267.f_360);
 				func_175(1);
 				Local_162.f_1 = 0.5f;
-				Local_162 = 1;
+				Local_162.f_0 = 1;
 				Local_162.f_3 = iLocal_131;
 				func_174();
 			}
@@ -246,21 +246,21 @@ void __EntryFunction__()
 			{
 				func_175(0);
 				Local_162.f_1 = 0.5f;
-				Local_162 = 0;
+				Local_162.f_0 = 0;
 			}
 		}
 		else if (Global_1853128[iLocal_130 /*888*/].f_267.f_358 != iLocal_143)
 		{
 			func_178(Global_1853128[iLocal_130 /*888*/].f_267.f_358);
 			func_175(1);
-			Local_162 = 1;
+			Local_162.f_0 = 1;
 			Local_162.f_3 = iLocal_131;
 			func_174();
 		}
 		else
 		{
 			func_175(0);
-			Local_162 = 0;
+			Local_162.f_0 = 0;
 		}
 	}
 	else
@@ -1672,7 +1672,7 @@ void func_44(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4
 				}
 				func_65(Global_22827, (fVar51 + 0f), fParam5, 0.034722f, iVar1, iVar2, iVar3, iVar4);
 				Var38 = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
-				Var38.x = (Var38.x * (0.5f / fVar62));
+				Var38.f_0 = (Var38.f_0 * (0.5f / fVar62));
 				Var38.f_1 = (Var38.f_1 * (0.5f / fVar62));
 				if (Global_22830.f_8672)
 				{
@@ -1685,7 +1685,7 @@ void func_44(bool bParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4
 				{
 					HUD::GET_HUD_COLOUR(1, &iVar1, &iVar2, &iVar3, &iVar4);
 				}
-				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22827 + (fParam5 * 0.5f)), ((fVar51 + 0f) + (0.034722f * 0.5f)), ((Var38.x / 1280f) * fVar62), ((Var38.f_1 / 720f) * fVar62), 0f, iVar1, iVar2, iVar3, iVar4, false);
+				GRAPHICS::DRAW_SPRITE("CommonMenu", "shop_arrows_upANDdown", (Global_22827 + (fParam5 * 0.5f)), ((fVar51 + 0f) + (0.034722f * 0.5f)), ((Var38.f_0 / 1280f) * fVar62), ((Var38.f_1 / 720f) * fVar62), 0f, iVar1, iVar2, iVar3, iVar4, false);
 				fVar51 = (fVar51 + (0f + 0.034722f));
 			}
 			if (MISC::GET_HASH_KEY(&(Global_22830.f_4947)) != 0 && Global_22830.f_5023 != -1)
@@ -4169,25 +4169,25 @@ int func_75(int iParam0, bool bParam1, bool bParam2, float fParam3, float fParam
 			GRAPHICS::GET_SCREEN_RESOLUTION(&iVar32, &iVar33);
 		}
 		Var37 = { GRAPHICS::GET_TEXTURE_RESOLUTION(&cVar0, &cVar16) };
-		Var37.x = (Var37.x * (func_76(iParam0) / fVar34));
+		Var37.f_0 = (Var37.f_0 * (func_76(iParam0) / fVar34));
 		Var37.f_1 = (Var37.f_1 * (func_76(iParam0) / fVar34));
 		if (!bParam2)
 		{
-			Var37.x = (Var37.x - 2f);
+			Var37.f_0 = (Var37.f_0 - 2f);
 			Var37.f_1 = (Var37.f_1 - 2f);
 		}
 		if (iParam0 == 30)
 		{
-			Var37.x = 288f;
+			Var37.f_0 = 288f;
 			Var37.f_1 = 106f;
 		}
 		if (iParam0 == 29 && MISC::GET_HASH_KEY(&(Global_22830.f_7286[29 /*16*/])) == joaat("CREW_LOGO"))
 		{
-			Var37.x = 106f;
+			Var37.f_0 = 106f;
 			Var37.f_1 = 106f;
 		}
-		*fParam3 = ((Var37.x / IntToFloat(iVar32)) * IntToFloat((iVar32 / iVar33)));
-		*fParam4 = (((Var37.f_1 / IntToFloat(iVar33)) / (Var37.x / IntToFloat(iVar32))) * *fParam3);
+		*fParam3 = ((Var37.f_0 / IntToFloat(iVar32)) * IntToFloat((iVar32 / iVar33)));
+		*fParam4 = (((Var37.f_1 / IntToFloat(iVar33)) / (Var37.f_0 / IntToFloat(iVar32))) * *fParam3);
 		if (!bParam5)
 		{
 			if (!GRAPHICS::GET_IS_WIDESCREEN() && iParam0 != 30)
@@ -5751,7 +5751,7 @@ void func_113(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -6389,7 +6389,7 @@ int func_139(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -6400,7 +6400,7 @@ int func_139(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{
@@ -7187,7 +7187,7 @@ void func_171()
 			{
 				if (func_173())
 				{
-					Local_162 = 0;
+					Local_162.f_0 = 0;
 					Local_162.f_3 = iLocal_143;
 					if (iLocal_130 == Local_162.f_2)
 					{
@@ -7202,7 +7202,7 @@ void func_171()
 				{
 					Local_162.f_4 = 1;
 				}
-				Local_162 = 1;
+				Local_162.f_0 = 1;
 			}
 		}
 		if (MISC::IS_BIT_SET(Local_167[Local_162.f_2 /*3*/], 3))
@@ -7249,14 +7249,14 @@ bool func_172(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_173()
 {
-	return Local_162 == 1;
+	return Local_162.f_0 == 1;
 }
 
 void func_174()

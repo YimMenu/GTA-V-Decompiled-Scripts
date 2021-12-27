@@ -709,7 +709,7 @@ int func_22(int iParam0)
 	struct<3> Var0;
 	
 	Var0 = { ENTITY::GET_ENTITY_ROTATION(iParam0, 0) };
-	if (((Var0.x > 30f || Var0.x < -30f) || Var0.f_1 > 30f) || Var0.f_1 < -30f)
+	if (((Var0.f_0 > 30f || Var0.f_0 < -30f) || Var0.f_1 > 30f) || Var0.f_1 < -30f)
 	{
 		return 1;
 	}
@@ -1583,7 +1583,7 @@ int func_58(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 	}
 	if (Global_112915.f_7688.f_764 < 8)
 	{
-		Var0 = iParam0;
+		Var0.f_0 = iParam0;
 		Var0.f_3 = func_60(iParam1);
 		Var0.f_4 = (MISC::GET_GAME_TIMER() + iParam4);
 		Var0.f_5 = iParam5;

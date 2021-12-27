@@ -497,9 +497,9 @@ bool func_16(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 Vector3 func_17(int iParam0, int iParam1)
@@ -2397,7 +2397,7 @@ int func_72(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 	}
 	if (Global_112915.f_7688.f_764 < 8)
 	{
-		Var0 = iParam0;
+		Var0.f_0 = iParam0;
 		Var0.f_3 = func_73(iParam1);
 		Var0.f_4 = (MISC::GET_GAME_TIMER() + iParam4);
 		Var0.f_5 = iParam5;
@@ -3430,7 +3430,7 @@ void func_101(int iParam0, struct<3> Param1)
 	{
 		return;
 	}
-	if ((Param1.x == Global_31884[iVar0 /*23*/][0 /*3*/] && Param1.f_1 == Global_31884[iVar0 /*23*/][0 /*3*/].f_1) && Param1.f_2 == Global_31884[iVar0 /*23*/][0 /*3*/].f_2)
+	if ((Param1.f_0 == Global_31884[iVar0 /*23*/][0 /*3*/] && Param1.f_1 == Global_31884[iVar0 /*23*/][0 /*3*/].f_1) && Param1.f_2 == Global_31884[iVar0 /*23*/][0 /*3*/].f_2)
 	{
 		return;
 	}

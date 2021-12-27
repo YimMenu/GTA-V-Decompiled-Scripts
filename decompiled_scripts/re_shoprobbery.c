@@ -3013,7 +3013,7 @@ void func_57(int iParam0, int iParam1)
 		}
 		if (func_60(iParam0, iParam1) != 322)
 		{
-			func_58(func_60(iParam0, iParam1), Local_43.x, Local_43.f_1);
+			func_58(func_60(iParam0, iParam1), Local_43.f_0, Local_43.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -6656,7 +6656,7 @@ void func_105()
 		{
 			Local_107 = { OBJECT::GET_SAFE_PICKUP_COORDS(ENTITY::GET_ENTITY_COORDS(iLocal_175, false), 1.2f, 1.5f) };
 		}
-		Local_107 = { Local_107.x, Local_107.f_1, (Local_107.f_2 + 0.25f) };
+		Local_107 = { Local_107.f_0, Local_107.f_1, (Local_107.f_2 + 0.25f) };
 		iLocal_110 = OBJECT::CREATE_PICKUP(joaat("pickup_money_med_bag"), Local_107, iLocal_106, iLocal_189, true, joaat("prop_cs_duffel_01"));
 		iLocal_192 = func_106(iLocal_110);
 		if (iLocal_49 == 1)
@@ -11114,9 +11114,9 @@ bool func_203(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_204(int iParam0)

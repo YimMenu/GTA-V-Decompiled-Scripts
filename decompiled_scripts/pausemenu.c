@@ -6,7 +6,7 @@
 
 void __EntryFunction__()
 {
-	switch (ScriptParam_0)
+	switch (ScriptParam_0.f_0)
 	{
 		case 3:
 			while (true)

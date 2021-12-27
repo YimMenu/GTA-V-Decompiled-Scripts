@@ -855,7 +855,7 @@ void func_17(var uParam0)
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		}
 	}
-	Var1 = (uParam0->f_1.f_16 + uParam0->f_1.f_18);
+	Var1.f_0 = (uParam0->f_1.f_16 + uParam0->f_1.f_18);
 	Var1.f_1 = (uParam0->f_1.f_16.f_1 + uParam0->f_1.f_18.f_1);
 	func_25(uParam0, &Var1, uParam0->f_1.f_10);
 	func_23(uParam0, 1, 1);
@@ -2065,7 +2065,7 @@ void func_68(var uParam0)
 					if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uParam0->f_401) < 4f)
 					{
 						Var1 = { uParam0->f_401 - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-						fVar4 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1);
+						fVar4 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.f_0, Var1.f_1);
 						fVar5 = MISC::ABSF((uParam0->f_404 - fVar4));
 						if (fVar5 <= 70f)
 						{
@@ -2521,13 +2521,13 @@ void func_80(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4
 	Var10 = { uParam0->f_8 + uParam0->f_11 };
 	if ((PAD::_IS_USING_KEYBOARD(2) && bParam2) && !uParam0->f_28)
 	{
-		uParam0->f_14 = Var10.x;
+		uParam0->f_14 = Var10.f_0;
 		uParam0->f_14.f_1 = Var10.f_1;
 		uParam0->f_14.f_2 = Var10.f_2;
 	}
 	else
 	{
-		uParam0->f_14 = (uParam0->f_14 + func_81(((((Var10.x - uParam0->f_14) * 0.05f) * fVar9) * fParam7), -3f, 3f));
+		uParam0->f_14 = (uParam0->f_14 + func_81(((((Var10.f_0 - uParam0->f_14) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 		uParam0->f_14.f_1 = (uParam0->f_14.f_1 + func_81(((((Var10.f_1 - uParam0->f_14.f_1) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 		uParam0->f_14.f_2 = (uParam0->f_14.f_2 + func_81(((((Var10.f_2 - uParam0->f_14.f_2) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 	}
@@ -7962,7 +7962,7 @@ int func_167(int iParam0, bool bParam1)
 			{
 				if (iParam0 == Var1.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 					{
 						return 0;
 					}
@@ -10270,9 +10270,9 @@ bool func_177(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_178(int iParam0, var uParam1, float fParam2)

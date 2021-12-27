@@ -208,7 +208,7 @@ void __EntryFunction__()
 				case 0:
 					if (func_20())
 					{
-						Local_110 = 1;
+						Local_110.f_0 = 1;
 					}
 					break;
 				
@@ -216,7 +216,7 @@ void __EntryFunction__()
 					func_3();
 					if (func_1())
 					{
-						Local_110 = 4;
+						Local_110.f_0 = 4;
 					}
 					break;
 				
@@ -319,7 +319,7 @@ void func_6(var uParam0, struct<3> Param1)
 	iVar2 = func_7(1, 1);
 	if (iVar2 != 0)
 	{
-		Var3 = -519771910;
+		Var3.f_0 = -519771910;
 		Var3.f_1 = PLAYER::PLAYER_ID();
 		Var3.f_2 = { *uParam0 };
 		Var3.f_7 = { Param1 };
@@ -472,9 +472,9 @@ bool func_14(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_15(var uParam0)
@@ -488,7 +488,7 @@ int func_15(var uParam0)
 
 int func_16(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -688,7 +688,7 @@ struct<5> func_24(int iParam0, struct<3> Param1, int iParam4, int iParam5, int i
 	{
 		return Var0;
 	}
-	Var6 = iParam0;
+	Var6.f_0 = iParam0;
 	Var6.f_1 = { Param1 };
 	if (func_12(&Var6) != -1)
 	{
@@ -813,7 +813,7 @@ void func_29(var uParam0, bool bParam1, bool bParam2)
 
 int func_30()
 {
-	return Local_110;
+	return Local_110.f_0;
 }
 
 int func_31(int iParam0)
@@ -1045,9 +1045,9 @@ int func_46(struct<41> Param0, var uParam41, var uParam42, var uParam43, var uPa
 	Var0.f_16 = -1;
 	Var0.f_19 = -1;
 	Var0.f_20 = -1;
-	Var0 = Param0;
+	Var0.f_0 = Param0.f_0;
 	Var0.f_16 = Param0.f_1;
-	func_50(func_51(Param0), Var0);
+	func_50(func_51(Param0.f_0), Var0);
 	func_48(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Local_110, 144, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&Local_254, 65, 0);

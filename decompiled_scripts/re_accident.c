@@ -704,7 +704,7 @@ void func_14()
 			fVar4 = 0f;
 			fVar7 = 999999f;
 			iVar0 = 0;
-			while (iVar0 < Local_229)
+			while (iVar0 < Local_229.f_0)
 			{
 				if (iVar0 > 0)
 				{
@@ -740,9 +740,9 @@ void func_14()
 				{
 					iLocal_228 = 0;
 				}
-				if (iLocal_227 >= Local_229 * 2)
+				if (iLocal_227 >= Local_229.f_0 * 2)
 				{
-					iLocal_227 = (Local_229 * 2 - 1);
+					iLocal_227 = (Local_229.f_0 * 2 - 1);
 				}
 			}
 		}
@@ -768,7 +768,7 @@ void func_14()
 			while (iVar0 <= iVar11)
 			{
 				iVar13 = (iVar0 / 2);
-				if (iVar13 < Local_229)
+				if (iVar13 < Local_229.f_0)
 				{
 					if (Local_229[iVar13 /*5*/].f_4)
 					{
@@ -790,7 +790,7 @@ void func_14()
 			while (iVar0 >= iVar12)
 			{
 				iVar13 = (iVar0 / 2);
-				if (iVar13 < Local_229)
+				if (iVar13 < Local_229.f_0)
 				{
 					if (Local_229[iVar13 /*5*/].f_4)
 					{
@@ -807,7 +807,7 @@ void func_14()
 			iLocal_228 = iVar12;
 		}
 		iVar0 = 0;
-		while (iVar0 < Local_66)
+		while (iVar0 < Local_66.f_0)
 		{
 			if ((MISC::GET_GAME_TIMER() - Local_66[iVar0 /*5*/].f_4) > 1000)
 			{
@@ -893,7 +893,7 @@ void func_17()
 						fVar4 = 9999.9f;
 						Local_59 = { func_19() };
 						iVar0 = 0;
-						while (iVar0 < Local_229)
+						while (iVar0 < Local_229.f_0)
 						{
 							if (HUD::DOES_BLIP_EXIST(Local_229[iVar0 /*5*/].f_3))
 							{
@@ -1021,7 +1021,7 @@ void func_17()
 
 int func_18(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -1044,7 +1044,7 @@ Vector3 func_19()
 		Var2 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(iVar0, iVar1) };
 		Var2 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var2, ENTITY::GET_ENTITY_HEADING(iVar0), 0.35f, 0f, -0.15f) };
 		MISC::GET_GROUND_Z_FOR_3D_COORD(Var2, &uVar8, false, false);
-		Var5 = { Var2.x, Var2.f_1, uVar8 };
+		Var5 = { Var2.f_0, Var2.f_1, uVar8 };
 	}
 	return Var5;
 }
@@ -1058,7 +1058,7 @@ void func_20()
 		if (iLocal_222)
 		{
 			iVar0 = 0;
-			while (iVar0 < Local_66)
+			while (iVar0 < Local_66.f_0)
 			{
 				FIRE::REMOVE_SCRIPT_FIRE(Local_66[iVar0 /*5*/]);
 				iVar0++;
@@ -1068,7 +1068,7 @@ void func_20()
 		iLocal_222 = 1;
 		iLocal_224 = MISC::GET_GAME_TIMER();
 		iVar0 = 0;
-		while (iVar0 < Local_229)
+		while (iVar0 < Local_229.f_0)
 		{
 			Local_229[iVar0 /*5*/].f_4 = 1;
 			iVar0++;
@@ -1141,7 +1141,7 @@ void func_22()
 					EVENT::CLEAR_DECISION_MAKER_EVENT_RESPONSE(joaat("empty"), 62);
 					EVENT::CLEAR_DECISION_MAKER_EVENT_RESPONSE(joaat("empty"), 138);
 					EVENT::CLEAR_DECISION_MAKER_EVENT_RESPONSE(joaat("empty"), 56);
-					iLocal_339 = OBJECT::CREATE_OBJECT(joaat("prop_generator_01a"), Local_526.x, (Local_526.f_1 + 0.5f), (Local_526.f_2 - 0.25f), true, true, false);
+					iLocal_339 = OBJECT::CREATE_OBJECT(joaat("prop_generator_01a"), Local_526.f_0, (Local_526.f_1 + 0.5f), (Local_526.f_2 - 0.25f), true, true, false);
 					ENTITY::SET_ENTITY_HEADING(iLocal_339, 75f);
 					ENTITY::SET_ENTITY_PROOFS(iLocal_339, false, true, true, false, false, false, false, false);
 					iLocal_533 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_sparking_generator", iLocal_339, 0f, 0f, 0.2f, 0f, 0f, 0f, 1f, false, false, false);
@@ -2400,7 +2400,7 @@ void func_57(int iParam0, int iParam1)
 		}
 		if (func_64(iParam0, iParam1) != 322)
 		{
-			func_59(func_64(iParam0, iParam1), Local_43.x, Local_43.f_1);
+			func_59(func_64(iParam0, iParam1), Local_43.f_0, Local_43.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -4728,7 +4728,7 @@ void func_115()
 		Local_229[12 /*5*/] = { Local_526 + Vector(0f, 7f, 0f) };
 		Local_229[13 /*5*/] = { Local_523 };
 		iVar0 = 0;
-		while (iVar0 < Local_229)
+		while (iVar0 < Local_229.f_0)
 		{
 			Local_229[iVar0 /*5*/].f_4 = 1;
 			iVar0++;
@@ -6050,9 +6050,9 @@ bool func_139(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_140(int iParam0)
@@ -8018,7 +8018,7 @@ int func_201(int iParam0, bool bParam1)
 			{
 				if (iParam0 == Var1.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 					{
 						return 0;
 					}

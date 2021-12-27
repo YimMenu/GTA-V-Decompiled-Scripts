@@ -70,13 +70,13 @@ void __EntryFunction__()
 	func_51();
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		while (Local_39.x == 0)
+		while (Local_39.f_0 == 0)
 		{
 			if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 			{
 				Local_39.f_1 = func_50(iScriptParam_0);
 				Local_39.f_2 = func_49();
-				Local_39.x = 1;
+				Local_39.f_0 = 1;
 			}
 			else
 			{
@@ -1190,7 +1190,7 @@ int func_23()
 
 int func_24(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

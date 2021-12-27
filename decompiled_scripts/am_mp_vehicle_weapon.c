@@ -1735,7 +1735,7 @@ void func_49()
 						{
 							Var4 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(func_30(), iVar3) + func_54(Local_125.f_31) };
 							Var7 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-							Var10 = { (-SYSTEM::SIN(Var7.f_2) * SYSTEM::COS(Var7.x)), (SYSTEM::COS(Var7.f_2) * SYSTEM::COS(Var7.x)), SYSTEM::SIN(Var7.x) };
+							Var10 = { (-SYSTEM::SIN(Var7.f_2) * SYSTEM::COS(Var7.f_0)), (SYSTEM::COS(Var7.f_2) * SYSTEM::COS(Var7.f_0)), SYSTEM::SIN(Var7.f_0) };
 							Var13 = { 1f, 1f, 1f };
 							Var16 = { Var4 + Var10 * Var13 };
 							MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var4, Var16, iVar1, true, func_53(0), PLAYER::PLAYER_PED_ID(), true, true, -1f, iVar2, false, false, Local_125.f_84[Local_125.f_31], true, 0, 1, 0);
@@ -1770,11 +1770,11 @@ void func_49()
 				Var20 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(func_30(), iVar19) + func_54(Local_125.f_31) };
 				Var23 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 				Var26 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-				Var29 = { (-SYSTEM::SIN(Var26.f_2) * SYSTEM::COS(Var26.x)), (SYSTEM::COS(Var26.f_2) * SYSTEM::COS(Var26.x)), SYSTEM::SIN(Var26.x) };
+				Var29 = { (-SYSTEM::SIN(Var26.f_2) * SYSTEM::COS(Var26.f_0)), (SYSTEM::COS(Var26.f_2) * SYSTEM::COS(Var26.f_0)), SYSTEM::SIN(Var26.f_0) };
 				Var32 = { 10f, 10f, 10f };
 				if (!func_50(Local_125.f_56))
 				{
-					Var32.x = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_125.f_56, Var23, false);
+					Var32.f_0 = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_125.f_56, Var23, false);
 					Var32.f_1 = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_125.f_56, Var23, false);
 					Var32.f_2 = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_125.f_56, Var23, false);
 				}
@@ -1792,7 +1792,7 @@ void func_49()
 
 int func_50(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2023,7 +2023,7 @@ void func_61()
 	{
 		Var6 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 		Var9 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-		Var12 = { (-SYSTEM::SIN(Var9.f_2) * SYSTEM::COS(Var9.x)), (SYSTEM::COS(Var9.f_2) * SYSTEM::COS(Var9.x)), SYSTEM::SIN(Var9.x) };
+		Var12 = { (-SYSTEM::SIN(Var9.f_2) * SYSTEM::COS(Var9.f_0)), (SYSTEM::COS(Var9.f_2) * SYSTEM::COS(Var9.f_0)), SYSTEM::SIN(Var9.f_0) };
 		Var15 = { 300f, 300f, 300f };
 		Var18 = { Var6 + Var12 * Var15 };
 		Var21 = { Var6 + Var12 * Vector(1f, 1f, 1f) };
@@ -2596,7 +2596,7 @@ int func_77()
 
 float func_78(struct<3> Param0)
 {
-	return SYSTEM::SQRT((((Param0.x * Param0.x) + (Param0.f_1 * Param0.f_1)) + (Param0.f_2 * Param0.f_2)));
+	return SYSTEM::SQRT((((Param0.f_0 * Param0.f_0) + (Param0.f_1 * Param0.f_1)) + (Param0.f_2 * Param0.f_2)));
 }
 
 int func_79(int iParam0)
@@ -2984,7 +2984,7 @@ void func_90()
 				iVar3 = 0;
 			}
 		}
-		fVar22 = ((Var15.x / fVar7) * 0.5f);
+		fVar22 = ((Var15.f_0 / fVar7) * 0.5f);
 		if (fVar22 > 0f)
 		{
 			fVar22 = (fVar22 + 1f);
@@ -3062,7 +3062,7 @@ void func_90()
 			{
 				Var28 = { ENTITY::GET_ENTITY_ROTATION(func_30(), 2) };
 				fVar31 = ((MISC::ABSF(Local_125.f_53.f_2) - 90f) / -90f);
-				fVar26 = (fVar26 + ((Var28.x - Local_125.f_50) * fVar31));
+				fVar26 = (fVar26 + ((Var28.f_0 - Local_125.f_50) * fVar31));
 				fVar27 = (fVar27 + (Var28.f_2 - Local_125.f_50.f_2));
 				if (fVar27 > 180f)
 				{
@@ -3072,7 +3072,7 @@ void func_90()
 				{
 					fVar27 = (fVar27 + 360f);
 				}
-				if (Var28.x < -80f || Var28.x > 80f)
+				if (Var28.f_0 < -80f || Var28.f_0 > 80f)
 				{
 					fVar26 = 0f;
 					fVar27 = 0f;
@@ -3249,7 +3249,7 @@ int func_92(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -3260,7 +3260,7 @@ int func_92(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{
@@ -3274,9 +3274,9 @@ bool func_93(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 float func_94(float fParam0, float fParam1, float fParam2)
@@ -3411,8 +3411,8 @@ void func_103()
 	Var0 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 	if ((((HUD::IS_PAUSE_MENU_ACTIVE() || func_108()) || PAD::IS_CONTROL_JUST_PRESSED(2, 199)) || PAD::IS_CONTROL_PRESSED(2, 199)) || PAD::IS_CONTROL_JUST_RELEASED(2, 199))
 	{
-		HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.f_1);
-		HUD::_0xA17784FCA9548D15(Var0.x, Var0.f_1, 0);
+		HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.f_0, Var0.f_1);
+		HUD::_0xA17784FCA9548D15(Var0.f_0, Var0.f_1, 0);
 		if (HUD::IS_PAUSE_MENU_ACTIVE() || func_108())
 		{
 			if (HUD::DOES_BLIP_EXIST(HUD::GET_MAIN_PLAYER_BLIP_ID()))
@@ -3428,7 +3428,7 @@ void func_103()
 			HUD::SET_BLIP_ALPHA(HUD::GET_MAIN_PLAYER_BLIP_ID(), 0);
 		}
 	}
-	HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
+	HUD::LOCK_MINIMAP_POSITION(Var0.f_0, Var0.f_1);
 	HUD::SET_RADAR_AS_EXTERIOR_THIS_FRAME();
 	HUD::HIDE_MINIMAP_INTERIOR_MAP_THIS_FRAME();
 	if (CAM::DOES_CAM_EXIST(Local_125.f_61))
@@ -3459,17 +3459,17 @@ void func_103()
 			HUD::SET_BLIP_SCALE(Local_125.f_109, 0.44f);
 			HUD::SET_BLIP_PRIORITY(Local_125.f_109, 13 + 1);
 			HUD::SET_BLIP_HIDDEN_ON_LEGEND(Local_125.f_109, true);
-			HUD::SET_BLIP_ROTATION(Local_125.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var3.x, Var3.f_1)));
+			HUD::SET_BLIP_ROTATION(Local_125.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var3.f_0, Var3.f_1)));
 			HUD::SET_BLIP_HIDDEN_ON_LEGEND(Local_125.f_108, true);
-			HUD::SET_BLIP_ROTATION(Local_125.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var3.x, Var3.f_1)));
+			HUD::SET_BLIP_ROTATION(Local_125.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var3.f_0, Var3.f_1)));
 		}
 		else
 		{
 			HUD::SET_BLIP_COORDS(Local_125.f_109, Var0);
-			HUD::SET_BLIP_ROTATION(Local_125.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var3.x, Var3.f_1)));
+			HUD::SET_BLIP_ROTATION(Local_125.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var3.f_0, Var3.f_1)));
 			HUD::SET_BLIP_DISPLAY(Local_125.f_109, 5);
 			HUD::SET_BLIP_COORDS(Local_125.f_108, Var0);
-			HUD::SET_BLIP_ROTATION(Local_125.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var3.x, Var3.f_1)));
+			HUD::SET_BLIP_ROTATION(Local_125.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(Var3.f_0, Var3.f_1)));
 			HUD::SET_BLIP_DISPLAY(Local_125.f_108, 5);
 		}
 	}
@@ -3667,11 +3667,11 @@ Vector3 func_107(struct<3> Param0)
 {
 	struct<3> Var0;
 	
-	Var0.x = SYSTEM::COS(Param0.x);
+	Var0.f_0 = SYSTEM::COS(Param0.f_0);
 	Var0.f_1 = SYSTEM::COS(Param0.f_2);
-	Var0.f_2 = SYSTEM::SIN(Param0.x);
-	Var0.f_1 = (Var0.f_1 * Var0.x);
-	Var0.x = (Var0.x * -SYSTEM::SIN(Param0.f_2));
+	Var0.f_2 = SYSTEM::SIN(Param0.f_0);
+	Var0.f_1 = (Var0.f_1 * Var0.f_0);
+	Var0.f_0 = (Var0.f_0 * -SYSTEM::SIN(Param0.f_2));
 	return Var0;
 }
 
@@ -3740,7 +3740,7 @@ int func_113()
 						Var0 = { CAM::GET_CAM_COORD(Local_125.f_61) };
 						if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var0, &fVar3, false, false))
 						{
-							if (SYSTEM::VDIST(Var0, Var0.x, Var0.f_1, fVar3) < 2f)
+							if (SYSTEM::VDIST(Var0, Var0.f_0, Var0.f_1, fVar3) < 2f)
 							{
 								return 1;
 							}
@@ -5171,7 +5171,7 @@ int func_172()
 				Var1 = { ENTITY::GET_ENTITY_COORDS(iVar0, true) };
 				if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var1, &fVar4, false, false))
 				{
-					if (SYSTEM::VDIST(Var1, Var1.x, Var1.f_1, fVar4) < 3f)
+					if (SYSTEM::VDIST(Var1, Var1.f_0, Var1.f_1, fVar4) < 3f)
 					{
 						return 1;
 					}

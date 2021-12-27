@@ -1306,12 +1306,12 @@ void func_30()
 		}
 		func_31(PLAYER::PLAYER_PED_ID(), &iLocal_328, fLocal_342, 0f, fLocal_341);
 		CAM::SET_CAM_FOV(iLocal_328, fVar1);
-		CAM::ATTACH_CAM_TO_ENTITY(iLocal_328, PLAYER::PLAYER_PED_ID(), Var7.x, (Var7.f_1 - 1f), (Var7.f_2 + 1f), true);
+		CAM::ATTACH_CAM_TO_ENTITY(iLocal_328, PLAYER::PLAYER_PED_ID(), Var7.f_0, (Var7.f_1 - 1f), (Var7.f_2 + 1f), true);
 	}
 	else
 	{
 		iLocal_328 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", true);
-		CAM::ATTACH_CAM_TO_ENTITY(iLocal_328, PLAYER::PLAYER_PED_ID(), Var7.x, (Var7.f_1 - 1f), (Var7.f_2 + 1f), true);
+		CAM::ATTACH_CAM_TO_ENTITY(iLocal_328, PLAYER::PLAYER_PED_ID(), Var7.f_0, (Var7.f_1 - 1f), (Var7.f_2 + 1f), true);
 		CAM::SET_CAM_NEAR_CLIP(iLocal_328, 0.01f);
 		fLocal_341 = -70f;
 		fLocal_342 = 3f;
@@ -1332,11 +1332,11 @@ void func_31(int iParam0, int iParam1, struct<3> Param2)
 		if (CAM::DOES_CAM_EXIST(*iParam1))
 		{
 			fVar0 = ENTITY::GET_ENTITY_HEADING(iParam0);
-			Var1.x = 0f;
+			Var1.f_0 = 0f;
 			Var1.f_1 = 0f;
 			Var1.f_2 = fVar0;
 			Var1 = { Var1 + Param2 };
-			CAM::SET_CAM_ROT(*iParam1, Var1.x, Var1.f_1, Var1.f_2, 2);
+			CAM::SET_CAM_ROT(*iParam1, Var1.f_0, Var1.f_1, Var1.f_2, 2);
 		}
 	}
 }
@@ -1458,8 +1458,8 @@ void func_36(struct<3> Param0, float fParam3)
 	}
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_306, false))
 	{
-		MISC::CLEAR_AREA_OF_VEHICLES(Param0.x, Param0.f_1, Param0.f_2, 5f, false, false, false, false, false, false, 0);
-		ENTITY::SET_ENTITY_COORDS(iLocal_306, Param0.x, Param0.f_1, Param0.f_2, true, false, false, true);
+		MISC::CLEAR_AREA_OF_VEHICLES(Param0.f_0, Param0.f_1, Param0.f_2, 5f, false, false, false, false, false, false, 0);
+		ENTITY::SET_ENTITY_COORDS(iLocal_306, Param0.f_0, Param0.f_1, Param0.f_2, true, false, false, true);
 		ENTITY::SET_ENTITY_HEADING(iLocal_306, fParam3);
 		VEHICLE::SET_VEHICLE_FORWARD_SPEED(iLocal_306, 0f);
 		TASK::TASK_VEHICLE_DRIVE_TO_COORD(iLocal_285, iLocal_306, ENTITY::GET_ENTITY_COORDS(iLocal_306, true), 0f, 0, joaat("tourbus"), iLocal_511, 5f, 15f);
@@ -1745,7 +1745,7 @@ void func_47()
 					{
 						func_85(ENTITY::GET_ENTITY_COORDS(iLocal_306, true), Local_52[iVar1 /*15*/].f_1, &Local_320, &Local_323, 500);
 					}
-					if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Local_320.x, Local_320.f_1, Local_323.x, Local_323.f_1))
+					if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Local_320.f_0, Local_320.f_1, Local_323.f_0, Local_323.f_1))
 					{
 						if ((iLocal_313 - iLocal_314) > 0)
 						{
@@ -2023,7 +2023,7 @@ void func_54(int iParam0, int iParam1)
 		}
 		if (func_62(iParam0, iParam1) != 322)
 		{
-			func_56(func_62(iParam0, iParam1), Local_44.x, Local_44.f_1);
+			func_56(func_62(iParam0, iParam1), Local_44.f_0, Local_44.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -3221,15 +3221,15 @@ void func_85(struct<2> Param0, Vector3 vParam2, struct<2> Param3, var uParam5, f
 {
 	if (!iLocal_318)
 	{
-		if (Param3 <= Param0)
+		if (Param3.f_0 <= Param0.f_0)
 		{
-			*fParam6 = Param3;
-			*fParam7 = Param0;
+			*fParam6 = Param3.f_0;
+			*fParam7 = Param0.f_0;
 		}
 		else
 		{
-			*fParam6 = Param0;
-			*fParam7 = Param3;
+			*fParam6 = Param0.f_0;
+			*fParam7 = Param3.f_0;
 		}
 		if (Param3.f_1 <= Param0.f_1)
 		{
@@ -7042,7 +7042,7 @@ void func_182()
 {
 	if (iLocal_318)
 	{
-		PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_320.x, Local_320.f_1, Local_323.x, Local_323.f_1);
+		PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_320.f_0, Local_320.f_1, Local_323.f_0, Local_323.f_1);
 	}
 }
 
@@ -7226,98 +7226,98 @@ void func_190()
 	Var0.f_8 = (8f - 1f);
 	Var0.f_10 = { -0.9281f, 266.8539f, 108.0699f };
 	Var0.f_13 = 82f;
-	Var0 = "BUSTO_P1";
+	Var0.f_0 = "BUSTO_P1";
 	Var15.f_1 = { -214.9f, 267.4f, 91.5f };
 	Var15.f_4 = { -253.7246f, 247.9038f, 95.2063f };
 	Var15.f_7 = 9000;
 	Var15.f_8 = (8f - 1f);
 	Var15.f_10 = { -188.67f, 265.43f, 92.15f };
 	Var15.f_13 = 81.79f;
-	Var15 = "BUSTO_P5";
+	Var15.f_0 = "BUSTO_P5";
 	Var30.f_1 = { -522.1094f, 260.8653f, 82.063f };
 	Var30.f_4 = { -549.5739f, 272.7824f, 82.9753f };
 	Var30.f_7 = 9000;
 	Var30.f_8 = 8f;
 	Var30.f_10 = { -435.0476f, 249.8727f, 82.0866f };
 	Var30.f_13 = 85f;
-	Var30 = "BUSTO_P6";
+	Var30.f_0 = "BUSTO_P6";
 	Var45.f_1 = { -575.5643f, 512.5427f, 105.0293f };
 	Var45.f_4 = { -586.4406f, 529.1188f, 108.8539f };
 	Var45.f_7 = 9000;
 	Var45.f_8 = (8f + 2f);
 	Var45.f_10 = { -552.3732f, 481.7021f, 102.1826f };
 	Var45.f_13 = 25f;
-	Var45 = "BUSTO_P7";
+	Var45.f_0 = "BUSTO_P7";
 	Var60.f_1 = { -732.2224f, 474.0897f, 105.0424f };
 	Var60.f_4 = { -728.4921f, 448.0321f, 107.9036f };
 	Var60.f_7 = 9000;
 	Var60.f_8 = (8f + 3f);
 	Var60.f_10 = { -688.5469f, 490.5489f, 108.784f };
 	Var60.f_13 = 105f;
-	Var60 = "BUSTO_P8";
+	Var60.f_0 = "BUSTO_P8";
 	Var75.f_1 = { -1037.97f, 468.9468f, 76.7167f };
 	Var75.f_4 = { -1065.762f, 469.4401f, 80.3204f };
 	Var75.f_7 = 9000;
 	Var75.f_8 = (8f + 2f);
 	Var75.f_10 = { -973.6752f, 499.3758f, 78.8246f };
 	Var75.f_13 = 47f;
-	Var75 = "BUSTO_P9";
+	Var75.f_0 = "BUSTO_P9";
 	Var90.f_1 = { -1231.581f, 239.014f, 64.8339f };
 	Var90.f_4 = { -1309.778f, 261.4181f, 65.87f };
 	Var90.f_7 = 9000;
 	Var90.f_8 = (8f + 4f);
 	Var90.f_10 = { -1168.448f, 257.0845f, 66.3477f };
 	Var90.f_13 = 105f;
-	Var90 = "BUSTO_P10";
+	Var90.f_0 = "BUSTO_P10";
 	Var105.f_1 = { -1406.729f, -160.0764f, 46.5244f };
 	Var105.f_4 = { -1421.479f, -193.5715f, 50f };
 	Var105.f_7 = 9000;
 	Var105.f_8 = (8f + 4f);
 	Var105.f_10 = { -1398.391f, -114.7998f, 50.028f };
 	Var105.f_13 = 178f;
-	Var105 = "BUSTO_P11";
+	Var105.f_0 = "BUSTO_P11";
 	Var120.f_1 = { -1316.205f, -487.0228f, 32.3407f };
 	Var120.f_4 = { -1271.75f, -500.2502f, 44.4638f };
 	Var120.f_7 = 9000;
 	Var120.f_8 = (15f + 4f);
 	Var120.f_10 = { -1356.912f, -437.5389f, 34.0665f };
 	Var120.f_13 = 215f;
-	Var120 = "BUSTO_P3";
+	Var120.f_0 = "BUSTO_P3";
 	Var135.f_1 = { -723.1427f, -239.0515f, 36.0196f };
 	Var135.f_4 = { -696.7581f, -239.2147f, 40.8147f };
 	Var135.f_7 = 9000;
 	Var135.f_8 = (15f + 6f);
 	Var135.f_10 = { -777.5432f, -262.5703f, 36.0082f };
 	Var135.f_13 = 290f;
-	Var135 = "BUSTO_P2";
+	Var135.f_0 = "BUSTO_P2";
 	Var150.f_1 = { -690.7699f, -25.762f, 36.9897f };
 	Var150.f_4 = { -695f, 22f, 53f };
 	Var150.f_7 = 9000;
 	Var150.f_8 = (15f + 5f);
 	Var150.f_10 = { -696.695f, -40.7958f, 36.8186f };
 	Var150.f_13 = 27.9347f;
-	Var150 = "BUSTO_P14";
+	Var150.f_0 = "BUSTO_P14";
 	Var165.f_1 = { 179.6443f, -340.3767f, 43.0448f };
 	Var165.f_4 = { 235.139f, -393.0182f, 50.0242f };
 	Var165.f_7 = 6000;
 	Var165.f_8 = (15f + 5f);
 	Var165.f_10 = { 113.5266f, -317.9667f, 44.6514f };
 	Var165.f_13 = 250f;
-	Var165 = "BUSTO_P13";
+	Var165.f_0 = "BUSTO_P13";
 	Var180.f_1 = { 288.2845f, 166.6872f, 103.309f };
 	Var180.f_4 = { 299.9585f, 198.3281f, 113.3522f };
 	Var180.f_7 = 6000;
 	Var180.f_8 = (15f + 3f);
 	Var180.f_10 = { 344.1458f, 148.4554f, 102.159f };
 	Var180.f_13 = 70f;
-	Var180 = "BUSTO_P4";
+	Var180.f_0 = "BUSTO_P4";
 	Local_263.f_1 = { 99.4291f, 246.9366f, 107.2005f };
 	Local_263.f_4 = { 102.6186f, 254.6904f, 114.0255f };
 	Local_263.f_7 = -1;
 	Local_263.f_8 = 8f;
 	Local_263.f_10 = { 177.5471f, 209.657f, 105.0543f };
 	Local_263.f_13 = 70f;
-	Local_263 = "BUSTO_Px";
+	Local_263.f_0 = "BUSTO_Px";
 	func_191(Var0);
 	func_191(Var15);
 	func_191(Var30);
@@ -7564,9 +7564,9 @@ bool func_196(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_197(int iParam0)

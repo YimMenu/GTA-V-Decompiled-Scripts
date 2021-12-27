@@ -13,7 +13,7 @@ void __EntryFunction__()
 	{
 		func_1();
 	}
-	iLocal_0 = ScriptParam_0;
+	iLocal_0 = ScriptParam_0.f_0;
 	iLocal_1 = ScriptParam_0.f_1;
 	while (!MISC::IS_BIT_SET(iLocal_2, 1))
 	{

@@ -321,7 +321,7 @@ void func_5()
 	struct<2> Var0;
 	int iVar2;
 	
-	Var0 = -1322571352;
+	Var0.f_0 = -1322571352;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	iVar2 = func_6(1, 1);
 	if (iVar2 != 0)
@@ -1270,7 +1270,7 @@ int func_50(int iParam0)
 
 void func_51(struct<21> Param0)
 {
-	func_54(func_55(Param0), Param0);
+	func_54(func_55(Param0.f_0), Param0);
 	func_52(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&Local_58, 97, 0);
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())

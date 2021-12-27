@@ -1238,7 +1238,7 @@ void func_1()
 	if (NETWORK::NETWORK_IS_PARTICIPANT_ACTIVE(PLAYER::INT_TO_PARTICIPANTINDEX(iLocal_397)))
 	{
 		iVar1 = NETWORK::NETWORK_GET_PLAYER_INDEX(PLAYER::INT_TO_PARTICIPANTINDEX(iLocal_397));
-		switch (Local_1142)
+		switch (Local_1142.f_0)
 		{
 			case 0:
 				if (MISC::IS_BIT_SET(Local_1406[iLocal_397 /*5*/].f_2, 4) && !MISC::IS_BIT_SET(Local_1142.f_3[iLocal_397], 1))
@@ -1247,7 +1247,7 @@ void func_1()
 					MISC::CLEAR_BIT(&(Local_1142.f_3[iLocal_397]), 0);
 					MISC::SET_BIT(&(Local_1142.f_2), 2);
 					iLocal_421 = 30000;
-					Local_1142 = 1;
+					Local_1142.f_0 = 1;
 					func_5(&uLocal_419);
 					MISC::SET_BIT(&(Local_1142.f_3[iLocal_397]), 1);
 				}
@@ -1423,7 +1423,7 @@ void func_6()
 	int iVar0;
 	int iVar1;
 	
-	switch (Local_1142)
+	switch (Local_1142.f_0)
 	{
 		case 0:
 			break;
@@ -1465,7 +1465,7 @@ void func_6()
 					}
 					MISC::CLEAR_BIT(&(Local_1142.f_2), 3);
 					MISC::CLEAR_BIT(&(Local_1142.f_2), 4);
-					Local_1142 = 0;
+					Local_1142.f_0 = 0;
 				}
 				else
 				{
@@ -3815,7 +3815,7 @@ void func_31()
 	switch (Local_1406[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_1)
 	{
 		case 0:
-			if (Local_1142 == 1)
+			if (Local_1142.f_0 == 1)
 			{
 				HUD::CLEAR_HELP(true);
 				MISC::CLEAR_BIT(&iLocal_418, 1);
@@ -3912,7 +3912,7 @@ void func_31()
 			break;
 		
 		case 1:
-			if (Local_1142 == 0)
+			if (Local_1142.f_0 == 0)
 			{
 				if (MISC::IS_BIT_SET(Local_1406[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2, 5) || MISC::IS_BIT_SET(Local_1406[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2, 7))
 				{
@@ -4061,7 +4061,7 @@ void func_32()
 			if (((TASK::IS_PED_WALKING(PLAYER::PLAYER_PED_ID()) || TASK::IS_PED_RUNNING(PLAYER::PLAYER_PED_ID())) || TASK::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID())) || TASK::IS_PED_STRAFING(PLAYER::PLAYER_PED_ID()))
 			{
 				Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0.x, Var0.f_1, (Var0.f_2 + 2f), true, false, false, true);
+				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Var0.f_0, Var0.f_1, (Var0.f_2 + 2f), true, false, false, true);
 				MISC::CLEAR_BIT(&iLocal_418, 5);
 			}
 		}
@@ -4222,7 +4222,7 @@ void func_40(int iParam0, var uParam1, int iParam2)
 {
 	struct<4> Var0;
 	
-	Var0 = 289633696;
+	Var0.f_0 = 289633696;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = uParam1;
 	Var0.f_3 = iParam2;
@@ -4261,7 +4261,7 @@ void func_43(int iParam0)
 {
 	struct<2> Var0;
 	
-	Var0 = -1242957671;
+	Var0.f_0 = -1242957671;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam0 == 0)
 	{
@@ -5059,7 +5059,7 @@ void func_68(int iParam0, var uParam1, struct<3> Param2, float fParam5)
 {
 	struct<7> Var0;
 	
-	Var0 = 935261065;
+	Var0.f_0 = 935261065;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = uParam1;
 	Var0.f_3 = { Param2 };
@@ -5140,7 +5140,7 @@ void func_77(int iParam0)
 {
 	struct<2> Var0;
 	
-	Var0 = -1343325606;
+	Var0.f_0 = -1343325606;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam0 == 0)
 	{
@@ -5347,7 +5347,7 @@ void func_87(var uParam0, var uParam1, bool bParam2, bool bParam3, int iParam4, 
 
 int func_88(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -5419,7 +5419,7 @@ void func_91()
 			else
 			{
 				func_106(&Local_325, 1, 1, 0, 0, 0.1f, 0, 1065353216, 0);
-				CAM::SET_CAM_ROT(Local_325, ENTITY::GET_ENTITY_ROTATION(PLAYER::PLAYER_PED_ID(), 2) + Local_325.f_14, 2);
+				CAM::SET_CAM_ROT(Local_325.f_0, ENTITY::GET_ENTITY_ROTATION(PLAYER::PLAYER_PED_ID(), 2) + Local_325.f_14, 2);
 				NETWORK::SET_LOCAL_PLAYER_INVISIBLE_LOCALLY(false);
 			}
 		}
@@ -5747,7 +5747,7 @@ struct<9> func_105()
 {
 	struct<9> Var0;
 	
-	Var0 = 0.5f;
+	Var0.f_0 = 0.5f;
 	Var0.f_1 = 0.5f;
 	Var0.f_2 = 1f;
 	Var0.f_3 = 1f;
@@ -5835,13 +5835,13 @@ void func_106(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam
 	Var10 = { iParam0->f_8 + iParam0->f_11 };
 	if ((PAD::_IS_USING_KEYBOARD(2) && bParam2) && !iParam0->f_28)
 	{
-		iParam0->f_14 = Var10.x;
+		iParam0->f_14 = Var10.f_0;
 		iParam0->f_14.f_1 = Var10.f_1;
 		iParam0->f_14.f_2 = Var10.f_2;
 	}
 	else
 	{
-		iParam0->f_14 = (iParam0->f_14 + func_107(((((Var10.x - iParam0->f_14) * 0.05f) * fVar9) * fParam7), -3f, 3f));
+		iParam0->f_14 = (iParam0->f_14 + func_107(((((Var10.f_0 - iParam0->f_14) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 		iParam0->f_14.f_1 = (iParam0->f_14.f_1 + func_107(((((Var10.f_1 - iParam0->f_14.f_1) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 		iParam0->f_14.f_2 = (iParam0->f_14.f_2 + func_107(((((Var10.f_2 - iParam0->f_14.f_2) * 0.05f) * fVar9) * fParam7), -3f, 3f));
 	}
@@ -6101,9 +6101,9 @@ void func_112(struct<3> Param0, var uParam3, var uParam4, int iParam5)
 	
 	if (Param0.f_1 != 0f)
 	{
-		*uParam4 = MISC::ATAN2(Param0.x, Param0.f_1);
+		*uParam4 = MISC::ATAN2(Param0.f_0, Param0.f_1);
 	}
-	else if (Param0.x < 0f)
+	else if (Param0.f_0 < 0f)
 	{
 		*uParam4 = -90f;
 	}
@@ -6119,7 +6119,7 @@ void func_112(struct<3> Param0, var uParam3, var uParam4, int iParam5)
 			*uParam4 = (*uParam4 + 360f);
 		}
 	}
-	fVar0 = SYSTEM::SQRT(((Param0.x * Param0.x) + (Param0.f_1 * Param0.f_1)));
+	fVar0 = SYSTEM::SQRT(((Param0.f_0 * Param0.f_0) + (Param0.f_1 * Param0.f_1)));
 	if (fVar0 != 0f)
 	{
 		*uParam3 = MISC::ATAN2(Param0.f_2, fVar0);
@@ -6147,7 +6147,7 @@ void func_113()
 		{
 			Var0 = { PED::GET_PED_BONE_COORDS(PLAYER::PLAYER_PED_ID(), 31086, 0f, -0.25f, 0f) };
 			func_116(&Local_325, Var0, ENTITY::GET_ENTITY_ROTATION(PLAYER::PLAYER_PED_ID(), 2), 50f, Local_325.f_20, Local_325.f_21, 3, 1101004800, 0, 0, -1082130432, 0);
-			CAM::ATTACH_CAM_TO_PED_BONE(Local_325, PLAYER::PLAYER_PED_ID(), 31086, 0f, -0.25f, 0f, true);
+			CAM::ATTACH_CAM_TO_PED_BONE(Local_325.f_0, PLAYER::PLAYER_PED_ID(), 31086, 0f, -0.25f, 0f, true);
 		}
 		else
 		{
@@ -6950,7 +6950,7 @@ void func_131(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -7269,7 +7269,7 @@ void func_154(int iParam0)
 {
 	struct<2> Var0;
 	
-	Var0 = 1823403209;
+	Var0.f_0 = 1823403209;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam0 == 0)
 	{
@@ -7281,7 +7281,7 @@ void func_155(int iParam0)
 {
 	struct<2> Var0;
 	
-	Var0 = 171704810;
+	Var0.f_0 = 171704810;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam0 == 0)
 	{
@@ -7354,7 +7354,7 @@ void func_160()
 				{
 					if (NETWORK::NETWORK_IS_PLAYER_A_PARTICIPANT(Var2.f_1))
 					{
-						switch (Var2)
+						switch (Var2.f_0)
 						{
 							case 171704810:
 								func_171(iVar0);
@@ -7486,7 +7486,7 @@ void func_165(int iParam0, bool bParam1)
 {
 	struct<3> Var0;
 	
-	Var0.x = 1469673382;
+	Var0.f_0 = 1469673382;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = bParam1;
 	if (!iParam0 == 0)
@@ -7512,7 +7512,7 @@ void func_167(int iParam0)
 {
 	struct<3> Var0;
 	
-	Var0.x = -1837006899;
+	Var0.f_0 = -1837006899;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = Global_2817789;
 	if (!iParam0 == 0)
@@ -8081,7 +8081,7 @@ void func_199(var uParam0)
 
 int func_200(struct<21> Param0)
 {
-	func_205(func_206(Param0), Param0);
+	func_205(func_206(Param0.f_0), Param0);
 	NETWORK::RESERVE_NETWORK_MISSION_OBJECTS(0);
 	func_202(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Local_1142, 264, 0);
@@ -8096,7 +8096,7 @@ void func_201(int iParam0)
 {
 	struct<3> Var0;
 	
-	Var0.x = -471862398;
+	Var0.f_0 = -471862398;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = NETWORK::PARTICIPANT_ID_TO_INT();
 	if (!iParam0 == 0)

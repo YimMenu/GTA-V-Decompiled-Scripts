@@ -1230,7 +1230,7 @@ void func_46()
 	int iVar1;
 	int iVar2;
 	
-	if (Local_391)
+	if (Local_391.f_0)
 	{
 		iVar0 = 1;
 		iVar1 = 0;
@@ -2571,7 +2571,7 @@ int func_74()
 
 int func_75(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2879,7 +2879,7 @@ var func_98(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 	Var0.f_2 = -1;
 	Var0.f_1 = iParam0;
 	Var0.f_2 = iParam1;
-	Var0.x = iParam2;
+	Var0.f_0 = iParam2;
 	func_94(1);
 	Global_2783728 = { Var0 };
 	Global_2783724 = iParam3;
@@ -3000,7 +3000,7 @@ int func_102(struct<3> Param0, float fParam3, bool bParam4, bool bParam5, bool b
 	if (!Global_2703656.f_924 && !bParam11)
 	{
 		Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
-		if ((MISC::ABSF((Var1.x - Param0.x)) < 0.2f && MISC::ABSF((Var1.f_1 - Param0.f_1)) < 0.2f) && MISC::ABSF((Var1.f_2 - Param0.f_2)) < 1.2f)
+		if ((MISC::ABSF((Var1.f_0 - Param0.f_0)) < 0.2f && MISC::ABSF((Var1.f_1 - Param0.f_1)) < 0.2f) && MISC::ABSF((Var1.f_2 - Param0.f_2)) < 1.2f)
 		{
 			fVar4 = (fParam3 - ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()));
 			if (fVar4 > 180f)
@@ -3023,7 +3023,7 @@ int func_102(struct<3> Param0, float fParam3, bool bParam4, bool bParam5, bool b
 			}
 		}
 	}
-	if (((!Param0.x == Global_2703656.f_926 || !Param0.f_1 == Global_2703656.f_926.f_1) || !Param0.f_2 == Global_2703656.f_926.f_2) || !fParam3 == Global_2703656.f_929)
+	if (((!Param0.f_0 == Global_2703656.f_926 || !Param0.f_1 == Global_2703656.f_926.f_1) || !Param0.f_2 == Global_2703656.f_926.f_2) || !fParam3 == Global_2703656.f_929)
 	{
 		if (Global_2703656.f_924 == 1)
 		{
@@ -4298,7 +4298,7 @@ int func_163()
 	func_164();
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 	{
-		if (!Local_391)
+		if (!Local_391.f_0)
 		{
 			iVar0 = 0;
 			while (iVar0 < 10)
@@ -4306,7 +4306,7 @@ int func_163()
 				Local_391.f_2[iVar0] = -1;
 				iVar0++;
 			}
-			Local_391 = 1;
+			Local_391.f_0 = 1;
 		}
 	}
 	return 1;
@@ -4363,8 +4363,8 @@ Vector3 func_167(struct<3> Param0, float fParam3)
 	
 	fVar3 = SYSTEM::SIN(fParam3);
 	fVar4 = SYSTEM::COS(fParam3);
-	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
-	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
+	Var0.f_0 = ((Param0.f_0 * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.f_0 * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }

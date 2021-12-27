@@ -1180,7 +1180,7 @@ int func_30(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 	}
 	if (Global_112915.f_7688.f_866 < 10)
 	{
-		Var0 = iParam0;
+		Var0.f_0 = iParam0;
 		Var0.f_3 = func_38(iParam1);
 		Var0.f_4 = (MISC::GET_GAME_TIMER() + iParam4);
 		Var0.f_5 = iParam5;
@@ -1311,7 +1311,7 @@ struct<10> func_37(var uParam0, int iParam1, int iParam2, int iParam3, int iPara
 {
 	struct<10> Var0;
 	
-	Var0 = uParam0;
+	Var0.f_0 = uParam0;
 	Var0.f_3 = func_38(iParam1);
 	Var0.f_4 = (MISC::GET_GAME_TIMER() + iParam4);
 	Var0.f_5 = iParam5;
@@ -1382,7 +1382,7 @@ void func_39(int iParam0, int iParam1)
 		}
 		if (func_46(iParam0, iParam1) != 322)
 		{
-			func_40(func_46(iParam0, iParam1), Local_86.x, Local_86.f_1);
+			func_40(func_46(iParam0, iParam1), Local_86.f_0, Local_86.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -3031,7 +3031,7 @@ int func_84()
 	int iVar0;
 	
 	iVar0 = 0;
-	while (iVar0 < Local_44)
+	while (iVar0 < Local_44.f_0)
 	{
 		if ((Local_44[iVar0 /*4*/] == 0 && Local_44[iVar0 /*4*/].f_1 == 0) && Local_44[iVar0 /*4*/].f_2 == 0)
 		{
@@ -3071,7 +3071,7 @@ int func_85(int iParam0, int iParam1, float fParam2, int iParam3)
 
 float func_86(struct<3> Param0, struct<3> Param3)
 {
-	return (((Param0.x * Param3.x) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
+	return (((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
 }
 
 Vector3 func_87(struct<3> Param0)
@@ -3087,7 +3087,7 @@ Vector3 func_87(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -3107,7 +3107,7 @@ int func_89(int iParam0, int iParam1)
 	int iVar0;
 	
 	iVar0 = 0;
-	while (iVar0 < Local_44)
+	while (iVar0 < Local_44.f_0)
 	{
 		if (Local_44[iVar0 /*4*/].f_1 == iParam0 && Local_44[iVar0 /*4*/].f_2 == iParam1)
 		{
@@ -4365,9 +4365,9 @@ bool func_134(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_135(var uParam0, bool bParam1, bool bParam2, bool bParam3)

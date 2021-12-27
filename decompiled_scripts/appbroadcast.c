@@ -270,7 +270,7 @@ void func_10(int iParam0, int iParam1)
 {
 	struct<4> Var0;
 	
-	Var0 = 801199324;
+	Var0.f_0 = 801199324;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = MISC::GET_RANDOM_INT_IN_RANGE(0, 9999);

@@ -359,7 +359,7 @@ void func_11(var uParam0)
 		case 4:
 			func_41(uParam0, &sVar0);
 			func_40(uParam0, &sVar16);
-			if (Var20 != 3)
+			if (Var20.f_0 != 3)
 			{
 				Var34 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&sVar0, &sVar16, func_39(uParam0), func_38(uParam0), 0f, 2) };
 				Var37 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&sVar0, &sVar16, func_39(uParam0), func_38(uParam0), 0f, 2) };
@@ -373,7 +373,7 @@ void func_11(var uParam0)
 			func_26(uParam0);
 			func_41(uParam0, &sVar0);
 			func_40(uParam0, &sVar16);
-			if (Var20 == 3)
+			if (Var20.f_0 == 3)
 			{
 				iVar41 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 1920390111);
 			}
@@ -1669,8 +1669,8 @@ Vector3 func_80(struct<3> Param0, float fParam3)
 	
 	fVar3 = SYSTEM::SIN(fParam3);
 	fVar4 = SYSTEM::COS(fParam3);
-	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
-	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
+	Var0.f_0 = ((Param0.f_0 * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.f_0 * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }

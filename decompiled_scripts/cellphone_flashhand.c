@@ -4128,7 +4128,7 @@ void func_51()
 		if (iLocal_82 == 0)
 		{
 			Local_83 = { Global_19907[Global_19899 /*3*/] };
-			Local_83.x = (Local_83.x - 10f);
+			Local_83.f_0 = (Local_83.f_0 - 10f);
 			Local_83.f_1 = (Local_83.f_1 + 20f);
 			iLocal_82 = 1;
 		}

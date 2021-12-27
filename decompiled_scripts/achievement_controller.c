@@ -691,7 +691,7 @@ void func_17(int iParam0)
 	func_90(iParam0, &Var1);
 	iVar0 = 0;
 	iVar0 = 0;
-	while (iVar0 < Var1)
+	while (iVar0 < Var1.f_0)
 	{
 		if (func_18(iParam0, Var1[iVar0 /*5*/]))
 		{
@@ -760,7 +760,7 @@ int func_18(int iParam0, int iParam1)
 		{
 			iVar40++;
 		}
-		if (func_19(iParam0, iParam1, Var45))
+		if (func_19(iParam0, iParam1, Var45.f_0))
 		{
 			if (Var45.f_4 == joaat("WAPClip"))
 			{
@@ -3930,43 +3930,43 @@ bool func_21(var uParam0, int iParam1, int iParam2, bool bParam3)
 					{
 						if (!func_76(Var54.f_3))
 						{
-							if (Var54 == joaat("WAPClip") || Var54 == joaat("WAPClip_2"))
+							if (Var54.f_0 == joaat("WAPClip") || Var54.f_0 == joaat("WAPClip_2"))
 							{
 								iVar1++;
 							}
-							else if (Var54 == joaat("WAPFlshLasr") || Var54 == joaat("WAPFlshLasr_2"))
+							else if (Var54.f_0 == joaat("WAPFlshLasr") || Var54.f_0 == joaat("WAPFlshLasr_2"))
 							{
 								iVar2++;
 							}
-							else if (Var54 == joaat("WAPScop") || Var54 == joaat("WAPScop_2"))
+							else if (Var54.f_0 == joaat("WAPScop") || Var54.f_0 == joaat("WAPScop_2"))
 							{
 								iVar3++;
 							}
-							else if (Var54 == joaat("WAPRail") || Var54 == joaat("WAPRail_2"))
+							else if (Var54.f_0 == joaat("WAPRail") || Var54.f_0 == joaat("WAPRail_2"))
 							{
 								iVar4++;
 							}
-							else if (Var54 == joaat("WAPGrip") || Var54 == joaat("WAPGrip_2"))
+							else if (Var54.f_0 == joaat("WAPGrip") || Var54.f_0 == joaat("WAPGrip_2"))
 							{
 								iVar5++;
 							}
-							else if (Var54 == joaat("WAPSupp") || Var54 == joaat("WAPSupp_2"))
+							else if (Var54.f_0 == joaat("WAPSupp") || Var54.f_0 == joaat("WAPSupp_2"))
 							{
 								iVar6++;
 							}
-							else if (Var54 == 1731751835)
+							else if (Var54.f_0 == 1731751835)
 							{
 								iVar7++;
 							}
-							else if (Var54 == joaat("gun_root"))
+							else if (Var54.f_0 == joaat("gun_root"))
 							{
 								iVar8++;
 							}
-							else if (Var54 == -31573710)
+							else if (Var54.f_0 == -31573710)
 							{
 								iVar9++;
 							}
-							else if (Var54 == -1312077031)
+							else if (Var54.f_0 == -1312077031)
 							{
 								iVar10++;
 							}
@@ -3976,43 +3976,43 @@ bool func_21(var uParam0, int iParam1, int iParam2, bool bParam3)
 							}
 							if (iVar14 == iParam2)
 							{
-								if (Var54 == joaat("WAPClip") || Var54 == joaat("WAPClip_2"))
+								if (Var54.f_0 == joaat("WAPClip") || Var54.f_0 == joaat("WAPClip_2"))
 								{
 									iVar0 = iVar1;
 								}
-								else if (Var54 == joaat("WAPFlshLasr") || Var54 == joaat("WAPFlshLasr_2"))
+								else if (Var54.f_0 == joaat("WAPFlshLasr") || Var54.f_0 == joaat("WAPFlshLasr_2"))
 								{
 									iVar0 = iVar2;
 								}
-								else if (Var54 == joaat("WAPScop") || Var54 == joaat("WAPScop_2"))
+								else if (Var54.f_0 == joaat("WAPScop") || Var54.f_0 == joaat("WAPScop_2"))
 								{
 									iVar0 = iVar3;
 								}
-								else if (Var54 == joaat("WAPRail") || Var54 == joaat("WAPRail_2"))
+								else if (Var54.f_0 == joaat("WAPRail") || Var54.f_0 == joaat("WAPRail_2"))
 								{
 									iVar0 = iVar4;
 								}
-								else if (Var54 == joaat("WAPGrip") || Var54 == joaat("WAPGrip_2"))
+								else if (Var54.f_0 == joaat("WAPGrip") || Var54.f_0 == joaat("WAPGrip_2"))
 								{
 									iVar0 = iVar5;
 								}
-								else if (Var54 == joaat("WAPSupp") || Var54 == joaat("WAPSupp_2"))
+								else if (Var54.f_0 == joaat("WAPSupp") || Var54.f_0 == joaat("WAPSupp_2"))
 								{
 									iVar0 = iVar6;
 								}
-								else if (Var54 == 1731751835)
+								else if (Var54.f_0 == 1731751835)
 								{
 									iVar0 = iVar7;
 								}
-								else if (Var54 == joaat("gun_root"))
+								else if (Var54.f_0 == joaat("gun_root"))
 								{
 									iVar0 = iVar8;
 								}
-								else if (Var54 == -31573710)
+								else if (Var54.f_0 == -31573710)
 								{
 									iVar0 = iVar9;
 								}
-								else if (Var54 == -1312077031)
+								else if (Var54.f_0 == -1312077031)
 								{
 									iVar0 = iVar10;
 								}
@@ -4020,7 +4020,7 @@ bool func_21(var uParam0, int iParam1, int iParam2, bool bParam3)
 								{
 									iVar0 = iVar11;
 								}
-								func_88(uParam0, Var54.f_3, Var54, iVar0, Var54.f_1);
+								func_88(uParam0, Var54.f_3, Var54.f_0, iVar0, Var54.f_1);
 							}
 							iVar14++;
 						}
@@ -7901,7 +7901,7 @@ void func_47(var uParam0, int iParam1)
 
 int func_48(struct<7> Param0)
 {
-	if ((((((Param0 == 0 && Param0.f_1 == 0) && Param0.f_2 == 0) && Param0.f_3 == 0) && Param0.f_4 == 0) && Param0.f_5 == 0) && Param0.f_6 == 0)
+	if ((((((Param0.f_0 == 0 && Param0.f_1 == 0) && Param0.f_2 == 0) && Param0.f_3 == 0) && Param0.f_4 == 0) && Param0.f_5 == 0) && Param0.f_6 == 0)
 	{
 		return 1;
 	}
@@ -7912,9 +7912,9 @@ var func_49(struct<6> Param0, var uParam6)
 {
 	var uVar0;
 	
-	if (Param0 > 0)
+	if (Param0.f_0 > 0)
 	{
-		func_42(&uVar0, Param0);
+		func_42(&uVar0, Param0.f_0);
 	}
 	if (Param0.f_1 > 0)
 	{
@@ -12649,38 +12649,38 @@ void func_90(int iParam0, var uParam1)
 			iVar3 = func_93(iVar0);
 			if (iVar3 != 0)
 			{
-				Var4 = WEAPON::GET_PED_WEAPONTYPE_IN_SLOT(iParam0, func_93(iVar0));
+				Var4.f_0 = WEAPON::GET_PED_WEAPONTYPE_IN_SLOT(iParam0, func_93(iVar0));
 				Var4.f_1 = 0;
 				Var4.f_2 = 0;
 				Var4.f_3 = 0;
 				Var4.f_4 = 0;
-				if (Var4 != 0 && Var4 != joaat("weapon_unarmed"))
+				if (Var4.f_0 != 0 && Var4.f_0 != joaat("weapon_unarmed"))
 				{
-					Var4.f_1 = WEAPON::GET_AMMO_IN_PED_WEAPON(iParam0, Var4);
-					if (Var4 == joaat("gadget_parachute"))
+					Var4.f_1 = WEAPON::GET_AMMO_IN_PED_WEAPON(iParam0, Var4.f_0);
+					if (Var4.f_0 == joaat("gadget_parachute"))
 					{
 						Var4.f_1 = 1;
 					}
-					Var4.f_3 = WEAPON::GET_PED_WEAPON_TINT_INDEX(iParam0, Var4);
-					Var4.f_4 = WEAPON::_0xA2C9AC24B4061285(iParam0, Var4);
+					Var4.f_3 = WEAPON::GET_PED_WEAPON_TINT_INDEX(iParam0, Var4.f_0);
+					Var4.f_4 = WEAPON::_0xA2C9AC24B4061285(iParam0, Var4.f_0);
 					if (Var4.f_1 == -1)
 					{
-						if (!WEAPON::GET_MAX_AMMO(iParam0, Var4, &(Var4.f_1)))
+						if (!WEAPON::GET_MAX_AMMO(iParam0, Var4.f_0, &(Var4.f_1)))
 						{
 							Var4.f_1 = 0;
 						}
 					}
 					(uParam1[iVar0 /*5*/])->f_1 = Var4.f_1;
 					iVar1 = 0;
-					iVar2 = func_92(Var4, iVar1);
+					iVar2 = func_92(Var4.f_0, iVar1);
 					while (iVar2 != 0)
 					{
-						if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(iParam0, Var4, iVar2))
+						if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(iParam0, Var4.f_0, iVar2))
 						{
 							MISC::SET_BIT(&(Var4.f_2), iVar1);
 						}
 						iVar1++;
-						iVar2 = func_92(Var4, iVar1);
+						iVar2 = func_92(Var4.f_0, iVar1);
 					}
 				}
 				*(uParam1[iVar0 /*5*/]) = { Var4 };
@@ -12699,22 +12699,22 @@ void func_90(int iParam0, var uParam1)
 		{
 			if ((FILES::_GET_DLC_WEAPON_DATA_SP(iVar9, &Var11) && !func_91(Var11.f_1)) && iVar72 < 51)
 			{
-				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var11))
+				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var11.f_0))
 				{
-					Var4 = Var11.f_1;
+					Var4.f_0 = Var11.f_1;
 					Var4.f_1 = 0;
 					Var4.f_2 = 0;
 					Var4.f_3 = 0;
 					Var4.f_4 = 0;
-					Var4.f_1 = WEAPON::GET_AMMO_IN_PED_WEAPON(iParam0, Var4);
-					if (WEAPON::HAS_PED_GOT_WEAPON(iParam0, Var4, false))
+					Var4.f_1 = WEAPON::GET_AMMO_IN_PED_WEAPON(iParam0, Var4.f_0);
+					if (WEAPON::HAS_PED_GOT_WEAPON(iParam0, Var4.f_0, false))
 					{
-						Var4.f_3 = WEAPON::GET_PED_WEAPON_TINT_INDEX(iParam0, Var4);
-						Var4.f_4 = WEAPON::_0xA2C9AC24B4061285(iParam0, Var4);
+						Var4.f_3 = WEAPON::GET_PED_WEAPON_TINT_INDEX(iParam0, Var4.f_0);
+						Var4.f_4 = WEAPON::_0xA2C9AC24B4061285(iParam0, Var4.f_0);
 					}
 					if (Var4.f_1 == -1)
 					{
-						if (!WEAPON::GET_MAX_AMMO(iParam0, Var4, &(Var4.f_1)))
+						if (!WEAPON::GET_MAX_AMMO(iParam0, Var4.f_0, &(Var4.f_1)))
 						{
 							Var4.f_1 = 0;
 						}
@@ -12728,7 +12728,7 @@ void func_90(int iParam0, var uParam1)
 						{
 							if (!func_76(Var50.f_3))
 							{
-								if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(iParam0, Var4, Var50.f_3))
+								if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(iParam0, Var4.f_0, Var50.f_3))
 								{
 									MISC::SET_BIT(&(Var4.f_2), iVar73);
 								}
@@ -12738,11 +12738,11 @@ void func_90(int iParam0, var uParam1)
 						iVar1++;
 					}
 				}
-				if (Var4 != 0)
+				if (Var4.f_0 != 0)
 				{
-					if (!WEAPON::HAS_PED_GOT_WEAPON(iParam0, Var4, false))
+					if (!WEAPON::HAS_PED_GOT_WEAPON(iParam0, Var4.f_0, false))
 					{
-						Var4 = 0;
+						Var4.f_0 = 0;
 						Var4.f_1 = 0;
 					}
 				}

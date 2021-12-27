@@ -1659,7 +1659,7 @@ int func_5()
 	if (func_4(iLocal_69, iLocal_467, 1) < (0.5f + 0.25f))
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_467, true) };
-		if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var0.x, Var0.f_1, (Var0.f_2 + 1f), &fVar3, false, false))
+		if (MISC::GET_GROUND_Z_FOR_3D_COORD(Var0.f_0, Var0.f_1, (Var0.f_2 + 1f), &fVar3, false, false))
 		{
 			if (MISC::ABSF((Var0.f_2 - fVar3)) < 0.1f)
 			{
@@ -1977,7 +1977,7 @@ int func_13()
 
 float func_14(struct<2> Param0, var uParam2, struct<2> Param3, float fParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 void func_15(char* sParam0, int iParam1)
@@ -3952,7 +3952,7 @@ void func_68(struct<3> Param0, int iParam3)
 				PED::DETACH_SYNCHRONIZED_SCENE(iLocal_108);
 			}
 			TASK::CLEAR_PED_TASKS_IMMEDIATELY(iLocal_69);
-			func_124(iLocal_69, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), (Param0.x + 1f), Param0.f_1, Param0.f_2), ENTITY::GET_ENTITY_HEADING(iLocal_69), 1, 0);
+			func_124(iLocal_69, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), (Param0.f_0 + 1f), Param0.f_1, Param0.f_2), ENTITY::GET_ENTITY_HEADING(iLocal_69), 1, 0);
 			PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_69, false, false);
 			func_69(0, 0);
 			iLocal_107 = 15;
@@ -6289,7 +6289,7 @@ int func_93(int iParam0)
 
 int func_94(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -7525,7 +7525,7 @@ bool func_119(var uParam0, struct<2> Param1, Vector3 vParam3)
 	{
 		if (((uParam0[iVar1 /*3*/])->f_1 < Param1.f_1 && (uParam0[iVar2 /*3*/])->f_1 >= Param1.f_1) || ((uParam0[iVar2 /*3*/])->f_1 < Param1.f_1 && (uParam0[iVar1 /*3*/])->f_1 >= Param1.f_1))
 		{
-			if (((*uParam0)[iVar1 /*3*/] + (((Param1.f_1 - (uParam0[iVar1 /*3*/])->f_1) / ((uParam0[iVar2 /*3*/])->f_1 - (uParam0[iVar1 /*3*/])->f_1)) * ((*uParam0)[iVar2 /*3*/] - (*uParam0)[iVar1 /*3*/]))) < Param1)
+			if (((*uParam0)[iVar1 /*3*/] + (((Param1.f_1 - (uParam0[iVar1 /*3*/])->f_1) / ((uParam0[iVar2 /*3*/])->f_1 - (uParam0[iVar1 /*3*/])->f_1)) * ((*uParam0)[iVar2 /*3*/] - (*uParam0)[iVar1 /*3*/]))) < Param1.f_0)
 			{
 				bVar0 = !bVar0;
 			}
@@ -7543,7 +7543,7 @@ bool func_120(int iParam0, struct<3> Param1, float fParam4)
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, true) };
 	Var3 = { Param1 - Var0 };
-	return ((Var3.x * Var3.x) + (Var3.f_1 * Var3.f_1)) <= (fParam4 * fParam4);
+	return ((Var3.f_0 * Var3.f_0) + (Var3.f_1 * Var3.f_1)) <= (fParam4 * fParam4);
 }
 
 void func_121(int iParam0, int iParam1)

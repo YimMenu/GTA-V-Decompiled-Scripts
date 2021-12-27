@@ -248,7 +248,7 @@ void __EntryFunction__()
 			if (iLocal_155)
 			{
 				iLocal_155 = 0;
-				if (Local_47 != 0)
+				if (Local_47.f_0 != 0)
 				{
 					func_33(&(Local_47.f_3), 0, 1);
 				}
@@ -278,7 +278,7 @@ void __EntryFunction__()
 			if (iLocal_156)
 			{
 				iLocal_156 = 0;
-				if (Local_47 != 0)
+				if (Local_47.f_0 != 0)
 				{
 					func_33(&(Local_47.f_3), 0, 1);
 				}
@@ -620,7 +620,7 @@ void func_31()
 	func_42();
 	func_32();
 	Global_1835431.f_9 = 1;
-	Local_47 = 0;
+	Local_47.f_0 = 0;
 	iLocal_153 = 0;
 	func_33(&(Local_47.f_3), 0, 1);
 }
@@ -2122,7 +2122,7 @@ void func_63(var uParam0, bool bParam1)
 
 int func_64(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2833,11 +2833,11 @@ Vector3 func_104(char* sParam0)
 	
 	if (DATAFILE::DATADICT_GET_TYPE(sParam0, "camp") == 3)
 	{
-		Var0.x = DATAFILE::DATADICT_GET_FLOAT(sParam0, "camp");
+		Var0.f_0 = DATAFILE::DATADICT_GET_FLOAT(sParam0, "camp");
 	}
 	else if (DATAFILE::DATADICT_GET_TYPE(sParam0, "camp") == 2)
 	{
-		Var0.x = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(sParam0, "camp"));
+		Var0.f_0 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(sParam0, "camp"));
 	}
 	if (DATAFILE::DATADICT_GET_TYPE(sParam0, "camh") == 3)
 	{
@@ -2864,11 +2864,11 @@ Vector3 func_105(char* sParam0, char* sParam1)
 		uVar3 = DATAFILE::DATADICT_GET_DICT(sParam0, sParam1);
 		if (DATAFILE::DATADICT_GET_TYPE(uVar3, "x") == 2)
 		{
-			Var0.x = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(sVar3, "x"));
+			Var0.f_0 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(sVar3, "x"));
 		}
 		else
 		{
-			Var0.x = DATAFILE::DATADICT_GET_FLOAT(sVar3, "x");
+			Var0.f_0 = DATAFILE::DATADICT_GET_FLOAT(sVar3, "x");
 		}
 		if (DATAFILE::DATADICT_GET_TYPE(sVar3, "y") == 2)
 		{
@@ -7687,7 +7687,7 @@ void func_143(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
 				Global_2883588 = Var2.f_1;
-				Global_2883589 = Var2;
+				Global_2883589 = Var2.f_0;
 				func_134(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var2.f_7), 0, 0, Var2.f_2, 0, -1, 2, 1);
 				return;
 			}
@@ -7748,7 +7748,7 @@ void func_143(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar36 = -1;
 				}
 				Global_2883588 = Var19.f_1;
-				Global_2883589 = Var19;
+				Global_2883589 = Var19.f_0;
 				func_134(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var19.f_9), Var19.f_3, Var19.f_4, Var19.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var19.f_1, joaat("OUTFIT_ONLY"), 0), iVar36, 2, Var19.f_1 != 0);
 				return;
 			}
@@ -7761,7 +7761,7 @@ void func_143(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			FILES::GET_SHOP_PED_COMPONENT(iParam3, &Var39);
 			Global_2883588 = Var39.f_1;
-			Global_2883589 = Var39;
+			Global_2883589 = Var39.f_0;
 			func_134(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 			return;
 		}
@@ -7773,7 +7773,7 @@ void func_143(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
 				Global_2883588 = Var39.f_1;
-				Global_2883589 = Var39;
+				Global_2883589 = Var39.f_0;
 				func_134(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 				return;
 			}
@@ -37407,7 +37407,7 @@ int func_281(struct<2> Param0, var uParam2, struct<3> Param3, float fParam6)
 {
 	if (!func_64(Param3))
 	{
-		if ((((Param0 + fParam6) > Param3.x && (Param0.f_1 + fParam6) > Param3.f_1) && (Param0 - fParam6) < Param3.x) && (Param0.f_1 - fParam6) < Param3.f_1)
+		if ((((Param0.f_0 + fParam6) > Param3.f_0 && (Param0.f_1 + fParam6) > Param3.f_1) && (Param0.f_0 - fParam6) < Param3.f_0) && (Param0.f_1 - fParam6) < Param3.f_1)
 		{
 			return 1;
 		}

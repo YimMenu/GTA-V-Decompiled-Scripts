@@ -331,7 +331,7 @@ void __EntryFunction__()
 		}
 		RECORDING::_0x208784099002BC30("RE_EP", 0);
 		iVar0 = 0;
-		while (iVar0 < Local_131)
+		while (iVar0 < Local_131.f_0)
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(Local_131[iVar0 /*18*/]) && !ENTITY::IS_ENTITY_DEAD(Local_131[iVar0 /*18*/], false))
 			{
@@ -340,7 +340,7 @@ void __EntryFunction__()
 			iVar0++;
 		}
 		iVar0 = 0;
-		while (iVar0 < Local_204)
+		while (iVar0 < Local_204.f_0)
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]) && !ENTITY::IS_ENTITY_DEAD(Local_204[iVar0 /*18*/], false))
 			{
@@ -574,7 +574,7 @@ void func_2()
 	int iVar0;
 	
 	iVar0 = 0;
-	while (iVar0 < Local_204)
+	while (iVar0 < Local_204.f_0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]))
 		{
@@ -1337,7 +1337,7 @@ int func_30()
 	iVar1 = -1;
 	fVar2 = 999999f;
 	iVar0 = 0;
-	while (iVar0 < Local_204)
+	while (iVar0 < Local_204.f_0)
 	{
 		if ((ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]) && !PED::IS_PED_INJURED(Local_204[iVar0 /*18*/])) && !PED::IS_PED_INJURED(iLocal_86))
 		{
@@ -1385,7 +1385,7 @@ void func_31()
 				fLocal_609[2] = -108.2056f;
 				fLocal_609[3] = 50.8189f;
 				iVar0 = 0;
-				while (iVar0 < Local_131)
+				while (iVar0 < Local_131.f_0)
 				{
 					func_69(iVar0);
 					func_67(func_68(iVar0));
@@ -1483,7 +1483,7 @@ void func_31()
 					}
 					SYSTEM::SETTIMERB(0);
 					iVar1 = 0;
-					while (iVar1 < Local_204)
+					while (iVar1 < Local_204.f_0)
 					{
 						if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar1 /*18*/]))
 						{
@@ -1492,7 +1492,7 @@ void func_31()
 						iVar1++;
 					}
 					iVar1 = 0;
-					while (iVar1 < Local_131)
+					while (iVar1 < Local_131.f_0)
 					{
 						if (ENTITY::DOES_ENTITY_EXIST(Local_131[iVar1 /*18*/]))
 						{
@@ -1620,7 +1620,7 @@ void func_31()
 				}
 			}
 			iVar0 = 0;
-			while (iVar0 < Local_131)
+			while (iVar0 < Local_131.f_0)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(Local_131[iVar0 /*18*/]) && iLocal_47 != 6)
 				{
@@ -1815,7 +1815,7 @@ void func_31()
 			if (!iLocal_618)
 			{
 				iVar0 = 0;
-				while (iVar0 < Local_131)
+				while (iVar0 < Local_131.f_0)
 				{
 					iVar5 = func_68(iVar0);
 					if (!PED::IS_PED_INJURED(Local_204[iVar5 /*18*/]))
@@ -1859,7 +1859,7 @@ void func_31()
 									{
 										TASK::SET_DRIVE_TASK_MAX_CRUISE_SPEED(Local_204[iVar5 /*18*/], fVar7);
 										iVar8 = 0;
-										while (iVar8 < Local_131)
+										while (iVar8 < Local_131.f_0)
 										{
 											if ((VEHICLE::IS_VEHICLE_DRIVEABLE(Local_131[iVar8 /*18*/], false) && !PED::IS_PED_INJURED(func_63(iVar8, 0))) && PED::IS_PED_IN_VEHICLE(func_63(iVar8, 0), Local_131[iVar8 /*18*/], false))
 											{
@@ -1950,7 +1950,7 @@ void func_31()
 			break;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_204)
+	while (iVar0 < Local_204.f_0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]) && !PED::IS_PED_INJURED(Local_204[iVar0 /*18*/]))
 		{
@@ -2056,7 +2056,7 @@ void func_31()
 	if (iLocal_47 != 7)
 	{
 		iVar0 = 0;
-		while (iVar0 < Local_131)
+		while (iVar0 < Local_131.f_0)
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(Local_131[iVar0 /*18*/]))
 			{
@@ -2224,7 +2224,7 @@ void func_35()
 			}
 		}
 		iLocal_568++;
-		if (iLocal_568 >= Local_131)
+		if (iLocal_568 >= Local_131.f_0)
 		{
 			iLocal_568 = 0;
 		}
@@ -2314,7 +2314,7 @@ float func_40(struct<3> Param0, struct<3> Param3)
 	
 	Param0 = { func_41(Param0) };
 	Param3 = { func_41(Param3) };
-	fVar0 = (MISC::ATAN2(Param3.f_1, Param3.x) - MISC::ATAN2(Param0.f_1, Param0.x));
+	fVar0 = (MISC::ATAN2(Param3.f_1, Param3.f_0) - MISC::ATAN2(Param0.f_1, Param0.f_0));
 	if (fVar0 > 180f)
 	{
 		fVar0 = (fVar0 - 360f);
@@ -2339,7 +2339,7 @@ Vector3 func_41(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -2512,7 +2512,7 @@ void func_46(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, va
 
 int func_47(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2569,7 +2569,7 @@ int func_49(int iParam0, int iParam1, int iParam2, struct<3> Param3, struct<3> P
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(iParam0), &Var7, &Var10);
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(iParam1), &Var13, &uVar16);
 		fVar19 = MISC::ABSF((Var10.f_2 - Var7.f_2));
-		fVar20 = MISC::ABSF((Var10.x - Var7.x));
+		fVar20 = MISC::ABSF((Var10.f_0 - Var7.f_0));
 		fVar21 = MISC::ABSF((Var10.f_1 - Var7.f_1));
 		if (fVar20 > fVar19)
 		{
@@ -2579,7 +2579,7 @@ int func_49(int iParam0, int iParam1, int iParam2, struct<3> Param3, struct<3> P
 		else
 		{
 			fVar22 = (fVar21 / 2f);
-			fVar23 = (fVar22 - MISC::ABSF(Var7.x));
+			fVar23 = (fVar22 - MISC::ABSF(Var7.f_0));
 		}
 		Var24.f_2 = (Var24.f_2 + (Var13.f_2 - Var7.f_2));
 		ENTITY::SET_ENTITY_COORDS(iParam2, Param3, true, false, false, true);
@@ -2640,7 +2640,7 @@ void func_50()
 				}
 			}
 			iLocal_566++;
-			if (iLocal_566 >= Local_204)
+			if (iLocal_566 >= Local_204.f_0)
 			{
 				iLocal_566 = 0;
 			}
@@ -2723,7 +2723,7 @@ void func_53(struct<3> Param0, int iParam3, int iParam4)
 	float fVar3;
 	
 	Var0 = { func_41(ENTITY::GET_ENTITY_COORDS(iParam4, true) - Param0) };
-	fVar3 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.f_1);
+	fVar3 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.f_0, Var0.f_1);
 	Local_204[iParam3 /*18*/].f_3 = { Param0 };
 	TASK::CLEAR_PED_TASKS(Local_204[iParam3 /*18*/]);
 	if (SYSTEM::VDIST(Param0, Local_204[iParam3 /*18*/].f_6) < 2f)
@@ -2785,7 +2785,7 @@ void func_55()
 	struct<3> Var4;
 	
 	iVar0 = 0;
-	while (iVar0 < Local_204)
+	while (iVar0 < Local_204.f_0)
 	{
 		if (HUD::DOES_BLIP_EXIST(Local_204[iVar0 /*18*/].f_1))
 		{
@@ -2806,7 +2806,7 @@ void func_55()
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_131)
+	while (iVar0 < Local_131.f_0)
 	{
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_131[iVar0 /*18*/], false))
 		{
@@ -2814,7 +2814,7 @@ void func_55()
 			{
 				Var1 = { HUD::GET_BLIP_COORDS(Local_131[iVar0 /*18*/].f_1) };
 				Var4 = { Local_131[iVar0 /*18*/].f_8 };
-				Var1.x = (Var1.x + ((Var4.x - Var1.x) / 10f));
+				Var1.f_0 = (Var1.f_0 + ((Var4.f_0 - Var1.f_0) / 10f));
 				Var1.f_1 = (Var1.f_1 + ((Var4.f_1 - Var1.f_1) / 10f));
 				Var1.f_2 = (Var1.f_2 + ((Var4.f_2 - Var1.f_2) / 10f));
 				HUD::SET_BLIP_COORDS(Local_131[iVar0 /*18*/].f_1, Var1);
@@ -3272,7 +3272,7 @@ int func_72()
 	iVar1 = -1;
 	fVar2 = 999999f;
 	iVar0 = 0;
-	while (iVar0 < Local_204)
+	while (iVar0 < Local_204.f_0)
 	{
 		if ((ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]) && !PED::IS_PED_INJURED(Local_204[iVar0 /*18*/])) && !PED::IS_PED_INJURED(iLocal_86))
 		{
@@ -3311,7 +3311,7 @@ int func_74()
 	int iVar0;
 	
 	iVar0 = 0;
-	while (iVar0 < Local_204)
+	while (iVar0 < Local_204.f_0)
 	{
 		if (func_75(Local_204[iVar0 /*18*/], 0, 0))
 		{
@@ -3406,7 +3406,7 @@ int func_76(struct<3> Param0, int iParam3)
 
 float func_77(struct<3> Param0, struct<3> Param3)
 {
-	return (((Param0.x * Param3.x) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
+	return (((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
 }
 
 void func_78()
@@ -3622,7 +3622,7 @@ void func_86(int iParam0, int iParam1)
 		}
 		if (func_94(iParam0, iParam1) != 322)
 		{
-			func_88(func_94(iParam0, iParam1), Local_43.x, Local_43.f_1);
+			func_88(func_94(iParam0, iParam1), Local_43.f_0, Local_43.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -4633,7 +4633,7 @@ void func_107()
 				TASK::TASK_SMART_FLEE_PED(iLocal_86, PLAYER::PLAYER_PED_ID(), 300f, -1, false, false);
 			}
 			iVar0 = 0;
-			while (iVar0 < Local_204)
+			while (iVar0 < Local_204.f_0)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]))
 				{
@@ -4653,7 +4653,7 @@ void func_107()
 				iVar0++;
 			}
 			iVar0 = 0;
-			while (iVar0 < Local_131)
+			while (iVar0 < Local_131.f_0)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(Local_131[iVar0 /*18*/]))
 				{
@@ -4676,7 +4676,7 @@ void func_107()
 		case 1:
 			iVar1 = 0;
 			iVar0 = 0;
-			while (iVar0 < Local_204)
+			while (iVar0 < Local_204.f_0)
 			{
 				if ((ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]) && !PED::IS_PED_INJURED(Local_204[iVar0 /*18*/])) && !ENTITY::IS_ENTITY_DEAD(Local_204[iVar0 /*18*/], false))
 				{
@@ -4851,7 +4851,7 @@ void func_108(char* sParam0)
 	if (!iLocal_672)
 	{
 		iVar0 = 0;
-		while (iVar0 < Local_204)
+		while (iVar0 < Local_204.f_0)
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]) && !PED::IS_PED_INJURED(Local_204[iVar0 /*18*/]))
 			{
@@ -4863,7 +4863,7 @@ void func_108(char* sParam0)
 		iLocal_672 = 1;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_204)
+	while (iVar0 < Local_204.f_0)
 	{
 		if (HUD::DOES_BLIP_EXIST(Local_204[iVar0 /*18*/].f_1))
 		{
@@ -4902,7 +4902,7 @@ void func_108(char* sParam0)
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_131)
+	while (iVar0 < Local_131.f_0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(Local_131[iVar0 /*18*/]))
 		{
@@ -4930,7 +4930,7 @@ void func_108(char* sParam0)
 		func_187(5);
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_204)
+	while (iVar0 < Local_204.f_0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]))
 		{
@@ -4963,7 +4963,7 @@ void func_108(char* sParam0)
 				if (func_5(&Local_395, cLocal_372, sParam0, 4, 0, 0, 0))
 				{
 					iVar0 = 0;
-					while (iVar0 < Local_204)
+					while (iVar0 < Local_204.f_0)
 					{
 						if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]))
 						{
@@ -4980,7 +4980,7 @@ void func_108(char* sParam0)
 			else
 			{
 				iVar0 = 0;
-				while (iVar0 < Local_204)
+				while (iVar0 < Local_204.f_0)
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar0 /*18*/]))
 					{
@@ -9063,7 +9063,7 @@ void func_199()
 		TASK::TASK_SMART_FLEE_PED(iLocal_86, PLAYER::PLAYER_PED_ID(), 300f, -1, false, false);
 	}
 	iVar0 = 0;
-	while (iVar0 < Local_204)
+	while (iVar0 < Local_204.f_0)
 	{
 		if (!PED::IS_PED_INJURED(Local_204[iVar0 /*18*/]))
 		{
@@ -9082,7 +9082,7 @@ int func_200()
 	
 	iVar0 = 0;
 	iVar1 = 0;
-	while (iVar1 < Local_204)
+	while (iVar1 < Local_204.f_0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(Local_204[iVar1 /*18*/]) && !PED::IS_PED_INJURED(Local_204[iVar1 /*18*/]))
 		{
@@ -9101,7 +9101,7 @@ int func_200()
 		iVar0 = 1;
 	}
 	iVar1 = 0;
-	while (iVar1 < Local_131)
+	while (iVar1 < Local_131.f_0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(Local_131[iVar1 /*18*/]))
 		{
@@ -11083,9 +11083,9 @@ bool func_238(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_239(int iParam0)

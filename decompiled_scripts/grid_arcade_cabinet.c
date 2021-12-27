@@ -1885,7 +1885,7 @@ void func_58(int iParam0, int iParam1, int iParam2, var uParam3, var uParam4, in
 	struct<7> Var0;
 	int iVar7;
 	
-	Var0 = -1605670950;
+	Var0.f_0 = -1605670950;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	Var0.f_3 = iParam2;
@@ -2011,13 +2011,13 @@ void func_65(var uParam0, int iParam1, int iParam2)
 		}
 		if (iVar0 <= iVar1)
 		{
-			Var3.x = (*uParam0)[iVar0 /*3*/];
+			Var3.f_0 = (*uParam0)[iVar0 /*3*/];
 			Var3.f_2 = (uParam0[iVar0 /*3*/])->f_2;
 			Var3.f_1 = (uParam0[iVar0 /*3*/])->f_1;
 			(*uParam0)[iVar0 /*3*/] = (*uParam0)[iVar1 /*3*/];
 			(uParam0[iVar0 /*3*/])->f_2 = (uParam0[iVar1 /*3*/])->f_2;
 			(uParam0[iVar0 /*3*/])->f_1 = (uParam0[iVar1 /*3*/])->f_1;
-			(*uParam0)[iVar1 /*3*/] = Var3.x;
+			(*uParam0)[iVar1 /*3*/] = Var3.f_0;
 			(uParam0[iVar1 /*3*/])->f_2 = Var3.f_2;
 			(uParam0[iVar1 /*3*/])->f_1 = Var3.f_1;
 			iVar0++;
@@ -3436,7 +3436,7 @@ void func_108(int iParam0)
 	Var6.f_3 = 255;
 	if (Local_1083[iParam0 /*17*/].f_3)
 	{
-		Var0 = -Var0;
+		Var0.f_0 = -Var0.f_0;
 	}
 	Var2 = { func_118() };
 	if (!Local_1083[iParam0 /*17*/].f_2)
@@ -3464,7 +3464,7 @@ void func_108(int iParam0)
 	if (Local_1083[iParam0 /*17*/].f_1)
 	{
 		fVar10 = (SYSTEM::TO_FLOAT(Local_1083[iParam0 /*17*/].f_5) / SYSTEM::TO_FLOAT(Local_1083[iParam0 /*17*/].f_8));
-		Var6 = func_117(Local_1083[iParam0 /*17*/].f_9, Local_1083[iParam0 /*17*/].f_13, fVar10);
+		Var6.f_0 = func_117(Local_1083[iParam0 /*17*/].f_9, Local_1083[iParam0 /*17*/].f_13, fVar10);
 		Var6.f_1 = func_117(Local_1083[iParam0 /*17*/].f_9.f_1, Local_1083[iParam0 /*17*/].f_13.f_1, fVar10);
 		Var6.f_2 = func_117(Local_1083[iParam0 /*17*/].f_9.f_2, Local_1083[iParam0 /*17*/].f_13.f_2, fVar10);
 		Var6.f_3 = func_117(Local_1083[iParam0 /*17*/].f_9.f_3, Local_1083[iParam0 /*17*/].f_13.f_3, fVar10);
@@ -3508,19 +3508,19 @@ void func_109(char* sParam0, char* sParam1, struct<2> Param2, struct<2> Param4, 
 {
 	Param2 = { func_110(Param2) };
 	Param4 = { func_110(Param4) };
-	func_126(sParam0, sParam1, Param2, Param2.f_1, Param4, Param4.f_1, fParam6, Param7);
+	func_126(sParam0, sParam1, Param2.f_0, Param2.f_1, Param4.f_0, Param4.f_1, fParam6, Param7);
 }
 
 struct<2> func_110(struct<2> Param0)
 {
-	return func_111((Param0 * (1f / 1920f)), (Param0.f_1 * (1f / 1080f)));
+	return func_111((Param0.f_0 * (1f / 1920f)), (Param0.f_1 * (1f / 1080f)));
 }
 
 struct<2> func_111(float fParam0, float fParam1)
 {
 	struct<2> Var0;
 	
-	Var0 = fParam0;
+	Var0.f_0 = fParam0;
 	Var0.f_1 = fParam1;
 	return Var0;
 }
@@ -3574,13 +3574,13 @@ void func_113(struct<2> Param0, struct<2> Param2, struct<4> Param4)
 void func_114(struct<2> Param0, struct<2> Param2, struct<4> Param4)
 {
 	Param0 = { func_115(Param0) };
-	Param2 = (Param2 * fLocal_148);
-	GRAPHICS::DRAW_RECT(Param0, Param0.f_1, Param2, Param2.f_1, Param4, Param4.f_1, Param4.f_2, Param4.f_3, false);
+	Param2.f_0 = (Param2.f_0 * fLocal_148);
+	GRAPHICS::DRAW_RECT(Param0.f_0, Param0.f_1, Param2.f_0, Param2.f_1, Param4.f_0, Param4.f_1, Param4.f_2, Param4.f_3, false);
 }
 
 struct<2> func_115(struct<2> Param0)
 {
-	Param0 = func_125(Param0);
+	Param0.f_0 = func_125(Param0.f_0);
 	return Param0;
 }
 
@@ -3851,7 +3851,7 @@ void func_126(char* sParam0, char* sParam1, float fParam2, float fParam3, float 
 	fParam3 = (SYSTEM::TO_FLOAT(iVar0) * (1f / IntToFloat(iLocal_150)));
 	iVar0 = SYSTEM::ROUND(((fParam5 * IntToFloat(iLocal_150)) / 4f)) * 4;
 	fParam5 = (SYSTEM::TO_FLOAT(iVar0) * (1f / IntToFloat(iLocal_150)));
-	GRAPHICS::_0x2D3B147AFAD49DE0(sParam0, sParam1, func_125(fParam2), fParam3, (fParam4 * fLocal_148), fParam5, fParam6, Param7, Param7.f_1, Param7.f_2, Param7.f_3, 0);
+	GRAPHICS::_0x2D3B147AFAD49DE0(sParam0, sParam1, func_125(fParam2), fParam3, (fParam4 * fLocal_148), fParam5, fParam6, Param7.f_0, Param7.f_1, Param7.f_2, Param7.f_3, 0);
 }
 
 void func_127()
@@ -4058,7 +4058,7 @@ void func_137()
 	struct<2> Var0;
 	int iVar2;
 	
-	Var0 = -713331550;
+	Var0.f_0 = -713331550;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	iVar2 = func_138(1);
 	if (!iVar2 == 0)
@@ -4146,13 +4146,13 @@ void func_140()
 			HUD::SET_TEXT_CENTRE(true);
 			HUD::SET_TEXT_FONT(7);
 			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(func_121(iVar8));
-			HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6 + 0.001041667f)), (0.205f + 0.003703704f), 0);
+			HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6.f_0 + 0.001041667f)), (0.205f + 0.003703704f), 0);
 			HUD::SET_TEXT_SCALE(1.1f, 1.1f);
 			HUD::SET_TEXT_COLOUR(Local_173.f_107[iVar5 /*4*/], Local_173.f_107[iVar5 /*4*/].f_1, Local_173.f_107[iVar5 /*4*/].f_2, 255);
 			HUD::SET_TEXT_CENTRE(true);
 			HUD::SET_TEXT_FONT(7);
 			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(func_121(iVar8));
-			HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var6), 0.205f, 0);
+			HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var6.f_0), 0.205f, 0);
 			iVar9 = Local_832[Local_173.f_149[iVar5] /*9*/].f_8;
 			HUD::SET_TEXT_SCALE(0.75f, 0.75f);
 			HUD::SET_TEXT_COLOUR(0, 0, 0, 255);
@@ -4160,14 +4160,14 @@ void func_140()
 			HUD::SET_TEXT_FONT(7);
 			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("SCGW_PTS");
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iVar9);
-			HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6 + 0.001041667f)), (0.26f + 0.003703704f), 0);
+			HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6.f_0 + 0.001041667f)), (0.26f + 0.003703704f), 0);
 			HUD::SET_TEXT_SCALE(0.75f, 0.75f);
 			HUD::SET_TEXT_COLOUR(Local_173.f_107[iVar5 /*4*/], Local_173.f_107[iVar5 /*4*/].f_1, Local_173.f_107[iVar5 /*4*/].f_2, 255);
 			HUD::SET_TEXT_CENTRE(true);
 			HUD::SET_TEXT_FONT(7);
 			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("SCGW_PTS");
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iVar9);
-			HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var6), 0.26f, 0);
+			HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var6.f_0), 0.26f, 0);
 			if (Local_173.f_149[iVar5] != Local_173.f_178)
 			{
 			}
@@ -4183,7 +4183,7 @@ void func_140()
 				HUD::SET_TEXT_FONT(7);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
 				HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(func_120(uVar0[0]));
-				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(((Var6 - 0.025f) + 0.001041667f)), (0.875f + 0.003703704f), 0);
+				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(((Var6.f_0 - 0.025f) + 0.001041667f)), (0.875f + 0.003703704f), 0);
 				HUD::SET_TEXT_SCALE(0.95f, 0.95f);
 				if (Local_173.f_432 == 0)
 				{
@@ -4197,7 +4197,7 @@ void func_140()
 				HUD::SET_TEXT_FONT(7);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
 				HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(func_120(uVar0[0]));
-				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6 - 0.025f)), 0.875f, 0);
+				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6.f_0 - 0.025f)), 0.875f, 0);
 				func_122(Local_832[Local_173.f_149[iVar5] /*9*/].f_7, &uVar0);
 				HUD::SET_TEXT_SCALE(0.95f, 0.95f);
 				HUD::SET_TEXT_COLOUR(0, 0, 0, 255);
@@ -4205,7 +4205,7 @@ void func_140()
 				HUD::SET_TEXT_FONT(7);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
 				HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(func_120(uVar0[1]));
-				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6 + 0.001041667f)), (0.875f + 0.003703704f), 0);
+				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6.f_0 + 0.001041667f)), (0.875f + 0.003703704f), 0);
 				HUD::SET_TEXT_SCALE(0.95f, 0.95f);
 				if (Local_173.f_432 == 1)
 				{
@@ -4219,7 +4219,7 @@ void func_140()
 				HUD::SET_TEXT_FONT(7);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
 				HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(func_120(uVar0[1]));
-				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var6), 0.875f, 0);
+				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var6.f_0), 0.875f, 0);
 				func_122(Local_832[Local_173.f_149[iVar5] /*9*/].f_7, &uVar0);
 				HUD::SET_TEXT_SCALE(0.95f, 0.95f);
 				HUD::SET_TEXT_COLOUR(0, 0, 0, 255);
@@ -4227,7 +4227,7 @@ void func_140()
 				HUD::SET_TEXT_FONT(7);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
 				HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(func_120(uVar0[2]));
-				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(((Var6 + 0.025f) + 0.001041667f)), (0.875f + 0.003703704f), 0);
+				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(((Var6.f_0 + 0.025f) + 0.001041667f)), (0.875f + 0.003703704f), 0);
 				HUD::SET_TEXT_SCALE(0.95f, 0.95f);
 				if (Local_173.f_432 == 2)
 				{
@@ -4241,7 +4241,7 @@ void func_140()
 				HUD::SET_TEXT_FONT(7);
 				HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
 				HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(func_120(uVar0[2]));
-				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6 + 0.025f)), 0.875f, 0);
+				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var6.f_0 + 0.025f)), 0.875f, 0);
 			}
 		}
 		iVar5++;
@@ -4283,7 +4283,7 @@ void func_142(int iParam0, bool bParam1)
 	
 	Var0 = { func_141(iParam0) };
 	Var2 = { func_149() };
-	func_126(func_148(iParam0), func_147(iParam0), Var0, Var0.f_1, Var2, Var2.f_1, 0f, Local_173.f_107.f_17);
+	func_126(func_148(iParam0), func_147(iParam0), Var0.f_0, Var0.f_1, Var2.f_0, Var2.f_1, 0f, Local_173.f_107.f_17);
 	if (Local_173.f_149[iParam0] == Local_173.f_178)
 	{
 		Var4 = { Local_173.f_107[iParam0 /*4*/] };
@@ -4292,7 +4292,7 @@ void func_142(int iParam0, bool bParam1)
 			Var4.f_3 = SYSTEM::ROUND(MISC::TAN((SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) * 0.25f))) * 255;
 		}
 		Var8 = { func_146(iParam0) };
-		func_126("MPArcadeCabinetGridHUD", "gang_lobby_player_highlight", Var8, Var8.f_1, 0.1625f, 0.05185185f, 0f, Var4);
+		func_126("MPArcadeCabinetGridHUD", "gang_lobby_player_highlight", Var8.f_0, Var8.f_1, 0.1625f, 0.05185185f, 0f, Var4);
 	}
 	if (Local_173.f_149[iParam0] != -1)
 	{
@@ -4328,7 +4328,7 @@ void func_142(int iParam0, bool bParam1)
 			}
 			HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&cVar10);
 		}
-		HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var0), 0.845f, 0);
+		HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var0.f_0), 0.845f, 0);
 	}
 	if (bParam1)
 	{
@@ -4341,13 +4341,13 @@ void func_142(int iParam0, bool bParam1)
 		HUD::SET_TEXT_CENTRE(true);
 		HUD::SET_TEXT_FONT(7);
 		HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("SCGW_R");
-		HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var0 + 0.001041667f)), (0.23f + 0.003703704f), 0);
+		HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125((Var0.f_0 + 0.001041667f)), (0.23f + 0.003703704f), 0);
 		HUD::SET_TEXT_SCALE(0.95f, 0.95f);
 		HUD::SET_TEXT_COLOUR(Local_173.f_107[iParam0 /*4*/], Local_173.f_107[iParam0 /*4*/].f_1, Local_173.f_107[iParam0 /*4*/].f_2, 255);
 		HUD::SET_TEXT_CENTRE(true);
 		HUD::SET_TEXT_FONT(7);
 		HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("SCGW_R");
-		HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var0), 0.23f, 0);
+		HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_125(Var0.f_0), 0.23f, 0);
 	}
 	if (Local_173.f_154[iParam0] != -2147483647 && (NETWORK::GET_NETWORK_TIME() - Local_173.f_154[iParam0]) <= 1000)
 	{
@@ -5200,7 +5200,7 @@ void func_178(int iParam0, int iParam1)
 
 struct<4> func_179(struct<4> Param0, float fParam4)
 {
-	Param0 = SYSTEM::ROUND(((IntToFloat((255 - Param0)) * fParam4) + IntToFloat(Param0)));
+	Param0.f_0 = SYSTEM::ROUND(((IntToFloat((255 - Param0.f_0)) * fParam4) + IntToFloat(Param0.f_0)));
 	Param0.f_1 = SYSTEM::ROUND(((IntToFloat((255 - Param0.f_1)) * fParam4) + IntToFloat(Param0.f_1)));
 	Param0.f_2 = SYSTEM::ROUND(((IntToFloat((255 - Param0.f_2)) * fParam4) + IntToFloat(Param0.f_2)));
 	return Param0;
@@ -5279,14 +5279,14 @@ void func_181()
 	{
 		Var21 = { Local_173.f_107.f_17 };
 		Var21.f_3 = iVar4;
-		func_126("MPArcadeCabinetGridHUD", "text_bkgd_blur", Var2, Var2.f_1, 0.3125f, 0.1481481f, 0f, Var21);
+		func_126("MPArcadeCabinetGridHUD", "text_bkgd_blur", Var2.f_0, Var2.f_1, 0.3125f, 0.1481481f, 0f, Var21);
 	}
-	func_126("MPArcadeCabinetGridHUD", "text_winner", Var2, Var2.f_1, 0.3125f, 0.1481481f, 0f, Local_173.f_107.f_17);
+	func_126("MPArcadeCabinetGridHUD", "text_winner", Var2.f_0, Var2.f_1, 0.3125f, 0.1481481f, 0f, Local_173.f_107.f_17);
 	if (bVar1)
 	{
 		StringCopy(&Var25, "MPArcadeCabinetGridPlayer", 64);
 		StringConCat(&Var25, Local_173.f_422[Local_832[Local_626.f_130 /*9*/].f_6], 64);
-		func_126(&Var25, &cVar5, Var2, (Var2.f_1 + 0.07407407f), 0.3125f, 0.1481481f, 0f, Local_173.f_107[Local_832[Local_626.f_130 /*9*/].f_6 /*4*/]);
+		func_126(&Var25, &cVar5, Var2.f_0, (Var2.f_1 + 0.07407407f), 0.3125f, 0.1481481f, 0f, Local_173.f_107[Local_832[Local_626.f_130 /*9*/].f_6 /*4*/]);
 	}
 }
 
@@ -5333,7 +5333,7 @@ void func_183()
 					if (func_84(&(Local_626.f_85[iVar2 /*11*/][1 /*5*/]), iVar3))
 					{
 						Var5 = { func_186(func_187(func_188(iVar3), func_188(iVar4)), 2f) };
-						func_126("MPArcadeCabinetGrid", "player_trail", Var5, Var5.f_1, 0.05208333f, 0.02962963f, 0f, Local_173.f_107[iVar2 /*4*/]);
+						func_126("MPArcadeCabinetGrid", "player_trail", Var5.f_0, Var5.f_1, 0.05208333f, 0.02962963f, 0f, Local_173.f_107[iVar2 /*4*/]);
 					}
 					else
 					{
@@ -5350,7 +5350,7 @@ void func_183()
 					if (func_84(&(Local_626.f_85[iVar2 /*11*/][0 /*5*/]), iVar3))
 					{
 						Var8 = { func_186(func_187(func_188(iVar3), func_188(iVar7)), 2f) };
-						func_126("MPArcadeCabinetGrid", "player_trail", Var8, Var8.f_1, 0.05208333f, 0.02962963f, 90f, Local_173.f_107[iVar2 /*4*/]);
+						func_126("MPArcadeCabinetGrid", "player_trail", Var8.f_0, Var8.f_1, 0.05208333f, 0.02962963f, 90f, Local_173.f_107[iVar2 /*4*/]);
 					}
 					else
 					{
@@ -5405,7 +5405,7 @@ void func_183()
 					else
 					{
 						Var21 = { func_186(func_187(func_188(Local_869[iVar18 /*16*/].f_1), func_188(Local_869[iVar18 /*16*/])), 2f) };
-						func_126("MPArcadeCabinetGrid", "player_trail", Var21, Var21.f_1, 0.05208333f, 0.02962963f, 0f, Var14);
+						func_126("MPArcadeCabinetGrid", "player_trail", Var21.f_0, Var21.f_1, 0.05208333f, 0.02962963f, 0f, Var14);
 						Jump @804; //curOff = 660
 						if (iVar13 != iVar11)
 						{
@@ -5423,7 +5423,7 @@ void func_183()
 							else
 							{
 								Var23 = { func_186(func_187(func_188(Local_869[iVar18 /*16*/].f_1), func_188(Local_869[iVar18 /*16*/])), 2f) };
-								func_126("MPArcadeCabinetGrid", "player_trail", Var23, Var23.f_1, 0.05208333f, 0.02962963f, 90f, Var14);
+								func_126("MPArcadeCabinetGrid", "player_trail", Var23.f_0, Var23.f_1, 0.05208333f, 0.02962963f, 90f, Var14);
 							}
 						}
 					}
@@ -5445,7 +5445,7 @@ struct<2> func_186(struct<2> Param0, float fParam2)
 {
 	struct<2> Var0;
 	
-	Var0 = (Param0 / fParam2);
+	Var0.f_0 = (Param0.f_0 / fParam2);
 	Var0.f_1 = (Param0.f_1 / fParam2);
 	return Var0;
 }
@@ -5454,7 +5454,7 @@ struct<2> func_187(struct<2> Param0, struct<2> Param2)
 {
 	struct<2> Var0;
 	
-	Var0 = (Param0 + Param2);
+	Var0.f_0 = (Param0.f_0 + Param2.f_0);
 	Var0.f_1 = (Param0.f_1 + Param2.f_1);
 	return Var0;
 }
@@ -5466,7 +5466,7 @@ struct<2> func_188(int iParam0)
 	struct<2> Var2;
 	
 	func_185(iParam0, &iVar0, &iVar1);
-	Var2 = (0.1380207f + (0.0520835f * IntToFloat(iVar0 + 1)));
+	Var2.f_0 = (0.1380207f + (0.0520835f * IntToFloat(iVar0 + 1)));
 	Var2.f_1 = (0.06851837f + (0.0925925f * IntToFloat(iVar1 + 1)));
 	return Var2;
 }
@@ -5493,7 +5493,7 @@ void func_189()
 			iVar18 = Local_626.f_31[iVar0 /*5*/][iVar1] + 1;
 			StringIntConCat(&Var2, iVar18, 64);
 			Var19 = { func_192(iVar0, iVar1) };
-			func_126("MPArcadeCabinetGridTiles", &Var2, Var19, Var19.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
+			func_126("MPArcadeCabinetGridTiles", &Var2, Var19.f_0, Var19.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
 			func_190(iVar0, iVar1);
 			iVar1++;
 		}
@@ -5503,18 +5503,18 @@ void func_189()
 	while (iVar0 <= 6)
 	{
 		Var21 = { func_192(iVar0, -1) };
-		func_126("MPArcadeCabinetGridTiles", "top_down_tile_1", Var21, Var21.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
+		func_126("MPArcadeCabinetGridTiles", "top_down_tile_1", Var21.f_0, Var21.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
 		Var23 = { func_192(iVar0, 4) };
-		func_126("MPArcadeCabinetGridTiles", "top_down_tile_1", Var23, Var23.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
+		func_126("MPArcadeCabinetGridTiles", "top_down_tile_1", Var23.f_0, Var23.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
 		iVar0++;
 	}
 	iVar0 = 0;
 	while (iVar0 <= 3)
 	{
 		Var25 = { func_192(-1, iVar0) };
-		func_126("MPArcadeCabinetGridTiles", "top_down_tile_1", Var25, Var25.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
+		func_126("MPArcadeCabinetGridTiles", "top_down_tile_1", Var25.f_0, Var25.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
 		Var27 = { func_192(6, iVar0) };
-		func_126("MPArcadeCabinetGridTiles", "top_down_tile_1", Var27, Var27.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
+		func_126("MPArcadeCabinetGridTiles", "top_down_tile_1", Var27.f_0, Var27.f_1, 0.104167f, 0.185185f, 0f, Local_173.f_107.f_17);
 		iVar0++;
 	}
 }
@@ -5546,7 +5546,7 @@ void func_190(int iParam0, int iParam1)
 			{
 				fVar19 = 1f;
 			}
-			Var17 = func_143(0f, 0.070833f, fVar19, 2);
+			Var17.f_0 = func_143(0f, 0.070833f, fVar19, 2);
 			Var17.f_1 = func_143(0f, 0.125926f, fVar19, 2);
 		}
 		else
@@ -5562,7 +5562,7 @@ void func_190(int iParam0, int iParam1)
 		{
 			fVar19 = 1f;
 		}
-		Var17 = func_143(0.070833f, 0f, fVar19, 1);
+		Var17.f_0 = func_143(0.070833f, 0f, fVar19, 1);
 		Var17.f_1 = func_143(0.125926f, 0f, fVar19, 1);
 	}
 	else
@@ -5575,7 +5575,7 @@ void func_190(int iParam0, int iParam1)
 		StringCopy(&Var0, "gang_logo_", 64);
 		StringConCat(&Var0, Local_173.f_422[iVar16], 64);
 		Var20 = { func_192(iParam0, iParam1) };
-		func_126("MPArcadeCabinetGrid", &Var0, Var20, Var20.f_1, Var17, Var17.f_1, 0f, Local_173.f_107[iVar16 /*4*/]);
+		func_126("MPArcadeCabinetGrid", &Var0, Var20.f_0, Var20.f_1, Var17.f_0, Var17.f_1, 0f, Local_173.f_107[iVar16 /*4*/]);
 	}
 	Local_173.f_318[iParam0 /*5*/][iParam1] = Local_626[iParam0 /*5*/][iParam1];
 }
@@ -5596,7 +5596,7 @@ struct<2> func_192(int iParam0, int iParam1)
 {
 	struct<2> Var0;
 	
-	Var0 = (0.1380207f + (0.1041665f * IntToFloat(iParam0 + 1)));
+	Var0.f_0 = (0.1380207f + (0.1041665f * IntToFloat(iParam0 + 1)));
 	Var0.f_1 = (0.06851837f + (0.1851855f * IntToFloat(iParam1 + 1)));
 	return Var0;
 }
@@ -5647,7 +5647,7 @@ void func_194()
 	}
 	StringCopy(&Var18, "MPArcadeCabinetGridPlayer", 64);
 	StringConCat(&Var18, Local_173.f_422[Local_832[Local_626.f_131[(Local_626.f_137 - 1)] /*9*/].f_6], 64);
-	func_126(&Var18, &cVar2, Var0, ((Var0.f_1 + 0.07407407f) + ((0.2407407f - 0.1481481f) / 2f)), 0.3125f, 0.1481481f, 0f, Local_173.f_107[Local_832[Local_626.f_131[(Local_626.f_137 - 1)] /*9*/].f_6 /*4*/]);
+	func_126(&Var18, &cVar2, Var0.f_0, ((Var0.f_1 + 0.07407407f) + ((0.2407407f - 0.1481481f) / 2f)), 0.3125f, 0.1481481f, 0f, Local_173.f_107[Local_832[Local_626.f_131[(Local_626.f_137 - 1)] /*9*/].f_6 /*4*/]);
 }
 
 void func_195()
@@ -5795,8 +5795,8 @@ void func_198()
 		return;
 	}
 	Var0 = { func_111(0.5f, (0.5f + -0.005f)) };
-	func_126("MPArcadeCabinetGridHUD", "TEXT_SUDDEN", Var0, Var0.f_1, 0.2666667f, 0.1481481f, 0f, Local_173.f_107.f_17);
-	func_126("MPArcadeCabinetGridHUD", "TEXT_DEATH", Var0, (Var0.f_1 + 0.07407407f), 0.2666667f, 0.1148148f, 0f, Local_173.f_107.f_17);
+	func_126("MPArcadeCabinetGridHUD", "TEXT_SUDDEN", Var0.f_0, Var0.f_1, 0.2666667f, 0.1481481f, 0f, Local_173.f_107.f_17);
+	func_126("MPArcadeCabinetGridHUD", "TEXT_DEATH", Var0.f_0, (Var0.f_1 + 0.07407407f), 0.2666667f, 0.1148148f, 0f, Local_173.f_107.f_17);
 }
 
 void func_199()
@@ -5991,7 +5991,7 @@ void func_203()
 	{
 		return;
 	}
-	func_126("MPArcadeCabinetGrid", func_204(Local_173.f_438), Local_173.f_439, Local_173.f_439.f_1, Var0, Var0.f_1, 0f, Local_173.f_107.f_17);
+	func_126("MPArcadeCabinetGrid", func_204(Local_173.f_438), Local_173.f_439, Local_173.f_439.f_1, Var0.f_0, Var0.f_1, 0f, Local_173.f_107.f_17);
 }
 
 char* func_204(int iParam0)
@@ -6019,12 +6019,12 @@ int func_205(struct<2> Param0, struct<2> Param2)
 	float fVar2;
 	float fVar3;
 	
-	fVar0 = (Param0 - (Param2 / 2f));
+	fVar0 = (Param0.f_0 - (Param2.f_0 / 2f));
 	if (fVar0 > (1f - 0.15625f))
 	{
 		return 1;
 	}
-	fVar1 = (Param0 + (Param2 / 2f));
+	fVar1 = (Param0.f_0 + (Param2.f_0 / 2f));
 	if (fVar1 < 0.15625f)
 	{
 		return 1;
@@ -6077,7 +6077,7 @@ void func_207()
 			StringCopy(&Var1, "fire_ball", 64);
 			StringIntConCat(&Var1, Local_173.f_159[iVar0 /*3*/] + 1, 64);
 			Var17 = { func_111((0.066667f / 2f), (0.118519f / 2f)) };
-			func_126("MPArcadeCabinetGrid", &Var1, Local_173.f_159[iVar0 /*3*/].f_1, Local_173.f_159[iVar0 /*3*/].f_1.f_1, Var17, Var17.f_1, 0f, Local_173.f_107.f_17);
+			func_126("MPArcadeCabinetGrid", &Var1, Local_173.f_159[iVar0 /*3*/].f_1, Local_173.f_159[iVar0 /*3*/].f_1.f_1, Var17.f_0, Var17.f_1, 0f, Local_173.f_107.f_17);
 			Local_173.f_159[iVar0 /*3*/] = (Local_173.f_159[iVar0 /*3*/] + Local_173.f_412);
 			if (Local_173.f_159[iVar0 /*3*/] >= 9)
 			{
@@ -6186,22 +6186,22 @@ void func_211(int iParam0)
 	if (Local_626.f_148[iParam0 /*4*/].f_2 == 1)
 	{
 		Var2 = { func_188(func_74(iVar0, 0)) };
-		func_126("MPArcadeCabinetGridHUD", "vehicle_alert", Var2, (Var2.f_1 + -0.011f), 0.02083333f, 0.01851852f, 180f, func_213(Local_626.f_148[iParam0 /*4*/].f_3));
+		func_126("MPArcadeCabinetGridHUD", "vehicle_alert", Var2.f_0, (Var2.f_1 + -0.011f), 0.02083333f, 0.01851852f, 180f, func_213(Local_626.f_148[iParam0 /*4*/].f_3));
 	}
 	else if (Local_626.f_148[iParam0 /*4*/].f_2 == 0)
 	{
 		Var2 = { func_188(func_74(iVar0, 8)) };
-		func_126("MPArcadeCabinetGridHUD", "vehicle_alert", Var2, (Var2.f_1 + 0.023f), 0.02083333f, 0.01851852f, 0f, func_213(Local_626.f_148[iParam0 /*4*/].f_3));
+		func_126("MPArcadeCabinetGridHUD", "vehicle_alert", Var2.f_0, (Var2.f_1 + 0.023f), 0.02083333f, 0.01851852f, 0f, func_213(Local_626.f_148[iParam0 /*4*/].f_3));
 	}
 	else if (Local_626.f_148[iParam0 /*4*/].f_2 == 3)
 	{
 		Var2 = { func_188(func_74(0, iVar1)) };
-		func_126("MPArcadeCabinetGridHUD", "vehicle_alert", (Var2 + func_212(iVar1, 1)), Var2.f_1, 0.02083333f, 0.01851852f, 90f, func_213(Local_626.f_148[iParam0 /*4*/].f_3));
+		func_126("MPArcadeCabinetGridHUD", "vehicle_alert", (Var2.f_0 + func_212(iVar1, 1)), Var2.f_1, 0.02083333f, 0.01851852f, 90f, func_213(Local_626.f_148[iParam0 /*4*/].f_3));
 	}
 	else if (Local_626.f_148[iParam0 /*4*/].f_2 == 2)
 	{
 		Var2 = { func_188(func_74(12, iVar1)) };
-		func_126("MPArcadeCabinetGridHUD", "vehicle_alert", (Var2 + func_212(iVar1, 0)), Var2.f_1, 0.02083333f, 0.01851852f, -90f, func_213(Local_626.f_148[iParam0 /*4*/].f_3));
+		func_126("MPArcadeCabinetGridHUD", "vehicle_alert", (Var2.f_0 + func_212(iVar1, 0)), Var2.f_1, 0.02083333f, 0.01851852f, -90f, func_213(Local_626.f_148[iParam0 /*4*/].f_3));
 	}
 }
 
@@ -6388,7 +6388,7 @@ void func_216(int iParam0)
 		{
 			Var55 = { func_187(Var55, func_111((0.002604167f * SYSTEM::COS(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()))), (0.00462963f * SYSTEM::SIN(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()))))) };
 		}
-		func_126(&Var0, &cVar38, Var55, Var55.f_1, 0.033333f, 0.059259f, fVar37, Var32);
+		func_126(&Var0, &cVar38, Var55.f_0, Var55.f_1, 0.033333f, 0.059259f, fVar37, Var32);
 		Var32.f_3 = iVar54;
 	}
 	func_126(&Var0, &cVar38, Local_173.f_204[iParam0 /*19*/], Local_173.f_204[iParam0 /*19*/].f_1, 0.033333f, 0.059259f, fVar37, Var32);
@@ -6397,7 +6397,7 @@ void func_216(int iParam0)
 		StringCopy(&Var57, "muzzle_flare_", 64);
 		StringIntConCat(&Var57, Local_173.f_204[iParam0 /*19*/].f_5 + 1, 64);
 		Var73 = { func_217(iParam0, fVar37) };
-		func_126("MPArcadeCabinetGrid", &Var57, Var73, Var73.f_1, 0.01666667f, 0.02962963f, fVar37, Var32);
+		func_126("MPArcadeCabinetGrid", &Var57, Var73.f_0, Var73.f_1, 0.01666667f, 0.02962963f, fVar37, Var32);
 		Local_173.f_204[iParam0 /*19*/].f_5 = (Local_173.f_204[iParam0 /*19*/].f_5 + Local_173.f_412);
 		if (Local_173.f_204[iParam0 /*19*/].f_5 >= 3)
 		{
@@ -6439,18 +6439,18 @@ struct<2> func_218(struct<2> Param0, struct<2> Param2, float fParam4)
 	
 	fVar2 = SYSTEM::SIN(fParam4);
 	fVar3 = SYSTEM::COS(fParam4);
-	Var0 = (Param2 - Param0);
+	Var0.f_0 = (Param2.f_0 - Param0.f_0);
 	Var0.f_1 = (Param2.f_1 - Param0.f_1);
-	fVar4 = ((Var0 * fVar3) - (Var0.f_1 * fVar2));
-	fVar5 = ((Var0 * fVar2) + (Var0.f_1 * fVar3));
-	Var0 = (fVar4 + Param0);
+	fVar4 = ((Var0.f_0 * fVar3) - (Var0.f_1 * fVar2));
+	fVar5 = ((Var0.f_0 * fVar2) + (Var0.f_1 * fVar3));
+	Var0.f_0 = (fVar4 + Param0.f_0);
 	Var0.f_1 = (fVar5 + Param0.f_1);
 	return Var0;
 }
 
 struct<2> func_219(struct<2> Param0)
 {
-	return func_111((Param0 * 1920f), (Param0.f_1 * 1080f));
+	return func_111((Param0.f_0 * 1920f), (Param0.f_1 * 1080f));
 }
 
 float func_220(int iParam0)
@@ -6513,7 +6513,7 @@ void func_221()
 			Var1 = { func_111(0.033333f, 0.059259f) };
 			if (!((Local_626.f_62[iVar3 /*3*/].f_1 == 0 || Local_626.f_62[iVar3 /*3*/].f_1 == 2) || Local_626.f_62[iVar3 /*3*/].f_1 == 1))
 			{
-				Var1 = (Var1 - ((Var1 * 0.15f) * fVar0));
+				Var1.f_0 = (Var1.f_0 - ((Var1.f_0 * 0.15f) * fVar0));
 				Var1.f_1 = (Var1.f_1 - ((Var1.f_1 * 0.15f) * fVar0));
 			}
 			Var24 = { Local_173.f_107.f_17 };
@@ -6525,7 +6525,7 @@ void func_221()
 			{
 				Var24.f_3 = SYSTEM::ROUND((func_143(1f, 0.1f, (SYSTEM::TO_FLOAT(((NETWORK::GET_NETWORK_TIME() - Local_626.f_62[iVar3 /*3*/].f_2) - 16500)) / 1000f), 4) * 255f));
 			}
-			func_126("MPArcadeCabinetGrid", &Var8, Var6, Var6.f_1, Var1, Var1.f_1, 0f, Var24);
+			func_126("MPArcadeCabinetGrid", &Var8, Var6.f_0, Var6.f_1, Var1.f_0, Var1.f_1, 0f, Var24);
 		}
 		iVar3++;
 	}
@@ -7155,13 +7155,13 @@ void func_243(int iParam0, int* iParam1)
 				
 				case 2:
 					fVar12 = -(IntToFloat(Local_173.f_59[Local_934[iParam0 /*37*/].f_9.f_5[iVar10 /*5*/].f_4 /*5*/].f_2) * 0.104167f);
-					Var13 = (Var13 + fVar12);
+					Var13.f_0 = (Var13.f_0 + fVar12);
 					Var8 = { func_111(0.008333333f, 0f) };
 					break;
 				
 				case 3:
 					fVar12 = (IntToFloat(Local_173.f_59[Local_934[iParam0 /*37*/].f_9.f_5[iVar10 /*5*/].f_4 /*5*/].f_2) * 0.104167f);
-					Var13 = (Var13 + fVar12);
+					Var13.f_0 = (Var13.f_0 + fVar12);
 					Var8 = { func_111(-0.008333333f, 0f) };
 					break;
 			}
@@ -7214,7 +7214,7 @@ void func_243(int iParam0, int* iParam1)
 					{
 						Var0 = { Local_173.f_204[iVar20 /*19*/] };
 						Var2 = { Local_173.f_204[iVar20 /*19*/].f_2 };
-						if (MISC::ABSF((Var0 - Var4)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
+						if (MISC::ABSF((Var0.f_0 - Var4.f_0)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
 						{
 						}
 						else if (func_252(Var4, Var6, Var0, Var2))
@@ -7245,7 +7245,7 @@ void func_243(int iParam0, int* iParam1)
 					{
 						Var0 = { Local_173.f_204[iVar22 /*19*/] };
 						Var2 = { Local_173.f_204[iVar22 /*19*/].f_2 };
-						if (MISC::ABSF((Var0 - Var4)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
+						if (MISC::ABSF((Var0.f_0 - Var4.f_0)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
 						{
 						}
 						else if (func_252(Var4, Var6, Var0, Var2))
@@ -7291,7 +7291,7 @@ void func_244(struct<2> Param0)
 
 float func_245(struct<2> Param0, struct<2> Param2)
 {
-	return (SYSTEM::POW((Param2 - Param0), 2f) + SYSTEM::POW((Param2.f_1 - Param0.f_1), 2f));
+	return (SYSTEM::POW((Param2.f_0 - Param0.f_0), 2f) + SYSTEM::POW((Param2.f_1 - Param0.f_1), 2f));
 }
 
 void func_246(int iParam0, int iParam1, int iParam2)
@@ -7344,7 +7344,7 @@ void func_248(int iParam0, bool bParam1, var uParam2)
 	struct<5> Var0;
 	int iVar5;
 	
-	Var0 = -77904037;
+	Var0.f_0 = -77904037;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = bParam1;
@@ -7456,18 +7456,18 @@ int func_253(struct<2> Param0, struct<2> Param2, struct<2> Param4, struct<2> Par
 	struct<2> Var9;
 	
 	fVar0 = (Param2.f_1 - Param0.f_1);
-	fVar1 = (Param0 - Param2);
-	fVar2 = ((fVar0 * Param0) + (fVar1 * Param0.f_1));
+	fVar1 = (Param0.f_0 - Param2.f_0);
+	fVar2 = ((fVar0 * Param0.f_0) + (fVar1 * Param0.f_1));
 	fVar3 = (Param6.f_1 - Param4.f_1);
-	fVar4 = (Param4 - Param6);
-	fVar5 = ((fVar3 * Param4) + (fVar4 * Param4.f_1));
+	fVar4 = (Param4.f_0 - Param6.f_0);
+	fVar5 = ((fVar3 * Param4.f_0) + (fVar4 * Param4.f_1));
 	fVar6 = ((fVar0 * fVar4) - (fVar3 * fVar1));
 	if (!func_259(fVar6, (0f - 0.0001f), (0f + 0.0001f)))
 	{
 		fVar7 = (((fVar4 * fVar2) - (fVar1 * fVar5)) / fVar6);
 		fVar8 = (((fVar0 * fVar5) - (fVar3 * fVar2)) / fVar6);
 		Var9 = { func_111(fVar7, fVar8) };
-		if (((((((func_255((Param0 - 0.001f), (Param2 - 0.001f)) <= Var9 && Var9 <= func_254((Param0 + 0.001f), (Param2 + 0.001f))) && func_255((Param0.f_1 - 0.001f), (Param2.f_1 - 0.001f)) <= Var9.f_1) && Var9.f_1 <= func_254((Param0.f_1 + 0.001f), (Param2.f_1 + 0.001f))) && func_255((Param4 - 0.001f), (Param6 - 0.001f)) <= Var9) && Var9 <= func_254((Param4 + 0.001f), (Param6 + 0.001f))) && func_255((Param4.f_1 - 0.001f), (Param6.f_1 - 0.001f)) <= Var9.f_1) && Var9.f_1 <= func_254((Param4.f_1 + 0.001f), (Param6.f_1 + 0.001f)))
+		if (((((((func_255((Param0.f_0 - 0.001f), (Param2.f_0 - 0.001f)) <= Var9.f_0 && Var9.f_0 <= func_254((Param0.f_0 + 0.001f), (Param2.f_0 + 0.001f))) && func_255((Param0.f_1 - 0.001f), (Param2.f_1 - 0.001f)) <= Var9.f_1) && Var9.f_1 <= func_254((Param0.f_1 + 0.001f), (Param2.f_1 + 0.001f))) && func_255((Param4.f_0 - 0.001f), (Param6.f_0 - 0.001f)) <= Var9.f_0) && Var9.f_0 <= func_254((Param4.f_0 + 0.001f), (Param6.f_0 + 0.001f))) && func_255((Param4.f_1 - 0.001f), (Param6.f_1 - 0.001f)) <= Var9.f_1) && Var9.f_1 <= func_254((Param4.f_1 + 0.001f), (Param6.f_1 + 0.001f)))
 		{
 			*uParam8 = { Var9 };
 			return 1;
@@ -7518,7 +7518,7 @@ struct<2> func_258(struct<2> Param0, float fParam2)
 {
 	struct<2> Var0;
 	
-	Var0 = (Param0 * fParam2);
+	Var0.f_0 = (Param0.f_0 * fParam2);
 	Var0.f_1 = (Param0.f_1 * fParam2);
 	return Var0;
 }
@@ -7659,13 +7659,13 @@ void func_263(int iParam0, int* iParam1)
 				
 				case 2:
 					fVar12 = -(IntToFloat(Local_173.f_59[Local_869[iParam0 /*16*/].f_5[iVar10 /*5*/].f_4 /*5*/].f_2) * 0.104167f);
-					Var13 = (Var13 + fVar12);
+					Var13.f_0 = (Var13.f_0 + fVar12);
 					Var8 = { func_111(0.008333333f, 0f) };
 					break;
 				
 				case 3:
 					fVar12 = (IntToFloat(Local_173.f_59[Local_869[iParam0 /*16*/].f_5[iVar10 /*5*/].f_4 /*5*/].f_2) * 0.104167f);
-					Var13 = (Var13 + fVar12);
+					Var13.f_0 = (Var13.f_0 + fVar12);
 					Var8 = { func_111(-0.008333333f, 0f) };
 					break;
 			}
@@ -7721,7 +7721,7 @@ void func_263(int iParam0, int* iParam1)
 					{
 						Var0 = { Local_173.f_204[iVar20 /*19*/] };
 						Var2 = { Local_173.f_204[iVar20 /*19*/].f_2 };
-						if (MISC::ABSF((Var0 - Var4)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
+						if (MISC::ABSF((Var0.f_0 - Var4.f_0)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
 						{
 						}
 						else if (func_252(Var4, Var6, Var0, Var2))
@@ -7752,7 +7752,7 @@ void func_263(int iParam0, int* iParam1)
 					{
 						Var0 = { Local_173.f_204[iVar22 /*19*/] };
 						Var2 = { Local_173.f_204[iVar22 /*19*/].f_2 };
-						if (MISC::ABSF((Var0 - Var4)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
+						if (MISC::ABSF((Var0.f_0 - Var4.f_0)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
 						{
 						}
 						else if (func_252(Var4, Var6, Var0, Var2))
@@ -7934,13 +7934,13 @@ void func_267()
 						break;
 					
 					case 2:
-						Var19 = (Var19 + 0.1041665f);
-						Var21 = (Var21 + -0.1041665f);
+						Var19.f_0 = (Var19.f_0 + 0.1041665f);
+						Var21.f_0 = (Var21.f_0 + -0.1041665f);
 						break;
 					
 					case 3:
-						Var19 = (Var19 + -0.1041665f);
-						Var21 = (Var21 + 0.1041665f);
+						Var19.f_0 = (Var19.f_0 + -0.1041665f);
+						Var21.f_0 = (Var21.f_0 + 0.1041665f);
 						break;
 				}
 				Local_173.f_281[iVar11 /*7*/].f_2 = { Local_173.f_281[iVar11 /*7*/] };
@@ -8006,7 +8006,7 @@ void func_267()
 					{
 						Var0 = { Local_173.f_204[iVar26 /*19*/] };
 						Var2 = { Local_173.f_204[iVar26 /*19*/].f_2 };
-						if (MISC::ABSF((Var0 - Var4)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
+						if (MISC::ABSF((Var0.f_0 - Var4.f_0)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
 						{
 						}
 						else if (func_252(Var4, Var6, Var0, Var2))
@@ -8033,7 +8033,7 @@ void func_267()
 					{
 						Var0 = { Local_173.f_204[iVar27 /*19*/] };
 						Var2 = { Local_173.f_204[iVar27 /*19*/].f_2 };
-						if (MISC::ABSF((Var0 - Var4)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
+						if (MISC::ABSF((Var0.f_0 - Var4.f_0)) > 0.104167f || MISC::ABSF((Var0.f_1 - Var4.f_1)) > 0.185185f)
 						{
 						}
 						else if (func_252(Var4, Var6, Var0, Var2))
@@ -8105,7 +8105,7 @@ struct<2> func_270(struct<2> Param0, struct<2> Param2)
 {
 	struct<2> Var0;
 	
-	Var0 = (Param0 - Param2);
+	Var0.f_0 = (Param0.f_0 - Param2.f_0);
 	Var0.f_1 = (Param0.f_1 - Param2.f_1);
 	return Var0;
 }
@@ -8333,7 +8333,7 @@ void func_276(int iParam0)
 	struct<3> Var0;
 	int iVar3;
 	
-	Var0.x = 1889605535;
+	Var0.f_0 = 1889605535;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	iVar3 = func_138(1);
@@ -8390,7 +8390,7 @@ void func_278(var uParam0, var uParam1)
 	struct<4> Var0;
 	int iVar4;
 	
-	Var0 = -1100083080;
+	Var0.f_0 = -1100083080;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = uParam0;
 	Var0.f_3 = uParam1;
@@ -8459,7 +8459,7 @@ void func_280(var uParam0, int iParam1, var uParam2)
 	struct<5> Var0;
 	int iVar5;
 	
-	Var0 = 1551971435;
+	Var0.f_0 = 1551971435;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = uParam0;
 	Var0.f_3 = iParam1;
@@ -8811,14 +8811,14 @@ int func_288(int iParam0, int iParam1)
 			break;
 		
 		case 2:
-			if (func_259(Local_173.f_204[iParam0 /*19*/], (Var2 - 0.0001f), (Var2 + 0.0001f)))
+			if (func_259(Local_173.f_204[iParam0 /*19*/], (Var2.f_0 - 0.0001f), (Var2.f_0 + 0.0001f)))
 			{
 				return 0;
 			}
 			break;
 		
 		case 3:
-			if (func_259(Local_173.f_204[iParam0 /*19*/], (Var0 - 0.0001f), (Var0 + 0.0001f)))
+			if (func_259(Local_173.f_204[iParam0 /*19*/], (Var0.f_0 - 0.0001f), (Var0.f_0 + 0.0001f)))
 			{
 				return 0;
 			}
@@ -9802,14 +9802,14 @@ int func_312(int iParam0)
 			break;
 		
 		case 2:
-			if (func_259(Local_173.f_204[Local_173.f_178 /*19*/], (Var2 - 0.0001f), (Var2 + 0.0001f)))
+			if (func_259(Local_173.f_204[Local_173.f_178 /*19*/], (Var2.f_0 - 0.0001f), (Var2.f_0 + 0.0001f)))
 			{
 				return 0;
 			}
 			break;
 		
 		case 3:
-			if (func_259(Local_173.f_204[Local_173.f_178 /*19*/], (Var0 - 0.0001f), (Var0 + 0.0001f)))
+			if (func_259(Local_173.f_204[Local_173.f_178 /*19*/], (Var0.f_0 - 0.0001f), (Var0.f_0 + 0.0001f)))
 			{
 				return 0;
 			}
@@ -11141,7 +11141,7 @@ void func_355(var uParam0, int iParam1)
 	
 	Var0.f_5 = 1073741824;
 	Var0.f_6 = -1073741824;
-	Var0 = 988620539;
+	Var0.f_0 = 988620539;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	Var0.f_3 = uParam0->f_3;
@@ -11532,31 +11532,31 @@ void func_374()
 		}
 		else if (SCRIPT::GET_EVENT_DATA(1, iVar0, &Var1, 3))
 		{
-			if (Var1.x == 1889605535)
+			if (Var1.f_0 == 1889605535)
 			{
 				func_382(Var1.f_2);
 			}
 			else if (SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 5))
 			{
-				if (Var4 == 1551971435)
+				if (Var4.f_0 == 1551971435)
 				{
 					func_380(Var4.f_2, Var4.f_3, Var4.f_4);
 				}
 				else if (SCRIPT::GET_EVENT_DATA(1, iVar0, &Var9, 4))
 				{
-					if (Var9 == -1100083080)
+					if (Var9.f_0 == -1100083080)
 					{
 						func_379(Var9.f_3, Var9.f_2);
 					}
 					else if (SCRIPT::GET_EVENT_DATA(1, iVar0, &Var13, 5))
 					{
-						if (Var9 == -77904037)
+						if (Var9.f_0 == -77904037)
 						{
 							func_378(Var13.f_2, Var13.f_3, Var13.f_4);
 						}
 						else if (SCRIPT::GET_EVENT_DATA(1, iVar0, &Var18, 25))
 						{
-							if (Var18 == 549044096)
+							if (Var18.f_0 == 549044096)
 							{
 								if (Local_626.f_164)
 								{
@@ -11570,7 +11570,7 @@ void func_374()
 									Jump @301; //curOff = 264
 									if (SCRIPT::GET_EVENT_DATA(1, iVar0, &Var43, 2))
 									{
-										if (Var43 == -713331550)
+										if (Var43.f_0 == -713331550)
 										{
 											func_375(Var43.f_1);
 										}
@@ -11789,7 +11789,7 @@ void func_383(int iParam0, int iParam1)
 	struct<3> Var0;
 	int iVar3;
 	
-	Var0.x = 1000228518;
+	Var0.f_0 = 1000228518;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	iVar3 = func_59(iParam0);

@@ -1065,7 +1065,7 @@ void func_12(int iParam0, int iParam1)
 {
 	struct<3> Var0;
 	
-	Var0.x = 252711156;
+	Var0.f_0 = 252711156;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	if (!iParam0 == 0)
@@ -3211,7 +3211,7 @@ int func_73(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -3418,7 +3418,7 @@ Vector3 func_80(int iParam0)
 
 int func_81(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -3579,7 +3579,7 @@ var func_90(int iParam0)
 	var uVar8;
 	
 	MISC::GET_MODEL_DIMENSIONS(iParam0, &Var0, &Var3);
-	fVar6 = (Var3 - Var0);
+	fVar6 = (Var3.f_0 - Var0.f_0);
 	fVar7 = (Var3.f_1 - Var0.f_1);
 	uVar8 = func_91(fVar6, fVar7);
 	return uVar8;
@@ -3710,7 +3710,7 @@ int func_97(int iParam0)
 
 bool func_98(struct<2> Param0)
 {
-	return (Param0.f_1 != -1 && Param0 != func_192());
+	return (Param0.f_1 != -1 && Param0.f_0 != func_192());
 }
 
 int func_99(var uParam0, int iParam1, int iParam2)
@@ -9020,7 +9020,7 @@ void func_199(int iParam0, int iParam1)
 {
 	struct<3> Var0;
 	
-	Var0.x = 104546633;
+	Var0.f_0 = 104546633;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	if (!iParam0 == 0)
@@ -9047,7 +9047,7 @@ int func_200(struct<2> Param0, var uParam2, var uParam3, var uParam4)
 				}
 				if (Param0.f_1 == 18)
 				{
-					if (NETWORK::NETWORK_GET_NUM_PARTICIPANTS() >= func_201(Param0))
+					if (NETWORK::NETWORK_GET_NUM_PARTICIPANTS() >= func_201(Param0.f_0))
 					{
 						return 1;
 					}
@@ -9056,7 +9056,7 @@ int func_200(struct<2> Param0, var uParam2, var uParam3, var uParam4)
 						return 2;
 					}
 				}
-				if (iLocal_123 >= func_201(Param0))
+				if (iLocal_123 >= func_201(Param0.f_0))
 				{
 					return 1;
 				}
@@ -9886,7 +9886,7 @@ void func_222()
 						{
 							if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE(&cVar1, -1, true, 0))
 							{
-								Local_102 = Global_2775740.f_3.f_1;
+								Local_102.f_0 = Global_2775740.f_3.f_1;
 								if (func_223(Local_102, 0))
 								{
 									MISC::SET_BIT(&(Local_132[PLAYER::NETWORK_PLAYER_ID_TO_INT() /*3*/].f_1), 2);
@@ -9932,7 +9932,7 @@ int func_223(struct<17> Param0, var uParam17, var uParam18, var uParam19, var uP
 		return 0;
 	}
 	bParam21 = bParam21;
-	StringCopy(&cVar0, func_6(Param0), 32);
+	StringCopy(&cVar0, func_6(Param0.f_0), 32);
 	if (SCRIPT::DOES_SCRIPT_EXIST(&cVar0))
 	{
 		SCRIPT::REQUEST_SCRIPT(&cVar0);
@@ -9956,7 +9956,7 @@ int func_223(struct<17> Param0, var uParam17, var uParam18, var uParam19, var uP
 			{
 				return 0;
 			}
-			iVar10 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar0, &Param0, 21, func_224(Param0));
+			iVar10 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&cVar0, &Param0, 21, func_224(Param0.f_0));
 			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&cVar0);
 			if (iVar10 > 0)
 			{
@@ -12483,7 +12483,7 @@ void func_311()
 int func_312(struct<21> Param0)
 {
 	func_318();
-	func_316(func_317(Param0), Param0);
+	func_316(func_317(Param0.f_0), Param0);
 	NETWORK::RESERVE_NETWORK_MISSION_OBJECTS(0);
 	func_313(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Global_2775740, 186, 0);
@@ -13201,6 +13201,49 @@ void func_318()
 	Var0.f_136.f_1.f_2 = -1;
 	Var0.f_136.f_1.f_2.f_1 = -1;
 	Var0.f_136.f_1.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2 = -1;
+	Var0.f_136.f_1.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_2.f_1 = -1;
+	Var0.f_182 = -1;
+	Var0.f_183 = -1;
+	Var0.f_184 = -1;
+	Var0.f_185 = -1;
+	Global_2775740 = { Var0 };
+}
+
+136.f_1.f_2.f_2 = -1;
 	Var0.f_136.f_1.f_2.f_2.f_1 = -1;
 	Var0.f_136.f_1.f_2.f_2.f_2 = -1;
 	Var0.f_136.f_1.f_2.f_2.f_2.f_1 = -1;

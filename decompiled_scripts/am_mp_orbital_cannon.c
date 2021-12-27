@@ -2295,18 +2295,18 @@ void func_61(var uParam0)
 		}
 		if (fVar5 > 0.1f)
 		{
-			if ((Var7.x + (MISC::ABSF((fVar4 * fVar5)) * SYSTEM::TIMESTEP())) <= 4000f)
+			if ((Var7.f_0 + (MISC::ABSF((fVar4 * fVar5)) * SYSTEM::TIMESTEP())) <= 4000f)
 			{
 				bVar1 = true;
-				Var7.x = (Var7.x + (MISC::ABSF((fVar4 * fVar5)) * SYSTEM::TIMESTEP()));
+				Var7.f_0 = (Var7.f_0 + (MISC::ABSF((fVar4 * fVar5)) * SYSTEM::TIMESTEP()));
 			}
 		}
 		else if (fVar5 < -0.1f)
 		{
-			if ((Var7.x - (MISC::ABSF((fVar4 * fVar5)) * SYSTEM::TIMESTEP())) >= -4000f)
+			if ((Var7.f_0 - (MISC::ABSF((fVar4 * fVar5)) * SYSTEM::TIMESTEP())) >= -4000f)
 			{
 				bVar1 = true;
-				Var7.x = (Var7.x - (MISC::ABSF((fVar4 * fVar5)) * SYSTEM::TIMESTEP()));
+				Var7.f_0 = (Var7.f_0 - (MISC::ABSF((fVar4 * fVar5)) * SYSTEM::TIMESTEP()));
 			}
 		}
 		if (fVar6 > 0.1f)
@@ -2403,11 +2403,11 @@ void func_61(var uParam0)
 		fVar11 = 0f;
 		fVar12 = 0f;
 		Var13 = { CAM::GET_CAM_COORD(uParam0->f_4) };
-		if (Var13.x < Var7.x)
+		if (Var13.f_0 < Var7.f_0)
 		{
 			fVar11 = 50f;
 		}
-		else if (Var13.x > Var7.x)
+		else if (Var13.f_0 > Var7.f_0)
 		{
 			fVar11 = -50f;
 		}
@@ -2461,7 +2461,7 @@ void func_61(var uParam0)
 			func_41(uParam0);
 		}
 		MISC::_GET_GROUND_Z_FOR_3D_COORD_2(Var7, &fVar16, true, false);
-		STREAMING::SET_FOCUS_POS_AND_VEL((Var7.x + fVar11), (Var7.f_1 + fVar12), (fVar16 + 50f), -90f, 0f, 0f);
+		STREAMING::SET_FOCUS_POS_AND_VEL((Var7.f_0 + fVar11), (Var7.f_1 + fVar12), (fVar16 + 50f), -90f, 0f, 0f);
 	}
 }
 
@@ -2632,15 +2632,15 @@ float func_66(var uParam0, bool bParam1)
 
 float func_67(struct<2> Param0, var uParam2)
 {
-	if (((Param0.f_1 >= 1000f && Param0.f_1 <= 1700f) && Param0 >= -700f) && Param0 <= 1100f)
+	if (((Param0.f_1 >= 1000f && Param0.f_1 <= 1700f) && Param0.f_0 >= -700f) && Param0.f_0 <= 1100f)
 	{
 		return 500f;
 	}
-	if (((Param0.f_1 >= 3600f && Param0.f_1 <= 4100f) && Param0 >= -1700f) && Param0 <= -700f)
+	if (((Param0.f_1 >= 3600f && Param0.f_1 <= 4100f) && Param0.f_0 >= -1700f) && Param0.f_0 <= -700f)
 	{
 		return 550f;
 	}
-	if (((Param0.f_1 >= 4880f && Param0.f_1 <= 6150f) && Param0 >= -500f) && Param0 <= 1900f)
+	if (((Param0.f_1 >= 4880f && Param0.f_1 <= 6150f) && Param0.f_0 >= -500f) && Param0.f_0 <= 1900f)
 	{
 		return 850f;
 	}
@@ -4662,7 +4662,7 @@ int func_125(var uParam0)
 					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0->f_22, "SET_ZOOM_LEVEL");
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(0f);
 					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-					if (((Var4.f_1 != 0f && Var4.f_1.f_1 != 0f) && Var4.f_1.f_2 != 0f) && Var4 != 0f)
+					if (((Var4.f_1 != 0f && Var4.f_1.f_1 != 0f) && Var4.f_1.f_2 != 0f) && Var4.f_0 != 0f)
 					{
 						if (CAM::DOES_CAM_EXIST(uParam0->f_4))
 						{
@@ -4674,7 +4674,7 @@ int func_125(var uParam0)
 						uParam0->f_736 = { Var4.f_1 };
 						CAM::SET_CAM_COORD(uParam0->f_4, Var4.f_1);
 						CAM::SET_CAM_ROT(uParam0->f_4, Var4.f_4, 2);
-						CAM::SET_CAM_FOV(uParam0->f_4, Var4);
+						CAM::SET_CAM_FOV(uParam0->f_4, Var4.f_0);
 						CAM::SET_CAM_ACTIVE(uParam0->f_4, true);
 						CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 						bVar0 = true;
@@ -5144,7 +5144,7 @@ struct<9> func_136()
 {
 	struct<9> Var0;
 	
-	Var0 = 0.5f;
+	Var0.f_0 = 0.5f;
 	Var0.f_1 = 0.5f;
 	Var0.f_2 = 1f;
 	Var0.f_3 = 1f;
@@ -5330,7 +5330,7 @@ struct<7> func_150()
 	
 	Var0.f_1 = { -8.8511f, 6835.003f, 400f };
 	Var0.f_4 = { -90f, 0f, 0f };
-	Var0 = 100f;
+	Var0.f_0 = 100f;
 	if (Global_2783651 > -1)
 	{
 		Var0.f_1 = Global_4980736.f_5742[Global_2783651 /*366*/];
@@ -6304,7 +6304,7 @@ int func_227(var uParam0)
 
 int func_228(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -6440,7 +6440,7 @@ bool func_233(struct<3> Param0, float fParam3, struct<3> Param4, float fParam7)
 
 float func_234(struct<3> Param0, struct<3> Param3)
 {
-	return (((Param0.x * Param3.x) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
+	return (((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
 }
 
 Vector3 func_235(struct<3> Param0)
@@ -6456,7 +6456,7 @@ Vector3 func_235(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}

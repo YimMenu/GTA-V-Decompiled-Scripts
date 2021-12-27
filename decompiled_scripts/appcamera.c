@@ -7892,11 +7892,11 @@ void func_91()
 		func_1(1);
 		if (iLocal_121)
 		{
-			Local_81.x = (Local_81.x + 12f);
+			Local_81.f_0 = (Local_81.f_0 + 12f);
 		}
-		if (Local_81.x > Local_87.x || Local_81.x == Local_87.x)
+		if (Local_81.f_0 > Local_87.f_0 || Local_81.f_0 == Local_87.f_0)
 		{
-			Local_81.x = Local_87.x;
+			Local_81.f_0 = Local_87.f_0;
 			iLocal_121 = 0;
 		}
 		if (iLocal_122)
@@ -7935,7 +7935,7 @@ void func_91()
 			{
 				Local_87.f_1 = (Local_87.f_1 + 10f);
 			}
-			Local_87.x = (Local_87.x - 14f);
+			Local_87.f_0 = (Local_87.f_0 - 14f);
 		}
 		else
 		{
@@ -8138,16 +8138,16 @@ void func_95()
 		{
 			if (MISC::IS_BIT_SET(Global_7824, 9))
 			{
-				Local_81.x = (Local_81.x + 2f);
+				Local_81.f_0 = (Local_81.f_0 + 2f);
 			}
 			else
 			{
-				Local_81.x = (Local_81.x + 12f);
+				Local_81.f_0 = (Local_81.f_0 + 12f);
 			}
 		}
-		if (Local_81.x > Local_87.x || Local_81.x == Local_87.x)
+		if (Local_81.f_0 > Local_87.f_0 || Local_81.f_0 == Local_87.f_0)
 		{
-			Local_81.x = Local_87.x;
+			Local_81.f_0 = Local_87.f_0;
 			iLocal_121 = 0;
 		}
 		if (iLocal_122)
@@ -8172,11 +8172,11 @@ void func_95()
 		{
 			if (iLocal_118)
 			{
-				Local_78.x = (Local_78.x + 1f);
+				Local_78.f_0 = (Local_78.f_0 + 1f);
 			}
-			if (Local_78.x > Local_84.x || Local_78.x == Local_84.x)
+			if (Local_78.f_0 > Local_84.f_0 || Local_78.f_0 == Local_84.f_0)
 			{
-				Local_78.x = Local_84.x;
+				Local_78.f_0 = Local_84.f_0;
 				iLocal_118 = 0;
 			}
 			if (iLocal_119)
@@ -8226,9 +8226,9 @@ void func_95()
 	{
 		if (iLocal_118)
 		{
-			Local_78.x = (Local_78.x + 1f);
+			Local_78.f_0 = (Local_78.f_0 + 1f);
 		}
-		if (Local_78.x > Local_84.x || Local_78.x == Local_84.x)
+		if (Local_78.f_0 > Local_84.f_0 || Local_78.f_0 == Local_84.f_0)
 		{
 			iLocal_118 = 0;
 		}
@@ -9572,9 +9572,9 @@ void func_121()
 		{
 			if (iLocal_121)
 			{
-				Local_81.x = (Local_81.x - 14f);
+				Local_81.f_0 = (Local_81.f_0 - 14f);
 			}
-			if (Local_81.x < Local_87.x || Local_81.x == Local_87.x)
+			if (Local_81.f_0 < Local_87.f_0 || Local_81.f_0 == Local_87.f_0)
 			{
 				iLocal_121 = 0;
 			}
@@ -9597,11 +9597,11 @@ void func_121()
 		}
 		if (iLocal_118)
 		{
-			Local_78.x = (Local_78.x - 1f);
+			Local_78.f_0 = (Local_78.f_0 - 1f);
 		}
-		if (Local_78.x < Local_84.x || Local_78.x == Local_84.x)
+		if (Local_78.f_0 < Local_84.f_0 || Local_78.f_0 == Local_84.f_0)
 		{
-			Local_78.x = Local_84.x;
+			Local_78.f_0 = Local_84.f_0;
 			iLocal_118 = 0;
 		}
 		if (iLocal_119)
@@ -9633,9 +9633,9 @@ void func_121()
 		Local_84 = { -93.9f, 4.9f, 90.7f };
 		if (iLocal_118)
 		{
-			Local_78.x = (Local_78.x - 1f);
+			Local_78.f_0 = (Local_78.f_0 - 1f);
 		}
-		if (Local_78.x < Local_84.x || Local_78.x == Local_84.x)
+		if (Local_78.f_0 < Local_84.f_0 || Local_78.f_0 == Local_84.f_0)
 		{
 			iLocal_118 = 0;
 		}

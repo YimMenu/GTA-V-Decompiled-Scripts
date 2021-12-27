@@ -802,7 +802,7 @@ void func_27(int iParam0)
 {
 	struct<2> Var0;
 	
-	Var0 = 1890624026;
+	Var0.f_0 = 1890624026;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam0 == 0)
 	{

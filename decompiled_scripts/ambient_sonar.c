@@ -3548,9 +3548,9 @@ bool func_107(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_108(int iParam0)
@@ -3970,7 +3970,7 @@ void func_126()
 	PLAYER::SET_MAX_WANTED_LEVEL(5);
 	func_5();
 	iVar0 = 0;
-	while (iVar0 < Local_55)
+	while (iVar0 < Local_55.f_0)
 	{
 		func_103(&(Local_55[iVar0 /*11*/].f_2));
 		func_93(&(Local_55[iVar0 /*11*/].f_1));

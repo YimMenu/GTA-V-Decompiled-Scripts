@@ -765,7 +765,7 @@ void func_4()
 	{
 		ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_128, true, true);
 	}
-	iLocal_130 = PED::ADD_SCENARIO_BLOCKING_AREA((Local_121.x - 3f), (Local_121.f_1 - 3f), (Local_121.f_2 - 3f), (Local_121.x + 3f), (Local_121.f_1 + 3f), (Local_121.f_2 + 3f), false, true, true, true);
+	iLocal_130 = PED::ADD_SCENARIO_BLOCKING_AREA((Local_121.f_0 - 3f), (Local_121.f_1 - 3f), (Local_121.f_2 - 3f), (Local_121.f_0 + 3f), (Local_121.f_1 + 3f), (Local_121.f_2 + 3f), false, true, true, true);
 	func_7();
 	func_5();
 }
@@ -3542,7 +3542,7 @@ int func_46()
 	int iVar8;
 	
 	HUD::CLEAR_HELP(true);
-	Var0 = iLocal_135;
+	Var0.f_0 = iLocal_135;
 	Var0.f_1 = { Local_118 };
 	Var0.f_4 = iLocal_125;
 	Var0.f_5 = iLocal_129;
@@ -4849,7 +4849,7 @@ void func_103()
 
 int func_104(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

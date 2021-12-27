@@ -701,7 +701,7 @@ int func_8(var uParam0)
 
 float func_9(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	return ((Param0 * Param3) + (Param0.f_1 * Param3.f_1));
+	return ((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1));
 }
 
 bool func_10()
@@ -828,7 +828,7 @@ Vector3 func_18(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -1338,13 +1338,13 @@ void func_50(struct<3> Param0, float fParam3, int iParam4, int iParam5, int iPar
 	Var5 = { Param0 };
 	fVar8 = 0f;
 	Var2 = { Param0 };
-	Var2.x = (Var2.x + (SYSTEM::SIN((fVar8 - fVar1)) * fParam3));
+	Var2.f_0 = (Var2.f_0 + (SYSTEM::SIN((fVar8 - fVar1)) * fParam3));
 	Var2.f_1 = (Var2.f_1 + (SYSTEM::COS((fVar8 - fVar1)) * fParam3));
 	iVar0 = 0;
 	while (iVar0 <= iParam8)
 	{
 		Var5 = { Param0 };
-		Var5.x = (Var5.x + (SYSTEM::SIN(fVar8) * fParam3));
+		Var5.f_0 = (Var5.f_0 + (SYSTEM::SIN(fVar8) * fParam3));
 		Var5.f_1 = (Var5.f_1 + (SYSTEM::COS(fVar8) * fParam3));
 		GRAPHICS::DRAW_DEBUG_LINE(Var2, Var5, iParam4, iParam5, iParam6, iParam7);
 		Var2 = { Var5 };
@@ -1405,7 +1405,7 @@ void func_52(struct<3> Param0, struct<3> Param3, float fParam6, int iParam7, int
 
 Vector3 func_53(struct<3> Param0, struct<3> Param3)
 {
-	return ((Param0.f_1 * Param3.f_2) - (Param0.f_2 * Param3.f_1)), ((Param0.f_2 * Param3.x) - (Param0.x * Param3.f_2)), ((Param0.x * Param3.f_1) - (Param0.f_1 * Param3.x));
+	return ((Param0.f_1 * Param3.f_2) - (Param0.f_2 * Param3.f_1)), ((Param0.f_2 * Param3.f_0) - (Param0.f_0 * Param3.f_2)), ((Param0.f_0 * Param3.f_1) - (Param0.f_1 * Param3.f_0));
 }
 
 void func_54(int iParam0, int iParam1, int iParam2, bool bParam3, int iParam4)
@@ -3561,13 +3561,13 @@ void func_67()
 		func_73(&(Local_99[0 /*24*/]), 0, "Bigwheel", func_74(158), 8, "", 0, 6.2f);
 		func_68(&(Local_74[0 /*24*/]), 0, "Rollercoaster", -1651.641f, -1134.325f, 21.90398f, -1640.984f, -1121.59f, 16.50313f, 6.75f, 15, "", 0);
 	}
-	Local_40 = "LEV_RIDEHLP";
+	Local_40.f_0 = "LEV_RIDEHLP";
 	Local_40.f_1 = "LEV_BROKEN";
 	Local_40.f_2 = "LEV_NOMONEY";
 	Local_40.f_4 = "LEV_WANTED";
 	Local_40.f_3 = 0;
 	Local_40.f_16 = 1;
-	Local_57 = "BIGW_RIDEHLP";
+	Local_57.f_0 = "BIGW_RIDEHLP";
 	Local_57.f_1 = "BIGW_BROKEN";
 	Local_57.f_2 = "BIGW_NOMONEY";
 	Local_57.f_4 = "BIGW_WANTED";
@@ -3675,7 +3675,7 @@ void func_76(var uParam0)
 
 int func_77(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}

@@ -110,7 +110,7 @@ void func_1()
 			}
 			if (bVar6)
 			{
-				HUD::SET_RADAR_AS_INTERIOR_THIS_FRAME(MISC::GET_HASH_KEY(func_13(iLocal_29)), Var3.x, Var3.f_1, func_12(iLocal_29), func_11(iLocal_29));
+				HUD::SET_RADAR_AS_INTERIOR_THIS_FRAME(MISC::GET_HASH_KEY(func_13(iLocal_29)), Var3.f_0, Var3.f_1, func_12(iLocal_29), func_11(iLocal_29));
 				func_10(iLocal_29);
 			}
 		}
@@ -240,7 +240,7 @@ void func_10(int iParam0)
 	struct<3> Var0;
 	
 	Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_33, false) };
-	HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.f_1);
+	HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.f_0, Var0.f_1);
 	switch (iParam0)
 	{
 		case 0:
@@ -251,7 +251,7 @@ void func_10(int iParam0)
 		
 		case 2:
 			Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_33, false) };
-			HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.x, Var0.f_1);
+			HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(Var0.f_0, Var0.f_1);
 			break;
 		
 		case 3:

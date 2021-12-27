@@ -1941,13 +1941,13 @@ void func_43(struct<3> Param0, float fParam3, float fParam4)
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 	{
 		Var1 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Param0 };
-		fVar4 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1);
+		fVar4 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.f_0, Var1.f_1);
 		if (func_44(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), fVar4, 15f))
 		{
 			bVar0 = true;
 		}
 		Var1 = { Param0 - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-		fVar4 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.x, Var1.f_1);
+		fVar4 = MISC::GET_HEADING_FROM_VECTOR_2D(Var1.f_0, Var1.f_1);
 		if (func_44(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), fVar4, 15f))
 		{
 			bVar0 = true;
@@ -3648,9 +3648,9 @@ bool func_98(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_99(var uParam0, bool bParam1, bool bParam2, bool bParam3)
@@ -4550,7 +4550,7 @@ void func_124(int iParam0, int iParam1)
 		}
 		if (func_130(iParam0, iParam1) != 322)
 		{
-			func_125(func_130(iParam0, iParam1), Local_45.x, Local_45.f_1);
+			func_125(func_130(iParam0, iParam1), Local_45.f_0, Local_45.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -5564,7 +5564,7 @@ int func_143(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	}
 	if (Global_112915.f_7688.f_866 < 10)
 	{
-		Var0 = iParam0;
+		Var0.f_0 = iParam0;
 		Var0.f_3 = func_151(iParam1);
 		Var0.f_4 = (MISC::GET_GAME_TIMER() + iParam4);
 		Var0.f_5 = iParam5;
@@ -5695,7 +5695,7 @@ struct<10> func_150(var uParam0, int iParam1, int iParam2, int iParam3, int iPar
 {
 	struct<10> Var0;
 	
-	Var0 = uParam0;
+	Var0.f_0 = uParam0;
 	Var0.f_3 = func_151(iParam1);
 	Var0.f_4 = (MISC::GET_GAME_TIMER() + iParam4);
 	Var0.f_5 = iParam5;
@@ -6665,7 +6665,7 @@ int func_169()
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
 				Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Local_52 };
-				fLocal_55 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.x, Var0.f_1);
+				fLocal_55 = MISC::GET_HEADING_FROM_VECTOR_2D(Var0.f_0, Var0.f_1);
 			}
 			iLocal_75 = PED::CREATE_PED(5, iVar7, Local_52, fLocal_55, true, true);
 			AUDIO::SET_AMBIENT_VOICE_NAME(iLocal_75, sVar11);

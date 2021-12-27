@@ -82,7 +82,7 @@ void __EntryFunction__()
 	Global_19958 = 0;
 	MOBILE::GET_MOBILE_PHONE_POSITION(&Local_1366);
 	Local_1363 = { Local_1366 };
-	Local_1363.x = (Local_1363.x - 10f);
+	Local_1363.f_0 = (Local_1363.f_0 - 10f);
 	Local_1363.f_1 = (Local_1363.f_1 + 20f);
 	Global_22318 = 0;
 	Global_22319 = 1;
@@ -2672,16 +2672,16 @@ int func_55(struct<6> Param0, struct<6> Param6)
 		}
 		if (Param0.f_4 == Param6.f_4)
 		{
-			Var0 = Param0;
+			Var0.f_0 = Param0.f_0;
 			Var0.f_1 = Param0.f_1 * 60;
 			Var0.f_2 = Param0.f_2 * 3600;
 			Var0.f_3 = (Param0.f_3 * 86400);
-			iVar12 = (((Var0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
-			Var6 = Param6;
+			iVar12 = (((Var0.f_0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
+			Var6.f_0 = Param6.f_0;
 			Var6.f_1 = Param6.f_1 * 60;
 			Var6.f_2 = Param6.f_2 * 3600;
 			Var6.f_3 = (Param6.f_3 * 86400);
-			iVar13 = (((Var6 + Var6.f_1) + Var6.f_2) + Var6.f_3);
+			iVar13 = (((Var6.f_0 + Var6.f_1) + Var6.f_2) + Var6.f_3);
 			if (iVar12 > iVar13 || iVar12 == iVar13)
 			{
 				return 1;

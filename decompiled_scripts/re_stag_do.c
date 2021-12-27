@@ -1413,7 +1413,7 @@ void func_36(int iParam0, int iParam1)
 		}
 		if (func_44(iParam0, iParam1) != 322)
 		{
-			func_38(func_44(iParam0, iParam1), Local_45.x, Local_45.f_1);
+			func_38(func_44(iParam0, iParam1), Local_45.f_0, Local_45.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -6980,9 +6980,9 @@ bool func_154(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_155(int iParam0)
@@ -8790,7 +8790,7 @@ int func_204(int iParam0, bool bParam1)
 			{
 				if (iParam0 == Var1.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 					{
 						return 0;
 					}

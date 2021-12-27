@@ -240,7 +240,7 @@ void __EntryFunction__()
 			switch (func_189())
 			{
 				case 0:
-					Local_61.x = 2;
+					Local_61.f_0 = 2;
 					break;
 				
 				case 2:
@@ -248,7 +248,7 @@ void __EntryFunction__()
 					func_2();
 					if (func_1())
 					{
-						Local_61.x = 6;
+						Local_61.f_0 = 6;
 					}
 					break;
 				
@@ -5069,8 +5069,8 @@ Vector3 func_132(struct<3> Param0, float fParam3)
 	
 	fVar3 = SYSTEM::SIN(fParam3);
 	fVar4 = SYSTEM::COS(fParam3);
-	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
-	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
+	Var0.f_0 = ((Param0.f_0 * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.f_0 * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }
@@ -7104,7 +7104,7 @@ int func_188(bool bParam0)
 
 int func_189()
 {
-	return Local_61.x;
+	return Local_61.f_0;
 }
 
 int func_190(int iParam0)
@@ -7491,7 +7491,7 @@ void func_211()
 
 void func_212(struct<21> Param0)
 {
-	func_218(func_219(Param0), Param0);
+	func_218(func_219(Param0.f_0), Param0);
 	func_216(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Local_61, 78, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&Local_140, 97, 0);

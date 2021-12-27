@@ -344,7 +344,7 @@ int func_11(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 	}
 	if (Global_112915.f_7688.f_764 < 8)
 	{
-		Var0 = iParam0;
+		Var0.f_0 = iParam0;
 		Var0.f_3 = func_13(iParam1);
 		Var0.f_4 = (MISC::GET_GAME_TIMER() + iParam4);
 		Var0.f_5 = iParam5;
@@ -1773,7 +1773,7 @@ void func_53()
 	
 	Global_112915.f_10049.f_125.f_2 = 0;
 	iVar0 = 0;
-	while (iVar0 < Local_55)
+	while (iVar0 < Local_55.f_0)
 	{
 		func_40(&(Local_55[iVar0 /*11*/].f_2));
 		func_27(&(Local_55[iVar0 /*11*/].f_1));

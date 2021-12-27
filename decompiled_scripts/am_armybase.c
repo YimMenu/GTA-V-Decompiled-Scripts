@@ -3589,7 +3589,7 @@ int func_134(int iParam0, struct<3> Param1, int iParam4)
 
 int func_135(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -4914,7 +4914,7 @@ void func_182()
 
 void func_183(struct<21> Param0)
 {
-	func_187(func_188(Param0), Param0);
+	func_187(func_188(Param0.f_0), Param0);
 	func_185(0, -1, 0);
 	NETWORK::RESERVE_NETWORK_MISSION_PEDS(5);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(3);

@@ -98,7 +98,7 @@ int func_1(var uParam0, var uParam1)
 						{
 							if (NETWORK::NETWORK_ACCESS_TUNABLE_FLOAT_HASH(iVar12, Var3.f_5, &fVar0))
 							{
-								if (fVar0 > Var3.f_1 || fVar0 < Var3)
+								if (fVar0 > Var3.f_1 || fVar0 < Var3.f_0)
 								{
 									uParam0->f_2 = 1;
 									uParam0->f_3 = MISC::GET_RANDOM_INT_IN_RANGE(20000, 30000);

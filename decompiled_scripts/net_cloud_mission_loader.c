@@ -258,7 +258,7 @@ void __EntryFunction__()
 					}
 				}
 			}
-			else if (Local_64)
+			else if (Local_64.f_0)
 			{
 				Global_2656980.f_23 = 1;
 				Global_2656980.f_24 = 1;
@@ -323,7 +323,7 @@ void __EntryFunction__()
 					Global_2656980.f_23 = 0;
 					Global_2656980.f_27 = -1;
 				}
-				else if (Local_64)
+				else if (Local_64.f_0)
 				{
 					Global_2656980.f_23 = 1;
 					Global_2656980.f_24 = 1;
@@ -385,7 +385,7 @@ void __EntryFunction__()
 						Global_2656980.f_27 = -1;
 					}
 				}
-				else if (Local_64)
+				else if (Local_64.f_0)
 				{
 					Global_2656980.f_23 = 1;
 					Global_2656980.f_24 = 1;
@@ -2929,11 +2929,11 @@ Vector3 func_85(int iParam0)
 	
 	if (DATAFILE::DATADICT_GET_TYPE(iParam0, "camp") == 3)
 	{
-		Var0.x = DATAFILE::DATADICT_GET_FLOAT(iParam0, "camp");
+		Var0.f_0 = DATAFILE::DATADICT_GET_FLOAT(iParam0, "camp");
 	}
 	else if (DATAFILE::DATADICT_GET_TYPE(iParam0, "camp") == 2)
 	{
-		Var0.x = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iParam0, "camp"));
+		Var0.f_0 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iParam0, "camp"));
 	}
 	if (DATAFILE::DATADICT_GET_TYPE(iParam0, "camh") == 3)
 	{
@@ -2960,11 +2960,11 @@ Vector3 func_86(int iParam0, char* sParam1)
 		iVar3 = DATAFILE::DATADICT_GET_DICT(iParam0, sParam1);
 		if (DATAFILE::DATADICT_GET_TYPE(iVar3, "x") == 2)
 		{
-			Var0.x = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iVar3, "x"));
+			Var0.f_0 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iVar3, "x"));
 		}
 		else
 		{
-			Var0.x = DATAFILE::DATADICT_GET_FLOAT(iVar3, "x");
+			Var0.f_0 = DATAFILE::DATADICT_GET_FLOAT(iVar3, "x");
 		}
 		if (DATAFILE::DATADICT_GET_TYPE(iVar3, "y") == 2)
 		{
@@ -3756,7 +3756,7 @@ void func_126()
 
 int func_127(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -5196,7 +5196,7 @@ void func_147()
 						iVar82[iVar91]++;
 					}
 					Var194 = { DATAFILE::DATAARRAY_GET_VECTOR(iVar5, iVar14) };
-					Global_1934631.f_407[iVar91 /*295*/].f_125[iVar80 /*31*/][iVar190 /*3*/] = Var194.x;
+					Global_1934631.f_407[iVar91 /*295*/].f_125[iVar80 /*31*/][iVar190 /*3*/] = Var194.f_0;
 					Global_1934631.f_407[iVar91 /*295*/].f_125[iVar80 /*31*/][iVar190 /*3*/].f_1 = Var194.f_1;
 					Var101[iVar91 /*11*/][iVar190]++;
 					Global_1934631.f_407[iVar91 /*295*/].f_250[iVar80 /*11*/][iVar190] = 2;
@@ -5237,13 +5237,13 @@ Vector3 func_148(int iParam0, int iParam1)
 		case 1:
 			if (iParam1 == 1 || iParam1 == 2)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 70;
 				Var0.f_2 = 255;
 			}
 			else if (iParam1 == 3)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 255;
 				Var0.f_2 = 70;
 			}
@@ -5251,19 +5251,19 @@ Vector3 func_148(int iParam0, int iParam1)
 		
 		case 2:
 		case 31:
-			Var0.x = 255;
+			Var0.f_0 = 255;
 			Var0.f_1 = 70;
 			Var0.f_2 = 70;
 			break;
 		
 		case 35:
-			Var0.x = 70;
+			Var0.f_0 = 70;
 			Var0.f_1 = 70;
 			Var0.f_2 = 255;
 			break;
 		
 		case 32:
-			Var0.x = 255;
+			Var0.f_0 = 255;
 			Var0.f_1 = 70;
 			Var0.f_2 = 70;
 			break;
@@ -5271,13 +5271,13 @@ Vector3 func_148(int iParam0, int iParam1)
 		case 3:
 			if (iParam1 == 1 || iParam1 == 2)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 70;
 				Var0.f_2 = 255;
 			}
 			else if (iParam1 == 3)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 255;
 				Var0.f_2 = 70;
 			}
@@ -5286,26 +5286,26 @@ Vector3 func_148(int iParam0, int iParam1)
 		case 4:
 			if (iParam1 == 1 || iParam1 == 2)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 70;
 				Var0.f_2 = 255;
 			}
 			else if (iParam1 == 3)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 255;
 				Var0.f_2 = 70;
 			}
 			else if (iParam1 == 4)
 			{
-				Var0.x = 200;
+				Var0.f_0 = 200;
 				Var0.f_1 = 200;
 				Var0.f_2 = 50;
 			}
 			break;
 		
 		case 5:
-			Var0.x = 200;
+			Var0.f_0 = 200;
 			Var0.f_1 = 200;
 			Var0.f_2 = 50;
 			break;
@@ -5313,13 +5313,13 @@ Vector3 func_148(int iParam0, int iParam1)
 		case 11:
 			if (iParam1 == 1 || iParam1 == 2)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 70;
 				Var0.f_2 = 255;
 			}
 			else if (iParam1 == 3)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 255;
 				Var0.f_2 = 70;
 			}
@@ -5328,26 +5328,26 @@ Vector3 func_148(int iParam0, int iParam1)
 		case 12:
 			if (iParam1 == 1 || iParam1 == 2)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 70;
 				Var0.f_2 = 255;
 			}
 			else if (iParam1 == 3)
 			{
-				Var0.x = 70;
+				Var0.f_0 = 70;
 				Var0.f_1 = 255;
 				Var0.f_2 = 70;
 			}
 			break;
 		
 		case 13:
-			Var0.x = 70;
+			Var0.f_0 = 70;
 			Var0.f_1 = 255;
 			Var0.f_2 = 70;
 			break;
 		
 		default:
-			Var0.x = 255;
+			Var0.f_0 = 255;
 			Var0.f_1 = 255;
 			Var0.f_2 = 255;
 			break;
@@ -5976,7 +5976,7 @@ void func_179(var uParam0, var uParam1, var uParam2, int iParam3)
 	Var3 = { func_180(NETWORK::UGC_GET_CONTENT_USER_ID(0)) };
 	NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Var16, 35, &Var3);
 	uParam2->f_48 = { Var16.f_1 };
-	uParam2->f_64 = Var16;
+	uParam2->f_64 = Var16.f_0;
 	uParam2->f_4 = DATAFILE::DATADICT_GET_INT(iVar2, "scr");
 	uParam2->f_5 = DATAFILE::DATADICT_GET_INT(iVar2, "time");
 	uParam2->f_1 = DATAFILE::DATADICT_GET_INT(iVar1, "cash");

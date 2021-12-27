@@ -2755,7 +2755,7 @@ void func_96(int iParam0)
 	{
 		if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 		{
-			Local_238 = iParam0;
+			Local_238.f_0 = iParam0;
 		}
 	}
 }
@@ -2916,9 +2916,9 @@ int func_103()
 {
 	if (bLocal_339)
 	{
-		if (Local_238 <= 1 || func_44(&uLocal_343))
+		if (Local_238.f_0 <= 1 || func_44(&uLocal_343))
 		{
-			return Local_238;
+			return Local_238.f_0;
 		}
 		else
 		{
@@ -2939,7 +2939,7 @@ void func_104()
 		iVar1 = -1;
 		fVar2 = 999999f;
 		iVar0 = 0;
-		while (iVar0 < Local_242.x)
+		while (iVar0 < Local_242.f_0)
 		{
 			if (NETWORK::NETWORK_IS_PARTICIPANT_ACTIVE(PLAYER::INT_TO_PARTICIPANTINDEX(iVar0)))
 			{

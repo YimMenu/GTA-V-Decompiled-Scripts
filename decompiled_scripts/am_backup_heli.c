@@ -319,7 +319,7 @@ void __EntryFunction__()
 				switch (func_91())
 				{
 					case 0:
-						Local_230 = 2;
+						Local_230.f_0 = 2;
 						break;
 					
 					case 2:
@@ -339,33 +339,33 @@ void func_1()
 	func_7();
 	if (Local_230.f_1.f_2 == 5)
 	{
-		Local_230 = 3;
+		Local_230.f_0 = 3;
 	}
 	if (func_6(&(Local_230.f_1.f_19)))
 	{
 		if (func_4(&(Local_230.f_1.f_19), 20000, 0))
 		{
-			Local_230 = 3;
+			Local_230.f_0 = 3;
 		}
 	}
 	if (func_3())
 	{
-		Local_230 = 3;
+		Local_230.f_0 = 3;
 	}
 	if (bLocal_48)
 	{
 		if (!NETWORK::NETWORK_IS_IN_TUTORIAL_SESSION())
 		{
-			Local_230 = 3;
+			Local_230.f_0 = 3;
 		}
 	}
 	else if (NETWORK::NETWORK_IS_IN_TUTORIAL_SESSION())
 	{
-		Local_230 = 3;
+		Local_230.f_0 = 3;
 	}
 	if (func_2())
 	{
-		Local_230 = 3;
+		Local_230.f_0 = 3;
 	}
 }
 
@@ -1148,7 +1148,7 @@ int func_38()
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			{
 				Var0 = { func_55(func_56(PLAYER::PLAYER_ID()), 0f, (-200f * SYSTEM::SIN((SYSTEM::TO_FLOAT(Local_230.f_1.f_15) * 30f))), (200f * SYSTEM::COS((SYSTEM::TO_FLOAT(Local_230.f_1.f_15) * 30f))), 0f) };
-				Var0.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var0.x, Var0.f_1);
+				Var0.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var0.f_0, Var0.f_1);
 				Var0.f_2 = (Var0.f_2 + 30f);
 				if (func_39(Var0, 20f, 1f, 1f, 15f, 1, 1, 1, 180f, 0, -1, 1, 0, 0, 0, 0, 0))
 				{
@@ -1185,7 +1185,7 @@ int func_39(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -1546,8 +1546,8 @@ Vector3 func_55(struct<3> Param0, float fParam3, struct<2> Param4, float fParam6
 	fVar3 = fParam3;
 	fVar4 = SYSTEM::COS(fVar3);
 	fVar5 = SYSTEM::SIN(fVar3);
-	Var0.x = ((Param4 * fVar4) + (Param4.f_1 * fVar5));
-	Var0.f_1 = ((Param4.f_1 * fVar4) - (Param4 * fVar5));
+	Var0.f_0 = ((Param4.f_0 * fVar4) + (Param4.f_1 * fVar5));
+	Var0.f_1 = ((Param4.f_1 * fVar4) - (Param4.f_0 * fVar5));
 	Var6 = { Param0 + Var0 };
 	return Var6;
 }
@@ -1559,7 +1559,7 @@ Vector3 func_56(int iParam0)
 
 int func_57(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -2650,7 +2650,7 @@ void func_90(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 
 int func_91()
 {
-	return Local_230;
+	return Local_230.f_0;
 }
 
 int func_92(int iParam0)
@@ -2678,7 +2678,7 @@ void func_93()
 	if (bVar0)
 	{
 		Var1 = { func_56(PLAYER::PLAYER_ID()) };
-		fLocal_58 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var1.x, Var1.f_1);
+		fLocal_58 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(Var1.f_0, Var1.f_1);
 		if (fLocal_58 < 85f)
 		{
 			fLocal_58 = 85f;
@@ -2720,7 +2720,7 @@ void func_98(int iParam0, int iParam1, var uParam2)
 {
 	struct<4> Var0;
 	
-	Var0 = -206137320;
+	Var0.f_0 = -206137320;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_3 = iParam1;
 	Var0.f_2 = uParam2;
@@ -2964,7 +2964,7 @@ void func_111()
 
 void func_112(struct<21> Param0)
 {
-	func_118(func_119(Param0), Param0);
+	func_118(func_119(Param0.f_0), Param0);
 	NETWORK::RESERVE_NETWORK_MISSION_PEDS(3);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(1);
 	func_116(0, -1, 0);

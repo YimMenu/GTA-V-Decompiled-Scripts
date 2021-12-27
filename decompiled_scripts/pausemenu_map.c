@@ -590,7 +590,7 @@ void func_5()
 		{
 			if (func_47(&Local_351, &Local_327, 0, iLocal_336, iLocal_337, 0) || iLocal_318 == 134)
 			{
-				StringCopy(&(Local_338.f_5), NETWORK::TEXTURE_DOWNLOAD_GET_NAME(Local_351), 24);
+				StringCopy(&(Local_338.f_5), NETWORK::TEXTURE_DOWNLOAD_GET_NAME(Local_351.f_0), 24);
 				if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Local_338.f_5)) && Local_351.f_4 == 1)
 				{
 					MemCopy(&Var0, {Local_338.f_5}, 8);
@@ -627,7 +627,7 @@ void func_5()
 				}
 				iVar17 = 0;
 				HUD::TAKE_CONTROL_OF_FRONTEND();
-				func_6(Local_338, " ", Local_338.f_2, iVar17, &Var0, &cVar8, 1, iVar16, iLocal_318, iLocal_319, &Local_327, bLocal_359, iLocal_360, iLocal_361);
+				func_6(Local_338.f_0, " ", Local_338.f_2, iVar17, &Var0, &cVar8, 1, iVar16, iLocal_318, iLocal_319, &Local_327, bLocal_359, iLocal_360, iLocal_361);
 				HUD::RELEASE_CONTROL_OF_FRONTEND();
 				Local_351.f_4 = 1;
 			}
@@ -8631,7 +8631,7 @@ int func_241(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -8642,7 +8642,7 @@ int func_241(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{
@@ -9022,9 +9022,9 @@ bool func_248(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 void func_249(int iParam0)
@@ -10894,7 +10894,7 @@ int func_278(struct<2> Param0, var uParam2)
 	iVar0 = 0;
 	while (iVar0 <= (Global_2657490.f_356 - 1))
 	{
-		if (Global_2657490.f_356[iVar0 /*75*/].f_10.f_44 == Param0 && Global_2657490.f_356[iVar0 /*75*/].f_10.f_44.f_1 == Param0.f_1)
+		if (Global_2657490.f_356[iVar0 /*75*/].f_10.f_44 == Param0.f_0 && Global_2657490.f_356[iVar0 /*75*/].f_10.f_44.f_1 == Param0.f_1)
 		{
 			return iVar0;
 		}
@@ -10910,7 +10910,7 @@ int func_279(var uParam0, struct<2> Param1, var uParam3)
 	iVar0 = 0;
 	while (iVar0 <= (uParam0->f_604 - 1))
 	{
-		if (uParam0->f_604[iVar0 /*88*/].f_56 == Param1 && uParam0->f_604[iVar0 /*88*/].f_56.f_1 == Param1.f_1)
+		if (uParam0->f_604[iVar0 /*88*/].f_56 == Param1.f_0 && uParam0->f_604[iVar0 /*88*/].f_56.f_1 == Param1.f_1)
 		{
 			return iVar0;
 		}
@@ -10926,7 +10926,7 @@ int func_280(var uParam0, struct<2> Param1, var uParam3)
 	iVar0 = 0;
 	while (iVar0 <= (uParam0->f_5 - 1))
 	{
-		if (uParam0->f_5[iVar0 /*88*/].f_56 == Param1 && uParam0->f_5[iVar0 /*88*/].f_56.f_1 == Param1.f_1)
+		if (uParam0->f_5[iVar0 /*88*/].f_56 == Param1.f_0 && uParam0->f_5[iVar0 /*88*/].f_56.f_1 == Param1.f_1)
 		{
 			return iVar0;
 		}
@@ -10942,7 +10942,7 @@ int func_281(var uParam0, struct<2> Param1, var uParam3)
 	iVar0 = 0;
 	while (iVar0 <= (uParam0->f_4 - 1))
 	{
-		if (uParam0->f_4[iVar0 /*88*/].f_56 == Param1 && uParam0->f_4[iVar0 /*88*/].f_56.f_1 == Param1.f_1)
+		if (uParam0->f_4[iVar0 /*88*/].f_56 == Param1.f_0 && uParam0->f_4[iVar0 /*88*/].f_56.f_1 == Param1.f_1)
 		{
 			return iVar0;
 		}

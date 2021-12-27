@@ -106,7 +106,7 @@ void __EntryFunction__()
 		{
 			RECORDING::_DISABLE_ROCKSTAR_EDITOR_CAMERA_CHANGES();
 		}
-		switch (Local_36)
+		switch (Local_36.f_0)
 		{
 			case 0:
 				func_27();
@@ -193,12 +193,12 @@ void func_4()
 	}
 	if (Local_36.f_70 >= Local_36.f_69)
 	{
-		Local_36 = 2;
+		Local_36.f_0 = 2;
 		Local_36.f_1 = 1;
 	}
 	if (MISC::GET_DISTANCE_BETWEEN_COORDS(func_5(Local_36.f_3), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), true) > 300f)
 	{
-		Local_36 = 2;
+		Local_36.f_0 = 2;
 		Local_36.f_1 = 2;
 	}
 }
@@ -726,7 +726,7 @@ int func_19(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -770,7 +770,7 @@ int func_19(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 
 int func_20(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -987,7 +987,7 @@ void func_27()
 				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, Local_36.f_52, joaat("player"));
 				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Local_36.f_52, Local_36.f_52);
 			}
-			Local_36 = 1;
+			Local_36.f_0 = 1;
 			break;
 	}
 }

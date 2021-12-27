@@ -998,11 +998,11 @@ void __EntryFunction__()
 		}
 		func_265();
 	}
-	if (ENTITY::DOES_ENTITY_EXIST(ScriptParam_0) && ENTITY::DOES_ENTITY_EXIST(ScriptParam_0.f_1))
+	if (ENTITY::DOES_ENTITY_EXIST(ScriptParam_0.f_0) && ENTITY::DOES_ENTITY_EXIST(ScriptParam_0.f_1))
 	{
-		if (!ENTITY::IS_ENTITY_DEAD(ScriptParam_0, false) && !ENTITY::IS_ENTITY_DEAD(ScriptParam_0.f_1, false))
+		if (!ENTITY::IS_ENTITY_DEAD(ScriptParam_0.f_0, false) && !ENTITY::IS_ENTITY_DEAD(ScriptParam_0.f_1, false))
 		{
-			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(ScriptParam_0, true, true);
+			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(ScriptParam_0.f_0, true, true);
 			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(ScriptParam_0.f_1, true, true);
 		}
 	}
@@ -1653,7 +1653,7 @@ float func_10(int iParam0, struct<3> Param1, bool bParam4)
 
 int func_11(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -6322,7 +6322,7 @@ int func_136(struct<3> Param0, float fParam3, var uParam4, int iParam5)
 	iLocal_3048 = VEHICLE::ADD_ROAD_NODE_SPEED_ZONE(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var12, fVar15, -1.5f, -30f, 0f), 10f, 0f, false);
 	iLocal_3049 = VEHICLE::ADD_ROAD_NODE_SPEED_ZONE(OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var12, fVar15, -1.5f, 30f, 0f), 10f, 0f, false);
 	MISC::CLEAR_AREA_OF_VEHICLES(Var0, 30f, false, false, false, false, false, false, 0);
-	Local_1870[func_254() /*28*/][0 /*3*/] = { Var0.x, Var0.f_1, (Var0.f_2 + 1f) };
+	Local_1870[func_254() /*28*/][0 /*3*/] = { Var0.f_0, Var0.f_1, (Var0.f_2 + 1f) };
 	return 1;
 }
 
@@ -6382,9 +6382,9 @@ bool func_138(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 void func_139(int iParam0)
@@ -7788,7 +7788,7 @@ int func_177(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	if (bParam3)
 	{
-		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.f_1 - IntToFloat(uParam2->f_6)), (Var0.f_2 - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.f_1 + IntToFloat(uParam2->f_6)), (Var0.f_2 + IntToFloat(uParam2->f_6)), false))
+		if (MISC::IS_PROJECTILE_IN_AREA((Var0.f_0 - IntToFloat(uParam2->f_6)), (Var0.f_1 - IntToFloat(uParam2->f_6)), (Var0.f_2 - IntToFloat(uParam2->f_6)), (Var0.f_0 + IntToFloat(uParam2->f_6)), (Var0.f_1 + IntToFloat(uParam2->f_6)), (Var0.f_2 + IntToFloat(uParam2->f_6)), false))
 		{
 			return 1;
 		}
@@ -8113,7 +8113,7 @@ int func_183(var uParam0, var uParam1, struct<3> Param2, var uParam5, var uParam
 
 float func_184(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 void func_185(var uParam0)
@@ -8158,7 +8158,7 @@ Vector3 func_186(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -8474,7 +8474,7 @@ void func_191()
 	func_192(&uLocal_3127);
 	func_120(&iLocal_2598);
 	func_144(&uLocal_399, 0, 0);
-	if (CAM::DOES_CAM_EXIST(Local_2993))
+	if (CAM::DOES_CAM_EXIST(Local_2993.f_0))
 	{
 		func_189(&Local_2993);
 	}

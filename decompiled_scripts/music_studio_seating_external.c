@@ -2593,7 +2593,7 @@ void func_70(int iParam0, bool bParam1, bool bParam2, int iParam3)
 		{
 			if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iVar14, iVar19, &Var21))
 			{
-				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21))
+				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var21.f_0))
 				{
 					iVar36 = (129 + iVar19);
 					if (func_105(iVar36, iVar0))
@@ -14400,7 +14400,7 @@ void func_99(char* sParam0, int iParam1, int iParam2, int iParam3)
 	{
 		if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iParam1, iVar0, &Var2))
 		{
-			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2))
+			if (!FILES::IS_CONTENT_ITEM_LOCKED(Var2.f_0))
 			{
 				sParam0->f_11 = iParam2;
 				MemCopy(sParam0, {Var2.f_7}, 4);
@@ -17117,16 +17117,16 @@ void func_131(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar0 = 4;
 		}
 		FILES::GET_SHOP_PED_OUTFIT(iParam2, &Var1);
-		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 		{
 			iVar19 = 0;
 			while (iVar19 < Var1.f_3)
 			{
 				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar19, &Var16) && Var16.f_2 != -1)
 				{
-					if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+					if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 					{
-						(*iParam0)[Var16.f_2] = func_119(iParam1, Var16.x, 14, iVar0);
+						(*iParam0)[Var16.f_2] = func_119(iParam1, Var16.f_0, 14, iVar0);
 					}
 					else if (Var16.f_1 != -1)
 					{
@@ -18079,32 +18079,32 @@ void func_134(var uParam0, int iParam1, int iParam2, int iParam3)
 	}
 	FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar0, false);
 	FILES::GET_SHOP_PED_QUERY_OUTFIT((iParam2 - iParam3), &Var1);
-	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 	{
 		iVar36 = 0;
 		while (iVar36 < Var1.f_4)
 		{
 			if (FILES::GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT(Var1.f_1, iVar36, &Var16))
 			{
-				if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+				if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 				{
 					if (Var16.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var19);
-						FILES::GET_SHOP_PED_COMPONENT(Var16.x, &Var19);
-						if (Var16.x != Var19.f_1)
+						FILES::GET_SHOP_PED_COMPONENT(Var16.f_0, &Var19);
+						if (Var16.f_0 != Var19.f_1)
 						{
 							uParam0->f_16 = 1;
 						}
 					}
 					if (Var16.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_135(Var16.f_2)] = Var16.x;
+						(*uParam0)[func_135(Var16.f_2)] = Var16.f_0;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_135(Var16.f_2)] = func_119(iParam1, Var16.x, func_135(Var16.f_2), iVar0);
+						(*uParam0)[func_135(Var16.f_2)] = func_119(iParam1, Var16.f_0, func_135(Var16.f_2), iVar0);
 					}
 				}
 				else if (Var16.f_1 != -1)
@@ -22466,7 +22466,7 @@ void func_150(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
 				Global_2883588 = Var2.f_1;
-				Global_2883589 = Var2;
+				Global_2883589 = Var2.f_0;
 				func_140(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var2.f_7), 0, 0, Var2.f_2, 0, -1, 2, 1);
 				return;
 			}
@@ -22527,7 +22527,7 @@ void func_150(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar36 = -1;
 				}
 				Global_2883588 = Var19.f_1;
-				Global_2883589 = Var19;
+				Global_2883589 = Var19.f_0;
 				func_140(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var19.f_9), Var19.f_3, Var19.f_4, Var19.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var19.f_1, joaat("OUTFIT_ONLY"), 0), iVar36, 2, Var19.f_1 != 0);
 				return;
 			}
@@ -22540,7 +22540,7 @@ void func_150(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			FILES::GET_SHOP_PED_COMPONENT(iParam3, &Var39);
 			Global_2883588 = Var39.f_1;
-			Global_2883589 = Var39;
+			Global_2883589 = Var39.f_0;
 			func_140(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 			return;
 		}
@@ -22552,7 +22552,7 @@ void func_150(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
 				Global_2883588 = Var39.f_1;
-				Global_2883589 = Var39;
+				Global_2883589 = Var39.f_0;
 				func_140(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 				return;
 			}
@@ -52776,7 +52776,7 @@ void func_218(int iParam0, int iParam1)
 	fVar17 = func_233(135, iParam1);
 	fVar18 = func_233(136, iParam1);
 	bVar19 = func_280(160, iParam1);
-	if (((((((((Var0 != iVar10 || Var0.f_1 != iVar11) || Var0.f_2 != iVar12) || Var0.f_3 != iVar13) || Var0.f_4 != iVar14) || Var0.f_5 != iVar15) || Var0.f_6 != fVar16) || Var0.f_7 != fVar17) || Var0.f_8 != fVar18) || Var0.f_9 != bVar19)
+	if (((((((((Var0.f_0 != iVar10 || Var0.f_1 != iVar11) || Var0.f_2 != iVar12) || Var0.f_3 != iVar13) || Var0.f_4 != iVar14) || Var0.f_5 != iVar15) || Var0.f_6 != fVar16) || Var0.f_7 != fVar17) || Var0.f_8 != fVar18) || Var0.f_9 != bVar19)
 	{
 		PED::SET_PED_HEAD_BLEND_DATA(iParam0, iVar10, iVar11, iVar12, iVar13, iVar14, iVar15, fVar16, fVar17, fVar18, bVar19);
 		iVar20 = func_281(2103, iParam1, 0);
@@ -68074,7 +68074,7 @@ void func_344(int iParam0, int iParam1)
 {
 	struct<4> Var0;
 	
-	Var0 = 801199324;
+	Var0.f_0 = 801199324;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = MISC::GET_RANDOM_INT_IN_RANGE(0, 9999);
@@ -90066,7 +90066,7 @@ void func_447(int iParam0, int iParam1, bool bParam2)
 				Var4.f_4 = -1;
 				Var4.f_8 = -1;
 				Var4.f_9 = 48;
-				Var4 = PLAYER::PLAYER_PED_ID();
+				Var4.f_0 = PLAYER::PLAYER_PED_ID();
 				Var4.f_1 = iVar0;
 				Var4.f_8 = -1;
 				Var4.f_6 = 1;
@@ -91079,7 +91079,7 @@ void func_452(int iParam0, var uParam1, bool bParam2, int iParam3)
 		{
 			if (FILES::GET_TATTOO_SHOP_DLC_ITEM_DATA(iVar13, iVar18, &Var20))
 			{
-				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var20))
+				if (!FILES::IS_CONTENT_ITEM_LOCKED(Var20.f_0))
 				{
 					iVar35 = (129 + iVar18);
 					if ((iVar35 / 32) >= *uParam1)
@@ -91745,7 +91745,7 @@ int func_465(int iParam0, int iParam1)
 	Var50.f_4 = -1;
 	Var50.f_8 = -1;
 	Var50.f_9 = 48;
-	Var50 = iParam0;
+	Var50.f_0 = iParam0;
 	Var50.f_2 = iParam1;
 	if (func_481(&Var0, Var50, 1, 1))
 	{
@@ -92728,7 +92728,7 @@ int func_479(int iParam0, var uParam1, int iParam2, int iParam3)
 			Var36.f_8 = -1;
 			Var36.f_9 = 48;
 			Var36.f_2 = *iParam3;
-			Var36 = iParam0;
+			Var36.f_0 = iParam0;
 			if (func_481(uParam1, Var36, 1, 1))
 			{
 				return 1;
@@ -93699,7 +93699,7 @@ int func_481(var uParam0, struct<9> Param1, var uParam10, var uParam11, var uPar
 		}
 	}
 	bVar85 = false;
-	if (ENTITY::GET_ENTITY_MODEL(Param1) == joaat("mp_m_freemode_01"))
+	if (ENTITY::GET_ENTITY_MODEL(Param1.f_0) == joaat("mp_m_freemode_01"))
 	{
 		bVar85 = true;
 	}
@@ -98907,11 +98907,11 @@ int func_484(var* uParam0, struct<2> Param1, var uParam3, var uParam4, var uPara
 				if (iVar2 != -99)
 				{
 					iVar3 = -99;
-					if (ENTITY::GET_ENTITY_MODEL(Param1) == joaat("mp_m_freemode_01"))
+					if (ENTITY::GET_ENTITY_MODEL(Param1.f_0) == joaat("mp_m_freemode_01"))
 					{
 						iVar3 = func_242(iVar2);
 					}
-					else if (ENTITY::GET_ENTITY_MODEL(Param1) == joaat("mp_f_freemode_01"))
+					else if (ENTITY::GET_ENTITY_MODEL(Param1.f_0) == joaat("mp_f_freemode_01"))
 					{
 						iVar3 = func_240(iVar2);
 					}
@@ -98920,7 +98920,7 @@ int func_484(var* uParam0, struct<2> Param1, var uParam3, var uParam4, var uPara
 						iVar2 = iVar3;
 					}
 				}
-				Var4 = { func_137(ENTITY::GET_ENTITY_MODEL(Param1), 2, iVar2, -1) };
+				Var4 = { func_137(ENTITY::GET_ENTITY_MODEL(Param1.f_0), 2, iVar2, -1) };
 				(*uParam0)[2] = Var4.f_3;
 				uParam0->f_13[2] = Var4.f_4;
 			}
@@ -98984,7 +98984,7 @@ int func_484(var* uParam0, struct<2> Param1, var uParam3, var uParam4, var uPara
 			}
 			if (!func_273())
 			{
-				iVar18 = func_91(func_281(1759, -1, 0), func_194(Param1));
+				iVar18 = func_91(func_281(1759, -1, 0), func_194(Param1.f_0));
 				if (iVar18 != -1 && func_105(iVar18, -1))
 				{
 					uParam0->f_46[0] = func_281(1759, -1, 0);
@@ -98999,16 +98999,16 @@ int func_484(var* uParam0, struct<2> Param1, var uParam3, var uParam4, var uPara
 		return 1;
 	}
 	Var19.f_1 = -1;
-	Var19 = ENTITY::GET_ENTITY_MODEL(Param1) == joaat("mp_m_freemode_01");
+	Var19.f_0 = ENTITY::GET_ENTITY_MODEL(Param1.f_0) == joaat("mp_m_freemode_01");
 	Var19.f_1 = Param1.f_1;
 	if (PED::_0x9E30E91FB03A2CAF(uParam0, &Var19))
 	{
-		if (!bParam59 && ((*uParam0)[1] == -1 || (*uParam0)[8] == func_455(Param1, 1)))
+		if (!bParam59 && ((*uParam0)[1] == -1 || (*uParam0)[8] == func_455(Param1.f_0, 1)))
 		{
 			(*uParam0)[1] = 0;
 			uParam0->f_13[1] = 0;
 		}
-		func_485(Param1.f_1, Var19, uParam0[1], &(uParam0->f_13[1]), &(uParam0->f_26[0]), &(uParam0->f_36[0]));
+		func_485(Param1.f_1, Var19.f_0, uParam0[1], &(uParam0->f_13[1]), &(uParam0->f_26[0]), &(uParam0->f_36[0]));
 		return 1;
 	}
 	return 0;
@@ -100559,8 +100559,8 @@ Vector3 func_523(struct<3> Param0, float fParam3)
 	
 	fVar3 = SYSTEM::SIN(fParam3);
 	fVar4 = SYSTEM::COS(fParam3);
-	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
-	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
+	Var0.f_0 = ((Param0.f_0 * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.f_0 * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }

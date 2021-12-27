@@ -80,7 +80,7 @@ void __EntryFunction__()
 	{
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
-	switch (ScriptParam_0)
+	switch (ScriptParam_0.f_0)
 	{
 		case 1:
 			switch (ScriptParam_0.f_1)
@@ -1816,7 +1816,7 @@ int func_53(int iParam0, int iParam1, int iParam2)
 	}
 	else
 	{
-		switch (Var0)
+		switch (Var0.f_0)
 		{
 			case 1:
 				func_60(iVar14, iParam1, iVar13, "MTTIME", iParam0, iParam2);

@@ -711,7 +711,7 @@ void __EntryFunction__()
 						if (func_141())
 						{
 							func_137(func_139(129, Local_88.f_1, Local_88.f_2, 0));
-							Local_88 = 1;
+							Local_88.f_0 = 1;
 						}
 					}
 					break;
@@ -722,7 +722,7 @@ void __EntryFunction__()
 					func_24();
 					if (func_1())
 					{
-						Local_88 = 4;
+						Local_88.f_0 = 4;
 					}
 					break;
 				
@@ -763,7 +763,7 @@ int func_2()
 	}
 	if (Local_88.f_241 > 0)
 	{
-		if (Local_88 != 4)
+		if (Local_88.f_0 != 4)
 		{
 			if (func_23())
 			{
@@ -4032,7 +4032,7 @@ int func_55(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -4185,7 +4185,7 @@ Vector3 func_59(int iParam0)
 
 int func_60(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -4328,9 +4328,9 @@ bool func_69(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_70(int iParam0)
@@ -5871,7 +5871,7 @@ void func_89(int iParam0, int iParam1)
 {
 	struct<3> Var0;
 	
-	Var0.x = -70338542;
+	Var0.f_0 = -70338542;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	if (!iParam1 == 0)
@@ -6012,7 +6012,7 @@ void func_97(int iParam0, int iParam1)
 {
 	struct<3> Var0;
 	
-	Var0.x = -1522149952;
+	Var0.f_0 = -1522149952;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	if (!iParam1 == 0)
@@ -6030,7 +6030,7 @@ void func_99(int iParam0, int iParam1)
 {
 	struct<3> Var0;
 	
-	Var0.x = -1272866763;
+	Var0.f_0 = -1272866763;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	if (!iParam0 == 0)
@@ -6072,7 +6072,7 @@ void func_101(int iParam0, int iParam1)
 {
 	struct<3> Var0;
 	
-	Var0.x = 1972669394;
+	Var0.f_0 = 1972669394;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam1;
 	if (!iParam0 == 0)
@@ -6165,7 +6165,7 @@ void func_106(var uParam0)
 
 void func_107(struct<2> Param0, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, int iParam14)
 {
-	Param0 = 677240627;
+	Param0.f_0 = 677240627;
 	Param0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam14 == 0)
 	{
@@ -6650,7 +6650,7 @@ void func_128()
 		iVar0++;
 	}
 	iVar0 = 0;
-	if (Local_88 != 4)
+	if (Local_88.f_0 != 4)
 	{
 		iLocal_1307 = 0;
 		while (iLocal_1307 < NETWORK::NETWORK_GET_MAX_NUM_PARTICIPANTS())
@@ -7244,7 +7244,7 @@ void func_137(int iParam0)
 	struct<3> Var0;
 	int iVar3;
 	
-	Var0.x = 470437478;
+	Var0.f_0 = 470437478;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	iVar3 = func_138(1, 1);
@@ -19781,7 +19781,7 @@ void func_523(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -22878,7 +22878,7 @@ void func_617(int iParam0, int iParam1, int iParam2)
 	
 	if (func_861(iParam0, 0, 1))
 	{
-		Var0 = 657959395;
+		Var0.f_0 = 657959395;
 		Var0.f_1 = PLAYER::PLAYER_ID();
 		Var0.f_2 = iParam1;
 		Var0.f_4 = iParam2;
@@ -29030,15 +29030,15 @@ void func_748(int iParam0)
 			{
 				if (!MISC::IS_BIT_SET(Local_88.f_271, iVar13))
 				{
-					if (ENTITY::DOES_ENTITY_EXIST(Var0))
+					if (ENTITY::DOES_ENTITY_EXIST(Var0.f_0))
 					{
-						if (ENTITY::IS_ENTITY_A_VEHICLE(Var0))
+						if (ENTITY::IS_ENTITY_A_VEHICLE(Var0.f_0))
 						{
 							if (NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(Local_88.f_73[iVar13]))
 							{
 								if (ENTITY::DOES_ENTITY_EXIST(NETWORK::NET_TO_VEH(Local_88.f_73[iVar13])))
 								{
-									if (ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(Var0) == NETWORK::NET_TO_VEH(Local_88.f_73[iVar13]))
+									if (ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(Var0.f_0) == NETWORK::NET_TO_VEH(Local_88.f_73[iVar13]))
 									{
 										if (ENTITY::DOES_ENTITY_EXIST(Var0.f_1))
 										{
@@ -29048,7 +29048,7 @@ void func_748(int iParam0)
 												{
 													if (Var0.f_5)
 													{
-														iVar16 = ENTITY::GET_ENTITY_MODEL(Var0);
+														iVar16 = ENTITY::GET_ENTITY_MODEL(Var0.f_0);
 														if (Local_88.f_27 == joaat("hydra"))
 														{
 															if (Local_722[NETWORK::PARTICIPANT_ID_TO_INT() /*18*/].f_17 < 2)
@@ -29145,15 +29145,15 @@ void func_748(int iParam0)
 				{
 					if (!MISC::IS_BIT_SET(Local_722[NETWORK::PARTICIPANT_ID_TO_INT() /*18*/].f_3[func_91(iVar13)], func_90(iVar13)))
 					{
-						if (ENTITY::DOES_ENTITY_EXIST(Var0))
+						if (ENTITY::DOES_ENTITY_EXIST(Var0.f_0))
 						{
-							if (ENTITY::IS_ENTITY_A_PED(Var0))
+							if (ENTITY::IS_ENTITY_A_PED(Var0.f_0))
 							{
 								if (NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(Local_88.f_48[iVar13]))
 								{
 									if (ENTITY::DOES_ENTITY_EXIST(NETWORK::NET_TO_VEH(Local_88.f_48[iVar13])))
 									{
-										if (ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(Var0) == NETWORK::NET_TO_PED(Local_88.f_48[iVar13]))
+										if (ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(Var0.f_0) == NETWORK::NET_TO_PED(Local_88.f_48[iVar13]))
 										{
 											if (Var0.f_5)
 											{
@@ -29203,17 +29203,17 @@ void func_748(int iParam0)
 					{
 						if (!MISC::IS_BIT_SET(Local_88.f_271, iVar13))
 						{
-							if (ENTITY::DOES_ENTITY_EXIST(Var0))
+							if (ENTITY::DOES_ENTITY_EXIST(Var0.f_0))
 							{
-								if (ENTITY::IS_ENTITY_A_VEHICLE(Var0))
+								if (ENTITY::IS_ENTITY_A_VEHICLE(Var0.f_0))
 								{
 									if (NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(Local_88.f_73[iVar13]))
 									{
 										if (ENTITY::DOES_ENTITY_EXIST(NETWORK::NET_TO_VEH(Local_88.f_73[iVar13])))
 										{
-											if (ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(Var0) == NETWORK::NET_TO_VEH(Local_88.f_73[iVar13]))
+											if (ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(Var0.f_0) == NETWORK::NET_TO_VEH(Local_88.f_73[iVar13]))
 											{
-												if (ENTITY::GET_ENTITY_MODEL(Var0) == joaat("savage"))
+												if (ENTITY::GET_ENTITY_MODEL(Var0.f_0) == joaat("savage"))
 												{
 													if (!MISC::IS_BIT_SET(Local_722[NETWORK::PARTICIPANT_ID_TO_INT() /*18*/].f_3[func_91(iVar13)], func_90(iVar13)))
 													{
@@ -29285,7 +29285,7 @@ void func_748(int iParam0)
 																	else if (func_741(iVar13))
 																	{
 																	}
-																	else if (NETWORK::_NETWORK_GET_ASSISTED_DAMAGE_OF_DEAD_ENTITY(iVar23, Var0, &uVar24))
+																	else if (NETWORK::_NETWORK_GET_ASSISTED_DAMAGE_OF_DEAD_ENTITY(iVar23, Var0.f_0, &uVar24))
 																	{
 																		if (iVar23 == PLAYER::PLAYER_ID())
 																		{
@@ -29334,7 +29334,7 @@ void func_748(int iParam0)
 																	}
 																}
 															}
-															if (!VEHICLE::IS_VEHICLE_DRIVEABLE(ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(Var0), false))
+															if (!VEHICLE::IS_VEHICLE_DRIVEABLE(ENTITY::GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(Var0.f_0), false))
 															{
 															}
 														}
@@ -29357,15 +29357,15 @@ void func_748(int iParam0)
 				{
 					if (!MISC::IS_BIT_SET(Local_722[NETWORK::PARTICIPANT_ID_TO_INT() /*18*/].f_3[func_91(iVar13)], func_90(iVar13)))
 					{
-						if (ENTITY::DOES_ENTITY_EXIST(Var0))
+						if (ENTITY::DOES_ENTITY_EXIST(Var0.f_0))
 						{
-							if (ENTITY::IS_ENTITY_A_PED(Var0))
+							if (ENTITY::IS_ENTITY_A_PED(Var0.f_0))
 							{
 								if (NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(Local_88.f_48[iVar13]))
 								{
 									if (ENTITY::DOES_ENTITY_EXIST(NETWORK::NET_TO_VEH(Local_88.f_48[iVar13])))
 									{
-										if (ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(Var0) == NETWORK::NET_TO_PED(Local_88.f_48[iVar13]))
+										if (ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(Var0.f_0) == NETWORK::NET_TO_PED(Local_88.f_48[iVar13]))
 										{
 											if (Var0.f_5)
 											{
@@ -29711,7 +29711,7 @@ void func_753(int iParam0, int iParam1)
 {
 	struct<3> Var0;
 	
-	Var0.x = 1105488649;
+	Var0.f_0 = 1105488649;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	if (!iParam1 == 0)
@@ -30483,7 +30483,7 @@ int func_763(int iParam0, struct<3> Param1)
 
 int func_764()
 {
-	return Local_88;
+	return Local_88.f_0;
 }
 
 int func_765(int iParam0)
@@ -31449,7 +31449,7 @@ void func_803()
 		Local_705.f_5 = 2;
 	}
 	AUDIO::STOP_SOUND(iLocal_3418);
-	Local_705 = Local_88.f_611;
+	Local_705.f_0 = Local_88.f_611;
 	Local_705.f_1 = Local_88.f_612;
 	Local_705.f_4 = Local_88.f_613;
 	Local_705.f_3 = Local_88.f_615;
@@ -32215,7 +32215,7 @@ void func_849(struct<21> Param0)
 {
 	int iVar0;
 	
-	func_858(func_859(Param0), Param0);
+	func_858(func_859(Param0.f_0), Param0);
 	NETWORK::RESERVE_NETWORK_MISSION_PEDS(24);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(9);
 	func_857(0, -1, 0);
@@ -33392,6 +33392,720 @@ int func_861(int iParam0, bool bParam1, bool bParam2)
 	int iVar0;
 	
 	iVar0 = iParam0;
+	if (iVar0 != -1)
+	{
+		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))
+		{
+			if (bParam1)
+			{
+				if (!PLAYER::IS_PLAYER_PLAYING(iParam0))
+				{
+					return 0;
+				}
+			}
+			if (bParam2)
+			{
+				if (!Global_2703656.f_3[iVar0])
+				{
+					return 0;
+				}
+			}
+			return 1;
+		}
+	}
+	return 0;
+}
+
+;
+		
+		case 85:
+			return 32;
+		
+		case 86:
+			return 8;
+		
+		case 87:
+			return 32;
+		
+		case 88:
+			return 32;
+		
+		case 89:
+			return 32;
+		
+		case 90:
+			return 32;
+		
+		case 91:
+			return 8;
+		
+		case 92:
+			return 32;
+		
+		case 93:
+			return 8;
+		
+		case 94:
+			return 8;
+		
+		case 102:
+			return 8;
+		
+		case 95:
+			return 8;
+		
+		case 96:
+			return 32;
+		
+		case 97:
+			return 32;
+		
+		case 98:
+			return 32;
+		
+		case 99:
+			return 8;
+		
+		case 100:
+			return 32;
+		
+		case 101:
+			return 32;
+		
+		case 103:
+			return 32;
+		
+		case 104:
+			return 32;
+		
+		case 105:
+			return 32;
+		
+		case 106:
+			return 8;
+		
+		case 107:
+			return 8;
+		
+		case 108:
+			return 8;
+		
+		case 109:
+			return 8;
+		
+		case 110:
+			return 8;
+		
+		case 111:
+			return 8;
+		
+		case 112:
+			return 8;
+		
+		case 113:
+			return 8;
+		
+		case 114:
+			return 32;
+		
+		case 115:
+			return 8;
+		
+		case 116:
+			return 8;
+		
+		case 117:
+			return 8;
+		
+		case 118:
+			return 8;
+		
+		case 119:
+			return 32;
+		
+		case 120:
+			return 32;
+		
+		case 121:
+			return 32;
+		
+		case 122:
+			return 32;
+		
+		case 123:
+			return 8;
+		
+		case 124:
+			return 8;
+		
+		case 125:
+			return 8;
+		
+		case 126:
+			return 8;
+		
+		case 12:
+			return 32;
+		
+		case 4:
+			return 16;
+		
+		case 13:
+			return 32;
+		
+		case 5:
+			return 16;
+		
+		case 6:
+			return 2;
+		
+		case 8:
+			return 2;
+		
+		case 9:
+			return 2;
+		
+		case 7:
+			return 16;
+		
+		case 10:
+			return 2;
+		
+		case 11:
+			return 4;
+		
+		case 15:
+			return 32;
+		
+		case 16:
+			return 32;
+		
+		case 27:
+			return 2;
+		
+		case 25:
+			return 2;
+		
+		case 26:
+			return 2;
+		
+		case 18:
+			return 32;
+		
+		case 28:
+			return 32;
+		
+		case 29:
+			return 2;
+		
+		case 30:
+			return 32;
+		
+		case 31:
+			return 32;
+		
+		case 17:
+			return 2;
+		
+		case 146:
+			return 32;
+		
+		case 147:
+			return 32;
+		
+		case 19:
+			return 32;
+		
+		case 22:
+			return 32;
+		
+		case 23:
+			return 32;
+		
+		case 24:
+			return 32;
+		
+		case 20:
+			return 2;
+		
+		case 0:
+			return 0;
+		
+		case 21:
+			return 32;
+		
+		case 158:
+			return 32;
+		
+		case 159:
+			return 32;
+		
+		case 148:
+			return 32;
+		
+		case 149:
+			return 32;
+		
+		case 153:
+			return 32;
+		
+		case 151:
+			return 32;
+		
+		case 152:
+			return 32;
+		
+		case 156:
+			return 32;
+		
+		case 157:
+			return 32;
+		
+		case 154:
+			return 32;
+		
+		case 155:
+			return 32;
+		
+		case 160:
+			return 32;
+		
+		case 161:
+			return 32;
+		
+		case 162:
+			return 32;
+		
+		case 163:
+			return 32;
+		
+		case 164:
+			return 2;
+		
+		case 169:
+			return 1;
+		
+		case 165:
+			return 2;
+		
+		case 166:
+			return 4;
+		
+		case 167:
+			return 2;
+		
+		case 168:
+			return 2;
+		
+		case 150:
+			return 1;
+		
+		case 170:
+			return 2;
+		
+		case 171:
+		case 172:
+		case 173:
+		case 174:
+		case 175:
+		case 176:
+			return 0;
+		
+		case 192:
+			return 1;
+		
+		case 177:
+			return 4;
+		
+		case 180:
+			return 4;
+		
+		case 181:
+			return 1;
+		
+		case 182:
+			return 1;
+		
+		case 188:
+			return 1;
+		
+		case 184:
+			return 2;
+		
+		case 189:
+			return 1;
+		
+		case 185:
+			return 1;
+		
+		case 183:
+			return 2;
+		
+		case 186:
+			return 8;
+		
+		case 187:
+			return 8;
+		
+		case 190:
+			return 1;
+		
+		case 191:
+			return 2;
+		
+		case 142:
+			return 8;
+		
+		case 178:
+			return 16;
+		
+		case 179:
+			return 32;
+		
+		default:
+	}
+	switch (func_140(func_860(iParam0, 1)))
+	{
+		case 0:
+			return 8;
+		
+		case 1:
+			return 32;
+		
+		case 2:
+			return 32;
+		
+		default:
+	}
+	return 0;
+}
+
+int func_860(int iParam0, bool bParam1)
+{
+	switch (iParam0)
+	{
+		case 164:
+			return 15;
+		
+		case 171:
+			return 8;
+		
+		case 165:
+			return 14;
+		
+		case 169:
+			return 122;
+		
+		case 172:
+			return 1;
+		
+		case 170:
+			return 5;
+		
+		case 173:
+			return 6;
+		
+		case 166:
+			return 11;
+		
+		case 174:
+			return 0;
+		
+		case 175:
+			return 2;
+		
+		case 167:
+			return 13;
+		
+		case 176:
+			return 3;
+		
+		case 168:
+			return 12;
+		
+		case 49:
+			return 148;
+		
+		case 52:
+			return 151;
+		
+		case 53:
+			return 152;
+		
+		case 54:
+			return 157;
+		
+		case 55:
+			return 153;
+		
+		case 56:
+			return 154;
+		
+		case 57:
+			return 155;
+		
+		case 58:
+			return 159;
+		
+		case 51:
+			return 162;
+		
+		case 60:
+			return 142;
+		
+		case 62:
+			return 160;
+		
+		case 63:
+			return 164;
+		
+		case 64:
+			return 163;
+		
+		case 65:
+			return 166;
+		
+		case 66:
+			return 167;
+		
+		case 67:
+			return 168;
+		
+		case 68:
+			return 169;
+		
+		case 69:
+			return 170;
+		
+		case 70:
+			return 171;
+		
+		case 71:
+			return 172;
+		
+		case 72:
+			return 173;
+		
+		case 73:
+			return 178;
+		
+		case 74:
+			return 188;
+		
+		case 75:
+			return 214;
+		
+		case 76:
+			return 215;
+		
+		case 77:
+			return 216;
+		
+		case 78:
+			return 217;
+		
+		case joaat("mpsv_lp0_31"):
+			return 218;
+		
+		case 80:
+			return 219;
+		
+		case 81:
+			return 220;
+		
+		case 82:
+			return 221;
+		
+		case 84:
+			return 179;
+		
+		case 83:
+			return 189;
+		
+		case 85:
+			return 180;
+		
+		case 87:
+			return 182;
+		
+		case 88:
+			return 183;
+		
+		case 89:
+			return 185;
+		
+		case 90:
+			return 186;
+		
+		case 91:
+			return 190;
+		
+		case 92:
+			return 191;
+		
+		case 93:
+			return 192;
+		
+		case 94:
+			return 193;
+		
+		case 102:
+			return 205;
+		
+		case 95:
+			return 194;
+		
+		case 96:
+			return 197;
+		
+		case 97:
+			return 198;
+		
+		case 99:
+			return 199;
+		
+		case 100:
+			return 200;
+		
+		case 101:
+			return 201;
+		
+		case 103:
+			return 207;
+		
+		case 104:
+			return 208;
+		
+		case 105:
+			return 209;
+		
+		case 106:
+			return 210;
+		
+		case 98:
+			return 195;
+		
+		case 107:
+			return 225;
+		
+		case 108:
+			return 226;
+		
+		case 109:
+			return 227;
+		
+		case 110:
+			return 229;
+		
+		case 111:
+			return 230;
+		
+		case 113:
+			return 233;
+		
+		case 115:
+			return 237;
+		
+		case 116:
+			return 238;
+		
+		case 117:
+			return 239;
+		
+		case 118:
+			return 240;
+		
+		case 119:
+			return 241;
+		
+		case 120:
+			return 242;
+		
+		case 121:
+			return 244;
+		
+		case 122:
+			return 248;
+		
+		case 123:
+			return 249;
+		
+		case 124:
+			return 250;
+		
+		case 125:
+			return 243;
+		
+		case 126:
+			return 158;
+		
+		case 86:
+			return 181;
+		
+		case 127:
+			return 150;
+		
+		case 128:
+			return 24;
+		
+		case 129:
+			return 26;
+		
+		case 130:
+			return 256;
+		
+		case 131:
+			return 258;
+		
+		case 133:
+			return 259;
+		
+		case 134:
+			return 271;
+		
+		case 135:
+			return 273;
+		
+		case 136:
+			return 276;
+		
+		case 137:
+			return 277;
+		
+		case 138:
+			return 262;
+		
+		case 139:
+			return 263;
+		
+		case 140:
+			return 264;
+		
+		case 141:
+			return 268;
+		
+		case 143:
+			return 269;
+		
+		case 144:
+			return 270;
+		
+		case 145:
+			return 275;
+		
+		default:
+	}
+	if (bParam1)
+	{
+	}
+	return 286;
+}
+
+int func_861(int iParam0, bool bParam1, bool bParam2)
+{
+	int iVar0;
+	
+	iVar0.f_0 = iParam0;
 	if (iVar0 != -1)
 	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))

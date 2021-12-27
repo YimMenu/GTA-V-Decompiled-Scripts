@@ -392,7 +392,7 @@ int func_1()
 
 bool func_2()
 {
-	return MISC::IS_BIT_SET(Local_81, 6);
+	return MISC::IS_BIT_SET(Local_81.f_0, 6);
 }
 
 void func_3()
@@ -402,16 +402,16 @@ void func_3()
 		switch (Local_81.f_2)
 		{
 			case 0:
-				if (!MISC::IS_BIT_SET(Local_81, 10))
+				if (!MISC::IS_BIT_SET(Local_81.f_0, 10))
 				{
 					if (func_38(&(Local_81.f_17), 300000, 0))
 					{
 						MISC::SET_BIT(&Local_81, 10);
 					}
 				}
-				if (!MISC::IS_BIT_SET(Local_81, 10))
+				if (!MISC::IS_BIT_SET(Local_81.f_0, 10))
 				{
-					if (MISC::IS_BIT_SET(Local_81, 0))
+					if (MISC::IS_BIT_SET(Local_81.f_0, 0))
 					{
 						Local_81.f_5 = func_37();
 						Local_81.f_2 = 1;
@@ -431,7 +431,7 @@ void func_3()
 				break;
 			
 			case 2:
-				if (MISC::IS_BIT_SET(Local_81, 4))
+				if (MISC::IS_BIT_SET(Local_81.f_0, 4))
 				{
 					func_4(Local_81.f_5);
 					Local_81.f_2 = 7;
@@ -471,7 +471,7 @@ int func_6()
 {
 	if (Local_81.f_5 == 0)
 	{
-		if (!MISC::IS_BIT_SET(Local_81, 1))
+		if (!MISC::IS_BIT_SET(Local_81.f_0, 1))
 		{
 			iLocal_227 = 0;
 			iLocal_228 = MISC::GET_RANDOM_INT_IN_RANGE(0, 5);
@@ -480,7 +480,7 @@ int func_6()
 			Local_81.f_4 = 0;
 			MISC::SET_BIT(&Local_81, 1);
 		}
-		if (!MISC::IS_BIT_SET(Local_81, 2))
+		if (!MISC::IS_BIT_SET(Local_81.f_0, 2))
 		{
 			if (func_36())
 			{
@@ -511,7 +511,7 @@ int func_7()
 			NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(1);
 			Local_81.f_15 = 1;
 		}
-		if (!MISC::IS_BIT_SET(Local_81, 13))
+		if (!MISC::IS_BIT_SET(Local_81.f_0, 13))
 		{
 			if (NETWORK::CAN_REGISTER_MISSION_VEHICLES(1))
 			{
@@ -527,7 +527,7 @@ int func_7()
 				}
 			}
 		}
-		if (MISC::IS_BIT_SET(Local_81, 13))
+		if (MISC::IS_BIT_SET(Local_81.f_0, 13))
 		{
 			if (func_26(iVar1))
 			{
@@ -1043,7 +1043,7 @@ Vector3 func_21(int iParam0)
 
 int func_22(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -1092,9 +1092,9 @@ bool func_25(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_26(int iParam0)
@@ -1287,9 +1287,9 @@ int func_36()
 	float fVar8;
 	int iVar9;
 	
-	if (MISC::IS_BIT_SET(Local_81, 1))
+	if (MISC::IS_BIT_SET(Local_81.f_0, 1))
 	{
-		if (iLocal_105 >= Local_120.x)
+		if (iLocal_105 >= Local_120.f_0)
 		{
 			if (iLocal_227 < 5)
 			{
@@ -1323,7 +1323,7 @@ int func_36()
 				}
 			}
 			iLocal_105++;
-			if (iLocal_105 == Local_120.x)
+			if (iLocal_105 == Local_120.f_0)
 			{
 				if (MISC::IS_BIT_SET(iLocal_219, 1))
 				{
@@ -1389,17 +1389,17 @@ void func_39()
 							{
 								if (PED::IS_PED_SITTING_IN_VEHICLE(NETWORK::NET_TO_PED(Local_81.f_9[0]), NETWORK::NET_TO_VEH(Local_81.f_12[0])))
 								{
-									if (MISC::IS_BIT_SET(Local_81, 7))
+									if (MISC::IS_BIT_SET(Local_81.f_0, 7))
 									{
 										MISC::SET_BIT(&Local_81, 9);
 										Local_81.f_6 = 2;
 									}
-									else if (MISC::IS_BIT_SET(Local_81, 14))
+									else if (MISC::IS_BIT_SET(Local_81.f_0, 14))
 									{
 										MISC::SET_BIT(&Local_81, 9);
 										Local_81.f_6 = 2;
 									}
-									else if (MISC::IS_BIT_SET(Local_81, 19))
+									else if (MISC::IS_BIT_SET(Local_81.f_0, 19))
 									{
 										Local_81.f_6 = 3;
 									}
@@ -1433,7 +1433,7 @@ void func_39()
 							{
 								Local_81.f_6 = 3;
 							}
-							else if (MISC::IS_BIT_SET(Local_81, 19))
+							else if (MISC::IS_BIT_SET(Local_81.f_0, 19))
 							{
 								Local_81.f_6 = 3;
 							}
@@ -1479,7 +1479,7 @@ void func_41()
 	
 	if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 	{
-		if (iLocal_104 >= Local_120.x)
+		if (iLocal_104 >= Local_120.f_0)
 		{
 			iLocal_104 = 0;
 			iLocal_226 = 0;
@@ -1489,11 +1489,11 @@ void func_41()
 			MISC::CLEAR_BIT(&Local_81, 17);
 			MISC::CLEAR_BIT(&iLocal_219, 14);
 			MISC::CLEAR_BIT(&iLocal_219, 19);
-			if (!MISC::IS_BIT_SET(Local_81, 16))
+			if (!MISC::IS_BIT_SET(Local_81.f_0, 16))
 			{
-				if (MISC::IS_BIT_SET(Local_81, 18))
+				if (MISC::IS_BIT_SET(Local_81.f_0, 18))
 				{
-					if (!MISC::IS_BIT_SET(Local_81, 4))
+					if (!MISC::IS_BIT_SET(Local_81.f_0, 4))
 					{
 						MISC::SET_BIT(&Local_81, 16);
 					}
@@ -1501,13 +1501,13 @@ void func_41()
 			}
 			if (func_44(&(Local_81.f_21)))
 			{
-				if (!MISC::IS_BIT_SET(Local_81, 12))
+				if (!MISC::IS_BIT_SET(Local_81.f_0, 12))
 				{
 					if (func_38(&(Local_81.f_21), 360000, 0))
 					{
 						MISC::SET_BIT(&Local_81, 12);
 					}
-					if (!MISC::IS_BIT_SET(Local_81, 15))
+					if (!MISC::IS_BIT_SET(Local_81.f_0, 15))
 					{
 						if (func_38(&(Local_81.f_21), 240000, 0))
 						{
@@ -1533,7 +1533,7 @@ void func_41()
 					MISC::CLEAR_BIT(&iLocal_219, 5);
 				}
 			}
-			if (!MISC::IS_BIT_SET(Local_81, 0))
+			if (!MISC::IS_BIT_SET(Local_81.f_0, 0))
 			{
 				if (MISC::IS_BIT_SET(Local_120[iVar0 /*3*/], 0))
 				{
@@ -1542,7 +1542,7 @@ void func_41()
 			}
 			else if (MISC::IS_BIT_SET(Local_120[iVar0 /*3*/], 2))
 			{
-				if (!MISC::IS_BIT_SET(Local_81, 17))
+				if (!MISC::IS_BIT_SET(Local_81.f_0, 17))
 				{
 					if (!MISC::IS_BIT_SET(Local_81.f_7, iVar2))
 					{
@@ -1553,11 +1553,11 @@ void func_41()
 						}
 					}
 				}
-				if (!MISC::IS_BIT_SET(Local_81, 5))
+				if (!MISC::IS_BIT_SET(Local_81.f_0, 5))
 				{
 					MISC::SET_BIT(&Local_81, 5);
 				}
-				if (!MISC::IS_BIT_SET(Local_81, 4))
+				if (!MISC::IS_BIT_SET(Local_81.f_0, 4))
 				{
 					if (MISC::IS_BIT_SET(Local_120[iVar0 /*3*/], 1))
 					{
@@ -1567,9 +1567,9 @@ void func_41()
 						MISC::CLEAR_BIT(&Local_81, 18);
 					}
 				}
-				if (!MISC::IS_BIT_SET(Local_81, 4))
+				if (!MISC::IS_BIT_SET(Local_81.f_0, 4))
 				{
-					if (!MISC::IS_BIT_SET(Local_81, 18))
+					if (!MISC::IS_BIT_SET(Local_81.f_0, 18))
 					{
 						if (MISC::IS_BIT_SET(Local_120[iVar0 /*3*/], 7))
 						{
@@ -1610,15 +1610,15 @@ void func_41()
 			iVar1++;
 		}
 		iLocal_104++;
-		if (iLocal_104 >= Local_120.x)
+		if (iLocal_104 >= Local_120.f_0)
 		{
-			if (!MISC::IS_BIT_SET(Local_81, 16))
+			if (!MISC::IS_BIT_SET(Local_81.f_0, 16))
 			{
 				if (NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(Local_81.f_9[0]))
 				{
 					if (func_40(Local_81.f_9[0]))
 					{
-						if (!MISC::IS_BIT_SET(Local_81, 4))
+						if (!MISC::IS_BIT_SET(Local_81.f_0, 4))
 						{
 							if (MISC::IS_BIT_SET(iLocal_219, 15))
 							{
@@ -1636,28 +1636,28 @@ void func_41()
 				}
 			}
 			MISC::SET_BIT(&iLocal_219, 0);
-			if (!MISC::IS_BIT_SET(Local_81, 0))
+			if (!MISC::IS_BIT_SET(Local_81.f_0, 0))
 			{
 				if (iLocal_226 >= 1)
 				{
 					MISC::SET_BIT(&Local_81, 0);
 				}
 			}
-			if (!MISC::IS_BIT_SET(Local_81, 14))
+			if (!MISC::IS_BIT_SET(Local_81.f_0, 14))
 			{
 				if (MISC::IS_BIT_SET(iLocal_219, 14))
 				{
 					MISC::SET_BIT(&Local_81, 14);
 				}
 			}
-			if (!MISC::IS_BIT_SET(Local_81, 19))
+			if (!MISC::IS_BIT_SET(Local_81.f_0, 19))
 			{
 				if (MISC::IS_BIT_SET(iLocal_219, 20))
 				{
 					MISC::SET_BIT(&Local_81, 19);
 				}
 			}
-			if (!MISC::IS_BIT_SET(Local_81, 6))
+			if (!MISC::IS_BIT_SET(Local_81.f_0, 6))
 			{
 				if (MISC::IS_BIT_SET(iLocal_219, 5))
 				{
@@ -1665,13 +1665,13 @@ void func_41()
 					{
 						MISC::SET_BIT(&Local_81, 6);
 					}
-					else if (MISC::IS_BIT_SET(Local_81, 10))
+					else if (MISC::IS_BIT_SET(Local_81.f_0, 10))
 					{
 						MISC::SET_BIT(&Local_81, 6);
 					}
 				}
 			}
-			if (MISC::IS_BIT_SET(Local_81, 17))
+			if (MISC::IS_BIT_SET(Local_81.f_0, 17))
 			{
 				MISC::CLEAR_BIT(&Local_81, 17);
 				MISC::CLEAR_BIT(&Local_81, 15);
@@ -1679,9 +1679,9 @@ void func_41()
 				func_42(&(Local_81.f_21));
 				func_45(&(Local_81.f_21), 0, 0);
 			}
-			if (!MISC::IS_BIT_SET(Local_81, 11))
+			if (!MISC::IS_BIT_SET(Local_81.f_0, 11))
 			{
-				if (MISC::IS_BIT_SET(Local_81, 12))
+				if (MISC::IS_BIT_SET(Local_81.f_0, 12))
 				{
 					if (MISC::IS_BIT_SET(iLocal_219, 9))
 					{
@@ -1702,7 +1702,7 @@ void func_43(int iParam0)
 {
 	if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 	{
-		if (!MISC::IS_BIT_SET(Local_81, 7))
+		if (!MISC::IS_BIT_SET(Local_81.f_0, 7))
 		{
 			if (MISC::IS_BIT_SET(Local_120[iParam0 /*3*/], 3))
 			{
@@ -1822,23 +1822,23 @@ void func_54()
 {
 	func_361();
 	func_358();
-	if (MISC::IS_BIT_SET(Local_81, 10))
+	if (MISC::IS_BIT_SET(Local_81.f_0, 10))
 	{
 		if (Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 < 6)
 		{
 			Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 = 6;
 		}
 	}
-	if (MISC::IS_BIT_SET(Local_81, 4))
+	if (MISC::IS_BIT_SET(Local_81.f_0, 4))
 	{
 		if (Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 <= 6)
 		{
 			Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 = 6;
 		}
 	}
-	if (MISC::IS_BIT_SET(Local_81, 16))
+	if (MISC::IS_BIT_SET(Local_81.f_0, 16))
 	{
-		if (!MISC::IS_BIT_SET(Local_81, 4))
+		if (!MISC::IS_BIT_SET(Local_81.f_0, 4))
 		{
 			if (Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 <= 6)
 			{
@@ -1848,7 +1848,7 @@ void func_54()
 			}
 		}
 	}
-	if (MISC::IS_BIT_SET(Local_81, 11))
+	if (MISC::IS_BIT_SET(Local_81.f_0, 11))
 	{
 		if (Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 <= 6)
 		{
@@ -1882,9 +1882,9 @@ void func_54()
 		case 0:
 			if (MISC::IS_BIT_SET(Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/], 0))
 			{
-				if (MISC::IS_BIT_SET(Local_81, 3))
+				if (MISC::IS_BIT_SET(Local_81.f_0, 3))
 				{
-					if (!MISC::IS_BIT_SET(Local_81, 15))
+					if (!MISC::IS_BIT_SET(Local_81.f_0, 15))
 					{
 						MISC::SET_BIT(&(Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/]), 2);
 						func_350(11, 1);
@@ -1931,7 +1931,7 @@ void func_54()
 				{
 					Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 = 6;
 				}
-				if (MISC::IS_BIT_SET(Local_81, 15))
+				if (MISC::IS_BIT_SET(Local_81.f_0, 15))
 				{
 					func_198(12, 116);
 					Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 = 6;
@@ -1964,7 +1964,7 @@ void func_54()
 			break;
 		
 		case 7:
-			if (Local_81.f_2 == 0 && !MISC::IS_BIT_SET(Local_81, 10))
+			if (Local_81.f_2 == 0 && !MISC::IS_BIT_SET(Local_81.f_0, 10))
 			{
 				Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 = 0;
 			}
@@ -2231,19 +2231,19 @@ void func_63()
 				HUD::SET_BLIP_COLOUR(Global_1932161, 1);
 				HUD::SET_BLIP_SCALE(Global_1932161, 0f);
 			}
-			if (HUD::DOES_BLIP_EXIST(Local_231))
+			if (HUD::DOES_BLIP_EXIST(Local_231.f_0))
 			{
 				if (func_196() || func_195())
 				{
-					HUD::SET_BLIP_DISPLAY(Local_231, 0);
+					HUD::SET_BLIP_DISPLAY(Local_231.f_0, 0);
 				}
 				else
 				{
-					HUD::SET_BLIP_DISPLAY(Local_231, 4);
+					HUD::SET_BLIP_DISPLAY(Local_231.f_0, 4);
 				}
 				if (!MISC::IS_BIT_SET(iLocal_219, 10))
 				{
-					HUD::SET_BLIP_NAME_FROM_TEXT_FILE(Local_231, "FM_GDM_BLP");
+					HUD::SET_BLIP_NAME_FROM_TEXT_FILE(Local_231.f_0, "FM_GDM_BLP");
 					MISC::SET_BIT(&iLocal_219, 10);
 				}
 			}
@@ -2997,7 +2997,7 @@ void func_75(struct<67> Param0, var uParam67, var uParam68, var uParam69, var uP
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -3082,7 +3082,7 @@ void func_80(int iParam0, int iParam1, int iParam2)
 	
 	if (func_381(iParam0, 0, 1))
 	{
-		Var0 = 657959395;
+		Var0.f_0 = 657959395;
 		Var0.f_1 = PLAYER::PLAYER_ID();
 		Var0.f_2 = iParam1;
 		Var0.f_4 = iParam2;
@@ -7932,16 +7932,16 @@ int func_256(struct<6> Param0, struct<6> Param6)
 		}
 		if (Param0.f_4 == Param6.f_4)
 		{
-			Var0 = Param0;
+			Var0.f_0 = Param0.f_0;
 			Var0.f_1 = Param0.f_1 * 60;
 			Var0.f_2 = Param0.f_2 * 3600;
 			Var0.f_3 = (Param0.f_3 * 86400);
-			iVar12 = (((Var0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
-			Var6 = Param6;
+			iVar12 = (((Var0.f_0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
+			Var6.f_0 = Param6.f_0;
 			Var6.f_1 = Param6.f_1 * 60;
 			Var6.f_2 = Param6.f_2 * 3600;
 			Var6.f_3 = (Param6.f_3 * 86400);
-			iVar13 = (((Var6 + Var6.f_1) + Var6.f_2) + Var6.f_3);
+			iVar13 = (((Var6.f_0 + Var6.f_1) + Var6.f_2) + Var6.f_3);
 			if (iVar12 > iVar13 || iVar12 == iVar13)
 			{
 				return 1;
@@ -8897,16 +8897,16 @@ int func_286(struct<6> Param0, struct<6> Param6)
 		}
 		if (Param0.f_4 == Param6.f_4)
 		{
-			Var0 = Param0;
+			Var0.f_0 = Param0.f_0;
 			Var0.f_1 = Param0.f_1 * 60;
 			Var0.f_2 = Param0.f_2 * 3600;
 			Var0.f_3 = (Param0.f_3 * 86400);
-			iVar12 = (((Var0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
-			Var6 = Param6;
+			iVar12 = (((Var0.f_0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
+			Var6.f_0 = Param6.f_0;
 			Var6.f_1 = Param6.f_1 * 60;
 			Var6.f_2 = Param6.f_2 * 3600;
 			Var6.f_3 = (Param6.f_3 * 86400);
-			iVar13 = (((Var6 + Var6.f_1) + Var6.f_2) + Var6.f_3);
+			iVar13 = (((Var6.f_0 + Var6.f_1) + Var6.f_2) + Var6.f_3);
 			if (iVar12 > iVar13 || iVar12 == iVar13)
 			{
 				return 1;
@@ -10252,7 +10252,7 @@ bool func_355()
 
 void func_356(struct<2> Param0, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, int iParam14)
 {
-	Param0 = 677240627;
+	Param0.f_0 = 677240627;
 	Param0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam14 == 0)
 	{
@@ -10289,7 +10289,7 @@ void func_358()
 {
 	if (Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 >= 5 && Local_120[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 < 6)
 	{
-		if (MISC::IS_BIT_SET(Local_81, 4))
+		if (MISC::IS_BIT_SET(Local_81.f_0, 4))
 		{
 			if (!MISC::IS_BIT_SET(iLocal_219, 3))
 			{
@@ -10673,10 +10673,10 @@ void func_370()
 							{
 								if (PED::IS_PED_SITTING_IN_VEHICLE(NETWORK::NET_TO_PED(Local_81.f_9[0]), NETWORK::NET_TO_VEH(Local_81.f_12[0])))
 								{
-									if ((TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_81.f_9[0]), -258271821) != 1 && TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_81.f_9[0]), -258271821) != 0) || MISC::IS_BIT_SET(Local_81, 9))
+									if ((TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_81.f_9[0]), -258271821) != 1 && TASK::GET_SCRIPT_TASK_STATUS(NETWORK::NET_TO_PED(Local_81.f_9[0]), -258271821) != 0) || MISC::IS_BIT_SET(Local_81.f_0, 9))
 									{
 										TASK::TASK_VEHICLE_DRIVE_WANDER(NETWORK::NET_TO_PED(Local_81.f_9[0]), NETWORK::NET_TO_VEH(Local_81.f_12[0]), 30f, 786469);
-										if (MISC::IS_BIT_SET(Local_81, 9))
+										if (MISC::IS_BIT_SET(Local_81.f_0, 9))
 										{
 											MISC::CLEAR_BIT(&Local_81, 9);
 										}
@@ -10978,7 +10978,7 @@ void func_379()
 	MISC::CLEAR_BIT(&iLocal_219, 3);
 	MISC::CLEAR_BIT(&iLocal_219, 4);
 	iLocal_218 = 0;
-	if (HUD::DOES_BLIP_EXIST(Local_231))
+	if (HUD::DOES_BLIP_EXIST(Local_231.f_0))
 	{
 		HUD::REMOVE_BLIP(&Local_231);
 	}
@@ -11224,7 +11224,7 @@ void func_393()
 
 void func_394(struct<21> Param0)
 {
-	func_397(func_398(Param0), Param0);
+	func_397(func_398(Param0.f_0), Param0);
 	func_396(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&Local_81, 23, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&Local_120, 97, 0);
@@ -12042,6 +12042,257 @@ int func_400(int iParam0, bool bParam1)
 			return 162;
 		
 		case 60:
+			return 142;
+		
+		case 62:
+			return 160;
+		
+		case 63:
+			return 164;
+		
+		case 64:
+			return 163;
+		
+		case 65:
+			return 166;
+		
+		case 66:
+			return 167;
+		
+		case 67:
+			return 168;
+		
+		case 68:
+			return 169;
+		
+		case 69:
+			return 170;
+		
+		case 70:
+			return 171;
+		
+		case 71:
+			return 172;
+		
+		case 72:
+			return 173;
+		
+		case 73:
+			return 178;
+		
+		case 74:
+			return 188;
+		
+		case 75:
+			return 214;
+		
+		case 76:
+			return 215;
+		
+		case 77:
+			return 216;
+		
+		case 78:
+			return 217;
+		
+		case joaat("mpsv_lp0_31"):
+			return 218;
+		
+		case 80:
+			return 219;
+		
+		case 81:
+			return 220;
+		
+		case 82:
+			return 221;
+		
+		case 84:
+			return 179;
+		
+		case 83:
+			return 189;
+		
+		case 85:
+			return 180;
+		
+		case 87:
+			return 182;
+		
+		case 88:
+			return 183;
+		
+		case 89:
+			return 185;
+		
+		case 90:
+			return 186;
+		
+		case 91:
+			return 190;
+		
+		case 92:
+			return 191;
+		
+		case 93:
+			return 192;
+		
+		case 94:
+			return 193;
+		
+		case 102:
+			return 205;
+		
+		case 95:
+			return 194;
+		
+		case 96:
+			return 197;
+		
+		case 97:
+			return 198;
+		
+		case 99:
+			return 199;
+		
+		case 100:
+			return 200;
+		
+		case 101:
+			return 201;
+		
+		case 103:
+			return 207;
+		
+		case 104:
+			return 208;
+		
+		case 105:
+			return 209;
+		
+		case 106:
+			return 210;
+		
+		case 98:
+			return 195;
+		
+		case 107:
+			return 225;
+		
+		case 108:
+			return 226;
+		
+		case 109:
+			return 227;
+		
+		case 110:
+			return 229;
+		
+		case 111:
+			return 230;
+		
+		case 113:
+			return 233;
+		
+		case 115:
+			return 237;
+		
+		case 116:
+			return 238;
+		
+		case 117:
+			return 239;
+		
+		case 118:
+			return 240;
+		
+		case 119:
+			return 241;
+		
+		case 120:
+			return 242;
+		
+		case 121:
+			return 244;
+		
+		case 122:
+			return 248;
+		
+		case 123:
+			return 249;
+		
+		case 124:
+			return 250;
+		
+		case 125:
+			return 243;
+		
+		case 126:
+			return 158;
+		
+		case 86:
+			return 181;
+		
+		case 127:
+			return 150;
+		
+		case 128:
+			return 24;
+		
+		case 129:
+			return 26;
+		
+		case 130:
+			return 256;
+		
+		case 131:
+			return 258;
+		
+		case 133:
+			return 259;
+		
+		case 134:
+			return 271;
+		
+		case 135:
+			return 273;
+		
+		case 136:
+			return 276;
+		
+		case 137:
+			return 277;
+		
+		case 138:
+			return 262;
+		
+		case 139:
+			return 263;
+		
+		case 140:
+			return 264;
+		
+		case 141:
+			return 268;
+		
+		case 143:
+			return 269;
+		
+		case 144:
+			return 270;
+		
+		case 145:
+			return 275;
+		
+		default:
+	}
+	if (bParam1)
+	{
+	}
+	return 286;
+}
+
+e 60:
 			return 142;
 		
 		case 62:

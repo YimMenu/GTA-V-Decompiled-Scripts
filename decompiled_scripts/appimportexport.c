@@ -2002,7 +2002,7 @@ void func_38(struct<67> Param0, var uParam67, var uParam68, var uParam69, var uP
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -2341,20 +2341,20 @@ int func_42(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 	{
 		if (iParam8 != 0 && func_43(iParam1))
 		{
-			Var2 = iParam8;
+			Var2.f_0 = iParam8;
 			Var2.f_1 = iParam2;
 			Var2.f_2 = iParam5;
 			Var2.f_3 = iParam6;
 		}
 		else
 		{
-			Var2 = iParam2;
+			Var2.f_0 = iParam2;
 			Var2.f_1 = iParam8;
 			Var2.f_2 = iParam5;
 			Var2.f_3 = iParam6;
 		}
 		Global_4528329[iVar1 /*85*/].f_66.f_1 = Var2.f_2;
-		Global_4528329[iVar1 /*85*/].f_66.f_15 = Var2;
+		Global_4528329[iVar1 /*85*/].f_66.f_15 = Var2.f_0;
 		Global_4528329[iVar1 /*85*/].f_66.f_16 = Var2.f_1;
 		if (bVar0 || NETSHOPPING::NET_GAMESERVER_BASKET_ADD_ITEM(&Var2, iParam4))
 		{
@@ -2568,7 +2568,7 @@ void func_51(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, va
 {
 	struct<7> Var0;
 	
-	Var0 = 985284033;
+	Var0.f_0 = 985284033;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = uParam2;
@@ -21807,7 +21807,7 @@ void func_286(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	
 	Var0.f_2 = 4;
 	Var0.f_7 = 4;
-	Var0 = 1622472682;
+	Var0.f_0 = 1622472682;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2[0] = uParam0;
 	Var0.f_2[1] = uParam1;
@@ -22269,7 +22269,7 @@ int func_307(int iParam0)
 	Var1.f_1 = 4;
 	func_301(&Var1, iParam0);
 	iVar0 = 0;
-	while (iVar0 < Var1)
+	while (iVar0 < Var1.f_0)
 	{
 		if (!func_19(PLAYER::PLAYER_ID(), Var1.f_1[iVar0]))
 		{

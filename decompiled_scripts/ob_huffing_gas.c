@@ -697,7 +697,7 @@ void func_4()
 						Var9.f_2 = (Var9.f_2 - 0.1f);
 						break;
 				}
-				iLocal_297 = PED::CREATE_SYNCHRONIZED_SCENE(Var9.x, Var9.f_1, Var9.f_2, 0f, 0f, fLocal_305, 2);
+				iLocal_297 = PED::CREATE_SYNCHRONIZED_SCENE(Var9.f_0, Var9.f_1, Var9.f_2, 0f, 0f, fLocal_305, 2);
 				TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_297, func_75(), sLocal_300, 1000f, -4f, 0, 0, 1000f, 0);
 				if (PED::IS_SYNCHRONIZED_SCENE_HOLD_LAST_FRAME(iLocal_297))
 				{
@@ -2507,7 +2507,7 @@ int func_65(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -2518,7 +2518,7 @@ int func_65(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{

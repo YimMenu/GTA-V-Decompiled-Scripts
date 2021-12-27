@@ -3420,7 +3420,7 @@ void func_130(int iParam0)
 	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 15))
 	{
 		Global_2817051.f_33 = Var0.f_1;
-		Global_2817051.f_34 = Var0;
+		Global_2817051.f_34 = Var0.f_0;
 	}
 }
 

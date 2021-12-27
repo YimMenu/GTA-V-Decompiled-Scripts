@@ -2289,7 +2289,7 @@ void func_73()
 	MISC::SET_GAME_PAUSED(false);
 	Global_112915.f_10049.f_122.f_2 = 0;
 	iVar0 = 0;
-	while (iVar0 < Local_57)
+	while (iVar0 < Local_57.f_0)
 	{
 		func_52(&(Local_57[iVar0 /*11*/].f_2));
 		func_39(&(Local_57[iVar0 /*11*/].f_1));

@@ -503,7 +503,7 @@ void func_1()
 								TASK::OPEN_SEQUENCE_TASK(&iLocal_73);
 								if (!bLocal_294 && fVar4 > 2f)
 								{
-									TASK::TASK_SHOOT_AT_COORD(0, Local_68.x, Local_68.f_1, (Local_68.f_2 + 4f), 1000, 1566631136);
+									TASK::TASK_SHOOT_AT_COORD(0, Local_68.f_0, Local_68.f_1, (Local_68.f_2 + 4f), 1000, 1566631136);
 								}
 								TASK::TASK_LOOK_AT_ENTITY(0, iLocal_55, -1, 2048, 2);
 								TASK::TASK_GO_TO_ENTITY_WHILE_AIMING_AT_ENTITY(0, iLocal_55, iLocal_55, 1f, false, 3f, 4f, true, false, joaat("FIRING_PATTERN_FULL_AUTO"));
@@ -736,7 +736,7 @@ void func_1()
 								fVar6 = MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(iLocal_55, true), ENTITY::GET_ENTITY_COORDS(iLocal_57, true), true);
 								if (fVar6 < 4f && iLocal_285 == 0)
 								{
-									TASK::TASK_GOTO_ENTITY_OFFSET_XY(iLocal_55, iLocal_57, 60000, 0.5f, Local_295.x, Local_295.f_1, 1f, true);
+									TASK::TASK_GOTO_ENTITY_OFFSET_XY(iLocal_55, iLocal_57, 60000, 0.5f, Local_295.f_0, Local_295.f_1, 1f, true);
 									iLocal_285 = 1;
 								}
 								else if (fVar6 < 3f)
@@ -755,7 +755,7 @@ void func_1()
 								{
 									Local_295 = { -1.578f, -0.5f, 1f };
 								}
-								TASK::TASK_GOTO_ENTITY_OFFSET_XY(iLocal_55, iLocal_57, 60000, 0.5f, Local_295.x, Local_295.f_1, 1f, true);
+								TASK::TASK_GOTO_ENTITY_OFFSET_XY(iLocal_55, iLocal_57, 60000, 0.5f, Local_295.f_0, Local_295.f_1, 1f, true);
 								if (bLocal_298)
 								{
 									PED::SET_PED_MOVEMENT_CLIPSET(iLocal_55, "MOVE_M@BAIL_BOND_TAZERED", 0.25f);
@@ -1322,7 +1322,7 @@ int func_10()
 				VEHICLE::SET_DISABLE_PRETEND_OCCUPANTS(iLocal_57, true);
 				Var0 = { ENTITY::GET_ENTITY_COORDS(iLocal_57, true) };
 				Var3 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Var0 };
-				ENTITY::SET_ENTITY_HEADING(iLocal_57, MISC::GET_HEADING_FROM_VECTOR_2D(Var3.x, Var3.f_1));
+				ENTITY::SET_ENTITY_HEADING(iLocal_57, MISC::GET_HEADING_FROM_VECTOR_2D(Var3.f_0, Var3.f_1));
 				PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(ENTITY::GET_ENTITY_COORDS(iLocal_54, false), 1, &Var0, 1, 1077936128, 0);
 				if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, 2528.563f, 2639.115f, 36.9446f, true) < 75f)
 				{
@@ -4106,7 +4106,7 @@ int func_91(float fParam0)
 
 float func_92(struct<3> Param0, struct<3> Param3)
 {
-	return (((Param0.x * Param3.x) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
+	return (((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
 }
 
 int func_93()
@@ -4847,7 +4847,7 @@ int func_112()
 			WEAPON::GIVE_WEAPON_TO_PED(iLocal_54, joaat("weapon_pistol"), -1, false, true);
 		}
 		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_54, joaat("weapon_pistol"), true);
-		iLocal_60 = OBJECT::CREATE_OBJECT(joaat("prop_ld_binbag_01"), Local_65.x, Local_65.f_1, (Local_65.f_2 + 100f), true, true, false);
+		iLocal_60 = OBJECT::CREATE_OBJECT(joaat("prop_ld_binbag_01"), Local_65.f_0, Local_65.f_1, (Local_65.f_2 + 100f), true, true, false);
 		ENTITY::SET_ENTITY_VISIBLE(iLocal_60, false, false);
 		if (SYSTEM::VDIST(2411.32f, 4958.76f, 45.19f, Local_65) < 10f)
 		{
@@ -4884,7 +4884,7 @@ int func_112()
 
 void func_113()
 {
-	Local_250.x = 0f;
+	Local_250.f_0 = 0f;
 	Local_250.f_1 = 10f;
 	PED::SET_PED_COMBAT_MOVEMENT(iLocal_54, 2);
 	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_54, 13, true);
@@ -6318,9 +6318,9 @@ bool func_135(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_136(int iParam0)
@@ -7855,7 +7855,7 @@ void func_194(int iParam0, int iParam1)
 		}
 		if (func_198(iParam0, iParam1) != 322)
 		{
-			func_195(func_198(iParam0, iParam1), Local_44.x, Local_44.f_1);
+			func_195(func_198(iParam0, iParam1), Local_44.f_0, Local_44.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)

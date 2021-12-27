@@ -1712,7 +1712,7 @@ int func_36()
 	HUD::CLEAR_HELP(true);
 	Var0.f_4 = 5;
 	Var0.f_10 = 5;
-	Var0 = iLocal_124;
+	Var0.f_0 = iLocal_124;
 	Var0.f_1 = { Local_121 };
 	iVar18 = 0;
 	iVar18 = 0;
@@ -3296,7 +3296,7 @@ int func_85(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4)
 			{
 				return 1;
 			}
-			if (MISC::IS_PROJECTILE_IN_AREA((Var1.x - 5f), (Var1.f_1 - 5f), (Var1.f_2 - 5f), (Var1.x + 5f), (Var1.f_1 + 5f), (Var1.f_2 + 5f), false))
+			if (MISC::IS_PROJECTILE_IN_AREA((Var1.f_0 - 5f), (Var1.f_1 - 5f), (Var1.f_2 - 5f), (Var1.f_0 + 5f), (Var1.f_1 + 5f), (Var1.f_2 + 5f), false))
 			{
 				return 1;
 			}
@@ -3983,7 +3983,7 @@ void func_118()
 	{
 		iVar5 = 0;
 		iVar5 = 0;
-		while (iVar5 < Local_329)
+		while (iVar5 < Local_329.f_0)
 		{
 			if (!func_123(Local_329[iVar5 /*14*/].f_2))
 			{
@@ -4229,7 +4229,7 @@ int func_122(bool bParam0)
 
 int func_123(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -4255,7 +4255,7 @@ void func_125(struct<3> Param0, float fParam3, struct<3> Param4, float fParam7)
 	iVar0 = 0;
 	bVar1 = false;
 	iVar0 = 0;
-	while (iVar0 < Local_329)
+	while (iVar0 < Local_329.f_0)
 	{
 		if (!bVar1 && func_123(Local_329[iVar0 /*14*/].f_2))
 		{
@@ -4278,7 +4278,7 @@ void func_126()
 	
 	iVar0 = 0;
 	iVar0 = 0;
-	while (iVar0 < Local_329)
+	while (iVar0 < Local_329.f_0)
 	{
 		Local_329[iVar0 /*14*/].f_2 = { 0f, 0f, 0f };
 		Local_329[iVar0 /*14*/].f_5 = 0f;

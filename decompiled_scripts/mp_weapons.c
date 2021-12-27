@@ -11174,7 +11174,7 @@ void func_104(int iParam0, var uParam1, int iParam2, int iParam3)
 					{
 						if (WEAPON::GET_WEAPON_COMPONENT_HUD_STATS(iVar28, &Var18))
 						{
-							Var23 = (Var23 + Var18);
+							Var23.f_0 = (Var23.f_0 + Var18.f_0);
 							Var23.f_1 = (Var23.f_1 + Var18.f_1);
 							Var23.f_3 = (Var23.f_3 + Var18.f_3);
 							Var23.f_4 = (Var23.f_4 + Var18.f_4);
@@ -11202,8 +11202,8 @@ void func_104(int iParam0, var uParam1, int iParam2, int iParam3)
 				Var23.f_2 = Var13.f_2;
 			}
 			func_122(iVar30, &Var0, &cVar4, uParam1);
-			func_121(iVar30, Var13, uParam1);
-			func_120(iVar30, Var23, uParam1);
+			func_121(iVar30, Var13.f_0, uParam1);
+			func_120(iVar30, Var23.f_0, uParam1);
 			if (func_15(iParam0))
 			{
 				func_119(iVar30, -1, uParam1);

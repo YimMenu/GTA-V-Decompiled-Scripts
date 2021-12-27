@@ -338,7 +338,7 @@ void func_2()
 	{
 		if (MISC::IS_BIT_SET(Local_121.f_2, 3))
 		{
-			Var0 = 677240627;
+			Var0.f_0 = 677240627;
 			Var0.f_1 = PLAYER::PLAYER_ID();
 			Var0.f_2 = -1643758344;
 			Var0.f_10 = func_6();
@@ -347,7 +347,7 @@ void func_2()
 		}
 		else if (MISC::IS_BIT_SET(Local_121.f_2, 0))
 		{
-			Var14 = 677240627;
+			Var14.f_0 = 677240627;
 			Var14.f_1 = PLAYER::PLAYER_ID();
 			Var14.f_2 = 1541697920;
 			func_3(Var14, func_4());
@@ -355,7 +355,7 @@ void func_2()
 		}
 		else if (MISC::IS_BIT_SET(Local_121.f_2, 2) || MISC::IS_BIT_SET(Local_121.f_2, 1))
 		{
-			Var28 = 677240627;
+			Var28.f_0 = 677240627;
 			Var28.f_1 = PLAYER::PLAYER_ID();
 			Var28.f_2 = 980511777;
 			func_3(Var28, func_4());
@@ -366,7 +366,7 @@ void func_2()
 
 void func_3(struct<2> Param0, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, int iParam14)
 {
-	Param0 = 677240627;
+	Param0.f_0 = 677240627;
 	Param0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam14 == 0)
 	{
@@ -556,7 +556,7 @@ int func_16()
 
 int func_17(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -927,7 +927,7 @@ int func_29()
 
 void func_30(int iParam0)
 {
-	Local_121 = iParam0;
+	Local_121.f_0 = iParam0;
 }
 
 int func_31()
@@ -13064,7 +13064,7 @@ void func_113(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
 				Global_2883588 = Var2.f_1;
-				Global_2883589 = Var2;
+				Global_2883589 = Var2.f_0;
 				func_103(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var2.f_7), 0, 0, Var2.f_2, 0, -1, 2, 1);
 				return;
 			}
@@ -13125,7 +13125,7 @@ void func_113(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar36 = -1;
 				}
 				Global_2883588 = Var19.f_1;
-				Global_2883589 = Var19;
+				Global_2883589 = Var19.f_0;
 				func_103(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var19.f_9), Var19.f_3, Var19.f_4, Var19.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var19.f_1, joaat("OUTFIT_ONLY"), 0), iVar36, 2, Var19.f_1 != 0);
 				return;
 			}
@@ -13138,7 +13138,7 @@ void func_113(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			FILES::GET_SHOP_PED_COMPONENT(iParam3, &Var39);
 			Global_2883588 = Var39.f_1;
-			Global_2883589 = Var39;
+			Global_2883589 = Var39.f_0;
 			func_103(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 			return;
 		}
@@ -13150,7 +13150,7 @@ void func_113(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
 				Global_2883588 = Var39.f_1;
-				Global_2883589 = Var39;
+				Global_2883589 = Var39.f_0;
 				func_103(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 				return;
 			}
@@ -40228,7 +40228,7 @@ void func_185(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, v
 				if (!func_208())
 				{
 					Var7 = { func_207() };
-					MONEY::_NETWORK_EARN_FROM_BUSINESS_PRODUCT(iParam1, MISC::GET_HASH_KEY(func_206(Var7)), func_205(Var7), iParam4);
+					MONEY::_NETWORK_EARN_FROM_BUSINESS_PRODUCT(iParam1, MISC::GET_HASH_KEY(func_206(Var7.f_0)), func_205(Var7.f_0), iParam4);
 				}
 			}
 			else if (func_208())
@@ -41160,7 +41160,7 @@ void func_202(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -43298,7 +43298,7 @@ void func_269(int iParam0, int iParam1, int iParam2)
 	
 	if (func_5(iParam0, 0, 1))
 	{
-		Var0 = 657959395;
+		Var0.f_0 = 657959395;
 		Var0.f_1 = PLAYER::PLAYER_ID();
 		Var0.f_2 = iParam1;
 		Var0.f_4 = iParam2;
@@ -44506,7 +44506,7 @@ void func_322(int iParam0, var uParam1, var uParam2, var uParam3)
 {
 	struct<8> Var0;
 	
-	Var0 = 1890277845;
+	Var0.f_0 = 1890277845;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = uParam1;
 	Var0.f_4 = uParam2;
@@ -46184,7 +46184,7 @@ void func_359(int iParam0, var uParam1, int iParam2, var uParam3)
 					fVar6 = ((IntToFloat(iVar5) / 100f) * fVar4);
 					*uParam3 = SYSTEM::CEIL(fVar6);
 				}
-				iVar7 = func_354(PLAYER::PLAYER_ID(), Var0, *uParam3);
+				iVar7 = func_354(PLAYER::PLAYER_ID(), Var0.f_0, *uParam3);
 				if (Var0.f_1 == 1)
 				{
 					fVar8 = (SYSTEM::TO_FLOAT(iVar7) * Global_262145.f_18861);
@@ -46248,7 +46248,7 @@ void func_359(int iParam0, var uParam1, int iParam2, var uParam3)
 					fVar21 = ((IntToFloat(iVar20) / 100f) * fVar19);
 					*uParam3 = SYSTEM::CEIL(fVar21);
 				}
-				iVar22 = func_354(func_211(), Var15, *uParam3);
+				iVar22 = func_354(func_211(), Var15.f_0, *uParam3);
 				if (Var15.f_1 == 1)
 				{
 					iVar22 = SYSTEM::CEIL((IntToFloat(iVar22) * Global_262145.f_18861));
@@ -49364,7 +49364,7 @@ int func_466(int iParam0, bool bParam1)
 			{
 				if (iParam0 == Var1.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 					{
 						return 0;
 					}
@@ -66976,7 +66976,7 @@ void func_790(int iParam0, int iParam1)
 {
 	struct<4> Var0;
 	
-	Var0 = 801199324;
+	Var0.f_0 = 801199324;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = MISC::GET_RANDOM_INT_IN_RANGE(0, 9999);
@@ -68110,16 +68110,16 @@ int func_818(struct<6> Param0, struct<6> Param6)
 		}
 		if (Param0.f_4 == Param6.f_4)
 		{
-			Var0 = Param0;
+			Var0.f_0 = Param0.f_0;
 			Var0.f_1 = Param0.f_1 * 60;
 			Var0.f_2 = Param0.f_2 * 3600;
 			Var0.f_3 = (Param0.f_3 * 86400);
-			iVar12 = (((Var0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
-			Var6 = Param6;
+			iVar12 = (((Var0.f_0 + Var0.f_1) + Var0.f_2) + Var0.f_3);
+			Var6.f_0 = Param6.f_0;
 			Var6.f_1 = Param6.f_1 * 60;
 			Var6.f_2 = Param6.f_2 * 3600;
 			Var6.f_3 = (Param6.f_3 * 86400);
-			iVar13 = (((Var6 + Var6.f_1) + Var6.f_2) + Var6.f_3);
+			iVar13 = (((Var6.f_0 + Var6.f_1) + Var6.f_2) + Var6.f_3);
 			if (iVar12 > iVar13 || iVar12 == iVar13)
 			{
 				return 1;
@@ -69674,11 +69674,11 @@ void func_873(int iParam0)
 	iVar2 = func_11();
 	iVar3 = func_11();
 	SCRIPT::GET_EVENT_DATA(1, iParam0, &Var4, 13);
-	if (ENTITY::DOES_ENTITY_EXIST(Var4))
+	if (ENTITY::DOES_ENTITY_EXIST(Var4.f_0))
 	{
-		if (ENTITY::IS_ENTITY_A_PED(Var4))
+		if (ENTITY::IS_ENTITY_A_PED(Var4.f_0))
 		{
-			iVar0 = ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(Var4);
+			iVar0 = ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(Var4.f_0);
 			if (PED::IS_PED_A_PLAYER(iVar0))
 			{
 				iVar2 = NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(iVar0);
@@ -72011,7 +72011,7 @@ void func_964(int iParam0)
 
 int func_965()
 {
-	return Local_121;
+	return Local_121.f_0;
 }
 
 int func_966(int iParam0)
@@ -73138,9 +73138,9 @@ bool func_996(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 Vector3 func_997()
@@ -73740,7 +73740,7 @@ void func_1025(var uParam0, int iParam1, int iParam2, int iParam3)
 	struct<18> Var153;
 	
 	sVar0 = SCRIPT::GET_THIS_SCRIPT_NAME();
-	Var1 = Global_1944620;
+	Var1.f_0 = Global_1944620;
 	Var1.f_1 = Global_1944620.f_1;
 	Var1.f_2 = Global_1944620.f_2;
 	Var1.f_3 = Global_1944620.f_3;
@@ -73849,7 +73849,7 @@ bool func_1027(int iParam0)
 
 int func_1028(struct<21> Param0)
 {
-	func_1076(func_1077(Param0), Param0);
+	func_1076(func_1077(Param0.f_0), Param0);
 	func_1032(164, 0, 0);
 	NETWORK::RESERVE_NETWORK_MISSION_OBJECTS(0);
 	func_1029(0, -1, 0);

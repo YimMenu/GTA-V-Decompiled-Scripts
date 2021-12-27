@@ -1276,7 +1276,7 @@ void func_32(int iParam0, int iParam1)
 		}
 		if (func_40(iParam0, iParam1) != 322)
 		{
-			func_34(func_40(iParam0, iParam1), Local_44.x, Local_44.f_1);
+			func_34(func_40(iParam0, iParam1), Local_44.f_0, Local_44.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -2677,13 +2677,13 @@ bool func_64()
 	if (bVar1)
 	{
 		Var2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Local_48 };
-		fVar11 = MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.f_1);
+		fVar11 = MISC::GET_HEADING_FROM_VECTOR_2D(Var2.f_0, Var2.f_1);
 		if (func_65(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), fVar11, 15f))
 		{
 			bVar0 = true;
 		}
 		Var2 = { Local_48 - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-		fVar11 = MISC::GET_HEADING_FROM_VECTOR_2D(Var2.x, Var2.f_1);
+		fVar11 = MISC::GET_HEADING_FROM_VECTOR_2D(Var2.f_0, Var2.f_1);
 		if (func_65(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), fVar11, 15f))
 		{
 			bVar0 = true;
@@ -5044,9 +5044,9 @@ bool func_122(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_123(int iParam0)

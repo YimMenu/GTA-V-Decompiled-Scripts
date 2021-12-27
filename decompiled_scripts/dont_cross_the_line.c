@@ -550,7 +550,7 @@ void __EntryFunction__()
 	fLocal_104 = 0.5f;
 	iLocal_249 = -1;
 	iLocal_251 = -1;
-	ScriptParam_0 = 177;
+	ScriptParam_0.f_0 = 177;
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		func_221(ScriptParam_0);
@@ -576,14 +576,14 @@ void __EntryFunction__()
 
 void func_1(var uParam0)
 {
-	if (Local_319 < 11)
+	if (Local_319.f_0 < 11)
 	{
 		func_187(uParam0);
 	}
 	switch (*uParam0)
 	{
 		case 0:
-			if (Local_319 > 3 && !Local_319 == 9)
+			if (Local_319.f_0 > 3 && !Local_319.f_0 == 9)
 			{
 				func_186(uParam0, 11);
 				return;
@@ -635,7 +635,7 @@ void func_1(var uParam0)
 			func_29(uParam0);
 			break;
 	}
-	switch (Local_319)
+	switch (Local_319.f_0)
 	{
 		case 0:
 			func_28(uParam0);
@@ -849,7 +849,7 @@ void func_6(bool bParam0)
 void func_7(var uParam0, int iParam1)
 {
 	uParam0->f_4 = 0;
-	Local_319 = iParam1;
+	Local_319.f_0 = iParam1;
 }
 
 int func_8(var uParam0, int iParam1, bool bParam2)
@@ -1116,7 +1116,7 @@ void func_19(var uParam0)
 	struct<3> Var0;
 	int iVar3;
 	
-	Var0.x = -1086101995;
+	Var0.f_0 = -1086101995;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = uParam0;
 	iVar3 = func_20(1);
@@ -2274,7 +2274,7 @@ void func_62(var uParam0)
 	}
 	func_64(uParam0, 1);
 	func_63(uParam0);
-	if (Local_319 == 10)
+	if (Local_319.f_0 == 10)
 	{
 		AUDIO::STOP_SOUND(uParam0->f_3);
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Music_Game_Over", "DLC_EXEC_ARC_MAC_SOUNDS", true);
@@ -2284,7 +2284,7 @@ void func_62(var uParam0)
 		func_6(0);
 		func_5(0, 0);
 	}
-	else if (Local_319 == 4)
+	else if (Local_319.f_0 == 4)
 	{
 		if (MISC::IS_BIT_SET(Local_397[iLocal_249 /*2*/].f_1, 4) || MISC::IS_BIT_SET(Local_397[iLocal_249 /*2*/].f_1, 2))
 		{
@@ -2751,7 +2751,7 @@ void func_84(int iParam0)
 	
 	bVar0 = false;
 	iVar1 = 0;
-	while (iVar1 < Local_397)
+	while (iVar1 < Local_397.f_0)
 	{
 		if (NETWORK::NETWORK_IS_PARTICIPANT_ACTIVE(PLAYER::INT_TO_PARTICIPANTINDEX(iVar1)) && Local_397[iVar1 /*2*/] == iParam0)
 		{
@@ -2798,7 +2798,7 @@ void func_86(var uParam0)
 	}
 	func_60(uParam0);
 	func_125(uParam0);
-	if (Local_319 >= 9)
+	if (Local_319.f_0 >= 9)
 	{
 		func_5(1, 0);
 		if (AUDIO::HAS_SOUND_FINISHED(uParam0->f_3))
@@ -5596,7 +5596,7 @@ void func_128(var uParam0)
 			HUD::DISPLAY_HELP_TEXT_THIS_FRAME("DCTL_GAMEHELP", false);
 			MISC::SET_BIT(&(uParam0->f_2), 5);
 		}
-		if (Local_319 >= 8)
+		if (Local_319.f_0 >= 8)
 		{
 			AUDIO::PLAY_SOUND_FRONTEND(-1, "Music_Win", "DLC_EXEC_ARC_MAC_SOUNDS", true);
 			iVar0 = 0;
@@ -5628,7 +5628,7 @@ void func_129(int iParam0, var uParam1, int iParam2, int iParam3)
 	Var0.f_3 = -1082130432;
 	Var0.f_4 = -1;
 	Var0.f_5 = -1;
-	Var0 = -1643822208;
+	Var0.f_0 = -1643822208;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = uParam1;
@@ -5697,7 +5697,7 @@ void func_131(var uParam0, var uParam1, int iParam2)
 			break;
 		
 		case 1:
-			if (Local_319 == 7)
+			if (Local_319.f_0 == 7)
 			{
 				func_16(uParam1, 2, iParam2);
 			}
@@ -5767,7 +5767,7 @@ void func_133(int iParam0)
 	struct<3> Var0;
 	int iVar3;
 	
-	Var0.x = -392833022;
+	Var0.f_0 = -392833022;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	iVar3 = func_20(1);
@@ -6805,7 +6805,7 @@ void func_159(var uParam0)
 			{
 				if (SCRIPT::GET_EVENT_DATA(1, iVar0, &Var1, 6))
 				{
-					if (Var1 == -1643822208)
+					if (Var1.f_0 == -1643822208)
 					{
 						if (iVar206 < 16)
 						{
@@ -6820,7 +6820,7 @@ void func_159(var uParam0)
 				}
 				if (SCRIPT::GET_EVENT_DATA(1, iVar0, &Var7, 3))
 				{
-					if (Var7.x == -392833022)
+					if (Var7.f_0 == -392833022)
 					{
 						func_164(&(uParam0->f_35), Var7.f_2);
 					}
@@ -6828,7 +6828,7 @@ void func_159(var uParam0)
 			}
 			else if (SCRIPT::GET_EVENT_DATA(1, iVar0, &Var10, 3))
 			{
-				if (Var10.x == -1086101995)
+				if (Var10.f_0 == -1086101995)
 				{
 					iLocal_251 = Var10.f_2;
 				}
@@ -7109,7 +7109,7 @@ void func_165(var uParam0)
 	func_159(uParam0);
 	func_167(uParam0);
 	func_146(uParam0);
-	if (Local_319 >= 7)
+	if (Local_319.f_0 >= 7)
 	{
 		AUDIO::STOP_SOUND(uParam0->f_3);
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Go", "DLC_EXEC_ARC_MAC_SOUNDS", true);
@@ -7223,12 +7223,12 @@ void func_169(var uParam0)
 	func_170(uParam0);
 	func_147(uParam0);
 	func_146(uParam0);
-	if (Local_319 == 10)
+	if (Local_319.f_0 == 10)
 	{
 		func_186(uParam0, 10);
 		func_54(1);
 	}
-	else if (Local_319 >= 6)
+	else if (Local_319.f_0 >= 6)
 	{
 		func_186(uParam0, 6);
 	}
@@ -7288,14 +7288,14 @@ void func_171(var uParam0)
 				{
 					MISC::SET_BIT(&(Local_397[iLocal_249 /*2*/].f_1), 5);
 				}
-				if (Local_319 == 10)
+				if (Local_319.f_0 == 10)
 				{
 					AUDIO::STOP_SOUND(uParam0->f_3);
 					AUDIO::PLAY_SOUND_FRONTEND(-1, "Music_Game_Over", "DLC_EXEC_ARC_MAC_SOUNDS", true);
 					func_186(uParam0, 10);
 					func_54(0);
 				}
-				else if (Local_319 >= 5)
+				else if (Local_319.f_0 >= 5)
 				{
 					uParam0->f_5 = NETWORK::NETWORK_GET_NUM_PARTICIPANTS();
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_3, "FadeOut", 7f);
@@ -7351,7 +7351,7 @@ void func_173(var uParam0)
 	func_174(uParam0);
 	func_146(uParam0);
 	func_64(uParam0, 0);
-	if (Local_319 > 3)
+	if (Local_319.f_0 > 3)
 	{
 		if (MISC::IS_BIT_SET(Local_397[iLocal_249 /*2*/].f_1, 4) || MISC::IS_BIT_SET(Local_397[iLocal_249 /*2*/].f_1, 2))
 		{
@@ -7359,7 +7359,7 @@ void func_173(var uParam0)
 		}
 		else
 		{
-			if (Local_319 == 10)
+			if (Local_319.f_0 == 10)
 			{
 				func_6(0);
 				func_5(0, 0);
@@ -7370,7 +7370,7 @@ void func_173(var uParam0)
 			func_14(uParam0);
 			func_6(0);
 			func_5(0, 0);
-			if (Local_319 == 4)
+			if (Local_319.f_0 == 4)
 			{
 				func_186(uParam0, 4);
 			}
@@ -7497,11 +7497,11 @@ void func_177(var uParam0)
 		{
 			MISC::SET_BIT(&(Local_397[iLocal_249 /*2*/].f_1), 6);
 			func_70();
-			if (Local_319 == 9)
+			if (Local_319.f_0 == 9)
 			{
 				func_186(uParam0, 9);
 			}
-			else if (Local_319 >= 3)
+			else if (Local_319.f_0 >= 3)
 			{
 				func_186(uParam0, 3);
 			}
@@ -7666,17 +7666,17 @@ void func_187(var uParam0)
 	}
 	func_197();
 	RECORDING::_STOP_RECORDING_THIS_FRAME();
-	if (Local_319 > 2)
+	if (Local_319.f_0 > 2)
 	{
 		func_190(0);
 	}
 	func_188(uParam0);
-	if (!HUD::IS_PAUSE_MENU_ACTIVE() && Local_319 > 2)
+	if (!HUD::IS_PAUSE_MENU_ACTIVE() && Local_319.f_0 > 2)
 	{
 		HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
 		GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(1);
 	}
-	if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT() && !Local_319 == 4)
+	if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT() && !Local_319.f_0 == 4)
 	{
 		iVar1 = 0;
 		while (iVar1 <= 3)

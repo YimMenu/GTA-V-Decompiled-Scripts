@@ -1530,7 +1530,7 @@ void func_20(int iParam0, int iParam1)
 		}
 		if (func_28(iParam0, iParam1) != 322)
 		{
-			func_22(func_28(iParam0, iParam1), Local_50.x, Local_50.f_1);
+			func_22(func_28(iParam0, iParam1), Local_50.f_0, Local_50.f_1);
 		}
 		Global_112903 = iParam1;
 		if (Global_112901 == 0)
@@ -2993,7 +2993,7 @@ void func_57()
 				iLocal_55 = 10;
 			}
 		}
-		else if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.x - 50f), (Var0.f_1 - 50f), (Var0.f_2 - 50f), (Var0.x + 50f), (Var0.f_1 + 50f), (Var0.f_2 + 50f)))
+		else if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.f_0 - 50f), (Var0.f_1 - 50f), (Var0.f_2 - 50f), (Var0.f_0 + 50f), (Var0.f_1 + 50f), (Var0.f_2 + 50f)))
 		{
 			if (!PED::IS_PED_INJURED(iLocal_72))
 			{
@@ -3011,7 +3011,7 @@ void func_57()
 	}
 	else if (func_14())
 	{
-		if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.x - 10f), (Var0.f_1 - 10f), (Var0.f_2 - 10f), (Var0.x + 10f), (Var0.f_1 + 10f), (Var0.f_2 + 10f)))
+		if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.f_0 - 10f), (Var0.f_1 - 10f), (Var0.f_2 - 10f), (Var0.f_0 + 10f), (Var0.f_1 + 10f), (Var0.f_2 + 10f)))
 		{
 			func_52();
 			SYSTEM::WAIT(0);
@@ -3028,7 +3028,7 @@ void func_57()
 			}
 		}
 	}
-	else if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.x - 10f), (Var0.f_1 - 10f), (Var0.f_2 - 10f), (Var0.x + 10f), (Var0.f_1 + 10f), (Var0.f_2 + 10f)))
+	else if (VEHICLE::IS_COP_VEHICLE_IN_AREA_3D((Var0.f_0 - 10f), (Var0.f_1 - 10f), (Var0.f_2 - 10f), (Var0.f_0 + 10f), (Var0.f_1 + 10f), (Var0.f_2 + 10f)))
 	{
 		if (!PED::IS_PED_INJURED(iLocal_72))
 		{
@@ -3047,7 +3047,7 @@ void func_57()
 
 float func_58(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 Vector3 func_59(int iParam0)
@@ -6315,9 +6315,9 @@ bool func_135(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 bool func_136(int iParam0)

@@ -170,7 +170,7 @@ void __EntryFunction__()
 					{
 						if (func_8())
 						{
-							Local_61 = 1;
+							Local_61.f_0 = 1;
 						}
 					}
 					break;
@@ -180,7 +180,7 @@ void __EntryFunction__()
 					func_6();
 					if (func_1())
 					{
-						Local_61 = 4;
+						Local_61.f_0 = 4;
 					}
 					break;
 				
@@ -656,7 +656,7 @@ bool func_16(int iParam0, float* fParam1)
 						}
 						else
 						{
-							Local_61 = 4;
+							Local_61.f_0 = 4;
 						}
 					}
 				}
@@ -687,7 +687,7 @@ int func_17(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -889,7 +889,7 @@ Vector3 func_23(int iParam0)
 
 int func_24(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -1167,7 +1167,7 @@ void func_41()
 
 int func_42()
 {
-	return Local_61;
+	return Local_61.f_0;
 }
 
 int func_43(int iParam0)
@@ -1624,7 +1624,7 @@ void func_64(struct<21> Param0)
 {
 	int iVar0;
 	
-	func_69(func_70(Param0), Param0);
+	func_69(func_70(Param0.f_0), Param0);
 	NETWORK::RESERVE_NETWORK_MISSION_PEDS(1);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(1);
 	func_67(0, -1, 0);
@@ -2970,6 +2970,41 @@ int func_73(int iParam0, bool bParam1, bool bParam2)
 	int iVar0;
 	
 	iVar0 = iParam0;
+	if (iVar0 != -1)
+	{
+		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))
+		{
+			if (bParam1)
+			{
+				if (!PLAYER::IS_PLAYER_PLAYING(iParam0))
+				{
+					return 0;
+				}
+			}
+			if (bParam2)
+			{
+				if (!Global_2703656.f_3[iVar0])
+				{
+					return 0;
+				}
+			}
+			return 1;
+		}
+	}
+	return 0;
+}
+
+ (bParam1)
+	{
+	}
+	return 286;
+}
+
+int func_73(int iParam0, bool bParam1, bool bParam2)
+{
+	int iVar0;
+	
+	iVar0.f_0 = iParam0;
 	if (iVar0 != -1)
 	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))

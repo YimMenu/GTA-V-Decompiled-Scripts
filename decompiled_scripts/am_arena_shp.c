@@ -463,13 +463,13 @@ void func_17(int iParam0)
 	if (!func_13())
 	{
 		iVar7 = 1;
-		Var0 = iParam0;
+		Var0.f_0 = iParam0;
 		Var0.f_2 = 0;
 	}
 	if (iVar7 || SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 7))
 	{
 		Var10.f_66 = 2147483647;
-		iVar9 = func_35(Var0, &Var10);
+		iVar9 = func_35(Var0.f_0, &Var10);
 		if (iVar9 != -1)
 		{
 			Global_4528329[iVar9 /*85*/].f_66.f_8 = 0;
@@ -837,7 +837,7 @@ void func_25(struct<67> Param0, var uParam67, var uParam68, var uParam69, var uP
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -1906,7 +1906,7 @@ void func_32(int iParam0, bool bParam1)
 			break;
 		
 		case -1896606724:
-			Var6 = Global_4528329[iParam0 /*85*/].f_66.f_1;
+			Var6.f_0 = Global_4528329[iParam0 /*85*/].f_66.f_1;
 			MONEY::_NETWORK_SPENT_ISLAND_HEIST(Global_4528329[iParam0 /*85*/].f_66.f_1, 0, 1, &Var6);
 			break;
 		

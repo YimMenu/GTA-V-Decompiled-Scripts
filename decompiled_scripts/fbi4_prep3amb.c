@@ -1160,7 +1160,7 @@ int func_26(int iParam0, bool bParam1)
 			{
 				if (iParam0 == Var1.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+					if (FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 					{
 						return 0;
 					}
@@ -4488,7 +4488,7 @@ int func_53(int iParam0, int iParam1)
 		Var0.f_31 = 49;
 		Var0.f_81 = 2;
 		func_54(iParam0, &Var0, iParam1);
-		return Var0;
+		return Var0.f_0;
 	}
 	else if (iParam0 != 145)
 	{
@@ -5250,9 +5250,9 @@ bool func_77(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 void func_78(int iParam0, bool bParam1)
@@ -6061,8 +6061,8 @@ int func_111(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	}
 	if (Global_112915.f_7688.f_136 < 9)
 	{
-		Var0 = iParam0;
-		if (Global_112915.f_7688.f_911 == Var0)
+		Var0.f_0 = iParam0;
+		if (Global_112915.f_7688.f_911 == Var0.f_0)
 		{
 			Global_112915.f_7688.f_911 = -1;
 		}
@@ -7137,7 +7137,7 @@ void func_160(int iParam0, var uParam1)
 	switch (iParam0)
 	{
 		case 0:
-			Local_44 = 0;
+			Local_44.f_0 = 0;
 			Local_44.f_1 = "MICHAEL";
 			if (iLocal_42 == 0)
 			{
@@ -7163,7 +7163,7 @@ void func_160(int iParam0, var uParam1)
 			break;
 		
 		case 1:
-			Local_44 = 1;
+			Local_44.f_0 = 1;
 			Local_44.f_1 = "FRANKLIN";
 			if (iLocal_42 == 0)
 			{
@@ -7189,7 +7189,7 @@ void func_160(int iParam0, var uParam1)
 			break;
 		
 		case 2:
-			Local_44 = 2;
+			Local_44.f_0 = 2;
 			Local_44.f_1 = "TREVOR";
 			if (iLocal_42 == 0)
 			{
@@ -7226,7 +7226,7 @@ void func_160(int iParam0, var uParam1)
 		}
 		func_162(Local_44.f_8, iVar0, 0);
 	}
-	func_161(&uLocal_1273, Local_44, PLAYER::PLAYER_PED_ID(), Local_44.f_1, 0, 1);
+	func_161(&uLocal_1273, Local_44.f_0, PLAYER::PLAYER_PED_ID(), Local_44.f_1, 0, 1);
 	func_161(&uLocal_1273, Local_44.f_2, 0, Local_44.f_3, 0, 1);
 	Local_44.f_4 = uParam1;
 }
@@ -9507,7 +9507,7 @@ int func_181(int iParam0)
 		return 0;
 	}
 	Var0 = { ENTITY::GET_ENTITY_ROTATION(iParam0, 2) };
-	if (Var0.x >= 10f || Var0.x <= -10f)
+	if (Var0.f_0 >= 10f || Var0.f_0 <= -10f)
 	{
 		func_69(42);
 		return 0;
@@ -12403,7 +12403,7 @@ struct<8> func_255(char* sParam0, struct<3> Param1, struct<3> Param4, float fPar
 {
 	struct<8> Var0;
 	
-	Var0 = sParam0;
+	Var0.f_0 = sParam0;
 	Var0.f_1 = { Param1 };
 	Var0.f_4 = { Param4 };
 	Var0.f_7 = fParam7;

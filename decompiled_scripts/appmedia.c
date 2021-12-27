@@ -287,11 +287,11 @@ void func_8()
 	{
 		if (iLocal_215)
 		{
-			Local_207.x = (Local_207.x + 1f);
+			Local_207.f_0 = (Local_207.f_0 + 1f);
 		}
-		if (Local_207.x > Local_204.x || Local_207.x == Local_204.x)
+		if (Local_207.f_0 > Local_204.f_0 || Local_207.f_0 == Local_204.f_0)
 		{
-			Local_207.x = Local_204.x;
+			Local_207.f_0 = Local_204.f_0;
 			iLocal_215 = 0;
 		}
 		if (iLocal_216)
@@ -333,11 +333,11 @@ void func_9()
 	{
 		if (iLocal_212)
 		{
-			Local_207.x = (Local_207.x - 1f);
+			Local_207.f_0 = (Local_207.f_0 - 1f);
 		}
-		if (Local_207.x < Local_204.x || Local_207.x == Local_204.x)
+		if (Local_207.f_0 < Local_204.f_0 || Local_207.f_0 == Local_204.f_0)
 		{
-			Local_207.x = Local_204.x;
+			Local_207.f_0 = Local_204.f_0;
 			iLocal_212 = 0;
 		}
 		if (iLocal_213)

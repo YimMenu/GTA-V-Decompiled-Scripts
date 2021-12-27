@@ -13837,7 +13837,7 @@ void func_291(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -14739,20 +14739,20 @@ int func_308(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	{
 		if (iParam8 != 0 && func_309(iParam1))
 		{
-			Var2 = iParam8;
+			Var2.f_0 = iParam8;
 			Var2.f_1 = iParam2;
 			Var2.f_2 = iParam5;
 			Var2.f_3 = iParam6;
 		}
 		else
 		{
-			Var2 = iParam2;
+			Var2.f_0 = iParam2;
 			Var2.f_1 = iParam8;
 			Var2.f_2 = iParam5;
 			Var2.f_3 = iParam6;
 		}
 		Global_4528329[iVar1 /*85*/].f_66.f_1 = Var2.f_2;
-		Global_4528329[iVar1 /*85*/].f_66.f_15 = Var2;
+		Global_4528329[iVar1 /*85*/].f_66.f_15 = Var2.f_0;
 		Global_4528329[iVar1 /*85*/].f_66.f_16 = Var2.f_1;
 		if (bVar0 || NETSHOPPING::NET_GAMESERVER_BASKET_ADD_ITEM(&Var2, iParam4))
 		{
@@ -15042,12 +15042,12 @@ int func_316(int iParam0, int iParam1, bool bParam2)
 	
 	if (bParam2)
 	{
-		Var0 = Global_2783571;
+		Var0.f_0 = Global_2783571;
 		Var0.f_1 = Global_2783571.f_1;
 	}
 	else
 	{
-		Var0 = Global_2783550[iParam0 /*2*/];
+		Var0.f_0 = Global_2783550[iParam0 /*2*/];
 		Var0.f_1 = Global_2783550[iParam0 /*2*/].f_1;
 	}
 	iVar2 = func_273(iParam1, bParam2);
@@ -15629,7 +15629,7 @@ int func_329(int iParam0)
 	{
 		if (iVar18 > 0)
 		{
-			Var22.x = MISC::GET_HASH_KEY(func_294(iLocal_140));
+			Var22.f_0 = MISC::GET_HASH_KEY(func_294(iLocal_140));
 			Var22.f_1 = 5;
 			Var22.f_2 = iParam0;
 			MONEY::_0x675D19C6067CAE08(iVar18, &Var22, 0, 1);
@@ -15899,7 +15899,7 @@ void func_333(int iParam0, int iParam1)
 {
 	struct<4> Var0;
 	
-	Var0 = 801199324;
+	Var0.f_0 = 801199324;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = MISC::GET_RANDOM_INT_IN_RANGE(0, 9999);
@@ -18195,7 +18195,7 @@ int func_429()
 			{
 				if (SCRIPT::GET_EVENT_DATA(1, iVar10, &Var0, 7))
 				{
-					if (Var0.x == iLocal_330 && Var0.x != -1)
+					if (Var0.f_0 == iLocal_330 && Var0.f_0 != -1)
 					{
 						if (Var0.f_2 == 0)
 						{
@@ -18315,7 +18315,7 @@ void func_436(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, v
 {
 	struct<7> Var0;
 	
-	Var0 = 985284033;
+	Var0.f_0 = 985284033;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = uParam2;

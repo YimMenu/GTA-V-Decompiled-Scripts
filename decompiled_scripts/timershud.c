@@ -2170,13 +2170,13 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 			{
 				bVar36 = false;
 			}
-			Var27 = *uParam3;
+			Var27.f_0 = *uParam3;
 			Var27.f_1 = uParam3->f_1;
-			Var0 = *uParam3;
+			Var0.f_0 = *uParam3;
 			Var0.f_1 = (uParam3->f_1 + 0.001f);
 			if (iParam22 == 1)
 			{
-				Var27 = (Var27 + 0.079f);
+				Var27.f_0 = (Var27.f_0 + 0.079f);
 				Var27.f_1 = (Var27.f_1 + 0.002f);
 				Var27.f_2 = (Var27.f_2 + 0.157f);
 				Var27.f_3 = (Var27.f_3 + 0.049f);
@@ -2187,7 +2187,7 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 			}
 			else if (iParam5 < 1000000)
 			{
-				Var27 = (Var27 + 0.079f);
+				Var27.f_0 = (Var27.f_0 + 0.079f);
 				Var27.f_1 = (Var27.f_1 + 0.008f);
 				Var27.f_2 = (Var27.f_2 + 0.157f);
 				Var27.f_3 = (Var27.f_3 + 0.036f);
@@ -2198,7 +2198,7 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 			}
 			else
 			{
-				Var27 = (Var27 + 0.079f);
+				Var27.f_0 = (Var27.f_0 + 0.079f);
 				Var27.f_1 = (Var27.f_1 + 0.01f);
 				Var27.f_2 = (Var27.f_2 + 0.157f);
 				Var27.f_3 = (Var27.f_3 + 0.033f);
@@ -2209,7 +2209,7 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 			}
 			if (func_122())
 			{
-				Var27 = (Var27 + -0.025f);
+				Var27.f_0 = (Var27.f_0 + -0.025f);
 				Var27.f_2 = (Var27.f_2 + 0.05f);
 			}
 			Global_1645739.f_6797 = (Global_1645739.f_6797 + Var27.f_3);
@@ -2355,15 +2355,15 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 			}
 			if (iParam22 == 1)
 			{
-				Var9 = uParam2->f_9;
+				Var9.f_0 = uParam2->f_9;
 				Var9.f_1 = (uParam4->f_1 - 0.0175f);
-				Var18 = uParam2->f_9;
+				Var18.f_0 = uParam2->f_9;
 				Var18.f_1 = (uParam4->f_1 + 0.0175f);
 				GRAPHICS::REQUEST_STREAMED_TEXTURE_DICT("MPArrow", false);
 				if (GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED("MPArrow"))
 				{
-					Var9 = (Var9 + 0.0095f);
-					Var9 = (Var9 - 0.015f);
+					Var9.f_0 = (Var9.f_0 + 0.0095f);
+					Var9.f_0 = (Var9.f_0 - 0.015f);
 					Var9.f_1 = (Var9.f_1 + 0.019f);
 					Var9.f_2 = (Var9.f_2 + 0.01f);
 					Var9.f_3 = (Var9.f_3 + 0.01f);
@@ -2373,8 +2373,8 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 					Var9.f_7 = (Var9.f_7 - 50);
 					Var9.f_8 = -90f;
 					func_89("MPArrow", "MP_ArrowXLarge", &Var9, 1, 0, iVar37, 0);
-					Var18 = (Var18 + 0.0095f);
-					Var18 = (Var18 - 0.015f);
+					Var18.f_0 = (Var18.f_0 + 0.0095f);
+					Var18.f_0 = (Var18.f_0 - 0.015f);
 					Var18.f_1 = (Var18.f_1 + 0.019f);
 					Var18.f_2 = (Var18.f_2 + 0.01f);
 					Var18.f_3 = (Var18.f_3 + 0.01f);
@@ -2392,11 +2392,11 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 				fVar49 = func_69();
 				if (func_122())
 				{
-					Var50 = (fVar49 - 0.061f);
+					Var50.f_0 = (fVar49 - 0.061f);
 				}
 				else
 				{
-					Var50 = (fVar49 - 0.0365f);
+					Var50.f_0 = (fVar49 - 0.0365f);
 				}
 				Var50.f_1 = (fVar48 + 0.057f);
 				Var50.f_2 = (Var27.f_2 - 0.004f);
@@ -2469,8 +2469,8 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 						fVar61 = (fVar61 + (-0.015f - 0.003f));
 					}
 					fVar59 = ((fVar62 * fVar60) + fVar61);
-					Var0 = (Var0 + fVar59);
-					Var0 = (Var0 - 0.015f);
+					Var0.f_0 = (Var0.f_0 + fVar59);
+					Var0.f_0 = (Var0.f_0 - 0.015f);
 					Var0.f_1 = (Var0.f_1 + 0.008f);
 					Var0.f_2 = (Var0.f_2 + 0.022f);
 					Var0.f_3 = (Var0.f_3 + 0.04f);
@@ -2486,7 +2486,7 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 				if (iParam21 != 0)
 				{
 					func_68(uParam2);
-					Var63 = ((*uParam4 + 0.145f) + 0.001f);
+					Var63.f_0 = ((*uParam4 + 0.145f) + 0.001f);
 					if (func_122())
 					{
 						Var63.f_1 = ((uParam4->f_1 + 0.016f) - 0.006f);
@@ -2499,7 +2499,7 @@ void func_45(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, in
 					Var63.f_3 = (0.032f + 0.004f);
 					Var63.f_7 = iParam26;
 					func_97(&Var63, 1);
-					Var72 = ((*uParam4 + 0.145f) + 0.001f);
+					Var72.f_0 = ((*uParam4 + 0.145f) + 0.001f);
 					if (func_122())
 					{
 						Var72.f_1 = ((uParam4->f_1 + 0.016f) - 0.006f);
@@ -3334,7 +3334,7 @@ void func_82(var uParam0, int iParam1)
 	{
 		return;
 	}
-	Var0 = 0.951f;
+	Var0.f_0 = 0.951f;
 	Var0.f_1 = uParam0->f_1;
 	Var0.f_2 = 0.002f;
 	Var0.f_3 = uParam0->f_3;
@@ -3373,11 +3373,11 @@ void func_83(struct<8> Param0, int iParam8, int iParam9)
 	{
 		if (iParam9 == 1)
 		{
-			GRAPHICS::DRAW_RECT(func_49(Var0), func_48(Var0.f_1), Var0.f_2, Var0.f_3, Var0.f_4, Var0.f_5, Var0.f_6, Var0.f_7, false);
+			GRAPHICS::DRAW_RECT(func_49(Var0.f_0), func_48(Var0.f_1), Var0.f_2, Var0.f_3, Var0.f_4, Var0.f_5, Var0.f_6, Var0.f_7, false);
 		}
 		else
 		{
-			GRAPHICS::DRAW_RECT(func_49(Var0), func_48(Var0.f_1), Var0.f_2, Var0.f_3, Var0.f_4, Var0.f_5, Var0.f_6, Var0.f_7, false);
+			GRAPHICS::DRAW_RECT(func_49(Var0.f_0), func_48(Var0.f_1), Var0.f_2, Var0.f_3, Var0.f_4, Var0.f_5, Var0.f_6, Var0.f_7, false);
 		}
 	}
 }
@@ -3473,11 +3473,11 @@ void func_89(char* sParam0, char* sParam1, var uParam2, int iParam3, int iParam4
 		GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(iParam5);
 		if (iParam3 == 1)
 		{
-			GRAPHICS::DRAW_SPRITE(sParam0, sParam1, func_49(Var0), func_48(Var0.f_1), Var0.f_2, Var0.f_3, Var0.f_8, Var0.f_4, Var0.f_5, Var0.f_6, Var0.f_7, bParam6);
+			GRAPHICS::DRAW_SPRITE(sParam0, sParam1, func_49(Var0.f_0), func_48(Var0.f_1), Var0.f_2, Var0.f_3, Var0.f_8, Var0.f_4, Var0.f_5, Var0.f_6, Var0.f_7, bParam6);
 		}
 		else
 		{
-			GRAPHICS::DRAW_SPRITE(sParam0, sParam1, func_49(Var0), func_48(Var0.f_1), Var0.f_2, Var0.f_3, Var0.f_8, Var0.f_4, Var0.f_5, Var0.f_6, Var0.f_7, bParam6);
+			GRAPHICS::DRAW_SPRITE(sParam0, sParam1, func_49(Var0.f_0), func_48(Var0.f_1), Var0.f_2, Var0.f_3, Var0.f_8, Var0.f_4, Var0.f_5, Var0.f_6, Var0.f_7, bParam6);
 		}
 		GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(4);
 	}
@@ -4197,21 +4197,21 @@ void func_126(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 		func_104(uParam2, uParam3, uParam4, iParam12, uParam1);
 		func_103(uParam2, iParam11);
 		uParam2->f_6 = 255;
-		Var9 = (*uParam4 + 0.095f);
-		Var18 = (*uParam4 + 0.095f);
-		Var27 = (*uParam4 + 0.095f);
-		Var36 = (*uParam4 + 0.072f);
-		Var45 = (*uParam4 + 0.072f);
-		Var54 = (*uParam4 + 0.072f);
-		Var63 = (*uParam4 + 0.049f);
-		Var72 = (*uParam4 + 0.049f);
-		Var81 = (*uParam4 + 0.049f);
-		Var90 = (*uParam4 + 0.026f);
-		Var99 = (*uParam4 + 0.026f);
-		Var108 = (*uParam4 + 0.026f);
-		Var117 = (*uParam4 + 0.003f);
-		Var126 = (*uParam4 + 0.003f);
-		Var135 = (*uParam4 + 0.003f);
+		Var9.f_0 = (*uParam4 + 0.095f);
+		Var18.f_0 = (*uParam4 + 0.095f);
+		Var27.f_0 = (*uParam4 + 0.095f);
+		Var36.f_0 = (*uParam4 + 0.072f);
+		Var45.f_0 = (*uParam4 + 0.072f);
+		Var54.f_0 = (*uParam4 + 0.072f);
+		Var63.f_0 = (*uParam4 + 0.049f);
+		Var72.f_0 = (*uParam4 + 0.049f);
+		Var81.f_0 = (*uParam4 + 0.049f);
+		Var90.f_0 = (*uParam4 + 0.026f);
+		Var99.f_0 = (*uParam4 + 0.026f);
+		Var108.f_0 = (*uParam4 + 0.026f);
+		Var117.f_0 = (*uParam4 + 0.003f);
+		Var126.f_0 = (*uParam4 + 0.003f);
+		Var135.f_0 = (*uParam4 + 0.003f);
 		if (func_122())
 		{
 			Var9.f_1 = ((uParam4->f_1 + 0.016f) - 0.0005f);
@@ -4363,11 +4363,11 @@ void func_126(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 		{
 			iVar344 = func_100();
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(iVar344);
-			Var0 = *uParam3;
+			Var0.f_0 = *uParam3;
 			Var0.f_1 = uParam3->f_1;
 			if (iParam5 < 1000000)
 			{
-				Var0 = (Var0 + 0.079f);
+				Var0.f_0 = (Var0.f_0 + 0.079f);
 				Var0.f_1 = (Var0.f_1 + 0.008f);
 				Var0.f_2 = (Var0.f_2 + 0.157f);
 				Var0.f_3 = (Var0.f_3 + 0.036f);
@@ -4378,7 +4378,7 @@ void func_126(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 			}
 			else
 			{
-				Var0 = (Var0 + 0.079f);
+				Var0.f_0 = (Var0.f_0 + 0.079f);
 				Var0.f_1 = (Var0.f_1 + 0.01f);
 				Var0.f_2 = (Var0.f_2 + 0.157f);
 				Var0.f_3 = (Var0.f_3 + 0.033f);
@@ -4389,7 +4389,7 @@ void func_126(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 			}
 			if (func_122())
 			{
-				Var0 = (Var0 + -0.025f);
+				Var0.f_0 = (Var0.f_0 + -0.025f);
 				Var0.f_2 = (Var0.f_2 + 0.05f);
 			}
 			Global_1645739.f_6797 = (Global_1645739.f_6797 + Var0.f_3);
@@ -5066,9 +5066,9 @@ void func_136(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 		{
 			iVar10 = func_100();
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(iVar10);
-			Var0 = *uParam3;
+			Var0.f_0 = *uParam3;
 			Var0.f_1 = uParam3->f_1;
-			Var0 = (Var0 + 0.079f);
+			Var0.f_0 = (Var0.f_0 + 0.079f);
 			Var0.f_1 = (Var0.f_1 + 0.008f);
 			Var0.f_2 = (Var0.f_2 + 0.157f);
 			Var0.f_3 = (Var0.f_3 + 0.036f);
@@ -5078,20 +5078,20 @@ void func_136(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			Var0.f_7 = 140;
 			if (func_122())
 			{
-				Var0 = (Var0 + -0.025f);
+				Var0.f_0 = (Var0.f_0 + -0.025f);
 				Var0.f_2 = (Var0.f_2 + 0.05f);
 			}
 			Global_1645739.f_6797 = (Global_1645739.f_6797 + Var0.f_3);
 			func_89("TimerBars", "ALL_BLACK_bg", &Var0, 1, 0, 4, 0);
 			func_80(uParam1, 0);
-			Var11 = ((*uParam4 + 0.145f) + 0.001f);
-			Var20 = ((*uParam4 + 0.145f) + 0.001f);
-			Var29 = (*uParam4 + 0.123f);
-			Var38 = (*uParam4 + 0.123f);
-			Var47 = (*uParam4 + 0.101f);
-			Var56 = (*uParam4 + 0.101f);
-			Var65 = (*uParam4 + 0.078f);
-			Var74 = (*uParam4 + 0.078f);
+			Var11.f_0 = ((*uParam4 + 0.145f) + 0.001f);
+			Var20.f_0 = ((*uParam4 + 0.145f) + 0.001f);
+			Var29.f_0 = (*uParam4 + 0.123f);
+			Var38.f_0 = (*uParam4 + 0.123f);
+			Var47.f_0 = (*uParam4 + 0.101f);
+			Var56.f_0 = (*uParam4 + 0.101f);
+			Var65.f_0 = (*uParam4 + 0.078f);
+			Var74.f_0 = (*uParam4 + 0.078f);
 			if (func_122())
 			{
 				Var11.f_1 = ((uParam4->f_1 + 0.016f) - 0f);
@@ -5327,9 +5327,9 @@ void func_140(int iParam0, var uParam1, var uParam2, var uParam3, int iParam4, i
 		{
 			iVar10 = func_100();
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(iVar10);
-			Var0 = *uParam2;
+			Var0.f_0 = *uParam2;
 			Var0.f_1 = uParam2->f_1;
-			Var0 = (Var0 + 0.079f);
+			Var0.f_0 = (Var0.f_0 + 0.079f);
 			Var0.f_1 = (Var0.f_1 + 0.008f);
 			Var0.f_2 = (Var0.f_2 + 0.157f);
 			Var0.f_3 = (Var0.f_3 + 0.036f);
@@ -5339,7 +5339,7 @@ void func_140(int iParam0, var uParam1, var uParam2, var uParam3, int iParam4, i
 			Var0.f_7 = 140;
 			if (func_122())
 			{
-				Var0 = (Var0 + -0.025f);
+				Var0.f_0 = (Var0.f_0 + -0.025f);
 				Var0.f_2 = (Var0.f_2 + 0.05f);
 			}
 			Global_1645739.f_6797 = (Global_1645739.f_6797 + Var0.f_3);
@@ -5534,7 +5534,7 @@ void func_144(struct<9> Param0, float fParam9, var uParam10, int iParam11, int i
 		fVar5 = fVar3;
 		fVar6 = fVar0;
 		fVar7 = ((fVar4 * fVar5) + fVar6);
-		fVar2 = Param0;
+		fVar2 = Param0.f_0;
 		fVar8 = func_145(Param0);
 		fVar9 = (fVar8 - (fVar7 / 2f));
 	}
@@ -5548,7 +5548,7 @@ void func_144(struct<9> Param0, float fParam9, var uParam10, int iParam11, int i
 		{
 			fVar7 = Param0.f_2;
 		}
-		fVar8 = Param0;
+		fVar8 = Param0.f_0;
 		fVar4 = ((fVar8 - fVar2) / 100f);
 		fVar5 = fVar3;
 		fVar6 = fVar2;
@@ -5575,7 +5575,7 @@ float func_145(struct<3> Param0, var uParam3, var uParam4, var uParam5, var uPar
 	float fVar1;
 	
 	fVar0 = (Param0.f_2 / 2f);
-	fVar1 = Param0.x;
+	fVar1 = Param0.f_0;
 	fVar1 = (fVar1 + fVar0);
 	fVar1 = (fVar1 - 0.002f);
 	return fVar1;
@@ -5587,7 +5587,7 @@ float func_146(struct<3> Param0, var uParam3, var uParam4, var uParam5, var uPar
 	float fVar1;
 	
 	fVar0 = (Param0.f_2 / 2f);
-	fVar1 = Param0.x;
+	fVar1 = Param0.f_0;
 	fVar1 = (fVar1 - fVar0);
 	return fVar1;
 }
@@ -5833,9 +5833,9 @@ void func_161(int iParam0, var uParam1, var uParam2, var uParam3, int iParam4, c
 		GRAPHICS::REQUEST_STREAMED_TEXTURE_DICT("Hunting", false);
 		if (GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED("TimerBars") && GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED("Hunting"))
 		{
-			Var9 = *uParam2;
+			Var9.f_0 = *uParam2;
 			Var9.f_1 = uParam2->f_1;
-			Var9 = (Var9 + 0.079f);
+			Var9.f_0 = (Var9.f_0 + 0.079f);
 			Var9.f_1 = (Var9.f_1 + 0.008f);
 			Var9.f_2 = (Var9.f_2 + 0.157f);
 			Var9.f_3 = (Var9.f_3 + 0.036f);
@@ -5845,7 +5845,7 @@ void func_161(int iParam0, var uParam1, var uParam2, var uParam3, int iParam4, c
 			Var9.f_7 = 140;
 			if (func_122())
 			{
-				Var9 = (Var9 + -0.025f);
+				Var9.f_0 = (Var9.f_0 + -0.025f);
 				Var9.f_2 = (Var9.f_2 + 0.05f);
 			}
 			Global_1645739.f_6797 = (Global_1645739.f_6797 + Var9.f_3);
@@ -5962,9 +5962,9 @@ void func_164(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 			}
 			if (!func_151(fParam22, fParam23))
 			{
-				Var0 = *uParam2;
+				Var0.f_0 = *uParam2;
 				Var0.f_1 = uParam2->f_1;
-				Var0 = (Var0 + 0.079f);
+				Var0.f_0 = (Var0.f_0 + 0.079f);
 				Var0.f_1 = (Var0.f_1 + 0.012f);
 				Var0.f_2 = (Var0.f_2 + 0.157f);
 				Var0.f_3 = (Var0.f_3 + 0.028f);
@@ -5974,7 +5974,7 @@ void func_164(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 				Var0.f_7 = 140;
 				if (func_122())
 				{
-					Var0 = (Var0 + -0.025f);
+					Var0.f_0 = (Var0.f_0 + -0.025f);
 					Var0.f_2 = (Var0.f_2 + 0.05f);
 				}
 				Global_1645739.f_6797 = (Global_1645739.f_6797 + Var0.f_3);
@@ -6508,11 +6508,11 @@ void func_177(int iParam0, var uParam1, var uParam2, var uParam3, int iParam4, i
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(iVar10);
 			if (!func_151(fParam12, fParam13))
 			{
-				Var0 = *uParam2;
+				Var0.f_0 = *uParam2;
 				Var0.f_1 = uParam2->f_1;
 				if (bParam17)
 				{
-					Var0 = (Var0 + 0.079f);
+					Var0.f_0 = (Var0.f_0 + 0.079f);
 					Var0.f_1 = (Var0.f_1 + 0.008f);
 					Var0.f_2 = (Var0.f_2 + 0.157f);
 					Var0.f_3 = (Var0.f_3 + 0.036f);
@@ -6523,7 +6523,7 @@ void func_177(int iParam0, var uParam1, var uParam2, var uParam3, int iParam4, i
 				}
 				else
 				{
-					Var0 = (Var0 + 0.079f);
+					Var0.f_0 = (Var0.f_0 + 0.079f);
 					Var0.f_1 = (Var0.f_1 + 0.012f);
 					Var0.f_2 = (Var0.f_2 + 0.157f);
 					Var0.f_3 = (Var0.f_3 + 0.028f);
@@ -6534,7 +6534,7 @@ void func_177(int iParam0, var uParam1, var uParam2, var uParam3, int iParam4, i
 				}
 				if (func_122())
 				{
-					Var0 = (Var0 + -0.025f);
+					Var0.f_0 = (Var0.f_0 + -0.025f);
 					Var0.f_2 = (Var0.f_2 + 0.05f);
 				}
 				Global_1645739.f_6797 = (Global_1645739.f_6797 + Var0.f_3);
@@ -6660,7 +6660,7 @@ void func_177(int iParam0, var uParam1, var uParam2, var uParam3, int iParam4, i
 					fVar21 = fParam12;
 				}
 				Var22.f_1 = (fVar20 + 0.0486f);
-				Var22 = (fVar21 - 0.0505f);
+				Var22.f_0 = (fVar21 - 0.0505f);
 				Var22.f_2 = 0.18f;
 				Var22.f_3 = 0.01f;
 				Var22.f_4 = 255;
@@ -7176,7 +7176,7 @@ void func_187(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			iVar23 = 1;
 		}
 		func_193(iParam8, uParam2, uParam3, &Var0, uParam6, uParam5, uParam4, iParam9, fParam15, fParam16, uParam1, iVar23);
-		Var9 = *uParam2;
+		Var9.f_0 = *uParam2;
 		Var9.f_1 = uParam2->f_1;
 		Var9.f_1 = (Var9.f_1 + (-0.006f - 0.007f));
 		func_114(uParam1);
@@ -7205,11 +7205,11 @@ void func_187(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			}
 			if (!func_151(fParam15, fParam16))
 			{
-				Var0 = *uParam2;
+				Var0.f_0 = *uParam2;
 				Var0.f_1 = uParam2->f_1;
 				if (iParam8 < 9 && iParam20 == 0)
 				{
-					Var0 = (Var0 + 0.079f);
+					Var0.f_0 = (Var0.f_0 + 0.079f);
 					Var0.f_1 = (Var0.f_1 + 0.012f);
 					Var0.f_2 = (Var0.f_2 + 0.157f);
 					Var0.f_3 = (Var0.f_3 + 0.028f);
@@ -7220,7 +7220,7 @@ void func_187(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				}
 				else
 				{
-					Var0 = (Var0 + 0.079f);
+					Var0.f_0 = (Var0.f_0 + 0.079f);
 					Var0.f_1 = (Var0.f_1 + 0.008f);
 					Var0.f_2 = (Var0.f_2 + 0.157f);
 					Var0.f_3 = (Var0.f_3 + 0.036f);
@@ -7231,7 +7231,7 @@ void func_187(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				}
 				if (func_122())
 				{
-					Var0 = (Var0 + -0.025f);
+					Var0.f_0 = (Var0.f_0 + -0.025f);
 					Var0.f_2 = (Var0.f_2 + 0.05f);
 				}
 				Global_1645739.f_6797 = (Global_1645739.f_6797 + Var0.f_3);
@@ -7725,18 +7725,18 @@ void func_200(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 		{
 			bVar22 = false;
 		}
-		Var13 = *uParam4;
+		Var13.f_0 = *uParam4;
 		Var13.f_1 = uParam4->f_1;
 		if (Global_1645739.f_1123 == 1)
 		{
-			Var13 = (Var13 + -0.113f);
+			Var13.f_0 = (Var13.f_0 + -0.113f);
 		}
 		switch (iParam13)
 		{
 			case 1:
 			case 0:
 			case 5:
-				Var13 = (Var13 + 0.079f);
+				Var13.f_0 = (Var13.f_0 + 0.079f);
 				Var13.f_1 = (Var13.f_1 + 0.008f);
 				Var13.f_2 = (Var13.f_2 + 0.157f);
 				Var13.f_3 = (Var13.f_3 + 0.036f);
@@ -7747,7 +7747,7 @@ void func_200(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				break;
 			
 			case 2:
-				Var13 = (Var13 + 0.079f);
+				Var13.f_0 = (Var13.f_0 + 0.079f);
 				Var13.f_1 = (Var13.f_1 + 0.008f);
 				Var13.f_2 = (Var13.f_2 + 0.157f);
 				Var13.f_3 = (Var13.f_3 + 0.036f);
@@ -7758,7 +7758,7 @@ void func_200(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				break;
 			
 			case 3:
-				Var13 = (Var13 + 0.079f);
+				Var13.f_0 = (Var13.f_0 + 0.079f);
 				Var13.f_1 = (Var13.f_1 + 0.008f);
 				Var13.f_2 = (Var13.f_2 + 0.157f);
 				Var13.f_3 = (Var13.f_3 + 0.036f);
@@ -7769,7 +7769,7 @@ void func_200(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				break;
 			
 			case 4:
-				Var13 = (Var13 + 0.079f);
+				Var13.f_0 = (Var13.f_0 + 0.079f);
 				Var13.f_1 = (Var13.f_1 + 0.008f);
 				Var13.f_2 = (Var13.f_2 + 0.157f);
 				Var13.f_3 = (Var13.f_3 + 0.036f);
@@ -7779,7 +7779,7 @@ void func_200(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				Var13.f_7 = 140;
 				break;
 		}
-		Var24 = ((*uParam5 + 0.145f) + 0.001f);
+		Var24.f_0 = ((*uParam5 + 0.145f) + 0.001f);
 		if (func_122())
 		{
 			Var24.f_1 = ((uParam5->f_1 + 0.019f) - 0.006f);
@@ -7792,10 +7792,10 @@ void func_200(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 		Var24.f_3 = (0.032f + 0.004f);
 		Var24.f_7 = 255;
 		func_97(&Var24, 1);
-		Var24 = (uParam1->f_9 - ((uParam2->f_9 - uParam1->f_9) / 8f));
+		Var24.f_0 = (uParam1->f_9 - ((uParam2->f_9 - uParam1->f_9) / 8f));
 		if (func_122())
 		{
-			Var24 = (Var24 - 0.003f);
+			Var24.f_0 = (Var24.f_0 - 0.003f);
 		}
 		switch (iParam23)
 		{
@@ -7942,7 +7942,7 @@ void func_200(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 		}
 		if (func_122())
 		{
-			Var13 = (Var13 + -0.025f);
+			Var13.f_0 = (Var13.f_0 + -0.025f);
 			Var13.f_2 = (Var13.f_2 + 0.05f);
 		}
 		Global_1645739.f_6797 = (Global_1645739.f_6797 + Var13.f_3);

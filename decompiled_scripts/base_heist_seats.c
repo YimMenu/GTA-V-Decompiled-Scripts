@@ -402,7 +402,7 @@ void func_19(int iParam0)
 		case 4:
 			func_47(iParam0, &sVar0);
 			func_46(iParam0, &sVar16);
-			if (Var20 != 3)
+			if (Var20.f_0 != 3)
 			{
 				Var34 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&sVar0, &sVar16, func_45(iParam0), func_44(iParam0), 0f, 2) };
 				Var37 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&sVar0, &sVar16, func_45(iParam0), func_44(iParam0), 0f, 2) };
@@ -416,7 +416,7 @@ void func_19(int iParam0)
 			func_33(iParam0);
 			func_47(iParam0, &sVar0);
 			func_46(iParam0, &sVar16);
-			if (Var20 == 3)
+			if (Var20.f_0 == 3)
 			{
 				iVar41 = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 1920390111);
 			}
@@ -1693,7 +1693,7 @@ bool func_81(var uParam0, int iParam1)
 
 float func_82(struct<3> Param0, struct<3> Param3)
 {
-	return (((Param0.x * Param3.x) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
+	return (((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
 }
 
 Vector3 func_83(struct<3> Param0)
@@ -1709,7 +1709,7 @@ Vector3 func_83(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -1749,8 +1749,8 @@ Vector3 func_86(struct<3> Param0, float fParam3)
 	
 	fVar3 = SYSTEM::SIN(fParam3);
 	fVar4 = SYSTEM::COS(fParam3);
-	Var0.x = ((Param0.x * fVar4) - (Param0.f_1 * fVar3));
-	Var0.f_1 = ((Param0.x * fVar3) + (Param0.f_1 * fVar4));
+	Var0.f_0 = ((Param0.f_0 * fVar4) - (Param0.f_1 * fVar3));
+	Var0.f_1 = ((Param0.f_0 * fVar3) + (Param0.f_1 * fVar4));
 	Var0.f_2 = Param0.f_2;
 	return Var0;
 }

@@ -2551,7 +2551,7 @@ char* func_46()
 {
 	char cVar0[32];
 	
-	StringCopy(&cVar0, ZONE::GET_NAME_OF_ZONE(func_47(Local_43.x)), 32);
+	StringCopy(&cVar0, ZONE::GET_NAME_OF_ZONE(func_47(Local_43.f_0)), 32);
 	if (MISC::ARE_STRINGS_EQUAL("SanAnd", &cVar0))
 	{
 		return "LOCATION_SAN_ANDREAS";
@@ -3840,7 +3840,7 @@ struct<9> func_78()
 {
 	struct<9> Var0;
 	
-	Var0 = 0.5f;
+	Var0.f_0 = 0.5f;
 	Var0.f_1 = 0.5f;
 	Var0.f_2 = 1f;
 	Var0.f_3 = 1f;
@@ -3965,7 +3965,7 @@ void func_79()
 					func_110(Global_96896, 1);
 					func_109(Global_96896);
 				}
-				iLocal_825 = func_108(Local_43.x);
+				iLocal_825 = func_108(Local_43.f_0);
 				if (iLocal_825 != -1)
 				{
 					func_110(iLocal_825, 1);
@@ -4195,7 +4195,7 @@ void func_81()
 			if (fVar3 < 100f)
 			{
 				Var0 = { func_82(Global_111953 - Var0) };
-				Var0 = { (Global_111953 + (Var0.x * IntToFloat((100 - SYSTEM::ROUND(fVar3))))), (Global_111953.f_1 + (Var0.f_1 * IntToFloat((100 - SYSTEM::ROUND(fVar3))))), Global_111953.f_2 };
+				Var0 = { (Global_111953 + (Var0.f_0 * IntToFloat((100 - SYSTEM::ROUND(fVar3))))), (Global_111953.f_1 + (Var0.f_1 * IntToFloat((100 - SYSTEM::ROUND(fVar3))))), Global_111953.f_2 };
 				PATHFIND::GET_CLOSEST_VEHICLE_NODE_WITH_HEADING(Var0, &Global_111953, &Global_111959, 1, 3f, 0);
 				ENTITY::SET_ENTITY_COORDS(Global_111946, Global_111953, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(Global_111946, Global_111959);
@@ -4217,7 +4217,7 @@ Vector3 func_82(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -6047,7 +6047,7 @@ int func_128(struct<3> Param0, struct<3> Param3)
 
 int func_129(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Param0, Param0.f_1, Param3, Param3.f_1))
+	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(Param0.f_0, Param0.f_1, Param3.f_0, Param3.f_1))
 	{
 		return 1;
 	}
@@ -6059,15 +6059,15 @@ void func_130(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5, var 
 	struct<3> Var0;
 	struct<3> Var3;
 	
-	if (Param3 <= Param0)
+	if (Param3.f_0 <= Param0.f_0)
 	{
-		Var0.x = Param3;
-		Var3.x = Param0;
+		Var0.f_0 = Param3.f_0;
+		Var3.f_0 = Param0.f_0;
 	}
 	else
 	{
-		Var0.x = Param0;
-		Var3.x = Param3;
+		Var0.f_0 = Param0.f_0;
+		Var3.f_0 = Param3.f_0;
 	}
 	if (Param3.f_1 <= Param0.f_1)
 	{
@@ -6097,7 +6097,7 @@ int func_131(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 	}
 	if (!bParam7)
 	{
-		if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+		if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 		{
 			if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 			{
@@ -6108,7 +6108,7 @@ int func_131(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
 			}
 		}
 	}
-	else if (MISC::ABSF((Param0.x - Param3.x)) <= fParam6)
+	else if (MISC::ABSF((Param0.f_0 - Param3.f_0)) <= fParam6)
 	{
 		if (MISC::ABSF((Param0.f_1 - Param3.f_1)) <= fParam6)
 		{
@@ -7155,7 +7155,7 @@ bool func_134(struct<3> Param0, struct<3> Param3, float fParam6)
 
 float func_135(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	return SYSTEM::VDIST2(Param0, Param0.f_1, 0f, Param3, Param3.f_1, 0f);
+	return SYSTEM::VDIST2(Param0.f_0, Param0.f_1, 0f, Param3.f_0, Param3.f_1, 0f);
 }
 
 int func_136()
@@ -7205,7 +7205,7 @@ bool func_138(struct<3> Param0, struct<3> Param3, float fParam6)
 	struct<3> Var0;
 	
 	Var0 = { Param3 - Param0 };
-	return ((Var0.x * Var0.x) + (Var0.f_1 * Var0.f_1)) <= (fParam6 * fParam6);
+	return ((Var0.f_0 * Var0.f_0) + (Var0.f_1 * Var0.f_1)) <= (fParam6 * fParam6);
 }
 
 int func_139(struct<3> Param0, int iParam3, int iParam4, bool bParam5)
@@ -7531,7 +7531,7 @@ Vector3 func_142(int iParam0)
 
 int func_143(struct<3> Param0, struct<3> Param3, struct<3> Param6)
 {
-	if (((((Param0.x > Param3.x && Param0.x < Param6.x) && Param0.f_1 > Param3.f_1) && Param0.f_1 < Param6.f_1) && Param0.f_2 > Param3.f_2) && Param0.f_2 < Param6.f_2)
+	if (((((Param0.f_0 > Param3.f_0 && Param0.f_0 < Param6.f_0) && Param0.f_1 > Param3.f_1) && Param0.f_1 < Param6.f_1) && Param0.f_2 > Param3.f_2) && Param0.f_2 < Param6.f_2)
 	{
 		return 1;
 	}
@@ -9684,7 +9684,7 @@ void func_179()
 	{
 		if (bLocal_62)
 		{
-			if (Local_43.x == Local_829[iVar0 /*3*/])
+			if (Local_43.f_0 == Local_829[iVar0 /*3*/])
 			{
 				iLocal_94 = iVar0;
 			}
@@ -9700,12 +9700,12 @@ void func_180()
 {
 	struct<3> Var0;
 	
-	if (HUD::DOES_BLIP_EXIST(Local_43.x))
+	if (HUD::DOES_BLIP_EXIST(Local_43.f_0))
 	{
-		Var0 = { HUD::GET_BLIP_COORDS(Local_43.x) };
+		Var0 = { HUD::GET_BLIP_COORDS(Local_43.f_0) };
 		if (CAM::DOES_CAM_EXIST(iLocal_70) && CAM::IS_CAM_ACTIVE(iLocal_70))
 		{
-			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
+			HUD::LOCK_MINIMAP_POSITION(Var0.f_0, Var0.f_1);
 			HUD::LOCK_MINIMAP_ANGLE(0);
 			HUD::SET_RADAR_ZOOM(1400);
 		}
@@ -9775,9 +9775,9 @@ void func_184(struct<3> Param0, var uParam3, var uParam4, int iParam5)
 	
 	if (Param0.f_1 != 0f)
 	{
-		*uParam4 = MISC::ATAN2(Param0.x, Param0.f_1);
+		*uParam4 = MISC::ATAN2(Param0.f_0, Param0.f_1);
 	}
-	else if (Param0.x < 0f)
+	else if (Param0.f_0 < 0f)
 	{
 		*uParam4 = -90f;
 	}
@@ -9793,7 +9793,7 @@ void func_184(struct<3> Param0, var uParam3, var uParam4, int iParam5)
 			*uParam4 = (*uParam4 + 360f);
 		}
 	}
-	fVar0 = SYSTEM::SQRT(((Param0.x * Param0.x) + (Param0.f_1 * Param0.f_1)));
+	fVar0 = SYSTEM::SQRT(((Param0.f_0 * Param0.f_0) + (Param0.f_1 * Param0.f_1)));
 	if (fVar0 != 0f)
 	{
 		*uParam3 = MISC::ATAN2(Param0.f_2, fVar0);
@@ -9913,7 +9913,7 @@ void func_187()
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 			if (bLocal_62)
 			{
-				if (Local_43.x == Local_829[iVar0 /*3*/])
+				if (Local_43.f_0 == Local_829[iVar0 /*3*/])
 				{
 					iLocal_94 = iVar0;
 				}
@@ -11318,14 +11318,14 @@ void func_197(struct<3> Param0, bool bParam3)
 	
 	iVar0 = 0;
 	iVar1 = 0;
-	if (func_127(Param0.x) == -1)
+	if (func_127(Param0.f_0) == -1)
 	{
 		return;
 	}
 	iVar0 = 0;
 	while (iVar0 < 40)
 	{
-		if (func_127(Local_829[iVar0 /*3*/]) == func_127(Param0.x))
+		if (func_127(Local_829[iVar0 /*3*/]) == func_127(Param0.f_0))
 		{
 			iVar1 = iVar0;
 			iVar0 = 40;
@@ -11347,7 +11347,7 @@ void func_197(struct<3> Param0, bool bParam3)
 		}
 		if (iVar0 < iLocal_93)
 		{
-			if (func_127(Local_829[iVar0 /*3*/]) == func_127(Param0.x))
+			if (func_127(Local_829[iVar0 /*3*/]) == func_127(Param0.f_0))
 			{
 				if (func_201(Param0, Local_829[iVar0 /*3*/]))
 				{
@@ -11542,9 +11542,9 @@ bool func_207(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_208(int iParam0)
@@ -11952,14 +11952,14 @@ void func_215()
 		Var0 = { HUD::GET_BLIP_COORDS(Local_829[iLocal_94 /*3*/]) };
 		if (!func_216(Var0))
 		{
-			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
+			HUD::LOCK_MINIMAP_POSITION(Var0.f_0, Var0.f_1);
 		}
 	}
 }
 
 int func_216(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -11983,7 +11983,7 @@ void func_217()
 		Var0 = { HUD::GET_BLIP_COORDS(Local_829[iLocal_94 /*3*/]) };
 		if (!func_216(Var0))
 		{
-			HUD::LOCK_MINIMAP_POSITION(Var0.x, Var0.f_1);
+			HUD::LOCK_MINIMAP_POSITION(Var0.f_0, Var0.f_1);
 		}
 	}
 }
@@ -12237,10 +12237,10 @@ int func_228(int iParam0)
 		fVar3 = 15f;
 		Var4 = { Var0 };
 		Var7 = { Var4 };
-		Var4.x = (Var4.x - fVar3);
+		Var4.f_0 = (Var4.f_0 - fVar3);
 		Var4.f_1 = (Var4.f_1 - fVar3);
 		Var4.f_2 = (Var4.f_2 - fVar3);
-		Var7.x = (Var7.x + fVar3);
+		Var7.f_0 = (Var7.f_0 + fVar3);
 		Var7.f_1 = (Var7.f_1 + fVar3);
 		Var7.f_2 = (Var7.f_2 + fVar3);
 		if (MISC::IS_PROJECTILE_IN_AREA(Var4, Var7, true))

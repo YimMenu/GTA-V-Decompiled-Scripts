@@ -338,7 +338,7 @@ void __EntryFunction__()
 				case 0:
 					if (func_78())
 					{
-						Local_60 = 1;
+						Local_60.f_0 = 1;
 					}
 					break;
 				
@@ -346,7 +346,7 @@ void __EntryFunction__()
 					func_38();
 					if (func_1())
 					{
-						Local_60 = 4;
+						Local_60.f_0 = 4;
 					}
 					break;
 				
@@ -1220,7 +1220,7 @@ void func_24(struct<67> Param0, var uParam67, var uParam68, var uParam69, var uP
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -2779,7 +2779,7 @@ int func_85(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -2981,7 +2981,7 @@ Vector3 func_91(int iParam0)
 
 int func_92(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -3768,7 +3768,7 @@ void func_126()
 
 int func_127()
 {
-	return Local_60;
+	return Local_60.f_0;
 }
 
 int func_128()
@@ -4092,7 +4092,7 @@ void func_143()
 			}
 			iVar0++;
 		}
-		Local_60 = 4;
+		Local_60.f_0 = 4;
 		func_147(func_148(1, 1), 8, func_50());
 	}
 	func_146();
@@ -4130,7 +4130,7 @@ void func_147(int iParam0, int iParam1, var uParam2)
 {
 	struct<4> Var0;
 	
-	Var0 = -206137320;
+	Var0.f_0 = -206137320;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_3 = iParam1;
 	Var0.f_2 = uParam2;
@@ -4173,7 +4173,7 @@ int func_149(struct<21> Param0)
 {
 	int iVar0;
 	
-	func_153(func_154(Param0), Param0);
+	func_153(func_154(Param0.f_0), Param0);
 	NETWORK::RESERVE_NETWORK_MISSION_PEDS(1);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(1);
 	NETWORK::RESERVE_NETWORK_MISSION_OBJECTS(2);

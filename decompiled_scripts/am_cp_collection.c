@@ -1903,7 +1903,7 @@ void func_10(var uParam0, int iParam1, int iParam2)
 
 void func_11(struct<2> Param0, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, int iParam14)
 {
-	Param0 = 677240627;
+	Param0.f_0 = 677240627;
 	Param0.f_1 = PLAYER::PLAYER_ID();
 	if (!iParam14 == 0)
 	{
@@ -2128,7 +2128,7 @@ int func_24()
 	if (func_34())
 	{
 		Var0 = { Local_810.f_729[iLocal_91 /*2*/] };
-		if (func_33(Var0))
+		if (func_33(Var0.f_0))
 		{
 			if (!NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(Var0.f_1))
 			{
@@ -2137,7 +2137,7 @@ int func_24()
 					Local_810.f_713[iLocal_91] = func_29(iLocal_91);
 					if (MISC::IS_BIT_SET(Local_3451[Local_810.f_713[iLocal_91] /*5*/].f_1, iLocal_91))
 					{
-						if (func_26(&(Local_810.f_729[iLocal_91 /*2*/].f_1), Var0, Var2, fVar5, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0))
+						if (func_26(&(Local_810.f_729[iLocal_91 /*2*/].f_1), Var0.f_0, Var2, fVar5, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0))
 						{
 							VEHICLE::SET_VEHICLE_DOORS_LOCKED(NETWORK::NET_TO_VEH(Local_810.f_729[iLocal_91 /*2*/].f_1), 1);
 							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(NETWORK::NET_TO_VEH(Local_810.f_729[iLocal_91 /*2*/].f_1), true);
@@ -4056,7 +4056,7 @@ int func_111(int iParam0, int iParam1)
 
 void func_112(int iParam0)
 {
-	Local_810 = iParam0;
+	Local_810.f_0 = iParam0;
 }
 
 int func_113()
@@ -7147,7 +7147,7 @@ void func_118(var uParam0)
 	struct<3> Var0;
 	int iVar3;
 	
-	Var0.x = 470437478;
+	Var0.f_0 = 470437478;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = uParam0;
 	iVar3 = func_119(1, 1);
@@ -8232,7 +8232,7 @@ int func_133(struct<3> Param0, float fParam3, float fParam4, float fParam5, floa
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -8380,7 +8380,7 @@ Vector3 func_136(int iParam0)
 
 int func_137(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -12346,7 +12346,7 @@ void func_261(struct<67> Param0, var uParam67, var uParam68, var uParam69, var u
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -12431,7 +12431,7 @@ void func_266(int iParam0, int iParam1, int iParam2)
 	
 	if (func_13(iParam0, 0, 1))
 	{
-		Var0 = 657959395;
+		Var0.f_0 = 657959395;
 		Var0.f_1 = PLAYER::PLAYER_ID();
 		Var0.f_2 = iParam1;
 		Var0.f_4 = iParam2;
@@ -13446,12 +13446,12 @@ void func_310()
 
 void func_311()
 {
-	if (Local_808 != -1 && Local_808.f_1 != -1)
+	if (Local_808.f_0 != -1 && Local_808.f_1 != -1)
 	{
 		if (NETWORK::NETWORK_GET_HOST_OF_THIS_SCRIPT() != func_313() && NETWORK::NETWORK_IS_PARTICIPANT_ACTIVE(NETWORK::NETWORK_GET_HOST_OF_THIS_SCRIPT()))
 		{
-			func_312(Local_808.f_1, Local_808, func_263(NETWORK::NETWORK_GET_PLAYER_INDEX(NETWORK::NETWORK_GET_HOST_OF_THIS_SCRIPT())));
-			Local_808 = -1;
+			func_312(Local_808.f_1, Local_808.f_0, func_263(NETWORK::NETWORK_GET_PLAYER_INDEX(NETWORK::NETWORK_GET_HOST_OF_THIS_SCRIPT())));
+			Local_808.f_0 = -1;
 			Local_808.f_1 = -1;
 		}
 	}
@@ -13461,7 +13461,7 @@ void func_312(int iParam0, int iParam1, int iParam2)
 {
 	struct<4> Var0;
 	
-	Var0 = -368423380;
+	Var0.f_0 = -368423380;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = iParam0;
 	Var0.f_3 = iParam1;
@@ -14080,12 +14080,12 @@ void func_352(struct<3> Param0, var uParam3, var uParam4, int iParam5)
 					if (NETWORK::NETWORK_GET_HOST_OF_THIS_SCRIPT() != func_313() && NETWORK::NETWORK_IS_PARTICIPANT_ACTIVE(NETWORK::NETWORK_GET_HOST_OF_THIS_SCRIPT()))
 					{
 						func_312(iLocal_357, iParam5, func_263(NETWORK::NETWORK_GET_PLAYER_INDEX(NETWORK::NETWORK_GET_HOST_OF_THIS_SCRIPT())));
-						Local_808 = -1;
+						Local_808.f_0 = -1;
 						Local_808.f_1 = -1;
 					}
 					else
 					{
-						Local_808 = iParam5;
+						Local_808.f_0 = iParam5;
 						Local_808.f_1 = iLocal_357;
 					}
 					MISC::SET_BIT(&(uLocal_358[func_17(iParam5)]), func_16(iParam5));
@@ -14098,11 +14098,11 @@ void func_352(struct<3> Param0, var uParam3, var uParam4, int iParam5)
 			{
 				func_312(iLocal_357, iParam5, func_263(NETWORK::NETWORK_GET_PLAYER_INDEX(NETWORK::NETWORK_GET_HOST_OF_THIS_SCRIPT())));
 				Local_808.f_1 = -1;
-				Local_808 = -1;
+				Local_808.f_0 = -1;
 			}
 			else
 			{
-				Local_808 = iParam5;
+				Local_808.f_0 = iParam5;
 				Local_808.f_1 = iLocal_357;
 			}
 			func_37(&uLocal_376);
@@ -15774,9 +15774,9 @@ bool func_424(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 int func_425()
@@ -15947,7 +15947,7 @@ bool func_432(struct<3> Param0, struct<3> Param3, struct<3> Param6, float fParam
 
 int func_433(struct<3> Param0, struct<3> Param3, struct<3> Param6, struct<3> Param9)
 {
-	if (((((Param0.x >= Param6.x && Param0.f_1 >= Param6.f_1) && Param0.f_2 >= Param6.f_2) && Param3.x <= Param9.x) && Param3.f_1 <= Param9.f_1) && Param3.f_2 <= Param9.f_2)
+	if (((((Param0.f_0 >= Param6.f_0 && Param0.f_1 >= Param6.f_1) && Param0.f_2 >= Param6.f_2) && Param3.f_0 <= Param9.f_0) && Param3.f_1 <= Param9.f_1) && Param3.f_2 <= Param9.f_2)
 	{
 		return 1;
 	}
@@ -15973,13 +15973,13 @@ void func_435(var uParam0, var uParam1)
 	
 	if (*uParam0 <= *uParam1)
 	{
-		Var0.x = *uParam0;
-		Var3.x = *uParam1;
+		Var0.f_0 = *uParam0;
+		Var3.f_0 = *uParam1;
 	}
 	else
 	{
-		Var0.x = *uParam1;
-		Var3.x = *uParam0;
+		Var0.f_0 = *uParam1;
+		Var3.f_0 = *uParam0;
 	}
 	if (uParam0->f_1 <= uParam1->f_1)
 	{
@@ -21334,7 +21334,7 @@ int func_653()
 
 int func_654()
 {
-	return Local_810;
+	return Local_810.f_0;
 }
 
 int func_655(int iParam0)
@@ -22157,7 +22157,7 @@ void func_694()
 	{
 		Local_3439.f_5 = 2;
 	}
-	Local_3439 = Local_810.f_724;
+	Local_3439.f_0 = Local_810.f_724;
 	Local_3439.f_1 = Local_810.f_725;
 	Local_3439.f_4 = Local_810.f_726;
 	Local_3439.f_3 = Local_810.f_728;
@@ -22846,7 +22846,7 @@ void func_731(int iParam0)
 
 int func_732(struct<21> Param0)
 {
-	func_740(func_741(Param0), Param0);
+	func_740(func_741(Param0.f_0), Param0);
 	NETWORK::RESERVE_NETWORK_MISSION_OBJECTS(0);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(func_739(8));
 	func_736(0, -1, 0);

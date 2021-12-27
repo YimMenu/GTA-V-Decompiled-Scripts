@@ -1604,8 +1604,8 @@ Vector3 func_38(struct<3> Param0, float fParam3, struct<2> Param4, float fParam6
 	fVar3 = fParam3;
 	fVar4 = SYSTEM::COS(fVar3);
 	fVar5 = SYSTEM::SIN(fVar3);
-	Var0.x = ((Param4 * fVar4) + (Param4.f_1 * fVar5));
-	Var0.f_1 = ((Param4.f_1 * fVar4) - (Param4 * fVar5));
+	Var0.f_0 = ((Param4.f_0 * fVar4) + (Param4.f_1 * fVar5));
+	Var0.f_1 = ((Param4.f_1 * fVar4) - (Param4.f_0 * fVar5));
 	Var6 = { Param0 + Var0 };
 	return Var6;
 }
@@ -1614,9 +1614,9 @@ bool func_39(struct<3> Param0, struct<3> Param3, bool bParam6)
 {
 	if (bParam6)
 	{
-		return (Param0.x == Param3.x && Param0.f_1 == Param3.f_1);
+		return (Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1);
 	}
-	return ((Param0.x == Param3.x && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
+	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
 Vector3 func_40()
@@ -3722,7 +3722,7 @@ void func_115(int iParam0)
 		}
 		iVar0++;
 	}
-	Local_169 = iParam0->f_411;
+	Local_169.f_0 = iParam0->f_411;
 	Local_169.f_20 = ((Local_169.f_1 + Local_169.f_2) + Local_169.f_3);
 }
 
@@ -4104,11 +4104,11 @@ int func_134()
 				func_140(Local_961, 1114636288, 1);
 				VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(Local_946, Local_949, false, true);
 				func_254(&Local_423, 35, 1, 1, 0);
-				CAM::SET_CAM_COORD(Local_423, func_139(0));
-				CAM::SET_CAM_ROT(Local_423, func_138(0), 2);
-				CAM::SET_CAM_FOV(Local_423, 44.5167f);
-				CAM::SHAKE_CAM(Local_423, "HAND_SHAKE", 0.1f);
-				CAM::SET_CAM_ACTIVE(Local_423, true);
+				CAM::SET_CAM_COORD(Local_423.f_0, func_139(0));
+				CAM::SET_CAM_ROT(Local_423.f_0, func_138(0), 2);
+				CAM::SET_CAM_FOV(Local_423.f_0, 44.5167f);
+				CAM::SHAKE_CAM(Local_423.f_0, "HAND_SHAKE", 0.1f);
+				CAM::SET_CAM_ACTIVE(Local_423.f_0, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_853.f_3, false))
 				{
@@ -4180,7 +4180,7 @@ int func_134()
 						ENTITY::SET_ENTITY_HEADING(Local_853.f_2, -49.27436f);
 					}
 				}
-				CAM::DESTROY_CAM(Local_423, false);
+				CAM::DESTROY_CAM(Local_423.f_0, false);
 				CAM::DESTROY_CAM(iLocal_422, false);
 				func_135(1, 1, 1);
 				CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
@@ -6206,15 +6206,15 @@ void func_210()
 	
 	Var0 = { 402.42f, -1457.19f, 28.82f };
 	Var3 = { -701.25f, -1080.29f, 12.29f };
-	if (Var3.x <= Var0.x)
+	if (Var3.f_0 <= Var0.f_0)
 	{
-		Local_964.x = Var3.x;
-		Local_967.x = Var0.x;
+		Local_964.f_0 = Var3.f_0;
+		Local_967.f_0 = Var0.f_0;
 	}
 	else
 	{
-		Local_964.x = Var0.x;
-		Local_967.x = Var3.x;
+		Local_964.f_0 = Var0.f_0;
+		Local_967.f_0 = Var3.f_0;
 	}
 	if (Var3.f_1 <= Var0.f_1)
 	{
@@ -6228,7 +6228,7 @@ void func_210()
 	}
 	Local_964 = { Local_964 - Vector(20f, 20f, 20f) };
 	Local_967 = { Local_967 + Vector(20f, 20f, 20f) };
-	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_964.x, Local_964.f_1, Local_967.x, Local_967.f_1);
+	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_964.f_0, Local_964.f_1, Local_967.f_0, Local_967.f_1);
 }
 
 int func_211()
@@ -6288,11 +6288,11 @@ int func_212()
 					}
 				}
 				PED::SET_PED_COORDS_KEEP_VEHICLE(PLAYER::PLAYER_PED_ID(), Local_423.f_17);
-				CAM::SET_CAM_COORD(Local_423, func_217(0));
-				CAM::SET_CAM_ROT(Local_423, func_216(0), 2);
-				CAM::SET_CAM_FOV(Local_423, 17.2f);
-				CAM::SHAKE_CAM(Local_423, "HAND_SHAKE", 0.1f);
-				CAM::SET_CAM_ACTIVE(Local_423, true);
+				CAM::SET_CAM_COORD(Local_423.f_0, func_217(0));
+				CAM::SET_CAM_ROT(Local_423.f_0, func_216(0), 2);
+				CAM::SET_CAM_FOV(Local_423.f_0, 17.2f);
+				CAM::SHAKE_CAM(Local_423.f_0, "HAND_SHAKE", 0.1f);
+				CAM::SET_CAM_ACTIVE(Local_423.f_0, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				func_315(&Local_423, 19, 0, 0);
 				iLocal_1144 = 2;
@@ -6305,7 +6305,7 @@ int func_212()
 			CAM::SET_CAM_ROT(iLocal_422, func_216(0), 2);
 			CAM::SET_CAM_FOV(iLocal_422, 17.2f);
 			CAM::SHAKE_CAM(iLocal_422, "HAND_SHAKE", 0.1f);
-			CAM::SET_CAM_ACTIVE_WITH_INTERP(iLocal_422, Local_423, 6000, 1, 1);
+			CAM::SET_CAM_ACTIVE_WITH_INTERP(iLocal_422, Local_423.f_0, 6000, 1, 1);
 			func_315(&Local_423, 19, 0, 0);
 			iLocal_1144 = 3;
 			break;
@@ -6321,11 +6321,11 @@ int func_212()
 			}
 			if (func_116(&Local_423, 19) > 8f && iLocal_912)
 			{
-				CAM::SET_CAM_COORD(Local_423, func_217(2));
-				CAM::POINT_CAM_AT_ENTITY(Local_423, Local_853.f_3, 0f, 0f, 0f, true);
-				CAM::SET_CAM_FOV(Local_423, 35f);
-				CAM::SHAKE_CAM(Local_423, "HAND_SHAKE", 0.2f);
-				CAM::SET_CAM_ACTIVE(Local_423, true);
+				CAM::SET_CAM_COORD(Local_423.f_0, func_217(2));
+				CAM::POINT_CAM_AT_ENTITY(Local_423.f_0, Local_853.f_3, 0f, 0f, 0f, true);
+				CAM::SET_CAM_FOV(Local_423.f_0, 35f);
+				CAM::SHAKE_CAM(Local_423.f_0, "HAND_SHAKE", 0.2f);
+				CAM::SET_CAM_ACTIVE(Local_423.f_0, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				func_315(&Local_423, 19, 0, 0);
 				iLocal_1144 = 4;
@@ -6337,7 +6337,7 @@ int func_212()
 			CAM::POINT_CAM_AT_ENTITY(iLocal_422, Local_853.f_3, 0f, 0f, 0f, true);
 			CAM::SET_CAM_FOV(iLocal_422, 45f);
 			CAM::SHAKE_CAM(iLocal_422, "HAND_SHAKE", 0.2f);
-			CAM::SET_CAM_ACTIVE_WITH_INTERP(iLocal_422, Local_423, 10000, 1, 1);
+			CAM::SET_CAM_ACTIVE_WITH_INTERP(iLocal_422, Local_423.f_0, 10000, 1, 1);
 			func_315(&Local_423, 19, 0, 0);
 			iLocal_1144 = 11;
 			break;
@@ -6374,7 +6374,7 @@ int func_212()
 				CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0f);
 				CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(0f, 1f);
 				func_109(&(Local_853.f_27));
-				CAM::DESTROY_CAM(Local_423, false);
+				CAM::DESTROY_CAM(Local_423.f_0, false);
 				CAM::DESTROY_CAM(iLocal_422, false);
 				func_135(1, 1, 1);
 				CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
@@ -7235,7 +7235,7 @@ int func_246(var uParam0, struct<3> Param1, float fParam4)
 
 int func_247()
 {
-	if (!STREAMING::HAS_MODEL_LOADED(Local_853))
+	if (!STREAMING::HAS_MODEL_LOADED(Local_853.f_0))
 	{
 		func_143("TAXI_ASSETS_FC_STAGE_02 - Loading escape ped", &iLocal_896, 1000);
 		return 0;
@@ -7469,7 +7469,7 @@ int func_258(var uParam0)
 
 void func_259()
 {
-	STREAMING::REQUEST_MODEL(Local_853);
+	STREAMING::REQUEST_MODEL(Local_853.f_0);
 	STREAMING::REQUEST_MODEL(Local_853.f_1);
 	STREAMING::REQUEST_MODEL(iLocal_888);
 	STREAMING::REQUEST_MODEL(iLocal_889);
@@ -7938,7 +7938,7 @@ float func_264(var uParam0)
 
 float func_265(struct<2> Param0, Vector3 vParam2, struct<2> Param3, var uParam5)
 {
-	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3 - Param0), (Param3.f_1 - Param0.f_1));
+	return MISC::GET_HEADING_FROM_VECTOR_2D((Param3.f_0 - Param0.f_0), (Param3.f_1 - Param0.f_1));
 }
 
 void func_266(var uParam0)
@@ -8135,7 +8135,7 @@ int func_271(int iParam0, int iParam1)
 	{
 		iVar3 = 0;
 	}
-	else if (Var0.x > 0f)
+	else if (Var0.f_0 > 0f)
 	{
 		if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iParam1, iParam0, 2, false, false))
 		{
@@ -8734,7 +8734,7 @@ void func_287(var uParam0, char* sParam1, int iParam2)
 
 void func_288()
 {
-	Local_343 = 0;
+	Local_343.f_0 = 0;
 	func_305(45452, 45427, 1);
 	func_305(45188, 45164, 1);
 	func_305(45102, 45077, 1);
@@ -8930,20 +8930,20 @@ int func_304(int iParam0)
 
 void func_305(int iParam0, int iParam1, bool bParam2)
 {
-	if (Local_343 >= 16)
+	if (Local_343.f_0 >= 16)
 	{
-		Local_343 = 16;
+		Local_343.f_0 = 16;
 		return;
 	}
-	Local_343.f_1[Local_343 /*4*/] = 0;
-	func_68(&(Local_343.f_1[Local_343 /*4*/]), 1);
+	Local_343.f_1[Local_343.f_0 /*4*/] = 0;
+	func_68(&(Local_343.f_1[Local_343.f_0 /*4*/]), 1);
 	if (bParam2)
 	{
-		func_68(&(Local_343.f_1[Local_343 /*4*/]), 2);
+		func_68(&(Local_343.f_1[Local_343.f_0 /*4*/]), 2);
 	}
-	Local_343.f_1[Local_343 /*4*/].f_2 = iParam0;
-	Local_343.f_1[Local_343 /*4*/].f_3 = iParam1;
-	Local_343++;
+	Local_343.f_1[Local_343.f_0 /*4*/].f_2 = iParam0;
+	Local_343.f_1[Local_343.f_0 /*4*/].f_3 = iParam1;
+	Local_343.f_0++;
 }
 
 int func_306(int iParam0, var uParam1)
@@ -9795,14 +9795,14 @@ int func_323(var uParam0)
 	if ((((((VEHICLE::IS_VEHICLE_DRIVEABLE(uParam0->f_4, false) && !func_14(&(Local_190[0 /*10*/].f_3))) && !func_14(&(Local_190[1 /*10*/].f_3))) && !func_14(&(Local_190[5 /*10*/].f_3))) && !func_14(&(Local_190[9 /*10*/].f_3))) && !func_14(&(Local_190[7 /*10*/].f_3))) && !func_14(&(Local_190[8 /*10*/].f_3)))
 	{
 		Var0 = { ENTITY::GET_ENTITY_SPEED_VECTOR(uParam0->f_4, true) };
-		if (MISC::ABSF(Var0.x) > 2.5f && !func_14(&(Local_190[0 /*10*/].f_3)))
+		if (MISC::ABSF(Var0.f_0) > 2.5f && !func_14(&(Local_190[0 /*10*/].f_3)))
 		{
 			if (!func_14(&(Local_190[11 /*10*/].f_3)))
 			{
 				func_117(&(Local_190[11 /*10*/].f_3));
-				fLocal_342 = Var0.x;
+				fLocal_342 = Var0.f_0;
 			}
-			else if (func_107(&(Local_190[11 /*10*/].f_3)) < 1.5f && (MISC::ABSF(fLocal_342) - MISC::ABSF(Var0.x)) < 0f)
+			else if (func_107(&(Local_190[11 /*10*/].f_3)) < 1.5f && (MISC::ABSF(fLocal_342) - MISC::ABSF(Var0.f_0)) < 0f)
 			{
 				func_106(&(Local_190[11 /*10*/].f_3));
 				return 1;
@@ -9892,7 +9892,7 @@ bool func_326(int iParam0)
 	PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(ENTITY::GET_ENTITY_COORDS(iParam0, true), 2, &Var3, 1, 1077936128, 0);
 	PATHFIND::_GET_POINT_ON_ROAD_SIDE(Var0, -1, &Var6);
 	fVar27 = SYSTEM::VMAG(Var6 - Var0);
-	Var9 = { func_330((Var3.x - Var0.x), (Var3.f_1 - Var0.f_1), 0f) };
+	Var9 = { func_330((Var3.f_0 - Var0.f_0), (Var3.f_1 - Var0.f_1), 0f) };
 	Var12 = { func_329(Var9, 0) * Vector(fVar27, fVar27, fVar27) };
 	Var9 = { Var9 * Vector(2f, 2f, 2f) };
 	Var15 = { Var0 - Var9 + Var12 };
@@ -9953,7 +9953,7 @@ int func_327(struct<3> Param0, struct<3> Param3, struct<3> Param6, struct<3> Par
 
 float func_328(struct<3> Param0, struct<3> Param3)
 {
-	return (((Param0.x * Param3.x) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
+	return (((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1)) + (Param0.f_2 * Param3.f_2));
 }
 
 Vector3 func_329(struct<3> Param0, int iParam3)
@@ -9963,18 +9963,18 @@ Vector3 func_329(struct<3> Param0, int iParam3)
 	switch (iParam3)
 	{
 		case 0:
-			Var0.x = -Param0.f_1;
-			Var0.f_1 = Param0.x;
+			Var0.f_0 = -Param0.f_1;
+			Var0.f_1 = Param0.f_0;
 			break;
 		
 		case 1:
-			Var0.x = -Param0.x;
+			Var0.f_0 = -Param0.f_0;
 			Var0.f_1 = -Param0.f_1;
 			break;
 		
 		case 2:
-			Var0.x = Param0.f_1;
-			Var0.f_1 = -Param0.x;
+			Var0.f_0 = Param0.f_1;
+			Var0.f_1 = -Param0.f_0;
 			break;
 	}
 	Var0.f_2 = Param0.f_2;
@@ -9994,7 +9994,7 @@ Vector3 func_330(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -10138,7 +10138,7 @@ int func_336(var uParam0)
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(uParam0->f_4, false))
 	{
 		Var0 = { ENTITY::GET_ENTITY_SPEED_VECTOR(uParam0->f_4, true) };
-		if (MISC::ABSF(Var0.x) > 3f && !func_14(&(Local_190[0 /*10*/].f_3)))
+		if (MISC::ABSF(Var0.f_0) > 3f && !func_14(&(Local_190[0 /*10*/].f_3)))
 		{
 			if (!func_14(&(Local_190[1 /*10*/].f_3)))
 			{
@@ -11383,7 +11383,7 @@ void func_362(var uParam0)
 
 int func_363(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -14901,11 +14901,11 @@ void func_401(var uParam0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(uParam0->f_4))
 		{
-			if (Local_343 > 0 && !func_295(Local_343.f_1[4 /*4*/], 4))
+			if (Local_343.f_0 > 0 && !func_295(Local_343.f_1[4 /*4*/], 4))
 			{
 				iVar0 = 0;
 				iVar0 = 0;
-				while (iVar0 <= (Local_343 - 1))
+				while (iVar0 <= (Local_343.f_0 - 1))
 				{
 					if (func_295(Local_343.f_1[iVar0 /*4*/], 2))
 					{
@@ -15773,7 +15773,7 @@ int func_433(int iParam0, int iParam1, var uParam2, bool bParam3)
 	}
 	if (bParam3)
 	{
-		if (MISC::IS_PROJECTILE_IN_AREA((Var0.x - IntToFloat(uParam2->f_6)), (Var0.f_1 - IntToFloat(uParam2->f_6)), (Var0.f_2 - IntToFloat(uParam2->f_6)), (Var0.x + IntToFloat(uParam2->f_6)), (Var0.f_1 + IntToFloat(uParam2->f_6)), (Var0.f_2 + IntToFloat(uParam2->f_6)), false))
+		if (MISC::IS_PROJECTILE_IN_AREA((Var0.f_0 - IntToFloat(uParam2->f_6)), (Var0.f_1 - IntToFloat(uParam2->f_6)), (Var0.f_2 - IntToFloat(uParam2->f_6)), (Var0.f_0 + IntToFloat(uParam2->f_6)), (Var0.f_1 + IntToFloat(uParam2->f_6)), (Var0.f_2 + IntToFloat(uParam2->f_6)), false))
 		{
 			return 1;
 		}
@@ -15966,7 +15966,7 @@ void func_442()
 	Local_423.f_26 = { Local_925 };
 	Local_423.f_34 = 95.93f;
 	func_443(&Local_423, &Local_853);
-	Local_853 = joaat("s_m_m_doctor_01");
+	Local_853.f_0 = joaat("s_m_m_doctor_01");
 	Local_853.f_1 = joaat("bison");
 }
 
@@ -16300,7 +16300,7 @@ void func_457()
 
 void func_458()
 {
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_853);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_853.f_0);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Local_853.f_1);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iLocal_888);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iLocal_889);

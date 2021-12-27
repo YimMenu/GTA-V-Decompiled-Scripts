@@ -156,7 +156,7 @@ void __EntryFunction__()
 										DATAFILE::DATADICT_SET_BOOL(uLocal_28[iLocal_396], "100", false);
 									}
 									Local_402 = { func_125(iLocal_422) };
-									DATAFILE::DATADICT_SET_INT(uLocal_28[iLocal_396], "x", SYSTEM::ROUND(Local_402.x));
+									DATAFILE::DATADICT_SET_INT(uLocal_28[iLocal_396], "x", SYSTEM::ROUND(Local_402.f_0));
 									DATAFILE::DATADICT_SET_INT(uLocal_28[iLocal_396], "y", SYSTEM::ROUND(Local_402.f_1));
 									iLocal_396++;
 								}
@@ -177,7 +177,7 @@ void __EntryFunction__()
 										DATAFILE::DATADICT_SET_BOOL(uLocal_99[iLocal_397], "100", false);
 									}
 									Local_402 = { func_125(iLocal_422) };
-									DATAFILE::DATADICT_SET_INT(uLocal_99[iLocal_397], "x", SYSTEM::ROUND(Local_402.x));
+									DATAFILE::DATADICT_SET_INT(uLocal_99[iLocal_397], "x", SYSTEM::ROUND(Local_402.f_0));
 									DATAFILE::DATADICT_SET_INT(uLocal_99[iLocal_397], "y", SYSTEM::ROUND(Local_402.f_1));
 									iLocal_397++;
 								}
@@ -198,7 +198,7 @@ void __EntryFunction__()
 										DATAFILE::DATADICT_SET_BOOL(uLocal_150[iLocal_398], "100", false);
 									}
 									Local_402 = { func_125(iLocal_422) };
-									DATAFILE::DATADICT_SET_INT(uLocal_150[iLocal_398], "x", SYSTEM::ROUND(Local_402.x));
+									DATAFILE::DATADICT_SET_INT(uLocal_150[iLocal_398], "x", SYSTEM::ROUND(Local_402.f_0));
 									DATAFILE::DATADICT_SET_INT(uLocal_150[iLocal_398], "y", SYSTEM::ROUND(Local_402.f_1));
 									iLocal_398++;
 								}
@@ -219,7 +219,7 @@ void __EntryFunction__()
 										DATAFILE::DATADICT_SET_BOOL(uLocal_302[iLocal_399], "100", false);
 									}
 									Local_402 = { func_125(iLocal_422) };
-									DATAFILE::DATADICT_SET_INT(uLocal_302[iLocal_399], "x", SYSTEM::ROUND(Local_402.x));
+									DATAFILE::DATADICT_SET_INT(uLocal_302[iLocal_399], "x", SYSTEM::ROUND(Local_402.f_0));
 									DATAFILE::DATADICT_SET_INT(uLocal_302[iLocal_399], "y", SYSTEM::ROUND(Local_402.f_1));
 									iLocal_399++;
 								}
@@ -260,7 +260,7 @@ void __EntryFunction__()
 										DATAFILE::DATADICT_SET_BOOL(uLocal_363[iLocal_401], "100", false);
 									}
 									Local_402 = { func_125(iLocal_422) };
-									DATAFILE::DATADICT_SET_INT(uLocal_363[iLocal_401], "x", SYSTEM::ROUND(Local_402.x));
+									DATAFILE::DATADICT_SET_INT(uLocal_363[iLocal_401], "x", SYSTEM::ROUND(Local_402.f_0));
 									DATAFILE::DATADICT_SET_INT(uLocal_363[iLocal_401], "y", SYSTEM::ROUND(Local_402.f_1));
 									iLocal_401++;
 								}
@@ -1490,16 +1490,16 @@ void func_35(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar0 = 4;
 		}
 		FILES::GET_SHOP_PED_OUTFIT(iParam2, &Var1);
-		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+		if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 		{
 			iVar19 = 0;
 			while (iVar19 < Var1.f_3)
 			{
 				if (FILES::GET_SHOP_PED_OUTFIT_PROP_VARIANT(Var1.f_1, iVar19, &Var16) && Var16.f_2 != -1)
 				{
-					if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+					if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 					{
-						(*iParam0)[Var16.f_2] = func_36(iParam1, Var16.x, 14, iVar0);
+						(*iParam0)[Var16.f_2] = func_36(iParam1, Var16.f_0, 14, iVar0);
 					}
 					else if (Var16.f_1 != -1)
 					{
@@ -2860,32 +2860,32 @@ void func_43(var uParam0, int iParam1, int iParam2, int iParam3)
 	}
 	FILES::SETUP_SHOP_PED_OUTFIT_QUERY(iVar0, false);
 	FILES::GET_SHOP_PED_QUERY_OUTFIT((iParam2 - iParam3), &Var1);
-	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1))
+	if (!FILES::IS_CONTENT_ITEM_LOCKED(Var1.f_0))
 	{
 		iVar36 = 0;
 		while (iVar36 < Var1.f_4)
 		{
 			if (FILES::GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT(Var1.f_1, iVar36, &Var16))
 			{
-				if ((Var16.x != 0 && Var16.x != -1) && Var16.x != joaat("0"))
+				if ((Var16.f_0 != 0 && Var16.f_0 != -1) && Var16.f_0 != joaat("0"))
 				{
 					if (Var16.f_2 == 10)
 					{
 						FILES::INIT_SHOP_PED_COMPONENT(&Var19);
-						FILES::GET_SHOP_PED_COMPONENT(Var16.x, &Var19);
-						if (Var16.x != Var19.f_1)
+						FILES::GET_SHOP_PED_COMPONENT(Var16.f_0, &Var19);
+						if (Var16.f_0 != Var19.f_1)
 						{
 							uParam0->f_16 = 1;
 						}
 					}
 					if (Var16.f_2 == 10 && uParam0->f_16)
 					{
-						(*uParam0)[func_44(Var16.f_2)] = Var16.x;
+						(*uParam0)[func_44(Var16.f_2)] = Var16.f_0;
 						uParam0->f_16 = 1;
 					}
 					else
 					{
-						(*uParam0)[func_44(Var16.f_2)] = func_36(iParam1, Var16.x, func_44(Var16.f_2), iVar0);
+						(*uParam0)[func_44(Var16.f_2)] = func_36(iParam1, Var16.f_0, func_44(Var16.f_2), iVar0);
 					}
 				}
 				else if (Var16.f_1 != -1)
@@ -8307,7 +8307,7 @@ void func_57(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_OUTFIT(iVar17, &Var2);
 				Global_2883588 = Var2.f_1;
-				Global_2883589 = Var2;
+				Global_2883589 = Var2.f_0;
 				func_50(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var2.f_7), 0, 0, Var2.f_2, 0, -1, 2, 1);
 				return;
 			}
@@ -8368,7 +8368,7 @@ void func_57(int iParam0, int iParam1, int iParam2, int iParam3)
 					iVar36 = -1;
 				}
 				Global_2883588 = Var19.f_1;
-				Global_2883589 = Var19;
+				Global_2883589 = Var19.f_0;
 				func_50(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var19.f_9), Var19.f_3, Var19.f_4, Var19.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var19.f_1, joaat("OUTFIT_ONLY"), 0), iVar36, 2, Var19.f_1 != 0);
 				return;
 			}
@@ -8381,7 +8381,7 @@ void func_57(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			FILES::GET_SHOP_PED_COMPONENT(iParam3, &Var39);
 			Global_2883588 = Var39.f_1;
-			Global_2883589 = Var39;
+			Global_2883589 = Var39.f_0;
 			func_50(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 			return;
 		}
@@ -8393,7 +8393,7 @@ void func_57(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				FILES::GET_SHOP_PED_QUERY_COMPONENT(iVar56, &Var39);
 				Global_2883588 = Var39.f_1;
-				Global_2883589 = Var39;
+				Global_2883589 = Var39.f_0;
 				func_50(&(Global_77663[0 /*14*/]), iParam0, iParam1, &(Var39.f_9), Var39.f_3, Var39.f_4, Var39.f_5, FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Var39.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, Var39.f_1 != 0);
 				return;
 			}

@@ -159,7 +159,7 @@ void __EntryFunction__()
 			func_58(bLocal_106);
 		}
 		iVar5 = 0;
-		while (iVar5 < Local_40)
+		while (iVar5 < Local_40.f_0)
 		{
 			func_57(iVar5);
 			iVar5++;
@@ -689,12 +689,12 @@ int func_9(var uParam0)
 
 float func_10(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5)
 {
-	return ((Param0 * Param3) + (Param0.f_1 * Param3.f_1));
+	return ((Param0.f_0 * Param3.f_0) + (Param0.f_1 * Param3.f_1));
 }
 
 int func_11(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -825,7 +825,7 @@ Vector3 func_20(struct<3> Param0)
 	}
 	else
 	{
-		Param0.x = 0f;
+		Param0.f_0 = 0f;
 		Param0.f_1 = 0f;
 		Param0.f_2 = 0f;
 	}
@@ -1344,13 +1344,13 @@ void func_53(struct<3> Param0, float fParam3, int iParam4, int iParam5, int iPar
 	Var5 = { Param0 };
 	fVar8 = 0f;
 	Var2 = { Param0 };
-	Var2.x = (Var2.x + (SYSTEM::SIN((fVar8 - fVar1)) * fParam3));
+	Var2.f_0 = (Var2.f_0 + (SYSTEM::SIN((fVar8 - fVar1)) * fParam3));
 	Var2.f_1 = (Var2.f_1 + (SYSTEM::COS((fVar8 - fVar1)) * fParam3));
 	iVar0 = 0;
 	while (iVar0 <= iParam8)
 	{
 		Var5 = { Param0 };
-		Var5.x = (Var5.x + (SYSTEM::SIN(fVar8) * fParam3));
+		Var5.f_0 = (Var5.f_0 + (SYSTEM::SIN(fVar8) * fParam3));
 		Var5.f_1 = (Var5.f_1 + (SYSTEM::COS(fVar8) * fParam3));
 		GRAPHICS::DRAW_DEBUG_LINE(Var2, Var5, iParam4, iParam5, iParam6, iParam7);
 		Var2 = { Var5 };
@@ -1411,7 +1411,7 @@ void func_55(struct<3> Param0, struct<3> Param3, float fParam6, int iParam7, int
 
 Vector3 func_56(struct<3> Param0, struct<3> Param3)
 {
-	return ((Param0.f_1 * Param3.f_2) - (Param0.f_2 * Param3.f_1)), ((Param0.f_2 * Param3.x) - (Param0.x * Param3.f_2)), ((Param0.x * Param3.f_1) - (Param0.f_1 * Param3.x));
+	return ((Param0.f_1 * Param3.f_2) - (Param0.f_2 * Param3.f_1)), ((Param0.f_2 * Param3.f_0) - (Param0.f_0 * Param3.f_2)), ((Param0.f_0 * Param3.f_1) - (Param0.f_1 * Param3.f_0));
 }
 
 void func_57(int iParam0)
@@ -1538,7 +1538,7 @@ int func_60(int iParam0)
 	MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(iParam0), &Var0, &Var3);
 	if (ENTITY::GET_ENTITY_MODEL(iParam0) != joaat("zeno"))
 	{
-		if (MISC::ABSF((Var3.x - Var0.x)) > 3.4f)
+		if (MISC::ABSF((Var3.f_0 - Var0.f_0)) > 3.4f)
 		{
 			return 1;
 		}

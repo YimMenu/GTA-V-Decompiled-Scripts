@@ -1055,7 +1055,7 @@ void __EntryFunction__()
 				case 0:
 					if (func_68(&(Local_63.f_16), 10000, 0))
 					{
-						if (!MISC::IS_BIT_SET(Local_63, 12))
+						if (!MISC::IS_BIT_SET(Local_63.f_0, 12))
 						{
 							Local_63.f_4 = PLAYER::PLAYER_ID();
 							Local_63.f_5 = func_67();
@@ -1892,7 +1892,7 @@ void func_16(struct<67> Param0, var uParam67, var uParam68, var uParam69, var uP
 		return;
 	}
 	Var0.f_2 = 2147483647;
-	Var0.x = -1141953949;
+	Var0.f_0 = -1141953949;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
@@ -2471,7 +2471,7 @@ void func_30()
 				{
 					Local_63.f_20 = 7;
 				}
-				else if (!MISC::IS_BIT_SET(Local_63, 7) && ENTITY::IS_ENTITY_AT_ENTITY(NETWORK::NET_TO_PED(Local_63.f_3), PLAYER::PLAYER_PED_ID(), 10f, 10f, 10f, false, true, 0))
+				else if (!MISC::IS_BIT_SET(Local_63.f_0, 7) && ENTITY::IS_ENTITY_AT_ENTITY(NETWORK::NET_TO_PED(Local_63.f_3), PLAYER::PLAYER_PED_ID(), 10f, 10f, 10f, false, true, 0))
 				{
 					Local_63.f_20 = 3;
 				}
@@ -2484,7 +2484,7 @@ void func_30()
 					Local_63.f_20 = 3;
 					MISC::CLEAR_BIT(&iLocal_182, 8);
 				}
-				else if (!MISC::IS_BIT_SET(Local_63, 7) && ENTITY::IS_ENTITY_AT_COORD(NETWORK::NET_TO_PED(Local_63.f_3), Local_63.f_7, 10f, 10f, 10f, false, true, 0))
+				else if (!MISC::IS_BIT_SET(Local_63.f_0, 7) && ENTITY::IS_ENTITY_AT_COORD(NETWORK::NET_TO_PED(Local_63.f_3), Local_63.f_7, 10f, 10f, 10f, false, true, 0))
 				{
 					Local_63.f_20 = 5;
 				}
@@ -2556,7 +2556,7 @@ void func_32()
 	switch (Local_63.f_21)
 	{
 		case 0:
-			if (MISC::IS_BIT_SET(Local_63, 8) || VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(NETWORK::NET_TO_VEH(Local_63.f_2), 0, 1) > 0)
+			if (MISC::IS_BIT_SET(Local_63.f_0, 8) || VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(NETWORK::NET_TO_VEH(Local_63.f_2), 0, 1) > 0)
 			{
 				Local_63.f_21 = 1;
 			}
@@ -2577,7 +2577,7 @@ void func_32()
 			{
 				Local_63.f_21 = 3;
 			}
-			else if (MISC::IS_BIT_SET(Local_63, 10))
+			else if (MISC::IS_BIT_SET(Local_63.f_0, 10))
 			{
 				Local_63.f_21 = 4;
 			}
@@ -2590,7 +2590,7 @@ void func_32()
 				{
 					Local_63.f_21 = 1;
 				}
-				else if (MISC::IS_BIT_SET(Local_63, 10))
+				else if (MISC::IS_BIT_SET(Local_63.f_0, 10))
 				{
 					Local_63.f_21 = 4;
 				}
@@ -2628,16 +2628,16 @@ void func_33()
 			{
 				if (func_72(Local_63.f_2))
 				{
-					if (!MISC::IS_BIT_SET(Local_63, 8))
+					if (!MISC::IS_BIT_SET(Local_63.f_0, 8))
 					{
 						if (ENTITY::IS_ENTITY_AT_COORD(NETWORK::NET_TO_VEH(Local_63.f_2), Local_63.f_10, (10f * 1.5f), (10f * 1.5f), (10f * 1.5f), false, true, 0))
 						{
 							MISC::SET_BIT(&Local_63, 8);
 						}
 					}
-					if (!MISC::IS_BIT_SET(Local_63, 7) || MISC::IS_BIT_SET(Local_63, 11))
+					if (!MISC::IS_BIT_SET(Local_63.f_0, 7) || MISC::IS_BIT_SET(Local_63.f_0, 11))
 					{
-						if (!MISC::IS_BIT_SET(Local_63, 10))
+						if (!MISC::IS_BIT_SET(Local_63.f_0, 10))
 						{
 							if (ENTITY::IS_ENTITY_AT_COORD(NETWORK::NET_TO_VEH(Local_63.f_2), Local_63.f_7, (10f * 1.5f), (10f * 1.5f), (10f * 1.5f), false, true, 0))
 							{
@@ -2645,7 +2645,7 @@ void func_33()
 							}
 						}
 					}
-					if (!MISC::IS_BIT_SET(Local_63, 9))
+					if (!MISC::IS_BIT_SET(Local_63.f_0, 9))
 					{
 						if (MISC::IS_BIT_SET(Local_85[iVar0 /*3*/].f_1, 6))
 						{
@@ -3067,7 +3067,7 @@ int func_45(struct<3> Param0, float fParam3, float fParam4, float fParam5, float
 	}
 	if (fParam4 > 0f)
 	{
-		if (PED::IS_ANY_PED_NEAR_POINT(Param0.x, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
+		if (PED::IS_ANY_PED_NEAR_POINT(Param0.f_0, Param0.f_1, (Param0.f_2 + 1f), fParam4) || PED::IS_ANY_PED_NEAR_POINT(Param0, fParam4))
 		{
 			return 0;
 		}
@@ -3269,7 +3269,7 @@ Vector3 func_51(int iParam0)
 
 int func_52(struct<3> Param0)
 {
-	if ((Param0.x == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
+	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
 	{
 		return 1;
 	}
@@ -3609,19 +3609,19 @@ int func_67()
 	struct<3> Var0;
 	
 	Var0 = { func_51(PLAYER::PLAYER_ID()) };
-	if (Var0.f_1 >= 0f && Var0.x >= 0f)
+	if (Var0.f_1 >= 0f && Var0.f_0 >= 0f)
 	{
 		return 0;
 	}
-	else if (Var0.f_1 < 0f && Var0.x >= 0f)
+	else if (Var0.f_1 < 0f && Var0.f_0 >= 0f)
 	{
 		return 1;
 	}
-	else if (Var0.f_1 < 0f && Var0.x < 0f)
+	else if (Var0.f_1 < 0f && Var0.f_0 < 0f)
 	{
 		return 2;
 	}
-	else if (Var0.f_1 >= 0f && Var0.x < 0f)
+	else if (Var0.f_1 >= 0f && Var0.f_0 < 0f)
 	{
 		return 3;
 	}
@@ -4173,7 +4173,7 @@ struct<9> func_89()
 {
 	struct<9> Var0;
 	
-	Var0 = 0.5f;
+	Var0.f_0 = 0.5f;
 	Var0.f_1 = 0.5f;
 	Var0.f_2 = 1f;
 	Var0.f_3 = 1f;
@@ -4455,15 +4455,15 @@ void func_101(var uParam0)
 
 void func_102(struct<2> Param0, Vector3 vParam2, struct<2> Param3, var uParam5)
 {
-	if (Param0 < Param3)
+	if (Param0.f_0 < Param3.f_0)
 	{
-		fLocal_1066 = (Param0 - 25f);
-		fLocal_1067 = (Param3 + 25f);
+		fLocal_1066 = (Param0.f_0 - 25f);
+		fLocal_1067 = (Param3.f_0 + 25f);
 	}
-	else if (Param0 > Param3)
+	else if (Param0.f_0 > Param3.f_0)
 	{
-		fLocal_1066 = (Param3 - 25f);
-		fLocal_1067 = (Param0 + 25f);
+		fLocal_1066 = (Param3.f_0 - 25f);
+		fLocal_1067 = (Param0.f_0 + 25f);
 	}
 	if (Param0.f_1 < Param3.f_1)
 	{
@@ -5756,7 +5756,7 @@ void func_151(int iParam0, int iParam1, var uParam2)
 {
 	struct<4> Var0;
 	
-	Var0 = -206137320;
+	Var0.f_0 = -206137320;
 	Var0.f_1 = PLAYER::PLAYER_ID();
 	Var0.f_3 = iParam1;
 	Var0.f_2 = uParam2;

@@ -759,7 +759,7 @@ int func_28()
 
 int func_29()
 {
-	switch (Local_125)
+	switch (Local_125.f_0)
 	{
 		case 0:
 			if (Global_1836144 || func_23(3))
@@ -767,13 +767,13 @@ int func_29()
 				Local_125.f_4 = PED::ADD_SCENARIO_BLOCKING_AREA(1413.703f, 2341.517f, -232.3945f, 2016.209f, 2998.893f, 161.0299f, false, true, true, true);
 			}
 			func_30(&(uLocal_92[NETWORK::PARTICIPANT_ID_TO_INT()]), 1);
-			Local_125 = 1;
+			Local_125.f_0 = 1;
 			break;
 		
 		case 1:
 			if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 1693.164f, 2559.616f, 44.5649f) >= 1030225f)
 			{
-				Local_125 = 2;
+				Local_125.f_0 = 2;
 			}
 			break;
 		
@@ -1072,7 +1072,7 @@ void func_47()
 
 void func_48(struct<21> Param0)
 {
-	func_52(func_53(Param0), Param0);
+	func_52(func_53(Param0.f_0), Param0);
 	func_50(0, -1, 0);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_90, 2, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_92, 33, 0);
