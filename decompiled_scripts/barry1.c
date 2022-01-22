@@ -48501,7 +48501,7 @@ void func_538()
 	AUDIO::SET_AUDIO_FLAG("AllowScriptedSpeechInSlowMo", false);
 	AUDIO::SET_AUDIO_FLAG("AllowAmbientSpeechInSlowMo", false);
 	func_531(1);
-	OBJECT::_0xA2C1F5E92AFE49ED();
+	OBJECT::CLEAR_ALL_PICKUP_REWARD_TYPE_SUPPRESSION();
 	func_529(0);
 	func_426(1, 1, 0, 0);
 	func_539(iLocal_165);

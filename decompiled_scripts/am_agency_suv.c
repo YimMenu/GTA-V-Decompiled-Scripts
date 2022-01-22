@@ -1344,14 +1344,14 @@ void func_43()
 			switch (func_5())
 			{
 				case 0:
-					if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), 0, 1) == 0)
+					if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), false, true) == 0)
 					{
 						func_45(2);
 					}
 					break;
 				
 				case 1:
-					if (func_16(7) && VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), 0, 1) == 0)
+					if (func_16(7) && VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), false, true) == 0)
 					{
 						func_57(5);
 					}
@@ -1741,7 +1741,7 @@ int func_66()
 			{
 				case 0:
 					VEHICLE::_0xDBC631F109350B8C(iVar0, true);
-					VEHICLE::_0x2311DD7159F00582(iVar0, true);
+					VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iVar0, true);
 					VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_NON_SCRIPT_PLAYERS(iVar0, true);
 					VEHICLE::SET_VEHICLE_INDIVIDUAL_DOORS_LOCKED(iVar0, 1, 3);
 					break;
@@ -50711,7 +50711,7 @@ void func_517()
 			break;
 		
 		case 2:
-			if ((func_311(func_8()) && func_311(func_10())) && VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), 0, 1) == 0)
+			if ((func_311(func_8()) && func_311(func_10())) && VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), false, true) == 0)
 			{
 				NETWORK::NETWORK_FADE_OUT_ENTITY(func_7(), false, true);
 				NETWORK::NETWORK_FADE_OUT_ENTITY(func_9(), false, true);
@@ -53573,14 +53573,14 @@ void func_611()
 		switch (VEHICLE::_GET_VEHICLE_DOOR_DESTROY_TYPE(func_7(), 1))
 		{
 			case 3:
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), 0, 1) > 1)
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), false, true) > 1)
 				{
 					VEHICLE::SET_VEHICLE_INDIVIDUAL_DOORS_LOCKED(func_7(), 1, 1);
 				}
 				break;
 			
 			case 1:
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), 0, 1) < 2)
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(func_7(), false, true) < 2)
 				{
 					VEHICLE::SET_VEHICLE_INDIVIDUAL_DOORS_LOCKED(func_7(), 1, 3);
 				}

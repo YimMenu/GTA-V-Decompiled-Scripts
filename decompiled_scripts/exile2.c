@@ -122146,7 +122146,7 @@ int func_795(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_335(uParam0->f_13))
 					{
@@ -126315,7 +126315,7 @@ int func_895(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_0x1CBA05AE7BD7EE05(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -137396,7 +137396,7 @@ int func_1066(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;
@@ -139640,7 +139640,7 @@ void func_1101()
 	PLAYER::SET_WANTED_LEVEL_MULTIPLIER(0.5f);
 	CAM::SET_FIRST_PERSON_AIM_CAM_ZOOM_FACTOR(1f);
 	func_1(PLAYER::PLAYER_PED_ID(), 183);
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Exile2_Thermal_Scope");
+	PAD::INIT_PC_SCRIPTED_CONTROLS("Exile2_Thermal_Scope");
 	func_1107(61, 1, 0, 1, 0);
 	func_1106();
 	HUD::CLEAR_HELP(true);
@@ -141931,7 +141931,7 @@ void func_1112()
 void func_1113()
 {
 	func_707();
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	MISC::SET_FAKE_WANTED_LEVEL(0);
 	PLAYER::SET_MAX_WANTED_LEVEL(6);
 	PED::SET_CREATE_RANDOM_COPS(true);

@@ -33467,7 +33467,7 @@ int func_262()
 			{
 				return 1;
 			}
-			if ((iLocal_61 == 1 && !PED::IS_PED_IN_VEHICLE(iLocal_82, iLocal_92, true)) && !VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_82, iLocal_92, 0, false, false))
+			if ((iLocal_61 == 1 && !PED::IS_PED_IN_VEHICLE(iLocal_82, iLocal_92, true)) && !VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_82, iLocal_92, 0, false, false))
 			{
 				return 1;
 			}

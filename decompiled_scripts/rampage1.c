@@ -2358,7 +2358,7 @@ int func_52(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4)
 	int iVar1;
 	
 	iVar0 = 0;
-	*uParam2 = (VEHICLE::GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS(iParam0) - VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iParam0, 0, 1));
+	*uParam2 = (VEHICLE::GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS(iParam0) - VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iParam0, false, true));
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0, false))
 	{
 		if (iParam4 && !VEHICLE::IS_VEHICLE_STOPPED(iParam0))
@@ -4262,7 +4262,7 @@ void func_106(int* iParam0, int iParam1)
 			break;
 		
 		case 2:
-			if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(*iParam0, 0, 1) == 0 && iParam1)
+			if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(*iParam0, false, true) == 0 && iParam1)
 			{
 				if (func_16(iVar1))
 				{
@@ -50539,7 +50539,7 @@ void func_572(bool bParam0)
 	TASK::RESET_SCENARIO_GROUPS_ENABLED();
 	PED::REMOVE_RELATIONSHIP_GROUP(iLocal_1036);
 	PED::REMOVE_RELATIONSHIP_GROUP(iLocal_1037);
-	OBJECT::_0xA2C1F5E92AFE49ED();
+	OBJECT::CLEAR_ALL_PICKUP_REWARD_TYPE_SUPPRESSION();
 	PLAYER::SET_WANTED_LEVEL_MULTIPLIER(1f);
 	PLAYER::SET_DISPATCH_COPS_FOR_PLAYER(PLAYER::GET_PLAYER_INDEX(), true);
 	HUD::CLEAR_ADDITIONAL_TEXT(0, true);

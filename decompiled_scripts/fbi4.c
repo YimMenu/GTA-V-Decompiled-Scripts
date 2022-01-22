@@ -117690,7 +117690,7 @@ int func_746(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_309(uParam0->f_13))
 					{
@@ -129079,11 +129079,11 @@ int func_951()
 				VEHICLE::FORCE_PLAYBACK_RECORDED_VEHICLE_UPDATE(Local_1196.f_0, true);
 				Local_1649.f_0 = PED::CREATE_PED_INSIDE_VEHICLE(Local_1196.f_0, 26, Local_1649.f_1, 0, true, true);
 				PED::SET_PED_DIES_WHEN_INJURED(Local_1649.f_0, true);
-				PED::_0x733C87D4CE22BEA2(Local_1649.f_0);
+				PED::DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(Local_1649.f_0);
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_1649.f_0, true);
 				Local_1669.f_0 = PED::CREATE_PED_INSIDE_VEHICLE(Local_1196.f_0, 26, Local_1669.f_1, -1, true, true);
 				PED::SET_PED_DIES_WHEN_INJURED(Local_1669.f_0, true);
-				PED::_0x733C87D4CE22BEA2(Local_1669.f_0);
+				PED::DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(Local_1669.f_0);
 				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_1669.f_0, true);
 				Local_1498[0 /*15*/] = VEHICLE::CREATE_VEHICLE(Local_1498[0 /*15*/].f_1, Local_1498[0 /*15*/].f_3, 0f, true, true, false);
 				VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(Local_1498[0 /*15*/], Local_1498[0 /*15*/].f_13, "lkheat", true);
@@ -130635,7 +130635,7 @@ void func_968()
 				if (!ENTITY::IS_ENTITY_DEAD(Local_1649.f_0, false))
 				{
 					PED::SET_PED_DIES_WHEN_INJURED(Local_1649.f_0, true);
-					PED::_0x733C87D4CE22BEA2(Local_1649.f_0);
+					PED::DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(Local_1649.f_0);
 					PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_1649.f_0, true);
 				}
 			}
@@ -130645,7 +130645,7 @@ void func_968()
 				if (!ENTITY::IS_ENTITY_DEAD(Local_1669.f_0, false))
 				{
 					PED::SET_PED_DIES_WHEN_INJURED(Local_1669.f_0, true);
-					PED::_0x733C87D4CE22BEA2(Local_1669.f_0);
+					PED::DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(Local_1669.f_0);
 					PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_1669.f_0, true);
 				}
 			}
@@ -131054,7 +131054,7 @@ int func_971(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_0x1CBA05AE7BD7EE05(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}

@@ -2068,7 +2068,7 @@ void func_49()
 				{
 					if (!PED::IS_PED_INJURED(iLocal_317) && !ENTITY::IS_ENTITY_DEAD(iLocal_319, false))
 					{
-						if (!VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_317, iLocal_319, -1, false, false) && !VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_317, iLocal_319, 0, false, false))
+						if (!VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_317, iLocal_319, -1, false, false) && !VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_317, iLocal_319, 0, false, false))
 						{
 							func_46();
 							SYSTEM::WAIT(0);
@@ -2139,9 +2139,9 @@ void func_52()
 						iLocal_348++;
 					}
 					OBJECT::DELETE_OBJECT(&iLocal_340);
-					if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_317, iLocal_319, -1, false, false) || VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_317, iLocal_319, 0, false, false))
+					if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_317, iLocal_319, -1, false, false) || VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_317, iLocal_319, 0, false, false))
 					{
-						if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_317, iLocal_319, -1, false, false))
+						if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_317, iLocal_319, -1, false, false))
 						{
 							bLocal_344 = true;
 							Local_314 = { ENTITY::GET_ENTITY_COORDS(iLocal_319, false) + Vector(0f, -1f, -3f) };

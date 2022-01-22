@@ -108028,7 +108028,7 @@ void func_626()
 	{
 		if (iLocal_6072 == 1)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			iLocal_6072 = 0;
 		}
 	}
@@ -122629,7 +122629,7 @@ int func_869(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_219(uParam0->f_13))
 					{
@@ -129815,7 +129815,7 @@ int func_965(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_0x1CBA05AE7BD7EE05(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -142022,7 +142022,7 @@ void func_1072()
 	{
 		if (iLocal_6072 == 0)
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("FINALE HEIST STINGER");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("FINALE HEIST STINGER");
 			iLocal_6072 = 1;
 		}
 	}
@@ -143035,7 +143035,7 @@ int func_1083(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;

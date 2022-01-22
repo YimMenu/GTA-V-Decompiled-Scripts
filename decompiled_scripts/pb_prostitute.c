@@ -3614,7 +3614,7 @@ int func_91(int iParam0)
 		{
 			if (VEHICLE::GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS(*iParam0) > 0)
 			{
-				iVar1 = VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(*iParam0, 0, 1);
+				iVar1 = VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(*iParam0, false, true);
 				if (((iVar1 == 0 && VEHICLE::IS_VEHICLE_SEAT_FREE(*iParam0, 0, false)) && (!VEHICLE::IS_VEHICLE_DOOR_DAMAGED(*iParam0, 1) && !VEHICLE::IS_VEHICLE_DOOR_DAMAGED(*iParam0, 0))) || VEHICLE::GET_PED_IN_VEHICLE_SEAT(*iParam0, 0, false) == iLocal_96)
 				{
 					if (func_47(*iParam0))
@@ -4352,7 +4352,7 @@ var func_108(bool bParam0)
 
 void func_109(int iParam0, int iParam1)
 {
-	if (!VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iParam0, PED::GET_VEHICLE_PED_IS_IN(iParam0, false), 0, false, false))
+	if (!VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iParam0, PED::GET_VEHICLE_PED_IS_IN(iParam0, false), 0, false, false))
 	{
 		TASK::TASK_LEAVE_ANY_VEHICLE(0, 0, 16842752);
 	}
@@ -4595,7 +4595,7 @@ void func_122(var uParam0)
 				{
 					bVar0 = true;
 				}
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar1, 0, 1) > 2)
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar1, false, true) > 2)
 				{
 					bVar0 = true;
 				}
@@ -8030,7 +8030,7 @@ void func_232()
 								{
 									VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), true);
 									VEHICLE::SET_VEHICLE_DOORS_LOCKED(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), 4);
-									VEHICLE::_0x2311DD7159F00582(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), true);
+									VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), true);
 								}
 							}
 						}
@@ -15132,7 +15132,7 @@ int func_395()
 		{
 			return 0;
 		}
-		if (!VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_96, iLocal_99, 0, false, false))
+		if (!VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_96, iLocal_99, 0, false, false))
 		{
 			return 0;
 		}
@@ -15790,7 +15790,7 @@ void func_410()
 					{
 						iLocal_99 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 					}
-					else if (!VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_96, iLocal_99, 0, false, false))
+					else if (!VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_96, iLocal_99, 0, false, false))
 					{
 						if (!func_112())
 						{
@@ -16111,7 +16111,7 @@ void func_428(var uParam0)
 	func_69(iLocal_96);
 	if (((ENTITY::IS_ENTITY_AT_ENTITY(iLocal_96, PLAYER::PLAYER_PED_ID(), 3f, 3f, 3f, false, true, 0) || func_489(iLocal_75, 1)) && !func_217(0)) && !func_401())
 	{
-		if (!VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_96, iLocal_99, 0, false, false))
+		if (!VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_96, iLocal_99, 0, false, false))
 		{
 			if (!func_112())
 			{
@@ -16518,7 +16518,7 @@ int func_437(bool bParam0)
 	}
 	if (func_549())
 	{
-		if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), 0, 1) > 1)
+		if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), false, true) > 1)
 		{
 			return 0;
 		}
@@ -18946,14 +18946,14 @@ void func_540()
 				{
 					VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_99, 1);
 					VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(iLocal_99, false);
-					VEHICLE::_0x2311DD7159F00582(iLocal_99, false);
+					VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iLocal_99, false);
 				}
 				else
 				{
 					NETWORK::NETWORK_REQUEST_CONTROL_OF_ENTITY(iLocal_99);
 					VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_99, 1);
 					VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(iLocal_99, false);
-					VEHICLE::_0x2311DD7159F00582(iLocal_99, false);
+					VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iLocal_99, false);
 				}
 			}
 		}

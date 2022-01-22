@@ -598,7 +598,7 @@ void func_1()
 					iLocal_316 = 1;
 					iLocal_308 = 6;
 					PAD::STOP_PAD_SHAKE(2);
-					PAD::_0xA0CEFCEA390AAB9B(2);
+					PAD::_CLEAR_SUPPRESSED_PAD_RUMBLE(2);
 				}
 			}
 			else
@@ -910,7 +910,7 @@ void func_10()
 	{
 		if (iLocal_329 == 1)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			iLocal_329 = 0;
 		}
 	}
@@ -1137,7 +1137,7 @@ void func_20()
 	{
 		if (iLocal_329 == 0)
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("SOFA ACTIVITY");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("SOFA ACTIVITY");
 			iLocal_329 = 1;
 		}
 	}

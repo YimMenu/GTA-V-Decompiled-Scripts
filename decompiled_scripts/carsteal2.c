@@ -18654,7 +18654,7 @@ int func_271(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_0x1CBA05AE7BD7EE05(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -66062,7 +66062,7 @@ int func_647(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_15(uParam0->f_13))
 					{
@@ -125814,7 +125814,7 @@ int func_904(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam4
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;
@@ -135035,7 +135035,7 @@ void func_1012()
 	{
 		if (iLocal_3995 == 0)
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("CARSTEAL2 HELICAM");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("CARSTEAL2 HELICAM");
 			iLocal_3995 = 1;
 		}
 	}
@@ -136246,7 +136246,7 @@ void func_1031()
 	{
 		if (iLocal_3995 == 1)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			iLocal_3995 = 0;
 		}
 	}

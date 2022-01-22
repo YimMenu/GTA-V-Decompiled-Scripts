@@ -12586,7 +12586,7 @@ void func_214(var uParam0)
 	switch (iLocal_1745)
 	{
 		case 0:
-			if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(uParam0->f_1, 0, 1) >= 2)
+			if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(uParam0->f_1, false, true) >= 2)
 			{
 				iLocal_1744 = ENTITY::GET_ENTITY_HEALTH(uParam0->f_1);
 				iLocal_1745++;

@@ -13309,7 +13309,7 @@ int func_290(int iParam0)
 				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true))
 				{
 					iVar5 = PED::GET_VEHICLE_PED_IS_USING(PLAYER::PLAYER_PED_ID());
-					iVar6 = VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar5, 0, 1);
+					iVar6 = VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar5, false, true);
 					if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iVar5, -1, false))
 					{
 						iVar6++;

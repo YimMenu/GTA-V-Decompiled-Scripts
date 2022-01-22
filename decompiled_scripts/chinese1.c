@@ -113351,8 +113351,8 @@ int func_752()
 			OBJECT::SET_STATE_OF_CLOSEST_DOOR_OF_TYPE(joaat("v_ilev_ss_doorext"), Local_2555, true, 1f, false);
 			OBJECT::SET_STATE_OF_CLOSEST_DOOR_OF_TYPE(joaat("v_ilev_ss_doorext"), Local_2558, true, -1f, false);
 			OBJECT::_DOOR_CONTROL(joaat("v_ilev_ss_door04"), Local_2561, true, 0f, 0f, -1f);
-			MISC::_ADD_TACTICAL_ANALYSIS_POINT(1398.7f, 3603.9f, 37.95f);
-			MISC::_ADD_TACTICAL_ANALYSIS_POINT(1394.5f, 3603.5f, 37.95f);
+			MISC::ADD_TACTICAL_NAV_MESH_POINT(1398.7f, 3603.9f, 37.95f);
+			MISC::ADD_TACTICAL_NAV_MESH_POINT(1394.5f, 3603.5f, 37.95f);
 			func_724();
 			MISC::SET_INSTANCE_PRIORITY_HINT(1);
 			iLocal_1951++;
@@ -113393,7 +113393,7 @@ int func_752()
 			if (func_754())
 			{
 				func_312(2, "Wave 0 outside enemies", 0, 0, 0, 1);
-				MISC::_CLEAR_TACTICAL_ANALYSIS_POINTS();
+				MISC::CLEAR_TACTICAL_NAV_MESH_POINTS();
 				iLocal_1951++;
 			}
 			break;
@@ -118611,7 +118611,7 @@ void func_859()
 	}
 	STREAMING::END_SRL();
 	func_685();
-	MISC::_CLEAR_TACTICAL_ANALYSIS_POINTS();
+	MISC::CLEAR_TACTICAL_NAV_MESH_POINTS();
 	OBJECT::_DOOR_CONTROL(joaat("v_ilev_ss_doorext"), Local_2555, false, 0f, 0f, 0f);
 	OBJECT::_DOOR_CONTROL(joaat("v_ilev_ss_doorext"), Local_2558, false, 0f, 0f, 0f);
 	OBJECT::_DOOR_CONTROL(joaat("v_ilev_ss_door04"), Local_2561, false, 0f, 0f, 0f);

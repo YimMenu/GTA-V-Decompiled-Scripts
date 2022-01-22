@@ -8061,7 +8061,7 @@ void func_167(int* iParam0, int iParam1)
 	{
 		if (MISC::IS_BIT_SET(Global_1966523[iParam1], 4))
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			MISC::CLEAR_BIT(&(Global_1966523[iParam1]), 4);
 		}
 	}
@@ -79560,7 +79560,7 @@ void func_462(int* iParam0, int iParam1)
 	{
 		if (!MISC::IS_BIT_SET(Global_1966523[iParam1], 4))
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("MP DRILL MINIGAME");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("MP DRILL MINIGAME");
 			MISC::SET_BIT(&(Global_1966523[iParam1]), 4);
 		}
 	}

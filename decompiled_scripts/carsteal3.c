@@ -500,7 +500,7 @@ void __EntryFunction__()
 		func_788();
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Carsteal4_spycar");
+	PAD::INIT_PC_SCRIPTED_CONTROLS("Carsteal4_spycar");
 	func_781(21, 0);
 	if (func_780())
 	{
@@ -93954,7 +93954,7 @@ void func_477(int* iParam0, int iParam1, int iParam2)
 								{
 									func_451(iParam0, 19);
 								}
-								if (VEHICLE::IS_VEHICLE_STOPPED(iParam2) && VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(*iParam0, iParam2, 0, false, false))
+								if (VEHICLE::IS_VEHICLE_STOPPED(iParam2) && VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(*iParam0, iParam2, 0, false, false))
 								{
 									if (iLocal_575 == 0)
 									{
@@ -119883,7 +119883,7 @@ struct<6> func_787(int iParam0, bool bParam1)
 void func_788()
 {
 	CUTSCENE::REMOVE_CUTSCENE();
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	HUD::CLEAR_HELP(true);
 	HUD::CLEAR_PRINTS();
 	HUD::DISPLAY_HUD(true);

@@ -3565,11 +3565,11 @@ void func_117(var uParam0, struct<3> Param1)
 			{
 				TASK::TASK_LEAVE_VEHICLE(uParam0->f_3, uParam0->f_4, 512);
 			}
-			else if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param1, false) < MISC::GET_DISTANCE_BETWEEN_COORDS(Var3, Param1, false) && VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(uParam0->f_3, uParam0->f_4, 1, false, false))
+			else if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param1, false) < MISC::GET_DISTANCE_BETWEEN_COORDS(Var3, Param1, false) && VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(uParam0->f_3, uParam0->f_4, 1, false, false))
 			{
 				TASK::TASK_LEAVE_VEHICLE(uParam0->f_3, uParam0->f_4, 131072);
 			}
-			else if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param1, false) >= MISC::GET_DISTANCE_BETWEEN_COORDS(Var3, Param1, false) && VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(uParam0->f_3, uParam0->f_4, 2, false, false))
+			else if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param1, false) >= MISC::GET_DISTANCE_BETWEEN_COORDS(Var3, Param1, false) && VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(uParam0->f_3, uParam0->f_4, 2, false, false))
 			{
 				TASK::TASK_LEAVE_VEHICLE(uParam0->f_3, uParam0->f_4, 262144);
 			}
@@ -3950,7 +3950,7 @@ int func_137(var uParam0, var uParam1, var uParam2, var uParam3)
 	}
 	if (!func_152(uParam0, uParam1))
 	{
-		if (!VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(uParam0->f_2, uParam0->f_4, -1, false, false))
+		if (!VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(uParam0->f_2, uParam0->f_4, -1, false, false))
 		{
 			TASK::TASK_LEAVE_ANY_VEHICLE((*uParam1)[0], 0, 0);
 			bLocal_447 = true;
@@ -4171,11 +4171,11 @@ void func_138(var uParam0, var uParam1, struct<3> Param2)
 		{
 			Var0 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(*uParam0, -1.78774f, -1.62399f, -0.6206f) };
 			Var3 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(*uParam0, 1.78498f, -1.24105f, -0.6422f) };
-			if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param2, false) < MISC::GET_DISTANCE_BETWEEN_COORDS(Var3, Param2, false) && VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(*uParam1, *uParam0, 1, false, false))
+			if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param2, false) < MISC::GET_DISTANCE_BETWEEN_COORDS(Var3, Param2, false) && VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(*uParam1, *uParam0, 1, false, false))
 			{
 				iVar6 = 131072;
 			}
-			else if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param2, false) >= MISC::GET_DISTANCE_BETWEEN_COORDS(Var3, Param2, false) && VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(*uParam1, *uParam0, 2, false, false))
+			else if (MISC::GET_DISTANCE_BETWEEN_COORDS(Var0, Param2, false) >= MISC::GET_DISTANCE_BETWEEN_COORDS(Var3, Param2, false) && VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(*uParam1, *uParam0, 2, false, false))
 			{
 				iVar6 = 262144;
 			}

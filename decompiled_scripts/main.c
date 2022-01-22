@@ -131361,7 +131361,7 @@ int func_1407()
 	{
 		return iVar0;
 	}
-	iVar2 = VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar1, 0, 1);
+	iVar2 = VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar1, false, true);
 	if (!VEHICLE::IS_VEHICLE_SEAT_FREE(iVar1, -1, false))
 	{
 		iVar2++;
@@ -146661,12 +146661,12 @@ int func_1749(var uParam0, bool bParam1)
 				if (func_1755(&(uParam0->f_1), &(uParam0->f_2), &Var106, &cVar175, cVar191))
 				{
 					func_1754(&Var98, &Var106);
-					if (uParam0->f_2 && STATS::_0xA0F93D5465B3094D(&Var98))
+					if (uParam0->f_2 && STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_START(&Var98))
 					{
 						if (Var98.f_3 > 0)
 						{
-							STATS::_0x34770B9CE0E03B91(0, &Var0);
-							if (STATS::_0x88578F6EC36B4A3A(0, 0) > 0)
+							STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INFO(0, &Var0);
+							if (STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INT(0, 0) > 0)
 							{
 								MISC::SET_BIT(&iVar192, 2);
 								if (!bParam1)
@@ -146676,7 +146676,7 @@ int func_1749(var uParam0, bool bParam1)
 							}
 						}
 						MISC::SET_BIT(&iVar192, 0);
-						STATS::_0x71B008056E5692D6();
+						STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_END();
 					}
 					uParam0->f_2 = 0;
 					*uParam0 = 1;
@@ -146702,12 +146702,12 @@ int func_1749(var uParam0, bool bParam1)
 				if (func_1755(&(uParam0->f_1), &(uParam0->f_2), &Var106, &cVar175, cVar191))
 				{
 					func_1754(&Var98, &Var106);
-					if (uParam0->f_2 && STATS::_0xA0F93D5465B3094D(&Var98))
+					if (uParam0->f_2 && STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_START(&Var98))
 					{
 						if (Var98.f_3 > 0)
 						{
-							STATS::_0x34770B9CE0E03B91(0, &Var0);
-							if (STATS::_0x88578F6EC36B4A3A(0, 0) > 0)
+							STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INFO(0, &Var0);
+							if (STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INT(0, 0) > 0)
 							{
 								MISC::SET_BIT(&iVar192, 5);
 								MISC::SET_BIT(&Global_25, 1);
@@ -146724,7 +146724,7 @@ int func_1749(var uParam0, bool bParam1)
 						MISC::SET_BIT(&Global_25, 5);
 						STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), Global_25, true);
 						MISC::SET_BIT(&iVar192, 3);
-						STATS::_0x71B008056E5692D6();
+						STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_END();
 					}
 					uParam0->f_2 = 0;
 					*uParam0 = 2;
@@ -146750,12 +146750,12 @@ int func_1749(var uParam0, bool bParam1)
 				if (func_1755(&(uParam0->f_1), &(uParam0->f_2), &Var106, &cVar175, cVar191))
 				{
 					func_1754(&Var98, &Var106);
-					if (uParam0->f_2 && STATS::_0xA0F93D5465B3094D(&Var98))
+					if (uParam0->f_2 && STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_START(&Var98))
 					{
 						if (Var98.f_3 > 0)
 						{
-							STATS::_0x34770B9CE0E03B91(0, &Var0);
-							if (STATS::_0x88578F6EC36B4A3A(0, 0) > 0)
+							STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INFO(0, &Var0);
+							if (STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INT(0, 0) > 0)
 							{
 								MISC::SET_BIT(&iVar192, 8);
 								MISC::SET_BIT(&Global_25, 2);
@@ -146772,7 +146772,7 @@ int func_1749(var uParam0, bool bParam1)
 						MISC::SET_BIT(&Global_25, 6);
 						STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), Global_25, true);
 						MISC::SET_BIT(&iVar192, 6);
-						STATS::_0x71B008056E5692D6();
+						STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_END();
 					}
 					uParam0->f_2 = 0;
 					*uParam0 = 3;
@@ -146802,12 +146802,12 @@ int func_1749(var uParam0, bool bParam1)
 				if (func_1755(&(uParam0->f_1), &(uParam0->f_2), &Var106, &cVar175, cVar191))
 				{
 					func_1754(&Var98, &Var106);
-					if (uParam0->f_2 && STATS::_0xA0F93D5465B3094D(&Var98))
+					if (uParam0->f_2 && STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_START(&Var98))
 					{
 						if (Var98.f_3 > 0)
 						{
-							STATS::_0x34770B9CE0E03B91(0, &Var0);
-							if (STATS::_0x88578F6EC36B4A3A(0, 0) > 0)
+							STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INFO(0, &Var0);
+							if (STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INT(0, 0) > 0)
 							{
 								MISC::SET_BIT(&iVar192, 2);
 								if (!bParam1)
@@ -146817,7 +146817,7 @@ int func_1749(var uParam0, bool bParam1)
 							}
 						}
 						MISC::SET_BIT(&iVar192, 1);
-						STATS::_0x71B008056E5692D6();
+						STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_END();
 					}
 					uParam0->f_2 = 0;
 					*uParam0 = 4;
@@ -146843,12 +146843,12 @@ int func_1749(var uParam0, bool bParam1)
 				if (func_1755(&(uParam0->f_1), &(uParam0->f_2), &Var106, &cVar175, cVar191))
 				{
 					func_1754(&Var98, &Var106);
-					if (uParam0->f_2 && STATS::_0xA0F93D5465B3094D(&Var98))
+					if (uParam0->f_2 && STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_START(&Var98))
 					{
 						if (Var98.f_3 > 0)
 						{
-							STATS::_0x34770B9CE0E03B91(0, &Var0);
-							if (STATS::_0x88578F6EC36B4A3A(0, 0) > 0)
+							STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INFO(0, &Var0);
+							if (STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INT(0, 0) > 0)
 							{
 								MISC::SET_BIT(&iVar192, 5);
 								MISC::SET_BIT(&Global_25, 3);
@@ -146865,7 +146865,7 @@ int func_1749(var uParam0, bool bParam1)
 						MISC::SET_BIT(&Global_25, 5);
 						STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), Global_25, true);
 						MISC::SET_BIT(&iVar192, 4);
-						STATS::_0x71B008056E5692D6();
+						STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_END();
 					}
 					uParam0->f_2 = 0;
 					*uParam0 = 5;
@@ -146891,12 +146891,12 @@ int func_1749(var uParam0, bool bParam1)
 				if (func_1755(&(uParam0->f_1), &(uParam0->f_2), &Var106, &cVar175, cVar191))
 				{
 					func_1754(&Var98, &Var106);
-					if (uParam0->f_2 && STATS::_0xA0F93D5465B3094D(&Var98))
+					if (uParam0->f_2 && STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_START(&Var98))
 					{
 						if (Var98.f_3 > 0)
 						{
-							STATS::_0x34770B9CE0E03B91(0, &Var0);
-							if (STATS::_0x88578F6EC36B4A3A(0, 0) > 0)
+							STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INFO(0, &Var0);
+							if (STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_INT(0, 0) > 0)
 							{
 								MISC::SET_BIT(&iVar192, 8);
 								MISC::SET_BIT(&Global_25, 4);
@@ -146913,7 +146913,7 @@ int func_1749(var uParam0, bool bParam1)
 						MISC::SET_BIT(&Global_25, 6);
 						STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), Global_25, true);
 						MISC::SET_BIT(&iVar192, 7);
-						STATS::_0x71B008056E5692D6();
+						STATS::LEADERBOARDS2_READ_BY_HELP_PURPLE_END();
 					}
 					uParam0->f_2 = 0;
 					*uParam0 = 6;

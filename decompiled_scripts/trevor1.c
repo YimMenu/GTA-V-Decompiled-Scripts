@@ -115131,7 +115131,7 @@ int func_697()
 																if (!PED::IS_PED_IN_VEHICLE(Local_5770.f_0, Local_6148.f_0, false))
 																{
 																	TASK::OPEN_SEQUENCE_TASK(&iLocal_6566);
-																	if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Local_5770.f_0, Local_6148.f_0, 1, false, false))
+																	if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Local_5770.f_0, Local_6148.f_0, 1, false, false))
 																	{
 																		TASK::TASK_ENTER_VEHICLE(0, Local_6148.f_0, 240000, 1, 2f, 1, 0);
 																	}
@@ -115206,7 +115206,7 @@ int func_697()
 						PED::REMOVE_PED_FROM_GROUP(Local_5760.f_0);
 						PED::REMOVE_PED_FROM_GROUP(Local_5770.f_0);
 						TASK::TASK_LOOK_AT_ENTITY(Local_5760.f_0, PLAYER::PLAYER_PED_ID(), 8000, 2048, 2);
-						if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Local_5770.f_0, Local_6148.f_0, 1, false, false))
+						if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Local_5770.f_0, Local_6148.f_0, 1, false, false))
 						{
 							TASK::CLEAR_PED_TASKS_IMMEDIATELY(Local_5770.f_0);
 							PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(Local_5770.f_0, false, false);
@@ -115249,7 +115249,7 @@ int func_697()
 					if (!PED::IS_PED_INJURED(Local_5770.f_0) && !PED::IS_PED_INJURED(Local_5760.f_0))
 					{
 						VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Local_6148.f_0, true);
-						if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Local_5770.f_0, Local_6148.f_0, 1, false, false) && VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(Local_6148.f_0))
+						if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Local_5770.f_0, Local_6148.f_0, 1, false, false) && VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(Local_6148.f_0))
 						{
 							iLocal_6266 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
 							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(iLocal_6266, Local_6148.f_0, -1);
@@ -130314,7 +130314,7 @@ int func_876()
 									func_657(0);
 									func_607();
 									PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 256);
-									if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(PLAYER::PLAYER_PED_ID(), Local_6148.f_0, -1, false, false))
+									if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(PLAYER::PLAYER_PED_ID(), Local_6148.f_0, -1, false, false))
 									{
 										if (PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Local_6148.f_0, false))
 										{

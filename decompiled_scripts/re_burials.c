@@ -786,7 +786,7 @@ void __EntryFunction__()
 										if (!PED::IS_PED_INJURED(iLocal_54[0]))
 										{
 											PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(iLocal_54[0]);
-											if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_54[0], iLocal_58, -1, false, false) || VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_54[0], iLocal_58, 0, false, false))
+											if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_54[0], iLocal_58, -1, false, false) || VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_54[0], iLocal_58, 0, false, false))
 											{
 												if (!iLocal_164)
 												{
@@ -830,7 +830,7 @@ void __EntryFunction__()
 										if (!PED::IS_PED_INJURED(iLocal_54[1]))
 										{
 											PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(iLocal_54[1]);
-											if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_54[1], iLocal_58, -1, false, false) || VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_54[1], iLocal_58, 0, false, false))
+											if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_54[1], iLocal_58, -1, false, false) || VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_54[1], iLocal_58, 0, false, false))
 											{
 												if (!iLocal_164)
 												{

@@ -19743,7 +19743,7 @@ void func_318(int iParam0, struct<3> Param1, float fParam4, bool bParam5, bool b
 				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_525[iParam0], false);
 				VEHICLE::SET_VEHICLE_EXPLODES_ON_HIGH_EXPLOSION_DAMAGE(iLocal_525[iParam0], false);
 				ENTITY::SET_ENTITY_LOD_DIST(iLocal_525[iParam0], 6000);
-				VEHICLE::_SET_VEHICLE_JET_ENGINE_ON(iLocal_525[iParam0], true);
+				VEHICLE::SET_VEHICLE_KEEP_ENGINE_ON_WHEN_ABANDONED(iLocal_525[iParam0], true);
 				VEHICLE::SET_VEHICLE_ENGINE_ON(iLocal_525[iParam0], true, true, false);
 				func_290(1);
 				iVar1 = 2;
@@ -121704,7 +121704,7 @@ void func_862()
 					ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_530, false);
 					VEHICLE::SET_VEHICLE_EXPLODES_ON_HIGH_EXPLOSION_DAMAGE(iLocal_530, false);
 					ENTITY::SET_ENTITY_LOD_DIST(iLocal_530, 3000);
-					VEHICLE::_SET_VEHICLE_JET_ENGINE_ON(iLocal_530, true);
+					VEHICLE::SET_VEHICLE_KEEP_ENGINE_ON_WHEN_ABANDONED(iLocal_530, true);
 					VEHICLE::SET_VEHICLE_ENGINE_ON(iLocal_530, true, true, false);
 					func_290(1);
 					VEHICLE::SET_VEHICLE_INTERIORLIGHT(iLocal_530, true);
@@ -126236,7 +126236,7 @@ int func_942(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_0x1CBA05AE7BD7EE05(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}

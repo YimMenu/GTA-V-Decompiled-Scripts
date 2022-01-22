@@ -2074,7 +2074,7 @@ void func_69()
 	{
 		if (iLocal_564 == 1)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			iLocal_564 = 0;
 		}
 	}
@@ -3865,7 +3865,7 @@ int func_151(int iParam0)
 		}
 		if (PED::IS_PED_USING_ANY_SCENARIO(iParam0))
 		{
-			PED::_0x9A77DFD295E29B09(iParam0, true);
+			PED::_SET_PED_SCARED_WHEN_USING_SCENARIO(iParam0, true);
 			return 1;
 		}
 		else
@@ -103375,7 +103375,7 @@ void func_926()
 	{
 		if (iLocal_564 == 0)
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Stripclub");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("Stripclub");
 			iLocal_564 = 1;
 		}
 	}

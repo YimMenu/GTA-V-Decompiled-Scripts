@@ -889,7 +889,7 @@ void func_32(int* iParam0, int iParam1)
 
 void func_33()
 {
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 }
 
 bool func_34(var uParam0, int iParam1)
@@ -2741,7 +2741,7 @@ bool func_86(var uParam0)
 
 void func_87(char* sParam0)
 {
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME(sParam0);
+	PAD::INIT_PC_SCRIPTED_CONTROLS(sParam0);
 }
 
 bool func_88(int iParam0)

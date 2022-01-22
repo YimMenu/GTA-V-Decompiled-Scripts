@@ -545,7 +545,7 @@ void __EntryFunction__()
 										func_63();
 										if (func_62())
 										{
-											if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_75, iLocal_77, -1, false, false))
+											if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_75, iLocal_77, -1, false, false))
 											{
 												if (!bLocal_296)
 												{

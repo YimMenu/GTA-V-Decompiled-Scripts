@@ -2799,7 +2799,7 @@ void func_51(var uParam0, bool bParam1)
 						default:
 							if (bParam1)
 							{
-								if (MISC::GET_HASH_KEY(SOCIALCLUB::_SC_INBOX_MESSAGE_GET_STRING(iVar1)) != joaat("COUPON"))
+								if (MISC::GET_HASH_KEY(SOCIALCLUB::SC_INBOX_MESSAGE_GET_RAW_TYPE_AT_INDEX(iVar1)) != joaat("COUPON"))
 								{
 									SOCIALCLUB::SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(iVar1);
 								}

@@ -35754,7 +35754,7 @@ int func_269(int iParam0, float fParam1)
 	var uVar0;
 	struct<3> Var1;
 	
-	if ((((MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_grenade"), fParam1, &Var1, &uVar0, false) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_smokegrenade"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_bzgas"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_stickybomb"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_molotov"), fParam1, &Var1, &uVar0, false))
+	if ((((MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_grenade"), fParam1, &Var1, &uVar0, false) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_smokegrenade"), fParam1, &Var1, &uVar0, false)) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_bzgas"), fParam1, &Var1, &uVar0, false)) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_stickybomb"), fParam1, &Var1, &uVar0, false)) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_molotov"), fParam1, &Var1, &uVar0, false))
 	{
 		if (func_270(iParam0, Var1, 90f, 0))
 		{
@@ -36971,8 +36971,8 @@ int func_303()
 	bool bVar0;
 	bool bVar1;
 	
-	bVar0 = VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Local_98.f_28[0], Local_98.f_35[0], -1, false, false);
-	bVar1 = VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Local_98.f_28[0], Local_98.f_35[0], 0, false, false);
+	bVar0 = VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Local_98.f_28[0], Local_98.f_35[0], -1, false, false);
+	bVar1 = VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Local_98.f_28[0], Local_98.f_35[0], 0, false, false);
 	if (!bVar0 && !bVar1)
 	{
 		iLocal_461 = 0;

@@ -6469,7 +6469,7 @@ void func_128()
 	{
 		if (bLocal_356 == 0)
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Turret");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("Turret");
 			bLocal_356 = true;
 		}
 	}
@@ -8012,7 +8012,7 @@ void func_175()
 	{
 		if (bLocal_356 == 1)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			bLocal_356 = false;
 		}
 	}

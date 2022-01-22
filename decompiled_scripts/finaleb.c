@@ -3221,7 +3221,7 @@ void func_59()
 	{
 		if (iLocal_1649 == 0)
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("FINALE B CHOICE");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("FINALE B CHOICE");
 			iLocal_1649 = 1;
 		}
 	}
@@ -111538,7 +111538,7 @@ int func_740(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam4
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;
@@ -112524,7 +112524,7 @@ void func_766()
 {
 	AUDIO::TRIGGER_MUSIC_EVENT("FINB_FAIL");
 	VEHICLE::SET_LIGHTS_CUTOFF_DISTANCE_TWEAK(0f);
-	OBJECT::_0x762DB2D380B48D04(128);
+	OBJECT::CLEAR_PICKUP_REWARD_TYPE_SUPPRESSION(128);
 	if (CUTSCENE::IS_CUTSCENE_ACTIVE())
 	{
 		CUTSCENE::STOP_CUTSCENE_IMMEDIATELY();
@@ -112631,7 +112631,7 @@ void func_767()
 	{
 		if (iLocal_1649 == 1)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			iLocal_1649 = 0;
 		}
 	}

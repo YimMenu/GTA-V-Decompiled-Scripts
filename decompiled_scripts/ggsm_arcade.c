@@ -1191,7 +1191,7 @@ void func_23()
 {
 	if (Local_714.f_6)
 	{
-		PAD::_RESET_INPUT_MAPPING_SCHEME();
+		PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 		Local_714.f_6 = 0;
 	}
 }
@@ -25572,7 +25572,7 @@ void func_639()
 {
 	if (!Local_714.f_6)
 	{
-		PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Arcade_Go_Go_Space_Monkey");
+		PAD::INIT_PC_SCRIPTED_CONTROLS("Arcade_Go_Go_Space_Monkey");
 		Local_714.f_6 = 1;
 	}
 }
@@ -30375,7 +30375,7 @@ void func_781(int* iParam0, int iParam1)
 	{
 		if (MISC::IS_BIT_SET(Global_1966523[iParam1], 4))
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			MISC::CLEAR_BIT(&(Global_1966523[iParam1]), 4);
 		}
 	}
@@ -101446,7 +101446,7 @@ void func_1063(int* iParam0, int iParam1)
 	{
 		if (!MISC::IS_BIT_SET(Global_1966523[iParam1], 4))
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("MP DRILL MINIGAME");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("MP DRILL MINIGAME");
 			MISC::SET_BIT(&(Global_1966523[iParam1]), 4);
 		}
 	}

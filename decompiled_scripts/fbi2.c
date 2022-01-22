@@ -9551,7 +9551,7 @@ void __EntryFunction__()
 	fLocal_640 = fLocal_640;
 	iLocal_527 = iLocal_527;
 	iLocal_658 = iLocal_658;
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Rappelling");
+	PAD::INIT_PC_SCRIPTED_CONTROLS("Rappelling");
 	while (true)
 	{
 		RECORDING::_0x208784099002BC30(func_1126(), 0);
@@ -109225,7 +109225,7 @@ int func_545(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_0x1CBA05AE7BD7EE05(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -127168,7 +127168,7 @@ void func_789(int iParam0)
 			PED::SET_PED_CONFIG_FLAG(iLocal_168[iVar0], 118, false);
 			PED::SET_PED_CONFIG_FLAG(iLocal_168[iVar0], 198, true);
 			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_168[iVar0], 38, true);
-			PED::_0x733C87D4CE22BEA2(iLocal_168[iVar0]);
+			PED::DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(iLocal_168[iVar0]);
 			PED::SET_RAGDOLL_BLOCKING_FLAGS(iLocal_168[iVar0], 16);
 			func_790(iLocal_168[iVar0], 0);
 			Local_45[iVar0 /*3*/] = 0;
@@ -140812,7 +140812,7 @@ void func_977(int iParam0)
 			PED::SET_PED_CONFIG_FLAG(iLocal_175[iVar0], 208, true);
 			PED::SET_PED_CONFIG_FLAG(iLocal_175[iVar0], 118, false);
 			PED::SET_PED_CONFIG_FLAG(iLocal_175[iVar0], 198, true);
-			PED::_0x733C87D4CE22BEA2(iLocal_175[iVar0]);
+			PED::DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(iLocal_175[iVar0]);
 			PED::SET_PED_COMPONENT_VARIATION(iLocal_175[iVar0], 0, iVar7, iVar8, 0);
 			PED::SET_PED_COMPONENT_VARIATION(iLocal_175[iVar0], 3, iVar9, iVar10, 0);
 			PED::SET_PED_COMPONENT_VARIATION(iLocal_175[iVar0], 4, 0, iVar11, 0);
@@ -148674,7 +148674,7 @@ int func_1089(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;
@@ -150170,7 +150170,7 @@ void func_1127()
 	PHYSICS::ROPE_UNLOAD_TEXTURES();
 	func_766(4, 0);
 	MISC::CLEAR_WEATHER_TYPE_PERSIST();
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	AUDIO::OVERRIDE_PLAYER_GROUND_MATERIAL(MISC::GET_HASH_KEY("AM_BASE_GLASS_STRONG"), false);
 	GRAPHICS::_0x5F6DF3D92271E8A1(false);
 	CLOCK::PAUSE_CLOCK(false);

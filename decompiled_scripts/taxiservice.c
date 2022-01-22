@@ -4074,7 +4074,7 @@ void func_79()
 			{
 				bVar0 = false;
 			}
-			if (!VEHICLE::_HAS_FILLED_VEHICLE_POPULATION())
+			if (!VEHICLE::HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED())
 			{
 				bVar0 = false;
 			}

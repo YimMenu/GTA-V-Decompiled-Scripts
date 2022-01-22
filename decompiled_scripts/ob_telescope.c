@@ -575,7 +575,7 @@ void func_4()
 									PED::SET_PED_STEALTH_MOVEMENT(PLAYER::PLAYER_PED_ID(), false, 0);
 									SYSTEM::SETTIMERA(0);
 									iLocal_55 = 2;
-									PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Ob_Telescope");
+									PAD::INIT_PC_SCRIPTED_CONTROLS("Ob_Telescope");
 									iLocal_110 = 1;
 								}
 							}
@@ -693,7 +693,7 @@ void func_4()
 						func_296(PLAYER::PLAYER_ID(), 1, 0, 0);
 						if (iLocal_110)
 						{
-							PAD::_RESET_INPUT_MAPPING_SCHEME();
+							PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 							iLocal_110 = 0;
 						}
 						func_323(0, 0, 1, 0);
@@ -722,7 +722,7 @@ void func_4()
 				}
 				if (iLocal_110)
 				{
-					PAD::_RESET_INPUT_MAPPING_SCHEME();
+					PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 					iLocal_110 = 0;
 				}
 				WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), iLocal_56, true);
@@ -823,7 +823,7 @@ void func_4()
 				}
 				if (iLocal_110)
 				{
-					PAD::_RESET_INPUT_MAPPING_SCHEME();
+					PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 					iLocal_110 = 0;
 				}
 				WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), iLocal_56, true);
@@ -890,7 +890,7 @@ void func_4()
 			}
 			if (iLocal_110)
 			{
-				PAD::_RESET_INPUT_MAPPING_SCHEME();
+				PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 				iLocal_110 = 0;
 			}
 			iLocal_55 = 1;
@@ -74379,7 +74379,7 @@ void func_369(int iParam0)
 	Global_31761 = 0;
 	if (iLocal_110)
 	{
-		PAD::_RESET_INPUT_MAPPING_SCHEME();
+		PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	}
 	SCRIPT::TERMINATE_THIS_THREAD();
 }

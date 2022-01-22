@@ -293,7 +293,7 @@ int func_2(var uParam0)
 				break;
 			
 			case 5:
-				if (((VEHICLE::_HAS_FILLED_VEHICLE_POPULATION() && func_3()) && MISC::GET_GAME_TIMER() > (*uParam0 - 990)) || MISC::GET_GAME_TIMER() > *uParam0)
+				if (((VEHICLE::HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED() && func_3()) && MISC::GET_GAME_TIMER() > (*uParam0 - 990)) || MISC::GET_GAME_TIMER() > *uParam0)
 				{
 					if (MISC::GET_GAME_TIMER() > *uParam0)
 					{
@@ -10178,7 +10178,7 @@ int func_219(int iParam0, float fParam1)
 	var uVar0;
 	struct<3> Var1;
 	
-	if ((((MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_grenade"), fParam1, &Var1, &uVar0, false) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_smokegrenade"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_bzgas"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_stickybomb"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_molotov"), fParam1, &Var1, &uVar0, false))
+	if ((((MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_grenade"), fParam1, &Var1, &uVar0, false) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_smokegrenade"), fParam1, &Var1, &uVar0, false)) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_bzgas"), fParam1, &Var1, &uVar0, false)) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_stickybomb"), fParam1, &Var1, &uVar0, false)) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_molotov"), fParam1, &Var1, &uVar0, false))
 	{
 		if (func_220(iParam0, Var1, 90f, 0))
 		{
@@ -46357,7 +46357,7 @@ void func_469(int* iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 		VEHICLE::INSTANTLY_FILL_VEHICLE_POPULATION();
 		MISC::POPULATE_NOW();
 		iVar5 = MISC::GET_GAME_TIMER() + 1000;
-		while (!VEHICLE::_HAS_FILLED_VEHICLE_POPULATION() && MISC::GET_GAME_TIMER() < iVar5)
+		while (!VEHICLE::HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED() && MISC::GET_GAME_TIMER() < iVar5)
 		{
 			SYSTEM::WAIT(0);
 		}
@@ -46580,7 +46580,7 @@ int func_474(struct<3> Param0, float fParam3, int iParam4, int iParam5)
 				MISC::POPULATE_NOW();
 			}
 		}
-		while ((!VEHICLE::_HAS_FILLED_VEHICLE_POPULATION() && !func_3()) && SYSTEM::TIMERA() < 1500)
+		while ((!VEHICLE::HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED() && !func_3()) && SYSTEM::TIMERA() < 1500)
 		{
 			SYSTEM::WAIT(0);
 		}

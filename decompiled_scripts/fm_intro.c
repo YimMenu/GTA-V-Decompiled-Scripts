@@ -16933,7 +16933,7 @@ void func_424(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 	iVar1 = Global_1853128[iVar0 /*888*/];
 	func_737();
 	func_733();
-	PAD::_0xA0CEFCEA390AAB9B(0);
+	PAD::_CLEAR_SUPPRESSED_PAD_RUMBLE(0);
 	func_732();
 	Global_1057161 = 0;
 	Global_1835453 = 0;
@@ -17624,7 +17624,7 @@ void func_424(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 	}
 	Global_1853128[iVar0 /*888*/].f_36.f_18 = 0;
 	MISC::CLEAR_BIT(&(Global_1853128[PLAYER::NETWORK_PLAYER_ID_TO_INT() /*888*/].f_762), 0);
-	HUD::_SET_MISSION_NAME_2(false, 0);
+	HUD::SET_MISSION_NAME_FOR_UGC_MISSION(false, 0);
 	if (iVar1 != 6 && iVar1 != 148)
 	{
 		HUD::THEFEED_FLUSH_QUEUE();
@@ -17769,7 +17769,7 @@ void func_424(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4)
 						if (func_17(PLAYER::PLAYER_ID()))
 						{
 							NETWORK::NETWORK_END_TUTORIAL_SESSION();
-							BRAIN::_0x4D953DF78EBF8158();
+							BRAIN::_PREPARE_SCRIPT_BRAIN();
 						}
 					}
 				}

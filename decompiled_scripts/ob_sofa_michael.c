@@ -537,7 +537,7 @@ void func_1()
 							iLocal_51 = 1;
 							WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
 							func_30(1, 1, 0, 0, 0, 0, 0);
-							PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("SOFA ACTIVITY");
+							PAD::INIT_PC_SCRIPTED_CONTROLS("SOFA ACTIVITY");
 							iLocal_328 = 1;
 							iLocal_308 = 2;
 						}
@@ -1767,7 +1767,7 @@ int func_22()
 		iLocal_312 = 0;
 		if (iLocal_328)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			iLocal_328 = 0;
 		}
 		iLocal_310 = 5;
@@ -4114,7 +4114,7 @@ void func_86()
 	func_87();
 	if (iLocal_328)
 	{
-		PAD::_RESET_INPUT_MAPPING_SCHEME();
+		PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	}
 	SCRIPT::TERMINATE_THIS_THREAD();
 }

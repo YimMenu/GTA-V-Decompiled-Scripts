@@ -74406,7 +74406,7 @@ void func_918()
 		return;
 	}
 	func_919();
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Darts");
+	PAD::INIT_PC_SCRIPTED_CONTROLS("Darts");
 	iLocal_437 = 1;
 }
 
@@ -74414,7 +74414,7 @@ void func_919()
 {
 	if (iLocal_437 || iLocal_438)
 	{
-		PAD::_RESET_INPUT_MAPPING_SCHEME();
+		PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 		iLocal_437 = 0;
 		iLocal_438 = 0;
 	}
@@ -74541,7 +74541,7 @@ void func_923(bool bParam0, int iParam1, var uParam2, int* iParam3, int* iParam4
 			iVar3 = 2;
 		}
 		ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
-		PAD::_0xA0CEFCEA390AAB9B(0);
+		PAD::_CLEAR_SUPPRESSED_PAD_RUMBLE(0);
 		if (NETWORK::NETWORK_IS_SIGNED_ONLINE() && !iLocal_445)
 		{
 			func_927(190, 1);

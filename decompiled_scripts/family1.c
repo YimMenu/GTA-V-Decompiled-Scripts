@@ -121955,7 +121955,7 @@ int func_870(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam4
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;
@@ -126613,7 +126613,7 @@ void func_927()
 	func_62(43, 0);
 	func_62(44, 0);
 	func_247(&uLocal_3301, 0, 0);
-	MISC::_CLEAR_CLOUD_HAT();
+	MISC::UNLOAD_ALL_CLOUD_HATS();
 	MISC::CLEAR_WEATHER_TYPE_PERSIST();
 	func_800(0, bLocal_2986);
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))

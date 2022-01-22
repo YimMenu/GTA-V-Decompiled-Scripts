@@ -704,7 +704,7 @@ void __EntryFunction__()
 			CLOCK::SET_CLOCK_TIME(9, 0, 0);
 		}
 	}
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Yoga");
+	PAD::INIT_PC_SCRIPTED_CONTROLS("Yoga");
 	bLocal_472 = false;
 	while (true)
 	{
@@ -825,7 +825,7 @@ void __EntryFunction__()
 					if (func_611(&iLocal_904))
 					{
 						func_735();
-						PAD::_RESET_INPUT_MAPPING_SCHEME();
+						PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 						iLocal_593 = 8;
 					}
 				}
@@ -97760,7 +97760,7 @@ int func_521(int iParam0, int iParam1, int iParam2)
 							Var20 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iParam2, Local_485) };
 							if (((((func_507(Var2, Var8, 0.5f) && func_507(Var2, Var11, 0.5f)) && func_507(Var2, Var14, 0.5f)) && func_507(Var2, Var17, 0.5f)) && func_507(Var2, Var20, 0.5f)) && func_522(iParam2, Var5, iVar0, 0.778f, -0.4f, -0.5f))
 							{
-								if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iParam0, iParam2, -1, true, true))
+								if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iParam0, iParam2, -1, true, true))
 								{
 									return 1;
 								}
@@ -108961,7 +108961,7 @@ int func_714(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam4
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;
@@ -121924,7 +121924,7 @@ void func_882()
 		GRAPHICS::STOP_PARTICLE_FX_LOOPED(iLocal_936, false);
 	}
 	func_808(1, 1);
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	STREAMING::REMOVE_IPL("SpaceInterior");
 	STATS::_STAT_MANAGER_SET_MUTABLE();
 	AUDIO::SET_AUDIO_FLAG("DisableReplayScriptStreamRecording", false);

@@ -723,7 +723,7 @@ void func_8()
 
 void func_9()
 {
-	iLocal_70 = GRAPHICS::_0xCB82A0BF0E3E3265(iLocal_71);
+	iLocal_70 = GRAPHICS::_GET_STATUS_OF_DRAW_LOW_QUALITY_PHOTO(iLocal_71);
 	switch (iLocal_70)
 	{
 		case 0:

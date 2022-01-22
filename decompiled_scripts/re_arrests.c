@@ -623,7 +623,7 @@ void func_1()
 						{
 							if (TASK::GET_SCRIPT_TASK_STATUS(iLocal_56, -1273030092) == 7)
 							{
-								if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_55, iLocal_57, 2, false, false))
+								if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_55, iLocal_57, 2, false, false))
 								{
 									if (!PED::IS_PED_INJURED(iLocal_55))
 									{

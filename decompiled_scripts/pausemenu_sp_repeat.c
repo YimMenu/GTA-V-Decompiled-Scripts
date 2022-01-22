@@ -962,7 +962,7 @@ void func_31(int iParam0)
 	{
 		HUD::PAUSE_MENU_ACTIVATE_CONTEXT(337714004);
 	}
-	HUD::_0x4895BDEA16E7C080(0);
+	HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
 }
 
 void func_32(int iParam0, int iParam1)

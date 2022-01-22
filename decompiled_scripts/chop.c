@@ -1353,7 +1353,7 @@ void func_2()
 				if (iLocal_52 == 0)
 				{
 					func_40(1);
-					if (MISC::_GET_PROJECTILE_NEAR_PED(PLAYER::PLAYER_PED_ID(), iLocal_473, 50f, &uLocal_468, &iLocal_467, false))
+					if (MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(PLAYER::PLAYER_PED_ID(), iLocal_473, 50f, &uLocal_468, &iLocal_467, false))
 					{
 						func_6(294, 0, 0);
 						WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
@@ -3265,7 +3265,7 @@ void func_54()
 									func_74();
 								}
 							}
-							else if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(PLAYER::PLAYER_PED_ID(), iLocal_80, 0, false, false))
+							else if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(PLAYER::PLAYER_PED_ID(), iLocal_80, 0, false, false))
 							{
 								if (VEHICLE::IS_VEHICLE_DOOR_DAMAGED(iLocal_80, iLocal_118) || VEHICLE::GET_VEHICLE_DOOR_ANGLE_RATIO(iLocal_80, 1) > 0.9f)
 								{
@@ -3500,7 +3500,7 @@ void func_54()
 					{
 						iLocal_107 = 9;
 					}
-					else if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(PLAYER::PLAYER_PED_ID(), iLocal_80, 0, false, false))
+					else if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(PLAYER::PLAYER_PED_ID(), iLocal_80, 0, false, false))
 					{
 						VEHICLE::BRING_VEHICLE_TO_HALT(iLocal_80, 10f, 1, false);
 						if (VEHICLE::IS_VEHICLE_DOOR_DAMAGED(iLocal_80, iLocal_118))
@@ -3512,7 +3512,7 @@ void func_54()
 							iLocal_107 = 10;
 						}
 					}
-					else if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(PLAYER::PLAYER_PED_ID(), iLocal_80, -1, false, false))
+					else if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(PLAYER::PLAYER_PED_ID(), iLocal_80, -1, false, false))
 					{
 						VEHICLE::BRING_VEHICLE_TO_HALT(iLocal_80, 10f, 1, false);
 						func_68(-2f, 0f, 0f, 0);
@@ -7686,7 +7686,7 @@ void func_128()
 	if ((MISC::GET_GAME_TIMER() - iLocal_485) > 500)
 	{
 		iLocal_485 = MISC::GET_GAME_TIMER();
-		if (iLocal_51 != 15 && MISC::_GET_PROJECTILE_NEAR_PED(PLAYER::PLAYER_PED_ID(), joaat("weapon_ball"), 1.5f, &uLocal_468, &iLocal_467, false))
+		if (iLocal_51 != 15 && MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(PLAYER::PLAYER_PED_ID(), joaat("weapon_ball"), 1.5f, &uLocal_468, &iLocal_467, false))
 		{
 			func_40(1);
 		}

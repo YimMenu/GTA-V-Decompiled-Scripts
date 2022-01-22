@@ -3382,7 +3382,7 @@ int func_87(int iParam0)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0, false))
 	{
-		if (AUDIO::_CAN_PED_SPEAK(iParam0, "TOUR_ABOUT_TO_START", false))
+		if (AUDIO::DOES_CONTEXT_EXIST_FOR_THIS_PED(iParam0, "TOUR_ABOUT_TO_START", false))
 		{
 			return 1;
 		}
@@ -3523,7 +3523,7 @@ void func_92()
 						ENTITY::SET_ENTITY_COORDS(PLAYER::GET_PLAYERS_LAST_VEHICLE(), 115.1136f, 241.6893f, 106.6493f, true, false, false, true);
 					}
 				}
-				PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("BusTours");
+				PAD::INIT_PC_SCRIPTED_CONTROLS("BusTours");
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_306, false))
 				{
 					func_85(ENTITY::GET_ENTITY_COORDS(iLocal_306, true), Local_52[0 /*15*/].f_1, &Local_320, &Local_323, 500);
@@ -8222,7 +8222,7 @@ void func_229()
 {
 	int iVar0;
 	
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	MISC::CLEAR_WEATHER_TYPE_PERSIST();
 	if (CAM::IS_GAMEPLAY_HINT_ACTIVE())
 	{

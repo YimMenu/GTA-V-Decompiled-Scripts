@@ -152938,7 +152938,7 @@ void func_803(bool bParam0, bool bParam1)
 	}
 	if (func_666(Local_71.f_2, &sVar62))
 	{
-		GRAPHICS::_0x1CBA05AE7BD7EE05(1.5f);
+		GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(1.5f);
 	}
 	if (iLocal_394)
 	{

@@ -758,7 +758,7 @@ void func_21()
 	{
 		if (iLocal_99 == 1)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			iLocal_99 = 0;
 		}
 	}
@@ -70301,7 +70301,7 @@ void func_258()
 	{
 		if (iLocal_99 == 0)
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("SAFEHOUSE ACTIVITY");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("SAFEHOUSE ACTIVITY");
 			iLocal_99 = 1;
 		}
 	}

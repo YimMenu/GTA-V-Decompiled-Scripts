@@ -43454,7 +43454,7 @@ int func_420(int iParam0)
 	{
 		return 0;
 	}
-	PED::_0x733C87D4CE22BEA2(Local_834[iParam0 /*11*/]);
+	PED::DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(Local_834[iParam0 /*11*/]);
 	AUDIO::STOP_PED_SPEAKING(Local_834[iParam0 /*11*/], true);
 	PED::SET_PED_DIES_WHEN_INJURED(Local_834[iParam0 /*11*/], true);
 	PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Local_834[iParam0 /*11*/], true);
@@ -52844,7 +52844,7 @@ void func_626()
 	func_613(20, 0);
 	func_613(4, 0);
 	func_619(1);
-	OBJECT::_0xA2C1F5E92AFE49ED();
+	OBJECT::CLEAR_ALL_PICKUP_REWARD_TYPE_SUPPRESSION();
 	func_617(0);
 	func_521(1, 1, 0, 0);
 	func_627(iLocal_164);

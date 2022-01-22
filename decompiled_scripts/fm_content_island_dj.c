@@ -4477,7 +4477,7 @@ void func_181(int iParam0, int iParam1)
 		}
 	}
 	VEHICLE::_0xDBC631F109350B8C(iParam1, true);
-	VEHICLE::_0x2311DD7159F00582(iParam1, true);
+	VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iParam1, true);
 	if (!func_184())
 	{
 		VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_NON_SCRIPT_PLAYERS(iParam1, true);

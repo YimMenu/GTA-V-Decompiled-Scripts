@@ -119359,7 +119359,7 @@ int func_756(int iParam0)
 						case 0:
 							if (!PED::IS_PED_IN_ANY_VEHICLE(Local_402.f_0, false))
 							{
-								if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Local_431.f_0, Local_518.f_0, 1, false, false) && VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Local_431.f_0, Local_518.f_0, 2, false, false))
+								if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Local_431.f_0, Local_518.f_0, 1, false, false) && VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Local_431.f_0, Local_518.f_0, 2, false, false))
 								{
 									if (!PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_1044))
 									{
@@ -126125,8 +126125,8 @@ int func_874(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 				VEHICLE::_0x9A75585FB2E54FAD(769.37f, -2954.11f, 4.84f, 100f);
 				iLocal_1040 = VEHICLE::ADD_VEHICLE_COMBAT_ANGLED_AVOIDANCE_AREA(1034.899f, -2649.698f, -2.152824f, 1206.04f, -2625.698f, 46.10272f, 96f);
 				iLocal_1041 = VEHICLE::ADD_VEHICLE_COMBAT_ANGLED_AVOIDANCE_AREA(1170.989f, -2583.811f, -1.248177f, 1184.574f, -2652.445f, 42.04342f, 32f);
-				iLocal_1038 = MISC::_ADD_DISPATCH_SPAWN_BLOCKING_ANGLED_AREA(886.2516f, -2602.161f, -2.892773f, 1278.529f, -2703.512f, 17.07362f, 72f);
-				iLocal_1039 = MISC::_ADD_DISPATCH_SPAWN_BLOCKING_ANGLED_AREA(1175.263f, -2587.421f, -0.919907f, 1188.792f, -2672.673f, 39.55923f, 24f);
+				iLocal_1038 = MISC::ADD_DISPATCH_SPAWN_ANGLED_BLOCKING_AREA(886.2516f, -2602.161f, -2.892773f, 1278.529f, -2703.512f, 17.07362f, 72f);
+				iLocal_1039 = MISC::ADD_DISPATCH_SPAWN_ANGLED_BLOCKING_AREA(1175.263f, -2587.421f, -0.919907f, 1188.792f, -2672.673f, 39.55923f, 24f);
 				if (*uParam3 == 1 || *iParam4 == 1)
 				{
 					PLAYER::SET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID(), 3, false);
@@ -128551,7 +128551,7 @@ int func_922(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_9(uParam0->f_13))
 					{

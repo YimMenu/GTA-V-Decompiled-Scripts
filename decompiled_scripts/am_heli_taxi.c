@@ -5919,7 +5919,7 @@ int func_152()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_1218))
 		{
-			if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0 || !func_153(PLAYER::GET_PLAYER_PED(Local_164.f_5), iLocal_1218, 0))
+			if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0 || !func_153(PLAYER::GET_PLAYER_PED(Local_164.f_5), iLocal_1218, 0))
 			{
 				VEHICLE::SET_VEHICLE_DOORS_LOCKED(iLocal_1218, 1);
 				return 1;
@@ -6092,7 +6092,7 @@ void func_159()
 					func_264();
 					Local_164.f_24 = 4;
 				}
-				else if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) > 0)
+				else if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) > 0)
 				{
 					func_264();
 					Local_164.f_24 = 4;
@@ -6170,7 +6170,7 @@ void func_159()
 				break;
 			
 			case 2:
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0)
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0)
 				{
 					Local_164.f_24 = 4;
 				}
@@ -6242,7 +6242,7 @@ void func_159()
 				break;
 			
 			case 5:
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0 || !func_153(PLAYER::GET_PLAYER_PED(Local_164.f_5), iLocal_1218, 0))
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0 || !func_153(PLAYER::GET_PLAYER_PED(Local_164.f_5), iLocal_1218, 0))
 				{
 					Local_164.f_24 = 8;
 					break;
@@ -6258,7 +6258,7 @@ void func_159()
 				{
 					iLocal_1004 = 3;
 				}
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0 && !VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1218))
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0 && !VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1218))
 				{
 					if (!MISC::IS_BIT_SET(Local_164.f_2, 9))
 					{
@@ -6378,7 +6378,7 @@ void func_159()
 								Local_164.f_24 = 2;
 							}
 						}
-						else if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0)
+						else if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0)
 						{
 							Local_164.f_24 = 8;
 						}
@@ -6414,7 +6414,7 @@ void func_159()
 				}
 				else if (MISC::IS_BIT_SET(Local_164.f_1, 13))
 				{
-					if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0)
+					if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0)
 					{
 						Local_164.f_24 = 8;
 					}
@@ -6424,7 +6424,7 @@ void func_159()
 				{
 					if (!MISC::IS_BIT_SET(Local_164.f_2, 1))
 					{
-						if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) > 0)
+						if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) > 0)
 						{
 							if (func_271(&uLocal_1185))
 							{
@@ -6448,7 +6448,7 @@ void func_159()
 					{
 						if (!MISC::IS_BIT_SET(Local_164.f_2, 3) && !MISC::IS_BIT_SET(Local_164.f_1, 12))
 						{
-							if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0)
+							if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0)
 							{
 								if (func_157())
 								{
@@ -6461,7 +6461,7 @@ void func_159()
 					}
 					else if (!MISC::IS_BIT_SET(Local_164.f_2, 16))
 					{
-						if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0)
+						if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0)
 						{
 							if (func_157())
 							{
@@ -6625,7 +6625,7 @@ void func_165()
 		{
 			if (func_267())
 			{
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) > 0)
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) > 0)
 				{
 					func_12(1);
 					func_118(&uLocal_1009, 2, NETWORK::NET_TO_PED(Local_164.f_4), "EXEC_PILOT", 0, 1);
@@ -6638,9 +6638,9 @@ void func_165()
 		{
 			if (func_267())
 			{
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) > 0)
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) > 0)
 				{
-					if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) < iLocal_1008 && ENTITY::GET_ENTITY_HEIGHT_ABOVE_GROUND(iLocal_1218) > 10f)
+					if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) < iLocal_1008 && ENTITY::GET_ENTITY_HEIGHT_ABOVE_GROUND(iLocal_1218) > 10f)
 					{
 						func_12(1);
 						func_118(&uLocal_1009, 2, NETWORK::NET_TO_PED(Local_164.f_4), "EXEC_PILOT", 0, 1);
@@ -6654,9 +6654,9 @@ void func_165()
 						MISC::SET_BIT(&(Local_164.f_2), 22);
 						MISC::CLEAR_BIT(&(Local_164.f_2), 23);
 					}
-					if (!VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) == iLocal_1008)
+					if (!VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) == iLocal_1008)
 					{
-						iLocal_1008 = VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1);
+						iLocal_1008 = VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true);
 					}
 				}
 				else if (!MISC::IS_BIT_SET(Local_164.f_2, 23))
@@ -6681,7 +6681,7 @@ void func_165()
 			}
 			if (!iLocal_1202)
 			{
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) == 0)
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) == 0)
 				{
 					iLocal_1202 = 1;
 				}
@@ -10548,7 +10548,7 @@ void func_272()
 		case 1:
 			if (!func_150(iLocal_1218))
 			{
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) > 0)
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) > 0)
 				{
 					Local_164.f_23 = 2;
 				}
@@ -10578,7 +10578,7 @@ void func_272()
 		case 3:
 			if (!func_150(iLocal_1218))
 			{
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0)
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0)
 				{
 					Local_164.f_23 = 1;
 				}
@@ -10609,7 +10609,7 @@ void func_272()
 		case 5:
 			if (!func_150(iLocal_1218))
 			{
-				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) <= 0 && !VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1218))
+				if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) <= 0 && !VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1218))
 				{
 					if (func_144(Local_164.f_5, 1, 1) && !ENTITY::IS_ENTITY_IN_AIR(PLAYER::GET_PLAYER_PED(Local_164.f_5)))
 					{
@@ -18680,7 +18680,7 @@ void func_446()
 	if (NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iVar0))
 	{
 		VEHICLE::_0x065D03A9D6B2C6B5(iVar0, 0);
-		VEHICLE::_0x2311DD7159F00582(iVar0, true);
+		VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iVar0, true);
 		VEHICLE::SET_VEHICLE_DOORS_LOCKED(iVar0, 4);
 		if (VEHICLE::GET_VEHICLE_DOOR_LOCK_STATUS(iVar0) != 0 && VEHICLE::GET_VEHICLE_DOOR_LOCK_STATUS(iVar0) != 1)
 		{
@@ -19378,7 +19378,7 @@ void func_464()
 					if (!VEHICLE::IS_ANY_PED_RAPPELLING_FROM_HELI(iLocal_1218))
 					{
 						func_145();
-						if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, 0, 1) > 0)
+						if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iLocal_1218, false, true) > 0)
 						{
 							if (!func_149(Local_164.f_4))
 							{

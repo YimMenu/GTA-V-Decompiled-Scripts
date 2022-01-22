@@ -4857,7 +4857,7 @@ int func_66(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam4,
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;
@@ -105204,7 +105204,7 @@ void func_718()
 											TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, -815.77f, 163.63f, 70.34f, 2f, 20000, 0.25f, true, 40000f);
 											if (VEHICLE::IS_VEHICLE_DRIVEABLE(Global_96471[1], false))
 											{
-												if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Global_96471.f_9[0], Global_96471[1], -1, false, false))
+												if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Global_96471.f_9[0], Global_96471[1], -1, false, false))
 												{
 													TASK::TASK_ENTER_VEHICLE(0, Global_96471[1], 20000, -1, 2f, 131072, 0);
 												}
@@ -105237,7 +105237,7 @@ void func_718()
 											TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, -831.35f, 165.95f, 68.27f, 2f, 20000, 0.25f, true, 40000f);
 											if (VEHICLE::IS_VEHICLE_DRIVEABLE(Global_96471[1], false))
 											{
-												if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Global_96471.f_9[0], Global_96471[1], -1, false, false))
+												if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Global_96471.f_9[0], Global_96471[1], -1, false, false))
 												{
 													TASK::TASK_ENTER_VEHICLE(0, Global_96471[1], 20000, -1, 2f, 131072, 0);
 												}

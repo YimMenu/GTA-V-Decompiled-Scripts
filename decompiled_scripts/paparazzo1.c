@@ -40898,7 +40898,7 @@ void func_358()
 				{
 					ENTITY::SET_ENTITY_HEALTH(Local_3515.f_0, 50, 0);
 				}
-				PED::_0xEC4B4B3B9908052A(Local_3515.f_0, 30000f);
+				PED::SET_PED_INJURED_ON_GROUND_BEHAVIOUR(Local_3515.f_0, 30000f);
 				iLocal_3181 = 1;
 			}
 		}
@@ -41421,7 +41421,7 @@ void func_372()
 		bVar0 = false;
 		iVar1 = 262144;
 	}
-	if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Local_3487.f_0, Local_3522.f_0, 0, true, bVar0))
+	if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Local_3487.f_0, Local_3522.f_0, 0, true, bVar0))
 	{
 		STREAMING::REQUEST_CLIP_SET(func_373(bVar0));
 		if (STREAMING::HAS_ANIM_SET_LOADED(func_373(bVar0)))
@@ -41441,7 +41441,7 @@ void func_372()
 			bVar0 = true;
 			iVar1 = 131072;
 		}
-		if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(Local_3487.f_0, Local_3522.f_0, 0, true, bVar0))
+		if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(Local_3487.f_0, Local_3522.f_0, 0, true, bVar0))
 		{
 			STREAMING::REQUEST_CLIP_SET(func_373(bVar0));
 			if (STREAMING::HAS_ANIM_SET_LOADED(func_373(bVar0)))

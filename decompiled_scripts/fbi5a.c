@@ -109463,7 +109463,7 @@ int func_691(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_334(uParam0->f_13))
 					{
@@ -109926,7 +109926,7 @@ int func_699(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_0x1CBA05AE7BD7EE05(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -127264,7 +127264,7 @@ void func_926()
 					func_613(&(Local_988[6 /*25*/]), 0);
 					PED::CLEAR_ALL_PED_PROPS(Local_988[6 /*25*/]);
 					AUDIO::DISABLE_PED_PAIN_AUDIO(Local_988[6 /*25*/], true);
-					PED::_0x733C87D4CE22BEA2(Local_988[6 /*25*/]);
+					PED::DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(Local_988[6 /*25*/]);
 					HUD::REMOVE_BLIP(&(Local_988[6 /*25*/].f_2));
 					PED::SET_PED_MONEY(Local_988[6 /*25*/], 0);
 					PED::SET_PED_COMPONENT_VARIATION(Local_988[6 /*25*/], 0, 0, 0, 0);
@@ -130284,7 +130284,7 @@ void func_961()
 			CAM::SET_WIDESCREEN_BORDERS(true, 0);
 			func_344(&uLocal_3789, "fbi5aAU", "fia5a_weld3", 7, 0, 0, 0);
 			RECORDING::_0x293220DA1B46CEBC(5f, 0f, 4);
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			RECORDING::_0x48621C9FCA3EBD28(4);
 			iLocal_85 = 1;
 		}
@@ -132398,7 +132398,7 @@ int func_988(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam4
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;
@@ -135107,7 +135107,7 @@ void func_1048()
 	func_1081();
 	func_977(1);
 	func_1080(0, 1);
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("FBI5A_Cutting_Torch");
+	PAD::INIT_PC_SCRIPTED_CONTROLS("FBI5A_Cutting_Torch");
 	func_1079(1);
 	func_1078();
 	iLocal_3666 = PLAYER::GET_PLAYER_GROUP(PLAYER::PLAYER_ID());
@@ -142141,7 +142141,7 @@ void func_1098()
 	HUD::DISPLAY_HUD(true);
 	CAM::SET_WIDESCREEN_BORDERS(false, 0);
 	STREAMING::SET_VEHICLE_POPULATION_BUDGET(3);
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	func_21(0);
 	func_1079(0);
 	func_977(0);

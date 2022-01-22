@@ -2748,7 +2748,7 @@ void func_8()
 	{
 		AUDIO::STOP_AUDIO_SCENE(&cLocal_195);
 	}
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	MISC::CLEAR_WEATHER_TYPE_PERSIST();
 	func_42();
 	func_41(1, 1);
@@ -18831,7 +18831,7 @@ int func_250(int iParam0, float fParam1)
 	var uVar0;
 	struct<3> Var1;
 	
-	if ((((MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_grenade"), fParam1, &Var1, &uVar0, false) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_smokegrenade"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_bzgas"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_stickybomb"), fParam1, &Var1, &uVar0, false)) || MISC::_GET_PROJECTILE_NEAR_PED(iParam0, joaat("weapon_molotov"), fParam1, &Var1, &uVar0, false))
+	if ((((MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_grenade"), fParam1, &Var1, &uVar0, false) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_smokegrenade"), fParam1, &Var1, &uVar0, false)) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_bzgas"), fParam1, &Var1, &uVar0, false)) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_stickybomb"), fParam1, &Var1, &uVar0, false)) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(iParam0, joaat("weapon_molotov"), fParam1, &Var1, &uVar0, false))
 	{
 		if (func_251(iParam0, Var1, 90f, 0))
 		{
@@ -22235,7 +22235,7 @@ void func_329()
 						iVar10++;
 					}
 					func_143(385, 0);
-					PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Lester1A_PopUpMinigame");
+					PAD::INIT_PC_SCRIPTED_CONTROLS("Lester1A_PopUpMinigame");
 					if (!AUDIO::IS_AUDIO_SCENE_ACTIVE("LESTER_1A_POPUP_MINIGAME"))
 					{
 						AUDIO::START_AUDIO_SCENE("LESTER_1A_POPUP_MINIGAME");
@@ -22791,7 +22791,7 @@ void func_329()
 				func_320(7, 0);
 				HUD::DISPLAY_RADAR(true);
 				HUD::DISPLAY_HUD(true);
-				PAD::_RESET_INPUT_MAPPING_SCHEME();
+				PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 				iLocal_2919++;
 			}
 			break;

@@ -111320,7 +111320,7 @@ void func_652()
 	{
 		if (iLocal_7342)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			iLocal_7342 = 0;
 		}
 	}
@@ -113832,7 +113832,7 @@ void func_667()
 	{
 		if (!iLocal_7342)
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Port_LS_Heist_crane");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("Port_LS_Heist_crane");
 			iLocal_7342 = 1;
 		}
 	}

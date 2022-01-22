@@ -10905,7 +10905,7 @@ void func_245(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 	}
 	if (MISC::IS_BIT_SET(Global_4980736.f_72864[iParam1 /*435*/].f_108, 8))
 	{
-		VEHICLE::_SET_VEHICLE_CAN_ENGINE_OPERATE_ON_FIRE(iParam0, false);
+		VEHICLE::SET_VEHICLE_CAN_ENGINE_MISSFIRE(iParam0, false);
 	}
 	if (Global_4980736.f_72864[iParam1 /*435*/].f_291 != 1f)
 	{
@@ -10962,14 +10962,14 @@ void func_245(int iParam0, int iParam1, var uParam2, struct<3> Param3, int iPara
 		{
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(iParam0, true);
 			VEHICLE::_0xDBC631F109350B8C(iParam0, true);
-			VEHICLE::_0x2311DD7159F00582(iParam0, true);
+			VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iParam0, true);
 		}
 		else
 		{
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED(iParam0, 2);
 			VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(iParam0, true);
 			VEHICLE::_0xDBC631F109350B8C(iParam0, true);
-			VEHICLE::_0x2311DD7159F00582(iParam0, true);
+			VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iParam0, true);
 		}
 	}
 	else
@@ -26720,7 +26720,7 @@ void func_354(int iParam0, int iParam1)
 			{
 				VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_TEAM(iParam1, iVar0, true);
 				VEHICLE::_0xDBC631F109350B8C(iParam1, true);
-				VEHICLE::_0x2311DD7159F00582(iParam1, true);
+				VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iParam1, true);
 			}
 			else if (iVar0 == Global_4718592.f_542)
 			{
@@ -152718,7 +152718,7 @@ void func_1689(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4
 	iVar1 = Global_1853128[iVar0 /*888*/];
 	func_1945();
 	func_1941();
-	PAD::_0xA0CEFCEA390AAB9B(0);
+	PAD::_CLEAR_SUPPRESSED_PAD_RUMBLE(0);
 	func_1940();
 	Global_1057161 = 0;
 	Global_1835453 = 0;
@@ -153409,7 +153409,7 @@ void func_1689(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4
 	}
 	Global_1853128[iVar0 /*888*/].f_36.f_18 = 0;
 	MISC::CLEAR_BIT(&(Global_1853128[PLAYER::NETWORK_PLAYER_ID_TO_INT() /*888*/].f_762), 0);
-	HUD::_SET_MISSION_NAME_2(false, 0);
+	HUD::SET_MISSION_NAME_FOR_UGC_MISSION(false, 0);
 	if (iVar1 != 6 && iVar1 != 148)
 	{
 		HUD::THEFEED_FLUSH_QUEUE();
@@ -153554,7 +153554,7 @@ void func_1689(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4
 						if (func_88(PLAYER::PLAYER_ID()))
 						{
 							NETWORK::NETWORK_END_TUTORIAL_SESSION();
-							BRAIN::_0x4D953DF78EBF8158();
+							BRAIN::_PREPARE_SCRIPT_BRAIN();
 						}
 					}
 				}

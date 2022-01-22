@@ -6155,7 +6155,7 @@ void func_142(int* iParam0, int iParam1)
 	{
 		if (MISC::IS_BIT_SET(Global_1966523[iParam1], 4))
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			MISC::CLEAR_BIT(&(Global_1966523[iParam1]), 4);
 		}
 	}
@@ -77937,7 +77937,7 @@ void func_452(int* iParam0, int iParam1)
 	{
 		if (!MISC::IS_BIT_SET(Global_1966523[iParam1], 4))
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("MP DRILL MINIGAME");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("MP DRILL MINIGAME");
 			MISC::SET_BIT(&(Global_1966523[iParam1]), 4);
 		}
 	}
@@ -100667,7 +100667,7 @@ int func_1007(int iParam0)
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(iVar0, false))
 			{
 				iVar1 = 0;
-				while (iVar1 < VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar0, 0, 1) + 1)
+				while (iVar1 < VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar0, false, true) + 1)
 				{
 					iVar2 = VEHICLE::GET_PED_IN_VEHICLE_SEAT(iVar0, (iVar1 - 1), false);
 					if (iVar2 != 0)

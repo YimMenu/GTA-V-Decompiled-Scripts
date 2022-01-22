@@ -3553,7 +3553,7 @@ void __EntryFunction__()
 	{
 		STATS::_0x6DEE77AFF8C21BD1(&(Local_802.f_34), &(Local_802.f_32));
 	}
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Tennis");
+	PAD::INIT_PC_SCRIPTED_CONTROLS("Tennis");
 	MISC::SET_MINIGAME_IN_PROGRESS(true);
 	iVar1 = 0;
 	iVar2 = 1;
@@ -135525,7 +135525,7 @@ void func_1526(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, 
 	func_1764();
 	func_1827(0);
 	func_1476(0, 0);
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	func_1763();
 	if (Global_78112)
 	{
@@ -135741,7 +135741,7 @@ void func_1532(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4
 	iVar1 = Global_1853128[iVar0 /*888*/];
 	func_1758();
 	func_1754();
-	PAD::_0xA0CEFCEA390AAB9B(0);
+	PAD::_CLEAR_SUPPRESSED_PAD_RUMBLE(0);
 	func_1753();
 	Global_1057161 = 0;
 	Global_1835453 = 0;
@@ -136432,7 +136432,7 @@ void func_1532(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4
 	}
 	Global_1853128[iVar0 /*888*/].f_36.f_18 = 0;
 	MISC::CLEAR_BIT(&(Global_1853128[PLAYER::NETWORK_PLAYER_ID_TO_INT() /*888*/].f_762), 0);
-	HUD::_SET_MISSION_NAME_2(false, 0);
+	HUD::SET_MISSION_NAME_FOR_UGC_MISSION(false, 0);
 	if (iVar1 != 6 && iVar1 != 148)
 	{
 		HUD::THEFEED_FLUSH_QUEUE();
@@ -136577,7 +136577,7 @@ void func_1532(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4
 						if (func_755(PLAYER::PLAYER_ID()))
 						{
 							NETWORK::NETWORK_END_TUTORIAL_SESSION();
-							BRAIN::_0x4D953DF78EBF8158();
+							BRAIN::_PREPARE_SCRIPT_BRAIN();
 						}
 					}
 				}

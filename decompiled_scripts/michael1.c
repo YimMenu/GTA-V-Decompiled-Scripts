@@ -4260,7 +4260,7 @@ void func_42()
 	{
 		MISC::SET_WEATHER_TYPE_NOW_PERSIST("EXTRASUNNY");
 		MISC::CLEAR_WEATHER_TYPE_PERSIST();
-		MISC::_CLEAR_CLOUD_HAT();
+		MISC::UNLOAD_ALL_CLOUD_HATS();
 	}
 	else if (iLocal_607 == 0)
 	{
@@ -114909,7 +114909,7 @@ int func_774(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 				{
 					MISC::SET_WEATHER_TYPE_NOW_PERSIST("EXTRASUNNY");
 					MISC::CLEAR_WEATHER_TYPE_PERSIST();
-					MISC::_CLEAR_CLOUD_HAT();
+					MISC::UNLOAD_ALL_CLOUD_HATS();
 					iLocal_607 = 0;
 				}
 				STREAMING::SET_MAPDATACULLBOX_ENABLED("prologue", false);
@@ -115032,7 +115032,7 @@ int func_774(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 					func_791(0, 1);
 					func_791(20, 1);
 					func_791(5, 1);
-					GRAPHICS::_SET_EXTRA_TIMECYCLE_MODIFIER_STRENGTH(0.5f);
+					GRAPHICS::_ENABLE_EXTRA_TIMECYCLE_MODIFIER_STRENGTH(0.5f);
 					VEHICLE::_0x35E0654F4BAD7971(false);
 					iLocal_609 = 1;
 				}
@@ -115103,7 +115103,7 @@ int func_774(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 				{
 					MISC::CLEAR_WEATHER_TYPE_PERSIST();
 					MISC::SET_WEATHER_TYPE_NOW_PERSIST("SNOWLIGHT");
-					MISC::_CLEAR_CLOUD_HAT();
+					MISC::UNLOAD_ALL_CLOUD_HATS();
 					MISC::LOAD_CLOUD_HAT("Snowy 01", 0f);
 					iLocal_607 = 1;
 				}

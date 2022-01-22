@@ -114110,7 +114110,7 @@ void func_1133()
 	{
 		CAM::DO_SCREEN_FADE_OUT(500);
 		func_1038(PLAYER::PLAYER_ID(), 0, 0, 0);
-		PAD::_0xA0CEFCEA390AAB9B(0);
+		PAD::_CLEAR_SUPPRESSED_PAD_RUMBLE(0);
 		func_1134(1);
 		MISC::SET_BIT(&(uLocal_91[PLAYER::PLAYER_ID()]), 0);
 		func_976(&(Local_125.f_35), 0, 0);

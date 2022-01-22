@@ -3827,7 +3827,7 @@ int func_107(int iParam0, bool bParam1)
 	{
 		iVar8 = 200;
 	}
-	if (VEHICLE::_IS_VEHICLE_DAMAGED(iParam0))
+	if (VEHICLE::GET_DOES_VEHICLE_HAVE_DAMAGE_DECALS(iParam0))
 	{
 		iVar8 += 50;
 	}

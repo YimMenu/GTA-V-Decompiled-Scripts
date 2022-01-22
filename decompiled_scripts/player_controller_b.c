@@ -6185,7 +6185,7 @@ int func_82()
 		MISC::SET_OVERRIDE_WEATHER("EXTRASUNNY");
 	}
 	PATHFIND::_SET_ALL_PATHS_CACHE_BOUNDINGSTRUCT(false);
-	MISC::_CLEAR_CLOUD_HAT();
+	MISC::UNLOAD_ALL_CLOUD_HATS();
 	VEHICLE::DELETE_ALL_TRAINS();
 	CAM::_0xDB90C6CCA48940F1(true);
 	return 1;
@@ -18570,7 +18570,7 @@ int func_159(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam4
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;
@@ -19122,7 +19122,7 @@ int func_181(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_66(uParam0->f_13))
 					{

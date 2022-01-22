@@ -2994,38 +2994,3 @@ int func_73(int iParam0, bool bParam1, bool bParam2)
 	return 0;
 }
 
- (bParam1)
-	{
-	}
-	return 286;
-}
-
-int func_73(int iParam0, bool bParam1, bool bParam2)
-{
-	int iVar0;
-	
-	iVar0.f_0 = iParam0;
-	if (iVar0 != -1)
-	{
-		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))
-		{
-			if (bParam1)
-			{
-				if (!PLAYER::IS_PLAYER_PLAYING(iParam0))
-				{
-					return 0;
-				}
-			}
-			if (bParam2)
-			{
-				if (!Global_2703656.f_3[iVar0])
-				{
-					return 0;
-				}
-			}
-			return 1;
-		}
-	}
-	return 0;
-}
-

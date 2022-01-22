@@ -6066,7 +6066,7 @@ void func_160()
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 				{
-					if (AUDIO::_IS_VEHICLE_RADIO_LOUD(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)))
+					if (AUDIO::CAN_VEHICLE_RECEIVE_CB_RADIO(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)))
 					{
 						switch (iLocal_53)
 						{

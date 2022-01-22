@@ -371,7 +371,7 @@ void func_2()
 	{
 		if (iLocal_87 == 1)
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			iLocal_87 = 0;
 		}
 	}
@@ -1102,7 +1102,7 @@ void func_29()
 	{
 		if (iLocal_87 == 0)
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("TV_Controls");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("TV_Controls");
 			iLocal_87 = 1;
 		}
 	}

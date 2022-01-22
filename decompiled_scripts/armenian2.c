@@ -48973,7 +48973,7 @@ void func_353(bool bParam0)
 		PED::SET_PED_COMBAT_ATTRIBUTES(Local_1071[2 /*14*/], 26, true);
 		PED::SET_PED_GROUP_MEMBER_PASSENGER_INDEX(Local_1071[2 /*14*/], 0);
 		ENTITY::SET_ENTITY_PROOFS(Local_1071[2 /*14*/], false, true, false, false, false, false, false, false);
-		PED::_0x733C87D4CE22BEA2(Local_1071[2 /*14*/]);
+		PED::DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(Local_1071[2 /*14*/]);
 		PED::SET_PED_CAN_BE_TARGETTED(Local_1071[2 /*14*/], false);
 	}
 }

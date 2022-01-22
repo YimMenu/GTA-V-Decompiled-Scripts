@@ -1177,7 +1177,7 @@ void func_35(char* sParam0)
 	}
 	else
 	{
-		PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME(sParam0);
+		PAD::INIT_PC_SCRIPTED_CONTROLS(sParam0);
 		MISC::SET_BIT(&(Local_160.f_60), 5);
 	}
 }
@@ -1186,7 +1186,7 @@ void func_36()
 {
 	if (MISC::IS_BIT_SET(Local_160.f_60, 5))
 	{
-		PAD::_RESET_INPUT_MAPPING_SCHEME();
+		PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 		MISC::CLEAR_BIT(&(Local_160.f_60), 5);
 	}
 }

@@ -108461,7 +108461,7 @@ void func_880(bool bParam0, int iParam1)
 	if (func_907())
 	{
 		func_906();
-		NETWORK::_0x444C4525ECE0A4B9();
+		NETWORK::RESET_STORE_NETWORK_GAME_TRACKING();
 	}
 	Global_2715542.f_3471.f_2 = 0;
 	Global_2715542.f_3471.f_3 = 0;

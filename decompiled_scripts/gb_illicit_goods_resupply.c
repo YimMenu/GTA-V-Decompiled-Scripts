@@ -10022,7 +10022,7 @@ void func_209(int iParam0, int iParam1, int iParam2, bool bParam3)
 	}
 	VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_NON_SCRIPT_PLAYERS(iVar1, true);
 	VEHICLE::_0xDBC631F109350B8C(iVar1, true);
-	VEHICLE::_0x2311DD7159F00582(iVar1, true);
+	VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iVar1, true);
 	if (func_106() == 37 || func_106() == 11)
 	{
 		VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(iVar1, true);
@@ -24108,7 +24108,7 @@ void func_442(int iParam0, int iParam1)
 						func_189(iParam1, func_206(iParam1));
 						VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(NETWORK::NET_TO_VEH(Local_946.f_404[iParam1 /*5*/]), true);
 						VEHICLE::_0xDBC631F109350B8C(NETWORK::NET_TO_VEH(Local_946.f_404[iParam1 /*5*/]), true);
-						VEHICLE::_0x2311DD7159F00582(NETWORK::NET_TO_VEH(Local_946.f_404[iParam1 /*5*/]), true);
+						VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(NETWORK::NET_TO_VEH(Local_946.f_404[iParam1 /*5*/]), true);
 						Local_946.f_514 = -1;
 						Local_946.f_516 = { 0f, 0f, 0f };
 						Local_946.f_519 = 0f;

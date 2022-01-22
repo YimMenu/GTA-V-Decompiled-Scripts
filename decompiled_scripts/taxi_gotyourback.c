@@ -6620,7 +6620,7 @@ int func_233(int iParam0, bool bParam1, float fParam2)
 								}
 								if (iParam0->f_411 == 0)
 								{
-									if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iParam0->f_3, iParam0->f_4, 0, false, false))
+									if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iParam0->f_3, iParam0->f_4, 0, false, false))
 									{
 										if (iParam0->f_7 == 2)
 										{
@@ -6798,7 +6798,7 @@ int func_235(int iParam0)
 				}
 				if (iParam0->f_411 == 0)
 				{
-					if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iParam0->f_3, iParam0->f_4, 0, false, false))
+					if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iParam0->f_3, iParam0->f_4, 0, false, false))
 					{
 						iParam0->f_7 = 0;
 						if (!ENTITY::IS_ENTITY_DEAD(iVar9, false))
@@ -7315,11 +7315,11 @@ int func_252(int iParam0, int iParam1)
 	}
 	else if (Var0.f_0 > 0f)
 	{
-		if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iParam1, iParam0, 2, false, false))
+		if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iParam1, iParam0, 2, false, false))
 		{
 			iVar3 = 2;
 		}
-		else if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iParam1, iParam0, 1, false, false))
+		else if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iParam1, iParam0, 1, false, false))
 		{
 			iVar3 = 1;
 		}
@@ -7328,11 +7328,11 @@ int func_252(int iParam0, int iParam1)
 			iVar3 = -2;
 		}
 	}
-	else if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iParam1, iParam0, 1, false, false))
+	else if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iParam1, iParam0, 1, false, false))
 	{
 		iVar3 = 1;
 	}
-	else if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iParam1, iParam0, 2, false, false))
+	else if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iParam1, iParam0, 2, false, false))
 	{
 		iVar3 = 2;
 	}

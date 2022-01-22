@@ -531,7 +531,7 @@ int func_23()
 				DECORATOR::DECOR_SET_INT(iVar0, "Not_Allow_As_Saved_Veh", 1);
 			}
 			VEHICLE::_0xDBC631F109350B8C(iVar0, true);
-			VEHICLE::_0x2311DD7159F00582(iVar0, true);
+			VEHICLE::SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER(iVar0, true);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_101());
 			return 1;
 		}

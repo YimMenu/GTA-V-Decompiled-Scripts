@@ -2665,7 +2665,7 @@ int func_75(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, f
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_25(uParam0->f_13))
 					{

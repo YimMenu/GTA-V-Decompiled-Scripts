@@ -2265,7 +2265,7 @@ void func_43()
 							case 3:
 							case 6:
 							case 9:
-								PED::_0x9A77DFD295E29B09(Local_3011[iVar0 /*20*/], true);
+								PED::_SET_PED_SCARED_WHEN_USING_SCENARIO(Local_3011[iVar0 /*20*/], true);
 								iLocal_2674[iVar0] = 8;
 								break;
 							
@@ -2298,7 +2298,7 @@ void func_43()
 							case 16:
 								if (func_42(&iLocal_3991, 2000))
 								{
-									PED::_0x9A77DFD295E29B09(Local_3011[iVar0 /*20*/], true);
+									PED::_SET_PED_SCARED_WHEN_USING_SCENARIO(Local_3011[iVar0 /*20*/], true);
 									iLocal_2674[iVar0] = 8;
 								}
 								break;
@@ -2308,7 +2308,7 @@ void func_43()
 							case 18:
 							case 21:
 							case 24:
-								PED::_0x9A77DFD295E29B09(Local_3011[iVar0 /*20*/], true);
+								PED::_SET_PED_SCARED_WHEN_USING_SCENARIO(Local_3011[iVar0 /*20*/], true);
 								iLocal_2674[iVar0] = 8;
 								break;
 							
@@ -2318,7 +2318,7 @@ void func_43()
 							case 23:
 								if (func_42(&iLocal_3991, 2500))
 								{
-									PED::_0x9A77DFD295E29B09(Local_3011[iVar0 /*20*/], true);
+									PED::_SET_PED_SCARED_WHEN_USING_SCENARIO(Local_3011[iVar0 /*20*/], true);
 									iLocal_2674[iVar0] = 8;
 								}
 								break;
@@ -120983,7 +120983,7 @@ int func_904(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam4
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;

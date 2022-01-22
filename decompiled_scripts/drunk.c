@@ -2075,7 +2075,7 @@ int func_57(struct<3> Param0, float fParam3, int iParam4, int iParam5)
 				MISC::POPULATE_NOW();
 			}
 		}
-		while ((!VEHICLE::_HAS_FILLED_VEHICLE_POPULATION() && !func_58()) && SYSTEM::TIMERA() < 1500)
+		while ((!VEHICLE::HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED() && !func_58()) && SYSTEM::TIMERA() < 1500)
 		{
 			SYSTEM::WAIT(0);
 		}

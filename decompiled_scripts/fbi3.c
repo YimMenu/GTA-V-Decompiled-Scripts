@@ -3224,7 +3224,7 @@ void func_4()
 {
 	if (iLocal_2830)
 	{
-		PAD::_RESET_INPUT_MAPPING_SCHEME();
+		PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 		iLocal_2830 = 0;
 	}
 }
@@ -51327,7 +51327,7 @@ void func_444()
 void func_445(char* sParam0)
 {
 	func_4();
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME(sParam0);
+	PAD::INIT_PC_SCRIPTED_CONTROLS(sParam0);
 	iLocal_2830 = 1;
 }
 
@@ -128936,7 +128936,7 @@ int func_861(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_23(uParam0->f_13))
 					{

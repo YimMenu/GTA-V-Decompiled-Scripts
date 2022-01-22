@@ -103833,7 +103833,7 @@ void func_541()
 	PLAYER::CLEAR_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID());
 	PLAYER::SET_MAX_WANTED_LEVEL(0);
 	PED::SET_CREATE_RANDOM_COPS(false);
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME_2("Rappelling");
+	PAD::SWITCH_PC_SCRIPTED_CONTROLS("Rappelling");
 	TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 	PATHFIND::SET_ROADS_IN_AREA(80.23f, -583.94f, 100f, -2.64f, -941.54f, -100f, false, true);
 	PED::ADD_SCENARIO_BLOCKING_AREA(-25.7f, -820.1f, 50.3f, 330.1f, -664.3f, -100f, false, true, true, true);
@@ -124527,7 +124527,7 @@ void func_902()
 	INTERIOR::PIN_INTERIOR_IN_MEMORY(iLocal_5076);
 	GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();
 	iLocal_57 = 20;
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME_2("Rappelling");
+	PAD::SWITCH_PC_SCRIPTED_CONTROLS("Rappelling");
 	func_26(9, "start of abseiling", 1, 0, 0, 1);
 }
 
@@ -132589,7 +132589,7 @@ int func_1000(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_0x1CBA05AE7BD7EE05(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -140883,7 +140883,7 @@ void func_1153()
 	func_497(122, 0);
 	func_1158(0, 1);
 	func_1157(0);
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Agency_Heist_3A_Mopping");
+	PAD::INIT_PC_SCRIPTED_CONTROLS("Agency_Heist_3A_Mopping");
 	func_8(35, 1, 0, 1, 0);
 	func_16();
 	func_7();
@@ -141290,7 +141290,7 @@ void func_1165()
 	func_869();
 	func_533(4, 0);
 	iLocal_4709 = 0;
-	PAD::_RESET_INPUT_MAPPING_SCHEME();
+	PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	CUTSCENE::_0xC61B86C9F61EB404(false);
 	CAM::STOP_GAMEPLAY_CAM_SHAKING(true);
 	TASK::SET_SCENARIO_GROUP_ENABLED("FIB_GROUP_1", false);

@@ -1217,7 +1217,7 @@ void func_37()
 	{
 		if (func_34(0))
 		{
-			PAD::_RESET_INPUT_MAPPING_SCHEME();
+			PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 			func_33(0, 0);
 		}
 	}
@@ -1229,7 +1229,7 @@ void func_38()
 	{
 		if (!func_34(0))
 		{
-			PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("MYSTERY LETTER CAM");
+			PAD::INIT_PC_SCRIPTED_CONTROLS("MYSTERY LETTER CAM");
 			func_33(0, 1);
 		}
 	}

@@ -1240,7 +1240,7 @@ void func_22()
 						WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
 						func_76(1, 1, 1, 0, 0, 0, 0);
 						GRAPHICS::ENABLE_MOVIE_SUBTITLES(true);
-						PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("SOFA ACTIVITY");
+						PAD::INIT_PC_SCRIPTED_CONTROLS("SOFA ACTIVITY");
 						iLocal_326 = 1;
 						iLocal_308 = 2;
 					}
@@ -1912,7 +1912,7 @@ void func_22()
 			}
 			if (iLocal_326)
 			{
-				PAD::_RESET_INPUT_MAPPING_SCHEME();
+				PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 				iLocal_326 = 0;
 			}
 			Global_31551 = 0;
@@ -4411,7 +4411,7 @@ void func_112()
 	func_113();
 	if (iLocal_326)
 	{
-		PAD::_RESET_INPUT_MAPPING_SCHEME();
+		PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 	}
 	SCRIPT::TERMINATE_THIS_THREAD();
 }

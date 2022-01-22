@@ -105713,7 +105713,7 @@ int func_627(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_0x1CBA05AE7BD7EE05(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -114331,7 +114331,7 @@ int func_752(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, 
 					STREAMING::START_PLAYER_SWITCH(uParam0->f_13, uParam0->f_12, iVar0, iParam2);
 					if (bParam11)
 					{
-						STREAMING::_0x5F2013F8BC24EE69(iParam12);
+						STREAMING::SET_PLAYER_SHORT_SWITCH_STYLE(iParam12);
 					}
 					switch (func_32(uParam0->f_13))
 					{
@@ -124944,7 +124944,7 @@ void func_905()
 	}
 	HUD::CLEAR_HELP(true);
 	HUD::CLEAR_PRINTS();
-	PAD::_SWITCH_TO_INPUT_MAPPING_SCHEME("Carsteal5_spycar_crane");
+	PAD::INIT_PC_SCRIPTED_CONTROLS("Carsteal5_spycar_crane");
 	HUD::REQUEST_ADDITIONAL_TEXT("H4HEIST", 0);
 	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, joaat("player"), joaat("player"));
 	PED::SET_PED_RELATIONSHIP_GROUP_HASH(PLAYER::PLAYER_PED_ID(), joaat("player"));
@@ -125093,7 +125093,7 @@ void func_907()
 	func_36(0);
 	if (bLocal_1375)
 	{
-		MISC::_CLEAR_CLOUD_HAT();
+		MISC::UNLOAD_ALL_CLOUD_HATS();
 		MISC::CLEAR_WEATHER_TYPE_PERSIST();
 	}
 	MISC::CLEAR_WEATHER_TYPE_PERSIST();
@@ -125121,7 +125121,7 @@ void func_907()
 		func_909();
 		VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(585.5f, -2645.5f, 1.6f, 600f, -2610.9f, 10.6f, true, true);
 		func_47(0);
-		PAD::_RESET_INPUT_MAPPING_SCHEME();
+		PAD::SHUTDOWN_PC_SCRIPTED_CONTROLS();
 		MISC::SET_STUNT_JUMPS_CAN_TRIGGER(true);
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}

@@ -39404,7 +39404,7 @@ void func_335()
 		{
 			if (CUTSCENE::HAS_THIS_CUTSCENE_LOADED("Armenian_3_mcs_7"))
 			{
-				if (VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(func_806(0), iLocal_180, 2, false, false))
+				if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(func_806(0), iLocal_180, 2, false, false))
 				{
 					while (!func_277(iLocal_180, 10f, 10, 1056964608, 0, 1, 0))
 					{
@@ -122381,7 +122381,7 @@ int func_866(int iParam0, int iParam1, char* sParam2, char* sParam3, var uParam4
 						}
 						if (MISC::GET_HASH_KEY(sParam3) != 0)
 						{
-							MISC::_CLEAR_CLOUD_HAT();
+							MISC::UNLOAD_ALL_CLOUD_HATS();
 							MISC::LOAD_CLOUD_HAT(sParam3, 0f);
 						}
 						uParam4->f_3 = 2;

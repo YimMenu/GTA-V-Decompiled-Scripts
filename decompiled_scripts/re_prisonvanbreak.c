@@ -2649,7 +2649,7 @@ void func_61()
 {
 	if (!PED::IS_PED_INJURED(iLocal_222) && !ENTITY::IS_ENTITY_DEAD(iLocal_236, false))
 	{
-		if (!VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_222, iLocal_236, -1, false, false) && !VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_222, iLocal_236, 0, false, false))
+		if (!VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_222, iLocal_236, -1, false, false) && !VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_222, iLocal_236, 0, false, false))
 		{
 			TASK::TASK_SMART_FLEE_COORD(iLocal_222, Local_219, 1000f, -1, false, false);
 			PED::SET_PED_KEEP_TASK(iLocal_222, true);
@@ -2658,7 +2658,7 @@ void func_61()
 	}
 	if (!PED::IS_PED_INJURED(iLocal_223) && !ENTITY::IS_ENTITY_DEAD(iLocal_236, false))
 	{
-		if (!VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_223, iLocal_236, -1, false, false) && !VEHICLE::_IS_VEHICLE_SEAT_ACCESSIBLE(iLocal_223, iLocal_236, 0, false, false))
+		if (!VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_223, iLocal_236, -1, false, false) && !VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(iLocal_223, iLocal_236, 0, false, false))
 		{
 			TASK::TASK_SMART_FLEE_COORD(iLocal_223, Local_219, 1000f, -1, false, false);
 			PED::SET_PED_KEEP_TASK(iLocal_223, true);

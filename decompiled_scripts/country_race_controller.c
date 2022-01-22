@@ -1316,7 +1316,7 @@ int func_41()
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 	{
 		iVar0 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
-		if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar0, 0, 1) == 0)
+		if (VEHICLE::GET_VEHICLE_NUMBER_OF_PASSENGERS(iVar0, false, true) == 0)
 		{
 			return 1;
 		}
