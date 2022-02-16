@@ -26782,7 +26782,7 @@ void func_114(int iParam0, int iParam1, var uParam2, int iParam3)
 		case 222:
 		case 223:
 		case 225:
-			STATS::_UPDATE_STAT_INT(joaat("sp0_crouched"), 10, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_crouched"), 10, 0);
 			switch (iParam1)
 			{
 				case 0:
@@ -26829,7 +26829,7 @@ void func_114(int iParam0, int iParam1, var uParam2, int iParam3)
 			break;
 		
 		case 20:
-			STATS::_UPDATE_STAT_INT(joaat("sp0_crouched"), 30, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_crouched"), 30, 0);
 		
 		case 15:
 		case 16:
@@ -26854,7 +26854,7 @@ void func_114(int iParam0, int iParam1, var uParam2, int iParam3)
 			break;
 		
 		case 17:
-			STATS::_UPDATE_STAT_INT(joaat("sp0_crouched"), 20, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_crouched"), 20, 0);
 		
 		case 18:
 		case 22:
@@ -39796,15 +39796,15 @@ void func_243(int iParam0, int iParam1, int iParam2)
 		Global_112915.f_10194[iParam0 /*12*/].f_11 = iParam2;
 		if (iParam0 == 287)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_0"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_hidden_packages_0"), 50, 0);
 		}
 		if (iParam0 == 286)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_1"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_hidden_packages_1"), 50, 0);
 		}
 		if (iParam0 == 299)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_3"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_hidden_packages_3"), 50, 0);
 		}
 	}
 	if (bVar0)
@@ -39926,7 +39926,7 @@ void func_244()
 			{
 				if (Global_112655 == Global_112638)
 				{
-					STATS::_UPDATE_STAT_INT(joaat("num_rndevents_completed"), Global_112638, 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_rndevents_completed"), Global_112638, 0);
 					MISC::SET_BIT(&(Global_112915.f_10194.f_3856), 14);
 				}
 			}
@@ -52243,7 +52243,7 @@ void func_418(int iParam0, int iParam1, int iParam2)
 				STATS::STAT_SET_INT(iParam1, Global_112915.f_10016.f_21, true);
 				if (!Global_78121)
 				{
-					STATS::_UPDATE_STAT_INT(iParam1, Global_112915.f_9085.f_330[iParam0 /*6*/].f_4, 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(iParam1, Global_112915.f_9085.f_330[iParam0 /*6*/].f_4, 0);
 				}
 			}
 		}

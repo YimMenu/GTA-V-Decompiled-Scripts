@@ -120093,7 +120093,7 @@ void func_651(int iParam0, int iParam1, int iParam2)
 				STATS::STAT_SET_INT(iParam1, Global_112915.f_10016.f_21, true);
 				if (!Global_78121)
 				{
-					STATS::_UPDATE_STAT_INT(iParam1, Global_112915.f_9085.f_330[iParam0 /*6*/].f_4, 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(iParam1, Global_112915.f_9085.f_330[iParam0 /*6*/].f_4, 0);
 				}
 			}
 		}

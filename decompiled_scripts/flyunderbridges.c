@@ -1441,20 +1441,20 @@ int func_30()
 		iVar0 = iVar2;
 		if (iVar2 >= 50)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_deaths"), 100, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_water_cannon_deaths"), 100, 0);
 		}
 		else if (iVar2 >= 38)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_deaths"), 75, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_water_cannon_deaths"), 75, 0);
 		}
 		else if (iVar2 >= 25)
 		{
 			func_44(290, 0, 0);
-			STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_deaths"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_water_cannon_deaths"), 50, 0);
 		}
 		else if (iVar2 >= 13)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_deaths"), 25, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_water_cannon_deaths"), 25, 0);
 		}
 	}
 	if (iVar1 == 15 && iVar2 == 50)
@@ -1702,15 +1702,15 @@ void func_44(int iParam0, int iParam1, int iParam2)
 		Global_112915.f_10194[iParam0 /*12*/].f_11 = iParam2;
 		if (iParam0 == 287)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_0"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_hidden_packages_0"), 50, 0);
 		}
 		if (iParam0 == 286)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_1"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_hidden_packages_1"), 50, 0);
 		}
 		if (iParam0 == 299)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_3"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_hidden_packages_3"), 50, 0);
 		}
 	}
 	if (bVar0)
@@ -1832,7 +1832,7 @@ void func_45()
 			{
 				if (Global_112655 == Global_112638)
 				{
-					STATS::_UPDATE_STAT_INT(joaat("num_rndevents_completed"), Global_112638, 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_rndevents_completed"), Global_112638, 0);
 					MISC::SET_BIT(&(Global_112915.f_10194.f_3856), 14);
 				}
 			}

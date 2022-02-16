@@ -1776,7 +1776,7 @@ void func_26(var uParam0)
 			{
 				if (func_42(10))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_50_vehicles_blownup"), func_46(10, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_50_vehicles_blownup"), func_46(10, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 0);
 				}
 			}
@@ -1784,7 +1784,7 @@ void func_26(var uParam0)
 			{
 				if (func_39(10))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_50_vehicles_blownup"), func_46(10, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_50_vehicles_blownup"), func_46(10, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 1);
 				}
 			}
@@ -1792,7 +1792,7 @@ void func_26(var uParam0)
 			{
 				if (func_36(10))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_50_vehicles_blownup"), func_46(10, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_50_vehicles_blownup"), func_46(10, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 2);
 				}
 			}
@@ -1800,7 +1800,7 @@ void func_26(var uParam0)
 			{
 				if (func_33(10))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_50_vehicles_blownup"), func_46(10, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_50_vehicles_blownup"), func_46(10, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 3);
 				}
 			}
@@ -1808,7 +1808,7 @@ void func_26(var uParam0)
 			{
 				if (func_42(11))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_vehicles_jackedr"), func_46(11, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_vehicles_jackedr"), func_46(11, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 4);
 				}
 			}
@@ -1816,7 +1816,7 @@ void func_26(var uParam0)
 			{
 				if (func_39(11))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_vehicles_jackedr"), func_46(11, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_vehicles_jackedr"), func_46(11, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 5);
 				}
 			}
@@ -1824,7 +1824,7 @@ void func_26(var uParam0)
 			{
 				if (func_36(11))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_vehicles_jackedr"), func_46(11, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_vehicles_jackedr"), func_46(11, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 6);
 				}
 			}
@@ -1832,7 +1832,7 @@ void func_26(var uParam0)
 			{
 				if (func_33(11))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_vehicles_jackedr"), func_46(11, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_vehicles_jackedr"), func_46(11, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 7);
 				}
 			}
@@ -1840,7 +1840,7 @@ void func_26(var uParam0)
 			{
 				if (func_42(60))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmtime5starwanted"), func_46(60, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmtime5starwanted"), func_46(60, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 8);
 				}
 			}
@@ -1848,7 +1848,7 @@ void func_26(var uParam0)
 			{
 				if (func_39(60))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmtime5starwanted"), func_46(60, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmtime5starwanted"), func_46(60, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 9);
 				}
 			}
@@ -1856,7 +1856,7 @@ void func_26(var uParam0)
 			{
 				if (func_36(60))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmtime5starwanted"), func_46(60, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmtime5starwanted"), func_46(60, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 10);
 				}
 			}
@@ -1864,7 +1864,7 @@ void func_26(var uParam0)
 			{
 				if (func_33(60))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmtime5starwanted"), func_46(60, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmtime5starwanted"), func_46(60, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 11);
 				}
 			}
@@ -1872,7 +1872,7 @@ void func_26(var uParam0)
 			{
 				if (func_27(23))
 				{
-					STATS::_UPDATE_STAT_FLOAT(joaat("mp0_awd_fmfurthestwheelie"), func_45(32, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("mp0_awd_fmfurthestwheelie"), func_45(32, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 15);
 				}
 			}
@@ -1880,7 +1880,7 @@ void func_26(var uParam0)
 			{
 				if (func_42(61))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmdrivewithoutcrash"), func_46(61, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmdrivewithoutcrash"), func_46(61, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 16);
 				}
 			}
@@ -1888,7 +1888,7 @@ void func_26(var uParam0)
 			{
 				if (func_39(61))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmdrivewithoutcrash"), func_46(61, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmdrivewithoutcrash"), func_46(61, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 17);
 				}
 			}
@@ -1896,7 +1896,7 @@ void func_26(var uParam0)
 			{
 				if (func_36(61))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmdrivewithoutcrash"), func_46(61, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmdrivewithoutcrash"), func_46(61, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 18);
 				}
 			}
@@ -1904,7 +1904,7 @@ void func_26(var uParam0)
 			{
 				if (func_33(61))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmdrivewithoutcrash"), func_46(61, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmdrivewithoutcrash"), func_46(61, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 19);
 				}
 			}
@@ -1912,7 +1912,7 @@ void func_26(var uParam0)
 			{
 				if (func_42(62))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmmostflipsinonevehicle"), func_46(62, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmmostflipsinonevehicle"), func_46(62, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 20);
 				}
 			}
@@ -1920,7 +1920,7 @@ void func_26(var uParam0)
 			{
 				if (func_39(62))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmmostflipsinonevehicle"), func_46(62, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmmostflipsinonevehicle"), func_46(62, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 21);
 				}
 			}
@@ -1928,7 +1928,7 @@ void func_26(var uParam0)
 			{
 				if (func_36(62))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmmostflipsinonevehicle"), func_46(62, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmmostflipsinonevehicle"), func_46(62, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 22);
 				}
 			}
@@ -1936,7 +1936,7 @@ void func_26(var uParam0)
 			{
 				if (func_33(62))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmmostflipsinonevehicle"), func_46(62, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmmostflipsinonevehicle"), func_46(62, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 23);
 				}
 			}
@@ -1944,7 +1944,7 @@ void func_26(var uParam0)
 			{
 				if (func_42(63))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmmostspinsinonevehicle"), func_46(63, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmmostspinsinonevehicle"), func_46(63, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 24);
 				}
 			}
@@ -1952,7 +1952,7 @@ void func_26(var uParam0)
 			{
 				if (func_39(63))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmmostspinsinonevehicle"), func_46(63, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmmostspinsinonevehicle"), func_46(63, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 25);
 				}
 			}
@@ -1960,7 +1960,7 @@ void func_26(var uParam0)
 			{
 				if (func_36(63))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmmostspinsinonevehicle"), func_46(63, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmmostspinsinonevehicle"), func_46(63, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 26);
 				}
 			}
@@ -1968,7 +1968,7 @@ void func_26(var uParam0)
 			{
 				if (func_33(63))
 				{
-					STATS::_UPDATE_STAT_INT(joaat("mp0_awd_fmmostspinsinonevehicle"), func_46(63, -1), 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("mp0_awd_fmmostspinsinonevehicle"), func_46(63, -1), 0);
 					MISC::SET_BIT(&(uParam0->f_9), 27);
 				}
 			}

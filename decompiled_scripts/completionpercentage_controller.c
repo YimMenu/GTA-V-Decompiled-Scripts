@@ -313,7 +313,7 @@ void __EntryFunction__()
 			{
 				if (func_123())
 				{
-					STATS::_UPDATE_STAT_FLOAT(joaat("total_progress_made"), Global_112915.f_10194.f_3853, 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("total_progress_made"), Global_112915.f_10194.f_3853, 0);
 					if (NETWORK::_FACEBOOK_IS_AVAILABLE())
 					{
 						NETWORK::FACEBOOK_POST_COMPLETED_MILESTONE(0);
@@ -340,20 +340,20 @@ void __EntryFunction__()
 			Global_112915.f_10049 = MISC::GET_NUM_SUCCESSFUL_STUNT_JUMPS();
 			if (Global_112915.f_10049 >= 50)
 			{
-				STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_kills"), 100, 0);
+				STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_water_cannon_kills"), 100, 0);
 			}
 			else if (Global_112915.f_10049 >= 38)
 			{
-				STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_kills"), 75, 0);
+				STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_water_cannon_kills"), 75, 0);
 			}
 			else if (Global_112915.f_10049 >= 25)
 			{
 				func_1(289, 0, 0);
-				STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_kills"), 50, 0);
+				STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_water_cannon_kills"), 50, 0);
 			}
 			else if (Global_112915.f_10049 >= 13)
 			{
-				STATS::_UPDATE_STAT_INT(joaat("sp0_water_cannon_kills"), 25, 0);
+				STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_water_cannon_kills"), 25, 0);
 			}
 		}
 	}
@@ -388,15 +388,15 @@ void func_1(int iParam0, int iParam1, int iParam2)
 		Global_112915.f_10194[iParam0 /*12*/].f_11 = iParam2;
 		if (iParam0 == 287)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_0"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_hidden_packages_0"), 50, 0);
 		}
 		if (iParam0 == 286)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_1"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_hidden_packages_1"), 50, 0);
 		}
 		if (iParam0 == 299)
 		{
-			STATS::_UPDATE_STAT_INT(joaat("num_hidden_packages_3"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_hidden_packages_3"), 50, 0);
 		}
 	}
 	if (bVar0)
@@ -30013,7 +30013,7 @@ void func_142()
 						{
 							if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 18))
 							{
-								STATS::_UPDATE_STAT_INT(joaat("sp0_stars_evaded"), 5, 0);
+								STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_stars_evaded"), 5, 0);
 								MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 18);
 							}
 							iLocal_409 = 0;
@@ -30061,7 +30061,7 @@ void func_143()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 17))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 5000000, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_shots"), 5000000, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 13);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 14);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 15);
@@ -30073,7 +30073,7 @@ void func_143()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 16))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 4000000, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_shots"), 4000000, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 13);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 14);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 15);
@@ -30084,7 +30084,7 @@ void func_143()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 15))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 3000000, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_shots"), 3000000, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 13);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 14);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 15);
@@ -30094,7 +30094,7 @@ void func_143()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 14))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 2000000, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_shots"), 2000000, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 13);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 14);
 		}
@@ -30103,7 +30103,7 @@ void func_143()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 13))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_shots"), 1000000, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_shots"), 1000000, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 13);
 		}
 	}
@@ -30125,7 +30125,7 @@ void func_144()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 12))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 250, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_deaths"), 250, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 8);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 9);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 10);
@@ -30137,7 +30137,7 @@ void func_144()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 11))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 100, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_deaths"), 100, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 8);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 9);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 10);
@@ -30148,7 +30148,7 @@ void func_144()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 10))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_deaths"), 50, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 8);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 9);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 10);
@@ -30158,7 +30158,7 @@ void func_144()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 9))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 25, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_deaths"), 25, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 8);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 9);
 		}
@@ -30167,7 +30167,7 @@ void func_144()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 8))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_deaths"), 10, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_deaths"), 10, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 8);
 		}
 	}
@@ -30189,7 +30189,7 @@ void func_145()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 7))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 250, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_busted"), 250, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 3);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 4);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 5);
@@ -30201,7 +30201,7 @@ void func_145()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 6))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 100, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_busted"), 100, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 3);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 4);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 5);
@@ -30212,7 +30212,7 @@ void func_145()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 5))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 50, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_busted"), 50, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 3);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 4);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 5);
@@ -30222,7 +30222,7 @@ void func_145()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 4))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 25, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_busted"), 25, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 3);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 4);
 		}
@@ -30231,7 +30231,7 @@ void func_145()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 3))
 		{
-			STATS::_UPDATE_STAT_INT(joaat("sp0_busted"), 10, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp0_busted"), 10, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 3);
 		}
 	}
@@ -30253,7 +30253,7 @@ void func_146()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 27))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_swimming"), 1000f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_swimming"), 1000f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 25);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 26);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 27);
@@ -30263,7 +30263,7 @@ void func_146()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 26))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_swimming"), 100f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_swimming"), 100f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 25);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 26);
 		}
@@ -30272,7 +30272,7 @@ void func_146()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 25))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_swimming"), 50f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_swimming"), 50f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 25);
 		}
 	}
@@ -30294,7 +30294,7 @@ void func_147()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 24))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_running"), 1000f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_running"), 1000f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 22);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 23);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 24);
@@ -30304,7 +30304,7 @@ void func_147()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 23))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_running"), 100f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_running"), 100f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 22);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 23);
 		}
@@ -30313,7 +30313,7 @@ void func_147()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 22))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_running"), 50f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_running"), 50f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 22);
 		}
 	}
@@ -30344,7 +30344,7 @@ void func_148()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 21))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_plane"), 50000f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_driving_plane"), 50000f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 19);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 20);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 21);
@@ -30354,7 +30354,7 @@ void func_148()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 20))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_plane"), 5000f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_driving_plane"), 5000f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 19);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 20);
 		}
@@ -30363,7 +30363,7 @@ void func_148()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 19))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_plane"), 500f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_driving_plane"), 500f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 19);
 		}
 	}
@@ -30406,7 +30406,7 @@ void func_149()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 2))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_car"), 50000f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_driving_car"), 50000f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 1);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 2);
@@ -30416,7 +30416,7 @@ void func_149()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 1))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_car"), 5000f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_driving_car"), 5000f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 1);
 		}
@@ -30425,7 +30425,7 @@ void func_149()
 	{
 		if (!MISC::IS_BIT_SET(Global_112915.f_10194.f_3855, 0))
 		{
-			STATS::_UPDATE_STAT_FLOAT(joaat("sp0_dist_driving_car"), 500f, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_FLOAT(joaat("sp0_dist_driving_car"), 500f, 0);
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3855), 0);
 		}
 	}
@@ -30438,7 +30438,7 @@ void func_150()
 		if (STATS::_0x5EAD2BF6484852E4())
 		{
 			MISC::SET_BIT(&(Global_112915.f_10194.f_3856), 15);
-			STATS::_UPDATE_STAT_INT(joaat("sp_vehicle_models_driven"), 200, 0);
+			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("sp_vehicle_models_driven"), 200, 0);
 		}
 	}
 }
@@ -30556,7 +30556,7 @@ void func_151()
 			{
 				if (Global_112655 == Global_112638)
 				{
-					STATS::_UPDATE_STAT_INT(joaat("num_rndevents_completed"), Global_112638, 0);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("num_rndevents_completed"), Global_112638, 0);
 					MISC::SET_BIT(&(Global_112915.f_10194.f_3856), 14);
 				}
 			}
