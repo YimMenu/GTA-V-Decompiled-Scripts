@@ -8024,7 +8024,7 @@ var func_113(var uParam0)
 	return uParam0;
 }
 
-int func_114(int iParam0, int* iParam1)
+int func_114(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -8033,9 +8033,9 @@ int func_114(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -8818,7 +8818,7 @@ int func_131(var uParam0)
 
 int func_132(var uParam0, var uParam1, var* uParam2, var uParam3)
 {
-	int* iVar0;
+	var* uVar0;
 	int iVar35;
 	
 	switch (*uParam0)
@@ -8853,9 +8853,9 @@ int func_132(var uParam0, var uParam1, var* uParam2, var uParam3)
 			iVar35 = 0;
 			while (iVar35 < *uParam1)
 			{
-				if (NETWORK::NETWORK_GET_PRIMARY_CLAN_DATA_NEW(uParam2[iVar35 /*13*/], &iVar0))
+				if (NETWORK::NETWORK_GET_PRIMARY_CLAN_DATA_NEW(uParam2[iVar35 /*13*/], &uVar0))
 				{
-					func_133(&iVar0, uParam3[iVar35 /*4*/]);
+					func_133(&uVar0, uParam3[iVar35 /*4*/]);
 				}
 				iVar35++;
 			}
@@ -8877,9 +8877,9 @@ int func_132(var uParam0, var uParam1, var* uParam2, var uParam3)
 	return 0;
 }
 
-void func_133(int* iParam0, char* sParam1)
+void func_133(var* uParam0, char* sParam1)
 {
-	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
+	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(uParam0, 35, sParam1);
 }
 
 int func_134(var* uParam0, var uParam1)

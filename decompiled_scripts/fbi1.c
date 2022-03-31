@@ -10563,7 +10563,7 @@ int func_149(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -11317,7 +11317,7 @@ int func_149(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_150(iParam0, &iVar4);
+				iVar1 = func_150(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -11343,7 +11343,7 @@ int func_149(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_150(int iParam0, int* iParam1)
+int func_150(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -11352,9 +11352,9 @@ int func_150(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -14843,7 +14843,7 @@ void func_193(int iParam0, var uParam1, bool bParam2)
 	}
 }
 
-int func_194(int iParam0, int* iParam1)
+int func_194(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -14852,9 +14852,9 @@ int func_194(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -115151,7 +115151,7 @@ void func_725()
 				CAM::SET_CAM_ACTIVE(iLocal_1752, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				RECORDING::_0x48621C9FCA3EBD28(3);
-				CAM::_0x661B5C8654ADD825(iLocal_1752, true);
+				CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_1752, true);
 				GRAPHICS::DRAW_RECT(0.5f, 0.5f, 1f, 1f, 0, 0, 0, 255, false);
 				SYSTEM::WAIT(0);
 				INTERIOR::_0xAF348AFCB575A441("rm_bsmt_AutopsySmall");

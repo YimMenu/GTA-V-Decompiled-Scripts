@@ -8118,7 +8118,7 @@ void func_1()
 			}
 			if (func_5(&uLocal_8056) && func_3(&uLocal_8056, 3000, 0))
 			{
-				NETWORK::_0x741A3D8380319A81();
+				NETWORK::NETWORK_REQUEST_TO_BE_HOST_OF_THIS_SCRIPT();
 				func_2(&uLocal_8056);
 			}
 		}

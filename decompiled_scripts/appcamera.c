@@ -1010,7 +1010,7 @@ void __EntryFunction__()
 			AUDIO::RELEASE_SOUND_ID(iLocal_112);
 			HUD::BUSYSPINNER_OFF();
 			func_113(1);
-			MOBILE::_0xA2CCBE62CD4C91A4(0);
+			MOBILE::_0xA2CCBE62CD4C91A4(false);
 			MOBILE::_SET_MOBILE_PHONE_UNK(false);
 			MOBILE::_0x1B0B4AEED5B9B41C(1f);
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
@@ -1628,7 +1628,7 @@ void func_10()
 						}
 						else
 						{
-							MOBILE::_0xA2CCBE62CD4C91A4(1);
+							MOBILE::_0xA2CCBE62CD4C91A4(true);
 							MOBILE::_SET_MOBILE_PHONE_UNK(true);
 						}
 					}
@@ -1636,7 +1636,7 @@ void func_10()
 					{
 						iLocal_61 = 0;
 						iLocal_60 = 0;
-						MOBILE::_0xA2CCBE62CD4C91A4(0);
+						MOBILE::_0xA2CCBE62CD4C91A4(false);
 						MOBILE::_SET_MOBILE_PHONE_UNK(false);
 					}
 				}
@@ -1647,14 +1647,14 @@ void func_10()
 				{
 					iLocal_60 = 1;
 					iLocal_61 = 1;
-					MOBILE::_0xA2CCBE62CD4C91A4(1);
+					MOBILE::_0xA2CCBE62CD4C91A4(true);
 					MOBILE::_SET_MOBILE_PHONE_UNK(true);
 				}
 				else
 				{
 					iLocal_60 = 0;
 					iLocal_61 = 0;
-					MOBILE::_0xA2CCBE62CD4C91A4(0);
+					MOBILE::_0xA2CCBE62CD4C91A4(false);
 					MOBILE::_SET_MOBILE_PHONE_UNK(false);
 				}
 			}
@@ -7158,12 +7158,12 @@ void func_58()
 	{
 		if (MISC::ARE_STRINGS_EQUAL(sLocal_19[Global_4534051], "phone_cam12DUMMY"))
 		{
-			MOBILE::_0xA2CCBE62CD4C91A4(0);
+			MOBILE::_0xA2CCBE62CD4C91A4(false);
 			MOBILE::_SET_MOBILE_PHONE_UNK(false);
 		}
 		else
 		{
-			MOBILE::_0xA2CCBE62CD4C91A4(1);
+			MOBILE::_0xA2CCBE62CD4C91A4(true);
 			MOBILE::_SET_MOBILE_PHONE_UNK(true);
 		}
 	}
@@ -8319,7 +8319,7 @@ void func_96()
 		PED::CLEAR_FACIAL_IDLE_ANIM_OVERRIDE(PLAYER::PLAYER_PED_ID());
 	}
 	func_113(1);
-	MOBILE::_0xA2CCBE62CD4C91A4(0);
+	MOBILE::_0xA2CCBE62CD4C91A4(false);
 	MOBILE::_SET_MOBILE_PHONE_UNK(false);
 	MOBILE::_0x1B0B4AEED5B9B41C(1f);
 	if (Global_4534052 > 0 && Global_4534052 < 13)

@@ -34941,7 +34941,7 @@ int func_244(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -35695,7 +35695,7 @@ int func_244(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_245(iParam0, &iVar4);
+				iVar1 = func_245(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -35721,7 +35721,7 @@ int func_244(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_245(int iParam0, int* iParam1)
+int func_245(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -35730,9 +35730,9 @@ int func_245(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -102291,7 +102291,7 @@ void func_532(int iParam0, var uParam1, bool bParam2)
 	}
 }
 
-int func_533(int iParam0, int* iParam1)
+int func_533(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -102300,9 +102300,9 @@ int func_533(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -124643,7 +124643,7 @@ void func_944()
 				{
 					CAM::PLAY_SYNCHRONIZED_CAM_ANIM(iLocal_3372, iLocal_2618, sLocal_2649, Local_3374.f_35);
 					CAM::SET_CAM_ACTIVE(iLocal_3372, true);
-					CAM::_0x661B5C8654ADD825(iLocal_3372, true);
+					CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_3372, true);
 				}
 				else
 				{
@@ -124654,7 +124654,7 @@ void func_944()
 					CAM::SET_CAM_ROT(iLocal_3371, Local_1763[iLocal_2465 /*30*/].f_18, 2);
 					CAM::SET_CAM_FOV(iLocal_3371, Local_1763[iLocal_2465 /*30*/].f_22);
 					CAM::SET_CAM_ACTIVE_WITH_INTERP(iLocal_3371, iLocal_3370, 2500, 3, 3);
-					CAM::_0x661B5C8654ADD825(iLocal_3371, true);
+					CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_3371, true);
 				}
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 			}

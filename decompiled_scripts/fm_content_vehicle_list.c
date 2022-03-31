@@ -138661,9 +138661,9 @@ struct<4> func_1734(int iParam0)
 	return cVar0;
 }
 
-void func_1735(int* iParam0, char* sParam1)
+void func_1735(var* uParam0, char* sParam1)
 {
-	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
+	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(uParam0, 35, sParam1);
 }
 
 struct<35> func_1736(int iParam0)

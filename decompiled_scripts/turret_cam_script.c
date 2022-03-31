@@ -207,7 +207,7 @@ void func_3(var uParam0, var uParam1)
 	iVar3 = CAM::GET_RENDERING_CAM();
 	if (CAM::DOES_CAM_EXIST(iVar3))
 	{
-		CAM::_0x661B5C8654ADD825(iVar3, true);
+		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iVar3, true);
 	}
 	Var4 = { CAM::GET_FINAL_RENDERED_CAM_ROT(0) };
 	Var4 = { func_7(Var4) };

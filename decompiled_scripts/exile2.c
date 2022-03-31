@@ -90884,7 +90884,7 @@ int func_342(int iParam0)
 	return 0;
 }
 
-int func_343(int iParam0, int* iParam1)
+int func_343(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -90893,9 +90893,9 @@ int func_343(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -91185,7 +91185,7 @@ int func_349(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -91939,7 +91939,7 @@ int func_349(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_350(iParam0, &iVar4);
+				iVar1 = func_350(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -91965,7 +91965,7 @@ int func_349(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_350(int iParam0, int* iParam1)
+int func_350(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -91974,9 +91974,9 @@ int func_350(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -107410,7 +107410,7 @@ void func_560()
 	CAM::ATTACH_CAM_TO_ENTITY(iLocal_882, Local_1719.f_0, -0.39f, 0.85f, 1.35f, true);
 	func_524(&Local_1719, &iLocal_882, Local_858.f_0, 0f, Local_858.f_2);
 	CAM::SET_CAM_FOV(iLocal_882, 45f);
-	CAM::_0x661B5C8654ADD825(iLocal_882, true);
+	CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_882, true);
 	CAM::SET_CAM_ACTIVE(iLocal_882, true);
 }
 
@@ -121580,7 +121580,7 @@ void func_782()
 							PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 156, true);
 							PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), true, false);
 							PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 512);
-							CAM::_0x661B5C8654ADD825(Local_2102.f_4, true);
+							CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(Local_2102.f_4, true);
 							func_787(&Local_2102, &iLocal_2024, 1, 0, 3000);
 							func_786(179, 0);
 							HUD::GET_HUD_COLOUR(174, &iVar0, &iVar1, &iVar2, &uVar3);
@@ -121607,7 +121607,7 @@ void func_782()
 						if (Local_2102.f_0 == 1)
 						{
 							PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 512);
-							CAM::_0x661B5C8654ADD825(Local_2102.f_4, true);
+							CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(Local_2102.f_4, true);
 							func_787(&Local_2102, &iLocal_2024, 1, 0, 3000);
 							func_786(179, 0);
 							HUD::GET_HUD_COLOUR(174, &iVar4, &iVar5, &iVar6, &uVar7);
@@ -130101,7 +130101,7 @@ int func_955()
 						if (Local_2102.f_0 == 1)
 						{
 							PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 512);
-							CAM::_0x661B5C8654ADD825(Local_2102.f_4, true);
+							CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(Local_2102.f_4, true);
 							func_787(&Local_2102, &iLocal_2024, 1, 0, 3000);
 							func_786(179, 0);
 						}

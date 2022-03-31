@@ -260,7 +260,7 @@ void __EntryFunction__()
 	int* iVar1798;
 	int* iVar1801;
 	int* iVar1804;
-	int* iVar1807[20];
+	var* uVar1807[20];
 	int iVar1828;
 	int iVar1829;
 	int iVar1830;
@@ -498,13 +498,13 @@ void __EntryFunction__()
 			PAD::_0x7F4724035FDCA1DD(0);
 			PAD::_0x7F4724035FDCA1DD(2);
 			iVar1779 = 0;
-			while (iVar1779 < PED::GET_PED_NEARBY_PEDS(PLAYER::PLAYER_PED_ID(), &iVar1807, -1))
+			while (iVar1779 < PED::GET_PED_NEARBY_PEDS(PLAYER::PLAYER_PED_ID(), &uVar1807, -1))
 			{
-				if (iVar1807[iVar1779] != iLocal_263[1])
+				if (uVar1807[iVar1779] != iLocal_263[1])
 				{
-					if (!PED::IS_PED_INJURED(iVar1807[iVar1779]))
+					if (!PED::IS_PED_INJURED(uVar1807[iVar1779]))
 					{
-						PED::SET_PED_RESET_FLAG(iVar1807[iVar1779], 240, true);
+						PED::SET_PED_RESET_FLAG(uVar1807[iVar1779], 240, true);
 					}
 				}
 				iVar1779++;
@@ -711,7 +711,7 @@ void __EntryFunction__()
 					if (!CAM::_0x705A276EBFF3133D())
 					{
 						iVar1828 = OBJECT::CREATE_OBJECT(joaat("prop_dart_1"), Var471, true, true, false);
-						func_442(Var0.f_243.f_4, Var465, &iVar1807, &ScriptParam_0);
+						func_442(Var0.f_243.f_4, Var465, &uVar1807, &ScriptParam_0);
 						func_441(&Var477, sLocal_358, sLocal_359);
 						TASK::CLEAR_PED_TASKS(iLocal_263[1]);
 						iLocal_301 = CAM::CREATE_CAMERA_WITH_PARAMS(26379945, 0f, 0f, 0f, 0f, 0f, 0f, 65f, false, 2);
@@ -8161,7 +8161,7 @@ var func_142(var uParam0)
 	return uParam0;
 }
 
-int func_143(int iParam0, int* iParam1)
+int func_143(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -8170,9 +8170,9 @@ int func_143(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -8965,7 +8965,7 @@ int func_161(var uParam0)
 
 int func_162(var uParam0, var uParam1, var* uParam2, var uParam3)
 {
-	int* iVar0;
+	var* uVar0;
 	int iVar35;
 	
 	switch (*uParam0)
@@ -9000,9 +9000,9 @@ int func_162(var uParam0, var uParam1, var* uParam2, var uParam3)
 			iVar35 = 0;
 			while (iVar35 < *uParam1)
 			{
-				if (NETWORK::NETWORK_GET_PRIMARY_CLAN_DATA_NEW(uParam2[iVar35 /*13*/], &iVar0))
+				if (NETWORK::NETWORK_GET_PRIMARY_CLAN_DATA_NEW(uParam2[iVar35 /*13*/], &uVar0))
 				{
-					func_163(&iVar0, uParam3[iVar35 /*4*/]);
+					func_163(&uVar0, uParam3[iVar35 /*4*/]);
 				}
 				iVar35++;
 			}
@@ -9024,9 +9024,9 @@ int func_162(var uParam0, var uParam1, var* uParam2, var uParam3)
 	return 0;
 }
 
-void func_163(int* iParam0, char* sParam1)
+void func_163(var* uParam0, char* sParam1)
 {
-	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
+	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(uParam0, 35, sParam1);
 }
 
 int func_164(var* uParam0, var uParam1)
@@ -22837,7 +22837,7 @@ void func_441(var uParam0, char* sParam1, char* sParam2)
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 }
 
-void func_442(float fParam0, struct<4> Param1, var uParam5, var uParam6, int* iParam7, var uParam8)
+void func_442(float fParam0, struct<4> Param1, var uParam5, var uParam6, var* uParam7, var uParam8)
 {
 	int iVar0;
 	int iVar1;
@@ -22854,7 +22854,7 @@ void func_442(float fParam0, struct<4> Param1, var uParam5, var uParam6, int* iP
 			iLocal_263[1] = uParam8->f_5;
 			TASK::CLEAR_PED_TASKS(iLocal_263[1]);
 		}
-		else if (func_444(iParam7))
+		else if (func_444(uParam7))
 		{
 			TASK::CLEAR_PED_TASKS(iLocal_263[1]);
 		}
@@ -22960,19 +22960,19 @@ void func_443(int iParam0)
 	}
 }
 
-int func_444(int* iParam0)
+int func_444(var* uParam0)
 {
 	int iVar0;
 	
 	iVar0 = 0;
-	while (iVar0 < PED::GET_PED_NEARBY_PEDS(PLAYER::PLAYER_PED_ID(), iParam0, -1))
+	while (iVar0 < PED::GET_PED_NEARBY_PEDS(PLAYER::PLAYER_PED_ID(), uParam0, -1))
 	{
-		if (!PED::IS_PED_INJURED((*iParam0)[iVar0]))
+		if (!PED::IS_PED_INJURED((*uParam0)[iVar0]))
 		{
-			if ((((((ENTITY::GET_ENTITY_MODEL((*iParam0)[iVar0]) == joaat("a_f_m_salton_01") || ENTITY::GET_ENTITY_MODEL((*iParam0)[iVar0]) == joaat("a_f_o_salton_01")) || ENTITY::GET_ENTITY_MODEL((*iParam0)[iVar0]) == joaat("a_m_y_vinewood_01")) || ENTITY::GET_ENTITY_MODEL((*iParam0)[iVar0]) == joaat("a_m_y_stlat_01")) || ENTITY::GET_ENTITY_MODEL((*iParam0)[iVar0]) == joaat("a_m_y_vinewood_04")) || ENTITY::GET_ENTITY_MODEL((*iParam0)[iVar0]) == joaat("a_m_y_stwhi_02")) || ENTITY::GET_ENTITY_MODEL((*iParam0)[iVar0]) == joaat("a_m_y_vinewood_03"))
+			if ((((((ENTITY::GET_ENTITY_MODEL((*uParam0)[iVar0]) == joaat("a_f_m_salton_01") || ENTITY::GET_ENTITY_MODEL((*uParam0)[iVar0]) == joaat("a_f_o_salton_01")) || ENTITY::GET_ENTITY_MODEL((*uParam0)[iVar0]) == joaat("a_m_y_vinewood_01")) || ENTITY::GET_ENTITY_MODEL((*uParam0)[iVar0]) == joaat("a_m_y_stlat_01")) || ENTITY::GET_ENTITY_MODEL((*uParam0)[iVar0]) == joaat("a_m_y_vinewood_04")) || ENTITY::GET_ENTITY_MODEL((*uParam0)[iVar0]) == joaat("a_m_y_stwhi_02")) || ENTITY::GET_ENTITY_MODEL((*uParam0)[iVar0]) == joaat("a_m_y_vinewood_03"))
 			{
-				ENTITY::SET_ENTITY_AS_MISSION_ENTITY((*iParam0)[iVar0], true, true);
-				iLocal_263[1] = (*iParam0)[iVar0];
+				ENTITY::SET_ENTITY_AS_MISSION_ENTITY((*uParam0)[iVar0], true, true);
+				iLocal_263[1] = (*uParam0)[iVar0];
 				return 1;
 			}
 		}

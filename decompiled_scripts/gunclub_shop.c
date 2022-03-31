@@ -8635,7 +8635,7 @@ int func_53(int iParam0)
 int func_54(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
-	int* iVar1;
+	var* uVar1;
 	int iVar40;
 	
 	iVar0 = func_81(iParam0);
@@ -8647,7 +8647,7 @@ int func_54(int iParam0, int iParam1, int iParam2)
 	{
 		return 1;
 	}
-	iVar40 = func_80(iParam0, &iVar1);
+	iVar40 = func_80(iParam0, &uVar1);
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		if (func_35() == 0)
@@ -9754,7 +9754,7 @@ int func_79(int iParam0, int iParam1)
 	return 0;
 }
 
-int func_80(int iParam0, int* iParam1)
+int func_80(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -9763,9 +9763,9 @@ int func_80(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -14753,7 +14753,7 @@ int func_127()
 
 bool func_128(char* sParam0, int iParam1, int iParam2, int iParam3)
 {
-	int* iVar0;
+	var* uVar0;
 	char* sVar39;
 	int iVar55;
 	char* sVar56;
@@ -15694,7 +15694,7 @@ bool func_128(char* sParam0, int iParam1, int iParam2, int iParam3)
 						break;
 				}
 			}
-			else if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || func_80(iParam1, &iVar0) != -1)
+			else if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || func_80(iParam1, &uVar0) != -1)
 			{
 				if (func_89(iParam1))
 				{
@@ -19788,7 +19788,7 @@ bool func_182(int iParam0, int iParam1, int iParam2, bool bParam3)
 	int iVar12;
 	int iVar13;
 	int iVar14;
-	int* iVar15;
+	var* uVar15;
 	struct<4> Var54;
 	
 	func_88(iParam0, 0, 989182658, 0, 0);
@@ -22875,7 +22875,7 @@ bool func_182(int iParam0, int iParam1, int iParam2, bool bParam3)
 			break;
 		
 		default:
-			iVar12 = func_80(iParam1, &iVar15);
+			iVar12 = func_80(iParam1, &uVar15);
 			if (iVar12 != -1)
 			{
 				iVar13 = 0;
@@ -22998,11 +22998,11 @@ int func_183(int iParam0, int iParam1)
 	float fVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<6> Var43;
 	int iVar65;
 	int iVar66;
-	int* iVar67;
+	var* uVar67;
 	struct<6> Var106;
 	char* sVar128;
 	struct<4> Var144;
@@ -23707,7 +23707,7 @@ int func_183(int iParam0, int iParam1)
 				break;
 			
 			default:
-				iVar2 = func_80(iParam0, &iVar4);
+				iVar2 = func_80(iParam0, &uVar4);
 				if (iVar2 != -1)
 				{
 					iVar3 = 0;
@@ -26262,7 +26262,7 @@ int func_183(int iParam0, int iParam1)
 				break;
 			
 			default:
-				iVar65 = func_80(iParam0, &iVar67);
+				iVar65 = func_80(iParam0, &uVar67);
 				if (iVar65 != -1)
 				{
 					iVar66 = 0;
@@ -26380,7 +26380,7 @@ char* func_185(int iParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
-	int* iVar2;
+	var* uVar2;
 	struct<7> Var41;
 	
 	if (iParam1 == joaat("weapon_knuckle"))
@@ -26869,7 +26869,7 @@ char* func_185(int iParam0, int iParam1)
 		default:
 			if (iParam1 != 0)
 			{
-				iVar0 = func_80(iParam1, &iVar2);
+				iVar0 = func_80(iParam1, &uVar2);
 				if (iVar0 != -1)
 				{
 					iVar1 = 0;
@@ -38517,7 +38517,7 @@ void func_283(int iParam0, var uParam1, bool bParam2)
 	}
 }
 
-int func_284(int iParam0, int* iParam1)
+int func_284(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -38526,9 +38526,9 @@ int func_284(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -38569,7 +38569,7 @@ int func_287(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -39323,7 +39323,7 @@ int func_287(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_80(iParam0, &iVar4);
+				iVar1 = func_80(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -71179,7 +71179,7 @@ bool func_515(int iParam0, int iParam1, char* sParam2, var uParam3, var uParam4)
 int func_516(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
-	int* iVar1;
+	var* uVar1;
 	int iVar40;
 	int iVar41;
 	struct<4> Var42;
@@ -71227,7 +71227,7 @@ int func_516(int iParam0, int iParam1, int iParam2)
 				}
 			}
 		}
-		iVar40 = func_80(iParam0, &iVar1);
+		iVar40 = func_80(iParam0, &uVar1);
 		if (iVar40 != -1)
 		{
 			return 1;
@@ -72101,7 +72101,7 @@ bool func_527(int iParam0, int iParam1, char* sParam2, char* sParam3)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	int* iVar3;
+	var* uVar3;
 	struct<15> Var42;
 	
 	switch (iParam0)
@@ -75859,7 +75859,7 @@ bool func_527(int iParam0, int iParam1, char* sParam2, char* sParam3)
 			break;
 		
 		default:
-			iVar0 = func_80(iParam0, &iVar3);
+			iVar0 = func_80(iParam0, &uVar3);
 			if (iVar0 != -1)
 			{
 				iVar1 = 0;
@@ -75889,7 +75889,7 @@ char* func_528(int iParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
-	int* iVar2;
+	var* uVar2;
 	struct<15> Var41;
 	
 	switch (iParam0)
@@ -76273,7 +76273,7 @@ char* func_528(int iParam0, int iParam1)
 		default:
 			if (iParam1 != 0)
 			{
-				iVar0 = func_80(iParam1, &iVar2);
+				iVar0 = func_80(iParam1, &uVar2);
 				if (iVar0 != -1)
 				{
 					iVar1 = 0;
@@ -138660,7 +138660,7 @@ int func_843(int iParam0)
 
 int func_844(int iParam0, int iParam1)
 {
-	int* iVar0;
+	var* uVar0;
 	int iVar39;
 	int iVar40;
 	int iVar41;
@@ -138685,7 +138685,7 @@ int func_844(int iParam0, int iParam1)
 	{
 		return 0;
 	}
-	iVar39 = func_80(iParam1, &iVar0);
+	iVar39 = func_80(iParam1, &uVar0);
 	if (((((((((((((((((((((iParam1 != joaat("weapon_pistol") && iParam1 != joaat("weapon_appistol")) && iParam1 != joaat("weapon_combatpistol")) && iParam1 != joaat("weapon_microsmg")) && iParam1 != joaat("weapon_smg")) && iParam1 != joaat("weapon_pumpshotgun")) && iParam1 != joaat("weapon_assaultshotgun")) && iParam1 != joaat("weapon_sawnoffshotgun")) && iParam1 != joaat("weapon_assaultrifle")) && iParam1 != joaat("weapon_carbinerifle")) && iParam1 != joaat("weapon_advancedrifle")) && iParam1 != joaat("weapon_sniperrifle")) && iParam1 != joaat("weapon_heavysniper")) && iParam1 != joaat("weapon_mg")) && iParam1 != joaat("weapon_combatmg")) && iParam1 != joaat("weapon_grenadelauncher")) && iParam1 != -572349828) && iParam1 != joaat("weapon_assaultsmg")) && iParam1 != 392730790) && iParam1 != joaat("weapon_bullpupshotgun")) && iParam1 != joaat("weapon_pistol50")) && (iVar39 == -1 || FILES::GET_NUM_DLC_WEAPON_COMPONENTS(iVar39) < 3))
 	{
 		return 0;
@@ -148821,7 +148821,7 @@ int func_950(int iParam0, int iParam1, int iParam2)
 
 int func_951(int iParam0, int iParam1)
 {
-	int* iVar0;
+	var* uVar0;
 	int iVar39;
 	
 	if (iParam0 != 0)
@@ -148905,7 +148905,7 @@ int func_951(int iParam0, int iParam1)
 				}
 			}
 		}
-		iVar39 = func_80(iParam1, &iVar0);
+		iVar39 = func_80(iParam1, &uVar0);
 		if (iVar39 != -1)
 		{
 			return 1;
@@ -154214,7 +154214,7 @@ bool func_1026(var uParam0, int iParam1, int iParam2)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	int* iVar3;
+	var* uVar3;
 	struct<4> Var42;
 	
 	*uParam0 = 0;
@@ -155132,7 +155132,7 @@ bool func_1026(var uParam0, int iParam1, int iParam2)
 			break;
 		
 		default:
-			iVar0 = func_80(iParam1, &iVar3);
+			iVar0 = func_80(iParam1, &uVar3);
 			if (iVar0 != -1)
 			{
 				iVar1 = 0;
@@ -158563,7 +158563,7 @@ bool func_1031(var uParam0, int iParam1, int iParam2)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	int* iVar3;
+	var* uVar3;
 	struct<4> Var42;
 	
 	*uParam0 = 0;
@@ -158864,7 +158864,7 @@ bool func_1031(var uParam0, int iParam1, int iParam2)
 			break;
 		
 		default:
-			iVar0 = func_80(iParam1, &iVar3);
+			iVar0 = func_80(iParam1, &uVar3);
 			if (iVar0 != -1)
 			{
 				iVar1 = 0;

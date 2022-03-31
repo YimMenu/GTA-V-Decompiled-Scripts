@@ -3595,7 +3595,7 @@ int func_7(int iParam0)
 	return 0;
 }
 
-int func_8(int iParam0, int* iParam1)
+int func_8(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -3604,9 +3604,9 @@ int func_8(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -3896,7 +3896,7 @@ int func_14(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -4650,7 +4650,7 @@ int func_14(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_15(iParam0, &iVar4);
+				iVar1 = func_15(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -4676,7 +4676,7 @@ int func_14(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_15(int iParam0, int* iParam1)
+int func_15(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -4685,9 +4685,9 @@ int func_15(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}

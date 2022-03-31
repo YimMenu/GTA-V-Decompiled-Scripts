@@ -73394,7 +73394,7 @@ void func_322()
 	}
 	iLocal_80 = CAM::CREATE_CAM_WITH_PARAMS("DEFAULT_SCRIPTED_CAMERA", Local_82, Local_85, fLocal_93, true, 2);
 	CAM::SET_CAM_NEAR_CLIP(iLocal_80, 0.1f);
-	CAM::_0x661B5C8654ADD825(iLocal_80, true);
+	CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_80, true);
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(1);
 	if (!func_365())
 	{

@@ -6292,7 +6292,7 @@ void func_90()
 							else
 							{
 								Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1 = Local_2045.f_244;
-								SECURITY::_0x40EB1EFD921822BC(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1));
+								SECURITY::_REGISTER_PROTECTED_VARIABLE(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1));
 								Local_3658.f_3 = (Local_3658.f_3 - Local_2045.f_244);
 								Local_3632.f_6 = (Local_3632.f_6 - Local_2045.f_244);
 								if (MISC::IS_BIT_SET(Local_2045.f_252, 20))
@@ -6564,7 +6564,7 @@ void func_90()
 												Local_3658.f_8 = (Local_3658.f_8 + Local_2045.f_244);
 												Local_3632.f_13 = (Local_3632.f_13 + Local_2045.f_244);
 												Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2 = (Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2 + Local_2045.f_244);
-												SECURITY::_0x40EB1EFD921822BC(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2));
+												SECURITY::_REGISTER_PROTECTED_VARIABLE(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2));
 												MISC::SET_BIT(&(Local_2045.f_252), 17);
 												MISC::CLEAR_BIT(&(Local_2045.f_252), 12);
 												MISC::SET_BIT(&(Local_1788[PLAYER::PLAYER_ID() /*8*/]), 11);
@@ -6741,7 +6741,7 @@ void func_90()
 											Local_3658.f_7 = (Local_3658.f_7 + Local_2045.f_244);
 											Local_3632.f_12 = (Local_3632.f_12 + Local_2045.f_244);
 											Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1 = (Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1 + Local_2045.f_244);
-											SECURITY::_0x40EB1EFD921822BC(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1));
+											SECURITY::_REGISTER_PROTECTED_VARIABLE(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1));
 											MISC::SET_BIT(&(Local_2045.f_252), 16);
 											MISC::CLEAR_BIT(&(Local_2045.f_252), 11);
 											MISC::SET_BIT(&(Local_1788[PLAYER::PLAYER_ID() /*8*/]), 10);
@@ -6773,7 +6773,7 @@ void func_90()
 											Local_3658.f_8 = (Local_3658.f_8 + Local_2045.f_244);
 											Local_3632.f_13 = (Local_3632.f_13 + Local_2045.f_244);
 											Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2 = (Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2 + Local_2045.f_244);
-											SECURITY::_0x40EB1EFD921822BC(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2));
+											SECURITY::_REGISTER_PROTECTED_VARIABLE(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2));
 											MISC::SET_BIT(&(Local_2045.f_252), 18);
 											MISC::CLEAR_BIT(&(Local_2045.f_252), 15);
 											MISC::SET_BIT(&(Local_1788[PLAYER::PLAYER_ID() /*8*/]), 14);
@@ -7253,7 +7253,7 @@ void func_90()
 					}
 					else if (iVar54 <= 21)
 					{
-						SECURITY::_0x8E580AB902917360();
+						SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 						if (bVar60 && !bVar59)
 						{
 							if (!Local_2045.f_232)
@@ -7334,7 +7334,7 @@ void func_90()
 						Local_2045.f_232 = 1;
 						Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1 = 0;
 					}
-					SECURITY::_0x340A36A700E99699(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1));
+					SECURITY::_UNREGISTER_PROTECTED_VARIABLE(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_1));
 					if (MISC::IS_BIT_SET(Local_1788[PLAYER::PLAYER_ID() /*8*/], 14))
 					{
 						if (bVar59 && !bVar61)
@@ -7384,7 +7384,7 @@ void func_90()
 						}
 						else if (iVar55 <= 21)
 						{
-							SECURITY::_0x8E580AB902917360();
+							SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 							if (bVar61 && !bVar59)
 							{
 								if (!Local_2045.f_233)
@@ -7662,7 +7662,7 @@ void func_90()
 							Local_2045.f_233 = 1;
 							Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2 = 0;
 						}
-						SECURITY::_0x340A36A700E99699(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2));
+						SECURITY::_UNREGISTER_PROTECTED_VARIABLE(&(Local_1788[PLAYER::PLAYER_ID() /*8*/].f_2));
 					}
 					else
 					{

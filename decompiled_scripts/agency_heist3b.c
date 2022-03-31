@@ -9627,7 +9627,7 @@ int func_103(int iParam0)
 	return 0;
 }
 
-int func_104(int iParam0, int* iParam1)
+int func_104(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -9636,9 +9636,9 @@ int func_104(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -9928,7 +9928,7 @@ int func_110(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -10682,7 +10682,7 @@ int func_110(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_111(iParam0, &iVar4);
+				iVar1 = func_111(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -10708,7 +10708,7 @@ int func_110(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_111(int iParam0, int* iParam1)
+int func_111(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -10717,9 +10717,9 @@ int func_111(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -110089,7 +110089,7 @@ void func_717(var uParam0, bool bParam1, int iParam2, int iParam3, bool bParam4,
 		CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_4, uParam0->f_3, Var17, true);
 		CAM::POINT_CAM_AT_ENTITY(uParam0->f_4, uParam0->f_3, Vector(0.6f, Var8.f_1, 0f) + uParam0->f_52, true);
 		CAM::SET_CAM_PARAMS(uParam0->f_4, Var14, 0f, 0f, 0f, uParam0->f_51, 0, 1, 1, 2);
-		CAM::_0x661B5C8654ADD825(uParam0->f_4, true);
+		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(uParam0->f_4, true);
 	}
 }
 
@@ -114092,7 +114092,7 @@ void func_759()
 				if (!PAD::IS_CONTROL_PRESSED(iVar0, iVar1) || iLocal_6108 != 0)
 				{
 					CAM::RENDER_SCRIPT_CAMS(false, true, 400, true, false, 0);
-					CAM::_0x661B5C8654ADD825(iLocal_3853[6], false);
+					CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_3853[6], false);
 					if (AUDIO::IS_AUDIO_SCENE_ACTIVE("AH_3B_COMPUTER_FOCUS_CAM"))
 					{
 						AUDIO::STOP_AUDIO_SCENE("AH_3B_COMPUTER_FOCUS_CAM");
@@ -114148,7 +114148,7 @@ void func_759()
 					if (MISC::GET_GAME_TIMER() > iLocal_6527)
 					{
 						CAM::SET_CAM_ACTIVE(iLocal_3853[6], true);
-						CAM::_0x661B5C8654ADD825(iLocal_3853[6], true);
+						CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_3853[6], true);
 						CAM::RENDER_SCRIPT_CAMS(true, true, 400, true, false, 0);
 						if (!AUDIO::IS_AUDIO_SCENE_ACTIVE("AH_3B_COMPUTER_FOCUS_CAM"))
 						{

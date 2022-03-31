@@ -6420,7 +6420,7 @@ void func_146(int iParam0)
 				iLocal_2600 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", true);
 				CAM::ATTACH_CAM_TO_ENTITY(iLocal_2600, NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/]), Local_2610, true);
 				func_149(iParam0);
-				CAM::_0x661B5C8654ADD825(iLocal_2600, true);
+				CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_2600, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				GRAPHICS::SET_PARTICLE_FX_CAM_INSIDE_VEHICLE(true);
 				iLocal_2598 = 1;

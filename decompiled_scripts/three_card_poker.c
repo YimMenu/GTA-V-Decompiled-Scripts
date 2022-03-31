@@ -6680,7 +6680,7 @@ void func_95()
 								else
 								{
 									Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 = Local_1050.f_15;
-									SECURITY::_0x40EB1EFD921822BC(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_3));
+									SECURITY::_REGISTER_PROTECTED_VARIABLE(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_3));
 									if (Local_1050.f_15 >= 10000)
 									{
 										iVar43 = 5000;
@@ -7036,7 +7036,7 @@ void func_95()
 								else
 								{
 									Local_761[PLAYER::PLAYER_ID() /*9*/].f_5 = Local_1050.f_23;
-									SECURITY::_0x40EB1EFD921822BC(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_5));
+									SECURITY::_REGISTER_PROTECTED_VARIABLE(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_5));
 									if (Local_1050.f_23 >= 10000)
 									{
 										iVar48 = 5000;
@@ -7364,7 +7364,7 @@ void func_95()
 								else
 								{
 									Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 = Local_761[PLAYER::PLAYER_ID() /*9*/].f_3;
-									SECURITY::_0x40EB1EFD921822BC(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_4));
+									SECURITY::_REGISTER_PROTECTED_VARIABLE(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_4));
 									Local_1913.f_6 = (Local_1913.f_6 - Local_761[PLAYER::PLAYER_ID() /*9*/].f_3);
 									Local_1936.f_3 = (Local_1936.f_3 - Local_761[PLAYER::PLAYER_ID() /*9*/].f_3);
 									Local_1050.f_19 = func_401();
@@ -7629,7 +7629,7 @@ void func_95()
 								if (!Local_1050.f_2)
 								{
 									Local_1050.f_2 = 1;
-									SECURITY::_0x8E580AB902917360();
+									SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 									Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
 									Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
 									Local_1913.f_14 = (Local_1913.f_14 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
@@ -7637,7 +7637,7 @@ void func_95()
 								if (!Local_1050.f_3)
 								{
 									Local_1050.f_3 = 1;
-									SECURITY::_0x8E580AB902917360();
+									SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 									Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4);
 									Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4);
 									Local_1936.f_13++;
@@ -7685,7 +7685,7 @@ void func_95()
 								if (!Local_1050.f_2)
 								{
 									Local_1050.f_2 = 1;
-									SECURITY::_0x8E580AB902917360();
+									SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 									Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
 									Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
 									Local_1913.f_14 = (Local_1913.f_14 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
@@ -7693,7 +7693,7 @@ void func_95()
 								if (!Local_1050.f_3)
 								{
 									Local_1050.f_3 = 1;
-									SECURITY::_0x8E580AB902917360();
+									SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 									Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 * 2);
 									Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 * 2);
 									Local_1913.f_14 = (Local_1913.f_14 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 * 2);
@@ -7722,7 +7722,7 @@ void func_95()
 										if (!Local_1050.f_2)
 										{
 											Local_1050.f_2 = 1;
-											SECURITY::_0x8E580AB902917360();
+											SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 											Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
 											Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
 											Local_1913.f_14 = (Local_1913.f_14 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
@@ -7730,7 +7730,7 @@ void func_95()
 										if (!Local_1050.f_3)
 										{
 											Local_1050.f_3 = 1;
-											SECURITY::_0x8E580AB902917360();
+											SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 											Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 * 2);
 											Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 * 2);
 											Local_1913.f_14 = (Local_1913.f_14 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 * 2);
@@ -7751,7 +7751,7 @@ void func_95()
 										if (!Local_1050.f_2)
 										{
 											Local_1050.f_2 = 1;
-											SECURITY::_0x8E580AB902917360();
+											SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 											Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3);
 											Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3);
 											Local_1913.f_14 = (Local_1913.f_14 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3);
@@ -7760,7 +7760,7 @@ void func_95()
 										if (!Local_1050.f_3)
 										{
 											Local_1050.f_3 = 1;
-											SECURITY::_0x8E580AB902917360();
+											SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 											Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4);
 											Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4);
 											Local_1913.f_14 = (Local_1913.f_14 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4);
@@ -7808,7 +7808,7 @@ void func_95()
 									if (!Local_1050.f_2)
 									{
 										Local_1050.f_2 = 1;
-										SECURITY::_0x8E580AB902917360();
+										SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 										Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
 										Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
 										Local_1913.f_14 = (Local_1913.f_14 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * 2);
@@ -7816,7 +7816,7 @@ void func_95()
 									if (!Local_1050.f_3)
 									{
 										Local_1050.f_3 = 1;
-										SECURITY::_0x8E580AB902917360();
+										SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 										Local_1936.f_3 = (Local_1936.f_3 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 * 2);
 										Local_1913.f_6 = (Local_1913.f_6 + Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 * 2);
 										Local_1936.f_13++;
@@ -7913,7 +7913,7 @@ void func_95()
 							iVar62 = func_9(&(Local_128.f_410[PLAYER::PLAYER_ID() /*5*/].f_1), 0, 0);
 							if (!Local_1050.f_4)
 							{
-								SECURITY::_0x8E580AB902917360();
+								SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 								if (func_96(iVar62) > 0)
 								{
 									Local_1936.f_3 = (Local_1936.f_3 + (Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 * func_96(iVar62)));
@@ -7980,7 +7980,7 @@ void func_95()
 							if (!Local_1050.f_6)
 							{
 								Local_1050.f_6 = 1;
-								SECURITY::_0x8E580AB902917360();
+								SECURITY::_FORCE_CHECK_PROTECTED_VARIABLES_NOW();
 								Local_1936.f_3 = (Local_1936.f_3 + (Local_761[PLAYER::PLAYER_ID() /*9*/].f_5 + (Local_761[PLAYER::PLAYER_ID() /*9*/].f_5 * func_23(iVar62))));
 								Local_1913.f_6 = (Local_1913.f_6 + (Local_761[PLAYER::PLAYER_ID() /*9*/].f_5 + (Local_761[PLAYER::PLAYER_ID() /*9*/].f_5 * func_23(iVar62))));
 								Local_1936.f_13++;
@@ -8036,9 +8036,9 @@ void func_95()
 							Local_761[PLAYER::PLAYER_ID() /*9*/].f_3 = 0;
 							Local_761[PLAYER::PLAYER_ID() /*9*/].f_5 = 0;
 							Local_761[PLAYER::PLAYER_ID() /*9*/].f_4 = 0;
-							SECURITY::_0x340A36A700E99699(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_3));
-							SECURITY::_0x340A36A700E99699(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_5));
-							SECURITY::_0x340A36A700E99699(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_4));
+							SECURITY::_UNREGISTER_PROTECTED_VARIABLE(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_3));
+							SECURITY::_UNREGISTER_PROTECTED_VARIABLE(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_5));
+							SECURITY::_UNREGISTER_PROTECTED_VARIABLE(&(Local_761[PLAYER::PLAYER_ID() /*9*/].f_4));
 						}
 					}
 				}

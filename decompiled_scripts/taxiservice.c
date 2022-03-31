@@ -9632,7 +9632,7 @@ void func_178()
 			iLocal_70 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
 			CAM::ATTACH_CAM_TO_ENTITY(iLocal_70, Global_111946, Local_980, true);
 			func_182();
-			CAM::_0x661B5C8654ADD825(iLocal_70, true);
+			CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_70, true);
 		}
 	}
 	else if (!bLocal_62 || bLocal_61)
@@ -9642,7 +9642,7 @@ void func_178()
 			if (!CAM::IS_CAM_ACTIVE(iLocal_70))
 			{
 				func_181(4, 1, -1);
-				CAM::_0x661B5C8654ADD825(iLocal_70, true);
+				CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_70, true);
 				func_180();
 				CAM::SET_CAM_ACTIVE(iLocal_70, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
@@ -9743,7 +9743,7 @@ void func_182()
 		func_183(Global_111946, &iLocal_70, Local_983);
 		CAM::SET_CAM_FOV(iLocal_70, fLocal_76);
 		CAM::SET_CAM_NEAR_CLIP(iLocal_70, 0.01f);
-		CAM::_0xA2767257A320FC82(iLocal_70, true);
+		CAM::_SET_CAM_SMOOTH_SHADOWS(iLocal_70, true);
 		CAM::_0x469F2ECDEC046337(true);
 	}
 }

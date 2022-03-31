@@ -83468,16 +83468,16 @@ void func_914(int iParam0)
 
 void func_915(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, char[4] cParam13)
 {
-	int* iVar0;
+	var* uVar0;
 	
 	StringCopy(cParam13, "", 16);
-	NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&iVar0, 35, &uParam0);
-	func_916(&iVar0, cParam13);
+	NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&uVar0, 35, &uParam0);
+	func_916(&uVar0, cParam13);
 }
 
-void func_916(int* iParam0, char* sParam1)
+void func_916(var* uParam0, char* sParam1)
 {
-	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
+	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(uParam0, 35, sParam1);
 }
 
 struct<13> func_917()

@@ -40647,7 +40647,7 @@ var func_318(var uParam0)
 	return uParam0;
 }
 
-int func_319(int iParam0, int* iParam1)
+int func_319(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -40656,9 +40656,9 @@ int func_319(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}

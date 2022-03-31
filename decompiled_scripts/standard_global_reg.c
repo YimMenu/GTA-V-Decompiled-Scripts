@@ -57,7 +57,7 @@ void __EntryFunction__()
 	int iVar4;
 	int iVar5;
 	struct<222> Var6;
-	int* iVar483;
+	var* uVar483;
 	
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -238,7 +238,7 @@ void __EntryFunction__()
 	}
 	Var6 = 44;
 	Var6.f_221 = 51;
-	func_110(&Var6, &iVar483);
+	func_110(&Var6, &uVar483);
 	if (Global_1 || !func_109(Global_112915.f_25084, 0f, 0f, 0f, 0))
 	{
 		if (Global_2)
@@ -10211,7 +10211,7 @@ int func_93(int iParam0)
 	return 0;
 }
 
-int func_94(int iParam0, int* iParam1)
+int func_94(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -10220,9 +10220,9 @@ int func_94(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -10512,7 +10512,7 @@ int func_100(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -11266,7 +11266,7 @@ int func_100(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_101(iParam0, &iVar4);
+				iVar1 = func_101(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -11292,7 +11292,7 @@ int func_100(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_101(int iParam0, int* iParam1)
+int func_101(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -11301,9 +11301,9 @@ int func_101(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -11714,7 +11714,7 @@ bool func_109(struct<3> Param0, struct<3> Param3, bool bParam6)
 	return ((Param0.f_0 == Param3.f_0 && Param0.f_1 == Param3.f_1) && Param0.f_2 == Param3.f_2);
 }
 
-void func_110(var uParam0, int* iParam1)
+void func_110(var uParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -11732,13 +11732,13 @@ void func_110(var uParam0, int* iParam1)
 		iVar1 = 0;
 		while (iVar1 < iVar0)
 		{
-			if (((iVar4 < iVar0 && FILES::GET_DLC_WEAPON_DATA(iVar1, iParam1)) && !FILES::IS_CONTENT_ITEM_LOCKED(*iParam1)) && !func_102(iParam1->f_1))
+			if (((iVar4 < iVar0 && FILES::GET_DLC_WEAPON_DATA(iVar1, uParam1)) && !FILES::IS_CONTENT_ITEM_LOCKED(*uParam1)) && !func_102(uParam1->f_1))
 			{
 				iVar5 = 1;
 				iVar3 = 0;
 				while (iVar5 && iVar3 < uParam0->f_221)
 				{
-					if (uParam0->f_221[iVar3 /*5*/] == iParam1->f_1)
+					if (uParam0->f_221[iVar3 /*5*/] == uParam1->f_1)
 					{
 						Global_112915.f_2363.f_539.f_298[iVar2 /*477*/].f_221[iVar4 /*5*/] = { uParam0->f_221[iVar3 /*5*/] };
 						iVar4++;
@@ -11748,8 +11748,8 @@ void func_110(var uParam0, int* iParam1)
 				}
 				if (iVar5 && (MISC::IS_XBOX360_VERSION() || MISC::IS_PS3_VERSION()))
 				{
-					Global_112915.f_2363.f_539.f_298[iVar2 /*477*/].f_221[iVar4 /*5*/].f_1 = iParam1->f_6 * 2;
-					Global_112915.f_2363.f_539.f_298[iVar2 /*477*/].f_221[iVar4 /*5*/] = iParam1->f_1;
+					Global_112915.f_2363.f_539.f_298[iVar2 /*477*/].f_221[iVar4 /*5*/].f_1 = uParam1->f_6 * 2;
+					Global_112915.f_2363.f_539.f_298[iVar2 /*477*/].f_221[iVar4 /*5*/] = uParam1->f_1;
 					Global_112915.f_2363.f_539.f_298[iVar2 /*477*/].f_221[iVar4 /*5*/].f_2 = 0;
 					Global_112915.f_2363.f_539.f_298[iVar2 /*477*/].f_221[iVar4 /*5*/].f_3 = 0;
 					Global_112915.f_2363.f_539.f_298[iVar2 /*477*/].f_221[iVar4 /*5*/].f_4 = 0;

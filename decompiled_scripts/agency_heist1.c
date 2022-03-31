@@ -91578,7 +91578,7 @@ int func_402(int iParam0)
 	return 0;
 }
 
-int func_403(int iParam0, int* iParam1)
+int func_403(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -91587,9 +91587,9 @@ int func_403(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -91879,7 +91879,7 @@ int func_409(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -92633,7 +92633,7 @@ int func_409(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_410(iParam0, &iVar4);
+				iVar1 = func_410(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -92659,7 +92659,7 @@ int func_409(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_410(int iParam0, int* iParam1)
+int func_410(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -92668,9 +92668,9 @@ int func_410(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -111176,7 +111176,7 @@ int func_696(int iParam0, struct<3> Param1)
 					}
 					CAM::SET_CAM_NEAR_CLIP(iLocal_1004, fVar1);
 					CAM::SET_CAM_FOV(iLocal_1004, 3.5f);
-					CAM::_0xA2767257A320FC82(iLocal_1004, true);
+					CAM::_SET_CAM_SMOOTH_SHADOWS(iLocal_1004, true);
 					CAM::POINT_CAM_AT_ENTITY(iLocal_1004, iParam0, Param1, true);
 					CAM::SET_CAM_ACTIVE_WITH_INTERP(iLocal_1004, Local_960.f_0, 1500, 0, 1);
 					fLocal_889 = 3.5f;
@@ -111370,7 +111370,7 @@ void func_703(int iParam0, bool bParam1)
 		CAM::SET_CAM_NEAR_CLIP(*iParam0, fVar0);
 		CAM::SET_CAM_FAR_CLIP(*iParam0, 600f);
 		CAM::SET_CAM_USE_SHALLOW_DOF_MODE(*iParam0, true);
-		CAM::_0xA2767257A320FC82(*iParam0, true);
+		CAM::_SET_CAM_SMOOTH_SHADOWS(*iParam0, true);
 	}
 	CAM::SET_CAM_FOV(*iParam0, 50f);
 	if (bParam1)

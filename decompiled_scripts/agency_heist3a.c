@@ -7343,7 +7343,7 @@ int func_63(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -8097,7 +8097,7 @@ int func_63(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_64(iParam0, &iVar4);
+				iVar1 = func_64(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -8123,7 +8123,7 @@ int func_63(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_64(int iParam0, int* iParam1)
+int func_64(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -8132,9 +8132,9 @@ int func_64(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -97223,7 +97223,7 @@ void func_452(int iParam0, var uParam1, bool bParam2)
 	}
 }
 
-int func_453(int iParam0, int* iParam1)
+int func_453(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -97232,9 +97232,9 @@ int func_453(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -104235,7 +104235,7 @@ void func_545()
 	Local_7296 = { Local_7296 + Var3 - Local_7296 * Vector(0.2f, 0.2f, 0.2f) };
 	CAM::SET_CAM_COORD(iLocal_5063, Local_7293);
 	CAM::SET_CAM_ROT(iLocal_5063, Local_7296, 2);
-	CAM::_0x661B5C8654ADD825(iLocal_5063, true);
+	CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_5063, true);
 }
 
 void func_546()
@@ -104602,7 +104602,7 @@ void func_558(var uParam0, bool bParam1, int iParam2, int iParam3, bool bParam4,
 		CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_4, uParam0->f_3, Var17, true);
 		CAM::POINT_CAM_AT_ENTITY(uParam0->f_4, uParam0->f_3, Vector(0.6f, Var8.f_1, 0f) + uParam0->f_52, true);
 		CAM::SET_CAM_PARAMS(uParam0->f_4, Var14, 0f, 0f, 0f, uParam0->f_51, 0, 1, 1, 2);
-		CAM::_0x661B5C8654ADD825(uParam0->f_4, true);
+		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(uParam0->f_4, true);
 	}
 }
 

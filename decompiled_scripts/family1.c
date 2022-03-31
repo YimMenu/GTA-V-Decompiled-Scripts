@@ -10906,7 +10906,7 @@ int func_182(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -11660,7 +11660,7 @@ int func_182(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_183(iParam0, &iVar4);
+				iVar1 = func_183(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -11686,7 +11686,7 @@ int func_182(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_183(int iParam0, int* iParam1)
+int func_183(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -11695,9 +11695,9 @@ int func_183(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -118044,7 +118044,7 @@ void func_807(int iParam0, var uParam1, bool bParam2)
 	}
 }
 
-int func_808(int iParam0, int* iParam1)
+int func_808(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -118053,9 +118053,9 @@ int func_808(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -121314,7 +121314,7 @@ void func_864()
 			TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_5922, "MISSFAM2MCS_intp1", "FAM_2_INT_P1_MICHAEL", 1000f, -1000f, 0, 0, 1000f, 0);
 			CAM::PLAY_SYNCHRONIZED_CAM_ANIM(iLocal_5923, iLocal_5922, "FAM_2_INT_P1_CAM", "MISSFAM2MCS_intp1");
 			CAM::SET_CAM_ACTIVE(iLocal_5923, true);
-			CAM::_0x661B5C8654ADD825(iLocal_5923, true);
+			CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_5923, true);
 			iLocal_5924 = OBJECT::CREATE_OBJECT(joaat("v_ilev_mm_doorm_l"), -816.72f, 179.1f, 72.83f, true, true, false);
 			iLocal_5925 = OBJECT::CREATE_OBJECT(joaat("v_ilev_mm_doorm_r"), -816.11f, 177.51f, 72.83f, true, true, false);
 			ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(iLocal_5924, iLocal_5922, "FAM_2_INT_P1_doorL", "MISSFAM2MCS_intp1", 1000f, -1000f, 0, 1000f);

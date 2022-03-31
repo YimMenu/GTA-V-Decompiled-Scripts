@@ -6655,7 +6655,7 @@ void func_134()
 		func_84(&Local_73, 0, 1086324736, -1030356992, -1020002304, 1127481344, 1041865114);
 		func_100(&Local_73, 1086324736, -1030356992, -1020002304, 1127481344, 1041865114);
 		func_135(&Local_73, Var0);
-		CAM::_0x661B5C8654ADD825(Local_73.f_32, true);
+		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(Local_73.f_32, true);
 		if ((Global_1581337 != -1 || func_194(iLocal_340)) || Global_1581343 != -1)
 		{
 			return;

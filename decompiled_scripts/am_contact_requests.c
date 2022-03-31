@@ -60002,9 +60002,9 @@ void func_929(int iParam0, char[4] cParam1)
 	}
 }
 
-void func_930(int* iParam0, char* sParam1)
+void func_930(var* uParam0, char* sParam1)
 {
-	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
+	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(uParam0, 35, sParam1);
 }
 
 struct<35> func_931(int iParam0)

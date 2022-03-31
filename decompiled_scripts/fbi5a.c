@@ -97463,7 +97463,7 @@ int func_463(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -98217,7 +98217,7 @@ int func_463(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_464(iParam0, &iVar4);
+				iVar1 = func_464(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;
@@ -98243,7 +98243,7 @@ int func_463(int iParam0, int iParam1)
 	return iVar0;
 }
 
-int func_464(int iParam0, int* iParam1)
+int func_464(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -98252,9 +98252,9 @@ int func_464(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -118149,7 +118149,7 @@ void func_814(int iParam0, var uParam1, bool bParam2)
 	}
 }
 
-int func_815(int iParam0, int* iParam1)
+int func_815(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -118158,9 +118158,9 @@ int func_815(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, iParam1))
+		if (FILES::_GET_DLC_WEAPON_DATA_SP(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -131443,7 +131443,7 @@ void func_975()
 				CAM::SET_CAM_ACTIVE(iLocal_3604, true);
 				CAM::SET_CAM_ACTIVE_WITH_INTERP(iLocal_3605, iLocal_3604, 5000, 3, 1);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
-				CAM::_0x661B5C8654ADD825(iLocal_3605, true);
+				CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_3605, true);
 				RECORDING::_0x48621C9FCA3EBD28(4);
 				iLocal_85 = 1;
 			}
@@ -132960,7 +132960,7 @@ void func_1006()
 		CAM::SET_CAM_ACTIVE(iLocal_3604, true);
 		CAM::SET_CAM_ACTIVE_WITH_INTERP(iLocal_3605, iLocal_3604, 3000, 3, 1);
 		CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
-		CAM::_0x661B5C8654ADD825(iLocal_3605, true);
+		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_3605, true);
 		VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_2571.f_0, 5f);
 		ENTITY::FORCE_ENTITY_AI_AND_ANIMATION_UPDATE(Local_2571.f_0);
 	}

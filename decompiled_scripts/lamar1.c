@@ -53619,11 +53619,11 @@ int func_464(int iParam0, int iParam1)
 	float fVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<6> Var43;
 	int iVar65;
 	int iVar66;
-	int* iVar67;
+	var* uVar67;
 	struct<6> Var106;
 	char* sVar128;
 	struct<4> Var144;
@@ -54328,7 +54328,7 @@ int func_464(int iParam0, int iParam1)
 				break;
 			
 			default:
-				iVar2 = func_502(iParam0, &iVar4);
+				iVar2 = func_502(iParam0, &uVar4);
 				if (iVar2 != -1)
 				{
 					iVar3 = 0;
@@ -56883,7 +56883,7 @@ int func_464(int iParam0, int iParam1)
 				break;
 			
 			default:
-				iVar65 = func_502(iParam0, &iVar67);
+				iVar65 = func_502(iParam0, &uVar67);
 				if (iVar65 != -1)
 				{
 					iVar66 = 0;
@@ -58538,7 +58538,7 @@ char* func_496(int iParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
-	int* iVar2;
+	var* uVar2;
 	struct<7> Var41;
 	
 	if (iParam1 == joaat("weapon_knuckle"))
@@ -59027,7 +59027,7 @@ char* func_496(int iParam0, int iParam1)
 		default:
 			if (iParam1 != 0)
 			{
-				iVar0 = func_502(iParam1, &iVar2);
+				iVar0 = func_502(iParam1, &uVar2);
 				if (iVar0 != -1)
 				{
 					iVar1 = 0;
@@ -59143,7 +59143,7 @@ int func_501(int iParam0)
 	return 0;
 }
 
-int func_502(int iParam0, int* iParam1)
+int func_502(int iParam0, var* uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -59152,9 +59152,9 @@ int func_502(int iParam0, int* iParam1)
 	iVar0 = 0;
 	while (iVar0 < iVar1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(iVar0, iParam1))
+		if (FILES::GET_DLC_WEAPON_DATA(iVar0, uParam1))
 		{
-			if (iParam1->f_1 == iParam0)
+			if (uParam1->f_1 == iParam0)
 			{
 				return iVar0;
 			}
@@ -74152,7 +74152,7 @@ int func_661(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	int* iVar4;
+	var* uVar4;
 	struct<4> Var43;
 	
 	iVar0 = 0;
@@ -74906,7 +74906,7 @@ int func_661(int iParam0, int iParam1)
 		default:
 			if (iParam0 != 0)
 			{
-				iVar1 = func_502(iParam0, &iVar4);
+				iVar1 = func_502(iParam0, &uVar4);
 				if (iVar1 != -1)
 				{
 					iVar2 = 0;

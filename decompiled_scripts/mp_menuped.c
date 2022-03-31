@@ -843,16 +843,16 @@ int func_18(int iParam0, var* uParam1, char* sParam2, int iParam3, char* sParam4
 
 void func_19(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, char[4] cParam13)
 {
-	int* iVar0;
+	var* uVar0;
 	
 	StringCopy(cParam13, "", 16);
-	NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&iVar0, 35, &uParam0);
-	func_20(&iVar0, cParam13);
+	NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&uVar0, 35, &uParam0);
+	func_20(&uVar0, cParam13);
 }
 
-void func_20(int* iParam0, char* sParam1)
+void func_20(var* uParam0, char* sParam1)
 {
-	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(iParam0, 35, sParam1);
+	NETWORK::NETWORK_CLAN_GET_UI_FORMATTED_TAG(uParam0, 35, sParam1);
 }
 
 void func_21(int iParam0)
