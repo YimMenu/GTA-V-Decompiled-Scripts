@@ -38869,7 +38869,7 @@ int func_395(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -38943,7 +38943,7 @@ int func_395(int iParam0, int iParam1)
 					break;
 				
 				case 5:
-					iVar0 = 1657753414;
+					iVar0 = joaat("component_appistol_varmod_security");
 					break;
 			}
 			break;
@@ -38976,7 +38976,7 @@ int func_395(int iParam0, int iParam1)
 					break;
 				
 				case 6:
-					iVar0 = 2012362801;
+					iVar0 = joaat("component_microsmg_varmod_security");
 					break;
 			}
 			break;
@@ -38985,7 +38985,7 @@ int func_395(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -39026,7 +39026,7 @@ int func_395(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -39067,7 +39067,7 @@ int func_395(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -39166,7 +39166,7 @@ int func_395(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -39207,7 +39207,7 @@ int func_395(int iParam0, int iParam1)
 					break;
 				
 				case 3:
-					iVar0 = -242322891;
+					iVar0 = joaat("component_pumpshotgun_varmod_security");
 					break;
 			}
 			break;
@@ -39266,7 +39266,7 @@ int func_395(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:

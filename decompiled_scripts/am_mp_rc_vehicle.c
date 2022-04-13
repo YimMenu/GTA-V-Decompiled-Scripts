@@ -112341,10 +112341,10 @@ void func_1074()
 		if (VEHICLE::GET_VEHICLE_MOD(Local_125.f_25, 45) > -1)
 		{
 			WEAPON::GET_CURRENT_PED_VEHICLE_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar0);
-			if (iVar0 != -354229862)
+			if (iVar0 != joaat("vehicle_weapon_granger2_mg"))
 			{
-				VEHICLE::DISABLE_VEHICLE_WEAPON(false, -354229862, Local_125.f_25, PLAYER::PLAYER_PED_ID());
-				WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(PLAYER::PLAYER_PED_ID(), -354229862);
+				VEHICLE::DISABLE_VEHICLE_WEAPON(false, joaat("vehicle_weapon_granger2_mg"), Local_125.f_25, PLAYER::PLAYER_PED_ID());
+				WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("vehicle_weapon_granger2_mg"));
 			}
 		}
 	}
@@ -112797,8 +112797,8 @@ void func_1092()
 	{
 		if (VEHICLE::GET_VEHICLE_MOD(Local_125.f_25, 45) > -1)
 		{
-			VEHICLE::DISABLE_VEHICLE_WEAPON(false, -354229862, Local_125.f_25, PLAYER::PLAYER_PED_ID());
-			WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(PLAYER::PLAYER_PED_ID(), -354229862);
+			VEHICLE::DISABLE_VEHICLE_WEAPON(false, joaat("vehicle_weapon_granger2_mg"), Local_125.f_25, PLAYER::PLAYER_PED_ID());
+			WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("vehicle_weapon_granger2_mg"));
 		}
 	}
 	switch (Local_125.f_29)

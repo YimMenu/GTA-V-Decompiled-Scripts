@@ -2964,13 +2964,13 @@ void func_122()
 	{
 		if (!iLocal_162 && !STREAMING::IS_IPL_ACTIVE("sf_dlc_fixer_hanger_door"))
 		{
-			ENTITY::CREATE_MODEL_HIDE(-1010.708f, -2980.452f, 25.5042f, 1f, 336991465, true);
+			ENTITY::CREATE_MODEL_HIDE(-1010.708f, -2980.452f, 25.5042f, 1f, joaat("sf_fixer_door_hanger"), true);
 			iLocal_162 = 1;
 		}
 	}
 	else if (iLocal_162)
 	{
-		ENTITY::REMOVE_MODEL_HIDE(-1010.708f, -2980.452f, 25.5042f, 1f, 336991465, false);
+		ENTITY::REMOVE_MODEL_HIDE(-1010.708f, -2980.452f, 25.5042f, 1f, joaat("sf_fixer_door_hanger"), false);
 		iLocal_162 = 0;
 	}
 }

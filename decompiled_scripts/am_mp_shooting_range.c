@@ -101299,14 +101299,14 @@ void func_629()
 
 void func_630(int iParam0)
 {
-	if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(PLAYER::PLAYER_PED_ID(), iParam0, joaat("COMPONENT_AT_SCOPE_NV")))
+	if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(PLAYER::PLAYER_PED_ID(), iParam0, joaat("component_at_scope_nv")))
 	{
-		WEAPON::REMOVE_WEAPON_COMPONENT_FROM_PED(PLAYER::PLAYER_PED_ID(), iParam0, joaat("COMPONENT_AT_SCOPE_NV"));
+		WEAPON::REMOVE_WEAPON_COMPONENT_FROM_PED(PLAYER::PLAYER_PED_ID(), iParam0, joaat("component_at_scope_nv"));
 		iLocal_3097 = 1;
 	}
-	if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(PLAYER::PLAYER_PED_ID(), iParam0, joaat("COMPONENT_AT_SCOPE_THERMAL")))
+	if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(PLAYER::PLAYER_PED_ID(), iParam0, joaat("component_at_scope_thermal")))
 	{
-		WEAPON::REMOVE_WEAPON_COMPONENT_FROM_PED(PLAYER::PLAYER_PED_ID(), iParam0, joaat("COMPONENT_AT_SCOPE_THERMAL"));
+		WEAPON::REMOVE_WEAPON_COMPONENT_FROM_PED(PLAYER::PLAYER_PED_ID(), iParam0, joaat("component_at_scope_thermal"));
 		iLocal_3098 = 1;
 	}
 }
@@ -101333,30 +101333,30 @@ int func_632(int iParam0)
 {
 	switch (iParam0)
 	{
-		case joaat("COMPONENT_ASSAULTRIFLE_MK2_CLIP_ARMORPIERCING"):
-		case joaat("COMPONENT_ASSAULTRIFLE_MK2_CLIP_FMJ"):
-		case joaat("COMPONENT_ASSAULTRIFLE_MK2_CLIP_INCENDIARY"):
-		case joaat("COMPONENT_ASSAULTRIFLE_MK2_CLIP_TRACER"):
-		case joaat("COMPONENT_CARBINERIFLE_MK2_CLIP_ARMORPIERCING"):
-		case joaat("COMPONENT_CARBINERIFLE_MK2_CLIP_FMJ"):
-		case joaat("COMPONENT_CARBINERIFLE_MK2_CLIP_INCENDIARY"):
-		case joaat("COMPONENT_CARBINERIFLE_MK2_CLIP_TRACER"):
-		case joaat("COMPONENT_COMBATMG_MK2_CLIP_ARMORPIERCING"):
-		case joaat("COMPONENT_COMBATMG_MK2_CLIP_FMJ"):
-		case joaat("COMPONENT_COMBATMG_MK2_CLIP_INCENDIARY"):
-		case joaat("COMPONENT_COMBATMG_MK2_CLIP_TRACER"):
-		case joaat("COMPONENT_HEAVYSNIPER_MK2_CLIP_ARMORPIERCING"):
-		case joaat("COMPONENT_HEAVYSNIPER_MK2_CLIP_EXPLOSIVE"):
-		case joaat("COMPONENT_HEAVYSNIPER_MK2_CLIP_FMJ"):
-		case joaat("COMPONENT_HEAVYSNIPER_MK2_CLIP_INCENDIARY"):
-		case joaat("COMPONENT_PISTOL_MK2_CLIP_FMJ"):
-		case joaat("COMPONENT_PISTOL_MK2_CLIP_HOLLOWPOINT"):
-		case joaat("COMPONENT_PISTOL_MK2_CLIP_INCENDIARY"):
-		case joaat("COMPONENT_PISTOL_MK2_CLIP_TRACER"):
-		case joaat("COMPONENT_SMG_MK2_CLIP_FMJ"):
-		case joaat("COMPONENT_SMG_MK2_CLIP_HOLLOWPOINT"):
-		case joaat("COMPONENT_SMG_MK2_CLIP_INCENDIARY"):
-		case joaat("COMPONENT_SMG_MK2_CLIP_TRACER"):
+		case joaat("component_assaultrifle_mk2_clip_armorpiercing"):
+		case joaat("component_assaultrifle_mk2_clip_fmj"):
+		case joaat("component_assaultrifle_mk2_clip_incendiary"):
+		case joaat("component_assaultrifle_mk2_clip_tracer"):
+		case joaat("component_carbinerifle_mk2_clip_armorpiercing"):
+		case joaat("component_carbinerifle_mk2_clip_fmj"):
+		case joaat("component_carbinerifle_mk2_clip_incendiary"):
+		case joaat("component_carbinerifle_mk2_clip_tracer"):
+		case joaat("component_combatmg_mk2_clip_armorpiercing"):
+		case joaat("component_combatmg_mk2_clip_fmj"):
+		case joaat("component_combatmg_mk2_clip_incendiary"):
+		case joaat("component_combatmg_mk2_clip_tracer"):
+		case joaat("component_heavysniper_mk2_clip_armorpiercing"):
+		case joaat("component_heavysniper_mk2_clip_explosive"):
+		case joaat("component_heavysniper_mk2_clip_fmj"):
+		case joaat("component_heavysniper_mk2_clip_incendiary"):
+		case joaat("component_pistol_mk2_clip_fmj"):
+		case joaat("component_pistol_mk2_clip_hollowpoint"):
+		case joaat("component_pistol_mk2_clip_incendiary"):
+		case joaat("component_pistol_mk2_clip_tracer"):
+		case joaat("component_smg_mk2_clip_fmj"):
+		case joaat("component_smg_mk2_clip_hollowpoint"):
+		case joaat("component_smg_mk2_clip_incendiary"):
+		case joaat("component_smg_mk2_clip_tracer"):
 			return 1;
 			break;
 	}
@@ -101379,7 +101379,7 @@ int func_633(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -101453,7 +101453,7 @@ int func_633(int iParam0, int iParam1)
 					break;
 				
 				case 5:
-					iVar0 = 1657753414;
+					iVar0 = joaat("component_appistol_varmod_security");
 					break;
 			}
 			break;
@@ -101486,7 +101486,7 @@ int func_633(int iParam0, int iParam1)
 					break;
 				
 				case 6:
-					iVar0 = 2012362801;
+					iVar0 = joaat("component_microsmg_varmod_security");
 					break;
 			}
 			break;
@@ -101495,7 +101495,7 @@ int func_633(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -101536,7 +101536,7 @@ int func_633(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -101577,7 +101577,7 @@ int func_633(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -101676,7 +101676,7 @@ int func_633(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -101717,7 +101717,7 @@ int func_633(int iParam0, int iParam1)
 					break;
 				
 				case 3:
-					iVar0 = -242322891;
+					iVar0 = joaat("component_pumpshotgun_varmod_security");
 					break;
 			}
 			break;
@@ -101776,7 +101776,7 @@ int func_633(int iParam0, int iParam1)
 			switch (iParam1)
 			{
 				case 0:
-					iVar0 = 1623028892;
+					iVar0 = joaat("component_gunrun_mk2_upgrade");
 					break;
 				
 				case 1:
@@ -111000,11 +111000,11 @@ void func_878(bool bParam0, bool bParam1)
 				}
 				if (iLocal_3097)
 				{
-					WEAPON::GIVE_WEAPON_COMPONENT_TO_PED(PLAYER::PLAYER_PED_ID(), iVar1, joaat("COMPONENT_AT_SCOPE_NV"));
+					WEAPON::GIVE_WEAPON_COMPONENT_TO_PED(PLAYER::PLAYER_PED_ID(), iVar1, joaat("component_at_scope_nv"));
 				}
 				if (iLocal_3098)
 				{
-					WEAPON::GIVE_WEAPON_COMPONENT_TO_PED(PLAYER::PLAYER_PED_ID(), iVar1, joaat("COMPONENT_AT_SCOPE_THERMAL"));
+					WEAPON::GIVE_WEAPON_COMPONENT_TO_PED(PLAYER::PLAYER_PED_ID(), iVar1, joaat("component_at_scope_thermal"));
 				}
 			}
 			MISC::CLEAR_BIT(&iLocal_1728, 0);
