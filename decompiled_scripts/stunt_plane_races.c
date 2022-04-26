@@ -21745,7 +21745,7 @@ char* func_496(int iParam0, bool bParam1)
 			}
 			break;
 		
-		case joaat("VEHICLE_WEAPON_TURRET_DINGHY5_50CAL"):
+		case joaat("vehicle_weapon_turret_dinghy5_50cal"):
 			if (bParam1)
 			{
 				return "WTU_VEH_DINGHY_50C";

@@ -27027,23 +27027,23 @@ void func_371(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam7)
 			{
 				case 0:
-					func_372(&iParam0, -1695500020);
+					func_372(&iParam0, joaat("vehicle_weapon_bomb"));
 					break;
 				
 				case 1:
-					func_372(&iParam0, 1794615063);
+					func_372(&iParam0, joaat("vehicle_weapon_bomb_incendiary"));
 					break;
 				
 				case 2:
-					func_372(&iParam0, 1430300958);
+					func_372(&iParam0, joaat("vehicle_weapon_bomb_gas"));
 					break;
 				
 				case 3:
-					func_372(&iParam0, 220773539);
+					func_372(&iParam0, joaat("vehicle_weapon_bomb_cluster"));
 					break;
 				
 				case 4:
-					func_372(&iParam0, -1695500020);
+					func_372(&iParam0, joaat("vehicle_weapon_bomb"));
 					if (iParam12 > 0)
 					{
 						VEHICLE::_SET_VEHICLE_BOMB_COUNT(iParam0, iParam12);
@@ -27128,19 +27128,19 @@ void func_372(int iParam0, int iParam1)
 			VEHICLE::SET_VEHICLE_MOD_KIT(*iParam0, 0);
 			switch (iParam1)
 			{
-				case -1695500020:
+				case joaat("vehicle_weapon_bomb"):
 					VEHICLE::SET_VEHICLE_MOD(*iParam0, 9, 0, false);
 					break;
 				
-				case 1794615063:
+				case joaat("vehicle_weapon_bomb_incendiary"):
 					VEHICLE::SET_VEHICLE_MOD(*iParam0, 9, 1, false);
 					break;
 				
-				case 1430300958:
+				case joaat("vehicle_weapon_bomb_gas"):
 					VEHICLE::SET_VEHICLE_MOD(*iParam0, 9, 2, false);
 					break;
 				
-				case 220773539:
+				case joaat("vehicle_weapon_bomb_cluster"):
 					VEHICLE::SET_VEHICLE_MOD(*iParam0, 9, 3, false);
 					break;
 				
