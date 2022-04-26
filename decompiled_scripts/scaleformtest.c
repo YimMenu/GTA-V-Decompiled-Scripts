@@ -353,12 +353,12 @@ void func_9(bool bParam0, bool bParam1)
 
 bool func_10()
 {
-	return MISC::IS_BIT_SET(Global_1958920, 5);
+	return BitTest(Global_1958928, 5);
 }
 
 bool func_11()
 {
-	return MISC::IS_BIT_SET(Global_1958920, 19);
+	return BitTest(Global_1958928, 19);
 }
 
 int func_12(int iParam0)
@@ -367,7 +367,7 @@ int func_12(int iParam0)
 	{
 		if (Global_19954.f_1 > 3)
 		{
-			if (MISC::IS_BIT_SET(Global_7824, 14))
+			if (BitTest(Global_7824, 14))
 			{
 				return 1;
 			}

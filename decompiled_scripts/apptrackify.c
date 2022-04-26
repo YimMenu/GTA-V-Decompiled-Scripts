@@ -274,7 +274,7 @@ void func_10()
 				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_19935, "SET_DATA_SLOT");
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(23);
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-				if (MISC::IS_BIT_SET(Global_7825, 30))
+				if (BitTest(Global_7825, 30))
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(-99);
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
@@ -285,7 +285,7 @@ void func_10()
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(fLocal_28));
 				}
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(100);
-				if (MISC::IS_BIT_SET(Global_7825, 22))
+				if (BitTest(Global_7825, 22))
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 				}
@@ -293,7 +293,7 @@ void func_10()
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 				}
-				if (MISC::IS_BIT_SET(Global_7825, 29))
+				if (BitTest(Global_7825, 29))
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(false);
 				}
@@ -301,7 +301,7 @@ void func_10()
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(true);
 				}
-				if (MISC::IS_BIT_SET(Global_7826, 1))
+				if (BitTest(Global_7826, 1))
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_30);
 				}
@@ -341,28 +341,28 @@ void func_10()
 				switch (iVar0)
 				{
 					case 0:
-						if (MISC::IS_BIT_SET(Global_4535327, 5))
+						if (BitTest(Global_4535327, 5))
 						{
 							bVar1 = true;
 						}
 						break;
 					
 					case 1:
-						if (MISC::IS_BIT_SET(Global_4535327, 6))
+						if (BitTest(Global_4535327, 6))
 						{
 							bVar1 = true;
 						}
 						break;
 					
 					case 2:
-						if (MISC::IS_BIT_SET(Global_4535327, 7))
+						if (BitTest(Global_4535327, 7))
 						{
 							bVar1 = true;
 						}
 						break;
 					
 					case 3:
-						if (MISC::IS_BIT_SET(Global_4535327, 8))
+						if (BitTest(Global_4535327, 8))
 						{
 							bVar1 = true;
 						}
@@ -379,7 +379,7 @@ void func_10()
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(fLocal_28));
 				}
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(100);
-				if (MISC::IS_BIT_SET(Global_7825, 22))
+				if (BitTest(Global_7825, 22))
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(true);
 				}
@@ -387,7 +387,7 @@ void func_10()
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(true);
 				}
-				if (MISC::IS_BIT_SET(Global_7825, 29))
+				if (BitTest(Global_7825, 29))
 				{
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(false);
 				}
@@ -483,7 +483,7 @@ float func_17()
 
 int func_18()
 {
-	if (Global_77852 == 1)
+	if (Global_77858 == 1)
 	{
 		return 1;
 	}

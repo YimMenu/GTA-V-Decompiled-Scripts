@@ -974,16 +974,16 @@ int func_3(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 
 int func_4()
 {
-	if (Global_2726647 == -15)
+	if (Global_2726661 == -15)
 	{
-		Global_2726647 = func_23();
-		func_15(&Global_2726647, 0, 0, 0, 1, 0, 0);
+		Global_2726661 = func_23();
+		func_15(&Global_2726661, 0, 0, 0, 1, 0, 0);
 		return 1;
 	}
-	if (func_5(func_23(), Global_2726647))
+	if (func_5(func_23(), Global_2726661))
 	{
-		Global_2726647 = func_23();
-		func_15(&Global_2726647, 0, 0, 0, 1, 0, 0);
+		Global_2726661 = func_23();
+		func_15(&Global_2726661, 0, 0, 0, 1, 0, 0);
 		return 1;
 	}
 	return 0;
@@ -1084,7 +1084,7 @@ int func_10(int iParam0)
 
 var func_11(int iParam0)
 {
-	return (SYSTEM::SHIFT_RIGHT(iParam0, 26) & 31 * func_12(MISC::IS_BIT_SET(iParam0, 31), -1, 1)) + 2011;
+	return (SYSTEM::SHIFT_RIGHT(iParam0, 26) & 31 * func_12(BitTest(iParam0, 31), -1, 1)) + 2011;
 }
 
 int func_12(bool bParam0, int iParam1, int iParam2)

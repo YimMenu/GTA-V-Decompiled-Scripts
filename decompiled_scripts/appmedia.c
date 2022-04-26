@@ -55,7 +55,7 @@ void __EntryFunction__()
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
-	func_27();
+	func_28();
 	func_26();
 	while (true)
 	{
@@ -81,7 +81,7 @@ void __EntryFunction__()
 							Global_19932 = 1;
 							if (Global_19954.f_1 > 3)
 							{
-								if (MISC::IS_BIT_SET(Global_7825, 15))
+								if (BitTest(Global_7825, 15))
 								{
 								}
 								func_13();
@@ -365,7 +365,7 @@ void func_9()
 		}
 		MOBILE::SET_MOBILE_PHONE_ROTATION(Local_207, 0);
 	}
-	if (MISC::IS_BIT_SET(Global_7825, 15))
+	if (BitTest(Global_7825, 15))
 	{
 		iLocal_210 = 0;
 		iLocal_211 = 0;
@@ -520,7 +520,7 @@ int func_19()
 	int iVar1;
 	int iVar2;
 	
-	if (Global_77852)
+	if (Global_77858)
 	{
 		return 0;
 	}
@@ -644,7 +644,7 @@ void func_25()
 
 void func_26()
 {
-	if ((MISC::IS_XBOX360_VERSION() || MISC::IS_DURANGO_VERSION()) || MISC::IS_PC_VERSION())
+	if ((MISC::IS_XBOX360_VERSION() || func_27()) || MISC::IS_PC_VERSION())
 	{
 		GRAPHICS::_0x4AF92ACD3141D96C();
 		if (GRAPHICS::_0x2A893980E96B659A(0))
@@ -664,7 +664,12 @@ void func_26()
 	}
 }
 
-void func_27()
+bool func_27()
+{
+	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+}
+
+void func_28()
 {
 	StringCopy(&(Local_52[0 /*6*/]), "CELL_MSSLOT_1", 24);
 	StringCopy(&(Local_52[1 /*6*/]), "CELL_MSSLOT_2", 24);

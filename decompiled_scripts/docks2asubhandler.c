@@ -1,7 +1,7 @@
 #region Local Var
 	int iLocal_0 = 0;
 	int iLocal_1 = 0;
-	int iLocal_2 = 0;
+	var uLocal_2 = 0;
 	struct<2> ScriptParam_0 = { 0, 0 } ;
 #endregion
 
@@ -15,9 +15,9 @@ void __EntryFunction__()
 	}
 	iLocal_0 = ScriptParam_0.f_0;
 	iLocal_1 = ScriptParam_0.f_1;
-	while (!MISC::IS_BIT_SET(iLocal_2, 1))
+	while (!BitTest(uLocal_2, 1))
 	{
-		if (!MISC::IS_BIT_SET(iLocal_2, 0))
+		if (!BitTest(uLocal_2, 0))
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_0))
 			{
@@ -32,7 +32,7 @@ void __EntryFunction__()
 						ENTITY::FREEZE_ENTITY_POSITION(iLocal_1, true);
 						ENTITY::SET_ENTITY_PROOFS(iLocal_1, true, true, true, true, true, false, false, false);
 					}
-					MISC::SET_BIT(&iLocal_2, 0);
+					MISC::SET_BIT(&uLocal_2, 0);
 				}
 			}
 		}
@@ -43,16 +43,16 @@ void __EntryFunction__()
 				fVar0 = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(iLocal_0, true));
 				if (fVar0 > 90000f)
 				{
-					MISC::SET_BIT(&iLocal_2, 1);
+					MISC::SET_BIT(&uLocal_2, 1);
 				}
 				else if (fVar0 > 40000f && !ENTITY::IS_ENTITY_ON_SCREEN(iLocal_0))
 				{
-					MISC::SET_BIT(&iLocal_2, 1);
+					MISC::SET_BIT(&uLocal_2, 1);
 				}
 			}
 			else
 			{
-				MISC::SET_BIT(&iLocal_2, 1);
+				MISC::SET_BIT(&uLocal_2, 1);
 			}
 		}
 		SYSTEM::WAIT(0);

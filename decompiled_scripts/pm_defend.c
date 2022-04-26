@@ -524,7 +524,7 @@ int func_11(int iParam0, var uParam1, int iParam2, int iParam3, bool bParam4, bo
 				HUD::SET_BLIP_PRIORITY(*uParam1, 7);
 			}
 		}
-		if (!MISC::IS_BIT_SET(uParam1->f_6, 2))
+		if (!BitTest(uParam1->f_6, 2))
 		{
 			if (HUD::DOES_BLIP_EXIST(*uParam1))
 			{
@@ -534,7 +534,7 @@ int func_11(int iParam0, var uParam1, int iParam2, int iParam3, bool bParam4, bo
 		if (PED::IS_PED_IN_ANY_VEHICLE(iParam0, false))
 		{
 			uParam1->f_1 = HUD::_GET_AI_BLIP(iParam0);
-			if (!MISC::IS_BIT_SET(uParam1->f_6, 3))
+			if (!BitTest(uParam1->f_6, 3))
 			{
 				if (HUD::DOES_BLIP_EXIST(uParam1->f_1))
 				{
@@ -1204,7 +1204,7 @@ void func_33(var uParam0)
 
 int func_34()
 {
-	return func_35(Global_111625.f_20, Global_111625.f_29);
+	return func_35(Global_111632.f_20, Global_111632.f_29);
 }
 
 int func_35(int iParam0, int iParam1)
@@ -1229,7 +1229,7 @@ int func_35(int iParam0, int iParam1)
 
 int func_36()
 {
-	return Global_111625.f_20;
+	return Global_111632.f_20;
 }
 
 void func_37(var uParam0)
@@ -1318,6 +1318,6 @@ void func_40(struct<61> Param0, var uParam61, var uParam62, var uParam63, var uP
 
 void func_41(int iParam0)
 {
-	Global_111625.f_22 = iParam0;
+	Global_111632.f_22 = iParam0;
 }
 

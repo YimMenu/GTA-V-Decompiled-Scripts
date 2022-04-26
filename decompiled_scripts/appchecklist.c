@@ -393,28 +393,28 @@ void func_11()
 	switch (iLocal_117)
 	{
 		case 0:
-			iLocal_126 = Global_112634;
-			iLocal_127 = Global_112651;
+			iLocal_126 = Global_112641;
+			iLocal_127 = Global_112658;
 			break;
 		
 		case 1:
-			iLocal_126 = (Global_112635 + Global_112636);
-			iLocal_127 = (Global_112652 + Global_112653);
+			iLocal_126 = (Global_112642 + Global_112643);
+			iLocal_127 = (Global_112659 + Global_112660);
 			break;
 		
 		case 2:
-			iLocal_126 = Global_112637;
-			iLocal_127 = Global_112654;
+			iLocal_126 = Global_112644;
+			iLocal_127 = Global_112661;
 			break;
 		
 		case 3:
-			iLocal_126 = Global_112638;
-			iLocal_127 = Global_112655;
+			iLocal_126 = Global_112645;
+			iLocal_127 = Global_112662;
 			break;
 		
 		case 4:
-			iLocal_126 = (Global_112639 + Global_112640);
-			iLocal_127 = (Global_112656 + Global_112657);
+			iLocal_126 = (Global_112646 + Global_112647);
+			iLocal_127 = (Global_112663 + Global_112664);
 			break;
 		
 		default:
@@ -447,7 +447,7 @@ int func_14()
 	int iVar1;
 	int iVar2;
 	
-	if (Global_77852)
+	if (Global_77858)
 	{
 		return 0;
 	}
@@ -512,9 +512,9 @@ void func_16()
 	}
 	else
 	{
-		while (iVar0 < Global_94975)
+		while (iVar0 < Global_94981)
 		{
-			func_7(Global_19935, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(iVar0), SYSTEM::TO_FLOAT(0), -1f, -1f, &(Global_94766[iVar0 /*4*/]), 0, 0, 0, 0);
+			func_7(Global_19935, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(iVar0), SYSTEM::TO_FLOAT(0), -1f, -1f, &(Global_94772[iVar0 /*4*/]), 0, 0, 0, 0);
 			iLocal_115++;
 			iLocal_20[iVar0] = iVar0;
 			iVar0++;
@@ -525,7 +525,7 @@ void func_16()
 	}
 	func_33(Global_19935, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
 	func_5(Global_19935, "SET_HEADER", "CELL_3301", 0, 0, 0, 0);
-	if (func_17(0) || Global_94975 == 0)
+	if (func_17(0) || Global_94981 == 0)
 	{
 		func_7(Global_19935, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 		MISC::CLEAR_BIT(&Global_7824, 17);
@@ -557,7 +557,7 @@ void func_16()
 
 int func_17(int iParam0)
 {
-	if (Global_42596 == 15)
+	if (Global_42602 == 15)
 	{
 		return 0;
 	}
@@ -570,7 +570,7 @@ int func_17(int iParam0)
 
 bool func_18(int iParam0)
 {
-	return func_19(iParam0, Global_42596);
+	return func_19(iParam0, Global_42602);
 }
 
 int func_19(int iParam0, int iParam1)
@@ -718,67 +718,67 @@ int func_19(int iParam0, int iParam1)
 
 void func_20()
 {
-	int iVar0;
+	bool bVar0;
 	int iVar1;
 	
-	Global_94975 = 0;
-	iVar0 = 0;
-	while (iVar0 < 7)
+	Global_94981 = 0;
+	bVar0 = false;
+	while (bVar0 < 7)
 	{
-		if (Global_90726[iVar0 /*5*/] != -1)
+		if (Global_90732[bVar0 /*5*/] != -1)
 		{
-			if (Global_94975 < 52)
+			if (Global_94981 < 52)
 			{
-				iVar1 = Global_78121.f_109[Global_90726[iVar0 /*5*/] /*4*/];
-				MemCopy(&(Global_94766[Global_94975 /*4*/]), {func_24(iVar1)}, 4);
-				Global_94975++;
+				iVar1 = Global_78127.f_109[Global_90732[bVar0 /*5*/] /*4*/];
+				MemCopy(&(Global_94772[Global_94981 /*4*/]), {func_24(iVar1)}, 4);
+				Global_94981++;
 			}
 			else
 			{
 				return;
 			}
 		}
-		iVar0++;
+		bVar0++;
 	}
-	iVar0 = 0;
-	while (iVar0 < 63)
+	bVar0 = false;
+	while (bVar0 < 63)
 	{
-		if ((MISC::IS_BIT_SET(Global_112915.f_18574[iVar0 /*6*/], 0) && MISC::IS_BIT_SET(Global_112915.f_18574[iVar0 /*6*/], 1)) && !MISC::IS_BIT_SET(Global_112915.f_18574[iVar0 /*6*/], 3))
+		if ((BitTest(Global_112922.f_18574[bVar0 /*6*/], 0) && BitTest(Global_112922.f_18574[bVar0 /*6*/], 1)) && !BitTest(Global_112922.f_18574[bVar0 /*6*/], 3))
 		{
-			if (Global_94975 < 52)
+			if (Global_94981 < 52)
 			{
-				MemCopy(&(Global_94766[Global_94975 /*4*/]), {func_22(iVar0)}, 4);
-				Global_94975++;
+				MemCopy(&(Global_94772[Global_94981 /*4*/]), {func_22(bVar0)}, 4);
+				Global_94981++;
 			}
 			else
 			{
 				return;
 			}
 		}
-		iVar0++;
+		bVar0++;
 	}
-	iVar0 = 0;
-	while (iVar0 < 20)
+	bVar0 = false;
+	while (bVar0 < 20)
 	{
-		if (MISC::IS_BIT_SET(Global_112915.f_9085.f_99.f_219[0], iVar0))
+		if (BitTest(Global_112922.f_9085.f_99.f_219[0], bVar0))
 		{
-			if (Global_94975 < 52)
+			if (Global_94981 < 52)
 			{
-				StringCopy(&(Global_94766[Global_94975 /*4*/]), func_21(iVar0), 16);
-				Global_94975++;
+				StringCopy(&(Global_94772[Global_94981 /*4*/]), func_21(bVar0), 16);
+				Global_94981++;
 			}
 			else
 			{
 				return;
 			}
 		}
-		iVar0++;
+		bVar0++;
 	}
 }
 
-char* func_21(int iParam0)
+char* func_21(bool bParam0)
 {
-	switch (iParam0)
+	switch (bParam0)
 	{
 		case 0:
 			return "MG_BJUM";
@@ -1151,10 +1151,10 @@ struct<2> func_24(int iParam0)
 	struct<2> Var0;
 	
 	StringCopy(&Var0, "M_", 8);
-	StringConCat(&Var0, &(Global_90762[iParam0 /*34*/].f_8), 8);
+	StringConCat(&Var0, &(Global_90768[iParam0 /*34*/].f_8), 8);
 	if (iParam0 == 90)
 	{
-		switch (Global_112915.f_9085.f_99.f_205[7])
+		switch (Global_112922.f_9085.f_99.f_205[7])
 		{
 			case 1:
 				StringConCat(&Var0, "A", 8);
@@ -1296,11 +1296,11 @@ void func_30()
 
 void func_31()
 {
-	func_32(0, "CELL_3001", 1, Global_112651);
-	func_32(1, "CELL_3008", 3, Global_112651);
-	func_32(2, "CELL_3004", 7, Global_112654);
-	func_32(3, "CELL_3005", 9, Global_112655);
-	func_32(4, "CELL_3007", 11, Global_112656);
+	func_32(0, "CELL_3001", 1, Global_112658);
+	func_32(1, "CELL_3008", 3, Global_112658);
+	func_32(2, "CELL_3004", 7, Global_112661);
+	func_32(3, "CELL_3005", 9, Global_112662);
+	func_32(4, "CELL_3007", 11, Global_112663);
 }
 
 void func_32(int iParam0, char* sParam1, int iParam2, var uParam3)

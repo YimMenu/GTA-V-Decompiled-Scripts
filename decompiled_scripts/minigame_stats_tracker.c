@@ -191,15 +191,15 @@ void __EntryFunction__()
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				func_12(1);
 				func_9(&iLocal_47);
-				if (!func_8(Global_112915.f_19097, 4096))
+				if (!func_8(Global_112922.f_19097, 4096))
 				{
-					func_6(&(Global_112915.f_19097), 4096);
+					func_6(&(Global_112922.f_19097), 4096);
 				}
 				iLocal_45 = 3;
 				break;
 			
 			case 3:
-				if (((func_2(&iLocal_47) > ScriptParam_0.f_67 && ScriptParam_0.f_67 != -1f) || CAM::IS_SCREEN_FADED_OUT()) || Global_31650)
+				if (((func_2(&iLocal_47) > ScriptParam_0.f_67 && ScriptParam_0.f_67 != -1f) || CAM::IS_SCREEN_FADED_OUT()) || Global_31656)
 				{
 					func_19();
 				}
@@ -221,8 +221,8 @@ void __EntryFunction__()
 
 void func_1(int iParam0)
 {
-	Global_78112 = iParam0;
-	Global_78113 = iParam0;
+	Global_78118 = iParam0;
+	Global_78119 = iParam0;
 }
 
 float func_2(int* iParam0)
@@ -235,7 +235,7 @@ float func_2(int* iParam0)
 		}
 		else
 		{
-			return (func_3(MISC::IS_BIT_SET(*iParam0, 4)) - iParam0->f_1);
+			return (func_3(BitTest(*iParam0, 4)) - iParam0->f_1);
 		}
 	}
 	return iParam0->f_1;
@@ -267,12 +267,12 @@ float func_3(bool bParam0)
 
 bool func_4(var uParam0)
 {
-	return MISC::IS_BIT_SET(*uParam0, 2);
+	return BitTest(*uParam0, 2);
 }
 
 bool func_5(var uParam0)
 {
-	return MISC::IS_BIT_SET(*uParam0, 1);
+	return BitTest(*uParam0, 1);
 }
 
 void func_6(var uParam0, int iParam1)
@@ -305,7 +305,7 @@ void func_10(int* iParam0)
 
 void func_11(int* iParam0, float fParam1)
 {
-	iParam0->f_1 = (func_3(MISC::IS_BIT_SET(*iParam0, 4)) - fParam1);
+	iParam0->f_1 = (func_3(BitTest(*iParam0, 4)) - fParam1);
 	MISC::SET_BIT(iParam0, 1);
 	MISC::CLEAR_BIT(iParam0, 2);
 	iParam0->f_2 = 0f;
@@ -396,7 +396,7 @@ int func_15(int iParam0)
 	{
 		if (Global_19954.f_1 > 3)
 		{
-			if (MISC::IS_BIT_SET(Global_7824, 14))
+			if (BitTest(Global_7824, 14))
 			{
 				return 1;
 			}
@@ -423,12 +423,12 @@ int func_15(int iParam0)
 
 bool func_16()
 {
-	return MISC::IS_BIT_SET(Global_1958920, 5);
+	return BitTest(Global_1958928, 5);
 }
 
 bool func_17()
 {
-	return MISC::IS_BIT_SET(Global_1958920, 19);
+	return BitTest(Global_1958928, 19);
 }
 
 void func_18(char* sParam0)
@@ -440,7 +440,7 @@ void func_18(char* sParam0)
 void func_19()
 {
 	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_46);
-	Global_31650 = 0;
+	Global_31656 = 0;
 	func_1(0);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }

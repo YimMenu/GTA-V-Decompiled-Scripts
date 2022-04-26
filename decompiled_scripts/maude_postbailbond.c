@@ -503,19 +503,19 @@ void func_20()
 
 char* func_21()
 {
-	if (MISC::IS_BIT_SET(Global_112915.f_24986, 3))
+	if (BitTest(Global_112922.f_24986, 3))
 	{
 		return "BB4_loiter";
 	}
-	else if (MISC::IS_BIT_SET(Global_112915.f_24986, 2))
+	else if (BitTest(Global_112922.f_24986, 2))
 	{
 		return "BB3_loiter";
 	}
-	else if (MISC::IS_BIT_SET(Global_112915.f_24986, 1))
+	else if (BitTest(Global_112922.f_24986, 1))
 	{
 		return "BB2_loiter";
 	}
-	else if (MISC::IS_BIT_SET(Global_112915.f_24986, 0))
+	else if (BitTest(Global_112922.f_24986, 0))
 	{
 		return "BB1_loiter";
 	}
@@ -1170,19 +1170,19 @@ void func_45(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 
 char* func_46()
 {
-	if (MISC::IS_BIT_SET(Global_112915.f_24986, 3))
+	if (BitTest(Global_112922.f_24986, 3))
 	{
 		return "BB4AUD";
 	}
-	else if (MISC::IS_BIT_SET(Global_112915.f_24986, 2))
+	else if (BitTest(Global_112922.f_24986, 2))
 	{
 		return "BB3AUD";
 	}
-	else if (MISC::IS_BIT_SET(Global_112915.f_24986, 1))
+	else if (BitTest(Global_112922.f_24986, 1))
 	{
 		return "BB2AUD";
 	}
-	else if (MISC::IS_BIT_SET(Global_112915.f_24986, 0))
+	else if (BitTest(Global_112922.f_24986, 0))
 	{
 		return "BB1AUD";
 	}
@@ -1199,7 +1199,7 @@ void func_47(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	(uParam0[iParam1 /*10*/])->f_7 = 1;
 	(uParam0[iParam1 /*10*/])->f_8 = iParam4;
 	(uParam0[iParam1 /*10*/])->f_9 = iParam5;
-	if (!Global_77852)
+	if (!Global_77858)
 	{
 		if (!PED::IS_PED_INJURED(iParam2))
 		{
@@ -1253,19 +1253,19 @@ void func_48(bool bParam0, var uParam1)
 
 int func_49()
 {
-	if (MISC::IS_BIT_SET(Global_112915.f_24986, 3))
+	if (BitTest(Global_112922.f_24986, 3))
 	{
 		return 4;
 	}
-	else if (MISC::IS_BIT_SET(Global_112915.f_24986, 2))
+	else if (BitTest(Global_112922.f_24986, 2))
 	{
 		return 4;
 	}
-	else if (MISC::IS_BIT_SET(Global_112915.f_24986, 1))
+	else if (BitTest(Global_112922.f_24986, 1))
 	{
 		return 4;
 	}
-	else if (MISC::IS_BIT_SET(Global_112915.f_24986, 0))
+	else if (BitTest(Global_112922.f_24986, 0))
 	{
 		return 3;
 	}

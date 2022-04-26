@@ -128,17 +128,17 @@ void func_3()
 	{
 		if (func_16())
 		{
-			if (Global_2725163)
+			if (Global_2725172)
 			{
 				NETWORK::NETWORK_OVERRIDE_SEND_RESTRICTIONS_ALL(false);
 				func_10(-873921503, func_11(1, 1));
-				Global_2725163 = 0;
+				Global_2725172 = 0;
 			}
 			else
 			{
 				NETWORK::NETWORK_OVERRIDE_SEND_RESTRICTIONS_ALL(true);
 				func_10(-480053738, func_11(1, 1));
-				Global_2725163 = 1;
+				Global_2725172 = 1;
 			}
 			func_4(0);
 			return;
@@ -231,7 +231,7 @@ int func_7(int iParam0)
 	{
 		if (Global_19954.f_1 > 3)
 		{
-			if (MISC::IS_BIT_SET(Global_7824, 14))
+			if (BitTest(Global_7824, 14))
 			{
 				return 1;
 			}
@@ -258,12 +258,12 @@ int func_7(int iParam0)
 
 bool func_8()
 {
-	return MISC::IS_BIT_SET(Global_1958920, 5);
+	return BitTest(Global_1958928, 5);
 }
 
 bool func_9()
 {
-	return MISC::IS_BIT_SET(Global_1958920, 19);
+	return BitTest(Global_1958928, 19);
 }
 
 void func_10(int iParam0, int iParam1)
@@ -322,7 +322,7 @@ bool func_12(int iParam0, int iParam1)
 	}
 	else
 	{
-		bVar0 = Global_1853128[iParam0 /*888*/].f_205 == 8;
+		bVar0 = Global_1853131[iParam0 /*888*/].f_205 == 8;
 	}
 	if (iParam1 == 1)
 	{
@@ -344,7 +344,7 @@ int func_13(int iParam0, bool bParam1)
 	{
 		iVar1 = func_14();
 	}
-	if (Global_1575026[iVar1] == 1)
+	if (Global_1575034[iVar1] == 1)
 	{
 		if (bParam1)
 		{
@@ -353,7 +353,7 @@ int func_13(int iParam0, bool bParam1)
 	}
 	else
 	{
-		iVar0 = Global_1574901[iVar1];
+		iVar0 = Global_1574909[iVar1];
 		if (bParam1)
 		{
 		}
@@ -363,7 +363,7 @@ int func_13(int iParam0, bool bParam1)
 
 int func_14()
 {
-	return Global_1574907;
+	return Global_1574915;
 }
 
 int func_15(int iParam0, bool bParam1, bool bParam2)
@@ -384,7 +384,11 @@ int func_15(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2703656.f_3[iVar0])
+				if (iVar0 == Global_2703660.f_3)
+				{
+					return Global_2703660.f_2;
+				}
+				else if (Global_2689224[iVar0 /*451*/] != 4)
 				{
 					return 0;
 				}
@@ -415,7 +419,7 @@ int func_17()
 
 int func_18()
 {
-	if (Global_1574610)
+	if (Global_1574612)
 	{
 		return 1;
 	}
@@ -435,7 +439,7 @@ int func_19(int iParam0, int iParam1)
 	int iVar0;
 	var uVar1;
 	
-	iVar0 = Global_2860375[iParam0 /*3*/][func_20(iParam1)];
+	iVar0 = Global_2860791[iParam0 /*3*/][func_20(iParam1)];
 	if (STATS::STAT_GET_BOOL(iVar0, &uVar1, -1))
 	{
 		return uVar1;
@@ -454,13 +458,13 @@ int func_20(var uParam0)
 		iVar1 = func_14();
 		if (iVar1 > -1)
 		{
-			Global_2821607 = 0;
+			Global_2822083 = 0;
 			iVar0 = iVar1;
 		}
 		else
 		{
 			iVar0 = 0;
-			Global_2821607 = 1;
+			Global_2822083 = 1;
 		}
 	}
 	return iVar0;
@@ -468,12 +472,12 @@ int func_20(var uParam0)
 
 bool func_21()
 {
-	return Global_1575034;
+	return Global_1575042;
 }
 
 bool func_22()
 {
-	return Global_1575036;
+	return Global_1575044;
 }
 
 bool func_23(int iParam0, bool bParam1)
@@ -497,7 +501,7 @@ int func_24(int iParam0, bool bParam1, bool bParam2)
 	if (!bParam2)
 	{
 	}
-	if (Global_1853128[iParam0 /*888*/] == -1)
+	if (Global_1853131[iParam0 /*888*/] == -1)
 	{
 		return 0;
 	}
@@ -509,28 +513,28 @@ bool func_25(int iParam0)
 	return func_26(iParam0);
 }
 
-bool func_26(int iParam0)
+var func_26(int iParam0)
 {
-	return MISC::IS_BIT_SET(Global_1853128[iParam0 /*888*/].f_11.f_1, 0);
+	return BitTest(Global_1853131[iParam0 /*888*/].f_11.f_1, 0);
 }
 
 int func_27(int iParam0)
 {
 	if (func_15(iParam0, 0, 1))
 	{
-		return Global_2689156[iParam0 /*453*/].f_1;
+		return Global_2689224[iParam0 /*451*/].f_1;
 	}
 	return 0;
 }
 
 int func_28()
 {
-	return Global_31505;
+	return Global_31511;
 }
 
 int func_29(int* iParam0)
 {
-	if (!MISC::IS_BIT_SET(*iParam0, 0))
+	if (!BitTest(*iParam0, 0))
 	{
 		return 0;
 	}
@@ -574,7 +578,7 @@ int func_32()
 	int iVar1;
 	int iVar2;
 	
-	if (Global_77852)
+	if (Global_77858)
 	{
 		return 0;
 	}
@@ -639,7 +643,7 @@ void func_36()
 	func_44(Global_19935, "SET_DATA_SLOT_EMPTY", SYSTEM::TO_FLOAT(13), -1082130432, -1082130432, -1082130432, -1082130432);
 	if (func_16())
 	{
-		if (Global_2725163)
+		if (Global_2725172)
 		{
 			func_43(Global_19935, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &Local_46, 0, 0, 0, 0);
 		}

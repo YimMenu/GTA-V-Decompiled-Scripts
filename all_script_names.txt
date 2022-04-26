@@ -237,6 +237,7 @@ camhedz_arcade
 candidate_controller
 car_meet_carmod
 car_meet_exterior_seating
+car_meet_interior_seating
 car_roof_test
 carmod_shop
 carsteal1
@@ -404,9 +405,12 @@ fm_content_auto_shop_delivery
 fm_content_business_battles
 fm_content_drug_vehicle
 fm_content_golden_gun
+fm_content_hsw_setup
+fm_content_hsw_time_trial
 fm_content_island_dj
 fm_content_island_heist
 fm_content_movie_props
+fm_content_mp_intro
 fm_content_payphone_hit
 fm_content_payphone_intro
 fm_content_phantom_car
@@ -589,6 +593,7 @@ josh2
 josh3
 josh4
 lamar1
+landing_pre_startup
 laptop_trigger
 launcher_abigail
 launcher_barry

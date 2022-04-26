@@ -155,7 +155,7 @@ float func_3(var uParam0)
 		}
 		else
 		{
-			return (func_4(MISC::IS_BIT_SET(*uParam0, 4)) - uParam0->f_1);
+			return (func_4(BitTest(*uParam0, 4)) - uParam0->f_1);
 		}
 	}
 	return uParam0->f_1;
@@ -187,7 +187,7 @@ float func_4(bool bParam0)
 
 bool func_5(var uParam0)
 {
-	return MISC::IS_BIT_SET(*uParam0, 2);
+	return BitTest(*uParam0, 2);
 }
 
 void func_6(int* iParam0)
@@ -197,7 +197,7 @@ void func_6(int* iParam0)
 
 void func_7(int* iParam0, float fParam1)
 {
-	iParam0->f_1 = (func_4(MISC::IS_BIT_SET(*iParam0, 4)) - fParam1);
+	iParam0->f_1 = (func_4(BitTest(*iParam0, 4)) - fParam1);
 	MISC::SET_BIT(iParam0, 1);
 	MISC::CLEAR_BIT(iParam0, 2);
 	iParam0->f_2 = 0f;
@@ -205,7 +205,7 @@ void func_7(int* iParam0, float fParam1)
 
 bool func_8(var uParam0)
 {
-	return MISC::IS_BIT_SET(*uParam0, 1);
+	return BitTest(*uParam0, 1);
 }
 
 void func_9(int iParam0)

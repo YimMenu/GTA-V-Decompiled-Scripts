@@ -106,22 +106,22 @@ void __EntryFunction__()
 	sLocal_18 = "NULL";
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		func_53(ScriptParam_0);
+		func_50(ScriptParam_0);
 	}
 	else
 	{
-		func_51();
+		func_48();
 	}
 	while (true)
 	{
-		func_50();
-		if (Global_262145.f_23844)
+		func_47();
+		if (Global_262145.f_23845)
 		{
-			func_51();
+			func_48();
 		}
 		if (func_39())
 		{
-			func_51();
+			func_48();
 		}
 		func_1();
 	}
@@ -156,7 +156,7 @@ void func_1()
 		{
 			func_15(0);
 		}
-		func_51();
+		func_48();
 	}
 	if (Local_22.f_66.f_18 > 0 && !func_14())
 	{
@@ -196,7 +196,7 @@ void func_1()
 			if (iVar1 != 0)
 			{
 				func_7(iLocal_21);
-				func_51();
+				func_48();
 			}
 		}
 	}
@@ -395,7 +395,7 @@ int func_10(int iParam0)
 
 var func_11()
 {
-	return Global_1574907;
+	return Global_1574915;
 }
 
 int func_12(int iParam0)
@@ -424,7 +424,7 @@ int func_13()
 
 bool func_14()
 {
-	return Global_100026.f_376 > 0;
+	return Global_100032.f_376 > 0;
 }
 
 void func_15(bool bParam0)
@@ -637,7 +637,7 @@ void func_18(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4)
 	switch (iParam1)
 	{
 		case 1704445500:
-			MISC::SET_BIT(&(Global_2689156[PLAYER::PLAYER_ID() /*453*/].f_126.f_71), 0);
+			MISC::SET_BIT(&(Global_2689224[PLAYER::PLAYER_ID() /*451*/].f_124.f_71), 0);
 			break;
 	}
 	if (iParam0 != -1)
@@ -648,8 +648,8 @@ void func_18(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4)
 
 void func_19(int iParam0, var uParam1)
 {
-	Global_2727573 = uParam1;
-	Global_2727572 = iParam0;
+	Global_2727588 = uParam1;
+	Global_2727587 = iParam0;
 }
 
 int func_20(int iParam0)
@@ -674,7 +674,7 @@ int func_20(int iParam0)
 			Global_4529831 = 1;
 			return 0;
 		}
-		if (Global_2726388)
+		if (Global_2726400)
 		{
 			if (Global_4528329[*iParam0 /*85*/].f_66.f_6 == 1067618600 || Global_4528329[*iParam0 /*85*/].f_66.f_6 == -1303831698)
 			{
@@ -793,7 +793,7 @@ int func_24()
 			}
 			return 0;
 		}
-		if (Global_2726388)
+		if (Global_2726400)
 		{
 			if (Global_4528329[iVar2 /*85*/].f_66.f_6 == 1067618600 || Global_4528329[iVar2 /*85*/].f_66.f_6 == -1303831698)
 			{
@@ -842,7 +842,7 @@ void func_25(struct<67> Param0, var uParam67, var uParam68, var uParam69, var uP
 	Var0.f_2 = { Param0.f_66 };
 	Var0.f_2.f_33 = iParam85;
 	iVar36 = func_27(Var0.f_1);
-	if ((Global_262145.f_23844 && !Global_262145.f_23845) && !Global_262145.f_23846)
+	if ((Global_262145.f_23845 && !Global_262145.f_23846) && !Global_262145.f_23847)
 	{
 		return;
 	}
@@ -2122,7 +2122,11 @@ int func_33(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2703656.f_3[iVar0])
+				if (iVar0 == Global_2703660.f_3)
+				{
+					return Global_2703660.f_2;
+				}
+				else if (Global_2689224[iVar0 /*451*/] != 4)
 				{
 					return 0;
 				}
@@ -2200,7 +2204,7 @@ void func_36(int iParam0)
 	}
 	if (((Global_4533764[iParam0 /*12*/] != Global_4533764[iParam0 /*12*/].f_5 || Global_4533764[iParam0 /*12*/].f_1 != Global_4533764[iParam0 /*12*/].f_6) || Global_4533764[iParam0 /*12*/].f_2 != iVar5) || Global_4533764[iParam0 /*12*/].f_3 != (iVar4 + iVar3))
 	{
-		Global_109617 = 1;
+		Global_109624 = 1;
 	}
 }
 
@@ -2217,10 +2221,7 @@ int func_38()
 
 int func_39()
 {
-	var uVar0;
-	
-	func_47(&uVar0);
-	if (Global_1575022 == 0)
+	if (Global_1575030 == 0)
 	{
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
@@ -2231,7 +2232,7 @@ int func_39()
 	{
 		return 1;
 	}
-	if (Global_2727476)
+	if (Global_2727490)
 	{
 		return 1;
 	}
@@ -2281,7 +2282,7 @@ int func_40()
 
 int func_41()
 {
-	switch (Global_2727578)
+	switch (Global_2727594)
 	{
 		case 0:
 			return joaat("freemode");
@@ -2293,12 +2294,12 @@ int func_41()
 
 int func_42()
 {
-	return Global_31505;
+	return Global_31511;
 }
 
 bool func_43()
 {
-	return Global_2714627.f_698;
+	return Global_2714635.f_698;
 }
 
 int func_44(int iParam0)
@@ -2312,127 +2313,34 @@ int func_44(int iParam0)
 
 bool func_45()
 {
-	return Global_2725224;
+	return Global_2725233;
 }
 
 bool func_46()
 {
-	return Global_2714627.f_693;
+	return Global_2714635.f_693;
 }
 
-void func_47(var uParam0)
-{
-	int iVar0;
-	int iVar1;
-	int iVar2;
-	struct<3> Var4;
-	
-	iVar0 = 0;
-	while (iVar0 < SCRIPT::GET_NUMBER_OF_EVENTS(1))
-	{
-		iVar1 = SCRIPT::GET_EVENT_AT_INDEX(1, iVar0);
-		if (iVar1 == 174)
-		{
-			SCRIPT::GET_EVENT_DATA(1, iVar0, &iVar2, 2);
-			switch (iVar2)
-			{
-				case -1537646326:
-					func_48(iVar0);
-					break;
-				
-				case 801199324:
-					SCRIPT::GET_EVENT_DATA(1, iVar0, &Var4, 4);
-					if (Var4.f_2 == 848999011)
-					{
-						*uParam0 = 1;
-					}
-					break;
-				}
-		}
-		iVar0++;
-	}
-}
-
-void func_48(int iParam0)
-{
-	struct<3> Var0;
-	int iVar3;
-	int iVar4;
-	bool bVar5;
-	
-	if (SCRIPT::GET_EVENT_DATA(1, iParam0, &Var0, 3))
-	{
-		if (func_33(Var0.f_1, 1, 1))
-		{
-			iVar3 = PLAYER::GET_PLAYER_PED(Var0.f_1);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
-			{
-				if (PED::IS_PED_IN_ANY_VEHICLE(iVar3, false))
-				{
-					iVar4 = PED::GET_VEHICLE_PED_IS_IN(iVar3, false);
-					if (VEHICLE::IS_VEHICLE_WINDOW_INTACT(iVar4, Var0.f_2) && NETWORK::NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT())
-					{
-						if (func_49(iVar4, &bVar5))
-						{
-							VEHICLE::REMOVE_VEHICLE_WINDOW(iVar4, Var0.f_2);
-						}
-						if (bVar5)
-						{
-							ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iVar4);
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-int func_49(int iParam0, var uParam1)
-{
-	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
-	{
-		if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(iParam0))
-		{
-			if (NETWORK::NETWORK_GET_ENTITY_IS_LOCAL(iParam0))
-			{
-				if (!VEHICLE::IS_THIS_MODEL_A_TRAIN(ENTITY::GET_ENTITY_MODEL(iParam0)))
-				{
-					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iParam0, false, true);
-					*uParam1 = 1;
-				}
-			}
-		}
-		if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(iParam0, false))
-		{
-			if (NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam0))
-			{
-				return 1;
-			}
-		}
-	}
-	return 0;
-}
-
-void func_50()
+void func_47()
 {
 	SYSTEM::WAIT(0);
 }
 
-void func_51()
+void func_48()
 {
-	func_52();
+	func_49();
 }
 
-void func_52()
+void func_49()
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
-void func_53(struct<34> Param0)
+void func_50(struct<34> Param0)
 {
-	if (Global_262145.f_23844)
+	if (Global_262145.f_23845)
 	{
-		func_51();
+		func_48();
 	}
 	Local_22.f_66 = { Param0 };
 	Local_22 = { Param0.f_19 };
@@ -2440,12 +2348,12 @@ void func_53(struct<34> Param0)
 	iLocal_21 = Param0.f_33;
 	if (Param0.f_33 < 0)
 	{
-		func_51();
+		func_48();
 	}
-	if (!func_54(Param0, Param0.f_33))
+	if (!func_51(Param0, Param0.f_33))
 	{
 		func_7(Param0.f_33);
-		func_51();
+		func_48();
 	}
 	if (Local_22.f_66.f_2 != 0)
 	{
@@ -2453,7 +2361,7 @@ void func_53(struct<34> Param0)
 	}
 }
 
-int func_54(struct<18> Param0, var uParam18, int iParam19)
+int func_51(struct<18> Param0, var uParam18, int iParam19)
 {
 	if (Global_4528329[iParam19 /*85*/].f_66.f_1 != Param0.f_1)
 	{
