@@ -4852,12 +4852,12 @@ int func_51(int iParam0)
 
 bool func_52()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_53()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_54()
@@ -13630,7 +13630,7 @@ void func_205()
 					if ((func_206(iLocal_46) && ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(iLocal_46, true)) && iLocal_473 == 0)
 					{
 						Local_122 = { ENTITY::GET_ENTITY_COORDS(iLocal_46, true) };
-						PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_122.f_0, Local_122.f_1, Local_116.f_0, Local_116.f_1);
+						PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_122.f_0, Local_122.f_1, Local_116.f_0, Local_116.f_1);
 						if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) == 0)
 						{
 							if (iLocal_476 == 0)
@@ -13727,7 +13727,7 @@ void func_205()
 					if ((func_206(iLocal_48) && ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(iLocal_48, true)) && iLocal_475 == 0)
 					{
 						Local_122 = { ENTITY::GET_ENTITY_COORDS(iLocal_48, true) };
-						PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_122.f_0, Local_122.f_1, Local_116.f_0, Local_116.f_1);
+						PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_122.f_0, Local_122.f_1, Local_116.f_0, Local_116.f_1);
 						if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) == 0)
 						{
 							if (iLocal_477 == 0)
@@ -13824,7 +13824,7 @@ void func_205()
 					if ((func_206(iLocal_47) && ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(iLocal_47, true)) && iLocal_474 == 0)
 					{
 						Local_122 = { ENTITY::GET_ENTITY_COORDS(iLocal_47, true) };
-						PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_122.f_0, Local_122.f_1, Local_116.f_0, Local_116.f_1);
+						PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_122.f_0, Local_122.f_1, Local_116.f_0, Local_116.f_1);
 						if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) == 0)
 						{
 							if (iLocal_478 == 0)

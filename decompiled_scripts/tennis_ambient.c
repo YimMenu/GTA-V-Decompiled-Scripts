@@ -4035,7 +4035,7 @@ Vector3 func_120(var uParam0, var uParam1, int iParam2, int iParam3, struct<3> P
 	fVar8 = (30f * func_125(uParam0));
 	fVar9 = fVar8;
 	Var10 = { Param4 };
-	Var13 = { MISC::_0x21C235BC64831E5A(Var10, uParam1->f_189.f_32[0 /*3*/], uParam1->f_189.f_32[1 /*3*/], false) };
+	Var13 = { MISC::GET_CLOSEST_POINT_ON_LINE(Var10, uParam1->f_189.f_32[0 /*3*/], uParam1->f_189.f_32[1 /*3*/], false) };
 	fVar16 = SYSTEM::VDIST(Var10, Var13);
 	fVar17 = (SYSTEM::VMAG(uParam1->f_189.f_3[3 /*3*/] - uParam1->f_189.f_3[0 /*3*/]) / 2f);
 	fVar18 = (fVar16 / fVar17);
@@ -4310,7 +4310,7 @@ Vector3 func_123(var uParam0, var uParam1, struct<3> Param2, int iParam5)
 			Var6 = { uParam0->f_43 * Vector(fVar14, fVar14, fVar14) * Vector(-1f, -1f, -1f) };
 		}
 	}
-	Var15 = { MISC::_0x21C235BC64831E5A(uParam0->f_37, uParam1->f_3[iVar9 /*3*/], uParam1->f_3[iVar10 /*3*/], true) };
+	Var15 = { MISC::GET_CLOSEST_POINT_ON_LINE(uParam0->f_37, uParam1->f_3[iVar9 /*3*/], uParam1->f_3[iVar10 /*3*/], true) };
 	if (MISC::ABSI(iParam5) > 15)
 	{
 		if (iParam5 > 0)
@@ -4870,8 +4870,8 @@ int func_143(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	}
 	uVar8 = Var4.f_2;
 	Var9 = { fVar7, 0f, uVar8 };
-	*fParam7 = MISC::_0x7F8F6405F4777AF6(Var9, *uParam5, *uParam3, false);
-	*fParam8 = MISC::_0x7F8F6405F4777AF6(Var9, func_116(bParam6, *uParam5, *uParam4), func_116(bParam6, *uParam4, *uParam5), false);
+	*fParam7 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Var9, *uParam5, *uParam3, false);
+	*fParam8 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Var9, func_116(bParam6, *uParam5, *uParam4), func_116(bParam6, *uParam4, *uParam5), false);
 	if (((*fParam7 < 0f || *fParam7 > 2f) || *fParam8 < 0f) || *fParam8 > 2f)
 	{
 		return 0;
@@ -5179,7 +5179,7 @@ int func_150(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 							while (((fVar53 > 0f && (iVar3 - iVar55) > 2) && func_151(uParam0)) && fVar54 > 0f)
 							{
 								iVar55++;
-								Var44 = { MISC::_0x21C235BC64831E5A(Var41, *(uParam4[(iVar3 - iVar55) /*3*/]), *(uParam4[((iVar3 - iVar55) - 1) /*3*/]), true) };
+								Var44 = { MISC::GET_CLOSEST_POINT_ON_LINE(Var41, *(uParam4[(iVar3 - iVar55) /*3*/]), *(uParam4[((iVar3 - iVar55) - 1) /*3*/]), true) };
 								Var50 = { Var41 - Var44 };
 								fVar53 = func_69(Var50, uParam0->f_40);
 							}
@@ -7739,8 +7739,8 @@ int func_282(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	if (fVar0 >= 0f && fVar0 <= 1f)
 	{
 		Var1 = { *uParam1 + *uParam2 - *uParam1 * Vector(fVar0, fVar0, fVar0) };
-		fVar7 = MISC::_0x7F8F6405F4777AF6(Var1, uParam0->f_39[0 /*3*/], uParam0->f_39[1 /*3*/], false);
-		fVar8 = MISC::_0x7F8F6405F4777AF6(Var1, uParam0->f_39[1 /*3*/], uParam0->f_39[2 /*3*/], false);
+		fVar7 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Var1, uParam0->f_39[0 /*3*/], uParam0->f_39[1 /*3*/], false);
+		fVar8 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Var1, uParam0->f_39[1 /*3*/], uParam0->f_39[2 /*3*/], false);
 		if (fVar7 > 0f && fVar7 < 1f)
 		{
 			Var4 = { uParam0->f_39[0 /*3*/] + uParam0->f_39[1 /*3*/] - uParam0->f_39[0 /*3*/] * Vector(fVar7, fVar7, fVar7) };

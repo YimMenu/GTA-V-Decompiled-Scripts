@@ -5311,7 +5311,7 @@ struct<6> func_130()
 		}
 		else
 		{
-			iVar6 = unk_0xECF041186C5A94DC(iVar7);
+			iVar6 = MISC::_0xECF041186C5A94DC(iVar7);
 			if (iVar6 != -1)
 			{
 				Var0 = { Global_794709.f_203837[Global_794709.f_177589[iVar6 /*13*/].f_10 /*6*/] };
@@ -5540,7 +5540,7 @@ bool func_152()
 
 int func_153(int iParam0)
 {
-	return unk_0xECF041186C5A94DC(iParam0);
+	return MISC::_0xECF041186C5A94DC(iParam0);
 }
 
 int func_154(int iParam0, int iParam1)

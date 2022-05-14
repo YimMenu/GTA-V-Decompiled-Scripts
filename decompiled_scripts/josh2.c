@@ -418,7 +418,7 @@ void __EntryFunction__()
 	}
 	if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_94))
 	{
-		PED::_DISPOSE_SYNCHRONIZED_SCENE(iLocal_94);
+		PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(iLocal_94);
 	}
 	while (true)
 	{
@@ -32367,12 +32367,12 @@ void func_212()
 
 bool func_213()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_214()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_215(int iParam0, int iParam1)

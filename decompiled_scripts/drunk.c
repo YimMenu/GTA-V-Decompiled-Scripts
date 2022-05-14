@@ -4390,7 +4390,7 @@ void func_142(int iParam0, float fParam1)
 	}
 	if (ENTITY::IS_ENTITY_A_PED(iParam0))
 	{
-		PED::_0x288DF530C92DAD6F(ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(iParam0), fParam1);
+		PED::_SET_PED_STEER_BIAS(ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(iParam0), fParam1);
 	}
 	else if (ENTITY::IS_ENTITY_A_VEHICLE(iParam0))
 	{

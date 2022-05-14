@@ -1734,7 +1734,7 @@ int func_58(int iParam0, bool bParam1, char* sParam2, int iParam3)
 
 bool func_59()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_60(int iParam0)
@@ -35903,7 +35903,7 @@ void func_228(var uParam0, bool bParam1)
 	if (!func_301())
 	{
 		Global_794709.f_177589[uParam0->f_9 /*13*/].f_1 = MISC::GET_HASH_KEY(NETWORK::UGC_GET_ROOT_CONTENT_ID(uParam0->f_7));
-		unk_0x4B82FA6F2D624634(Global_794709.f_177589[uParam0->f_9 /*13*/].f_1, uParam0->f_9);
+		MISC::_0x4B82FA6F2D624634(Global_794709.f_177589[uParam0->f_9 /*13*/].f_1, uParam0->f_9);
 	}
 	Global_794709.f_177589[uParam0->f_9 /*13*/].f_2 = func_252(Global_794709.f_177589[uParam0->f_9 /*13*/].f_1, 1);
 	if (func_251(Global_794709.f_177589[uParam0->f_9 /*13*/].f_1))
@@ -38207,7 +38207,7 @@ int func_304()
 
 bool func_305()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 int func_306(int iParam0)

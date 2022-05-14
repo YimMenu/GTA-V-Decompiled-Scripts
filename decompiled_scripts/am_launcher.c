@@ -3923,7 +3923,7 @@ int func_109(int iParam0, int iParam1, int iParam2, struct<3> Param3)
 	int iVar1;
 	int iVar2;
 	
-	NETWORK::_0xE42D626EEC94E5D9(Param3, 0, &iVar0, &iVar1, &iVar2);
+	NETWORK::_GET_RESERVATIONS_FOR_SLOT_WORLD_POSITION(Param3, 0, &iVar0, &iVar1, &iVar2);
 	if ((iParam0 <= (func_106(0) - iVar0) && iParam1 <= (func_106(1) - iVar1)) && iParam2 <= (func_106(2) - iVar2))
 	{
 		return 1;
@@ -9886,7 +9886,7 @@ void func_222()
 					Local_102.f_16 = -1;
 					if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(MISC::GET_HASH_KEY(&cVar1)) == 0)
 					{
-						if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE(&cVar1, -1, false, 0) || NETWORK::NETWORK_GET_NUM_SCRIPT_PARTICIPANTS(&cVar1, -1, 0) < 32)
+						if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE(&cVar1, -1, false, 0) || NETWORK::NETWORK_GET_NUM_SCRIPT_PARTICIPANTS(&cVar1, -1, false) < 32)
 						{
 							if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE(&cVar1, -1, true, 0))
 							{

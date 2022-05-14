@@ -207,7 +207,7 @@ void func_3(var uParam0, var uParam1)
 	iVar3 = CAM::GET_RENDERING_CAM();
 	if (CAM::DOES_CAM_EXIST(iVar3))
 	{
-		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iVar3, true);
+		CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(iVar3, true);
 	}
 	Var4 = { CAM::GET_FINAL_RENDERED_CAM_ROT(0) };
 	Var4 = { func_7(Var4) };
@@ -2303,7 +2303,7 @@ void func_85()
 			Var15 = { Var15 + Var18 };
 			Var9 = { Var6 + FtoV(SYSTEM::VMAG(Var9 - Var6)) * func_7(Var15) };
 			Var6.f_2 = (Var6.f_2 - 1f);
-			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var6, Var9, Local_64.f_8.f_3, false, Local_64.f_8, PLAYER::PLAYER_PED_ID(), true, true, -1f, Local_64.f_95, false, false, false, true, 0, Local_64.f_94 != 0, 0);
+			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var6, Var9, Local_64.f_8.f_3, false, Local_64.f_8, PLAYER::PLAYER_PED_ID(), true, true, -1f, Local_64.f_95, false, false, 0, true, 0, Local_64.f_94 != 0, 0);
 			if (Local_160.f_40.f_13.f_2 != -1 && AUDIO::HAS_SOUND_FINISHED(Local_160.f_40.f_13.f_2))
 			{
 				AUDIO::PLAY_SOUND_FROM_COORD(Local_160.f_40.f_13.f_2, Local_160.f_40.f_13.f_1, Var6, Local_160.f_40.f_13, true, 500, false);

@@ -6836,7 +6836,7 @@ void func_213(int iParam0, int iParam1, bool bParam2, char* sParam3, char* sPara
 
 bool func_214()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_215()
@@ -6948,7 +6948,7 @@ struct<6> func_218()
 		}
 		else
 		{
-			iVar6 = unk_0xECF041186C5A94DC(iVar7);
+			iVar6 = MISC::_0xECF041186C5A94DC(iVar7);
 			if (iVar6 != -1)
 			{
 				Var0 = { Global_794709.f_203837[Global_794709.f_177589[iVar6 /*13*/].f_10 /*6*/] };
@@ -8345,7 +8345,7 @@ void func_273(int iParam0)
 		if (Global_1656661[iParam0 /*5*/].f_2 != 0)
 		{
 			StringCopy(&cVar16, PED::GET_PEDHEADSHOT_TXD_STRING(Global_1656661[iParam0 /*5*/].f_2), 64);
-			HUD::_THEFEED_ADD_TXD_REF(&cVar16, &cVar16, &cVar0, &cVar0);
+			HUD::THEFEED_UPDATE_ITEM_TEXTURE(&cVar16, &cVar16, &cVar0, &cVar0);
 		}
 		PED::UNREGISTER_PEDHEADSHOT(Global_1656661[iParam0 /*5*/].f_2);
 	}

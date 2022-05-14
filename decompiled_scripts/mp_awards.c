@@ -235,7 +235,7 @@ void __EntryFunction__()
 		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-1770673475);
 		HUD::PAUSE_MENU_SET_BUSY_SPINNER(false, -1, 0);
 		Global_1574599 = 0;
-		STATS::_0x70F52471E758EBAE(Global_1642856.f_471, Global_1642856.f_472);
+		STATS::_PLAYSTATS_AWARDS_NAV(Global_1642856.f_471, Global_1642856.f_472);
 		Global_1642856.f_471 = 0;
 		Global_1642856.f_472 = 0;
 		SCRIPT::TERMINATE_THIS_THREAD();
@@ -409,7 +409,7 @@ void __EntryFunction__()
 	HUD::RELEASE_CONTROL_OF_FRONTEND();
 	Global_1574599 = 0;
 	HUD::PAUSE_MENU_SET_BUSY_SPINNER(false, -1, 0);
-	STATS::_0x70F52471E758EBAE(Global_1642856.f_471, Global_1642856.f_472);
+	STATS::_PLAYSTATS_AWARDS_NAV(Global_1642856.f_471, Global_1642856.f_472);
 	Global_1642856.f_471 = 0;
 	Global_1642856.f_472 = 0;
 	while (true)
@@ -14947,12 +14947,12 @@ int func_120(int iParam0, int iParam1)
 
 bool func_121()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_122()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_123(var uParam0, var uParam1)

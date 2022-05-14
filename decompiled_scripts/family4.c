@@ -31105,7 +31105,7 @@ int func_190(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_190(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_321(iVar5, iParam1, iParam2, -1) };
@@ -31175,7 +31175,7 @@ int func_190(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_153(iParam0, 11);
 				iVar74 = func_153(iParam0, 8);
 				iVar75 = func_153(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -31550,7 +31550,7 @@ int func_190(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -31694,7 +31694,7 @@ int func_190(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_190(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_190(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -34969,7 +34969,7 @@ int func_206(int iParam0, int iParam1)
 
 int func_207(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -35747,7 +35747,7 @@ int func_210(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_211(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -35758,7 +35758,7 @@ int func_212(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -35842,7 +35842,7 @@ void func_214(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_225(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -90541,7 +90541,7 @@ int func_399(bool bParam0, bool bParam1)
 
 bool func_400()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_401()
@@ -109409,7 +109409,7 @@ int func_659(int iParam0)
 
 bool func_660()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_661()
@@ -119000,7 +119000,7 @@ void func_866()
 	switch (iLocal_3988)
 	{
 		case 0:
-			AUDIO::_0x149AEE66F0CB3A99(1f, 1f);
+			AUDIO::SET_PED_WALLA_DENSITY(1f, 1f);
 			iLocal_3988++;
 			break;
 		
@@ -119023,7 +119023,7 @@ void func_866()
 		case 2:
 			if (!func_867(PLAYER::PLAYER_PED_ID(), -260.7652f, -2026.163f, 29.1458f))
 			{
-				AUDIO::_0x149AEE66F0CB3A99(0f, 0f);
+				AUDIO::SET_PED_WALLA_DENSITY(0f, 0f);
 				iLocal_3988++;
 			}
 			break;
@@ -127120,7 +127120,7 @@ void func_995()
 	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(-365.5f, -2063.4f, 100f, -141.4f, -1837f, -100f, true, true);
 	AUDIO::TRIGGER_MUSIC_EVENT("FAM4_MISSION_FAIL");
 	func_987(100, 0, 1, 1, 0);
-	AUDIO::_0x149AEE66F0CB3A99(0f, 0f);
+	AUDIO::SET_PED_WALLA_DENSITY(0f, 0f);
 	STREAMING::_0xF8155A7F03DDFC8E(0);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }

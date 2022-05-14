@@ -877,7 +877,7 @@ void func_20(int iParam0, int iParam1)
 	bool bVar4;
 	
 	iVar0 = func_1();
-	HUD::_SET_BLIP_DISPLAY_INDICATOR_ON_BLIP(iParam0, true);
+	HUD::SET_BLIP_EXTENDED_HEIGHT_THRESHOLD(iParam0, true);
 	HUD::SET_BLIP_PRIORITY(iParam0, 2);
 	HUD::SET_BLIP_COLOUR(iParam0, func_22(iParam1));
 	if (Global_31890[iParam1 /*23*/].f_16 == 4 || Global_31890[iParam1 /*23*/].f_16 == 8)

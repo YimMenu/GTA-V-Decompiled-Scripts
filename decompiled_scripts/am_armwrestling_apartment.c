@@ -4215,7 +4215,7 @@ int func_37(int* iParam0, var uParam1, char* sParam2, int iParam3, int iParam4, 
 						GRAPHICS::ANIMPOSTFX_STOP("MP_Celeb_Preload_Fade");
 						GRAPHICS::ANIMPOSTFX_STOP("MP_Celeb_Preload_Fade");
 						func_146(iParam0);
-						HUD::_SET_TEXT_CHAT_UNK(true);
+						HUD::_MULTIPLAYER_CHAT_SET_DISABLED(true);
 						iParam0->f_436 = 3;
 					}
 					break;
@@ -4230,7 +4230,7 @@ int func_37(int* iParam0, var uParam1, char* sParam2, int iParam3, int iParam4, 
 				
 				case 5:
 					func_145(iParam0);
-					HUD::_SET_TEXT_CHAT_UNK(false);
+					HUD::_MULTIPLAYER_CHAT_SET_DISABLED(false);
 					*iParam8 = 1;
 					iParam0->f_436 = 0;
 					break;
@@ -4323,7 +4323,7 @@ int func_37(int* iParam0, var uParam1, char* sParam2, int iParam3, int iParam4, 
 						}
 						func_146(iParam0);
 						iParam0->f_436 = 3;
-						HUD::_SET_TEXT_CHAT_UNK(true);
+						HUD::_MULTIPLAYER_CHAT_SET_DISABLED(true);
 					}
 					else if (GRAPHICS::ANIMPOSTFX_IS_RUNNING("DeathFailMPIn"))
 					{
@@ -4409,7 +4409,7 @@ int func_37(int* iParam0, var uParam1, char* sParam2, int iParam3, int iParam4, 
 					break;
 				
 				case 5:
-					HUD::_SET_TEXT_CHAT_UNK(false);
+					HUD::_MULTIPLAYER_CHAT_SET_DISABLED(false);
 					if (func_76())
 					{
 						AUDIO::STOP_AUDIO_SCENE("MP_CELEB_SCREEN_SCENE");
@@ -9140,12 +9140,12 @@ int func_154()
 
 bool func_155()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 bool func_156()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_157(int* iParam0, char* sParam1, char* sParam2, bool bParam3, int iParam4)
@@ -14245,7 +14245,7 @@ int func_193(int iParam0)
 	{
 		return 0;
 	}
-	if (unk_0x7796B21B76221BC5(iParam0, 11, joaat("JUGG_SUIT")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 11, joaat("JUGG_SUIT")))
 	{
 		return 1;
 	}
@@ -14299,7 +14299,7 @@ void func_194(var uParam0, int iParam1, struct<3> Param2, float fParam5, int iPa
 
 int func_195(int iParam0, int iParam1)
 {
-	if (unk_0x7796B21B76221BC5(uParam0, iParam1, joaat("PILOT_SUIT")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, iParam1, joaat("PILOT_SUIT")))
 	{
 		return 1;
 	}
@@ -44756,7 +44756,7 @@ void func_280(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			{
 				Global_786435.f_22 = 0;
 			}
-			STATS::_0xF5BB8DAC426A52C0(&cVar0, &Var8, &Global_786435, &Var144);
+			STATS::PLAYSTATS_JOB_BEND(&cVar0, &Var8, &Global_786435, &Var144);
 			func_324();
 			Global_1837287 = 0;
 			return;
@@ -44919,7 +44919,7 @@ void func_280(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			Global_2714635.f_669.f_15 = 0;
 			Global_1945472.f_25 = (func_289(PLAYER::PLAYER_ID(), 1) - Global_1837272);
 			IntToString(&(Global_1945472.f_7), MISC::GET_HASH_KEY(&(Global_4718592.f_87296)), 32);
-			STATS::_0xFEA3F7E83C0610FA(&Global_1945472);
+			STATS::_PLAYSTATS_INST_MISSION_END(&Global_1945472);
 			func_324();
 			Global_1837287 = 0;
 		}

@@ -2968,7 +2968,7 @@ void func_62()
 						{
 							PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
 						}
-						Var6 = { MISC::_0x21C235BC64831E5A(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Local_982, Local_985, true) };
+						Var6 = { MISC::GET_CLOSEST_POINT_ON_LINE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Local_982, Local_985, true) };
 						bVar9 = func_77(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 20f, 0f), Local_982, Local_985, &Var0);
 						if (!PED::IS_PED_INJURED(iLocal_85))
 						{
@@ -6635,10 +6635,10 @@ int func_135(struct<3> Param0, var uParam3)
 	iVar0 = 0;
 	while (iVar0 < (*uParam3 - 1))
 	{
-		if (MISC::GET_DISTANCE_BETWEEN_COORDS(MISC::_0x21C235BC64831E5A(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0, true) < fVar2)
+		if (MISC::GET_DISTANCE_BETWEEN_COORDS(MISC::GET_CLOSEST_POINT_ON_LINE(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0, true) < fVar2)
 		{
 			iVar1 = iVar0;
-			fVar2 = SYSTEM::VDIST(MISC::_0x21C235BC64831E5A(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0);
+			fVar2 = SYSTEM::VDIST(MISC::GET_CLOSEST_POINT_ON_LINE(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0);
 		}
 		iVar0++;
 	}
@@ -6686,7 +6686,7 @@ float func_137(struct<3> Param0, var uParam3)
 		fVar1 = SYSTEM::TO_FLOAT(iVar0);
 		if (iVar0 < (*uParam3 - 1))
 		{
-			fVar1 = (fVar1 + MISC::_0x7F8F6405F4777AF6(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true));
+			fVar1 = (fVar1 + MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true));
 		}
 		return fVar1;
 	}
@@ -18713,12 +18713,12 @@ int func_278(int iParam0)
 
 bool func_279()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_280()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_281()
@@ -20700,7 +20700,7 @@ void func_323()
 	}
 	if (((PED::GET_PED_PROP_INDEX(PLAYER::PLAYER_PED_ID(), 0) != 7 && func_82(PLAYER::PLAYER_PED_ID())) && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Local_982) < 625f) && iLocal_210 < 7)
 	{
-		if (SYSTEM::VDIST2(MISC::_0x21C235BC64831E5A(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Local_982, Local_985, true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 49f)
+		if (SYSTEM::VDIST2(MISC::GET_CLOSEST_POINT_ON_LINE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Local_982, Local_985, true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 49f)
 		{
 			PED::SET_PED_MAX_MOVE_BLEND_RATIO(PLAYER::PLAYER_PED_ID(), 1f);
 			PAD::DISABLE_CONTROL_ACTION(0, 22, true);
@@ -20712,7 +20712,7 @@ void func_323()
 		}
 		if ((!iLocal_167 && !PED::IS_PED_INJURED(Local_576[1 /*14*/])) && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{
-			if (SYSTEM::VDIST2(MISC::_0x21C235BC64831E5A(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Local_982, Local_985, true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 25f)
+			if (SYSTEM::VDIST2(MISC::GET_CLOSEST_POINT_ON_LINE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), Local_982, Local_985, true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 25f)
 			{
 				if (!func_5())
 				{
@@ -51419,7 +51419,7 @@ int func_467(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_467(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_593(iVar5, iParam1, iParam2, -1) };
@@ -51489,7 +51489,7 @@ int func_467(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_434(iParam0, 11);
 				iVar74 = func_434(iParam0, 8);
 				iVar75 = func_434(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -51864,7 +51864,7 @@ int func_467(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -52008,7 +52008,7 @@ int func_467(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_467(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_467(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -55283,7 +55283,7 @@ int func_483(int iParam0, int iParam1)
 
 int func_484(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -56061,7 +56061,7 @@ int func_487(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_488(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -56072,7 +56072,7 @@ int func_489(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -56156,7 +56156,7 @@ void func_491(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_502(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;

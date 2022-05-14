@@ -4768,7 +4768,7 @@ int func_80(bool bParam0)
 							ENTITY::SET_ENTITY_DYNAMIC(NETWORK::NET_TO_VEH(Local_89.f_73[bParam0]), true);
 							PHYSICS::ACTIVATE_PHYSICS(NETWORK::NET_TO_VEH(Local_89.f_73[bParam0]));
 							VEHICLE::SET_VEHICLE_FORWARD_SPEED(NETWORK::NET_TO_VEH(Local_89.f_73[bParam0]), 30f);
-							VEHICLE::_0xE16142B94664DEFD(NETWORK::NET_TO_VEH(Local_89.f_73[bParam0]), true);
+							VEHICLE::SET_PLANE_RESIST_TO_EXPLOSION(NETWORK::NET_TO_VEH(Local_89.f_73[bParam0]), true);
 							VEHICLE::_0xC361AA040D6637A8(NETWORK::NET_TO_VEH(Local_89.f_73[bParam0]), true);
 							fVar1 = 500f;
 							ENTITY::SET_ENTITY_HEALTH(NETWORK::NET_TO_VEH(Local_89.f_73[bParam0]), SYSTEM::ROUND(fVar1), 0);
@@ -8115,7 +8115,7 @@ int func_142()
 						VEHICLE::SET_VEHICLE_ENGINE_HEALTH(NETWORK::NET_TO_VEH(Local_89.f_7[bVar0]), fVar1);
 						if (VEHICLE::IS_THIS_MODEL_A_PLANE(Local_89.f_27))
 						{
-							VEHICLE::_0xE16142B94664DEFD(NETWORK::NET_TO_VEH(Local_89.f_7[bVar0]), true);
+							VEHICLE::SET_PLANE_RESIST_TO_EXPLOSION(NETWORK::NET_TO_VEH(Local_89.f_7[bVar0]), true);
 						}
 						if (VEHICLE::IS_THIS_MODEL_A_HELI(Local_89.f_27))
 						{
@@ -13693,7 +13693,7 @@ void func_334(int iParam0)
 		if (Global_1656661[iParam0 /*5*/].f_2 != 0)
 		{
 			StringCopy(&cVar16, PED::GET_PEDHEADSHOT_TXD_STRING(Global_1656661[iParam0 /*5*/].f_2), 64);
-			HUD::_THEFEED_ADD_TXD_REF(&cVar16, &cVar16, &cVar0, &cVar0);
+			HUD::THEFEED_UPDATE_ITEM_TEXTURE(&cVar16, &cVar16, &cVar0, &cVar0);
 		}
 		PED::UNREGISTER_PEDHEADSHOT(Global_1656661[iParam0 /*5*/].f_2);
 	}
@@ -13793,7 +13793,7 @@ int func_340(var* uParam0)
 
 bool func_341()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_342(int iParam0, int iParam1)
@@ -16676,7 +16676,7 @@ void func_441()
 							}
 							else
 							{
-								NETWORK::_NETWORK_EXPLODE_HELI(NETWORK::NET_TO_VEH(Local_89.f_7[0]), true, false, 0);
+								NETWORK::NETWORK_EXPLODE_HELI(NETWORK::NET_TO_VEH(Local_89.f_7[0]), true, false, 0);
 								func_25(&(Local_89.f_7[0]));
 							}
 						}
@@ -16786,7 +16786,7 @@ void func_441()
 									}
 									else
 									{
-										NETWORK::_NETWORK_EXPLODE_HELI(NETWORK::NET_TO_VEH(Local_89.f_7[bVar0]), true, false, 0);
+										NETWORK::NETWORK_EXPLODE_HELI(NETWORK::NET_TO_VEH(Local_89.f_7[bVar0]), true, false, 0);
 										func_25(&(Local_89.f_7[bVar0]));
 									}
 								}
@@ -20058,7 +20058,7 @@ void func_532()
 							}
 							else
 							{
-								NETWORK::_NETWORK_EXPLODE_HELI(NETWORK::NET_TO_VEH(Local_89.f_7[bVar2]), true, false, 0);
+								NETWORK::NETWORK_EXPLODE_HELI(NETWORK::NET_TO_VEH(Local_89.f_7[bVar2]), true, false, 0);
 								func_25(&(Local_89.f_7[bVar2]));
 							}
 						}
@@ -22612,14 +22612,14 @@ int func_607(int iParam0)
 	if (iParam0 != func_5())
 	{
 		Var0 = { func_66(iParam0) };
-		if ((MISC::IS_ORBIS_VERSION() && !unk_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
+		if ((MISC::IS_ORBIS_VERSION() && !MISC::_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
 				return 0;
 			}
 		}
-		else if (func_341() || unk_0x807ABE1AB65C24D2())
+		else if (func_341() || MISC::_0x807ABE1AB65C24D2())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
@@ -26072,7 +26072,7 @@ int func_659(int iParam0, int iParam1)
 
 int func_660(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}

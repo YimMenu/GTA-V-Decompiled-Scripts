@@ -6431,7 +6431,7 @@ void func_146(int iParam0)
 				iLocal_2601 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", true);
 				CAM::ATTACH_CAM_TO_ENTITY(iLocal_2601, NETWORK::NET_TO_VEH(Local_68.f_2[iParam0 /*23*/]), Local_2611, true);
 				func_149(iParam0);
-				CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_2601, true);
+				CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(iLocal_2601, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				GRAPHICS::SET_PARTICLE_FX_CAM_INSIDE_VEHICLE(true);
 				iLocal_2599 = 1;
@@ -8524,7 +8524,7 @@ int func_196(int iParam0, struct<3> Param1, var uParam4, var uParam5, var uParam
 	bVar21 = true;
 	iVar24 = *uParam6 + 2;
 	iVar25 = 50;
-	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Param1.f_0 - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.f_0 + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7)));
+	PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Param1.f_0 - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.f_0 + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7)));
 	if (PATHFIND::ARE_NODES_LOADED_FOR_AREA((Param1.f_0 - IntToFloat(iParam7)), (Param1.f_1 - IntToFloat(iParam7)), (Param1.f_0 + IntToFloat(iParam7)), (Param1.f_1 + IntToFloat(iParam7))))
 	{
 		while (!bVar19 && *uParam6 < iVar24)
@@ -10343,7 +10343,7 @@ void func_215(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5, var 
 		*uParam6 = { Var0 };
 		*uParam7 = { Var3 };
 	}
-	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(*uParam6, uParam6->f_1, *uParam7, uParam7->f_1);
+	PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(*uParam6, uParam6->f_1, *uParam7, uParam7->f_1);
 }
 
 Vector3 func_216(int iParam0)
@@ -11766,7 +11766,7 @@ void func_256(int iParam0)
 		if (Global_1656661[iParam0 /*5*/].f_2 != 0)
 		{
 			StringCopy(&cVar16, PED::GET_PEDHEADSHOT_TXD_STRING(Global_1656661[iParam0 /*5*/].f_2), 64);
-			HUD::_THEFEED_ADD_TXD_REF(&cVar16, &cVar16, &cVar0, &cVar0);
+			HUD::THEFEED_UPDATE_ITEM_TEXTURE(&cVar16, &cVar16, &cVar0, &cVar0);
 		}
 		PED::UNREGISTER_PEDHEADSHOT(Global_1656661[iParam0 /*5*/].f_2);
 	}

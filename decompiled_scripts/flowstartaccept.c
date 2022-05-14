@@ -42,7 +42,7 @@ void __EntryFunction__()
 	{
 		func_6();
 	}
-	if ((!Global_1 && !MISC::IS_PC_VERSION()) && MISC::_0x6FDDF453C0C756EC())
+	if ((!Global_1 && !MISC::IS_PC_VERSION()) && MISC::HAS_GAME_INSTALLED_THIS_SESSION())
 	{
 		SCRIPT::SET_NO_LOADING_SCREEN(true);
 		if (!CAM::IS_SCREEN_FADED_OUT())

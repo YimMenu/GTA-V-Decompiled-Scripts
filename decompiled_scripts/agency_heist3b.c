@@ -10945,7 +10945,7 @@ int func_114(bool bParam0, bool bParam1)
 
 bool func_115()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_116()
@@ -38484,7 +38484,7 @@ int func_235(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_235(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_360(iVar5, iParam1, iParam2, -1) };
@@ -38554,7 +38554,7 @@ int func_235(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_218(iParam0, 11);
 				iVar74 = func_218(iParam0, 8);
 				iVar75 = func_218(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -38929,7 +38929,7 @@ int func_235(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -39073,7 +39073,7 @@ int func_235(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_235(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_235(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -42380,7 +42380,7 @@ int func_255(int iParam0, int iParam1)
 
 int func_256(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -43158,7 +43158,7 @@ int func_259(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_260(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -43169,7 +43169,7 @@ int func_261(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -43253,7 +43253,7 @@ void func_263(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_274(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -110057,7 +110057,7 @@ void func_718(var uParam0, bool bParam1, int iParam2, int iParam3, bool bParam4,
 		CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_4, uParam0->f_3, Var17, true);
 		CAM::POINT_CAM_AT_ENTITY(uParam0->f_4, uParam0->f_3, Vector(0.6f, Var8.f_1, 0f) + uParam0->f_52, true);
 		CAM::SET_CAM_PARAMS(uParam0->f_4, Var14, 0f, 0f, 0f, uParam0->f_51, 0, 1, 1, 2);
-		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(uParam0->f_4, true);
+		CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(uParam0->f_4, true);
 	}
 }
 
@@ -114060,7 +114060,7 @@ void func_760()
 				if (!PAD::IS_CONTROL_PRESSED(iVar0, iVar1) || iLocal_6108 != 0)
 				{
 					CAM::RENDER_SCRIPT_CAMS(false, true, 400, true, false, 0);
-					CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_3853[6], false);
+					CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(iLocal_3853[6], false);
 					if (AUDIO::IS_AUDIO_SCENE_ACTIVE("AH_3B_COMPUTER_FOCUS_CAM"))
 					{
 						AUDIO::STOP_AUDIO_SCENE("AH_3B_COMPUTER_FOCUS_CAM");
@@ -114116,7 +114116,7 @@ void func_760()
 					if (MISC::GET_GAME_TIMER() > iLocal_6527)
 					{
 						CAM::SET_CAM_ACTIVE(iLocal_3853[6], true);
-						CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_3853[6], true);
+						CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(iLocal_3853[6], true);
 						CAM::RENDER_SCRIPT_CAMS(true, true, 400, true, false, 0);
 						if (!AUDIO::IS_AUDIO_SCENE_ACTIVE("AH_3B_COMPUTER_FOCUS_CAM"))
 						{
@@ -129824,7 +129824,7 @@ int func_959(int iParam0)
 
 bool func_960()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_961()
@@ -139350,7 +139350,7 @@ void func_1089()
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(1f);
+					GRAPHICS::SET_TRANSITION_OUT_OF_TIMECYCLE_MODIFIER(1f);
 				}
 				iLocal_8032 = 0;
 			}

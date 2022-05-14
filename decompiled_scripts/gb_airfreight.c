@@ -50303,7 +50303,7 @@ char* func_478(int iParam0)
 
 bool func_479()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_480(int iParam0)
@@ -50331,14 +50331,14 @@ int func_481(int iParam0)
 	if (iParam0 != func_3())
 	{
 		Var0 = { func_288(iParam0) };
-		if ((MISC::IS_ORBIS_VERSION() && !unk_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
+		if ((MISC::IS_ORBIS_VERSION() && !MISC::_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
 				return 0;
 			}
 		}
-		else if (func_479() || unk_0x807ABE1AB65C24D2())
+		else if (func_479() || MISC::_0x807ABE1AB65C24D2())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
@@ -65487,14 +65487,14 @@ void func_771()
 		{
 			if (!func_8(12))
 			{
-				if (ENTITY::_GET_ENTITY_CAN_BE_DAMAGED(func_31()))
+				if (ENTITY::GET_ENTITY_CAN_BE_DAMAGED(func_31()))
 				{
 					ENTITY::SET_ENTITY_INVINCIBLE(func_31(), true);
 					VEHICLE::SET_VEHICLE_CAN_BE_VISIBLY_DAMAGED(func_31(), false);
 					ENTITY::SET_ENTITY_CAN_BE_DAMAGED(func_31(), false);
 				}
 			}
-			else if (!ENTITY::_GET_ENTITY_CAN_BE_DAMAGED(func_31()))
+			else if (!ENTITY::GET_ENTITY_CAN_BE_DAMAGED(func_31()))
 			{
 				ENTITY::SET_ENTITY_INVINCIBLE(func_31(), false);
 				VEHICLE::SET_VEHICLE_CAN_BE_VISIBLY_DAMAGED(func_31(), true);
@@ -65626,7 +65626,7 @@ int func_773(struct<3> Param0, struct<3> Param3, int iParam6, int iParam7, var u
 			return 0;
 		}
 	}
-	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Param0.f_0 - 100f), (Param0.f_1 - 100f), (Param0.f_0 + 100f), (Param0.f_1 + 100f));
+	PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Param0.f_0 - 100f), (Param0.f_1 - 100f), (Param0.f_0 + 100f), (Param0.f_1 + 100f));
 	if (Global_2667223.f_676 == 0)
 	{
 		Global_2667223.f_682 = 0;
@@ -67702,7 +67702,7 @@ Vector3 func_816(struct<3> Param0, float* fParam3, int iParam4, bool bParam5, st
 	Var0 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param0, *fParam3, fVar11, 0f, 0f) };
 	if (bParam5)
 	{
-		if (PATHFIND::_GET_ROAD_SIDE_POINT_WITH_HEADING(Param0, *fParam3, &Var15))
+		if (PATHFIND::GET_ROAD_BOUNDARY_USING_HEADING(Param0, *fParam3, &Var15))
 		{
 			Var18 = { Var15 - Param0 };
 			if (!iParam11 == 0)
@@ -75577,7 +75577,7 @@ void func_1044(bool bParam0, var uParam1, int iParam2, bool bParam3, int iParam4
 
 void func_1045(int iParam0, int iParam1, int iParam2)
 {
-	STATS::_0x46A70777BE6CEAB9(&Global_1945443, iParam1, iParam2);
+	STATS::_PLAYSTATS_FREEMODE_MISSION_END(&Global_1945443, iParam1, iParam2);
 	func_1046();
 }
 
@@ -78398,7 +78398,7 @@ int func_1081(int iParam0)
 
 bool func_1082()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 int func_1083()

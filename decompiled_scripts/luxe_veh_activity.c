@@ -2027,7 +2027,7 @@ void func_29(var uParam0, var uParam1, var uParam2)
 					{
 						if (!func_311(uParam2))
 						{
-							if (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::_0xD7360051C885628B())
+							if (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::IS_BONNET_CINEMATIC_CAM_RENDERING())
 							{
 								if (func_25(uParam2->f_28))
 								{
@@ -2108,7 +2108,7 @@ void func_29(var uParam0, var uParam1, var uParam2)
 					{
 						if (!func_311(uParam2))
 						{
-							if (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::_0xD7360051C885628B())
+							if (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::IS_BONNET_CINEMATIC_CAM_RENDERING())
 							{
 								uParam2->f_8 = "POD_CIGAR";
 								if (func_310(0))
@@ -2151,7 +2151,7 @@ void func_29(var uParam0, var uParam1, var uParam2)
 					{
 						if (!func_311(uParam2))
 						{
-							if (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::_0xD7360051C885628B())
+							if (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::IS_BONNET_CINEMATIC_CAM_RENDERING())
 							{
 								uParam2->f_8 = "POD_CHAM_WEB";
 								if (func_310(0))
@@ -2189,7 +2189,7 @@ void func_29(var uParam0, var uParam1, var uParam2)
 					{
 						if (!func_311(uParam2))
 						{
-							if (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::_0xD7360051C885628B())
+							if (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::IS_BONNET_CINEMATIC_CAM_RENDERING())
 							{
 								uParam2->f_8 = "POD_WEB";
 								if (func_310(0))
@@ -4062,7 +4062,7 @@ int func_76(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_76(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_241(iVar5, iParam1, iParam2, -1) };
@@ -4132,7 +4132,7 @@ int func_76(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 				iVar73 = func_206(iParam0, 11);
 				iVar74 = func_206(iParam0, 8);
 				iVar75 = func_206(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -4507,7 +4507,7 @@ int func_76(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -4651,7 +4651,7 @@ int func_76(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 					{
 						func_76(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_76(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -8330,7 +8330,7 @@ int func_101(int iParam0, int iParam1)
 
 int func_102(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -9692,7 +9692,7 @@ int func_110(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_111(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -9703,7 +9703,7 @@ int func_112(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -9787,7 +9787,7 @@ void func_114(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_125(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -73149,7 +73149,7 @@ int func_296(int iParam0)
 
 int func_297(int iParam0, int iParam1)
 {
-	if (unk_0x7796B21B76221BC5(uParam0, iParam1, joaat("PILOT_SUIT")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, iParam1, joaat("PILOT_SUIT")))
 	{
 		return 1;
 	}
@@ -73200,7 +73200,7 @@ int func_299(var uParam0, char* sParam1)
 
 int func_300(int iParam0, var uParam1)
 {
-	if (((((PAD::IS_CONTROL_JUST_PRESSED(0, iParam0) && PED::IS_PED_SITTING_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID())) && (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::_0xD7360051C885628B())) && func_302(uParam1)) && !HUD::IS_PAUSE_MENU_ACTIVE()) && !func_301())
+	if (((((PAD::IS_CONTROL_JUST_PRESSED(0, iParam0) && PED::IS_PED_SITTING_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID())) && (CAM::_IS_IN_VEHICLE_CAM_DISABLED() || CAM::IS_BONNET_CINEMATIC_CAM_RENDERING())) && func_302(uParam1)) && !HUD::IS_PAUSE_MENU_ACTIVE()) && !func_301())
 	{
 		return 1;
 	}

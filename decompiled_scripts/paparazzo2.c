@@ -909,7 +909,7 @@ void __EntryFunction__()
 	}
 	if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_82))
 	{
-		PED::_DISPOSE_SYNCHRONIZED_SCENE(iLocal_82);
+		PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(iLocal_82);
 	}
 	iLocal_2919 = Local_2105.f_35[0];
 	Local_2105.f_35[0] = 0;
@@ -32189,12 +32189,12 @@ void func_193()
 
 bool func_194()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_195()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_196(int iParam0, int iParam1)
@@ -36038,7 +36038,7 @@ int func_247(int iParam0, bool bParam1)
 						}
 						if (func_5(Local_2560.f_0))
 						{
-							AUDIO::_SET_SYNCHRONIZED_AUDIO_EVENT_POSITION_THIS_FRAME("PAP2_IG1_POPPYSEX", Local_2560.f_0);
+							AUDIO::INIT_SYNCH_SCENE_AUDIO_WITH_ENTITY("PAP2_IG1_POPPYSEX", Local_2560.f_0);
 						}
 						func_13("TK************ SETTING SYNCH SCENE AUDIO POSITION THIS FRAME ************TK");
 						iLocal_2243 = 1;
@@ -36100,7 +36100,7 @@ int func_247(int iParam0, bool bParam1)
 						{
 							AUDIO::STOP_SYNCHRONIZED_AUDIO_EVENT(iLocal_2173);
 						}
-						AUDIO::_SET_SYNCHRONIZED_AUDIO_EVENT_POSITION_THIS_FRAME("PAP2_IG1_POPPYSEX", Local_2560.f_0);
+						AUDIO::INIT_SYNCH_SCENE_AUDIO_WITH_ENTITY("PAP2_IG1_POPPYSEX", Local_2560.f_0);
 						func_13("TK************ SETTING SYNCH SCENE AUDIO POSITION THIS FRAME ************TK");
 						iLocal_2243 = 1;
 					}
@@ -54785,7 +54785,7 @@ void func_528(int iParam0)
 					{
 						if (iLocal_2243 == 0)
 						{
-							AUDIO::_SET_SYNCHRONIZED_AUDIO_EVENT_POSITION_THIS_FRAME("PAP2_IG1_POPPYSEX", Local_2560.f_0);
+							AUDIO::INIT_SYNCH_SCENE_AUDIO_WITH_ENTITY("PAP2_IG1_POPPYSEX", Local_2560.f_0);
 							func_13("TK************ SETTING SYNCH SCENE AUDIO POSITION THIS FRAME ************TK");
 							iLocal_2243 = 1;
 						}
@@ -54801,7 +54801,7 @@ void func_528(int iParam0)
 					{
 						if (iLocal_2243 == 0)
 						{
-							AUDIO::_SET_SYNCHRONIZED_AUDIO_EVENT_POSITION_THIS_FRAME("PAP2_IG1_POPPYSEX", Local_2560.f_0);
+							AUDIO::INIT_SYNCH_SCENE_AUDIO_WITH_ENTITY("PAP2_IG1_POPPYSEX", Local_2560.f_0);
 							func_13("TK************ SETTING SYNCH SCENE AUDIO POSITION THIS FRAME ************TK");
 							iLocal_2243 = 1;
 						}
@@ -56742,7 +56742,7 @@ void func_578()
 		{
 			if (iLocal_2243 == 0)
 			{
-				AUDIO::_SET_SYNCHRONIZED_AUDIO_EVENT_POSITION_THIS_FRAME("PAP2_IG1_POPPYSEX", Local_2560.f_0);
+				AUDIO::INIT_SYNCH_SCENE_AUDIO_WITH_ENTITY("PAP2_IG1_POPPYSEX", Local_2560.f_0);
 				func_13("TK************ SETTING SYNCH SCENE AUDIO POSITION THIS FRAME ************TK");
 				iLocal_2243 = 1;
 			}

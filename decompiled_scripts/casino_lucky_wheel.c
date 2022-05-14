@@ -41133,8 +41133,8 @@ int func_616(var uParam0, int iParam1, bool bParam2)
 				{
 					if (func_142())
 					{
-						HUD::_0x170F541E1CADD1DE(true);
-						HUD::_SET_PLAYER_CASH_CHANGE(-iVar1, -iVar2);
+						HUD::USE_FAKE_MP_CASH(true);
+						HUD::CHANGE_FAKE_MP_CASH(-iVar1, -iVar2);
 						uParam0->f_356 = 1;
 					}
 					else
@@ -41147,8 +41147,8 @@ int func_616(var uParam0, int iParam1, bool bParam2)
 			{
 				if (func_142())
 				{
-					HUD::_0x170F541E1CADD1DE(true);
-					HUD::_SET_PLAYER_CASH_CHANGE(-iVar1, -iVar2);
+					HUD::USE_FAKE_MP_CASH(true);
+					HUD::CHANGE_FAKE_MP_CASH(-iVar1, -iVar2);
 					uParam0->f_356 = 1;
 				}
 				else
@@ -41178,7 +41178,7 @@ int func_616(var uParam0, int iParam1, bool bParam2)
 		
 		case 2:
 			uParam0->f_356 = 0;
-			HUD::_0x170F541E1CADD1DE(false);
+			HUD::USE_FAKE_MP_CASH(false);
 			HUD::HIDE_HUD_COMPONENT_THIS_FRAME(13);
 			uParam0->f_350 = 2;
 			return 0;
@@ -41187,7 +41187,7 @@ int func_616(var uParam0, int iParam1, bool bParam2)
 		case 3:
 			func_107(func_112());
 			uParam0->f_356 = 0;
-			HUD::_0x170F541E1CADD1DE(false);
+			HUD::USE_FAKE_MP_CASH(false);
 			HUD::HIDE_HUD_COMPONENT_THIS_FRAME(13);
 			uParam0->f_350 = 0;
 			return 0;

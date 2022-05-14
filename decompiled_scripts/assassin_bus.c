@@ -8863,12 +8863,12 @@ int func_124(int iParam0)
 
 bool func_125()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_126()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_127()
@@ -15522,7 +15522,7 @@ void func_308(var uParam0, bool bParam1)
 				if (!CAM::DOES_CAM_EXIST(iLocal_142))
 				{
 					iLocal_142 = CAM::CREATE_CAMERA(26379945, false);
-					CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_142, true);
+					CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(iLocal_142, true);
 					if (func_277("ASS_HELP_02"))
 					{
 						HUD::CLEAR_HELP(true);

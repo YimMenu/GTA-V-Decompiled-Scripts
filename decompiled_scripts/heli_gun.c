@@ -2795,11 +2795,11 @@ void func_58()
 												Var10 = { (-SYSTEM::SIN(Var7.f_2) * SYSTEM::COS(Var7.f_0)), (SYSTEM::COS(Var7.f_2) * SYSTEM::COS(Var7.f_0)), SYSTEM::SIN(Var7.f_0) };
 												Var13 = { 10f, 10f, 10f };
 												Var16 = { Var4 + Var10 * Var13 };
-												MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var4, Var16, iVar1, true, func_69(iLocal_340), PLAYER::PLAYER_PED_ID(), true, true, -1f, iVar3, false, false, false, true, 0, 1, 0);
+												MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var4, Var16, iVar1, true, func_69(iLocal_340), PLAYER::PLAYER_PED_ID(), true, true, -1f, iVar3, false, false, 0, true, 0, 1, 0);
 											}
 											else
 											{
-												MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var4, Local_73.f_45, iVar1, true, func_69(iLocal_340), PLAYER::PLAYER_PED_ID(), true, true, -1f, iVar3, false, false, false, true, 0, 1, 0);
+												MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var4, Local_73.f_45, iVar1, true, func_69(iLocal_340), PLAYER::PLAYER_PED_ID(), true, true, -1f, iVar3, false, false, 0, true, 0, 1, 0);
 											}
 											func_145(&(Global_2703660.f_3681), 0, 0);
 											if (iLocal_333 != 0)
@@ -2864,7 +2864,7 @@ void func_58()
 												Var25 = { CAM::GET_CAM_ROT(CAM::GET_RENDERING_CAM(), 2) };
 												Var22 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Var22, Var25.f_2, -0.5f, 0f, 0f) };
 											}
-											MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var22, Local_73.f_45, iVar19, true, joaat("vehicle_weapon_player_bullet"), PLAYER::PLAYER_PED_ID(), true, true, -1f, iVar21, false, false, false, true, 0, 1, 0);
+											MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var22, Local_73.f_45, iVar19, true, joaat("vehicle_weapon_player_bullet"), PLAYER::PLAYER_PED_ID(), true, true, -1f, iVar21, false, false, 0, true, 0, 1, 0);
 											func_145(&Local_290, 0, 0);
 											if (iLocal_333 != 0)
 											{
@@ -3240,7 +3240,7 @@ bool func_63()
 			switch (Global_1581352)
 			{
 				case 1:
-					if (VEHICLE::_GET_VEHICLE_FLIGHT_NOZZLE_POSITION(iLocal_340) >= 0.4f)
+					if (VEHICLE::GET_VEHICLE_FLIGHT_NOZZLE_POSITION(iLocal_340) >= 0.4f)
 					{
 						if ((fVar0 > 122.6f && fVar0 < 131.3f) && Local_73.f_186 > 7.87f)
 						{
@@ -3276,7 +3276,7 @@ bool func_63()
 					break;
 				
 				case 2:
-					if (VEHICLE::_GET_VEHICLE_FLIGHT_NOZZLE_POSITION(iLocal_340) >= 0.4f)
+					if (VEHICLE::GET_VEHICLE_FLIGHT_NOZZLE_POSITION(iLocal_340) >= 0.4f)
 					{
 						bVar1 = !((fVar0 > 111.2f && fVar0 < 125.8f) && Local_73.f_186 < 20f);
 					}
@@ -3306,7 +3306,7 @@ bool func_63()
 					break;
 				
 				case 3:
-					if (VEHICLE::_GET_VEHICLE_FLIGHT_NOZZLE_POSITION(iLocal_340) >= 0.4f)
+					if (VEHICLE::GET_VEHICLE_FLIGHT_NOZZLE_POSITION(iLocal_340) >= 0.4f)
 					{
 						bVar1 = !((fVar0 > 141.3f && fVar0 < 147.7f) && Local_73.f_186 > -3.7f);
 					}
@@ -6659,7 +6659,7 @@ void func_134()
 		func_84(&Local_73, 0, 1086324736, -1030356992, -1020002304, 1127481344, 1041865114);
 		func_100(&Local_73, 1086324736, -1030356992, -1020002304, 1127481344, 1041865114);
 		func_135(&Local_73, Var0);
-		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(Local_73.f_32, true);
+		CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(Local_73.f_32, true);
 		if ((Global_1581346 != -1 || func_194(iLocal_340)) || Global_1581352 != -1)
 		{
 			return;

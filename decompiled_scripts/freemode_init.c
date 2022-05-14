@@ -2597,7 +2597,7 @@ int func_76(int iParam0)
 
 bool func_77()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 int func_78()
@@ -2693,7 +2693,7 @@ int func_82(int iParam0)
 
 bool func_83()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_84(bool bParam0)
@@ -4756,7 +4756,7 @@ void func_154(bool bParam0)
 					if (Global_1656661[iVar32 /*5*/].f_2 != 0)
 					{
 						StringCopy(&cVar16, PED::GET_PEDHEADSHOT_TXD_STRING(Global_1656661[iVar32 /*5*/].f_2), 64);
-						HUD::_THEFEED_ADD_TXD_REF(&cVar16, &cVar16, &cVar0, &cVar0);
+						HUD::THEFEED_UPDATE_ITEM_TEXTURE(&cVar16, &cVar16, &cVar0, &cVar0);
 					}
 					PED::UNREGISTER_PEDHEADSHOT(Global_1656661[iVar32 /*5*/].f_2);
 				}

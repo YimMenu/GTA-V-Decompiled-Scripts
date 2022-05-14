@@ -242,7 +242,7 @@ void func_2()
 					{
 						if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 						{
-							GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND((SYSTEM::TO_FLOAT((Global_43748 / 2)) / 1000f));
+							GRAPHICS::SET_TRANSITION_OUT_OF_TIMECYCLE_MODIFIER((SYSTEM::TO_FLOAT((Global_43748 / 2)) / 1000f));
 						}
 						fLocal_16 = -99f;
 						Global_43753 = 0f;

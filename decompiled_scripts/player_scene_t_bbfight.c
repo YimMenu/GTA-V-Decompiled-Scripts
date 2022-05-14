@@ -1133,7 +1133,7 @@ int func_28(int iParam0, int iParam1)
 					}
 					else if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_97310))
 					{
-						PED::_DISPOSE_SYNCHRONIZED_SCENE(Global_97310);
+						PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(Global_97310);
 						(*iParam1)[iVar0] = 101;
 					}
 					break;

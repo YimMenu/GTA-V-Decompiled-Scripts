@@ -826,9 +826,9 @@ void func_4(var uParam0)
 	{
 		return;
 	}
-	uParam0->f_14 = MISC::_0x7F8F6405F4777AF6(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uParam0->f_5[0 /*3*/], uParam0->f_5[1 /*3*/], true);
+	uParam0->f_14 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uParam0->f_5[0 /*3*/], uParam0->f_5[1 /*3*/], true);
 	iVar2 = MISC::GET_RANDOM_INT_IN_RANGE(0, uParam0->f_214);
-	fVar6 = MISC::_0x7F8F6405F4777AF6(uParam0->f_15[iVar2 /*6*/].f_2, uParam0->f_5[0 /*3*/], uParam0->f_5[1 /*3*/], true);
+	fVar6 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(uParam0->f_15[iVar2 /*6*/].f_2, uParam0->f_5[0 /*3*/], uParam0->f_5[1 /*3*/], true);
 	Var3 = { uParam0->f_5[0 /*3*/] + Vector(fVar6, fVar6, fVar6) * uParam0->f_5[1 /*3*/] - uParam0->f_5[0 /*3*/] };
 	if (fVar6 < (uParam0->f_14 + uParam0->f_13))
 	{
@@ -42136,12 +42136,12 @@ int func_393(int iParam0)
 
 bool func_394()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_395()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_396()

@@ -1099,7 +1099,7 @@ int func_25()
 				{
 					if (func_26(&(Local_81.f_16[3]), func_27(3), func_22(3), 1, 1, 0, 1, 0, 0, 0))
 					{
-						INTERIOR::_0x82EBB79E258FA2B7(NETWORK::NET_TO_OBJ(Local_81.f_16[3]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(NETWORK::NET_TO_OBJ(Local_81.f_16[3]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
 						ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(Local_81.f_16[3]), true);
 						ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ(Local_81.f_16[3]), false, false);
 					}
@@ -1108,7 +1108,7 @@ int func_25()
 				{
 					if (func_26(&(Local_81.f_16[1]), func_27(1), func_22(1), 1, 1, 0, 1, 0, 0, 0))
 					{
-						INTERIOR::_0x82EBB79E258FA2B7(NETWORK::NET_TO_OBJ(Local_81.f_16[1]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(NETWORK::NET_TO_OBJ(Local_81.f_16[1]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
 						ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(Local_81.f_16[1]), true);
 						ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ(Local_81.f_16[1]), false, false);
 					}
@@ -1117,7 +1117,7 @@ int func_25()
 				{
 					if (func_26(&(Local_81.f_16[2]), func_27(2), func_22(2), 1, 1, 0, 1, 0, 0, 0))
 					{
-						INTERIOR::_0x82EBB79E258FA2B7(NETWORK::NET_TO_OBJ(Local_81.f_16[2]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(NETWORK::NET_TO_OBJ(Local_81.f_16[2]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
 						ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(Local_81.f_16[2]), true);
 						ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ(Local_81.f_16[2]), false, false);
 					}
@@ -1126,7 +1126,7 @@ int func_25()
 				{
 					if (func_26(&(Local_81.f_16[4]), func_27(4), func_22(4), 1, 1, 0, 1, 0, 0, 0))
 					{
-						INTERIOR::_0x82EBB79E258FA2B7(NETWORK::NET_TO_OBJ(Local_81.f_16[4]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(NETWORK::NET_TO_OBJ(Local_81.f_16[4]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
 						ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(Local_81.f_16[4]), true);
 						ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ(Local_81.f_16[4]), false, false);
 					}
@@ -1135,7 +1135,7 @@ int func_25()
 				{
 					if (func_26(&(Local_81.f_16[0]), func_27(0), func_22(0), 1, 1, 0, 1, 0, 0, 0))
 					{
-						INTERIOR::_0x82EBB79E258FA2B7(NETWORK::NET_TO_OBJ(Local_81.f_16[0]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(NETWORK::NET_TO_OBJ(Local_81.f_16[0]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
 						ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(Local_81.f_16[0]), true);
 						ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ(Local_81.f_16[0]), false, false);
 					}
@@ -1144,7 +1144,7 @@ int func_25()
 				{
 					if (func_26(&(Local_81.f_16[5]), func_27(5), func_22(5), 1, 1, 0, 1, 0, 0, 0))
 					{
-						INTERIOR::_0x82EBB79E258FA2B7(NETWORK::NET_TO_OBJ(Local_81.f_16[5]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(NETWORK::NET_TO_OBJ(Local_81.f_16[5]), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
 						ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(Local_81.f_16[5]), true);
 						ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ(Local_81.f_16[5]), false, false);
 					}
@@ -2257,7 +2257,7 @@ int func_49()
 						PED::SET_PED_COMPONENT_VARIATION(NETWORK::NET_TO_PED(Local_81.f_0), 3, iLocal_763[2], iLocal_769[2], 0);
 						PED::SET_PED_COMPONENT_VARIATION(NETWORK::NET_TO_PED(Local_81.f_0), 4, iLocal_763[3], iLocal_769[3], 0);
 						PED::SET_PED_COMPONENT_VARIATION(NETWORK::NET_TO_PED(Local_81.f_0), 8, iLocal_763[4], iLocal_769[4], 0);
-						INTERIOR::_0x82EBB79E258FA2B7(NETWORK::NET_TO_PED(Local_81.f_0), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(NETWORK::NET_TO_PED(Local_81.f_0), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
 						PED::SET_PED_KEEP_TASK(NETWORK::NET_TO_PED(Local_81.f_0), true);
 						PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(NETWORK::NET_TO_PED(Local_81.f_0), true);
 						ENTITY::SET_ENTITY_IS_TARGET_PRIORITY(NETWORK::NET_TO_PED(Local_81.f_0), true, 0f);
@@ -2282,7 +2282,7 @@ int func_49()
 						ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(Local_81.f_13), true);
 						ENTITY::SET_ENTITY_COLLISION(NETWORK::NET_TO_OBJ(Local_81.f_13), false, false);
 						ENTITY::SET_ENTITY_HEADING(NETWORK::NET_TO_OBJ(Local_81.f_13), fLocal_561);
-						INTERIOR::_0x82EBB79E258FA2B7(NETWORK::NET_TO_OBJ(Local_81.f_13), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(NETWORK::NET_TO_OBJ(Local_81.f_13), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
 						ENTITY::SET_ENTITY_INVINCIBLE(NETWORK::NET_TO_OBJ(Local_81.f_13), true);
 						OBJECT::_0xA08FE5E49BDC39DD(NETWORK::NET_TO_OBJ(Local_81.f_13), -0.2f, true);
 						OBJECT::PREVENT_COLLECTION_OF_PORTABLE_PICKUP(NETWORK::NET_TO_OBJ(Local_81.f_13), true, false);
@@ -2294,7 +2294,7 @@ int func_49()
 					if (func_26(&(Local_81.f_14), func_52(2), Local_562 - Vector(0.12f, 0f, 0f), 1, 1, 0, 1, 0, 0, 0))
 					{
 						ENTITY::SET_ENTITY_HEADING(NETWORK::NET_TO_OBJ(Local_81.f_14), fLocal_565);
-						INTERIOR::_0x82EBB79E258FA2B7(NETWORK::NET_TO_OBJ(Local_81.f_14), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(NETWORK::NET_TO_OBJ(Local_81.f_14), INTERIOR::GET_INTERIOR_AT_COORDS(Local_534));
 						ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_OBJ(Local_81.f_14), true);
 					}
 				}
@@ -10152,8 +10152,8 @@ int func_286(var uParam0, int iParam1, int iParam2, int iParam3)
 				{
 					if (func_289())
 					{
-						HUD::_0x170F541E1CADD1DE(true);
-						HUD::_SET_PLAYER_CASH_CHANGE(-iVar0, -iVar1);
+						HUD::USE_FAKE_MP_CASH(true);
+						HUD::CHANGE_FAKE_MP_CASH(-iVar0, -iVar1);
 						uParam0->f_48 = 1;
 					}
 					else
@@ -10184,7 +10184,7 @@ int func_286(var uParam0, int iParam1, int iParam2, int iParam3)
 			case 2:
 				uParam0->f_47 = 0;
 				uParam0->f_48 = 0;
-				HUD::_0x170F541E1CADD1DE(false);
+				HUD::USE_FAKE_MP_CASH(false);
 				HUD::HIDE_HUD_COMPONENT_THIS_FRAME(13);
 				uParam0->f_49 = 2;
 				return 0;
@@ -10194,7 +10194,7 @@ int func_286(var uParam0, int iParam1, int iParam2, int iParam3)
 				func_206(func_274());
 				uParam0->f_47 = 0;
 				uParam0->f_48 = 0;
-				HUD::_0x170F541E1CADD1DE(false);
+				HUD::USE_FAKE_MP_CASH(false);
 				HUD::HIDE_HUD_COMPONENT_THIS_FRAME(13);
 				uParam0->f_49 = 0;
 				return 0;

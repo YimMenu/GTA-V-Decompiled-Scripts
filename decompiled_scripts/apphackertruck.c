@@ -17233,7 +17233,7 @@ int func_432(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			case 2:
 				*iParam7 = 0;
 				*iParam8 = 0;
-				HUD::_0x170F541E1CADD1DE(false);
+				HUD::USE_FAKE_MP_CASH(false);
 				HUD::HIDE_HUD_COMPONENT_THIS_FRAME(13);
 				*iParam0 = 2;
 				return 0;
@@ -17243,7 +17243,7 @@ int func_432(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				func_373(func_388());
 				*iParam7 = 0;
 				*iParam8 = 0;
-				HUD::_0x170F541E1CADD1DE(false);
+				HUD::USE_FAKE_MP_CASH(false);
 				HUD::HIDE_HUD_COMPONENT_THIS_FRAME(13);
 				*iParam0 = 0;
 				return 0;

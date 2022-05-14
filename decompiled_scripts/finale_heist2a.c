@@ -9179,12 +9179,12 @@ int func_73(int iParam0)
 
 bool func_74()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_75()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_76()
@@ -42493,7 +42493,7 @@ int func_302(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_302(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_428(iVar5, iParam1, iParam2, -1) };
@@ -42563,7 +42563,7 @@ int func_302(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_277(iParam0, 11);
 				iVar74 = func_277(iParam0, 8);
 				iVar75 = func_277(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -42938,7 +42938,7 @@ int func_302(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -43082,7 +43082,7 @@ int func_302(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_302(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_302(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -46357,7 +46357,7 @@ int func_318(int iParam0, int iParam1)
 
 int func_319(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -47135,7 +47135,7 @@ int func_322(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_323(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -47146,7 +47146,7 @@ int func_324(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -47230,7 +47230,7 @@ void func_326(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_337(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -130136,7 +130136,7 @@ int func_973(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::SET_TRANSITION_OUT_OF_TIMECYCLE_MODIFIER(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -137432,7 +137432,7 @@ void func_1054()
 						iLocal_2138[0] = PED::CREATE_SYNCHRONIZED_SCENE(-1.233f, -702.975f, 15.136f, 0f, 0f, 160f, 2);
 						TASK::TASK_SYNCHRONIZED_SCENE(iLocal_2700[2], iLocal_2138[0], sLocal_2297, "trevor_leadout_action", 1000f, -1.5f, 5, 0, 1000f, 0);
 						WEAPON::SET_CURRENT_PED_WEAPON(iLocal_2700[2], joaat("weapon_pumpshotgun"), true);
-						INTERIOR::_0x82EBB79E258FA2B7(iLocal_2700[2], iLocal_2521);
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_2700[2], iLocal_2521);
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(iLocal_2700[2], false, false);
 					}
 					if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("Casey", 0) && !PED::IS_PED_INJURED(Local_4240[0 /*4*/]))
@@ -137440,7 +137440,7 @@ void func_1054()
 						ENTITY::SET_ENTITY_COORDS(Local_4240[0 /*4*/], 0.6f, -707f, 15.3f, true, false, false, true);
 						iLocal_2138[1] = PED::CREATE_SYNCHRONIZED_SCENE(-1.233f, -702.975f, 15.136f, 0f, 0f, 160f, 2);
 						TASK::TASK_SYNCHRONIZED_SCENE(Local_4240[0 /*4*/], iLocal_2138[1], sLocal_2297, "casey_leadout_action", 1000f, -1.5f, 5, 0, 1000f, 0);
-						INTERIOR::_0x82EBB79E258FA2B7(Local_4240[0 /*4*/], iLocal_2521);
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Local_4240[0 /*4*/], iLocal_2521);
 						INTERIOR::FORCE_ROOM_FOR_ENTITY(Local_4240[0 /*4*/], iLocal_2521, joaat("GtaMloRoom013"));
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(Local_4240[0 /*4*/], false, false);
 					}
@@ -137449,7 +137449,7 @@ void func_1054()
 						ENTITY::SET_ENTITY_COORDS(Local_3334.f_0, 1.2f, -705.5f, 15.3f, true, false, false, true);
 						iLocal_2138[2] = PED::CREATE_SYNCHRONIZED_SCENE(-1.233f, -702.975f, 15.136f, 0f, 0f, 160f, 2);
 						TASK::TASK_SYNCHRONIZED_SCENE(Local_3334.f_0, iLocal_2138[2], sLocal_2297, "bankman_leadout_action", 1000f, -1.5f, 5, 0, 1000f, 0);
-						INTERIOR::_0x82EBB79E258FA2B7(Local_3334.f_0, iLocal_2521);
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Local_3334.f_0, iLocal_2521);
 						INTERIOR::FORCE_ROOM_FOR_ENTITY(Local_3334.f_0, iLocal_2521, joaat("GtaMloRoom013"));
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(Local_3334.f_0, false, false);
 					}

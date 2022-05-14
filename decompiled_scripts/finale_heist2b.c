@@ -40120,7 +40120,7 @@ int func_288(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_288(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_413(iVar5, iParam1, iParam2, -1) };
@@ -40190,7 +40190,7 @@ int func_288(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_146(iParam0, 11);
 				iVar74 = func_146(iParam0, 8);
 				iVar75 = func_146(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -40565,7 +40565,7 @@ int func_288(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -40709,7 +40709,7 @@ int func_288(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_288(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_288(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -43984,7 +43984,7 @@ int func_304(int iParam0, int iParam1)
 
 int func_305(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -44762,7 +44762,7 @@ int func_308(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_309(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -44773,7 +44773,7 @@ int func_310(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -44857,7 +44857,7 @@ void func_312(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_323(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -96444,7 +96444,7 @@ int func_468(bool bParam0, bool bParam1)
 
 bool func_469()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_470()
@@ -101301,8 +101301,8 @@ int func_592(bool bParam0)
 					{
 						if (INTERIOR::IS_INTERIOR_READY(iLocal_878))
 						{
-							INTERIOR::_0x82EBB79E258FA2B7(iLocal_879[0], iLocal_878);
-							INTERIOR::_0x82EBB79E258FA2B7(iLocal_879[1], iLocal_878);
+							INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_879[0], iLocal_878);
+							INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_879[1], iLocal_878);
 							INTERIOR::FORCE_ROOM_FOR_ENTITY(iLocal_879[0], iLocal_878, joaat("GtaMloRoom010"));
 							INTERIOR::FORCE_ROOM_FOR_ENTITY(iLocal_879[1], iLocal_878, joaat("GtaMloRoom010"));
 						}
@@ -101348,7 +101348,7 @@ int func_593(bool bParam0, int iParam1, int iParam2)
 				ENTITY::SET_CAN_CLIMB_ON_ENTITY(iLocal_890[0], false);
 				if (iLocal_875[0] != 0)
 				{
-					INTERIOR::_0x82EBB79E258FA2B7(iLocal_890[0], iLocal_875[0]);
+					INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_890[0], iLocal_875[0]);
 				}
 				iLocal_890[1] = OBJECT::CREATE_OBJECT_NO_OFFSET(iVar0, 24.9209f, -639.1294f, 16.0089f, true, true, false);
 				if (iVar0 == iLocal_973)
@@ -101364,7 +101364,7 @@ int func_593(bool bParam0, int iParam1, int iParam2)
 				ENTITY::SET_CAN_CLIMB_ON_ENTITY(iLocal_890[1], false);
 				if (iLocal_875[0] != 0)
 				{
-					INTERIOR::_0x82EBB79E258FA2B7(iLocal_890[1], iLocal_875[0]);
+					INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_890[1], iLocal_875[0]);
 				}
 				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iVar0);
 				return 1;
@@ -123214,7 +123214,7 @@ void func_821(var uParam0, bool bParam1, int iParam2, int iParam3, bool bParam4,
 		CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_4, uParam0->f_3, Var17, true);
 		CAM::POINT_CAM_AT_ENTITY(uParam0->f_4, uParam0->f_3, Vector(0.6f, Var8.f_1, 0f) + uParam0->f_52, true);
 		CAM::SET_CAM_PARAMS(uParam0->f_4, Var14, 0f, 0f, 0f, uParam0->f_51, 0, 1, 1, 2);
-		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(uParam0->f_4, true);
+		CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(uParam0->f_4, true);
 	}
 }
 
@@ -123638,7 +123638,7 @@ int func_844(bool bParam0)
 				{
 					if (iLocal_875[0] != 0)
 					{
-						INTERIOR::_0x82EBB79E258FA2B7(iLocal_885[iVar0], iLocal_875[0]);
+						INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_885[iVar0], iLocal_875[0]);
 					}
 					iVar0++;
 				}
@@ -128337,7 +128337,7 @@ int func_872(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::SET_TRANSITION_OUT_OF_TIMECYCLE_MODIFIER(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -135541,7 +135541,7 @@ int func_955(int iParam0)
 
 bool func_956()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_957()

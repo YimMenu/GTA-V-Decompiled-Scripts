@@ -6725,7 +6725,7 @@ int func_283(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_283(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_443(iVar5, iParam1, iParam2, -1) };
@@ -6795,7 +6795,7 @@ int func_283(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_405(iParam0, 11);
 				iVar74 = func_405(iParam0, 8);
 				iVar75 = func_405(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -7170,7 +7170,7 @@ int func_283(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -7314,7 +7314,7 @@ int func_283(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_283(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_283(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -10970,7 +10970,7 @@ int func_307(int iParam0, int iParam1)
 
 int func_308(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -12332,7 +12332,7 @@ int func_316(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_317(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -12343,7 +12343,7 @@ int func_318(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -12427,7 +12427,7 @@ void func_320(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_331(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -88340,7 +88340,7 @@ int func_647(struct<3> Param0, struct<3> Param3, int iParam6, int iParam7, var u
 			return 0;
 		}
 	}
-	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Param0.f_0 - 100f), (Param0.f_1 - 100f), (Param0.f_0 + 100f), (Param0.f_1 + 100f));
+	PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT((Param0.f_0 - 100f), (Param0.f_1 - 100f), (Param0.f_0 + 100f), (Param0.f_1 + 100f));
 	if (Global_2667223.f_676 == 0)
 	{
 		Global_2667223.f_682 = 0;
@@ -90293,7 +90293,7 @@ Vector3 func_684(struct<3> Param0, float* fParam3, int iParam4, bool bParam5, st
 	Var0 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param0, *fParam3, fVar11, 0f, 0f) };
 	if (bParam5)
 	{
-		if (PATHFIND::_GET_ROAD_SIDE_POINT_WITH_HEADING(Param0, *fParam3, &Var15))
+		if (PATHFIND::GET_ROAD_BOUNDARY_USING_HEADING(Param0, *fParam3, &Var15))
 		{
 			Var18 = { Var15 - Param0 };
 			if (!iParam11 == 0)
@@ -96448,12 +96448,12 @@ int func_770(int iParam0)
 
 bool func_771()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_772()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_773()
@@ -98215,7 +98215,7 @@ void func_840(int iParam0)
 				}
 				else if (iVar1 == joaat("stromberg") && ENTITY::IS_ENTITY_IN_WATER(iParam0))
 				{
-					VEHICLE::_TRANSFORM_VEHICLE_TO_SUBMARINE(iParam0, true);
+					VEHICLE::TRANSFORM_TO_SUBMARINE(iParam0, true);
 					Global_2667223.f_2892 = 0;
 				}
 			}
@@ -101572,7 +101572,7 @@ int func_877(var uParam0, int iParam1, bool bParam2, int iParam3, int iParam4, v
 					break;
 				}
 		}
-		PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(fVar3, fVar5, fVar4, fVar6);
+		PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(fVar3, fVar5, fVar4, fVar6);
 		if (PATHFIND::ARE_NODES_LOADED_FOR_AREA(fVar3, fVar5, fVar4, fVar6))
 		{
 			if (Global_2667223.f_555.f_21)
@@ -101999,7 +101999,7 @@ int func_878(var uParam0, var uParam1, var uParam2)
 			}
 			break;
 	}
-	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(fVar4, fVar5, fVar6, fVar7);
+	PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(fVar4, fVar5, fVar6, fVar7);
 	if (uParam0->f_7 == 0)
 	{
 		Var8 = { *uParam0 };
@@ -102171,7 +102171,7 @@ int func_878(var uParam0, var uParam1, var uParam2)
 		}
 		if (Global_2667223.f_2465 == 2)
 		{
-			if ((PATHFIND::IS_NAVMESH_LOADED_IN_AREA(Var11, Var14) || NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), Global_2667223.f_2471) > 15000) || PATHFIND::_0x01708E8DD3FF8C65(Var11, Var14) == 0)
+			if ((PATHFIND::IS_NAVMESH_LOADED_IN_AREA(Var11, Var14) || NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), Global_2667223.f_2471) > 15000) || PATHFIND::GET_NUM_NAVMESHES_EXISTING_IN_AREA(Var11, Var14) == 0)
 			{
 				Global_2667223.f_2471 = NETWORK::GET_NETWORK_TIME();
 				if (uParam0->f_5 && !func_193(PLAYER::PLAYER_ID(), 0))
@@ -116792,7 +116792,7 @@ int func_1271(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam
 								}
 								if (*uParam0 == PLAYER::PLAYER_PED_ID())
 								{
-									if (unk_0x7796B21B76221BC5(*uParam0, 8, joaat("SCUBA_GEAR")))
+									if (FILES::_0x7796B21B76221BC5(*uParam0, 8, joaat("SCUBA_GEAR")))
 									{
 										if (iVar1 == joaat("mp_m_freemode_01"))
 										{
@@ -117662,7 +117662,7 @@ int func_1277(int iParam0, bool bParam1)
 
 int func_1278(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAZ_MASK")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAZ_MASK")))
 	{
 		return 1;
 	}
@@ -117671,7 +117671,7 @@ int func_1278(int iParam0)
 
 int func_1279(int iParam0, int iParam1)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, iParam1, joaat("PILOT_SUIT")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, iParam1, joaat("PILOT_SUIT")))
 	{
 		return 1;
 	}
@@ -118398,7 +118398,7 @@ void func_1294(int iParam0, var uParam1, bool bParam2)
 		iVar10 = 0;
 		while (iVar10 < 20)
 		{
-			PED::_SET_PED_FACE_FEATURE(iParam0, iVar10, 0f);
+			PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar10, 0f);
 			iVar10++;
 		}
 	}
@@ -125931,7 +125931,7 @@ int func_1313(int iParam0)
 
 int func_1314(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 5, joaat("DUFFEL_BAG")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 5, joaat("DUFFEL_BAG")))
 	{
 		return 1;
 	}
@@ -138094,7 +138094,7 @@ int func_1391(int iParam0)
 {
 	float fVar0;
 	
-	fVar0 = VEHICLE::_GET_VEHICLE_BODY_HEALTH_2(iParam0, 1000f, 1000f, 1000f, 1000f, 1000f, 1000f);
+	fVar0 = VEHICLE::GET_VEHICLE_HEALTH_PERCENTAGE(iParam0, 1000f, 1000f, 1000f, 1000f, 1000f, 1000f);
 	if (fVar0 >= 100f)
 	{
 		return 1;
@@ -140982,7 +140982,7 @@ int func_1465(int iParam0)
 	{
 		return 0;
 	}
-	if (unk_0x7796B21B76221BC5(iParam0, 11, joaat("JUGG_SUIT")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 11, joaat("JUGG_SUIT")))
 	{
 		return 1;
 	}
@@ -153950,7 +153950,7 @@ void func_1658(bool bParam0, var uParam1, var uParam2)
 		Var1 = { func_1511(fVar0) };
 		Var4 = { ENTITY::GET_ENTITY_COORDS(*uParam1, true) - Vector(3.5f, 0f, 0f) + Var1 * Vector(1.6f, 1.6f, 1.6f) };
 		ENTITY::SET_ENTITY_COORDS_NO_OFFSET(*uParam2, Var4, false, false, true);
-		VEHICLE::_ATTACH_ENTITY_TO_CARGOBOB(*uParam1, *uParam2, -1, 0f, 0f, 0f);
+		VEHICLE::ATTACH_ENTITY_TO_CARGOBOB(*uParam1, *uParam2, -1, 0f, 0f, 0f);
 		VEHICLE::STABILISE_ENTITY_ATTACHED_TO_HELI(*uParam1, *uParam2, 0.1f);
 	}
 	else
@@ -155057,7 +155057,7 @@ int func_1689(var uParam0)
 	{
 		if (func_11(uParam0->f_7))
 		{
-			if (VEHICLE::_GET_VEHICLE_FLIGHT_NOZZLE_POSITION(uParam0->f_7) == 1f)
+			if (VEHICLE::GET_VEHICLE_FLIGHT_NOZZLE_POSITION(uParam0->f_7) == 1f)
 			{
 				func_199(uParam0, 9, 1);
 				func_199(uParam0, 10, 0);
@@ -178692,7 +178692,7 @@ void func_2066(var uParam0, int iParam1)
 				ENTITY::SET_ENTITY_COLLISION(uParam0->f_11.f_553[0 /*12*/], false, false);
 				VEHICLE::CREATE_PICK_UP_ROPE_FOR_CARGOBOB(uParam0->f_11.f_553[0 /*12*/], 0);
 				VEHICLE::SET_PICKUP_ROPE_LENGTH_FOR_CARGOBOB(uParam0->f_11.f_553[0 /*12*/], 3f, 3f, true);
-				VEHICLE::_SET_CARGOBOB_HOOK_CAN_DETACH(uParam0->f_11.f_553[0 /*12*/], true);
+				VEHICLE::SET_CARGOBOB_FORCE_DONT_DETACH_VEHICLE(uParam0->f_11.f_553[0 /*12*/], true);
 				if (ENTITY::DOES_ENTITY_EXIST(uParam0->f_9) && !ENTITY::IS_ENTITY_DEAD(uParam0->f_9, false))
 				{
 					Var7 = { ENTITY::GET_ENTITY_COORDS(uParam0->f_11.f_553[0 /*12*/], true) };
@@ -178701,7 +178701,7 @@ void func_2066(var uParam0, int iParam1)
 					ENTITY::SET_ENTITY_COLLISION(uParam0->f_9, false, false);
 					ENTITY::SET_ENTITY_COORDS(uParam0->f_9, Var7, true, false, false, true);
 					ENTITY::SET_ENTITY_HEADING(uParam0->f_9, fVar3);
-					VEHICLE::_ATTACH_ENTITY_TO_CARGOBOB(uParam0->f_11.f_553[0 /*12*/], uParam0->f_9, 0, 0f, 0f, -3f);
+					VEHICLE::ATTACH_ENTITY_TO_CARGOBOB(uParam0->f_11.f_553[0 /*12*/], uParam0->f_9, 0, 0f, 0f, -3f);
 				}
 				uParam0->f_11.f_590[0 /*3*/] = { ENTITY::GET_ENTITY_COORDS(uParam0->f_11.f_553[0 /*12*/], true) };
 				uParam0->f_11.f_590[1 /*3*/] = { uParam0->f_11.f_590[0 /*3*/] - Vector(3.3f, 0f, 0f) };
@@ -184508,7 +184508,7 @@ char* func_2152(var uParam0)
 				{
 					return "delivery vehicle is not driveable";
 				}
-				if (ENTITY::GET_ENTITY_MODEL(uParam0->f_7) == joaat("stromberg") && VEHICLE::_GET_IS_SUBMARINE_VEHICLE_TRANSFORMED(uParam0->f_7))
+				if (ENTITY::GET_ENTITY_MODEL(uParam0->f_7) == joaat("stromberg") && VEHICLE::IS_VEHICLE_IN_SUBMARINE_MODE(uParam0->f_7))
 				{
 					return "delivery vehicle is in submarine mode";
 				}

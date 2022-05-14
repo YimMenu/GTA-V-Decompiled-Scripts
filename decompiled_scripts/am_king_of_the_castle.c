@@ -2894,7 +2894,7 @@ char* func_63(bool bParam0)
 
 bool func_64()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_65(bool bParam0)
@@ -2931,14 +2931,14 @@ int func_67(bool bParam0)
 	if (bParam0 != func_27())
 	{
 		Var0 = { func_41(bParam0) };
-		if ((MISC::IS_ORBIS_VERSION() && !unk_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
+		if ((MISC::IS_ORBIS_VERSION() && !MISC::_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
 				return 0;
 			}
 		}
-		else if (func_64() || unk_0x807ABE1AB65C24D2())
+		else if (func_64() || MISC::_0x807ABE1AB65C24D2())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
@@ -14127,7 +14127,7 @@ void func_407(int iParam0)
 		if (Global_1656661[iParam0 /*5*/].f_2 != 0)
 		{
 			StringCopy(&cVar16, PED::GET_PEDHEADSHOT_TXD_STRING(Global_1656661[iParam0 /*5*/].f_2), 64);
-			HUD::_THEFEED_ADD_TXD_REF(&cVar16, &cVar16, &cVar0, &cVar0);
+			HUD::THEFEED_UPDATE_ITEM_TEXTURE(&cVar16, &cVar16, &cVar0, &cVar0);
 		}
 		PED::UNREGISTER_PEDHEADSHOT(Global_1656661[iParam0 /*5*/].f_2);
 	}
@@ -16387,7 +16387,7 @@ void func_497(int iParam0)
 			MISC::SET_BIT(&bLocal_548, 12);
 		}
 		HUD::SHOW_HEIGHT_ON_BLIP(func_88(iParam0), true);
-		HUD::_SET_BLIP_DISPLAY_INDICATOR_ON_BLIP(func_88(iParam0), true);
+		HUD::SET_BLIP_EXTENDED_HEIGHT_THRESHOLD(func_88(iParam0), true);
 	}
 	else
 	{

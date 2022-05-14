@@ -1985,12 +1985,12 @@ void func_61(var uParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 
 bool func_62()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_63()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 bool func_64()
@@ -14675,11 +14675,11 @@ int func_523(var uParam0)
 
 int func_524(int iParam0)
 {
-	var uVar0;
+	int iVar0;
 	int iVar1;
 	
-	uVar0 = func_525(iParam0);
-	iVar1 = unk_0xECF041186C5A94DC(uVar0);
+	iVar0 = func_525(iParam0);
+	iVar1 = MISC::_0xECF041186C5A94DC(iVar0);
 	if (iVar1 != -1)
 	{
 		return iVar1;

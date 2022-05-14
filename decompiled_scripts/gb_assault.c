@@ -1893,7 +1893,7 @@ int func_52(var uParam0, var uParam1, var uParam2)
 			}
 			break;
 	}
-	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(fVar4, fVar5, fVar6, fVar7);
+	PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(fVar4, fVar5, fVar6, fVar7);
 	if (uParam0->f_7 == 0)
 	{
 		Var8 = { *uParam0 };
@@ -2065,7 +2065,7 @@ int func_52(var uParam0, var uParam1, var uParam2)
 		}
 		if (Global_2667223.f_2465 == 2)
 		{
-			if ((PATHFIND::IS_NAVMESH_LOADED_IN_AREA(Var11, Var14) || NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), Global_2667223.f_2471) > 15000) || PATHFIND::_0x01708E8DD3FF8C65(Var11, Var14) == 0)
+			if ((PATHFIND::IS_NAVMESH_LOADED_IN_AREA(Var11, Var14) || NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), Global_2667223.f_2471) > 15000) || PATHFIND::GET_NUM_NAVMESHES_EXISTING_IN_AREA(Var11, Var14) == 0)
 			{
 				Global_2667223.f_2471 = NETWORK::GET_NETWORK_TIME();
 				if (uParam0->f_5 && !func_36(PLAYER::PLAYER_ID(), 0))
@@ -7987,7 +7987,7 @@ Vector3 func_189(struct<3> Param0, float* fParam3, int iParam4, bool bParam5, st
 	Var0 = { OBJECT::_GET_OBJECT_OFFSET_FROM_COORDS(Param0, *fParam3, fVar11, 0f, 0f) };
 	if (bParam5)
 	{
-		if (PATHFIND::_GET_ROAD_SIDE_POINT_WITH_HEADING(Param0, *fParam3, &Var15))
+		if (PATHFIND::GET_ROAD_BOUNDARY_USING_HEADING(Param0, *fParam3, &Var15))
 		{
 			Var18 = { Var15 - Param0 };
 			if (!iParam11 == 0)
@@ -10710,7 +10710,7 @@ void func_280(int iParam0)
 		if (Global_1656661[iParam0 /*5*/].f_2 != 0)
 		{
 			StringCopy(&cVar16, PED::GET_PEDHEADSHOT_TXD_STRING(Global_1656661[iParam0 /*5*/].f_2), 64);
-			HUD::_THEFEED_ADD_TXD_REF(&cVar16, &cVar16, &cVar0, &cVar0);
+			HUD::THEFEED_UPDATE_ITEM_TEXTURE(&cVar16, &cVar16, &cVar0, &cVar0);
 		}
 		PED::UNREGISTER_PEDHEADSHOT(Global_1656661[iParam0 /*5*/].f_2);
 	}
@@ -10810,7 +10810,7 @@ int func_286(var* uParam0)
 
 bool func_287()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_288(bool bParam0, int iParam1)
@@ -14587,7 +14587,7 @@ bool func_449()
 				OBJECT::PREVENT_COLLECTION_OF_PORTABLE_PICKUP(NETWORK::NET_TO_OBJ(Local_89.f_12), true, true);
 				OBJECT::DETACH_PORTABLE_PICKUP_FROM_PED(NETWORK::NET_TO_OBJ(Local_89.f_12));
 				ENTITY::SET_ENTITY_VISIBLE(NETWORK::NET_TO_OBJ(Local_89.f_12), true, false);
-				OBJECT::_HIDE_PICKUP(NETWORK::NET_TO_OBJ(Local_89.f_12), false);
+				OBJECT::HIDE_PORTABLE_PICKUP_WHEN_DETACHED(NETWORK::NET_TO_OBJ(Local_89.f_12), false);
 			}
 		}
 	}
@@ -18857,14 +18857,14 @@ int func_586(int iParam0)
 	if (iParam0 != func_18())
 	{
 		Var0 = { func_47(iParam0) };
-		if ((MISC::IS_ORBIS_VERSION() && !unk_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
+		if ((MISC::IS_ORBIS_VERSION() && !MISC::_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
 				return 0;
 			}
 		}
-		else if (func_287() || unk_0x807ABE1AB65C24D2())
+		else if (func_287() || MISC::_0x807ABE1AB65C24D2())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
@@ -20316,7 +20316,7 @@ void func_652()
 		return;
 	}
 	iLocal_481 = HUD::ADD_BLIP_FOR_ENTITY(NETWORK::NET_TO_VEH(Local_89.f_29[0]));
-	HUD::_SET_BLIP_DISPLAY_INDICATOR_ON_BLIP(iLocal_481, true);
+	HUD::SET_BLIP_EXTENDED_HEIGHT_THRESHOLD(iLocal_481, true);
 	HUD::SHOW_HEIGHT_ON_BLIP(iLocal_481, true);
 	HUD::SET_BLIP_PRIORITY(iLocal_481, 12);
 	HUD::SET_BLIP_SPRITE(iLocal_481, 421);
@@ -21666,7 +21666,7 @@ void func_680()
 	iLocal_478 = HUD::ADD_BLIP_FOR_ENTITY(NETWORK::NET_TO_ENT(Local_89.f_12));
 	HUD::SET_BLIP_PRIORITY(iLocal_478, 12);
 	HUD::SET_BLIP_SPRITE(iLocal_478, 457);
-	HUD::_SET_BLIP_DISPLAY_INDICATOR_ON_BLIP(iLocal_478, true);
+	HUD::SET_BLIP_EXTENDED_HEIGHT_THRESHOLD(iLocal_478, true);
 	HUD::SHOW_HEIGHT_ON_BLIP(iLocal_478, true);
 	HUD::SET_BLIP_SCALE(iLocal_478, Global_262145.f_12620);
 	HUD::SET_BLIP_NAME_FROM_TEXT_FILE(iLocal_478, "GB_AST_BLIP");
@@ -67957,7 +67957,7 @@ void func_970(bool bParam0, int iParam1, int iParam2, bool bParam3, int iParam4,
 
 void func_971(int iParam0, int iParam1, int iParam2)
 {
-	STATS::_0x46A70777BE6CEAB9(&Global_1945443, iParam1, iParam2);
+	STATS::_PLAYSTATS_FREEMODE_MISSION_END(&Global_1945443, iParam1, iParam2);
 	func_972();
 }
 
@@ -71260,7 +71260,7 @@ int func_1047(int iParam0)
 
 bool func_1048()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 int func_1049()

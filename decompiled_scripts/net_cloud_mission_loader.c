@@ -767,7 +767,7 @@ void func_6(bool bParam0, bool bParam1)
 	if (!func_110())
 	{
 		Global_794709.f_177589[bParam0->f_9 /*13*/].f_1 = MISC::GET_HASH_KEY(NETWORK::UGC_GET_ROOT_CONTENT_ID(bParam0->f_7));
-		unk_0x4B82FA6F2D624634(Global_794709.f_177589[bParam0->f_9 /*13*/].f_1, bParam0->f_9);
+		MISC::_0x4B82FA6F2D624634(Global_794709.f_177589[bParam0->f_9 /*13*/].f_1, bParam0->f_9);
 	}
 	Global_794709.f_177589[bParam0->f_9 /*13*/].f_2 = func_80(Global_794709.f_177589[bParam0->f_9 /*13*/].f_1, 1);
 	if (func_79(Global_794709.f_177589[bParam0->f_9 /*13*/].f_1))
@@ -3241,7 +3241,7 @@ int func_99(int iParam0)
 	{
 		Global_794709.f_4[(2000 + iVar0) /*88*/] = { Global_786550.f_1[iVar2[iVar0] /*88*/] };
 		Global_794709.f_177589[(2000 + iVar0) /*13*/] = { Global_786550.f_3082[iVar2[iVar0] /*13*/] };
-		unk_0x4B82FA6F2D624634(Global_794709.f_177589[(2000 + iVar0) /*13*/].f_1, (2000 + iVar0));
+		MISC::_0x4B82FA6F2D624634(Global_794709.f_177589[(2000 + iVar0) /*13*/].f_1, (2000 + iVar0));
 		iVar1 = 0;
 		while (iVar1 < 8)
 		{
@@ -5940,7 +5940,7 @@ int func_175(var uParam0, char* sParam1)
 
 bool func_176()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 bool func_177()
@@ -12464,7 +12464,7 @@ void func_235(int iParam0)
 
 bool func_236()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 int func_237(int iParam0, int iParam1, int iParam2)

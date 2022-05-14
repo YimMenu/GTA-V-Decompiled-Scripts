@@ -929,7 +929,7 @@ void func_3()
 		case 7:
 			if (!PATHFIND::ARE_NODES_LOADED_FOR_AREA(func_58(0), func_58(1), func_58(2), func_58(3)))
 			{
-				PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(func_58(0), func_58(1), func_58(2), func_58(3));
+				PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(func_58(0), func_58(1), func_58(2), func_58(3));
 			}
 			else
 			{

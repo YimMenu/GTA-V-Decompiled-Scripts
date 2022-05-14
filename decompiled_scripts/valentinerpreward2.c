@@ -2599,7 +2599,7 @@ void func_110()
 		{
 			if (!NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(iVar0))
 			{
-				if (ENTITY::_GET_ENTITY_CAN_BE_DAMAGED(iVar0))
+				if (ENTITY::GET_ENTITY_CAN_BE_DAMAGED(iVar0))
 				{
 				}
 				else

@@ -441,7 +441,7 @@ int func_3(int* iParam0)
 				}
 				else if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_97310))
 				{
-					PED::_DISPOSE_SYNCHRONIZED_SCENE(Global_97310);
+					PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(Global_97310);
 					if (!ENTITY::IS_ENTITY_PLAYING_ANIM(*iParam0, &cLocal_280, &cLocal_312, 2))
 					{
 						TASK::CLEAR_PED_TASKS(*iParam0);
@@ -10305,12 +10305,12 @@ int func_157(int iParam0)
 
 bool func_158()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_159()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_160()

@@ -4625,7 +4625,7 @@ void func_72(var uParam0)
 	}
 	else
 	{
-		Var11 = { MISC::_0x21C235BC64831E5A(Var8, Var3, Var0, true) };
+		Var11 = { MISC::GET_CLOSEST_POINT_ON_LINE(Var8, Var3, Var0, true) };
 	}
 	fVar14 = MISC::GET_DISTANCE_BETWEEN_COORDS(Var11, Var8, true);
 	bVar15 = fVar14 >= fVar6;
@@ -19744,7 +19744,7 @@ bool func_484()
 
 bool func_485()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_486(bool bParam0)
@@ -23222,7 +23222,7 @@ int func_526(var uParam0)
 
 bool func_527()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_528(var uParam0)

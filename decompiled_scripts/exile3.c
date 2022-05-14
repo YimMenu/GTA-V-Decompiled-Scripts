@@ -47352,12 +47352,12 @@ int func_356(int iParam0)
 
 bool func_357()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_358()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_359()
@@ -49736,7 +49736,7 @@ int func_404(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::SET_TRANSITION_OUT_OF_TIMECYCLE_MODIFIER(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -60051,7 +60051,7 @@ int func_584(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_584(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_704(iVar5, iParam1, iParam2, -1) };
@@ -60121,7 +60121,7 @@ int func_584(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_125(iParam0, 11);
 				iVar74 = func_125(iParam0, 8);
 				iVar75 = func_125(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -60496,7 +60496,7 @@ int func_584(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -60640,7 +60640,7 @@ int func_584(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_584(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_584(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -63910,7 +63910,7 @@ int func_599(int iParam0, int iParam1)
 
 int func_600(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -64688,7 +64688,7 @@ int func_603(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_604(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -64699,7 +64699,7 @@ int func_605(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -64783,7 +64783,7 @@ void func_607(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_618(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -129717,7 +129717,7 @@ void func_954()
 		{
 			if (!iLocal_1186)
 			{
-				AUDIO::_SET_SYNCHRONIZED_AUDIO_EVENT_POSITION_THIS_FRAME("EX03_TRAIN_BIKE_LAND", PLAYER::PLAYER_PED_ID());
+				AUDIO::INIT_SYNCH_SCENE_AUDIO_WITH_ENTITY("EX03_TRAIN_BIKE_LAND", PLAYER::PLAYER_PED_ID());
 				iLocal_1186 = 1;
 			}
 			bLocal_1185 = AUDIO::PREPARE_SYNCHRONIZED_AUDIO_EVENT("EX03_TRAIN_BIKE_LAND", 0);
@@ -130916,7 +130916,7 @@ void func_979(bool bParam0)
 	if (!iLocal_1005)
 	{
 		bVar0 = false;
-		PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(592.95f, 3533.08f, 2145.54f, 4089.31f);
+		PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(592.95f, 3533.08f, 2145.54f, 4089.31f);
 		if (!PED::IS_PED_INJURED(iLocal_72[0]))
 		{
 			if (!ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), iLocal_72[0], 300f, 300f, 20f, false, false, 0) && !func_230())

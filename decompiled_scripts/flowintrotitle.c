@@ -49,7 +49,7 @@ void __EntryFunction__()
 			else if (MISC::GET_GAME_TIMER() > iLocal_1)
 			{
 				MISC::SET_BIT(&(Global_112922.f_10016.f_25), 1);
-				if (MISC::_0x6FDDF453C0C756EC() || MISC::IS_PC_VERSION())
+				if (MISC::HAS_GAME_INSTALLED_THIS_SESSION() || MISC::IS_PC_VERSION())
 				{
 					func_4(1, 1);
 					func_2();

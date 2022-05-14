@@ -25422,7 +25422,7 @@ float func_385(struct<3> Param0, int iParam3, char* sParam4, var uParam5)
 		fVar0 = (VEHICLE::GET_TOTAL_DURATION_OF_VEHICLE_RECORDING(iParam3, sParam4) / 800f);
 		iVar2 = func_386(Param0, uParam5);
 		fVar1 = MISC::GET_DISTANCE_BETWEEN_COORDS(*(uParam5[iVar2 /*3*/]), *(uParam5[iVar2 + 1 /*3*/]), true);
-		Var3 = { MISC::_0x21C235BC64831E5A(Param0, *(uParam5[iVar2 /*3*/]), *(uParam5[iVar2 + 1 /*3*/]), true) };
+		Var3 = { MISC::GET_CLOSEST_POINT_ON_LINE(Param0, *(uParam5[iVar2 /*3*/]), *(uParam5[iVar2 + 1 /*3*/]), true) };
 		fVar6 = MISC::GET_DISTANCE_BETWEEN_COORDS(*(uParam5[iVar2 /*3*/]), Var3, true);
 		fVar7 = ((fVar6 / fVar1) * fVar0);
 	}
@@ -25439,7 +25439,7 @@ int func_386(struct<3> Param0, var uParam3)
 	iVar0 = iLocal_3490;
 	while (iVar0 <= 798)
 	{
-		fVar2 = MISC::GET_DISTANCE_BETWEEN_COORDS(MISC::_0x21C235BC64831E5A(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0, true);
+		fVar2 = MISC::GET_DISTANCE_BETWEEN_COORDS(MISC::GET_CLOSEST_POINT_ON_LINE(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0, true);
 		if (fVar2 < fVar1)
 		{
 			iLocal_3490 = iVar0;
@@ -33912,7 +33912,7 @@ int func_528(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_528(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_670(iVar5, iParam1, iParam2, -1) };
@@ -33982,7 +33982,7 @@ int func_528(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_514(iParam0, 11);
 				iVar74 = func_514(iParam0, 8);
 				iVar75 = func_514(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -34357,7 +34357,7 @@ int func_528(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -34501,7 +34501,7 @@ int func_528(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_528(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_528(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -37776,7 +37776,7 @@ int func_544(int iParam0, int iParam1)
 
 int func_545(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -39138,7 +39138,7 @@ int func_553(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_554(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -39149,7 +39149,7 @@ int func_555(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -39233,7 +39233,7 @@ void func_557(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_568(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -118422,7 +118422,7 @@ int func_815(bool bParam0, bool bParam1)
 
 bool func_816()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_817()
@@ -121561,7 +121561,7 @@ void func_868()
 			TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_5922, "MISSFAM2MCS_intp1", "FAM_2_INT_P1_MICHAEL", 1000f, -1000f, 0, 0, 1000f, 0);
 			CAM::PLAY_SYNCHRONIZED_CAM_ANIM(iLocal_5923, iLocal_5922, "FAM_2_INT_P1_CAM", "MISSFAM2MCS_intp1");
 			CAM::SET_CAM_ACTIVE(iLocal_5923, true);
-			CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_5923, true);
+			CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(iLocal_5923, true);
 			iLocal_5924 = OBJECT::CREATE_OBJECT(joaat("v_ilev_mm_doorm_l"), -816.72f, 179.1f, 72.83f, true, true, false);
 			iLocal_5925 = OBJECT::CREATE_OBJECT(joaat("v_ilev_mm_doorm_r"), -816.11f, 177.51f, 72.83f, true, true, false);
 			ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(iLocal_5924, iLocal_5922, "FAM_2_INT_P1_doorL", "MISSFAM2MCS_intp1", 1000f, -1000f, 0, 1000f);
@@ -125681,7 +125681,7 @@ int func_908(int iParam0)
 
 bool func_909()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_910()

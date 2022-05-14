@@ -4516,7 +4516,7 @@ void func_183()
 					{
 						iVar16 = Global_262145.f_24428;
 					}
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Local_190.f_150 + Vector(0f, 0f, 0f), Var13, iVar16, true, joaat("WEAPON_TRANQUILIZER"), PLAYER::PLAYER_PED_ID(), true, true, -1f, NETWORK::NET_TO_OBJ(Local_190.f_159), false, false, false, true, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Local_190.f_150 + Vector(0f, 0f, 0f), Var13, iVar16, true, joaat("WEAPON_TRANQUILIZER"), PLAYER::PLAYER_PED_ID(), true, true, -1f, NETWORK::NET_TO_OBJ(Local_190.f_159), false, false, 0, true, 0, 0, 0);
 					Local_190.f_24 = 100;
 					PAD::SET_PAD_SHAKE(0, 300, SYSTEM::ROUND((150f * Local_190.f_131)));
 					if (AUDIO::HAS_SOUND_FINISHED(Local_190.f_81))
@@ -4792,7 +4792,7 @@ void func_188()
 				{
 					iVar15 = 1;
 				}
-				MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Local_190.f_150 + Vector(0f, 0f, 0f), Var12, iVar15, true, joaat("weapon_stungun"), PLAYER::PLAYER_PED_ID(), true, true, -1f, NETWORK::NET_TO_OBJ(Local_190.f_159), false, false, false, true, 0, 0, 0);
+				MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Local_190.f_150 + Vector(0f, 0f, 0f), Var12, iVar15, true, joaat("weapon_stungun"), PLAYER::PLAYER_PED_ID(), true, true, -1f, NETWORK::NET_TO_OBJ(Local_190.f_159), false, false, 0, true, 0, 0, 0);
 				Local_190.f_18 = 100;
 				Local_190.f_19 = 0;
 				PAD::SET_PAD_SHAKE(0, 300, SYSTEM::ROUND((150f * Local_190.f_131)));
@@ -6539,7 +6539,7 @@ void func_237(int iParam0)
 						if (!BitTest(Local_190.f_5, 8))
 						{
 							Local_190.f_123 = func_244(INTERIOR::_GET_INTERIOR_HEADING(iVar0));
-							INTERIOR::_GET_INTERIOR_INFO(iVar0, &(Local_190.f_147), &(Local_190.f_17));
+							INTERIOR::GET_INTERIOR_LOCATION_AND_NAMEHASH(iVar0, &(Local_190.f_147), &(Local_190.f_17));
 							MISC::SET_BIT(&(Local_190.f_5), 8);
 						}
 						iVar1 = 0;

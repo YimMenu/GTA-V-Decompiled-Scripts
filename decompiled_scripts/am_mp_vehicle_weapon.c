@@ -1784,7 +1784,7 @@ void func_49()
 					Var32.f_2 = MISC::GET_DISTANCE_BETWEEN_COORDS(Local_126.f_56, Var23, false);
 				}
 				Var35 = { Var23 + Var29 * Var32 };
-				MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var20, Var35, iVar1, true, func_53(1), PLAYER::PLAYER_PED_ID(), true, true, -1f, iVar2, false, false, false, true, 0, 1, 0);
+				MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var20, Var35, iVar1, true, func_53(1), PLAYER::PLAYER_PED_ID(), true, true, -1f, iVar2, false, false, 0, true, 0, 1, 0);
 				AUDIO::PLAY_SOUND_FROM_COORD(-1, "Fire", Var20, "DLC_BTL_Terrobyte_Turret_Sounds", true, 120, true);
 				MISC::SET_BIT(&(Local_126.f_5), true);
 				Local_126.f_33 = 0;
@@ -3438,7 +3438,7 @@ void func_103()
 	HUD::HIDE_MINIMAP_INTERIOR_MAP_THIS_FRAME();
 	if (CAM::DOES_CAM_EXIST(Local_126.f_61))
 	{
-		CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(Local_126.f_61, true);
+		CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(Local_126.f_61, true);
 	}
 	HUD::SET_RADAR_ZOOM(0);
 	if (func_165())

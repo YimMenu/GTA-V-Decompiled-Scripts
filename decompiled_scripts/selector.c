@@ -4214,11 +4214,11 @@ struct<16> func_103(int iParam0)
 	
 	StringCopy(&Var0, "share/gta5/mpchars/", 64);
 	StringIntConCat(&Var0, iParam0, 64);
-	if (unk_0x807ABE1AB65C24D2())
+	if (MISC::_0x807ABE1AB65C24D2())
 	{
 		StringConCat(&Var0, "_ps5", 64);
 	}
-	else if (unk_0xC545AB1CF97ABB34())
+	else if (MISC::_0xC545AB1CF97ABB34())
 	{
 		StringConCat(&Var0, "_xboxsx", 64);
 	}
@@ -4390,7 +4390,7 @@ int func_113()
 
 bool func_114()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_115()
@@ -5223,7 +5223,7 @@ void func_132()
 							}
 							else if (iVar9 == 6)
 							{
-								if (iVar8 == 0 && unk_0xC545AB1CF97ABB34() == 0)
+								if (iVar8 == 0 && MISC::_0xC545AB1CF97ABB34() == 0)
 								{
 									MISC::SET_TIME_SCALE(1f);
 									PLAYER::DISPLAY_SYSTEM_SIGNIN_UI(true);
@@ -5482,7 +5482,7 @@ void func_132()
 					}
 					else if (iVar9 == 6)
 					{
-						if (iVar8 == 0 && unk_0xC545AB1CF97ABB34() == 0)
+						if (iVar8 == 0 && MISC::_0xC545AB1CF97ABB34() == 0)
 						{
 							MISC::SET_TIME_SCALE(1f);
 							PLAYER::DISPLAY_SYSTEM_SIGNIN_UI(true);
@@ -37190,7 +37190,7 @@ int func_285(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_285(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_411(iVar5, iParam1, iParam2, -1) };
@@ -37260,7 +37260,7 @@ int func_285(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_259(iParam0, 11);
 				iVar74 = func_259(iParam0, 8);
 				iVar75 = func_259(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -37635,7 +37635,7 @@ int func_285(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -37779,7 +37779,7 @@ int func_285(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_285(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_285(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -41054,7 +41054,7 @@ int func_301(int iParam0, int iParam1)
 
 int func_302(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -41832,7 +41832,7 @@ int func_305(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_306(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -41843,7 +41843,7 @@ int func_307(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -41927,7 +41927,7 @@ void func_309(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_320(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -102813,7 +102813,7 @@ int func_793()
 		CAM::DO_SCREEN_FADE_IN(0);
 	}
 	func_699();
-	if (unk_0x7788DFE15016A182() == 0)
+	if (NETWORK::_0x7788DFE15016A182() == 0)
 	{
 		HUD::SET_WARNING_MESSAGE_WITH_HEADER(sVar0, sVar1, 16384, 0, false, -1, 0, 0, true, 0);
 	}
@@ -103282,7 +103282,7 @@ int func_806(int iParam0)
 
 bool func_807()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_808()

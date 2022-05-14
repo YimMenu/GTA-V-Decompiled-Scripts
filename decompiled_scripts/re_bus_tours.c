@@ -7042,7 +7042,7 @@ void func_182()
 {
 	if (iLocal_318)
 	{
-		PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_320.f_0, Local_320.f_1, Local_323.f_0, Local_323.f_1);
+		PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Local_320.f_0, Local_320.f_1, Local_323.f_0, Local_323.f_1);
 	}
 }
 

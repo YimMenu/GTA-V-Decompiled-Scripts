@@ -4828,7 +4828,7 @@ void func_75(bool bParam0)
 
 bool func_76()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_77(bool bParam0)

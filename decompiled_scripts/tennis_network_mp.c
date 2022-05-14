@@ -7575,8 +7575,8 @@ int func_128(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	if (fVar0 >= 0f && fVar0 <= 1f)
 	{
 		Var1 = { *uParam1 + *uParam2 - *uParam1 * Vector(fVar0, fVar0, fVar0) };
-		fVar7 = MISC::_0x7F8F6405F4777AF6(Var1, uParam0->f_39[0 /*3*/], uParam0->f_39[1 /*3*/], false);
-		fVar8 = MISC::_0x7F8F6405F4777AF6(Var1, uParam0->f_39[1 /*3*/], uParam0->f_39[2 /*3*/], false);
+		fVar7 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Var1, uParam0->f_39[0 /*3*/], uParam0->f_39[1 /*3*/], false);
+		fVar8 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Var1, uParam0->f_39[1 /*3*/], uParam0->f_39[2 /*3*/], false);
 		if (fVar7 > 0f && fVar7 < 1f)
 		{
 			Var4 = { uParam0->f_39[0 /*3*/] + uParam0->f_39[1 /*3*/] - uParam0->f_39[0 /*3*/] * Vector(fVar7, fVar7, fVar7) };
@@ -9531,7 +9531,7 @@ int func_180(int* iParam0, var uParam1, char* sParam2, int iParam3, int iParam4,
 						GRAPHICS::ANIMPOSTFX_STOP("MP_Celeb_Preload_Fade");
 						GRAPHICS::ANIMPOSTFX_STOP("MP_Celeb_Preload_Fade");
 						func_233(iParam0);
-						HUD::_SET_TEXT_CHAT_UNK(true);
+						HUD::_MULTIPLAYER_CHAT_SET_DISABLED(true);
 						iParam0->f_436 = 3;
 					}
 					break;
@@ -9546,7 +9546,7 @@ int func_180(int* iParam0, var uParam1, char* sParam2, int iParam3, int iParam4,
 				
 				case 5:
 					func_232(iParam0);
-					HUD::_SET_TEXT_CHAT_UNK(false);
+					HUD::_MULTIPLAYER_CHAT_SET_DISABLED(false);
 					*uParam8 = 1;
 					iParam0->f_436 = 0;
 					break;
@@ -9639,7 +9639,7 @@ int func_180(int* iParam0, var uParam1, char* sParam2, int iParam3, int iParam4,
 						}
 						func_233(iParam0);
 						iParam0->f_436 = 3;
-						HUD::_SET_TEXT_CHAT_UNK(true);
+						HUD::_MULTIPLAYER_CHAT_SET_DISABLED(true);
 					}
 					else if (GRAPHICS::ANIMPOSTFX_IS_RUNNING("DeathFailMPIn"))
 					{
@@ -9725,7 +9725,7 @@ int func_180(int* iParam0, var uParam1, char* sParam2, int iParam3, int iParam4,
 					break;
 				
 				case 5:
-					HUD::_SET_TEXT_CHAT_UNK(false);
+					HUD::_MULTIPLAYER_CHAT_SET_DISABLED(false);
 					if (func_217())
 					{
 						AUDIO::STOP_AUDIO_SCENE("MP_CELEB_SCREEN_SCENE");
@@ -12308,12 +12308,12 @@ int func_243()
 
 bool func_244()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 bool func_245()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_246(int* iParam0, char* sParam1, char* sParam2, bool bParam3, int iParam4)
@@ -17408,7 +17408,7 @@ int func_281(int iParam0)
 	{
 		return 0;
 	}
-	if (unk_0x7796B21B76221BC5(iParam0, 11, joaat("JUGG_SUIT")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 11, joaat("JUGG_SUIT")))
 	{
 		return 1;
 	}
@@ -17462,7 +17462,7 @@ void func_282(var uParam0, int iParam1, struct<3> Param2, float fParam5, int iPa
 
 int func_283(int iParam0, int iParam1)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, iParam1, joaat("PILOT_SUIT")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, iParam1, joaat("PILOT_SUIT")))
 	{
 		return 1;
 	}
@@ -51455,7 +51455,7 @@ Vector3 func_507(var uParam0, var uParam1, int iParam2, int iParam3, struct<3> P
 	fVar8 = (30f * func_511(uParam0));
 	fVar9 = fVar8;
 	Var10 = { Param4 };
-	Var13 = { MISC::_0x21C235BC64831E5A(Var10, uParam1->f_189.f_32[0 /*3*/], uParam1->f_189.f_32[1 /*3*/], false) };
+	Var13 = { MISC::GET_CLOSEST_POINT_ON_LINE(Var10, uParam1->f_189.f_32[0 /*3*/], uParam1->f_189.f_32[1 /*3*/], false) };
 	fVar16 = SYSTEM::VDIST(Var10, Var13);
 	fVar17 = (SYSTEM::VMAG(uParam1->f_189.f_3[3 /*3*/] - uParam1->f_189.f_3[0 /*3*/]) / 2f);
 	fVar18 = (fVar16 / fVar17);
@@ -51725,7 +51725,7 @@ Vector3 func_509(var uParam0, var uParam1, struct<3> Param2, int iParam5)
 			Var6 = { uParam0->f_43 * Vector(fVar14, fVar14, fVar14) * Vector(-1f, -1f, -1f) };
 		}
 	}
-	Var15 = { MISC::_0x21C235BC64831E5A(uParam0->f_37, uParam1->f_3[iVar9 /*3*/], uParam1->f_3[iVar10 /*3*/], true) };
+	Var15 = { MISC::GET_CLOSEST_POINT_ON_LINE(uParam0->f_37, uParam1->f_3[iVar9 /*3*/], uParam1->f_3[iVar10 /*3*/], true) };
 	if (MISC::ABSI(iParam5) > 15)
 	{
 		if (iParam5 > 0)
@@ -52243,8 +52243,8 @@ int func_526(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	}
 	uVar8 = Var4.f_2;
 	Var9 = { fVar7, 0f, uVar8 };
-	*fParam7 = MISC::_0x7F8F6405F4777AF6(Var9, *uParam5, *uParam3, false);
-	*fParam8 = MISC::_0x7F8F6405F4777AF6(Var9, func_1174(bParam6, *uParam5, *uParam4), func_1174(bParam6, *uParam4, *uParam5), false);
+	*fParam7 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Var9, *uParam5, *uParam3, false);
+	*fParam8 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Var9, func_1174(bParam6, *uParam5, *uParam4), func_1174(bParam6, *uParam4, *uParam5), false);
 	if (((*fParam7 < 0f || *fParam7 > 2f) || *fParam8 < 0f) || *fParam8 > 2f)
 	{
 		return 0;
@@ -52620,7 +52620,7 @@ int func_537(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 							while (((fVar53 > 0f && (iVar3 - iVar55) > 2) && func_538(uParam0)) && fVar54 > 0f)
 							{
 								iVar55++;
-								Var44 = { MISC::_0x21C235BC64831E5A(Var41, *(uParam4[(iVar3 - iVar55) /*3*/]), *(uParam4[((iVar3 - iVar55) - 1) /*3*/]), true) };
+								Var44 = { MISC::GET_CLOSEST_POINT_ON_LINE(Var41, *(uParam4[(iVar3 - iVar55) /*3*/]), *(uParam4[((iVar3 - iVar55) - 1) /*3*/]), true) };
 								Var50 = { Var41 - Var44 };
 								fVar53 = func_91(Var50, uParam0->f_40);
 							}
@@ -85040,7 +85040,7 @@ void func_974(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			{
 				Global_786435.f_22 = 0;
 			}
-			STATS::_0xF5BB8DAC426A52C0(&cVar0, &Var8, &Global_786435, &Var144);
+			STATS::PLAYSTATS_JOB_BEND(&cVar0, &Var8, &Global_786435, &Var144);
 			func_1014();
 			Global_1837287 = 0;
 			return;
@@ -85203,7 +85203,7 @@ void func_974(int iParam0, var uParam1, int iParam2, bool bParam3, int iParam4, 
 			Global_2714635.f_669.f_15 = 0;
 			Global_1945472.f_25 = (func_983(PLAYER::PLAYER_ID(), 1) - Global_1837272);
 			IntToString(&(Global_1945472.f_7), MISC::GET_HASH_KEY(&(Global_4718592.f_87296)), 32);
-			STATS::_0xFEA3F7E83C0610FA(&Global_1945472);
+			STATS::_PLAYSTATS_INST_MISSION_END(&Global_1945472);
 			func_1014();
 			Global_1837287 = 0;
 		}
@@ -96639,7 +96639,7 @@ void func_1186(int iParam0)
 		if (Global_1656661[iParam0 /*5*/].f_2 != 0)
 		{
 			StringCopy(&cVar16, PED::GET_PEDHEADSHOT_TXD_STRING(Global_1656661[iParam0 /*5*/].f_2), 64);
-			HUD::_THEFEED_ADD_TXD_REF(&cVar16, &cVar16, &cVar0, &cVar0);
+			HUD::THEFEED_UPDATE_ITEM_TEXTURE(&cVar16, &cVar16, &cVar0, &cVar0);
 		}
 		PED::UNREGISTER_PEDHEADSHOT(Global_1656661[iParam0 /*5*/].f_2);
 	}
@@ -97379,7 +97379,7 @@ int func_1200(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_1200(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_284(iVar5, iParam1, iParam2, -1) };
@@ -97449,7 +97449,7 @@ int func_1200(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 				iVar73 = func_780(iParam0, 11);
 				iVar74 = func_780(iParam0, 8);
 				iVar75 = func_780(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -97824,7 +97824,7 @@ int func_1200(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -97968,7 +97968,7 @@ int func_1200(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 					{
 						func_1200(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_1200(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -101126,7 +101126,7 @@ int func_1213(int iParam0, int iParam1)
 
 int func_1214(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -101700,7 +101700,7 @@ int func_1216(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_1217(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -101711,7 +101711,7 @@ int func_1218(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -101795,7 +101795,7 @@ void func_1220(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_1230(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;

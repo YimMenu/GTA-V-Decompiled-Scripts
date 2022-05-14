@@ -9042,7 +9042,7 @@ int func_165(var* uParam0, var uParam1)
 
 bool func_166()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_167(var uParam0)
@@ -9260,7 +9260,7 @@ int func_170(var uParam0)
 
 bool func_171()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_172(var uParam0)

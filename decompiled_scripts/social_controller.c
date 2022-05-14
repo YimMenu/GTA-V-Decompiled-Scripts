@@ -492,7 +492,7 @@ void func_10()
 	int iVar24;
 	int iVar25;
 	int iVar26;
-	int iVar27;
+	char* sVar27;
 	struct<8> Var28;
 	
 	switch (iLocal_332)
@@ -538,11 +538,11 @@ void func_10()
 		case 1:
 			if (iLocal_334 == 0)
 			{
-				SOCIALCLUB::_0x0F73393BAC7E6730(&(Global_109607[iLocal_333 /*4*/]), &iLocal_334);
+				SOCIALCLUB::SC_LICENSEPLATE_ISVALID(&(Global_109607[iLocal_333 /*4*/]), &iLocal_334);
 			}
-			else if (!SOCIALCLUB::_0xD302E99EDF0449CF(iLocal_334))
+			else if (!SOCIALCLUB::SC_LICENSEPLATE_GET_ISVALID_IS_PENDING(iLocal_334))
 			{
-				switch (SOCIALCLUB::_0x5C4EBFFA98BDB41C(iLocal_334))
+				switch (SOCIALCLUB::SC_LICENSEPLATE_GET_ISVALID_STATUS(iLocal_334))
 				{
 					case 0:
 						bVar7 = false;
@@ -572,7 +572,7 @@ void func_10()
 					
 					default:
 						StringCopy(&(Global_109607[iLocal_333 /*4*/]), "", 16);
-						if (SOCIALCLUB::_0x5C4EBFFA98BDB41C(iLocal_334) == 2)
+						if (SOCIALCLUB::SC_LICENSEPLATE_GET_ISVALID_STATUS(iLocal_334) == 2)
 						{
 							if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 							{
@@ -599,11 +599,11 @@ void func_10()
 				{
 					func_13(&Var8, "SPPlate", 1);
 				}
-				SOCIALCLUB::_0x1989C6E6F67E76A8(&(Global_109607[iLocal_333 /*4*/]), &Var8, &iLocal_334);
+				SOCIALCLUB::SC_LICENSEPLATE_ADD(&(Global_109607[iLocal_333 /*4*/]), &Var8, &iLocal_334);
 			}
-			else if (!SOCIALCLUB::_0x07C61676E5BB52CD(iLocal_334))
+			else if (!SOCIALCLUB::SC_LICENSEPLATE_GET_ADD_IS_PENDING(iLocal_334))
 			{
-				switch (SOCIALCLUB::_0x8147FFF6A718E1AD(iLocal_334))
+				switch (SOCIALCLUB::SC_LICENSEPLATE_GET_ADD_STATUS(iLocal_334))
 				{
 					case 0:
 						iLocal_330 = 1;
@@ -632,17 +632,17 @@ void func_10()
 			break;
 		
 		case 3:
-			if (SOCIALCLUB::_0xF22CA0FD74B80E7A(iLocal_334))
+			if (SOCIALCLUB::SC_LICENSEPLATE_GET_CHECK_IS_VALID(iLocal_334))
 			{
-				if (!SOCIALCLUB::_0x9237E334F6E43156(iLocal_334))
+				if (!SOCIALCLUB::SC_LICENSEPLATE_GET_CHECK_IS_PENDING(iLocal_334))
 				{
 					iVar24 = -1;
-					iVar25 = SOCIALCLUB::_0x700569DBA175A77C(iLocal_334);
+					iVar25 = SOCIALCLUB::SC_LICENSEPLATE_GET_COUNT(iLocal_334);
 					iVar26 = 0;
 					while (iVar26 < iVar25)
 					{
-						iVar27 = SOCIALCLUB::_0x1D4446A62D35B0D0(iLocal_334, iVar26);
-						if (!MISC::IS_STRING_NULL_OR_EMPTY(iVar27) && MISC::GET_HASH_KEY(iVar27) == MISC::GET_HASH_KEY(&(Global_109607[iLocal_333 /*4*/])))
+						sVar27 = SOCIALCLUB::SC_LICENSEPLATE_GET_PLATE(iLocal_334, iVar26);
+						if (!MISC::IS_STRING_NULL_OR_EMPTY(sVar27) && MISC::GET_HASH_KEY(sVar27) == MISC::GET_HASH_KEY(&(Global_109607[iLocal_333 /*4*/])))
 						{
 							iVar24 = iVar26;
 							iVar26 = iVar25 + 1;
@@ -651,7 +651,7 @@ void func_10()
 					}
 					if (iVar24 != -1)
 					{
-						StringCopy(&Var28, SOCIALCLUB::_0x2E89990DDFF670C3(iLocal_334, iVar24), 64);
+						StringCopy(&Var28, SOCIALCLUB::SC_LICENSEPLATE_GET_PLATE_DATA(iLocal_334, iVar24), 64);
 						if (Global_109616[iLocal_333])
 						{
 							func_13(&Var28, "SPPlate", 0);
@@ -661,7 +661,7 @@ void func_10()
 						{
 							func_13(&Var28, "SPPlate", 1);
 						}
-						SOCIALCLUB::_0xD0EE05FE193646EA(iVar27, iVar27, &Var28);
+						SOCIALCLUB::SC_LICENSEPLATE_SET_PLATE_DATA(sVar27, sVar27, &Var28);
 						if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 						{
 							func_14(3763, 0, -1);
@@ -680,7 +680,7 @@ void func_10()
 			}
 			else
 			{
-				SOCIALCLUB::_0xF6BAAAF762E1BF40("TEST", &iLocal_334);
+				SOCIALCLUB::SC_LICENSEPLATE_CHECK_STRING("TEST", &iLocal_334);
 			}
 			break;
 	}
@@ -1261,9 +1261,9 @@ void func_22()
 		APP::APP_CLOSE_BLOCK();
 		APP::APP_CLOSE_APP();
 		iVar0 = iVar0;
-		if (SOCIALCLUB::_0xF22CA0FD74B80E7A(iLocal_334))
+		if (SOCIALCLUB::SC_LICENSEPLATE_GET_CHECK_IS_VALID(iLocal_334))
 		{
-			if (!SOCIALCLUB::_0x9237E334F6E43156(iLocal_334))
+			if (!SOCIALCLUB::SC_LICENSEPLATE_GET_CHECK_IS_PENDING(iLocal_334))
 			{
 				iVar2 = Global_109455;
 				iVar1 = 0;
@@ -1273,15 +1273,15 @@ void func_22()
 					Global_109576[iVar1] = 0;
 					iVar1++;
 				}
-				iVar2 = SOCIALCLUB::_0x700569DBA175A77C(iLocal_334);
+				iVar2 = SOCIALCLUB::SC_LICENSEPLATE_GET_COUNT(iLocal_334);
 				Global_109621 = iVar2 >= Global_109455;
 				iVar1 = 0;
 				while (iVar1 < iVar2)
 				{
 					if (iVar1 < Global_109455)
 					{
-						StringCopy(&(Global_109455[iVar1 /*4*/]), SOCIALCLUB::_0x1D4446A62D35B0D0(iLocal_334, iVar1), 16);
-						StringCopy(&Var3, SOCIALCLUB::_0x2E89990DDFF670C3(iLocal_334, iVar1), 64);
+						StringCopy(&(Global_109455[iVar1 /*4*/]), SOCIALCLUB::SC_LICENSEPLATE_GET_PLATE(iLocal_334, iVar1), 16);
+						StringCopy(&Var3, SOCIALCLUB::SC_LICENSEPLATE_GET_PLATE_DATA(iLocal_334, iVar1), 64);
 						if ((func_11(&Var3, "MPPlate") || func_11(&Var3, "NoDelete")) || iVar1 == 0)
 						{
 							Global_109576[iVar1] = 1;
@@ -1296,7 +1296,7 @@ void func_22()
 		}
 		else
 		{
-			SOCIALCLUB::_0xF6BAAAF762E1BF40("TEST", &iLocal_334);
+			SOCIALCLUB::SC_LICENSEPLATE_CHECK_STRING("TEST", &iLocal_334);
 		}
 	}
 }
@@ -2449,12 +2449,12 @@ int func_48()
 
 bool func_49()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 bool func_50()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 int func_51()
@@ -7566,11 +7566,11 @@ void func_200(int iParam0)
 						{
 							if (iLocal_107 == 0)
 							{
-								SOCIALCLUB::_0x0F73393BAC7E6730(&(Global_2359296[func_190() /*5559*/].f_587.f_28), &iLocal_107);
+								SOCIALCLUB::SC_LICENSEPLATE_ISVALID(&(Global_2359296[func_190() /*5559*/].f_587.f_28), &iLocal_107);
 							}
-							else if (!SOCIALCLUB::_0xD302E99EDF0449CF(iLocal_107))
+							else if (!SOCIALCLUB::SC_LICENSEPLATE_GET_ISVALID_IS_PENDING(iLocal_107))
 							{
-								switch (SOCIALCLUB::_0x5C4EBFFA98BDB41C(iLocal_107))
+								switch (SOCIALCLUB::SC_LICENSEPLATE_GET_ISVALID_STATUS(iLocal_107))
 								{
 									case 0:
 										iLocal_107 = 0;
@@ -7713,11 +7713,11 @@ void func_200(int iParam0)
 					{
 						if (iLocal_107 == 0)
 						{
-							SOCIALCLUB::_0x0F73393BAC7E6730(&(Global_112922.f_20118.f_130[iParam0 /*41*/].f_28), &iLocal_107);
+							SOCIALCLUB::SC_LICENSEPLATE_ISVALID(&(Global_112922.f_20118.f_130[iParam0 /*41*/].f_28), &iLocal_107);
 						}
-						else if (!SOCIALCLUB::_0xD302E99EDF0449CF(iLocal_107))
+						else if (!SOCIALCLUB::SC_LICENSEPLATE_GET_ISVALID_IS_PENDING(iLocal_107))
 						{
-							switch (SOCIALCLUB::_0x5C4EBFFA98BDB41C(iLocal_107))
+							switch (SOCIALCLUB::SC_LICENSEPLATE_GET_ISVALID_STATUS(iLocal_107))
 							{
 								case 0:
 									iLocal_107 = 0;
@@ -14174,7 +14174,7 @@ void func_318(int iParam0)
 		if (Global_1656661[iParam0 /*5*/].f_2 != 0)
 		{
 			StringCopy(&cVar16, PED::GET_PEDHEADSHOT_TXD_STRING(Global_1656661[iParam0 /*5*/].f_2), 64);
-			HUD::_THEFEED_ADD_TXD_REF(&cVar16, &cVar16, &cVar0, &cVar0);
+			HUD::THEFEED_UPDATE_ITEM_TEXTURE(&cVar16, &cVar16, &cVar0, &cVar0);
 		}
 		PED::UNREGISTER_PEDHEADSHOT(Global_1656661[iParam0 /*5*/].f_2);
 	}

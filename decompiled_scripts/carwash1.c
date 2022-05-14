@@ -4305,7 +4305,7 @@ float func_83(var uParam0, int iParam1)
 	{
 		return 0f;
 	}
-	return MISC::_0x7F8F6405F4777AF6(ENTITY::GET_ENTITY_COORDS(iParam1, true), uParam0->f_14[0 /*3*/], uParam0->f_14[1 /*3*/], false);
+	return MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(iParam1, true), uParam0->f_14[0 /*3*/], uParam0->f_14[1 /*3*/], false);
 }
 
 float func_84(var uParam0, int iParam1, float fParam2)
@@ -4313,7 +4313,7 @@ float func_84(var uParam0, int iParam1, float fParam2)
 	struct<3> Var0;
 	float fVar3;
 	
-	fVar3 = MISC::_0x7F8F6405F4777AF6(ENTITY::GET_ENTITY_COORDS(iParam1, true), *(uParam0[0 /*3*/]), *(uParam0[1 /*3*/]), false);
+	fVar3 = MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(iParam1, true), *(uParam0[0 /*3*/]), *(uParam0[1 /*3*/]), false);
 	if (fVar3 <= 1f)
 	{
 		if (PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iParam1, false))
@@ -4327,7 +4327,7 @@ float func_84(var uParam0, int iParam1, float fParam2)
 		}
 		if (NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iParam1))
 		{
-			Var0 = { MISC::_0x21C235BC64831E5A(ENTITY::GET_ENTITY_COORDS(iParam1, true), *(uParam0[0 /*3*/]), *(uParam0[1 /*3*/]), false) };
+			Var0 = { MISC::GET_CLOSEST_POINT_ON_LINE(ENTITY::GET_ENTITY_COORDS(iParam1, true), *(uParam0[0 /*3*/]), *(uParam0[1 /*3*/]), false) };
 			if (func_86(iParam1, Var0, 1) < 4f)
 			{
 				if (fVar3 > 0f)
@@ -37499,7 +37499,7 @@ void func_327(int iParam0, var uParam1, int iParam2)
 		Var0 = { ENTITY::GET_ENTITY_FORWARD_VECTOR(iParam0) };
 		if (!func_328(uParam1->f_26, Var0, 30f) || iParam2 == 1)
 		{
-			func_176(iParam0, MISC::_0x21C235BC64831E5A(ENTITY::GET_ENTITY_COORDS(iParam0, true), *(uParam1[0 /*3*/]), *(uParam1[1 /*3*/]), false) + Vector(0.1f, 0f, 0f));
+			func_176(iParam0, MISC::GET_CLOSEST_POINT_ON_LINE(ENTITY::GET_ENTITY_COORDS(iParam0, true), *(uParam1[0 /*3*/]), *(uParam1[1 /*3*/]), false) + Vector(0.1f, 0f, 0f));
 			ENTITY::SET_ENTITY_HEADING(iParam0, uParam1->f_24);
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(iParam0, 5f);
 			VEHICLE::SET_VEHICLE_FORWARD_SPEED(iParam0, 0f);
@@ -38938,12 +38938,12 @@ void func_378(var uParam0, int iParam1)
 
 bool func_379()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 bool func_380()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_381(var uParam0, struct<3> Param1, float fParam4)

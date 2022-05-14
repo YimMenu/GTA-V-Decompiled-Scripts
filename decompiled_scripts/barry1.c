@@ -33250,12 +33250,12 @@ void func_240()
 
 bool func_241()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_242()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_243(int iParam0, int iParam1)
@@ -45686,7 +45686,7 @@ void func_451(var uParam0)
 			{
 				uParam0->f_9 = MISC::GET_FRAME_COUNT();
 				ENTITY::SET_ENTITY_RENDER_SCORCHED(PLAYER::PLAYER_PED_ID(), true);
-				uParam0->f_27 = { MISC::_0x21C235BC64831E5A(Var11, Var5, Var8, false) };
+				uParam0->f_27 = { MISC::GET_CLOSEST_POINT_ON_LINE(Var11, Var5, Var8, false) };
 				ENTITY::SET_ENTITY_COORDS(uParam0->f_5, uParam0->f_27, true, false, false, true);
 				uParam0->f_12 = func_362(uParam0->f_5, uParam0->f_4, 1);
 				Var2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };

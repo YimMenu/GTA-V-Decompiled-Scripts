@@ -267,7 +267,7 @@ void __EntryFunction__()
 	func_494(&Local_81);
 	if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Local_81.f_59))
 	{
-		PED::_DISPOSE_SYNCHRONIZED_SCENE(Local_81.f_59);
+		PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(Local_81.f_59);
 		iLocal_147 = Local_81.f_59;
 	}
 	MISC::SET_MISSION_FLAG(true);
@@ -31384,12 +31384,12 @@ void func_194()
 
 bool func_195()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_196()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_197(int iParam0, int iParam1)
@@ -41174,7 +41174,7 @@ void func_363()
 		func_494(&Local_81);
 		if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Local_81.f_59))
 		{
-			PED::_DISPOSE_SYNCHRONIZED_SCENE(Local_81.f_59);
+			PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(Local_81.f_59);
 			iLocal_147 = Local_81.f_59;
 		}
 		Global_78103 = 0;

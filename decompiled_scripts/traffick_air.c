@@ -16632,7 +16632,7 @@ int func_294(var uParam0, var uParam1)
 				iLocal_4661 = CAM::CREATE_CAMERA_WITH_PARAMS(26379945, 2128.367f, 4834.374f, 43.0187f, 0.4794f, 0f, -174.1694f, 36.51f, true, 2);
 				CAM::POINT_CAM_AT_ENTITY(iLocal_4661, uParam1->f_7, 0f, 0f, 0f, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
-				CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_4661, true);
+				CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(iLocal_4661, true);
 				func_295(2137.12f, 4799.97f, 39.67854f, 2116.64f, 4790.417f, 45.45295f, 25f, 2140.629f, 4816.914f, 40.22365f, 193.1398f, 1, 1, 1, 0, 0);
 				MISC::CLEAR_AREA_OF_VEHICLES(2035.914f, 4765.766f, 40.0606f, 200f, true, false, false, false, false, false, 0);
 				iLocal_4533 = 1;
@@ -21021,12 +21021,12 @@ void func_368()
 
 bool func_369()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_370()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_371()

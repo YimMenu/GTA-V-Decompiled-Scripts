@@ -28294,7 +28294,7 @@ int func_204(bool bParam0, bool bParam1)
 
 bool func_205()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_206(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, bool bParam5, int iParam6)
@@ -39847,8 +39847,8 @@ int func_299()
 			case 80:
 				Local_162.f_116.f_25 = 0;
 				Local_162.f_116.f_26 = 0;
-				HUD::_0x170F541E1CADD1DE(false);
-				HUD::_SET_PLAYER_CASH_CHANGE(0, 0);
+				HUD::USE_FAKE_MP_CASH(false);
+				HUD::CHANGE_FAKE_MP_CASH(0, 0);
 				iVar0 = 0;
 				while (iVar0 < iLocal_1339)
 				{
@@ -39880,8 +39880,8 @@ int func_299()
 			
 			case 90:
 				func_300(func_408());
-				HUD::_0x170F541E1CADD1DE(false);
-				HUD::_SET_PLAYER_CASH_CHANGE(0, 0);
+				HUD::USE_FAKE_MP_CASH(false);
+				HUD::CHANGE_FAKE_MP_CASH(0, 0);
 				iVar0 = 0;
 				while (iVar0 < iLocal_1339)
 				{
@@ -79520,7 +79520,7 @@ int func_560(int iParam0)
 
 bool func_561()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_562(int iParam0)
@@ -134572,7 +134572,7 @@ int func_806(int iParam0, int iParam1)
 
 int func_807(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -140550,7 +140550,7 @@ int func_880(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_881(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -145011,9 +145011,9 @@ void func_923(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 		}
 		if (iLocal_1339 == 1)
 		{
-			HUD::_0x170F541E1CADD1DE(true);
+			HUD::USE_FAKE_MP_CASH(true);
 		}
-		HUD::_SET_PLAYER_CASH_CHANGE(-iVar3, -iVar2);
+		HUD::CHANGE_FAKE_MP_CASH(-iVar3, -iVar2);
 		iLocal_1342 = (iLocal_1342 + iVar2);
 		iLocal_1341 = (iLocal_1341 + iVar3);
 	}
@@ -160781,7 +160781,7 @@ int func_1101(int iParam0)
 	{
 		return 0;
 	}
-	if (unk_0x7796B21B76221BC5(iParam0, 11, joaat("JUGG_SUIT")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 11, joaat("JUGG_SUIT")))
 	{
 		return 1;
 	}
@@ -164011,7 +164011,7 @@ void func_1180()
 							{
 								NETWORK::_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK(NETWORK::NET_TO_OBJ(Local_66.f_0), true);
 							}
-							INTERIOR::_0x82EBB79E258FA2B7(Local_162.f_12, INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_11(Local_162.f_0, 0), func_7(Local_162.f_0)));
+							INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Local_162.f_12, INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_11(Local_162.f_0, 0), func_7(Local_162.f_0)));
 							ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Local_162.f_12, true);
 							PED::CLEAR_ALL_PED_PROPS(Local_162.f_12);
 							if (Local_162.f_0 == 46)

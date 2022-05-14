@@ -1890,7 +1890,7 @@ struct<13> func_22(bool bParam0)
 
 bool func_23()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_24()

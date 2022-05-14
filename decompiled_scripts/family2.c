@@ -29743,12 +29743,12 @@ int func_119(int iParam0)
 
 bool func_120()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_121()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_122()
@@ -35182,7 +35182,7 @@ void func_231()
 					{
 						Var4 = { Vector(-1.599754f, -1082.671f, -1114.952f) + Vector(17.75f, 133.25f, 81.25f) };
 						Var7 = { Vector(-1.599754f, -1082.671f, -1114.952f) - Vector(17.75f, 133.25f, 81.25f) };
-						if (PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Var7.f_0, Var7.f_1, Var4.f_0, Var4.f_1))
+						if (PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(Var7.f_0, Var7.f_1, Var4.f_0, Var4.f_1))
 						{
 							if (TASK::GET_SCRIPT_TASK_STATUS(iLocal_130[1], -1817882002) != 1)
 							{
@@ -35378,7 +35378,7 @@ float func_234(struct<3> Param0, int iParam3, char* sParam4, var uParam5, bool b
 	
 	iVar0 = func_235(Param0, uParam5);
 	fVar1 = (VEHICLE::GET_TOTAL_DURATION_OF_VEHICLE_RECORDING(iParam3, sParam4) / IntToFloat((*uParam5 - 1)));
-	fVar2 = (MISC::_0x7F8F6405F4777AF6(Param0, *(uParam5[iVar0 /*3*/]), *(uParam5[iVar0 + 1 /*3*/]), true) * fVar1);
+	fVar2 = (MISC::_GET_PROGRESS_ALONG_LINE_BETWEEN_COORDS(Param0, *(uParam5[iVar0 /*3*/]), *(uParam5[iVar0 + 1 /*3*/]), true) * fVar1);
 	if (bParam6)
 	{
 	}
@@ -35395,10 +35395,10 @@ int func_235(struct<3> Param0, var uParam3)
 	iVar0 = 0;
 	while (iVar0 < (*uParam3 - 1))
 	{
-		if (SYSTEM::VDIST2(MISC::_0x21C235BC64831E5A(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0) < fVar2)
+		if (SYSTEM::VDIST2(MISC::GET_CLOSEST_POINT_ON_LINE(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0) < fVar2)
 		{
 			iVar1 = iVar0;
-			fVar2 = SYSTEM::VDIST2(MISC::_0x21C235BC64831E5A(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0);
+			fVar2 = SYSTEM::VDIST2(MISC::GET_CLOSEST_POINT_ON_LINE(Param0, *(uParam3[iVar0 /*3*/]), *(uParam3[iVar0 + 1 /*3*/]), true), Param0);
 		}
 		iVar0++;
 	}
@@ -37454,7 +37454,7 @@ void func_274()
 					{
 						AUDIO::STOP_AUDIO_SCENE("FAMILY_2_BIKE_RACE_JIMMY");
 					}
-					AUDIO::_0x149AEE66F0CB3A99(0f, 0f);
+					AUDIO::SET_PED_WALLA_DENSITY(0f, 0f);
 					iLocal_274++;
 				}
 				else
@@ -37630,7 +37630,7 @@ void func_276()
 				ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_117, true);
 				func_239(&uLocal_334, iLocal_273, sLocal_271);
 				iLocal_274++;
-				AUDIO::_0x149AEE66F0CB3A99(0.5f, 0.5f);
+				AUDIO::SET_PED_WALLA_DENSITY(0.5f, 0.5f);
 				func_284(500);
 				MISC::ENABLE_DISPATCH_SERVICE(1, false);
 				MISC::ENABLE_DISPATCH_SERVICE(7, false);
@@ -38453,7 +38453,7 @@ float func_282(struct<3> Param0, int iParam3, char* sParam4, var uParam5)
 		{
 			if (iVar2[iVar0] > 0)
 			{
-				Var19 = { MISC::_0x21C235BC64831E5A(Param0, *(uParam5[iVar2[iVar0] /*3*/]), *(uParam5[(iVar2[iVar0] - 1) /*3*/]), true) };
+				Var19 = { MISC::GET_CLOSEST_POINT_ON_LINE(Param0, *(uParam5[iVar2[iVar0] /*3*/]), *(uParam5[(iVar2[iVar0] - 1) /*3*/]), true) };
 			}
 			else
 			{
@@ -38461,7 +38461,7 @@ float func_282(struct<3> Param0, int iParam3, char* sParam4, var uParam5)
 			}
 			if (iVar2[iVar0] < (*uParam5 - 2))
 			{
-				Var22 = { MISC::_0x21C235BC64831E5A(Param0, *(uParam5[iVar2[iVar0] /*3*/]), *(uParam5[iVar2[iVar0] + 1 /*3*/]), true) };
+				Var22 = { MISC::GET_CLOSEST_POINT_ON_LINE(Param0, *(uParam5[iVar2[iVar0] /*3*/]), *(uParam5[iVar2[iVar0] + 1 /*3*/]), true) };
 			}
 			else
 			{
@@ -52436,7 +52436,7 @@ void func_489()
 			iVar0++;
 		}
 		func_485(1);
-		AUDIO::_0x149AEE66F0CB3A99(0f, 0f);
+		AUDIO::SET_PED_WALLA_DENSITY(0f, 0f);
 		if (AUDIO::IS_AUDIO_SCENE_ACTIVE("FAMILY_2_DRIVE_TO_BEACH"))
 		{
 			AUDIO::STOP_AUDIO_SCENE("FAMILY_2_DRIVE_TO_BEACH");

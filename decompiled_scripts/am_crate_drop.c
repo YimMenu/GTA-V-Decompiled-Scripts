@@ -1386,7 +1386,7 @@ void func_50(bool bParam0)
 				}
 				func_13(Var0, func_14(1));
 				func_51(bParam0);
-				STATS::_PLAYSTATS_CRATE_CREATED_MISSION_DONE(Local_81.f_2.f_68[bParam0 /*104*/].f_1, Local_81.f_2.f_68[bParam0 /*104*/].f_1.f_1, Local_81.f_2.f_68[bParam0 /*104*/].f_1.f_2);
+				STATS::PLAYSTATS_CRATE_CREATED(Local_81.f_2.f_68[bParam0 /*104*/].f_1, Local_81.f_2.f_68[bParam0 /*104*/].f_1.f_1, Local_81.f_2.f_68[bParam0 /*104*/].f_1.f_2);
 				MISC::SET_BIT(&(Local_81.f_2.f_1[bParam0 /*66*/].f_65), true);
 				Local_81.f_176++;
 			}

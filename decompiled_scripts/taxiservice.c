@@ -6086,7 +6086,7 @@ void func_130(struct<2> Param0, var uParam2, struct<2> Param3, var uParam5, var 
 		*uParam6 = { Var0 };
 		*uParam7 = { Var3 };
 	}
-	PATHFIND::_REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(*uParam6, uParam6->f_1, *uParam7, uParam7->f_1);
+	PATHFIND::REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT(*uParam6, uParam6->f_1, *uParam7, uParam7->f_1);
 }
 
 int func_131(struct<3> Param0, struct<3> Param3, float fParam6, bool bParam7)
@@ -9632,7 +9632,7 @@ void func_178()
 			iLocal_70 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
 			CAM::ATTACH_CAM_TO_ENTITY(iLocal_70, Global_111953, Local_980, true);
 			func_182();
-			CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_70, true);
+			CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(iLocal_70, true);
 		}
 	}
 	else if (!bLocal_62 || bLocal_61)
@@ -9642,7 +9642,7 @@ void func_178()
 			if (!CAM::IS_CAM_ACTIVE(iLocal_70))
 			{
 				func_181(4, 1, -1);
-				CAM::_SET_CAM_CONTROLS_RADAR_ROTATION(iLocal_70, true);
+				CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(iLocal_70, true);
 				func_180();
 				CAM::SET_CAM_ACTIVE(iLocal_70, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);

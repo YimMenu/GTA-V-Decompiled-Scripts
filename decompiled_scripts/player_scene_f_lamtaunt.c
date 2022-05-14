@@ -5395,7 +5395,7 @@ int func_135()
 				}
 				iVar0++;
 			}
-			PED::_DISPOSE_SYNCHRONIZED_SCENE(Global_97310);
+			PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(Global_97310);
 			return 1;
 		}
 	}

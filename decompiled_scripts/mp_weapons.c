@@ -11104,7 +11104,7 @@ int func_103(bool bParam0, bool bParam1)
 
 bool func_104()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_105(int iParam0, var uParam1, int iParam2, int iParam3)

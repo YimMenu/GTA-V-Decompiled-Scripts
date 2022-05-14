@@ -3837,12 +3837,12 @@ int func_42(int iParam0)
 
 bool func_43()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_44()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_45()
@@ -33989,7 +33989,7 @@ void func_465()
 						{
 							ENTITY::SET_ENTITY_VISIBLE(iLocal_393[iVar2], true, false);
 							ENTITY::SET_ENTITY_ALWAYS_PRERENDER(iLocal_393[iVar2], true);
-							INTERIOR::_0x82EBB79E258FA2B7(iLocal_393[iVar2], iVar1);
+							INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_393[iVar2], iVar1);
 						}
 						iVar2++;
 					}

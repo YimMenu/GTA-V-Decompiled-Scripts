@@ -17786,7 +17786,7 @@ int func_401(int iParam0, int iParam1, var uParam2, int iParam3, int iParam4, in
 			case 2:
 				iLocal_697 = 0;
 				iLocal_698 = 0;
-				HUD::_0x170F541E1CADD1DE(false);
+				HUD::USE_FAKE_MP_CASH(false);
 				*iParam0 = 2;
 				return 0;
 				break;
@@ -17795,7 +17795,7 @@ int func_401(int iParam0, int iParam1, var uParam2, int iParam3, int iParam4, in
 				func_250(func_297());
 				iLocal_697 = 0;
 				iLocal_698 = 0;
-				HUD::_0x170F541E1CADD1DE(false);
+				HUD::USE_FAKE_MP_CASH(false);
 				HUD::HIDE_HUD_COMPONENT_THIS_FRAME(13);
 				*iParam0 = 0;
 				return 0;
@@ -19659,7 +19659,7 @@ int func_477(int iParam0, bool bParam1, int iParam2)
 
 bool func_478()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_479(int iParam0)
@@ -19695,14 +19695,14 @@ int func_481(int iParam0)
 	if (iParam0 != func_5())
 	{
 		Var0 = { func_480(iParam0) };
-		if ((MISC::IS_ORBIS_VERSION() && !unk_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
+		if ((MISC::IS_ORBIS_VERSION() && !MISC::_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
 				return 0;
 			}
 		}
-		else if (func_478() || unk_0x807ABE1AB65C24D2())
+		else if (func_478() || MISC::_0x807ABE1AB65C24D2())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{

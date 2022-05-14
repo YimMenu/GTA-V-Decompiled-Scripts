@@ -566,7 +566,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), PLAYER::PLAYER_PED_ID(), true, false, -1f, iVar0, true, true, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), PLAYER::PLAYER_PED_ID(), true, false, -1f, iVar0, true, true, 0, false, 0, 0, 0);
 					func_11(&(Local_242.f_51), 0, 0);
 					iLocal_57 = 1;
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);
@@ -597,7 +597,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, 0, false, 0, 0, 0);
 					func_11(&(Local_242.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);
 				}
@@ -620,7 +620,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, 0, false, 0, 0, 0);
 					func_11(&(Local_242.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);
 				}
@@ -643,7 +643,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, 0, false, 0, 0, 0);
 					func_11(&(Local_242.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);
 				}
@@ -666,7 +666,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, 0, false, 0, 0, 0);
 					func_11(&(Local_242.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);
 				}
@@ -689,7 +689,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, 0, false, 0, 0, 0);
 					func_11(&(Local_242.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);
 				}
@@ -712,7 +712,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, 0, false, 0, 0, 0);
 					func_11(&(Local_242.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);
 				}
@@ -735,7 +735,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, 0, false, 0, 0, 0);
 					func_11(&(Local_242.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);
 				}
@@ -758,7 +758,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, 0, false, 0, 0, 0);
 					func_11(&(Local_242.f_51), 0, 0);
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);
 				}
@@ -781,7 +781,7 @@ void func_13()
 					Var4 = { Var4 + Vector(0f, 0.1f, 0.1f) };
 					MISC::GET_GROUND_Z_FOR_3D_COORD(Var4 + Vector(10f, 0f, 0f), &(Var4.f_2), false, false);
 					Var4.f_2 = (Var4.f_2 - 25f);
-					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, false, false, 0, 0, 0);
+					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(Var1, Var4, iVar7, true, joaat("weapon_airstrike_rocket"), NETWORK::NET_TO_PED(Local_242.f_2.f_3), true, false, -1f, iVar0, true, false, 0, false, 0, 0, 0);
 					Local_242.f_50++;
 					iLocal_57 = 0;
 					MISC::SET_BIT(&uLocal_241, Local_242.f_50);

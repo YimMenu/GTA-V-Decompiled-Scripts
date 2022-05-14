@@ -3868,7 +3868,7 @@ void func_139(int* iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 				{
 					NETWORK::NETWORK_ADD_SYNCHRONISED_SCENE_CAMERA(iParam0->f_5, iVar3, "intro_nobag_cam");
 				}
-				NETWORK::_0xC9B43A33D09CADA7(iParam0->f_5);
+				NETWORK::NETWORK_FORCE_LOCAL_USE_OF_SYNCED_SCENE_CAMERA(iParam0->f_5);
 				NETWORK::NETWORK_START_SYNCHRONISED_SCENE(iParam0->f_5);
 				if (bParam7)
 				{
@@ -37170,7 +37170,7 @@ void func_225(int iParam0, var uParam1, int iParam2)
 		iVar10 = 0;
 		while (iVar10 < 20)
 		{
-			PED::_SET_PED_FACE_FEATURE(iParam0, iVar10, 0f);
+			PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar10, 0f);
 			iVar10++;
 		}
 	}
@@ -37263,7 +37263,7 @@ void func_227(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_238(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -38373,7 +38373,7 @@ int func_250(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_250(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_173(iVar5, iParam1, iParam2, -1) };
@@ -38443,7 +38443,7 @@ int func_250(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_67(iParam0, 11);
 				iVar74 = func_67(iParam0, 8);
 				iVar75 = func_67(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -38818,7 +38818,7 @@ int func_250(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -38962,7 +38962,7 @@ int func_250(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_250(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_250(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -42153,7 +42153,7 @@ int func_267(int iParam0, int iParam1)
 
 int func_268(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -42727,7 +42727,7 @@ int func_270(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_271(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -42738,7 +42738,7 @@ int func_272(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -74946,7 +74946,7 @@ void func_395(var uParam0, var uParam1, int iParam2, struct<3> Param3, int iPara
 			NETWORK::NETWORK_ADD_SYNCHRONISED_SCENE_CAMERA(uParam0->f_5, func_442(), "exit_nobag_cam");
 			NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(iParam6, uParam0->f_5, func_442(), "exit_nobag", 1000f, -8f, 3341, 16, 1000f, 0);
 		}
-		NETWORK::_0xC9B43A33D09CADA7(uParam0->f_5);
+		NETWORK::NETWORK_FORCE_LOCAL_USE_OF_SYNCED_SCENE_CAMERA(uParam0->f_5);
 		NETWORK::NETWORK_START_SYNCHRONISED_SCENE(uParam0->f_5);
 	}
 }

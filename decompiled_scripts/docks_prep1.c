@@ -2295,7 +2295,7 @@ void func_8()
 				}
 				if (HUD::DOES_BLIP_EXIST(Local_188.f_5))
 				{
-					HUD::_SET_BLIP_DISPLAY_INDICATOR_ON_BLIP(Local_188.f_5, true);
+					HUD::SET_BLIP_EXTENDED_HEIGHT_THRESHOLD(Local_188.f_5, true);
 				}
 				if (HUD::DOES_BLIP_EXIST(iLocal_378))
 				{
@@ -16228,12 +16228,12 @@ int func_239(int iParam0)
 
 bool func_240()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_241()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_242()

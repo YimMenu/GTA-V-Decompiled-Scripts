@@ -16285,7 +16285,7 @@ void func_163(char* sParam0, int iParam1)
 
 bool func_164()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_165(int* iParam0)

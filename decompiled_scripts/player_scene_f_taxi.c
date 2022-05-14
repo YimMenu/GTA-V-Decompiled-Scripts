@@ -347,7 +347,7 @@ int func_4()
 		}
 		else if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_97310))
 		{
-			PED::_DISPOSE_SYNCHRONIZED_SCENE(Global_97310);
+			PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(Global_97310);
 			fVar1 = PED::GET_SYNCHRONIZED_SCENE_PHASE(Global_97310);
 			if (!func_5(Global_99701, iLocal_74, 2))
 			{
@@ -7279,12 +7279,12 @@ int func_35(int iParam0)
 
 bool func_36()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_37()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_38()

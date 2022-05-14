@@ -5728,7 +5728,7 @@ int func_90()
 
 bool func_91()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_92()
@@ -6320,7 +6320,7 @@ void func_112(int iParam0, char* sParam1, float fParam2, float fParam3, float fP
 
 bool func_113()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_114()

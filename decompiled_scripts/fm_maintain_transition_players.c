@@ -1143,7 +1143,7 @@ void func_27()
 		{
 			iVar1 = Global_4718592.f_525;
 		}
-		NETWORK::_0x0E4F77F7B9D74D84(iVar1);
+		NETWORK::NETWORK_SET_ACTIVITY_PLAYER_MAX(iVar1);
 	}
 }
 
@@ -46378,12 +46378,12 @@ void func_489(var uParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 
 bool func_490()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_491()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 bool func_492()

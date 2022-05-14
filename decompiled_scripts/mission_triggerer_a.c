@@ -38851,7 +38851,7 @@ int func_325(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_325(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_455(iVar5, iParam1, iParam2, -1) };
@@ -38921,7 +38921,7 @@ int func_325(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_118(iParam0, 11);
 				iVar74 = func_118(iParam0, 8);
 				iVar75 = func_118(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -39296,7 +39296,7 @@ int func_325(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -39440,7 +39440,7 @@ int func_325(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_325(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_325(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -42715,7 +42715,7 @@ int func_341(int iParam0, int iParam1)
 
 int func_342(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -43493,7 +43493,7 @@ int func_345(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_346(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -43504,7 +43504,7 @@ int func_347(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -43588,7 +43588,7 @@ void func_349(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_360(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -98296,7 +98296,7 @@ int func_534(bool bParam0, bool bParam1)
 
 bool func_535()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_536()
@@ -106427,7 +106427,7 @@ void func_778()
 	VEHICLE::SET_VEHICLE_EXTRA_COLOURS(Global_96477[3], 29, 134);
 	VEHICLE::SET_VEHICLE_DOORS_LOCKED(Global_96477[3], 10);
 	VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Global_96477[3], false);
-	INTERIOR::_0x82EBB79E258FA2B7(Global_96477[3], iVar0);
+	INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Global_96477[3], iVar0);
 	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Global_96477[3], true);
 	Global_96477[4] = VEHICLE::CREATE_VEHICLE(joaat("tailgater"), -41.7113f, -1100.042f, 25.4223f, 138.7067f, true, true, false);
 	VEHICLE::SET_VEHICLE_DIRT_LEVEL(Global_96477[4], 0f);
@@ -106438,7 +106438,7 @@ void func_778()
 	VEHICLE::SET_VEHICLE_EXTRA_COLOURS(Global_96477[4], 68, 134);
 	VEHICLE::SET_VEHICLE_DOORS_LOCKED(Global_96477[4], 10);
 	VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Global_96477[4], false);
-	INTERIOR::_0x82EBB79E258FA2B7(Global_96477[4], iVar0);
+	INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Global_96477[4], iVar0);
 	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Global_96477[4], true);
 	Global_96477[5] = VEHICLE::CREATE_VEHICLE(joaat("bjxl"), -46.3951f, -1097.778f, 25.4223f, 108.3411f, true, true, false);
 	VEHICLE::SET_VEHICLE_DIRT_LEVEL(Global_96477[5], 0f);
@@ -106449,7 +106449,7 @@ void func_778()
 	VEHICLE::SET_VEHICLE_EXTRA_COLOURS(Global_96477[5], 10, 134);
 	VEHICLE::SET_VEHICLE_DOORS_LOCKED(Global_96477[5], 10);
 	VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Global_96477[5], false);
-	INTERIOR::_0x82EBB79E258FA2B7(Global_96477[5], iVar0);
+	INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Global_96477[5], iVar0);
 	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Global_96477[5], true);
 	Global_96477[6] = VEHICLE::CREATE_VEHICLE(joaat("tailgater"), -50.0989f, -1094.534f, 25.4223f, 88.9621f, true, true, false);
 	VEHICLE::SET_VEHICLE_DIRT_LEVEL(Global_96477[6], 0f);
@@ -106460,7 +106460,7 @@ void func_778()
 	VEHICLE::SET_VEHICLE_EXTRA_COLOURS(Global_96477[6], 42, 134);
 	VEHICLE::SET_VEHICLE_DOORS_LOCKED(Global_96477[6], 10);
 	VEHICLE::SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(Global_96477[6], false);
-	INTERIOR::_0x82EBB79E258FA2B7(Global_96477[6], iVar0);
+	INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Global_96477[6], iVar0);
 	ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(Global_96477[6], true);
 	STREAMING::REMOVE_ANIM_DICT("missarmenian3leadinoutArmenian_3_int");
 	func_784(18);

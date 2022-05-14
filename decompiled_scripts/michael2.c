@@ -43262,17 +43262,17 @@ void func_322()
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4682[0]))
 		{
 			iLocal_4682[0] = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_watercrate_01"), 985.1165f, -2111.032f, 29.4751f, true, true, false);
-			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4682[0], iLocal_4675);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4682[0], iLocal_4675);
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4682[1]))
 		{
 			iLocal_4682[1] = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_watercrate_01"), 977.4531f, -2128.16f, 29.4753f, true, true, false);
-			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4682[1], iLocal_4675);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4682[1], iLocal_4675);
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4682[2]))
 		{
 			iLocal_4682[2] = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_watercrate_01"), 987.7f, -2125.6f, 29.4753f, true, true, false);
-			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4682[2], iLocal_4675);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4682[2], iLocal_4675);
 		}
 		if (!TASK::DOES_SCRIPTED_COVER_POINT_EXIST_AT_COORDS(996.3627f, -2142.455f, 28.4762f))
 		{
@@ -46039,7 +46039,7 @@ int func_368(var uParam0)
 
 bool func_369()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 void func_370(int iParam0, bool bParam1, int iParam2)
@@ -46966,17 +46966,17 @@ void func_400()
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4682[0]))
 		{
 			iLocal_4682[0] = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_watercrate_01"), 985.1165f, -2111.032f, 29.4751f, true, true, false);
-			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4682[0], iLocal_4675);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4682[0], iLocal_4675);
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4682[1]))
 		{
 			iLocal_4682[1] = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_watercrate_01"), 977.4531f, -2128.16f, 29.4753f, true, true, false);
-			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4682[1], iLocal_4675);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4682[1], iLocal_4675);
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4682[2]))
 		{
 			iLocal_4682[2] = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_watercrate_01"), 987.7f, -2125.6f, 29.4753f, true, true, false);
-			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4682[2], iLocal_4675);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4682[2], iLocal_4675);
 		}
 		if (!TASK::DOES_SCRIPTED_COVER_POINT_EXIST_AT_COORDS(996.3627f, -2142.455f, 28.4762f))
 		{
@@ -48697,7 +48697,7 @@ int func_403(var uParam0)
 			{
 				if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
 				{
-					GRAPHICS::_SET_TRANSITION_TIMECYCLE_MODIFIER_STOP_WITH_BLEND(uParam0->f_10[iVar1 /*57*/].f_51);
+					GRAPHICS::SET_TRANSITION_OUT_OF_TIMECYCLE_MODIFIER(uParam0->f_10[iVar1 /*57*/].f_51);
 					uParam0->f_1231 = 0;
 					uParam0->f_10[iVar1 /*57*/].f_56 = 1;
 				}
@@ -50367,7 +50367,7 @@ void func_450()
 		{
 			TASK::TASK_PLAY_ANIM(func_946(0), sLocal_4617, "michael_meat_hook_react_c", 1000f, -2f, -1, 10, 0f, false, false, false);
 		}
-		INTERIOR::_0x82EBB79E258FA2B7(func_946(0), iLocal_4675);
+		INTERIOR::RETAIN_ENTITY_IN_INTERIOR(func_946(0), iLocal_4675);
 		PED::SET_PED_CAN_BE_TARGETTED(func_946(0), false);
 		PED::SET_RAGDOLL_BLOCKING_FLAGS(func_946(0), 24592);
 		WEAPON::REMOVE_ALL_PED_WEAPONS(func_946(0), true);
@@ -55186,7 +55186,7 @@ int func_459(int iParam0)
 
 bool func_460()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 int func_461()
@@ -56511,7 +56511,7 @@ void func_493()
 		PED::ADD_SCENARIO_BLOCKING_AREA(Vector(44.65416f, -1446.622f, -26.81648f) - Vector(30f, 30f, 30f), Vector(44.65416f, -1446.622f, -26.81648f) + Vector(30f, 30f, 30f), false, true, true, true);
 		MISC::CLEAR_AREA(941.6578f, -2181.059f, 29.5517f, 1000f, true, false, false, false);
 		PED::ADD_SCENARIO_BLOCKING_AREA(Vector(55.97744f, -2149.353f, 966.1083f) - Vector(30f, 70f, 60f), Vector(55.97744f, -2149.353f, 966.1083f) + Vector(30f, 70f, 60f), false, true, true, true);
-		INTERIOR::_0x82EBB79E258FA2B7(func_946(0), iLocal_4675);
+		INTERIOR::RETAIN_ENTITY_IN_INTERIOR(func_946(0), iLocal_4675);
 		func_866(func_946(0), Local_4597, 87.8708f, 0);
 		PED::SET_PED_TARGET_LOSS_RESPONSE(func_946(0), 1);
 		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(func_946(0), true);
@@ -56549,7 +56549,7 @@ void func_493()
 		iLocal_4679 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_ld_hook"), Local_321[0 /*6*/], true, true, false);
 		ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4679, false);
 		ENTITY::FREEZE_ENTITY_POSITION(iLocal_4679, true);
-		INTERIOR::_0x82EBB79E258FA2B7(iLocal_4679, iLocal_4675);
+		INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4679, iLocal_4675);
 		iLocal_4680 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_leg_chain_01"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(0.01f, 0f, 0f), true, true, false);
 		ENTITY::ATTACH_ENTITY_TO_ENTITY(iLocal_4680, iLocal_4679, -1, Local_4600, Local_4603, false, false, false, false, 2, true);
 		iLocal_4681 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_padlock"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(-0.01f, 0f, 0f), true, true, false);
@@ -59907,7 +59907,7 @@ int func_525(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			if (BitTest(Global_77669[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("SHRINK_HAIR"), 1))
 			{
 			}
-			else if (unk_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
+			else if (FILES::_0x7796B21B76221BC5(iParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_525(iParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				Global_77669[1 /*14*/] = { func_646(iVar5, iParam1, iParam2, -1) };
@@ -59977,7 +59977,7 @@ int func_525(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar73 = func_58(iParam0, 11);
 				iVar74 = func_58(iParam0, 8);
 				iVar75 = func_58(iParam0, 4);
-				if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+				if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 				{
 					if (iVar5 == joaat("mp_m_freemode_01"))
 					{
@@ -60352,7 +60352,7 @@ int func_525(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 				iVar106 = 0;
 				while (iVar106 < 20)
 				{
-					PED::_SET_PED_FACE_FEATURE(iParam0, iVar106, 0f);
+					PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar106, 0f);
 					iVar106++;
 				}
 			}
@@ -60496,7 +60496,7 @@ int func_525(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						func_525(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
-					if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
+					if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("OVER_JACKET")))
 					{
 						func_525(iParam0, 9, 0, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
@@ -63766,7 +63766,7 @@ int func_540(int iParam0, int iParam1)
 
 int func_541(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 4, joaat("DUNGAREES")))
 	{
 		return 1;
 	}
@@ -64544,7 +64544,7 @@ int func_544(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_545(int iParam0)
 {
-	if (unk_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
+	if (FILES::_0x7796B21B76221BC5(iParam0, 8, joaat("X17_DRAW_6")))
 	{
 		return 1;
 	}
@@ -64555,7 +64555,7 @@ int func_546(int iParam0)
 {
 	if (!PED::IS_PED_INJURED(iParam0))
 	{
-		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !unk_0x7796B21B76221BC5(iParam0, 9, -138631194))
+		if (PED::GET_PED_DRAWABLE_VARIATION(iParam0, 9) != 0 && !FILES::_0x7796B21B76221BC5(iParam0, 9, -138631194))
 		{
 			return 1;
 		}
@@ -64639,7 +64639,7 @@ void func_548(int iParam0, int iParam1, bool bParam2)
 		{
 			fVar3 = func_559(iVar2, iParam1);
 		}
-		PED::_SET_PED_FACE_FEATURE(iParam0, iVar1, fVar3);
+		PED::_SET_PED_MICRO_MORPH_VALUE(iParam0, iVar1, fVar3);
 		iVar0++;
 	}
 	iVar4 = 0;
@@ -118255,7 +118255,7 @@ void func_739(int iParam0)
 			iLocal_4679 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_ld_hook"), Local_321[31 /*6*/], true, true, false);
 			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4679, false);
 			ENTITY::FREEZE_ENTITY_POSITION(iLocal_4679, true);
-			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4679, iLocal_4675);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4679, iLocal_4675);
 			iLocal_4680 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_leg_chain_01"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(0.01f, 0f, 0f), true, true, false);
 			ENTITY::ATTACH_ENTITY_TO_ENTITY(iLocal_4680, iLocal_4679, -1, Local_4600, Local_4603, false, false, false, false, 2, true);
 			iLocal_4681 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_padlock"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(-0.01f, 0f, 0f), true, true, false);
@@ -118313,7 +118313,7 @@ void func_739(int iParam0)
 			iLocal_4679 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_ld_hook"), Local_321[31 /*6*/], true, true, false);
 			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4679, false);
 			ENTITY::FREEZE_ENTITY_POSITION(iLocal_4679, true);
-			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4679, iLocal_4675);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4679, iLocal_4675);
 			iLocal_4680 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_leg_chain_01"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(0.01f, 0f, 0f), true, true, false);
 			ENTITY::ATTACH_ENTITY_TO_ENTITY(iLocal_4680, iLocal_4679, -1, Local_4600, Local_4603, false, false, false, false, 2, true);
 			iLocal_4681 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_padlock"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(-0.01f, 0f, 0f), true, true, false);
@@ -118375,7 +118375,7 @@ void func_739(int iParam0)
 			iLocal_4679 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_ld_hook"), Local_321[31 /*6*/], true, true, false);
 			ENTITY::_SET_ENTITY_CLEANUP_BY_ENGINE(iLocal_4679, false);
 			ENTITY::FREEZE_ENTITY_POSITION(iLocal_4679, true);
-			INTERIOR::_0x82EBB79E258FA2B7(iLocal_4679, iLocal_4675);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(iLocal_4679, iLocal_4675);
 			iLocal_4680 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_leg_chain_01"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(0.01f, 0f, 0f), true, true, false);
 			ENTITY::ATTACH_ENTITY_TO_ENTITY(iLocal_4680, iLocal_4679, -1, Local_4600, Local_4603, false, false, false, false, 2, true);
 			iLocal_4681 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_cs_padlock"), ENTITY::GET_ENTITY_COORDS(iLocal_4679, true) + Vector(-0.01f, 0f, 0f), true, true, false);
@@ -124320,7 +124320,7 @@ void func_844()
 							{
 								iLocal_4675 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_4597, "v_abattoir");
 							}
-							INTERIOR::_0x82EBB79E258FA2B7(func_946(0), iLocal_4675);
+							INTERIOR::RETAIN_ENTITY_IN_INTERIOR(func_946(0), iLocal_4675);
 							Local_97.f_19 = 1;
 						}
 					}

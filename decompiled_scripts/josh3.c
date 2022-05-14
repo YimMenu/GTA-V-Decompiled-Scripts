@@ -469,7 +469,7 @@ void __EntryFunction__()
 	func_662(&Local_523);
 	if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Local_523.f_59))
 	{
-		PED::_DISPOSE_SYNCHRONIZED_SCENE(Local_523.f_59);
+		PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(Local_523.f_59);
 	}
 	MISC::SET_MISSION_FLAG(true);
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
@@ -33631,12 +33631,12 @@ void func_200()
 
 bool func_201()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_202()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 void func_203(int iParam0, int iParam1)

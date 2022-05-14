@@ -4081,12 +4081,12 @@ void func_101(var uParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 
 bool func_102()
 {
-	return (MISC::IS_ORBIS_VERSION() || unk_0x807ABE1AB65C24D2());
+	return (MISC::IS_ORBIS_VERSION() || MISC::_0x807ABE1AB65C24D2());
 }
 
 bool func_103()
 {
-	return (MISC::IS_DURANGO_VERSION() || unk_0xC545AB1CF97ABB34());
+	return (MISC::IS_DURANGO_VERSION() || MISC::_0xC545AB1CF97ABB34());
 }
 
 bool func_104()
@@ -4322,9 +4322,9 @@ int func_130(int iParam0, int iParam1)
 	return -1;
 }
 
-var func_131(var uParam0)
+int func_131(int iParam0)
 {
-	return unk_0xECF041186C5A94DC(uParam0);
+	return MISC::_0xECF041186C5A94DC(iParam0);
 }
 
 int func_132(int iParam0)
@@ -7925,7 +7925,7 @@ void func_253(int iParam0)
 		if (Global_1656661[iParam0 /*5*/].f_2 != 0)
 		{
 			StringCopy(&cVar16, PED::GET_PEDHEADSHOT_TXD_STRING(Global_1656661[iParam0 /*5*/].f_2), 64);
-			HUD::_THEFEED_ADD_TXD_REF(&cVar16, &cVar16, &cVar0, &cVar0);
+			HUD::THEFEED_UPDATE_ITEM_TEXTURE(&cVar16, &cVar16, &cVar0, &cVar0);
 		}
 		PED::UNREGISTER_PEDHEADSHOT(Global_1656661[iParam0 /*5*/].f_2);
 	}
@@ -12204,14 +12204,14 @@ int func_359(int iParam0)
 	if (iParam0 != func_23())
 	{
 		Var0 = { func_122(iParam0) };
-		if ((MISC::IS_ORBIS_VERSION() && !unk_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
+		if ((MISC::IS_ORBIS_VERSION() && !MISC::_0x807ABE1AB65C24D2()) || MISC::IS_PC_VERSION())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{
 				return 0;
 			}
 		}
-		else if (func_103() || unk_0x807ABE1AB65C24D2())
+		else if (func_103() || MISC::_0x807ABE1AB65C24D2())
 		{
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
 			{

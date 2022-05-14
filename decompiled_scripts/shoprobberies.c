@@ -11264,11 +11264,11 @@ void func_255()
 	func_257();
 	if (INTERIOR::IS_VALID_INTERIOR(Local_68.f_185))
 	{
-		INTERIOR::_0x82EBB79E258FA2B7(Local_68.f_2, Local_68.f_185);
-		INTERIOR::_0x82EBB79E258FA2B7(Local_68.f_28, Local_68.f_185);
+		INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Local_68.f_2, Local_68.f_185);
+		INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Local_68.f_28, Local_68.f_185);
 		if (!bLocal_574)
 		{
-			INTERIOR::_0x82EBB79E258FA2B7(Local_68.f_96.f_1, Local_68.f_185);
+			INTERIOR::RETAIN_ENTITY_IN_INTERIOR(Local_68.f_96.f_1, Local_68.f_185);
 		}
 	}
 	func_256();
