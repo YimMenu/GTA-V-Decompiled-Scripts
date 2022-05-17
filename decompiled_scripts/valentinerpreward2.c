@@ -509,6 +509,11 @@ void func_1()
 			iLocal_214 = 1;
 		}
 	}
+	if (!BitTest(Global_2810701.f_1792, 3) || BitTest(Global_2810701.f_1792, 1))
+	{
+		MISC::SET_BIT(&(Global_2810701.f_1792), 3);
+		MISC::CLEAR_BIT(&(Global_2810701.f_1792), true);
+	}
 }
 
 void func_2(int iParam0, int iParam1, int iParam2, bool bParam3)
